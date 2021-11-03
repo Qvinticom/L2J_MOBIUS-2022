@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34445</npc> <!-- Accessory Artisan Denign -->
+	</npcs>
+	<!-- Exchange +6 Angel/Fallen Angel Accessories -->
+	<item>
+		<ingredient id="48860" count="100" /> <!-- Fallen Angel's Ring Pack -->
+		<production id="81918" count="1" /> <!-- +6 Fallen Angel's Ring Pack -->
+	</item>
+	<item>
+		<ingredient id="81448" count="100" /> <!-- Angel's Necklace Pack -->
+		<production id="80764" count="1" /> <!-- +6 Angel's Necklace Pack -->
+	</item>
+	<item>
+		<ingredient id="81449" count="100" /> <!-- Angel's Earring Pack -->
+		<production id="80765" count="1" /> <!-- +6 Angel's Earring Pack -->
+	</item>
+	<item>
+		<ingredient id="81450" count="100" /> <!-- Angel's Ring Pack -->
+		<production id="81155" count="1" /> <!-- +6 Angel's Ring Pack -->
+	</item>
+</list>

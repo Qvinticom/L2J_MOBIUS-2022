@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34445</npc> <!-- Accessory Artisan Denign -->
+	</npcs>
+	<!-- Modify Angel accessories -->
+	<item>
+		<ingredient id="48669" count="1" /> <!-- Angel's Necklace -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81372" count="1" chance="0" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+		<production id="81370" count="1" chance="70" /> <!-- Angel's Necklace (Assault Lv. 1) -->
+		<production id="81371" count="1" chance="25" /> <!-- Angel's Necklace (Assault Lv. 2) -->
+		<production id="81372" count="1" chance="5" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="48841" count="1" /> <!-- Angel's Earring -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81375" count="1" chance="0" /> <!-- Angel's Earring (Security Lv. 3) -->
+		<production id="81373" count="1" chance="70" /> <!-- Angel's Earring (Security Lv. 1) -->
+		<production id="81374" count="1" chance="25" /> <!-- Angel's Earring (Security Lv. 2) -->
+		<production id="81375" count="1" chance="5" /> <!-- Angel's Earring (Security Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="81154" count="1" /> <!-- Angel's Ring -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81378" count="1" chance="0" /> <!-- Angel's Ring (Elements Lv. 3) -->
+		<production id="81376" count="1" chance="70" /> <!-- Angel's Ring (Elements Lv. 1) -->
+		<production id="81377" count="1" chance="25" /> <!-- Angel's Ring (Elements Lv. 2) -->
+		<production id="81378" count="1" chance="5" /> <!-- Angel's Ring (Elements Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="81212" count="1" /> <!-- Angel's Necklace -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81390" count="1" chance="0" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+		<production id="81388" count="1" chance="70" /> <!-- Angel's Necklace (Assault Lv. 1) -->
+		<production id="81389" count="1" chance="25" /> <!-- Angel's Necklace (Assault Lv. 2) -->
+		<production id="81390" count="1" chance="5" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="81213" count="1" /> <!-- Angel's Earring -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81393" count="1" chance="0" /> <!-- Angel's Earring (Security Lv. 3) -->
+		<production id="81391" count="1" chance="70" /> <!-- Angel's Earring (Security Lv. 1) -->
+		<production id="81392" count="1" chance="25" /> <!-- Angel's Earring (Security Lv. 2) -->
+		<production id="81393" count="1" chance="5" /> <!-- Angel's Earring (Security Lv. 3) -->
+	</item>
+	<item>
+		<ingredient id="81214" count="1" /> <!-- Angel's Ring -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81396" count="1" chance="0" /> <!-- Angel's Ring (Elements Lv. 3) -->
+		<production id="81394" count="1" chance="70" /> <!-- Angel's Ring (Elements Lv. 1) -->
+		<production id="81395" count="1" chance="25" /> <!-- Angel's Ring (Elements Lv. 2) -->
+		<production id="81396" count="1" chance="5" /> <!-- Angel's Ring (Elements Lv. 3) -->
+	</item>
+</list>

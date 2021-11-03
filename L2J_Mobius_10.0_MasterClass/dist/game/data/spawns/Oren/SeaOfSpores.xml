@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="SeaOfSpores">
+		<group name="NPCs">
+			<npc id="33960" x="62645" y="27761" z="-3760" heading="36920" respawnTime="60sec" /> <!-- Barrier Enforcer -->
+			<npc id="33960" x="63520" y="24448" z="-3792" heading="33708" respawnTime="60sec" /> <!-- Barrier Enforcer -->
+			<npc id="33960" x="60735" y="30320" z="-3736" heading="42512" respawnTime="60sec" /> <!-- Barrier Enforcer -->
+			<npc id="33960" x="57450" y="31235" z="-3736" heading="51260" respawnTime="60sec" /> <!-- Barrier Enforcer -->
+			<npc id="33960" x="63633" y="20925" z="-3736" heading="33512" respawnTime="60sec" /> <!-- Barrier Enforcer -->
+			<npc id="34508" x="65480" y="26024" z="-3747" heading="32770" respawnTime="60sec" /> <!-- Battlefield Guide -->
+		</group>
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_1" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61544" y="9002" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_2" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="62483" y="11134" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_3" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="60065" y="11424" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_4" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61786" y="13467" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_5" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="59924" y="14276" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_6" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="62293" y="16499" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_7" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61362" y="17527" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_8" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61885" y="18521" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_9" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="62939" y="20095" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_10" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="62513" y="21564" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_11" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="62037" y="23318" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_12" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="63125" y="24226" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_13" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="62000" y="25917" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_14" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61963" y="27835" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_15" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="60647" y="27647" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_16" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="60551" y="30027" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_17" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="59657" y="29887" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_18" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="58227" y="29801" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_19" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="56744" y="30931" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_20" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="58178" y="30950" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_21" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61127" y="29191" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_22" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61148" y="24797" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_23" shape="Cylinder" minZ="-4400" maxZ="-3500" rad="600">
+				<node x="61640" y="19869" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_24" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="60388" y="26085" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_25" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="58963" y="26857" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_26" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="58114" y="25657" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_27" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56302" y="25500" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_28" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56417" y="24360" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_29" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="55268" y="23762" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_30" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="54710" y="24846" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_31" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="54510" y="26343" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_32" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="54148" y="27645" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_33" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="55522" y="28075" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_34" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56815" y="28035" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_35" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="57469" y="28468" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_36" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="51456" y="25333" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_37" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="50416" y="25764" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_38" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="49741" y="24674" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_39" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="46748" y="24276" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_40" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="47951" y="25452" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_41" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="47650" y="23154" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_42" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="45898" y="22332" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_43" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="44690" y="23125" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_44" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="43731" y="22874" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_45" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="42559" y="23258" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_46" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="41480" y="24606" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_47" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="43214" y="25750" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_48" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="47006" y="20775" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_49" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="48564" y="21364" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_50" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="50112" y="21891" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_51" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="48955" y="22785" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_52" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="52744" y="26516" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_53" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="50604" y="23170" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_54" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="51895" y="22762" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_55" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="52543" y="24334" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_56" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="53795" y="23292" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_57" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="48384" y="19093" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_58" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="49678" y="20368" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_59" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="50784" y="20150" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_60" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="50061" y="17366" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_61" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="51604" y="17991" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_62" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="52937" y="17094" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_63" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="53375" y="17960" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_64" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="54388" y="19363" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_65" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="52576" y="20924" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_66" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="53498" y="21906" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_67" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="55147" y="20893" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_68" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56193" y="21759" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_69" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="57793" y="22764" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_70" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="59707" y="22994" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_71" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="59164" y="21351" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_72" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="57734" y="19515" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_73" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="58366" y="17739" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_74" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56419" y="18034" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_75" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="54562" y="16826" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_76" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56655" y="15596" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_77" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="58533" y="17701" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_78" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56754" y="20219" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_79" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="56521" y="13924" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_80" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="55126" y="12599" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_81" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="54490" y="14169" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_82" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="52914" y="13964" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_83" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="52349" y="15296" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_84" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="50700" y="15177" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_85" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="48875" y="15292" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="Sea_Of_Spores_86" shape="Cylinder" minZ="-5600" maxZ="-4000" rad="600">
+				<node x="48160" y="17423" />
+			</territory>
+		</territories>
+		<npc id="24621" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24622" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24623" count="3" respawnTime="30sec" respawnRandom="0sec" />
+		<npc id="24624" count="3" respawnTime="30sec" respawnRandom="0sec" />
+	</spawn>
+</list>

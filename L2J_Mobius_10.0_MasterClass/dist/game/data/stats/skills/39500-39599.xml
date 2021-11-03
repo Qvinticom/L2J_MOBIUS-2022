@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39500" toLevel="10" name="Rok's Earnest Love Letter Lv. 1">
+		<!-- You can feel Rok's earnest love toward Lucy slightly. Lv. 2 -->
+		<icon>icon.ev_2018_xmas_letter</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39501" toLevel="1" name="Rok's Earnest Love Letter - Reward">
+		<!-- Reward -->
+		<icon>icon.ev_2018_xmas_letter</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39502" toLevel="1" name="Elysium Support Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39503" toLevel="1" name="Shining Nevit's Gold Hourglass">
+		<!-- During hunting acquired XP/ SP +$s2 for $s1. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown is 5 min. -->
+		<icon>icon.bm_nebit_bonus_time_up</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SHINING_HOURGLASS</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>81013</itemConsumeId> <!-- Shining Nevit's Gold Hourglass -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">VOTE,1;BUFF_PCCAFE_EXP1,1</value>
+				</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>VOTE;BUFF_PCCAFE_EXP1</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39504" toLevel="1" name="Year-End Super Reward Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39508" toLevel="2" name="Buff Pouch">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39509" toLevel="1" name="New Year Energy of Hope">
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39510" toLevel="1" name="Lucky Pig Special Vitality Tonic">
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39511" toLevel="1" name="Retired Legend's Scroll">
+		<!-- For 30 min., acquired XP/ SP +15%, P./ M. Atk., Basic Attack Power and P./ M. Skill Power +10%, P./ M. Def. +20%. -->
+		<icon>icon.etc_charm_of_luck_i00</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80804</itemConsumeId> <!-- Retired Legend's Scroll -->
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>15</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>15</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39512" toLevel="1" name="Heavenly Fantasia Cookie">
+		<!-- For PA. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
+		<icon>icon.etc_bm_defence_cookie</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="39513" toLevel="1" name="Fantasia Harmony - GM's Blessing">
+		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39514" toLevel="3" name="Fantasia Harmony - Emperor's Special Cocktail">
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, Critical Rate for standard attacks/ M. Skill Critical Rate +$s6, Critical Damage for standard attacks +$s7, M. Skill Critical Damage +$s8, Atk. Spd. +$s9, Casting Spd. +$s10, Shield Defense/ Shield Defense Rate +$s11, Attribute Attack +$s12, Skill Cooldown -$s13, Skill MP Consumption -$s14, received Critical Rate for standard attacks/ M. skills -$s15. The effect remains after death. -->
+		<icon>icon.bm_special_cocktail_of_king_d</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<abnormalLevel>6</abnormalLevel>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">14400</value>
+			<value level="3">28800</value>
+		</abnormalTime>
+		<specialLevel>-2</specialLevel>
+		<magicLevel>-2</magicLevel>
+		<isMagic>22</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="PAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>85</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39515" toLevel="1" name="Fantasia Harmony - Chaos Arena">
+		<!-- For PA. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="39516" toLevel="1" name="Elixir of Harmony">
+		<!-- For PA. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
+		<icon>icon.soul_spirit1</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>120000</reuseDelay>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="39517" toLevel="3" name="Fantasia Melody - Emperor's Special Cocktail">
+		<!-- For $s1, PvP Damage +$s2, Received PvP Damage -$s3, Attribute Attack +$s4, Speed +$s5, HP/ MP Recovery Rate +$s6. The effect remains after death. -->
+		<icon>icon.bm_special_cocktail_of_king_d</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">14400</value>
+			<value level="3">28800</value>
+		</abnormalTime>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalType>DITTY</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<specialLevel>-2</specialLevel>
+		<isMagic>22</isMagic>
+		<magicLevel>-2</magicLevel>
+		<effectRange>-1</effectRange>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>10</amount>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39518" toLevel="1" name="Nevit's Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39519" toLevel="1" name="Nevit's Growth Support Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39520" toLevel="3" name="Emperor's Special Cocktail">
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39521" toLevel="1" name="PA Emperor's Special Cocktail">
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39522" toLevel="1" name="Emperor's Special Cocktail">
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39523" toLevel="1" name="Golden Pig's Medium Vitality Tonic">
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39524" toLevel="1" name="Jackpot Wish Lucky Pouch">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39525" toLevel="1" name="PA Honey Dark Beer">
+		<!-- All stats +$s1, Vitality bonus +$s2. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<icon>icon.bm_royal_black_beer</icon>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39526" toLevel="1" name="Honey Dark Beer">
+		<!-- All stats +$s1, Vitality bonus +$s2. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<icon>icon.bm_royal_black_beer</icon>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39527" toLevel="1" name="Blessed Scroll: Enchant Bracelet">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39528" toLevel="1" name="PA Event Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39529" toLevel="1" name="Appearance Stone Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39530" toLevel="1" name="Shiny Gold Bar Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39531" toLevel="1" name="Lucy's Return Present">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39532" toLevel="1" name="Nevit's Shining Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39533" toLevel="1" name="PA Shining Nevit's Gold Hourglass">
+		<!-- During hunting acquired XP/ SP +$s2 for $s1. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown is 5 min. -->
+		<icon>icon.bm_nebit_bonus_time_up</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SHINING_HOURGLASS</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>4</isMagic>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80852</itemConsumeId> <!-- PA Shining Nevit's Gold Hourglass -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">VOTE,1;BUFF_PCCAFE_EXP1,1</value>
+				</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>VOTE;BUFF_PCCAFE_EXP1</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39534" toLevel="1" name="Red Libra Blessing (7-day)">
+		<!-- When in inventory, maintains the Vitality level. -->
+		<icon>icon.ev_L2_soul_ore</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39535" toLevel="1" name="Scroll of Escape: Herphah">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80857</itemConsumeId> <!-- Scroll of Escape: Herphah -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>146536</x>
+				<y>26824</y>
+				<z>-2207</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39536" toLevel="1" name="Scroll of Escape: Joachim">
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80858</itemConsumeId> <!-- Scroll of Escape: Joachim -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>146520</x>
+				<y>26744</y>
+				<z>-2207</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39537" toLevel="1" name="Zariche's Sealed Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39538" toLevel="1" name="Akamanah's Sealed Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39539" toLevel="1" name="+5 Warrior's Circlet Box">
+		<!-- Obtain a +5 Warrior's Circlet. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39540" toLevel="1" name="+5 Wizard's Circlet Box">
+		<!-- Obtain a +5 Circlet of Foresight. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39541" toLevel="1" name="+5 Knight's Circlet Box">
+		<!-- Obtain a +5 Circlet of Grace. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39542" toLevel="1" name="Storm Isle's Time Stone(Event)">
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80905</itemConsumeId> <!-- Storm Isle's Time Stone(Event) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>100</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>1</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39543" toLevel="1" name="Primeval Isle's Time Stone(Event)">
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80906</itemConsumeId> <!-- Primeval Isle's Time Stone(Event) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>105</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>6</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39544" toLevel="1" name="PA Summoning Stick">
+		<operateType>A1</operateType>
+		<isMagic>7</isMagic>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39545" toLevel="1" name="Summon Orc of Pa'agrio">
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="39546" toLevel="1" name="Summon Orc Hero of Pa'agrio">
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="39547" toLevel="1" name="Emperor's Vitality Tonic">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39548" toLevel="1" name="Lindvior's Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39549" toLevel="1" name="Caring Rok's Icy Candy">
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P./ M. Atk. and P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, Speed +$s5, Attribute Attack/ Resistance +$s6, damage +$s7, P./ M. Skill Power +$s8, acquired XP/ SP +$s9, received damage -$s10, Skill MP Consumption -$s11. The effect remains after death. -->
+		<icon>icon.etc_whiteday_candy_i04</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39550" toLevel="1" name="Caring Rok's Candy Full of Passion">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39551" toLevel="1" name="Spellbook: Renewed Energy of Power">
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80924</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>105</minLevel>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>30820</skillId> <!-- Dual Class - Renewed Energy of Power -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>30820</skillId> <!-- Dual Class - Renewed Energy of Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39552" toLevel="1" name="Low-grade Potion of Protection: Confusion">
+		<!-- Confusion Resistance +$s1. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39553" toLevel="1" name="Potion of Protection: Confusion">
+		<!-- Confusion Resistance +$s1, Received PvP damage -$s2. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39554" toLevel="1" name="Low-grade Potion of Protection: Infection">
+		<!-- Infection Resistance +$s1. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39555" toLevel="1" name="Potion of Protection: Infection">
+		<!-- Infection Resistance +$s1, Received PvP damage -$s2. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39556" toLevel="1" name="Low-grade Potion of Protection: Obstruction">
+		<!-- Obstruction Resistance +$s1. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39557" toLevel="1" name="Potion of Protection: Obstruction">
+		<!-- Obstruction Resistance +$s1, Received PvP damage -$s2. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39558" toLevel="1" name="Low-grade Potion of Protection: Stupor">
+		<!-- Stupor Resistance +$s1. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39559" toLevel="1" name="Potion of Protection: Stupor">
+		<!-- Stupor Resistance +$s1, Received PvP damage -$s2. Cannot be used in the Olympiad. -->
+		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39560" toLevel="1" name="Festival Fairy's Crystal Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39561" toLevel="1" name="Effect of Security">
+		<!-- Granted for using the account protection feature. P./ M. Def. +$s1, Attribute Resistance +$s2. -->
+		<icon>icon.security_buff</icon>
+		<operateType>A1</operateType>
+		<isMagic>3</isMagic> <!-- Dance Skill -->
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="39562" toLevel="1" name="Isle of Souls' Time Stone(Event)">
+		<icon>icon.timezone_refill_3</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80960</itemConsumeId> <!-- Isle of Souls' Time Stone(Event) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>107</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>7</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39563" toLevel="1" name="Maphr's Blessing (1-day)">
+		<!-- When in inventory, maintains the Vitality level. -->
+		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39564" toLevel="1" name="Scroll of Aden Green Squad">
+		<!-- For $s1, acquired XP/ SP +$s2, Vitality Bonus +$s3, all stats +$s4. -->
+		<icon>icon.ev_green_aden_scroll</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39565" toLevel="1" name="Storm Isle's Time Stone">
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80996</itemConsumeId> <!-- Storm Isle's Time Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>100</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>1</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39566" toLevel="1" name="Primeval Isle's Time Stone">
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80997</itemConsumeId> <!-- Primeval Isle's Time Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>105</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>6</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39567" toLevel="1" name="Isle of Souls' Time Stone">
+		<icon>icon.timezone_refill_3</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80998</itemConsumeId> <!-- Isle of Souls' Time Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>107</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>7</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39568" toLevel="1" name="My Teleport Book">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39569" toLevel="1" name="Emperor's Special Cocktail">
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39570" toLevel="1" name="Honey Dark Beer">
+		<!-- For $s1, all basic stats $s2, Vitality bonus +$s3. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<icon>icon.bm_royal_black_beer</icon>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39571" toLevel="1" name="Shining Nevit's Gold Hourglass">
+		<!-- During hunting acquired XP/ SP +$s2 for $s1. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown: 5 min. -->
+		<icon>icon.bm_nebit_bonus_time_up</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
+	</skill>
+	<skill id="39572" toLevel="1" name="10,000 PA Points">
+		<!-- Double-click to obtain 10,000 PA points. -->
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="39573" toLevel="1" name="1,000 PA Points">
+		<!-- Double-click to obtain 1,000 PA points. -->
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="39574" toLevel="1" name="200 PA Points">
+		<!-- Double-click to obtain 200 PA points. -->
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="39575" toLevel="1" name="100 PA Points">
+		<!-- Double-click to obtain 100 PA points. -->
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="39576" toLevel="1" name="10 PA Points">
+		<!-- Double-click to obtain 10 PA points. -->
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+	</skill>
+	<skill id="39577" toLevel="1" name="Vitality">
+		<!-- Recovers 1 bar of Vitality. -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<itemConsumeId>81053</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>15626</itemConsumeId> <!-- Vitality -->
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>17500</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39578" toLevel="1" name="PA Event Potion of Appearance - Bear">
+		<!-- Appearance changed by wearing the Teddy Bear Wear. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39579" toLevel="1" name="Potion of Appearance for PA Event - Red Wizard">
+		<!-- Changes the armor appearance to that of Red Magician Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39580" toLevel="1" name="Pink's Style Potion - Red Archer">
+		<!-- Changes the armor appearance to that of Red Archer Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39581" toLevel="1" name="Pink's Style Potion - Green Archer">
+		<!-- Changes the armor appearance to that of Green Archer Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39582" toLevel="1" name="Pink's Style Potion - Samurai">
+		<!-- Changes the armor appearance to that of Samurai Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39583" toLevel="1" name="PA Event Potion of Appearance - Kitty">
+		<!-- Appearance changed by wearing the Kitty Costume. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39584" toLevel="1" name="Potion of Appearance for PA Event - Dark Assassin Suit">
+		<!-- Appearance changed by wearing the Dark Assassin Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39585" toLevel="1" name="Potion of Appearance for PA Event - White Assassin Suit">
+		<!-- Appearance changed by wearing the White Assassin Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39586" toLevel="1" name="Pink's Style Potion - Metal Suit">
+		<!-- Changes the armor appearance to that of Metal Suit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39587" toLevel="1" name="Pink's Style Potion - Red Noblesse">
+		<!-- Changes the armor appearance to that of Red Noblesse Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39588" toLevel="1" name="Potion of Appearance for PA Event - White Noblesse">
+		<!-- Changes the armor appearance to that of White Noblesse Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39589" toLevel="1" name="Pink's Style Potion - Blue Musketeer">
+		<!-- Changes the armor appearance to that of Blue Musketeer Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39590" toLevel="1" name="Pink's Style Potion - Red Musketeer">
+		<!-- Changes the armor appearance to that of Red Musketeer Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39591" toLevel="1" name="Pink's Style Potion - Red Pirate">
+		<!-- Appearance changed by wearing the Red Pirate Costume. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39592" toLevel="1" name="Pink's Style Potion - Pirate">
+		<!-- Changes the armor appearance to that of Pirate Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39593" toLevel="1" name="Pink's Style Potion - Purple Cowboy">
+		<!-- Changes the armor appearance to that of Purple Cowboy Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39594" toLevel="1" name="PA Event Potion of Appearance - Healer">
+		<!-- Changes the armor appearance to that of Healer Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39595" toLevel="1" name="Pink's Style Potion - Chevalier">
+		<!-- Changes the armor appearance to that of Chevalier Garment. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39596" toLevel="1" name="Pink's Style Potion - Kat the Cat">
+		<!-- Changes the armor appearance to that of Kat the Cat Costume. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39597" toLevel="1" name="Pink's Style Potion - Barbarian Wolf">
+		<!-- Changes the armor appearance to that of Barbarian Wolf Costume. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39598" toLevel="1" name="Pink's Style Potion - Valkyrie">
+		<!-- Changes the armor appearance to that of Valkyrie Costume. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+	<skill id="39599" toLevel="1" name="PA Event Potion of Appearance - Steward">
+		<!-- Appearance changed by wearing the Steward Outfit. -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1500</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>780</effectPoint>
+	</skill>
+</list>

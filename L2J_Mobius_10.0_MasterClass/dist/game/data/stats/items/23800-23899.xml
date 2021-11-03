@@ -1,0 +1,1382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="23800" name="Major Adenian Augmenting Stone" additionalName="Not Available" type="EtcItem">
+		<!-- Augmenting stone for Adenian Underwear. More powerful than a standard Augmenting Stone, also has a higher chance of giving good bonuses. Can be used through a blacksmith in any town. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="23801" name="Great Adenian Tattoo Augmenting Stone" additionalName="Not Available" type="EtcItem">
+		<!-- Augmenting stone for Adenian Tattoo. Most powerful of all Augmenting Stones. Has a high chance of giving the best bonuses. Can be used through a blacksmith in any town. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="23802" name="Adenian Augmenting Stone" type="EtcItem">
+		<!-- Augmenting stone for Adenian Underwear. Double-click the item or speak to a blacksmith to augment what you need. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="23803" name="Major Adenian Augmenting Stone" type="EtcItem">
+		<!-- Augmenting stone for Adenian Underwear. More powerful than a standard Augmenting Stone, also has a higher chance of giving good bonuses. Double-click the item or speak to a blacksmith to augment what you need. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="23804" name="Great Adenian Tattoo Augmenting Stone" type="EtcItem">
+		<!-- Augmenting stone for Adenian Tattoo. Most powerful of all Augmenting Stones. Has a high chance of giving the best bonuses. Double-click the item or speak to a blacksmith to augment what you need. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="23805" name="Hero Coin" type="EtcItem">
+		<!-- Used for purchasing at the L2 Store. -->
+		<set name="icon" val="icon.etc_coins_gold_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23806" name="Transformation Potion: Uthanka" type="EtcItem">
+		<!-- Can transform into Pirate Captain Uthanka. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="weight" val="120" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23807" name="High-grade Maphr's Rune 30%" additionalName="30-day" type="EtcItem">
+		<!-- When in the inventory, Drop and Spoil rate +30%, amount of dropped Adena +30%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
+	</item>
+	<item id="23808" name="High-grade Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
+		<!-- When in the inventory, Drop and Spoil rate +50%, amount of dropped Adena +50%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
+	</item>
+	<item id="23809" name="High-grade Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
+		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22588" level="3" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
+	</item>
+	<item id="23810" name="Package: High-grade Maphr's Rune 30%" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 30% (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
+	</item>
+	<item id="23811" name="Package: High-grade Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 50% (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
+	</item>
+	<item id="23812" name="Package: High-grade Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 100% (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="23809" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="23813" name="Package: Prestige Cube" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Prestige Cube (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23814" name="Package: Chaos Essence" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain one Chaos Essence (30-day). The Chaos Essence cannot be used by Ertheia. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
+			<capsuled_items>
+			<item id="36949" min="1" max="1" chance="100" /> <!-- Chaos Essence - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="23815" name="Package: Chaos Essence (Dual Class)" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain one Chaos Essence (Dual Class, 30-day). The Chaos Essence cannot be used by Ertheia. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
+			<capsuled_items>
+			<item id="37494" min="1" max="1" chance="100" /> <!-- Chaos Essence (Dual Class) -->
+		</capsuled_items>
+	</item>
+	<item id="23816" name="Uthanka's Treasure Chest" type="EtcItem">
+		<!-- Pirate Captain Uthanka's treasure. Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23817" name="Uthanka's Ring" type="Armor">
+		<!-- Ring acquired when you mourn for Pirate Captain Uthanka's spirit. Use it to turn into Pirate Captain Uthanka. -->
+		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+	</item>
+	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
+		<!-- Can transform into Pirate Captain Uthanka (7-day). -->
+		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+	</item>
+	<item id="23819" name="Package: Uthanka's Ring" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain Uthanka's Ring (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23820" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
+		<!-- Return to Uthanka's Tomb. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23821" name="Agathion Pirate Captain Uthanka" type="Armor">
+		<!-- A bracelet for summoning Agathion Pirate Captain Uthanka. -->
+		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
+	</item>
+	<item id="23822" name="Agathion Pirate Captain Uthanka" additionalName="7-day" type="Armor">
+		<!-- A bracelet for summoning Agathion Pirate Captain Uthanka (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
+	</item>
+	<item id="23823" name="Package: Agathion Uthanka" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain Agathion Pirate Captain Uthanka (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23824" name="Uthanka's Blessed Scroll of Resurrection" type="EtcItem">
+		<!-- Resurrects a dead person and restores their XP. -->
+		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
+		<set name="weight" val="120" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23825" name="Wondrous Human Dye" additionalName="Unbind / 7-day" type="EtcItem">
+		<!-- A wondrous dye that contains the Human power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Human race (Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +1%, active skill: Unbind). The active skill cannot be used along with the Unbind revelation skill. Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_human" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23826" name="Wondrous Elf Dye" additionalName="Prevision / 7-day" type="EtcItem">
+		<!-- A wondrous dye that contains the Elven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Elven race (Water Resistance +20, Critical Rate for standard attacks +10, M. Skill Critical Rate +10, active skill: Prevision). The active skill cannot be used along with the Prevision revelation skill. Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_elf" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23827" name="Wondrous Dark Elf Dye" additionalName="Disparition / 7-day" type="EtcItem">
+		<!-- A wondrous dye that contains the Dark Elven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Dark Elven race (Wind Resistance +20, Critical Damage for standard attacks +1%, M. Skill Critical Damage +1%, active skill: Disparition). The active skill cannot be used along with the Disparition revelation skill. Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_darkelf" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23828" name="Wondrous Orc Dye" additionalName="Savagery / 7-day" type="EtcItem">
+		<!-- A wondrous dye that contains the Orc power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Orc race (Fire Resistance +20, Max HP/ MP/ CP +1%, active skill: Savage). The active skill cannot be used along with the Savage revelation skill. Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_orc" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23829" name="Wondrous Dwarf Dye" additionalName="Endurance / 7-day" type="EtcItem">
+		<!-- A wondrous dye that contains the Dwarven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Dwarven race (Earth Resistance +20, Skill Cooldown -1%, active skill: Endurance). The active skill cannot be used along with the Endurance revelation skill. Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_dwarf" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23830" name="Wondrous Kamael Dye" additionalName="Soul Protection / 7-day" type="EtcItem">
+		<!-- A wondrous dye that contains the Kamael power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Kamael race (Dark Resistance +20, PvP Damage +1%, active skill: Soul Protection). The active skill cannot be used along with the Soul Protection revelation skill. Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_kamael" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23831" name="Nevit's Rune Box 100% (1-hour)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Nevit's Rune 100% (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="23832" name="Pa'agrio's Warm Breeze Pack (1-hour)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Pa'agrio's Warm Breeze (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36329" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze (1-hour) -->
+		</capsuled_items>
+	</item>
+	<item id="23833" name="Talisman of Abundance" additionalName="War" type="Armor">
+		<!-- P. Atk. +154, M. Atk. +181, P./ M. Evasion +4. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
+		</skills>
+	</item>
+	<item id="23834" name="Talisman of Abundance" additionalName="Tactics" type="Armor">
+		<!-- Attribute Resistance +10, Debuff Resistance +10%. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
+		</skills>
+	</item>
+	<item id="23835" name="Talisman of Abundance" additionalName="Esprit" type="Armor">
+		<!-- P./ M. Critical Rate +8%, Received P. Critical Damage -10%, Received Skill PvP Damage -10%. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
+		</skills>
+	</item>
+	<item id="23836" name="Talisman of Abundance" additionalName="Body" type="Armor">
+		<!-- Max HP/ MP/ CP +325, HP/ MP/ CP Recovery Rate +5. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
+		</skills>
+	</item>
+	<item id="23837" name="Talisman of Hunter" additionalName="Abundance" type="Armor">
+		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%. Received Critical Damage -15%, received Skill PvP damage -15%. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="5" /> <!-- Talisman - Abundance -->
+			<skill id="21365" level="1" type="ON_EQUIP" /> <!-- Talisman - Hunter -->
+			<skill id="21373" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Hunter -->
+		</skills>
+	</item>
+	<item id="23838" name="Talisman of Slaughterer" additionalName="Abundance" type="Armor">
+		<!-- P. Atk. +231, M. Atk. +271 P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="6" /> <!-- Talisman - Abundance -->
+			<skill id="21370" level="1" type="ON_EQUIP" /> <!-- Talisman - Slaughterer -->
+			<skill id="21374" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Slaughterer -->
+		</skills>
+	</item>
+	<item id="23839" name="Talisman of Conquerer" additionalName="Abundance" type="Armor">
+		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7, received P. Critical Damage -15%, received Skill PvP damage -15%. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="7" /> <!-- Talisman - Abundance -->
+			<skill id="21371" level="1" type="ON_EQUIP" /> <!-- Talisman - Conquerer -->
+			<skill id="21375" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Conquerer -->
+		</skills>
+	</item>
+	<item id="23840" name="Talisman of Outlaw" additionalName="Abundance" type="Armor">
+		<!-- Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Rate +7, Received P. Critical Damage -15%, Received Skill PvP Damage -15%. Note!. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="21364" level="8" /> <!-- Talisman - Abundance -->
+			<skill id="21372" level="1" type="ON_EQUIP" /> <!-- Talisman - Outlaw -->
+			<skill id="21376" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Outlaw -->
+		</skills>
+	</item>
+	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Talisman of Abundance - War, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="PAPER" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="23348" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
+			<item id="23347" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23946" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box (Dragon Rising) 100% (1-hour) -->
+			<item id="23831" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box 100% (1-hour) - Event -->
+			<item id="23832" min="1" max="1" chance="20" /> <!-- Pa'agrio's Warm Breeze Pack (1-hour) - Event -->
+			<item id="36513" min="1" max="1" chance="20" /> <!-- Elcyum Powder -->
+			<item id="17527" min="1" max="1" chance="25" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="17526" min="1" max="1" chance="15" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="23833" min="1" max="1" chance="25" /> <!-- Talisman of Abundance - War -->
+			<item id="23760" min="1" max="1" chance="25" /> <!-- Package: High-grade Maphr's Rune 100% - 7-day -->
+			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
+		</capsuled_items>
+	</item>
+	<item id="23842" name="Abundance Gift Box" additionalName="Tactics" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Tactics, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="PAPER" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="23348" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
+			<item id="23347" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23946" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box (Dragon Rising) 100% (1-hour) -->
+			<item id="23831" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box 100% (1-hour) - Event -->
+			<item id="23832" min="1" max="1" chance="20" /> <!-- Pa'agrio's Warm Breeze Pack (1-hour) - Event -->
+			<item id="36513" min="1" max="1" chance="20" /> <!-- Elcyum Powder -->
+			<item id="17527" min="1" max="1" chance="25" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="17526" min="1" max="1" chance="15" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="23834" min="1" max="1" chance="25" /> <!-- Talisman of Abundance - Tactics -->
+			<item id="23760" min="1" max="1" chance="25" /> <!-- Package: High-grade Maphr's Rune 100% - 7-day -->
+			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
+		</capsuled_items>
+	</item>
+	<item id="23843" name="Abundance Gift Box" additionalName="Esprit" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Morale, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="PAPER" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="23348" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
+			<item id="23347" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23946" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box (Dragon Rising) 100% (1-hour) -->
+			<item id="23831" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box 100% (1-hour) - Event -->
+			<item id="23832" min="1" max="1" chance="20" /> <!-- Pa'agrio's Warm Breeze Pack (1-hour) - Event -->
+			<item id="36513" min="1" max="1" chance="20" /> <!-- Elcyum Powder -->
+			<item id="17527" min="1" max="1" chance="25" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="17526" min="1" max="1" chance="15" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="23835" min="1" max="1" chance="25" /> <!-- Talisman of Abundance - Morale -->
+			<item id="23760" min="1" max="1" chance="25" /> <!-- Package: High-grade Maphr's Rune 100% - 7-day -->
+			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
+		</capsuled_items>
+	</item>
+	<item id="23844" name="Abundance Gift Box" additionalName="Body" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Physique, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="PAPER" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="23348" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
+			<item id="23347" min="1" max="1" chance="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23946" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box (Dragon Rising) 100% (1-hour) -->
+			<item id="23831" min="1" max="1" chance="10" /> <!-- Nevit's Rune Box 100% (1-hour) - Event -->
+			<item id="23832" min="1" max="1" chance="20" /> <!-- Pa'agrio's Warm Breeze Pack (1-hour) - Event -->
+			<item id="36513" min="1" max="1" chance="20" /> <!-- Elcyum Powder -->
+			<item id="17527" min="1" max="1" chance="25" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="17526" min="1" max="1" chance="15" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="23836" min="1" max="1" chance="25" /> <!-- Talisman of Abundance - Physique -->
+			<item id="23760" min="1" max="1" chance="25" /> <!-- Package: High-grade Maphr's Rune 100% - 7-day -->
+			<item id="37041" min="1" max="1" chance="25" /> <!-- Divine Protection Elixir -->
+		</capsuled_items>
+	</item>
+	<item id="23845" name="Wondrous Hunting Dye" additionalName="P. Def. / Speed / 1-day" type="EtcItem">
+		<!-- Take it to the town's Dye Merchant for a 1-day tattoo that increases your power (when HP > 90%, P. Def. +20%, Speed +33). All classes. Awakened only. Note!. Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflection Resistance / Received Damage Decrease / 1-day" type="EtcItem">
+		<!-- Take it to the town's Dye Merchant for a 1-day tattoo that increases your power (PvP Damage - +2%, Damage Reflection Resistance +2, effect increased for PvP kills, up to Lv. 5) All classes. Awakened only. Note!. Tattoo is effective only in PvP zones. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23847" name="Tarot Card Coupon" type="EtcItem">
+		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23848" name="Tarot Card Coupon" type="EtcItem">
+		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23849" name="Tarot Card Coupon" additionalName="Event" type="EtcItem">
+		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23850" name="Tarot Card Coupon" additionalName="Event" type="EtcItem">
+		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23851" name="Royal Training Camp Ticket" type="EtcItem">
+		<!-- Ticket for entering the Royal Training Camp. Talk to the manager to enter. You can stay up to 5 h. inside, and must leave when the time resets at 6:30 am. -->
+		<set name="icon" val="icon.ticket_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23852" name="Transparent Armor" additionalName="Test" type="Armor">
+		<!-- Transparent armor that shows your underwear. Your cloak also becomes invisible. -->
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
+	</item>
+	<item id="23853" name="Appearance Stone: Transparent Armor" additionalName="Test" type="EtcItem">
+		<!-- Transparent armor appearance stone. Makes armor invisible so that Adenian Underwear and Tattoos are visible. Your cloak also becomes invisible. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23854" name="Nevit's Rune Box (Dragon Rising) 100% (3-hour)" type="EtcItem">
+		<!-- Double-click to obtain Nevit's Rune (Dragon Rising, 3-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23392" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon Rising) 100% - 3-hour -->
+		</capsuled_items>
+	</item>
+	<item id="23855" name="Golden Crate" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Dark Helios Enhancement Stone, Bloody Helios Enhancement Stone, Kaliel's Energy - Desire, Dark Eternal Enhancement Stone, Fire Crystal - Super, Water Crystal - Super, Earth Crystal - Super, Wind Crystal - Super, Dark Crystal - Super, Holy Crystal - Super, Kaliel's Energy - Fire, Blessed Giant's Lucky Enchant Stone: R-grade Weapon, Blessed Giant's Lucky Enchant Stone: R-grade Armor, Kaliel's Energy - Annihilation, Bloody Eternal Enhancement Stone, Top-grade R-grade Life Stone, Giant's Energy, Destructive Energy, R-grade Gemstone. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="23784" min="1" max="1" chance="5" /> <!-- Blessed Giant's Lucky Enchant Stone: R-grade Armor -->
+			<item id="23783" min="1" max="1" chance="5" /> <!-- Blessed Giant's Lucky Enchant Stone: R-grade Weapon -->
+			<item id="18566" min="1" max="3" chance="10" /> <!-- Top-grade R-grade Life Stone -->
+			<item id="33490" min="1" max="1" chance="10" /> <!-- Wind Crystal - Super -->
+			<item id="33488" min="1" max="1" chance="10" /> <!-- Water Crystal - Super -->
+			<item id="33489" min="1" max="1" chance="10" /> <!-- Earth Crystal - Super -->
+			<item id="33487" min="1" max="1" chance="10" /> <!-- Fire Crystal - Super -->
+			<item id="33492" min="1" max="1" chance="10" /> <!-- Holy Crystal - Super -->
+			<item id="33491" min="1" max="1" chance="10" /> <!-- Dark Crystal - Super -->
+			<item id="33486" min="1" max="1" chance="10" /> <!-- Holy Stone - Super -->
+			<item id="19440" min="1" max="40" chance="15" /> <!-- R-grade Gemstone -->
+			<item id="35563" min="1" max="8" chance="20" /> <!-- Giant's Energy -->
+			<item id="35569" min="1" max="1" chance="20" /> <!-- Bloody Armor Enhancement Stone -->
+			<item id="35568" min="1" max="1" chance="20" /> <!-- Bloody Weapon Enhancement Stone -->
+			<item id="35567" min="1" max="1" chance="20" /> <!-- Dark Armor Enhancement Stone -->
+			<item id="35566" min="1" max="1" chance="20" /> <!-- Dark Weapon Enhancement Stone -->
+			<item id="36184" min="1" max="1" chance="20" /> <!-- Annihilation Energy -->
+			<item id="36185" min="1" max="1" chance="20" /> <!-- Hellfire Energy -->
+			<item id="36186" min="1" max="1" chance="20" /> <!-- Energy of Desire -->
+			<item id="35562" min="1" max="20" chance="20" /> <!-- Destructive Energy -->
+		</capsuled_items>
+	</item>
+	<item id="23856" name="Silver Crate" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: R99-grade Scroll of Blessing, R95-grade Scroll of Blessing, R2-grade Scroll of Blessing, R1-grade Scroll of Blessing, Lv. 5 Legendary Dye Pack, Blessed Scroll: Enchant R-grade Weapon, Giant's Scroll: Enchant R-grade Weapon, Blessed Scroll: Enchant R-grade Armor, High-grade Lucky Enchant Stone: R-grade Weapon, High-grade Lucky Enchant Stone: R-grade Armor, Giant's Scroll: Enchant R-grade Armor, Life Stone: Hair Accessory, Scroll: Enchant Hair Accessory, Fire Stone (+150), Water Stone (+150), Earth Stone (+150), Wind Stone (+150), Dark Stone (+150), Holy Stone (+150). -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="23784" min="1" max="1" chance="5" /> <!-- Blessed Giant's Lucky Enchant Stone: R-grade Armor -->
+			<item id="19448" min="1" max="1" chance="5" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="5" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="36979" min="1" max="1" chance="6" /> <!-- Life Stone: Hair Accessory -->
+			<item id="34954" min="1" max="1" chance="5" /> <!-- Lv. 5 Legendary Dye Pack - Event -->
+			<item id="34670" min="1" max="1" chance="6.667" /> <!-- Wind Stone (+150) -->
+			<item id="34668" min="1" max="1" chance="6.667" /> <!-- Water Stone (+150) -->
+			<item id="34669" min="1" max="1" chance="6.667" /> <!-- Earth Stone (+150) -->
+			<item id="34667" min="1" max="1" chance="6.667" /> <!-- Fire Stone (+150) -->
+			<item id="34672" min="1" max="1" chance="6.667" /> <!-- Holy Stone (+150) -->
+			<item id="34671" min="1" max="1" chance="6.667" /> <!-- Dark Stone (+150) -->
+			<item id="36159" min="1" max="1" chance="5" /> <!-- Scroll of Blessing (R1-grade) -->
+			<item id="36160" min="1" max="1" chance="5" /> <!-- Scroll of Blessing (R2-grade) -->
+			<item id="36161" min="1" max="1" chance="5" /> <!-- R95-grade Scroll of Blessing -->
+			<item id="36162" min="1" max="1" chance="5" /> <!-- R99-grade Scroll of Blessing -->
+			<item id="36389" min="1" max="1" chance="5" /> <!-- Giant's Scroll: Enchant R-grade Armor -->
+			<item id="36386" min="1" max="1" chance="5" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
+			<item id="36978" min="1" max="1" chance="7" /> <!-- Scroll: Enchant Hair Accessory -->
+			<item id="23647" min="1" max="1" chance="5" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor -->
+			<item id="23646" min="1" max="1" chance="5" /> <!-- High-grade Lucky Enchant Stone: R-grade Weapon -->
+		</capsuled_items>
+	</item>
+	<item id="23857" name="Bronze Crate" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Package: +7 Enhanced Power Shirt, Package: High-grade Maphr's Rune 100% (7-day), Package: R-grade Weapon Appearance/ Restoration Stone, Package: R-grade Armor Appearance/ Restoration Stone, Package: Hair Accessory Appearance/ Restoration Stone, Package: Superior Minion Coupon (1 pc.), Top-grade R-grade Life Stone, Package: Super Healthy Juice (CP)/ (HP), Letter Collector's Gift, Blessed Scroll: Enchant Power Shirt, Package: Feather of Blessing (1 pc.), Fire/ Water/ Earth/ Wind/ Dark/ Holy Stone (+60). -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+		<!-- TODO : Verify Chance -->
+			<item id="21582" min="1" max="5" chance="5" /> <!-- Blessed Scroll: Enchant Power Shirt -->
+			<item id="18566" min="1" max="1" chance="5" /> <!-- Top-grade R-grade Life Stone -->
+			<item id="23346" min="1" max="1" chance="10" /> <!-- Letter Collector's Gift -->
+			<item id="34664" min="1" max="1" chance="6.667" /> <!-- Wind Stone (+60) -->
+			<item id="34662" min="1" max="1" chance="6.667" /> <!-- Water Stone (+60) -->
+			<item id="34663" min="1" max="1" chance="6.667" /> <!-- Earth Stone (+60) -->
+			<item id="34661" min="1" max="1" chance="6.667" /> <!-- Fire Stone (+60) -->
+			<item id="34666" min="1" max="1" chance="6.667" /> <!-- Holy Stone (+60) -->
+			<item id="34665" min="1" max="1" chance="6.667" /> <!-- Dark Stone (+60) -->
+			<item id="23439" min="1" max="1" chance="5" /> <!-- Package: Feather of Blessing (1 pc.) -->
+			<item id="23376" min="1" max="1" chance="5" /> <!-- Package: Hair Accessory Appearance/Restoration Stone -->
+			<item id="23374" min="1" max="1" chance="5" /> <!-- Package: R-grade Armor Appearance/Restoration Stone -->
+			<item id="23372" min="1" max="1" chance="5" /> <!-- Package: R-grade Weapon Appearance/Restoration Stone (1 pc.) -->
+			<item id="22515" min="1" max="1" chance="5" /> <!-- Package: Superior Minion Coupon (1 pc.) -->
+			<item id="21241" min="1" max="1" chance="5" /> <!-- Package: Super Healthy Juice (CP) -->
+			<item id="21237" min="1" max="1" chance="7" /> <!-- Package: Super Healthy Juice (HP) -->
+			<item id="23876" min="1" max="1" chance="5" /> <!-- Package: High-grade Maphr's Rune 100% - 7-day -->
+			<item id="23349" min="1" max="1" chance="5" /> <!-- Package: Enchanted Power Shirt -->
+		</capsuled_items>
+	</item>
+	<item id="23858" name="Talisman Crate" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: R-grade Talisman - Confusion Resistance (Passive), R-grade Talisman - Obstruction Resistance (Passive), R-grade Talisman - Stupor Resistance (Passive), R-grade Talisman - Lethal Strike Resistance, R-grade Talisman - Damage Reflection Resistance, Special Talisman - M. Def., Special Talisman - Ranged Attack Resistance, Special R-grade Talisman - Decrease MP Consumption, R-grade Talisman - Cancel Debuff (Active). -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="18540" min="1" max="1" chance="8.333" /> <!-- Special R-grade Talisman - Decrease MP Consumption -->
+			<item id="32247" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Remove Debuff (Active) -->
+			<item id="30415" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Obstruction Resistance (Passive) -->
+			<item id="30416" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Stupor Resistance (Passive) -->
+			<item id="30413" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Confusion Resistance (Passive) -->
+			<item id="30412" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Confusion Resistance (Passive) -->
+			<item id="33768" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Damage Reflection Resistance (Active) -->
+			<item id="30411" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Confusion Resistance (Passive) -->
+			<item id="30414" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Confusion Resistance (Passive) -->
+			<item id="33767" min="1" max="1" chance="8.333" /> <!-- R-grade Talisman - Lethal Strike Resistance (Active) -->
+			<item id="33472" min="1" max="1" chance="8.333" /> <!-- Special Talisman - M. Def. (Active) -->
+			<item id="30473" min="1" max="1" chance="8.333" /> <!-- Bound Heavy War Axe - Anger -->
+		</capsuled_items>
+	</item>
+	<item id="23859" name="Change Clan Name" type="EtcItem">
+		<!-- To change your clan name:. 1. Request through your own account. 2. Send a request with the title "Change Clan Name". 3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="23860" name="Raid Boss' Soul Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, Bottle of Baium's Soul. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="37520" min="1" max="1" chance="20" /> <!-- Bottle of Baium's Soul -->
+			<item id="36252" min="1" max="1" chance="20" /> <!-- Bottle of Queen Ant's Soul -->
+			<item id="36253" min="1" max="1" chance="20" /> <!-- Bottle of Orfen's Soul -->
+			<item id="16027" min="1" max="1" chance="20" /> <!-- Bottle of Freya's Soul -->
+			<item id="37519" min="1" max="1" chance="20" /> <!-- Bottle of Frintezza's Soul -->
+		</capsuled_items>
+	</item>
+	<item id="23861" name="Bottle Fragment of Valakas' Soul" type="EtcItem">
+		<!-- Bottle Fragment of Valakas' Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Valakas' Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_valakas_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23862" name="Bottle Fragment of Antharas' Soul" type="EtcItem">
+		<!-- Bottle Fragment of Antharas' Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Antharas' Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_antaras_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23863" name="Bottle Fragment of Baium's Soul" type="EtcItem">
+		<!-- Bottle Fragment of Baium's Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Baium's Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_baium_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23864" name="Bottle Fragment of Orfen's Soul" type="EtcItem">
+		<!-- Bottle Fragment of Orfen's Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Orfen's Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_orfen_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23865" name="Bottle Fragment of Queen Ant's Soul" type="EtcItem">
+		<!-- Bottle Fragment of Queen Ant's Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Queen Ant's Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_queen_ant_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23866" name="Bottle Fragment of Frintezza's Soul" type="EtcItem">
+		<!-- Bottle Fragment of Frintezza's Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Frintezza's Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_frintessa_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23867" name="Bottle Fragment of Freya's Soul" type="EtcItem">
+		<!-- Bottle Fragment of Freya's Soul. Gather 1000 and take them to Denign to exchange them for the Bottle of Freya's Soul. -->
+		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_freya_soul_fragment" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23868" name="Agathion - Van Halter's Memory" type="Armor">
+		<!-- Memento for Van Halter's users. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_tiger_grandma_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
+	</item>
+	<item id="23869" name="Package: Angel Cat's Blessing" type="EtcItem">
+		<!-- Double-click to obtain Angel Cat's Blessing (1-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23870" name="Angel Cat's Blessing" type="EtcItem">
+		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, Atk. Spd. +5%, Casting Spd. +5%, Acquired SP/ XP +30%. Does not stack with event buffs such as the Letter Collector's Gift. -->
+		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23871" name="High-grade Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
+		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23872" name="High-grade Maphr's Rune 100%" additionalName="5-hour" type="EtcItem">
+		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="300" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23873" name="High-grade Maphr's Rune 100%" additionalName="7-day" type="EtcItem">
+		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23874" name="Package: High-grade Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 100% (1-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="60" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23875" name="Package: High-grade Maphr's Rune 100%" additionalName="5-hour" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 100% (5-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="300" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23876" name="Package: High-grade Maphr's Rune 100%" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 100% (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23877" name="Samurai Hair Accessory" type="Armor">
+		<!-- Samurai Hair Accessory. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_hair_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="23878" name="Appearance Stone: Samurai Hair Accessory" type="EtcItem">
+		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23879" name="Samurai Outfit" type="Armor">
+		<!-- Samurai s outfit. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
+	</item>
+	<item id="23880" name="Appearance Stone: Samurai Outfit" type="EtcItem">
+		<!-- Changes the appearance of the top or one-piece armor to that of Samurai Outfit. Can be undone with a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23881" name="Anakim Outfit" type="Armor">
+		<!-- Anakim's look. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_anakim_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
+	</item>
+	<item id="23882" name="Anakim Outfit Appearance Stone" type="EtcItem">
+		<!-- Modifies the appearance of top or one-piece armor into that of Anakim. Can be undone with a Restoration Stone. Note!. The appearance is reset if the modified armor is upgraded or given new options. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23883" name="Vampire Top" type="Armor">
+		<!-- Vampiric wear. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_u_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="chest" />
+	</item>
+	<item id="23884" name="Vampire Pants" type="Armor">
+		<!-- Vampiric wear. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_l_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="legs" />
+	</item>
+	<item id="23885" name="Vampire Gloves" type="Armor">
+		<!-- Vampiric wear. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_g_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
+	</item>
+	<item id="23886" name="Vampire Shoes" type="Armor">
+		<!-- Vampiric wear. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_b_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
+	</item>
+	<item id="23887" name="Vampire Hair Accessory" type="Armor">
+		<!-- Vampiric wear in the form of a mask. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_hair_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="23888" name="Appearance Stone: Vampire Top" type="EtcItem">
+		<!-- Modifies the appearance of top armor into that of a Vampire Outfit. No change in stats. All armor types. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23889" name="Appearance Stone: Vampire Pants" type="EtcItem">
+		<!-- Modifies the appearance of pants into that of a Vampire Outfit. No change in stats. All armor types. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23890" name="Appearance Stone: Vampire Gloves" type="EtcItem">
+		<!-- Modifies the appearance of gloves into that of a Vampire Outfit. No change in stats. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23891" name="Appearance Stone: Vampire Shoes" type="EtcItem">
+		<!-- Modifies the appearance of shoes into that of a Vampire Outfit. No change in stats. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23892" name="Vampiric Hair Accessory Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Vamparic style. Can be used only on hair accessories that take up 2 slots. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="23893" name="Life Stone Pack" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Life Stone: Giant's Power, R-grade Top-grade Life Stone, R-grade High-grade Life Stone, R-grade Mid-grade Life Stone, R-grade Life Stone. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="18563" min="1" max="1" chance="40" /> <!-- R-grade Life Stone -->
+			<item id="18565" min="1" max="1" chance="15" /> <!-- High-grade R-grade Life Stone -->
+			<item id="18566" min="1" max="1" chance="10" /> <!-- Top-grade R-grade Life Stone -->
+			<item id="36731" min="1" max="1" chance="5" /> <!-- Giant's Energy Spirit Stone -->
+			<item id="18564" min="1" max="1" chance="30" /> <!-- Mid-grade R-grade Life Stone -->
+		</capsuled_items>
+	</item>
+	<item id="23894" name="Adenian Augmenting Stone Pack" additionalName="Not Available" type="EtcItem">
+		<!-- A pack containing all kinds of Adenian Augmenting Stones. Double-click to obtain either a Great Adenian Tattoo Augmenting Stone, Major Adenian Augmenting Stone, or Adenian Augmenting Stone. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23802" min="1" max="1" chance="60" /> <!-- Adenian Augmenting Stone -->
+			<item id="23803" min="1" max="1" chance="30" /> <!-- Major Adenian Augmenting Stone -->
+			<item id="23804" min="1" max="1" chance="10" /> <!-- Great Adenian Tattoo Augmenting Stone -->
+		</capsuled_items>
+	</item>
+	<item id="23895" name="Armor Enchant Stone Pack" type="EtcItem">
+		<!-- Double-click to obtain various Lucky Enchant Stones: Armor. Double-click to obtain either Improved Lucky Enchant Stone: R-grade Armor, Blessed Lucky Enchant Stone: R-grade Armor, High-grade Lucky Enchant Stone: R-grade Armor, or Lucky Enchant Stone: R-grade Armor. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23798" min="1" max="1" chance="10" /> <!-- Blessed Lucky Enchant Stone: R-grade Armor -->
+			<item id="23348" min="1" max="1" chance="40" /> <!-- Lucky Enchant Stone: R-grade Armor -->
+			<item id="23780" min="1" max="1" chance="30" /> <!-- Improved Lucky Enchant Stone: R-grade Armor -->
+			<item id="23647" min="1" max="1" chance="20" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor -->
+		</capsuled_items>
+	</item>
+	<item id="23896" name="Weapon Enchant Stone Pack" type="EtcItem">
+		<!-- Double-click to obtain various Lucky Enchant Stones: Weapon. Double-click to obtain either Improved Lucky Enchant Stone: R-grade Weapon, Blessed Lucky Enchant Stone: R-grade Weapon, High-grade Lucky Enchant Stone: R-grade Weapon, or Lucky Enchant Stone: R-grade Weapon. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23792" min="1" max="1" chance="10" /> <!-- Blessed Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23347" min="1" max="1" chance="40" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23774" min="1" max="1" chance="30" /> <!-- Improved Lucky Enchant Stone: R-grade Weapon -->
+			<item id="23646" min="1" max="1" chance="20" /> <!-- High-grade Lucky Enchant Stone: R-grade Weapon -->
+		</capsuled_items>
+	</item>
+	<item id="23897" name="Soul Bottle Pack" type="EtcItem">
+		<!-- Double-click to acquire either Bottle of Valakas' Soul, Bottle of Antharas' Soul, Bottle of Baium's Soul, Bottle of Orfen's Soul, Bottle of Queen Ant's Soul, Bottle of Frintezza's Soul, Bottle of Freya's Soul, Valakas' Soul Fragment, Antharas' Soul Fragment, Baium's Soul Fragment, Orfen's Soul Fragment, Queen Ant's Soul Fragment, Frintezza's Soul Fragment, or Freya's Soul Fragment. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="19465" min="1" max="1" chance="5" /> <!-- Bottle of Antharas' Soul -->
+			<item id="37520" min="1" max="1" chance="5" /> <!-- Bottle of Baium's Soul -->
+			<item id="19466" min="1" max="1" chance="5" /> <!-- Bottle of Valakas' Soul -->
+			<item id="36252" min="1" max="1" chance="5" /> <!-- Bottle of Queen Ant's Soul -->
+			<item id="36253" min="1" max="1" chance="5" /> <!-- Bottle of Orfen's Soul -->
+			<item id="16027" min="1" max="1" chance="5" /> <!-- Bottle of Freya's Soul -->
+			<item id="37519" min="1" max="1" chance="5" /> <!-- Bottle of Frintezza's Soul -->
+			<item id="23862" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Antharas' Soul -->
+			<item id="23863" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Baium's Soul -->
+			<item id="23861" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Valakas' Soul -->
+			<item id="23865" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Queen Ant's Soul -->
+			<item id="23864" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Orfen's Soul -->
+			<item id="23867" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Freya's Soul -->
+			<item id="23866" min="1" max="1" chance="14.271" /> <!-- Bottle Fragment of Frintezza's Soul -->
+		</capsuled_items>
+	</item>
+	<item id="23898" name="Pandora's Box" type="EtcItem">
+		<!-- Pandora's Box that contains various high-grade items. Double-click to obtain one of the following: Life Stone: Giant's Power, Destruction Scroll: Enchant R-grade Weapon, Destruction Scroll: Enchant R-grade Armor, 100 Ziggo's Jewels, Transformation Scroll, Immortal Scroll, Kaliel's Energy, Dye, Elcyum, Attribute Crystal, Pendant, Hair Accessory, Potion, etc. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<!-- TODO Chance needs to be verified -->
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="36731" min="1" max="1" chance="5" /> <!-- Giant's Energy Spirit Stone -->
+			<item id="37044" min="1" max="1" chance="5" /> <!-- Immortal Scroll -->
+			<item id="34691" min="1" max="1" chance="5" /> <!-- Hair Accessory Pack -->
+			<item id="34955" min="1" max="1" chance="5" /> <!-- Lv. 5 Ancient Dye Pack - Event -->
+			<item id="34953" min="1" max="1" chance="5" /> <!-- Lv. 5 Giant's Dye Pack - Event -->
+			<item id="34692" min="1" max="1" chance="5" /> <!-- Pendant Pack -->
+			<item id="34954" min="1" max="1" chance="5" /> <!-- Lv. 5 Legendary Dye Pack - Event -->
+			<item id="21243" min="1" max="1" chance="14.5" /> <!-- Super Healthy Juice (CP) -->
+			<item id="21239" min="1" max="1" chance="14.5" /> <!-- Super Healthy Juice (HP) -->
+			<item id="8868" min="1" max="100" chance="5" /> <!-- Ziggo's Jewel -->
+			<item id="33479" min="1" max="1" chance="5" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
+			<item id="33478" min="1" max="1" chance="5" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
+			<item id="23404" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Anakim -->
+			<item id="23405" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Venom -->
+			<item id="23406" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Gordon -->
+			<item id="23403" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Zaken -->
+			<item id="23408" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Kechi -->
+			<item id="23402" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Doll Blader -->
+			<item id="23409" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Demon Prince -->
+			<item id="23407" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Ranku -->
+			<item id="23400" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Saber Tooth Tiger -->
+			<item id="23401" min="1" max="1" chance="5" /> <!-- Transformation Scroll: Oel Mahum -->
+			<item id="22205" min="1" max="1" chance="25" /> <!-- Attribute Crystal Pack - Event -->
+			<item id="36515" min="1" max="1" chance="5" /> <!-- Elcyum -->
+			<item id="36184" min="1" max="1" chance="5" /> <!-- Annihilation Energy -->
+			<item id="36185" min="1" max="1" chance="5" /> <!-- Hellfire Energy -->
+			<item id="36186" min="1" max="1" chance="5" /> <!-- Energy of Desire -->
+		</capsuled_items>
+	</item>
+	<item id="23899" name="Gambler's Box" type="EtcItem">
+		<!-- Gambler's Box containing various high-grade items. Double-click to acquire one of the following: 100 Ziggo's Jewels, Scroll: Enchant Hair Accessory, R-grade Weapon Attribute Change Crysta, R-grade Gemstone, Scroll: Enchant R-grade Armor, R-grade Life Stone, Attribute Stone Pack, Blessed Scroll of Escape, Strawberry Cake (HP), or Fantasy Mana Potion. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<!-- TODO Chance needs to be verified -->
+		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="19448" min="1" max="1" chance="5" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="23468" min="1" max="1" chance="20" /> <!-- Fantasy Mana Potion - Event -->
+			<item id="18563" min="1" max="1" chance="5" /> <!-- R-grade Life Stone -->
+			<item id="37008" min="1" max="1" chance="20" /> <!-- Strawberry Cake (HP) -->
+			<item id="35749" min="1" max="1" chance="5" /> <!-- R-grade Weapon Attribute Change Crystal - Event -->
+			<item id="8868" min="1" max="100" chance="5" /> <!-- Ziggo's Jewel -->
+			<item id="19440" min="1" max="1" chance="5" /> <!-- R-grade Gemstone -->
+			<item id="1538" min="1" max="1" chance="25" /> <!-- Blessed Scroll of Escape -->
+			<item id="36978" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Hair Accessory -->
+			<item id="22204" min="1" max="1" chance="20" /> <!-- Attribute Stone Pack - Event -->
+		</capsuled_items>
+	</item>
+</list>

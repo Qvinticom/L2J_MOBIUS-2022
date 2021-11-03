@@ -1,0 +1,4055 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="18001" level="60" type="Monster" name="Blood Queen">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<skill name="DDMagic1" id="4039" level="6" />
+			<skill name="DDMagic2" id="4002" level="6" />
+			<skill name="DeBuff" id="4035" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="6804" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1046.22871046229" mpRegen="2.4" />
+			<attack physical="664.429530201342" magical="315.348233981419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.651006711409" magical="181.257042081027" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4035" level="6" /> <!-- Poison -->
+			<skill id="4039" level="6" /> <!-- Mana Drain -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="400" isAggressive="true">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="88" max="205" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="18002" level="60" type="Monster" name="Blood Queen">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<skill name="DDMagic1" id="4039" level="6" />
+			<skill name="DDMagic2" id="4002" level="6" />
+			<skill name="DeBuff" id="4035" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="6804" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1036.49635036496" mpRegen="2.4" />
+			<attack physical="730.984340044743" magical="315.348233981419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.651006711409" magical="150.231061904995" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4035" level="6" /> <!-- Poison -->
+			<skill id="4039" level="6" /> <!-- Mana Drain -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+				<ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="2397" min="1" max="1" chance="0.03" /> <!-- Zubei's Tunic -->
+				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Zubei's Stockings -->
+				<item id="2406" min="1" max="1" chance="0.03" /> <!-- Avadon Robe -->
+				<item id="4070" min="1" max="1" chance="3.744" /> <!-- Zubei's Stockings Fabric -->
+				<item id="4069" min="1" max="1" chance="2.429" /> <!-- Zubei's Tunic Fabric -->
+				<item id="4071" min="1" max="1" chance="1.809" /> <!-- Avadon Robe Fabric -->
+			</drop>
+			<lucky>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="18003" level="1" type="Monster" name="Nepetir">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="44" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="39.1167192429022" hpRegen="2" mp="40.551500405515" mpRegen="0.9" />
+			<attack physical="5.55555555555556" magical="7.73786917593707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.4444444444444" magical="27.0343336036767" />
+			<speed>
+				<walk ground="23" />
+				<run ground="110" />
+			</speed>
+			<hitTime>370</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="18004" level="49" type="Monster" name="Susceptor Prime">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1372.23974763407" hpRegen="5.5" mp="720.194647201946" mpRegen="2.1" />
+			<attack physical="327.22940331636" magical="193.534084391194" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="196.376811594203" magical="118.715986694406" />
+			<speed>
+				<walk ground="78" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="45" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="18005" level="52" type="Monster" name="Mimic">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="4867" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1569.08517350158" hpRegen="6.5" mp="804.541768045418" mpRegen="2.4" />
+			<attack physical="480.496453900709" magical="223.341496558335" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="216.312056737589" magical="127.118887796012" />
+			<speed>
+				<walk ground="80" />
+				<run ground="156" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="18006" level="68" type="Monster" name="Maluk Lord">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="DDMagic" id="4002" level="6" />
+			<skill name="CancelMagic" id="4094" level="6" />
+			<skill name="CheckMagic" id="4098" level="6" />
+			<skill name="SleepMagic" id="4046" level="6" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- Dreadbane -->
+		<acquire exp="9086" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2421.45110410095" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<attack physical="920.912951167728" magical="418.620202976462" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.178343949045" magical="173.570753328064" />
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4094" level="6" /> <!-- Cancellation -->
+			<skill id="4098" level="6" /> <!-- Silence -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>MALRUK</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" grown="25" />
+			<height normal="45" grown="52" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="18007" level="69" type="Monster" name="Limal Karinness">
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<skill name="DDMagic" id="4002" level="6" />
+			<skill name="DeBuff" id="4118" level="6" />
+			<skill name="HoldMagic" id="4047" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="48146" sp="11" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2395.58359621451" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<attack physical="1013.71308016878" magical="474.79754173783" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.772151898734" magical="176.578685310091" />
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4047" level="6" /> <!-- Hold -->
+			<skill id="4118" level="6" /> <!-- Paralysis -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>MALRUK</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="18008" level="70" type="Monster" name="Karik">
+		<parameters>
+			<param name="MoveAroundSocial" value="140" />
+			<param name="MoveAroundSocial1" value="140" />
+			<param name="MoveAroundSocial2" value="140" />
+			<skill name="HoldMagic" id="4047" level="7" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="59260" sp="14" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<attack physical="1046.1215932914" magical="489.715090010501" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.023076559323" magical="179.548781669702" />
+			<speed>
+				<walk ground="37" />
+				<run ground="200" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4047" level="7" /> <!-- Hold -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="30" />
+			<height normal="90" grown="109" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="18009" level="34" type="FestivalMonster" name="Offering of the Branded, Elder">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<minions name="Privates">
+				<npc id="18010" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="127" /> <!-- Crimson Sword -->
+		<acquire exp="2630" sp="102" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="81.10300081103" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="3" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>DOOR</clan>
+				<clan>MERCENARY_SIEGE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="26.4" />
+		</collision>
+	</npc>
+	<npc id="18010" level="32" type="FestivalMonster" name="Offering of the Branded">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="218" /> <!-- Throwing Knife -->
+		<acquire exp="2285" sp="86" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
+			<attack physical="129.824894715177" magical="73.4792050408192" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="85.9504132231405" magical="89.8954019684727" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="18011" level="28" type="FestivalMonster" name="Offering of the Branded, Archer">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- Bow -->
+		<acquire exp="1500" sp="53" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="543.217665615142" hpRegen="3.5" mp="300.081103000811" mpRegen="1.5" />
+			<attack physical="201.804368471035" magical="56.3727171146142" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="76.0683760683761" magical="79.9205035644137" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="60" />
+			</speed>
+			<hitTime>800</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="18012" level="29" type="FestivalMonster" name="Offering of the Branded, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4087" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="125" /> <!-- Spinebone Sword -->
+		<acquire exp="1538" sp="55" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="573.501577287066" hpRegen="3.5" mp="315.490673154907" mpRegen="1.5" />
+			<attack physical="119.350282485876" magical="59.579316799789" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="115.254237288136" magical="70.1059837519073" />
+			<speed>
+				<walk ground="45" />
+				<run ground="110" />
+			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="3" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="23" grown="27.6" />
+		</collision>
+	</npc>
+	<npc id="18013" level="29" type="FestivalMonster" name="Offering of the Branded, Follower">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18300" />
+			<param name="private_ai" value="dusk_1_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="2" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="2" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="1840" sp="66" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="573.501577287066" hpRegen="3.5" mp="315.490673154907" mpRegen="1.5" />
+			<attack physical="105.526332878758" magical="59.579316799789" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="78.8135593220339" magical="81.9680965325424" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="2" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="2" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18014" level="37" type="FestivalMonster" name="Offering of the Branded, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="292" /> <!-- Pike -->
+		<acquire exp="3414" sp="140" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="847.318611987382" hpRegen="4.5" mp="432.27899432279" mpRegen="1.8" />
+			<attack physical="203.042328042328" magical="100.335377524539" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="145.238095238095" magical="87.7337310360675" />
+			<speed>
+				<walk ground="43" />
+				<run ground="115" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="3" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18015" level="34" type="FestivalMonster" name="Offering of the Branded, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18300" />
+			<param name="private_ai" value="dusk_1_2_light_prv" />
+			<skill name="PhysicalSpecial" id="4032" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="158" /> <!-- Tarbar -->
+		<acquire exp="2475" sp="96" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="147.96124972744" magical="83.4882480254579" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="91.0569105691057" magical="95.4152950718" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="155" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26.4" />
+		</collision>
+	</npc>
+	<npc id="18016" level="32" type="FestivalMonster" name="Offering of the Branded, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="273" /> <!-- Compound Bow -->
+		<acquire exp="1898" sp="71" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
+			<attack physical="265.865038592311" magical="73.4792050408192" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="85.9504132231405" magical="89.8954019684727" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="130" />
+			</speed>
+			<hitTime>800</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="16" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="18017" level="34" type="FestivalMonster" name="Offering of the Branded, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4032" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" /> <!-- Sword of Revolution -->
+		<acquire exp="2475" sp="96" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="81.10300081103" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18018" level="39" type="FestivalMonster" name="Offering of the Branded, Saint">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- StormBringer -->
+		<acquire exp="3256" sp="138" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="925.552050473186" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<attack physical="229.817708333333" magical="112.910760949221" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="153.125" magical="92.5081103000811" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="4" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18019" level="45" type="FestivalMonster" name="Apostate's Offering, Elder">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<minions name="Privates">
+				<npc id="18020" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- StormBringer -->
+		<acquire exp="4518" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="178.358208955224" magical="107.733836898234" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="4" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27.6" />
+		</collision>
+	</npc>
+	<npc id="18020" level="43" type="FestivalMonster" name="Apostate's Offering">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="223" /> <!-- Kukuri -->
+		<acquire exp="4125" sp="186" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1094.00630914827" hpRegen="5.5" mp="557.177615571776" mpRegen="2.1" />
+			<attack physical="256.15348891211" magical="141.215900173963" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="115.151515151515" magical="120.714805128717" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
+	</npc>
+	<npc id="18021" level="39" type="FestivalMonster" name="Apostate's Offering, Archer">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- Longbow -->
+		<acquire exp="2818" sp="119" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="925.552050473186" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<attack physical="415.552271021021" magical="112.910760949221" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="103.90625" magical="108.833070941272" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="60" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18022" level="40" type="FestivalMonster" name="Apostate's Offering, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4087" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="127" /> <!-- Crimson Sword -->
+		<acquire exp="2880" sp="124" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<attack physical="243.540051679587" magical="119.727087227037" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.589147286822" magical="94.9345203291902" />
+			<speed>
+				<walk ground="80" />
+				<run ground="115" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="4" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18023" level="40" type="FestivalMonster" name="Apostate's Offering, Follower">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18302" />
+			<param name="private_ai" value="dusk_2_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="4" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="3444" sp="148" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<attack physical="215.331610680448" magical="119.727087227037" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="106.976744186047" magical="111.96124142969" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="155" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="4" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="4" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="18024" level="48" type="FestivalMonster" name="Apostate's Offering, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4244" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="297" /> <!-- Glaive -->
+		<acquire exp="5748" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1324.29022082019" hpRegen="5.5" mp="692.619626926196" mpRegen="2.1" />
+			<attack physical="380.778588807786" magical="184.422058426" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191.240875912409" magical="115.965694590314" />
+			<speed>
+				<walk ground="37" />
+				<run ground="120" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="4" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="18025" level="45" type="FestivalMonster" name="Apostate's Offering, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18302" />
+			<param name="private_ai" value="dusk_2_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="172" /> <!-- Heavy Bone Club -->
+		<acquire exp="4336" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="285.926688397095" magical="157.498281240115" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="120.89552238806" magical="126.74569046851" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18026" level="43" type="FestivalMonster" name="Apostate's Offering, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="277" /> <!-- Dark Elven Bow -->
+		<acquire exp="3428" sp="154" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1094.00630914827" hpRegen="5.5" mp="557.177615571776" mpRegen="2.1" />
+			<attack physical="525.809900809901" magical="141.215900173963" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="115.151515151515" magical="120.714805128717" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="135" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18027" level="45" type="FestivalMonster" name="Apostate's Offering, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4032" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="74" /> <!-- Katana -->
+		<acquire exp="4336" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="178.358208955224" magical="107.733836898234" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18028" level="50" type="FestivalMonster" name="Apostate's Offering, Saint">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" /> <!-- Raid Sword -->
+		<acquire exp="5355" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.719424460432" magical="121.362763803556" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="5" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18029" level="56" type="FestivalMonster" name="Witch's Offering, Elder">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<minions name="Privates">
+				<npc id="18030" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" /> <!-- Raid Sword -->
+		<acquire exp="6998" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="560.344827586207" magical="267.355541221739" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.965517241379" magical="138.714097938865" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="5" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="18030" level="54" type="FestivalMonster" name="Witch's Offering">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="226" /> <!-- Cursed Dagger -->
+		<acquire exp="6507" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1621.45110410095" hpRegen="6.5" mp="861.313868613139" mpRegen="2.4" />
+			<attack physical="451.464244567693" magical="245.047581123137" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="148.951048951049" magical="156.1341192084" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18031" level="50" type="FestivalMonster" name="Witch's Offering, Archer">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="278" /> <!-- Gastraphetes -->
+		<acquire exp="4635" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<attack physical="764.793570548966" magical="203.073733813267" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="136.690647482014" magical="142.77972212183" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="70" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18032" level="51" type="FestivalMonster" name="Witch's Offering, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4087" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- StormBringer -->
+		<acquire exp="4680" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="124.551036959796" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="5" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18033" level="51" type="FestivalMonster" name="Witch's Offering, Follower">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18304" />
+			<param name="private_ai" value="dusk_3_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="5" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="5599" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="391.351943076081" magical="213.01712035889" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="140" magical="146.110505662786" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="5" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="5" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="18034" level="59" type="FestivalMonster" name="Witch's Offering, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="301" /> <!-- Scorpion -->
+		<acquire exp="8684" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1880.1261829653" hpRegen="6.5" mp="1007.29927007299" mpRegen="2.4" />
+			<attack physical="637.95045045045" magical="303.292490998687" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="243.243243243243" magical="147.132433903757" />
+			<speed>
+				<walk ground="52" />
+				<run ground="125" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="5" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="18035" level="56" type="FestivalMonster" name="Witch's Offering, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18304" />
+			<param name="private_ai" value="dusk_3_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="91" /> <!-- Heavy War Axe -->
+		<acquire exp="6717" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="494.120755714097" magical="267.355541221739" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="155.862068965517" magical="163.193056398665" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18036" level="54" type="FestivalMonster" name="Witch's Offering, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="282" /> <!-- Elemental Bow -->
+		<acquire exp="5406" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1621.45110410095" hpRegen="6.5" mp="861.313868613139" mpRegen="2.4" />
+			<attack physical="927.675927675928" magical="245.047581123137" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="148.951048951049" magical="156.1341192084" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="140" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18037" level="56" type="FestivalMonster" name="Witch's Offering, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4032" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="135" /> <!-- Samurai Long Sword -->
+		<acquire exp="6717" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="560.344827586207" magical="267.355541221739" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.965517241379" magical="138.714097938865" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18038" level="61" type="FestivalMonster" name="Witch's Offering, Saint">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<acquire exp="7970" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="153.01432819681" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18039" level="67" type="FestivalMonster" name="Dark Omen Offering Elder">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<minions name="Privates">
+				<npc id="18040" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<acquire exp="10019" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="171.044149146339" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="6" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="18040" level="65" type="FestivalMonster" name="Dark Omen Offering">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="234" /> <!-- Demon's Dagger -->
+		<acquire exp="9430" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<attack physical="709.683037269244" magical="378.90274609333" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="185.064935064935" magical="193.928489334243" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18041" level="61" type="FestivalMonster" name="Dark Omen Offering Archer">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="283" /> <!-- Akat Longbow -->
+		<acquire exp="6897" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="1254.004004004" magical="327.641209306521" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="172" magical="180.016856702129" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="70" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18042" level="62" type="FestivalMonster" name="Dark Omen Offering Warrior">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4087" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" /> <!-- Raid Sword -->
+		<acquire exp="6919" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<attack physical="719.646799116998" magical="340.156785791482" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.615894039735" magical="156.297836000064" />
+			<speed>
+				<walk ground="80" />
+				<run ground="125" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="6" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18043" level="62" type="FestivalMonster" name="Dark Omen Offering Follower">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18306" />
+			<param name="private_ai" value="dusk_4_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="6" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="8274" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<attack physical="634.340666311436" magical="340.156785791482" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="175.496688741722" magical="183.507598251126" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="165" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="6" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="18044" level="70" type="FestivalMonster" name="Dark Omen Offering Berserker">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="97" /> <!-- Lance -->
+		<acquire exp="12223" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<attack physical="950.733752620545" magical="445.095379897059" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.22641509434" magical="179.576731355516" />
+			<speed>
+				<walk ground="52" />
+				<run ground="130" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="6" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="18045" level="67" type="FestivalMonster" name="Dark Omen Offering Zealot">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18306" />
+			<param name="private_ai" value="dusk_4_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2503" /> <!-- Yaksa Mace -->
+		<acquire exp="9614" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="760.757441791925" magical="405.60709752719" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="191.666666666667" magical="201.228410760399" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18046" level="65" type="FestivalMonster" name="Dark Omen Offering Sniper">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="286" /> <!-- Eminence Bow -->
+		<acquire exp="7832" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<attack physical="1458.35770835771" magical="378.90274609333" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="185.064935064935" magical="193.928489334243" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="145" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18047" level="67" type="FestivalMonster" name="Dark Omen Offering Disciple">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4032" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- Keshanberk -->
+		<acquire exp="9614" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="171.044149146339" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18048" level="72" type="FestivalMonster" name="Dark Omen Offering Saint">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
+		<acquire exp="11101" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
+			<attack physical="1009.83436853002" magical="471.565535355007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.590062111801" magical="185.378287568069" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="7" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18049" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Elder">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<minions name="Privates">
+				<npc id="18050" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
+		<acquire exp="13579" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2802.52365930599" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
+			<attack physical="1181.1377245509" magical="547.18386675727" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="201.543385248967" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="7" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18050" level="76" type="FestivalMonster" name="Offering of Forbidden Path">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="236" /> <!-- Soul Separator -->
+		<acquire exp="12892" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2719.2429022082" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
+			<attack physical="992.685475444096" magical="522.843991364853" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="220.606060606061" magical="231.309806234667" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18051" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Archer">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="287" /> <!-- Bow of Peril -->
+		<acquire exp="12465" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3010.09463722398" hpRegen="8.772" mp="1777.77777777778" mpRegen="3.0906" />
+			<attack physical="2506.92309075543" magical="660.871571684254" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="252.095808383234" magical="263.963271396237" evasion="14" />
+			<speed>
+				<walk ground="45" />
+				<run ground="70" />
+			</speed>
+			<hitTime>910</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="18052" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="DDMagic" id="4087" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<acquire exp="11519" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2937.53943217666" hpRegen="8.67" mp="1708.02919708029" mpRegen="3.06" />
+			<attack physical="1259.48103792415" magical="595.130420574302" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.502994011976" magical="211.256319477833" evasion="2" />
+			<speed>
+				<walk ground="36" />
+				<run ground="130" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="7" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18053" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Follower">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18308" />
+			<param name="private_ai" value="dusk_5_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="7" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="13776" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2937" hpRegen="8.67" mp="1708" mpRegen="3.06" />
+			<attack physical="798.57199695" magical="635.688655236" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="295.972125" magical="210.933802353999" evasion="12" />
+			<speed>
+				<walk ground="10" />
+				<run ground="180" />
+			</speed>
+			<hitTime>340</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="7" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18054" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="305" /> <!-- Tallum Glaive -->
+		<acquire exp="16367" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2975.39432176656" hpRegen="8.721" mp="1742.09245742092" mpRegen="3.0702" />
+			<attack physical="1322.35528942116" magical="627.753848944655" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.281437125749" magical="217.875750681752" evasion="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="135" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="7" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" grown="22" />
+			<height normal="35" grown="42.2" />
+		</collision>
+	</npc>
+	<npc id="18055" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="private_name" value="18308" />
+			<param name="private_ai" value="dusk_5_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="175" /> <!-- Art of Battle Axe -->
+		<acquire exp="13030" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2802.52365930599" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
+			<attack physical="1041.59497097759" magical="547.18386675727" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="226.347305389222" magical="237.109864998784" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="195" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34.8" />
+		</collision>
+	</npc>
+	<npc id="18056" level="76" type="FestivalMonster" name="Offering of Forbidden Path, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="289" /> <!-- Soul Bow -->
+		<acquire exp="10708" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2719.2429022082" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
+			<attack physical="2040.44954044954" magical="522.843991364853" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="220.606060606061" magical="231.309806234667" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hitTime>910</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="32.4" />
+		</collision>
+	</npc>
+	<npc id="18057" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<skill name="PhysicalSpecial" id="4032" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="151" /> <!-- Sword of Miracles -->
+		<acquire exp="13030" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2802.52365930599" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
+			<attack physical="1181.1377245509" magical="547.18386675727" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="201.543385248967" />
+			<speed>
+				<walk ground="33" />
+				<run ground="195" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="18058" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Saint">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="TWILIGHT" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
+		<acquire exp="14756" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3044.16403785489" hpRegen="8.823" mp="1812.65206812652" mpRegen="3.111" />
+			<attack physical="1443.6127744511" magical="694.97788316235" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="380.838323353293" magical="230.682187935564" evasion="5" />
+			<speed>
+				<walk ground="33" />
+				<run ground="195" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="7" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="28.8" />
+		</collision>
+	</npc>
+	<npc id="18059" level="34" type="FestivalMonster" name="Offering of the Branded, Elder">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<minions name="Privates">
+				<npc id="18060" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="127" /> <!-- Crimson Sword -->
+		<acquire exp="2579" sp="100" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="81.10300081103" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="3" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26.4" />
+		</collision>
+	</npc>
+	<npc id="18060" level="32" type="FestivalMonster" name="Offering of the Branded">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="218" /> <!-- Throwing Knife -->
+		<acquire exp="2285" sp="86" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
+			<attack physical="129.824894715177" magical="73.4792050408192" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="85.9504132231405" magical="89.8954019684727" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="18061" level="28" type="FestivalMonster" name="Offering of the Branded, Archer">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="14" /> <!-- Bow -->
+		<acquire exp="1500" sp="53" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="543.217665615142" hpRegen="3.5" mp="300.081103000811" mpRegen="1.5" />
+			<attack physical="201.804368471035" magical="56.3727171146142" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="76.0683760683761" magical="79.9205035644137" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="60" />
+			</speed>
+			<hitTime>800</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="18062" level="29" type="FestivalMonster" name="Offering of the Branded, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4087" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="125" /> <!-- Spinebone Sword -->
+		<acquire exp="1538" sp="55" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="573.501577287066" hpRegen="3.5" mp="315.490673154907" mpRegen="1.5" />
+			<attack physical="119.350282485876" magical="59.579316799789" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="115.254237288136" magical="70.1059837519073" />
+			<speed>
+				<walk ground="45" />
+				<run ground="110" />
+			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="3" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="23" grown="27.6" />
+		</collision>
+	</npc>
+	<npc id="18063" level="29" type="FestivalMonster" name="Offering of the Branded, Follower">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18310" />
+			<param name="private_ai" value="dawn_1_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="2" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="2" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="1840" sp="66" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="573.501577287066" hpRegen="3.5" mp="315.490673154907" mpRegen="1.5" />
+			<attack physical="105.526332878758" magical="59.579316799789" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="78.8135593220339" magical="81.9680965325424" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="150" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="2" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="2" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18064" level="37" type="FestivalMonster" name="Offering of the Branded, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="292" /> <!-- Pike -->
+		<acquire exp="3414" sp="140" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="847.318611987382" hpRegen="4.5" mp="432.27899432279" mpRegen="1.8" />
+			<attack physical="203.042328042328" magical="100.335377524539" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="145.238095238095" magical="87.7337310360675" />
+			<speed>
+				<walk ground="43" />
+				<run ground="115" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="3" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="18065" level="34" type="FestivalMonster" name="Offering of the Branded, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18310" />
+			<param name="private_ai" value="dawn_1_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="3" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="158" /> <!-- Tarbar -->
+		<acquire exp="2475" sp="96" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="147.96124972744" magical="83.4882480254579" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="91.0569105691057" magical="95.4152950718" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="155" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26.4" />
+		</collision>
+	</npc>
+	<npc id="18066" level="32" type="FestivalMonster" name="Offering of the Branded, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="273" /> <!-- Compound Bow -->
+		<acquire exp="1898" sp="71" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
+			<attack physical="265.865038592311" magical="73.4792050408192" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="85.9504132231405" magical="89.8954019684727" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="130" />
+			</speed>
+			<hitTime>800</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="16" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="18067" level="34" type="FestivalMonster" name="Offering of the Branded, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4032" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" /> <!-- Sword of Revolution -->
+		<acquire exp="2475" sp="96" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="81.10300081103" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18068" level="39" type="FestivalMonster" name="Offering of the Branded, Saint">
+		<parameters>
+			<param name="RoomIndex" value="1" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- StormBringer -->
+		<acquire exp="3256" sp="138" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="925.552050473186" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<attack physical="229.817708333333" magical="112.910760949221" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="153.125" magical="92.5081103000811" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="4" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18069" level="45" type="FestivalMonster" name="Apostate's Offering, Elder">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<minions name="Privates">
+				<npc id="18070" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- StormBringer -->
+		<acquire exp="4518" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="178.358208955224" magical="107.733836898234" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="4" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27.6" />
+		</collision>
+	</npc>
+	<npc id="18070" level="43" type="FestivalMonster" name="Apostate's Offering">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="223" /> <!-- Kukuri -->
+		<acquire exp="4125" sp="186" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1094.00630914827" hpRegen="5.5" mp="557.177615571776" mpRegen="2.1" />
+			<attack physical="256.15348891211" magical="141.215900173963" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="115.151515151515" magical="120.714805128717" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
+	</npc>
+	<npc id="18071" level="39" type="FestivalMonster" name="Apostate's Offering, Archer">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="275" /> <!-- Longbow -->
+		<acquire exp="2818" sp="119" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="925.552050473186" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<attack physical="415.552271021021" magical="112.910760949221" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="103.90625" magical="108.833070941272" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="60" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18072" level="40" type="FestivalMonster" name="Apostate's Offering, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4087" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="127" /> <!-- Crimson Sword -->
+		<acquire exp="2880" sp="124" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<attack physical="243.540051679587" magical="119.727087227037" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.589147286822" magical="94.9345203291902" />
+			<speed>
+				<walk ground="80" />
+				<run ground="115" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="4" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18073" level="40" type="FestivalMonster" name="Apostate's Offering, Follower">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18312" />
+			<param name="private_ai" value="dawn_2_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="4" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="3444" sp="148" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<attack physical="215.331610680448" magical="119.727087227037" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="106.976744186047" magical="111.96124142969" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="155" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="4" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="4" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="18074" level="48" type="FestivalMonster" name="Apostate's Offering, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="297" /> <!-- Glaive -->
+		<acquire exp="5748" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1324.29022082019" hpRegen="5.5" mp="692.619626926196" mpRegen="2.1" />
+			<attack physical="380.778588807786" magical="184.422058426" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191.240875912409" magical="115.965694590314" />
+			<speed>
+				<walk ground="37" />
+				<run ground="120" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="4" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="18075" level="45" type="FestivalMonster" name="Apostate's Offering, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18312" />
+			<param name="private_ai" value="dawn_2_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="4" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="172" /> <!-- Heavy Bone Club -->
+		<acquire exp="4336" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="285.926688397095" magical="157.498281240115" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="120.89552238806" magical="126.74569046851" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18076" level="43" type="FestivalMonster" name="Apostate's Offering, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="277" /> <!-- Dark Elven Bow -->
+		<acquire exp="3428" sp="154" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1094.00630914827" hpRegen="5.5" mp="557.177615571776" mpRegen="2.1" />
+			<attack physical="525.809900809901" magical="141.215900173963" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="115.151515151515" magical="120.714805128717" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="135" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18077" level="45" type="FestivalMonster" name="Apostate's Offering, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4032" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="74" /> <!-- Katana -->
+		<acquire exp="4336" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="178.358208955224" magical="107.733836898234" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18078" level="50" type="FestivalMonster" name="Apostate's Offering, Saint">
+		<parameters>
+			<param name="RoomIndex" value="2" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" /> <!-- Raid Sword -->
+		<acquire exp="5355" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.719424460432" magical="121.362763803556" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="5" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18079" level="56" type="FestivalMonster" name="Witch's Offering, Elder">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<minions name="Privates">
+				<npc id="18080" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" /> <!-- Raid Sword -->
+		<acquire exp="6998" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="560.344827586207" magical="267.355541221739" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.965517241379" magical="138.714097938865" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="5" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="18080" level="54" type="FestivalMonster" name="Witch's Offering">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="226" /> <!-- Cursed Dagger -->
+		<acquire exp="6507" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1621.45110410095" hpRegen="6.5" mp="861.313868613139" mpRegen="2.4" />
+			<attack physical="451.464244567693" magical="245.047581123137" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="148.951048951049" magical="156.1341192084" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18081" level="50" type="FestivalMonster" name="Witch's Offering, Archer">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="278" /> <!-- Gastraphetes -->
+		<acquire exp="4635" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<attack physical="764.793570548966" magical="203.073733813267" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="136.690647482014" magical="142.77972212183" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="70" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18082" level="51" type="FestivalMonster" name="Witch's Offering, Warrior">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4087" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- StormBringer -->
+		<acquire exp="4680" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="124.551036959796" />
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="5" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18083" level="51" type="FestivalMonster" name="Witch's Offering, Follower">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18314" />
+			<param name="private_ai" value="dawn_3_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="5" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="5599" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="391.351943076081" magical="213.01712035889" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="140" magical="146.110505662786" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="5" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="5" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="18084" level="59" type="FestivalMonster" name="Witch's Offering, Berserker">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="301" /> <!-- Scorpion -->
+		<acquire exp="8684" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1880.1261829653" hpRegen="6.5" mp="1007.29927007299" mpRegen="2.4" />
+			<attack physical="637.95045045045" magical="303.292490998687" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="243.243243243243" magical="147.132433903757" />
+			<speed>
+				<walk ground="52" />
+				<run ground="125" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="5" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="18085" level="56" type="FestivalMonster" name="Witch's Offering, Zealot">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18314" />
+			<param name="private_ai" value="dawn_3_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="91" /> <!-- Heavy War Axe -->
+		<acquire exp="6717" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="494.120755714097" magical="267.355541221739" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="155.862068965517" magical="163.193056398665" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18086" level="54" type="FestivalMonster" name="Witch's Offering, Sniper">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="282" /> <!-- Elemental Bow -->
+		<acquire exp="5406" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1621.45110410095" hpRegen="6.5" mp="861.313868613139" mpRegen="2.4" />
+			<attack physical="927.675927675928" magical="245.047581123137" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="148.951048951049" magical="156.1341192084" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="140" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18087" level="56" type="FestivalMonster" name="Witch's Offering, Disciple">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4032" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="135" /> <!-- Samurai Long Sword -->
+		<acquire exp="6717" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="560.344827586207" magical="267.355541221739" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.965517241379" magical="138.714097938865" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18088" level="61" type="FestivalMonster" name="Witch's Offering, Saint">
+		<parameters>
+			<param name="RoomIndex" value="3" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<acquire exp="7970" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="153.01432819681" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18089" level="67" type="FestivalMonster" name="Dark Omen Offering Elder">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<minions name="Privates">
+				<npc id="18090" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<acquire exp="10019" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="171.044149146339" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="6" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="18090" level="65" type="FestivalMonster" name="Dark Omen Offering">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="234" /> <!-- Demon's Dagger -->
+		<acquire exp="9430" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<attack physical="709.683037269244" magical="378.90274609333" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="185.064935064935" magical="193.928489334243" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18091" level="61" type="FestivalMonster" name="Dark Omen Offering Archer">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="283" /> <!-- Akat Longbow -->
+		<acquire exp="6897" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="1254.004004004" magical="327.641209306521" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="172" magical="180.016856702129" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="70" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="18092" level="62" type="FestivalMonster" name="Dark Omen Offering Warrior">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="DDMagic" id="4087" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="133" /> <!-- Raid Sword -->
+		<acquire exp="6919" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<attack physical="719.646799116998" magical="340.156785791482" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.615894039735" magical="156.297836000064" />
+			<speed>
+				<walk ground="80" />
+				<run ground="125" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4087" level="6" /> <!-- Blaze -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="18093" level="62" type="FestivalMonster" name="Dark Omen Offering Follower">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18316" />
+			<param name="private_ai" value="dawn_4_2_light_prv" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="6" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="316" /> <!-- Sage's Blood -->
+		<acquire exp="8274" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<attack physical="634.340666311436" magical="340.156785791482" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="175.496688741722" magical="183.507598251126" evasion="10" />
+			<speed>
+				<walk ground="50" />
+				<run ground="165" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4151" level="6" /> <!-- (Wind Strike) -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="18094" level="70" type="FestivalMonster" name="Dark Omen Offering Berserker">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="DDMagic" id="4244" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="97" /> <!-- Lance -->
+		<acquire exp="12223" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<attack physical="950.733752620545" magical="445.095379897059" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.22641509434" magical="179.576731355516" />
+			<speed>
+				<walk ground="52" />
+				<run ground="130" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4244" level="7" /> <!-- Wild Sweep -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="18095" level="67" type="FestivalMonster" name="Dark Omen Offering Zealot">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="private_name" value="18316" />
+			<param name="private_ai" value="dawn_4_2_light_prv" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4032" level="6" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2503" /> <!-- Yaksa Mace -->
+		<acquire exp="9614" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="760.757441791925" magical="405.60709752719" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="191.666666666667" magical="201.228410760399" evasion="10" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4225" level="5" /> <!-- Stun Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18096" level="65" type="FestivalMonster" name="Dark Omen Offering Sniper">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="286" /> <!-- Eminence Bow -->
+		<acquire exp="7832" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<attack physical="1458.35770835771" magical="378.90274609333" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="185.064935064935" magical="193.928489334243" evasion="10" />
+			<speed>
+				<walk ground="45" />
+				<run ground="145" />
+			</speed>
+			<hitTime>960</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="25.3" />
+		</collision>
+	</npc>
+	<npc id="18097" level="67" type="FestivalMonster" name="Dark Omen Offering Disciple">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<skill name="PhysicalSpecial" id="4032" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- Keshanberk -->
+		<acquire exp="9614" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="171.044149146339" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="18098" level="72" type="FestivalMonster" name="Dark Omen Offering Saint">
+		<parameters>
+			<param name="RoomIndex" value="4" />
+			<param name="SSQPart" value="DAWN" />
+			<param name="IsStrong" value="1" />
+			<skill name="PhysicalSpecial" id="4073" level="7" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
+		<acquire exp="11101" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
+			<attack physical="1009.83436853002" magical="471.565535355007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.590062111801" magical="185.378287568069" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4073" level="7" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+	<npc id="18099" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Elder">
+		<parameters>
+			<param name="RoomIndex" value="5" />
+			<param name="SSQPart" value="DAWN" />
+			<minions name="Privates">
+				<npc id="18100" count="2" respawnTime="120" weightPoint="0" />
+			</minions>
+			<skill name="DDMagic" id="4078" level="8" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
+		<acquire exp="16294" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2802.52365930599" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
+			<attack physical="1181.1377245509" magical="547.18386675727" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="201.543385248967" />
+			<speed>
+				<walk ground="80" />
+				<run ground="30" />
+			</speed>
+			<hitTime>280</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4078" level="8" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
+	</npc>
+</list>

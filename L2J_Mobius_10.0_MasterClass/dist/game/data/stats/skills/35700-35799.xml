@@ -1,0 +1,2420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="35700" toLevel="2" name="Upper Armor Augmentation: PvE Damage">
+		<!-- PvE damage +1% -->
+		<icon>icon.armor_t902_u_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35701" toLevel="2" name="Upper Armor Augmentation: PvP Damage">
+		<!-- PvP damage +1% -->
+		<icon>icon.armor_t902_u_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35702" toLevel="3" name="Lower Armor Augmentation: P. Evasion">
+		<!-- P. Evasion +1 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35703" toLevel="3" name="Lower Armor Augmentation: M. Evasion">
+		<!-- M. Evasion +1 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35704" toLevel="9" name="Lower Armor Augmentation: P. Def.">
+		<!-- P. Def. +282 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">282</value>
+					<value level="2">288</value>
+					<value level="3">293</value>
+					<value level="4">299</value>
+					<value level="5">305</value>
+					<value level="6">311</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35705" toLevel="9" name="Lower Armor Augmentation: M. Def.">
+		<!-- M. Def. +151 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">151</value>
+					<value level="2">155</value>
+					<value level="3">159</value>
+					<value level="4">163</value>
+					<value level="5">167</value>
+					<value level="6">171</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35706" toLevel="8" name="Lower Armor Augmentation: Attribute Resistance">
+		<!-- Attribute Resistance +4 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35707" toLevel="2" name="Lower Armor Augmentation: Received PvE Damage Decrease">
+		<!-- Received PvE damage -1% -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35708" toLevel="2" name="Lower Armor Augmentation: Received PvP Damage Decrease">
+		<!-- Received PvP damage -1% -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35709" toLevel="3" name="Lower Armor Augmentation: P. Accuracy">
+		<!-- P. Accuracy +1 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35710" toLevel="3" name="Lower Armor Augmentation: M. Accuracy">
+		<!-- M. Accuracy +1 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicAccuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35711" toLevel="9" name="Lower Armor Augmentation: P. Atk.">
+		<!-- P. Atk. +763 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">763</value>
+					<value level="2">786</value>
+					<value level="3">809</value>
+					<value level="4">834</value>
+					<value level="5">859</value>
+					<value level="6">884</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35712" toLevel="9" name="Lower Armor Augmentation: M. Atk.">
+		<!-- M. Atk. +443 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">443</value>
+					<value level="2">457</value>
+					<value level="3">470</value>
+					<value level="4">484</value>
+					<value level="5">499</value>
+					<value level="6">514</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35713" toLevel="8" name="Lower Armor Augmentation: Attribute Attack">
+		<!-- Attribute Attack +4 -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35714" toLevel="2" name="Lower Armor Augmentation: PvE Damage">
+		<!-- PvE damage +1% -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35715" toLevel="2" name="Lower Armor Augmentation: PvP Damage">
+		<!-- PvP damage +1% -->
+		<icon>icon.armor_t902_l_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35716" toLevel="3" name="Glove Augmentation: P. Evasion">
+		<!-- P. Evasion +1 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35717" toLevel="3" name="Glove Augmentation: M. Evasion">
+		<!-- M. Evasion +1 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35718" toLevel="9" name="Glove Augmentation: P. Def.">
+		<!-- P. Def. +282 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">282</value>
+					<value level="2">288</value>
+					<value level="3">293</value>
+					<value level="4">299</value>
+					<value level="5">305</value>
+					<value level="6">311</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35719" toLevel="9" name="Glove Augmentation: M. Def.">
+		<!-- M. Def. +151 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">151</value>
+					<value level="2">155</value>
+					<value level="3">159</value>
+					<value level="4">163</value>
+					<value level="5">167</value>
+					<value level="6">171</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35720" toLevel="8" name="Glove Augmentation: Attribute Resistance">
+		<!-- Attribute Resistance +4 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35721" toLevel="2" name="Glove Augmentation: PvE Received Damage">
+		<!-- Received PvE damage -1% -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35722" toLevel="2" name="Glove Augmentation: PvP Received Damage">
+		<!-- Received PvP damage -1% -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35723" toLevel="3" name="Glove Augmentation: P. Accuracy">
+		<!-- P. Accuracy +1 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35724" toLevel="3" name="Glove Augmentation: M. Accuracy">
+		<!-- M. Accuracy +1 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicAccuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35725" toLevel="9" name="Glove Augmentation: P. Atk.">
+		<!-- P. Atk. +763 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">763</value>
+					<value level="2">786</value>
+					<value level="3">809</value>
+					<value level="4">834</value>
+					<value level="5">859</value>
+					<value level="6">884</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35726" toLevel="9" name="Glove Augmentation: M. Atk.">
+		<!-- M. Atk. +443 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">443</value>
+					<value level="2">457</value>
+					<value level="3">470</value>
+					<value level="4">484</value>
+					<value level="5">499</value>
+					<value level="6">514</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35727" toLevel="8" name="Glove Augmentation: Attribute Attack">
+		<!-- Attribute Attack +4 -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35728" toLevel="2" name="Glove Augmentation: PvE Damage Increase">
+		<!-- PvE damage +1% -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35729" toLevel="2" name="Glove Augmentation: PvP Damage Increase">
+		<!-- PvP damage +1% -->
+		<icon>icon.armor_t902_g_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35730" toLevel="3" name="Boot Augmentation: P. Evasion">
+		<!-- P. Evasion +1 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35731" toLevel="3" name="Boot Augmentation: M. Evasion">
+		<!-- M. Evasion +1 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35732" toLevel="9" name="Boot Augmentation: P. Def.">
+		<!-- P. Def. +282 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">282</value>
+					<value level="2">288</value>
+					<value level="3">293</value>
+					<value level="4">299</value>
+					<value level="5">305</value>
+					<value level="6">311</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35733" toLevel="9" name="Boot Augmentation: M. Def.">
+		<!-- M. Def. +151 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">151</value>
+					<value level="2">155</value>
+					<value level="3">159</value>
+					<value level="4">163</value>
+					<value level="5">167</value>
+					<value level="6">171</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35734" toLevel="8" name="Boot Augmentation: Attribute Resistance">
+		<!-- Attribute Resistance +4 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35735" toLevel="2" name="Boot Augmentation: Received PvE Damage Decrease">
+		<!-- Received PvE damage -1% -->
+		<icon>icon.armor_t902_u_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35736" toLevel="2" name="Boot Augmentation: Received PvP Damage Decrease">
+		<!-- Received PvP damage -1% -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35737" toLevel="3" name="Boot Augmentation: P. Accuracy">
+		<!-- P. Accuracy +1 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35738" toLevel="3" name="Boot Augmentation: M. Accuracy">
+		<!-- M. Accuracy +1 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicAccuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35739" toLevel="9" name="Boot Augmentation: P. Atk.">
+		<!-- P. Atk. +763 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">763</value>
+					<value level="2">786</value>
+					<value level="3">809</value>
+					<value level="4">834</value>
+					<value level="5">859</value>
+					<value level="6">884</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35740" toLevel="9" name="Boot Augmentation: M. Atk.">
+		<!-- M. Atk. +443 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">443</value>
+					<value level="2">457</value>
+					<value level="3">470</value>
+					<value level="4">484</value>
+					<value level="5">499</value>
+					<value level="6">514</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35741" toLevel="8" name="Boot Augmentation: Attribute Attack">
+		<!-- Attribute Attack +4 -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35742" toLevel="2" name="Boot Augmentation: PvE Damage Increase">
+		<!-- PvE damage +1% -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35743" toLevel="2" name="Boot Augmentation: PvP Damage Increase">
+		<!-- PvP damage +1% -->
+		<icon>icon.armor_t902_b_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35744" toLevel="3" name="Angel's Earring Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35745" toLevel="9" name="Angel's Earring Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35746" toLevel="6" name="Angel's Earring Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35747" toLevel="6" name="Angel's Earring Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35748" toLevel="6" name="Angel's Earring Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35749" toLevel="5" name="Angel's Earring Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35750" toLevel="5" name="Angel's Earring Augmentation: Acquired XP/SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35751" toLevel="5" name="Angel's Earring Augmentation: Critical Rate for Standard Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35752" toLevel="5" name="Angel's Earring Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35753" toLevel="5" name="Angel's Earring Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35754" toLevel="5" name="Angel's Earring Augmentation: Critical Damage for Standard Attacks">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35755" toLevel="5" name="Angel's Earring Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35756" toLevel="5" name="Angel's Earring Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35757" toLevel="7" name="Angel's Earring Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35758" toLevel="7" name="Angel's Earring Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35759" toLevel="3" name="Angel's Ring Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35760" toLevel="9" name="Angel's Ring Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35761" toLevel="6" name="Angel's Ring Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35762" toLevel="6" name="Angel's Ring Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35763" toLevel="6" name="Angel's Ring Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35764" toLevel="5" name="Angel's Ring Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35765" toLevel="5" name="Angel's Ring Augmentation: Acquired XP/ SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35766" toLevel="5" name="Angel's Ring Augmentation: Critical Rate for Standard Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35767" toLevel="5" name="Angel's Ring Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35768" toLevel="5" name="Angel's Ring Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35769" toLevel="5" name="Angel's Ring Augmentation: Critical Damage for Standard Attacks">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35770" toLevel="5" name="Angel's Ring Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35771" toLevel="5" name="Angel's Ring Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35772" toLevel="7" name="Angel's Ring Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35773" toLevel="7" name="Angel's Ring Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>icon.new_ring_of_hero</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35774" toLevel="3" name="Fallen Angel's Ring Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35775" toLevel="9" name="Fallen Angel's Ring Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35776" toLevel="6" name="Fallen Angel's Ring Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35777" toLevel="6" name="Fallen Angel's Ring Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35778" toLevel="6" name="Fallen Angel's Ring Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35779" toLevel="5" name="Fallen Angel's Ring Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35780" toLevel="5" name="Fallen Angel's Ring Augmentation: Acquired XP/ SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35781" toLevel="5" name="Fallen Angel's Ring Augmentation: Critical Rate for Basic Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35782" toLevel="5" name="Fallen Angel's Ring Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35783" toLevel="5" name="Fallen Angel's Ring Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35784" toLevel="5" name="Fallen Angel's Ring Augmentation: Critical Damage for Basic Attacks">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35785" toLevel="5" name="Fallen Angel's Ring Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35786" toLevel="5" name="Fallen Angel's Ring Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35787" toLevel="7" name="Fallen Angel's Ring Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35788" toLevel="7" name="Fallen Angel's Ring Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35789" toLevel="3" name="Atlas' Earring Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35790" toLevel="9" name="Atlas' Earring Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35791" toLevel="6" name="Atlas' Earring Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35792" toLevel="6" name="Atlas' Earring Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35793" toLevel="6" name="Atlas' Earring Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35794" toLevel="5" name="Atlas' Earring Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35795" toLevel="5" name="Atlas' Earring Augmentation: Acquired XP/SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35796" toLevel="5" name="Atlas' Earring Augmentation: Critical Rate for Standard Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35797" toLevel="5" name="Atlas' Earring Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35798" toLevel="5" name="Atlas' Earring Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35799" toLevel="5" name="Atlas' Earring Augmentation: Critical Damage for Standard Attacks">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

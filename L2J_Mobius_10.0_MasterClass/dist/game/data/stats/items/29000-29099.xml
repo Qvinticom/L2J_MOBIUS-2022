@@ -1,0 +1,1672 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29000" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 4" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 4. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29001" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 5" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 5. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29002" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 6" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 6. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29003" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 7" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 7. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29004" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 8" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 8. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29005" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 9" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 9. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29006" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 10" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 10. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29007" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 11" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 11. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29008" name="Scorpio Agathion Charm From the Star" additionalName="Lv. 12" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Scorpion's Mass Exile Lv. 12. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28058" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29009" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 1" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29010" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 2" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 2. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29011" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 3" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 3. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29012" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 4" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 4. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29013" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 5" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 5. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29014" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 6" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 6. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29015" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 7" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 7. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29016" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 8" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 8. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29017" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 9" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 9. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29018" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 10" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 10. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29019" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 11" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 11. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29020" name="Aquarius Agathion Charm From the Star" additionalName="Lv. 12" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Mass Binding Flood Lv. 12. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28059" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29021" name="Pisces Agathion Charm From the Star" additionalName="Lv. 1" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29022" name="Pisces Agathion Charm From the Star" additionalName="Lv. 2" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 2. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29023" name="Pisces Agathion Charm From the Star" additionalName="Lv. 3" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 3. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29024" name="Pisces Agathion Charm From the Star" additionalName="Lv. 4" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 4. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29025" name="Pisces Agathion Charm From the Star" additionalName="Lv. 5" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 5. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29026" name="Pisces Agathion Charm From the Star" additionalName="Lv. 6" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 6. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29027" name="Pisces Agathion Charm From the Star" additionalName="Lv. 7" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 7. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29028" name="Pisces Agathion Charm From the Star" additionalName="Lv. 8" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 8. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29029" name="Pisces Agathion Charm From the Star" additionalName="Lv. 9" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 9. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29030" name="Pisces Agathion Charm From the Star" additionalName="Lv. 10" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 10. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29031" name="Pisces Agathion Charm From the Star" additionalName="Lv. 11" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 11. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29032" name="Pisces Agathion Charm From the Star" additionalName="Lv. 12" type="Armor">
+		<!-- Activates the power of Agathion Pisces. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Slippery Scale Lv. 12. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28060" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29033" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 1" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29034" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 2" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 2. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29035" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 3" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 3. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29036" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 4" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 4. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29037" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 5" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 5. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29038" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 6" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 6. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29039" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 7" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 7. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29040" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 8" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 8. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29041" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 9" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 9. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29042" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 10" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 10. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29043" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 11" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 11. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29044" name="Sagittarius Agathion Charm From the Star" additionalName="Lv. 12" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Archer's Call Lv. 12. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28061" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29045" name="Cancer Agathion Charm From the Star" additionalName="Lv. 1" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29046" name="Cancer Agathion Charm From the Star" additionalName="Lv. 2" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 2. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29047" name="Cancer Agathion Charm From the Star" additionalName="Lv. 3" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 3. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29048" name="Cancer Agathion Charm From the Star" additionalName="Lv. 4" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 4. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29049" name="Cancer Agathion Charm From the Star" additionalName="Lv. 5" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 5. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29050" name="Cancer Agathion Charm From the Star" additionalName="Lv. 6" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 6. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29051" name="Cancer Agathion Charm From the Star" additionalName="Lv. 7" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 7. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29052" name="Cancer Agathion Charm From the Star" additionalName="Lv. 8" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 8. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29053" name="Cancer Agathion Charm From the Star" additionalName="Lv. 9" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 9. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29054" name="Cancer Agathion Charm From the Star" additionalName="Lv. 10" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 10. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29055" name="Cancer Agathion Charm From the Star" additionalName="Lv. 11" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 11. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29056" name="Cancer Agathion Charm From the Star" additionalName="Lv. 12" type="Armor">
+		<!-- Activates the power of Agathion Cancer. Can be upgraded up to Lv. +12 through compounding with Starlight Jar. Also can be enchanted to +10 by using Book of Growth. Active skill: Exoskeletal Shield Lv. 12. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. Compounding the charm resets its enchant value. 2. If Agathion Taurus is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="28062" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29057" name="Sayha's Talisman Lv. 1" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power. P. Def. +112, M. Def. +74, acquired XP/ SP +1%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="1" /> <!-- Sayha's Talisman Stage 1 -->
+		</skills>
+	</item>
+	<item id="29058" name="Sayha's Talisman Lv. 2" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power. P. Def. +225, M. Def. +147, acquired XP/ SP +2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="2" /> <!-- Sayha's Talisman Stage 2 -->
+		</skills>
+	</item>
+	<item id="29059" name="Sayha's Talisman Lv. 3" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power. P. Def. +450, M. Def. +294, acquired XP/ SP +3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="3" /> <!-- Sayha's Talisman Stage 3 -->
+		</skills>
+	</item>
+	<item id="29060" name="Sayha's Talisman Lv. 4" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power. P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 12+, Skill Power +2%, Skill Cooldown -2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="4" /> <!-- Sayha's Talisman Stage 4 -->
+		</skills>
+	</item>
+	<item id="29061" name="Sayha's Talisman Lv. 5" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power: P. Def. +901, M. Def. +589, acquired XP/ SP +7%. If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +2%, Skill Cooldown -2%. Active Skill:. Sayha's Grace Lv. 1. If two identical talismans are equipped, only the effect of the max level talisman is applied. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="5" /> <!-- Sayha's Talisman Stage 5 -->
+			<skill id="28144" level="1" /> <!-- Sayha's Protection -->
+		</skills>
+	</item>
+	<item id="29062" name="Sayha's Talisman Lv. 6" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power: P. Def. +1126, M. Def. +736, Acquired XP/ SP +10%. If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +3%, Skill Cooldown -3%. Active Skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="6" /> <!-- Sayha's Talisman Stage 6 -->
+			<skill id="28144" level="1" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="1" /> <!-- Sayha's Encouragement -->
+		</skills>
+	</item>
+	<item id="29063" name="Sayha's Talisman Lv. 7" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power: P. Def. +1351, M. Def. +883, and acquired XP/ SP +15%. If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +3% and Skill Cooldown -3%. Active Skill:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Anger Lv. 1. If two identical talismans are equipped, only the effect of the max level talisman is applied. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="7" /> <!-- Sayha's Talisman Stage 7 -->
+			<skill id="28144" level="1" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="1" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="1" /> <!-- Sayha's Anger -->
+		</skills>
+	</item>
+	<item id="29064" name="Sayha's Talisman Lv. 8" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power: P. Def. +1576, M. Def. +1030, and acquired XP/ SP +20%. If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +5% and Skill Cooldown -5%. Active Skill:. Sayha's Grace Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. Sayha's Support Lv. 1. If two identical talismans are equipped, only the effect of the max level talisman is applied. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="8" /> <!-- Sayha's Talisman Stage 8 -->
+			<skill id="28144" level="2" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="2" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="2" /> <!-- Sayha's Anger -->
+			<skill id="28147" level="1" /> <!-- Sayha's Support -->
+		</skills>
+	</item>
+	<item id="29065" name="Sayha's Talisman Lv. 9" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power. P. Def. +1801, M. Def. +1178, acquired XP/ SP +25%, Recovery Potions' Effect +1000 (except percent recovery items). If equipped with Venir's Talisman Lv. 12+, Skill Power +5%, Skill Cooldown -5%. Active skills:. Sayha's Grace Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Anger Lv. 3. Sayha's Support Lv. 2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="9" /> <!-- Sayha's Talisman Stage 9 -->
+			<skill id="28144" level="3" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="3" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="3" /> <!-- Sayha's Anger -->
+			<skill id="28147" level="2" /> <!-- Sayha's Support -->
+		</skills>
+	</item>
+	<item id="29066" name="Sayha's Talisman Lv. 10" additionalName="Not Available" type="Armor">
+		<!-- Grants Sayha's power: P. Def. +2027, M. Def. +1325, and acquired XP/ SP +30%, Healing Potion Efficiency +2,000 (except percent recovery items). If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +9% and Skill Cooldown -5%. Active Skill:. Sayha's Grace Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Anger Lv. 4. Sayha's Support Lv. 3. If two identical talismans are equipped, only the effect of the max level talisman is applied. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13970" level="10" /> <!-- Sayha's Talisman Stage 10 -->
+			<skill id="28144" level="4" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="4" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="4" /> <!-- Sayha's Anger -->
+			<skill id="28147" level="3" /> <!-- Sayha's Support -->
+		</skills>
+	</item>
+	<item id="29067" name="Sayha's Talisman Pack" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 1. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28437" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
+		</capsuled_items>
+	</item>
+	<item id="29068" name="Sayha's Talisman Pack Lv. 7" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 7. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28443" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 7 -->
+		</capsuled_items>
+	</item>
+	<item id="29069" name="Sayha's Talisman Pack Lv. 8" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 8. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28444" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 8 -->
+		</capsuled_items>
+	</item>
+	<item id="29070" name="Sayha's Talisman Pack Lv. 9" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 9. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28445" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 9 -->
+		</capsuled_items>
+	</item>
+	<item id="29071" name="Sayha's Talisman Pack Lv. 10" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 10. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28446" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 10 -->
+		</capsuled_items>
+	</item>
+	<item id="29072" name="Fortune Talisman Pack" additionalName="Not Available" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 3-10 or Venir's Talisman Lv. 10-15. -->
+		<set name="icon" val="icon.bm_pendant_pve_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29073" name="Mother Tree's Blessed Herbs" type="EtcItem">
+		<!-- Acquired XP/ SP while hunting +300% for 2 min. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29074" name="Jack O'Lantern" type="EtcItem">
+		<!-- Jack O'Lantern made with love. Bring it to Rico to get the Halloween Blessing. -->
+		<set name="icon" val="icon.ev_wp_halloween" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29075" name="Halloween Gift" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Dragonclaw, Bottle of Baium's Soul, Life Stone: Giant's Power, Bottle of Queen Ant's Soul, Bottle of Frintezza's Soul, Blessed Helios Pack, Queen Ant's Ring, Helios Weapon Crafting Pack, Blessed Eternal Pack, Blessed High-grade Lucky Enchant Stone: R-grade Armor, Bottle of Orfen's Soul, Specter Weapon Crafting Pack, Blessed High-grade Lucky Enchant Stone: R-grade Weapon, High-grade Lucky Enchant Stone: R-grade Armor, Scroll of Blessing: R99-grade Armor, Scroll of Blessing: R99-grade Weapon, Apocalypse Weapon Crafting Pack, Eternal Armor Crafting Pack, Top-grade Spirit Stone, Seraph Armor Crafting Pack, Energy of Wind, Twilight Armor Crafting Pack, High-grade Lucky Enchant Stone: R-grade Weapon, Enchant Scroll Pack, R-grade Gemstone, Blessed Scroll of Resurrection, Crafting Ingredients Pack, Red Potion of Regeneration, Halloween Candy. -->
+		<set name="icon" val="icon.event_halloween_king_pumpkini00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29076" name="Halloween Candy" additionalName="Event" type="EtcItem">
+		<!-- Sweet Hallowen candy from the Halloween Gift. Rico will definitely like it. Take the candy to Rico to exchange it for various Halloween items. -->
+		<set name="icon" val="BranchSys.br_hallowinday_candy_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29077" name="Talisman of Abundance Pack" type="EtcItem">
+		<!-- Double-click to obtain Talisman of Abundance: War/ Tactics/ Morale/ Physique. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28154" level="1" /> <!-- Talisman - Abundance Pack -->
+		</skills>
+	</item>
+	<item id="29078" name="Greater Vital Stone Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Vitality bonus +30%, Vitality Consumption -15%, acquired XP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18568" level="6" /> <!-- Vital Stone -->
+		</skills>
+	</item>
+	<item id="29079" name="Greater Vital Stone Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29078" min="1" max="1" chance="100" /> <!-- Greater Vital Stone Lv. 1 - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="29080" name="Ultimate Jewelry Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain (1) of the following types of item randomly: Lv. 1 La Vie En Rose s Jewelry Box, Radiant Gemstone Fragment, La Vie En Rose's Radiant Brooch Chest, or a very small chance to win a Lv. 3 Jewelry Box. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29081" name="Dimensional Talisman - Attribute Attack" additionalName="30-day" type="Armor">
+		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="bodypart" val="deco1" />
+	</item>
+	<item id="29082" name="Dimensional Talisman - Attribute Attack Pack (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Dimensional Talisman - Attribute Attack (30-day). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29081" min="1" max="1" chance="100" /> <!-- Dimensional Talisman - Attribute Attack - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="29083" name="Agathion Virgo Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Contains the power of Agathion Virgo. Primary skill: Healing Light Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Pisces is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28027" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29084" name="Agathion Capricorn Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Capricorn. Primary skill: Skipping Kid Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Libra is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29085" name="Agathion Libra Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Libra. Primary skill: Scale of Life Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Capricorn is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29086" name="Agathion Aries Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Aries. Active skill: Rocky Camouflage Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Aries is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aries_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28030" level="1" type="ON_EQUIP" /> <!-- Summon Aries Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29087" name="Agathion Taurus Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Taurus. Primary skill: Battle Rhapsody Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Sagittarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_tau_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28031" level="1" type="ON_EQUIP" /> <!-- Summon Taurus Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29088" name="Agathion Leo Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Leo. Primary skill: Nemean Lion's Defense Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary abilities. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Virgo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_leo_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28032" level="1" type="ON_EQUIP" /> <!-- Summon Leo Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29089" name="Agathion Gemini Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Gemini. Primary skill: Bountiful Resurrection Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Gemini is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28033" level="1" type="ON_EQUIP" /> <!-- Summon Gemini Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29090" name="Agathion Scorpio Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Scorpio. Active skill: Scorpion's Mass Exile Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28034" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29091" name="Agathion Aquarius Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Aquarius. Active skill: Mass Binding Flood Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28035" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29092" name="Agathion Pisces Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Contains the power of Agathion Pisces. Primary skill: Slippery Scale Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28036" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29093" name="Agathion Sagittarius Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Activates the power of Agathion Sagittarius. Active skill: Archer's Call Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28037" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29094" name="Agathion Cancer Charm Lv. 1" additionalName="15-day" type="Armor">
+		<!-- Contains the power of Agathion Cancer. Primary skill: Exoskeletal Shield Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="28038" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29095" name="Agathion Virgo Charm Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Contains the power of Agathion Virgo. Primary skill: Healing Light Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Pisces is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="28051" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29096" name="Agathion Capricorn Charm Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Activates the power of Agathion Capricorn. Primary skill: Skipping Kid Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Libra is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="28028" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29097" name="Agathion Libra Charm Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Activates the power of Agathion Libra. Primary skill: Scale of Life Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Capricorn is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="28029" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29098" name="Agathion Aries Charm Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Activates the power of Agathion Aries. Active skill: Rocky Camouflage Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Aries is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aries_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="28030" level="1" type="ON_EQUIP" /> <!-- Summon Aries Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="29099" name="Agathion Taurus Charm Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Activates the power of Agathion Taurus. Primary skill: Battle Rhapsody Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Sagittarius is also equipped, only secondary skills will be active. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_tau_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="28031" level="1" type="ON_EQUIP" /> <!-- Summon Taurus Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+</list>

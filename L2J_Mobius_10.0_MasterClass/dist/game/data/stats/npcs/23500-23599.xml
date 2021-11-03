@@ -1,0 +1,3564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="23500" level="99" type="Monster" name="Flame Crow">
+		<parameters>
+			<skill name="Skill01_ID" id="32852" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="508054437" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="91952.0231213873" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="10118.65045867" magical="1486.60958281356" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
+			<attribute>
+				<attack type="FIRE" value="330" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="39.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23501" level="99" type="Monster" name="Flame Rael">
+		<parameters>
+			<skill name="Skill01_ID" id="18217" level="5" />
+			<skill name="Skill02_ID" id="32854" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38559" />
+		<acquire exp="508054437" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="91952.0231213873" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="10119.0006782013" magical="1486.56528586613" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="170" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23502" level="99" type="Monster" name="Flame Salamander">
+		<parameters>
+			<skill name="Skill01_ID" id="32849" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="508054437" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="91952.0231213873" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="10118.65045867" magical="1486.60958281356" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23503" level="99" type="Monster" name="Flame Drake">
+		<parameters>
+			<skill name="Skill01_ID" id="32854" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="508054437" sp="457217" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="91952.0231213873" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="10119.0006782013" magical="1486.481325348" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
+			<attribute>
+				<attack type="FIRE" value="330" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="70" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="55" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23504" level="99" type="Monster" name="Flame Votis">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>FEMALE</sex>
+		<acquire exp="18801846" sp="16857" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="70" />
+			</speed>
+			<attack physical="10118.65045867" magical="1486.60958281356" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
+			<attribute>
+				<attack type="EARTH" value="330" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+		</stats>
+		<skillList>
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23505" level="101" type="Monster" name="Fortress Raider">
+		<parameters>
+			<skill name="Skill01_ID" id="23638" level="1" />
+			<skill name="Skill02_ID" id="23639" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17421" />
+		<acquire exp="247302435" sp="247375" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="480429.479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4343" max="10150" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.205" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.19" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.13" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23506" level="101" type="Monster" name="Fortress Guardian Captain">
+		<parameters>
+			<skill name="Skill01_ID" id="23636" level="1" />
+			<skill name="Skill02_ID" id="23637" level="1" />
+			<skill name="Skill03_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17417" lhand="17435" />
+		<acquire exp="311374508" sp="311437" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="480429.479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.91966759003" magical="1152.96056712913" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4343" max="10150" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.208" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.115" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.114" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23507" level="101" type="Monster" name="Atelia Passionate Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23640" level="1" />
+			<skill name="Skill02_ID" id="23641" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17329" />
+		<acquire exp="247302435" sp="247375" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="480429.479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4343" max="10150" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.185" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.184" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.168" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23508" level="101" type="Monster" name="Atelia Elite Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23642" level="1" />
+			<skill name="Skill02_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17325" lhand="17401" />
+		<acquire exp="311374508" sp="311437" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="480429.479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.91966759003" magical="1152.96056712913" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4343" max="10150" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.228" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.188" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.094" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23509" level="102" type="Monster" name="Fortress Dark Wizard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23645" level="1" />
+			<skill name="Skill02_ID" id="23646" level="1" />
+			<skill name="Skill03_ID" id="23706" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17391" />
+		<sex>MALE</sex>
+		<acquire exp="381103202" sp="381203" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.23253159076" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23706" level="1" /> <!-- Dark Fire -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="25.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.222" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.214" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.196" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23510" level="102" type="Monster" name="Atelia Flame Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23645" level="1" />
+			<skill name="Skill02_ID" id="23649" level="1" />
+			<skill name="Skill03_ID" id="23650" level="1" />
+			<skill name="Skill04_ID" id="23706" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+			<param name="Skill04_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17425" />
+		<sex>MALE</sex>
+		<acquire exp="381103202" sp="381203" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.23253159076" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23649" level="1" /> <!-- Curse of Blaze -->
+			<skill id="23650" level="1" /> <!-- Meteor Hurricane -->
+			<skill id="23706" level="1" /> <!-- Dark Fire -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="25.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.178" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.17" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.152" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23511" level="102" type="Monster" name="Fortress Archon">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<equipment rhand="17392" />
+		<sex>MALE</sex>
+		<acquire exp="444700149" sp="444771" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.14695457058" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23651" level="1" /> <!-- Absolute Crimson -->
+			<skill id="23652" level="1" /> <!-- Rage of Embryo -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.198" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.193" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.146" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23512" level="102" type="Monster" name="Atelia High Priest">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<equipment rhand="17426" />
+		<sex>MALE</sex>
+		<acquire exp="444700149" sp="444771" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.14695457058" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23648" level="1" /> <!-- Blessing of Atelia -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.251" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.229" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.18" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23530" level="101" type="Monster" name="Fortress Guardian Captain" title="Kelbim's Call">
+		<parameters>
+			<skill name="Skill01_ID" id="23637" level="1" /> <!-- Dark Provoke -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="311374508" sp="311437" />
+		<equipment rhand="17417" lhand="17435" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="480429.479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.91966759003" magical="1152.96056712913" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4343" max="10150" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.15" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.139" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.129" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23532" level="101" type="Monster" name="Atelia Elite Captain" title="Kelbim's Call">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="311374508" sp="311437" />
+		<equipment rhand="17325" lhand="17401" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="480429.479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.91966759003" magical="1152.96056712913" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4343" max="10150" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.175" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.145" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.145" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23535" level="102" type="Monster" name="Atelia Archon" title="Kelbim's Call">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="444700149" sp="444771" />
+		<equipment rhand="17392" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.14695457058" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23651" level="1" /> <!-- Absolute Crimson -->
+			<skill id="23652" level="1" /> <!-- Rage of Embryo -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.216" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.198" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.129" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23536" level="102" type="Monster" name="Atelia High Priest" title="Kelbim's Call">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="444700149" sp="444771" />
+		<equipment rhand="17426" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.14695457058" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23648" level="1" /> <!-- Blessing of Atelia -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.224" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.218" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.149" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23537" level="102" type="Monster" name="Atelia Elite Captain" title="Atelia Infuser">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17325" lhand="17401" />
+		<acquire exp="381103202" sp="381203" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="520304.624277457" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2231.23253159076" magical="1293.47265317407" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.252" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.195" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.116" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23538" level="103" type="Monster" name="Atelia High Priest" title="Atelia Infuser">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="544164785" sp="544242" />
+		<equipment rhand="17426" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="563489.01734104" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="680876.266370151" magical="107887.198303425" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2274.19772256729" magical="1318.55188624453" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23648" level="1" /> <!-- Blessing of Atelia -->
+			<skill id="23706" level="3" /> <!-- Dark Fire -->
+			<skill id="23707" level="3" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.278" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.245" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.232" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23539" level="104" type="Monster" name="Atelia Trial Guardian Captain" title="Trial Guardian">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23654" level="1" />
+			<skill name="Skill02_ID" id="23655" level="1" />
+			<skill name="Skill03_ID" id="23680" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1827926.58959538" hpRegen="9.5" mp="67961.0561056106" mpRegen="3.3" />
+			<attack physical="839293.354893473" magical="135334.346535351" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2803.62694300518" magical="1625.19878930898" />
+			<attribute>
+				<attack type="DARK" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="47" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23541" level="102" type="Monster" name="Kerberos Liger">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.797447659" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="HOLY" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.188" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.124" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.123" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23542" level="103" type="Monster" name="Kerberos Fort">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.609291254" magical="92754.380731082" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="HOLY" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.279" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.188" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.143" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23543" level="102" type="Monster" name="Kerberos Nero">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.797447659" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.243" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.197" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.12" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23544" level="103" type="Monster" name="Fury Sylph Barrena">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.3352285556" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.198" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.162" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.145" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23545" level="102" type="Monster" name="Fury Kiku">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="71402652" sp="71476" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94598.8439306358" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="270511.917865513" magical="40535.9045507019" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="HOLY" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" />
+			<height normal="10.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="361" max="841" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23546" level="103" type="Monster" name="Fury Sylph Temptress">
+		<!-- FIX ME NO INFO ABOUT THIS NPC -->
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.3352285556" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.27" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.258" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.208" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23547" level="103" type="Monster" name="Fury Sylph Purka">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23667" level="1" />
+			<skill name="Skill02_ID" id="23658" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.3352285556" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.239" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.224" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.203" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23548" level="102" type="Monster" name="Fury Kerberos Liger">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.944838622" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="HOLY" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="350" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23549" level="102" type="Monster" name="Fury Kerberos Nero">
+		<!-- Source: www.l2wiki.com -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.944838622" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23550" level="102" type="Monster" name="Kerberos Liger" title="Spirit of the Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.797447659" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16154" level="6" /> <!-- Mass Chain Smash -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.228" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.153" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.133" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23551" level="103" type="Monster" name="Kerberos Fort" title="Spirit of the Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.609291254" magical="92754.380731082" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16154" level="6" /> <!-- Mass Chain Smash -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.175" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.154" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.142" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23552" level="102" type="Monster" name="Kerberos Nero" title="Spirit of the Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.797447659" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16154" level="6" /> <!-- Mass Chain Smash -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4441" max="10346" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.173" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.171" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.136" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23553" level="103" type="Monster" name="Fury Sylph Barrena" title="Spirit of the Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.3352285556" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.248" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.184" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.149" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23554" level="102" type="Monster" name="Fury Kiku">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="71402652" sp="71476" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94598.8439306358" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="270511.917865513" magical="40535.9045507019" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<speed>
+				<walk ground="39" />
+				<run ground="180" />
+			</speed>
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="6" />
+			<height normal="10.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="361" max="841" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23555" level="103" type="Monster" name="Fury Sylph Temptress" title="Spirit of the Night">
+		<!-- FIX ME NO INFO ABOUT THIS NPC -->
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.3352285556" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.269" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.243" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.164" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23556" level="103" type="Monster" name="Fury Sylph Purka" title="Spirit of the Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23667" level="1" />
+			<skill name="Skill02_ID" id="23658" level="2" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<acquire exp="740762816" sp="740827" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.3352285556" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81219" min="1" max="1" chance="1.276" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.259" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.182" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23557" level="102" type="Monster" name="Fury Kerberos Liger">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.944838622" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16156" level="8" /> <!-- Mass Droop -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23558" level="102" type="Monster" name="Fury Kerberos Nero">
+		<!-- Source: www.l2wiki.com -->
+		<race>ELEMENTAL</race>
+		<acquire exp="605356740" sp="605409" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="541023.944838622" magical="81071.6609216526" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16156" level="8" /> <!-- Mass Droop -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23559" level="102" type="Monster" name="El Floato">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="71402652" sp="71476" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94598.8439306358" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="270512.097076058" magical="40535.9896752398" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="14" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23560" level="102" type="Monster" name="El Floato">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="71402652" sp="71476" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94598.8439306358" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="270512.097076058" magical="40535.9896752398" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1807.39682539683" magical="1047.66095657185" />
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GARDEN_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="14" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23561" level="103" type="Monster" name="Harpe">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="3703824689" sp="3703921" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10245260.1156069" hpRegen="427.8936586" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="607212.483645462" magical="92754.380731082" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2028.33246482543" magical="1175.86339144597" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23678" level="1" /> <!-- Summon Friends -->
+			<skill id="23681" level="1" /> <!-- Harpe Stone Cancel -->
+		</skillList>
+		<collision>
+			<radius normal="43" />
+			<height normal="43" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.227" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.222" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="1" chance="1.166" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23562" level="103" type="Monster" name="Harpe" title="Spirit of the Night">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="3703824689" sp="3703921" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10245260.1156069" hpRegen="427.8936586" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="546328.10116057" magical="81866.4811267669" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1825.1164021164" magical="1057.93214242059" />
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23678" level="1" /> <!-- Summon Friends -->
+			<skill id="23681" level="1" /> <!-- Harpe Stone Cancel -->
+		</skillList>
+		<collision>
+			<radius normal="43" />
+			<height normal="43" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.216" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.211" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.191" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23563" level="104" type="Monster" name="Croamis" title="Gatekeeper">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16643400" hpRegen="9.5" mp="25714.8514851485" mpRegen="3.3" />
+			<attack physical="1114741.54711324" magical="170281.558089742" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1861.59458051068" magical="1079.24747659758" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<collision>
+			<radius normal="46" />
+			<height normal="50" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23564" level="103" type="Monster" name="Croa">
+		<!-- Source: www.l2wiki.com -->
+		<race>ELEMENTAL</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1552391.58959538" hpRegen="427.8936586" mp="49291.7887788779" mpRegen="3.3" />
+			<attack physical="546328.10116057" magical="81866.4811267669" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1825.1164021164" magical="1057.93214242059" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attribute>
+				<attack type="EARTH" value="350" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
+		</skillList>
+		<collision>
+			<radius normal="46" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23565" level="103" type="Monster" name="Amis">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1552391.58959538" hpRegen="427.8936586" mp="49291.7887788779" mpRegen="3.3" />
+			<attack physical="546328.10116057" magical="81866.4811267669" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1825.1164021164" magical="1057.93214242059" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attribute>
+				<attack type="WIND" value="350" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
+		</skillList>
+		<collision>
+			<radius normal="46" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23566" level="104" type="Monster" name="Nymph Rose">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.794" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23567" level="104" type="Monster" name="Nymph Rose">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.871" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23568" level="104" type="Monster" name="Nymph Lily">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.835" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23569" level="104" type="Monster" name="Nymph Lily">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.892" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23570" level="104" type="Monster" name="Nymph Tulip">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<skill name="Skill03_ID" id="23721" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.924" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23571" level="104" type="Monster" name="Nymph Tulip">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23716" level="2" />
+			<skill name="Skill03_ID" id="23721" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.84" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23572" level="104" type="Monster" name="Nymph Cosmos">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<param name="Skill01_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.9" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23573" level="104" type="Monster" name="Nymph Cosmos">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<param name="Skill01_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.848" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23578" level="104" type="Monster" name="Nymph Guardian" title="Guardian of the Flower">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23715" level="2" />
+			<skill name="Skill02_ID" id="23723" level="1" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
+			<skill id="23723" level="1" /> <!-- Guardian Knock Down -->
+			<skill id="23724" level="1" /> <!-- Nymph's Fury -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.876" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23581" level="104" type="Monster" name="Apherus">
+		<!-- Source: www.l2on.net -->
+		<race>PLANT</race>
+		<acquire exp="959476544" sp="863442" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="129772.832369942" hpRegen="9.5" mp="2571.61716171617" mpRegen="3.3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="50" critical="4.75" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
+			<attribute>
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="53" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2671" max="6233" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="1.826" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23586" level="103" type="Monster" name="Geork" title="Embryo Master Artisan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="12872716593" sp="12872749" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1572361.2716763" hpRegen="9.5" mp="66930.6930693069" mpRegen="3.3" />
+			<attack physical="748963.738571782" magical="118675.876040372" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2501.5625" magical="1450.42629262926" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16523" level="1" /> <!-- Magma Splash -->
+			<skill id="16524" level="1" /> <!-- Full Swing Crusher -->
+			<skill id="16525" level="1" /> <!-- Spirit of Master -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="29.5" />
+		</collision>
+	</npc>
+	<npc id="23587" level="103" type="Monster" name="Burnstein" title="Embryo Commander">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="18723951408" sp="18724037" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2358541.61849711" hpRegen="9.5" mp="66930.6930693069" mpRegen="3.3" />
+			<attack physical="748963.738571782" magical="118675.876040372" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2501.5625" magical="1450.42629262926" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16522" level="1" /> <!-- Shield Swing -->
+			<skill id="23708" level="4" /> <!-- Dark Breaker -->
+			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="28.25" />
+		</collision>
+	</npc>
+	<npc id="23588" level="102" type="Monster" name="Hummel" title="Embryo Quartermaster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="5738066517" sp="5738119" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="878787.283236994" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5578.01047120419" magical="3233.63226374994" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16519" level="1" /> <!-- Slay X -->
+			<skill id="16520" level="1" /> <!-- Shield of Atelia -->
+			<skill id="16521" level="1" /> <!-- Embryo's Call -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="23589" level="101" type="Monster" name="Fortress Spy">
+		<race>HUMANOID</race>
+		<equipment rhand="17421" />
+		<acquire exp="60751240" sp="60798" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="109188.439306358" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23590" level="103" type="Monster" name="Adolph" title="Brainwashed Aden Vanguard">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="17383" lhand="17401" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="824743.352601156" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="748963.738571782" magical="118675.876040372" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5003.125" magical="2900.50880088009" />
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
+		</skillList>
+	</npc>
+	<npc id="23591" level="103" type="Monster" name="Barton" title="Brainwashed Aden Vanguard">
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<equipment rhand="17393" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="824743.352601156" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="748963.738571782" magical="118675.876040372" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5003.125" magical="2900.50880088009" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="14.5" />
+			<height normal="30" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+		</skillList>
+	</npc>
+	<npc id="23592" level="103" type="Monster" name="Hayuk" title="Brainwashed Aden Vanguard">
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="15302" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="824743.352601156" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="748963.738571782" magical="118675.876040372" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5003.125" magical="2900.50880088009" />
+			<speed>
+				<walk ground="30" />
+				<run ground="190" />
+			</speed>
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+		</skillList>
+	</npc>
+	<npc id="23593" level="103" type="Monster" name="Elise" title="Brainwashed Aden Vanguard">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="17392" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="824743.352601156" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="374481.869285891" magical="237351.752080744" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5003.125" magical="2900.50880088009" />
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23706" level="3" /> <!-- Dark Fire -->
+		</skillList>
+	</npc>
+	<npc id="23594" level="103" type="Monster" name="Eliyah" title="Brainwashed Aden Vanguard">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="824743.352601156" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
+			<attack physical="374481.869285891" magical="237351.752080744" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5003.125" magical="2900.50880088009" />
+			<speed>
+				<walk ground="28" />
+				<run ground="190" />
+			</speed>
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="23706" level="3" /> <!-- Dark Fire -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
+		</skillList>
+	</npc>
+	<npc id="23595" level="101" type="Monster" name="Fortress Raider">
+		<parameters>
+			<skill name="Skill01_ID" id="23638" level="1" />
+			<skill name="Skill02_ID" id="23639" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17421" />
+		<acquire exp="102491488" sp="205041" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3977.36842105263" magical="2306.06218516589" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23596" level="102" type="Monster" name="Fortress Guardian Captain">
+		<parameters>
+			<skill name="Skill01_ID" id="23636" level="1" />
+			<skill name="Skill02_ID" id="23637" level="1" />
+			<skill name="Skill03_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17417" lhand="17435" />
+		<acquire exp="888259707" sp="1776588" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4462.30366492147" magical="2587.04404471861" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="23597" level="101" type="Monster" name="Atelia Passionate Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23640" level="1" />
+			<skill name="Skill02_ID" id="23641" level="1" />
+			<skill name="Skill03_ID" id="23708" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17329" />
+		<acquire exp="102491488" sp="205041" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="595421.949982443" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3977.36842105263" magical="2306.06218516589" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23598" level="102" type="Monster" name="Atelia Elite Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23642" level="1" />
+			<skill name="Skill02_ID" id="23709" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17325" lhand="17401" />
+		<acquire exp="888259707" sp="1776588" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="667987.922020966" magical="103953.888987153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4462.30366492147" magical="2587.04404471861" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="23599" level="102" type="Monster" name="Fortress Dark Wizard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<skill name="Skill01_ID" id="23645" level="1" />
+			<skill name="Skill02_ID" id="23646" level="1" />
+			<skill name="Skill03_ID" id="23706" level="4" />
+			<param name="Skill01_Probablity" value="100" />
+			<param name="Skill02_Probablity" value="100" />
+			<param name="Skill03_Probablity" value="100" />
+		</parameters>
+		<race>HUMANOID</race>
+		<equipment rhand="17391" />
+		<sex>MALE</sex>
+		<acquire exp="104531069" sp="209121" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="63065.8959537572" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
+			<attack physical="333994.155065416" magical="207907.777974305" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4462.30366492147" magical="2587.04404471861" />
+			<attribute>
+				<attack type="DARK" value="400" />
+				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23706" level="1" /> <!-- Dark Fire -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ATELIA_CLAN</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+</list>

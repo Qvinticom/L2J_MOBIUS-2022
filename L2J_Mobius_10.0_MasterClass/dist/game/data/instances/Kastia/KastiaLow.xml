@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kastia - Low -->
+<instance id="298" maxWorlds="50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<time duration="15" empty="0" />
+	<locations>
+		<enter type="FIXED">
+			<location x="-111297" y="-14750" z="-11427" />
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="Level" showMessageAndHtml="true">
+			<param name="html" value="condNoLevel.html" />
+			<param name="min" value="100" />
+		</condition>
+		<condition type="Distance" />
+		<condition type="Reenter" />
+	</conditions>
+	<reenter apply="ON_FINISH">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+	<spawnlist>
+		<group name="NPC" spawnByDefault="false">
+			<npc id="34566" x="-111304" y="-15018" z="-11430" heading="48879" /> <!-- Kastia's Researcher -->
+		</group>
+		<group name="wave_1" spawnByDefault="false">
+			<npc id="24535" x="-111432" y="-14392" z="-11428" heading="16526" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111368" y="-14376" z="-11428" heading="2854" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111304" y="-14376" z="-11428" heading="162" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111240" y="-14376" z="-11428" heading="1006" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111176" y="-14360" z="-11428" heading="1578" /> <!-- Kastia's Keeper -->
+		</group>
+		<group name="wave_2" spawnByDefault="false">
+			<npc id="24535" x="-111432" y="-14664" z="-11428" heading="47624" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111368" y="-14664" z="-11424" heading="33959" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111304" y="-14664" z="-11424" heading="33959" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111240" y="-14664" z="-11424" heading="33959" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111240" y="-14664" z="-11424" heading="33959" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111256" y="-14664" z="-11424" heading="33959" /> <!-- Kastia's Keeper -->
+		</group>
+		<group name="wave_3" spawnByDefault="false">
+			<npc id="24535" x="-111256" y="-14936" z="-11428" heading="10847" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111160" y="-14952" z="-11428" heading="2661" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111080" y="-14968" z="-11428" heading="63227" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-110984" y="-14968" z="-11428" heading="34989" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-110856" y="-14936" z="-11428" heading="10250" /> <!-- Kastia's Keeper -->
+			<npc id="24536" x="-110728" y="-14952" z="-11428" heading="51468" /> <!-- Kastia's Overseer -->
+		</group>
+		<group name="wave_4" spawnByDefault="false">
+			<npc id="24536" x="-111264" y="-15215" z="-11428" heading="40265" /> <!-- Kastia's Overseer -->
+			<npc id="24535" x="-111384" y="-15192" z="-11428" heading="1272" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111480" y="-15192" z="-11428" heading="29763" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111560" y="-15192" z="-11428" heading="32212" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111656" y="-15192" z="-11428" heading="39292" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111752" y="-15192" z="-11428" heading="32881" /> <!-- Kastia's Keeper -->
+			<npc id="24537" x="-111864" y="-15192" z="-11428" heading="29025" /> <!-- Kastia's Warder -->
+		</group>
+		<group name="wave_5" spawnByDefault="false">
+			<npc id="24536" x="-111288" y="-15432" z="-11421" heading="49913" /> <!-- Kastia's Overseer -->
+			<npc id="24535" x="-111192" y="-15448" z="-11421" heading="63567" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111112" y="-15432" z="-11421" heading="1052" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111032" y="-15432" z="-11422" heading="65408" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-110952" y="-15432" z="-11423" heading="65176" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-110872" y="-15464" z="-11422" heading="61095" /> <!-- Kastia's Keeper -->
+			<npc id="24536" x="-110776" y="-15448" z="-11424" heading="14585" /> <!-- Kastia's Overseer -->
+		</group>
+		<group name="wave_6" spawnByDefault="false">
+			<npc id="24536" x="-111272" y="-15720" z="-11404" heading="50504" /> <!-- Kastia's Overseer -->
+			<npc id="24536" x="-111352" y="-15736" z="-11404" heading="34158" /> <!-- Kastia's Overseer -->
+			<npc id="24535" x="-111544" y="-15688" z="-11408" heading="33765" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111624" y="-15720" z="-11413" heading="36991" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111688" y="-15736" z="-11413" heading="34980" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111784" y="-15736" z="-11414" heading="9605" /> <!-- Kastia's Keeper -->
+		</group>
+		<group name="wave_7" spawnByDefault="false">
+			<npc id="24536" x="-111320" y="-15928" z="-11347" heading="49821" /> <!-- Kastia's Overseer -->
+			<npc id="24536" x="-111416" y="-15944" z="-11404" heading="65370" /> <!-- Kastia's Overseer -->
+			<npc id="24535" x="-111416" y="-15944" z="-11400" heading="35114" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111544" y="-15992" z="-11362" heading="43959" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111176" y="-15944" z="-11404" heading="59207" /> <!-- Kastia's Keeper -->
+			<npc id="24535" x="-111080" y="-15960" z="-11404" heading="63885" /> <!-- Kastia's Keeper -->
+			<npc id="24538" x="-110968" y="-15976" z="-11404" heading="52605" /> <!-- Kalix -->
+		</group>
+	</spawnlist>
+</instance>

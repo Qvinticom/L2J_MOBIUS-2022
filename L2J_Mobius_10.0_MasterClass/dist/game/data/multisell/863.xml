@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>33715</npc> <!-- Seed Talisman Manager -->
+	</npcs>
+	<item>
+		<ingredient id="34984" count="1" /> <!-- Talisman - Infinity -->
+		<ingredient id="57" count="44000000" /> <!-- Adena -->
+		<production id="34985" count="1" chance="100" /> <!-- Talisman - Destruction -->
+	</item>
+	<item>
+		<ingredient id="34985" count="1" /> <!-- Talisman - Destruction -->
+		<ingredient id="81150" count="1" /> <!-- Energy of Destruction -->
+		<ingredient id="35563" count="15" /> <!-- Giant's Energy -->
+		<ingredient id="57" count="5500000" /> <!-- Adena -->
+		<production id="34986" count="1" /> <!-- Talisman - Annihilation -->
+		<production id="34986" count="1" chance="50" /> <!-- Talisman - Annihilation -->
+		<production id="34986" count="1" chance="50" /> <!-- Talisman - Annihilation -->
+	</item>
+	<item>
+		<ingredient id="34986" count="1" /> <!-- Talisman - Annihilation -->
+		<ingredient id="36184" count="1" /> <!-- Annihilation Energy -->
+		<ingredient id="35563" count="30" /> <!-- Giant's Energy -->
+		<ingredient id="57" count="11000000" /> <!-- Adena -->
+		<production id="34987" count="1" /> <!-- Talisman - Hellfire -->
+		<production id="34987" count="1" chance="45" /> <!-- Talisman - Hellfire -->
+		<production id="34986" count="1" chance="55" /> <!-- Talisman - Annihilation -->
+	</item>
+	<item>
+		<ingredient id="34987" count="1" /> <!-- Talisman - Hellfire -->
+		<ingredient id="36185" count="1" /> <!-- Hellfire Energy -->
+		<ingredient id="35563" count="45" /> <!-- Giant's Energy -->
+		<ingredient id="57" count="22000000" /> <!-- Adena -->
+		<production id="34988" count="1" /> <!-- Talisman - Desire -->
+		<production id="34988" count="1" chance="35" /> <!-- Talisman - Desire -->
+		<production id="34987" count="1" chance="65" /> <!-- Talisman - Hellfire -->
+	</item>
+	<item>
+		<ingredient id="34988" count="1" /> <!-- Talisman - Desire -->
+		<ingredient id="36186" count="1" /> <!-- Energy of Destruction -->
+		<ingredient id="35563" count="60" /> <!-- Giant's Energy -->
+		<ingredient id="57" count="44000000" /> <!-- Adena -->
+		<production id="34989" count="1" /> <!-- Talisman - Longing -->
+		<production id="34989" count="1" chance="15" /> <!-- Talisman - Longing -->
+		<production id="34988" count="1" chance="85" /> <!-- Talisman - Desire -->
+	</item>
+	<item>
+		<ingredient id="34989" count="1" /> <!-- Talisman - Longing -->
+		<ingredient id="26291" count="1" /> <!-- Kaliel's Energy (Longing) -->
+		<ingredient id="35563" count="70" /> <!-- Giant's Energy -->
+		<production id="39572" count="1" /> <!-- Talisman - Insanity -->
+		<production id="39572" count="1" chance="10" /> <!-- Talisman - Insanity -->
+		<production id="34989" count="1" chance="90" /> <!-- Talisman - Longing -->
+	</item>
+</list>

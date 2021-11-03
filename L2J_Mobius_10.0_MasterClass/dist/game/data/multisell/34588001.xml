@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34588</npc> <!-- Dreamer of the Legend Tittle -->
+	</npcs>
+	<item>
+		<ingredient id="81904" count="1" /> <!-- Prophecy Fragment -->
+		<ingredient id="57" count="5000000" /> <!-- Adena -->
+		<production id="81905" count="1" /> <!-- Legend's Mark -->
+		<production id="80804" count="3" chance="70" /> <!-- Retired Legend's Scroll -->
+		<production id="81906" count="1" chance="28" /> <!-- Prophecy Chest -->
+		<production id="81905" count="1" chance="2" /> <!-- Legend's Mark -->
+	</item>
+</list>

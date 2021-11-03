@@ -1,0 +1,1809 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="27700" name="Eva's Earring Lv. 5" type="Armor">
+		<!-- MP +98, Water Resistance +90, DEX/ WIT/ MEN +5, Vampiric Rage effect +7%, MP Consumption -7%, P. Def. +14%, M. Def. +19%, P./ M. Debuff Reflection Rate +18%, M. Damage Reflection Rate +18%, P. Skill Evasion +9%, P. Skill Power +4%, Speed +4, Received Healing +13%, Healing Power +188, Obstruction/ Stupor Resistance +18%, Confusion/ Vital Point Attack Resistance +38%, Petrification/ Infection Resistance +48%. For 40 sec., P./ M. Def. +40%, PvP defense -15%, Attribute Resistance -150. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="46785" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring Lv. 5 -->
+			<skill id="46786" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring Lv. 5 -->
+			<skill id="27652" level="5" /> <!-- Eva's Earring -->
+			<skill id="27752" level="5" /> <!-- Eva's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">320.0</stat>
+			<stat type="maxMp">98</stat>
+		</stats>
+	</item>
+	<item id="27701" name="Eva's Earring Lv. 6" type="Armor">
+		<!-- MP +102, Water Resistance +100, DEX/ WIT/ MEN +5, Vampiric Rage effect +8%, MP Consumption -7%, P. Def. +15%, M. Def. +20%, P./ M. Debuff Reflection Rate +20%, M. Damage Reflection Rate +20%, P. Skill Evasion +10%, P. Skill Power +5%, Speed +5, Received Healing +15%, Healing Power +192, Obstruction/ Stupor Resistance +20%, Confusion/ Vital Point Attack Resistance +40%, Petrification/ Infection Resistance +50%. For 40 sec., P./ M. Def. +50%, PvP defense -20%, Attribute Resistance -300. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="46791" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring Lv. 6 -->
+			<skill id="46792" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring Lv. 6 -->
+			<skill id="27652" level="6" /> <!-- Eva's Earring -->
+			<skill id="27752" level="6" /> <!-- Eva's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">359.0</stat>
+			<stat type="maxMp">102</stat>
+		</stats>
+	</item>
+	<item id="27702" name="Sayha's Ring Lv. 1" type="Armor">
+		<!-- MP +53, CHA/ LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +30%, Fixed Damage Resistance +5%, P./ M. Skill Power +5%, Speed +2, Physical/ Mental Resistance +10, P. Accuracy +2, HP Recovery +10%. Resistance to the following: Confusion +20%, Obstruction +12%, Infection +40%, Petrification/ Vital Spot Attack +10%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46721" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring Lv. 1 -->
+			<skill id="46722" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring Lv. 1 -->
+			<skill id="27658" level="1" /> <!-- Sayha's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">146.0</stat>
+			<stat type="maxMp">53</stat>
+		</stats>
+	</item>
+	<item id="27703" name="Sayha's Ring Lv. 2" type="Armor">
+		<!-- MP +57, CHA/ LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +33%, Fixed Damage Resistance +6%, P./ M. Skill Power +9%, Speed +2, Physical/ Mental Resistance +11, P. Accuracy +3, HP Recovery +15%. Resistance to the following: Confusion +22%, Obstruction +14%, Petrification +11%, Infection +42%, Vital Spot Attack +12%. Blocks P./ M. Skills with a 1% chance for standard attacks and 2% for skill casting. Additionally, upon activation of toggle skills: you get Speed +7, P. Atk. in PvP +4%, P./ M. Atk. +12%, Critical Rate for standard attacks -55, P./ M. Def. -18%, nearby enemies get Speed -10%, Atk. Spd./ Casting Spd. -10%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46727" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring Lv. 2 -->
+			<skill id="46728" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring Lv. 2 -->
+			<skill id="27658" level="2" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="2" /> <!-- Sayha's Ring -->
+			<skill id="46799" level="2" /> <!-- Sayha's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">167.0</stat>
+			<stat type="maxMp">57</stat>
+		</stats>
+	</item>
+	<item id="27704" name="Sayha's Ring Lv. 3" type="Armor">
+		<!-- MP +60, CHA/ LUC +4, P. Critical Damage/ M. Skill Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +35%, Fixed Damage Resistance +7%, P./ M. Skill Power +12%, Speed +3, Physical/ Mental Resistance +12, P. Accuracy +4, HP Recovery +18%. Resistance to the following: Confusion +24%, Obstruction +16%, Petrification +12%, Infection +44%, Vital Spot Attack +14%. Blocks P./ M. Skills with a 2% chance for standard attacks and 3% for skill casting. Additionally, upon activation of toggle skills: you get Speed +10, P. Atk. in PvP +6%, P./ M. Atk. +15%, Critical Rate for standard attacks -50, P./ M. Def. -16%, nearby enemies get Speed -15%, Atk. Spd./ Casting Spd. -15%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46733" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring Lv. 3 -->
+			<skill id="46734" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring Lv. 3 -->
+			<skill id="27658" level="3" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="3" /> <!-- Sayha's Ring -->
+			<skill id="46799" level="3" /> <!-- Sayha's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">187.0</stat>
+			<stat type="maxMp">60</stat>
+		</stats>
+	</item>
+	<item id="27705" name="Sayha's Ring Lv. 4" type="Armor">
+		<!-- MP +62, CHA/ LUC +4, P. Critical Damage/ M. Skill Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +37%, Fixed Damage Resistance +10%, P./ M. Skill Power +16%, Speed +3, Physical/ Mental Resistance +13, P. Accuracy +5, HP Recovery +22%. Resistance to the following: Confusion +26%, Obstruction +18%, Petrification +13%, Infection +46%, Vital Spot Attack +16%. Blocks P./ M. Skills with a 3% chance for standard attacks and 5% for skill casting. Additionally, upon activation of toggle skills: you get Speed +15, P. Atk. in PvP +9%, P./ M. Atk. +20%, Critical Rate for standard attacks -40, P./ M. Def. -13%, nearby enemies get Speed -20%, Atk. Spd./ Casting Spd. -20%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46763" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring Lv. 4 -->
+			<skill id="46764" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring Lv. 4 -->
+			<skill id="27658" level="4" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="4" /> <!-- Sayha's Ring -->
+			<skill id="46799" level="4" /> <!-- Sayha's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">206.0</stat>
+			<stat type="maxMp">62</stat>
+		</stats>
+	</item>
+	<item id="27706" name="Sayha's Ring Lv. 5" type="Armor">
+		<!-- MP +64, CHA/ LUC +5, P. Critical Damage/ M. Skill Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +39%, Fixed Damage Resistance +13%, P./ M. Skill Power +19%, Speed +4, Physical/ Mental Resistance +14, P. Accuracy +6, HP Recovery +25%. Resistance to the following: Confusion +28%, Obstruction +19%, Petrification +14%, Infection +48%, Vital Spot Attack +18%. Blocks P./ M. Skills with a 5% chance for standard attacks and 7% for skill casting. Additionally, upon activation of toggle skills: you get Speed +20, P. Atk. in PvP +12%, P./ M. Atk. +25%, Critical Rate for standard attacks -30, P./ M. Def. -10%, nearby enemies get Speed -25%, Atk. Spd./ Casting Spd. -25%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46769" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring Lv. 5 -->
+			<skill id="46770" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring Lv. 5 -->
+			<skill id="27658" level="5" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="5" /> <!-- Sayha's Ring -->
+			<skill id="46799" level="5" /> <!-- Sayha's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">225.0</stat>
+			<stat type="maxMp">64</stat>
+		</stats>
+	</item>
+	<item id="27707" name="Sayha's Ring Lv. 6" type="Armor">
+		<!-- MP +68, CHA/ LUC +6, P. Critical Damage/ M. Skill Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +45%, Fixed Damage Resistance +18%, P./ M. Skill Power +25%, Speed +5, Physical/ Mental Resistance +15, P. Accuracy +7, HP Recovery +30%. Resistance to the following: Confusion +30%, Obstruction +20%, Petrification +15%, Infection +50%, Vital Spot Attack +20%. Blocks P./ M. Skills with a +7% chance for standard attacks and 10% for skill casting. Additionally, upon activation of toggle skills: you get Speed +30, P. Atk. in PvP +15%, P./ M. Atk. +35%, Critical Rate for standard attacks -20, P./ M. Def. -5%, nearby enemies get Speed -35%, Atk. Spd./ Casting Spd. -35%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46775" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring Lv. 6 -->
+			<skill id="46776" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring Lv. 6 -->
+			<skill id="27658" level="6" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="6" /> <!-- Sayha's Ring -->
+			<skill id="46799" level="6" /> <!-- Sayha's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">239.0</stat>
+			<stat type="maxMp">68</stat>
+		</stats>
+	</item>
+	<item id="27708" name="Maphr's Ring Lv. 1" type="Armor">
+		<!-- MP +53, CHA/ LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +30%, Fixed Damage Resistance +5%, P./ M. Skill Power +5%, Speed +2, Physical/ Mental Resistance +10, M. Accuracy +2, MP Recovery +10%. Resistance to the following: Confusion +20%, Obstruction +12%, Petrification/ Vital Spot Attack +10%, Infection +40%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46739" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring Lv. 1 -->
+			<skill id="46740" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring Lv. 1 -->
+			<skill id="27664" level="1" /> <!-- Maphr's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">146.0</stat>
+			<stat type="maxMp">53</stat>
+		</stats>
+	</item>
+	<item id="27709" name="Maphr's Ring Lv. 2" type="Armor">
+		<!-- MP +57, CHA/ LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +33%, Fixed Damage Resistance +6%, P./ M. Skill Power +9%, Speed +2, Physical/ Mental Resistance +11, M. Accuracy +3, MP Recovery +15%. Resistance to the following: Confusion +22%, Obstruction +14%, Petrification +11%, Infection +42%, Vital Spot Attack +12%. Binds the target with a chance of 1% for standard attacks and 2% for skill casting. Additionally, upon activation of toggle skills: Received PvP Damage +4%, P./ M. Critical Damage -6%, Fixed Damage Resistance +22%, Shield Defense +930, Shield Defense Rate +22%, Speed -28%, also party members receive Received PvP Damage +3%, Fixed Damage Resistance +17%, Received Healing +12%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46745" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring Lv. 2 -->
+			<skill id="46746" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring Lv. 2 -->
+			<skill id="27664" level="2" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="2" /> <!-- Maphr's Ring -->
+			<skill id="46801" level="2" /> <!-- Maphr's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">167.0</stat>
+			<stat type="maxMp">57</stat>
+		</stats>
+	</item>
+	<item id="27710" name="Maphr's Ring Lv. 3" type="Armor">
+		<!-- MP +60, CHA/ LUC +4, P. Critical Damage/ M. Skill Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +35%, Fixed Damage Resistance +7%, P./ M. Skill Power +12%, Speed +3, Physical/ Mental Resistance +12, M. Accuracy +4, MP Recovery +18%. Resistance to the following: Confusion +24%, Obstruction +16%, Petrification +12%, Infection +44%, Vital Spot Attack +14%. Binds the target with a chance of 2% for standard attacks and 3% for skill casting. Additionally, upon activation of toggle skills: Received PvP Damage +5%, P./ M. Critical Damage -12%, Fixed Damage Resistance +24%, Shield Defense +1000, Shield Defense Rate +24%, Speed -26%, also party members receive Received PvP Damage +4%, Fixed Damage Resistance +19%, Received Healing +14%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46751" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring Lv. 3 -->
+			<skill id="46752" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring Lv. 3 -->
+			<skill id="27664" level="3" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="3" /> <!-- Maphr's Ring -->
+			<skill id="46801" level="3" /> <!-- Maphr's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">187.0</stat>
+			<stat type="maxMp">60</stat>
+		</stats>
+	</item>
+	<item id="27711" name="Maphr's Ring Lv. 4" type="Armor">
+		<!-- MP +62, CHA/ LUC +4, P. Critical Damage/ M. Skill Critical Damage +21%, Atk. Spd. +10%, Casting Spd. +7%, Damage Reflection Resistance +37%, Fixed Damage Resistance +10%, P./ M. Skill Power +16%, Speed +3, Physical/ Mental Resistance +13, M. Accuracy +5, MP Recovery +22%. Resistance to the following: Confusion +26%, Obstruction +18%, Petrification +13%, Infection +46%, Vital Spot Attack +16%. Binds the target with a chance of 3% for standard attacks and 5% for skill casting. Additionally, upon activation of toggle skills: Received PvP Damage +9%, P./ M. Critical Damage -14%, Fixed Damage Resistance +28%, Shield Defense +1300, Shield Defense Rate +30%, Speed -23%, also party members receive Received PvP Damage +5%, Fixed Damage Resistance +21%, Received Healing +16%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46781" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring Lv. 4 -->
+			<skill id="46782" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring Lv. 4 -->
+			<skill id="27664" level="4" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="4" /> <!-- Maphr's Ring -->
+			<skill id="46801" level="4" /> <!-- Maphr's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">206.0</stat>
+			<stat type="maxMp">62</stat>
+		</stats>
+	</item>
+	<item id="27712" name="Maphr's Ring Lv. 5" type="Armor">
+		<!-- MP +64, CHA/ LUC +5, P. Critical Damage/ M. Skill Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +39%, Fixed Damage Resistance +13%, P./ M. Skill Power +19%, Speed +4, Physical/ Mental Resistance +14, M. Accuracy +6, MP Recovery +25%. Resistance to the following: Confusion +28%, Obstruction +19%, Petrification +14%, Infection +48%, Vital Spot Attack +18%. Binds the target with a chance of 5% for standard attacks and 7% for skill casting. Additionally, upon activation of toggle skills: Received PvP Damage +12%, P./ M. Critical Damage -18%, Fixed Damage Resistance +34%, Shield Defense +1800, Shield Defense Rate +36%, Speed -17%, also party members receive Received PvP Damage +6%, Fixed Damage Resistance +23%, Received Healing +18%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46787" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring Lv. 5 -->
+			<skill id="46788" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring Lv. 5 -->
+			<skill id="27664" level="5" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="5" /> <!-- Maphr's Ring -->
+			<skill id="46801" level="5" /> <!-- Maphr's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">225.0</stat>
+			<stat type="maxMp">64</stat>
+		</stats>
+	</item>
+	<item id="27713" name="Maphr's Ring Lv. 6" type="Armor">
+		<!-- MP +68, CHA/ LUC +6, P. Critical Damage/ M. Skill Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +45%, Fixed Damage Resistance +18%, P./ M. Skill Power +25%, Speed +5, Physical/ Mental Resistance +15, M. Accuracy +7, MP Recovery +30%. Resistance to the following: Confusion +30%, Obstruction +20%, Petrification +15%, Infection +50%, Vital Spot Attack +20%. Binds the target with a chance of +7% for standard attacks and 10% for skill casting. Additionally, upon activation of toggle skills: Received PvP Damage +15%, P./ M. Critical Damage -25%, Fixed Damage Resistance +40%, Shield Defense +2500, Shield Defense Rate +45%, Speed -10%, also party members receive Received PvP Damage +6%, Fixed Damage Resistance +25%, Received Healing +20%. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="46793" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring Lv. 6 -->
+			<skill id="46794" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring Lv. 6 -->
+			<skill id="27664" level="6" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="6" /> <!-- Maphr's Ring -->
+			<skill id="46801" level="6" /> <!-- Maphr's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">239.0</stat>
+			<stat type="maxMp">68</stat>
+		</stats>
+	</item>
+	<item id="27714" name="Bottle of Luminous God's Soul" type="EtcItem">
+		<!-- Luminous bottle containing the soul of a god. Can be used to craft Grankain's Necklace or Einhasad's Necklace. -->
+		<set name="icon" val="BranchIcon.icon.energy_of_einhasad_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="27715" name="Bottle of Splendid God's Soul" type="EtcItem">
+		<!-- Fancy bottle containing the soul of a god. Can be used to craft Pa'agrio's Earring or Eva's Earring. -->
+		<set name="icon" val="BranchIcon.icon.energy_of_maphr_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="27716" name="Bottle of Honorable God's Soul" type="EtcItem">
+		<!-- Honorable bottle containing the soul of a god. Can be used to craft Sayha's Ring or Maphr's Ring. -->
+		<set name="icon" val="BranchIcon.icon.energy_of_grankein_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="27717" name="Recipe: Sealed Gran Kain's Necklace Lv. 1 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Gran Kain's Necklace Lv. 1. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5016" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27718" name="Recipe: Sealed Gran Kain's Necklace Lv. 2 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Gran Kain's Necklace Lv. 2. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5017" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27719" name="Recipe: Sealed Gran Kain's Necklace Lv. 3 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Gran Kain's Necklace Lv. 3. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5018" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27720" name="Recipe: Sealed Gran Kain's Necklace Lv. 4 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Gran Kain's Necklace Lv. 4. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5019" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27721" name="Recipe: Sealed Gran Kain's Necklace Lv. 5 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Gran Kain's Necklace Lv. 5. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5020" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27722" name="Recipe: Sealed Gran Kain's Necklace Lv. 6 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Gran Kain's Necklace Lv. 6. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5021" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27723" name="Recipe: Sealed Einhasad's Necklace Lv. 1 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Einhasad's Necklace Lv. 1. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5022" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27724" name="Recipe: Sealed Einhasad's Necklace Lv. 2 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Einhasad's Necklace Lv. 2. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5023" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27725" name="Recipe: Sealed Einhasad's Necklace Lv. 3 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Einhasad's Necklace Lv. 3. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5024" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27726" name="Recipe: Sealed Einhasad's Necklace Lv. 4 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Einhasad's Necklace Lv. 4. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5025" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27727" name="Recipe: Sealed Einhasad's Necklace Lv. 5 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Einhasad's Necklace Lv. 5. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5026" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27728" name="Recipe: Sealed Einhasad's Necklace Lv. 6 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Einhasad's Necklace Lv. 6. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5027" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27729" name="Recipe: Sealed Pa'agrio's Earring Lv. 1 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Pa'agrio's Earring Lv. 1. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5028" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27730" name="Recipe: Sealed Pa'agrio's Earring Lv. 2 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Pa'agrio's Earring Lv. 2. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5029" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27731" name="Recipe: Sealed Pa'agrio's Earring Lv. 3 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Pa'agrio's Earring Lv. 3. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5030" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27732" name="Recipe: Sealed Pa'agrio's Earring Lv. 4 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Pa'agrio's Earring Lv. 4. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5031" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27733" name="Recipe: Sealed Pa'agrio's Earring Lv. 5 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Pa'agrio's Earring Lv. 5. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5032" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27734" name="Recipe: Sealed Pa'agrio's Earring Lv. 6 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Pa'agrio's Earring Lv. 6. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5033" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27735" name="Recipe: Sealed Eva's Earring Lv. 1 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Eva's Earring Lv. 1. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5034" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27736" name="Recipe: Sealed Eva's Earring Lv. 2 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Eva's Earring Lv. 2. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5035" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27737" name="Recipe: Sealed Eva's Earring Lv. 3 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Eva's Earring Lv. 3. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5036" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27738" name="Recipe: Sealed Eva's Earring Lv. 4 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Eva's Earring Lv. 4. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5037" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27739" name="Recipe: Sealed Eva's Earring Lv. 5 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Eva's Earring Lv. 5. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5038" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27740" name="Recipe: Sealed Eva's Earring Lv. 6 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Eva's Earring Lv. 6. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5039" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27741" name="Recipe: Sealed Sayha's Ring Lv. 1 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Sayha's Ring Lv. 1. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5040" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27742" name="Recipe: Sealed Sayha's Ring Lv. 2 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Sayha's Ring Lv. 2. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5041" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27743" name="Recipe: Sealed Sayha's Ring Lv. 3 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Sayha's Ring Lv. 3. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5042" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27744" name="Recipe: Sealed Sayha's Ring Lv. 4 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Sayha's Ring Lv. 4. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5043" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27745" name="Recipe: Sealed Sayha's Ring Lv. 5 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Sayha's Ring Lv. 5. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5044" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27746" name="Recipe: Sealed Sayha's Ring Lv. 6 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Sayha's Ring Lv. 6. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5045" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27747" name="Recipe: Sealed Maphr's Ring Lv. 1 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Maphr's Ring Lv. 1. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5046" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27748" name="Recipe: Sealed Maphr's Ring Lv. 2 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Maphr's Ring Lv. 2. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5047" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27749" name="Recipe: Sealed Maphr's Ring Lv. 3 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Maphr's Ring Lv. 3. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5048" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27750" name="Recipe: Sealed Maphr's Ring Lv. 4 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Maphr's Ring Lv. 4. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5049" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27751" name="Recipe: Sealed Maphr's Ring Lv. 5 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Maphr's Ring Lv. 5. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5050" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27752" name="Recipe: Sealed Maphr's Ring Lv. 6 (50%)" type="EtcItem">
+		<!-- For 4th classes only. A recipe for Sealed Maphr's Ring Lv. 6. Requires Create Common Item Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="5051" />
+		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="27753" name="Wondrous Casket" additionalName="Dungeon" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Talisman of Anakim, Talisman of Lilith, Antharas' Earring, Valakas' Necklace, Package: +7 Shiny Elemental Shirt, Package: +7 Physical/ Magical Reflect Shirt, Baium's Ring, Recipe: High-grade Talisman of Abundance Lv. 1-4, Queen Ant's Ring, Superior Giant's Codex - Mastery Chapter 1, Leona's/ Pantheon's/ Lionel's Soul Crystal Lv. 4-5, Talisman of Hunter/ Slaughterer/ Conquerer/ Outlaw, Superior Giant's Codex - Chapter 1, Elcyum (2 pcs.), Lv. 5 Legendary Dye Pack, Elcyum Crystal (5 pcs.), Giant's Energy (10 pcs.), Fortune Pocket Lv. 5 (2 pcs.), R-grade Gemstone (30 pcs.), Apocalypse/ Specter/ Helios Weapon Crafting Pack. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27754" name="Vintage Casket" additionalName="Dungeon" type="EtcItem">
+		<!-- Double-click to obtain one of the following items at a certain rate: Seven Signs' Energy, Bottle of Orfen's Soul/ Queen Ant's Soul/ Baium's Soul/ Antharas' Soul/ Valakas' Soul, Freya's Lucky Enchant Stone: R-grade Armor/ Weapon, Windy Lucky Enchant Stone: R-grade Armor/ Weapon, Package: Lesser Giant's Lucky Enchant Stone: R-grade Armor/ Weapon, Package: Blessed Lucky Enchant Stone: R-grade Armor/ Weapon, Blessed High-grade Lucky Enchant Stone: R-grade Armor/ Weapon, Blessed Scroll: Enchant R-grade Armor/ Weapon, Giant's Scroll: Enchant R-grade Weapon/ Armor, Package: Blessed Lucky Enchant Stone: R-grade Weapon/ Armor, High-grade Lucky Enchant Stone: R-grade Weapon/ Armor, Package: Scroll: Enchant R-grade Weapon, Package: Scroll: Enchant R-grade Armor (3 pcs.), Wondrous Casket, Destruction Scroll: Enchant R-grade Weapon/ Armor. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27755" name="Shabby Casket" additionalName="Dungeon" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Giant's Energy Spirit Stone, Package: +7 Elemental Shirt, Package: Seed Talisman Upgrade, Immortal Scroll/ Chapter 1, Package: XP Rune 100% (30-day), Package: High-grade Maphr's Rune 100% (30-day), Package: Talisman of Annihilation Crafting, Package: Pa'agrio's Warm Breeze (1-hour), Vintage/ Wondrous Casket, Ghost Potion, Queen Ant/ Antharas/ Valakas/ Frintezza's Soul Fragment (10 pcs.), Package: Feather of Blessing (3 pcs.), Emperor's Growth Scroll (2 pcs.), Elcyum Powder (5 pcs.), R-grade Gemstone (5 pcs.). -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27756" name="Package: +7 Shiny Elemental Shirt" type="EtcItem">
+		<!-- Double-click to get a +7 enchanted Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27757" name="Package: +7 Physical Reflect Shirt" type="EtcItem">
+		<!-- Double-click to obtain +7 Physical Reflect Shirt. The shirt cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27758" name="Package: +7 Magical Reflect Shirt" type="EtcItem">
+		<!-- Double-click to obtain +7 Magical Reflect Shirt. The shirt cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27759" name="Package: +7 Pa'agrio's Shirt" type="EtcItem">
+		<!-- Double-click to get a +7 enchanted Pa'agrio's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27760" name="Package: +7 Sayha's Shirt" type="EtcItem">
+		<!-- Double-click to get a +7 enchanted Sayha's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27761" name="Package: +7 Eva's Shirt" type="EtcItem">
+		<!-- Double-click to get a +7 enchanted Eva's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27762" name="Package: +7 Maphr's Shirt" type="EtcItem">
+		<!-- Double-click to get a +7 enchanted Maphr's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="27763" name="Shadai's Shiny Jewelry Box" type="EtcItem">
+		<!-- Double-click to get one of the following: La Vie En Rose's Vital Stone Chest, Garnet Chest, Tanzanite Chest, Cat's Eye Chest. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="27764" name="Ultimate Eternal Helmet" additionalName="Heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27765" name="Ultimate Eternal Breastplate" additionalName="Heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -8%, P. Atk. +1%, M. Atk. +2%. Heavy Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="27766" name="Ultimate Eternal Gaiters" additionalName="Heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="27767" name="Ultimate Eternal Gauntlets" additionalName="Heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27768" name="Ultimate Eternal Boots" additionalName="Heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27769" name="Ultimate Eternal Leather Helmet" additionalName="Light armor / Lv. 1" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27770" name="Ultimate Eternal Leather Armor" additionalName="Light armor / Lv. 1" type="Armor">
+		<!-- Received Damage -8%. P. Atk. +1%, M. Atk. +2%. Light Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pDef">361</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="27771" name="Ultimate Eternal Leather Leggings" additionalName="Light armor / Lv. 1" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">226</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="27772" name="Ultimate Eternal Leather Gloves" additionalName="Light armor / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27773" name="Ultimate Eternal Leather Boots" additionalName="Light armor / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27774" name="Ultimate Eternal Circlet" additionalName="Robe/ Lv. 1" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27775" name="Ultimate Eternal Tunic" additionalName="Robe/ Lv. 1" type="Armor">
+		<!-- Received damage -8%, P. Atk. +1%, M. Atk. +2%. Robe, can be enhanced by Blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">248</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="27776" name="Ultimate Eternal Stockings" additionalName="Robe/ Lv. 1" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">155</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="27777" name="Ultimate Eternal Gloves" additionalName="Robe/ Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27778" name="Ultimate Eternal Shoes" additionalName="Robe/ Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27779" name="Ultimate Eternal Helmet" additionalName="Reinforced heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27780" name="Ultimate Eternal Breastplate" additionalName="Reinforced heavy armor / Lv. 1" type="Armor">
+		<!-- Received Damage -8%. P. Atk. +1% and M. Atk. +2%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="27781" name="Ultimate Eternal Gaiters" additionalName="Reinforced heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="27782" name="Ultimate Eternal Gauntlets" additionalName="Reinforced heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27783" name="Ultimate Eternal Boots" additionalName="Reinforced heavy armor / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27784" name="Ultimate Eternal Leather Helmet" additionalName="Not used" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27785" name="Ultimate Eternal Leather Armor" additionalName="Not used" type="Armor">
+		<!-- Received Damage -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pDef">361</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="27786" name="Ultimate Eternal Leather Leggings" additionalName="Not used" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">226</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="27787" name="Ultimate Eternal Leather Gloves" additionalName="Not used" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27788" name="Ultimate Eternal Leather Boots" additionalName="Not used" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27789" name="Ultimate Eternal Circlet" additionalName="Reinforced robe / Lv. 1" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27790" name="Ultimate Eternal Tunic" additionalName="Reinforced robe / Lv. 1" type="Armor">
+		<!-- Received damage -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">248</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="27791" name="Ultimate Eternal Stockings" additionalName="Reinforced robe / Lv. 1" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">155</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="27792" name="Ultimate Eternal Gloves" additionalName="Reinforced robe / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27793" name="Ultimate Eternal Shoes" additionalName="Reinforced robe / Lv. 1" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27794" name="Ultimate Eternal Helmet" additionalName="Not used" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27795" name="Ultimate Eternal Breastplate" additionalName="Not used" type="Armor">
+		<!-- Received Damage -8%. P. Atk. +1% and M. Atk. +2%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="crystal_count" val="9008" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="1" /> <!-- Inherent Abilities - Attack -->
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="27796" name="Ultimate Eternal Gaiters" additionalName="Not used" type="Armor">
+		<!-- Received damage -5%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="crystal_count" val="5630" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="27797" name="Ultimate Eternal Gauntlets" additionalName="Not used" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27798" name="Ultimate Eternal Boots" additionalName="Not used" type="Armor">
+		<!-- Received damage -2%, P. Atk. +1%, M. Atk. +2%. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="crystal_count" val="2252" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27799" name="Ultimate Eternal Leather Helmet" additionalName="Reinforced light armor / Lv. 1" type="Armor">
+		<!-- Received damage -3%, P. Atk. +1%, M. Atk. +2%. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="weight" val="530" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
+		<set name="crystal_count" val="3378" />
+		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27697" level="1" /> <!-- Inherent Abilities - Attack -->
+		</skills>
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+</list>

@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="81800" name="Blessed Angel's Earring" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81801" name="Blessed Angel's Earring" additionalName="Security Lv. 1" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39627" level="1" /> <!-- Craft Effect - Security Lv. 1 -->
+		</skills>
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81802" name="Blessed Angel's Earring" additionalName="Security Lv. 2" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39627" level="2" /> <!-- Craft Effect - Security Lv. 2 -->
+		</skills>
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81803" name="Blessed Angel's Earring" additionalName="Security Lv. 3" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39627" level="3" /> <!-- Craft Effect - Security Lv. 3 -->
+		</skills>
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81804" name="Blessed Angel's Ring" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\nThe item can be changed.\n\n<Enchanting>Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81805" name="Blessed Angel's Ring" additionalName="Elements Lv. 1" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +10\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39628" level="1" /> <!-- Craft Effect - Elements Lv. 1 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81806" name="Blessed Angel's Ring" additionalName="Elements Lv. 2" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +20\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39628" level="2" /> <!-- Craft Effect - Elements Lv. 2 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81807" name="Blessed Angel's Ring" additionalName="Elements Lv. 3" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +50\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39628" level="3" /> <!-- Craft Effect - Elements Lv. 3 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81808" name="Common Homunculus' Hourglass" additionalName="Test" type="EtcItem">
+		<!-- An item to summon a common Homunculus for testing. -->
+		<set name="icon" val="icon.homun_cupon_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81809" name="High-grade Homunculus' Hourglass" additionalName="Test" type="EtcItem">
+		<!-- An item to summon a high-grade Homunculus for testing. -->
+		<set name="icon" val="icon.homun_coupon_m" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81810" name="Top-grade Homunculus' Hourglass" additionalName="Test" type="EtcItem">
+		<!-- An item to summon a top-grade Homunculus for testing. -->
+		<set name="icon" val="icon.homun_coupon_l" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81811" name="Homunculus' Hourglass" additionalName="Event" type="EtcItem">
+		<!-- Required to awake Homunculus sleeping in the Cradle of Time. Click on the Create icon in the homunculus window or double-click on the item to get to the Cradle of Time. -->
+		<set name="icon" val="icon.homun_coupon_etc" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81812" name="Homunculus Upgrade Points - 10" type="EtcItem">
+		<!-- Double-click to obtain 10 points required to grow a Homunculus. -->
+		<set name="icon" val="icon.homun_coupon_point" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39715" level="1" /> <!-- Homunculus Upgrade Points - 10 -->
+		</skills>
+	</item>
+	<item id="81813" name="Blessed Angel's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain one rare item with a certain chance. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81814" name="Einhasad's Enchantment Pack" type="EtcItem">
+		<!-- A pack made by Einhasad and full of items for enchantments. Double-click to obtain with a certain chance Royal Golden Ticket, Royal Black Ticket, Gran Kain's Scroll: Enchant R-grade Weapon, Gran Kain's Scroll: Enchant R-grade Armor, and a rare item. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81815" name="Homunculus' Hourglass" type="EtcItem">
+		<!-- Required for awakening a Homunculus sleeping in the Cradle of Time. Click on the Create icon in the Homunculus window or double-click on the item to open the Cradle of Time.\n\nCan be bought for adena in the Homunculi tab of the Einhasad's Store. -->
+		<set name="icon" val="icon.homun_cupon_s" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81816" name="Transparent Sigil" type="Armor">
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">58</stat>
+		</stats>
+	</item>
+	<item id="81817" name="Transparent Sigil Appearance Stone" type="EtcItem">
+		<!-- Make a sigil transparent. Use Recovery Stone to restore the original appearance. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81818" name="Elixir of Agility" additionalName="Event" type="EtcItem">
+		<!-- Alice's elixir that grants a feeling of lightness.\nWhen used, for 30 min., Power of standard attacks and P./ M. skills +5%%, P./ M. Def. +5%%, Acquired XP/ SP +5%. -->
+		<set name="icon" val="icon.etc_whiteday_herb" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81819" name="Alice's Golden Pack" additionalName="Event" type="EtcItem">
+		<!-- A thank gift prepared by Alice.\nDouble-click to obtain one of the Dark/ Bloody Weapon Enhancement Stone and Elixir of Agility. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81820" name="Gran Kain's Scroll: Enchant Circlet" type="EtcItem">
+		<!-- For Radiant Circlet enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
+		<set name="icon" val="icon.bm_shilen_scrl_of_ench_hair" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39718" level="1" /> <!-- Gran Kain's Scroll: Enchant Circlet -->
+		</skills>
+	</item>
+	<item id="81821" name="Cara's Talisman" additionalName="10-day" type="Armor">
+		<!-- The best talisman of Cara, the most powerful demon working for Gran Kain. Skill Power +5%, Critical Damage for standard attacks and P./ M. Skill Critical Damage +10%, P. Def. +10%, M. Def. +10%, Attribute Attack +70, Skill Cooldown -5%. The dark energy fades little by little, so the talisman cannot be used for a long time.\n\nWhen equipped with High-grade Skill Cooldown Talisman, High-grade Talisman of Attribute Attack or High-grade Skill Power Talisman, only one effect is applied. -->
+		<set name="icon" val="icon.combination_mammon_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="time" val="14400" />
+		<skills>
+			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
+			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
+			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->
+		</skills>
+	</item>
+	<item id="81822" name="Cara's Talisman Pack" type="EtcItem">
+		<!-- Double-click to obtain Cara's Talisman (10-day). -->
+		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81821" min="1" max="1" chance="100" /> <!-- Cara's Talisman (10-day) -->
+		</capsuled_items>
+	</item>
+	<item id="81823" name="Recipe: Cara's Talisman Pack (50%)" type="EtcItem">
+		<!-- For the 4th classes only. A recipe for Cara's Talisman. Requires Create Item Lv. 10. The success rate is 50%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1500000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1460" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="81824" name="Gran Kain's Red Pack" type="EtcItem">
+		<!-- A pack belonged to Gran Kain. Double-click on it to obtain a rare item. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81825" name="Festival Fairy's Five-colored Rice Cake" additionalName="Event" type="EtcItem">
+		<!-- A rice cake cooked by the Festival Fairy.\nWhen used, for 2 h., acquired XP/ SP +15%, the character's armor appearance is changed to that of Lovely Hanbok. -->
+		<set name="icon" val="icon.etc_five_color_honey_cake_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81826" name="5 Billion Adena Pack" additionalName="Event" type="EtcItem">
+		<!-- A pack prepared by Festival Fairy for Chuseok.\nDouble-click to obtain 5 billion adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81827" name="10 Billion Adena Pack" additionalName="Event" type="EtcItem">
+		<!-- A pack prepared by Festival Fairy for Chuseok.\nDouble-click to obtain 10 billion adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81828" name="Festival Fairy's Box: +5 Greater Agathion Charm" additionalName="Event" type="EtcItem">
+		<!-- A box prepared by Festival Fairy for Chuseok.\nDouble-click to obtain +5 Enhanced Zodiac Agathion. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81829" name="Otherworldly Atelia Refinery's Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
+		<set name="icon" val="icon.bm_timezone_refill_atre_a_60" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
+		<skills>
+			<skill id="39719" level="1" /> <!-- Otherworldly Atelia Refinery's Time Stone(Event) -->
+		</skills>
+	</item>
+	<item id="81830" name="Otherworldly Atelia Refinery's Time Stone" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
+		<set name="icon" val="icon.bm_timezone_refill_atre_a_60" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
+		<skills>
+			<skill id="39719" level="2" /> <!-- Otherworldly Atelia Refinery's Time Stone -->
+		</skills>
+	</item>
+	<item id="81831" name="Goddess' Fortune Box" type="EtcItem">
+		<!-- A box full of goddess' fortune. Double-click to obtain a rare item. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81832" name="Gran Kain's Scroll: Enchant Dragon Rind Leather Shirt" type="EtcItem">
+		<!-- For Dragon Rind Leather Shirt enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
+		<set name="icon" val="icon.bm_shilen_scrl_of_dragon_rind_leather_shirt" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39722" level="1" /> <!-- Gran Kain's Scroll: Enchant Dragon Skin Shirt -->
+		</skills>
+	</item>
+	<item id="81833" name="TJ Coupon" additionalName="V1" type="EtcItem">
+		<!-- A Grace's gift to all warriors of the continent. Required to restore Angel Accessories and obtain Lulu's Gratitude Box. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81834" name="Lulu's Gratitude Box" additionalName="V1" type="EtcItem">
+		<!-- Double-click to obtain Freya's Scroll of Storm (1008 pcs.), Emperor's Special Cocktail (168 pcs.), Freya's Ice Rose (336 pcs.), Glowing Dragon's Attribute Potion (336 pcs.), Honey Dark Beer (336 pcs.), Shining Nevit's Gold Hourglass (336 pcs.). -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81835" name="High Priest's Holy Water" type="EtcItem">
+		<!-- Water from the Temple of Einhasad. Required to compound Bloody Soul Orbs, Orbs of Abyss, and Orbs of Darkness. -->
+		<set name="icon" val="icon.etc_holy_water_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="1800000" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81836" name="Bloody Soul Orb" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81837" name="Bloody Soul Orb" additionalName="Lv. 1" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81838" name="Bloody Soul Orb" additionalName="Lv. 2" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81839" name="Bloody Soul Orb" additionalName="Lv. 3" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81840" name="Bloody Soul Orb" additionalName="Lv. 4" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81841" name="Bloody Soul Orb" additionalName="Lv. 5" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81842" name="Bloody Soul Orb" additionalName="Lv. 6" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81843" name="Bloody Soul Orb" additionalName="Lv. 7" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81844" name="Bloody Soul Orb" additionalName="Lv. 8" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv3" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81845" name="Bloody Soul Orb" additionalName="Lv. 9" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_field_rune_lv3" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81846" name="Bloody Soul Orb" additionalName="Lv. 10" type="EtcItem">
+		<!-- A special orb that can be obtained during hunting on the Aden continent. -->
+		<set name="icon" val="icon.collection_field_rune_lv3" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81847" name="Orb of Abyss" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81848" name="Orb of Abyss" additionalName="Lv. 1" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81849" name="Orb of Abyss" additionalName="Lv. 2" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81850" name="Orb of Abyss" additionalName="Lv. 3" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81851" name="Orb of Abyss" additionalName="Lv. 4" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81852" name="Orb of Abyss" additionalName="Lv. 5" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81853" name="Orb of Abyss" additionalName="Lv. 6" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81854" name="Orb of Abyss" additionalName="Lv. 7" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81855" name="Orb of Abyss" additionalName="Lv. 8" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv10" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81856" name="Orb of Abyss" additionalName="Lv. 9" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_unite_rune_lv10" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81857" name="Orb of Abyss" additionalName="Lv. 10" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after successful raiding in command channel instance zones. -->
+		<set name="icon" val="icon.collection_unite_rune_lv10" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81858" name="Orb of Darkness" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81859" name="Orb of Darkness" additionalName="Lv. 1" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81860" name="Orb of Darkness" additionalName="Lv. 2" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81861" name="Orb of Darkness" additionalName="Lv. 3" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81862" name="Orb of Darkness" additionalName="Lv. 4" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81863" name="Orb of Darkness" additionalName="Lv. 5" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81864" name="Orb of Darkness" additionalName="Lv. 6" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81865" name="Orb of Darkness" additionalName="Lv. 7" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv5" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81866" name="Orb of Darkness" additionalName="Lv. 8" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv10" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81867" name="Orb of Darkness" additionalName="Lv. 9" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant.\n\nCan be compounded with High Priest's Holy Water. -->
+		<set name="icon" val="icon.collection_boss_rune_lv10" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81868" name="Orb of Darkness" additionalName="Lv. 10" type="EtcItem">
+		<!-- A special orb that can be obtained with a certain chance after defeating the following bosses: Anakim, Lilith, Orfen, Baium, Lord Ishka, and Queen Ant. -->
+		<set name="icon" val="icon.collection_boss_rune_lv10" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81869" name="Superior Ruby Lv. 10" additionalName="Event" type="Armor">
+		<!-- Soulshot and Beast Soulshot damage +23%, P. Atk. +25%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_ssdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81870" name="Superior Sapphire Lv. 10" additionalName="Event" type="Armor">
+		<!-- Spiritshot and Blessed Spiritshot damage +23%, M. Atk. +30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_spsdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81871" name="Superior Red Cat's Eye Lv. 10" additionalName="Event" type="Armor">
+		<!-- P. Critical Damage +25%, P. Skill Critical Damage +25%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81872" name="Superior Blue Cat's Eye Lv. 10" additionalName="Event" type="Armor">
+		<!-- M. Skill Critical Damage +25%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81873" name="Heavenly Talisman" additionalName="1-day" type="Armor">
+		<!-- Max HP/ MP/ CP +7%, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage +5%, Atk./ Casting Spd. +70, P. Critical Rate +30, M. Critical Rate +10, P./ M. Atk. +3%, Skill Power +7%, Damage Reflection Resistance +40, Fixed Damage Resistance +15%, P./ M. Def. +750, all stats +3, MP Consumption -3%, Skill Cooldown -3%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.accessory_heaven_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81874" name="Heavenly Talisman Safe Pack" additionalName="Event" type="EtcItem">
+		<!-- For characters of Lv. 85+. Double-click to obtain a Heavenly Talisman (1-day). Unsealed Heavenly Talisman cannot be exchanged, dropped or sold. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81875" name="Teleportation Cube" type="EtcItem">
+		<!-- Double-click to teleport to the place where you have to complete the accepted quest. -->
+		<set name="icon" val="icon.cube_upgrade" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="TeleportCube" />
+	</item>
+	<item id="81876" name="Blessed Atlas' Earring" type="Armor">
+		<!-- A special mentor's earring.\nWhen enchanted, Stupor Atk. Rate and Resistance +25%, Attribute Resistance +60, Vampiric Rage effect +6%, Critical Damage for standard attacks and P./ M. Skill Critical Damage +5%, P./ M. Def. +2%, MP Consumption -11%.\nEffects of two identical earrings do not stack.\nThe item can be changed.\nCan be augmented.\nCannot be enchanted. -->
+		<set name="icon" val="icon.mentoring_earring_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">205</stat>
+		</stats>
+	</item>
+	<item id="81877" name="Blessed Atlas' Earring" additionalName="Vitality" type="Armor">
+		<!-- A special mentor's earring.\nWhen enchanted, Stupor Atk. Rate and Resistance +25%, Attribute Resistance +60, Vampiric Rage effect +6%, Critical Damage for standard attacks and P./ M. Skill Critical Damage +5%, P./ M. Def. +2%, MP Consumption -11%.\nEffects of two identical earrings do not stack.\n\n<Special effect>\nVitality bonus +3%\nCan be augmented.\nCannot be enchanted. -->
+		<set name="icon" val="icon.mentoring_earring_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">205</stat>
+		</stats>
+	</item>
+	<item id="81878" name="Atlas' Earring Upgrade Stone" type="EtcItem">
+		<!-- Imbued with Atlas' energy. Increases the Atlas' Earring level.\nAtlas’ Earring can be upgraded to Blessed Atlas’ Earring through a town head blacksmith. -->
+		<set name="icon" val="icon.freed_soul_essense_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81879" name="Homunculus' Shiny Hourglass" additionalName="Event" type="EtcItem">
+		<!-- A homunculus' hourglass that is shining very bright. Required to awake Homunculus of High-Grade or Top-Grade who is sleeping in the Cradle of Time.\nClick on the Create icon in the homunculus window or double-click on the item to get to the Cradle of Time.\n\nCan be obtained by completing the Mentee Training clan quest. -->
+		<set name="icon" val="icon.homun_coupon_etc" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81880" name="17th Anniversary Jewel Box" additionalName="Event" type="EtcItem">
+		<!-- A jewel box prepared by Lilly for 17th anniversary.\nDouble-click to obtain Superior Ruby Lv. 10, Superior Sapphire Lv. 10, Superior Red Cat's Eye Lv. 10, and Superior Blue Cat's Eye Lv. 10. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81881" name="Passion Pack" additionalName="Event" type="EtcItem">
+		<!-- A box containing supplies prepared by Lilly for the 17th anniversary.\nDouble-click to obtain Emperor's Special Cocktail, Freya's Ice Rose (2 pcs.), Glowing Dragon's Attribute Potion (XP) (2 pcs.), Honey Dark Beer (2 pcs.). -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81882" name="17th Anniversary Cube of Abundance" additionalName="Event" type="EtcItem">
+		<!-- A cube full of presents prepared by Lilly for 17th anniversary.\nThey say, the items of the cube are getting more enhanced day after day. -->
+		<set name="icon" val="icon.bm_2019_cube_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81883" name="17th Anniversary Cube of Passion" additionalName="Event" type="EtcItem">
+		<!-- A cube full of presents prepared by Lilly for 17th anniversary.\nThey say, the items of the cube allow warriors to use the power of passion in combat. -->
+		<set name="icon" val="icon.bm_2019_cube_lv2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81884" name="17th Anniversary Cube of Vitality" additionalName="Event" type="EtcItem">
+		<!-- A cube full of presents prepared by Lilly for 17th anniversary.\nThey say, the items of the cube help to restore vitality. -->
+		<set name="icon" val="icon.bm_2019_cube_lv3" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81885" name="Party Costume" additionalName="Event" type="Armor">
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81886" name="Party Appearance Stone" additionalName="Event" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Party Costume. Modified armor can be restored to its original appearance with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81887" name="Rune Stone" type="EtcItem">
+		<!-- Rock engraved with ancient rune. Used to infuse skills with ancient wisdom. Consumed when learning skills for each class. -->
+		<set name="icon" val="icon.skill_acquire_book_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81888" name="Masia's Historical Book" type="EtcItem">
+		<!-- A book about Masia's shield of light. Required for learning the Masia's Shield skill. -->
+		<set name="icon" val="icon.level_mission_masia_1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81889" name="Eraton's Historical Book" type="EtcItem">
+		<!-- A book about Eraton's spear of light. Required for learning the Eraton's Spear skill. -->
+		<set name="icon" val="icon.level_mission_eratone_1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81890" name="Anniversary Badge of Lv. 120" type="EtcItem">
+		<!-- A badge given after reaching Lv. 120. Can be put into the collection. -->
+		<set name="icon" val="icon.level_mission_lv120_coin_1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81891" name="17th Anniversary Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A box full of cubes prepared by Lilly for 17th anniversary.\nDouble-click to obtain 17th Anniversary Cube of Abundance, 17th Anniversary Cube of Passion, and 17th Anniversary Cube of Vitality. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="price" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81892" name="Shining Royal Nevit's Gold Hourglass" type="EtcItem">
+		<!-- During hunting, for 30 min., acquired XP/ SP +120%, damage +5%, received damage -7%.\nCannot stack with the Shining Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball.\nThe effect is removed after entering the Olympiad or the Ceremony of Chaos.\nCooldown: 10 sec. -->
+		<set name="icon" val="icon.bm_dragon_breath" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81893" name="Freya's Gift Box" type="EtcItem">
+		<!-- Double-click to obtain Shining Nevit's Gold Hourglass (4 pcs.). If you are lucky, you will get Nevit's Red Pack, Nevit's Silver Pack, and Nevit's Golden Pack. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81894" name="Freya's Red Pack" type="EtcItem">
+		<!-- Double-click to obtain one useful item with a certain chance. -->
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81895" name="Freya's Silver Pack" type="EtcItem">
+		<!-- Double-click to obtain one special item with a certain chance. -->
+		<set name="icon" val="icon.bm_silver_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81896" name="Freya's Golden Pack" type="EtcItem">
+		<!-- Double-click to obtain one rare item with a certain chance. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81897" name="17th Anniversary Coin" type="EtcItem">
+		<!-- 17th Anniversary Coin -->
+		<set name="icon" val="icon.etc_11th_token" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81898" name="Scroll: Enchant Blessed Exalted Armor" type="EtcItem">
+		<!-- Enchant success rate is 100%. Cannot be used on armor enchanted to +10 or higher. -->
+		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81899" name="17th Anniversary Box" type="EtcItem">
+		<!-- Double-click to obtain 300 of each of the following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass, Honey Dark Beer, and also 150 Emperor's Special Cocktails and 17th Anniversary Coin.\n\nCan be transferred within the account before being opened. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+</list>

@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/DailyMission.xsd">
+	<reward id="1101" name="Hunt Lv. 101+ monsters" requiredCompletion="800" isOneTime="false">
+		<!-- Kill 800 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
+		<handler name="monster">
+			<param name="minLevel">101</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1103" name="Field Raid Hunt" requiredCompletion="8" isOneTime="false">
+		<!-- Defeat any of the field raid bosses 8 times: Avenger Alusion, Avenger Graff Demon Venoma, Fiend Sarboth Watcher Tristan, Watcher Setheth Berserker Zetahl, Berserker Tabris Ferocious Valac, Arrogant Lebruum Witch Moira, Mad Cullan Akrikhin Charon, Scorpion King Votan -->
+		<handler name="monster">
+			<param name="ids">26431,26433,26435,26437,26439,26441,26443,26444</param>
+			<param name="minLevel">99</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1104" name="Go Fishing" requiredCompletion="100" isOneTime="false">
+		<!-- Successfully catch any type of fish 100 times at the Fishing Dock. -->
+		<handler name="fishing" />
+		<items>
+			<item id="-200" count="220" /> <!-- Clan Reputation -->
+			<item id="-300" count="1000" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<!-- 
+	<reward id="1105" name="Attempt Augmenting" requiredCompletion="5" isOneTime="false">
+		Attempt Augmenting 5 times with any material and items of any grade.
+		<handler name="augment" />
+		<items>
+			<item id="-200" count="220" /> Clan Reputation
+			<item id="-300" count="1000" /> Fame
+			<item id="81053" count="1" /> Vitality
+			<item id="81904" count="1" /> Prophecy Fragment
+		</items>
+	</reward>
+	<reward id="1106" name="Attempt Combining" requiredCompletion="5" isOneTime="false">
+		Attempt Combining 5 times with any item.
+		<handler name="combine" />
+		<items>
+			<item id="-200" count="220" /> Clan Reputation
+			<item id="-300" count="1000" /> Fame
+			<item id="81053" count="1" /> Vitality
+			<item id="81904" count="1" /> Prophecy Fragment
+		</items>
+	</reward>
+	-->
+	<reward id="1107" name="Olympiad Participation" requiredCompletion="5" isOneTime="false">
+		<!-- Participate in the Olympiad 5 times. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1108" name="Ceremony of Chaos Participation" requiredCompletion="5" isOneTime="false">
+		<!-- Participate in the Ceremony of Chaos 5 times. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1109" name="Hunt on the Storm Isle" requiredCompletion="800" isOneTime="false">
+		<!-- Defeat 800 monsters on the Storm Isle. -->
+		<handler name="monster">
+			<param name="ids">24427,24428,24429,24430,24431,24432</param>
+			<param name="minLevel">99</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1110" name="Hunt on the Primeval Isle" requiredCompletion="800" isOneTime="false">
+		<!-- Defeat 800 monsters on the Primeval Isle. -->
+		<handler name="monster">
+			<param name="ids">24436,24437,24438,24439,24440,24441</param>
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1111" name="Hunt at the Golden Altar of the Isle of Souls" requiredCompletion="800" isOneTime="false">
+		<!-- Defeat 800 monsters at the Golden Altar of the Isle of Souls. -->
+		<handler name="monster">
+			<param name="ids">24470,24471,24472,24473,24474,24475</param>
+			<param name="minLevel">107</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1112" name="Hunting in the Abandoned Coal Mines" requiredCompletion="800" isOneTime="false">
+		<!-- Kill 800 monsters in the Abandoned Coal Mines -->
+		<handler name="monster">
+			<param name="ids">24577,24578,24579</param>
+			<param name="minLevel">99</param>
+			<param name="maxLevel">105</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="1113" name="Hunting in a Group Instance Zone" requiredCompletion="3" isOneTime="false">
+		<!-- Defeat any of the bosses in the following group instance zones of any difficulty level 3 times: Crystal Prison (Baylor), Nightmare Kamaloka, Ashen Shadow Camp, Krofin's Nest -->
+		<handler name="monster">
+			<!-- <param name="ids"> </param> --> <!-- TODO: Add correct monster ids. -->
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" />
+		</items>
+	</reward>
+	<reward id="1114" name="Hunting in the Otherworldly Atelia Refinery" requiredCompletion="800" isOneTime="false">
+		<!-- Defeat 800 in the Otherworldly Atelia Refinery. -->
+		<handler name="monster">
+			<!-- <param name="ids"></param> --> <!-- TODO: Add correct monster ids. -->
+			<param name="minLevel">112</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" /> <!-- Vitality -->
+			<item id="81904" count="1" /> <!-- Prophecy Fragment -->
+		</items>
+	</reward>
+	<reward id="2101" name="Field Boss I" requiredCompletion="3" isOneTime="false">
+		<!-- Defeat any of the field raid bosses 3 times: Baium Orfen Lilith Anakim Ishka -->
+		<handler name="monster">
+			<param name="ids">29020,29325,29336,29348,29379</param>
+		</handler>
+		<items>
+			<item id="-200" count="100" /> <!-- Clan Reputation -->
+			<item id="-300" count="1000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2102" name="Defeat the Dimensional Raid Boss" requiredCompletion="1" isOneTime="false">
+		<!-- Defeat 1 of the following once. Isadora Guillotine of Death Antharas' Herald Komabor Vengeful Eligos Vengeful Agonia Nerva Chief Turakan Tegaffe Varkaron -->
+		<handler name="monster">
+			<param name="ids">29261,25892,29275,29280,29285,25922,25929,29300</param>
+		</handler>
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2103" name="Castle Siege: Successfu Attack" requiredCompletion="1" isOneTime="false">
+		<!-- Join a castle siege and achieve 1 win as a sieger. -->
+		<handler name="siege" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2104" name="Castle Siege: Successful Defense" requiredCompletion="1" isOneTime="false">
+		<!-- Join a castle siege and achieve 1 win as a defender. -->
+		<handler name="siege" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2105" name="Dimensional Siege: Successful Attack" requiredCompletion="1" isOneTime="false">
+		<!-- Join a dimensional castle siege and achieve 1 win as a sieger. -->
+		<handler name="siege" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2106" name="Dimensional Siege: Successful Defense" requiredCompletion="1" isOneTime="false">
+		<!-- Join a dimensional castle siege and achieve 1 win as a defender. -->
+		<handler name="siege" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2107" name="Olympiad Winner" requiredCompletion="15" isOneTime="false">
+		<!-- Achieve 15 wins in the Olympiad. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2108" name="Olympiad Hero" requiredCompletion="1" isOneTime="false">
+		<!-- Become a Hero in one of the Olympiad competitions. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="350" /> <!-- Clan Reputation -->
+			<item id="-300" count="3500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2109" name="Ceremony of Chaos Winner" requiredCompletion="12" isOneTime="false">
+		<!-- Achieve 12 wins in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="2110" name="Ceremony of Chaos Champion" requiredCompletion="1" isOneTime="false">
+		<!-- Become the final champion for a cycle of the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="350" /> <!-- Clan Reputation -->
+			<item id="-300" count="3500" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3201" name="Main Class - Basic Enhancement 1" requiredCompletion="99" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 99 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">99</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> <!-- Clan Reputation -->
+			<item id="-300" count="3000" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3202" name="Main Class - Basic Enhancement 2" requiredCompletion="100" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 100 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">100</param>
+		</handler>
+		<items>
+			<item id="-200" count="450" /> <!-- Clan Reputation -->
+			<item id="-300" count="4500" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3203" name="Main Class - Initial Growth 1" requiredCompletion="101" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 101 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">101</param>
+		</handler>
+		<items>
+			<item id="-200" count="600" /> <!-- Clan Reputation -->
+			<item id="-300" count="6000" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3204" name="Main Class - Initial Growth 2" requiredCompletion="102" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 102 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">102</param>
+		</handler>
+		<items>
+			<item id="-200" count="750" /> <!-- Clan Reputation -->
+			<item id="-300" count="7500" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3205" name="Main Class - Initial Growth 3" requiredCompletion="103" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 103 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">103</param>
+		</handler>
+		<items>
+			<item id="-200" count="900" /> <!-- Clan Reputation -->
+			<item id="-300" count="9000" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3206" name="Main Class - Initial Growth 4" requiredCompletion="104" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 104 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">104</param>
+		</handler>
+		<items>
+			<item id="-200" count="1050" /> <!-- Clan Reputation -->
+			<item id="-300" count="10500" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3207" name="Main Class - Initial Growth 5" requiredCompletion="105" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 105 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">105</param>
+		</handler>
+		<items>
+			<item id="-200" count="1200" /> <!-- Clan Reputation -->
+			<item id="-300" count="12000" /> <!-- Fame -->
+			<item id="39738" count="2" />
+		</items>
+	</reward>
+	<reward id="3208" name="Main Class - First Challenge 1" requiredCompletion="106" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 106 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">106</param>
+		</handler>
+		<items>
+			<item id="-200" count="1500" /> <!-- Clan Reputation -->
+			<item id="-300" count="15000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="1" />
+		</items>
+	</reward>
+	<reward id="3209" name="Main Class - First Challenge 2" requiredCompletion="107" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 107 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">107</param>
+		</handler>
+		<items>
+			<item id="-200" count="1800" /> <!-- Clan Reputation -->
+			<item id="-300" count="18000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="1" />
+		</items>
+	</reward>
+	<reward id="3210" name="Main Class - First Challenge 3" requiredCompletion="108" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 108 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">108</param>
+		</handler>
+		<items>
+			<item id="-200" count="2100" /> <!-- Clan Reputation -->
+			<item id="-300" count="21000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="3" />
+		</items>
+	</reward>
+	<reward id="3211" name="Main Class - First Challenge 4" requiredCompletion="109" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 109 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">109</param>
+		</handler>
+		<items>
+			<item id="-200" count="2400" /> <!-- Clan Reputation -->
+			<item id="-300" count="24000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="5" />
+		</items>
+	</reward>
+	<reward id="3212" name="Main Class - Path of Ascetic 1" requiredCompletion="110" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Lv. 110 for your main class while in a clan. -->
+		<handler name="level">
+			<param name="level">110</param>
+		</handler>
+		<items>
+			<item id="-200" count="2700" /> <!-- Clan Reputation -->
+			<item id="-300" count="27000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3213" name="Main Class - Path of Ascetic 2" requiredCompletion="111" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 111 while in a clan. -->
+		<handler name="level">
+			<param name="level">111</param>
+		</handler>
+		<items>
+			<item id="-200" count="3000" /> <!-- Clan Reputation -->
+			<item id="-300" count="30000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3214" name="Main Class - Path of Ascetic 3" requiredCompletion="112" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 112 while in a clan. -->
+		<handler name="level">
+			<param name="level">112</param>
+		</handler>
+		<items>
+			<item id="-200" count="3300" /> <!-- Clan Reputation -->
+			<item id="-300" count="33000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3215" name="Main Class - Path of Ascetic 4" requiredCompletion="113" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 113 while in a clan. -->
+		<handler name="level">
+			<param name="level">113</param>
+		</handler>
+		<items>
+			<item id="-200" count="3600" /> <!-- Clan Reputation -->
+			<item id="-300" count="36000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3216" name="Main Class - Path of Ascetic 5" requiredCompletion="114" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 114 while in a clan. -->
+		<handler name="level">
+			<param name="level">114</param>
+		</handler>
+		<items>
+			<item id="-200" count="3900" /> <!-- Clan Reputation -->
+			<item id="-300" count="39000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3217" name="Path of Patience 1" requiredCompletion="115" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 115 while in a clan. -->
+		<handler name="level">
+			<param name="level">115</param>
+		</handler>
+		<items>
+			<item id="-200" count="4200" /> <!-- Clan Reputation -->
+			<item id="-300" count="42000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3218" name="Path of Patience 2" requiredCompletion="116" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 116 while in a clan. -->
+		<handler name="level">
+			<param name="level">116</param>
+		</handler>
+		<items>
+			<item id="-200" count="4500" /> <!-- Clan Reputation -->
+			<item id="-300" count="45000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3219" name="Path of Patience 3" requiredCompletion="117" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 117 while in a clan. -->
+		<handler name="level">
+			<param name="level">117</param>
+		</handler>
+		<items>
+			<item id="-200" count="4800" /> <!-- Clan Reputation -->
+			<item id="-300" count="48000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3220" name="Path of Patience 4" requiredCompletion="118" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 118 while in a clan. -->
+		<handler name="level">
+			<param name="level">118</param>
+		</handler>
+		<items>
+			<item id="-200" count="5100" /> <!-- Clan Reputation -->
+			<item id="-300" count="51000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3221" name="Path of Patience 5" requiredCompletion="119" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 119 while in a clan. -->
+		<handler name="level">
+			<param name="level">119</param>
+		</handler>
+		<items>
+			<item id="-200" count="5400" /> <!-- Clan Reputation -->
+			<item id="-300" count="54000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3222" name="Fruits of Patience" requiredCompletion="120" isMainClassOnly="true" isDualClassOnly="false" dailyReset="false">
+		<!-- Reach Main Class Lv. 120 while in a clan. -->
+		<handler name="level">
+			<param name="level">120</param>
+		</handler>
+		<items>
+			<item id="-200" count="5700" /> <!-- Clan Reputation -->
+			<item id="-300" count="57000" /> <!-- Fame -->
+			<item id="81890" count="1" />
+		</items>
+	</reward>
+	<reward id="3223" name="Dual Class - Basic Enhancement 1" requiredCompletion="99" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+		<!-- Reach Lv. 99 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">99</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> <!-- Clan Reputation -->
+			<item id="-300" count="3000" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3224" name="Dual Class - Basic Enhancement 2" requiredCompletion="100" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+		<!-- Reach Lv. 100 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">100</param>
+		</handler>
+		<items>
+			<item id="-200" count="450" /> <!-- Clan Reputation -->
+			<item id="-300" count="4500" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3225" name="Dual Class - Initial Growth 1" requiredCompletion="101" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+		<!-- Reach Lv. 101 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">101</param>
+		</handler>
+		<items>
+			<item id="-200" count="600" /> <!-- Clan Reputation -->
+			<item id="-300" count="6000" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3226" name="Dual Class - Initial Growth 2" requiredCompletion="102" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+		<!-- Reach Lv. 102 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">102</param>
+		</handler>
+		<items>
+			<item id="-200" count="750" /> <!-- Clan Reputation -->
+			<item id="-300" count="7500" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3227" name="Dual Class - Initial Growth 3" requiredCompletion="103" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false">
+		<!-- Reach Lv. 103 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">103</param>
+		</handler>
+		<items>
+			<item id="-200" count="900" /> <!-- Clan Reputation -->
+			<item id="-300" count="9000" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3228" name="Dual Class - Initial Growth 4" requiredCompletion="104" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 104 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">104</param>
+		</handler>
+		<items>
+			<item id="-200" count="1050" /> <!-- Clan Reputation -->
+			<item id="-300" count="10500" /> <!-- Fame -->
+			<item id="39738" count="1" />
+		</items>
+	</reward>
+	<reward id="3229" name="Dual Class - Initial Growth 5" requiredCompletion="105" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 105 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">105</param>
+		</handler>
+		<items>
+			<item id="-200" count="1200" /> <!-- Clan Reputation -->
+			<item id="-300" count="12000" /> <!-- Fame -->
+			<item id="39738" count="2" />
+		</items>
+	</reward>
+	<reward id="3230" name="Dual Class - First Challenge 1" requiredCompletion="106" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 106 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">106</param>
+		</handler>
+		<items>
+			<item id="-200" count="1500" /> <!-- Clan Reputation -->
+			<item id="-300" count="15000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="1" />
+		</items>
+	</reward>
+	<reward id="3231" name="Dual Class - First Challenge 2" requiredCompletion="107" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 107 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">107</param>
+		</handler>
+		<items>
+			<item id="-200" count="1800" /> <!-- Clan Reputation -->
+			<item id="-300" count="18000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="1" />
+		</items>
+	</reward>
+	<reward id="3232" name="Dual Class - First Challenge 3" requiredCompletion="108" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 108 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">108</param>
+		</handler>
+		<items>
+			<item id="-200" count="2100" /> <!-- Clan Reputation -->
+			<item id="-300" count="21000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="3" />
+		</items>
+	</reward>
+	<reward id="3233" name="Dual Class - First Challenge 4" requiredCompletion="109" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 109 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">109</param>
+		</handler>
+		<items>
+			<item id="-200" count="2400" /> <!-- Clan Reputation -->
+			<item id="-300" count="24000" /> <!-- Fame -->
+			<item id="81815" count="5" />
+			<item id="81812" count="5" />
+		</items>
+	</reward>
+	<reward id="3234" name="Dual Class - Path of Ascetic 1" requiredCompletion="110" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Lv. 110 for your dual class while in a clan. -->
+		<handler name="level">
+			<param name="level">110</param>
+		</handler>
+		<items>
+			<item id="-200" count="2700" /> <!-- Clan Reputation -->
+			<item id="-300" count="27000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3235" name="Dual Class - Path of Ascetic 2" requiredCompletion="111" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 111 while in a clan. -->
+		<handler name="level">
+			<param name="level">111</param>
+		</handler>
+		<items>
+			<item id="-200" count="3000" /> <!-- Clan Reputation -->
+			<item id="-300" count="30000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3236" name="Dual Class - Path of Ascetic 3" requiredCompletion="112" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 112 while in a clan. -->
+		<handler name="level">
+			<param name="level">112</param>
+		</handler>
+		<items>
+			<item id="-200" count="3300" /> <!-- Clan Reputation -->
+			<item id="-300" count="33000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3237" name="Dual Class - Path of Ascetic 4" requiredCompletion="113" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 113 while in a clan. -->
+		<handler name="level">
+			<param name="level">113</param>
+		</handler>
+		<items>
+			<item id="-200" count="3600" /> <!-- Clan Reputation -->
+			<item id="-300" count="36000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3238" name="Dual Class - Path of Ascetic 5" requiredCompletion="114" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 114 while in a clan. -->
+		<handler name="level">
+			<param name="level">114</param>
+		</handler>
+		<items>
+			<item id="-200" count="3900" /> <!-- Clan Reputation -->
+			<item id="-300" count="39000" /> <!-- Fame -->
+			<item id="81888" count="1" />
+		</items>
+	</reward>
+	<reward id="3239" name="Dual Class - Path of Patience 1" requiredCompletion="115" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 115 while in a clan. -->
+		<handler name="level">
+			<param name="level">115</param>
+		</handler>
+		<items>
+			<item id="-200" count="4200" /> <!-- Clan Reputation -->
+			<item id="-300" count="42000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3240" name="Dual Class - Path of Patience 2" requiredCompletion="116" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 116 while in a clan. -->
+		<handler name="level">
+			<param name="level">116</param>
+		</handler>
+		<items>
+			<item id="-200" count="4500" /> <!-- Clan Reputation -->
+			<item id="-300" count="45000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3241" name="Dual Class - Path of Patience 3" requiredCompletion="117" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 117 while in a clan. -->
+		<handler name="level">
+			<param name="level">117</param>
+		</handler>
+		<items>
+			<item id="-200" count="4800" /> <!-- Clan Reputation -->
+			<item id="-300" count="48000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3242" name="Dual Class - Path of Patience 4" requiredCompletion="118" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 118 while in a clan. -->
+		<handler name="level">
+			<param name="level">118</param>
+		</handler>
+		<items>
+			<item id="-200" count="5100" /> <!-- Clan Reputation -->
+			<item id="-300" count="51000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3243" name="Dual Class - Path of Patience 5" requiredCompletion="119" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 119 while in a clan. -->
+		<handler name="level">
+			<param name="level">119</param>
+		</handler>
+		<items>
+			<item id="-200" count="5400" /> <!-- Clan Reputation -->
+			<item id="-300" count="54000" /> <!-- Fame -->
+			<item id="81889" count="1" />
+		</items>
+	</reward>
+	<reward id="3244" name="Dual Class - Fruits of Patience" requiredCompletion="120" isMainClassOnly="false" isDualClassOnly="true" dailyReset="false" >
+		<!-- Reach Dual Class Lv. 120 while in a clan. -->
+		<handler name="level">
+			<param name="level">120</param>
+		</handler>
+		<items>
+			<item id="-200" count="5700" /> <!-- Clan Reputation -->
+			<item id="-300" count="57000" /> <!-- Fame -->
+			<item id="81890" count="1" />
+		</items>
+	</reward>
+
+	<!-- 
+	<reward id="3025" name="Obtain Noblesse status" requiredCompletion="1">
+		Obtain the Noblesse status while in a clan.
+		<handler name="noble">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> Clan Reputation
+			<item id="-300" count="3000" /> Fame
+		</items>
+	</reward>
+	<reward id="3026" name="Obtain Exalted Status" requiredCompletion="1">
+		Obtain the Exalted status while in a clan.
+		<handler name="monster">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="900" /> Clan Reputation
+			<item id="-300" count="9000" /> Fame
+		</items>
+	</reward>
+	-->
+
+	<reward id="3027" name="Monster Hunting: First Steps" requiredCompletion="20000">
+		<!-- Hunt 20,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
+		<handler name="monster">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> <!-- Clan Reputation -->
+			<item id="-300" count="3000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3028" name="Monster Hunting: Seasoned" requiredCompletion="60000">
+		<!-- Hunt 60,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
+		<handler name="monster">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="900" /> <!-- Clan Reputation -->
+			<item id="-300" count="9000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3029" name="Monster Hunting: Expert" requiredCompletion="120000">
+		<!-- Hunt 120,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
+		<handler name="monster">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1800" /> <!-- Clan Reputation -->
+			<item id="-300" count="18000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3030" name="Rare Tavern Monster Hunting" requiredCompletion="10">
+		<!-- Defeat any of the following monsters that appear rarely in the Mystic Tavern 10 times. Mystic Tavern Tauti: Ifrit Mystic Tavern Freya: Ice Knight Mystic Tavern Kelbim: Domithan Mystic Tavern Kain: Eilhalder von Hellmann -->
+		<handler name="monster">
+			<param name="ids">23704,23703,23696,24068</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> <!-- Clan Reputation -->
+			<item id="-300" count="3000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3031" name="World Boss Raid: First Steps" requiredCompletion="1">
+		<!-- Defeat 1 of the following once. Antharas Valakas Lindvior Fafurion Helios Etis van Etina -->
+		<handler name="monster">
+			<param name="ids">29068,29028,29240,29361,29362,29363,29364,29365,29366,29367,29305,29320</param>
+		</handler>
+		<items>
+			<item id="-200" count="200" /> <!-- Clan Reputation -->
+			<item id="-300" count="2000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3032" name="World Boss Raid: Seasoned" requiredCompletion="10">
+		<!-- Defeat 1 of the following 10 times. Antharas Valakas Lindvior Fafurion Helios Etis van Etina -->
+		<handler name="monster">
+			<param name="ids">29068,29028,29240,29361,29362,29363,29364,29365,29366,29367,29305,29320</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> <!-- Clan Reputation -->
+			<item id="-300" count="10000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3033" name="World Boss Raid: Expert" requiredCompletion="30">
+		<!-- Defeat 1 of the following 30 times. Antharas Valakas Lindvior Fafurion Helios Etis van Etina -->
+		<handler name="monster">
+			<param name="ids">29068,29028,29240,29361,29362,29363,29364,29365,29366,29367,29305,29320</param>
+		</handler>
+		<items>
+			<item id="-200" count="2000" /> <!-- Clan Reputation -->
+			<item id="-300" count="20000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3034" name="Olympiad Beginner" requiredCompletion="60">
+		<!-- Achieve 60 wins in the Olympiad. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="200" /> <!-- Clan Reputation -->
+			<item id="-300" count="2000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3035" name="Olympiad Veteran" requiredCompletion="180">
+		<!-- Achieve 180 wins in the Olympiad. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="600" /> <!-- Clan Reputation -->
+			<item id="-300" count="6000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3036" name="Olympiad Master" requiredCompletion="360">
+		<!-- Achieve 360 wins in the Olympiad. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="1200" /> <!-- Clan Reputation -->
+			<item id="-300" count="12000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3037" name="Olympiad: Hero of Heroes" requiredCompletion="10">
+		<!-- Become a Hero 10 times in the Olympiad. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="3000" /> <!-- Clan Reputation -->
+			<item id="-300" count="30000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3038" name="Olympiad: From Defeat to Victory" requiredCompletion="100">
+		<!-- Lose 100 times in the Olympiad to complete this achievement. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="100" /> <!-- Clan Reputation -->
+			<item id="-300" count="1000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3039" name="Olympiad Participation Reward" requiredCompletion="200">
+		<!-- Participate in the Olympiad 200 times. -->
+		<handler name="olympiad" />
+		<items>
+			<item id="-200" count="200" /> <!-- Clan Reputation -->
+			<item id="-300" count="2000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3040" name="Ceremony of Chaos Beginner" requiredCompletion="50">
+		<!-- Achieve 50 wins in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="400" /> <!-- Clan Reputation -->
+			<item id="-300" count="4000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3041" name="Ceremony of Chaos Veteran" requiredCompletion="150">
+		<!-- Achieve 150 wins in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="1200" /> <!-- Clan Reputation -->
+			<item id="-300" count="12000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3042" name="Ceremony of Chaos Master" requiredCompletion="300">
+		<!-- Achieve 300 wins in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="2400" /> <!-- Clan Reputation -->
+			<item id="-300" count="24000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3043" name="Ceremony of Chaos: Best of the Best" requiredCompletion="10">
+		<!-- Become the best Champion 10 times in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="5000" /> <!-- Clan Reputation -->
+			<item id="-300" count="50000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3044" name="Ceremony of Chaos: Survival Expert" requiredCompletion="100">
+		<!-- Become the last survivor 100 times in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="400" /> <!-- Clan Reputation -->
+			<item id="-300" count="4000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3045" name="Ceremony of Chaos Participation Reward" requiredCompletion="200">
+		<!-- Participate in the Ceremony of Chaos 200 times. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="200" /> <!-- Clan Reputation -->
+			<item id="-300" count="2000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3046" name="Ceremony of Chaos Consolation Prize" requiredCompletion="100">
+		<!-- Obtain Ruler's Consideration 100 times in the Ceremony of Chaos. -->
+		<handler name="ceremonyofchaos" />
+		<items>
+			<item id="-200" count="1000" /> <!-- Clan Reputation -->
+			<item id="-300" count="10000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<reward id="3047" name="Angler's Descendant" requiredCompletion="72000">
+		<!-- Successfully catch any type of fish 72000 times at the Fishing Dock. -->
+		<handler name="fishing" />
+		<items>
+			<item id="-200" count="300" /> <!-- Clan Reputation -->
+			<item id="-300" count="3000" /> <!-- Fame -->
+		</items>
+	</reward>
+	<!--
+	<reward id="3048" name="Big Player in the Auction House" requiredCompletion="10">
+		Bid in the Rare Auction and win 10 times.
+		<handler name="auction" />
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3049" name="Novice Recycler" requiredCompletion="10">
+		Perform Crystallization or Alchemy Combination 10 times.
+		<handler name="combine" />
+		<items>
+			<item id="-200" count="100" /> Clan Reputation
+			<item id="-300" count="1000" /> Fame
+		</items>
+	</reward>
+	<reward id="3050" name="Professional Recycler" requiredCompletion="50">
+		Perform Crystallization or Alchemy Combination 50 times.
+		<handler name="combine" />
+		<items>
+			<item id="-200" count="200" /> Clan Reputation
+			<item id="-300" count="2000" /> Fame
+		</items>
+	</reward>
+	<reward id="3051" name="Expert Recycler" requiredCompletion="100">
+		Perform Crystallization or Alchemy Combination 100 times.
+		<handler name="combine" />
+		<items>
+			<item id="-200" count="300" /> Clan Reputation
+			<item id="-300" count="3000" /> Fame
+		</items>
+	</reward>
+	<reward id="3052" name="Talisman of Insanity" requiredCompletion="1">
+		Successfully compound 1 Talisman of Insanity.
+		<handler name="combine">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="500" /> Clan Reputation
+			<item id="-300" count="5000" /> Fame
+		</items>
+	</reward>
+	<reward id="3053" name="Achieve Venir's Talisman Lv. 15" requiredCompletion="1">
+		Successfully combine Venir's Talisman Lv. 15 once.
+		<handler name="combine">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> Clan Reputation
+			<item id="-300" count="3000" /> Fame
+		</items>
+	</reward>
+	<reward id="3054" name="Achieve Venir's Talisman Lv. 24" requiredCompletion="1">
+		Successfully combine Venir's Talisman Lv. 24 once.
+		<handler name="combine">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3055" name="Augmenting Expert: Weapon" requiredCompletion="100">
+		Use the following Spirit Stones to augment weapons 100 times: High-grade Spirit Stone Top-grade Spirit Stone Life Stone: Giant's Power
+		<handler name="augment">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3056" name="Augmenting Expert: Accessory" requiredCompletion="100">
+		Use the following Spirit Stones to augment accessories 100 times. High-grade Accessory Spirit Stone Top-grade Accessory Spirit Stone
+		<handler name="augment">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3057" name="Augmenting Expert: Hair Accessory" requiredCompletion="100">
+		Use the following Spirit Stones to augment hair accessories 100 times. Hair Accessory Spirit Stone Circlet Spirit Stone
+		<handler name="augment">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3058" name="All Wiped Out" requiredCompletion="3">
+		Enhance your equipment 3 times with any of the following Soul Crystals. Kain's Soul Crystal Lv. 8 Mermoden's Soul Crystal Lv. 8 Leona's Soul Crystal Lv. 8 Pantheon's Soul Crystal Lv. 8 Lionel's Soul Crystal Lv. 8
+		<handler name="ensoul">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3063" name="+10 Apocalypse Weapon" requiredCompletion="1">
+		Enchant 1 Apocalypse weapon to +10.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="100" /> Clan Reputation
+			<item id="-300" count="1000" /> Fame
+		</items>
+	</reward>
+	<reward id="3064" name="+15 Apocalypse Weapon" requiredCompletion="1">
+		Enchant 1 Apocalypse weapon to +15.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> Clan Reputation
+			<item id="-300" count="3000" /> Fame
+		</items>
+	</reward>
+	<reward id="3065" name="+20 Apocalypse Weapon" requiredCompletion="1">
+		Enchant 1 Apocalypse weapon to +20.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="500" /> Clan Reputation
+			<item id="-300" count="5000" /> Fame
+		</items>
+	</reward>
+	<reward id="3066" name="+10 Specter Weapon" requiredCompletion="1">
+		Enchant 1 Specter weapon to +10.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="200" /> Clan Reputation
+			<item id="-300" count="2000" /> Fame
+		</items>
+	</reward>
+	<reward id="3067" name="+15 Specter Weapon" requiredCompletion="1">
+		Enchant 1 Specter weapon to +15.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="600" /> Clan Reputation
+			<item id="-300" count="6000" /> Fame
+		</items>
+	</reward>
+	<reward id="3068" name="+20 Specter Weapon" requiredCompletion="1">
+		Enchant 1 Specter weapon to +20.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="3069" name="+10 Helios Weapon" requiredCompletion="1">
+		Enchant 1 Helios weapon to +10.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="300" /> Clan Reputation
+			<item id="-300" count="3000" /> Fame
+		</items>
+	</reward>
+	<reward id="3070" name="+15 Helios Weapon" requiredCompletion="1">
+		Enchant 1 Helios weapon to +15.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="900" /> Clan Reputation
+			<item id="-300" count="9000" /> Fame
+		</items>
+	</reward>
+	<reward id="3071" name="+20 Helios Weapon" requiredCompletion="1">
+		Enchant 1 Helios weapon to +20.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1500" /> Clan Reputation
+			<item id="-300" count="15000" /> Fame
+		</items>
+	</reward>
+	<reward id="3072" name="+10 Bloody Helios Weapon" requiredCompletion="1">
+		Enchant 1 Bloody Helios weapon to +10.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="400" /> Clan Reputation
+			<item id="-300" count="4000" /> Fame
+		</items>
+	</reward>
+	<reward id="3073" name="+15 Bloody Helios Weapon" requiredCompletion="1">
+		Enchant 1 Bloody Helios weapon to +15.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1200" /> Clan Reputation
+			<item id="-300" count="12000" /> Fame
+		</items>
+	</reward>
+	<reward id="3074" name="+20 Bloody Helios Weapon" requiredCompletion="1">
+		Enchant 1 Bloody Helios weapon to +20.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="2000" /> Clan Reputation
+			<item id="-300" count="20000" /> Fame
+		</items>
+	</reward>
+	<reward id="3075" name="+10 Dark Helios Weapon" requiredCompletion="1">
+		Enchant 1 Dark Helios weapon to +10.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="400" /> Clan Reputation
+			<item id="-300" count="4000" /> Fame
+		</items>
+	</reward>
+	<reward id="3076" name="+15 Dark Helios Weapon" requiredCompletion="1">
+		Enchant 1 Dark Helios weapon to +15.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="1200" /> Clan Reputation
+			<item id="-300" count="12000" /> Fame
+		</items>
+	</reward>
+	<reward id="3077" name="+20 Dark Helios Weapon" requiredCompletion="1">
+		Enchant 1 Dark Helios weapon to +20.
+		<handler name="enchant">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="2000" /> Clan Reputation
+			<item id="-300" count="20000" /> Fame
+		</items>
+	</reward>
+	<reward id="3081" name="Savior's Path - Standing at the End" requiredCompletion="1">
+		Complete the 'Savior's Path - Hall of Etina' quest.
+		<handler name="quest" />
+		<items>
+			<item id="-200" count="1000" /> Clan Reputation
+			<item id="-300" count="10000" /> Fame
+		</items>
+	</reward>
+	<reward id="4101" name="Power of Freya's Scroll" requiredCompletion="24" isOneTime="false">
+		Use any of the following scrolls 24 times: Freya's Frozen Scroll Freya's Frozen Scroll (Event) Freya's Scroll of Storm Freya's Scroll of Storm (Event) PA Scroll of Storm
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4103" name="Power of Freya's Ice Rose" requiredCompletion="8" isOneTime="false">
+		Use any of the following items 8 times: Freya's Ice Rose Freya's Ice Rose (Event) PA Ice Rose
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4104" name="Power of Glowing Dragon's Attribute Potion" requiredCompletion="8" isOneTime="false">
+		Use any of the following items 8 times: Glowing Dragon's Attribute Potion (XP) Glowing Dragon's Attribute Potion (XP, Event) PA Glowing Dragon's Attribute Potion (XP)
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4105" name="Power of Honey Dark Beer" requiredCompletion="8" isOneTime="false">
+		Use any of the following items 8 times: Honey Dark Beer PA Honey Dark Beer
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4106" name="Power of Emperor's Special Cocktail" requiredCompletion="4" isOneTime="false">
+		Use any of the following items 4 times: Emperor's Special Cocktail Emperor's Special Cocktail (Event) PA Emperor's Special Cocktail
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4107" name="Shining Nevit's Gold Hourglass" requiredCompletion="8" isOneTime="false">
+		Use one of the following items 8 times: Shining Nevit's Gold Hourglass Shining Nevit's Gold Hourglass (Event) PA Shining Nevit's Gold Hourglass
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4108" name="Use a Time Stone in a Session Zone" requiredCompletion="8" isOneTime="false">
+		Use any of the following items 3 times. Abandoned Coal Mines' Time Stone, Storm Isle's Time Stone, Primeval Isle's Time Stone, Golden Altar's Time Stone
+		<handler name="useitem">
+			<param name="minLevel">100</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4110" name="Hunting at lunchtime" requiredCompletion="300" isOneTime="false">
+		Kill 300 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) Available daily from 11:30 a.m. till 2:30 p.m. The quest progress is saved.
+		<handler name="monster">
+			<param name="minLevel">101</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="30" /> Clan Reputation
+			<item id="-300" count="300" /> Fame
+			<item id="81455" count="2" /> Special Clan Reward Lv. 1
+		</items>
+	</reward>
+	<reward id="4111" name="Evening hunt!" requiredCompletion="300" isOneTime="false" >
+		Kill 300 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) Available daily from 5:30 p.m. till 8:30 p.m. The quest progress is saved.
+		<handler name="monster">
+			<param name="minLevel">101</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="30" /> Clan Reputation
+			<item id="-300" count="300" /> Fame
+			<item id="81455" count="2" /> Special Clan Reward Lv. 1
+		</items>
+	</reward>
+	<reward id="4112" name="Hunting in the Corroded Fields" requiredCompletion="900" isOneTime="false">
+		Kill 900 monsters in the Corroded Fields.
+		<handler name="monster">
+		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="minLevel">100</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> Clan Reputation
+			<item id="-300" count="1500" /> Fame
+			<item id="81053" count="1" /> Vitality
+		</items>
+	</reward>
+	<reward id="4113" name="Great Hunt" requiredCompletion="1800" isOneTime="false">
+		Fight fire with fire! Kill 1800 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.)
+		<handler name="useitem">
+		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="35" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+			<item id="81782" count="1" /> Watermelon Seed
+		</items>
+	</reward>
+	<reward id="4114" name="Great Hunt in Group Instance Zones" requiredCompletion="3" isOneTime="false">
+		Fight fire with fire! Defeat any of the bosses in the following group instance zones of any difficulty level 3 times: Crystal Prison (Baylor), Nightmare Kamaloka, Ashen Shadow Camp, Krofin's Nest
+		<handler name="useitem">
+		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="35" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+			<item id="81782" count="1" /> Watermelon Seed
+		</items>
+	</reward>
+	<reward id="4115" name="Mentee training" requiredCompletion="2" isOneTime="false">
+		Train 2 Mentees. (Mentorship lasts until the Mentee reaches Lv. 105.) To add a Mentee open the Friend Manager window (Alt+Y) and open the Mentorship tab.
+		<handler name="mentor">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="20000" /> Clan Reputation
+			<item id="-300" count="20000" /> Fame
+			<item id="33804" count="200000" />
+		</items>
+	</reward>
+	-->
+</list>

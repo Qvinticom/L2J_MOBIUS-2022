@@ -1,0 +1,3799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25512" level="52" type="RaidBoss" name="Gigantic Chaos Golem" title="Raid Boss">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="5" />
+			<skill name="SelfBuff_a" id="4173" level="5" />
+			<skill name="PhysicalSpecial_a" id="4726" level="5" />
+			<skill name="SelfRangePhysicalSpecial_a" id="4171" level="5" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="1156668" sp="277" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="223134.397312054" hpRegen="145.221991187936" mp="804.195804195804" mpRegen="2.4" />
+			<attack physical="748.087467830972" magical="227.319590431056" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="629.078014184397" magical="306.785413168392" evasion="-18" />
+			<speed>
+				<walk ground="18" />
+				<run ground="190" />
+			</speed>
+			<hitTime>430</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4171" level="5" /> <!-- Spinning Slasher -->
+			<skill id="4173" level="5" /> <!-- Might -->
+			<skill id="4177" level="5" /> <!-- Cancellation -->
+			<skill id="4273" level="5" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4726" level="5" /> <!-- Stun -->
+			<skill id="5029" level="1" /> <!-- Raid Boss (Lv. 52) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<corpseTime>8</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>GOLEM</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="31" />
+			<height normal="51.8" />
+		</collision>
+	</npc>
+	<npc id="25531" level="81" type="RaidBoss" name="Darnel" title="Torture Maiden">
+		<parameters>
+			<minions name="Privates">
+				<npc id="22302" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeDebuff_a" id="4182" level="9" />
+			<skill name="debuff" id="4189" level="9" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="1713494" sp="411" />
+		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+			<vitals hp="1354779.17981073" hpRegen="155.191510697296" mp="1708.47457627119" mpRegen="3" />
+			<attack physical="7193.62745098039" magical="3069.21426611738" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="622.352941176471" magical="334.19740777667" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hitTime>580</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4182" level="9" /> <!-- Poison -->
+			<skill id="4189" level="9" /> <!-- Paralysis -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5470" level="1" /> <!-- Raid Boss (Lv. 81) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40.599" />
+		</collision>
+	</npc>
+	<npc id="25532" level="99" type="RaidBoss" name="Kechi" title="Flaming">
+		<parameters>
+			<param name="InzoneRestriction" value="1" />
+			<skill name="selfbuff1" id="5418" level="1" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="10340290224" sp="20680600" />
+		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+			<vitals hp="408254.458721243" hpRegen="192.545054202338" mp="2104.41504754031" mpRegen="3" />
+			<attack physical="7535.14120667522" magical="3210.94149562544" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="760.397946084724" magical="408.302691412284" />
+			<attribute>
+				<attack type="FIRE" value="200" />
+				<defence fire="200" water="150" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="26" />
+				<run ground="180" />
+			</speed>
+			<hitTime>470</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5418" level="1" /> <!-- Invincibility -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5471" level="1" /> <!-- Raid Boss (Lv. 82) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GRANISKO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="78.09" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.71" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack - Heavy armor -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack - Heavy armor -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack - Heavy armor -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack - Heavy armor -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack - Heavy armor -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Box -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack - Light armor -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack - Light armor -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack - Light armor -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack - Light armor -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack - Light armor -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="46491" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46490" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46478" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal Lv. 5 -->
+				<item id="46477" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46493" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
+				<item id="46505" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46508" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal Lv. 5 -->
+				<item id="46476" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46475" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46446" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46460" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46463" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
+				<item id="46462" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46448" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal Lv. 5 -->
+				<item id="46494" min="1" max="1" chance="0.003" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
+				<item id="46449" min="1" max="1" chance="0.003" /> <!-- Kain's Soul Crystal Lv. 6 -->
+				<item id="46479" min="1" max="1" chance="0.003" /> <!-- Leona's Soul Crystal Lv. 6 -->
+				<item id="46464" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
+				<item id="46509" min="1" max="1" chance="0.003" /> <!-- Lionel's Soul Crystal Lv. 6 -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<lucky>
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="25533" level="82" type="Monster" name="Kechi's Subordinate">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="IsAggressive" value="0" />
+			<param name="AttackRange" value="0" />
+			<param name="Party_Type" value="1" />
+			<param name="Party_Loyalty" value="2" />
+			<skill name="selfbuff1" id="4084" level="2" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18801" hpRegen="192.697893809876" mp="1743" mpRegen="3" />
+			<attack physical="2138.26232247285" magical="1460.15597007277" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="629.594586" magical="614.28" />
+			<attribute>
+				<attack type="FIRE" value="200" />
+				<defence fire="200" water="150" wind="200" earth="200" holy="200" dark="200" default="65" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4084" level="2" /> <!-- Resist Physical Attack -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>GRANISKO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25534" level="83" type="RaidBoss" name="Tears" title="Ice">
+		<parameters>
+			<param name="InzoneRestriction" value="1" />
+			<skill name="W_LongRangeDDMagic" id="5238" level="1" />
+			<skill name="selfbuff1" id="5420" level="1" />
+			<skill name="selfbuff2" id="2369" level="1" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
+		<acquire exp="2010424" sp="482" />
+		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+			<vitals hp="1347510.41009464" hpRegen="152.563941686569" mp="1777.62711864407" mpRegen="3" />
+			<attack physical="7352.22868217054" magical="3129.21395126087" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="637.209302325581" magical="342.136381553015" />
+			<attribute>
+				<attack type="WATER" value="200" />
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="2369" level="1" /> <!-- Water Dragon Scale -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5238" level="1" /> <!-- Freezing -->
+			<skill id="5420" level="1" /> <!-- Invincibility -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5472" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25535" level="83" type="Monster" name="Tears" title="Ice">
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1347510.40462428" hpRegen="152.563941686569" mp="1777.55775577558" mpRegen="3" />
+			<attack physical="294.361025393487" magical="123.95670694274" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="637.209302325581" magical="342.313301097552" />
+			<attribute>
+				<attack type="WATER" value="200" />
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5472" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25536" level="81" type="RaidBoss" name="Hannibal" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25537" count="1" respawnTime="60" weightPoint="1" />
+				<npc id="25538" count="1" respawnTime="60" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="DDMagic_a" id="4191" level="9" />
+			<skill name="SelfRangeDebuff_a" id="4183" level="9" />
+			<skill name="SelfRangeDebuffAnother_a" id="4185" level="9" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="5614731" sp="1347" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="431893.322133557" hpRegen="132.781870390792" mp="1777.22277722278" mpRegen="3" />
+			<attack physical="3843.34670597902" magical="771.008095858252" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1074.11764705882" magical="524.181700652289" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="100" />
+			</speed>
+			<hitTime>580</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4183" level="9" /> <!-- Decrease P. Atk. -->
+			<skill id="4185" level="9" /> <!-- Sleep -->
+			<skill id="4191" level="9" /> <!-- (Wind Strike) -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5473" level="1" /> <!-- Raid Boss (Lv. 81) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40.599" />
+		</collision>
+	</npc>
+	<npc id="25537" level="81" type="Monster" name="Enmity" title="Raid Fighter">
+		<!-- Confirmed CT2.5 -->
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="34551" hpRegen="132.781870390792" mp="1777" mpRegen="3" />
+			<attack physical="5569.79467526538" magical="4133.68833440234" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="537.036773647059" magical="523.972705882353" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="90" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="100" />
+			</speed>
+			<hitTime>490</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="36" />
+			<height normal="43.5" />
+		</collision>
+	</npc>
+	<npc id="25538" level="81" type="Monster" name="Vengeance" title="Raid Fighter">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="HealMagic_a" id="4780" level="8" />
+			<skill name="SelfRangeBuff_a" id="4199" level="9" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="69102" hpRegen="132.781870390792" mp="1777" mpRegen="3" />
+			<attack physical="5569.79467526538" magical="4133.68833440234" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="537.036773647059" magical="523.972705882353" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="90" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="100" />
+			</speed>
+			<hitTime>490</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4199" level="9" /> <!-- Decrease P. Atk. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Demons -->
+			<skill id="4780" level="8" /> <!-- BOSS Heal -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="36" />
+			<height normal="43.5" />
+		</collision>
+	</npc>
+	<npc id="25539" level="101" type="RaidBoss" name="Typhoon" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="0" />
+			<param name="Skill01_Check_Dist" value="1" />
+			<param name="Skill01_Dist_Min" value="200" />
+			<param name="Skill01_MainAttack" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill02_Check_Dist" value="1" />
+			<param name="Skill02_Dist_Max" value="200" />
+			<param name="FieldCycle" value="1" />
+			<skill name="Skill01_ID" id="5380" level="4" />
+			<skill name="Skill02_ID" id="5382" level="4" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="5678636" sp="1362" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1087838.61952391" hpRegen="335.274222736751" mp="2259.64159297493" mpRegen="3" />
+			<attack physical="9736.52128613702" magical="3937.66080224517" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1362.80319535221" magical="664.600468522037" evasion="-18" />
+			<attribute>
+				<attack type="WIND" value="200" />
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5380" level="4" /> <!-- Hurricane -->
+			<skill id="5382" level="4" /> <!-- Tempest -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="5474" level="1" /> <!-- Raid Boss (Lv. 81) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="19448" min="1" max="1" chance="78.91" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
+				<item id="19447" min="1" max="1" chance="20.19" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+				<item id="46537" min="1" max="1" chance="0.75" /> <!-- Mystic Soul Crystal Fragment -->
+				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light armor -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy armor -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25540" level="83" type="RaidBoss" name="Demon Prince" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25541" count="6" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="5" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill01_Check_Dist" value="1" />
+			<param name="Skill01_Dist_Max" value="150" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill03_Probablity" value="300" />
+			<param name="Skill03_Target" value="3" />
+			<param name="Skill03_Type" value="1" />
+			<param name="FieldCycle" value="1" />
+			<param name="Threshold_Level_Min" value="11" />
+			<param name="Threshold_Level_Max" value="11" />
+			<param name="FieldCycle_Quantity" value="300" />
+			<skill name="Skill01_ID" id="5249" level="9" />
+			<skill name="Skill02_ID" id="5247" level="9" />
+			<skill name="Skill03_ID" id="5044" level="2" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="3100451" sp="744" />
+		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+			<vitals hp="2230489.58990536" hpRegen="319.2293199" mp="1846.10169491525" mpRegen="3" />
+			<attack physical="7191.37596899225" magical="3096.46729781611" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="732.558139534884" magical="353.961371698857" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hitTime>550</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5044" level="2" /> <!-- Ultimate Defense -->
+			<skill id="5247" level="9" /> <!-- Seed of Darkness -->
+			<skill id="5249" level="9" /> <!-- Dark Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5475" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="33" grown="39.6" />
+			<height normal="49" grown="60.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6680" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
+				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
+				<item id="6707" min="24" max="72" chance="92.625" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6690" min="2" max="6" chance="33.63" /> <!-- Imperial Staff Head -->
+				<item id="6693" min="3" max="9" chance="32.96" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="6689" min="18" max="54" chance="32.84" /> <!-- Basalt Battlehammer Head -->
+				<item id="6697" min="3" max="9" chance="31.98" /> <!-- Arcana Mace Head -->
+				<item id="10301" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Demon Prince -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25541" level="83" type="Monster" name="Fiend" title="Raid Fighter">
+		<!-- Confirmed CT2.5 -->
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="55817" hpRegen="187.410040552143" mp="1846" mpRegen="3" />
+			<attack physical="9440.59973604737" magical="6521.66749943455" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="731.989957674419" magical="353.810790697674" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="100" />
+			</attribute>
+			<speed>
+				<walk ground="200" />
+				<run ground="240" />
+			</speed>
+			<hitTime>430</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="4466" level="1" /> <!-- Surrender to Dark -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="25542" level="83" type="RaidBoss" name="Ranku" title="Raid Boss">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="5" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill02_HPTarget" value="0" />
+			<param name="Skill02_HighHP" value="10" />
+			<param name="FieldCycle" value="1" />
+			<param name="Threshold_Level_Min" value="11" />
+			<param name="Threshold_Level_Max" value="11" />
+			<param name="FieldCycle_Quantity" value="300" />
+			<skill name="Skill01_ID" id="5246" level="9" />
+			<skill name="Skill02_ID" id="5250" level="1" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="3100451" sp="744" />
+		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+			<vitals hp="2230489.58990536" hpRegen="319.2293199" mp="1846.10169491525" mpRegen="3" />
+			<attack physical="4928.29457364341" magical="2121.90278333444" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="732.558139534884" magical="353.961371698857" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="26" />
+				<run ground="180" />
+			</speed>
+			<hitTime>490</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5246" level="9" /> <!-- Dark Explosion -->
+			<skill id="5250" level="1" /> <!-- Stun -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5476" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="2000" isAggressive="true">
+			<clanList>
+				<clan>RANKU</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="29" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
+				<item id="7575" min="1" max="1" chance="0.3" /> <!-- Draconic Bow -->
+				<item id="7579" min="14" max="42" chance="56.64" /> <!-- Draconic Bow Shaft -->
+				<item id="6696" min="81" max="243" chance="55.41" /> <!-- Heaven's Divider Edge -->
+				<item id="6688" min="40" max="120" chance="54.78" /> <!-- Forgotten Blade Edge -->
+				<item id="10299" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Ranku -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25543" level="83" type="Monster" name="Eidolon" title="Raid Fighter">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="5" />
+			<param name="Skill02_Type" value="2" />
+			<param name="FieldCycle" value="1" />
+			<skill name="Skill01_ID" id="5297" level="9" />
+			<skill name="Skill02_ID" id="5266" level="9" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="55817" hpRegen="187.410040552143" mp="1846" mpRegen="3" />
+			<attack physical="9440.59973604737" magical="6521.66749943455" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="731.989957674419" magical="353.810790697674" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="100" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="210" />
+			</speed>
+			<hitTime>490</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5266" level="9" /> <!-- Magical Backfire -->
+			<skill id="5297" level="9" /> <!-- NPC(party) - Physical Single Close Range Attack - Dark -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>RANKU</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="25544" level="83" type="RaidBoss" name="Tully" title="Steel Citadel">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25545" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="5" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill02_Check_Dist" value="1" />
+			<param name="Skill02_Dist_Max" value="200" />
+			<skill name="Skill01_ID" id="4168" level="10" />
+			<skill name="Skill02_ID" id="4187" level="10" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="2522624" sp="605" />
+		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+			<vitals hp="1697736.27760252" hpRegen="171.837730607924" mp="1881.35593220339" mpRegen="3" />
+			<attack physical="7295.05813953488" magical="3158.94710898985" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="744.186046511628" magical="359.873866771778" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4168" level="10" /> <!-- Power Strike -->
+			<skill id="4187" level="10" /> <!-- Decrease Speed -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5477" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="19" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25545" level="83" type="Monster" name="Tully's Banshee" title="Raid Fighter">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial1" id="5230" level="1" />
+			<skill name="PhysicalSpecial2" id="5231" level="1" />
+			<skill name="PhysicalSpecial3" id="5232" level="1" />
+			<skill name="PhysicalSpecial4" id="5233" level="1" />
+			<skill name="PhysicalSpecial5" id="5234" level="1" />
+			<skill name="PhysicalSpecial6" id="5235" level="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4334645" hpRegen="185.531972616358" mp="1881" mpRegen="3" />
+			<attack physical="5285.98483353792" magical="3672.60126521562" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="743.994593023256" magical="653.307558139535" />
+			<speed>
+				<walk ground="250" />
+				<run ground="250" />
+			</speed>
+			<hitTime>640</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5230" level="1" /> <!-- Stun -->
+			<skill id="5231" level="1" /> <!-- Stun -->
+			<skill id="5232" level="1" /> <!-- Stun -->
+			<skill id="5233" level="1" /> <!-- Weight Spin Attack - Weak -->
+			<skill id="5234" level="1" /> <!-- Weight Spin Attack - Mid -->
+			<skill id="5235" level="1" /> <!-- Weight Spin Attack - Strong -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="33" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="25546" level="104" type="RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25547" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25548" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeDDMagic_a" id="4178" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
+		<acquire exp="20025867264" sp="18019456" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2351007.1398572" hpRegen="8.5" mp="51429.0709290709" mpRegen="30" />
+			<attack physical="58949.0230882483" magical="5550.25498393345" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3722.10526315789" magical="2115.9618413623" evasion="-18" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="12" /> <!-- Flame Strike -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="13.5" />
+			<height normal="38" />
+		</collision>
+	</npc>
+	<npc id="25547" level="95" type="Monster" name="Rhianna's Escort">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<attack physical="39019.9712170142" magical="6908.12226971491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="485.665861215878" magical="276.105917767995" />
+			<speed>
+				<walk ground="10" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="25548" level="95" type="Monster" name="Rhianna's Healer">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="HealMagic_a" id="4781" level="10" />
+			<skill name="SelfRangeBuff_a" id="4213" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<attack physical="39019.9712170142" magical="6908.12226971491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="388.532688972703" magical="220.884734214396" />
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>340</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4213" level="12" /> <!-- BOSS Haste -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4781" level="12" /> <!-- BOSS Heal -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="25549" level="104" type="RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25550" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25551" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeHold_a" id="4197" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="7" /> <!-- Apprentice's Rod -->
+		<acquire exp="20025867264" sp="18019456" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2351007.1398572" hpRegen="8.5" mp="51429.0709290709" mpRegen="30" />
+			<attack physical="58949.0230882483" magical="5550.25498393345" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3722.10526315789" magical="2115.9618413623" evasion="-18" />
+			<speed>
+				<walk ground="43" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="12" /> <!-- Hold -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="10" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="25550" level="95" type="Monster" name="Tesla's Apprentice">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="DDMagic_a" id="4195" level="10" />
+			<skill name="Debuff_a" id="4200" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="291" /> <!-- Trident -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<attack physical="39019.9712170142" magical="6908.12226971491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="388.532688972703" magical="220.884734214396" />
+			<speed>
+				<walk ground="40" />
+				<run ground="170" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4195" level="12" /> <!-- BOSS Twister -->
+			<skill id="4200" level="12" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="13" grown="22" />
+			<height normal="35" grown="42.2" />
+		</collision>
+	</npc>
+	<npc id="25551" level="95" type="Monster" name="Tesla's Herald">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4725" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- Great Spear -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<attack physical="39019.9712170142" magical="6908.12226971491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="485.665861215878" magical="276.105917767995" />
+			<speed>
+				<walk ground="52" />
+				<run ground="170" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4725" level="12" /> <!-- Stun -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="25552" level="104" type="RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeCancel_a" id="4177" level="11" />
+			<skill name="SelfBuff_a" id="4173" level="11" />
+			<skill name="PhysicalSpecial_a" id="4730" level="11" />
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="20025867264" sp="18019456" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2351007.1398572" hpRegen="436.263366" mp="51429.0709290709" mpRegen="3.3" />
+			<attack physical="58949.0230882483" magical="5550.25498393345" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3722.10526315789" magical="2115.9618413623" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4172" level="12" /> <!-- Stun -->
+			<skill id="4173" level="12" /> <!-- Might -->
+			<skill id="4177" level="12" /> <!-- Cancellation -->
+			<skill id="4730" level="12" /> <!-- Mortal Blow -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25553" level="105" type="RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<param name="doSummonNPC" value="1" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeCancel_a" id="4177" level="11" />
+			<skill name="SelfBuff_a" id="4175" level="11" />
+			<skill name="PhysicalSpecial_a" id="4170" level="11" />
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
+			<attack physical="64139.9525456761" magical="6007.32055673886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3828.81609577652" magical="2198.25070174255" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4170" level="12" /> <!-- Mortal Blow -->
+			<skill id="4172" level="12" /> <!-- Stun -->
+			<skill id="4175" level="12" /> <!-- Haste -->
+			<skill id="4177" level="12" /> <!-- Cancellation -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="35" />
+			<height normal="46.377" />
+		</collision>
+	</npc>
+	<npc id="25554" level="105" type="RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25555" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25556" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="DDMagic_a" id="4195" level="11" />
+			<skill name="SelfRangeDebuff_a" id="4182" level="11" />
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="8.5" mp="52212.7872127872" mpRegen="30" />
+			<attack physical="64139.9525456761" magical="6007.32055673886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3828.81609577652" magical="2198.25070174255" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="37" />
+				<run ground="170" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4182" level="12" /> <!-- Poison -->
+			<skill id="4190" level="12" /> <!-- Decrease MP -->
+			<skill id="4195" level="12" /> <!-- Twister -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="24" grown="29" />
+			<height normal="40" grown="48" />
+		</collision>
+	</npc>
+	<npc id="25555" level="97" type="Monster" name="Brutus' Right Hand">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4721" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- Dreadbane -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4721" level="12" /> <!-- BOSS Strike -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="15" grown="25" />
+			<height normal="45" grown="52" />
+		</collision>
+	</npc>
+	<npc id="25556" level="97" type="Monster" name="Brutus' Left Hand">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- Keshanberk -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="170" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="25557" level="105" type="RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25558" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25559" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeHold_a" id="4197" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="8.5" mp="52212.7872127872" mpRegen="30" />
+			<attack physical="64139.9525456761" magical="6007.32055673886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3828.81609577652" magical="2198.25070174255" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="12" /> <!-- Hold -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="60" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="25558" level="97" type="Monster" name="Karankawa's Root">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="DDMagic_a" id="4191" level="11" />
+			<skill name="Debuff_a" id="4198" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="404.2294096072" magical="232.067023884" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>200</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4191" level="12" /> <!-- BOSS Windstrike -->
+			<skill id="4198" level="12" /> <!-- Poison -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="15" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="25559" level="97" type="Monster" name="Karankawa's Blossom">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4740" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>130</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4740" level="12" /> <!-- BOSS Strike -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="25560" level="105" type="RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25561" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25562" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeDDMagic_a" id="4178" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="135" /> <!-- Samurai Long Sword -->
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="8.5" mp="52212.7872127872" mpRegen="30" />
+			<attack physical="64139.9525456761" magical="6007.32055673886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3828.81609577652" magical="2198.25070174255" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="34" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="12" /> <!-- Flame Strike -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="19" />
+			<height normal="43.5" />
+		</collision>
+	</npc>
+	<npc id="25561" level="97" type="Monster" name="Sargon's Attendant">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="HealMagic_a" id="4780" level="11" />
+			<skill name="SelfRangeBuff_a" id="4211" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="200" /> <!-- Sage's Staff -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="29" />
+				<run ground="170" />
+			</speed>
+			<hitTime>220</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4211" level="12" /> <!-- BOSS Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4780" level="12" /> <!-- BOSS Heal -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="25562" level="97" type="Monster" name="Sargon's Squire">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="228" /> <!-- Crystal Dagger -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="404.2294096072" magical="232.067023884" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="170" />
+			</speed>
+			<hitTime>390</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="13" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="25563" level="106" type="RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25564" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25565" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneFinish" value="1" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="DDMagic_a" id="4194" level="12" />
+			<skill name="SelfRangeDebuff_a" id="4188" level="12" />
+			<skill name="SelfRangeDebuffAnother_a" id="4182" level="12" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="145624548788" sp="131056704" raidPoints="7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2940661.06677866" hpRegen="8.5" mp="52981.5184815185" mpRegen="30" />
+			<attack physical="69771.496852827" magical="6496.96322549349" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3940.54373522459" magical="2284.35866733739" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<hitTime>840</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4182" level="12" /> <!-- Poison -->
+			<skill id="4188" level="12" /> <!-- Bleed -->
+			<skill id="4194" level="12" /> <!-- Aura Burn -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="20" />
+			<height normal="75" />
+		</collision>
+	<dropLists>
+			<drop>
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="80.98" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="20.84" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.689" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.161" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25564" level="99" type="Monster" name="Atrielle's Follower">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4725" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4725" level="12" /> <!-- Stun -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="25565" level="99" type="Monster" name="Atrielle's Subordinate">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="420.560277755331" magical="243.815416968128" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="25566" level="106" type="RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25567" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25568" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="doSummonNPC" value="1" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneFinish" value="1" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="DDMagic_a" id="4194" level="12" />
+			<skill name="SelfRangeDebuff_a" id="4183" level="12" />
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="12" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<acquire exp="145624548788" sp="131056704" raidPoints="7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2940661.06677866" hpRegen="8.5" mp="52981.5184815185" mpRegen="30" />
+			<attack physical="69771.496852827" magical="6496.96322549349" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3940.54373522459" magical="2284.35866733739" evasion="-18" />
+			<attribute>
+				<attack type="WIND" value="430" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>720</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4183" level="12" /> <!-- Decrease P. Atk. -->
+			<skill id="4190" level="12" /> <!-- Decrease MP -->
+			<skill id="4194" level="12" /> <!-- Aura Burn -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="10" />
+			<height normal="54" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="78.4" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.69" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.714" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.156" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25567" level="99" type="Monster" name="Nagen's Cohort">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="DDMagic_a" id="4194" level="12" />
+			<skill name="Debuff_a" id="4202" level="12" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
+			<attribute>
+				<attack type="WIND" value="430" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="170" />
+			</speed>
+			<hitTime>370</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4194" level="12" /> <!-- BOSS Aura Burn -->
+			<skill id="4202" level="12" /> <!-- Hold -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25568" level="99" type="Monster" name="Nagen's Friend">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="HealMagic_a" id="4785" level="12" />
+			<skill name="SelfRangeBuff_a" id="4212" level="12" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
+			<attribute>
+				<attack type="WIND" value="430" />
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="170" />
+			</speed>
+			<hitTime>370</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4212" level="12" /> <!-- BOSS Shield -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4785" level="12" /> <!-- BOSS Chant of Life -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25569" level="106" type="RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25570" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25571" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneFinish" value="1" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="PhysicalSpecial_b" id="4745" level="12" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
+		<acquire exp="145624548788" sp="131056704" raidPoints="7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2940661.06677866" hpRegen="8.5" mp="52981.5184815185" mpRegen="30" />
+			<attack physical="69771.496852827" magical="6496.96322549349" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3940.54373522459" magical="2284.35866733739" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="24" />
+				<run ground="170" />
+			</speed>
+			<hitTime>510</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4745" level="12" /> <!-- Stun -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="17" />
+			<height normal="46.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="78.54" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.3" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.793" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.26" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25570" level="99" type="Monster" name="Jax' Vanguard">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="279" /> <!-- Reinforced Longbow -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="420.560277755331" magical="243.815416968128" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hitTime>910</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="ARCHER" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="25571" level="99" type="Monster" name="Jax' Raider">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="68" /> <!-- Falchion -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="25572" level="104" type="RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25573" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25574" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeDDMagic_a" id="4178" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="201" /> <!-- Club of Nature -->
+		<acquire exp="20025867264" sp="18019456" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2351007.1398572" hpRegen="8.5" mp="51429.0709290709" mpRegen="30" />
+			<attack physical="54722.9658688296" magical="5179.57301935533" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3654.68509984639" magical="2057.23615861865" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="280" />
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="12" /> <!-- Flame Strike -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="25573" level="93" type="Monster" name="Hager's Follower">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="HealMagic_a" id="4780" level="10" />
+			<skill name="SelfRangeBuff_a" id="4213" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="9" /> <!-- Cedar Staff -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<attack physical="35459.9874241795" magical="6296.76383568414" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attribute>
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4213" level="12" /> <!-- BOSS Haste -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4780" level="12" /> <!-- BOSS Heal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="15" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="25574" level="93" type="Monster" name="Hager's Escort">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<attack physical="35459.9874241795" magical="6296.76383568414" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="373.44549113101" magical="210.24126992447" />
+			<attribute>
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<hitTime>650</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="20" />
+			<height normal="38" />
+		</collision>
+	</npc>
+	<npc id="25575" level="104" type="RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25576" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="25577" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="DDMagic_a" id="4194" level="10" />
+			<skill name="SelfRangeDebuff_a" id="4187" level="10" />
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="20025867264" sp="18019456" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2351007.1398572" hpRegen="8.5" mp="51429.0709290709" mpRegen="30" />
+			<attack physical="54722.9658688296" magical="5179.57301935533" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3654.68509984639" magical="2057.23615861865" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="280" />
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4187" level="12" /> <!-- Decrease Speed -->
+			<skill id="4190" level="12" /> <!-- Decrease MP -->
+			<skill id="4194" level="12" /> <!-- Aura Burn -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="42" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="25576" level="93" type="Monster" name="Rango's Iris">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<attack physical="35459.9874241795" magical="6296.76383568414" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="373.44549113101" magical="210.24126992447" />
+			<attribute>
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="170" />
+			</speed>
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="21" />
+			<height normal="43" />
+		</collision>
+	</npc>
+	<npc id="25577" level="93" type="Monster" name="Rango's Lens">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4741" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<attack physical="35459.9874241795" magical="6296.76383568414" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attribute>
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<hitTime>410</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4741" level="12" /> <!-- BOSS Strike -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="25578" level="104" type="RaidBoss" name="Jakard" title="Forsaken Inmate">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeCancel_a" id="4177" level="10" />
+			<skill name="SelfBuff_a" id="4176" level="10" />
+			<skill name="PhysicalSpecial_a" id="4730" level="10" />
+			<skill name="SelfRangePhysicalSpecial_a" id="4735" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="140" />
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="20025867264" sp="18019456" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2351007.1398572" hpRegen="436.263366" mp="51429.0709290709" mpRegen="3.3" />
+			<attack physical="54722.9658688296" magical="5179.57301935533" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3654.68509984639" magical="2057.23615861865" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="280" />
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
+			<hitTime>370</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4176" level="12" /> <!-- Reflect Damage -->
+			<skill id="4177" level="12" /> <!-- Cancellation -->
+			<skill id="4730" level="12" /> <!-- Mortal Blow -->
+			<skill id="4735" level="12" /> <!-- Spinning Slasher -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="37" />
+			<height normal="98" />
+		</collision>
+	</npc>
+	<npc id="25579" level="105" type="RaidBoss" name="Helsing" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25580" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="25581" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="DDMagic_a" id="4196" level="10" />
+			<skill name="SelfRangeDebuff_a" id="4185" level="10" />
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="142" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="8.5" mp="52212.7872127872" mpRegen="30" />
+			<attack physical="57319.8717505952" magical="5409.19823796889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3723.40425531915" magical="2106.50005731973" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="20" />
+				<run ground="170" />
+			</speed>
+			<hitTime>430</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4185" level="12" /> <!-- Sleep -->
+			<skill id="4190" level="12" /> <!-- Decrease MP -->
+			<skill id="4196" level="12" /> <!-- Decrease Speed -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="14" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="25580" level="94" type="Monster" name="Helsing's Guard">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="142" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" /> <!-- Keshanberk -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="313367" hpRegen="8.5" mp="21690" mpRegen="30" />
+			<attack physical="37184.6066131423" magical="6590.82182407988" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="476.143001192038" magical="269.371627090727" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+				<attack type="DARK" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="170" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+	</npc>
+	<npc id="25581" level="94" type="Monster" name="Helsing's Assassin">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4741" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="142" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" /> <!-- Kris -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="313367" hpRegen="8.5" mp="21690" mpRegen="30" />
+			<attack physical="37184.6066131423" magical="6590.82182407988" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="476.143001192038" magical="269.371627090727" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+				<attack type="DARK" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4741" level="12" /> <!-- BOSS Strike -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="25582" level="105" type="RaidBoss" name="Gillien" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25583" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25584" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeDDMagic_a" id="4178" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6723" /> <!-- Monster Only (Vampire Warrior) -->
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="8.5" mp="52212.7872127872" mpRegen="30" />
+			<attack physical="59515.840617943" magical="5603.62282031743" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3757.89473684211" magical="2136.30762829848" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="43" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="12" /> <!-- Flame Strike -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="9" grown="10" />
+			<height normal="31.5" grown="38" />
+		</collision>
+	</npc>
+	<npc id="25583" level="95" type="Monster" name="Gillien's Daughter">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="HealMagic_a" id="4785" level="10" />
+			<skill name="SelfRangeBuff_a" id="4213" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="99" /> <!-- Apprentice's Spellbook -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<attack physical="39019.9712170142" magical="6908.12226971491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="485.665861215878" magical="276.105917767995" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+				<attack type="DARK" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4213" level="12" /> <!-- BOSS Haste -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4785" level="12" /> <!-- BOSS Chant of Life -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="5.5" grown="6.5" />
+			<height normal="28" grown="34.5" />
+		</collision>
+	</npc>
+	<npc id="25584" level="95" type="Monster" name="Gillien's Attendant">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="144" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="178" /> <!-- Bone Staff -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<attack physical="39019.9712170142" magical="6908.12226971491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="485.665861215878" magical="276.105917767995" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+				<attack type="DARK" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="19" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="25585" level="105" type="RaidBoss" name="Medici" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25586" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25587" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="RangeHold_a" id="4197" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="146" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>FEMALE</sex>
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="8.5" mp="52212.7872127872" mpRegen="30" />
+			<attack physical="61761.9339758822" magical="5797.95826566198" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3793.24324324324" magical="2167.00529200529" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="12" /> <!-- Hold -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="20" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="25586" level="96" type="Monster" name="Medici's Sister">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="DDMagic_a" id="4192" level="10" />
+			<skill name="Debuff_a" id="4204" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="146" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
+			<attack physical="40918.7454632461" magical="7231.0886261522" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="396.303342752157" magical="226.406852569756" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4192" level="12" /> <!-- BOSS HP Drain -->
+			<skill id="4204" level="12" /> <!-- Bleed -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="MAGE" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="25587" level="96" type="Monster" name="Medici's Brother">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4725" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="146" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" /> <!-- Kris -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
+			<attack physical="40918.7454632461" magical="7231.0886261522" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="495.379178440196" magical="283.008565712195" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4725" level="12" /> <!-- Stun -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="25588" level="105" type="RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm02_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeCancel_a" id="4177" level="11" />
+			<skill name="SelfBuff_a" id="4175" level="11" />
+			<skill name="PhysicalSpecial_a" id="4731" level="11" />
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="146" />
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
+		<acquire exp="40825674225" sp="36735300" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2406485.93028139" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
+			<attack physical="61761.9339758822" magical="5797.95826566198" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3793.24324324324" magical="2167.00529200529" evasion="-18" />
+			<attribute>
+				<attack type="DARK" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4172" level="12" /> <!-- Stun -->
+			<skill id="4175" level="12" /> <!-- Haste -->
+			<skill id="4177" level="12" /> <!-- Cancellation -->
+			<skill id="4731" level="12" /> <!-- Mortal Blow -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="30" grown="40" />
+			<height normal="46.5" grown="48.4" />
+		</collision>
+	</npc>
+	<npc id="25589" level="106" type="RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25590" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25591" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneFinish" value="1" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="DDMagic_a" id="4192" level="10" />
+			<skill name="SelfRangeDebuff_a" id="4188" level="10" />
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="5131" /> <!-- Monster Only (Parhit Staff) -->
+		<acquire exp="145624548788" sp="131056704" raidPoints="7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2940661.06677866" hpRegen="8.5" mp="52981.5184815185" mpRegen="30" />
+			<attack physical="64750.8092365873" magical="6064.53313346971" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3865.28101097439" magical="2219.18642271153" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="29" />
+				<run ground="170" />
+			</speed>
+			<hitTime>220</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4188" level="12" /> <!-- Bleed -->
+			<skill id="4190" level="12" /> <!-- Decrease MP -->
+			<skill id="4192" level="12" /> <!-- Vampiric Touch -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="19.5" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="79.07" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="20.09" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.767" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.261" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25590" level="97" type="Monster" name="Brand's Servant">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4725" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="162" /> <!-- War Axe -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="170" />
+			</speed>
+			<hitTime>390</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4725" level="12" /> <!-- Stun -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="13" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="25591" level="97" type="Monster" name="Brand's Maid">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="148" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="200" /> <!-- Sage's Staff -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="404.2294096072" magical="232.067023884" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="29" />
+				<run ground="170" />
+			</speed>
+			<hitTime>220</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="25592" level="106" type="RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneFinish" value="1" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="SelfRangeCancel_a" id="4177" level="10" />
+			<skill name="SelfBuff_a" id="4173" level="10" />
+			<skill name="PhysicalSpecial_a" id="4721" level="10" />
+			<skill name="SelfRangePhysicalSpecial_a" id="4736" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="151" />
+		</parameters>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="145624548788" sp="131056704" raidPoints="7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2940661.06677866" hpRegen="453.2459686" mp="52981.5184815185" mpRegen="3.3" />
+			<attack physical="67210.4712505754" magical="6276.60426540642" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3902.55374877224" magical="2251.53543389929" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="26" />
+				<run ground="170" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4173" level="12" /> <!-- Might -->
+			<skill id="4177" level="12" /> <!-- Cancellation -->
+			<skill id="4721" level="12" /> <!-- Power Strike -->
+			<skill id="4736" level="12" /> <!-- Spinning Slasher -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="20" />
+			<height normal="33.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="81.58" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.08" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.702" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.229" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25593" level="106" type="RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25594" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25595" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<param name="CouldDespawn" value="1" />
+			<param name="DespawnTime" value="10" />
+			<param name="InzoneFinish" value="1" />
+			<param name="InzoneRestriction" value="1" />
+			<skill name="PhysicalSpecial_b" id="4745" level="11" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="145624548788" sp="131056704" raidPoints="7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2940661.06677866" hpRegen="8.5" mp="52981.5184815185" mpRegen="30" />
+			<attack physical="69771.496852827" magical="6496.96322549349" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3940.54373522459" magical="2284.35866733739" evasion="-18" />
+			<attribute>
+				<attack type="EARTH" value="430" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4745" level="12" /> <!-- Stun -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="46" />
+			<height normal="71.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="79.13" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.05" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.703" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.229" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25594" level="99" type="Monster" name="Gerg's Follower">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="LongRangePhysicalSpecial_a" id="4760" level="10" />
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2507" /> <!-- Lizardspear -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="420.560277755331" magical="243.815416968128" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="43" />
+				<run ground="170" />
+			</speed>
+			<hitTime>720</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4760" level="12" /> <!-- Stun -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="22" grown="27" />
+		</collision>
+	</npc>
+	<npc id="25595" level="99" type="Monster" name="Gerg's Subordinate">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<skill name="different_level_9_attacked" id="5456" level="1" />
+			<skill name="different_level_9_see_spelled" id="5456" level="1" />
+			<param name="Attack_BoostValue" value="155" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="74" /> <!-- Katana -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="25596" level="82" type="Monster" name="Ocular Servitor">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="AttackRange" value="2" />
+			<param name="Party_Type" value="1" />
+			<param name="Party_Loyalty" value="2" />
+			<param name="Skill01_Type" value="2" />
+			<param name="Skill01_MainAttack" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="4047" level="11" />
+			<skill name="Skill02_ID" id="5315" level="3" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4656" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="1317.4781016378" magical="925.9728055546" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="380.159485380117" magical="278.184210526316" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="120" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="160" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4047" level="11" /> <!-- Hold -->
+			<skill id="4095" level="1" /> <!-- Damage Shield -->
+			<skill id="4277" level="4" /> <!-- Resist Poison Attacks -->
+			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
+			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5315" level="3" /> <!-- NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction) -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="600" aggroRange="300">
+			<clanList>
+				<clan>CASTLE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="50.5" />
+		</collision>
+	</npc>
+	<npc id="25597" level="82" type="Monster" name="Heurel">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="AttackRange" value="2" />
+			<param name="MovingAttack" value="0" />
+			<param name="Skill01_MainAttack" value="1" />
+			<skill name="Skill01_ID" id="4152" level="11" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4656" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="1317.4781016378" magical="925.9728055546" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="380.159485380117" magical="278.184210526316" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="120" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4084" level="10" /> <!-- Resist Physical Attack -->
+			<skill id="4093" level="1" /> <!-- Evasion -->
+			<skill id="4152" level="11" /> <!-- NPC HP Drain - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5555" level="11" /> <!-- NPC Silence Resistance weakened -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>CASTLE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+	</npc>
+	<npc id="25598" level="82" type="Monster" name="Gegei">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="AttackRange" value="2" />
+			<param name="MovingAttack" value="0" />
+			<param name="Skill01_MainAttack" value="1" />
+			<skill name="Skill01_ID" id="4153" level="11" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4656" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="1317.4781016378" magical="925.9728055546" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="380.159485380117" magical="278.184210526316" />
+			<attribute>
+				<attack type="WATER" value="200" />
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" default="120" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="1" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4084" level="10" /> <!-- Resist Physical Attack -->
+			<skill id="4093" level="1" /> <!-- Evasion -->
+			<skill id="4153" level="11" /> <!-- Decrease Speed -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5555" level="11" /> <!-- NPC Silence Resistance weakened -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>CASTLE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="46" />
+			<height normal="71.5" />
+		</collision>
+	</npc>
+	<npc id="25599" level="82" type="Monster" name="Iglas">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="AttackRange" value="2" />
+			<param name="MovingAttack" value="0" />
+			<param name="Skill01_MainAttack" value="1" />
+			<skill name="Skill01_ID" id="4157" level="11" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4656" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="1317.4781016378" magical="925.9728055546" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="380.159485380117" magical="278.184210526316" />
+			<attribute>
+				<attack type="FIRE" value="200" />
+				<defence fire="200" water="150" wind="200" earth="200" holy="200" dark="200" default="120" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4084" level="10" /> <!-- Resist Physical Attack -->
+			<skill id="4093" level="1" /> <!-- Evasion -->
+			<skill id="4157" level="11" /> <!-- NPC Blaze - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5555" level="11" /> <!-- NPC Silence Resistance weakened -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>CASTLE</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="60" />
+		</collision>
+	</npc>
+</list>

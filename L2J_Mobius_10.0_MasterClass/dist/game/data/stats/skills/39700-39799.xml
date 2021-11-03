@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39700" toLevel="1" name="+14 Krishna Dual Swords Pack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39701" toLevel="1" name="+14 Krishna Dual Daggers Pack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39702" toLevel="1" name="+14 Krishna Dual Blunt Weapon Pack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39703" toLevel="1" name="Vitality Maintaining Rune - 30 d.">
+		<!-- When in inventory, maintains the Vitality level. -->
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39704" toLevel="1" name="Scroll: Enchant Anhel's Protection">
+		<!-- A scroll to enchant Anhel's Protection. -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39705" toLevel="1" name="Faeron's Protector Scroll">
+		<!-- All stats +1, acquired XP/ SP +5%. The effect remains after death and main/ dual class changing. Deleted when entering the Olympiad or Ceremony of Chaos. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39706" toLevel="2" name="+1 Artifact Crystal Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39707" toLevel="1" name="Royal Honey Dark Beer">
+		<!-- For $s1, all basic stats $s2, Vitality bonus +$s3, P./ M. Def. +$s4. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<icon>icon.bm_royal_black_beer</icon>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>50</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39708" toLevel="1" name="First Time Lv. 120 Gift">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39709" toLevel="1" name="Gran Kain's Scroll: Enchant Superior Kaliel's Bracelet">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39710" toLevel="1" name="Appearance Stone: Beach Swimsuit">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39711" toLevel="1" name="Alluring Swimsuit">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39712" toLevel="1" name="Seductive Swimsuit Appearance Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39713" toLevel="1" name="Event Appearance Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39714" toLevel="4" name="Fresh Watermelon Energy">
+		<!-- Makes everything cooler. For $s1, damage +$s2, received damage -$s2. Note! 1. The effect remains after death. Cannot be used in the Olympiad/ Ceremony of Chaos. 2. The item or effect of the next level cannot be obtained if the characters is dead or too far away. 3. The item cannot be obtained if the inventory is full. 4. The effect can be removed with Alt+Mouse Left Click. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39715" toLevel="1" name="Homunculus Upgrade Points - 10">
+		<!-- Double-click to obtain 10 homunculus upgrade points. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81812</itemConsumeId> <!-- Homunculus Upgrade Points - 10 -->
+		<effects>
+			<effect name="AddHomunculusPoints">
+				<amount>10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39716" toLevel="1" name="Transparent Sigil Appearance Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39717" toLevel="1" name="Elixir of Agility">
+		<!-- Grants a feeling of lightness. For 30 min., power of standard attacks and P./ M. skills +5%, P./ M. Def. +5%, acquired XP/ SP +5%. The effect remains after death and main/ dual class changing. Deleted when entering the Olympiad or Ceremony of Chaos. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39718" toLevel="1" name="Gran Kain's Scroll: Enchant Circlet">
+		<!-- A scroll to enchant Anhel's Protection. -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39719" toLevel="2" name="Otherworldly Atelia Refinery's Time Stone">
+		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
+		<icon>icon.bm_timezone_refill_atre_a_60</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">81829</value><!-- Otherworldly Atelia Refinery's Time Stone(Event) -->
+			<value level="2">81830</value><!-- Otherworldly Atelia Refinery's Time Stone -->
+		</itemConsumeId> 
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>107</minLevel>
+				<maxLevel>120</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>14</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39720" toLevel="1" name="Festival Fairy's Five-colored Rice Cake">
+		<!-- For 2 h., acquired XP/ SP +15%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39721" toLevel="1" name="Festival Fairy's Five-colored Rice Cake - Lovely Hanbok">
+		<!-- Transforms armor into a Lovely Hanbok. The effect can be removed with Alt+Mouse Left Click. Deleted when entering the Olympiad or Ceremony of Chaos. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39722" toLevel="1" name="Gran Kain's Scroll: Enchant Dragon Skin Shirt">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39723" toLevel="1" name="Teleportation Cubic">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39724" toLevel="1" name="Mentor's Encouragement">
+		<!-- With your mentor's help, your P. Atk./ M. Atk./ P. Def./ M. Def. +5%, Acquired XP/ SP +100%, Vitality bonus +100%. The effect is active only when your mentor is online and for 5 min. after they have gone offline. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39725" toLevel="1" name="Party Appearance Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39726" toLevel="1" name="Scroll: Enchant Blessed Exalted Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39727" toLevel="1" name="Gran Kain's Scroll: Enchant Superior La Vie En Rose's Brooch">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39728" toLevel="1" name="No Doubt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39729" toLevel="1" name="Snowman's Icy Candy">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39734" toLevel="3" name="Lucky Pouch of Growth">
+		<!-- Acquired XP/SP +5%. / Acquired adena +5%. / Vitality Bonus +7%. -->
+		<icon>
+			<value level="1">icon.ev_2021_newyear_rune2</value>
+			<value level="2">icon.ev_2021_newyear_rune3</value>
+			<value level="3">icon.ev_2021_newyear_rune4</value>
+		</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+			</effect>
+			<effect name="BonusDropAdena">
+				<amount>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="3">7</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39735" toLevel="1" name="Greater Zodiac Agathion's Sacred Book of Growth">
+		<!-- Required for enhancing greater agathions. In case of failure, the enchant value remains the same. -->
+		<icon>icon.star_scrl_of_ench_ag</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39736" toLevel="1" name="Gran Kain's Scroll: Enchant Superior Seed Bracelet">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+</list>

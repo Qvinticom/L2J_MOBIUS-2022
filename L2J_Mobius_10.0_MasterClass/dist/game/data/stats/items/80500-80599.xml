@@ -1,0 +1,969 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80500" name="Draco's Treasure Chest" type="EtcItem">
+		<!-- Use it to obtain one of the special items. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80501" name="Royal Gold Save Ticket" type="EtcItem">
+		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R-grade Weapons. When Enchant succeeds, it increases by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ENCHT_WP_DOWN" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39446" level="1" /> <!-- Royal Gold Save Card -->
+		</skills>
+	</item>
+	<item id="80502" name="Gran Kain's Scroll: Enchant R-grade Armor" type="EtcItem">
+		<!-- For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased and HP is increased with each enchant value. The enchanting is safe up to +3. In case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +12 or higher. -->
+		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_am" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39447" level="1" /> <!-- Gran Kain's Scroll: Enchant Armor (R-grade) -->
+		</skills>
+	</item>
+	<item id="80503" name="Hero's Trophy Pack" type="EtcItem">
+		<!-- Use it to obtain a special item. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80504" name="Capsule: +12 Bloody Helios Shaper" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Shaper. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80505" name="Capsule: +12 Bloody Helios Cutter" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Cutter. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80506" name="Capsule: +12 Bloody Helios Slasher" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Slasher. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80507" name="Capsule: +12 Bloody Helios Avenger" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Avenger. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80508" name="Capsule: +12 Bloody Helios Fighter" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Fighter. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80509" name="Capsule: +12 Bloody Helios Stormer" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Stormer. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80510" name="Capsule: +12 Bloody Helios Thrower" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Thrower. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80511" name="Capsule: +12 Bloody Helios Guardian" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Shooter. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80512" name="Capsule: +12 Bloody Helios Buster" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Buster. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80513" name="Capsule: +12 Bloody Helios Caster" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Caster. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80514" name="Capsule: +12 Bloody Helios Retributer" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Retributer. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80515" name="Capsule: +12 Bloody Helios Dual Swords" type="EtcItem">
+		<!-- Double-click to obtain +12 Bloody Helios Dual Swords. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80516" name="Capsule: +12 Bloody Helios Dual Daggers" type="EtcItem">
+		<!-- Double-click to obtain +12 Bloody Helios Dual Daggers. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80517" name="Capsule: +12 Bloody Helios Dual Blunt Weapons" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +12 Bloody Helios Dual Blunt Weapon. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80518" name="Capsule: +8 Bloody Eternal Helmet" additionalName="Heavy armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Helmet (Heavy). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80519" name="Capsule: +8 Bloody Eternal Breastplate" additionalName="Heavy armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Breastplate (Heavy). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80520" name="Capsule: +8 Bloody Eternal Gaiters" additionalName="Heavy armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Gaiters (Heavy). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80521" name="Capsule: +8 Bloody Eternal Gauntlets" additionalName="Heavy armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Gauntlets (Heavy). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80522" name="Capsule: +8 Bloody Eternal Boots" additionalName="Heavy armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Boots (Heavy). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80523" name="Capsule: +8 Bloody Eternal Leather Helmet" additionalName="Light armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Helmet (Light). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80524" name="Capsule: +8 Bloody Eternal Leather Armor" additionalName="Light armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Helmet (Light). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80525" name="Capsule: +8 Bloody Eternal Leather Leggings" additionalName="Light armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Leggings (Light). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80526" name="Capsule: +8 Bloody Eternal Leather Gloves" additionalName="Light armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Gloves (Light). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80527" name="Capsule: +8 Bloody Eternal Leather Boots" additionalName="Light armor" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Leather Boots (Light). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80528" name="Capsule: +8 Bloody Eternal Circlet" additionalName="Robe" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Circlet (Robe). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80529" name="Capsule: +8 Bloody Eternal Tunic" additionalName="Robe" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Tunic (Robe). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80530" name="Capsule: +8 Bloody Eternal Stockings" additionalName="Robe" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Stockings (Robe). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80531" name="Capsule: +8 Bloody Eternal Gloves" additionalName="Robe" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Gloves (Robe). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80532" name="Capsule: +8 Bloody Eternal Shoes" additionalName="Robe" type="EtcItem">
+		<!-- Use it to obtain an exchangeable +8 Bloody Eternal Shoes (Robe). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80533" name="Golden Pig's Extra Pass: Kartia's Labyrinth Lv. 85 (Party)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 95 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80534" name="Golden Pig's Extra Pass: Kartia's Labyrinth Lv. 90 (Party)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 90 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80535" name="Golden Pig's Extra Pass: Kartia's Labyrinth Lv. 95 (Party)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 95 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80536" name="Golden Pig's Extra Pass: Emperor's Labyrinth" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Emperor's Labyrinth. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80537" name="Golden Pig's Extra Pass: Nightmare Kamaloka" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Nightmare Kamaloka. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80538" name="Golden Pig's Extra Pass: Embryo Command Post" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Embryo Command Post. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80539" name="Golden Pig's Extra Pass: Altar of Shillien" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Altar of Shillien. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80540" name="Golden Pig's Extra Pass: Fallen Emperor's Throne" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Fallen Emperor's Throne. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80541" name="Golden Pig's Extra Pass: Hall of Etina" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for the Hall of Etina. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80542" name="Golden Pig's Extra Pass: Krofin's Nest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to reset the instance zone timer for Krofin's Nest. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80543" name="Anakim's Protection Rune" additionalName="Event" type="EtcItem">
+		<!-- When in inventory, Received PvP Damage -90%. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_dark_rune" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80544" name="Snow's Plea for Help - Altar of Evil" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Altar of Evil and Bloody Swampland. Characters of level 85-95 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80545" name="Snow's Plea for Help - Fairy Settlement" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Fairy Settlement. Characters of level 85-95 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80546" name="Snow's Plea for Help - Isle of Souls" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters on the Isle of Souls. Characters of level 90-99 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80547" name="Snow's Plea for Help - Seal of Shillien" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shillien. Characters of level 90-99 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80548" name="Snow's Plea for Help - Monsters from Three Areas" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Cemetery. the Pagan Temple. and Blazing Swamp. Characters of level 95-101 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80549" name="Snow's Plea for Help - Raider's Crossroads" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Raider's Crossroads. Characters of level 95-101 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80550" name="Snow's Plea for Help - Silent Valley" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Silent Valley. Characters of level 95-101 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80551" name="Snow's Plea for Help - Hellbound" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Hellbound. Characters of level 97-103 can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80552" name="Snow's Plea for Help - Enchanted Valley" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Enchanted Valley. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80553" name="Snow's Plea for Help - Giant's Cave" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Giant's Cave. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80554" name="Snow's Plea for Help - Garden of Spirits" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Garden of Spirits. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80555" name="Snow's Plea for Help - Atelia Fortress" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Atelia Fortress. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80556" name="Snow's Plea for Help - Superion" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Superion. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80557" name="Snow's Plea for Help - Shadow of the Mother Tree" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Shadow of the Mother Tree. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80558" name="Snow's Plea for Help - Atelia Refinery" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Atelia Refinery. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80559" name="Snow's Plea for Help - Sea of Spores" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Sea of Spores. Characters of level 106 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80560" name="Snow's Plea for Help - Field of Silence" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Field of Silence. Characters of level 106 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80561" name="Snow's Plea for Help - Field of Whispers" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Field of Whispers. Characters of level 108 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80562" name="Snow's Plea for Help - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
+		<!-- A request from Snow for the 15th Anniversary to defeat Kalios in Kartia's Labyrinth Lv. 95 (Party). Required level: 95-105. Double-click to obtain a quest. The instance zone is available twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80563" name="Snow's Plea for Help - Crystal Prison (Baylor)" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Warden Baylor in the Crystal Prison. Characters of level 97 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80564" name="Snow's Plea for Help - Nightmare Kamaloka" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating the Betrayed Dark Rider in Nightmare Kamaloka. Characters of level 99 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80565" name="Snow's Plea for Help - Embryo Command Post" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Commander Burnstein at the Embryo Command Post. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80566" name="Snow's Plea for Help - Altar of Shillien" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shillien. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80567" name="Snow's Plea for Help - Fallen Emperor's Throne" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Helios in the Fallen Emperor's Throne. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80568" name="Snow's Plea - Hall of Etina" type="EtcItem">
+		<!-- A request from Snow to eliminate Etis van Etina in celebration of the game's anniversary. Required level: 104+. Double-click to obtain a quest. The instance zone is available twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80569" name="Snow's Plea for Help - Krofin's Nest" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Krofin's Nest. Characters of level 107 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80570" name="Snow's Plea for Help - Altar of Evil" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Altar of Evil and Bloody Swampland. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80571" name="Snow's Plea for Help - Fairy Settlement" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Fairy Settlement. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80572" name="Snow's Plea for Help - Isle of Souls" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters on the Isle of Souls. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80573" name="Snow's Plea for Help - Seal of Shillien" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shillien. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80574" name="Snow's Plea for Help - Monsters from Three Areas" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Cemetery. Pagan Temple. Blazing Swamp. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80575" name="Snow's Plea for Help - Raider's Crossroads" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Raider's Crossroads. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80576" name="Snow's Plea for Help - Silent Valley" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Silent Valley. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80577" name="Snow's Plea for Help - Hellbound" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Hellbound. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80578" name="Snow's Plea for Help - Enchanted Valley" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Enchanted Valley. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80579" name="Snow's Plea for Help - Giant's Cave" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Giant's Cave. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80580" name="Snow's Plea for Help - Garden of Spirits" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Garden of Spirits. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80581" name="Snow's Plea for Help - Atelia Fortress" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Atelia Fortress. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80582" name="Snow's Plea for Help - Superion" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in Superion. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80583" name="Snow's Plea for Help - Shadow of the Mother Tree" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Shadow of the Mother Tree. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80584" name="Snow's Plea for Help - Atelia Refinery" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Atelia Refinery. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80585" name="Snow's Plea for Help - Sea of Spores" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Sea of Spores. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80586" name="Snow's Plea for Help - Field of Silence" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Field of Silence. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80587" name="Snow's Plea for Help - Field of Whispers" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Field of Whispers. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80588" name="Snow's Plea for Help - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
+		<!-- A request from Snow for the 15th Anniversary to defeat Kalios in Kartia's Labyrinth Lv. 95 (Party). -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80589" name="Snow's Plea for Help - Crystal Prison (Baylor)" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Baylor in the Crystal Prison. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80590" name="Snow's Plea for Help - Nightmare Kamaloka" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating the Dark Rider in Nightmare Kamaloka. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80591" name="Snow's Plea for Help - Embryo Command Post" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Commander Burnstein at the Command Post. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80592" name="Snow's Plea for Help - Altar of Shillien" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shillien. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80593" name="Snow's Plea for Help - Fallen Emperor's Throne" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Helios in the Fallen Emperor's Throne. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80594" name="Snow's Plea - Hall of Etina" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Etis van Etina. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80595" name="Snow's Plea for Help - Krofin's Nest" type="EtcItem">
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Queen Krosha in Krofin's Nest. -->
+		<set name="icon" val="icon.ev_commission_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80596" name="Anniversary Coin" additionalName="Event" type="EtcItem">
+		<!-- An event coin for Lineage II Anniversary. -->
+		<set name="icon" val="icon.etc_11th_token" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80597" name="Anniversary Pitapat Box" type="EtcItem">
+		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80598" name="Anniversary Pitapat Box" type="EtcItem">
+		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80599" name="Anniversary Cube" type="EtcItem">
+		<!-- A cube prepared by Bright Snow for the 15th Anniversary. Can be used by Lv. 85 or higher. -->
+		<set name="icon" val="icon.ev_15th_cube" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>32478</npc> <!-- Game Assistant -->
+	</npcs>
+	<!-- Exchange long-term Vitality items for the short-term ones -->
+	<item>
+		<ingredient id="29494" count="1" /> <!-- Paulina's Helios Weapon Coupon 30-day -->
+		<production id="29477" count="1" /> <!-- Package: Paulina's Helios Shaper 30-day -->
+	</item>
+</list>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="107" parentClassId="34">
+		<skill skillName="Novice Sword Waltz" skillId="30809" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30613" /> <!-- Newbie's Rising Smash -->
+		</skill>
+		<skill skillName="Novice Celestial Aegis" skillId="30754" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Resolving Bash" skillId="30624" skillLevel="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Novice Resistance Debuff" skillId="30752" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30613" /> <!-- Newbie's Rising Smash -->
+		</skill>
+		<skill skillName="Novice Mental Attack Resistance" skillId="30753" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30613" /> <!-- Newbie's Rising Smash -->
+		</skill>
+		<skill skillName="Novice Elemental Resistance" skillId="30751" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30725" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30725" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Robe Mastery" skillId="30724" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Robe Mastery" skillId="30724" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Sword/Blunt Weapon Mastery" skillId="30723" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30802" /> <!-- Sword / Blunt Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Sword/Blunt Weapon Mastery" skillId="30723" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30722" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30722" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30726" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30726" skillLevel="2" getLevel="76" levelUpSp="100" />
+	</skillTree>
+</list>

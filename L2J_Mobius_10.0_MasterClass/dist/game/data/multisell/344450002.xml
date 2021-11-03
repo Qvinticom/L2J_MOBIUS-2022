@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>34445</npc> <!-- Accessory Artisan Denign -->
+	</npcs>
+	<!-- Modify Blessed Angel accessories -->
+	<item>
+		<ingredient id="81784" count="1" /> <!-- Blessed Angel's Necklace -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81787" count="1" chance="0" /> <!-- Blessed Angel's Necklace Assault Lv. 3 -->
+		<production id="81785" count="1" chance="70" /> <!-- Blessed Angel's Necklace Assault Lv. 1 -->
+		<production id="81786" count="1" chance="28" /> <!-- Blessed Angel's Necklace Assault Lv. 2 -->
+		<production id="81787" count="1" chance="2" /> <!-- Blessed Angel's Necklace Assault Lv. 3 -->
+	</item>
+	<item>
+		<ingredient id="81788" count="1" /> <!-- Blessed Angel's Earring -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81791" count="1" chance="0" /> <!-- Blessed Angel's Necklace Assault Lv. 3 -->
+		<production id="81789" count="1" chance="70" /> <!-- Blessed Angel's Necklace Assault Lv. 1 -->
+		<production id="81790" count="1" chance="28" /> <!-- Blessed Angel's Necklace Assault Lv. 2 -->
+		<production id="81791" count="1" chance="2" /> <!-- Blessed Angel's Necklace Assault Lv. 3 -->
+	</item>
+	<item>
+		<ingredient id="81792" count="1" /> <!-- Blessed Angel's Ring -->
+		<ingredient id="47494" count="10" /> <!-- Selenite -->
+		<ingredient id="35563" count="20" /> <!-- Giant's Energy -->
+		<production id="81795" count="1" chance="0" /> <!-- Blessed Angel's Necklace Assault Lv. 3 -->
+		<production id="81793" count="1" chance="70" /> <!-- Blessed Angel's Necklace Assault Lv. 1 -->
+		<production id="81794" count="1" chance="28" /> <!-- Blessed Angel's Necklace Assault Lv. 2 -->
+		<production id="81795" count="1" chance="2" /> <!-- Blessed Angel's Necklace Assault Lv. 3 -->
+	</item>
+</list>

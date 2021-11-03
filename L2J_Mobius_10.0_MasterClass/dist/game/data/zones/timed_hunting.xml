@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Timed Hunting Zones -->
+	<zone name="storm_isle_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="163840" Y="176604" />
+		<node X="196607" Y="196607" />
+	</zone>
+	<zone name="primeval_isle_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="0" Y="-32768" />
+		<node X="32767" Y="-1" />
+	</zone>
+	<zone name="golden_altar_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="-131072" Y="65536" />
+		<node X="-98305" Y="98303" />
+	</zone>
+	<zone name="coal_mines_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="131072" Y="-196608" />
+		<node X="163839" Y="-163841" />
+	</zone>
+	<zone name="toi_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="-98304" Y="0" />
+		<node X="-65537" Y="32767" />
+	</zone>
+	<zone name="imperial_tomb_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
+		<node X="163840" Y="-98304" />
+		<node X="196607" Y="-65537" />
+	</zone>
+	<zone name="outwordly_atelia_hz" type="TimedHuntingZone" shape="Cylinder" minZ="-9000" maxZ="-8300" rad="20000">
+		<node X="-49013" Y="15351" />
+	</zone>
+	<zone name="corroded_fields" type="TimedHuntingZone" shape="NPoly" minZ="-16000" maxZ="10000">
+		<stat name="instanceId" val="1013" />
+		<node X="98690" Y="164132" />
+		<node X="83362" Y="160672" />
+		<node X="69111" Y="221833" />
+		<node X="79606" Y="232038" />
+		<node X="99157" Y="221489" />
+	</zone>
+</list>

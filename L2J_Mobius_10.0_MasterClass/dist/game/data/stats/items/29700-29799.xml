@@ -1,0 +1,1347 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29700" name="Antharas Shaper" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<stats>
+			<stat type="pAtk">1877</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29701" name="Antharas Slasher" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29702" name="Antharas Thrower" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4225</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29703" name="Antharas Buster" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">1716</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="29704" name="Antharas Cutter" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29705" name="Antharas Stormer" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="rEvas">-3.75</stat>
+		</stats>
+	</item>
+	<item id="29706" name="Antharas Fighter" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29707" name="Antharas Avenger" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="29708" name="Antharas Dual Blunt Weapon" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29709" name="Antharas Dual Swords" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29710" name="Fafurion Avenger" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_avenger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="29711" name="Fafurion Fighter" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_fighter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29712" name="Fafurion Stormer" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_stormer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29713" name="Fafurion Retributer" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_retributer_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">2090</stat>
+			<stat type="mAtk">1371</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29714" name="Fafurion Dual Blunt Weapon" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29715" name="Fafurion Dual Swords" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29716" name="Fafurion Dual Daggers" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">1877</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29717" name="Dragon Claw Coupon" type="EtcItem">
+		<!-- Can be exchanged for a 1-day weapon through the Game Assistant. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_7th_sins_dragon_trade_jp" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29718" name="Lindvior Shaper Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Shaper (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29719" name="Lindvior Thrower Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Thrower (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29720" name="Lindvior Slasher Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Slasher (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29721" name="Lindvior Caster Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Caster (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29722" name="Lindvior Cutter Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Cutter (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29723" name="Lindvior Guardian Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Shooter (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29724" name="Lindvior Dual Daggers Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Lindvior Dual Daggers (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29725" name="Valakas Shaper Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Shaper (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29726" name="Valakas Cutter Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Cutter (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29727" name="Valakas Slasher Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Slasher (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29728" name="Valakas Thrower Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Thrower (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29729" name="Valakas Buster Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Buster (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29730" name="Valakas Caster Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Caster (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29731" name="Antharas Shaper Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Shaper (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29732" name="Antharas Slasher Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Slasher (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29733" name="Antharas Thrower Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Thrower (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29734" name="Antharas Buster Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Buster (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29735" name="Antharas Cutter Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Cutter (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29736" name="Antharas Stormer Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Stormer (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29737" name="Antharas Fighter Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Fighter (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29738" name="Antharas Avenger Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Avenger (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29739" name="Antharas Dual Blunt Weapon Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Dual Blunt Weapon (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29740" name="Antharas Dual Swords Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Antharas Dual Swords (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29741" name="Fafurion Avenger Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Avenger (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29742" name="Fafurion Fighter Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Fighter (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29743" name="Fafurion Stormer Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Stormer (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29744" name="Fafurion Retributer Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Retributer (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29745" name="Fafurion Dual Blunt Weapon Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Dual Blunt Weapon (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29746" name="Fafurion Dual Swords Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Dual Swords (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29747" name="Fafurion Dual Daggers Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Fafurion Dual Daggers (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29748" name="Valakas Retributer" additionalName="1-day" type="Weapon">
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can increase by more than 150,000. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">2090</stat>
+			<stat type="mAtk">1371</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="29749" name="Valakas Retributer Pack (1-day)" type="EtcItem">
+		<!-- Double-click to obtain Valakas Retributer (1-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29750" name="Heir's Radiance Lv. 1" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +10, Attribute Resistance +10, Debuff Resistance +1%, Max HP +1000. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29382" level="1" /> <!-- Heir's Radiance Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29751" name="Heir's Radiance Lv. 2" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +15, Attribute Resistance +15, Debuff Resistance +2%, Max HP +1500, all stats +1. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +1%. Warrior's Circlet: P. Atk. +1%. Wizard's Circlet: M. Atk. +1%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29383" level="1" /> <!-- Heir's Radiance Lv. 2 -->
+		</skills>
+	</item>
+	<item id="29752" name="Heir's Radiance Lv. 3" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +20, Attribute Resistance +20, Debuff Resistance +3%, Max HP +3000, P./ M. Skill Power +1%, all Critical Damage +1%, all stats +2, PvE damage +3%, received damage from Dragon's weapons -1%. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +3%. Warrior's Circlet: P. Atk. +3%. Wizard's Circlet: M. Atk. +3%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29384" level="1" /> <!-- Heir's Radiance Lv. 3 -->
+		</skills>
+	</item>
+	<item id="29753" name="Heir's Radiance Lv. 4" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +30, Attribute Resistance +30, Debuff Resistance +5%, Max HP +4000, P./ M. Skill Power +2%, all Critical Damage +2%, all stats +3, PvE damage +5%, received damage from Dragon's weapons -3%. Enables the Heir's Radiance - PvE Lv. 1 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +7%. Warrior's Circlet: P. Atk. +7%. Wizard's Circlet: M. Atk. +7%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29385" level="1" /> <!-- Heir's Radiance Lv. 4 -->
+			<skill id="29390" level="1" /> <!-- Heir's Radiance - PvE -->
+		</skills>
+	</item>
+	<item id="29754" name="Heir's Radiance Lv. 1" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +10, Attribute Resistance +10, Debuff Resistance +1%, Max HP +1000. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29386" level="1" /> <!-- Heir's Radiance Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29755" name="Heir's Radiance Lv. 2" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +15, Attribute Resistance +15, Debuff Resistance +2%, Max HP +1500, all stats +1. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +1%. Warrior's Circlet: P. Atk. +1%. Wizard's Circlet: M. Atk. +1%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29387" level="1" /> <!-- Heir's Radiance Lv. 2 -->
+		</skills>
+	</item>
+	<item id="29756" name="Heir's Radiance Lv. 3" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +20, Attribute Resistance +20, Debuff Resistance +3%, Max HP +3000, P./ M. Skill Power +1%, all Critical Damage +1%, all stats +2, PvP damage +3%, received damage from Dragon's weapons -1%. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +3%. Warrior's Circlet: P. Atk. +3%. Wizard's Circlet: M. Atk. +3%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29388" level="1" /> <!-- Heir's Radiance Lv. 3 -->
+		</skills>
+	</item>
+	<item id="29757" name="Heir's Radiance Lv. 4" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +30, Attribute Resistance +30, Debuff Resistance +5%, Max HP +4000, P./ M. Skill Power +2%, all Critical Damage +2%, all stats +3, PvP damage +5%, received damage from Dragon's weapons -3%. Enables the Heir's Radiance - PvP Lv. 1 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +7%. Warrior's Circlet: P. Atk. +7%. Wizard's Circlet: M. Atk. +7%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29389" level="1" /> <!-- Heir's Radiance Lv. 4 -->
+			<skill id="29391" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
+	<item id="29758" name="Hidden Secret Book" type="EtcItem">
+		<!-- Required for upgrading Heir's Radiance. Take it to Denign. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_hidden_book" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29759" name="Wondrous Shard" type="EtcItem">
+		<!-- Required for creating Heir's Radiance. Take it to Denign. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_jewel_piece" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29760" name="Starlight Agathion Enchantment Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following at random: Book of Growth: Starlight Agathion Charm (2 pcs.), Starlight Agathion Evolution Stone, Red Starlight Jar, Starlight Jar. -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29761" name="Freya's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29762" name="Sirra's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29763" name="Snowman's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29764" name="Freya's Fortune Stick" type="EtcItem">
+		<!-- Double-click to obtain one of the following: 3 Emperor's Vitality Tonics, 3 Freya's Charisma Potions, 3 Freya's Ice Roses. There is also a chance to obtain one of the items: Freya s/ Sirra s/ Snowman's Fortune Box. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29765" name="Freya's Fortune Stick 2020" type="EtcItem">
+		<!-- Double-click to obtain 2 Freya's Ice Roses and 6 Freya's Scrolls of Storm. If you are lucky, you may get a very good item. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29766" name="Freya's Growth Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29767" name="Freya's Dragon Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29768" name="Freya's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29769" name="Freya's Vitality Maintaining Rune Pack" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Vitality Maintaining Rune (30-day). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="29844" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="29770" name="Mochi" additionalName="Event" type="EtcItem">
+		<!-- Restores a half of one Vitality bar. Can be used no more than 5 times a week. -->
+		<set name="icon" val="icon.etc_mochi_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29771" name="Vitality Maintaining Rune" additionalName="3-day" type="EtcItem">
+		<!-- Available for 3 d. When in inventory, maintains the Vitality level. -->
+		<set name="icon" val="icon.ev_charge_run" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="4320" />
+		<skills>
+			<skill id="29417" level="1" /> <!-- Vitality Maintaining Rune -->
+		</skills>
+	</item>
+	<item id="29772" name="Dragon's Relic" type="EtcItem">
+		<!-- Double-click to obtain a rare item. Additionally, you will get Glittering Freya's Scroll of Storm (3 pcs.) and Glittering Freya's Ice Rose. -->
+		<set name="icon" val="icon.bm_dragon_present_poket" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29773" name="Starlight Agathion Pack" type="EtcItem">
+		<!-- Double-click to obtain a random Starlight Agathion. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29774" name="Rare Accessory Gift Box" type="EtcItem">
+		<!-- Double-click to obtain for 7 days Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, Ruler's Authority Belt. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29775" name="Perfect Charm" additionalName="14-day" type="EtcItem">
+		<!-- If stored in the inventory, STR/ INT/ CON/ DEX/ WIT/ MEN/ LUC/ CHA +1. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+	</item>
+	<item id="29776" name="Glowing Dragon's Attribute Potion (XP)" additionalName="Event" type="EtcItem">
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_dragon_posion_special" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29777" name="Greater Topaz Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 13,275 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29778" name="Greater Obsidian Lv. 1" additionalName="30-day" type="Armor">
+		<!-- When equipped, Received PvP Damage -15%. Cancels the attacker's target when hit. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29779" name="Greater Opal Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Attribute Attack +120, Attribute Resistance +70. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29780" name="Greater Emerald Lv. 1" additionalName="30-day" type="Armor">
+		<!-- When equipped, all stats +3, Skill Mastery Rate +30%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29781" name="Greater Aquamarine Lv. 1" additionalName="30-day" type="Armor">
+		<!-- When equipped, with a 15% chance recovers 136 MP when using skills, Skill Cooldown -5%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29782" name="Greater Diamond Lv. 1" additionalName="30-day" type="Armor">
+		<!-- P. Def. +1986, Received Critical Damage from standard attacks -5%, P. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29783" name="Greater Pearl Lv. 1" additionalName="30-day" type="Armor">
+		<!-- M. Def. +1150, received M. Skill Critical Damage -5%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29784" name="Greater Vital Stone Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Vitality bonus +50%, Vitality Consumption -15%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29785" name="Greater Garnet Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29786" name="Greater Tanzanite Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Creates a protective barrier that absorbs 50,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29787" name="Greater Red Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
+		<!-- Critical Damage for standard attacks +12%, P. Skill Critical Damage +12%, P. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29788" name="Greater Blue Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
+		<!-- M. Skill Critical Damage +12%, M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29789" name="Freya's Ice Rose" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_ice_rose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29790" name="Ruler's Authority" additionalName="30-day" type="Armor">
+		<!-- Max HP/ MP/ CP +1000, weight limit +25,600, damage +8%, received damage -9%, Damage Reflection Resistance +5%, inventory slots +36, Attribute Resistance +15. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.belt_rulers_authority" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="29791" name="Emperor's Special Cocktail" additionalName="Event" type="EtcItem">
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Soul Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Fantasia Harmony cannot be used while the effect of Emperor's Special Cocktail is active. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="300000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39407" level="1" /> <!-- Horn Melody - Emperor's Special Cocktail -->
+			<skill id="39408" level="1" /> <!-- Drum Melody - Emperor's Special Cocktail -->
+			<skill id="39409" level="1" /> <!-- Pipe Organ Melody - Emperor's Special Cocktail -->
+			<skill id="39410" level="1" /> <!-- Guitar Melody - Emperor's Special Cocktail -->
+			<skill id="39414" level="1" /> <!-- War Drum - Emperor's Special Cocktail -->
+			<skill id="39415" level="1" /> <!-- Marching Drum - Emperor's Special Cocktail -->
+			<skill id="39416" level="1" /> <!-- Soothing Drum - Emperor's Special Cocktail -->
+			<skill id="39413" level="1" /> <!-- Mental Attack Resistance - Emperor's Special Cocktail -->
+			<skill id="39412" level="1" /> <!-- Resistance Debuff - Emperor's Special Cocktail -->
+			<skill id="39411" level="1" /> <!-- Elemental Resistance - Emperor's Special Cocktail -->
+			<skill id="39514" level="1" /> <!-- Fantasia Harmony - Emperor's Special Cocktail -->
+			<skill id="39517" level="1" /> <!-- Fantasia Melody - Emperor's Special Cocktail -->
+		</skills>
+	</item>
+	<item id="29792" name="Dragon Coin" type="EtcItem">
+		<!-- Contains Dragon's power. Can be used through the Game Assistant. -->
+		<set name="icon" val="icon.bm_goblin_coin" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29793" name="Dragon Coin Pouch" type="EtcItem">
+		<!-- Double-click to obtain 1 to 15,000 Dragon Coins. -->
+		<set name="icon" val="icon.bm_dragon_present_poket" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29794" name="Dragon's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain 3 Glittering Freya's Scrolls of Storm and Glittering Freya's Ice Rose. Additionally, you can get a rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29795" name="Sweetheart Box" type="EtcItem">
+		<!-- Double-click to obtain a useful item. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29796" name="Superior Amethyst Lv. 1" type="Armor">
+		<!-- PvP Damage +26%, received P. Critical Rate -30%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="29409" level="1" /> <!-- Superior Amethyst -->
+			<skill id="27443" level="2" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29797" name="Superior Amethyst Lv. 2" type="Armor">
+		<!-- PvP Damage +26%, received P. Critical Rate -30%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="29409" level="2" /> <!-- Superior Amethyst -->
+			<skill id="27443" level="3" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29798" name="Superior Amethyst Lv. 3" type="Armor">
+		<!-- PvP Damage +26%, received P. Critical Rate -30%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="29409" level="3" /> <!-- Superior Amethyst -->
+			<skill id="27443" level="4" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29799" name="Superior Amethyst Lv. 4" type="Armor">
+		<!-- PvP Damage +27%, received P. Critical Rate -30%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="29409" level="4" /> <!-- Superior Amethyst -->
+			<skill id="27443" level="5" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+</list>

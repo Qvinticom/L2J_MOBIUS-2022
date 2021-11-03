@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="TanorCanyon">
+		<group>
+			<npc id="30878" x="47984" y="186832" z="-3480" heading="42000" respawnTime="30sec" /> <!-- Angelina -->
+			<npc id="30879" x="48564" y="186548" z="-3480" heading="42000" respawnTime="30sec" /> <!-- Felton -->
+			<npc id="31573" x="48816" y="186240" z="-3480" heading="40000" respawnTime="30sec" /> <!-- Monakan -->
+			<npc id="32243" x="36180" y="192030" z="-3744" heading="43260" respawnTime="30sec" /> <!-- Cargo Box -->
+			<npc id="32712" x="48158" y="186843" z="-3480" heading="45055" respawnTime="30sec" /> <!-- Somulitan -->
+		</group>
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_1" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="56286" y="162219" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_2" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="53587" y="162464" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_3" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="53363" y="165318" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_4" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="51066" y="162743" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_5" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="49815" y="164264" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_6" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="48481" y="162768" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_7" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="47022" y="163059" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_8" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="46230" y="168195" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_9" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="48255" y="166550" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_10" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="44171" y="161531" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_11" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="43624" y="164043" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_12" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="41633" y="164743" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_13" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="40087" y="162853" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_14" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="41775" y="161586" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_15" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="38460" y="164894" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_16" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="37200" y="162941" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_17" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="34770" y="164272" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_18" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="33174" y="162915" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_19" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="57853" y="164012" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_20" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="60314" y="164570" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_21" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="59286" y="161786" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_22" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="61272" y="162740" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_23" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="60594" y="159550" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_24" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="62490" y="160253" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_25" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="64260" y="158285" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_26" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="64846" y="160909" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_27" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="64457" y="158047" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_28" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="67344" y="156274" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+	<spawn>
+		<territories>
+			<territory name="tanor_canyon_29" shape="Cylinder" minZ="-3800" maxZ="-2450" rad="500">
+				<node x="67879" y="159478" />
+			</territory>
+		</territories>
+		<npc id="20936" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+		<npc id="20937" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Soldier-->
+		<npc id="20938" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Scout -->
+		<npc id="20939" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Warrior -->
+		<npc id="20940" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos Shaman -->
+		<npc id="20942" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Guide -->
+		<npc id="20943" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Nightmare Watchman -->
+		<npc id="24587" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Tanor Silenos -->
+	</spawn>
+</list>

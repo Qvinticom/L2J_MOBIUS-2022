@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Krofins Nest - 110 -->
+<instance id="315" maxWorlds="100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time duration="60" empty="1" />
+	<locations>
+		<enter type="FIXED">
+			<location x="124390" y="155333" z="-3713" heading="0" /> <!-- Krofin Nest -->
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="Reenter" />
+		<condition type="Party" showMessageAndHtml="true">
+			<param name="html" value="condNoPartyLeader.html" />
+		</condition>
+		<condition type="PartyLeader" showMessageAndHtml="true">
+			<param name="html" value="condNoPartyLeader.html" />
+		</condition>
+		<condition type="GroupMin">
+			<param name="limit" value="2" />
+		</condition>
+		<condition type="GroupMax">
+			<param name="limit" value="7" />
+		</condition>
+		<condition type="Level">
+			<param name="min" value="105" />
+		</condition>
+		<condition type="Distance" />
+	</conditions>
+	<reenter apply="ON_FINISH">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+	<doorlist>
+		<door id="23220101">
+			<openStatus default="close" />
+		</door>
+		<door id="24250002">
+			<openStatus default="close" />
+		</door>
+		<door id="24250004">
+			<openStatus default="close" />
+		</door>
+		<door id="24250006">
+			<openStatus default="close" />
+		</door>
+	</doorlist>
+	<spawnlist>
+		<group name="FIRST_AREA" spawnByDefault="false">
+			<npc id="26479" x="123970" y="154547" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="123906" y="154494" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="124308" y="154585" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="123833" y="154401" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="124370" y="154268" z="-3666" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="124131" y="154115" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="124012" y="153981" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="123682" y="154261" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26479" x="124012" y="153981" z="-3664" heading="32542" /> <!-- Kropios -->
+			<npc id="26477" x="124020" y="154360" z="-3656" heading="32542" /> <!-- Kropion -->
+			<npc id="26478" x="124123" y="152724" z="-3667" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124200" y="153026" z="-3674" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124303" y="152969" z="-3670" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124399" y="152839" z="-3666" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124029" y="152515" z="-3670" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124123" y="152724" z="-3667" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124200" y="153026" z="-3674" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124303" y="152969" z="-3670" heading="32542" /> <!-- Krotanios -->
+			<npc id="26478" x="124399" y="152839" z="-3666" heading="32542" /> <!-- Krotanios -->
+			<npc id="26476" x="124231" y="152661" z="-3656" heading="32542" /> <!-- Krotanion -->
+		</group>
+		<group name="SECOND_AREA" spawnByDefault="false">
+			<npc id="26474" x="150858" y="249727" z="-7112" heading="32542" /> <!-- Kropion -->
+			<npc id="26474" x="150598" y="249649" z="-7112" heading="32542" /> <!-- Kropion -->
+			<npc id="26474" x="151442" y="249603" z="-7112" heading="32542" /> <!-- Kropion -->
+			<npc id="26474" x="151294" y="249068" z="-7112" heading="32542" /> <!-- Kropion -->
+			<npc id="26474" x="151294" y="249068" z="-7112" heading="32542" /> <!-- Kropion -->
+		</group>
+		<group name="THIRD_AREA" spawnByDefault="false">
+			<npc id="26470" x="142173" y="249603" z="-7112" heading="32542" /> <!-- Krotanion -->
+			<npc id="26471" x="141842" y="249717" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="141942" y="249900" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="142065" y="249808" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="142232" y="250114" z="-7101" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="142264" y="249813" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="142145" y="249693" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="142243" y="249603" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+			<npc id="26471" x="142408" y="249281" z="-7112" heading="32542" /> <!-- Young Krotanion -->
+		</group>
+		<group name="FOURTH_AREA" spawnByDefault="false">
+			<npc id="26468" x="150536" y="241386" z="-7112" heading="32542" /> <!-- Krotanion -->
+			<npc id="26469" x="151089" y="241259" z="-7119" heading="32542" /> <!-- Kropion -->
+		</group>
+		<group name="KROPION_MINIONS" spawnByDefault="false">
+			<npc id="26475" x="151023" y="249494" z="-7095" heading="32542" /> <!-- Kropios-->
+			<npc id="26475" x="151023" y="249494" z="-7095" heading="32542" /> <!--	Kropios -->
+			<npc id="26475" x="151023" y="249494" z="-7095" heading="32542" /> <!-- Kropios -->
+			<npc id="26475" x="151023" y="249494" z="-7095" heading="32542" /> <!-- Kropios -->
+			<npc id="26475" x="151023" y="249494" z="-7095" heading="32542" /> <!-- Kropios -->
+			<npc id="26475" x="151023" y="249494" z="-7095" heading="32542" /> <!-- Kropios -->
+		</group>
+		<group name="KROSHA_FINAL_FORM" spawnByDefault="false">
+			<npc id="26467" x="142395" y="240706" z="-6216" heading="32542" /> <!-- Queen Krosha Final Form -->
+		</group>
+	</spawnlist>
+</instance>
+

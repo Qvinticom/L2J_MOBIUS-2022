@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30900" toLevel="1" name="Eruption - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill10265</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30901" toLevel="1" name="Sonic Star - Knock Down">
+		<!-- A powerful blow knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30902" toLevel="1" name="Thunder Spear - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30903" toLevel="1" name="Thunder Storm - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30904" toLevel="1" name="Power Hammer Crush - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30905" toLevel="1" name="Rush Impact - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30906" toLevel="1" name="Bow Strike - Knock Down">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30907" toLevel="1" name="Impact Shot - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30908" toLevel="1" name="Recoil Shot - Knock Down">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKBACK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30909" toLevel="1" name="Shield Bash - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30910" toLevel="1" name="Shield Impact - Knockdown">
+		<!-- A powerful blow knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>100</KNOCKDOWN>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30911" toLevel="1" name="Shield Wave - Stun">
+		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30917" toLevel="1" name="Chain Gust - Hold">
+		<!-- Makes unable to move. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Ban on Stealth). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30922" toLevel="1" name="Mass Lightning Strike - Paralysis">
+		<!-- Paralysis makes unable to do anything. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<PARALYZE>100</PARALYZE>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30925" toLevel="1" name="Barrage of Nails - Ban on Stealth">
+		<!-- Makes unable to hide. Speed is decreased. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Ban on Stealth). -->
+		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="AttackTrait">
+				<DISARM>100</DISARM>
+			</effect>
+			<effect name="Speed">
+				<value level="1">100</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30926" toLevel="1" name="Reliable Hit">
+		<!-- Increases standard attack damage x 5. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>5</pAtkMod>
+				<criticalChance>5</criticalChance>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30927" toLevel="3" name="Infinite Hydro Flare">
+		<!-- Deals magic damage to the target with $s1 power. If the target is debuffed, inflicted damage +$s2. Can be used without a cooldown, if the target is marked by Storm Sign Lv. 4. Requires a sword or a blunt weapon. Consumes 1 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>0</reuseDelay>
+		<mpConsume>
+			<value level="1">73</value>
+			<value level="2">74</value>
+			<value level="3">75</value>
+		</mpConsume>
+		<castRange>80</castRange>
+		<effectRange>400</effectRange>
+		<effectPoint>-696</effectPoint>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<magicLevel>
+			<value level="1">105</value>
+			<value level="2">107</value>
+			<value level="3">109</value>
+		</magicLevel>
+		<magicCriticalRate>10</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>STORM_SIGN</type>
+				<level>4</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<value level="1">739</value>
+				<value level="2">754</value>
+				<value level="3">769</value>
+				<debuffModifier>1.1</debuffModifier>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30928" toLevel="1" name="Gravity Switch">
+		<!-- For $s1, changes the Heavy Punch effect and deals additional damage powered by P. Atk. x$s2 after a standard attack. The main effect decreasing HP after a hit doesn't work during this effect. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalType>BATTLE_CRY</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>707</effectPoint>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Damage Up -->
+				<chance>7</chance>
+				<targetType>TARGET</targetType>
+				<affectScope>SINGLE</affectScope>
+				<minDamage>100</minDamage>
+				<skillId>30521</skillId> <!-- Reliable Hit -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30929" toLevel="1" name="Golem Power">
+		<!-- For $s1, character's P. Atk. +$s2, P. Skill Power +$s3. Deals additional damage powered by P. Atk. x $s4. Cannot be used with Golem Spirit. Consumes $s5 Soulstone(s). -->
+		<icon>icon.skill0000</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalVisualEffect>PMENTAL_TRAIL</abnormalVisualEffect>
+		<abnormalType>STEEL_MIND</abnormalType>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>221</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>30000</coolTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>300000</reuseDelay>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Damage Up -->
+				<chance>100</chance>
+				<targetType>TARGET</targetType>
+				<affectScope>SINGLE</affectScope>
+				<minDamage>100</minDamage>
+				<skillId>30926</skillId> <!-- Reliable Hit -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30930" toLevel="5" name="Eraton's Spear">
+		<!-- For 30 min., Eraton's energy makes Weapon P./ M. Atk. +50. Consumes Spirit Ore (250 pcs.) -->
+		<icon>icon.skill0000</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>ERATON</abnormalType>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>151</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>3000</coolTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>30000</reuseDelay>
+		<itemConsumeCount>250</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1.73</value>
+					<value level="2">2.42</value>
+					<value level="3">3.12</value>
+					<value level="4">4.16</value>
+					<value level="5">5.2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1.73</value>
+					<value level="2">2.42</value>
+					<value level="3">3.12</value>
+					<value level="4">4.16</value>
+					<value level="5">5.2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30931" toLevel="5" name="Masia's Shield">
+		<!-- Through Masia's Shield's protection, received damage -1%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicLevel>
+			<value level="1">110</value>
+			<value level="2">111</value>
+			<value level="3">112</value>
+			<value level="4">113</value>
+			<value level="5">114</value>
+		</magicLevel>
+		<effects>
+			<effect name="DamageByAttack" >
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-7</value>
+					<value level="5">-10</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack" >
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-7</value>
+					<value level="5">-10</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30932" toLevel="1" name="Perfect Polearm Mastery">
+		<!-- When using a spear, attack and skill range +$s1. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalAttackRange">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30933" toLevel="3" name="Test Skill - Skill Acquisition Requirements">
+		<!-- A test for the function of adding/ registering several items due to skill acquisition requirements by using the checking function / level_hide -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30934" toLevel="1" name="P. Skill Power - Percentage (Test)">
+		<!-- P. Skill Power +10.5% for 5 min. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30935" toLevel="1" name="M. Skill Power - Percentage (Test)">
+		<!-- M. Skill Power +10.5% for 5 min. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30936" toLevel="1" name="M. Skill Critical Damage - Percentage (Test)">
+		<!-- M. Skill Critical Damage +10.5% for 5 min. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30937" toLevel="1" name="M. Skill Critical Rate - Percentage (Test)">
+		<!-- M. Skill Critical Rate +10.5% for 5 min. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30938" toLevel="1" name="Received M. Critical Damage - Percentage (Test)">
+		<!-- Received M. Critical Damage -10.5% for 5 min. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30939" toLevel="1" name="Vitality Bonus - Percentage (Test)">
+		<!-- Vitality Bonus +10.5% for 5 min. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

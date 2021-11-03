@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="28200" toLevel="1" name="Adventurer's Circlet">
+		<!-- Increases P. Atk. by $s1, M. Atk. by $s2 -->
+		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28201" toLevel="1" name="Adventurer's Bracelet">
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +$s1. Unlocks 3 talisman slots. -->
+		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28202" toLevel="1" name="T-shirt Pack">
+		<icon>icon.bm_strongbox</icon>
+		<itemConsumeId>29214</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="23301" count="1" /> <!-- Sayha's Shirt -->
+					</item>
+					<item chance="25">
+						<item id="23240" count="1" /> <!-- Pa'agrio's Shirt -->
+					</item>
+					<item chance="25">
+						<item id="23304" count="1" /> <!-- Eva's Shirt -->
+					</item>
+					<item chance="25">
+						<item id="23307" count="1" /> <!-- Maphr's Shirt -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28203" toLevel="1" name="Greater Garnet - Purge">
+		<!-- Cancels all debuffs on you and makes you immune to debuffs for $s1 -->
+		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<abnormalTime>7</abnormalTime>
+		<chance>100</chance>
+		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28204" toLevel="1" name="Box Containing War God's Soul">
+		<icon>icon.bm_strongbox</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28205" toLevel="1" name="Anniversary Rune 100%">
+		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_5</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28206" toLevel="1" name="Stable Book of Growth: Starlight Agathion Charm">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28207" toLevel="1" name="+7 Elmoreden Cloak Box">
+		<!-- Summons Agathion Hut on Chicken Legs. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28208" toLevel="1" name="Summon Agathion Minion Eye">
+		<!-- Summons Agathion Minion Eye. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28209" toLevel="1" name="+7 Elmore Cloak Box">
+		<!-- Summons Agathion Matryoshka. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28210" toLevel="1" name="+7 Ferios Cloak Box">
+		<!-- Shows Agathion Hut on Chicken Legs' cute trick. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="28211" toLevel="1" name="Reconstruction Society's Enchantment Pack">
+		<!-- Speed +100% for 10 sec. -->
+		<icon>icon.skill_transform_buff</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>689</effectPoint>
+	</skill>
+	<skill id="28212" toLevel="1" name="Hut on Chicken Legs' Blessing - Meditation">
+		<!-- Decreases P. Def. by 90% and recovers 134 MP every second for 30 sec. The status is canceled when damage is incurred. Cooldown is 30 min. -->
+		<icon>icon.skill1430</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="28213" toLevel="1" name="Hut on Chicken Legs' Blessing - Decrease Weight">
+		<!-- Weight is increased by 9000, Inventory Slot is increased by 9. -->
+		<icon>icon.skill0332</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28214" toLevel="1" name="Hut on Chicken Legs' Teleport: Aden">
+		<!-- Teleports you to the Town of Aden. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>600000</reuseDelay>
+	</skill>
+	<skill id="28215" toLevel="1" name="Hut on Chicken Legs' Teleport: Rune">
+		<!-- Teleport to Town of Rune. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>600000</reuseDelay>
+	</skill>
+	<skill id="28216" toLevel="1" name="Hut on Chicken Legs' Teleport: Giran">
+		<!-- Teleports to Giran. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>600000</reuseDelay>
+	</skill>
+	<skill id="28217" toLevel="1" name="Minion Eye's Encouragement">
+		<!-- Increases CON +3, MEN +3, Weight Limit by 10,000, and Max HP/ MP/ CP by 300. Decreases skill Cooldown by 3%, and MP Consumption for skill use by 3%. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28218" toLevel="1" name="Minion Eye's Blessing - Resurrection">
+		<!-- Blessed Resurrection is available. -->
+		<icon>icon.skill_agathion_special</icon>
+		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="28219" toLevel="1" name="Matryoshka's Gift">
+		<!-- Receive Matryoshka's Gift's gift. -->
+		<icon>icon.etc_pi_gift_box_i02</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>2000</hitTime>
+		<reuseDelay>43200000</reuseDelay>
+	</skill>
+	<skill id="28220" toLevel="1" name="Matryoshka's Blessing">
+		<!-- Increases Acquired XP/ SP by 30% while hunting for 60 min. -->
+		<icon>icon.exp_bottle_scroll</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="28221" toLevel="1" name="Matryoshka Teleport: Talking Island Village">
+		<!-- Teleports you to the Talking Island Village. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+	</skill>
+	<skill id="28222" toLevel="1" name="Matryoshka Teleport: Town of Aden">
+		<!-- Teleports you to the Town of Aden. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+	</skill>
+	<skill id="28223" toLevel="1" name="Matryoshka Teleport: Magmeld">
+		<!-- Teleports to Magmeld Ancient City Arcan. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+	</skill>
+	<skill id="28224" toLevel="1" name="Matryoshka Teleport: Keucereus Alliance Base">
+		<!-- Teleports you to Keucereus Alliance Base. -->
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1800000</reuseDelay>
+	</skill>
+	<skill id="28225" toLevel="1" name="+7 Elmoreden Cloak Box">
+		<!-- Double-click to obtain Elmoreden Cloak enchanted to +7. -->
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="28226" toLevel="1" name="+7 Aden Cloak Box">
+		<!-- Double-click to obtain a +7 Aden Cloak. -->
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="28227" toLevel="1" name="+7 Elmore Cloak Box">
+		<!-- Double-click to obtain Elmore Cloak enchanted to +7. -->
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="28228" toLevel="1" name="+7 Ferios Cloak Box">
+		<!-- Double-click to obtain Ferios Cloak enchanted to +7. -->
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="28229" toLevel="1" name="Reconstruction Society's Enchantment Pack">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28230" toLevel="1" name="Agathion Summon - Gnosian">
+		<!-- Summons Gnosian agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28231" toLevel="1" name="Agathion Summon - Orodriel">
+		<!-- Summons Agathion Orodriel. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28232" toLevel="1" name="Agathion Summon - Penalty Kick">
+		<!-- Summons Penalty Kick agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28233" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28234" toLevel="1" name="Freya's Deluxe Shopping Bag">
+		<!-- Double-click Freya's Deluxe Shopping Bag to obtain 1 Freya's Art of Seduction, 2 Freya's Recovery Potion, and 1 Freya's Frozen Scroll. There is also a chance to additionally obtain one Freya, Sirra, or Snowman Special Card. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28235" toLevel="3" name="Freya Special Card">
+		<!-- Double-click to randomly obtain an item from a selection of rare items including rare accessories. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28236" toLevel="1" name="Sibi's Suspicious Supplies">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28237" toLevel="1" name="Water Dragon's Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28238" toLevel="1" name="Summon Agathion Meliodas">
+		<!-- Summons Meliodas agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28239" toLevel="1" name="Summon Agathion Elizabeth">
+		<!-- Summons Agathion Elizabeth. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28240" toLevel="1" name="Summon Agathion Hawk">
+		<!-- Summons Hawk agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28241" toLevel="1" name="Summon Agathion Ban">
+		<!-- Summons Ban agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28242" toLevel="1" name="Summon Agathion Diane">
+		<!-- Summons Diane agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28243" toLevel="1" name="Summon Agathion King">
+		<!-- Summons King agathion -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28244" toLevel="1" name="Summon Agathion Merlin">
+		<!-- Summons Agathion Merlin. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28245" toLevel="1" name="Summon Agathion Gowther">
+		<!-- Summons Gowther agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28246" toLevel="1" name="Summon Agathion Escanor">
+		<!-- Summons Escanor agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="28247" toLevel="9" name="Seven Deadly Sins - Meliodas">
+		<!-- Attribute Attack/ Resistance and CHA are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28248" toLevel="9" name="Seven Deadly Sins - Elizabeth">
+		<!-- Attribute Attack/ Resistance and Recovery Potions' Effect are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28249" toLevel="9" name="Seven Deadly Sins - Hawk">
+		<!-- Attribute Attack/ Resistance and LUC are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28250" toLevel="9" name="Seven Deadly Sins - Ban">
+		<!-- Attribute Attack/ Resistance and DEX are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28251" toLevel="9" name="Seven Deadly Sins - Diane">
+		<!-- Attribute Attack/ Resistance and STR are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28252" toLevel="9" name="Seven Deadly Sins - King">
+		<!-- Attribute Attack/ Resistance and WIT are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28253" toLevel="9" name="Seven Deadly Sins - Merlin">
+		<!-- Attribute Attack/ Resistance and INT are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28254" toLevel="9" name="Seven Deadly Sins - Gowther">
+		<!-- Attribute Attack/ Resistance and MEN are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28255" toLevel="9" name="Seven Deadly Sins - Escanor">
+		<!-- Attribute Attack/ Resistance and CON are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28256" toLevel="9" name="Sin of Wrath">
+		<!-- PvE Damage to regular monsters is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28257" toLevel="9" name="Divine Family Power">
+		<!-- Received PvE Damage is decreased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28258" toLevel="8" name="Boar Hat Pub Pig Mark">
+		<!-- Acquired XP/ SP are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28259" toLevel="8" name="Sin of Greed">
+		<!-- P. Skill Critical Rate is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28260" toLevel="8" name="Sin of Envy">
+		<!-- P. Atk. is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28261" toLevel="8" name="Sin of Sloth">
+		<!-- Skill MP Consumption is decreased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28262" toLevel="8" name="Sin of Gluttony">
+		<!-- M. Def. is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28263" toLevel="8" name="Sin of Lust">
+		<!-- Debuff Resistance is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28264" toLevel="8" name="Sin of Pride">
+		<!-- P. Def. is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28265" toLevel="8" name="Demon Sword Lostvayne Power">
+		<!-- PvP Damage is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28266" toLevel="8" name="Tranquility Magic Power">
+		<!-- Received PvP Damage is decreased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28267" toLevel="8" name="Leftover Cleaning Knights' Power">
+		<!-- Acquired XP/ SP while hunting are increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28268" toLevel="8" name="Holy Staff Courechouse Power">
+		<!-- Skill Cooldown is decreased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28269" toLevel="8" name="War Hammer Gideon Power">
+		<!-- P. Critical Damage is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28270" toLevel="8" name="Spirit Spear Chastiefol Power">
+		<!-- M. Atk. is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28271" toLevel="8" name="Morning Star Aldan Power">
+		<!-- M. Critical Damage is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28272" toLevel="8" name="Twin Bow Herritt Power">
+		<!-- Damage to immobilized targets is increased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28273" toLevel="8" name="Divine Axe Rhitta Power">
+		<!-- Received P. Critical Damage is decreased, when the agathion grows. -->
+		<icon>BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28274" toLevel="1" name="Seven Deadly Sins Agathion's Book of Growth">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28275" toLevel="1" name="Merlin's Magical Bracelet">
+		<!-- Unlocks the agathion's main slot and $s1 side slot(s). -->
+		<icon>BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28276" toLevel="1" name="Seven Deadly Sins Card Pouch">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28277" toLevel="1" name="Legendary Knights Card - Seven Deadly Sins">
+		<!-- For $s1, Acquired XP/ SP +$s2, XP/ SP with Vitality +$s3, P. Atk./ M. Atk./ P. Def./ M. Def. +$s4, Damage Reflectionion +$s5. -->
+		<icon>BranchIcon.icon.icon_card_sin_meli_legend</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28278" toLevel="1" name="Animate Appearance Stone Random Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28279" toLevel="1" name="+5 Agathion Hawk Lv. 3 (7-day) Pack">
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="28280" toLevel="1" name="New User Sprout">
+		<!-- Recovers Vitality when in a peace zone. -->
+		<icon>icon.s_newbie_user_display</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28281" toLevel="1" name="Goddess Eva's Treasure Chest">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28282" toLevel="2" name="Peeves' Red Potion">
+		<!-- For $s1, acquired XP/ SP +$s2, SP/ Vitality bonus +$s3, P. Atk./ P. Def./ M. Atk./ M. Def. +$s4. -->
+		<icon>
+			<value level="1">BranchIcon.etc_sign_agathion_feed_red_i00</value>
+			<value level="2">BranchIcon.etc_sign_agathion_feed_purple_i00</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="28283" toLevel="1" name="Peeves' Yellow Potion">
+		<icon>BranchIcon.etc_sign_agathion_feed_yellow_i00</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="28284" toLevel="4" name="Peeves' Blue Potion">
+		<!-- When used, increases Successful Fishing XP/ SP by $s2 for $s1 Applied to all bait. Can be stacked with Angler's Blessing. -->
+		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="28285" toLevel="1" name="Honey Rose Beer">
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P./ M. Atk. and P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, Speed +$s5, Attribute Attack/ Resistance +$s6, damage +$s7, P./ M. Skill Power +$s8, acquired XP/ SP +$s9, received damage -$s10, Skill MP Consumption -$s11. The effect remains after death. -->
+		<icon>BranchSys3.Icon1.g_beerfestival_bavarian_beer</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="28286" toLevel="1" name="Honey Rose Beer">
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P./ M. Atk. and P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, Speed +$s5, Attribute Attack/ Resistance +$s6, damage +$s7, P./ M. Skill Power +$s8, acquired XP/ SP +$s9, received damage -$s10, Skill MP Consumption -$s11. The effect remains after death. -->
+		<icon>BranchSys3.Icon1.g_beerfestival_bavarian_beer</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="28287" toLevel="1" name="Jewel Box Lv. 4">
+		<!-- Double click to obtain 1 Level 4 La Vie En Rose Gem. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28288" toLevel="1" name="Jewel Box Lv. 5">
+		<!-- Double click to obtain 1 Level 5 La Vie En Rose Gem. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28289" toLevel="1" name="Paulina's Magic Bracelet">
+		<!-- Unlocks the agathion's main slot and $s1 side slot(s). -->
+		<icon>BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="28290" toLevel="3" name="Sealed Artifact Pack">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28291" toLevel="1" name="Water Spirit's Gift">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28292" toLevel="1" name="Ancient Relic">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28293" toLevel="1" name="Ancient Relic Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28294" toLevel="1" name="Shining Ancient Relic Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="28295" toLevel="1" name="Ultimate Jewelry Box Lv. 3">
+		<!-- Double-click to obtain 1 of the Lv. 3 jewels. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.75">
+						<item id="47633" count="1" /> <!-- Aquamarine Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="4.99">
+						<item id="28362" count="1" /> <!-- Amethyst Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.5">
+						<item id="47631" count="1" /> <!-- Diamond Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.72">
+						<item id="47636" count="1" /> <!-- Garnet Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="8.02">
+						<item id="47634" count="1" /> <!-- Pearl Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.39">
+						<item id="47632" count="1" /> <!-- Emerald Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.64">
+						<item id="47635" count="1" /> <!-- Vital Stone Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="5.64">
+						<item id="47703" count="1" /> <!-- Red Cat's Eye Lv. 3 Jewelry Box -->
+					</item>
+					<item chance="7.66">
+						<item id="47630" count="1" /> <!-- Obsidian Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.78">
+						<item id="47629" count="1" /> <!-- Opal Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.88">
+						<item id="47626" count="1" /> <!-- Ruby Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="7.73">
+						<item id="47627" count="1" /> <!-- Sapphire Jewelry Box Lv. 3 -->
+					</item>
+					<item chance="5.14">
+						<item id="47705" count="1" /> <!-- Blue Cat's Eye Lv. 3 Jewelry Box -->
+					</item>
+					<item chance="7.16">
+						<item id="47637" count="1" /> <!-- Tanzanite Jewelry Box Lv. 3 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28296" toLevel="1" name="Ultimate Jewelry Box Lv. 4">
+		<!-- Double-click to obtain 1 of the Lv. 4 jewels. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.75">
+						<item id="47645" count="1" /> <!-- Aquamarine Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="4.99">
+						<item id="28363" count="1" /> <!-- Amethyst Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.5">
+						<item id="47643" count="1" /> <!-- Diamond Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.72">
+						<item id="47648" count="1" /> <!-- Garnet Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="8.02">
+						<item id="47646" count="1" /> <!-- Pearl Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.39">
+						<item id="47644" count="1" /> <!-- Emerald Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.64">
+						<item id="47647" count="1" /> <!-- Vital Stone Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="5.64">
+						<item id="47704" count="1" /> <!-- Red Cat's Eye Lv. 4 Jewelry Box -->
+					</item>
+					<item chance="7.66">
+						<item id="47642" count="1" /> <!-- Obsidian Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.78">
+						<item id="47641" count="1" /> <!-- Opal Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.88">
+						<item id="47638" count="1" /> <!-- Ruby Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="7.73">
+						<item id="47639" count="1" /> <!-- Sapphire Jewelry Box Lv. 4 -->
+					</item>
+					<item chance="5.14">
+						<item id="47706" count="1" /> <!-- Blue Cat's Eye Lv. 4 Jewelry Box -->
+					</item>
+					<item chance="7.16">
+						<item id="47649" count="1" /> <!-- Tanzanite Jewelry Box Lv. 4 -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28297" toLevel="1" name="Ultimate Jewelry Box Lv. 5">
+		<!-- Double-click to obtain one level 5 Gem. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.75">
+						<item id="26506" count="1" /> <!-- Amethyst Lv. 5 -->
+					</item>
+					<item chance="4.99">
+						<item id="38889" count="1" /> <!-- Aquamarine Lv. 5 -->
+					</item>
+					<item chance="7.5">
+						<item id="47686" count="1" /> <!-- Blue Cat's Eye Lv. 5 -->
+					</item>
+					<item chance="7.72">
+						<item id="26501" count="1" /> <!-- Cat's Eye Lv. 5 -->
+					</item>
+					<item chance="8.02">
+						<item id="38894" count="1" /> <!-- Diamond Lv. 5 -->
+					</item>
+					<item chance="7.39">
+						<item id="38884" count="1" /> <!-- Emerald Lv. 5 -->
+					</item>
+					<item chance="6.64">
+						<item id="27473" count="1" /> <!-- Garnet Lv. 5 - Not available -->
+					</item>
+					<item chance="5.64">
+						<item id="38874" count="1" /> <!-- Obsidian Lv. 5 -->
+					</item>
+					<item chance="6.66">
+						<item id="38879" count="1" /> <!-- Opal Lv. 5 -->
+					</item>
+					<item chance="5.78">
+						<item id="38899" count="1" /> <!-- Pearl Lv. 5 -->
+					</item>
+					<item chance="5.44">
+						<item id="47681" count="1" /> <!-- Red Cat's Eye Lv. 5 -->
+					</item>
+					<item chance="5.50">
+						<item id="38859" count="1" /> <!-- Ruby Lv. 5 -->
+					</item>
+					<item chance="5.14">
+						<item id="38931" count="1" /> <!-- Sapphire Lv. 5 -->
+					</item>
+					<item chance="5.16">
+						<item id="27478" count="1" /> <!-- Tanzanite Lv. 5 - Not available -->
+					</item>
+					<item chance="5.44">
+						<item id="38854" count="1" /> <!-- Topaz Lv. 5 -->
+					</item>
+					<item chance="5.23">
+						<item id="27472" count="1" /> <!-- Vital Stone Lv. 5 - Not available -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28298" toLevel="1" name="Jewel Box Lv. 3">
+		<!-- Double-click to obtain 1 of the Lv. 3 La Vie En Rose's Jewelry Boxes. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="28299" toLevel="1" name="Transformation Scroll: Kat the Cat">
+		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+	</skill>
+</list>

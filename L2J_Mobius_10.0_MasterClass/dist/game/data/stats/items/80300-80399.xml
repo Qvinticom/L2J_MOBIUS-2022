@@ -1,0 +1,1647 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80300" name="Corroded Leviathan Circlet Material" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_sealed_vesper_circlet_piece_I00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3167180" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80301" name="Corroded Leviathan Tunic Material" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_sealed_vesper_jaket_piece_I00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="8445840" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80302" name="Corroded Leviathan Stockings Material" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_sealed_vesper_hose_piece_I00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5278660" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80303" name="Corroded Leviathan Glove Material" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_sealed_vesper_gloves_piece_I00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2111460" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80304" name="Corroded Leviathan Shoes Material" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_sealed_vesper_shoes_piece_I00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2111460" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80305" name="Corroded Leviathan Sigil Material" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_sealed_vesper_sigil_piece_I00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="2111460" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80306" name="Bloody Coin" type="EtcItem">
+		<!-- Can be exchanged for special equipment. -->
+		<set name="icon" val="icon.etc_coins_black_i01" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80307" name="Water Dragon Lucky Coupon" type="EtcItem">
+		<!-- A lucky coupon to the warriors who are going to face the Water Dragon. Using the coupon you can win powerful supply items in a lottery. Double-click to get special effect: Acquired XP/ SP +15% for 60 min. The effect is not removed if you switch to a different class or have died. -->
+		<set name="icon" val="icon.blue_save_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80308" name="Water Dragon Coin" type="EtcItem">
+		<!-- A coin exchangeable for supply items for the warriors who are going to face the Water Dragon. Can be exchanged for supply items through the Water Dragon s Messenger after the Water Dragon appears. -->
+		<set name="icon" val="icon.etc_magic_coin_blue_i01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80309" name="Hero Growth Box" type="EtcItem">
+		<!-- A supply item for the warriors who will fight the Water Dragon. Use it to obtain 1 Dandy's Home Run Ball, 3 Freya's Wind Scrolls (Event), and 3 Glowing Dragon's Attribute Potions (Event). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80310" name="Special Growth Box for Novice Heroes" type="EtcItem">
+		<!-- A supply item for warriors who are going to face the Water Dragon. Use it to obtain 10 Challenger's Scrolls of Growth and 1 Special Growth Rune (1 hour). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80311" name="Special Growth Rune" additionalName="1-hour" type="EtcItem">
+		<!-- When stored in the inventory, Hunting XP/ SP +100% and Vitality +100% (excludes boss monsters). Lv. 104 and below. -->
+		<set name="icon" val="icon.bm_sayha_rune" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80312" name="Scroll of Escape: Dimensional Rift" type="EtcItem">
+		<!-- Teleports you to the Dimensional Rift. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80313" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
+		<!-- Teleports you to the Raider's Crossroads. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80314" name="Scroll of Escape: Parnassus" type="EtcItem">
+		<!-- Teleports you to Parnassus. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80315" name="Fafurion Dual Daggers" additionalName="Fragment" type="Weapon">
+		<!-- A fragment of the Fafurion Dual Daggers. Can be upgraded through Lionel Hunter, the Fafurion's Watcher. Cannot be assigned an attribute, appearance modified, crystallized, enchanted, augmented or soul crystal enhanced. -->
+		<set name="icon" val="icon.fafurion_dual_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80316" name="Fafurion Dual Daggers" additionalName="Standard" type="Weapon">
+		<!-- A weapon imbued with the dragon's power. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and damage to Dragons +100%. Can be upgraded through Lionel Hunter, the Fafurion's Watcher. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. -->
+		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+			<skill id="8890" level="1" /> <!-- Dignity -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+	</item>
+	<item id="80317" name="Fafurion Dual Daggers" additionalName="High-grade" type="Weapon">
+		<!-- A weapon imbued with the dragon's power. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and damage to Dragons +100%. Additionally, allows to use the Dignity and Fafurion Rising Wave skills. Can be upgraded through Lionel Hunter, the Fafurion's Watcher. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. -->
+		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+	</item>
+	<item id="80318" name="Fafurion Dual Daggers" additionalName="Top-grade" type="Weapon">
+		<!-- A weapon imbued with the dragon's power. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to Dragons +300%. Additionally, allows to use the Dignity, Fafurion Rising Wave, and Fafurion s Breath skills. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. -->
+		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<skills>
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+		</skills>
+		<stats>
+			<stat type="pAtk">2884</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+	</item>
+	<item id="80319" name="Enchanted Leviathan Sigil" additionalName="" type="Armor">
+		<!-- Enchant effect: Atk. Spd./ Casting Spd. +5%, P. Atk. +2%, M. Skill Power +2%. -->
+		<set name="icon" val="icon.weapon_r110_sigil" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="price" val="88681000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="35295" level="1" /> <!-- Leviathan Sigil Enchantment Effect -->
+		</skills>
+		<stats>
+			<stat type="pDef">59</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+	</item>
+	<item id="80320" name="Paulina Twilight Bracelet" type="Armor">
+		<!-- A Twilight Bracelet with Paulina's power. When equipped, increases STR/ DEX/ CON/ INT/ WIT/ MEN by +1 and unlocks 5 talisman slots. -->
+		<set name="icon" val="icon.r2_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="35352" level="1" /> <!-- Paulina Twilight Bracelet -->
+		</skills>
+	</item>
+	<item id="80321" name="Bloody Cloak" type="Armor">
+		<!-- A limited-edition cloak created by Dwarven Artisans to celebrate the opening of the Bloody Server. Can be used only in the Bloody Server. <Additional properties>. All stats +1, Attribute Resistance +5 -->
+		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="80322" name="Pontus Stone" type="EtcItem">
+		<!-- A mark required for safe passage deep within Fafurion's Nest. Fafurion gave the mark to his temple guard, Cyrax. If the Pontus Stone falls into hands other than Cyrax's, it will automatically return to him after a certain time. -->
+		<set name="icon" val="icon.etc_fafurion_guardpontus_01" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80323" name="Minion’s Symbol" type="EtcItem">
+		<!-- A mark that only a few of Fafurion s best minions can receive. It also indicates that they are still under Fafurion s influence. Gather the marks and take them to Lupicia at the entrance of Fafurion Temple. -->
+		<set name="icon" val="icon.etc_symbol_subordinate_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="80324" name="Fragment of Power" type="EtcItem">
+		<!-- A Fragment of Power obtained by defeating Fafurion s minions. It still contains the power that Fafurion bestowed upon his men guarding his temple. Gather the fragments and take them to Lupicia at the entrance of Fafurion Temple. -->
+		<set name="icon" val="icon.etc_piece_of_power_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="80325" name="Deformed Claw" type="EtcItem">
+		<!-- Proof of the secret relationship between Krofins and Fafurion. The deformed claws indicate that Fafurion has bestowed some of his power upon the Krofins. Gather the claws and take them to Lionel Hunter in Heine. -->
+		<set name="icon" val="icon.etc_modify_claw_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="80326" name="Broken Contract Fragments" type="EtcItem">
+		<!-- Proof that the contract between the priestess kin and Fafurion is weakening after the death of Priestess Parme. This fragment of the contract may lead you to find clues to Fafurion. Gather them and take them to Lionel Hunter in Heine. -->
+		<set name="icon" val="icon.etc_cut_off_contract_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="80327" name="Recipe: Krishna Dual Sword (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Krishna Dual Swords. Requires Create Item Lv. 15. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="161659000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1320" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80328" name="Recipe: Krishna Dual Dagger (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Krishna Dual Daggers. Requires Create Item Lv. 15. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="161659000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1321" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80329" name="Recipe: Krishna Dual Blunt Weapon (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Krishna Dual Blunt Weapon. Requires Create Item Lv. 15. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="161659000" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1322" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80330" name="Corroded Krishna Dual Sword Fragment" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="16165900" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80331" name="Corroded Krishna Dual Dagger Fragment" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="16165900" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80332" name="Corroded Krishna Dual Blunt Weapon Fragment" type="EtcItem">
+		<!-- Not in use anymore. Can be sold to any trader. -->
+		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="16165900" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80333" name="Dragon's Necklace" type="Armor">
+		<!-- When enchanted, increases Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, CHA/ LUC, Damage Reflection, Speed, P./ M. Atk., P./ M. Def., also decreases Skill Cooldowns. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="icon.dragon_accessary_necklace" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">292</stat>
+		</stats>
+	</item>
+	<item id="80334" name="Dragon's Earring" type="Armor">
+		<!-- When enchanted, increases Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, CHA/ LUC, Received Healing, Speed, Skill Power, Vampiric Rage effect, and Attribute Resistance. Additionally, decreases Skill MP Consumption and Received P./ M. Critical Damage. Effects of two identical earrings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="icon.dragon_accessary_earring" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">219</stat>
+		</stats>
+	</item>
+	<item id="80335" name="Dragon's Ring" type="Armor">
+		<!-- When enchanted, increases Confusion Resistance/ Atk. Rate, CHA/ LUC, Atk. Spd., Casting Spd., P./ M. Accuracy, Speed, Skill Power, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, and damage to immobilized targets. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="icon.dragon_accessary_ring" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">146</stat>
+		</stats>
+	</item>
+	<item id="80336" name="Giant Monster's Mark" type="EtcItem">
+		<!-- Granted as a reward for defeating Raid Boss. No longer used. Can be sold in a store. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80337" name="Bloody Helios Shaper" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks. -->
+		<set name="icon" val="icon.weapon_R99_dagger_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13787" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">629</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80338" name="Bloody Helios Cutter" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
+		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13788" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">719</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80339" name="Bloody Helios Slasher" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Atk. -->
+		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13789" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">875</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80340" name="Bloody Helios Avenger" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks. -->
+		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13790" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
+		</skills>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">719</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="80341" name="Bloody Helios Fighter" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
+		<set name="icon" val="icon.weapon_R99_fist_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13791" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">875</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80342" name="Bloody Helios Stormer" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases the number of targets attacked with a spear. -->
+		<set name="icon" val="icon.weapon_R99_spear_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13792" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
+		</skills>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">719</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80343" name="Bloody Helios Thrower" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power. -->
+		<set name="icon" val="icon.weapon_R99_bow_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13793" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">1415</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80344" name="Bloody Helios Guardian" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. -->
+		<set name="icon" val="icon.weapon_R99_crossbow_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13794" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">1274</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80345" name="Bloody Helios Buster" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
+		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13795" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">575</stat>
+			<stat type="mAtk">417</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="80346" name="Bloody Helios Caster" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
+		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13796" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">575</stat>
+			<stat type="mAtk">417</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="80347" name="Bloody Helios Retributer" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
+		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13797" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">700</stat>
+			<stat type="mAtk">459</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80348" name="Bloody Helios Dual Swords" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Rate for standard attacks and P. Atk. -->
+		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13798" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">875</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="80349" name="Bloody Helios Dual Daggers" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
+		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13799" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">719</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80350" name="Bloody Helios Dual Blunt Weapons" type="Weapon">
+		<!-- PvE damage +15%, Max HP/ MP/ CP +10%. 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. -->
+		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13800" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+		</skills>
+		<stats>
+			<stat type="pAtk">875</stat>
+			<stat type="mAtk">313</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="80351" name="Bloody Eternal Helmet" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80352" name="Bloody Eternal Breastplate" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">433</stat>
+		</stats>
+	</item>
+	<item id="80353" name="Bloody Eternal Gaiters" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">270</stat>
+		</stats>
+	</item>
+	<item id="80354" name="Bloody Eternal Gauntlets" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80355" name="Bloody Eternal Boots" additionalName="Reinforced heavy armor" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80356" name="Bloody Eternal Leather Helmet" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80357" name="Bloody Eternal Leather Armor" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
+		<set name="icon" val="icon.armor_t802_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">346</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="80358" name="Bloody Eternal Leather Leggings" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t802_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">216</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="80359" name="Bloody Eternal Leather Gloves" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t802_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80360" name="Bloody Eternal Leather Boots" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t802_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80361" name="Bloody Eternal Circlet" additionalName="Reinforced robe" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80362" name="Bloody Eternal Tunic" additionalName="Reinforced robe" type="Armor">
+		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
+		<set name="icon" val="icon.armor_t803_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">238</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="80363" name="Bloody Eternal Stockings" additionalName="Reinforced robe" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t803_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">148</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="80364" name="Bloody Eternal Gloves" additionalName="Reinforced robe" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t803_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80365" name="Bloody Eternal Shoes" additionalName="Reinforced robe" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t803_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80366" name="Bloody Eternal Helmet" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80367" name="Bloody Eternal Breastplate" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
+		<set name="icon" val="icon.armor_t801_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">433</stat>
+		</stats>
+	</item>
+	<item id="80368" name="Bloody Eternal Gaiters" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t801_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">270</stat>
+		</stats>
+	</item>
+	<item id="80369" name="Bloody Eternal Gauntlets" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t801_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80370" name="Bloody Eternal Boots" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t801_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80371" name="Bloody Eternal Leather Helmet" additionalName="Reinforced light armor" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80372" name="Bloody Eternal Leather Armor" additionalName="Reinforced light armor" type="Armor">
+		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
+		<set name="icon" val="icon.armor_t802_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">346</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="80373" name="Bloody Eternal Leather Leggings" additionalName="Reinforced light armor" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t802_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">216</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="80374" name="Bloody Eternal Leather Gloves" additionalName="Reinforced light armor" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t802_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80375" name="Bloody Eternal Leather Boots" additionalName="Reinforced light armor" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Can be augmented. -->
+		<set name="icon" val="icon.armor_t802_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80376" name="Bloody Eternal Circlet" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80377" name="Bloody Eternal Tunic" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -8%. PvE Damage +1%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases Received P. Critical Damage and Received P. Critical Rate. -->
+		<set name="icon" val="icon.armor_t803_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">238</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="80378" name="Bloody Eternal Stockings" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t803_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">148</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="80379" name="Bloody Eternal Gloves" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t803_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80380" name="Bloody Eternal Shoes" additionalName="Not used" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. -->
+		<set name="icon" val="icon.armor_t803_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+	<item id="80381" name="Bloody Magic Necklace" additionalName="Cooldown" type="Armor">
+		<!-- MP +62, Skill Cooldown -10%, Damage Reflection +4%, Speed +3. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.r991_necklace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">158</stat>
+			<stat type="maxMp">62</stat>
+		</stats>
+	</item>
+	<item id="80382" name="Bloody Magic Earring" additionalName="Vampiric Rage" type="Armor">
+		<!-- MP +46, Received Healing +10%, Vampiric Rage effect +4%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.r991_earring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">118</stat>
+			<stat type="maxMp">46</stat>
+		</stats>
+	</item>
+	<item id="80383" name="Bloody Magic Earring" additionalName="MP Consumption" type="Armor">
+		<!-- MP +46, Received Healing +10%, MP Consumption -4%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.r991_earring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">118</stat>
+			<stat type="maxMp">46</stat>
+		</stats>
+	</item>
+	<item id="80384" name="Bloody Magic Ring" additionalName="Atk. Spd./ Casting Spd." type="Armor">
+		<!-- Max MP +31, P. Critical Damage and P./ M. Skill Critical Damage +15%, Atk. Spd./ Casting Spd. +4%. Effects of two identical rings do not stack. Cannot be upgraded or crystallized. -->
+		<set name="icon" val="icon.r991_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">79</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
+	<item id="80385" name="Bloody Magic Ring" additionalName="Critical Rate" type="Armor">
+		<!-- MP +31, P. Critical Damage/ M. Skill Critical Damage +15%, P. Critical Rate/ M. Skill Critical Rate +20%. Effects of two identical rings do not stack. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.r991_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">79</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
+	<item id="80386" name="Giant's Stone: Enchant Bloody Armor" type="EtcItem">
+		<!-- Enchant success rate +30% when using Giant's Scroll: Enchant R-grade Armor. -->
+		<set name="icon" val="icon.bless_high_ench_amr_stone_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80387" name="Giant's Stone: Enchant Bloody Weapon" type="EtcItem">
+		<!-- An item that increases the success rate of the Giant's Weapon Enchant Scroll by 40% when it is used to enchant an R-grade weapon. -->
+		<set name="icon" val="icon.bless_high_ench_wp_stone_i02" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80388" name="Mammon’s Adena Box" type="EtcItem">
+		<!-- Double-click to obtain a random amount of adena. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80389" name="Freya's Bloody Rune Pack (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Freya's Bloody Rune (30-day). -->
+		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48681" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="80390" name="Freya's Vital Rune Pack (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Freya's Vital Rune (30-day). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48682" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="80391" name="Mammon's Relic Pouch" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_golden_spice_blessed_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80392" name="Mammon’s Key" type="EtcItem">
+		<!-- A special item that can be used via visiting Black Marketeer of Mammon. Mammon's power is getting weaker and weaker, so it will be harder and harder to use the item. -->
+		<set name="icon" val="icon.bm_dragon_key" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80393" name="Bloody Helios Upgrade Stone" type="EtcItem">
+		<!-- A crystal that contains a spirit s strong fighting will. The special power of the upgrade stone unbinds +12 or above Enchanted Bloody Helios Weapons. -->
+		<set name="icon" val="icon.weapone_upgrade_crystal" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80394" name="Bloody Eternal Upgrade Stone" type="EtcItem">
+		<!-- A crystal that contains a spirit s strong will for protection. The special power of the upgrade stone unbinds +8 or above Enchanted Bloody Eternal Armor. -->
+		<set name="icon" val="icon.amor_upgrade_crystal" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80395" name="Adena Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random amount of adena. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80396" name="Bloody Eternal Helmet" additionalName="Heavy armor" type="Armor">
+		<!-- Received PvE Damage -3%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">162</stat>
+		</stats>
+	</item>
+	<item id="80397" name="Bloody Eternal Breastplate" additionalName="Heavy armor" type="Armor">
+		<!-- Received PvE damage -8%, PvE damage +1%. Heavy armor, can be enhanced by a blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">433</stat>
+		</stats>
+	</item>
+	<item id="80398" name="Bloody Eternal Gaiters" additionalName="Heavy armor" type="Armor">
+		<!-- Received PvE Damage -5%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">270</stat>
+		</stats>
+	</item>
+	<item id="80399" name="Bloody Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
+		<set name="icon" val="icon.armor_t801_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pDef">108</stat>
+		</stats>
+	</item>
+</list>

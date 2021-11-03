@@ -1,0 +1,2524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
+	<!-- Scroll: Enchant Anhel's Protection -->
+	<enchant id="81737" maxEnchant="10">
+		<item id="81736" />
+	</enchant>
+
+	<!-- Scroll: Enchant Mysterious Weapon -->
+	<enchant id="48502">
+		<item id="48494" />
+	</enchant>
+	
+	<!-- Mysterious and Special Weapon Enchant Scroll -->
+	<enchant id="48503" maxEnchant="14" randomEnchantMin="1" randomEnchantMax="3">
+		<item id="48494" />
+	</enchant>
+	
+	<!-- Blessed Scroll: Enchant Brooch -->
+	<enchant id="81361" maxEnchant="10">
+		<item id="81359" />
+		<item id="81360" />
+		<item id="29546" />
+		<item id="29547" />
+	</enchant>
+	
+	<!-- Gran Kain's Scroll: Enchant La Vie En Rose's Brooch -->
+	<enchant id="81908" maxEnchant="10">
+		<item id="29547" />
+	</enchant>
+	
+	<!-- Scrolls: Enchant Hair's -->
+	<enchant id="33818" maxEnchant="10" />
+	<enchant id="34940" maxEnchant="10" />
+	<enchant id="36978" maxEnchant="10" />
+
+	<!-- Knight's, Warrior's, Wizard's Circlets -->
+	<enchant id="48211" maxEnchant="10">
+		<item id="48202" />
+		<item id="48203" />
+		<item id="48205" />
+		<item id="48206" />
+		<item id="48208" />
+		<item id="48209" />
+		<item id="48204" /> <!-- TODO: Only this +10 -->
+		<item id="48207" /> <!-- TODO: Only this +10 -->
+		<item id="48210" /> <!-- TODO: Only this +10 -->
+	</enchant>
+	
+	<!-- Gran Kain's Scroll: Enchant Circlet -->
+	<enchant id="81820" minEnchant="7" maxEnchant="10">
+		<item id="48204" />
+		<item id="48207" />
+		<item id="48210" />
+	</enchant>
+	
+	<!-- Enchant Scroll: Blessed Bracelet -->
+	<enchant id="80838" maxEnchant="10">
+		<item id="80835" />
+		<item id="80836" />
+		<item id="80837" />
+	</enchant>
+	
+	<!--Gran Kain's Scroll: Enchant Kaliel's Bracelet-->
+	<enchant id="81752" minEnchant="7" maxEnchant="10">
+		<item id="80837" />
+	</enchant>
+	
+	<!-- Gran Kain's Scroll: Enchant Superior Seed Bracelet -->
+	<enchant id="82010" minEnchant="7" maxEnchant="10">
+		<item id="48577" />
+	</enchant>
+	
+	<!-- Blessed Scroll: Enchant Dragon Shirt -->
+	<enchant id="48498" maxEnchant="10">
+		<item id="48491" />
+		<item id="48492" />
+		<item id="48493" /> <!-- TODO: Only this +10 -->
+	</enchant>
+	
+	<!-- Gran Kain's Scroll: Enchant Dragon Rind Leather Shirt -->
+	<enchant id="81832" minEnchant="7" maxEnchant="10">
+		<item id="48493" />
+	</enchant>
+	
+	<!-- Blessed Scroll: Enchant Artifact Book -->
+	<enchant id="81694" maxEnchant="10">
+		<item id="48956" />
+		<item id="81695" />
+		<item id="81696" /> <!-- TODO: Only this +10 -->
+	</enchant>
+	
+	<!-- Scroll: Enchant Fallen Angel's Accessory -->
+	<enchant id="48863" maxEnchant="10">
+		<item id="48864" /> <!-- Fallen Angel's Ring -->
+		<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
+		<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
+		<item id="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+		<item id="81914" /> <!-- Blessed Fallen Angel's Ring -->
+		<item id="81915" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 1) -->
+		<item id="81916" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 2) -->
+		<item id="81917" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 3) -->
+	</enchant>
+	
+	<!-- Scroll: Enchant Angel's Accessory -->
+	<enchant id="48668" targetGrade="R" maxEnchant="10">
+			<item id="48669" /> <!-- Angel's Necklace -->
+			<item id="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item id="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item id="81372" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item id="48841" /> <!-- Angel's Earring -->
+			<item id="81373" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item id="81374" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item id="81375" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item id="81154" /> <!-- Angel's Ring -->
+			<item id="81376" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item id="81377" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item id="81378" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item id="81212" /> <!-- Angel's Necklace -->
+			<item id="81388" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item id="81389" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item id="81390" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item id="81213" /> <!-- Angel's Earring -->
+			<item id="81391" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item id="81392" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item id="81393" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item id="81214" /> <!-- Angel's Ring -->
+			<item id="81394" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item id="81395" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item id="81396" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item id="81784" /> <!-- Blessed Angel's Necklace -->
+			<item id="81785" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item id="81786" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item id="81787" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item id="81788" /> <!-- Blessed Angel's Earring -->			
+			<item id="81789" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item id="81790" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item id="81791" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item id="81792" /> <!-- Blessed Angel's Ring -->		
+			<item id="81793" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item id="81794" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item id="81795" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item id="81796" /> <!-- Blessed Angel's Necklace -->
+			<item id="81797" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item id="81798" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item id="81799" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item id="81800" /> <!-- Blessed Angel's Earring -->
+			<item id="81801" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item id="81802" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item id="81803" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item id="81804" /> <!-- Blessed Angel's Ring -->
+			<item id="81805" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item id="81806" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item id="81807" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item id="80333" /> <!-- Dragon Necklace -->
+			<item id="81379" /> <!-- Dragon Necklace (Battle Lv. 1) -->
+			<item id="81380" /> <!-- Dragon Necklace (Battle Lv. 2) -->
+			<item id="81381" /> <!-- Dragon Necklace (Battle Lv. 3) -->
+			<item id="80334" /> <!-- Dragon's Earring -->
+			<item id="81382" /> <!-- Dragon's Earring (Guardian lv. 1) -->
+			<item id="81383" /> <!-- Dragon's Earring (Guardian lv. 2) -->
+			<item id="81384" /> <!-- Dragon's Earring (Guardian lv. 3) -->
+			<item id="80335" /> <!-- Dragon's Ring -->
+			<item id="81385" /> <!-- Dragon's Ring (Potential Lv. 1) -->
+			<item id="81386" /> <!-- Dragon's Ring (Potential Lv. 2) -->
+			<item id="81387" /> <!-- Dragon's Ring (Potential Lv. 3) -->
+	</enchant>
+	
+	<!-- Scroll: Enchant Atlas' Earring -->
+	<enchant id="81351" targetGrade="R" maxEnchant="12" bonusRate="100">
+		<item id="81350" /> <!-- Atlas' Earring -->
+		<item id="81454" /> <!-- Atlas' Earring (Vitality) -->
+	</enchant>
+	
+	<!-- Scroll: Enchant Savior's Mask -->
+	<enchant id="48582" maxEnchant="10">
+		<item id="48584" /> <!-- Savior's Mask -->
+		<item id="81153" /> <!-- Navari's Mask -->
+	</enchant>
+	<!-- Special Scroll: Enchant Savior's Mask -->
+	<enchant id="48583" maxEnchant="10">
+		<item id="48584" /> <!-- Savior's Mask -->
+		<item id="81153" /> <!-- Navari's Mask -->
+	</enchant>
+	
+	<!-- Scroll: Enchant Expert's Mask -->
+	<enchant id="81346" maxEnchant="10">
+		<item id="81345" /> <!-- Expert's Mask -->
+	</enchant>
+
+	<!-- Guard Agathion's Book of Growth -->
+	<enchant id="48570" maxEnchant="10">
+		<item id="48572" /> <!-- Masia's Guard Agathion Charm -->
+		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->
+		<item id="48574" /> <!-- Tersi's Guard Agathion Charm -->
+	</enchant>
+	<!-- Ancient Guard Agathion's Book of Growth -->
+	<enchant id="48571" maxEnchant="7">
+		<item id="48572" /> <!-- Masia's Guard Agathion Charm -->
+		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->
+		<item id="48574" /> <!-- Tersi's Guard Agathion Charm -->
+	</enchant>
+		
+	<!-- Gran Kain's Scroll: Enchant Weapon (R-grade) -->
+	<enchant id="48912" targetGrade="R" maxEnchant="20" />
+	<!-- Gran Kain's Scroll: Enchant Armor (R-grade) -->
+	<enchant id="80502" targetGrade="R" maxEnchant="12" />
+
+	<!-- Scroll: Enchant Shadow Weapon -->
+	<enchant id="46337" targetGrade="R" maxEnchant="10">
+		<item id="46317" /> <!-- Shadow Shaper -->
+		<item id="46318" /> <!-- Shadow Cutter -->
+		<item id="46319" /> <!-- Shadow Slasher -->
+		<item id="46320" /> <!-- Shadow Fighter -->
+		<item id="46321" /> <!-- Shadow Stormer -->
+		<item id="46322" /> <!-- Shadow Thrower -->
+		<item id="46323" /> <!-- Shadow Shooter -->
+		<item id="46324" /> <!-- Shadow Buster -->
+		<item id="46325" /> <!-- Shadow Retributer -->
+		<item id="46326" /> <!-- Shadow Dualsword -->
+		<item id="46327" /> <!-- Shadow Shaper -->
+		<item id="46328" /> <!-- Shadow Cutter -->
+		<item id="46329" /> <!-- Shadow Slasher -->
+		<item id="46330" /> <!-- Shadow Fighter -->
+		<item id="46331" /> <!-- Shadow Stormer -->
+		<item id="46332" /> <!-- Shadow Thrower -->
+		<item id="46333" /> <!-- Shadow Shooter -->
+		<item id="46334" /> <!-- Shadow Buster -->
+		<item id="46335" /> <!-- Shadow Retributer -->
+		<item id="46336" /> <!-- Shadow Dualsword -->
+	</enchant>
+
+	<!-- Scroll: Enchant Cloak -->
+	<enchant id="28593" maxEnchant="10">
+		<item id="28585" />
+		<item id="28586" />
+		<item id="28587" />
+		<item id="28588" />
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+
+	<!-- Scroll: Enchant Cloak - Legendary -->
+	<enchant id="28594" minEnchant="10" maxEnchant="20">
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+
+	<!-- Scroll: Ancient Cloak - Legendary -->
+	<enchant id="28595" minEnchant="7" maxEnchant="20" bonusRate="10">
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+	
+	<!-- Stable Cloak Enchantment Scroll -->
+	<enchant id="29163" maxEnchant="10">
+		<item id="28585" />
+		<item id="28586" />
+		<item id="28587" />
+		<item id="28588" />
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+
+	<!-- Stable Cloak Enchantment Scroll - Legendary -->
+	<enchant id="28766" minEnchant="10" maxEnchant="15">
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+	
+	<!-- Scroll: Blessed Enchant Lucien's Bracelet -->
+	<enchant id="48845" maxEnchant="10" bonusRate="100">
+		<item id="48842" />
+		<item id="48843" />
+		<item id="48844" />
+	</enchant>
+	
+	<!-- Scroll: Enchant Superior Seed Bracelet -->
+	<enchant id="81706" maxEnchant="10">
+		<item id="48577" /> <!-- Superior Seed Bracelet Lv. 4 -->
+	</enchant>
+	
+	<!-- Divine Book of Growth: Agathion Dragon -->
+	<enchant id="81445" maxEnchant="10">
+		<item id="81443" /> <!-- Agathion Fire Dragon Charm -->
+	</enchant>
+	
+	<!-- Greater Zodiac Agathion's Book of Growth -->
+	<enchant id="80932" maxEnchant="10">
+		<item id="80936" /> <!-- Greater Agathion Virgo Charm -->
+		<item id="80937" /> <!-- Greater Agathion Capricorn Charm -->
+		<item id="80938" /> <!-- Greater Agathion Libra Charm -->
+		<item id="80939" /> <!-- Greater Agathion Aries Charm -->
+		<item id="80940" /> <!-- Greater Agathion Taurus Charm -->
+		<item id="80941" /> <!-- Greater Agathion Leo Charm -->
+		<item id="80942" /> <!-- Greater Agathion Gemini Charm -->
+		<item id="80943" /> <!-- Greater Agathion Scorpio Charm -->
+		<item id="80944" /> <!-- Greater Agathion Aquarius Charm -->
+		<item id="80945" /> <!-- Greater Agathion Pisces Charm -->
+		<item id="80946" /> <!-- Greater Agathion Sagittarius Charm -->
+		<item id="80947" /> <!-- Greater Agathion Cancer Charm -->
+	</enchant>
+	
+	<!-- Zodiac Agathion Charm Book of Growth -->
+	<enchant id="28757" maxEnchant="10">
+		<item id="28769" /> <!-- Virgo Agathion Charm -->
+		<item id="28770" /> <!-- Virgo Agathion Charm -->
+		<item id="28771" /> <!-- Virgo Agathion Charm -->
+		<item id="28772" /> <!-- Virgo Agathion Charm -->
+		<item id="28773" /> <!-- Virgo Agathion Charm -->
+		<item id="28774" /> <!-- Virgo Agathion Charm -->
+		<item id="28775" /> <!-- Virgo Agathion Charm -->
+		<item id="28776" /> <!-- Virgo Agathion Charm -->
+		<item id="28777" /> <!-- Virgo Agathion Charm -->
+		<item id="28778" /> <!-- Virgo Agathion Charm -->
+		<item id="28779" /> <!-- Virgo Agathion Charm -->
+		<item id="28780" /> <!-- Virgo Agathion Charm -->
+		<item id="28781" /> <!-- Capricorn Agathion Charm -->
+		<item id="28782" /> <!-- Capricorn Agathion Charm -->
+		<item id="28783" /> <!-- Capricorn Agathion Charm -->
+		<item id="28784" /> <!-- Capricorn Agathion Charm -->
+		<item id="28785" /> <!-- Capricorn Agathion Charm -->
+		<item id="28786" /> <!-- Capricorn Agathion Charm -->
+		<item id="28787" /> <!-- Capricorn Agathion Charm -->
+		<item id="28788" /> <!-- Capricorn Agathion Charm -->
+		<item id="28789" /> <!-- Capricorn Agathion Charm -->
+		<item id="28790" /> <!-- Capricorn Agathion Charm -->
+		<item id="28791" /> <!-- Capricorn Agathion Charm -->
+		<item id="28792" /> <!-- Capricorn Agathion Charm -->
+		<item id="28793" /> <!-- Libra Agathion Charm -->
+		<item id="28794" /> <!-- Libra Agathion Charm -->
+		<item id="28795" /> <!-- Libra Agathion Charm -->
+		<item id="28796" /> <!-- Libra Agathion Charm -->
+		<item id="28797" /> <!-- Libra Agathion Charm -->
+		<item id="28798" /> <!-- Libra Agathion Charm -->
+		<item id="28799" /> <!-- Libra Agathion Charm -->
+		<item id="28800" /> <!-- Libra Agathion Charm -->
+		<item id="28801" /> <!-- Libra Agathion Charm -->
+		<item id="28802" /> <!-- Libra Agathion Charm -->
+		<item id="28803" /> <!-- Libra Agathion Charm -->
+		<item id="28804" /> <!-- Libra Agathion Charm -->
+		<item id="28805" /> <!-- Aries Agathion Charm -->
+		<item id="28806" /> <!-- Aries Agathion Charm -->
+		<item id="28807" /> <!-- Aries Agathion Charm -->
+		<item id="28808" /> <!-- Aries Agathion Charm -->
+		<item id="28809" /> <!-- Aries Agathion Charm -->
+		<item id="28810" /> <!-- Aries Agathion Charm -->
+		<item id="28811" /> <!-- Aries Agathion Charm -->
+		<item id="28812" /> <!-- Aries Agathion Charm -->
+		<item id="28813" /> <!-- Aries Agathion Charm -->
+		<item id="28814" /> <!-- Aries Agathion Charm -->
+		<item id="28815" /> <!-- Aries Agathion Charm -->
+		<item id="28816" /> <!-- Aries Agathion Charm -->
+		<item id="28817" /> <!-- Taurus Agathion Charm -->
+		<item id="28818" /> <!-- Taurus Agathion Charm -->
+		<item id="28819" /> <!-- Taurus Agathion Charm -->
+		<item id="28820" /> <!-- Taurus Agathion Charm -->
+		<item id="28821" /> <!-- Taurus Agathion Charm -->
+		<item id="28822" /> <!-- Taurus Agathion Charm -->
+		<item id="28823" /> <!-- Taurus Agathion Charm -->
+		<item id="28824" /> <!-- Taurus Agathion Charm -->
+		<item id="28825" /> <!-- Taurus Agathion Charm -->
+		<item id="28826" /> <!-- Taurus Agathion Charm -->
+		<item id="28827" /> <!-- Taurus Agathion Charm -->
+		<item id="28828" /> <!-- Taurus Agathion Charm -->
+		<item id="28829" /> <!-- Leo Agathion Charm -->
+		<item id="28830" /> <!-- Leo Agathion Charm -->
+		<item id="28831" /> <!-- Leo Agathion Charm -->
+		<item id="28832" /> <!-- Leo Agathion Charm -->
+		<item id="28833" /> <!-- Leo Agathion Charm -->
+		<item id="28834" /> <!-- Leo Agathion Charm -->
+		<item id="28835" /> <!-- Leo Agathion Charm -->
+		<item id="28836" /> <!-- Leo Agathion Charm -->
+		<item id="28837" /> <!-- Leo Agathion Charm -->
+		<item id="28838" /> <!-- Leo Agathion Charm -->
+		<item id="28839" /> <!-- Leo Agathion Charm -->
+		<item id="28840" /> <!-- Leo Agathion Charm -->
+		<item id="28841" /> <!-- Gemini Agathion Charm -->
+		<item id="28842" /> <!-- Gemini Agathion Charm -->
+		<item id="28843" /> <!-- Gemini Agathion Charm -->
+		<item id="28844" /> <!-- Gemini Agathion Charm -->
+		<item id="28845" /> <!-- Gemini Agathion Charm -->
+		<item id="28846" /> <!-- Gemini Agathion Charm -->
+		<item id="28847" /> <!-- Gemini Agathion Charm -->
+		<item id="28848" /> <!-- Gemini Agathion Charm -->
+		<item id="28849" /> <!-- Gemini Agathion Charm -->
+		<item id="28850" /> <!-- Gemini Agathion Charm -->
+		<item id="28851" /> <!-- Gemini Agathion Charm -->
+		<item id="28852" /> <!-- Gemini Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28854" /> <!-- Scorpio Agathion Charm -->
+		<item id="28855" /> <!-- Scorpio Agathion Charm -->
+		<item id="28856" /> <!-- Scorpio Agathion Charm -->
+		<item id="28857" /> <!-- Scorpio Agathion Charm -->
+		<item id="28858" /> <!-- Scorpio Agathion Charm -->
+		<item id="28859" /> <!-- Scorpio Agathion Charm -->
+		<item id="28860" /> <!-- Scorpio Agathion Charm -->
+		<item id="28861" /> <!-- Scorpio Agathion Charm -->
+		<item id="28862" /> <!-- Scorpio Agathion Charm -->
+		<item id="28863" /> <!-- Scorpio Agathion Charm -->
+		<item id="28864" /> <!-- Scorpio Agathion Charm -->
+		<item id="28865" /> <!-- Aquarius Agathion Charm -->
+		<item id="28866" /> <!-- Aquarius Agathion Charm -->
+		<item id="28867" /> <!-- Aquarius Agathion Charm -->
+		<item id="28868" /> <!-- Aquarius Agathion Charm -->
+		<item id="28869" /> <!-- Aquarius Agathion Charm -->
+		<item id="28870" /> <!-- Aquarius Agathion Charm -->
+		<item id="28871" /> <!-- Aquarius Agathion Charm -->
+		<item id="28872" /> <!-- Aquarius Agathion Charm -->
+		<item id="28873" /> <!-- Aquarius Agathion Charm -->
+		<item id="28874" /> <!-- Aquarius Agathion Charm -->
+		<item id="28875" /> <!-- Aquarius Agathion Charm -->
+		<item id="28876" /> <!-- Aquarius Agathion Charm -->
+		<item id="28877" /> <!-- Pisces Agathion Charm -->
+		<item id="28878" /> <!-- Pisces Agathion Charm -->
+		<item id="28879" /> <!-- Pisces Agathion Charm -->
+		<item id="28880" /> <!-- Pisces Agathion Charm -->
+		<item id="28881" /> <!-- Pisces Agathion Charm -->
+		<item id="28882" /> <!-- Pisces Agathion Charm -->
+		<item id="28883" /> <!-- Pisces Agathion Charm -->
+		<item id="28884" /> <!-- Pisces Agathion Charm -->
+		<item id="28885" /> <!-- Pisces Agathion Charm -->
+		<item id="28886" /> <!-- Pisces Agathion Charm -->
+		<item id="28887" /> <!-- Pisces Agathion Charm -->
+		<item id="28888" /> <!-- Pisces Agathion Charm -->
+		<item id="28889" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28890" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28891" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28892" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28893" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28894" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28895" /> <!-- Sagittarius Agathion Charm -->
+ 		<item id="28896" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28897" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28898" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28899" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28900" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28901" /> <!-- Cancer Agathion Charm -->
+		<item id="28902" /> <!-- Cancer Agathion Charm -->
+		<item id="28903" /> <!-- Cancer Agathion Charm -->
+		<item id="28904" /> <!-- Cancer Agathion Charm -->
+		<item id="28905" /> <!-- Cancer Agathion Charm -->
+		<item id="28906" /> <!-- Cancer Agathion Charm -->
+		<item id="28907" /> <!-- Cancer Agathion Charm -->
+		<item id="28908" /> <!-- Cancer Agathion Charm -->
+		<item id="28909" /> <!-- Cancer Agathion Charm -->
+		<item id="28910" /> <!-- Cancer Agathion Charm -->
+		<item id="28911" /> <!-- Cancer Agathion Charm -->
+		<item id="28912" /> <!-- Cancer Agathion Charm -->
+		<item id="28913" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28914" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28915" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28916" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28917" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28918" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28919" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28920" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28921" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28922" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28923" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28924" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28925" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28926" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28927" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28928" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28929" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28930" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28931" /> <!-- Capricorn Agathion Charm From the Star -->				
+		<item id="28932" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28933" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28934" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28935" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28936" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28937" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28938" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28939" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28940" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28941" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28942" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28943" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28944" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28945" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28946" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28947" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28948" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28949" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28950" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28951" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28952" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28953" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28954" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28955" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28956" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28957" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28958" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28959" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28960" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28961" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28962" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28963" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28964" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28965" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28966" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28967" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28968" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28969" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28970" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28971" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28972" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28973" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28974" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28975" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28976" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28977" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28978" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28979" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28980" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28981" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28982" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28983" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28984" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28985" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28986" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28987" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28988" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28989" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28990" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28991" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28992" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28993" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28994" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28995" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28996" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28997" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28998" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28999" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="48048" /> <!-- Agathion Virgo Charm -->
+		<item id="48049" /> <!-- Agathion Capricorn Charm -->
+		<item id="48050" /> <!-- Agathion Libra Charm -->
+		<item id="48051" /> <!-- Agathion Aries Charm -->
+		<item id="48052" /> <!-- Agathion Taurus Charm -->
+		<item id="48053" /> <!-- Agathion Leo Charm -->
+		<item id="48054" /> <!-- Agathion Gemini Charm -->
+		<item id="48055" /> <!-- Agathion Scorpio Charm -->
+		<item id="48056" /> <!-- Agathion Aquarius Charm -->
+		<item id="48057" /> <!-- Agathion Pisces Charm -->
+		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
+		<item id="48059" /> <!-- Agathion Cancer Charm -->
+	</enchant>
+	
+	<!-- Book of Growth Zodiac Agathion -->
+	<enchant id="48046" maxEnchant="10">
+		<item id="28769" /> <!-- Virgo Agathion Charm -->
+		<item id="28770" /> <!-- Virgo Agathion Charm -->
+		<item id="28771" /> <!-- Virgo Agathion Charm -->
+		<item id="28772" /> <!-- Virgo Agathion Charm -->
+		<item id="28773" /> <!-- Virgo Agathion Charm -->
+		<item id="28774" /> <!-- Virgo Agathion Charm -->
+		<item id="28775" /> <!-- Virgo Agathion Charm -->
+		<item id="28776" /> <!-- Virgo Agathion Charm -->
+		<item id="28777" /> <!-- Virgo Agathion Charm -->
+		<item id="28778" /> <!-- Virgo Agathion Charm -->
+		<item id="28779" /> <!-- Virgo Agathion Charm -->
+		<item id="28780" /> <!-- Virgo Agathion Charm -->
+		<item id="28781" /> <!-- Capricorn Agathion Charm -->
+		<item id="28782" /> <!-- Capricorn Agathion Charm -->
+		<item id="28783" /> <!-- Capricorn Agathion Charm -->
+		<item id="28784" /> <!-- Capricorn Agathion Charm -->
+		<item id="28785" /> <!-- Capricorn Agathion Charm -->
+		<item id="28786" /> <!-- Capricorn Agathion Charm -->
+		<item id="28787" /> <!-- Capricorn Agathion Charm -->
+		<item id="28788" /> <!-- Capricorn Agathion Charm -->
+		<item id="28789" /> <!-- Capricorn Agathion Charm -->
+		<item id="28790" /> <!-- Capricorn Agathion Charm -->
+		<item id="28791" /> <!-- Capricorn Agathion Charm -->
+		<item id="28792" /> <!-- Capricorn Agathion Charm -->
+		<item id="28793" /> <!-- Libra Agathion Charm -->
+		<item id="28794" /> <!-- Libra Agathion Charm -->
+		<item id="28795" /> <!-- Libra Agathion Charm -->
+		<item id="28796" /> <!-- Libra Agathion Charm -->
+		<item id="28797" /> <!-- Libra Agathion Charm -->
+		<item id="28798" /> <!-- Libra Agathion Charm -->
+		<item id="28799" /> <!-- Libra Agathion Charm -->
+		<item id="28800" /> <!-- Libra Agathion Charm -->
+		<item id="28801" /> <!-- Libra Agathion Charm -->
+		<item id="28802" /> <!-- Libra Agathion Charm -->
+		<item id="28803" /> <!-- Libra Agathion Charm -->
+		<item id="28804" /> <!-- Libra Agathion Charm -->
+		<item id="28805" /> <!-- Aries Agathion Charm -->
+		<item id="28806" /> <!-- Aries Agathion Charm -->
+		<item id="28807" /> <!-- Aries Agathion Charm -->
+		<item id="28808" /> <!-- Aries Agathion Charm -->
+		<item id="28809" /> <!-- Aries Agathion Charm -->
+		<item id="28810" /> <!-- Aries Agathion Charm -->
+		<item id="28811" /> <!-- Aries Agathion Charm -->
+		<item id="28812" /> <!-- Aries Agathion Charm -->
+		<item id="28813" /> <!-- Aries Agathion Charm -->
+		<item id="28814" /> <!-- Aries Agathion Charm -->
+		<item id="28815" /> <!-- Aries Agathion Charm -->
+		<item id="28816" /> <!-- Aries Agathion Charm -->
+		<item id="28817" /> <!-- Taurus Agathion Charm -->
+		<item id="28818" /> <!-- Taurus Agathion Charm -->
+		<item id="28819" /> <!-- Taurus Agathion Charm -->
+		<item id="28820" /> <!-- Taurus Agathion Charm -->
+		<item id="28821" /> <!-- Taurus Agathion Charm -->
+		<item id="28822" /> <!-- Taurus Agathion Charm -->
+		<item id="28823" /> <!-- Taurus Agathion Charm -->
+		<item id="28824" /> <!-- Taurus Agathion Charm -->
+		<item id="28825" /> <!-- Taurus Agathion Charm -->
+		<item id="28826" /> <!-- Taurus Agathion Charm -->
+		<item id="28827" /> <!-- Taurus Agathion Charm -->
+		<item id="28828" /> <!-- Taurus Agathion Charm -->
+		<item id="28829" /> <!-- Leo Agathion Charm -->
+		<item id="28830" /> <!-- Leo Agathion Charm -->
+		<item id="28831" /> <!-- Leo Agathion Charm -->
+		<item id="28832" /> <!-- Leo Agathion Charm -->
+		<item id="28833" /> <!-- Leo Agathion Charm -->
+		<item id="28834" /> <!-- Leo Agathion Charm -->
+		<item id="28835" /> <!-- Leo Agathion Charm -->
+		<item id="28836" /> <!-- Leo Agathion Charm -->
+		<item id="28837" /> <!-- Leo Agathion Charm -->
+		<item id="28838" /> <!-- Leo Agathion Charm -->
+		<item id="28839" /> <!-- Leo Agathion Charm -->
+		<item id="28840" /> <!-- Leo Agathion Charm -->
+		<item id="28841" /> <!-- Gemini Agathion Charm -->
+		<item id="28842" /> <!-- Gemini Agathion Charm -->
+		<item id="28843" /> <!-- Gemini Agathion Charm -->
+		<item id="28844" /> <!-- Gemini Agathion Charm -->
+		<item id="28845" /> <!-- Gemini Agathion Charm -->
+		<item id="28846" /> <!-- Gemini Agathion Charm -->
+		<item id="28847" /> <!-- Gemini Agathion Charm -->
+		<item id="28848" /> <!-- Gemini Agathion Charm -->
+		<item id="28849" /> <!-- Gemini Agathion Charm -->
+		<item id="28850" /> <!-- Gemini Agathion Charm -->
+		<item id="28851" /> <!-- Gemini Agathion Charm -->
+		<item id="28852" /> <!-- Gemini Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28854" /> <!-- Scorpio Agathion Charm -->
+		<item id="28855" /> <!-- Scorpio Agathion Charm -->
+		<item id="28856" /> <!-- Scorpio Agathion Charm -->
+		<item id="28857" /> <!-- Scorpio Agathion Charm -->
+		<item id="28858" /> <!-- Scorpio Agathion Charm -->
+		<item id="28859" /> <!-- Scorpio Agathion Charm -->
+		<item id="28860" /> <!-- Scorpio Agathion Charm -->
+		<item id="28861" /> <!-- Scorpio Agathion Charm -->
+		<item id="28862" /> <!-- Scorpio Agathion Charm -->
+		<item id="28863" /> <!-- Scorpio Agathion Charm -->
+		<item id="28864" /> <!-- Scorpio Agathion Charm -->
+		<item id="28865" /> <!-- Aquarius Agathion Charm -->
+		<item id="28866" /> <!-- Aquarius Agathion Charm -->
+		<item id="28867" /> <!-- Aquarius Agathion Charm -->
+		<item id="28868" /> <!-- Aquarius Agathion Charm -->
+		<item id="28869" /> <!-- Aquarius Agathion Charm -->
+		<item id="28870" /> <!-- Aquarius Agathion Charm -->
+		<item id="28871" /> <!-- Aquarius Agathion Charm -->
+		<item id="28872" /> <!-- Aquarius Agathion Charm -->
+		<item id="28873" /> <!-- Aquarius Agathion Charm -->
+		<item id="28874" /> <!-- Aquarius Agathion Charm -->
+		<item id="28875" /> <!-- Aquarius Agathion Charm -->
+		<item id="28876" /> <!-- Aquarius Agathion Charm -->
+		<item id="28877" /> <!-- Pisces Agathion Charm -->
+		<item id="28878" /> <!-- Pisces Agathion Charm -->
+		<item id="28879" /> <!-- Pisces Agathion Charm -->
+		<item id="28880" /> <!-- Pisces Agathion Charm -->
+		<item id="28881" /> <!-- Pisces Agathion Charm -->
+		<item id="28882" /> <!-- Pisces Agathion Charm -->
+		<item id="28883" /> <!-- Pisces Agathion Charm -->
+		<item id="28884" /> <!-- Pisces Agathion Charm -->
+		<item id="28885" /> <!-- Pisces Agathion Charm -->
+		<item id="28886" /> <!-- Pisces Agathion Charm -->
+		<item id="28887" /> <!-- Pisces Agathion Charm -->
+		<item id="28888" /> <!-- Pisces Agathion Charm -->
+		<item id="28889" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28890" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28891" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28892" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28893" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28894" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28895" /> <!-- Sagittarius Agathion Charm -->
+ 		<item id="28896" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28897" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28898" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28899" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28900" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28901" /> <!-- Cancer Agathion Charm -->
+		<item id="28902" /> <!-- Cancer Agathion Charm -->
+		<item id="28903" /> <!-- Cancer Agathion Charm -->
+		<item id="28904" /> <!-- Cancer Agathion Charm -->
+		<item id="28905" /> <!-- Cancer Agathion Charm -->
+		<item id="28906" /> <!-- Cancer Agathion Charm -->
+		<item id="28907" /> <!-- Cancer Agathion Charm -->
+		<item id="28908" /> <!-- Cancer Agathion Charm -->
+		<item id="28909" /> <!-- Cancer Agathion Charm -->
+		<item id="28910" /> <!-- Cancer Agathion Charm -->
+		<item id="28911" /> <!-- Cancer Agathion Charm -->
+		<item id="28912" /> <!-- Cancer Agathion Charm -->
+		<item id="28913" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28914" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28915" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28916" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28917" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28918" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28919" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28920" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28921" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28922" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28923" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28924" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28925" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28926" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28927" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28928" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28929" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28930" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28931" /> <!-- Capricorn Agathion Charm From the Star -->				
+		<item id="28932" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28933" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28934" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28935" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28936" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28937" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28938" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28939" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28940" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28941" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28942" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28943" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28944" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28945" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28946" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28947" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28948" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28949" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28950" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28951" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28952" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28953" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28954" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28955" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28956" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28957" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28958" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28959" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28960" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28961" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28962" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28963" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28964" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28965" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28966" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28967" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28968" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28969" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28970" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28971" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28972" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28973" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28974" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28975" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28976" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28977" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28978" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28979" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28980" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28981" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28982" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28983" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28984" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28985" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28986" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28987" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28988" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28989" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28990" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28991" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28992" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28993" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28994" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28995" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28996" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28997" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28998" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28999" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="48048" /> <!-- Agathion Virgo Charm -->
+		<item id="48049" /> <!-- Agathion Capricorn Charm -->
+		<item id="48050" /> <!-- Agathion Libra Charm -->
+		<item id="48051" /> <!-- Agathion Aries Charm -->
+		<item id="48052" /> <!-- Agathion Taurus Charm -->
+		<item id="48053" /> <!-- Agathion Leo Charm -->
+		<item id="48054" /> <!-- Agathion Gemini Charm -->
+		<item id="48055" /> <!-- Agathion Scorpio Charm -->
+		<item id="48056" /> <!-- Agathion Aquarius Charm -->
+		<item id="48057" /> <!-- Agathion Pisces Charm -->
+		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
+		<item id="48059" /> <!-- Agathion Cancer Charm -->
+	</enchant>
+	
+	<!-- Ancient Zodiac Agathion Charm Book of Growth -->
+	<enchant id="28758" maxEnchant="7">
+		<item id="28769" /> <!-- Virgo Agathion Charm -->
+		<item id="28770" /> <!-- Virgo Agathion Charm -->
+		<item id="28771" /> <!-- Virgo Agathion Charm -->
+		<item id="28772" /> <!-- Virgo Agathion Charm -->
+		<item id="28773" /> <!-- Virgo Agathion Charm -->
+		<item id="28774" /> <!-- Virgo Agathion Charm -->
+		<item id="28775" /> <!-- Virgo Agathion Charm -->
+		<item id="28776" /> <!-- Virgo Agathion Charm -->
+		<item id="28777" /> <!-- Virgo Agathion Charm -->
+		<item id="28778" /> <!-- Virgo Agathion Charm -->
+		<item id="28779" /> <!-- Virgo Agathion Charm -->
+		<item id="28780" /> <!-- Virgo Agathion Charm -->
+		<item id="28781" /> <!-- Capricorn Agathion Charm -->
+		<item id="28782" /> <!-- Capricorn Agathion Charm -->
+		<item id="28783" /> <!-- Capricorn Agathion Charm -->
+		<item id="28784" /> <!-- Capricorn Agathion Charm -->
+		<item id="28785" /> <!-- Capricorn Agathion Charm -->
+		<item id="28786" /> <!-- Capricorn Agathion Charm -->
+		<item id="28787" /> <!-- Capricorn Agathion Charm -->
+		<item id="28788" /> <!-- Capricorn Agathion Charm -->
+		<item id="28789" /> <!-- Capricorn Agathion Charm -->
+		<item id="28790" /> <!-- Capricorn Agathion Charm -->
+		<item id="28791" /> <!-- Capricorn Agathion Charm -->
+		<item id="28792" /> <!-- Capricorn Agathion Charm -->
+		<item id="28793" /> <!-- Libra Agathion Charm -->
+		<item id="28794" /> <!-- Libra Agathion Charm -->
+		<item id="28795" /> <!-- Libra Agathion Charm -->
+		<item id="28796" /> <!-- Libra Agathion Charm -->
+		<item id="28797" /> <!-- Libra Agathion Charm -->
+		<item id="28798" /> <!-- Libra Agathion Charm -->
+		<item id="28799" /> <!-- Libra Agathion Charm -->
+		<item id="28800" /> <!-- Libra Agathion Charm -->
+		<item id="28801" /> <!-- Libra Agathion Charm -->
+		<item id="28802" /> <!-- Libra Agathion Charm -->
+		<item id="28803" /> <!-- Libra Agathion Charm -->
+		<item id="28804" /> <!-- Libra Agathion Charm -->
+		<item id="28805" /> <!-- Aries Agathion Charm -->
+		<item id="28806" /> <!-- Aries Agathion Charm -->
+		<item id="28807" /> <!-- Aries Agathion Charm -->
+		<item id="28808" /> <!-- Aries Agathion Charm -->
+		<item id="28809" /> <!-- Aries Agathion Charm -->
+		<item id="28810" /> <!-- Aries Agathion Charm -->
+		<item id="28811" /> <!-- Aries Agathion Charm -->
+		<item id="28812" /> <!-- Aries Agathion Charm -->
+		<item id="28813" /> <!-- Aries Agathion Charm -->
+		<item id="28814" /> <!-- Aries Agathion Charm -->
+		<item id="28815" /> <!-- Aries Agathion Charm -->
+		<item id="28816" /> <!-- Aries Agathion Charm -->
+		<item id="28817" /> <!-- Taurus Agathion Charm -->
+		<item id="28818" /> <!-- Taurus Agathion Charm -->
+		<item id="28819" /> <!-- Taurus Agathion Charm -->
+		<item id="28820" /> <!-- Taurus Agathion Charm -->
+		<item id="28821" /> <!-- Taurus Agathion Charm -->
+		<item id="28822" /> <!-- Taurus Agathion Charm -->
+		<item id="28823" /> <!-- Taurus Agathion Charm -->
+		<item id="28824" /> <!-- Taurus Agathion Charm -->
+		<item id="28825" /> <!-- Taurus Agathion Charm -->
+		<item id="28826" /> <!-- Taurus Agathion Charm -->
+		<item id="28827" /> <!-- Taurus Agathion Charm -->
+		<item id="28828" /> <!-- Taurus Agathion Charm -->
+		<item id="28829" /> <!-- Leo Agathion Charm -->
+		<item id="28830" /> <!-- Leo Agathion Charm -->
+		<item id="28831" /> <!-- Leo Agathion Charm -->
+		<item id="28832" /> <!-- Leo Agathion Charm -->
+		<item id="28833" /> <!-- Leo Agathion Charm -->
+		<item id="28834" /> <!-- Leo Agathion Charm -->
+		<item id="28835" /> <!-- Leo Agathion Charm -->
+		<item id="28836" /> <!-- Leo Agathion Charm -->
+		<item id="28837" /> <!-- Leo Agathion Charm -->
+		<item id="28838" /> <!-- Leo Agathion Charm -->
+		<item id="28839" /> <!-- Leo Agathion Charm -->
+		<item id="28840" /> <!-- Leo Agathion Charm -->
+		<item id="28841" /> <!-- Gemini Agathion Charm -->
+		<item id="28842" /> <!-- Gemini Agathion Charm -->
+		<item id="28843" /> <!-- Gemini Agathion Charm -->
+		<item id="28844" /> <!-- Gemini Agathion Charm -->
+		<item id="28845" /> <!-- Gemini Agathion Charm -->
+		<item id="28846" /> <!-- Gemini Agathion Charm -->
+		<item id="28847" /> <!-- Gemini Agathion Charm -->
+		<item id="28848" /> <!-- Gemini Agathion Charm -->
+		<item id="28849" /> <!-- Gemini Agathion Charm -->
+		<item id="28850" /> <!-- Gemini Agathion Charm -->
+		<item id="28851" /> <!-- Gemini Agathion Charm -->
+		<item id="28852" /> <!-- Gemini Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28854" /> <!-- Scorpio Agathion Charm -->
+		<item id="28855" /> <!-- Scorpio Agathion Charm -->
+		<item id="28856" /> <!-- Scorpio Agathion Charm -->
+		<item id="28857" /> <!-- Scorpio Agathion Charm -->
+		<item id="28858" /> <!-- Scorpio Agathion Charm -->
+		<item id="28859" /> <!-- Scorpio Agathion Charm -->
+		<item id="28860" /> <!-- Scorpio Agathion Charm -->
+		<item id="28861" /> <!-- Scorpio Agathion Charm -->
+		<item id="28862" /> <!-- Scorpio Agathion Charm -->
+		<item id="28863" /> <!-- Scorpio Agathion Charm -->
+		<item id="28864" /> <!-- Scorpio Agathion Charm -->
+		<item id="28865" /> <!-- Aquarius Agathion Charm -->
+		<item id="28866" /> <!-- Aquarius Agathion Charm -->
+		<item id="28867" /> <!-- Aquarius Agathion Charm -->
+		<item id="28868" /> <!-- Aquarius Agathion Charm -->
+		<item id="28869" /> <!-- Aquarius Agathion Charm -->
+		<item id="28870" /> <!-- Aquarius Agathion Charm -->
+		<item id="28871" /> <!-- Aquarius Agathion Charm -->
+		<item id="28872" /> <!-- Aquarius Agathion Charm -->
+		<item id="28873" /> <!-- Aquarius Agathion Charm -->
+		<item id="28874" /> <!-- Aquarius Agathion Charm -->
+		<item id="28875" /> <!-- Aquarius Agathion Charm -->
+		<item id="28876" /> <!-- Aquarius Agathion Charm -->
+		<item id="28877" /> <!-- Pisces Agathion Charm -->
+		<item id="28878" /> <!-- Pisces Agathion Charm -->
+		<item id="28879" /> <!-- Pisces Agathion Charm -->
+		<item id="28880" /> <!-- Pisces Agathion Charm -->
+		<item id="28881" /> <!-- Pisces Agathion Charm -->
+		<item id="28882" /> <!-- Pisces Agathion Charm -->
+		<item id="28883" /> <!-- Pisces Agathion Charm -->
+		<item id="28884" /> <!-- Pisces Agathion Charm -->
+		<item id="28885" /> <!-- Pisces Agathion Charm -->
+		<item id="28886" /> <!-- Pisces Agathion Charm -->
+		<item id="28887" /> <!-- Pisces Agathion Charm -->
+		<item id="28888" /> <!-- Pisces Agathion Charm -->
+		<item id="28889" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28890" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28891" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28892" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28893" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28894" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28895" /> <!-- Sagittarius Agathion Charm -->
+ 		<item id="28896" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28897" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28898" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28899" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28900" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28901" /> <!-- Cancer Agathion Charm -->
+		<item id="28902" /> <!-- Cancer Agathion Charm -->
+		<item id="28903" /> <!-- Cancer Agathion Charm -->
+		<item id="28904" /> <!-- Cancer Agathion Charm -->
+		<item id="28905" /> <!-- Cancer Agathion Charm -->
+		<item id="28906" /> <!-- Cancer Agathion Charm -->
+		<item id="28907" /> <!-- Cancer Agathion Charm -->
+		<item id="28908" /> <!-- Cancer Agathion Charm -->
+		<item id="28909" /> <!-- Cancer Agathion Charm -->
+		<item id="28910" /> <!-- Cancer Agathion Charm -->
+		<item id="28911" /> <!-- Cancer Agathion Charm -->
+		<item id="28912" /> <!-- Cancer Agathion Charm -->
+		<item id="28913" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28914" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28915" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28916" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28917" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28918" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28919" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28920" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28921" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28922" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28923" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28924" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28925" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28926" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28927" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28928" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28929" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28930" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28931" /> <!-- Capricorn Agathion Charm From the Star -->				
+		<item id="28932" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28933" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28934" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28935" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28936" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28937" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28938" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28939" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28940" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28941" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28942" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28943" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28944" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28945" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28946" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28947" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28948" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28949" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28950" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28951" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28952" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28953" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28954" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28955" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28956" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28957" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28958" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28959" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28960" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28961" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28962" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28963" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28964" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28965" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28966" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28967" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28968" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28969" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28970" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28971" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28972" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28973" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28974" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28975" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28976" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28977" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28978" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28979" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28980" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28981" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28982" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28983" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28984" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28985" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28986" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28987" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28988" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28989" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28990" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28991" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28992" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28993" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28994" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28995" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28996" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28997" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28998" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28999" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="48048" /> <!-- Agathion Virgo Charm -->
+		<item id="48049" /> <!-- Agathion Capricorn Charm -->
+		<item id="48050" /> <!-- Agathion Libra Charm -->
+		<item id="48051" /> <!-- Agathion Aries Charm -->
+		<item id="48052" /> <!-- Agathion Taurus Charm -->
+		<item id="48053" /> <!-- Agathion Leo Charm -->
+		<item id="48054" /> <!-- Agathion Gemini Charm -->
+		<item id="48055" /> <!-- Agathion Scorpio Charm -->
+		<item id="48056" /> <!-- Agathion Aquarius Charm -->
+		<item id="48057" /> <!-- Agathion Pisces Charm -->
+		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
+		<item id="48059" /> <!-- Agathion Cancer Charm -->
+	</enchant>
+	
+	<!-- Divine Zodiac Agathion Charm Book of Growth -->
+	<enchant id="48047" maxEnchant="7">
+		<item id="28769" /> <!-- Virgo Agathion Charm -->
+		<item id="28770" /> <!-- Virgo Agathion Charm -->
+		<item id="28771" /> <!-- Virgo Agathion Charm -->
+		<item id="28772" /> <!-- Virgo Agathion Charm -->
+		<item id="28773" /> <!-- Virgo Agathion Charm -->
+		<item id="28774" /> <!-- Virgo Agathion Charm -->
+		<item id="28775" /> <!-- Virgo Agathion Charm -->
+		<item id="28776" /> <!-- Virgo Agathion Charm -->
+		<item id="28777" /> <!-- Virgo Agathion Charm -->
+		<item id="28778" /> <!-- Virgo Agathion Charm -->
+		<item id="28779" /> <!-- Virgo Agathion Charm -->
+		<item id="28780" /> <!-- Virgo Agathion Charm -->
+		<item id="28781" /> <!-- Capricorn Agathion Charm -->
+		<item id="28782" /> <!-- Capricorn Agathion Charm -->
+		<item id="28783" /> <!-- Capricorn Agathion Charm -->
+		<item id="28784" /> <!-- Capricorn Agathion Charm -->
+		<item id="28785" /> <!-- Capricorn Agathion Charm -->
+		<item id="28786" /> <!-- Capricorn Agathion Charm -->
+		<item id="28787" /> <!-- Capricorn Agathion Charm -->
+		<item id="28788" /> <!-- Capricorn Agathion Charm -->
+		<item id="28789" /> <!-- Capricorn Agathion Charm -->
+		<item id="28790" /> <!-- Capricorn Agathion Charm -->
+		<item id="28791" /> <!-- Capricorn Agathion Charm -->
+		<item id="28792" /> <!-- Capricorn Agathion Charm -->
+		<item id="28793" /> <!-- Libra Agathion Charm -->
+		<item id="28794" /> <!-- Libra Agathion Charm -->
+		<item id="28795" /> <!-- Libra Agathion Charm -->
+		<item id="28796" /> <!-- Libra Agathion Charm -->
+		<item id="28797" /> <!-- Libra Agathion Charm -->
+		<item id="28798" /> <!-- Libra Agathion Charm -->
+		<item id="28799" /> <!-- Libra Agathion Charm -->
+		<item id="28800" /> <!-- Libra Agathion Charm -->
+		<item id="28801" /> <!-- Libra Agathion Charm -->
+		<item id="28802" /> <!-- Libra Agathion Charm -->
+		<item id="28803" /> <!-- Libra Agathion Charm -->
+		<item id="28804" /> <!-- Libra Agathion Charm -->
+		<item id="28805" /> <!-- Aries Agathion Charm -->
+		<item id="28806" /> <!-- Aries Agathion Charm -->
+		<item id="28807" /> <!-- Aries Agathion Charm -->
+		<item id="28808" /> <!-- Aries Agathion Charm -->
+		<item id="28809" /> <!-- Aries Agathion Charm -->
+		<item id="28810" /> <!-- Aries Agathion Charm -->
+		<item id="28811" /> <!-- Aries Agathion Charm -->
+		<item id="28812" /> <!-- Aries Agathion Charm -->
+		<item id="28813" /> <!-- Aries Agathion Charm -->
+		<item id="28814" /> <!-- Aries Agathion Charm -->
+		<item id="28815" /> <!-- Aries Agathion Charm -->
+		<item id="28816" /> <!-- Aries Agathion Charm -->
+		<item id="28817" /> <!-- Taurus Agathion Charm -->
+		<item id="28818" /> <!-- Taurus Agathion Charm -->
+		<item id="28819" /> <!-- Taurus Agathion Charm -->
+		<item id="28820" /> <!-- Taurus Agathion Charm -->
+		<item id="28821" /> <!-- Taurus Agathion Charm -->
+		<item id="28822" /> <!-- Taurus Agathion Charm -->
+		<item id="28823" /> <!-- Taurus Agathion Charm -->
+		<item id="28824" /> <!-- Taurus Agathion Charm -->
+		<item id="28825" /> <!-- Taurus Agathion Charm -->
+		<item id="28826" /> <!-- Taurus Agathion Charm -->
+		<item id="28827" /> <!-- Taurus Agathion Charm -->
+		<item id="28828" /> <!-- Taurus Agathion Charm -->
+		<item id="28829" /> <!-- Leo Agathion Charm -->
+		<item id="28830" /> <!-- Leo Agathion Charm -->
+		<item id="28831" /> <!-- Leo Agathion Charm -->
+		<item id="28832" /> <!-- Leo Agathion Charm -->
+		<item id="28833" /> <!-- Leo Agathion Charm -->
+		<item id="28834" /> <!-- Leo Agathion Charm -->
+		<item id="28835" /> <!-- Leo Agathion Charm -->
+		<item id="28836" /> <!-- Leo Agathion Charm -->
+		<item id="28837" /> <!-- Leo Agathion Charm -->
+		<item id="28838" /> <!-- Leo Agathion Charm -->
+		<item id="28839" /> <!-- Leo Agathion Charm -->
+		<item id="28840" /> <!-- Leo Agathion Charm -->
+		<item id="28841" /> <!-- Gemini Agathion Charm -->
+		<item id="28842" /> <!-- Gemini Agathion Charm -->
+		<item id="28843" /> <!-- Gemini Agathion Charm -->
+		<item id="28844" /> <!-- Gemini Agathion Charm -->
+		<item id="28845" /> <!-- Gemini Agathion Charm -->
+		<item id="28846" /> <!-- Gemini Agathion Charm -->
+		<item id="28847" /> <!-- Gemini Agathion Charm -->
+		<item id="28848" /> <!-- Gemini Agathion Charm -->
+		<item id="28849" /> <!-- Gemini Agathion Charm -->
+		<item id="28850" /> <!-- Gemini Agathion Charm -->
+		<item id="28851" /> <!-- Gemini Agathion Charm -->
+		<item id="28852" /> <!-- Gemini Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28854" /> <!-- Scorpio Agathion Charm -->
+		<item id="28855" /> <!-- Scorpio Agathion Charm -->
+		<item id="28856" /> <!-- Scorpio Agathion Charm -->
+		<item id="28857" /> <!-- Scorpio Agathion Charm -->
+		<item id="28858" /> <!-- Scorpio Agathion Charm -->
+		<item id="28859" /> <!-- Scorpio Agathion Charm -->
+		<item id="28860" /> <!-- Scorpio Agathion Charm -->
+		<item id="28861" /> <!-- Scorpio Agathion Charm -->
+		<item id="28862" /> <!-- Scorpio Agathion Charm -->
+		<item id="28863" /> <!-- Scorpio Agathion Charm -->
+		<item id="28864" /> <!-- Scorpio Agathion Charm -->
+		<item id="28865" /> <!-- Aquarius Agathion Charm -->
+		<item id="28866" /> <!-- Aquarius Agathion Charm -->
+		<item id="28867" /> <!-- Aquarius Agathion Charm -->
+		<item id="28868" /> <!-- Aquarius Agathion Charm -->
+		<item id="28869" /> <!-- Aquarius Agathion Charm -->
+		<item id="28870" /> <!-- Aquarius Agathion Charm -->
+		<item id="28871" /> <!-- Aquarius Agathion Charm -->
+		<item id="28872" /> <!-- Aquarius Agathion Charm -->
+		<item id="28873" /> <!-- Aquarius Agathion Charm -->
+		<item id="28874" /> <!-- Aquarius Agathion Charm -->
+		<item id="28875" /> <!-- Aquarius Agathion Charm -->
+		<item id="28876" /> <!-- Aquarius Agathion Charm -->
+		<item id="28877" /> <!-- Pisces Agathion Charm -->
+		<item id="28878" /> <!-- Pisces Agathion Charm -->
+		<item id="28879" /> <!-- Pisces Agathion Charm -->
+		<item id="28880" /> <!-- Pisces Agathion Charm -->
+		<item id="28881" /> <!-- Pisces Agathion Charm -->
+		<item id="28882" /> <!-- Pisces Agathion Charm -->
+		<item id="28883" /> <!-- Pisces Agathion Charm -->
+		<item id="28884" /> <!-- Pisces Agathion Charm -->
+		<item id="28885" /> <!-- Pisces Agathion Charm -->
+		<item id="28886" /> <!-- Pisces Agathion Charm -->
+		<item id="28887" /> <!-- Pisces Agathion Charm -->
+		<item id="28888" /> <!-- Pisces Agathion Charm -->
+		<item id="28889" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28890" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28891" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28892" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28893" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28894" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28895" /> <!-- Sagittarius Agathion Charm -->
+ 		<item id="28896" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28897" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28898" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28899" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28900" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28901" /> <!-- Cancer Agathion Charm -->
+		<item id="28902" /> <!-- Cancer Agathion Charm -->
+		<item id="28903" /> <!-- Cancer Agathion Charm -->
+		<item id="28904" /> <!-- Cancer Agathion Charm -->
+		<item id="28905" /> <!-- Cancer Agathion Charm -->
+		<item id="28906" /> <!-- Cancer Agathion Charm -->
+		<item id="28907" /> <!-- Cancer Agathion Charm -->
+		<item id="28908" /> <!-- Cancer Agathion Charm -->
+		<item id="28909" /> <!-- Cancer Agathion Charm -->
+		<item id="28910" /> <!-- Cancer Agathion Charm -->
+		<item id="28911" /> <!-- Cancer Agathion Charm -->
+		<item id="28912" /> <!-- Cancer Agathion Charm -->
+		<item id="28913" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28914" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28915" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28916" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28917" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28918" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28919" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28920" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28921" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28922" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28923" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28924" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28925" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28926" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28927" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28928" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28929" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28930" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28931" /> <!-- Capricorn Agathion Charm From the Star -->				
+		<item id="28932" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28933" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28934" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28935" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28936" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28937" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28938" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28939" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28940" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28941" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28942" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28943" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28944" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28945" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28946" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28947" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28948" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28949" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28950" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28951" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28952" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28953" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28954" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28955" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28956" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28957" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28958" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28959" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28960" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28961" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28962" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28963" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28964" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28965" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28966" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28967" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28968" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28969" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28970" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28971" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28972" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28973" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28974" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28975" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28976" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28977" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28978" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28979" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28980" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28981" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28982" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28983" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28984" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28985" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28986" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28987" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28988" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28989" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28990" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28991" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28992" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28993" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28994" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28995" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28996" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28997" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28998" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28999" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="48048" /> <!-- Agathion Virgo Charm -->
+		<item id="48049" /> <!-- Agathion Capricorn Charm -->
+		<item id="48050" /> <!-- Agathion Libra Charm -->
+		<item id="48051" /> <!-- Agathion Aries Charm -->
+		<item id="48052" /> <!-- Agathion Taurus Charm -->
+		<item id="48053" /> <!-- Agathion Leo Charm -->
+		<item id="48054" /> <!-- Agathion Gemini Charm -->
+		<item id="48055" /> <!-- Agathion Scorpio Charm -->
+		<item id="48056" /> <!-- Agathion Aquarius Charm -->
+		<item id="48057" /> <!-- Agathion Pisces Charm -->
+		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
+		<item id="48059" /> <!-- Agathion Cancer Charm -->
+	</enchant>
+	
+	<!-- Stabilized Agathion Charm Book of Growth -->
+	<enchant id="29239" maxEnchant="7">
+		<item id="28769" /> <!-- Virgo Agathion Charm -->
+		<item id="28770" /> <!-- Virgo Agathion Charm -->
+		<item id="28771" /> <!-- Virgo Agathion Charm -->
+		<item id="28772" /> <!-- Virgo Agathion Charm -->
+		<item id="28773" /> <!-- Virgo Agathion Charm -->
+		<item id="28774" /> <!-- Virgo Agathion Charm -->
+		<item id="28775" /> <!-- Virgo Agathion Charm -->
+		<item id="28776" /> <!-- Virgo Agathion Charm -->
+		<item id="28777" /> <!-- Virgo Agathion Charm -->
+		<item id="28778" /> <!-- Virgo Agathion Charm -->
+		<item id="28779" /> <!-- Virgo Agathion Charm -->
+		<item id="28780" /> <!-- Virgo Agathion Charm -->
+		<item id="28781" /> <!-- Capricorn Agathion Charm -->
+		<item id="28782" /> <!-- Capricorn Agathion Charm -->
+		<item id="28783" /> <!-- Capricorn Agathion Charm -->
+		<item id="28784" /> <!-- Capricorn Agathion Charm -->
+		<item id="28785" /> <!-- Capricorn Agathion Charm -->
+		<item id="28786" /> <!-- Capricorn Agathion Charm -->
+		<item id="28787" /> <!-- Capricorn Agathion Charm -->
+		<item id="28788" /> <!-- Capricorn Agathion Charm -->
+		<item id="28789" /> <!-- Capricorn Agathion Charm -->
+		<item id="28790" /> <!-- Capricorn Agathion Charm -->
+		<item id="28791" /> <!-- Capricorn Agathion Charm -->
+		<item id="28792" /> <!-- Capricorn Agathion Charm -->
+		<item id="28793" /> <!-- Libra Agathion Charm -->
+		<item id="28794" /> <!-- Libra Agathion Charm -->
+		<item id="28795" /> <!-- Libra Agathion Charm -->
+		<item id="28796" /> <!-- Libra Agathion Charm -->
+		<item id="28797" /> <!-- Libra Agathion Charm -->
+		<item id="28798" /> <!-- Libra Agathion Charm -->
+		<item id="28799" /> <!-- Libra Agathion Charm -->
+		<item id="28800" /> <!-- Libra Agathion Charm -->
+		<item id="28801" /> <!-- Libra Agathion Charm -->
+		<item id="28802" /> <!-- Libra Agathion Charm -->
+		<item id="28803" /> <!-- Libra Agathion Charm -->
+		<item id="28804" /> <!-- Libra Agathion Charm -->
+		<item id="28805" /> <!-- Aries Agathion Charm -->
+		<item id="28806" /> <!-- Aries Agathion Charm -->
+		<item id="28807" /> <!-- Aries Agathion Charm -->
+		<item id="28808" /> <!-- Aries Agathion Charm -->
+		<item id="28809" /> <!-- Aries Agathion Charm -->
+		<item id="28810" /> <!-- Aries Agathion Charm -->
+		<item id="28811" /> <!-- Aries Agathion Charm -->
+		<item id="28812" /> <!-- Aries Agathion Charm -->
+		<item id="28813" /> <!-- Aries Agathion Charm -->
+		<item id="28814" /> <!-- Aries Agathion Charm -->
+		<item id="28815" /> <!-- Aries Agathion Charm -->
+		<item id="28816" /> <!-- Aries Agathion Charm -->
+		<item id="28817" /> <!-- Taurus Agathion Charm -->
+		<item id="28818" /> <!-- Taurus Agathion Charm -->
+		<item id="28819" /> <!-- Taurus Agathion Charm -->
+		<item id="28820" /> <!-- Taurus Agathion Charm -->
+		<item id="28821" /> <!-- Taurus Agathion Charm -->
+		<item id="28822" /> <!-- Taurus Agathion Charm -->
+		<item id="28823" /> <!-- Taurus Agathion Charm -->
+		<item id="28824" /> <!-- Taurus Agathion Charm -->
+		<item id="28825" /> <!-- Taurus Agathion Charm -->
+		<item id="28826" /> <!-- Taurus Agathion Charm -->
+		<item id="28827" /> <!-- Taurus Agathion Charm -->
+		<item id="28828" /> <!-- Taurus Agathion Charm -->
+		<item id="28829" /> <!-- Leo Agathion Charm -->
+		<item id="28830" /> <!-- Leo Agathion Charm -->
+		<item id="28831" /> <!-- Leo Agathion Charm -->
+		<item id="28832" /> <!-- Leo Agathion Charm -->
+		<item id="28833" /> <!-- Leo Agathion Charm -->
+		<item id="28834" /> <!-- Leo Agathion Charm -->
+		<item id="28835" /> <!-- Leo Agathion Charm -->
+		<item id="28836" /> <!-- Leo Agathion Charm -->
+		<item id="28837" /> <!-- Leo Agathion Charm -->
+		<item id="28838" /> <!-- Leo Agathion Charm -->
+		<item id="28839" /> <!-- Leo Agathion Charm -->
+		<item id="28840" /> <!-- Leo Agathion Charm -->
+		<item id="28841" /> <!-- Gemini Agathion Charm -->
+		<item id="28842" /> <!-- Gemini Agathion Charm -->
+		<item id="28843" /> <!-- Gemini Agathion Charm -->
+		<item id="28844" /> <!-- Gemini Agathion Charm -->
+		<item id="28845" /> <!-- Gemini Agathion Charm -->
+		<item id="28846" /> <!-- Gemini Agathion Charm -->
+		<item id="28847" /> <!-- Gemini Agathion Charm -->
+		<item id="28848" /> <!-- Gemini Agathion Charm -->
+		<item id="28849" /> <!-- Gemini Agathion Charm -->
+		<item id="28850" /> <!-- Gemini Agathion Charm -->
+		<item id="28851" /> <!-- Gemini Agathion Charm -->
+		<item id="28852" /> <!-- Gemini Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28854" /> <!-- Scorpio Agathion Charm -->
+		<item id="28855" /> <!-- Scorpio Agathion Charm -->
+		<item id="28856" /> <!-- Scorpio Agathion Charm -->
+		<item id="28857" /> <!-- Scorpio Agathion Charm -->
+		<item id="28858" /> <!-- Scorpio Agathion Charm -->
+		<item id="28859" /> <!-- Scorpio Agathion Charm -->
+		<item id="28860" /> <!-- Scorpio Agathion Charm -->
+		<item id="28861" /> <!-- Scorpio Agathion Charm -->
+		<item id="28862" /> <!-- Scorpio Agathion Charm -->
+		<item id="28863" /> <!-- Scorpio Agathion Charm -->
+		<item id="28864" /> <!-- Scorpio Agathion Charm -->
+		<item id="28865" /> <!-- Aquarius Agathion Charm -->
+		<item id="28866" /> <!-- Aquarius Agathion Charm -->
+		<item id="28867" /> <!-- Aquarius Agathion Charm -->
+		<item id="28868" /> <!-- Aquarius Agathion Charm -->
+		<item id="28869" /> <!-- Aquarius Agathion Charm -->
+		<item id="28870" /> <!-- Aquarius Agathion Charm -->
+		<item id="28871" /> <!-- Aquarius Agathion Charm -->
+		<item id="28872" /> <!-- Aquarius Agathion Charm -->
+		<item id="28873" /> <!-- Aquarius Agathion Charm -->
+		<item id="28874" /> <!-- Aquarius Agathion Charm -->
+		<item id="28875" /> <!-- Aquarius Agathion Charm -->
+		<item id="28876" /> <!-- Aquarius Agathion Charm -->
+		<item id="28877" /> <!-- Pisces Agathion Charm -->
+		<item id="28878" /> <!-- Pisces Agathion Charm -->
+		<item id="28879" /> <!-- Pisces Agathion Charm -->
+		<item id="28880" /> <!-- Pisces Agathion Charm -->
+		<item id="28881" /> <!-- Pisces Agathion Charm -->
+		<item id="28882" /> <!-- Pisces Agathion Charm -->
+		<item id="28883" /> <!-- Pisces Agathion Charm -->
+		<item id="28884" /> <!-- Pisces Agathion Charm -->
+		<item id="28885" /> <!-- Pisces Agathion Charm -->
+		<item id="28886" /> <!-- Pisces Agathion Charm -->
+		<item id="28887" /> <!-- Pisces Agathion Charm -->
+		<item id="28888" /> <!-- Pisces Agathion Charm -->
+		<item id="28889" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28890" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28891" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28892" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28893" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28894" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28895" /> <!-- Sagittarius Agathion Charm -->
+ 		<item id="28896" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28897" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28898" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28899" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28900" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28901" /> <!-- Cancer Agathion Charm -->
+		<item id="28902" /> <!-- Cancer Agathion Charm -->
+		<item id="28903" /> <!-- Cancer Agathion Charm -->
+		<item id="28904" /> <!-- Cancer Agathion Charm -->
+		<item id="28905" /> <!-- Cancer Agathion Charm -->
+		<item id="28906" /> <!-- Cancer Agathion Charm -->
+		<item id="28907" /> <!-- Cancer Agathion Charm -->
+		<item id="28908" /> <!-- Cancer Agathion Charm -->
+		<item id="28909" /> <!-- Cancer Agathion Charm -->
+		<item id="28910" /> <!-- Cancer Agathion Charm -->
+		<item id="28911" /> <!-- Cancer Agathion Charm -->
+		<item id="28912" /> <!-- Cancer Agathion Charm -->
+		<item id="28913" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28914" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28915" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28916" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28917" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28918" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28919" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28920" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28921" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28922" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28923" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28924" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28925" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28926" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28927" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28928" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28929" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28930" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28931" /> <!-- Capricorn Agathion Charm From the Star -->				
+		<item id="28932" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28933" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28934" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28935" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28936" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28937" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28938" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28939" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28940" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28941" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28942" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28943" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28944" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28945" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28946" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28947" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28948" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28949" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28950" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28951" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28952" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28953" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28954" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28955" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28956" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28957" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28958" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28959" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28960" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28961" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28962" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28963" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28964" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28965" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28966" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28967" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28968" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28969" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28970" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28971" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28972" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28973" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28974" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28975" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28976" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28977" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28978" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28979" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28980" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28981" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28982" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28983" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28984" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28985" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28986" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28987" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28988" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28989" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28990" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28991" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28992" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28993" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28994" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28995" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28996" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28997" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28998" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28999" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="48048" /> <!-- Agathion Virgo Charm -->
+		<item id="48049" /> <!-- Agathion Capricorn Charm -->
+		<item id="48050" /> <!-- Agathion Libra Charm -->
+		<item id="48051" /> <!-- Agathion Aries Charm -->
+		<item id="48052" /> <!-- Agathion Taurus Charm -->
+		<item id="48053" /> <!-- Agathion Leo Charm -->
+		<item id="48054" /> <!-- Agathion Gemini Charm -->
+		<item id="48055" /> <!-- Agathion Scorpio Charm -->
+		<item id="48056" /> <!-- Agathion Aquarius Charm -->
+		<item id="48057" /> <!-- Agathion Pisces Charm -->
+		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
+		<item id="48059" /> <!-- Agathion Cancer Charm -->
+	</enchant>
+	
+	<!-- Ancient Zodiac Agathion Charm Book of Growth -->
+	<enchant id="48323" maxEnchant="7">
+		<item id="28769" /> <!-- Virgo Agathion Charm -->
+		<item id="28770" /> <!-- Virgo Agathion Charm -->
+		<item id="28771" /> <!-- Virgo Agathion Charm -->
+		<item id="28772" /> <!-- Virgo Agathion Charm -->
+		<item id="28773" /> <!-- Virgo Agathion Charm -->
+		<item id="28774" /> <!-- Virgo Agathion Charm -->
+		<item id="28775" /> <!-- Virgo Agathion Charm -->
+		<item id="28776" /> <!-- Virgo Agathion Charm -->
+		<item id="28777" /> <!-- Virgo Agathion Charm -->
+		<item id="28778" /> <!-- Virgo Agathion Charm -->
+		<item id="28779" /> <!-- Virgo Agathion Charm -->
+		<item id="28780" /> <!-- Virgo Agathion Charm -->
+		<item id="28781" /> <!-- Capricorn Agathion Charm -->
+		<item id="28782" /> <!-- Capricorn Agathion Charm -->
+		<item id="28783" /> <!-- Capricorn Agathion Charm -->
+		<item id="28784" /> <!-- Capricorn Agathion Charm -->
+		<item id="28785" /> <!-- Capricorn Agathion Charm -->
+		<item id="28786" /> <!-- Capricorn Agathion Charm -->
+		<item id="28787" /> <!-- Capricorn Agathion Charm -->
+		<item id="28788" /> <!-- Capricorn Agathion Charm -->
+		<item id="28789" /> <!-- Capricorn Agathion Charm -->
+		<item id="28790" /> <!-- Capricorn Agathion Charm -->
+		<item id="28791" /> <!-- Capricorn Agathion Charm -->
+		<item id="28792" /> <!-- Capricorn Agathion Charm -->
+		<item id="28793" /> <!-- Libra Agathion Charm -->
+		<item id="28794" /> <!-- Libra Agathion Charm -->
+		<item id="28795" /> <!-- Libra Agathion Charm -->
+		<item id="28796" /> <!-- Libra Agathion Charm -->
+		<item id="28797" /> <!-- Libra Agathion Charm -->
+		<item id="28798" /> <!-- Libra Agathion Charm -->
+		<item id="28799" /> <!-- Libra Agathion Charm -->
+		<item id="28800" /> <!-- Libra Agathion Charm -->
+		<item id="28801" /> <!-- Libra Agathion Charm -->
+		<item id="28802" /> <!-- Libra Agathion Charm -->
+		<item id="28803" /> <!-- Libra Agathion Charm -->
+		<item id="28804" /> <!-- Libra Agathion Charm -->
+		<item id="28805" /> <!-- Aries Agathion Charm -->
+		<item id="28806" /> <!-- Aries Agathion Charm -->
+		<item id="28807" /> <!-- Aries Agathion Charm -->
+		<item id="28808" /> <!-- Aries Agathion Charm -->
+		<item id="28809" /> <!-- Aries Agathion Charm -->
+		<item id="28810" /> <!-- Aries Agathion Charm -->
+		<item id="28811" /> <!-- Aries Agathion Charm -->
+		<item id="28812" /> <!-- Aries Agathion Charm -->
+		<item id="28813" /> <!-- Aries Agathion Charm -->
+		<item id="28814" /> <!-- Aries Agathion Charm -->
+		<item id="28815" /> <!-- Aries Agathion Charm -->
+		<item id="28816" /> <!-- Aries Agathion Charm -->
+		<item id="28817" /> <!-- Taurus Agathion Charm -->
+		<item id="28818" /> <!-- Taurus Agathion Charm -->
+		<item id="28819" /> <!-- Taurus Agathion Charm -->
+		<item id="28820" /> <!-- Taurus Agathion Charm -->
+		<item id="28821" /> <!-- Taurus Agathion Charm -->
+		<item id="28822" /> <!-- Taurus Agathion Charm -->
+		<item id="28823" /> <!-- Taurus Agathion Charm -->
+		<item id="28824" /> <!-- Taurus Agathion Charm -->
+		<item id="28825" /> <!-- Taurus Agathion Charm -->
+		<item id="28826" /> <!-- Taurus Agathion Charm -->
+		<item id="28827" /> <!-- Taurus Agathion Charm -->
+		<item id="28828" /> <!-- Taurus Agathion Charm -->
+		<item id="28829" /> <!-- Leo Agathion Charm -->
+		<item id="28830" /> <!-- Leo Agathion Charm -->
+		<item id="28831" /> <!-- Leo Agathion Charm -->
+		<item id="28832" /> <!-- Leo Agathion Charm -->
+		<item id="28833" /> <!-- Leo Agathion Charm -->
+		<item id="28834" /> <!-- Leo Agathion Charm -->
+		<item id="28835" /> <!-- Leo Agathion Charm -->
+		<item id="28836" /> <!-- Leo Agathion Charm -->
+		<item id="28837" /> <!-- Leo Agathion Charm -->
+		<item id="28838" /> <!-- Leo Agathion Charm -->
+		<item id="28839" /> <!-- Leo Agathion Charm -->
+		<item id="28840" /> <!-- Leo Agathion Charm -->
+		<item id="28841" /> <!-- Gemini Agathion Charm -->
+		<item id="28842" /> <!-- Gemini Agathion Charm -->
+		<item id="28843" /> <!-- Gemini Agathion Charm -->
+		<item id="28844" /> <!-- Gemini Agathion Charm -->
+		<item id="28845" /> <!-- Gemini Agathion Charm -->
+		<item id="28846" /> <!-- Gemini Agathion Charm -->
+		<item id="28847" /> <!-- Gemini Agathion Charm -->
+		<item id="28848" /> <!-- Gemini Agathion Charm -->
+		<item id="28849" /> <!-- Gemini Agathion Charm -->
+		<item id="28850" /> <!-- Gemini Agathion Charm -->
+		<item id="28851" /> <!-- Gemini Agathion Charm -->
+		<item id="28852" /> <!-- Gemini Agathion Charm -->
+		<item id="28853" /> <!-- Scorpio Agathion Charm -->
+		<item id="28854" /> <!-- Scorpio Agathion Charm -->
+		<item id="28855" /> <!-- Scorpio Agathion Charm -->
+		<item id="28856" /> <!-- Scorpio Agathion Charm -->
+		<item id="28857" /> <!-- Scorpio Agathion Charm -->
+		<item id="28858" /> <!-- Scorpio Agathion Charm -->
+		<item id="28859" /> <!-- Scorpio Agathion Charm -->
+		<item id="28860" /> <!-- Scorpio Agathion Charm -->
+		<item id="28861" /> <!-- Scorpio Agathion Charm -->
+		<item id="28862" /> <!-- Scorpio Agathion Charm -->
+		<item id="28863" /> <!-- Scorpio Agathion Charm -->
+		<item id="28864" /> <!-- Scorpio Agathion Charm -->
+		<item id="28865" /> <!-- Aquarius Agathion Charm -->
+		<item id="28866" /> <!-- Aquarius Agathion Charm -->
+		<item id="28867" /> <!-- Aquarius Agathion Charm -->
+		<item id="28868" /> <!-- Aquarius Agathion Charm -->
+		<item id="28869" /> <!-- Aquarius Agathion Charm -->
+		<item id="28870" /> <!-- Aquarius Agathion Charm -->
+		<item id="28871" /> <!-- Aquarius Agathion Charm -->
+		<item id="28872" /> <!-- Aquarius Agathion Charm -->
+		<item id="28873" /> <!-- Aquarius Agathion Charm -->
+		<item id="28874" /> <!-- Aquarius Agathion Charm -->
+		<item id="28875" /> <!-- Aquarius Agathion Charm -->
+		<item id="28876" /> <!-- Aquarius Agathion Charm -->
+		<item id="28877" /> <!-- Pisces Agathion Charm -->
+		<item id="28878" /> <!-- Pisces Agathion Charm -->
+		<item id="28879" /> <!-- Pisces Agathion Charm -->
+		<item id="28880" /> <!-- Pisces Agathion Charm -->
+		<item id="28881" /> <!-- Pisces Agathion Charm -->
+		<item id="28882" /> <!-- Pisces Agathion Charm -->
+		<item id="28883" /> <!-- Pisces Agathion Charm -->
+		<item id="28884" /> <!-- Pisces Agathion Charm -->
+		<item id="28885" /> <!-- Pisces Agathion Charm -->
+		<item id="28886" /> <!-- Pisces Agathion Charm -->
+		<item id="28887" /> <!-- Pisces Agathion Charm -->
+		<item id="28888" /> <!-- Pisces Agathion Charm -->
+		<item id="28889" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28890" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28891" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28892" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28893" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28894" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28895" /> <!-- Sagittarius Agathion Charm -->
+ 		<item id="28896" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28897" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28898" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28899" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28900" /> <!-- Sagittarius Agathion Charm -->
+		<item id="28901" /> <!-- Cancer Agathion Charm -->
+		<item id="28902" /> <!-- Cancer Agathion Charm -->
+		<item id="28903" /> <!-- Cancer Agathion Charm -->
+		<item id="28904" /> <!-- Cancer Agathion Charm -->
+		<item id="28905" /> <!-- Cancer Agathion Charm -->
+		<item id="28906" /> <!-- Cancer Agathion Charm -->
+		<item id="28907" /> <!-- Cancer Agathion Charm -->
+		<item id="28908" /> <!-- Cancer Agathion Charm -->
+		<item id="28909" /> <!-- Cancer Agathion Charm -->
+		<item id="28910" /> <!-- Cancer Agathion Charm -->
+		<item id="28911" /> <!-- Cancer Agathion Charm -->
+		<item id="28912" /> <!-- Cancer Agathion Charm -->
+		<item id="28913" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28914" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28915" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28916" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28917" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28918" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28919" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28920" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28921" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28922" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28923" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28924" /> <!-- Virgo Agathion Charm From the Star -->
+		<item id="28925" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28926" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28927" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28928" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28929" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28930" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28931" /> <!-- Capricorn Agathion Charm From the Star -->				
+		<item id="28932" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28933" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28934" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28935" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28936" /> <!-- Capricorn Agathion Charm From the Star -->
+		<item id="28937" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28938" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28939" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28940" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28941" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28942" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28943" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28944" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28945" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28946" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28947" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28948" /> <!-- Libra Agathion Charm From the Star -->
+		<item id="28949" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28950" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28951" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28952" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28953" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28954" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28955" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28956" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28957" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28958" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28959" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28960" /> <!-- Aries Agathion Charm From the Star -->
+		<item id="28961" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28962" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28963" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28964" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28965" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28966" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28967" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28968" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28969" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28970" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28971" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28972" /> <!-- Taurus Agathion Charm From the Star -->
+		<item id="28973" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28974" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28975" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28976" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28977" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28978" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28979" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28980" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28981" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28982" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28983" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28984" /> <!-- Leo Agathion Charm From the Star -->
+		<item id="28985" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28986" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28987" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28988" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28989" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28990" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28991" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28992" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28993" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28994" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28995" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28996" /> <!-- Gemini Agathion Charm From the Star -->
+		<item id="28997" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28998" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="28999" /> <!-- Scorpio Agathion Charm From the Star -->
+		<item id="48048" /> <!-- Agathion Virgo Charm -->
+		<item id="48049" /> <!-- Agathion Capricorn Charm -->
+		<item id="48050" /> <!-- Agathion Libra Charm -->
+		<item id="48051" /> <!-- Agathion Aries Charm -->
+		<item id="48052" /> <!-- Agathion Taurus Charm -->
+		<item id="48053" /> <!-- Agathion Leo Charm -->
+		<item id="48054" /> <!-- Agathion Gemini Charm -->
+		<item id="48055" /> <!-- Agathion Scorpio Charm -->
+		<item id="48056" /> <!-- Agathion Aquarius Charm -->
+		<item id="48057" /> <!-- Agathion Pisces Charm -->
+		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
+		<item id="48059" /> <!-- Agathion Cancer Charm -->
+	</enchant>
+
+	<!-- Scrolls: Enchant Weapon -->
+	<enchant id="729" targetGrade="A" maxEnchant="30" />
+	<enchant id="947" targetGrade="B" maxEnchant="30" />
+	<enchant id="951" targetGrade="C" maxEnchant="30" />
+	<enchant id="955" targetGrade="D" maxEnchant="30" />
+	<enchant id="959" targetGrade="S" maxEnchant="30" />
+	<enchant id="17526" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Armor -->
+	<enchant id="730" targetGrade="A" maxEnchant="30" />
+	<enchant id="948" targetGrade="B" maxEnchant="30" />
+	<enchant id="952" targetGrade="C" maxEnchant="30" />
+	<enchant id="956" targetGrade="D" maxEnchant="30" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
+	<enchant id="960" targetGrade="S" maxEnchant="30" />
+	<enchant id="17527" targetGrade="R" maxEnchant="30" />
+
+	<!-- Blessed Scrolls: Enchant Weapon -->
+	<enchant id="6569" targetGrade="A" maxEnchant="30" />
+	<enchant id="6571" targetGrade="B" maxEnchant="30" />
+	<enchant id="6573" targetGrade="C" maxEnchant="30" />
+	<enchant id="6575" targetGrade="D" maxEnchant="30" />
+	<enchant id="6577" targetGrade="S" maxEnchant="30" />
+	<enchant id="19447" targetGrade="R" maxEnchant="30" />
+
+	<!-- Blessed Scrolls: Enchant Armor -->
+	<enchant id="6570" targetGrade="A" maxEnchant="30" />
+	<enchant id="6572" targetGrade="B" maxEnchant="30" />
+	<enchant id="6574" targetGrade="C" maxEnchant="30" />
+	<enchant id="6576" targetGrade="D" maxEnchant="30" />
+	<enchant id="6578" targetGrade="S" maxEnchant="30" />
+	<enchant id="19448" targetGrade="R" maxEnchant="30" />
+
+	<!-- Not used anymore. -->
+	<!-- Crystal Scrolls: Enchant Weapon -->
+	<!-- <enchant id="731" targetGrade="A" bonusRate="100" /> -->
+	<!-- <enchant id="949" targetGrade="B" bonusRate="100" /> -->
+	<!-- <enchant id="953" targetGrade="C" bonusRate="100" /> -->
+	<!-- <enchant id="957" targetGrade="D" bonusRate="100" /> -->
+	<!-- <enchant id="961" targetGrade="S" bonusRate="100" /> -->
+	<!-- Crystal Scrolls: Enchant Armor -->
+	<!-- <enchant id="732" targetGrade="A" bonusRate="100" /> -->
+	<!-- <enchant id="950" targetGrade="B" bonusRate="100" /> -->
+	<!-- <enchant id="954" targetGrade="C" bonusRate="100" /> -->
+	<!-- <enchant id="958" targetGrade="D" bonusRate="100" /> -->
+	<!-- <enchant id="962" targetGrade="S" bonusRate="100" /> -->
+
+	<!-- Weapon Enchant Scrolls -->
+	<enchant id="22006" targetGrade="D" maxEnchant="30" bonusRate="10" />
+	<enchant id="22007" targetGrade="C" maxEnchant="30" bonusRate="10" />
+	<enchant id="22008" targetGrade="B" maxEnchant="30" bonusRate="10" />
+	<enchant id="22009" targetGrade="A" maxEnchant="30" bonusRate="10" />
+	<enchant id="20517" targetGrade="S" maxEnchant="30" bonusRate="10" />
+	
+	<!-- Armor Enchant Scrolls -->
+	<enchant id="22010" targetGrade="D" maxEnchant="30" bonusRate="10" />
+	<enchant id="22011" targetGrade="C" maxEnchant="30" bonusRate="10" />
+	<enchant id="22012" targetGrade="B" maxEnchant="30" bonusRate="10" />
+	<enchant id="22013" targetGrade="A" maxEnchant="30" bonusRate="10" />
+	<enchant id="20518" targetGrade="S" maxEnchant="30" bonusRate="10" />
+
+	<!-- Scrolls: Enchant Weapon -->
+	<enchant id="22425" targetGrade="R" bonusRate="10" />
+
+	<!-- Scrolls: Enchant Armor -->
+	<enchant id="22428" targetGrade="R" bonusRate="10" />
+	
+	<!-- Ancient Crystal: Enchant Weapon -->
+	<enchant id="22014" targetGrade="B" maxEnchant="16" bonusRate="10" />
+	<enchant id="22015" targetGrade="A" maxEnchant="16" bonusRate="10" />
+	<enchant id="20519" targetGrade="S" maxEnchant="16" bonusRate="10" />
+	<enchant id="22426" targetGrade="R" maxEnchant="15" bonusRate="10" />
+	<enchant id="23342" targetGrade="R" maxEnchant="15" bonusRate="10" />
+	
+	<!-- Ancient Crystal: Enchant Armor -->
+	<enchant id="22016" targetGrade="B" maxEnchant="16" bonusRate="10" />
+	<enchant id="22017" targetGrade="A" maxEnchant="16" bonusRate="10" />
+	<enchant id="20520" targetGrade="S" maxEnchant="16" bonusRate="10" />
+	<enchant id="22429" targetGrade="R" maxEnchant="16" bonusRate="10" />
+	<enchant id="23344" targetGrade="R" maxEnchant="16" bonusRate="10" />
+
+	<!-- Sacred Crystal: Enchant Weapon -->
+	<enchant id="22018" targetGrade="B" maxEnchantFighter="16" maxEnchantMagic="10" bonusRate="100" />
+	<enchant id="22019" targetGrade="A" maxEnchantFighter="16" maxEnchantMagic="10" bonusRate="100" />
+	<enchant id="20521" targetGrade="S" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
+	<enchant id="22427" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
+	<enchant id="23343" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
+	
+	<!-- Sacred Crystal: Enchant Armor -->
+	<enchant id="22020" targetGrade="B" maxEnchant="7" bonusRate="100" />
+	<enchant id="22021" targetGrade="A" maxEnchant="7" bonusRate="100" />
+	<enchant id="20522" targetGrade="S" maxEnchant="7" bonusRate="100" />
+	<enchant id="22430" targetGrade="R" maxEnchant="7" bonusRate="100" />
+	<enchant id="23345" targetGrade="R" maxEnchant="7" bonusRate="100" />
+
+	<!-- Sacred Scroll: Enchant Weapon -->
+	<enchant id="23731" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23732" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23733" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	
+	<enchant id="23737" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23738" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23739" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	
+	<!-- Sacred Scroll: Enchant Armor -->
+	<enchant id="23734" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23735" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23736" targetGrade="R" maxEnchant="4" bonusRate="100" />
+	
+	<enchant id="23740" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23741" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23742" targetGrade="R" maxEnchant="4" bonusRate="100" />
+
+	<!-- Destruction Scroll: Enchant Weapon (Event) -->
+	<enchant id="22221" targetGrade="S" maxEnchant="15" />
+	<enchant id="22223" targetGrade="A" maxEnchant="15" />
+	<enchant id="22225" targetGrade="B" maxEnchant="15" />
+	<enchant id="22227" targetGrade="C" maxEnchant="15" />
+	<enchant id="22229" targetGrade="D" maxEnchant="15" />
+	<enchant id="33478" targetGrade="R" maxEnchant="15" />
+	<enchant id="33838" targetGrade="D" maxEnchant="15" />
+	<enchant id="33839" targetGrade="C" maxEnchant="15" />
+	<enchant id="33840" targetGrade="B" maxEnchant="15" />
+	<enchant id="33841" targetGrade="A" maxEnchant="15" />
+	<enchant id="33842" targetGrade="S" maxEnchant="15" />
+	<enchant id="33843" targetGrade="R" maxEnchant="15" />
+	
+	<!-- Destruction Scroll: Enchant Armor (Event) -->
+	<enchant id="22222" targetGrade="S" maxEnchant="6" />
+	<enchant id="22224" targetGrade="A" maxEnchant="6" />
+	<enchant id="22226" targetGrade="B" maxEnchant="6" />
+	<enchant id="22228" targetGrade="C" maxEnchant="6" />
+	<enchant id="22230" targetGrade="D" maxEnchant="6" />
+	<enchant id="33479" targetGrade="R" maxEnchant="6" />
+	<enchant id="33844" targetGrade="D" maxEnchant="6" />
+	<enchant id="33845" targetGrade="C" maxEnchant="6" />
+	<enchant id="33846" targetGrade="B" maxEnchant="6" />
+	<enchant id="33847" targetGrade="A" maxEnchant="6" />
+	<enchant id="33848" targetGrade="S" maxEnchant="6" />
+	<enchant id="33849" targetGrade="R" maxEnchant="6" />
+
+	<!-- Master Yogi's Scroll: Enchant Weapon -->
+	<enchant id="13540" maxEnchant="15">
+		<item id="13539" /> <!-- Staff of Master Yogi -->
+	</enchant>
+
+	<!-- Master Yogi's Scroll: Enchant Weapon -->
+	<enchant id="38926" maxEnchant="15">
+		<item id="13539" /> <!-- Staff of Master Yogi -->
+	</enchant>
+
+	<!-- Master Yogi's Special Scroll: Enchant Weapon -->
+	<enchant id="37803" maxEnchant="15">
+		<item id="13539" /> <!-- Staff of Master Yogi -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Power Shirt (Event) -->
+	<enchant id="21707" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Power Shirt -->
+	<enchant id="21581" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Power Shirt -->
+	<enchant id="21582" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Power Shirt -->
+	<enchant id="22904" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Power Shirt -->
+	<enchant id="22905" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Elemental Shirt -->
+	<enchant id="23241" maxEnchant="10">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Elemental Shirt -->
+	<enchant id="25792" maxEnchant="10">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+	
+	<!-- Blessed Scroll: Enchant Elemental Shirt -->
+	<enchant id="25793" maxEnchant="10">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Elemental Shirt -->
+	<enchant id="34627" maxEnchant="10">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+
+	<!-- Event - Herdsman's Love Scroll Event -->
+	<enchant id="15381" maxEnchant="16">
+		<item id="15383" /> <!-- Weaver's Multi-colored Clothes (7-day limited period) -->
+		<item id="15384" /> <!-- Weaver's Multi-colored Clothes (30-day limited period) -->
+		<item id="15385" /> <!-- Weaver's Multi-colored Clothes (60-day limited period) -->
+		<item id="15386" /> <!-- Weaver's Multi-colored Clothes (90-day limited period) -->
+		<item id="15387" /> <!-- Weaver's Multi-colored Clothes (Permanent Use) -->
+		<item id="15388" /> <!-- Weaver's Multi-colored Clothes (Event) (7-day limited period) -->
+		<item id="15389" /> <!-- Weaver's Multi-colored Clothes (Event) (30-day limited period) -->
+		<item id="15390" /> <!-- Weaver's Multi-colored Clothes (Event) (60-day limited period) -->
+		<item id="15391" /> <!-- Weaver's Multi-colored Clothes (Event) (90-day limited period) -->
+		<item id="15392" /> <!-- Weaver's Multi-colored Clothes (Event) (Permanent Use) -->
+	</enchant>
+
+	<!-- Event - Vitality Belt Enchant Scroll -->
+	<enchant id="15382" maxEnchant="50">
+		<item id="15393" /> <!-- Vitality Belt (7-day limited period) -->
+		<item id="15394" /> <!-- Vitality Belt (30-day limited period) -->
+		<item id="15395" /> <!-- Vitality Belt (60-day limited period) -->
+		<item id="15396" /> <!-- Vitality Belt (90-day limited period) -->
+		<item id="15397" /> <!-- Vitality Belt (Permanent Use) -->
+		<item id="15398" /> <!-- Vitality Belt (Event) (7-day limited period) -->
+		<item id="15399" /> <!-- Vitality Belt (Event) (30-day limited period) -->
+		<item id="15400" /> <!-- Vitality Belt (Event) (60-day limited period) -->
+		<item id="15401" /> <!-- Vitality Belt (Event) (90-day limited period) -->
+		<item id="15402" /> <!-- Vitality Belt (Event) (Permanent Use) -->
+	</enchant>
+
+	<!-- Weapon enhancing scroll exclusive for PC cafe -->
+	<enchant id="15346" targetGrade="S">
+		<item id="15313" /> <!-- Player Commendation - Forgotten Blade (Player Recommendation Weapon) -->
+		<item id="15314" /> <!-- Player Commendation - Basalt Battlehammer (Player Recommendation Weapon) -->
+		<item id="15315" /> <!-- Player Commendation - Imperial Staff (Player Recommendation Weapon) -->
+		<item id="15316" /> <!-- Player Commendation - Angel Slayer (Player Recommendation Weapon) -->
+		<item id="15317" /> <!-- Player Commendation - Dragon Hunter Axe (Player Recommendation Weapon) -->
+		<item id="15318" /> <!-- Player Commendation - Saint Spear (Player Recommendation Weapon) -->
+		<item id="15319" /> <!-- Player Commendation - Demon Splinter (Player Recommendation Weapon) -->
+		<item id="15320" /> <!-- Player Commendation - Heaven's Divider (Player Recommendation Weapon) -->
+		<item id="15321" /> <!-- Player Commendation - Arcana Macw (Player Recommendation Weapon) -->
+		<item id="15322" /> <!-- Player Commendation - Draconic Bow (Player Recommendation Weapon) -->
+		<item id="15323" /> <!-- Player Commendation - Laevateinn (Player Recommendation Weapon) -->
+		<item id="15324" /> <!-- Player Commendation - Gram (Player Recommendation Weapon) -->
+		<item id="15325" /> <!-- Player Commendation - Sarunga (Player Recommendation Weapon) -->
+		<item id="15326" /> <!-- Player Commendation - Tallum Blade *Dark Legion's Edge (Player Recommendation Weapon) -->
+	</enchant>
+	<enchant id="15347" targetGrade="A">
+		<item id="13210" /> <!-- Player Commendation - Sirra's Blade (Player Commendation Weapon) -->
+		<item id="13211" /> <!-- Player Commendation - Sword of Ipos (Player Commendation Weapon) -->
+		<item id="13212" /> <!-- Player Commendation - Barakiel's Axe (Player Commendation Weapon) -->
+		<item id="13213" /> <!-- Player Commendation - Behemoth Tuning Fork (Player Commendation Weapon) -->
+		<item id="13214" /> <!-- Player Commendation - Naga Storm (Player Commendation Weapon) -->
+		<item id="13215" /> <!-- Player Commendation - Tiphon's Spear (Player Commendation Weapon) -->
+		<item id="13216" /> <!-- Player Commendation - Shyeed's Bow (Player Commendation Weapon) -->
+		<item id="13217" /> <!-- Player Commendation - Sobekk's Hurricane (Player Commendation Weapon) -->
+		<item id="13218" /> <!-- Player Commendation - Themis' Tongue (Player Commendation Weapon) -->
+		<item id="13219" /> <!-- Player Commendation - Cabrio's Hand (Player Commendation Weapon) -->
+		<item id="13220" /> <!-- Player Commendation - Daimon Crystal (Player Commendation Weapon) -->
+		<item id="13221" /> <!-- Player Commendation - Tallum Blade*Damascus (Player Commendation Weapon) -->
+		<item id="13222" /> <!-- Player Commendation - Éclair Bijou (Player Commendation Weapon) -->
+		<item id="13223" /> <!-- Player Commendation - Durendal (Player Commendation Weapon) -->
+		<item id="13224" /> <!-- Player Commendation - Screaming Vengeance (Player Commendation Weapon) -->
+	</enchant>
+	<enchant id="15348" targetGrade="B">
+		<item id="13194" /> <!-- Player Commendation - Damascus Sword (Player Commendation Weapon) -->
+		<item id="13195" /> <!-- Player Commendation - Lance (Player Commendation Weapon) -->
+		<item id="13196" /> <!-- Player Commendation - Deadman's Glory (Player Commendation Weapon) -->
+		<item id="13197" /> <!-- Player Commendation - Art of Battle Axe (Player Commendation Weapon) -->
+		<item id="13198" /> <!-- Player Commendation - Staff of Evil Spirits (Player Commendation Weapon) -->
+		<item id="13199" /> <!-- Player Commendation - Devil's Dagger (Player Commendation Weapon) -->
+		<item id="13200" /> <!-- Player Commendation - Bellion Cestus (Player Commendation Weapon) -->
+		<item id="13201" /> <!-- Player Commendation - Bow of Peril (Player Commendation Weapon) -->
+		<item id="13202" /> <!-- Player Commendation - Samurai*Samurai (Player Commendation Weapon) -->
+		<item id="13203" /> <!-- Player Commendation - Guardian's Sword (Player Commendation Weapon) -->
+		<item id="13204" /> <!-- Player Commendation - Wizard's Tear (Player Commendation Weapon) -->
+		<item id="13205" /> <!-- Player Commendation - Kaim Vanul's Bones (Player Commendation Weapon) -->
+		<item id="13206" /> <!-- Player Commendation - Star Buster (Player Commendation Weapon) -->
+		<item id="13207" /> <!-- Player Commendation - Colichemarde (Player Commendation Weapon) -->
+		<item id="13208" /> <!-- Player Commendation - Dismantler (Player Commendation Weapon) -->
+		<item id="13209" /> <!-- Player Commendation - Hell Hound (Player Commendation Weapon) -->
+	</enchant>
+	<enchant id="15349" targetGrade="C">
+		<item id="13178" /> <!-- Player Commendation - Samurai Long Sword (Player Commendation Weapon) -->
+		<item id="13179" /> <!-- Player Commendation - Ghost's Wand (Player Commendation Weapon) -->
+		<item id="13180" /> <!-- Player Commendation - Ghoul's Wand (Player Commendation Weapon) -->
+		<item id="13181" /> <!-- Player Commendation - Devil's Wand (Player Commendation Weapon) -->
+		<item id="13182" /> <!-- Player Commendation - Crystal Dagger (Player Commendation Weapon) -->
+		<item id="13183" /> <!-- Player Commendation - Great Pata (Player Commendation Weapon) -->
+		<item id="13184" /> <!-- Player Commendation - Eminence Bow (Player Commendation Weapon) -->
+		<item id="13185" /> <!-- Player Commendation - Orcish Poleaxe (Player Commendation Weapon) -->
+		<item id="13186" /> <!-- Player Commendation - Yaksa Mace (Player Commendation Weapon) -->
+		<item id="13187" /> <!-- Player Commendation - Shamshir*Shamshir (Player Commendation Weapon) -->
+		<item id="13188" /> <!-- Player Commendation - Admiral's Estoc (Player Commendation Weapon) -->
+		<item id="13189" /> <!-- Player Commendation - Saber Tooth (Player Commendation Weapon) -->
+		<item id="13190" /> <!-- Player Commendation - Sharpshooter (Player Commendation Weapon) -->
+		<item id="13191" /> <!-- Player Commendation - Ecliptic Sword (Player Commendation Weapon) -->
+		<item id="13192" /> <!-- Player Commendation - Ecliptic Axe (Player Commendation Weapon) -->
+		<item id="13193" /> <!-- Player Commendation - Dwarven Hammer (Player Commendation Weapon) -->
+	</enchant>
+	<enchant id="15350" targetGrade="D">
+		<item id="13163" /> <!-- Player Commendation - Bastard*Crimson Sword (Player Commendation Weapon) -->
+		<item id="13164" /> <!-- Player Commendation - Claymore (Player Commendation Weapon) -->
+		<item id="13165" /> <!-- Player Commendation - Bonebreaker (Player Commendation Weapon) -->
+		<item id="13166" /> <!-- Player Commendation - Atuba Hammer (Player Commendation Weapon) -->
+		<item id="13167" /> <!-- Player Commendation - Ghost's Wand (Player Commendation Weapon) -->
+		<item id="13168" /> <!-- Player Commendation - Hall of Life (Player Commendation Weapon) -->
+		<item id="13169" /> <!-- Player Commendation - Atuba Mace (Player Commendation Weapon) -->
+		<item id="13170" /> <!-- Player Commendation - Mithril Dagger (Player Commendation Weapon) -->
+		<item id="13171" /> <!-- Player Commendation - Scallop Jamadhr (Player Commendation Weapon) -->
+		<item id="13172" /> <!-- Player Commendation - Crossbow (Player Commendation Weapon) -->
+		<item id="13173" /> <!-- Player Commendation - Glaive (Player Commendation Weapon) -->
+		<item id="13174" /> <!-- Player Commendation - Elven Long Sword (Player Commendation Weapon) -->
+		<item id="13175" /> <!-- Player Commendation - Grand Epee (Player Commendation Weapon) -->
+		<item id="13176" /> <!-- Player Commendation - General Katzbalger (Player Commendation Weapon) -->
+		<item id="13177" /> <!-- Player Commendation - Cranequin (Player Commendation Weapon) -->
+	</enchant>
+
+	<!-- Blessed Scrolls: Enchant Weapon (Event) -->
+	<enchant id="17255" targetGrade="A" maxEnchant="30" />
+	<enchant id="17257" targetGrade="B" maxEnchant="30" />
+	<enchant id="17259" targetGrade="C" maxEnchant="30" />
+	<enchant id="17261" targetGrade="D" maxEnchant="30" />
+	<enchant id="17263" targetGrade="S" maxEnchant="30" />	
+	<enchant id="23597" targetGrade="R" maxEnchant="30" />
+	<enchant id="34788" targetGrade="S" maxEnchant="30" />
+	<enchant id="34789" targetGrade="R" maxEnchant="30" />
+	<enchant id="36283" targetGrade="R" maxEnchant="30" />
+
+	<!-- Blessed Scrolls: Enchant Armor (Event) -->
+	<enchant id="17256" targetGrade="A" maxEnchant="30" />
+	<enchant id="17258" targetGrade="B" maxEnchant="30" />
+	<enchant id="17260" targetGrade="C" maxEnchant="30" />
+	<enchant id="17262" targetGrade="D" maxEnchant="30" />
+	<enchant id="17264" targetGrade="S" maxEnchant="30" />
+	<enchant id="23596" targetGrade="R" maxEnchant="30" />
+	<enchant id="34786" targetGrade="S" maxEnchant="30" />
+	<enchant id="34787" targetGrade="R" maxEnchant="30" />
+	<enchant id="36284" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Weapon (Event) -->
+	<enchant id="22306" targetGrade="S" maxEnchant="30" />
+	<enchant id="22307" targetGrade="A" maxEnchant="30" />
+	<enchant id="22550" targetGrade="A" maxEnchant="30" />
+	<enchant id="22552" targetGrade="B" maxEnchant="30" />
+	<enchant id="22554" targetGrade="C" maxEnchant="30" />
+	<enchant id="22556" targetGrade="D" maxEnchant="30" />
+	<enchant id="22558" targetGrade="S" maxEnchant="30" />
+	<enchant id="22560" targetGrade="R" maxEnchant="30" />
+	<enchant id="34066" targetGrade="A" maxEnchant="30" />
+	<enchant id="34068" targetGrade="B" maxEnchant="30" />
+	<enchant id="34070" targetGrade="C" maxEnchant="30" />
+	<enchant id="34072" targetGrade="D" maxEnchant="30" />
+	<enchant id="34074" targetGrade="S" maxEnchant="30" />
+	<enchant id="34076" targetGrade="R" maxEnchant="30" />
+	<enchant id="34782" targetGrade="S" maxEnchant="30" />
+	<enchant id="34783" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Armor (Event) -->
+	<enchant id="22308" targetGrade="S" maxEnchant="30" />
+	<enchant id="22309" targetGrade="A" maxEnchant="30" />
+	<enchant id="22551" targetGrade="A" maxEnchant="30" />
+	<enchant id="22553" targetGrade="B" maxEnchant="30" />
+	<enchant id="22555" targetGrade="C" maxEnchant="30" />
+	<enchant id="22557" targetGrade="D" maxEnchant="30" />
+	<enchant id="22559" targetGrade="S" maxEnchant="30" />
+	<enchant id="22561" targetGrade="R" maxEnchant="30" />
+	<enchant id="34067" targetGrade="A" maxEnchant="30" />
+	<enchant id="34069" targetGrade="B" maxEnchant="30" />
+	<enchant id="34071" targetGrade="C" maxEnchant="30" />
+	<enchant id="34073" targetGrade="D" maxEnchant="30" />
+	<enchant id="34075" targetGrade="S" maxEnchant="30" />
+	<enchant id="34077" targetGrade="R" maxEnchant="30" />
+	<enchant id="34784" targetGrade="S" maxEnchant="30" />
+	<enchant id="34785" targetGrade="R" maxEnchant="30" />
+
+	<!-- Blessed Scrolls: Enchant Weapon -->
+	<enchant id="22314" targetGrade="S" maxEnchant="30" />
+	<enchant id="22316" targetGrade="A" maxEnchant="30" />
+	<enchant id="22317" targetGrade="B" maxEnchant="30" />
+	<enchant id="22341" targetGrade="C" maxEnchant="30" />
+
+	<enchant id="23422" targetGrade="R" maxEnchant="30" />
+	<enchant id="23423" targetGrade="S" maxEnchant="30" />
+	<enchant id="23424" targetGrade="A" maxEnchant="30" />
+	<enchant id="23425" targetGrade="B" maxEnchant="30" />
+	<enchant id="23426" targetGrade="C" maxEnchant="30" />
+	<enchant id="23427" targetGrade="D" maxEnchant="30" />
+
+	<!-- Blessed Scrolls: Enchant Armor -->
+	<enchant id="22315" targetGrade="S" maxEnchant="30" />
+	<enchant id="22318" targetGrade="A" maxEnchant="30" />
+	<enchant id="22319" targetGrade="B" maxEnchant="30" />
+	
+	<enchant id="23428" targetGrade="R" maxEnchant="30" />
+	<enchant id="23429" targetGrade="S" maxEnchant="30" />
+	<enchant id="23430" targetGrade="A" maxEnchant="30" />
+	<enchant id="23431" targetGrade="B" maxEnchant="30" />
+	<enchant id="23432" targetGrade="C" maxEnchant="30" />
+	<enchant id="23433" targetGrade="D" maxEnchant="30" />
+	
+	<!-- Scrolls: Enchant Weapon -->
+	<enchant id="23410" targetGrade="R" maxEnchant="30" />
+	<enchant id="23411" targetGrade="S" maxEnchant="30" />
+	<enchant id="23412" targetGrade="A" maxEnchant="30" />
+	<enchant id="23413" targetGrade="B" maxEnchant="30" />
+	<enchant id="23414" targetGrade="C" maxEnchant="30" />
+	<enchant id="23415" targetGrade="D" maxEnchant="30" />
+	<enchant id="26350" targetGrade="A" maxEnchant="30" />
+	<enchant id="26352" targetGrade="S" maxEnchant="30" />
+	
+	<!-- Scrolls: Enchant Armor -->
+	<enchant id="23416" targetGrade="R" maxEnchant="30" />
+	<enchant id="23417" targetGrade="S" maxEnchant="30" />
+	<enchant id="23418" targetGrade="A" maxEnchant="30" />
+	<enchant id="23419" targetGrade="B" maxEnchant="30" />
+	<enchant id="23420" targetGrade="C" maxEnchant="30" />
+	<enchant id="23421" targetGrade="D" maxEnchant="30" />
+	<enchant id="26351" targetGrade="A" maxEnchant="30" />
+	<enchant id="26353" targetGrade="S" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Weapon (Campaign) -->
+	<enchant id="33519" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Armor (Campaign) -->
+	<enchant id="33520" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Weapon (For PA Only) -->
+	<enchant id="22627" targetGrade="R" maxEnchant="30" />
+	<!-- Blessed Scrolls: Enchant Weapon (For PA Only) -->
+	<enchant id="22647" targetGrade="R" maxEnchant="30" />
+
+	<!-- Scrolls: Enchant Armor (For PA Only) -->
+	<enchant id="22628" targetGrade="R" maxEnchant="30" />
+	<!-- Blessed Scrolls: Enchant Armor (For PA Only) -->
+	<enchant id="22648" targetGrade="R" maxEnchant="30" />
+
+	<!-- Weapon Destiny Enchant Scrolls -->
+	<enchant id="33455" targetGrade="D" />
+	<enchant id="33456" targetGrade="C" />
+	<enchant id="33457" targetGrade="B" />
+	<enchant id="33458" targetGrade="A" />
+	<enchant id="33459" targetGrade="S" />
+
+	<!-- Armor Destiny Enchant Scrolls -->
+	<enchant id="33460" targetGrade="D" />
+	<enchant id="33461" targetGrade="C" />
+	<enchant id="33462" targetGrade="B" />
+	<enchant id="33463" targetGrade="A" />
+	<enchant id="33464" targetGrade="S" />
+
+	<!-- Giant's Scroll: Enchant Weapon -->
+	<enchant id="33806" targetGrade="D" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33807" targetGrade="C" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33808" targetGrade="B" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33809" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33810" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33811" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36163" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36386" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36387" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36388" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+
+	<!-- Giant's Scroll: Enchant Armor -->
+	<enchant id="33812" targetGrade="D" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33813" targetGrade="C" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33814" targetGrade="B" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33815" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33816" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="33817" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36164" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36389" targetGrade="R" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36390" targetGrade="S" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	<enchant id="36391" targetGrade="A" maxEnchant="30" randomEnchantMin="1" randomEnchantMax="3" />
+	
+	<!-- Practice Weapon Enchant Scroll -->
+	<enchant id="48171" targetGrade="R" maxEnchant="7" bonusRate="100">
+		<item id="48170" /> <!-- Enhancement Practice Long Sword -->
+	</enchant>
+
+	<!-- Scroll: Enchant Lady's Ornamental Silver Knife -->
+	<enchant id="48932" targetGrade="R">
+		<item id="45645" /> <!-- Lady's Ornamental Silver Knife -->
+		<item id="48931" /> <!-- Lady's Ornamental Silver Knife -->
+	</enchant>
+
+	<!-- Lucky Enchant Stone: Weapon -->
+	<support id="12362" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="12363" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="12364" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="12365" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="12" />
+	<support id="12366" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="23347" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="46077" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+
+	<!-- Lucky Enchant Stone: Armor -->
+	<support id="12367" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="35" />
+	<support id="12368" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="27" />
+	<support id="12369" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="23" />
+	<support id="12370" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="12371" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="23348" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="46078" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+
+	<!-- Lucky Enchant Stone: Weapon Event -->
+	<support id="14078" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="14079" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="14080" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="14081" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="12" />
+	<support id="14082" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="23599" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="33850" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="33851" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="33852" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="33853" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="12" />
+	<support id="33854" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="33855" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+
+	<!-- Lucky Enchant Stone: Armor Event -->
+	<support id="14083" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="35" />
+	<support id="14084" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="27" />
+	<support id="14085" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="23" />
+	<support id="14086" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="14087" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="23600" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="33856" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="35" />
+	<support id="33857" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="27" />
+	<support id="33858" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="23" />
+	<support id="33859" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="33860" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="33861" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+
+	<!-- Lucky Enchant Stone: Weapon -->
+	<support id="14702" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="14703" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="14704" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="14705" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="12" />
+	<support id="14706" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="30381" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+
+	<!-- Lucky Enchant Stone: Armor -->
+	<support id="14707" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="35" />
+	<support id="14708" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="27" />
+	<support id="14709" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="23" />
+	<support id="14710" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="14711" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="30382" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+
+	<!-- Agathion Auxiliary Stone: Enchant Weapon -->
+	<support id="14702" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="14703" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="14704" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="14705" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="12" />
+	<support id="14706" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="10" />
+
+	<!-- Agathion Auxiliary Stone: Enchant Armor -->
+	<support id="14707" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="35" />
+	<support id="14708" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="27" />
+	<support id="14709" targetGrade="B" minEnchant="3" maxEnchant="9" bonusRate="23" />
+	<support id="14710" targetGrade="A" minEnchant="3" maxEnchant="9" bonusRate="18" />
+	<support id="14711" targetGrade="S" minEnchant="3" maxEnchant="9" bonusRate="15" />
+
+	<!-- High-grade Lucky Enchant Stone Weapon -->
+	<support id="23646" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="36008" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="36019" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	
+	<!-- High-grade Lucky Enchant Stone Armor -->
+	<support id="23647" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+	<support id="36009" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+	<support id="36020" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+
+	<!-- Blessed Lucky Enchant Stone Weapon -->
+	<support id="23787" targetGrade="D" minEnchant="3" maxEnchant="9" />
+	<support id="23788" targetGrade="C" minEnchant="3" maxEnchant="9" />
+	<support id="23789" targetGrade="B" minEnchant="3" maxEnchant="9" />
+	<support id="23790" targetGrade="A" minEnchant="3" maxEnchant="9" />
+	<support id="23791" targetGrade="S" minEnchant="3" maxEnchant="9" />
+	<support id="23792" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	<support id="37566" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	
+	<!-- Blessed Lucky Enchant Stone Armor -->
+	<support id="23793" targetGrade="D" minEnchant="3" maxEnchant="9" />
+	<support id="23794" targetGrade="C" minEnchant="3" maxEnchant="9" />
+	<support id="23795" targetGrade="B" minEnchant="3" maxEnchant="9" />
+	<support id="23796" targetGrade="A" minEnchant="3" maxEnchant="9" />
+	<support id="23797" targetGrade="S" minEnchant="3" maxEnchant="9" />
+	<support id="23798" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	<support id="37567" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="38758" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+	<support id="38760" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+	
+	<!-- Blessed High-grade Lucky Enchant Stone Weapon -->
+	<support id="38757" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="38759" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+
+	<!-- Blessed High-grade Lucky Enchant Stone Armor -->
+	<support id="38758" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+	<support id="38760" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+
+	<!-- Lesser Giant's Lucky Stone: Enchant Weapon -->
+	<support id="23785" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
+	
+	<!-- Lesser Giant's Lucky Stone: Enchant Armor -->
+	<support id="23786" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
+	
+	<!-- Giant's Lucky Enchant Stone Weapon -->
+	<support id="23781" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+	<support id="39463" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
+
+	<!-- Giant's Lucky Enchant Stone Armor -->
+	<support id="23782" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	<support id="39462" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
+	
+	<!-- Blessed Giant's Lucky Enchant Stone Weapon -->
+	<support id="23783" targetGrade="R" minEnchant="3" maxEnchant="9" />
+
+	<!-- Blessed Giant's Lucky Enchant Stone Armor -->
+	<support id="23784" targetGrade="R" minEnchant="3" maxEnchant="9" />
+	
+	<!-- Windy Lucky Enchant Stone Weapon -->
+	<support id="39465" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="28497" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+
+	<!-- Windy Lucky Enchant Stone Armor -->
+	<support id="39464" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
+
+	<!-- Freya's Lucky Enchant Stone Weapon -->
+	<support id="40232" targetGrade="R" minEnchant="3" maxEnchant="15" bonusRate="20" />
+
+	<!-- Freya's Lucky Enchant Stone Armor -->
+	<support id="40233" targetGrade="R" minEnchant="3" maxEnchant="15" bonusRate="30" />
+
+	<!-- High-grade Lucky Enchant Stone Weapon -->
+	<support id="45439" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+
+	<!-- Improved Lucky Enchant Stone Weapon -->
+	<support id="23769" targetGrade="D" minEnchant="10" maxEnchant="15" bonusRate="20" />
+	<support id="23770" targetGrade="C" minEnchant="10" maxEnchant="15" bonusRate="18" />
+	<support id="23771" targetGrade="B" minEnchant="10" maxEnchant="15" bonusRate="15" />
+	<support id="23772" targetGrade="A" minEnchant="10" maxEnchant="15" bonusRate="12" />
+	<support id="23773" targetGrade="S" minEnchant="10" maxEnchant="15" bonusRate="10" />
+	<support id="23774" targetGrade="R" minEnchant="10" maxEnchant="15" bonusRate="7" />
+
+	<!-- Improved Lucky Enchant Stone Armor -->
+	<support id="23775" targetGrade="D" minEnchant="10" maxEnchant="15" bonusRate="35" />
+	<support id="23776" targetGrade="C" minEnchant="10" maxEnchant="15" bonusRate="27" />
+	<support id="23777" targetGrade="B" minEnchant="10" maxEnchant="15" bonusRate="23" />
+	<support id="23778" targetGrade="A" minEnchant="10" maxEnchant="15" bonusRate="18" />
+	<support id="23779" targetGrade="S" minEnchant="10" maxEnchant="15" bonusRate="15" />
+	<support id="23780" targetGrade="R" minEnchant="10" maxEnchant="15" bonusRate="10" />
+
+	<!-- Royal Black Save Ticket -->
+	<support id="80449" targetGrade="R" minEnchant="3" maxEnchant="11" bonusRate="20" randomEnchantMin="1" randomEnchantMax="2" />
+	<!-- Royal Gold Save Ticket -->
+	<support id="80501" targetGrade="R" maxEnchant="10" bonusRate="20" randomEnchantMin="1" randomEnchantMax="3" />
+	<!-- Royal Gold Save Ticket -->
+	<support id="81697" targetGrade="R" maxEnchant="10" bonusRate="10" randomEnchantMin="1" randomEnchantMax="3" />
+	<!-- Royal Black Save Ticket -->
+	<support id="81698" targetGrade="R" maxEnchant="11" bonusRate="10" randomEnchantMin="1" randomEnchantMax="2" />
+</list>

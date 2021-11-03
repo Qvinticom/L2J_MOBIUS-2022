@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SpiritForest 105 -->
+<instance id="314" maxWorlds="100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time duration="60" empty="0" />
+	<locations>
+		<enter type="FIXED">
+			<location x="-83306" y="244696" z="-14160" heading="0" /> <!-- Spirit Forest -->
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="GroupMin">
+			<param name="limit" value="2" />
+		</condition>
+		<condition type="GroupMax">
+			<param name="limit" value="7" />
+		</condition>
+		<condition type="Level">
+			<param name="min" value="105" />
+		</condition>
+		<condition type="Distance" />
+		<condition type="Reenter" />
+	</conditions>
+	<reenter apply="ON_ENTER">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+	<spawnlist>
+		<group name="spawns" spawnByDefault="true">
+			<npc id="24647" x="-81336" y="245944" z="-14157" heading="16530" respawnTime="20sec" />
+			<npc id="24645" x="-81912" y="245480" z="-14157" heading="4942" respawnTime="20sec" />
+			<npc id="24645" x="-81640" y="246168" z="-14157" heading="10603" respawnTime="20sec" />
+			<npc id="24645" x="-81848" y="246664" z="-14157" heading="18802" respawnTime="20sec" />
+			<npc id="24645" x="-82744" y="246344" z="-14153" heading="54507" respawnTime="20sec" />
+			<npc id="24645" x="-82856" y="245848" z="-14160" heading="46992" respawnTime="20sec" />
+			<npc id="24645" x="-82449" y="245293" z="-14160" heading="55619" respawnTime="20sec" />
+			<npc id="24646" x="-82312" y="245528" z="-14157" heading="18259" respawnTime="20sec" />
+			<npc id="24646" x="-81944" y="245864" z="-14156" heading="7064" respawnTime="20sec" />
+			<npc id="24646" x="-81960" y="246376" z="-14157" heading="21032" respawnTime="20sec" />
+			<npc id="24646" x="-82456" y="246568" z="-14154" heading="30288" respawnTime="20sec" />
+			<npc id="24648" x="-82216" y="246200" z="-14158" heading="50624" respawnTime="20sec" />
+			<npc id="24648" x="-83000" y="246056" z="-14156" heading="64254" respawnTime="20sec" />
+			<npc id="24647" x="-82328" y="245928" z="-14160" heading="57922" respawnTime="20sec" />
+			<npc id="24647" x="-82696" y="246072" z="-14149" heading="17355" respawnTime="20sec" />
+			<npc id="24647" x="-81784" y="245592" z="-14157" heading="62351" respawnTime="20sec" />
+			<npc id="24647" x="-81784" y="245704" z="-14157" heading="16979" respawnTime="20sec" />
+			<npc id="24648" x="-82712" y="245576" z="-14152" heading="36094" respawnTime="20sec" />
+			<npc id="24648" x="-81848" y="246232" z="-14157" heading="7048" respawnTime="20sec" />
+			<npc id="24648" x="-82168" y="245272" z="-14160" heading="45511" respawnTime="20sec" />
+			<npc id="24647" x="-82712" y="246552" z="-14153" heading="27043" respawnTime="20sec" />
+			<npc id="24646" x="-82968" y="246264" z="-14151" heading="41494" respawnTime="20sec" />
+			<npc id="24646" x="-82696" y="245384" z="-14153" heading="59660" respawnTime="20sec" />
+			<npc id="24648" x="-82136" y="245448" z="-14158" heading="1108" respawnTime="20sec" />
+		</group>
+	</spawnlist>
+</instance>

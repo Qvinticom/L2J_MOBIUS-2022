@@ -1,0 +1,1304 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48000" name="Fish Cream Stew - MEN" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., MEN +3, CHA +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48001" name="Fish Cream Stew - DEX" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., DEX +3, CHA +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48002" name="Fish Cream Stew - STR" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., STR +3, CHA +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48003" name="Fish Cream Stew - CON" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., CON +3, CHA +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48004" name="Scroll: Energy of Harmony" type="EtcItem">
+		<!-- A scroll that contains harmony united races. For 30 min., acquired XP/ SP +50%. Cannot be used with Fall of the Dragon/ Nevit's Hourglass/ Dandy's Home Run Ball. -->
+		<set name="icon" val="icon.etc_london_olympic_scroll_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48005" name="Transformed Energy" type="EtcItem">
+		<!-- Crystallized form of suspicious energy that manifests in the Energy of Wind. It seems to have been affected by the Altar of Oblivion built in the Garden of Spirits. Take it to Magister Belas, who should be near the Garden of Spirits. -->
+		<set name="icon" val="icon.drake_wing_lure_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="48006" name="Essence of Evil Thoughts" type="EtcItem">
+		<!-- Item obtained after defeating Harpe who appeared at the Altar of Oblivion. According to Ferin, it contains information on how the Altar of Oblivion affects other matters in the Material Realm. Take them to Ferin. -->
+		<set name="icon" val="icon.cube_upgrade" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="48007" name="Bracelet of Challenger" type="Armor">
+		<!-- All basic stats +1. Unlocks 5 talisman slots. -->
+		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="R" />
+	</item>
+	<item id="48008" name="Freya's Ice Crystal" type="EtcItem">
+		<!-- Take it along with a Freya's Wind Scroll to Freya in Schuttgart Castle to receive a present of destiny from Freya. -->
+		<set name="icon" val="icon.bm_freya_crystal" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="48009" name="Freya's Deluxe Shopping Bag" type="EtcItem">
+		<!-- Double-click Freya's Heart-pounding Shopping Bag to obtain 1 Freya's Wind Scroll. There is also a chance to additionally obtain one a Freya, Sirra, or Snowman Winter Card. -->
+		<set name="icon" val="icon.bm_freya_bag_01" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48010" name="Freya Winter Card" type="EtcItem">
+		<!-- Double-click to randomly obtain an item from a selection of rare items including rare accessories. -->
+		<set name="icon" val="icon.bm_freya_winter_card" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48011" name="Sirra Winter Card" type="EtcItem">
+		<!-- Double-click to obtain an item for enchanting equipment. -->
+		<set name="icon" val="icon.bm_freya_sirr_winter_card" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48012" name="Snowman Winter Card" type="EtcItem">
+		<!-- Double-click to randomly obtain an item from a selection of various character growth and enhancement items. -->
+		<set name="icon" val="icon.bm_freya_snowman_winter_card" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48013" name="2016 Freya's Kindness" type="EtcItem">
+		<!-- Double-click to randomly obtain a White Knight Suit, Healer Costume, Chevalier Costume, Kat the Cat Costume, Barbarian Wolf Costume, or Valkyrie Costume Appearance Stone. -->
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48014" name="Freya's Dark Rune Pack (2-hour)" type="EtcItem">
+		<!-- Double-click to obtain Freya's Dark Rune (2-hour). Freya's Dark Rune effects do not apply in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_dark_rune_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="48015" min="1" max="1" chance="100" /> <!-- Freya's Dark Rune - 2-hour -->
+		</capsuled_items>
+	</item>
+	<item id="48015" name="Freya's Dark Rune" additionalName="2-hour" type="EtcItem">
+		<!-- When stored in the inventory, PvP Damage +15%. The remaining time decreases even when not playing. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_dark_rune" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35029" level="1" /> <!-- Freya's Dark Rune -->
+		</skills>
+	</item>
+	<item id="48016" name="White Knight Suit" type="Armor">
+		<set name="icon" val="icon.white_knight_suit" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48017" name="Healer Garment" type="Armor">
+		<set name="icon" val="icon.healer_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48018" name="Chevalier Garment" type="Armor">
+		<set name="icon" val="icon.chevalier_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48019" name="Kat the Cat Costume" type="Armor">
+		<set name="icon" val="icon.cat_the_cat_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48020" name="Barbarian Wolf Costume" type="Armor">
+		<set name="icon" val="icon.barbarian_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48021" name="Valkyrie Costume" type="Armor">
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48022" name="Teddy Bear Costume" type="Armor">
+		<set name="icon" val="icon.gomdori_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48023" name="White Knight Suit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of White Knight Suit. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48024" name="Healer Outfit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Healer Costume. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48025" name="Chevalier Costume Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Chevalier Costume. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48026" name="Kat the Cat Costume Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Kat the Cat Costume. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48027" name="Barbarian Wolf Costume Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Barbarian Wolf Costume. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48028" name="Valkyrie Costume Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Valkyrie Costume. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48029" name="Freya's Charisma Potion" type="EtcItem">
+		<!-- Changes the appearance to that of a teddy bear, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_charisma_potion1" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="48030" name="Faction Amity Token" type="EtcItem">
+		<!-- Token that strengthens the amity with a faction. Use it at the completion of a faction quest to gain extra quest XP and Faction Points. However, no further rewards will be gained if the quest rewards do not include XP or Faction Points. -->
+		<set name="icon" val="icon.faction_boost_reward" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48031" name="Extra Pass: Altar of Shillien" type="EtcItem">
+		<!-- Additional pass to the Altar of Shillien. Double-click to reset cooldown to the dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
+	</item>
+	<item id="48032" name="Sayha's Talisman Pack Lv. 8" type="EtcItem">
+		<!-- Double-click to obtain Sayha Talisman Lv. 8. Can be transferred within the account through the Game Assistant. Cannot be exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28444" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 8 -->
+		</capsuled_items>
+	</item>
+	<item id="48033" name="Test - Agathion Items" type="Armor">
+		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48034" name="Test - Bracelet Main 1 Slot" type="Armor">
+		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48035" name="Test - Bracelet Main 1 Slot, Subclass 1 Slot" type="Armor">
+		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48036" name="Test - Bracelet Main 1 Slot, Subclass 2 Slot" type="Armor">
+		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48037" name="Test - Bracelet Main 1 Slot, Subclass 3 Slot" type="Armor">
+		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48038" name="Test - Bracelet Main 1 Slot, Subclass 4 Slot" type="Armor">
+		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48039" name="Scroll: Enchant Agathion" type="EtcItem">
+		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48040" name="Blessed Scroll: Enchant Agathion" type="EtcItem">
+		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48041" name="Scroll: Enchant Agathion of the Giants" type="EtcItem">
+		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48042" name="Scroll: Enchant Agathion of Destruction" type="EtcItem">
+		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48043" name="Agathion Enchant Stone" type="EtcItem">
+		<set name="icon" val="icon.ench_am_stone_i04" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48044" name="Blessed Agathion Enchant Stone" type="EtcItem">
+		<set name="icon" val="icon.bless_ench_amr_stone_i05" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48045" name="Giant's Agathion Enchant Stone" type="EtcItem">
+		<set name="icon" val="icon.giant_ench_armor_stone_r_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48046" name="Zodiac Agathion's Book of Growth" type="EtcItem">
+		<!-- Can be used for enchanting Zodiac agathions. Increases M. Def. When the agathion is enchanted to +4 and higher, enables its primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="28065" level="1" /> <!-- Zodiac Agathion Charm Book of Growth -->
+		</skills>
+	</item>
+	<item id="48047" name="Ancient Zodiac Agathion's Book of Growth" type="EtcItem">
+		<!-- Can be used for enchanting Zodiac agathions. Increases M. Def. When the agathion is enchanted to +4 and higher, enables its primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. The enchanting is random from +1 to +3. Cannot be used with agathions enchanted to +7 or higher. -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="28066" level="1" /> <!-- Ancient Zodiac Agathion Charm Book of Growth -->
+		</skills>
+	</item>
+	<item id="48048" name="Agathion Virgo Charm" type="Armor">
+		<!-- Contains the power of Agathion Virgo. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Leo is also equipped, only secondary skills of Agathion Virgo will be active. -->
+		<set name="icon" val="icon.agathion_virgo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28118" level="1" type="ON_EQUIP" /> <!-- Summon Virgo Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48049" name="Agathion Capricorn Charm" type="Armor">
+		<!-- Contains the power of Agathion Capricorn. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Libra is also equipped, only secondary skills of Agathion Capricorn will be active. -->
+		<set name="icon" val="icon.agathion_capr_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28119" level="1" type="ON_EQUIP" /> <!-- Summon Capricorn Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48050" name="Agathion Libra Charm" type="Armor">
+		<!-- Contains the power of Agathion Libra. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Capricorn is also equipped, only secondary skills of Agathion Libra will be active. -->
+		<set name="icon" val="icon.agathion_lib_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28120" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48051" name="Agathion Aries Charm" type="Armor">
+		<!-- Contains the power of Agathion Aries. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Aries is also equipped, only secondary skills of Agathion Aries will be active. -->
+		<set name="icon" val="icon.agathion_aries_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28121" level="1" type="ON_EQUIP" /> <!-- Summon Aries Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48052" name="Agathion Taurus Charm" type="Armor">
+		<!-- Contains the power of Agathion Taurus. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Cancer is also equipped, only secondary skills of Agathion Taurus will be active. -->
+		<set name="icon" val="icon.agathion_tau_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28122" level="1" type="ON_EQUIP" /> <!-- Summon Taurus Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48053" name="Agathion Leo Charm" type="Armor">
+		<!-- Contains the power of Agathion Leo. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Pisces is also equipped, only secondary skills of Agathion Leo will be active. -->
+		<set name="icon" val="icon.agathion_leo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28123" level="1" type="ON_EQUIP" /> <!-- Summon Leo Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48054" name="Agathion Gemini Charm" type="Armor">
+		<!-- Contains the power of Agathion Gemini. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Gemini is also equipped, only secondary skills of Agathion Gemini will be active. -->
+		<set name="icon" val="icon.agathion_gem_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28124" level="1" type="ON_EQUIP" /> <!-- Summon Gemini Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48055" name="Agathion Scorpio Charm" type="Armor">
+		<!-- Contains the power of Agathion Scorpio. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Scorpio is also equipped, only secondary skills of Agathion Scorpio will be active. -->
+		<set name="icon" val="icon.agathion_sco_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28125" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48056" name="Agathion Aquarius Charm" type="Armor">
+		<!-- Contains the power of Agathion Aquarius. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Aquarius is also equipped, only secondary skills of Agathion Aquarius will be active. -->
+		<set name="icon" val="icon.agathion_aqu_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28126" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48057" name="Agathion Pisces Charm" type="Armor">
+		<!-- Contains the power of Agathion Pisces. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Virgo is also equipped, only secondary skills of Agathion Pisces will be active. -->
+		<set name="icon" val="icon.agathion_pis_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28127" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48058" name="Agathion Sagittarius Charm" type="Armor">
+		<!-- Contains the power of Agathion Sagittarius. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Taurus is also equipped, only secondary skills of Agathion Sagittarius will be active. -->
+		<set name="icon" val="icon.agathion_sag_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28128" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48059" name="Agathion Cancer Charm" type="Armor">
+		<!-- Contains the power of Agathion Cancer. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Zodiac Agathion's Book of Growth. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Santiago in Heine. Note!. If Agathion Sagittarius is also equipped, only secondary skills of Agathion Cancer will be active. -->
+		<set name="icon" val="icon.agathion_can_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="28129" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="48060" name="Elementary Seed Bracelet" type="Armor">
+		<!-- Unlocks an agathion s main slot. <Active skills>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Enchanting>. 1. Compounding with Seed Bracelets of the same level. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35078" level="1" /> <!-- Elementary Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="48061" name="Mid-grade Seed Bracelet" type="Armor">
+		<!-- Unlocks an agathion s main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. <Enchanting>. +1. Compounding with Seed Bracelet of the same level. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35079" level="1" /> <!-- Intermediate Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="48062" name="High-grade Seed Bracelet" type="Armor">
+		<!-- Unlocks an agathion s main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. <Enchanting>. +1. Compounding with Seed Bracelet of the same level. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<set name="price" val="0" />
+		<skills>
+			<skill id="35080" level="1" /> <!-- Advanced Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="48063" name="Top-grade Seed Bracelet" type="Armor">
+		<!-- Unlocks the agathion's main slot. <Primary skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Secondary skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack and Resistance +30. <Enchanting>. 1. Compounding with Seed Bracelet of the same level. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35081" level="1" /> <!-- Top-grade Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="48064" name="Superior Seed Bracelet Lv. 1" additionalName="" type="Armor">
+		<!-- When equipped, unlocks the agathion's main slot and 1 additional slot. Can be enchanted through the Fishing Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. 3. Vitality bonus +5%. <Enchanting>. 1. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35082" level="1" /> <!-- Super Advanced Seed Bracelet - Stage 1 -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
+	</item>
+	<item id="48065" name="Zodiac Cube Fragment" type="EtcItem">
+		<!-- A mysterious fragment filled with the power of stars, obtainable from some Fishing Treasure Chests or by hunting. Can be exchanged for Zodiac Agathion Cube through the Fishing Guild members in any town. -->
+		<set name="icon" val="icon.star_agathion_cube_peice" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48066" name="Zodiac Agathion Cube" type="EtcItem">
+		<!-- Double-click to obtain a Zodiac Agathion Charm that activates the power of Zodiac. -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" chance="8.3" /> <!-- Agathion Virgo Charm -->
+			<item id="48049" min="1" max="1" chance="8.3" /> <!-- Agathion Capricorn Charm -->
+			<item id="48050" min="1" max="1" chance="8.3" /> <!-- Agathion Libra Charm -->
+			<item id="48051" min="1" max="1" chance="8.3" /> <!-- Agathion Aries Charm -->
+			<item id="48052" min="1" max="1" chance="8.3" /> <!-- Agathion Taurus Charm -->
+			<item id="48053" min="1" max="1" chance="8.3" /> <!-- Agathion Leo Charm -->
+			<item id="48054" min="1" max="1" chance="8.3" /> <!-- Agathion Gemini Charm -->
+			<item id="48055" min="1" max="1" chance="8.3" /> <!-- Agathion Scorpio Charm -->
+			<item id="48056" min="1" max="1" chance="8.3" /> <!-- Agathion Aquarius Charm -->
+			<item id="48057" min="1" max="1" chance="8.3" /> <!-- Agathion Pisces Charm -->
+			<item id="48058" min="1" max="1" chance="8.3" /> <!-- Agathion Sagittarius Charm -->
+			<item id="48059" min="1" max="1" chance="8.3" /> <!-- Agathion Cancer Charm -->
+		</capsuled_items>
+	</item>
+	<item id="48067" name="Low-grade Seed Bracelet Pack" type="EtcItem">
+		<!-- Open to obtain an Elementary Seed Bracelet. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48060" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet -->
+		</capsuled_items>
+	</item>
+	<item id="48068" name="Mid-grade Seed Bracelet Pack" type="EtcItem">
+		<!-- Double-click to obtain Mid-grade Seed Bracelet. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48061" min="1" max="1" chance="100" /> <!-- Mid-grade Seed Bracelet -->
+		</capsuled_items>
+	</item>
+	<item id="48069" name="High-grade Seed Bracelet Pack" type="EtcItem">
+		<!-- Open to obtain a High-grade Seed Bracelet. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48062" min="1" max="1" chance="100" /> <!-- High-grade Seed Bracelet -->
+		</capsuled_items>
+	</item>
+	<item id="48070" name="Top-grade Seed Bracelet Pack" type="EtcItem">
+		<!-- Open to obtain a Top-grade Seed Bracelet. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48063" min="1" max="1" chance="100" /> <!-- Top-grade Seed Bracelet -->
+		</capsuled_items>
+	</item>
+	<item id="48071" name="Superior Seed Bracelet Pack" type="EtcItem">
+		<!-- Open to obtain a Superior Seed Bracelet. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48064" min="1" max="1" chance="100" /> <!-- Superior Seed Bracelet Lv. 1 -->
+		</capsuled_items>
+	</item>
+	<item id="48072" name="Elementary Seed Bracelet" additionalName="15-day" type="Armor">
+		<!-- When equipped, unlocks an agathion s main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Coldown: 30 min.). -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="35078" level="1" /> <!-- Elementary Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
+	</item>
+	<item id="48073" name="Mid-grade Seed Bracelet" additionalName="15-day" type="Armor">
+		<!-- Unlocks an agathion's main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="35079" level="1" /> <!-- Intermediate Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
+	</item>
+	<item id="48074" name="High-grade Seed Bracelet" additionalName="30-day" type="Armor">
+		<!-- A seed bracelet given for obtaining Vitality of the Exalted. Unlocks an agathion's main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="35080" level="1" /> <!-- Advanced Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
+	</item>
+	<item id="48075" name="Top-grade Seed Bracelet" additionalName="30-day" type="Armor">
+		<!-- A seed bracelet given for obtaining Vitality of the Exalted. Unlocks an agathion's main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="35081" level="1" /> <!-- Top-grade Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
+	</item>
+	<item id="48076" name="Superior Seed Bracelet" additionalName="30-day" type="Armor">
+		<!-- When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. 3. Vitality bonus +5%. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="35082" level="1" /> <!-- Super Advanced Seed Bracelet - Stage 1 -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
+	</item>
+	<item id="48077" name="Low-grade Seed Bracelet Pack" additionalName="15-day" type="EtcItem">
+		<!-- Use to obtain an Elementary Seed Bracelet (15-day). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48072" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet - 15-day -->
+		</capsuled_items>
+	</item>
+	<item id="48078" name="Mid-grade Seed Bracelet Pack" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to obtain Mid-grade Seed Bracelet (15-day). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48073" min="1" max="1" chance="100" /> <!-- Mid-grade Seed Bracelet - 15-day -->
+		</capsuled_items>
+	</item>
+	<item id="48079" name="High-grade Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+		<!-- Use to obtain a High-grade Seed Bracelet (30-day). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48074" min="1" max="1" chance="100" /> <!-- High-grade Seed Bracelet - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="48080" name="Top-grade Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+		<!-- Use to obtain a Top-grade Seed Bracelet (30-day). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48075" min="1" max="1" chance="100" /> <!-- Top-grade Seed Bracelet - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="48081" name="Superior Seed Bracelet Pack" additionalName="30-day" type="EtcItem">
+		<!-- Use to obtain a Superior Seed Bracelet (30-day). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48076" min="1" max="1" chance="100" /> <!-- Superior Seed Bracelet - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="48082" name="Rainbow Clan Hall Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Rainbow Clan Hall. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="7000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player clanHall="62" />
+		</cond>
+	</item>
+	<item id="48083" name="Wild Beast Reserve Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Wild Beast Reserve. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="7000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player clanHall="63" />
+		</cond>
+	</item>
+	<item id="48084" name="Gludio Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Gludio Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{1}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="1" />
+			</and>
+		</cond>
+	</item>
+	<item id="48085" name="Dion Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Dion Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{2}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="2" />
+			</and>
+		</cond>
+	</item>
+	<item id="48086" name="Giran Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Giran Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{3}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="3" />
+			</and>
+		</cond>
+	</item>
+	<item id="48087" name="Oren Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Oren Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{4}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="4" />
+			</and>
+		</cond>
+	</item>
+	<item id="48088" name="Aden Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Aden Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{5}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="5" />
+			</and>
+		</cond>
+	</item>
+	<item id="48089" name="Innadril Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Innadril Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{6}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="6" />
+			</and>
+		</cond>
+	</item>
+	<item id="48090" name="Goddard Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Goddard Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{7}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="7" />
+			</and>
+		</cond>
+	</item>
+	<item id="48091" name="Rune Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Rune Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{8}}}" />
+		<cond msgId="1518">
+			<player castle="8" />
+		</cond>
+	</item>
+	<item id="48092" name="Schuttgart Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the Schuttgart Castle. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{9}}}" />
+		<cond msgId="1518">
+			<player castle="9" />
+		</cond>
+	</item>
+	<item id="48093" name="Agathion Charm" type="Armor">
+		<!-- A charm for summoning Agathion Fortress. Shadow item. For 700 min. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48094" name="Fortress Agathion Charm" type="Armor">
+		<!-- Charm that can summon an agathion. Only for members of a clan that owns the a fortress. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_fortress;1}}" />
+		<cond msgId="1518">
+			<player fort="-1" />
+		</cond>
+	</item>
+	<item id="48095" name="Agathion Charm" type="Armor">
+		<!-- A charm for summoning Agathion Rainbow Clan Hall. Shadow item. For 700 min. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48096" name="Little Angel Agathion Charm" additionalName="Firecracker" type="Armor">
+		<!-- A charm for summoning Agathion Little Angel. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48097" name="Little Angel Agathion Charm" additionalName="Big Head" type="Armor">
+		<!-- A charm for summoning Agathion Little Angel. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48098" name="Little Angel Agathion Charm" additionalName="Escape" type="Armor">
+		<!-- A charm for summoning Agathion Little Angel. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48099" name="Little Angel Agathion Charm" additionalName="Resurrection" type="Armor">
+		<!-- A charm for summoning Agathion Little Angel. -->
+		<set name="icon" val="icon.agathion_base" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

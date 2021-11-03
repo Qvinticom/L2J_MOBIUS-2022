@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="Legend's Mark" active="01 07 2021-01 08 2021" enableShrines="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<spawnlist>
+		<add npc="34588" x="-14144" y="123128" z="-3096" heading="30212" /> <!-- Gludio -->
+		<add npc="34588" x="16304" y="142852" z="-2680" heading="14450" /> <!-- Dion -->
+		<add npc="34588" x="80821" y="148038" z="-3448" heading="3355" /> <!-- Giran -->
+		<add npc="34588" x="82014" y="53924" z="-1472" heading="3355" /> <!-- Oren -->
+		<add npc="34588" x="147402" y="27868" z="-2250" heading="17863" /> <!-- Aden -->
+		<add npc="34588" x="112172" y="220396" z="-3648" heading="30708" /> <!-- Heine -->
+		<add npc="34588" x="148162" y="-57388" z="-2752" heading="17863" /> <!-- Goddard -->
+		<add npc="34588" x="44479" y="-48365" z="-776" heading="14450" /> <!-- Rune -->
+		<add npc="34588" x="86943" y="-141322" z="-1320" heading="49153" /> <!-- Schuttgart -->
+		<add npc="34588" x="-114778" y="256366" z="-1472" heading="49744" /> <!-- Talking Island -->
+		<add npc="34588" x="-78793" y="249145" z="-3272" heading="56380" /> <!-- Faeron Village -->
+		<add npc="34588" x="-80534" y="149539" z="-3016" heading="16383" /> <!-- Gludin -->
+		<add npc="34588" x="117409" y="76647" z="-2672" heading="40961" /> <!-- Hunters Village -->
+		<add npc="34588" x="208475" y="87702" z="-1006" heading="29025" /> <!-- Arcan -->
+	</spawnlist>
+	<messages>
+		<add type="onEnd" text="Legend's Mark: Event end!" />
+		<add type="onEnter" text="Legend's Mark: Event ongoing! Visit Dreamer of the Legend Tittle! The event will end at Aug 1st!" />
+	</messages>
+</event>

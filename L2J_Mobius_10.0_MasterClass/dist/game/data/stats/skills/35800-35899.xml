@@ -1,0 +1,1853 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="35800" toLevel="5" name="Atlas' Earring Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35801" toLevel="5" name="Atlas' Earring Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35802" toLevel="7" name="Atlas' Earring Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35803" toLevel="7" name="Atlas' Earring Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35804" toLevel="3" name="Dragon's Necklace Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35805" toLevel="9" name="Dragon's Necklace Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35806" toLevel="6" name="Dragon's Necklace Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35807" toLevel="6" name="Dragon's Necklace Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35808" toLevel="6" name="Dragon's Necklace Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35809" toLevel="5" name="Dragon's Necklace Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35810" toLevel="5" name="Dragon's Necklace Augmentation: Acquired XP/ SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35811" toLevel="5" name="Dragon's Necklace Augmentation: Critical Rate for Standard Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35812" toLevel="5" name="Dragon's Necklace Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35813" toLevel="5" name="Dragon's Necklace Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35814" toLevel="5" name="Dragon's Necklace Augmentation: Standard Attack Critical Damage">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35815" toLevel="5" name="Dragon's Necklace Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35816" toLevel="5" name="Dragon's Necklace Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35817" toLevel="7" name="Dragon's Necklace Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35818" toLevel="7" name="Dragon's Necklace Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>icon.dragon_accessary_necklace</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35819" toLevel="3" name="Dragon's Earring Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35820" toLevel="9" name="Dragon's Earring Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35821" toLevel="6" name="Dragon's Earring Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35822" toLevel="6" name="Dragon's Earring Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35823" toLevel="6" name="Dragon's Earring Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35824" toLevel="5" name="Dragon's Earring Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35825" toLevel="5" name="Dragon's Earring Augmentation: Acquired XP/ SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35826" toLevel="5" name="Dragon's Earring Augmentation: Critical Rate for Standard Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35827" toLevel="5" name="Dragon's Earring Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35828" toLevel="5" name="Dragon's Earring Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35829" toLevel="5" name="Dragon's Earring Augmentation: Standard Attack Critical Damage">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35830" toLevel="5" name="Dragon's Earring Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35831" toLevel="5" name="Dragon's Earring Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35832" toLevel="7" name="Dragon's Earring Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35833" toLevel="7" name="Dragon's Earring Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>icon.dragon_accessary_earring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35834" toLevel="3" name="Dragon's Ring Augmentation: MP Consumption Decrease">
+		<!-- MP Consumption -1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35835" toLevel="9" name="Dragon's Ring Augmentation: Speed">
+		<!-- Speed +2 -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<value level="1">2</value>
+				<value level="2">3</value>
+				<value level="3">4</value>
+				<value level="4">5</value>
+				<value level="5">6</value>
+				<value level="6">7</value>
+				<value level="7">8</value>
+				<value level="8">9</value>
+				<value level="9">10</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35836" toLevel="6" name="Dragon's Ring Augmentation: Max HP">
+		<!-- Max HP +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35837" toLevel="6" name="Dragon's Ring Augmentation: Max MP">
+		<!-- Max MP +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35838" toLevel="6" name="Dragon's Ring Augmentation: Max CP">
+		<!-- Max CP +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35839" toLevel="5" name="Dragon's Ring Augmentation: Vitality Bonus">
+		<!-- Vitality Bonus +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35840" toLevel="5" name="Dragon's Ring Augmentation: Acquired XP/ SP">
+		<!-- Acquired XP/ SP +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35841" toLevel="5" name="Dragon's Ring Augmentation: Critical Rate for Standard Attacks">
+		<!-- Critical Rate for standard attacks +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35842" toLevel="5" name="Dragon's Ring Augmentation: P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35843" toLevel="5" name="Dragon's Ring Augmentation: M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35844" toLevel="5" name="Dragon's Ring Augmentation: Standard Attack Critical Damage">
+		<!-- Critical Damage for standard attacks +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35845" toLevel="5" name="Dragon's Ring Augmentation: P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35846" toLevel="5" name="Dragon's Ring Augmentation: M. Skill Critical Damage">
+		<!-- M. Skill Critical Damage +1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35847" toLevel="7" name="Dragon's Ring Augmentation: All Received Critical Rate Decrease">
+		<!-- All received Critical Rate -1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35848" toLevel="7" name="Dragon's Ring Augmentation: All Received Critical Damage Decrease">
+		<!-- All received Critical Damage -1% -->
+		<icon>icon.dragon_accessary_ring</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35849" toLevel="11" name="Enchant Effect: Anhel's Blessing">
+		<!-- Attribute Attack/ Resistance +$s1. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>10</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35850" toLevel="1" name="Blood Whirlwind">
+		<!-- P. Atk. +5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35851" toLevel="1" name="Blood Shadow Retributer">
+		<!-- M. Atk. +5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35852" toLevel="1" name="Abyssal Sculptor">
+		<!-- P. Skill Power +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35853" toLevel="1" name="Abyssal Warrior">
+		<!-- P./ M. Atk. +3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35854" toLevel="1" name="Dual Daggers of Abyss">
+		<!-- P. Critical Rate +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35855" toLevel="1" name="Abyssal Burst">
+		<!-- P. Skill Critical Damage +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35856" toLevel="1" name="Abyssal Buster">
+		<!-- M. Skill Power +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35857" toLevel="1" name="Krishna's Sharpness">
+		<!-- P. Atk. +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35858" toLevel="1" name="Burning Krishna">
+		<!-- M. Atk. +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35859" toLevel="1" name="Heine Cutter">
+		<!-- Weapon P. Atk. +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DAGGER</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>BOW</item>
+					<item>DUAL</item>
+					<item>FIST</item>
+					<item>RAPIER</item>
+					<item>CROSSBOW</item>
+					<item>ANCIENTSWORD</item>
+					<item>DUALDAGGER</item>
+					<item>TWOHANDCROSSBOW</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35860" toLevel="1" name="Heine Stormer">
+		<!-- Critical Damage for standard attacks +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35861" toLevel="1" name="Dual Swords of Heine">
+		<!-- Standard Attack Power +1.3% -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35862" toLevel="1" name="Heine Guardian">
+		<!-- P. Skill Critical Rate +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35863" toLevel="1" name="Heine Caster">
+		<!-- Weapon M. Atk. +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DAGGER</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>BOW</item>
+					<item>DUAL</item>
+					<item>FIST</item>
+					<item>RAPIER</item>
+					<item>CROSSBOW</item>
+					<item>ANCIENTSWORD</item>
+					<item>DUALDAGGER</item>
+					<item>TWOHANDCROSSBOW</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35864" toLevel="1" name="One-handed Weapon Training">
+		<!-- Weapon P. Atk. +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DAGGER</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>BOW</item>
+					<item>DUAL</item>
+					<item>FIST</item>
+					<item>RAPIER</item>
+					<item>CROSSBOW</item>
+					<item>ANCIENTSWORD</item>
+					<item>DUALDAGGER</item>
+					<item>TWOHANDCROSSBOW</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35865" toLevel="1" name="Two-handed Weapon Training">
+		<!-- M. Critical Rate +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35866" toLevel="1" name="Two-handed Magic Weapon Training">
+		<!-- M. Skill Critical Damage +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35867" toLevel="1" name="One-handed Magic Weapon Training">
+		<!-- Weapon M. Atk. +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DAGGER</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>BOW</item>
+					<item>DUAL</item>
+					<item>FIST</item>
+					<item>RAPIER</item>
+					<item>CROSSBOW</item>
+					<item>ANCIENTSWORD</item>
+					<item>DUALDAGGER</item>
+					<item>TWOHANDCROSSBOW</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35868" toLevel="1" name="High Quality Weapon">
+		<!-- P. Atk., Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35869" toLevel="1" name="Legacy of Giants">
+		<!-- M. Atk., Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35870" toLevel="1" name="Giant Legend">
+		<!-- Critical Damage for standard attacks, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35871" toLevel="1" name="Blacksmith Enhanced Cutter">
+		<!-- P. Skill Critical Damage, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35872" toLevel="1" name="Blacksmith Enhanced Buster">
+		<!-- M. Skill Critical Damage, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35873" toLevel="1" name="Weapon Enhancement I">
+		<!-- P./ M. Atk. +1%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35874" toLevel="1" name="Armor Basics">
+		<!-- P./ M. Def. +5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35875" toLevel="1" name="Shining Helmet">
+		<!-- Fire Resistance +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35876" toLevel="1" name="Heavy Armor Set">
+		<!-- Fire Resistance +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35877" toLevel="1" name="Light Armor Set">
+		<!-- Water Resistance +10 -->
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35878" toLevel="1" name="Robe Set">
+		<!-- Water Resistance +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35879" toLevel="1" name="Minimal Protection">
+		<!-- Dark Resistance +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35880" toLevel="1" name="Sigel Knight's Symbol">
+		<!-- Dark Resistance +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35881" toLevel="1" name="Basic Heavy Armor">
+		<!-- Wind Resistance +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35882" toLevel="1" name="Basic Light Armor">
+		<!-- Wind Resistance +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35883" toLevel="1" name="Basic Robe">
+		<!-- Holy Resistance +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35884" toLevel="1" name="High Quality Helmet">
+		<!-- Fire Resistance +3, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35885" toLevel="1" name="High Quality Upper Armor">
+		<!-- Water Resistance +3, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35886" toLevel="1" name="High Quality Lower Armor">
+		<!-- Wind Resistance +3, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35887" toLevel="1" name="High Quality Gloves">
+		<!-- Earth Resistance +3, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35888" toLevel="1" name="High Quality Shoes">
+		<!-- Holy Resistance +3, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35889" toLevel="1" name="High Quality Shield">
+		<!-- Dark Resistance +3, Vitality bonus +0.5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35890" toLevel="1" name="Oriharukon Gloves">
+		<!-- Earth Resistance +10 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35891" toLevel="1" name="Dragon Scale Gloves">
+		<!-- Earth Resistance +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35892" toLevel="1" name="Angel Feather Gloves">
+		<!-- Holy Resistance +7 -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35893" toLevel="1" name="Eternal Armor">
+		<!-- P./ M. Def. +1%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35894" toLevel="1" name="Leviathan Armor">
+		<!-- P./ M. Def. +3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35895" toLevel="1" name="Trinity">
+		<!-- Power of standard attacks and P./ M. skills +5%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35896" toLevel="1" name="Archangel's Accessories">
+		<!-- P. Def. +1.3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>1.3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35897" toLevel="1" name="Valakas' Legacy">
+		<!-- Damage +3%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35898" toLevel="1" name="Antharas' Legacy">
+		<!-- Received damage -7%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-7</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35899" toLevel="1" name="Lindvior's Legacy">
+		<!-- Power of standard attacks and P./ M. skills +3%. -->
+		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

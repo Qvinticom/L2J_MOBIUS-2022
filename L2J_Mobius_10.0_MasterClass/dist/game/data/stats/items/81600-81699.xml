@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="81600" name="Superior Garnet Lv. 6" type="Armor">
+		<!-- Debuff Resistance +35%, Damage Reflection Resistance +21%. Removes Stun/ Silence of Confusion/ Obstruction debuff types when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="16" /> <!-- Garnet -->
+			<skill id="18567" level="3" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="81601" name="Superior Garnet Lv. 7" type="Armor">
+		<!-- Debuff Resistance +35%, Damage Reflection Resistance +22%. Removes Stun/ Silence of Confusion/ Obstruction debuff types when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="17" /> <!-- Garnet -->
+			<skill id="18567" level="3" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="81602" name="Superior Garnet Lv. 8" type="Armor">
+		<!-- Debuff Resistance +35%, Damage Reflection Resistance +23%. Removes Stun/ Silence of Confusion/ Obstruction debuff types when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="18" /> <!-- Garnet -->
+			<skill id="18567" level="3" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="81603" name="Superior Garnet Lv. 9" type="Armor">
+		<!-- Debuff Resistance +35%, Damage Reflection Resistance +24%. Removes Stun/ Silence of Confusion/ Obstruction debuff types when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="19" /> <!-- Garnet -->
+			<skill id="18567" level="3" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="81604" name="Superior Garnet Lv. 10" type="Armor">
+		<!-- Debuff Resistance +35%, Damage Reflection Resistance +25%. Removes Stun/ Silence of Confusion/ Obstruction debuff types when hit in PvP. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_garnet_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="20" /> <!-- Garnet -->
+			<skill id="18567" level="3" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="81605" name="Superior Tanzanite Lv. 1" type="Armor">
+		<!-- Creates a protective barrier that absorbs 70,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="11" /> <!-- Tanzanite -->
+			<skill id="18565" level="11" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81606" name="Superior Tanzanite Lv. 2" type="Armor">
+		<!-- Creates a protective barrier that absorbs 75,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="12" /> <!-- Tanzanite -->
+			<skill id="18565" level="12" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81607" name="Superior Tanzanite Lv. 3" type="Armor">
+		<!-- Creates a protective barrier that absorbs 80,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="13" /> <!-- Tanzanite -->
+			<skill id="18565" level="13" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81608" name="Superior Tanzanite Lv. 4" type="Armor">
+		<!-- Creates a protective barrier that absorbs 85,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="14" /> <!-- Tanzanite -->
+			<skill id="18565" level="14" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81609" name="Superior Tanzanite Lv. 5" type="Armor">
+		<!-- Creates a protective barrier that absorbs 90,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="15" /> <!-- Tanzanite -->
+			<skill id="18565" level="15" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81610" name="Superior Tanzanite Lv. 6" type="Armor">
+		<!-- Creates a protective barrier that absorbs 95,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="16" /> <!-- Tanzanite -->
+			<skill id="18565" level="16" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81611" name="Superior Tanzanite Lv. 7" type="Armor">
+		<!-- Creates a protective barrier that absorbs 100,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="17" /> <!-- Tanzanite -->
+			<skill id="18565" level="17" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81612" name="Superior Tanzanite Lv. 8" type="Armor">
+		<!-- Creates a protective barrier that absorbs 105,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="18" /> <!-- Tanzanite -->
+			<skill id="18565" level="18" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81613" name="Superior Tanzanite Lv. 9" type="Armor">
+		<!-- Creates a protective barrier that absorbs 110,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="19" /> <!-- Tanzanite -->
+			<skill id="18565" level="19" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81614" name="Superior Tanzanite Lv. 10" type="Armor">
+		<!-- Creates a protective barrier that absorbs 115,000 damage for 15 sec, and instantly restores 20% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18815" level="20" /> <!-- Tanzanite -->
+			<skill id="18565" level="20" /> <!-- Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="81615" name="Superior Red Cat's Eye Lv. 1" type="Armor">
+		<!-- Critical Damage for standard attacks +15%, P. Skill Critical Damage +15%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="11" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81616" name="Superior Red Cat's Eye Lv. 2" type="Armor">
+		<!-- Critical Damage for standard attacks +16%, P. Skill Critical Damage +16%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="12" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81617" name="Superior Red Cat's Eye Lv. 3" type="Armor">
+		<!-- Critical Damage for standard attacks +17%, P. Skill Critical Damage +17%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="13" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81618" name="Superior Red Cat's Eye Lv. 4" type="Armor">
+		<!-- Critical Damage for standard attacks +18%, P. Skill Critical Damage +18%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="14" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81619" name="Superior Red Cat's Eye Lv. 5" type="Armor">
+		<!-- Critical Damage for standard attacks +20%, P. Skill Critical Damage +20%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="15" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81620" name="Superior Red Cat's Eye Lv. 6" type="Armor">
+		<!-- Critical Damage for standard attacks +21%, P. Skill Critical Damage +21%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="16" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81621" name="Superior Red Cat's Eye Lv. 7" type="Armor">
+		<!-- Critical Damage for standard attacks +22%, P. Skill Critical Damage +22%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="17" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81622" name="Superior Red Cat's Eye Lv. 8" type="Armor">
+		<!-- Critical Damage for standard attacks +23%, P. Skill Critical Damage +23%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="18" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81623" name="Superior Red Cat's Eye Lv. 9" type="Armor">
+		<!-- Critical Damage for standard attacks +24%, P. Skill Critical Damage +24%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="19" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81624" name="Superior Red Cat's Eye Lv. 10" type="Armor">
+		<!-- Critical Damage for standard attacks +25%, P. Skill Critical Damage +25%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="20" /> <!-- Red Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81625" name="Superior Blue Cat's Eye Lv. 1" type="Armor">
+		<!-- M. Skill Critical Damage +15%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="11" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81626" name="Superior Blue Cat's Eye Lv. 2" type="Armor">
+		<!-- M. Skill Critical Damage +16%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="12" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81627" name="Superior Blue Cat's Eye Lv. 3" type="Armor">
+		<!-- M. Skill Critical Damage +17%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="13" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81628" name="Superior Blue Cat's Eye Lv. 4" type="Armor">
+		<!-- M. Skill Critical Damage +18%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="14" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81629" name="Superior Blue Cat's Eye Lv. 5" type="Armor">
+		<!-- M. Skill Critical Damage +20%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="15" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81630" name="Superior Blue Cat's Eye Lv. 6" type="Armor">
+		<!-- M. Skill Critical Damage +21%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="16" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81631" name="Superior Blue Cat's Eye Lv. 7" type="Armor">
+		<!-- M. Skill Critical Damage +22%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="17" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81632" name="Superior Blue Cat's Eye Lv. 8" type="Armor">
+		<!-- M. Skill Critical Damage +23%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="18" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81633" name="Superior Blue Cat's Eye Lv. 9" type="Armor">
+		<!-- M. Skill Critical Damage +24%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting> Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="19" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81634" name="Superior Blue Cat's Eye Lv. 10" type="Armor">
+		<!-- M. Skill Critical Damage +25%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="20" /> <!-- Blue Cat's Eye -->
+		</skills>
+	</item>
+	<item id="81635" name="Red Assassin Suit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Red Assassin Suit. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="39663" level="1" /> <!-- Red Assassin Suit Appearance Stone -->
+		</skills>
+	</item>
+	<item id="81636" name="Blue Assassin Suit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Blue Assassin Suit. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="39664" level="1" /> <!-- Blue Assassin Suit Appearance Stone -->
+		</skills>
+	</item>
+	<item id="81637" name="Pink Assassin Suit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Pink Assassin Suit. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="39665" level="1" /> <!-- Pink Assassin Suit Appearance Stone -->
+		</skills>
+	</item>
+	<item id="81638" name="Steward Outfit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Steward Outfit. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="39666" level="1" /> <!-- Steward Outfit Appearance Stone -->
+		</skills>
+	</item>
+	<item id="81639" name="Alice's Costume Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Alice's Costume. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="39667" level="1" /> <!-- Alice's Costume Appearance Stone -->
+		</skills>
+	</item>
+	<item id="81640" name="Aden's Anniversary Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- A chest obtained as a reward for monster hunting during the game anniversary event. Double-click to obtain various items such as a greater jewel Lv. 5, Sealed Talisman of Insanity, R110-/ R99-grade equipment. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81641" name="Special Transformation Candy" additionalName="Event" type="EtcItem">
+		<!-- An anniversary present from Lilly. Double-click to change the appearance of the armor to that of a costume given by Lilly. Can be used many times. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="81642" name="Anniversary Happy Wishes Gift" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Anniversary Agathion Charm: Guardian Angel Chuchu, Lilly's Special Anniversary Transformation Candy, Freya's Ice Rose (60 pcs.), Glowing Dragon's Attribute Potion (60 pcs.), Emperor's Special Cocktail (30 pcs.), Anniversary Cake (30 pcs.). -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81643" name="Merry Wishes Gift" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain R-grade Soulshot (100,000 pcs.) and Blessed R-grade Spiritshot (100,000 pcs.), Freya's Ice Rose (6 pcs.), Glowing Dragon's Attribute Potion (6 pcs.). -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81644" name="Appearance Stone Coupon" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for Appearance Stone through Lilly. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81645" name="Quiz Reward" additionalName="Event" type="EtcItem">
+		<!-- A reward for participating in the Anniversary Quiz. Double-click to obtain one of the following items: Dandy's Golden Ball, Emperor's Special Cocktail, Freya's Frozen Scroll. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81646" name="Festive Agathion Charm: Guardian Angel Chuchu" additionalName="Event" type="Armor">
+		<!-- Activates the power of Agathion Guardian Angel Chuchu. Equipping it in the main slot summons the Agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. -->
+		<set name="icon" val="icon.ev_agathion_chuchu" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="23336" level="1" /> <!-- Agathion Chuchu's Cute Trick -->
+			<skill id="35657" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Guardian Angel Chuchu -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+		<stats>
+			<stat type="mDef">72</stat>
+		</stats>
+	</item>
+	<item id="81647" name="Blessed Exalted Heavy Armor Set Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- A box containing Exalted heavy armor set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Heavy Armor Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="81648" name="Blessed Exalted Light Armor Set Box" additionalName="Light armor" type="EtcItem">
+		<!-- A box containing Exalted light armor set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Light Armor Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="81649" name="Blessed Exalted Robe Set Box" additionalName="Robe" type="EtcItem">
+		<!-- A box containing Exalted robe set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Robe Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="81650" name="Blessed Exalted Support Box" type="EtcItem">
+		<!-- Double-click to obtain 300 pcs. of each following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass, Honey Dark Beer, also 150 Emperor's Special Cocktails. Before it opened, can be transferred within the account. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="81651" name="Maphr's Wind Scroll" type="EtcItem">
+		<!-- For 10 min., Vitality Consumption during hunting +30%, amount of dropped adena +30%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Does not stack with the Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Scroll of Storm effects. -->
+		<set name="icon" val="icon.bm_maphr_scroll" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="itemSkills" />
+		<set name="reuse_delay" val="540000" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="39669" level="1" /> <!-- Maphr's Wind Scroll -->
+		</skills>
+	</item>
+	<item id="81652" name="Maphr's Scroll of Storm" type="EtcItem">
+		<!-- For 10 min., Vitality Consumption during hunting +50%, amount of dropped adena +50%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Does not stack with the Freya's Scroll of Storm effect. -->
+		<set name="icon" val="icon.bm_maphr_scroll_up" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="itemSkills" />
+		<set name="reuse_delay" val="540000" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="39670" level="1" /> <!-- Maphr's Scroll of Storm -->
+		</skills>
+	</item>
+	<item id="81653" name="Aden Traveler Pack" additionalName="Event" type="EtcItem">
+		<!-- A prize for participating in "Journey through Aden". Double-click to obtain one of the following rewards: Freya's Ice Rose, Emperor's Special Cocktail, Freya's Scroll of Storm (3 pcs.), Honey Dark Beer, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81654" name="Big Aden Traveler Pack" additionalName="Event" type="EtcItem">
+		<!-- A prize for participating in "Journey through Aden". Double-click to obtain one of the following rewards: Freya's Ice Rose (2 pcs.), Emperor's Special Cocktail, Freya's Scroll of Storm (6 pcs.), Honey Dark Beer (2 pcs.), Glowing Dragon's Attribute Potion (2 pcs.), Shining Nevit's Gold Hourglass (2 pcs.). -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81656" name="Dragon's Rare Accessory Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Blessed Valakas' Necklace, Blessed Antharas' Earring, Lindvior's Earring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81657" name="Finishing Journey through Aden Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A prize for finishing the "Journey through Aden" game. Double-click to obtain one of the following items: Sealed Heavenly Talisman, Dark Weapon Enhancement Stone, Bloody Weapon Enhancement Stone, 3 Dragon accessories, Appearance Stone Coupon. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81658" name="Topaz Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Topaz Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81659" name="Ruby Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Ruby Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81660" name="Sapphire Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Sapphire Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81661" name="Obsidian Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Obsidian Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81662" name="Opal Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Opal Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81663" name="Emerald Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Emerald Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81664" name="Aquamarine Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Aquamarine Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81665" name="Diamond Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Diamond Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81666" name="Pearl Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Pearl Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81667" name="Vital Stone Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Vital Stone Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81668" name="Garnet Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Garnet Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81669" name="Tanzanite Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Tanzanite Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81670" name="Red Cat's Eye Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Red Cat's Eye Lv. 5. -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81671" name="Blue Cat's Eye Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Blue Cat's Eye Lv. 5. -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81672" name="Ultimate Luxurious Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 5 greater jewel. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81673" name="Essence of Time" type="EtcItem">
+		<!-- Concentrated energy of time. When used, decreases time of homunculus creation for 1 h. -->
+		<set name="icon" val="icon.homun_time_potion" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="10000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39671" level="1" /> <!-- Essence of Time -->
+		</skills>
+	</item>
+	<item id="81674" name="Essence of Time (test)" type="EtcItem">
+		<!-- A test item for homunculus system. When used, decreases time of homunculus creation for 24 h. -->
+		<set name="icon" val="icon.homun_time_potion" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="10000" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39672" level="1" /> <!-- Essence of Time -->
+		</skills>
+	</item>
+	<item id="81675" name="PA Lineage 2 Festival Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Sayha's Talisman Pack Lv. 9, +9 Fallen Angel's Ring Pack, Session Zone Time Stone, PA supplies. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81676" name="Milk of Vitality" additionalName="Event" type="EtcItem">
+		<!-- Recovers amount of Vitality. Also can be used to cook Lucky Pumpkin Cheese when you are visiting Stray Rat on the event stage. -->
+		<set name="icon" val="icon.etc_fresh_milk_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81677" name="Lucky Pumpkin Cheese" additionalName="Event" type="EtcItem">
+		<!-- A tasty cheese cooked by Stray Rat. When used, may summon either Year of the Rat, or Chatty Rat. -->
+		<set name="icon" val="icon.ev_lucky_cheese" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81678" name="Magic Dumpling Soup" additionalName="Event" type="EtcItem">
+		<!-- Hot soup cooked by rats for Year of the Rat. For 30 min., damage +10%, received damage -10%, Vitality bonus +30%. -->
+		<set name="icon" val="icon.ev_stew_of_pray" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81679" name="Night Goblin's Supply Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose (5 pcs.), Shining Nevit's Gold Hourglass (3 pcs.), Glowing Dragon's Attribute Potion (5 pcs.), Emperor's Special Cocktail (3 pcs.). Also there is a low chance to obtain a rare item. -->
+		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81680" name="Valentine's Day Chocolate 56%" additionalName="Event" type="EtcItem">
+		<!-- Chocolate of 56% cocoa. For 10 min., CON/ MEN/ DEX/ WIT +1, Attribute Attack/ Resistance +5, Speed +5, Vitality bonus +5%. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81681" name="Valentine's Day Chocolate 72%" additionalName="Event" type="EtcItem">
+		<!-- Chocolate of 72% cocoa. For 10 min., STR/ INT/ CON/ MEN/ DEX/ WIT +1, Attribute Attack/ Resistance +15, Speed +7, P./ M. Atk. +3%, Vitality bonus +20%. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81682" name="Valentine's Day Chocolate 99%" additionalName="Event" type="EtcItem">
+		<!-- Chocolate of 99% cocoa. For 10 min., all stats +1, Attribute Attack/ Resistance +70, Speed +15, P./ M. Atk. +10%, P. Critical Damage and P./ M. Skill Critical Damage +5%, Vitality bonus +50%. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81683" name="Valentine's Day Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A present for White Day from Violet. It's carefully and lovely wrapped. Double-click to obtain one of the following items: Bloody Weapon Enhancement Stone, Blessed Valakas' Necklace, Blessed Antharas' Earring, Lindvior's Earring, +8 Fallen Angel's Ring Pack, +8 Angel Necklace/ Earring/ Ring Pack, Sayha's Talisman Lv. 9, Forgotten Spellbook Chapter 1, Jewel Energy, various supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81694" name="Blessed Scroll: Enchant Artifact Book" type="EtcItem">
+		<!-- A scroll for enchanting Artifact Book. In case of failure, the item's enchant value is reset. -->
+		<set name="icon" val="icon.bm_blessed_scrl_of_ench_artifact_book" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="weight" val="10" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39679" level="1" /> <!-- Blessed Scroll: Enchant Artifact Book -->
+		</skills>
+	</item>
+	<item id="81695" name="Improved Artifact Book" additionalName="Lv. 3" type="Armor">
+		<!-- Unlocks 3 attack slots, 3 defense slots, 3 support slots and 12 balance slots. When equipping 3 sets of artifacts, damage +6%, received damage -7%, all basic stats +1. <Enchanting> Use Blessed Scroll: Enchant Artifact Book. <Enhancing> An artifact book enchanted to +5 can be enhanced to Unique Artifact Book through Head Blacksmith in any town by using Crystal of Dawn. -->
+		<set name="icon" val="icon.artifact_book_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifactbook" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="5" />
+		<cond msgId="113" addName="1">
+			<player level="110" />
+		</cond>
+		
+		<skills>
+			<skill id="39677" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
+		</skills>
+		<!-- Skill handled by enchantItemOptions -->
+	</item>
+	<item id="81696" name="Unique Artifact Book" additionalName="Lv. 3" type="Armor">
+		<!-- Unlocks 3 attack slots, 3 defense slots, 3 support slots and 12 balance slots. When equipping 3 sets of artifacts, damage +6%, received damage -7%, all basic stats +1. <Enchanting> Use Blessed Scroll: Enchant Artifact Book. -->
+		<set name="icon" val="icon.artifact_book_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifactbook" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="110" />
+		</cond>
+		<skills>
+			<skill id="39678" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
+		</skills>
+		<!-- Skill handled by enchantItemOptions -->
+	</item>
+	<item id="81697" name="Gold Save Ticket" type="EtcItem">
+		<!-- A ticket that enhances probability by +10% when using a Normal Weapon Enchant Scroll to enchant R-grade Weapons. When Enchant succeeds, it increases by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<set name="icon" val="icon.gold_save_r" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ENCHT_WP_DOWN" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39680" level="1" /> <!-- Gold Save Ticket -->
+		</skills>
+	</item>
+	<item id="81698" name="Black Save Ticket" type="EtcItem">
+		<!-- Enchant success rate +10% for R-grade armor when using an Enchant Scroll. Only for armor of R-grade and higher. If enchantment fails. the enchant value of the item will increase randomly by 1 to 2. If enchantment fails. the item will not be crystallized but its enchant value will decrease by 1. -->
+		<set name="icon" val="icon.black_save_r" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM_DOWN" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39681" level="1" /> <!-- Black Save Ticket -->
+		</skills>
+	</item>
+	<item id="81699" name="Corroded Fields' Time Stone" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in the Corroded Fields. Required level: 100+. -->
+		<set name="icon" val="icon.bm_timezone_refill_pccafe_a_60" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
+		<skills>
+			<skill id="39682" level="1" /> <!-- Corroded Fields' Time Stone -->
+		</skills>
+	</item>
+</list>

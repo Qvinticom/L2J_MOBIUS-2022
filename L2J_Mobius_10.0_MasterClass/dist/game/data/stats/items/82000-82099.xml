@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="82000" name="Hero's Shining Box" type="EtcItem">
+		<!-- Double-click to obtain 1 special item. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82009" name="Heine's Blue Box" type="EtcItem">
+		<!-- A box that was hidden in Heine. Double-click to obtain 1 rare item (excluding Star Sign and Scroll: Enchant Superior Seed Bracelet). -->
+		<set name="icon" val="icon.bm_dragon_present_5" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82010" name="Gran Kain's Scroll: Enchant Superior Seed Bracelet" type="EtcItem">
+		<!-- For Superior Seed Bracelet Lv. 4 enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
+		<set name="icon" val="icon.bm_shilen_scrl_of_lbracelet_charm_m1_s4_lv5" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39736" level="1" /> <!-- Gran Kain's Scroll: Enchant Superior Seed Bracelet -->
+		</skills>
+	</item>
+	<item id="82011" name="Festival Fairy's Chest: Authority Ornament" additionalName="Event" type="EtcItem">
+		<!-- A gift from the Festival Fairy.\nDouble-click to obtain Authority Ornament (4 pcs.). -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

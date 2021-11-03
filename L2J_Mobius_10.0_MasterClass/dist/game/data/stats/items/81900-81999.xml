@@ -1,0 +1,1528 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="81900" name="Scroll: 2,000,000,000 SP" additionalName="Event" type="EtcItem">
+		<!-- SP +2,000,000,000. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81901" name="PA Growing Guide" type="EtcItem">
+		<!-- A unique item that can be bought in the PA Store. After adding in the collection, makes additional features available. -->
+		<set name="icon" val="icon.etc_spell_books_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="81902" name="Giran Shining Luxury Box" type="EtcItem">
+		<!-- A beautiful box made by Alexandria in the souvenir shop of Giran. Double-click to obtain a rare item (excluding Artifact Crystal). -->
+		<set name="icon" val="icon.bm_artifact_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81903" name="Shining Crystal of Dyes" type="EtcItem">
+		<!-- Required for creating legendary dyes. Can be compounded with a dye Lv. 7+. In case of failure, the dye does not disappear, but its level drops to 7. -->
+		<set name="icon" val="icon.bm_dye_stone_upgrade" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81904" name="Prophecy Fragment" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged with certain chance to Legend's Mark, Prophecy Chest or Retired Legend's Scroll (3 pcs.). You can do it through the Dreamer of the Legend Title in any town.-->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81905" name="Legend's Mark" additionalName="Event" type="EtcItem">
+		<!-- A proof of completing the collection Aplies the following buff: P.Atk./M.Atk./P.Def./M.Def. +5%. -->
+		<set name="icon" val="icon.ev_darkelf_soul_ore" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81906" name="Prophecy Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a rare random item -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81696" min="1" max="1" chance="2" /> <!-- Unique Artifact Book Lv. 3 -->
+			<item id="80090" min="1" max="1" chance="2" /> <!-- Krishna Shaper-->
+			<item id="80091" min="1" max="1" chance="2" /> <!-- Krishna Cutter -->
+			<item id="80092" min="1" max="1" chance="2" /> <!-- Krishna Slasher -->
+			<item id="80093" min="1" max="1" chance="2" /> <!-- Krishna Avenger -->
+			<item id="80094" min="1" max="1" chance="2" /> <!-- Krishna Fighter -->
+			<item id="80095" min="1" max="1" chance="2" /> <!-- Krishna Stormer -->
+			<item id="80096" min="1" max="1" chance="2" /> <!-- Krishna Thrower -->
+			<item id="80097" min="1" max="1" chance="2" /> <!-- Krishna Shooter -->
+			<item id="80098" min="1" max="1" chance="2" /> <!-- Krishna Buster -->
+			<item id="80099" min="1" max="1" chance="2" /> <!-- Krishna Caster -->
+			<item id="80100" min="1" max="1" chance="2" /> <!-- Krishna Retributer -->
+			<item id="80101" min="1" max="1" chance="2" /> <!-- Krishna Dual Swords -->
+			<item id="80102" min="1" max="1" chance="2" /> <!-- Krishna Dual Daggers -->
+			<item id="80103" min="1" max="1" chance="2" /> <!-- Krishna Dual Blunt Weapons -->
+			<item id="80104" min="1" max="1" chance="2" /> <!-- Leviathan Helmet - Heavy armor -->
+			<item id="80105" min="1" max="1" chance="2" /> <!-- Leviathan Breastplate - Heavy armor -->
+			<item id="80106" min="1" max="1" chance="2" /> <!-- Leviathan Gaiters - Heavy armor -->
+			<item id="80107" min="1" max="1" chance="2" /> <!-- Leviathan Gauntlets - Heavy armor -->
+			<item id="80108" min="1" max="1" chance="2" /> <!-- Leviathan Boots - Heavy armor -->
+			<item id="80110" min="1" max="1" chance="2" /> <!-- Leviathan Leather Helmet - Light armor -->
+			<item id="80111" min="1" max="1" chance="2" /> <!-- Leviathan Leather Armor - Light armor -->
+			<item id="80112" min="1" max="1" chance="2" /> <!-- Leviathan Leather Leggings - Light armor -->
+			<item id="80113" min="1" max="1" chance="2" /> <!-- Leviathan Leather Gloves - Light armor -->
+			<item id="80114" min="1" max="1" chance="2" /> <!-- Leviathan Leather Boots - Light armor -->
+			<item id="80115" min="1" max="1" chance="2" /> <!-- Leviathan Circlet - Robe -->
+			<item id="80116" min="1" max="1" chance="2" /> <!-- Leviathan Tunic - Robe -->
+			<item id="80117" min="1" max="1" chance="2" /> <!-- Leviathan Stockings - Robe -->
+			<item id="80118" min="1" max="1" chance="2" /> <!-- Leviathan Gloves - Robe -->
+			<item id="80119" min="1" max="1" chance="2" /> <!-- Leviathan Shoes - Robe -->
+			<item id="80120" min="1" max="1" chance="2" /> <!-- Leviathan Sigil -->
+			<item id="80109" min="1" max="1" chance="2" /> <!-- Leviathan Shield -->
+			<item id="19448" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="36389" min="1" max="1" chance="2" /> <!-- Giant's Scroll: Enchant R-grade Armor -->
+			<item id="36386" min="1" max="1" chance="2" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
+			<item id="23416" min="1" max="1" chance="2" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="23410" min="1" max="1" chance="2" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="48831" min="1" max="1" chance="10" /> <!-- Jewel Energy -->
+			<item id="80804" min="1" max="1" chance="2" /> <!-- Retired Legend's Scroll -->
+		</capsuled_items>
+	</item>
+	<item id="81906" name="Prophecy Chest" additionalName="Event" type="EtcItem">
+		<!-- A luxury box made by Shadai in Heine. Double-click to obtain 1 rare item (excluding Blessed Scroll; Enchant Brooch) -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81907" name="Heine Shining Luxury Box" type="EtcItem">
+		<!-- A luxury box made by Shadai from Heine. Double-click to obtain 1 rare item (excluding Blessed Scroll: Enchant Brooch). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81908" name="Gran Kain's Scroll: Enchant La Vie En Rose's Brooch" type="EtcItem">
+		<!-- For Dragon Rind Leather Shirt enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
+		<set name="icon" val="iicon.bm_shilen_scrl_of_brooch_6slot_lavianrose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39727" level="1" /> <!-- Gran Kain's Scroll: Enchant La Vie En Rose's Brooch -->
+		</skills>
+	</item>
+	<item id="81909" name="Winner's Trophy" additionalName="V1" type="EtcItem">
+		<!-- Granted to Aden's warriors as a token of appreciation for their support.\nDouble-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
+		<set name="icon" val="icon.ev_2018_soccer_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81910" name="Official League Winner's Trophy" additionalName="Event" type="EtcItem">
+		<!-- Granted to Aden's warriors as a token of appreciation for their support.\nDouble-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
+		<set name="icon" val="icon.ev_2018_soccer_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81911" name="Belt of Fortitude" additionalName="V1" type="Armor">
+		<!-- When equipped, Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -14%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, All received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
+		<set name="icon" val="icon.ev_dinos_v1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+		</stats>
+	</item>
+	<item id="81912" name="Belt of Fortitude" additionalName="Event" type="Armor">
+		<!-- When equipped, Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -14%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, All received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
+		<set name="icon" val="icon.ev_dinos_v1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+		</stats>
+	</item>
+	<item id="81913" name="No Doubt" additionalName="Event" type="EtcItem">
+		<!-- A symbol of those who go only forward without hesitation.\n\nWhen in inventory, maintains your Vitality level. Available for 7 d. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81914" name="Blessed Fallen Angel's Ring" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81915" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 1" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39620" level="1" /> <!-- Craft Effect - Charisma Lv. 1 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81916" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 2" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39620" level="2" /> <!-- Craft Effect - Charisma Lv. 2 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81917" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 3" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39620" level="3" /> <!-- Craft Effect - Charisma Lv. 3 -->
+		</skills>
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81918" name="+6 Fallen Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain +6 Fallen Angel's Ring. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48864" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Fallen Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81919" name="Fallen Angel's Shining Chest" type="EtcItem">
+		<!-- Double-click to obtain various items (excluding Fallen Angel's Ring Pack). -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81920" name="+9 Blessed Fallen Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain +9 Blessed Fallen Angel's Ring. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81914" min="1" max="1" minEnchant="9" maxEnchant="9" chance="100" /> <!-- Blessed Fallen Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81921" name="+10 Blessed Fallen Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain +10 Blessed Fallen Angel's Ring. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81914" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Blessed Fallen Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81922" name="Ultimate Death Knight A - Not Available" additionalName="Not Available" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81923" name="Ultimate Death Knight B - Not Available" additionalName="Not Available" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81924" name="Ultimate Death Knight C - Not Available" additionalName="Not Available" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81925" name="Ultimate Death Knight D - Not Available" additionalName="Not Available" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81926" name="Ultimate Death Knight E - Not Available" additionalName="Not Available" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81927" name="New Year Gift" additionalName="Event" type="EtcItem">
+		<!-- A gift box for the New Year. Double-click to obtain various items (excluding Snowman's Icy Candy). -->
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81928" name="Snowman's Icy Candy" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., P. Atk., M. Atk., P. Def., M. Def. +5%. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81929" name="New Year Gift Set" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Soulshot/ Spiritshot Ticket, and also Freya's Ice Rose (50 pcs.), Glowing Dragon's Attribute Potion (50 pcs.), Shining Nevit's Gold Hourglass (50 pcs.), Honey Dark Beer (50 pcs.). -->
+		<set name="icon" val="icon.event_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81930" name="Golden Dragon Pack" type="EtcItem">
+		<!-- Double-click to obtain various items (excluding Dragon Skin Shirt Augmenting Stone and Blessed Scroll: Enchant Artifact Book). -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81931" name="Dragon Skin Shirt Augmenting Stone" type="EtcItem">
+		<!--A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies.\nKey material for Dragon Rind Leather Shirt's augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
+		<set name="icon" val="icon.renewal_mineral_dragon_rind_leather_shirt" />
+		<set name="commissionItemType" val="LIFE_STONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="10030020" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81932" name="Death Knight's Cloak R99" type="Armor">
+		<!-- Changes your appearance to that of a Death Knight. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">45</stat>
+			<stat type="pDef">60</stat>
+		</stats>
+	</item>
+	<item id="81933" name="Death Knight's Cloak R110" type="Armor">
+		<!-- Changes your appearance to that of a Death Knight. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">45</stat>
+			<stat type="pDef">60</stat>
+		</stats>
+	</item>
+	<item id="81934" name="Lucky Pouch of Growth" additionalName="Event" type="EtcItem">
+		<!-- Lucky Pouch that contains the sunlight energy. When in inventory, acquired XP/ SP +5%.-->
+		<set name="icon" val="icon.ev_2021_newyear_rune2" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CLOTH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freigthable" val="false" />
+		<skills>
+			<skill id="39734" level="1" /> <!-- Lucky Pouch of Growth -->
+		</skills>
+	</item>
+	<item id="81935" name="Lucky Pouch of Prosperity" additionalName="Event" type="EtcItem">
+		<!-- Lucky Pouch that contains the moonlight energy. When in inventory, adena drop rate +5%. -->
+		<set name="icon" val="icon.ev_2021_newyear_rune3" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CLOTH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freigthable" val="false" />
+		<skills>
+			<skill id="39734" level="2" /> <!-- Lucky Pouch of Prosperity -->
+		</skills>
+	</item>
+	<item id="81936" name="Lucky Pouch of Harmony" additionalName="Event" type="EtcItem">
+		<!-- Lucky Pouch that contains the plant energy. When in inventory, Vitality bonus +7%. -->
+		<set name="icon" val="icon.ev_2021_newyear_rune4" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CLOTH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_freigthable" val="false" />
+		<skills>
+			<skill id="39734" level="3" /> <!-- Lucky Pouch of Harmony -->
+		</skills>
+	</item>
+	<item id="81937" name="Shiny Agathion Growth Cube" type="EtcItem">
+		<!-- Double-click to obtain various items (excluding Shiny Star Shard and Greater Zodiac Agathion's Book of Growth). -->
+		<set name="icon" val="icon.bless_star_agathion_upgrade_cube" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81938" name="Greater Zodiac Agathion's Sacred Book of Growth" type="EtcItem">
+		<!-- Required for upgrading Greater Zodiac Agathion Charms.\nCan be used with Greater Zodiac agathions enchanted to +5 and higher.\nIn case of failure, the enchant value remains the same. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39735" level="1" /> <!-- Greater Zodiac Agathion's Sacred Book of Growth -->
+		</skills>
+	</item>
+	<item id="81939" name="Shiny Star Shard" type="EtcItem">
+		<!-- Can be exchanged for Zodiac Agathion's Book of Growth through the Game Assistant. -->
+		<set name="icon" val="icon.bm_star_agathion_mineral" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81940" name="Woeful Sword Eigis" type="Weapon">
+		<!-- Shillien's sword imbued with the power to create and destroy worlds. The embodiment of the goddess' sorrow and despair. It can enslave one's soul by turning it into an evil spirit. The item is not available after the server transfer. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1840" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1548</stat>
+			<stat type="mAtk">255</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81941" name="Woeful Sword Eigis" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes the armor appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="pAtkSpd">325</stat>
+		</stats>
+	</item>
+	<item id="81942" name="Eigis Shaper" type="Weapon">
+		<!-- Changes a dagger's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">685</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81943" name="Eigis Cutter" type="Weapon">
+		<!-- Changes a one-handed sword's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81944" name="Eigis Slasher" type="Weapon">
+		<!-- Changes a two-handed sword's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81945" name="Eigis Avenger" type="Weapon">
+		<!-- Changes a one-handed blunt weapon's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81946" name="Eigis Fighter" type="Weapon">
+		<!-- Changes a fist weapon's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81947" name="Eigis Stormer" type="Weapon">
+		<!-- Changes a spear's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81948" name="Eigis Thrower" type="Weapon">
+		<!-- Changes a bow's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1481</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="81949" name="Eigis Guardian" type="Weapon">
+		<!-- Changes a crossbow's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1333</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="81950" name="Eigis Buster" type="Weapon">
+		<!-- Changes a one-handed magic sword's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81951" name="Eigis Caster" type="Weapon">
+		<!-- Changes a one-handed staff's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81952" name="Eigis Retributer" type="Weapon">
+		<!-- Changes a two-handed staff's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">733</stat>
+			<stat type="mAtk">535</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81953" name="Eigis Dual Swords" type="Weapon">
+		<!-- Changes dual swords' appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81954" name="Eigis Dual Daggers" type="Weapon">
+		<!-- Changes dual daggers' appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81955" name="Eigis Dual Blunt Weapons" type="Weapon">
+		<!-- Changes dual blunt weapons' appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81956" name="Eigis Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">546</stat>
+		</stats>
+	</item>
+	<item id="81957" name="Eigis Sigil" type="Armor">
+		<!-- Changes a sigil's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81958" name="Lindvior's Throne Usurper - Upper Armor" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes upper armor's appearance to that of Lindvior armor. Available to characters from the Conquest-winning server. -->
+		<set name="icon" val="icon.honors_light_upbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">360</stat>
+		</stats>
+	</item>
+	<item id="81959" name="Lindvior's Throne Usurper - Lower Armor" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes lower armor's appearance to that of Lindvior armor. Available to characters from the Conquest-winning server. -->
+		<set name="icon" val="icon.honors_light_downbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">225</stat>
+		</stats>
+	</item>
+	<item id="81960" name="Lindvior's Throne Usurper - Gloves" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes gloves' appearance to that of Lindvior armor. Available to characters from the Conquest-winning server. -->
+		<set name="icon" val="icon.honors_light_gloves_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81961" name="Lindvior's Throne Usurper - Boots" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes boots' appearance to that of Lindvior armor. Available to characters from the Conquest-winning server. -->
+		<set name="icon" val="icon.honors_light_shoes_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81962" name="Usurper's Cloak" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes the appearance of characters from the Conquest-winning server. -->
+		<set name="icon" val="icon.cloak_noblesse2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="81963" name="Frozen Shaper" type="Weapon">
+		<!-- Changes a dagger's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">685</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81964" name="Frozen Cutter" type="Weapon">
+		<!-- Changes a one-handed sword's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81965" name="Frozen Slasher" type="Weapon">
+		<!-- Changes a two-handed sword's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81966" name="Frozen Avenger" type="Weapon">
+		<!-- Changes a one-handed blunt weapon's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81967" name="Frozen Fighter" type="Weapon">
+		<!-- Changes a fist weapon's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81968" name="Frozen Stormer" type="Weapon">
+		<!-- Changes a spear's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81969" name="Frozen Thrower" type="Weapon">
+		<!-- Changes a bow's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1481</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="81970" name="Frozen Guardian" type="Weapon">
+		<!-- Changes a crossbow's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1333</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="81971" name="Frozen Buster" type="Weapon">
+		<!-- Changes a one-handed magic sword's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81972" name="Frozen Caster" type="Weapon">
+		<!-- Changes a one-handed staff's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81973" name="Frozen Retributer" type="Weapon">
+		<!-- Changes a two-handed staff's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">733</stat>
+			<stat type="mAtk">535</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81974" name="Frozen Dual Swords" type="Weapon">
+		<!-- Changes dual swords' appearance so that they look like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81975" name="Frozen Dual Daggers" type="Weapon">
+		<!-- Changes dual daggers' appearance so that they look like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81976" name="Frozen Dual Blunt Weapons" type="Weapon">
+		<!-- Changes dual blunt weapons' appearance so that they look like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81977" name="Frozen Shield" type="Armor">
+		<!-- Changes a shield's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">546</stat>
+		</stats>
+	</item>
+	<item id="81978" name="Frozen Sigil" type="Armor">
+		<!-- Changes a sigil's appearance so that it looks like being made of ice. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81979" name="Usurper's Name Change Coupon" type="EtcItem">
+		<!-- Required for changing a name used in the Conquest. In order to do it, use the Conquest UI before entering a Conquest world. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81980" name="Soul Orb" type="EtcItem">
+		<!-- At first glance, looks like an ordinary glass bead. However, if you take a closer look, you will see a soul trapped inside.\nListen closely, and you will hear its whisper: 'Here, in the depths of darkness filled with horror and despair, one may acquire special powers, and that will let them rule the world.'\n\nIt's time to go to the Conquest. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81981" name="Dimensional Chain" type="EtcItem">
+		<!-- A chain that connects our world with the Conquest one. Only the Aden Castle lord can open or close the path between the worlds. -->
+		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81982" name="Woeful Sword Eigis's Cloak" additionalName="Appearance Modification" type="Armor">
+		<!-- Changes the cloak appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
+		<set name="icon" val="icon.cloak_noblesse2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="81983" name="Giran Castle's Pack" additionalName="Lv. 1" type="EtcItem">
+		<!-- Contains supplies from the Giran Castle. Double-click to obtain 1 useful item (excluding Rune Castle's Silver Pack). -->
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81984" name="Rune Castle's Silver Pack" additionalName="Lv. 2" type="EtcItem">
+		<!-- Contains supplies from the Rune Castle. Double-click to obtain 1 useful item (excluding Aden Castle's Silver Pack). -->
+		<set name="icon" val="icon.bm_silver_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81985" name="Aden Castle's Golden Pack" additionalName="Lv. 3" type="EtcItem">
+		<!-- A gilded pack from the Aden Castle. Double-click to obtain 1 rare item with a certain chance. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

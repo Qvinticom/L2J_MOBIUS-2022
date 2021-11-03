@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39200" toLevel="1" name="Merlot's Gift">
+		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="39201" toLevel="7" name="Dragon's Relic">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39202" toLevel="3" name="+10 Bloody Armor - Heavy Armor Capsule">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39203" toLevel="1" name="Blessed Scroll: Enchant Dragon Shirt">
+		<!-- A Dragon Shirt Enchant Scroll. If enchantment to the Blessed Enchant Scroll fails, its enchant value will be reset. -->
+		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39204" toLevel="2" name="Scroll: Enchant Mysterious Weapon">
+		<!-- A Mysterious Weapon Enchant Scroll. If enchantment fails, the weapon will be destroyed. -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39205" toLevel="1" name="Glowing Dragon's Attribute Potion">
+		<!-- For $s1, Attribute Attack +$s2, Attribute Resistance +$s3, acquired XP/ SP +$s4. The effect remains after death. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<abnormalType>GLOWING_DRAGON_POTION</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<effectPoint>1</effectPoint>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>70</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39206" toLevel="1" name="Royal Red Save Ticket Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39207" toLevel="1" name="Red Libra's Fortune Scroll">
+		<!-- For 30 min., damage +$s1, Acquired XP/ SP +$s2. -->
+		<icon>icon.etc_charm_of_luck_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39208" toLevel="17" name="Red Libra's +7 Agathion Charm Gift Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="39209" toLevel="1" name="Fried Fish">
+		<!-- For 10 min., P. Atk. +$s1. The effect stacks with that of Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_p_dmg</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>500</hitTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<effects>
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39210" toLevel="1" name="Steamed Fish">
+		<!-- Increases M. Atk. by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_m_dmg</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>500</hitTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<effects>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39211" toLevel="1" name="Grilled Fish">
+		<!-- Increases Atk. Spd./ Casting Spd. by $s1, Speed by $s2 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_pm_speed</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>500</hitTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39212" toLevel="1" name="Braised Fish">
+		<!-- Increases Max HP/ MP by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>icon.fishing_buff_hp_mp</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>500</hitTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<effects>
+			<effect name="MaxHp">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39213" toLevel="1" name="Royal Santiago�s Soup">
+		<!-- P./ M. Atk., Atk./ Casting Spd., Max HP/ MP +$s1 for 10 min. -->
+		<icon>icon.fish_stew_residence_luc</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalTime>600</abnormalTime>
+		<targetType>SELF</targetType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80670</itemConsumeId>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39214" toLevel="2" name="Fried Fish">
+		<!-- Increases P. Atk. by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>
+			<value level="1">icon.fishing_buff_p_dmg_1</value>
+			<value level="2">icon.fishing_buff_p_dmg_2</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<abnormalTime>60</abnormalTime>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39215" toLevel="2" name="Steamed Fish">
+		<!-- Increases M. Atk. by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>
+			<value level="1">icon.fishing_buff_m_dmg_1</value>
+			<value level="2">icon.fishing_buff_m_dmg_2</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39216" toLevel="2" name="Grilled Fish">
+		<!-- Increases Atk. Spd./ Casting Spd. by $s1, Speed by $s2 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>
+			<value level="1">icon.fishing_buff_pm_speed_1</value>
+			<value level="2">icon.fishing_buff_pm_speed_2</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="39217" toLevel="2" name="Braised Fish">
+		<!-- Increases Max HP/ MP by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>
+			<value level="1">icon.fishing_buff_hp_mp_1</value>
+			<value level="2">icon.fishing_buff_hp_mp_2</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="39218" toLevel="2" name="Royal Fish Soup">
+		<!-- Increases P. Atk./ M. Atk., Atk./ Casting Spd., Max HP/ MP by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<icon>
+			<value level="1">icon.fishing_buff_all_1</value>
+			<value level="2">icon.fishing_buff_all_2</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="39219" toLevel="1" name="Olympiad Class Winner's Rune">
+		<!-- Vitality Bonus +$s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4, P./ M. Skill Power +$s5. -->
+		<icon>icon.rune_olympiad_legend_server</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>80</magicLevel>
+		<passiveConditions>
+			<condition name="OpNotOlympiad" />
+		</passiveConditions>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>1986</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>1150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39220" toLevel="1" name="Olympiad Class Runner-up's Rune">
+		<!-- Vitality Bonus +$s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4, P./ M. Skill Power +$s5. -->
+		<icon>icon.rune_olympiad_legend_server</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="39221" toLevel="1" name="Legend Celebration Rune">
+		<!-- Vitality Bonus +$s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4, P./ M. Skill Power +$s5. -->
+		<icon>icon.rune_olympiad_legend_server</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="39222" toLevel="1" name="Summon Agathion Masia's Guard">
+		<!-- Summons Agathion Masia's Guard. -->
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLevel>85</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13570</npcId> <!-- Masia's Guard -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39223" toLevel="11" name="Masia's Guard Unique Ability">
+		<!-- Secondary skills are enabled only when a heavy armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. is increased and Skill Cooldown decreased. -->
+		<icon>icon.agathion_masia_guard_1</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="39224" toLevel="11" name="Masia's Guard Unique Ability">
+		<!-- Special skills activate only when a heavy armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. is increased and Skill Cooldown decreased. -->
+		<icon>icon.agathion_masia_guard_1</icon>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">321</value>
+					<value level="3">377</value>
+					<value level="4">445</value>
+					<value level="5">523</value>
+					<value level="6">615</value>
+					<value level="7">724</value>
+					<value level="8">851</value>
+					<value level="9">1002</value>
+					<value level="10">1179</value>
+					<value level="11">1387</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">-1</value>
+					<value level="8">-2</value>
+					<value level="9">-3</value>
+					<value level="10">-4</value>
+					<value level="11">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">-1</value>
+					<value level="8">-2</value>
+					<value level="9">-3</value>
+					<value level="10">-4</value>
+					<value level="11">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">-1</value>
+					<value level="8">-2</value>
+					<value level="9">-3</value>
+					<value level="10">-4</value>
+					<value level="11">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">-1</value>
+					<value level="8">-2</value>
+					<value level="9">-3</value>
+					<value level="10">-4</value>
+					<value level="11">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39225" toLevel="4" name="Primary Skill: Agathion Masia's Guard">
+		<!-- As the agathion grows, Fixed Damage Resistance is increased. -->
+		<icon>icon.agathion_masia_guard_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="RealDamageResist">
+				<damage>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+				</damage>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39226" toLevel="1" name="Summon Paulina's Guard Agathion">
+		<!-- Summons Agathion Paulina's Guard. -->
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLevel>85</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13571</npcId> <!-- Paulina's Guard -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39227" toLevel="11" name="Paulina's Guard Unique Ability">
+		<!-- Secondary skills are enabled only when a light armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. and Skill Power are increased. -->
+		<icon>icon.agathion_pollyne_guard_1</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="39228" toLevel="11" name="Paulina's Guard Unique Ability">
+		<!-- Special skills activate only when a light armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. and Skill Power are increased. -->
+		<icon>icon.agathion_pollyne_guard_1</icon>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">321</value>
+					<value level="3">377</value>
+					<value level="4">445</value>
+					<value level="5">523</value>
+					<value level="6">615</value>
+					<value level="7">724</value>
+					<value level="8">851</value>
+					<value level="9">1002</value>
+					<value level="10">1179</value>
+					<value level="11">1387</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+					<value level="10">4</value>
+					<value level="11">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39229" toLevel="4" name="Primary Skill: Agathion Paulina's Guard">
+		<!-- As the agathion grows, Fixed Damage Resistance is increased. -->
+		<icon>icon.agathion_pollyne_guard_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="RealDamageResist">
+				<damage>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+				</damage>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39230" toLevel="3" name="Shining Fortune Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="39231" toLevel="4" name="Master Fisherman's Blessing (1-hour)">
+		<!-- Increases Fishing Success Rate by $s2 for $s1 h. Effect remains after death and cannot be deleted. -->
+		<icon>icon.fishing_zone_ticket</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="39232" toLevel="4" name="Blue Potion - Fishing XP Bonus">
+		<!-- When used, increases Successful Fishing XP/ SP by $s2 for $s1 Applied to all bait. Can be stacked with Angler's Blessing. -->
+		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="39233" toLevel="1" name="Lucky Vitality Potion">
+		<icon>BranchIcon.etc_sign_agathion_feed_yellow_i00</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="39234" toLevel="1" name="Guard Agathion's Book of Growth">
+		<icon>icon.star_scrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39235" toLevel="1" name="Ancient Guard Agathion's Book of Growth">
+		<icon>icon.star_giantscrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39236" toLevel="1" name="Tipsy">
+		<!-- The power of the liquor grips your mind, but you feel happy for some reason. For $s1, increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. by $s2, Acquired XP/ SP by $s3. The effect disappears on restart. -->
+		<icon>icon.bm_goblin_buff_herong</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="39237" toLevel="3" name="Blackbird Clan Basic Box">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">48579</value> <!-- Basic Supply Box -->
+			<value level="2">48580</value> <!-- Intermediate Supply Box -->
+			<value level="3">48581</value> <!-- Advanced Supply Box -->
+		</itemConsumeId>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>47256</itemId> <!-- Demon Crystal -->
+				<itemCount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">9</value>
+				</itemCount>
+			</effect>
+			<effect name="Restoration">
+				<itemId>48585</itemId> <!-- Savior's Wish -->
+				<itemCount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+				</itemCount>
+				<max>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+				</max>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="48585" count="1" /> <!-- Savior's Wish -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39238" toLevel="1" name="Episode Enchant Scroll">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39239" toLevel="1" name="Episode Special Enchant Scroll">
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39240" toLevel="2" name="Goblin Cudgel">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="39241" toLevel="13" name="Throne of Heroes 2nd Place Reward Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="39242" toLevel="2" name="Rudolph's Red Potion">
+		<!-- For $s1, acquired XP/ SP +$s2, SP/ Vitality bonus +$s3, P. Atk./ P. Def./ M. Atk./ M. Def. +$s4. -->
+		<icon>
+			<value level="1">BranchIcon.etc_sign_agathion_feed_red_i00</value>
+			<value level="2">BranchIcon.etc_sign_agathion_feed_purple_i00</value>
+		</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="39243" toLevel="1" name="Hero's Rune">
+		<!-- If stored in the inventory, increases Acquired XP/ SP by $s1. -->
+		<icon>icon.skill19226</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39244" toLevel="2" name="Peeves' Gift Bundle">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="39245" toLevel="1" name="Shining Nevit's Gold Hourglass">
+		<!-- During hunting acquired XP/ SP +$s2 for $s1. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown is 5 min. -->
+		<icon>icon.bm_nebit_bonus_time_up</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SHINING_HOURGLASS</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80797</itemConsumeId> <!-- Shining Nevit's Gold Hourglass -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">VOTE,1;BUFF_PCCAFE_EXP1,1</value>
+				</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>VOTE;BUFF_PCCAFE_EXP1</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39246" toLevel="3" name="Dragon Weapon Box (Fragment)">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+	<skill id="39247" toLevel="1" name="Scroll: Enchant Angel Accessory">
+		<icon>icon.scrl_of_ench_acc</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="39248" toLevel="1" name="Windstorm Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+	</skill>
+</list>

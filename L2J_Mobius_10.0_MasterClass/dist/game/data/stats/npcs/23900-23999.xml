@@ -1,0 +1,2198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="23900" level="85" type="Monster" name="Laikel of Terror" title="Leader of Creation">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="59018.5159786038" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.630669531155" magical="531.723202209691" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="37" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="23901" level="85" type="Monster" name="Giant Spider of Terror">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="64920.6784620308" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="105" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.630669531155" magical="531.723202209691" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="45" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="23902" level="85" type="Monster" name="Riba of Terror" title="Leader of Creation">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="71239.1167192429" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="23903" level="85" type="Monster" name="Mansion Gatekeeper">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="40770.7048354442" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="140" />
+				<run ground="180" />
+			</speed>
+			<attack physical="793.078472861377" magical="514.419553652245" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23904" level="85" type="Monster" name="Mine Gatekeeper">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="49847.7917981073" hpRegen="10.5" mp="1603.81184103812" mpRegen="3.6" />
+			<speed>
+				<walk ground="54" />
+				<run ground="180" />
+			</speed>
+			<attack physical="808.241652190697" magical="523.16406672653" critical="4" attackSpeed="253" range="40" />
+			<defence physical="358.28025477707" magical="262.164158672597" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="23905" level="85" type="Monster" name="Gatekeeper of Fire" title="Gatekeeper Leader">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="59018.5159786038" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="13" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.630669531155" magical="531.723202209691" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="38" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="23906" level="85" type="Monster" name="Gatekeeper of Crystal">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="64920.6784620308" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="23" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.630669531155" magical="531.723202209691" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="31" />
+		</collision>
+	</npc>
+	<npc id="23907" level="85" type="Npc" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58667" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="35" />
+			<height normal="46.377" />
+		</collision>
+	</npc>
+	<npc id="23908" level="85" type="Monster" name="Hell Assassin">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="65302.523659306" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23909" level="85" type="Monster" name="Hell Dark Wizard">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="71622.517439019" hpRegen="10.5" mp="1649.64645945421" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="850.272087067862" magical="548.823603997899" critical="4" attackSpeed="253" range="40" />
+			<defence physical="360.651408450704" magical="263.977416812309" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="23910" level="85" type="Monster" name="Hell Armor" title="Devil's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="80967.4903610235" hpRegen="10.5" mp="1665.03334234478" mpRegen="3.6" />
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<attack physical="864.060090838747" magical="556.291048625548" critical="4" attackSpeed="253" range="40" />
+			<defence physical="360.766045548654" magical="264.046519203612" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23911" level="85" type="Monster" name="Hell Puppeteer">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="87344.9289140487" hpRegen="10.5" mp="1679.99866679999" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="876.663643025896" magical="564.113066895425" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.533908337561" magical="264.651175486018" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="23912" level="85" type="Monster" name="Hell Lord" title="Devil's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="96751.001790434" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.116059222027" magical="571.258430559737" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23913" level="85" type="Monster" name="Heavenly Soldier">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="65302.523659306" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23914" level="85" type="Monster" name="Heavenly Priest">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="71622.517439019" hpRegen="10.5" mp="1649.64645945421" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="850.272087067862" magical="548.823603997899" critical="4" attackSpeed="253" range="40" />
+			<defence physical="360.651408450704" magical="263.977416812309" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="38.5" />
+		</collision>
+	</npc>
+	<npc id="23915" level="85" type="Monster" name="Heavenly Judge" title="Angel's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="97" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="80967.4903610235" hpRegen="10.5" mp="1665.03334234478" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="864.060090838747" magical="556.291048625548" critical="4" attackSpeed="253" range="40" />
+			<defence physical="360.766045548654" magical="264.046519203612" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="80" />
+		</collision>
+	</npc>
+	<npc id="23916" level="85" type="Monster" name="Heavenly Wings">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="97" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="87344.9289140487" hpRegen="10.5" mp="1679.99866679999" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="876.663643025896" magical="564.113066895425" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.533908337561" magical="264.651175486018" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="23917" level="85" type="Monster" name="Heavenly Guardian" title="Angel's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="96751.001790434" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.116059222027" magical="571.258430559737" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="23918" level="85" type="Monster" name="Drake">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="91007.0241850684" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.944030101458" magical="578.250018031241" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="100" />
+		</collision>
+	</npc>
+	<npc id="23919" level="85" type="Monster" name="Mutated Drake">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="101794.662128507" hpRegen="10.5" mp="1723.43876723439" mpRegen="3.6" />
+			<speed>
+				<walk ground="46" />
+				<run ground="180" />
+			</speed>
+			<attack physical="922.447616662493" magical="591.187720654988" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.639553429027" magical="265.525015813145" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="48" />
+			<height normal="53.5" />
+		</collision>
+	</npc>
+	<npc id="23920" level="85" type="Monster" name="Drak" title="Dragon's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="113529.27198984" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.743907259391" magical="605.482499280969" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="100" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23921" level="85" type="Monster" name="Inferno Drake">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="126143.635544266" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="57" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.743907259391" magical="605.482499280969" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="23922" level="85" type="Monster" name="Chaos Drake" title="Dragon's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="142616.840572677" hpRegen="10.5" mp="1751.72083931208" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="970.722255425576" magical="620.565160120439" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.812835866728" magical="265.673656119043" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="112" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="23923" level="85" type="Monster" name="Velociraptor">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="91007.0241850684" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.944030101458" magical="578.250018031241" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23924" level="85" type="Monster" name="Ornithomimus">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="101794.662128507" hpRegen="10.5" mp="1723.43876723439" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="922.447616662493" magical="591.187720654988" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.639553429027" magical="265.525015813145" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.2" />
+		</collision>
+	</npc>
+	<npc id="23925" level="85" type="Monster" name="Pterosaur" title="Dominator of the Wild">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="113529.27198984" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="54" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.743907259391" magical="605.482499280969" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="36" />
+			<height normal="43.7" />
+		</collision>
+	</npc>
+	<npc id="23926" level="85" type="Monster" name="Primeval Strider">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="126143.635544266" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.743907259391" magical="605.482499280969" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="44.2" />
+		</collision>
+	</npc>
+	<npc id="23927" level="85" type="Monster" name="Tyrannosaurus" title="Dominator of the Wild">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="142616.840572677" hpRegen="10.5" mp="1751.72083931208" mpRegen="3.6" />
+			<speed>
+				<walk ground="105" />
+				<run ground="180" />
+			</speed>
+			<attack physical="5897.58711016196" magical="3769.6885049497" critical="4" attackSpeed="253" range="40" />
+			<defence physical="580.109012743743" magical="637.193390373162" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="60" />
+			<height normal="89.7" />
+		</collision>
+	</npc>
+	<npc id="23928" level="85" type="Monster" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="46595.3199303169" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="180" />
+			</speed>
+			<attack physical="793.078472861377" magical="514.419553652245" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="27.5" />
+			<height normal="38.25" />
+		</collision>
+	</npc>
+	<npc id="23929" level="85" type="Monster" name="Dancing Bard" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="46595.3199303169" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="793.078472861377" magical="514.419553652245" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="39" />
+			<height normal="61.5" />
+		</collision>
+	</npc>
+	<npc id="23930" level="85" type="Monster" name="Gatekeeper Roxxy" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="77175.7097791798" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="23931" level="85" type="Monster" name="Super Kat the Cat" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="77175.7097791798" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="23932" level="85" type="Monster" name="Super Mew the Cat" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="111868.957285361" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.116059222027" magical="571.258430559737" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="23933" level="85" type="Monster" name="Super Queen the Cat" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="111868.957285361" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.116059222027" magical="571.258430559737" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="23934" level="85" type="Monster" name="Roa" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="155582.382916768" hpRegen="10.5" mp="1751.72083931208" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="970.722255425576" magical="620.565160120439" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.812835866728" magical="265.673656119043" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
+	</npc>
+	<npc id="23935" level="85" type="Monster" name="Golden Bat Dandy" title="Intruding Challenger">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="155582.382916768" hpRegen="10.5" mp="1751.72083931208" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="970.722255425576" magical="620.565160120439" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.812835866728" magical="265.673656119043" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23936" level="85" type="Monster" name="Ketra Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="160" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="5478.07570977918" hpRegen="10.5" mp="1469.51878886185" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="682.186800894855" magical="446.743331473676" critical="4" attackSpeed="253" range="40" />
+			<defence physical="350.838926174497" magical="256.780809614788" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23937" level="85" type="Monster" name="Kel Mahum Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="160" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="5478.07570977918" hpRegen="10.5" mp="1469.51878886185" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="682.186800894855" magical="446.743331473676" critical="4" attackSpeed="253" range="40" />
+			<defence physical="350.838926174497" magical="256.780809614788" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="23938" level="85" type="Monster" name="Molten Guardian Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="84" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9956.32886435331" hpRegen="10.5" mp="1538.16909975669" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="746.527777777778" magical="485.828870153698" critical="4" attackSpeed="253" range="40" />
+			<defence physical="355.034722222222" magical="259.783049472831" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="23939" level="85" type="Monster" name="Arena Protector Tree">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9956.32886435331" hpRegen="10.5" mp="1538.16909975669" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="746.527777777778" magical="485.828870153698" critical="4" attackSpeed="253" range="40" />
+			<defence physical="355.034722222222" magical="259.783049472831" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23940" level="85" type="Monster" name="Protector Tree of Terror">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="20385.7526248882" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="23941" level="85" type="Monster" name="Gatekeeper Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="20385.7526248882" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="140" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23942" level="85" type="Monster" name="Hell Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32651.6448850834" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.889787361485" magical="540.472961303571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23943" level="85" type="Monster" name="Heavenly Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32651.6448850834" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.889787361485" magical="540.472961303571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23944" level="85" type="Monster" name="Drake Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="45503.5120925342" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.677506775068" magical="578.404218036049" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="100" />
+		</collision>
+	</npc>
+	<npc id="23945" level="85" type="Monster" name="Velociraptor Protector Tree">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="45503.5120925342" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.677506775068" magical="578.404218036049" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23946" level="85" type="Monster" name="Ketra Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="160" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="5478.07570977918" hpRegen="10.5" mp="1469.51878886185" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="682.311214648005" magical="446.624231678562" critical="4" attackSpeed="253" range="40" />
+			<defence physical="350.838926174497" magical="256.780809614788" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23947" level="85" type="Monster" name="Kel Mahum Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="160" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="5478.07570977918" hpRegen="10.5" mp="1469.51878886185" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="682.311214648005" magical="446.624231678562" critical="4" attackSpeed="253" range="40" />
+			<defence physical="350.838926174497" magical="256.780809614788" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="23948" level="85" type="Monster" name="Molten Guardian Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="84" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9956.32886435331" hpRegen="10.5" mp="1538.16909975669" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="746.695171411081" magical="486.421264115408" critical="4" attackSpeed="253" range="40" />
+			<defence physical="355.034722222222" magical="259.783049472831" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="23949" level="85" type="Monster" name="Arena Protector Tree">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9956.32886435331" hpRegen="10.5" mp="1538.16909975669" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="746.695171411081" magical="486.421264115408" critical="4" attackSpeed="253" range="40" />
+			<defence physical="355.034722222222" magical="259.783049472831" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23950" level="85" type="Monster" name="Protector Tree of Terror">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="20385.7526248882" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="793.078472861377" magical="514.419553652245" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="23951" level="85" type="Monster" name="Gatekeeper Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="20385.7526248882" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="140" />
+				<run ground="180" />
+			</speed>
+			<attack physical="793.078472861377" magical="514.419553652245" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23952" level="85" type="Monster" name="Hell Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32651.6448850834" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23953" level="85" type="Monster" name="Heavenly Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32651.6448850834" hpRegen="10.5" mp="1634.8047734909" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="836.810892557033" magical="540.649861053609" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.703504043127" magical="263.238625723132" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23954" level="85" type="Monster" name="Drake Knight Recruit">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="45503.5120925342" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.944030101458" magical="578.250018031241" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="100" />
+		</collision>
+	</npc>
+	<npc id="23955" level="85" type="Monster" name="Velociraptor Protector Tree">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="45503.5120925342" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.944030101458" magical="578.250018031241" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23956" level="85" type="Monster" name="Veil Master" title="Aide of the Blood Queen">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23957" level="85" type="Monster" name="Tanta Healer" title="Commander's Medic">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23958" level="85" type="Monster" name="Young Poisonous Spider">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2951.08124171353" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.555494404696" magical="531.910869222235" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23959" level="85" type="Monster" name="Young Stakato">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2951.08124171353" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.555494404696" magical="531.910869222235" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23960" level="85" type="Monster" name="Angel" title="Judge's Aid">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3011.97009636576" hpRegen="10.5" mp="1679.99866679999" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="876.881447657703" magical="563.787519228326" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.533908337561" magical="264.651175486018" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23961" level="85" type="Monster" name="Banshee" title="Queen's Maid">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3011.97009636576" hpRegen="10.5" mp="1679.99866679999" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="876.881447657703" magical="563.787519228326" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.533908337561" magical="264.651175486018" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23962" level="85" type="Monster" name="Baby Golden Pig">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="23963" level="85" type="Monster" name="Small Bard">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="23964" level="85" type="Monster" name="Would-be Gatekeeper">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="28" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="23965" level="85" type="Monster" name="Kat the Cat">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="23966" level="85" type="Monster" name="Mew the Cat">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23967" level="85" type="Monster" name="Queen the Cat">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23968" level="85" type="Monster" name="Roa Fan Club Human">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23969" level="85" type="Monster" name="Roa Fan Club Dwarf">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="23970" level="85" type="Monster" name="Dandy's Dinosaur Friend">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23971" level="85" type="Monster" name="Veil Master" title="Aide of the Blood Queen">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23972" level="85" type="Monster" name="Tanta Healer" title="Commander's Medic">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23973" level="85" type="Monster" name="Young Poisonous Spider">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2951.08124171353" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.555494404696" magical="531.910869222235" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23974" level="85" type="Monster" name="Young Stakato">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2951.08124171353" hpRegen="10.5" mp="1619.53289373156" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="822.555494404696" magical="531.910869222235" critical="4" attackSpeed="253" range="40" />
+			<defence physical="359.429462483948" magical="263.052844310954" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23975" level="85" type="Monster" name="Angel" title="Judge's Aid">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3011.97009636576" hpRegen="10.5" mp="1679.99866679999" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="876.881447657703" magical="563.787519228326" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.533908337561" magical="264.651175486018" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23976" level="85" type="Monster" name="Banshee" title="Queen's Maid">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3011.97009636576" hpRegen="10.5" mp="1679.99866679999" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="876.881447657703" magical="563.787519228326" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.533908337561" magical="264.651175486018" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23977" level="85" type="Monster" name="Baby Golden Pig">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="23978" level="85" type="Monster" name="Small Bard">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="23979" level="85" type="Monster" name="Would-be Gatekeeper">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="28" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="23980" level="85" type="Monster" name="Kat the Cat">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2912.70775460238" hpRegen="10.5" mp="1587.62150318965" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="792.910447761194" magical="514.576168504644" critical="4" attackSpeed="253" range="40" />
+			<defence physical="357.826253348641" magical="261.846609487965" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="23981" level="85" type="Monster" name="Mew the Cat">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23982" level="85" type="Monster" name="Queen the Cat">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23983" level="85" type="Monster" name="Roa Fan Club Human">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23984" level="85" type="Monster" name="Roa Fan Club Dwarf">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="23985" level="85" type="Monster" name="Dandy's Dinosaur Friend">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3024.17085855572" hpRegen="10.5" mp="1694.55952302668" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="889.086939700437" magical="571.426738936159" critical="4" attackSpeed="253" range="40" />
+			<defence physical="361.507212734207" magical="264.616862619639" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23986" level="85" type="Monster" name="Leona Blackbird" title="Dragon's Advocate">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="1893" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3033.90115667718" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.677506775068" magical="578.404218036049" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="23987" level="85" type="Monster" name="Kain van Halter" title="Prince of the Second Dimension">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3033.90115667718" hpRegen="10.5" mp="1709.65125709651" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="900.677506775068" magical="578.404218036049" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.113821138211" magical="265.101312813615" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="23988" level="85" type="Monster" name="Princess Ant" title="Successor in the Ant Nest">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3085.00747135979" hpRegen="10.5" mp="1723.43876723439" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="922.414938862308" magical="591.004733979548" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.639553429027" magical="265.525015813145" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="23989" level="85" type="Monster" name="Escort Ant">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3085.00747135979" hpRegen="10.5" mp="1723.43876723439" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="922.414938862308" magical="591.004733979548" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.639553429027" magical="265.525015813145" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23990" level="85" type="Monster" name="Royal Guard Ant">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3085.00747135979" hpRegen="10.5" mp="1723.43876723439" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="922.414938862308" magical="591.004733979548" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.639553429027" magical="265.525015813145" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23991" level="85" type="Monster" name="Urfen" title="Orfen Kin">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<collision>
+			<radius normal="31.5" />
+			<height normal="128.4" />
+		</collision>
+	</npc>
+	<npc id="23992" level="85" type="Monster" name="Laikel">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="18.5" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="23993" level="85" type="Monster" name="Riba">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="23994" level="85" type="Monster" name="Zaken" title="Unworldly Pirate King">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="23995" level="85" type="Monster" name="Zaken" title="Unworldly Pirate King">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="23996" level="85" type="Monster" name="Pirate Zombie Captain">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="14" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23997" level="85" type="Monster" name="Pirate Zombie">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3153.59088860666" hpRegen="10.5" mp="1737.76345309192" mpRegen="3.6" />
+			<speed>
+				<walk ground="11" />
+				<run ground="180" />
+			</speed>
+			<attack physical="945.959161320607" magical="605.45965088477" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.423720857456" magical="265.351861517546" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="23998" level="85" type="Monster" name="Saium" title="Relative of the Emperor">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3241.72935371674" hpRegen="10.5" mp="1751.72083931208" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="970.654844157838" magical="620.52954662488" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.812835866728" magical="265.673656119043" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="67.8" />
+		</collision>
+	</npc>
+	<npc id="23999" level="85" type="Monster" name="Traitor Angel">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="97" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3241.72935371674" hpRegen="10.5" mp="1751.72083931208" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="970.654844157838" magical="620.52954662488" critical="4" attackSpeed="253" range="40" />
+			<defence physical="362.812835866728" magical="265.673656119043" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+</list>

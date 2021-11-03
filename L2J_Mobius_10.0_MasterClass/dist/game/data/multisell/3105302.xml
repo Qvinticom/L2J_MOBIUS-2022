@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>31046</npc> <!-- Marsden -->
+		<npc>31047</npc> <!-- Kell -->
+		<npc>31048</npc> <!-- McDermott -->
+		<npc>31049</npc> <!-- Pepper -->
+		<npc>31050</npc> <!-- Thora -->
+		<npc>31051</npc> <!-- Keach -->
+		<npc>31052</npc> <!-- Heid -->
+		<npc>31053</npc> <!-- Kidder -->
+		<npc>31264</npc> <!-- Olsun -->
+		<npc>31308</npc> <!-- Achim -->
+		<npc>31953</npc> <!-- Rankar -->
+	</npcs>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="17825" count="1" chance="0" /> <!-- STR Dye -->
+		<production id="17625" count="1" chance="35" /> <!-- Giant STR Dye Lv.1 -->
+		<production id="17631" count="1" chance="20" /> <!-- Ancient STR Dye Lv.1 -->
+		<production id="17637" count="1" chance="20" /> <!-- Legendary STR Dye Lv.1 -->
+		<production id="17643" count="1" chance="5" /> <!-- Giant STR Dye Lv.2 -->
+		<production id="17649" count="1" chance="5" /> <!-- Ancient STR Dye Lv.2 -->
+		<production id="17655" count="1" chance="3" /> <!-- Legendary STR Dye Lv.2 -->
+		<production id="17661" count="1" chance="2" /> <!-- Giant STR Dye Lv.3 -->
+		<production id="17667" count="1" chance="2" /> <!-- Ancient STR Dye Lv.3 -->
+		<production id="17673" count="1" chance="2" /> <!-- Legendary STR Dye Lv.3 -->
+		<production id="17697" count="1" chance="2" /> <!-- Giant STR Dye Lv.5 -->
+		<production id="17703" count="1" chance="2" /> <!-- Ancient STR Dye Lv.5 -->
+		<production id="17709" count="1" chance="2" /> <!-- Legendary STR Dye Lv.5 -->
+	</item>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="17826" count="1" chance="0" /> <!-- DEX Dye -->
+		<production id="17626" count="1" chance="35" /> <!-- Giant DEX Dye Lv.1 -->
+		<production id="17632" count="1" chance="20" /> <!-- Ancient DEX Dye Lv.1 -->
+		<production id="17638" count="1" chance="20" /> <!-- Legendary DEX Dye Lv.1 -->
+		<production id="17644" count="1" chance="5" /> <!-- Giant DEX Dye Lv.2 -->
+		<production id="17650" count="1" chance="5" /> <!-- Ancient DEX Dye Lv.2 -->
+		<production id="17656" count="1" chance="3" /> <!-- Legendary DEX Dye Lv.2 -->
+		<production id="17662" count="1" chance="2" /> <!-- Giant DEX Dye Lv.3 -->
+		<production id="17668" count="1" chance="2" /> <!-- Ancient DEX Dye Lv.3 -->
+		<production id="17674" count="1" chance="2" /> <!-- Legendary DEX Dye Lv.3 -->
+		<production id="17698" count="1" chance="2" /> <!-- Giant DEX Dye Lv.5 -->
+		<production id="17704" count="1" chance="2" /> <!-- Ancient DEX Dye Lv.5 -->
+		<production id="17710" count="1" chance="2" /> <!-- Legendary DEX Dye Lv.5 -->
+	</item>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="17827" count="1" chance="0" /> <!-- CON Dye -->
+		<production id="17627" count="1" chance="35" /> <!-- Giant CON Dye Lv.1 -->
+		<production id="17633" count="1" chance="20" /> <!-- Ancient CON Dye Lv.1 -->
+		<production id="17639" count="1" chance="20" /> <!-- Legendary CON Dye Lv.1 -->
+		<production id="17645" count="1" chance="5" /> <!-- Giant CON Dye Lv.2 -->
+		<production id="17651" count="1" chance="5" /> <!-- Ancient CON Dye Lv.2 -->
+		<production id="17657" count="1" chance="3" /> <!-- Legendary CON Dye Lv.2 -->
+		<production id="17663" count="1" chance="2" /> <!-- Giant CON Dye Lv.3 -->
+		<production id="17669" count="1" chance="2" /> <!-- Ancient CON Dye Lv.3 -->
+		<production id="17675" count="1" chance="2" /> <!-- Legendary CON Dye Lv.3 -->
+		<production id="17699" count="1" chance="2" /> <!-- Giant CON Dye Lv.5 -->
+		<production id="17705" count="1" chance="2" /> <!-- Ancient CON Dye Lv.5 -->
+		<production id="17711" count="1" chance="2" /> <!-- Legendary CON Dye Lv.5 -->
+	</item>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="17828" count="1" chance="0" /> <!-- INT Dye -->
+		<production id="17628" count="1" chance="35" /> <!-- Giant INT Dye Lv.1 -->
+		<production id="17634" count="1" chance="20" /> <!-- Ancient INT Dye Lv.1 -->
+		<production id="17640" count="1" chance="20" /> <!-- Legendary INT Dye Lv.1 -->
+		<production id="17646" count="1" chance="5" /> <!-- Giant INT Dye Lv.2 -->
+		<production id="17652" count="1" chance="5" /> <!-- Ancient INT Dye Lv.2 -->
+		<production id="17658" count="1" chance="3" /> <!-- Legendary INT Dye Lv.2 -->
+		<production id="17664" count="1" chance="2" /> <!-- Giant INT Dye Lv.3 -->
+		<production id="17670" count="1" chance="2" /> <!-- Ancient INT Dye Lv.3 -->
+		<production id="17676" count="1" chance="2" /> <!-- Legendary INT Dye Lv.3 -->
+		<production id="17700" count="1" chance="2" /> <!-- Giant INT Dye Lv.5 -->
+		<production id="17706" count="1" chance="2" /> <!-- Ancient INT Dye Lv.5 -->
+		<production id="17712" count="1" chance="2" /> <!-- Legendary INT Dye Lv.5 -->
+	</item>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="17829" count="1" chance="0" /> <!-- WIT Dye -->
+		<production id="17629" count="1" chance="35" /> <!-- Giant WIT Dye Lv.1 -->
+		<production id="17635" count="1" chance="20" /> <!-- Ancient WIT Dye Lv.1 -->
+		<production id="17641" count="1" chance="20" /> <!-- Legendary WIT Dye Lv.1 -->
+		<production id="17647" count="1" chance="5" /> <!-- Giant WIT Dye Lv.2 -->
+		<production id="17653" count="1" chance="5" /> <!-- Ancient WIT Dye Lv.2 -->
+		<production id="17659" count="1" chance="3" /> <!-- Legendary WIT Dye Lv.2 -->
+		<production id="17665" count="1" chance="2" /> <!-- Giant WIT Dye Lv.3 -->
+		<production id="17671" count="1" chance="2" /> <!-- Ancient WIT Dye Lv.3 -->
+		<production id="17677" count="1" chance="2" /> <!-- Legendary WIT Dye Lv.3 -->
+		<production id="17701" count="1" chance="2" /> <!-- Giant WIT Dye Lv.5 -->
+		<production id="17707" count="1" chance="2" /> <!-- Ancient WIT Dye Lv.5 -->
+		<production id="17713" count="1" chance="2" /> <!-- Legendary WIT Dye Lv.5 -->
+	</item>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="17830" count="1" chance="0" /> <!-- MEN Dye -->
+		<production id="17630" count="1" chance="35" /> <!-- Giant MEN Dye Lv.1 -->
+		<production id="17636" count="1" chance="20" /> <!-- Ancient MEN Dye Lv.1 -->
+		<production id="17642" count="1" chance="20" /> <!-- Legendary MEN Dye Lv.1 -->
+		<production id="17648" count="1" chance="5" /> <!-- Giant MEN Dye Lv.2 -->
+		<production id="17654" count="1" chance="5" /> <!-- Ancient MEN Dye Lv.2 -->
+		<production id="17660" count="1" chance="3" /> <!-- Legendary MEN Dye Lv.2 -->
+		<production id="17666" count="1" chance="2" /> <!-- Giant MEN Dye Lv.3 -->
+		<production id="17672" count="1" chance="2" /> <!-- Ancient MEN Dye Lv.3 -->
+		<production id="17678" count="1" chance="2" /> <!-- Legendary MEN Dye Lv.3 -->
+		<production id="17702" count="1" chance="2" /> <!-- Giant MEN Dye Lv.5 -->
+		<production id="17708" count="1" chance="2" /> <!-- Ancient MEN Dye Lv.5 -->
+		<production id="17714" count="1" chance="2" /> <!-- Legendary MEN Dye Lv.5 -->
+	</item>	
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="39381" count="1" chance="0" /> <!-- Windy CHA Dye -->
+		<production id="39381" count="1" chance="35" /> <!-- Windy CHA Dye Lv.1 -->
+		<production id="39382" count="1" chance="20" /> <!-- Windy CHA Dye Lv.2 -->
+		<production id="39383" count="1" chance="20" /> <!-- Windy CHA Dye Lv.3 -->
+		<production id="39384" count="1" chance="5" /> <!-- Windy CHA Dye Lv.4 -->
+		<production id="39385" count="1" chance="5" /> <!-- Windy CHA Dye Lv.5 -->
+		<production id="39451" count="1" chance="3" /> <!-- Windy CHA Dye (Luck) Lv.1 -->
+		<production id="39452" count="1" chance="3" /> <!-- Windy CHA Dye (Luck) Lv.2 -->
+		<production id="39453" count="1" chance="3" /> <!-- Windy CHA Dye (Luck) Lv.3 -->
+		<production id="39454" count="1" chance="3" /> <!-- Windy CHA Dye (Luck) Lv.4 -->
+		<production id="39455" count="1" chance="3" /> <!-- Windy CHA Dye (Luck) Lv.5 -->
+	</item>
+	<item>
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="39386" count="1" chance="0" /> <!-- Windy LUC Dye -->
+		<production id="39386" count="1" chance="35" /> <!-- Windy LUC Dye Lv.1 -->
+		<production id="39387" count="1" chance="20" /> <!-- Windy LUC Dye Lv.2 -->
+		<production id="39388" count="1" chance="20" /> <!-- Windy LUC Dye Lv.3 -->
+		<production id="39389" count="1" chance="5" /> <!-- Windy LUC Dye Lv.4 -->
+		<production id="39390" count="1" chance="5" /> <!-- Windy LUC Dye Lv.5 -->
+		<production id="39456" count="1" chance="3" /> <!-- Windy LUC Dye (Charisma) Lv.1 -->
+		<production id="39457" count="1" chance="3" /> <!-- Windy LUC Dye (Charisma) Lv.2 -->
+		<production id="39458" count="1" chance="3" /> <!-- Windy LUC Dye (Charisma) Lv.3 -->
+		<production id="39459" count="1" chance="3" /> <!-- Windy LUC Dye (Charisma) Lv.4 -->
+		<production id="39460" count="1" chance="3" /> <!-- Windy LUC Dye (Charisma) Lv.5 -->
+	</item>
+</list>

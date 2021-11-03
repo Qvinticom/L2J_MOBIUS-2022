@@ -1,0 +1,1219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29400" name="Ancient Coin" type="EtcItem">
+		<!-- A coin that can be exchanged for various items through Alexandria. -->
+		<set name="icon" val="icon.bm_nebit_coin" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29401" name="Ultimate Jewelry Box Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 3 jewel. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
+	</item>
+	<item id="29402" name="Ultimate Jewelry Box Lv. 4" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 4 jewel. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
+	</item>
+	<item id="29403" name="Ultimate Jewelry Box Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain a Lv. 5 jewel. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28297" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
+	</item>
+	<item id="29404" name="Shiny Coin" type="EtcItem">
+		<!-- Can be exchanged for special items through the Game Assistant. -->
+		<set name="icon" val="icon.bm_nebit_coin" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29405" name="Jewel Box Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 3. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
+	</item>
+	<item id="29406" name="Transformation Sealbook: Sales Part-timer" additionalName="Kat the Cat" type="EtcItem">
+		<!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. -->
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29407" name="Aqua Elf's Present" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29408" name="Mysterious Magic Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Mysterious Boxes. Can be used only above level 85. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29409" name="Mysterious Magic Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Mysterious Boxes. Can be used only above level 95. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29410" name="Mysterious Magic Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Mysterious Boxes. Can be used only above level 99. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29411" name="Mysterious Magic Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Mysterious Boxes. Can be used only above level 102. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29412" name="Mysterious Magic Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Mysterious Boxes. Can be used only above level 105. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29413" name="Mysterious Magic Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged for Mysterious Magic Bait of your choice through Fisher Peeves in Heine. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29414" name="Mysterious Magic Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Earth Wyrm's Heart Ring, Antharas' Earring, Valakas' Necklace, Bottle of Antharas'/ Valakas'/ Baium's/ Queen Ant's/ Frintezza's Soul, Life Stone: Giant's Power, Blessed Helios/ Eternal Pack, Kain's/ Mermoden's/ Leona's/ Pantheon's/ Lionel's Soul Crystal Lv. 7, Blessed Zaken's Earring, Specter/ Helios Weapon Crafting Pack, Dark Eternal Enhancement Stone, Baium's Ring, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Zodiac Agathion Box, Special Magic Ornament Eternal Belt (PvE Attack)/ (PvE Def.)/ (PvP Attack)/ (PvP Def.), Queen Ant's Ring, Scroll of Blessing: R99-grade Weapon/ Armor, Elcyum, Package: High-grade Maphr's Rune 100% (3-hour), Designer Apocalypse Weapon/ Twilight Armor Pack, Eternal/ Seraph Armor Crafting Pack, Package: Eva's Rune (3-day) - Event, Tempest Stone, Venir's Talisman Lv. 7/ Lv. 5/ Lv. 3, Scroll of Blessing: R95-grade Weapon/ Armor, Dimensional Bracelet Enhancement Stone Pack, Maphr's Wind Scroll - Event, Scroll of Blessing: R-grade Weapon/ Armor, Maphr's Luck Potion, R-grade Gemstone (5 pcs.), Bottle Fragment of Antharas'/ Valakas'/ Baium's/ Queen Ant's/ Frintezza's Soul (2 pcs.). -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29415" name="Mysterious Box" type="EtcItem">
+		<!-- Double-click to receive a Heine Fishing Coin. There is a small chance to receive a Mysterious Magic Box. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29416" name="Scroll: Enchant Freya's Staff" additionalName="Event" type="EtcItem">
+		<!-- A weapon enchant scroll that can be used only on Freya's Ice Staff. You cannot use items that increase enchant success rates. -->
+		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29417" name="Pumpkin Seed" type="EtcItem">
+		<!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little pumpkin. -->
+		<set name="icon" val="icon.etc_gourd_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29418" name="Honey Pumpkin Seed" type="EtcItem">
+		<!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little honey pumpkin. -->
+		<set name="icon" val="icon.etc_gourd_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29419" name="Monster Energy" type="EtcItem">
+		<!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little honey pumpkin. -->
+		<set name="icon" val="icon.etc_nectar_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29420" name="Dragon's Pouch" type="EtcItem">
+		<!-- Obtain a Dragon's Box or a Dragon's Golden Box, and has a chance to obtain 1 Glowing Dragon's Attribute Potion. -->
+		<set name="icon" val="icon.bm_dragon_present_poket" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29421" name="Dragon's Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29422" name="Dragon's Golden Box" type="EtcItem">
+		<!-- Double-click to obtain a very rare item at a random rate. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29423" name="Mysterious Ancient Herb" type="EtcItem">
+		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="29424" name="Freya's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a rare random item. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29425" name="Sirra's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29426" name="Snowman's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29427" name="Freya's Fortune Stick" type="EtcItem">
+		<!-- Double-click Freya's Fortune Stick to obtain 1 Freya's Wind Scroll and 1 Freya's Ice Rose. Additionally, you can randomly earn 1 Freya/ Sirra/ Snowman's Fortune Box. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29428" name="Dragon Enchantment Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Dragon Weapon Box (Standard), Dragonclaw, Shadow/ Tauti/ Kelbim Weapon Pack, Life Stone Instilled with Giants' Power, Venir's Talisman Lv.12, Superior Giant's Codex - Mastery Chapter 1, Elcyum, Top-grade Spirit Stone, Superior Giant's Codex - Mastery, Superior Giant's Codex - Chapter 1, Rune Stone, Elcyum Crystal, Superior Giant's Codex, Festival Fortune Scroll (2 pcs.). -->
+		<set name="icon" val="BranchSys.Icon.Br_santa_gift_click_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29429" name="Dragon's Leather Pouch" type="EtcItem">
+		<!-- Double-click to obtain Santa Girl's Gift. Can be used only once a day. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29430" name="Dragon Enchantment Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Dragon Claw, Gran Kain's Scroll: Enchant R-grade Weapon, Royal R99-/ R95-/ R-grade Purple Save Ticket, Destruction Scroll: Enchant R-grade Weapon, Freya's Lucky Enchant Stone: R-grade Weapon/ Armor, Ancient Crystal: Enchant R-grade Armor, R99-/ R95-/ R-grade Red Save Ticket, Royal R99-/ R95-/ R-grade White Save Ticket, Superior Giant's Codex - Mastery Chapter 1, Giant's Lucky Enchant Stone: R-grade Weapon/ Armor, Blessed Scroll: Enchant R-grade Weapon/ Armor, Dragon's Attribute Potion (2 pcs.), Giant's Scroll: Enchant R-grade Weapon, Giant's Scroll: Enchant R-grade Armor (2 pcs.), Dragon's Golden Key. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29431" name="Dragon's Leather Pouch" type="EtcItem">
+		<!-- Double-click to obtain one of the following items at a certain rate: +5 Dragon Rind Leather Shirt Box, Radiant Rind Upgrade Stone, Blessed Antharas' Earring, Blessed Valakas' Necklace, Lindvior's Earring, Dragon Claw, Noble Leather Upgrade Stone, +8 Shiny Elemental Shirt Pack, Package: +7 Eva's/ Maphr's/ Sayha's/ Pa'agrio's Shirt, Shiny Elemental Shirt Exchange Stone, Destruction Scroll: Enchant Elemental Shirt, Package: High-grade Maphr's Rune 300% (1-day), Faint Scroll: Enchant Elemental Shirt, Superior Giant's Codex - Mastery Chapter 1, Elcyum (2 pcs.), Giant's Energy 20-unit Pack, R-grade Gemstone (90 pcs.), Source of the Emperor, Blessed Scroll: Enchant Dragon Shirt (2 pcs.). -->
+		<set name="icon" val="icon.bm_dragon_present_poket" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29432" name="High-grade Maphr's Rune 300%" additionalName="30-day" type="EtcItem">
+		<!-- If stored in inventory, adena drop +300%, item drop rate and item gain through spoils +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
+	</item>
+	<item id="29433" name="Package: High-grade Maphr's Rune 300%" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain High-grade Maphr's Rune 300% (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
+		<capsuled_items>
+			<item id="29432" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="29434" name="Package: High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
+		<capsuled_items>
+			<item id="29435" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="29435" name="High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
+		<!-- When in the inventory, adena drop +300%, item drop rate and spoil acquisition rate +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
+	</item>
+	<item id="29436" name="Package: High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
+		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (1-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
+		<capsuled_items>
+			<item id="29437" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% - 1-day -->
+		</capsuled_items>
+	</item>
+	<item id="29437" name="High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
+		<!-- If stored in inventory, adena drop +300%, item drop rate and item gain through spoils +100%. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="28172" level="1" /> <!-- High-grade Maphr's Rune -->
+		</skills>
+	</item>
+	<item id="29438" name="Sibi's Suspicious Supplies" type="EtcItem">
+		<!-- Suspicious supplies prepared by Sibi for the Balthus Knights. Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29439" name="Greater Vital Stone Lv. 2" additionalName="Not Available" type="Armor">
+		<!-- Vitality bonus +52%, Vitality Consumption -1, Acquired XP +16%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18568" level="7" /> <!-- Vital Stone -->
+			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
+		</skills>
+	</item>
+	<item id="29440" name="Greater Vital Stone Lv. 3" additionalName="Not Available" type="Armor">
+		<!-- Vitality bonus +54%, Vitality Consumption -1, Acquired XP +17%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18568" level="8" /> <!-- Vital Stone -->
+			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
+		</skills>
+	</item>
+	<item id="29441" name="Greater Vital Stone Lv. 4" additionalName="Not Available" type="Armor">
+		<!-- Vitality bonus +56%, Vitality Consumption -1, Acquired XP +18%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18568" level="9" /> <!-- Vital Stone -->
+			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
+		</skills>
+	</item>
+	<item id="29442" name="Greater Vital Stone Lv. 5" additionalName="Not Available" type="Armor">
+		<!-- Vitality bonus +60%, Vitality Consumption -20%, acquired XP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18568" level="10" /> <!-- Vital Stone -->
+			<skill id="27439" level="5" /> <!-- Vital Stone - Vital Wind -->
+		</skills>
+	</item>
+	<item id="29443" name="Greater Garnet Lv. 2" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +3%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="7" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29444" name="Greater Garnet Lv. 3" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +6%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="8" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29445" name="Greater Garnet Lv. 4" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +9%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="9" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29446" name="Greater Garnet Lv. 5" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="10" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29447" name="Greater Garnet Lv. 2" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +3%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="7" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29448" name="Greater Garnet Lv. 3" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +6%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="8" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29449" name="Greater Garnet Lv. 4" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +9%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="9" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29450" name="Greater Garnet Lv. 5" additionalName="Not Available" type="Armor">
+		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18566" level="10" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
+		</skills>
+	</item>
+	<item id="29451" name="Greater Tanzanite Lv. 2" additionalName="Not Available" type="Armor">
+		<!-- Creates a protective barrier that absorbs 55,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18565" level="7" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="29452" name="Greater Tanzanite Lv. 3" additionalName="Not Available" type="Armor">
+		<!-- Creates a protective barrier that absorbs 60,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18565" level="8" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="29453" name="Greater Tanzanite Lv. 4" additionalName="Not Available" type="Armor">
+		<!-- Creates a protective barrier that absorbs 65,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18565" level="9" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="29454" name="Greater Tanzanite Lv. 5" additionalName="Not Available" type="Armor">
+		<!-- Creates a protective barrier that absorbs 70,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18565" level="10" /> <!-- Greater Tanzanite - Barrier -->
+		</skills>
+	</item>
+	<item id="29455" name="Greater Cat's Eye Lv. 2" additionalName="" type="Armor">
+		<!-- Damage Reflection Resistance +55%. With a 10% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27440" level="7" /> <!-- Cat's Eye -->
+			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
+		</skills>
+	</item>
+	<item id="29456" name="Greater Cat's Eye Lv. 3" additionalName="" type="Armor">
+		<!-- Damage Reflection Resistance +60%. With a 10% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27440" level="8" /> <!-- Cat's Eye -->
+			<skill id="27441" level="2" /> <!-- Cat's Eye - Invincibility -->
+		</skills>
+	</item>
+	<item id="29457" name="Greater Cat's Eye Lv. 4" additionalName="" type="Armor">
+		<!-- Damage Reflection Resistance +65%. With a 15% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27440" level="9" /> <!-- Cat's Eye -->
+			<skill id="27441" level="2" /> <!-- Cat's Eye - Invincibility -->
+		</skills>
+	</item>
+	<item id="29458" name="Greater Cat's Eye Lv. 5" additionalName="" type="Armor">
+		<!-- Damage Reflection Resistance +70%. With a 20% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding two jewels of the same level, you can get superior jewel. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27440" level="10" /> <!-- Cat's Eye -->
+			<skill id="27441" level="3" /> <!-- Cat's Eye - Invincibility -->
+		</skills>
+	</item>
+	<item id="29459" name="Greater Amethyst Lv. 2" additionalName="" type="Armor">
+		<!-- PvP Damage +17%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27442" level="7" /> <!-- Amethyst -->
+			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29460" name="Greater Amethyst Lv. 3" additionalName="" type="Armor">
+		<!-- PvP Damage +20%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27442" level="8" /> <!-- Amethyst -->
+			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29461" name="Greater Amethyst Lv. 4" additionalName="" type="Armor">
+		<!-- PvP Damage +23%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27442" level="9" /> <!-- Amethyst -->
+			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29462" name="Greater Amethyst Lv. 5" additionalName="" type="Armor">
+		<!-- PvP Damage +25%, received P. Critical Rate -30%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding two jewels of the same level, you can get superior jewel. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_amethyst_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="27442" level="10" /> <!-- Amethyst -->
+			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
+		</skills>
+	</item>
+	<item id="29463" name="Jewel Energy Fragment" type="EtcItem">
+		<!-- Take it to Shadai in Heine to exchange for Jewel Energy. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_energy_piece" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29464" name="Energy-infused Ultimate Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain 1 La Vie En Rose's Jewelry Box. There is also a chance to obtain the Jewel Energy. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29465" name="Cat's Eye's Energy" type="EtcItem">
+		<!-- Combine with a Lv. 5 Cat's Eye to obtian a Greater Cat's Eye. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29466" name="Amethyst's Energy" type="EtcItem">
+		<!-- Combine with a Lv. 5 Amethyst to obtian a Greater Amethyst. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29467" name="Anniversary Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29468" name="Shiny Coin" type="EtcItem">
+		<!-- Can be exchanged for special items through the Game Assistant. -->
+		<set name="icon" val="icon.bm_nebit_coin" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29469" name="Shiny Jewel Energy" type="EtcItem">
+		<!-- Combine with a Lv. 5 gem to obtain a Greater gem. It can be used on any Lv. 5 gem, regardless of type. -->
+		<set name="icon" val="icon.bm_blessed_jewel" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29470" name="Greater Red Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Greater Red Cat's Eye Lv. 1 (30-day). -->
+		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47921" min="1" max="1" chance="100" /> <!-- Greater Red Cat's Eye Lv. 1 - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="29471" name="Greater Blue Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Blue Cat's Eye Lv. 1 (30-day). -->
+		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47922" min="1" max="1" chance="100" /> <!-- Greater Blue Cat's Eye Lv. 1 - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="29472" name="Greater Ruby Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Greater Ruby Lv. 1 (30-day). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80473" min="1" max="1" chance="100" /> <!-- Greater Ruby Lv. 1 - Event -->
+		</capsuled_items>
+	</item>
+	<item id="29473" name="Greater Sapphire Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Sapphire Lv. 1 (30-day). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80474" min="1" max="1" chance="100" /> <!-- Greater Sapphire Lv. 1 - Event -->
+		</capsuled_items>
+	</item>
+	<item id="29474" name="Greater Opal Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Greater Opal Lv. 1 (30-day). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80476" min="1" max="1" chance="100" /> <!-- Greater Opal Lv. 1 - Event -->
+		</capsuled_items>
+	</item>
+	<item id="29475" name="Greater Diamond Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Diamond Lv. 1 (30-day). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80479" min="1" max="1" chance="100" /> <!-- Greater Diamond Lv. 1 - Event -->
+		</capsuled_items>
+	</item>
+	<item id="29476" name="Greater Pearl Lv. 1 Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Pearl Lv. 1 (30-day). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80480" min="1" max="1" chance="100" /> <!-- Greater Pearl Lv. 1 - Event -->
+		</capsuled_items>
+	</item>
+	<item id="29477" name="Package: Paulina's Helios Shaper" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Shaper (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80021" min="1" max="1" chance="100" /> <!-- Paulina's Helios Shaper (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29478" name="Package: Paulina's Helios Cutter" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Cutter (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80022" min="1" max="1" chance="100" /> <!-- Paulina's Helios Cutter (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29479" name="Package: Paulina's Helios Slasher" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Slasher (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80023" min="1" max="1" chance="100" /> <!-- Paulina's Helios Slasher (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29480" name="Package: Paulina's Helios Avenger" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Avenger (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80024" min="1" max="1" chance="100" /> <!-- Paulina's Helios Avenger (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29481" name="Package: Paulina's Helios Fighter" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Fighter (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_fist" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80025" min="1" max="1" chance="100" /> <!-- Paulina's Helios Fighter (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29482" name="Package: Paulina's Helios Stormer" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Stormer (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_spear" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80026" min="1" max="1" chance="100" /> <!-- Paulina's Helios Stormer (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29483" name="Package: Paulina's Helios Thrower" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Thrower (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_bow" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80027" min="1" max="1" chance="100" /> <!-- Paulina's Helios Thrower (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29484" name="Package: Paulina's Helios Guardian" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Shooter (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80028" min="1" max="1" chance="100" /> <!-- Paulina's Helios Shooter (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29485" name="Package: Paulina's Helios Buster" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Buster (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80029" min="1" max="1" chance="100" /> <!-- Paulina's Helios Buster (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29486" name="Package: Paulina's Helios Caster" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Caster (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80030" min="1" max="1" chance="100" /> <!-- Paulina's Helios Caster (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29487" name="Package: Paulina's Helios Retributer" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Retributer (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80031" min="1" max="1" chance="100" /> <!-- Paulina's Helios Retributer (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29488" name="Package: Paulina's Helios Dual Swords" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Dual Swords (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80032" min="1" max="1" chance="100" /> <!-- Paulina's Helios Dual Sword (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29489" name="Package: Paulina's Helios Dual Daggers" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Dual Daggers (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80033" min="1" max="1" chance="100" /> <!-- Paulina's Helios Dual Dagger (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29490" name="Package: Paulina's Helios Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Helios Dual Blunt Weapon (30-day). -->
+		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80034" min="1" max="1" chance="100" /> <!-- Paulina's Helios Dual Blunt (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="29491" name="Package: Paulina's Eternal Heavy Armor Set" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Eternal Heavy Armor Set (30-day) and Paulina's Eternal Accessory Kit (30-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80035" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Helmet(Heavy Armor) (30-day) -->
+			<item id="80036" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Breastplate(Heavy Armor) (30-day) -->
+			<item id="80037" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Gaiters(Heavy Armor) (30-day) -->
+			<item id="80038" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Gauntlets(Heavy Armor) (30-day) -->
+			<item id="80039" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Boots(Heavy Armor) (30-day) -->
+			<item id="80040" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Shield (30-day) -->
+			<item id="80052" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Necklace(Skill Cooldown) (30-day) -->
+			<item id="80053" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Earring(MP Consumption) (30-day) -->
+			<item id="80054" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Earring(Vampiric Rage) (30-day) -->
+			<item id="80055" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Ring(Critical Rate) (30-day) -->
+			<item id="80056" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Ring(Critical Damage) (30-day) -->
+			<item id="80057" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Bracelet (30-day) -->	
+		</capsuled_items>
+	</item>
+	<item id="29492" name="Package: Paulina's Eternal Light Armor Set" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Eternal Light Armor Set (30-day) and Paulina's Eternal Accessory Kit (30-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80041" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Leather Helmet(Light Armor) (30-day) -->
+			<item id="80042" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Leather Armor(Light Armor) (30-day) -->
+			<item id="80043" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Leather Leggings(Light Armor) (30-day) -->
+			<item id="80044" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Leather Gloves(Light Armor) (30-day) -->
+			<item id="80045" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Leather Boots(Light Armor) (30-day) -->
+			<item id="80052" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Necklace(Skill Cooldown) (30-day) -->
+			<item id="80053" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Earring(MP Consumption) (30-day) -->
+			<item id="80054" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Earring(Vampiric Rage) (30-day) -->
+			<item id="80055" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Ring(Critical Rate) (30-day) -->
+			<item id="80056" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Ring(Critical Damage) (30-day) -->
+			<item id="80057" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Bracelet (30-day) -->	
+		</capsuled_items>
+	</item>
+	<item id="29493" name="Package: Paulina's Eternal Robe Set" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Paulina's Eternal Robe Set (30-day) and Paulina's Eternal Accessory Kit (30-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80046" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Circlet(Robe) (30-day) -->
+			<item id="80047" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Tunic(Robe) (30-day) -->
+			<item id="80048" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Stockings(Robe) (30-day) -->
+			<item id="80049" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Gloves(Robe) (30-day) -->
+			<item id="80050" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Shoes(Robe) (30-day) -->
+			<item id="80051" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Sigil (30-day) -->
+			<item id="80052" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Necklace(Skill Cooldown) (30-day) -->
+			<item id="80053" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Earring(MP Consumption) (30-day) -->
+			<item id="80054" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Earring(Vampiric Rage) (30-day) -->
+			<item id="80055" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Ring(Critical Rate) (30-day) -->
+			<item id="80056" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Ring(Critical Damage) (30-day) -->
+			<item id="80057" min="1" max="1" chance="100" /> <!-- Paulina's Eternal Bracelet (30-day) -->	
+		</capsuled_items>
+	</item>
+	<item id="29494" name="Paulina's Helios Weapon Coupon" additionalName="30-day" type="EtcItem">
+		<!-- Can be exchanged for a Paulina's Helios weapon (30-day) through the Game Assistant. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29495" name="Paulina's Eternal Armor Set Coupon" additionalName="30-day" type="EtcItem">
+		<!-- Can be exchanged for Paulina's Eternal Armor Set (30-day) through the Game Assistant. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29496" name="Freya's Fortune Stick" type="EtcItem">
+		<!-- Double-click Freya's Fortune Stick to obtain 2 Freya's Frozen Scroll, 2 Freya's Ice Rose, and 1 Scroll: Enchant Freya s Ice Staff. Additionally, you have a chance to earn a Freya or Snowman's Fortune Box. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29497" name="Snowman's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29498" name="Freya's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29499" name="Krishna Weapon Fragment Box" type="EtcItem">
+		<!-- Double-click to obtain 1 Krishna Weapon Fragment. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

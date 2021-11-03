@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29500" name="Krishna Crafting Recipe Box" type="EtcItem">
+		<!-- Double-click to obtain 1 Krishna Crafting Recipe. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29501" name="Freya's Appearance" type="Armor">
+		<!-- Freya's appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_freya" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">49</stat>
+			<stat type="pDef">220</stat>
+		</stats>
+	</item>
+	<item id="29502" name="Freya's Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Freya's. Used with upper or full-body armor. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29503" name="Freya's Ice Flower Appearance Stone" type="EtcItem">
+		<!-- An appearance stone that gives a shield/ sigil Freya's Ice Flower Shield appearance. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29504" name="Freya's Fortune Stick" type="EtcItem">
+		<!-- Double-click Freya's Fortune Stick to obtain Freya's Frozen Scroll/ Freya's Recovery Potion x3 and Freya's Art of Seduction XP/ Barrier or Pa'agrio's Blessing XP/ Might. Additionally, you can randomly earn 1 Freya's/ Sirra's/ Snowman's Fortune Box. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29505" name="Freya's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Ultimate Jewelry Box Lv. 4/ Lv. 5, Lindvior's Earring, Blessed Valakas' Necklace, Blessed Antharas' Earring, Mystic Soul Crystal, Sealed Talisman of Insanity/ Longing, Red Starlight Jar, Ancient Zodiac Agathion Charm Book of Growth, Mystic Soul Crystal Fragment, Life Stone: Giant's Power, Royal R99-grade White Save Ticket, Package: Lesser Giant's Lucky Enchant Stone: R-grade Weapon/ Armor, R99-grade Scroll of Blessing, Freya's Rune (30-day) Box, Apparition Stone (All-purpose), Life Stone: Giant's Power, Giant's Energy 100-unit Pack, Superior Giant's Codex - Mastery (2 pcs.)/ Mastery Chapter 1, Source of the Emperor, Package: Eva's Rune (3-day) - Event, Pa'agrio's Blessing Might (5 pcs.), Freya's Art of Seduction Barrier (5 pcs.). -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29506" name="Sirra's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29507" name="Snowman's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29508" name="Transformation Sealbook: Sales Part-timer" additionalName="Kat the Cat" type="EtcItem">
+		<!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. -->
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29509" name="Expertise Rune - ALL (7-day) Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain an Expertise Rune - ALL (7-day) Box. -->
+		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29510" name="Expertise Rune - ALL" additionalName="7-day" type="EtcItem">
+		<!-- When stored in the inventory, it enables you equip all grade items without any penalty. -->
+		<set name="icon" val="icon.ev_charge_run" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="29511" name="Rookie Box" type="EtcItem">
+		<!-- Pack containing items for new heroes. Double-click to obtain Nevit's Rune (Dragon's Ascension) - 7 days, Freya's Art of Seduction - EXP (10 pcs.), Dandy's Home Run Ball (3 pcs.), Hero's Mark (250 pcs.), Hero's Support Cube, New User Sprout (30-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29512" name="Angel Cat's Blessing" type="EtcItem">
+		<!-- For 60 min., P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Letter Collector's Gift. -->
+		<set name="icon" val="BranchSys3.g_blessing_of_angel_cat_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29513" name="Passion Treasure Chest" type="EtcItem">
+		<!-- Treasure Chest with Pomona's gift. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29514" name="Festival Ticket" type="EtcItem">
+		<!-- Ticket to participate in the Festival. -->
+		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29515" name="Golden Mermaid Bait Coupon" type="EtcItem">
+		<!-- Exchange for 1 Golden Bait that you want through Peeves. -->
+		<set name="icon" val="icon.etc_bm_lure_special_ticket" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29516" name="Golden Mermaid Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29517" name="Golden Mermaid Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29518" name="Golden Mermaid Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29519" name="Golden Mermaid Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29520" name="Special Golden Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Sayha's Talisman Pack Lv. 8, Radiant Circlet Upgrade Stone, Radiant Rind Upgrade Stone, +7 T-shirt Pack (Shiny Elemental/ Physical Reflect/ Magical Reflect), Red Starlight Jar, Dark/ Bloody Weapon Enhancement Stone, Royal R99-grade Purple/ Red/ White Save Ticket, High-grade/ Mid-grade/ Low-grade Zodiac Agathion Box, Destruction Scroll: Enchant Elemental Shirt, Stable/ Ancient Zodiac Agathion Charm Book of Growth, Soul Crystal Box Lv. 5-7, Dark/ Bloody Armor Enhancement Stone, Royal R95-grade Purple/ Red/ White Save Ticket, Ultimate Fortune Jewelry Box, Elcyum, Tempest Stone, Shining Nevit's Gold Hourglass, Blessed Scroll: Enchant R-grade Weapon, Gale Scroll, Giant's Scroll: Enchant R-grade Weapon, Energy of Destruction Pack (20 pcs.), Elcyum Crystal, R-grade Gemstone (7 pcs.). -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29521" name="Golden Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain 3 Heine Fishing Coins and for a chance to obtain a Special Golden Treasure Chest. -->
+		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29522" name="Maphr's Rune 300%" additionalName="1-hour" type="EtcItem">
+		<!-- Have it in your inventory to have Item Drop Rate +300% when hunting. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29523" name="Package: Maphr's Rune 300% (1-hour)" type="EtcItem">
+		<!-- Double-click to obtain Maphr's Rune 300% (1-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29524" name="+3 Dragon Earring Box" type="EtcItem">
+		<!-- Double-click to obtain Dragon Earring enchanted to +3. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80334" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Dragon's Earring -->
+		</capsuled_items>
+	</item>
+	<item id="29525" name="+3 Dragon Ring Box" type="EtcItem">
+		<!-- Double-click to obtain Dragon's Ring enchanted to +3. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80335" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Dragon's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="29526" name="+3 Dragon Necklace Box" type="EtcItem">
+		<!-- Double-click to obtain Dragon's Necklace enchanted to +3. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80333" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Dragon's Necklace -->
+		</capsuled_items>
+	</item>
+	<item id="29527" name="Golden Mermaid Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_silver_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29528" name="Archaeologist's Box" type="EtcItem">
+		<!-- A suspicious vault secretly being traded in Mystic Tavern. Obtain a rare item. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29529" name="Shiny Gold Bar Box" type="EtcItem">
+		<!-- Double-click to obtain 3 to 1000 Shiny Gold Bars. -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29530" name="Lucky Growth Scroll" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. and P./ M. Def. +30%. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29531" name="Anniversary Pitapat Box" type="EtcItem">
+		<!-- A generous gift box prepared by Bright Snow for the 15th Anniversary. It is said to contain a number of valuable items. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29532" name="Anniversary Attendance Box" type="EtcItem">
+		<!-- A box issued at every login after logging in on at least 5 days during the 15th Anniversary event. Use it to obtain Bright Snow's gifts. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29533" name="Anniversary Earring Gift Box" type="EtcItem">
+		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Earring, Lindvior's Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29534" name="Anniversary Ring Gift Box" type="EtcItem">
+		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Ring, Ring of Creation, Tauti's Ring, Earth Wyrm's Heart Ring, Baium's Soul Ring, Forgotten Ring of Core, Mimir's Soul Ring, Queen Ant's Soul Ring. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29535" name="Anniversary Necklace Gift Box" type="EtcItem">
+		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Dragon's Necklace, Blessed Valakas' Necklace, Harnak's Transformed Necklace, Frintezza's Soul Necklace. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29536" name="Blazing Sun Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Ring of the Truth-Seeker, Ruler's Ring of Authority, +10 Fallen Angel's Ring Box, +5 Dragon Rind Leather Shirt Box, Sayha's Talisman Pack Lv. 8, Talisman of Seven Signs, Radiant Circlet Upgrade Stone, Sayha's Talisman Pack Lv. 7, Radiant Rind Upgrade Stone, +8 Shiny Elemental Shirt Pack, +8 Physical Reflect Shirt Pack, +8 Magical Reflect Shirt Pack, Noble Circlet Upgrade Stone, Noble Leather Upgrade Stone, Sayha's Energy/ Blessing, Destruction Scroll: Enchant Elemental Shirt, Venir's Talisman Lv. 11, Giant's Energy 100-unit Pack, Giant's Energy 20-unit Pack, Angel's Necklace/ Earring, Superior Giant's Codex - Mastery Chapter 1, Blessed Scroll: Enchant Elemental Shirt x3, Circlet Spirit Stone, Shirt Pack, Forgotten Spellbook Chapter 1, Rune Stone x2, Superior Giant's Codex - Chapter 1, Superior Giant's Codex - Mastery, Sayha's Talisman Pack, Energy of Destruction 20-unit Pack, Freya's Dark/ Bloody Rune Pack (2-hour), Elcyum Crystal. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29537" name="Hardin's Miracle Sack" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29538" name="Cheer Pompoms from Don Quijote" additionalName="Event" type="Weapon">
+		<!-- An item commemorating the collaboration with Don Quijote. Fulfill all your cherished dreams! Enables the Inspiring Crackers skill. -->
+		<set name="icon" val="BranchIcon.Icon.etc_ev_don_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">200</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29539" name="Dragon Power Crystal" type="EtcItem">
+		<!-- A stone imbued with arcane power of Dragons. Required for crafting Dragon Augmenting Stone. -->
+		<set name="icon" val="icon.bm_piece_of_ensoul_stone" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29540" name="Mammon's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_2018_special_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29541" name="Suspicious Vault" type="EtcItem">
+		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29542" name="Gold Bar Pouch" type="EtcItem">
+		<!-- Double-click to obtain Shiny Gold Bar Box and other rare items. -->
+		<set name="icon" val="icon.christmas_card_box1" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29543" name="Treasure Chest of Ancient Kingdom" type="EtcItem">
+		<!-- Double-click to obtain a rare valuable item at random. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29544" name="Antharas Treasure Chest" type="EtcItem">
+		<!-- Precious treasure chest obtained after the campaign against Antharas. Double-click to get one rare item, Emperor's Special Cocktail and Freya's Ice Rose. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29545" name="Letter D" additionalName="Event" type="EtcItem">
+		<!-- Combine with other letters to create a special word and get a reward! -->
+		<set name="icon" val="icon.etc_alphabet_d_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29546" name="Enhanced La Vie En Rose's Brooch" type="Armor">
+		<!-- Unlocks 6 jewel slots. Inventory Slots +12. <Enchanting>. Use Blessed Scroll: Enchant Brooch. <Enhancing>. Take La Vie En Rose's Brooch enchanted to +5 to Head Blacksmith in any town to get Superior La Vie En Rose's Brooch. Can be augmented. -->
+		<set name="icon" val="icon.bm_brooch_6slot_lavianrose_4" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="5" />
+		<skills>
+			<skill id="35626" level="1" /> <!-- Enhanced La Vie En Rose's Brooch -->
+			<skill id="35626" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Enhanced La Vie En Rose's Brooch -->
+			<skill id="35626" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Enhanced La Vie En Rose's Brooch -->
+			<skill id="35626" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Enhanced La Vie En Rose's Brooch -->
+			<skill id="35626" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Enhanced La Vie En Rose's Brooch -->
+			<skill id="35626" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Enhanced La Vie En Rose's Brooch -->
+		</skills>
+		<stats>
+			<stat type="mDef">128</stat>
+		</stats>
+	</item>
+	<item id="29547" name="Superior La Vie En Rose's Brooch" type="Armor">
+		<!-- Unlocks 6 jewel slots. Inventory Slots +12. <Enchanting>. Use Blessed Scroll: Enchant Brooch. Can be augmented. -->
+		<set name="icon" val="icon.bm_brooch_6slot_lavianrose_5" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<skills>
+			<skill id="35627" level="1" /> <!-- Top-grade La Vie En Rose's Brooch" -->
+			<skill id="35627" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Top-grade La Vie En Rose's Brooch -->
+			<skill id="35627" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Top-grade La Vie En Rose's Brooch -->
+		</skills>
+		<stats>
+			<stat type="mDef">144</stat>
+		</stats>
+	</item>
+	<item id="29548" name="Blessed Scroll: Enchant Brooch" type="EtcItem">
+		<!-- A scroll for enchanting Enhanced La Vie En Rose's Brooch and Superior La Vie En Rose's Brooch. In case of failure, enchant value of La Vie En Rose's Brooch is reset, but its type is unchanged. -->
+		<set name="icon" val="icon.bm_blessed_scrl_of_ench_brooch" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39619" level="1" /> <!-- Blessed Scroll: Enchant Brooch -->
+		</skills>
+	</item>
+	<item id="29549" name="Requiem Shaper Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Shaper with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29550" name="Requiem Cutter Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Cutter with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29551" name="Requiem Slasher Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Slasher with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29552" name="Requiem Avenger Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Avenger with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29553" name="Requiem Fighter Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Fighter with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29554" name="Requiem Stormer Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Stormer with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29555" name="Requiem Thrower Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Thrower with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29556" name="Requiem Guardian Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Shooter with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29557" name="Requiem Buster Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Buster with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29558" name="Requiem Caster Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Caster with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29559" name="Requiem Retributer Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Requiem Retributer with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29560" name="Immortal Helmet Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Helmet (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29561" name="Immortal Breastplate Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Breastplate (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29562" name="Immortal Gaiters Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Gaiters (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29563" name="Immortal Gauntlets Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Gauntlets (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29564" name="Immortal Boots Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Boots (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29565" name="Immortal Shield Fortune Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain Immortal Shield with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29566" name="Immortal Leather Helmet Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Leather Helmet (Light) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29567" name="Immortal Leather Armor Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Leather Armor (Light) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29568" name="Immortal Leather Leggings Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Leather Leggings with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29569" name="Immortal Leather Gloves Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Leather Gloves (Light) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29570" name="Immortal Leather Boots Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Immortal Leather Boots (Light) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29571" name="Immortal Circlet Fortune Box" additionalName="Robe" type="EtcItem">
+		<!-- Double-click to obtain Immortal Circlet (Robe) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29572" name="Immortal Tunic Fortune Box" additionalName="Robe" type="EtcItem">
+		<!-- Double-click to obtain Immortal Tunic (Robe) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29573" name="Immortal Stockings Fortune Box" additionalName="Robe" type="EtcItem">
+		<!-- Double-click to obtain Immortal Stockings (Robe) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29574" name="Immortal Gloves Fortune Box" additionalName="Robe" type="EtcItem">
+		<!-- Double-click to obtain Immortal Gloves (Robe) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29575" name="Immortal Shoes Fortune Box" additionalName="Robe" type="EtcItem">
+		<!-- Double-click to obtain Immortal Shoes (Robe) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29576" name="Immortal Sigil Fortune Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain Immortal Sigil with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29577" name="Immortal Necklace Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Immortal Necklace with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29578" name="Immortal Earring Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Immortal Earring with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29579" name="Immortal Ring Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Immortal Ring with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29580" name="Apocalypse Shaper Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Shaper with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29581" name="Apocalypse Cutter Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Cutter with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29582" name="Apocalypse Slasher Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Slasher with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29583" name="Apocalypse Avenger Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Avenger with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29584" name="Apocalypse Fighter Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Fighter with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29585" name="Apocalypse Stormer Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Stormer with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29586" name="Apocalypse Thrower Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Thrower with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29587" name="Apocalypse Guardian Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Shooter with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29588" name="Apocalypse Buster Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Buster with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29589" name="Apocalypse Caster Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Caster with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29590" name="Apocalypse Retributer Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain Apocalypse Retributer with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29591" name="Twilight Helmet Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Helmet (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29592" name="Twilight Breastplate Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Breastplate (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29593" name="Twilight Gaiters Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Gaiters (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29594" name="Twilight Gauntlets Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Gauntlets (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29595" name="Twilight Boots Fortune Box" additionalName="Heavy armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Boots (Heavy) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29596" name="Twilight Shield Fortune Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain Twilight Shield with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29597" name="Twilight Leather Helmet Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Leather Helmet (Light) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29598" name="Twilight Leather Armor Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Leather Armor (Light) with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29599" name="Twilight Leather Leggings Fortune Box" additionalName="Light armor" type="EtcItem">
+		<!-- Double-click to obtain Twilight Leather Leggings with a 60% chance. In case of failure you will get nothing. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

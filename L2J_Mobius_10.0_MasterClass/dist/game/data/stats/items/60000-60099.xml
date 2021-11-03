@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="60000" name="Freya's Ice Rose" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_ice_rose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60001" name="Lovely Chocolate Box" type="EtcItem">
+		<!-- Double-click to obtain 1-5 Valentine's Bouquets. Additionally, you can get 1 useful item. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60002" name="Lovely Chocolate Box Set" type="EtcItem">
+		<!-- Double-click to obtain Lovely Chocolate Box (70 pcs.) and Valentine's Bouquet (25 pcs.). -->
+		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60003" name="Alchemist's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="BranchSys.icon.br_fire_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60004" name="Boys' Surprise Lucky Pouch" type="EtcItem">
+		<!-- Double-click to obtain a random item. Additionally you can get Christmas Gift Lucky Pouch. -->
+		<set name="icon" val="BranchIcon.Icon.newyear_lucky_bag3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60005" name="Christmas Gift Lucky Pouch" type="EtcItem">
+		<!-- Double-click to obtain 1 to 2000 Boys' Lucky Coins. -->
+		<set name="icon" val="BranchSys.icon.br_otoshidama_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60006" name="Boys' Lucky Coin" type="EtcItem">
+		<!-- Take it to the Game Assistant to obtain a useful item. -->
+		<set name="icon" val="icon.bm_goblin_coin" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60007" name="Siege Attack Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60008" name="Siege Support Box" type="EtcItem">
+		<!-- Double-click to obtain various supplies. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60009" name="Festival Fairy's Lucky Ticket" type="EtcItem">
+		<!-- Allows to take part in the raffle for 1 h. after using the ticket. Required level: 105+. The effect is removed when switching to a subclass/ dual class. -->
+		<set name="icon" val="icon.ev_balthus_token" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="60010" name="Pantheon's Protection Box" type="EtcItem">
+		<!-- Double-click to obtain 1 useful item with a certain chance. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60011" name="Festival Fairy's Good Luck Bag" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 3 Festival Fairy's Lucky Tickets (1-hour). -->
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60012" name="Barter Package" type="EtcItem">
+		<!-- Double-click to obtain rare items. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60013" name="Partner Help Cube" type="EtcItem">
+		<!-- Double-click to obtain Emperor's Special Cocktail (3 pcs.). 10 d. - Ice Rose (50 pcs.) 20 d. - Glowing Dragon's Attribute Potion (50 pcs.) 30 d. - Shining Nevit's Gold Hourglass (20 pcs.) (Can be used only once a day.) -->
+		<set name="icon" val="icon.etc_11th_event_group" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60014" name="Lulu's Gratitude Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Freya's Scroll of Storm (1008 pcs.), Emperor's Special Cocktail (168 pcs.), Freya's Ice Rose (336 pcs.), Glowing Dragon's Attribute Potion (336 pcs.), Honey Dark Beer (336 pcs.), Shining Nevit's Gold Hourglass (336 pcs.). -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60015" name="Spellbook: Create Mysterious Soulshots" type="EtcItem">
+		<!-- A spellbook for learning the Create Mysterious R-grade Soulshots skill. -->
+		<set name="icon" val="BranchIcon.Icon.g_book_summonsoulshot_r" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="60016" name="Spellbook: Create Mysterious Spiritshots" type="EtcItem">
+		<!-- A spellbook for learning the Create Mysterious R-grade Spiritshots skill. -->
+		<set name="icon" val="BranchIcon.Icon.g_book_summonspiritshot_r" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="60017" name="Shiny Vault" type="EtcItem">
+		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60018" name="Night Goblin's Jewel Box" type="EtcItem">
+		<!-- Double-click to obtain Glittering Freya's Scroll of Storm and Glittering Freya's Ice Rose. Additionally, you can get 1 useful item. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60019" name="zaken" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60020" name="lilith" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60021" name="Admiral" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60022" name="skeleton" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_skeleton" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60023" name="Demon" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60024" name="Nymph" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60025" name="Jester" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="icon.ev_new_clothes_05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="BRONZE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60026" name="Dragon Berserker" type="Armor">
+		<!-- Changes your appearance. -->
+		<set name="icon" val="icon.bm2018_dragon_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60027" name="Zaken Outfit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Zaken Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60028" name="Lilith Outfit Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Lilith Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60029" name="Admiral Outfit Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Admiral Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60030" name="Skeleton Outfit Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Skeleton Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60031" name="Demon Outfit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Demon Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60032" name="Nymph Outfit Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Nymph Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60033" name="Jester Outfit Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Jester Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60034" name="Dragon Berserker Outfit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Dragon Berserker Outfit. The default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60035" name="Watermelon Hat" additionalName="14-day" type="Armor">
+		<!-- Hat that looks like a watermelon. It feels cool just by looking at it. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+		<stats>
+		</stats>
+	</item>
+	<item id="60036" name="Forgotten Treasure" type="EtcItem">
+		<!-- Double-click to obtain rare items. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60037" name="Lucky Coin" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_ev_kalie_token" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60038" name="Kingdom's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain 5 Shiny Golden Kingdom's Keys. There is also a chance to obtain an additional useful item. -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60039" name="Shiny Golden Kingdom's Key" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.bm_dragon_key" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60040" name="Orc's Special Medium Vitality Tonic" type="EtcItem">
+		<!-- Recovers 2 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60041" name="Dragon's Relic" type="EtcItem">
+		<!-- Double-click to obtain Scroll: Enchant Mysterious Weapon, a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60042" name="Kingdom's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain Shiny Golden Kingdom's Key. There is also a chance to obtain an additional useful item. -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60043" name="Returning Hero's Welcome Gift" additionalName="THE HERO" type="EtcItem">
+		<!-- A special gift for returning adventurers who still remember the glory of the past. Double-click to obtain the following. -->
+		<set name="icon" val="icon.bm_2018_special_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60044" name="THE HERO RETURNS Coin" type="EtcItem">
+		<!-- A coin that can be obtained for completing the 'THE HERO RETURNS' event quest. Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_field_special_coin_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60045" name="Hero's Symbol" additionalName="THE HERO" type="EtcItem">
+		<!-- A special gift for returning adventurers. Its bonuses will be available after you add it to the collection. -->
+		<set name="icon" val="icon.etc_london_olympic_gold" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60046" name="God's Accessory Enhancement Stone" additionalName="THE HERO" type="EtcItem">
+		<!-- An enhancement stone imbued with a god's energy. Only for returning adventurers. Can be used to enhance god's accessories from THE HERO RETURNS event through compounding. -->
+		<set name="icon" val="BranchSys.Icon.br_spirit_skill_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60047" name="Gran Kain's Necklace Lv. 1" additionalName="THE HERO" type="Armor">
+		<!-- MP +107, Dark Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +15%, M. Atk. +10%, Skill Power +15%, Max HP +3%, Max MP +5%, Confusion Resistance +25%, Obstruction Resistance +25%, Stupor Resistance +15%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">292</stat>
+			<stat type="maxMp">107</stat>
+		</stats>
+	</item>
+	<item id="60048" name="Gran Kain's Necklace Lv. 2" additionalName="THE HERO" type="Armor">
+		<!-- MP +114, Dark Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -11%, Damage Reflection +6%, P. Atk. +16%, M. Atk. +11%, Skill Power +17%, Max HP +3%, Max MP +5%, Confusion Resistance +26%, Obstruction Resistance +26%, Stupor Resistance +16%. When used, ignores the target's invincibility for 7 sec. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">333</stat>
+			<stat type="maxMp">114</stat>
+		</stats>
+	</item>
+	<item id="60049" name="Gran Kain's Necklace Lv. 3" additionalName="THE HERO" type="Armor">
+		<!-- MP +121, Dark Resistance +60, STR +4, INT +4, CON +4, Skill Cooldown -12%, Damage Reflection +7%, P. Atk. +17%, M. Atk. +12%, Skill Power +25%, Max HP +5%, Max MP +7%, Confusion Resistance +27%, Obstruction Resistance +27%, Stupor Resistance +17%. When used, ignores the target's invincibility for 8 sec. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">374</stat>
+			<stat type="maxMp">121</stat>
+		</stats>
+	</item>
+	<item id="60050" name="Einhasad's Necklace Lv. 1" additionalName="THE HERO" type="Armor">
+		<!-- MP +107, Holy Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +10%, M. Atk. +15%, Skill Power +15%, Max HP +5%, Max MP +3%, Confusion Resistance +25%, Obstruction Resistance +25%, Stupor Resistance +25%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">292</stat>
+			<stat type="maxMp">107</stat>
+		</stats>
+	</item>
+	<item id="60051" name="Einhasad's Necklace Lv. 2" additionalName="THE HERO" type="Armor">
+		<!-- MP +114, Holy Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -11%, Damage Reflection +6%, P. Atk. +11%, M. Atk. +16%, Skill Power +17%, Max HP +5%, Max MP +3%, Confusion Resistance +26%, Obstruction Resistance +26%, Stupor Resistance +26%. When used, Damage Reflection Resistance +20% for 30 sec. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">333</stat>
+			<stat type="maxMp">114</stat>
+		</stats>
+	</item>
+	<item id="60052" name="Einhasad's Necklace Lv. 3" additionalName="THE HERO" type="Armor">
+		<!-- MP +121, Holy Resistance +60, STR +4, INT +4, CON +4, Skill Cooldown -12%, Damage Reflection +7%, P. Atk. +12%, M. Atk. +17%, Skill Power +25%, Max HP +7%, Max MP +5%, Confusion Resistance +27%, Obstruction Resistance +27%, Stupor Resistance +27%. When used, Damage Reflection Resistance +35% for 30 sec. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">374</stat>
+			<stat type="maxMp">121</stat>
+		</stats>
+	</item>
+	<item id="60053" name="Pa'agrio's Earring Lv. 1" additionalName="THE HERO" type="Armor">
+		<!-- MP +80, Fire Resistance +70, DEX +3, WIT +3, MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +15%, M. Def. +10%, P./ M. Debuff Reflection Rate +13%, M. Damage Reflection Rate +13%, P. Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Healing +10%, Healing Power +80, Obstruction/ Stupor Resistance +10%, Confusion/ Vital Point Attack Resistance +30%, Petrification/ Infection Resistance +40%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">219</stat>
+			<stat type="maxMp">80</stat>
+		</stats>
+	</item>
+	<item id="60054" name="Pa'agrio's Earring Lv. 2" additionalName="THE HERO" type="Armor">
+		<!-- MP +86, Fire Resistance +75, DEX +3, WIT +3, MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +16%, M. Def. +11%, P./ M. Debuff Reflection Rate +14%, M. Damage Reflection Rate +14%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +12%, Healing Power +88, Obstruction/ Stupor Resistance +12%, Confusion/ Vital Point Attack Resistance +32%, Petrification/ Infection Resistance +42%. Inflicts continuous damage with a chance of 1% for basic attacks and 2% for skill casting. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">250</stat>
+			<stat type="maxMp">86</stat>
+		</stats>
+	</item>
+	<item id="60055" name="Pa'agrio's Earring Lv. 3" additionalName="THE HERO" type="Armor">
+		<!-- MP +91, Fire Resistance +80, DEX +4, WIT +4, MEN +4, Vampiric Rage effect +6%, MP Consumption -6%, P. Def. +17%, M. Def. +12%, P./ M. Debuff Reflection Rate +15%, M. Damage Reflection Rate +15%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +14%, Healing Power +96, Obstruction/ Stupor Resistance +14%, Confusion/ Vital Point Attack Resistance +34%, Petrification/ Infection Resistance +44%. Inflicts continuous damage with a chance of 2% for basic attacks and 3% for skill casting. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">280</stat>
+			<stat type="maxMp">91</stat>
+		</stats>
+	</item>
+	<item id="60056" name="Eva's Earring Lv. 1" additionalName="THE HERO" type="Armor">
+		<!-- MP +160, Water Resistance +70, DEX +3, WIT +3, MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +10%, M. Def. +15%, P./ M. Debuff Reflection Rate +13%, M. Damage Reflection Rate +13%, P. Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Healing +5%, Healing Power +160, Obstruction/ Stupor Resistance +10%, Confusion/ Vital Point Attack Resistance +30%, Petrification/ Infection Resistance +40%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">219</stat>
+			<stat type="maxMp">80</stat>
+		</stats>
+	</item>
+	<item id="60057" name="Eva's Earring Lv. 2" additionalName="THE HERO" type="Armor">
+		<!-- MP +86, Water Resistance +75, DEX +3, WIT +3, MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +11%, M. Def. +16%, P./ M. Debuff Reflection Rate +14%, M. Damage Reflection Rate +14%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +7%, Healing Power +168, Obstruction/ Stupor Resistance +12%, Confusion/ Vital Point Attack Resistance +32%, Petrification/ Infection Resistance +42%. For 40 sec., P./ M. Def. +20%. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">250</stat>
+			<stat type="maxMp">86</stat>
+		</stats>
+	</item>
+	<item id="60058" name="Eva's Earring Lv. 3" additionalName="THE HERO" type="Armor">
+		<!-- MP +91, Water Resistance +80, DEX +4, WIT +4, MEN +4, Vampiric Rage effect +6%, MP Consumption -6%, P. Def. +12%, M. Def. +17%, P./ M. Debuff Reflection Rate +15%, M. Damage Reflection Rate +15%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +9%, Healing Power +176, Obstruction/ Stupor Resistance +14%, Confusion/ Vital Point Attack Resistance +34%, Petrification/ Infection Resistance +44%. For 40 sec., P./ M. Def. +25%, PvP defense -10%. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">280</stat>
+			<stat type="maxMp">91</stat>
+		</stats>
+	</item>
+	<item id="60059" name="Sayha's Ring Lv. 1" additionalName="THE HERO" type="Armor">
+		<!-- MP +53, CHA +3, LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +30%, Fixed Damage Resistance +5%, P./ M. Skill Power +5%, Speed +2, Physical/ Mental Resistance +10, P. Accuracy +2, HP Recovery +10%, Confusion Resistance +20%, Obstruction Resistance +12%, Petrification Resistance +10%, Infection Resistance +40%, Vital Point Attack Resistance +10%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">146</stat>
+			<stat type="maxMp">53</stat>
+		</stats>
+	</item>
+	<item id="60060" name="Sayha's Ring Lv. 2" additionalName="THE HERO" type="Armor">
+		<!-- MP +57, CHA +3, LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +33%, Fixed Damage Resistance +6%, P./ M. Skill Power +9%, Speed +2, Physical/ Mental Resistance +11, P. Accuracy +3, HP Recovery +15%, Confusion Resistance +22%, Obstruction Resistance +14%, Petrification Resistance +11%, Infection Resistance +42%, Vital Point Attack Resistance +12%. Blocks P./ M. skills with a 1% chance for basic attacks and 2% for skill casting. Additionally, upon activation of toggle skills, Speed +7, P. Atk. in PvP +4%, P./ M. Atk. +12%, Critical Rate for basic attacks -55, P./ M. Def. -18%; nearby enemies' Speed -10%, Atk. Spd./ Casting Spd. -10%. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">167</stat>
+			<stat type="maxMp">57</stat>
+		</stats>
+	</item>
+	<item id="60061" name="Sayha's Ring Lv. 3" additionalName="THE HERO" type="Armor">
+		<!-- MP +60, CHA +4, LUC +4, P. Critical Damage/ M. Skill Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +35%, Fixed Damage Resistance +7%, P./ M. Skill Power +12%, Speed +3, Physical/ Mental Resistance +12, P. Accuracy +4, HP Recovery +18%, Confusion Resistance +24%, Obstruction Resistance +16%, Petrification Resistance +12%, Infection Resistance +44%, Vital Point Attack Resistance +14%. Blocks P./ M. skills with a 2% chance for basic attacks and 3% for skill casting. Additionally, upon activation of toggle skills, Speed +10, P. Atk. in PvP +6%, P./ M. Atk. +15%, Critical Rate for basic attacks -50, P./ M. Def. -16%; nearby enemies' Speed -15%, Atk. Spd./ Casting Spd. -15%. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">187</stat>
+			<stat type="maxMp">60</stat>
+		</stats>
+	</item>
+	<item id="60062" name="Maphr's Ring Lv. 1" additionalName="THE HERO" type="Armor">
+		<!-- MP +53, CHA +3, LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +30%, Fixed Damage Resistance +5%, P./ M. Skill Power +5%, Speed +2, Physical/ Mental Resistance +10, M. Accuracy +2, MP Recovery +10%, Confusion Resistance +20%, Obstruction Resistance +12%, Petrification Resistance +10%, Infection Resistance +40%, Vital Point Attack Resistance +10%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">146</stat>
+			<stat type="maxMp">53</stat>
+		</stats>
+	</item>
+	<item id="60063" name="Maphr's Ring Lv. 2" additionalName="THE HERO" type="Armor">
+		<!-- MP +57, CHA +3, LUC +3, P. Critical Damage/ M. Skill Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +33%, Fixed Damage Resistance +6%, P./ M. Skill Power +9%, Speed +2, Physical/ Mental Resistance +11, M. Accuracy +3, MP Recovery +15%, Confusion Resistance +22%, Obstruction Resistance +14%, Petrification Resistance +11%, Infection Resistance +42%, Vital Point Attack Resistance +12%. Binds the target with a chance of 1% for basic attacks and 2% for skill casting. Additionally, upon activation of toggle skills, P. Def. in PvP +4%, P./ M. Critical Damage -6%, Fixed Damage Resistance +22%, Shield Defense +930, Shield Defense Rate +22%, Speed -28%; party members' P. Def. in PvP +3%, Fixed Damage Resistance +17%, Received Healing +12%. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">167</stat>
+			<stat type="maxMp">57</stat>
+		</stats>
+	</item>
+	<item id="60064" name="Maphr's Ring Lv. 3" additionalName="THE HERO" type="Armor">
+		<!-- MP +60, CHA +4, LUC +4, P. Critical Damage/ M. Skill Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +35%, Fixed Damage Resistance +7%, P./ M. Skill Power +12%, Speed +3, Physical/ Mental Resistance +12, M. Accuracy +4, MP Recovery +18%, Confusion Resistance +24%, Obstruction Resistance +16%, Petrification Resistance +12%, Infection Resistance +44%, Vital Point Attack Resistance +14%. Binds the target with a chance of 2% for basic attacks and 3% for skill casting. Additionally, upon activation of toggle skills, P. Def. in PvP +5%, P./ M. Critical Damage -12%, Fixed Damage Resistance +24%, Shield Defense +1000, Shield Defense Rate +24%, Speed -26%; party members' P. Def. in PvP +4%, Fixed Damage Resistance +19%, Received Healing +14%. Cannot be enchanted or upgraded. -->
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">187</stat>
+			<stat type="maxMp">60</stat>
+		</stats>
+	</item>
+	<item id="60065" name="Isolation Luck Charm Box" type="EtcItem">
+		<!-- Double-click to obtain 1 to 15,000 Isolation Luck Charm. -->
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60066" name="Isolation Luck Charm Box" type="EtcItem">
+		<!-- Take it to the Game Assistant to obtain a useful item. -->
+		<set name="icon" val="icon.etc_ev_kalie_token" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60067" name="Suspicious Vault" type="EtcItem">
+		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60068" name="Mythic Dragon Pack" type="EtcItem">
+		<!-- Double-click to obtain Scroll: Enchant Mysterious Weapon (5 pcs.) and a random item from the list. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60069" name="Lineage 2 PA Support Kit" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

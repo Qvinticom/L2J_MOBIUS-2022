@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="81000" name="PA - Dragon Skin Shirt" additionalName="1-day" type="Armor">
+		<!-- For PA. Acquired XP/ SP +3%, P./ M. Def. +5%, Speed +7, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +3, Received P. Critical Damage/ Received M. Skill Critical Damage -5%. -->
+		<set name="icon" val="icon.bm_dragon_shirt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">23</stat>
+			<stat type="pDef">46</stat>
+		</stats>
+	</item>
+	<item id="81001" name="PA - Emerald Lv. 5" additionalName="1-day" type="Armor">
+		<!-- For PA. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="5" />	<!-- Emerald Lv. 5 -->
+		</skills>
+	</item>
+	<item id="81002" name="PA - Diamond Lv. 5" additionalName="1-day" type="Armor">
+		<!-- For PA. P. Def. +1986 and decreases Received P. Critical Damage. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="5" />	<!-- Diamond Lv. 5 -->
+		</skills>
+	</item>
+	<item id="81003" name="PA - Opal Lv. 5" additionalName="1-day" type="Armor">
+		<!-- For PA. Attribute Attack +120. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="5" />	<!-- Opal -->
+		</skills>
+	</item>
+	<item id="81004" name="PA - Vital Stone Lv. 5" additionalName="1-day" type="Armor">
+		<!-- For PA. Vitality Bonus +30%, Vitality Consumption Rate -15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="5" /> <!-- Superior Vital Stone Lv. 10 -->
+			<skill id="27439" level="4" /> <!-- Superior Vital Stone - Vital Wind -->
+		</skills>
+	</item>
+	<item id="81005" name="PA - Red Cat's Eye Lv. 5" additionalName="1-day" type="Armor">
+		<!-- For PA. P. Critical Damage +12%, P. Skill Critical Damage +12%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="5" /> <!-- Superior Red Cat's Eye Lv. 10 -->
+		</skills>
+	</item>
+	<item id="81006" name="PA - Blue Cat's Eye Lv. 5" additionalName="1-day" type="Armor">
+		<!-- For PA. M. Skill Critical Damage +12%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
+		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="5" /> <!-- Superior Blue Cat's Eye Lv. 10 -->
+		</skills>
+	</item>
+	<item id="81007" name="PA - La Vie En Rose's Brooch" additionalName="1-day" type="Armor">
+		<!-- For PA. Moon Voice Irene had inspired maestro Shadai to craft this brooch. The item activates 5 Jewel Slots. Inventory Slots +12. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81008" name="Helios Dual Swords Crafting Pack" type="EtcItem">
+		<!-- Double-click to obtain ingredients needed for crafting Helios Dual Swords. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81009" name="Helios Dual Daggers Crafting Pack" type="EtcItem">
+		<!-- Double-click to obtain ingredients needed for crafting Helios Dual Daggers. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81010" name="Helios Dual Blunt Weapon Crafting Pack" type="EtcItem">
+		<!-- Double-click to obtain ingredients needed for crafting Helios Dual Blunt Weapon. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81011" name="Honey Dark Beer" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., all basic stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_black_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<skills>
+			<skill id="39570" level="1" /> <!-- Honey Dark Beer -->
+		</skills>
+	</item>
+	<item id="81012" name="Emperor's Special Cocktail" additionalName="Event" type="EtcItem">
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<set name="icon" val="icon.cocktail_heaven_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="reuse_delay" val="300000" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39514" level="1" /> <!-- Fantasia Harmony - Emperor's Special Cocktail -->
+			<skill id="39517" level="1" /> <!-- Fantasia Melody - Emperor's Special Cocktail -->
+			<skill id="39407" level="1" /> <!-- Horn Melody - Emperor's Special Cocktail -->
+			<skill id="39408" level="1" /> <!-- Drum Melody - Emperor's Special Cocktail -->
+			<skill id="39409" level="1" /> <!-- Pipe organ Melody - Emperor's Special Cocktail -->
+			<skill id="39410" level="1" /> <!-- Guitar Melody - Emperor's Special Cocktail -->
+			<skill id="39413" level="1" /> <!-- Mental Attack Resistance - Emperor's Special Cocktail -->
+			<skill id="39412" level="1" /> <!-- Resistance Debuff - Emperor's Special Cocktail -->
+			<skill id="39411" level="1" /> <!-- Elemental Resistance - Emperor's Special Cocktail -->
+			<skill id="39414" level="1" /> <!-- War drum - Emperor's Special Cocktail -->
+			<skill id="39415" level="1" /> <!-- Marching Drum - Emperor's Special Cocktail -->
+			<skill id="39416" level="1" /> <!-- Soothing Drum - Emperor's Special Cocktail -->
+		</skills>
+	</item>
+	<item id="81013" name="Shining Nevit's Gold Hourglass" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., Acquired XP/ SP +100%. Does not stack with the Fall of the Dragon or Dandy's Home Run Ball effects. Cooldown: 5 min. -->
+		<set name="icon" val="icon.bm_dragon_breath" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39503" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
+		</skills>
+	</item>
+	<item id="81014" name="PA Event Appearance Potion - Bear" type="EtcItem">
+		<!-- Changes the armor appearance to that of Bear Costume for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81015" name="Potion of Appearance for PA Event - Red Wizard" type="EtcItem">
+		<!-- Changes the armor appearance to that of Red Magician Garment for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81016" name="Pink's Style Potion - Red Archer" type="EtcItem">
+		<!-- Changes the armor appearance to that of Red Archer Garment for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81017" name="Pink's Style Potion - Green Archer" type="EtcItem">
+		<!-- Changes the armor appearance to that of Green Archer Garment for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81018" name="PA Event Potion of Appearance - Samurai" type="EtcItem">
+		<!-- Changes the armor appearance to that of Samurai Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81019" name="Potion of Appearance for PA Event - Plush Cat" type="EtcItem">
+		<!-- Changes the armor appearance to that of Plush Cat Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81020" name="Potion of Appearance for PA Event - Dark Assassin Suit" type="EtcItem">
+		<!-- Changes appearance by wearing Dark Assassin Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81021" name="Potion of Appearance for PA Event - White Assassin Suit" type="EtcItem">
+		<!-- Changes appearance by wearing White Assassin Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81022" name="Pink's Style Potion - Metal Suit" type="EtcItem">
+		<!-- Changes the armor appearance to that of Metal Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81023" name="Pink's Style Potion - Red Noblesse" type="EtcItem">
+		<!-- Changes the armor appearance to that of Red Noblesse Garment for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81024" name="Potion of Appearance for PA Event - White Noblesse" type="EtcItem">
+		<!-- Changes the armor appearance to that of White Noblesse Garment for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81025" name="Pink's Style Potion - Blue Musketeer" type="EtcItem">
+		<!-- Changes the armor appearance to that of Blue Musketeer Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81026" name="Pink's Style Potion - Red Musketeer" type="EtcItem">
+		<!-- Changes the armor appearance to that of Red Musketeer Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81027" name="Pink's Style Potion - Pirate Captain" type="EtcItem">
+		<!-- Changes the armor appearance to that of Pirate Captain Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81028" name="Pink's Style Potion - Pirate" type="EtcItem">
+		<!-- Changes the armor appearance to that of Pirate Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81029" name="Pink's Style Potion - Purple Cowboy" type="EtcItem">
+		<!-- Changes the armor appearance to that of Purple Cowboy Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81030" name="PA Event Potion of Appearance - Healer" type="EtcItem">
+		<!-- Changes the armor appearance to that of Healer Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81031" name="Pink's Style Potion - Chevalier" type="EtcItem">
+		<!-- Changes the armor appearance to that of Chevalier Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81032" name="Pink's Style Potion - Cat" type="EtcItem">
+		<!-- Changes the armor appearance to that of Cat Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81033" name="Pink's Style Potion - Barbarian Wolf" type="EtcItem">
+		<!-- Changes the armor appearance to that of Barbarian Wolf Costume for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81034" name="Pink's Style Potion - Valkyrie" type="EtcItem">
+		<!-- Changes the armor appearance to that of Valkyrie Costume for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81035" name="PA Event Potion of Appearance - Steward" type="EtcItem">
+		<!-- Changes the armor appearance to that of Steward Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81036" name="PA Event Potion of Appearance - Alice" type="EtcItem">
+		<!-- Changes the armor appearance to that of Alice's Costume for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81037" name="PA Event Appearance Potion - Steampunk" type="EtcItem">
+		<!-- Changes the armor appearance to that of Steampunk Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81038" name="Potion of Appearance for PA Event - Lovely Hanbok" type="EtcItem">
+		<!-- Changes the armor appearance to that of Lovely Hanbok for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81039" name="PA Event Potion of Appearance - Jester" type="EtcItem">
+		<!-- Changes appearance by wearing Jester Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81040" name="Pink's Style Potion - Elite Knight" type="EtcItem">
+		<!-- Changes the armor appearance to that of Elite Knight Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81041" name="Potion of Appearance for PA Event - Red Dragon Knight" type="EtcItem">
+		<!-- Changes appearance by wearing Red Dragon Knight Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81042" name="PA Event Potion of Appearance - Assassin" type="EtcItem">
+		<!-- Changes appearance by wearing Assassin Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81043" name="Potion of Appearance for PA Event - Yellow Nymph" type="EtcItem">
+		<!-- Changes appearance by wearing Yellow Nymph for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81044" name="Steward Outfit" type="Armor">
+		<set name="icon" val="icon.ev_new_clothes_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81045" name="Alice's Costume" type="Armor">
+		<set name="icon" val="icon.ev_new_clothes_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81046" name="Steampunk Outfit" type="Armor">
+		<set name="icon" val="icon.king_black_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81047" name="Lovely Hanbok" type="Armor">
+		<set name="icon" val="icon.ev_kr_traditional_dress2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81048" name="Jester Outfit" type="Armor">
+		<set name="icon" val="icon.ev_new_clothes_05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81049" name="Elite Knight Outfit" type="Armor">
+		<set name="icon" val="icon.king_black_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81050" name="Red Dragon Knight Outfit" type="Armor">
+		<set name="icon" val="icon.king_black_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81051" name="Assassin Suit" type="Armor">
+		<set name="icon" val="icon.new_assassin_suit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81052" name="Yellow Nymph Costume" type="Armor">
+		<set name="icon" val="icon.king_black_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="81053" name="Vitality" type="EtcItem">
+		<!-- Double click to recover a certain amount of Vitality. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<cond>
+			<player MaximumVitalityPoints="140000" />
+		</cond>
+		<skills>
+			<skill id="39577" level="1" /> <!-- Vitality -->
+		</skills>
+	</item>
+	<item id="81054" name="Freya's Scroll of Storm" additionalName="Event" type="EtcItem">
+		<!-- For 10 min., Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
+		<set name="icon" val="icon.bm_freya_storm_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="540000" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="18646" level="1" /> <!-- Freya's Scroll of Storm -->
+		</skills>
+	</item>
+	<item id="81055" name="Legendary Dye Lv. 1 (P. Atk.)" additionalName="STR +3, DEX +3" type="EtcItem">
+		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81056" name="Legendary Dye Lv. 2 (P. Atk.)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81057" name="Legendary Dye Lv. 3 (P. Atk.)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81058" name="Legendary Dye Lv. 4 (P. Atk.)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81059" name="Legendary Dye Lv. 5 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Atk. +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81060" name="Legendary Dye Lv. 6 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Atk. +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81061" name="Legendary Dye Lv. 7 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Atk. +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81062" name="Legendary Dye Lv. 8 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Atk. +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81063" name="Legendary Dye Lv. 9 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Atk. +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81064" name="Legendary Dye Lv. 10 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, P. Atk. +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81065" name="Legendary Dye Lv. 1 (Standard Attack Critical Damage)" additionalName="STR +3, DEX +3" type="EtcItem">
+		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81066" name="Legendary Dye Lv. 2 (Standard Attack Critical Damage)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81067" name="Legendary Dye Lv. 3 (Standard Attack Critical Damage)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81068" name="Legendary Dye Lv. 4 (Standard Attack Critical Damage)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81069" name="Legendary Dye Lv. 5 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, Critical Damage for standard attacks +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81070" name="Legendary Dye Lv. 6 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +6, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, Critical Damage for standard attacks +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81071" name="Legendary Dye Lv. 7 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +7, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, Critical Damage for standard attacks +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81072" name="Legendary Dye Lv. 8 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +8, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, Critical Damage for standard attacks +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81073" name="Legendary Dye Lv. 9 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +9, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, Critical Damage for standard attacks +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81074" name="Legendary Dye Lv. 10 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +10, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, Critical Damage for standard attacks +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81075" name="Legendary Dye Lv. 1 (P. Skill Critical Damage)" additionalName="STR +3, DEX +3" type="EtcItem">
+		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81076" name="Legendary Dye Lv. 2 (P. Skill Critical Damage)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81077" name="Legendary Dye Lv. 3 (P. Skill Critical Damage)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81078" name="Legendary Dye Lv. 4 (P. Skill Critical Damage)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81079" name="Legendary Dye Lv. 5 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Critical Damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81080" name="Legendary Dye Lv. 6 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Critical Damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81081" name="Legendary Dye Lv. 7 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Critical Damage +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81082" name="Legendary Dye Lv. 8 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Critical Damage +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81083" name="Legendary Dye Lv. 9 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Critical Damage +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81084" name="Legendary Dye Lv. 10 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, P. Skill Critical Damage +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81085" name="Legendary Dye Lv. 1 (P. Skill Power)" additionalName="STR +3, DEX +3" type="EtcItem">
+		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81086" name="Legendary Dye Lv. 2 (P. Skill Power)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
+		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81087" name="Legendary Dye Lv. 3 (P. Skill Power)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
+		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81088" name="Legendary Dye Lv. 4 (P. Skill Power)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
+		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81089" name="Legendary Dye Lv. 5 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Power +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81090" name="Legendary Dye Lv. 6 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Power +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81091" name="Legendary Dye Lv. 7 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Power +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81092" name="Legendary Dye Lv. 8 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Power +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81093" name="Legendary Dye Lv. 9 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Power +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81094" name="Legendary Dye Lv. 10 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
+		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, P. Skill Power +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81095" name="Legendary Dye Lv. 1 (M. Atk.)" additionalName="INT +3, WIT +3" type="EtcItem">
+		<!-- INT +3, WIT +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81096" name="Legendary Dye Lv. 2 (M. Atk.)" additionalName="INT +3, WIT +3, CHA +1" type="EtcItem">
+		<!-- INT +3, WIT +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81097" name="Legendary Dye Lv. 3 (M. Atk.)" additionalName="INT +4, WIT +4, CHA +2" type="EtcItem">
+		<!-- INT +4, WIT +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81098" name="Legendary Dye Lv. 4 (M. Atk.)" additionalName="INT +4, WIT +5, CHA +3" type="EtcItem">
+		<!-- INT +4, WIT +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81099" name="Legendary Dye Lv. 5 (M. Atk.)" additionalName="INT +5, WIT +5, CHA +4" type="EtcItem">
+		<!-- INT +5, WIT +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, M. Atk. +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

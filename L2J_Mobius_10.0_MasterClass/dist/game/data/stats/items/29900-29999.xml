@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29900" name="Heir's Radiance Lv. 6" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +50, Attribute Resistance +50, Debuff Resistance +10%, Max HP +6000, P./ M. Skill Power +4%, all Critical Damage +4%, all stats +5, PvE damage +9%, received damage from Dragon's weapons -10%. Enables the Heir's Radiance - PvE Lv. 3 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +12%. Warrior's Circlet: P. Atk. +12%. Wizard's Circlet: M. Atk. +12%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29424" level="1" /> <!-- Heir's Radiance Lv. 6 -->
+			<skill id="29431" level="1" /> <!-- Heir's Radiance - PvE -->
+		</skills>
+	</item>
+	<item id="29901" name="Heir's Radiance Lv. 7" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +60, Attribute Resistance +60, Debuff Resistance +15%, Max HP +7000, P./ M. Skill Power +5%, all Critical Damage +5%, all stats +5, PvE damage +10%, received damage from Dragon's weapons -15%. Enables the Heir's Radiance - PvE Lv. 4 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +15%. Warrior's Circlet: P. Atk. +15%. Wizard's Circlet: M. Atk. +15%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29425" level="1" /> <!-- Heir's Radiance Lv. 7 -->
+			<skill id="29433" level="1" /> <!-- Heir's Radiance - PvE -->
+		</skills>
+	</item>
+	<item id="29902" name="Heir's Radiance Lv. 5" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +40, Attribute Resistance +40, Debuff Resistance +7%, Max HP +5000, P./ M. Skill Power +3%, all Critical Damage +3%, all stats +4, PvP damage +7%, received damage from Dragon's weapons -7%. Enables the Heir's Radiance - PvP Lv. 2 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +10%. Warrior's Circlet: P. Atk. +10%. Wizard's Circlet: M. Atk. +10%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29426" level="1" /> <!-- Heir's Radiance Lv. 5 -->
+			<skill id="29430" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
+	<item id="29903" name="Heir's Radiance Lv. 6" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +50, Attribute Resistance +50, Debuff Resistance +10%, Max HP +6000, P./ M. Skill Power +4%, all Critical Damage +4%, all stats +5, PvP damage +9%, received damage from Dragon's weapons -10%. Enables the Heir's Radiance - PvP Lv. 3 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +12%. Warrior's Circlet: P. Atk. +12%. Wizard's Circlet: M. Atk. +12%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29427" level="1" /> <!-- Heir's Radiance Lv. 6 -->
+			<skill id="29432" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
+	<item id="29904" name="Heir's Radiance Lv. 7" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +60, Attribute Resistance +60, Debuff Resistance +15%, Max HP +7000, P./ M. Skill Power +5%, all Critical Damage +5%, all stats +5, PvP damage +10%, received damage from Dragon's weapons -15%. Enables the Heir's Radiance - PvP Lv. 4 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +15%. Warrior's Circlet: P. Atk. +15%. Wizard's Circlet: M. Atk. +15%. Cannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29427" level="1" /> <!-- Heir's Radiance Lv. 7 -->
+			<skill id="29434" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
+	<item id="29905" name="Legacy Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29906" name="Shiny Coin Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i09" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29907" name="Top-grade Dragon Weapon Pack" type="EtcItem">
+		<!-- Double-click to obtain Antharas', Valakas', Lindvior's or Fafurion's top-grade weapon. -->
+		<set name="icon" val="BranchSys2.G-latus_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29908" name="Sealed Bloodthirsty Zariche Weapon Pack" type="EtcItem">
+		<!-- A pack in which the madness of the Demonic Sword Zariche is sealed.\nDouble-click to obtain a Bloodthirsty Zariche weapon. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29909" name="Sealed Bloodstained Zariche Weapon Pack" type="EtcItem">
+		<!-- A pack in which the madness of the Demonic Sword Zariche is sealed.\nDouble-click to obtain a Bloodstained Zariche weapon. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29910" name="Ghost Pack" type="EtcItem">
+		<!-- Double-click to obtain a rare item. Can be exchanged through the Game Assistant. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29911" name="Bloodstained Ghost Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29912" name="Dragon's Relic Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. Additionally, you obtain Scroll: Enchant Mysterious Weapon. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29913" name="Sealed Bloodthirsty Akamanah Weapon Pack" type="EtcItem">
+		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed.\nDouble-click to obtain a Bloodthirsty Akamanah weapon. -->
+		<set name="icon" val="icon.aka_manaf_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29914" name="Sealed Bloodstained Akamanah Weapon Pack" type="EtcItem">
+		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed.\nDouble-click to obtain a Bloodstained Akamanah weapon. -->
+		<set name="icon" val="icon.aka_manaf_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29915" name="+18 Supreme Krishna Weapon Pack" type="EtcItem">
+		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +18. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29916" name="+20 Supreme Krishna Weapon Pack" type="EtcItem">
+		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +20. -->
+		<set name="icon" val="Branchsys2.icon2.g_alegra_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29917" name="+10 Supreme Leviathan Armor Set Pack" type="EtcItem">
+		<!-- Double-click to acquire one of the following: +10 Limited Leviathan Heavy Armor Pack, +10 Limited Leviathan Light Armor Pack or +10 Limited Leviathan Robe Pack. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29918" min="1" max="1" chance="33" />
+			<item id="29919" min="1" max="1" chance="33" />
+			<item id="29920" min="1" max="1" chance="34" />
+		</capsuled_items>
+	</item>
+	<item id="29918" name="+10 Supreme Leviathan Heavy Armor Set Pack" type="EtcItem">
+		<!-- Double-click to acquire Limited Leviathan Heavy Armor Set that has been enchanted to +10. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29437" level="1" /> <!-- +10 Limited Leviathan Heavy Armor Pack Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29919" name="+10 Supreme Leviathan Light Armor Set Pack" type="EtcItem">
+		<!-- Double-click to acquire Limited Leviathan Armor Light Armor Set that has been enchanted to +10. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29438" level="1" /> <!-- +10 Limited Leviathan Light Armor Pack Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29920" name="+10 Supreme Leviathan Robe Set Pack" type="EtcItem">
+		<!-- Double-click to acquire Limited Leviathan Armor Robe Set that has been enchanted to +10. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29439" level="1" /> <!-- +10 Limited Leviathan Robe Pack Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29921" name="Top-grade Weapon Coupon" type="EtcItem">
+		<!-- Can be exchanged for any top-grade Dragon weapon. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_7th_sins_dragon_trade_jp" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29922" name="Sealed Mysterious Dragon Slayer" type="EtcItem">
+		<!-- Double-click to obtain Mysterious Dragon Slayer. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29923" name="Artifact Pack - P. Atk. +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Atk. +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29924" name="Artifact Pack - M. Atk. +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Atk. +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29925" name="Artifact Pack - Atk. Spd. +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Atk. Spd. +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29926" name="Artifact Pack - Casting Spd. +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Casting Spd. +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29927" name="Artifact Pack - P. Def. +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Def. +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29928" name="Artifact Pack - M. Def. +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Def. +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29929" name="Artifact Pack - Max HP +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Max HP +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29930" name="Artifact Pack - Max MP +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Max MP +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29931" name="Artifact Pack - Acquired XP +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Acquired XP +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29932" name="Artifact Pack - Vampiric Rage +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Vampiric Rage +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29933" name="Artifact Pack - Speed +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Speed +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29934" name="Artifact Pack - Received Healing +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Received Healing +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29935" name="Artifact Pack - P. Atk. +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Atk. +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29936" name="Artifact Pack - M. Atk. +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Atk. +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29937" name="Artifact Pack - P. Accuracy +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Accuracy +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29938" name="Artifact Pack - M. Accuracy +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Accuracy +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29939" name="Artifact Pack - Standard Attack Critical Rate +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Standard Attack Critical Rate +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29940" name="Artifact Pack - P. Skill Critical Rate +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Skill Critical Rate +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29941" name="Artifact Pack - M. Critical Rate +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Critical Rate +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29942" name="Artifact Pack - Recovery Potions' Effect +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Recovery Potions' Effect +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29943" name="Artifact Pack - Received Damage When Immobilized +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Received Damage When Immobilized +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29944" name="Artifact Pack - Standard Attack Critical Damage +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Standard Attack Critical Damage +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29945" name="Artifact Pack - P. Skill Critical Damage +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Skill Critical Damage +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29946" name="Artifact Pack - M. Skill Critical Damage +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Skill Critical Damage +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29947" name="Artifact Pack - Bow Resistance +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Bow Resistance +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29948" name="Artifact Pack - Dagger Resistance +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Dagger Resistance +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29949" name="Artifact Pack - Sword Resistance +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Sword Resistance +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29950" name="Artifact Pack - Vitality Bonus +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Vitality Bonus +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29951" name="Artifact Pack - Vitality Consumption +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Vitality Consumption +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29952" name="Artifact Pack - Skill MP Consumption +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Skill MP Consumption +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29953" name="Artifact Pack - P. Def. +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Def. +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29954" name="Artifact Pack - M. Def. +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Def. +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29955" name="Artifact Pack - Standard Attack Critical Damage +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Standard Attack Critical Damage +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29956" name="Artifact Pack - P. Skill Critical Damage +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Skill Critical Damage +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29957" name="Artifact Pack - M. Skill Critical Damage +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Skill Critical Damage +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29958" name="Artifact Pack - Atk. Spd. +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Atk. Spd. +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29959" name="Artifact Pack - Casting Spd. +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Casting Spd. +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29960" name="Artifact Pack - Attribute Attack +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Attribute Attack +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29961" name="Artifact Pack - P. Skill Power +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - P. Skill Power +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29962" name="Artifact Pack - M. Skill Power +7 (Attack)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - M. Skill Power +7 (attack artifact). -->
+		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29963" name="Artifact Pack - Attribute Resistance +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Attribute Resistance +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29964" name="Artifact Pack - Received Damage When Immobilized +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Received Damage When Immobilized +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29965" name="Artifact Pack - Received P. Critical Damage +7 (Defense)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Received P. Critical Damage +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29966" name="Artifact Pack - Recovery Potions' Effect +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Recovery Potions' Effect +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29967" name="Artifact Pack - Fixed Damage Resistance +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Fixed Damage Resistance +7 (support artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29968" name="Artifact Pack - Damage Reflection Resistance +7 (Support)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Damage Reflection Resistance +7 (defense artifact). -->
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29969" name="Artifact Pack - Vitality Bonus +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Vitality Bonus +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29970" name="Artifact Pack - Received Healing +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Received Healing +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29971" name="Artifact Pack - Skill MP Consumption +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Skill MP Consumption +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29972" name="Artifact Pack - Received P. Critical Rate +7 (Balance)" type="EtcItem">
+		<!-- Double-click to obtain Artifact - Received P. Critical Rate +7 (balance artifact). -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="29973" name="Pearly Joy Box" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29974" name="Freya's Vital Rune Pack (30-min.)" type="EtcItem">
+		<!-- Double-click to obtain Freya's Vital Rune (30-min). -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29975" name="Card Pouch" additionalName="Event" type="EtcItem">
+		<!-- A card pouch with great magic power. Double-click to receive one of the event cards. -->
+		<set name="icon" val="icon.card_event_dragon_pocket" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29976" name="Night Goblin's Jewel Box" type="EtcItem">
+		<!-- Double-click to obtain 2 Glittering Freya's Ice Roses and 2 Glittering Freya's Scrolls of Storm. Additionally, you can get a useful item. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29977" name="Barter Coin" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_pig_adena_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29978" name="Barter Coin Chest" type="EtcItem">
+		<!-- Double-click to obtain 1 to 5000 Barter Coins. -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29979" name="Barter Package" type="EtcItem">
+		<!-- Double-click to obtain rare items. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29980" name="Dragon's Relic" type="EtcItem">
+		<!-- Double-click to obtain 3 Glittering Freya's Scrolls of Storm and Glittering Freya's Ice Rose. Additionally, you can get a rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29981" name="Mysterious Magic Stone" type="EtcItem">
+		<!-- Double-click to obtain Shining Magic Stone or Legendary Magic Stone. -->
+		<set name="icon" val="br_L2Icon.cn_vestige_of_wind" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29982" name="Shining Magic Stone" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="br_L2Icon.cn_shadow_of_dust" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29983" name="Legendary Magic Stone" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="br_L2Icon.cn_aroma_of_flame" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29984" name="Freya's Fortune Stick 2021" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_wand" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29985" name="Freya's Growth Chest 2021" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29986" name="Freya's Dragon Chest 2021" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29987" name="Freya's Treasure Chest 2021" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29989" name="Valentine Two-handed Blunt Weapon" type="Weapon">
+		<!-- Modifies the appearance of a weapon. Valentine Two-handed Blunt Weapon form. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">849</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29990" name="Festive Chest" type="EtcItem">
+		<!-- Double-click to obtain Emperor's Vitality Tonic (3 pcs.). Additionally you can get 1 useful item. -->
+		<set name="icon" val="icon.freya_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29991" name="Valentine Set Festive Chest" type="EtcItem">
+		<!-- Double-click to obtain Festive Chest (75 pcs.) and Freya's Vital Rune (30-day). (Freya's Vital Rune duration countdown will start immediately after opening the chest.) -->
+		<set name="icon" val="icon.freya_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29992" name="Golden Lucky Pouch" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.christmas_card_box1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29993" name="Clan Cooperation Pack" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29994" name="Old Antique" type="EtcItem">
+		<!-- Double-click to obtain one of the antiques. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29995" name="Sacred Antique" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29996" name="Great Antique" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29997" name="Rare Antique" type="EtcItem">
+		<!-- Double-click to obtain a random rare item. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29998" name="Fake Antique" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29999" name="Valentine's Bouquet" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_flower_bouquet_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>
