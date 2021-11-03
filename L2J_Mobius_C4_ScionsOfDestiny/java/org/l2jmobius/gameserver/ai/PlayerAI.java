@@ -196,9 +196,8 @@ public class PlayerAI extends CreatureAI
 	
 	private void thinkCast()
 	{
-		final Creature target = getCastTarget();
+		final WorldObject target = getCastTarget();
 		final Skill skill = getSkill();
-		// if (Config.DEBUG) LOGGER.warning("PlayerAI: thinkCast -> Start");
 		if (checkTargetLost(target))
 		{
 			if (skill.isOffensive() && (getAttackTarget() != null))
@@ -219,28 +218,17 @@ public class PlayerAI extends CreatureAI
 			clientStopMoving(null);
 		}
 		
-		final WorldObject oldTarget = _actor.getTarget();
-		if (oldTarget != null)
+		// Check if target has changed.
+		final WorldObject currentTarget = _actor.getTarget();
+		if ((currentTarget != target) && (currentTarget != null) && (target != null))
 		{
-			// Replace the current target by the cast target
-			if ((target != null) && (oldTarget != target))
-			{
-				_actor.setTarget(getCastTarget());
-			}
-			
-			// Launch the Cast of the skill
-			_accessor.doCast(getSkill());
-			
-			// Restore the initial target
-			if ((target != null) && (oldTarget != target))
-			{
-				_actor.setTarget(oldTarget);
-			}
+			_actor.setTarget(target);
+			_actor.doCast(skill);
+			_actor.setTarget(currentTarget);
+			return;
 		}
-		else
-		{
-			_accessor.doCast(skill);
-		}
+		
+		_actor.doCast(skill);
 	}
 	
 	private void thinkPickUp()

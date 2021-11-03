@@ -308,7 +308,7 @@ public class PlayerAI extends PlayableAI
 	
 	private void thinkCast()
 	{
-		final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+		final WorldObject target = getCastTarget();
 		if ((_skill.getTargetType() == TargetType.GROUND) && _actor.isPlayer())
 		{
 			if (maybeMoveToPosition(((PlayerInstance) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill)))
@@ -323,6 +323,7 @@ public class PlayerAI extends PlayableAI
 				if (_skill.isBad() && (target != null))
 				{
 					// Notify the target
+					setCastTarget(null);
 					setTarget(null);
 				}
 				return;
@@ -331,6 +332,16 @@ public class PlayerAI extends PlayableAI
 			{
 				return;
 			}
+		}
+		
+		// Check if target has changed.
+		final WorldObject currentTarget = _actor.getTarget();
+		if ((currentTarget != target) && (currentTarget != null) && (target != null))
+		{
+			_actor.setTarget(target);
+			_actor.doCast(_skill, _item, _forceUse, _dontMove);
+			_actor.setTarget(currentTarget);
+			return;
 		}
 		
 		_actor.doCast(_skill, _item, _forceUse, _dontMove);

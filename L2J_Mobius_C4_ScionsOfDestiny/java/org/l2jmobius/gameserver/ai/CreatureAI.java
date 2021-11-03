@@ -278,7 +278,7 @@ public class CreatureAI extends AbstractAI
 		}
 		
 		// Set the AI cast target
-		setCastTarget((Creature) target);
+		setCastTarget(target);
 		
 		// Stop actions client-side to cast the skill
 		if (skill.getHitTime() > 50)

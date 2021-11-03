@@ -274,6 +274,7 @@ public class AttackableAI extends CreatureAI
 		final WorldObject target = _skill.getTarget(_actor, getTarget(), _forceUse, _dontMove, false);
 		if (checkTargetLost(target))
 		{
+			setCastTarget(null);
 			return;
 		}
 		

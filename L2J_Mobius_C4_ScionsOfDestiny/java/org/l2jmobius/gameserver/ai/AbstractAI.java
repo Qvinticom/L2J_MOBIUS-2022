@@ -72,7 +72,7 @@ abstract class AbstractAI implements Ctrl
 	
 	/** Different targets this AI maintains */
 	private WorldObject _target;
-	private Creature _castTarget;
+	private WorldObject _castTarget;
 	private Creature _attackTarget;
 	private Creature _followTarget;
 	
@@ -765,15 +765,12 @@ abstract class AbstractAI implements Ctrl
 		_target = target;
 	}
 	
-	protected synchronized void setCastTarget(Creature target)
+	protected synchronized void setCastTarget(WorldObject target)
 	{
 		_castTarget = target;
 	}
 	
-	/**
-	 * @return the current cast target.
-	 */
-	public synchronized Creature getCastTarget()
+	public synchronized WorldObject getCastTarget()
 	{
 		return _castTarget;
 	}
@@ -783,9 +780,6 @@ abstract class AbstractAI implements Ctrl
 		_attackTarget = target;
 	}
 	
-	/**
-	 * Return current attack target.
-	 */
 	@Override
 	public synchronized Creature getAttackTarget()
 	{

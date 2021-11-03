@@ -64,6 +64,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	/** Different targets this AI maintains */
 	private WorldObject _target;
+	private WorldObject _castTarget;
 	
 	/** The skill we are currently casting by INTENTION_CAST */
 	protected Skill _skill;
@@ -671,6 +672,7 @@ public abstract class AbstractAI implements Ctrl
 		// Init AI
 		_intention = AI_INTENTION_IDLE;
 		_target = null;
+		_castTarget = null;
 		
 		// Cancel the follow task if necessary
 		stopFollow();
@@ -747,6 +749,16 @@ public abstract class AbstractAI implements Ctrl
 	public WorldObject getTarget()
 	{
 		return _target;
+	}
+	
+	protected void setCastTarget(WorldObject target)
+	{
+		_castTarget = target;
+	}
+	
+	public WorldObject getCastTarget()
+	{
+		return _castTarget;
 	}
 	
 	/**

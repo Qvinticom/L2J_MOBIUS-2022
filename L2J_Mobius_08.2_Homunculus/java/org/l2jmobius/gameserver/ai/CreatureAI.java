@@ -155,6 +155,9 @@ public class CreatureAI extends AbstractAI
 		// Set the AI Intention to AI_INTENTION_IDLE
 		changeIntention(AI_INTENTION_IDLE);
 		
+		// Init cast target
+		setCastTarget(null);
+		
 		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
 		clientStopMoving(null);
 		
@@ -182,6 +185,9 @@ public class CreatureAI extends AbstractAI
 		{
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			changeIntention(AI_INTENTION_ACTIVE);
+			
+			// Init cast target
+			setCastTarget(null);
 			
 			// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
 			clientStopMoving(null);
@@ -317,6 +323,9 @@ public class CreatureAI extends AbstractAI
 	
 	protected void changeIntentionToCast(Skill skill, WorldObject target, ItemInstance item, boolean forceUse, boolean dontMove)
 	{
+		// Set the AI cast target
+		setCastTarget(target);
+		
 		// Set the AI skill used by INTENTION_CAST
 		_skill = skill;
 		
@@ -791,6 +800,9 @@ public class CreatureAI extends AbstractAI
 			// Cancel AI target
 			setTarget(null);
 			
+			// Init cast target
+			setCastTarget(null);
+			
 			// Stop an AI Follow Task
 			stopFollow();
 			
@@ -872,6 +884,7 @@ public class CreatureAI extends AbstractAI
 		// Init AI
 		_intention = AI_INTENTION_IDLE;
 		setTarget(null);
+		setCastTarget(null);
 	}
 	
 	/**

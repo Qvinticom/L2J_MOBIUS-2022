@@ -117,32 +117,7 @@ public abstract class AbstractAI implements Ctrl
 		return _intention;
 	}
 	
-	protected void setCastTarget(Creature target)
-	{
-		_castTarget = target;
-	}
-	
-	/**
-	 * @return the current cast target.
-	 */
-	public Creature getCastTarget()
-	{
-		return _castTarget;
-	}
-	
-	protected void setAttackTarget(Creature target)
-	{
-		_attackTarget = target;
-	}
-	
-	/**
-	 * @return current attack target.
-	 */
-	@Override
-	public Creature getAttackTarget()
-	{
-		return _attackTarget;
-	}
+
 	
 	/**
 	 * Set the Intention of this AbstractAI.<br>
@@ -832,6 +807,27 @@ public abstract class AbstractAI implements Ctrl
 	protected void setTarget(WorldObject target)
 	{
 		_target = target;
+	}
+	
+	protected void setCastTarget(Creature target)
+	{
+		_castTarget = target;
+	}
+	
+	public Creature getCastTarget()
+	{
+		return _castTarget;
+	}
+	
+	protected void setAttackTarget(Creature target)
+	{
+		_attackTarget = target;
+	}
+	
+	@Override
+	public Creature getAttackTarget()
+	{
+		return _attackTarget;
 	}
 	
 	/**

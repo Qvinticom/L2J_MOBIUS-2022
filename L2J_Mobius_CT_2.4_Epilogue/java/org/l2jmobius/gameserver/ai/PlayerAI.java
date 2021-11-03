@@ -298,6 +298,16 @@ public class PlayerAI extends PlayableAI
 			clientStopMoving(null);
 		}
 		
+		// Check if target has changed.
+		final WorldObject currentTarget = _actor.getTarget();
+		if ((currentTarget != target) && (currentTarget != null) && (target != null))
+		{
+			_actor.setTarget(target);
+			_actor.doCast(_skill);
+			_actor.setTarget(currentTarget);
+			return;
+		}
+		
 		_actor.doCast(_skill);
 	}
 	

@@ -85,7 +85,7 @@ public class SummonAI extends CreatureAI
 	
 	private void thinkCast()
 	{
-		final Creature target = getCastTarget();
+		final WorldObject target = getCastTarget();
 		if (checkTargetLost(target))
 		{
 			setCastTarget(null);

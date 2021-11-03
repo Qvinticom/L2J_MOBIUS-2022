@@ -109,7 +109,6 @@ public class Synergy extends AbstractEffect
 			if (partyBuffSkill != null)
 			{
 				final WorldObject target = partyBuffSkill.getTarget(effector, effected, false, false, false);
-				
 				if ((target != null) && target.isCreature())
 				{
 					SkillCaster.triggerCast(effector, (Creature) target, partyBuffSkill);

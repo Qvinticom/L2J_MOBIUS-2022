@@ -144,10 +144,11 @@ public class SummonAI extends PlayableAI implements Runnable
 			return;
 		}
 		
-		final WorldObject target = _skill.getTarget(_actor, _skill.isBad(), _dontMove, false);
+		final WorldObject target = getCastTarget();
 		if (checkTargetLost(target))
 		{
 			setTarget(null);
+			setCastTarget(null);
 			summon.setFollowStatus(true);
 			return;
 		}
