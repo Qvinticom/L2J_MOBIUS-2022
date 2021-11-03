@@ -52,6 +52,14 @@
 				<allowedSkills>35016</allowedSkills>
 			</effect>
 			<effect name="GetAgro" />
+			<effect name="CallSkill">
+				<skillId>47278</skillId> <!-- Chain Strike (Shock) -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="5" name="Mass Lightning Strike">

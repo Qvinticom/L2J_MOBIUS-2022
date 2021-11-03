@@ -320,4 +320,387 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="47273" toLevel="7" name="Shield Throwing">
+		<icon>icon.skill0984</icon>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">-2200</value>
+			<value level="2">-2350</value>
+			<value level="3">-2500</value>
+			<value level="4">-2650</value>
+			<value level="5">-2800</value>
+			<value level="6">-2950</value>
+			<value level="7">-3100</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<coolTime>500</coolTime>
+		<hitTime>700</hitTime>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">79</value>
+			<value level="3">81</value>
+			<value level="4">83</value>
+			<value level="5">85</value>
+			<value level="6">87</value>
+			<value level="7">89</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">33</value>
+			<value level="2">35</value>
+			<value level="3">37</value>
+			<value level="4">39</value>
+			<value level="5">42</value>
+			<value level="6">44</value>
+			<value level="7">46</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A1</operateType>
+		<reuseDelay>7000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">619</value>
+					<value level="2">800</value>
+					<value level="3">983</value>
+					<value level="4">1167</value>
+					<value level="5">1353</value>
+					<value level="6">1540</value>
+					<value level="7">6585</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.8</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47274" toLevel="2" name="Power of Life">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>KNIGHT_SHIELD</abnormalType>
+		<affectRange>1000</affectRange>		
+		<hitTime>500</hitTime>
+		<coolTime>1000</coolTime>
+		<magicLevel>
+			<value level="1">78</value>
+			<value level="2">86</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">86</value>
+			<value level="2">103</value>
+		</mpConsume>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">6</value>
+		</itemConsumeCount>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">1200</value>
+					<value level="2">2700</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">650</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">450</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47275" toLevel="2" name="Toughness">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>KNIGHT_SHIELD</abnormalType>
+		<affectRange>1000</affectRange>		
+		<hitTime>500</hitTime>
+		<coolTime>1000</coolTime>
+		<magicLevel>
+			<value level="1">78</value>
+			<value level="2">86</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">86</value>
+			<value level="2">103</value>
+		</mpConsume>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">6</value>
+		</itemConsumeCount>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">1200</value>
+					<value level="2">2700</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">650</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">450</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47276" toLevel="1" name="Chain Strike (Shock)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>82</magicLevel>
+		<effects>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>10015</castSkillId>	<!-- Chain Strike -->
+				<skillId>47277</skillId> <!-- Chain Strike (Shock) -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<chance>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</chance>
+				<targetType>TARGET</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47277" toLevel="3" name="Chain Strike (Shock)">
+		<!-- <Pull Skill> Pulls the enemy. -->
+		<icon>icon.skill10015</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicLevel>82</magicLevel>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">69</value>
+			<value level="2">73</value>
+			<value level="3">77</value>
+		</mpConsume>
+		<castRange>700</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>12000</reuseDelay>
+		<effectPoint>
+			<value level="1">-4132</value>
+			<value level="2">-4198</value>
+			<value level="3">-4265</value>
+		</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
+			<effect name="GetAgro" />
+			<effect name="CallSkill">
+				<skillId>47278</skillId> <!-- Chain Strike (Shock) -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47278" toLevel="3" name="Chain Strike (Shock)">
+		<icon>icon.skill1898</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-5800</value>
+			<value level="2">-5875</value>
+			<value level="3">-5950</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47279" toLevel="8" name="Knight Assault">
+		<icon>icon.skill0984</icon>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-2200</value>
+			<value level="2">-2350</value>
+			<value level="3">-2500</value>
+			<value level="4">-2650</value>
+			<value level="5">-2800</value>
+			<value level="6">-2950</value>
+			<value level="7">-3100</value>
+			<value level="8">-3100</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<coolTime>500</coolTime>
+		<hitTime>900</hitTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
+			<value level="6">86</value>
+			<value level="7">88</value>
+			<value level="8">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">33</value>
+			<value level="2">35</value>
+			<value level="3">37</value>
+			<value level="4">39</value>
+			<value level="5">42</value>
+			<value level="6">44</value>
+			<value level="7">46</value>
+			<value level="8">46</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">619</value>
+					<value level="2">800</value>
+					<value level="3">983</value>
+					<value level="4">1167</value>
+					<value level="5">1353</value>
+					<value level="6">1540</value>
+					<value level="7">5485</value>
+					<value level="8">5485</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47280" toLevel="2" name="Knight's Power">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">89</value>
+		</magicLevel>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47281" toLevel="2" name="Masterpiece Shield">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">78</value>
+			<value level="2">84</value>
+		</magicLevel>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
+	</skill>
 </list>

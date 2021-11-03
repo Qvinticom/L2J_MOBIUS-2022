@@ -947,12 +947,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="110" toLevel="2" name="Ultimate Defense">
+	<skill id="110" toLevel="3" name="Ultimate Defense">
 		<!-- The effect lasts for $s1 P. Def. +$s2 M. Def. +$s3 Buff Cancel Resistance +$s4 The target is unable to move. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -960,18 +961,31 @@
 		<effectPoint>
 			<value level="1">204</value>
 			<value level="2">438</value>
+			<value level="3">438</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">46</value>
+			<value level="3">83</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">10</value>
 			<value level="2">21</value>
+			<value level="3">33</value>
 		</mpConsume>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">2</value>
+		</itemConsumeCount>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>
+			<value level="1">900000</value>
+			<value level="2">900000</value>
+			<value level="3">300000</value>
+		</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -982,6 +996,7 @@
 				<amount>
 					<value level="1">1620</value>
 					<value level="2">3240</value>
+					<value level="3">4500</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -989,11 +1004,16 @@
 				<amount>
 					<value level="1">1800</value>
 					<value level="2">3600</value>
+					<value level="3">4500</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="ResistDispelByCategory">
-				<amount>-80</amount>
+				<amount>
+					<value level="1">-80</value>
+					<value level="2">-80</value>
+					<value level="3">-90</value>
+				</amount>
 				<slot>BUFF</slot>
 			</effect>
 		</effects>
