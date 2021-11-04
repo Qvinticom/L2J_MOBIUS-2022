@@ -544,7 +544,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PVP_BOOK_LIST(0x18D, ExPvpBookList::new, ConnectionState.IN_GAME),
 	EX_PVPBOOK_KILLER_LOCATION(0x18E, null, ConnectionState.IN_GAME),
 	EX_PVPBOOK_TELEPORT_TO_KILLER(0x18F, null, ConnectionState.IN_GAME),
-	EX_LETTER_COLLECTOR_TAKE_REWARD(0x190, null, ConnectionState.IN_GAME),
+	EX_LETTER_COLLECTOR_TAKE_REWARD(0x190, ExLetterCollectorTakeReward::new, ConnectionState.IN_GAME),
 	EX_SET_STATUS_BONUS(0x191, ExSetStatusBonus::new, ConnectionState.IN_GAME),
 	EX_RESET_STATUS_BONUS(0x192, ExResetStatusBonus::new, ConnectionState.IN_GAME),
 	EX_OLYMPIAD_MY_RANKING_INFO(0x193, RequestOlympiadMyRankingInfo::new, ConnectionState.IN_GAME),
