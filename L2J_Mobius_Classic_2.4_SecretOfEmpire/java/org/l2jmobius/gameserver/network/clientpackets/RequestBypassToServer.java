@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -88,7 +89,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		if (_command.isEmpty())
 		{
 			LOGGER.warning("Player " + player.getName() + " sent empty bypass!");
-			Disconnection.of(client, player).defaultSequence(false);
+			Disconnection.of(client, player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}
 		

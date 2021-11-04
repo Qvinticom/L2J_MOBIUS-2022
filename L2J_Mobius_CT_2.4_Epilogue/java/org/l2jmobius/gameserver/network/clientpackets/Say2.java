@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -110,7 +111,7 @@ public class Say2 implements IClientIncomingPacket
 		{
 			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			Disconnection.of(player).defaultSequence(false);
+			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}
 		
@@ -118,7 +119,7 @@ public class Say2 implements IClientIncomingPacket
 		{
 			LOGGER.warning(player.getName() + ": sending empty text. Possible packet hack!");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			Disconnection.of(player).defaultSequence(false);
+			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}
 		

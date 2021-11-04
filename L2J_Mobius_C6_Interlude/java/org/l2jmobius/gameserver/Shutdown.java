@@ -44,6 +44,7 @@ import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.EventLoopGroupManager;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -553,7 +554,7 @@ public class Shutdown extends Thread
 				if (player.getClient() != null)
 				{
 					player.getClient().sendPacket(ServerClose.STATIC_PACKET);
-					player.getClient().close(false);
+					player.getClient().close(LeaveWorld.STATIC_PACKET);
 					player.getClient().setPlayer(null);
 					player.setClient(null);
 				}

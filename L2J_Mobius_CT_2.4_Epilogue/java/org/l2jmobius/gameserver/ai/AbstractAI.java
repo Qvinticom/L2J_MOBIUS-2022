@@ -117,8 +117,6 @@ public abstract class AbstractAI implements Ctrl
 		return _intention;
 	}
 	
-
-	
 	/**
 	 * Set the Intention of this AbstractAI.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method is USED by AI classes</b></font><b><u><br>

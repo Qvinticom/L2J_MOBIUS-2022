@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 
@@ -163,7 +164,7 @@ public class CharacterSelect implements IClientIncomingPacket
 					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
 					if ((terminate != null) && terminate.terminate())
 					{
-						Disconnection.of(cha).defaultSequence(false);
+						Disconnection.of(cha).defaultSequence(LeaveWorld.STATIC_PACKET);
 						return;
 					}
 					

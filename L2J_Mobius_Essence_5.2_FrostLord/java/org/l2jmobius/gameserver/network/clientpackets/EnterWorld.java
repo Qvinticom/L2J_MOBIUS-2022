@@ -100,6 +100,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
@@ -162,7 +163,7 @@ public class EnterWorld implements IClientIncomingPacket
 		if (player == null)
 		{
 			LOGGER.warning("EnterWorld failed! player returned 'null'.");
-			Disconnection.of(client).defaultSequence(false);
+			Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}
 		
@@ -765,14 +766,14 @@ public class EnterWorld implements IClientIncomingPacket
 				// Banned?
 				if ((hwInfo != null) && PunishmentManager.getInstance().hasPunishment(hwInfo.getMacAddress(), PunishmentAffect.HWID, PunishmentType.BAN))
 				{
-					Disconnection.of(client).defaultSequence(false);
+					Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 					return;
 				}
 				
 				// Check max players.
 				if (Config.KICK_MISSING_HWID && (hwInfo == null))
 				{
-					Disconnection.of(client).defaultSequence(false);
+					Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 				}
 				else if (Config.MAX_PLAYERS_PER_HWID > 0)
 				{
@@ -790,7 +791,7 @@ public class EnterWorld implements IClientIncomingPacket
 					}
 					if (count >= Config.MAX_PLAYERS_PER_HWID)
 					{
-						Disconnection.of(client).defaultSequence(false);
+						Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 					}
 				}
 			}, 5000);

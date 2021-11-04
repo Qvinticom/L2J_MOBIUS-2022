@@ -59,6 +59,7 @@ import org.l2jmobius.gameserver.network.loginserverpackets.login.LoginServerFail
 import org.l2jmobius.gameserver.network.loginserverpackets.login.PlayerAuthResponse;
 import org.l2jmobius.gameserver.network.serverpackets.AuthLoginFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
+import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 
 public class LoginServerThread extends Thread
 {
@@ -465,7 +466,7 @@ public class LoginServerThread extends Thread
 		final GameClient client = _accountsInGameServer.get(account);
 		if (client != null)
 		{
-			client.close(true);
+			client.close(ServerClose.STATIC_PACKET);
 			getInstance().sendLogout(account);
 		}
 	}

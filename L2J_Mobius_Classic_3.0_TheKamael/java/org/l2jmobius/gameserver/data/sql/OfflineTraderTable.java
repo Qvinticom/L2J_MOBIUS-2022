@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 public class OfflineTraderTable
 {
@@ -301,7 +302,7 @@ public class OfflineTraderTable
 					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading trader: " + player, e);
 					if (player != null)
 					{
-						Disconnection.of(player).defaultSequence(false);
+						Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 					}
 				}
 			}

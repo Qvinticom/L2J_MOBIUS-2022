@@ -47,7 +47,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
@@ -133,11 +132,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	{
 		sendPacket(packet);
 		closeNow();
-	}
-	
-	public void close(boolean toLoginScreen)
-	{
-		close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
 	}
 	
 	public Channel getChannel()
@@ -542,7 +536,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			
 			if (player.getClient() != null)
 			{
-				Disconnection.of(player).defaultSequence(false);
+				Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			}
 			else
 			{

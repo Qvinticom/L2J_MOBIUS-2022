@@ -19,6 +19,7 @@ package handlers.telnethandlers.player;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.Disconnection;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -50,7 +51,7 @@ public class Kick implements ITelnetCommand
 		final PlayerInstance player = World.getInstance().getPlayer(args[0]);
 		if (player != null)
 		{
-			Disconnection.of(player).defaultSequence(false);
+			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return "Player has been successfully kicked.";
 		}
 		return "Couldn't find player with such name.";

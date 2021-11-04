@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionRewardCount;
 
@@ -56,7 +57,7 @@ public class RequestExPledgeMissionReward implements IClientIncomingPacket
 		if (player.hasRequest(RewardRequest.class))
 		{
 			LOGGER.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
-			Disconnection.of(player).defaultSequence(true);
+			Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
 			return;
 		}
 		

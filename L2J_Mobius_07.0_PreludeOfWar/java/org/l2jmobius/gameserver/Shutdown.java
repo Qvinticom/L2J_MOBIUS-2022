@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.EventLoopGroupManager;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
+import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -509,7 +510,7 @@ public class Shutdown extends Thread
 	{
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
-			Disconnection.of(player).defaultSequence(true);
+			Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
 		}
 	}
 	

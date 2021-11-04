@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.Disconnection;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -69,7 +70,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 		else
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Character " + player.getName() + " disconnected from server.");
-			Disconnection.of(player).defaultSequence(false);
+			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 		}
 	}
 }

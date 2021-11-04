@@ -49,8 +49,6 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
-import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
@@ -163,11 +161,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	{
 		sendPacket(packet);
 		closeNow();
-	}
-	
-	public void close(boolean toLoginScreen)
-	{
-		close(toLoginScreen ? ServerClose.STATIC_PACKET : LeaveWorld.STATIC_PACKET);
 	}
 	
 	public Channel getChannel()
@@ -357,12 +350,11 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getConnection())
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?"))
 		{
-			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?");
 			statement.setInt(1, objectId);
 			statement.execute();
-			statement.close();
 		}
 		catch (Exception e)
 		{

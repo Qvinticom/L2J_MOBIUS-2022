@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
@@ -92,7 +93,7 @@ public class Logout implements IClientIncomingPacket
 		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
-			Disconnection.of(client, player).defaultSequence(false);
+			Disconnection.of(client, player).defaultSequence(LeaveWorld.STATIC_PACKET);
 		}
 	}
 }

@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 /**
  * This class handles ban punishment.
@@ -59,7 +60,7 @@ public class BanHandler implements IPunishmentHandler
 					}
 					else
 					{
-						Disconnection.of(client).defaultSequence(false);
+						Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 					}
 				}
 				break;
@@ -104,7 +105,7 @@ public class BanHandler implements IPunishmentHandler
 	 */
 	private void applyToPlayer(PlayerInstance player)
 	{
-		Disconnection.of(player).defaultSequence(false);
+		Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 	}
 	
 	@Override

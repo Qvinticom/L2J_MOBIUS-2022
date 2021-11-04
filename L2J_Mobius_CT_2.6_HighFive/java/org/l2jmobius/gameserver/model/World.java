@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 public class World
 {
@@ -155,8 +156,8 @@ public class World
 			final PlayerInstance existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
 			if (existingPlayer != null)
 			{
-				Disconnection.of(existingPlayer).defaultSequence(false);
-				Disconnection.of(newPlayer).defaultSequence(false);
+				Disconnection.of(existingPlayer).defaultSequence(LeaveWorld.STATIC_PACKET);
+				Disconnection.of(newPlayer).defaultSequence(LeaveWorld.STATIC_PACKET);
 				LOGGER.warning(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
 			}
 			else if (Config.FACTION_SYSTEM_ENABLED)

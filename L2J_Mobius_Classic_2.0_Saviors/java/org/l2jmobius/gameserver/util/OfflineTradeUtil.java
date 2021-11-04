@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 
 /**
  * @author lord_rex
@@ -105,7 +106,7 @@ public class OfflineTradeUtil
 		World.OFFLINE_TRADE_COUNT++;
 		
 		final GameClient client = player.getClient();
-		client.close(true);
+		client.close(ServerClose.STATIC_PACKET);
 		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
 		{
 			AntiFeedManager.getInstance().onDisconnect(client);

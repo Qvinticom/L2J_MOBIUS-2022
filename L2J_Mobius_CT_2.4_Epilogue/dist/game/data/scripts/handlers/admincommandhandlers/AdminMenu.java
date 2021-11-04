@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -174,7 +175,7 @@ public class AdminMenu implements IAdminCommandHandler
 				String text;
 				if (plyr != null)
 				{
-					Disconnection.of(plyr).defaultSequence(false);
+					Disconnection.of(plyr).defaultSequence(LeaveWorld.STATIC_PACKET);
 					text = "You kicked " + plyr.getName() + " from the game.";
 				}
 				else

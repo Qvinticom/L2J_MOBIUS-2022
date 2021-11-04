@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import org.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import org.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordVerify;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -105,7 +106,7 @@ public class SecondaryPasswordAuth
 		if (passwordExist())
 		{
 			LOGGER.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced savePassword");
-			Disconnection.of(_activeClient).defaultSequence(false);
+			Disconnection.of(_activeClient).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return false;
 		}
 		
@@ -157,7 +158,7 @@ public class SecondaryPasswordAuth
 		if (!passwordExist())
 		{
 			LOGGER.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced changePassword");
-			Disconnection.of(_activeClient).defaultSequence(false);
+			Disconnection.of(_activeClient).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return false;
 		}
 		

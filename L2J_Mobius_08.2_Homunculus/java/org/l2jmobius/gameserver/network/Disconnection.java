@@ -149,15 +149,6 @@ public class Disconnection
 		return this;
 	}
 	
-	public Disconnection close(boolean toLoginScreen)
-	{
-		if (_client != null)
-		{
-			_client.close(toLoginScreen);
-		}
-		return this;
-	}
-	
 	public Disconnection close(IClientOutgoingPacket packet)
 	{
 		if (_client != null)
@@ -165,12 +156,6 @@ public class Disconnection
 			_client.close(packet);
 		}
 		return this;
-	}
-	
-	public void defaultSequence(boolean toLoginScreen)
-	{
-		defaultSequence();
-		close(toLoginScreen);
 	}
 	
 	public void defaultSequence(IClientOutgoingPacket packet)

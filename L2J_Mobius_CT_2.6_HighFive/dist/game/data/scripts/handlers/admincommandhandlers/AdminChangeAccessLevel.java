@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -133,7 +134,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		{
 			player.setAccessLevel(lvl);
 			player.sendMessage("Your character has been banned. Bye.");
-			Disconnection.of(player).defaultSequence(false);
+			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 		}
 	}
 }

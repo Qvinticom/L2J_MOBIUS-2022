@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
@@ -139,7 +140,7 @@ public class FloodProtectorAction
 	 */
 	private void kickPlayer()
 	{
-		Disconnection.of(_client).defaultSequence(false);
+		Disconnection.of(_client).defaultSequence(LeaveWorld.STATIC_PACKET);
 		
 		if (LOGGER.isLoggable(Level.WARNING))
 		{
