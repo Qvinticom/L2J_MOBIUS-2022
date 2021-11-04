@@ -22,8 +22,8 @@ package org.l2jmobius.gameserver.model;
 public class ExtractableProduct
 {
 	private final int _id;
-	private final int _min;
-	private final int _max;
+	private final long _min;
+	private final long _max;
 	private final int _chance;
 	private final int _minEnchant;
 	private final int _maxEnchant;
@@ -37,7 +37,7 @@ public class ExtractableProduct
 	 * @param minEnchant item min enchant
 	 * @param maxEnchant item max enchant
 	 */
-	public ExtractableProduct(int id, int min, int max, double chance, int minEnchant, int maxEnchant)
+	public ExtractableProduct(int id, long min, long max, double chance, int minEnchant, int maxEnchant)
 	{
 		_id = id;
 		_min = min;
@@ -52,12 +52,12 @@ public class ExtractableProduct
 		return _id;
 	}
 	
-	public int getMin()
+	public long getMin()
 	{
 		return _min;
 	}
 	
-	public int getMax()
+	public long getMax()
 	{
 		return _max;
 	}
