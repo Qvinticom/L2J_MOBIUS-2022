@@ -409,13 +409,8 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -423,7 +418,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 		}
 		
 		final QuestState qs = getQuestState(player, false);
-		if ((qs == null) || (player.getLevel() < 20))
+		if (!Config.DISABLE_TUTORIAL && (qs == null) && (player.getLevel() < 20))
 		{
 			showOnScreenMsg(player, NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 			return;
@@ -434,7 +429,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 			return;
 		}
 		
-		if (qs.isCompleted())
+		if (Config.DISABLE_TUTORIAL || ((qs != null) && qs.isCompleted()))
 		{
 			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 		}

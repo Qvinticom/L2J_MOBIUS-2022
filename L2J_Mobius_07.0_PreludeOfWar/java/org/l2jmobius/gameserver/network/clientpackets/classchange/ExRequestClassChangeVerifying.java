@@ -42,11 +42,6 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
@@ -97,24 +92,44 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 	
 	private boolean firstClassCheck(PlayerInstance player)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return true;
+		}
+		
 		final QuestState qs = player.getQuestState("Q11032_CurseOfUndying");
 		return (qs != null) && qs.isCompleted();
 	}
 	
 	private boolean secondClassCheck(PlayerInstance player)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return true;
+		}
+		
 		final QuestState qs = player.getQuestState("Q11025_PathOfDestinyProving");
 		return (qs != null) && qs.isCompleted();
 	}
 	
 	private boolean thirdClassCheck(PlayerInstance player)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return true;
+		}
+		
 		final QuestState qs = player.getQuestState("Q11026_PathOfDestinyConviction");
 		return (qs != null) && qs.isCompleted();
 	}
 	
 	private boolean fourthClassCheck(PlayerInstance player)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return true;
+		}
+		
 		final QuestState qs = player.getQuestState("Q11027_PathOfDestinyOvercome");
 		return (qs != null) && qs.isCompleted();
 	}

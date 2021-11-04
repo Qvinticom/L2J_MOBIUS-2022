@@ -232,13 +232,8 @@ public class Q11032_CurseOfUndying extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = event.getPlayer();
 		if ((player == null) || !CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 		{
@@ -252,7 +247,7 @@ public class Q11032_CurseOfUndying extends Quest
 		}
 		
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCompleted())
+		if (Config.DISABLE_TUTORIAL || ((qs != null) && qs.isCompleted()))
 		{
 			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		}

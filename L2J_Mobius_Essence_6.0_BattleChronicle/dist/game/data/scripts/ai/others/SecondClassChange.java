@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -40,13 +39,8 @@ public class SecondClassChange extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -63,13 +57,8 @@ public class SecondClassChange extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{

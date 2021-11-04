@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.classchange;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -84,6 +85,11 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 	
 	private boolean firstClassCheck(PlayerInstance player)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return true;
+		}
+		
 		QuestState qs = null;
 		if (player.isDeathKnight())
 		{
@@ -141,6 +147,11 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 	
 	private boolean thirdClassCheck(PlayerInstance player)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return true;
+		}
+		
 		final QuestState qs = player.getQuestState("Q10673_SagaOfLegend");
 		return (qs != null) && qs.isCompleted();
 	}

@@ -273,13 +273,8 @@ public class Q10984_CollectSpiderweb extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -292,7 +287,7 @@ public class Q10984_CollectSpiderweb extends Quest
 		}
 		
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCompleted())
+		if (Config.DISABLE_TUTORIAL || ((qs != null) && qs.isCompleted()))
 		{
 			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		}

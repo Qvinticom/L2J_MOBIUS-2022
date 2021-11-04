@@ -325,13 +325,10 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 			}
 			case "34505-10.html":
 			{
-				if (player.getLevel() >= LEVEL_85)
+				if ((player.getLevel() >= LEVEL_85) && qs.isCond(19))
 				{
-					if (qs.isCond(19))
-					{
-						qs.setCond(20, true);
-						htmltext = event;
-					}
+					qs.setCond(20, true);
+					htmltext = event;
 				}
 				break;
 			}
@@ -857,13 +854,8 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -876,7 +868,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 		}
 		
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCompleted())
+		if (Config.DISABLE_TUTORIAL || ((qs != null) && qs.isCompleted()))
 		{
 			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 		}
