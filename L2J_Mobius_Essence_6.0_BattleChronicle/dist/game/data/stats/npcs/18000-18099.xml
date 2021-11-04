@@ -808,96 +808,262 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18020" level="80" type="Npc" name="Queen Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="18020" level="80" type="RaidBoss" name="Queen Ant">
+		<!-- DEFEAT THE QUEEN EVENT -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="18023" count="2" respawnTime="200" weightPoint="1" />
+				<npc id="18024" count="2" respawnTime="200" weightPoint="1" />
+			</minions>
+		</parameters>
+		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="386384" hpRegen="10.5" mp="300" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="50" con="60" men="80">
+			<vitals hp="9000000" hpRegen="85.09694484" mp="15362.3283191629" mpRegen="1.8" />
+			<attack physical="990.441457140486" magical="600.33579646414" random="30" critical="4.75" accuracy="40" attackSpeed="250" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="95.9748607784026" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>370</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4021" level="1" /> <!-- Queen Ant -->
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4019" level="1" /> <!-- Decrease Speed -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4017" level="1" /> <!-- Queen Ant's Blow -->
+		</skillList>
+		<corpseTime>300</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="500" aggroRange="500">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="45" />
 			<height normal="53" />
 		</collision>
-	</npc>
+		<dropLists>
+			<drop>
+				<item id="94383" min="1" max="1" chance="7.03" /> <!-- Scroll: Enchant Rare Accessories-->
+				<item id="94385" min="1" max="1" chance="7.11" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+				<item id="91257" min="1" max="1" chance="2.03" /> <!-- Queen Ant Doll Lv. 2-->
+				<item id="92421" min="1" max="1" chance="0.03" /> <!-- Queen Ant's Stone Breaker-->
+				<item id="6328" min="1" max="1" chance="34.03" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="33.11" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="1" chance="32.56" /> <!-- Sealed Majestic Earring -->
+				<item id="5323" min="1" max="1" chance="7.762" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5316" min="1" max="1" chance="7.752" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="7.746" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="7.743" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5329" min="1" max="1" chance="7.731" /> <!-- Sealed Majestic Robe -->
+				<item id="5315" min="1" max="1" chance="7.725" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5313" min="1" max="1" chance="7.724" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5311" min="1" max="1" chance="7.722" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5326" min="1" max="1" chance="7.706" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5314" min="1" max="1" chance="7.692" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5312" min="1" max="1" chance="7.661" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5319" min="1" max="1" chance="7.654" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="7.622" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="6660" min="1" max="1" chance="4.935" /> <!-- Queen Ant's Ring -->
+				<item id="8686" min="1" max="1" chance="1.268" /> <!-- Themis' Tongue -->
+				<item id="8685" min="1" max="1" chance="1.258" /> <!-- Sobekk's Hurricane -->
+				<item id="8684" min="1" max="1" chance="1.254" /> <!-- Shyeed's Bow -->
+				<item id="8682" min="1" max="1" chance="1.245" /> <!-- Naga's Storm -->
+				<item id="8678" min="1" max="1" chance="1.222" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="1.217" /> <!-- Sword of Ipos -->
+				<item id="8687" min="1" max="1" chance="1.214" /> <!-- Cabrio's Hand -->
+				<item id="8938" min="1" max="1" chance="1.208" /> <!-- Tallum Blade*Damascus -->
+				<item id="91902" min="1" max="1" chance="1.202" /> <!-- Γ‰clair Bijou -->
+				<item id="8680" min="1" max="1" chance="1.181" /> <!-- Barakiel's Axe -->
+				<item id="8683" min="1" max="1" chance="1.159" /> <!-- Tiphon's Spear -->
+				<item id="8681" min="1" max="1" chance="1.157" /> <!-- Behemoth' Tuning Fork -->
+				<item id="91887" min="1" max="1" chance="1.149" /> <!-- Durendal -->
+				<item id="8688" min="1" max="1" chance="1.149" /> <!-- Daimon Crystal -->
+				<item id="93910" min="1" max="1" chance="10.02" /> <!-- Queen Ant's Crystal -->
+				<item id="92401" min="1" max="1" chance="0.75" /> <!-- Spellbook: White Guardian -->
+				<item id="91945" min="1" max="1" chance="0.3" /> <!-- Book of Shadows -->
+				<item id="94137" min="1" max="1" chance="0.3" /> <!-- Spellbook: Devour -->
+				<item id="91944" min="1" max="1" chance="0.3" /> <!-- Book of Light -->
+				<item id="93631" min="1" max="1" chance="0.3" /> <!-- Spellbook: Hellfire -->
+				<item id="93869" min="1" max="1" chance="0.075" /> <!-- Spellbook: Elemental Burst -->
+				<item id="93870" min="1" max="1" chance="0.03" /> <!-- Spellbook: Ethereal Strike -->
+				<item id="94325" min="1" max="1" chance="0.03" /> <!-- Spellbook: song of hunter -->
+				<item id="94324" min="1" max="1" chance="0.03" /> <!-- Spellbook: song of eart -->
+				<item id="94326" min="1" max="1" chance="0.03" /> <!-- Spellbook: dance of warrior -->
+				<item id="94327" min="1" max="1" chance="0.03" /> <!-- Spellbook: dance of fire -->
+				<item id="94500" min="1" max="1" chance="0.03" /> <!-- Spellbook: Titanic Sweep-->
+				<item id="94501" min="1" max="1" chance="0.03" /> <!-- Spellbook: Titanic Break -->
+				<item id="94505" min="1" max="1" chance="0.03" /> <!-- Spellbook: Burning Strike -->
+				<item id="94507" min="1" max="1" chance="0.03" /> <!-- Spellbook: Armor Break -->
+				<item id="94670" min="1" max="1" chance="0.03" /> <!-- Spellbook: Debuff Master -->
+				<item id="94674" min="1" max="1" chance="0.03" /> <!-- Spellbook: Blood Bond -->
+				<item id="95348" min="1" max="1" chance="0.03" /> <!-- Spellbook: Song of Wind -->
+				<item id="95349" min="1" max="1" chance="0.03" /> <!-- Spellbook: Dance of Fury -->
+				<item id="95350" min="1" max="1" chance="0.03" /> <!-- Spellbook: Goring Charge -->
+				<item id="95352" min="1" max="1" chance="0.03" /> <!-- Spellbook: Elemental Changing -->
+				<item id="95365" min="1" max="1" chance="0.03" /> <!-- Spellbook: Elemental Spirit Lv. 4 -->
+			</drop>
+		</dropLists>
+		</npc>
 	<npc id="18021" level="80" type="Npc" name="Queen Ant Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="591" hpRegen="10.5" mp="315" mpRegen="3.6" />
+			<vitals hp="591" hpRegen="3.5" mp="315" mpRegen="1.5" />
+			<attack physical="89.21" magical="59.01" random="30" critical="7" accuracy="40" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="118.72" magical="84.16" />
 			<speed>
 				<walk ground="40" />
 				<run ground="60" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>350</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="true" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18022" level="80" type="Npc" name="Nurse Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000" hpRegen="10.5" mp="402" mpRegen="3.6" />
+	<npc id="18022" level="80" type="Monster" name="Nurse Ant">
+		<!-- DEFEAT THE QUEEN EVENT -->
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="408630" hpRegen="108" mp="402" mpRegen="1.8" />
+			<attack physical="637" magical="395" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="547" magical="200" />
 			<speed>
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="20" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="20" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4020" level="1" /> <!-- Recovery -->
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18023" level="80" type="Npc" name="Escort Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4343" hpRegen="10.5" mp="432" mpRegen="3.6" />
+	<npc id="18023" level="80" type="Monster" name="Escort Ant">
+		<!-- DEFEAT THE QUEEN EVENT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="234871" hpRegen="115" mp="432" mpRegen="1.8" />
+			<attack physical="178" magical="27" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="578" magical="211" />
 			<speed>
 				<walk ground="40" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="20" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="20" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="900" isAggressive="true">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18024" level="80" type="Npc" name="Royal Guard Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7051" hpRegen="10.5" mp="463" mpRegen="3.6" />
+	<npc id="18024" level="80" type="Monster" name="Royal Guard Ant">
+		<!-- DEFEAT THE QUEEN EVENT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire sp="1" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="70051" hpRegen="122" mp="463" mpRegen="1.8" />
+			<attack physical="1190" magical="1074" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="610" magical="223" />
 			<speed>
 				<walk ground="40" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="20" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="20" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="900" aggroRange="450">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
