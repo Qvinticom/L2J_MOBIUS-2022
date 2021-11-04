@@ -181,8 +181,8 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 					if ("item".equals(b.getNodeName()))
 					{
 						final int id = parseInteger(b.getAttributes(), "id");
-						final long min = parseInteger(b.getAttributes(), "min");
-						final long max = parseInteger(b.getAttributes(), "max");
+						final long min = parseLong(b.getAttributes(), "min");
+						final long max = parseLong(b.getAttributes(), "max");
 						final double chance = parseDouble(b.getAttributes(), "chance");
 						final int minEnchant = parseInteger(b.getAttributes(), "minEnchant", 0);
 						final int maxEnchant = parseInteger(b.getAttributes(), "maxEnchant", 0);
