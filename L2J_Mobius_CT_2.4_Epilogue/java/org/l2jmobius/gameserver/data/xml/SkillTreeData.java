@@ -509,7 +509,7 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
 	{
-		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
+		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, true, player);
 	}
 	
 	/**
@@ -518,10 +518,11 @@ public class SkillTreeData implements IXmlReader
 	 * @param classId the learning skill class Id
 	 * @param includeByFs if {@code true} skills from Forgotten Scroll will be included
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder)
+	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Map<Integer, SkillLearn> skills = getCompleteClassSkillTree(classId);
@@ -539,20 +540,28 @@ public class SkillTreeData implements IXmlReader
 				continue;
 			}
 			
-			if (((includeAutoGet && skill.isAutoGet()) || skill.isLearnedByNpc() || (includeByFs && skill.isLearnedByFS())) && (player.getLevel() >= skill.getGetLevel()))
+			if (((!includeAutoGet || !skill.isAutoGet()) && !skill.isLearnedByNpc() && (!includeByFs || !skill.isLearnedByFS())) || (player.getLevel() < skill.getGetLevel()))
 			{
-				final Skill oldSkill = holder.getKnownSkill(skill.getSkillId());
-				if (oldSkill != null)
-				{
-					if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
-					{
-						result.add(skill);
-					}
-				}
-				else if (skill.getSkillLevel() == 1)
+				continue;
+			}
+			
+			// Forgotten Scroll requirements checked above.
+			if (!includeRequiredItems && !skill.getRequiredItems().isEmpty() && !skill.isLearnedByFS())
+			{
+				continue;
+			}
+			
+			final Skill oldSkill = holder.getKnownSkill(skill.getSkillId());
+			if (oldSkill != null)
+			{
+				if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
 				{
 					result.add(skill);
 				}
+			}
+			else if (skill.getSkillLevel() == 1)
+			{
+				result.add(skill);
 			}
 		}
 		return result;
@@ -571,22 +580,17 @@ public class SkillTreeData implements IXmlReader
 	{
 		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
-		List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
+		List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
 		for (int i = 0; i < 1000; i++) // Infinite loop warning
 		{
-			SEARCH: for (SkillLearn skillLearn : learnable)
+			for (SkillLearn skillLearn : learnable)
 			{
-				if (!includeRequiredItems && !skillLearn.getRequiredItems().isEmpty())
-				{
-					continue SEARCH;
-				}
-				
 				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 				holder.addSkill(skill);
 			}
 			
 			// Get new available skills, some skills depend of previous skills to be available.
-			learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
+			learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
 		}
 		return holder.getSkills().values();
 	}

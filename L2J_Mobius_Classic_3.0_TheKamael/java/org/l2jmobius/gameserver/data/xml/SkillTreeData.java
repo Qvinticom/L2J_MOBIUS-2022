@@ -666,7 +666,7 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
 	{
-		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
+		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, true, player);
 	}
 	
 	/**
@@ -675,10 +675,11 @@ public class SkillTreeData implements IXmlReader
 	 * @param classId the learning skill class Id
 	 * @param includeByFs if {@code true} skills from Forgotten Scroll will be included
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder)
+	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
 	{
 		final List<SkillLearn> result = new LinkedList<>();
 		final Map<Long, SkillLearn> skills = getCompleteClassSkillTree(classId);
@@ -694,6 +695,12 @@ public class SkillTreeData implements IXmlReader
 		{
 			final SkillLearn skill = entry.getValue();
 			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
+			{
+				continue;
+			}
+			
+			// Forgotten Scroll requirements checked above.
+			if (!includeRequiredItems && !skill.getRequiredItems().isEmpty() && !skill.isLearnedByFS())
 			{
 				continue;
 			}
@@ -743,7 +750,7 @@ public class SkillTreeData implements IXmlReader
 		final Set<Integer> removed = new HashSet<>();
 		for (int i = 0; i < 1000; i++) // Infinite loop warning
 		{
-			final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
+			final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
 			if (learnable.isEmpty())
 			{
 				// No more skills to learn
@@ -756,13 +763,8 @@ public class SkillTreeData implements IXmlReader
 				break;
 			}
 			
-			SEARCH: for (SkillLearn skillLearn : learnable)
+			for (SkillLearn skillLearn : learnable)
 			{
-				if (!includeRequiredItems && !skillLearn.getRequiredItems().isEmpty())
-				{
-					continue SEARCH;
-				}
-				
 				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 				// Cleanup skills that has to be removed
 				for (int skillId : skillLearn.getRemoveSkills())

@@ -668,7 +668,7 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet)
 	{
-		return getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, player);
+		return getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, true, player);
 	}
 	
 	/**
@@ -678,10 +678,11 @@ public class SkillTreeData implements IXmlReader
 	 * @param includeByFs if {@code true} skills from Forgotten Scroll will be included
 	 * @param includeByFp if {@code true} skills from Forgotten Power books will be included
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet, ISkillsHolder holder)
+	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
 	{
 		final List<SkillLearn> result = new LinkedList<>();
 		final Map<Long, SkillLearn> skills = getCompleteClassSkillTree(classId);
@@ -697,6 +698,12 @@ public class SkillTreeData implements IXmlReader
 		{
 			final SkillLearn skill = entry.getValue();
 			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || (!includeByFp && (skill.getSkillId() > 11399) && (skill.getSkillId() < 11405)) || isRemoveSkill(classId, skill.getSkillId()))
+			{
+				continue;
+			}
+			
+			// Forgotten Scroll and Forgotten Power requirements checked above.
+			if (!includeRequiredItems && !skill.getRequiredItems().isEmpty() && !skill.isLearnedByFS() && ((skill.getSkillId() < 11400) || (skill.getSkillId() > 11404)))
 			{
 				continue;
 			}
@@ -748,7 +755,7 @@ public class SkillTreeData implements IXmlReader
 		final Set<Integer> removed = new HashSet<>();
 		for (int i = 0; i < 1000; i++) // Infinite loop warning
 		{
-			final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, holder);
+			final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, includeRequiredItems, holder);
 			if (learnable.isEmpty())
 			{
 				// No more skills to learn
@@ -761,13 +768,8 @@ public class SkillTreeData implements IXmlReader
 				break;
 			}
 			
-			SEARCH: for (SkillLearn skillLearn : learnable)
+			for (SkillLearn skillLearn : learnable)
 			{
-				if (!includeRequiredItems && !skillLearn.getRequiredItems().isEmpty())
-				{
-					continue SEARCH;
-				}
-				
 				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 				// Cleanup skills that has to be removed
 				for (int skillId : skillLearn.getRemoveSkills())
