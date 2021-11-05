@@ -558,17 +558,31 @@ public class SkillTreeData implements IXmlReader
 		return result;
 	}
 	
-	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	/**
+	 * Used by auto learn configuration.
+	 * @param player
+	 * @param classId
+	 * @param includeByFs if {@code true} forgotten scroll skills present in the skill tree will be added
+	 * @param includeAutoGet if {@code true} auto-get skills present in the skill tree will be added
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
+	 * @return a list of auto learnable skills for the player.
+	 */
+	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems)
 	{
 		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
-		while (!learnable.isEmpty())
+		for (int i = 0; i < 1000; i++) // Infinite loop warning
 		{
-			for (SkillLearn s : learnable)
+			SEARCH: for (SkillLearn skillLearn : learnable)
 			{
-				final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
-				holder.addSkill(sk);
+				if (!includeRequiredItems && !skillLearn.getRequiredItems().isEmpty())
+				{
+					continue SEARCH;
+				}
+				
+				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
+				holder.addSkill(skill);
 			}
 			
 			// Get new available skills, some skills depend of previous skills to be available.

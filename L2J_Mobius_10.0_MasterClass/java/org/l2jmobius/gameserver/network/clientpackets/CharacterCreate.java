@@ -287,7 +287,7 @@ public class CharacterCreate implements IClientIncomingPacket
 			newChar.getStat().setLevel(Config.BALTHUS_KNIGHTS_LEVEL);
 			if (Config.BALTHUS_KNIGHTS_REWARD_SKILLS)
 			{
-				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
+				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true, Config.AUTO_LEARN_SKILLS_WITHOUT_ITEMS);
 			}
 		}
 		

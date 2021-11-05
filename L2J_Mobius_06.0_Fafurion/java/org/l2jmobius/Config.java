@@ -179,6 +179,7 @@ public class Config
 	public static boolean ENABLE_MODIFY_SKILL_REUSE;
 	public static Map<Integer, Integer> SKILL_REUSE_LIST;
 	public static boolean AUTO_LEARN_SKILLS;
+	public static boolean AUTO_LEARN_SKILLS_WITHOUT_ITEMS;
 	public static boolean AUTO_LEARN_FS_SKILLS;
 	public static boolean AUTO_LEARN_FP_SKILLS;
 	public static boolean AUTO_LOOT_HERBS;
@@ -1769,6 +1770,7 @@ public class Config
 				}
 			}
 			AUTO_LEARN_SKILLS = Character.getBoolean("AutoLearnSkills", false);
+			AUTO_LEARN_SKILLS_WITHOUT_ITEMS = Character.getBoolean("AutoLearnSkillsWithoutItems", false);
 			AUTO_LEARN_FS_SKILLS = Character.getBoolean("AutoLearnForgottenScrollSkills", false);
 			AUTO_LEARN_FP_SKILLS = Character.getBoolean("AutoLearnForgottenPowerSkills", false);
 			AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);

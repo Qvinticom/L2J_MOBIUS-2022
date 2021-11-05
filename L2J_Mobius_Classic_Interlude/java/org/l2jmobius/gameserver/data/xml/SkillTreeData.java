@@ -729,7 +729,16 @@ public class SkillTreeData implements IXmlReader
 		return result;
 	}
 	
-	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	/**
+	 * Used by auto learn configuration.
+	 * @param player
+	 * @param classId
+	 * @param includeByFs if {@code true} forgotten scroll skills present in the skill tree will be added
+	 * @param includeAutoGet if {@code true} auto-get skills present in the skill tree will be added
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
+	 * @return a list of auto learnable skills for the player.
+	 */
+	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems)
 	{
 		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
@@ -749,8 +758,13 @@ public class SkillTreeData implements IXmlReader
 				break;
 			}
 			
-			for (SkillLearn skillLearn : learnable)
+			SEARCH: for (SkillLearn skillLearn : learnable)
 			{
+				if (!includeRequiredItems && !skillLearn.getRequiredItems().isEmpty())
+				{
+					continue SEARCH;
+				}
+				
 				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 				// Cleanup skills that has to be removed
 				for (int skillId : skillLearn.getRemoveSkills())

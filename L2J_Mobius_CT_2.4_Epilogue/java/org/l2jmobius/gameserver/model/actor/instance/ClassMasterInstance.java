@@ -104,7 +104,7 @@ public class ClassMasterInstance extends MerchantInstance
 		}
 		else if (command.startsWith("learn_skills"))
 		{
-			player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+			player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true, Config.AUTO_LEARN_SKILLS_WITHOUT_ITEMS);
 		}
 		else if (command.startsWith("increase_clan_level"))
 		{

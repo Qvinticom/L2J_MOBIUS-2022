@@ -156,11 +156,11 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_give_all_skills"))
 		{
-			adminGiveAllSkills(activeChar, false, false);
+			adminGiveAllSkills(activeChar, false, false, false);
 		}
 		else if (command.equals("admin_give_all_skills_fs"))
 		{
-			adminGiveAllSkills(activeChar, true, true);
+			adminGiveAllSkills(activeChar, true, true, true);
 		}
 		else if (command.equals("admin_give_clan_skills"))
 		{
@@ -277,10 +277,11 @@ public class AdminSkill implements IAdminCommandHandler
 	/**
 	 * This function will give all the skills that the target can learn at his/her level
 	 * @param activeChar the player
-	 * @param includedByFs if {@code true} Forgotten Scroll skills will be delivered.
-	 * @param includedByFp if {@code true} Forgotten Power skills will be delivered.
+	 * @param includeByFs if {@code true} Forgotten Scroll skills will be delivered.
+	 * @param includeByFp if {@code true} Forgotten Power skills will be delivered.
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 */
-	private void adminGiveAllSkills(PlayerInstance activeChar, boolean includedByFs, boolean includedByFp)
+	private void adminGiveAllSkills(PlayerInstance activeChar, boolean includeByFs, boolean includeByFp, boolean includeRequiredItems)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -290,7 +291,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		final PlayerInstance player = target.getActingPlayer();
 		// Notify player and admin
-		BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(includedByFs, includedByFp, true) + " skills to " + player.getName());
+		BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(includeByFs, includeByFp, true, includeRequiredItems) + " skills to " + player.getName());
 		player.sendSkillList();
 		player.sendPacket(new AcquireSkillList(player));
 	}

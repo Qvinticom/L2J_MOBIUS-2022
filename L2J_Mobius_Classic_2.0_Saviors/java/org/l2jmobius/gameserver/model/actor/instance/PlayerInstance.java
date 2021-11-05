@@ -2550,7 +2550,7 @@ public class PlayerInstance extends Playable
 		// Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
 		if (Config.AUTO_LEARN_SKILLS)
 		{
-			giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+			giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true, Config.AUTO_LEARN_SKILLS_WITHOUT_ITEMS);
 		}
 		else
 		{
@@ -2610,15 +2610,16 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Give all available skills to the player.
-	 * @param includedByFs if {@code true} forgotten scroll skills present in the skill tree will be added
+	 * @param includeByFs if {@code true} forgotten scroll skills present in the skill tree will be added
 	 * @param includeAutoGet if {@code true} auto-get skills present in the skill tree will be added
+	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 * @return the amount of new skills earned
 	 */
-	public int giveAvailableSkills(boolean includedByFs, boolean includeAutoGet)
+	public int giveAvailableSkills(boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems)
 	{
 		int skillCounter = 0;
 		// Get available skills
-		final Collection<Skill> skills = SkillTreeData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
+		final Collection<Skill> skills = SkillTreeData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includeByFs, includeAutoGet, includeRequiredItems);
 		final List<Skill> skillsForStore = new ArrayList<>();
 		for (Skill skill : skills)
 		{

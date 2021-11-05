@@ -368,7 +368,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					}
 					if (Config.AUTO_LEARN_SKILLS)
 					{
-						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true, Config.AUTO_LEARN_SKILLS_WITHOUT_ITEMS);
 					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 					player.broadcastUserInfo();
@@ -385,7 +385,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			}
 			case "learnskills":
 			{
-				player.giveAvailableSkills(true, true);
+				player.giveAvailableSkills(true, true, true);
 				break;
 			}
 			case "clanlevelup":
@@ -762,7 +762,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			}
 			if (Config.AUTO_LEARN_SKILLS)
 			{
-				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true, Config.AUTO_LEARN_SKILLS_WITHOUT_ITEMS);
 			}
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 			player.broadcastUserInfo();
