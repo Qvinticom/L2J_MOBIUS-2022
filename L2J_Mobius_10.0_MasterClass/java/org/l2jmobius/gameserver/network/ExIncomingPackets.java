@@ -99,6 +99,8 @@ import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExShowHo
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExSummonHomunculusCouponResult;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneEnter;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneList;
+import org.l2jmobius.gameserver.network.clientpackets.limitshop.RequestPurchaseLimitShopItemBuy;
+import org.l2jmobius.gameserver.network.clientpackets.limitshop.RequestPurchaseLimitShopItemList;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
@@ -505,8 +507,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME),
 	EX_TRY_ENCHANT_ARTIFACT(0x160, RequestExTryEnchantArtifact::new, ConnectionState.IN_GAME),
 	EX_UPGRADE_SYSTEM_NORMAL_REQUEST(0x161, null, ConnectionState.IN_GAME),
-	EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(0x162, null, ConnectionState.IN_GAME),
-	EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x163, null, ConnectionState.IN_GAME),
+	EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(0x162, RequestPurchaseLimitShopItemList::new, ConnectionState.IN_GAME),
+	EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x163, RequestPurchaseLimitShopItemBuy::new, ConnectionState.IN_GAME),
 	// 228
 	EX_OPEN_HTML(0x164, ExOpenHtml::new, ConnectionState.IN_GAME),
 	EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME),

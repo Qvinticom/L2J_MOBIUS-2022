@@ -88,7 +88,7 @@ public abstract class Inventory extends ItemContainer
 	public static final int AIR_STONE_ID = 39461;
 	public static final int TEMPEST_STONE_ID = 39592;
 	public static final int ELCYUM_CRYSTAL_ID = 36514;
-	
+	public static final int EINHASAD_COIN_ID = 48472; // Lcoin on Essence.
 	public static final long MAX_ADENA = Config.MAX_ADENA;
 	
 	public static final int PAPERDOLL_UNDER = 0;

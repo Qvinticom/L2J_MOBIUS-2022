@@ -357,6 +357,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoSho
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
@@ -3457,6 +3458,12 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
+		// Einhasad coin UI update.
+		if (destoyedItem.getId() == Inventory.EINHASAD_COIN_ID)
+		{
+			sendPacket(new ExBloodyCoinCount(this));
+		}
+		
 		return true;
 	}
 	
@@ -3566,6 +3573,12 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
+		// Einhasad coin UI update.
+		if (item.getId() == Inventory.EINHASAD_COIN_ID)
+		{
+			sendPacket(new ExBloodyCoinCount(this));
+		}
+		
 		return true;
 	}
 	
@@ -3634,6 +3647,13 @@ public class PlayerInstance extends Playable
 				targetPlayer.sendItemList();
 			}
 		}
+		
+		// Einhasad coin UI update.
+		if (newItem.getId() == Inventory.EINHASAD_COIN_ID)
+		{
+			sendPacket(new ExBloodyCoinCount(this));
+		}
+		
 		return newItem;
 	}
 	
@@ -3741,6 +3761,12 @@ public class PlayerInstance extends Playable
 			sendPacket(sm);
 		}
 		
+		// Einhasad coin UI update.
+		if (item.getId() == Inventory.EINHASAD_COIN_ID)
+		{
+			sendPacket(new ExBloodyCoinCount(this));
+		}
+		
 		return true;
 	}
 	
@@ -3813,6 +3839,12 @@ public class PlayerInstance extends Playable
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
 			sm.addItemName(item);
 			sendPacket(sm);
+		}
+		
+		// Einhasad coin UI update.
+		if (item.getId() == Inventory.EINHASAD_COIN_ID)
+		{
+			sendPacket(new ExBloodyCoinCount(this));
 		}
 		
 		return item;

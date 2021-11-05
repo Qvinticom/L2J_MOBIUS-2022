@@ -84,6 +84,8 @@ import org.l2jmobius.gameserver.data.xml.InitialEquipmentData;
 import org.l2jmobius.gameserver.data.xml.InitialShortcutData;
 import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
 import org.l2jmobius.gameserver.data.xml.KarmaData;
+import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
+import org.l2jmobius.gameserver.data.xml.LimitShopData;
 import org.l2jmobius.gameserver.data.xml.LuckyGameData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -289,6 +291,8 @@ public class GameServer
 		FishingData.getInstance();
 		HennaData.getInstance();
 		PrimeShopData.getInstance();
+		LimitShopData.getInstance();
+		LimitShopCraftData.getInstance();
 		CollectionData.getInstance();
 		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
