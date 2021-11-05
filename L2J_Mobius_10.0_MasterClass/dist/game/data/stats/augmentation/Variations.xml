@@ -2882,75 +2882,406 @@
 		</variation>
 		<!-- Cloak Augmenting Stone - Ancient Kingdom -->
 		<variation mineralId="28597">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="40645" to="40654" chance="0.9901" /> <!-- P. Atk. +69 ~ +628 -->
+					<optionRange from="40655" to="40664" chance="0.9901" /> <!-- M. Atk. +74 ~ +672 -->
+					<optionRange from="40665" to="40674" chance="0.9901" /> <!-- Atk. Spd. +10 ~ +90 -->
+					<optionRange from="40675" to="40684" chance="0.9901" /> <!-- Casting Spd. +10 ~ +90 -->
+					<optionRange from="40685" to="40689" chance="0.9901" /> <!-- P. Accuracy +1 ~ +5 -->
+					<optionRange from="40690" to="40694" chance="0.9901" /> <!-- M. Accuracy +1 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +99 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +99 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +99 ~ +900 -->
+					<option id="40725" chance="0.9901" /> <!-- STR +1 ~ +2 -->
+					<option id="40731" chance="0.9901" /> <!-- DEX +1 ~ +2 -->
+					<option id="40727" chance="0.9901" /> <!-- CON +1 ~ +2 -->
+					<option id="40739" chance="0.9901" /> <!-- INT +1 ~ +2 -->
+					<option id="40733" chance="0.9901" /> <!-- WIT +1 ~ +2 -->
+					<option id="40729" chance="0.9901" /> <!-- MEN +1 ~ +2 -->
+					<option id="40735" chance="0.9901" /> <!-- LUC +1 ~ +2 -->
+					<option id="40737" chance="0.9901" /> <!-- CHA +1 ~ +2 -->
+					<optionRange from="40741" to="40750" chance="0.9901" /> <!-- P. Critical Rate +1.7% ~ +15% -->
+					<optionRange from="40751" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +0.9% ~ +7.5% -->
+					<optionRange from="40761" to="40770" chance="0.9901" /> <!-- M. Critical Rate +1% ~ +15% -->
+					<optionRange from="40771" to="40780" chance="0.9901" /> <!-- P. Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40781" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40791" to="40800" chance="0.9901" /> <!-- M. Critical Damage +1% ~ +7% -->
+					<optionRange from="40801" to="40810" chance="0.9901" /> <!-- Attribute Attack +5 ~ +35 -->
+					<optionRange from="40811" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40820" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40829" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40856" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40901" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40910" to="40912" chance="0.9901" /> <!-- Max HP +4% ~ +5% -->
+					<optionRange from="40913" to="40915" chance="0.9901" /> <!-- Max MP +4% ~ +5% -->
+					<optionRange from="40916" to="40918" chance="0.9901" /> <!-- Max CP +4% ~ +5% -->
+					<optionRange from="40919" to="40921" chance="0.9901" /> <!-- P. Atk. +4% ~ +5% -->
+					<optionRange from="40922" to="40924" chance="0.9901" /> <!-- P. Def. +4% ~ +5% -->
+					<optionRange from="40925" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4% ~ +5% -->
+					<optionRange from="40928" to="40930" chance="0.9901" /> <!-- Speed +10 ~ +15 -->
+					<optionRange from="40931" to="40933" chance="0.9901" /> <!-- M. Atk. +4% ~ +5% -->
+					<optionRange from="40934" to="40936" chance="0.9901" /> <!-- M. Def. +4% ~ +5% -->
+					<optionRange from="40937" to="40939" chance="0.9901" /> <!-- Casting Spd. +4% ~ +5% -->
+					<optionRange from="40940" to="40942" chance="0.9901" /> <!-- PvP damage +4% ~ +5% -->
+					<optionRange from="40943" to="40945" chance="0.9901" /> <!-- Received PvP damage -4% ~ -5% -->
+					<optionRange from="40946" to="40948" chance="0.9901" /> <!-- PvE damage +4% ~ +5% -->
+					<optionRange from="40949" to="40951" chance="0.9901" /> <!-- Received PvE damage -4% ~ -5% -->
+					<optionRange from="40952" to="40954" chance="0.9901" /> <!-- Acquired XP +4% ~ +5% -->
+					<optionRange from="40955" to="40957" chance="0.9901" /> <!-- Acquired SP +4% ~ +5% -->
+					<optionRange from="40958" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4~5% -->
+					<optionRange from="40961" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40964" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -3% ~ -5% -->
+				</optionCategory>
+			</optionGroup>
 		</variation>
 		<!-- Cloak Augmenting Stone - Elmoreden -->
 		<variation mineralId="28598">
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="40645" to="40654" chance="0.9901" /> <!-- P. Atk. +69 ~ +628 -->
+					<optionRange from="40655" to="40664" chance="0.9901" /> <!-- M. Atk. +74 ~ +672 -->
+					<optionRange from="40665" to="40674" chance="0.9901" /> <!-- Atk. Spd. +10 ~ +90 -->
+					<optionRange from="40675" to="40684" chance="0.9901" /> <!-- Casting Spd. +10 ~ +90 -->
+					<optionRange from="40685" to="40689" chance="0.9901" /> <!-- P. Accuracy +1 ~ +5 -->
+					<optionRange from="40690" to="40694" chance="0.9901" /> <!-- M. Accuracy +1 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +99 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +99 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +99 ~ +900 -->
+					<option id="40725" chance="0.9901" /> <!-- STR +1 ~ +2 -->
+					<option id="40731" chance="0.9901" /> <!-- DEX +1 ~ +2 -->
+					<option id="40727" chance="0.9901" /> <!-- CON +1 ~ +2 -->
+					<option id="40739" chance="0.9901" /> <!-- INT +1 ~ +2 -->
+					<option id="40733" chance="0.9901" /> <!-- WIT +1 ~ +2 -->
+					<option id="40729" chance="0.9901" /> <!-- MEN +1 ~ +2 -->
+					<option id="40735" chance="0.9901" /> <!-- LUC +1 ~ +2 -->
+					<option id="40737" chance="0.9901" /> <!-- CHA +1 ~ +2 -->
+					<optionRange from="40741" to="40750" chance="0.9901" /> <!-- P. Critical Rate +1.7% ~ +15% -->
+					<optionRange from="40751" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +0.9% ~ +7.5% -->
+					<optionRange from="40761" to="40770" chance="0.9901" /> <!-- M. Critical Rate +1% ~ +15% -->
+					<optionRange from="40771" to="40780" chance="0.9901" /> <!-- P. Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40781" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40791" to="40800" chance="0.9901" /> <!-- M. Critical Damage +1% ~ +7% -->
+					<optionRange from="40801" to="40810" chance="0.9901" /> <!-- Attribute Attack +5 ~ +35 -->
+					<optionRange from="40811" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40820" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40829" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40856" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40901" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40910" to="40912" chance="0.9901" /> <!-- Max HP +4% ~ +5% -->
+					<optionRange from="40913" to="40915" chance="0.9901" /> <!-- Max MP +4% ~ +5% -->
+					<optionRange from="40916" to="40918" chance="0.9901" /> <!-- Max CP +4% ~ +5% -->
+					<optionRange from="40919" to="40921" chance="0.9901" /> <!-- P. Atk. +4% ~ +5% -->
+					<optionRange from="40922" to="40924" chance="0.9901" /> <!-- P. Def. +4% ~ +5% -->
+					<optionRange from="40925" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4% ~ +5% -->
+					<optionRange from="40928" to="40930" chance="0.9901" /> <!-- Speed +10 ~ +15 -->
+					<optionRange from="40931" to="40933" chance="0.9901" /> <!-- M. Atk. +4% ~ +5% -->
+					<optionRange from="40934" to="40936" chance="0.9901" /> <!-- M. Def. +4% ~ +5% -->
+					<optionRange from="40937" to="40939" chance="0.9901" /> <!-- Casting Spd. +4% ~ +5% -->
+					<optionRange from="40940" to="40942" chance="0.9901" /> <!-- PvP damage +4% ~ +5% -->
+					<optionRange from="40943" to="40945" chance="0.9901" /> <!-- Received PvP damage -4% ~ -5% -->
+					<optionRange from="40946" to="40948" chance="0.9901" /> <!-- PvE damage +4% ~ +5% -->
+					<optionRange from="40949" to="40951" chance="0.9901" /> <!-- Received PvE damage -4% ~ -5% -->
+					<optionRange from="40952" to="40954" chance="0.9901" /> <!-- Acquired XP +4% ~ +5% -->
+					<optionRange from="40955" to="40957" chance="0.9901" /> <!-- Acquired SP +4% ~ +5% -->
+					<optionRange from="40958" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4~5% -->
+					<optionRange from="40961" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40964" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40967" to="40969" chance="0.9901" /> <!-- Fixed Damage Resistance +5 ~ +10 -->
+					<optionRange from="40970" to="40972" chance="0.9901" /> <!-- Reflects 3~5% of debuffs. -->
+					<option id="40973" chance="0.9901" /> <!-- A chance to inflict Silence on the target after a consecutive attack -->
+					<option id="40984" chance="0.9901" /> <!-- A chance to twist the nearby area: for 15 sec., blocks all debuffs and range attacks, Speed +100. Attacks in the area deal damage to yourself -->
+				</optionCategory>
+			</optionGroup>
 		</variation>
 		<!-- Cloak Augmenting Stone - Aden -->
 		<variation mineralId="28599">
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="40645" to="40654" chance="0.9901" /> <!-- P. Atk. +69 ~ +628 -->
+					<optionRange from="40655" to="40664" chance="0.9901" /> <!-- M. Atk. +74 ~ +672 -->
+					<optionRange from="40665" to="40674" chance="0.9901" /> <!-- Atk. Spd. +10 ~ +90 -->
+					<optionRange from="40675" to="40684" chance="0.9901" /> <!-- Casting Spd. +10 ~ +90 -->
+					<optionRange from="40685" to="40689" chance="0.9901" /> <!-- P. Accuracy +1 ~ +5 -->
+					<optionRange from="40690" to="40694" chance="0.9901" /> <!-- M. Accuracy +1 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +99 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +99 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +99 ~ +900 -->
+					<option id="40725" chance="0.9901" /> <!-- STR +1 ~ +2 -->
+					<option id="40731" chance="0.9901" /> <!-- DEX +1 ~ +2 -->
+					<option id="40727" chance="0.9901" /> <!-- CON +1 ~ +2 -->
+					<option id="40739" chance="0.9901" /> <!-- INT +1 ~ +2 -->
+					<option id="40733" chance="0.9901" /> <!-- WIT +1 ~ +2 -->
+					<option id="40729" chance="0.9901" /> <!-- MEN +1 ~ +2 -->
+					<option id="40735" chance="0.9901" /> <!-- LUC +1 ~ +2 -->
+					<option id="40737" chance="0.9901" /> <!-- CHA +1 ~ +2 -->
+					<optionRange from="40741" to="40750" chance="0.9901" /> <!-- P. Critical Rate +1.7% ~ +15% -->
+					<optionRange from="40751" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +0.9% ~ +7.5% -->
+					<optionRange from="40761" to="40770" chance="0.9901" /> <!-- M. Critical Rate +1% ~ +15% -->
+					<optionRange from="40771" to="40780" chance="0.9901" /> <!-- P. Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40781" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40791" to="40800" chance="0.9901" /> <!-- M. Critical Damage +1% ~ +7% -->
+					<optionRange from="40801" to="40810" chance="0.9901" /> <!-- Attribute Attack +5 ~ +35 -->
+					<optionRange from="40811" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40820" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40829" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40856" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40901" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40910" to="40912" chance="0.9901" /> <!-- Max HP +4% ~ +5% -->
+					<optionRange from="40913" to="40915" chance="0.9901" /> <!-- Max MP +4% ~ +5% -->
+					<optionRange from="40916" to="40918" chance="0.9901" /> <!-- Max CP +4% ~ +5% -->
+					<optionRange from="40919" to="40921" chance="0.9901" /> <!-- P. Atk. +4% ~ +5% -->
+					<optionRange from="40922" to="40924" chance="0.9901" /> <!-- P. Def. +4% ~ +5% -->
+					<optionRange from="40925" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4% ~ +5% -->
+					<optionRange from="40928" to="40930" chance="0.9901" /> <!-- Speed +10 ~ +15 -->
+					<optionRange from="40931" to="40933" chance="0.9901" /> <!-- M. Atk. +4% ~ +5% -->
+					<optionRange from="40934" to="40936" chance="0.9901" /> <!-- M. Def. +4% ~ +5% -->
+					<optionRange from="40937" to="40939" chance="0.9901" /> <!-- Casting Spd. +4% ~ +5% -->
+					<optionRange from="40940" to="40942" chance="0.9901" /> <!-- PvP damage +4% ~ +5% -->
+					<optionRange from="40943" to="40945" chance="0.9901" /> <!-- Received PvP damage -4% ~ -5% -->
+					<optionRange from="40946" to="40948" chance="0.9901" /> <!-- PvE damage +4% ~ +5% -->
+					<optionRange from="40949" to="40951" chance="0.9901" /> <!-- Received PvE damage -4% ~ -5% -->
+					<optionRange from="40952" to="40954" chance="0.9901" /> <!-- Acquired XP +4% ~ +5% -->
+					<optionRange from="40955" to="40957" chance="0.9901" /> <!-- Acquired SP +4% ~ +5% -->
+					<optionRange from="40958" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4~5% -->
+					<optionRange from="40961" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40964" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40967" to="40969" chance="0.9901" /> <!-- Fixed Damage Resistance +5 ~ +10 -->
+					<optionRange from="40975" to="40977" chance="0.9901" /> <!-- A chance to create a barrier that absorbs 10000~30000 damage, when hit -->
+					<optionRange from="40978" to="40980" chance="0.9901" /> <!-- P./ M. Skill Power +5% ~ +15% -->
+					<optionRange from="40985" to="40987" chance="0.9901" /> <!-- Vitality bonus +2% ~ +20% -->
+				</optionCategory>
+			</optionGroup>
 		</variation>
 		<!-- Cloak Augmenting Stone - Elmore -->
 		<variation mineralId="28600">
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="40645" to="40654" chance="0.9901" /> <!-- P. Atk. +69 ~ +628 -->
+					<optionRange from="40655" to="40664" chance="0.9901" /> <!-- M. Atk. +74 ~ +672 -->
+					<optionRange from="40665" to="40674" chance="0.9901" /> <!-- Atk. Spd. +10 ~ +90 -->
+					<optionRange from="40675" to="40684" chance="0.9901" /> <!-- Casting Spd. +10 ~ +90 -->
+					<optionRange from="40685" to="40689" chance="0.9901" /> <!-- P. Accuracy +1 ~ +5 -->
+					<optionRange from="40690" to="40694" chance="0.9901" /> <!-- M. Accuracy +1 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +99 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +99 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +99 ~ +900 -->
+					<option id="40725" chance="0.9901" /> <!-- STR +1 ~ +2 -->
+					<option id="40731" chance="0.9901" /> <!-- DEX +1 ~ +2 -->
+					<option id="40727" chance="0.9901" /> <!-- CON +1 ~ +2 -->
+					<option id="40739" chance="0.9901" /> <!-- INT +1 ~ +2 -->
+					<option id="40733" chance="0.9901" /> <!-- WIT +1 ~ +2 -->
+					<option id="40729" chance="0.9901" /> <!-- MEN +1 ~ +2 -->
+					<option id="40735" chance="0.9901" /> <!-- LUC +1 ~ +2 -->
+					<option id="40737" chance="0.9901" /> <!-- CHA +1 ~ +2 -->
+					<optionRange from="40741" to="40750" chance="0.9901" /> <!-- P. Critical Rate +1.7% ~ +15% -->
+					<optionRange from="40751" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +0.9% ~ +7.5% -->
+					<optionRange from="40761" to="40770" chance="0.9901" /> <!-- M. Critical Rate +1% ~ +15% -->
+					<optionRange from="40771" to="40780" chance="0.9901" /> <!-- P. Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40781" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40791" to="40800" chance="0.9901" /> <!-- M. Critical Damage +1% ~ +7% -->
+					<optionRange from="40801" to="40810" chance="0.9901" /> <!-- Attribute Attack +5 ~ +35 -->
+					<optionRange from="40811" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40820" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40829" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40856" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40901" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40910" to="40912" chance="0.9901" /> <!-- Max HP +4% ~ +5% -->
+					<optionRange from="40913" to="40915" chance="0.9901" /> <!-- Max MP +4% ~ +5% -->
+					<optionRange from="40916" to="40918" chance="0.9901" /> <!-- Max CP +4% ~ +5% -->
+					<optionRange from="40919" to="40921" chance="0.9901" /> <!-- P. Atk. +4% ~ +5% -->
+					<optionRange from="40922" to="40924" chance="0.9901" /> <!-- P. Def. +4% ~ +5% -->
+					<optionRange from="40925" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4% ~ +5% -->
+					<optionRange from="40928" to="40930" chance="0.9901" /> <!-- Speed +10 ~ +15 -->
+					<optionRange from="40931" to="40933" chance="0.9901" /> <!-- M. Atk. +4% ~ +5% -->
+					<optionRange from="40934" to="40936" chance="0.9901" /> <!-- M. Def. +4% ~ +5% -->
+					<optionRange from="40937" to="40939" chance="0.9901" /> <!-- Casting Spd. +4% ~ +5% -->
+					<optionRange from="40940" to="40942" chance="0.9901" /> <!-- PvP damage +4% ~ +5% -->
+					<optionRange from="40943" to="40945" chance="0.9901" /> <!-- Received PvP damage -4% ~ -5% -->
+					<optionRange from="40946" to="40948" chance="0.9901" /> <!-- PvE damage +4% ~ +5% -->
+					<optionRange from="40949" to="40951" chance="0.9901" /> <!-- Received PvE damage -4% ~ -5% -->
+					<optionRange from="40952" to="40954" chance="0.9901" /> <!-- Acquired XP +4% ~ +5% -->
+					<optionRange from="40955" to="40957" chance="0.9901" /> <!-- Acquired SP +4% ~ +5% -->
+					<optionRange from="40958" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4~5% -->
+					<optionRange from="40961" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40964" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40967" to="40969" chance="0.9901" /> <!-- Fixed Damage Resistance +5 ~ +10 -->
+					<optionRange from="40975" to="40977" chance="0.9901" /> <!-- A chance to create a barrier that absorbs 10000~30000 damage, when hit -->
+					<optionRange from="40978" to="40980" chance="0.9901" /> <!-- P./ M. Skill Power +5% ~ +15% -->
+					<optionRange from="40985" to="40987" chance="0.9901" /> <!-- Vitality bonus +2% ~ +20% -->
+				</optionCategory>
+			</optionGroup>
 		</variation>
 		<!-- Cloak Augmenting Stone - Ferios -->
 		<variation mineralId="28601">
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="40645" to="40654" chance="0.9901" /> <!-- P. Atk. +69 ~ +628 -->
+					<optionRange from="40655" to="40664" chance="0.9901" /> <!-- M. Atk. +74 ~ +672 -->
+					<optionRange from="40665" to="40674" chance="0.9901" /> <!-- Atk. Spd. +10 ~ +90 -->
+					<optionRange from="40675" to="40684" chance="0.9901" /> <!-- Casting Spd. +10 ~ +90 -->
+					<optionRange from="40685" to="40689" chance="0.9901" /> <!-- P. Accuracy +1 ~ +5 -->
+					<optionRange from="40690" to="40694" chance="0.9901" /> <!-- M. Accuracy +1 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +99 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +99 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +99 ~ +900 -->
+					<option id="40725" chance="0.9901" /> <!-- STR +1 ~ +2 -->
+					<option id="40731" chance="0.9901" /> <!-- DEX +1 ~ +2 -->
+					<option id="40727" chance="0.9901" /> <!-- CON +1 ~ +2 -->
+					<option id="40739" chance="0.9901" /> <!-- INT +1 ~ +2 -->
+					<option id="40733" chance="0.9901" /> <!-- WIT +1 ~ +2 -->
+					<option id="40729" chance="0.9901" /> <!-- MEN +1 ~ +2 -->
+					<option id="40735" chance="0.9901" /> <!-- LUC +1 ~ +2 -->
+					<option id="40737" chance="0.9901" /> <!-- CHA +1 ~ +2 -->
+					<optionRange from="40741" to="40750" chance="0.9901" /> <!-- P. Critical Rate +1.7% ~ +15% -->
+					<optionRange from="40751" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +0.9% ~ +7.5% -->
+					<optionRange from="40761" to="40770" chance="0.9901" /> <!-- M. Critical Rate +1% ~ +15% -->
+					<optionRange from="40771" to="40780" chance="0.9901" /> <!-- P. Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40781" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +0.9% ~ +7.5% -->
+					<optionRange from="40791" to="40800" chance="0.9901" /> <!-- M. Critical Damage +1% ~ +7% -->
+					<optionRange from="40801" to="40810" chance="0.9901" /> <!-- Attribute Attack +5 ~ +35 -->
+					<optionRange from="40811" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40820" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40829" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40856" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40901" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +1.5% ~ +15% -->
+					<optionRange from="40910" to="40912" chance="0.9901" /> <!-- Max HP +4% ~ +5% -->
+					<optionRange from="40913" to="40915" chance="0.9901" /> <!-- Max MP +4% ~ +5% -->
+					<optionRange from="40916" to="40918" chance="0.9901" /> <!-- Max CP +4% ~ +5% -->
+					<optionRange from="40919" to="40921" chance="0.9901" /> <!-- P. Atk. +4% ~ +5% -->
+					<optionRange from="40922" to="40924" chance="0.9901" /> <!-- P. Def. +4% ~ +5% -->
+					<optionRange from="40925" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4% ~ +5% -->
+					<optionRange from="40928" to="40930" chance="0.9901" /> <!-- Speed +10 ~ +15 -->
+					<optionRange from="40931" to="40933" chance="0.9901" /> <!-- M. Atk. +4% ~ +5% -->
+					<optionRange from="40934" to="40936" chance="0.9901" /> <!-- M. Def. +4% ~ +5% -->
+					<optionRange from="40937" to="40939" chance="0.9901" /> <!-- Casting Spd. +4% ~ +5% -->
+					<optionRange from="40940" to="40942" chance="0.9901" /> <!-- PvP damage +4% ~ +5% -->
+					<optionRange from="40943" to="40945" chance="0.9901" /> <!-- Received PvP damage -4% ~ -5% -->
+					<optionRange from="40946" to="40948" chance="0.9901" /> <!-- PvE damage +4% ~ +5% -->
+					<optionRange from="40949" to="40951" chance="0.9901" /> <!-- Received PvE damage -4% ~ -5% -->
+					<optionRange from="40952" to="40954" chance="0.9901" /> <!-- Acquired XP +4% ~ +5% -->
+					<optionRange from="40955" to="40957" chance="0.9901" /> <!-- Acquired SP +4% ~ +5% -->
+					<optionRange from="40958" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4~5% -->
+					<optionRange from="40961" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -3% ~ -5% -->
+					<optionRange from="40964" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -3% ~ -5% -->
+					<option id="40974" chance="0.9901" /> <!-- Active skill: Recovers 100% HP/ CP if you die (duration: 1 min.). The effect is cancelled after activation. -->
+					<option id="40981" chance="0.9901" /> <!-- Active skill: Resurrects fully recovered. Buffs/ debuffs remain after death, except Noblesse Blessing and Lucky Charm. -->
+					<option id="40982" chance="0.9901" /> <!-- A chance to twist the nearby area: for 30 sec., blocks all debuffs and range attacks. Attacks in the area deal damage to yourself. -->
+					<option id="40983" chance="0.9901" /> <!-- Grants invincibility if HP is lower than 30% -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- High-grade Cloak Augmenting Stone - Ancient Kingdom -->
+		<variation mineralId="29165">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. Atk. +251 ~ +628 -->
+					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. Atk. +269 ~ +672 -->
+					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk. Spd. +36 ~ +90 -->
+					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Casting Spd. +36 ~ +90 -->
+					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P. Accuracy +4 ~ +5 -->
+					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M. Accuracy +4 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +360 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +360 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +360 ~ +900 -->
+					<option id="40726" chance="0.9901" /> <!-- STR +2 -->
+					<option id="40732" chance="0.9901" /> <!-- DEX +2 -->
+					<option id="40728" chance="0.9901" /> <!-- CON +2 -->
+					<option id="40740" chance="0.9901" /> <!-- INT +2 -->
+					<option id="40734" chance="0.9901" /> <!-- WIT +2 -->
+					<option id="40730" chance="0.9901" /> <!-- MEN +2 -->
+					<option id="40736" chance="0.9901" /> <!-- LUC +2 -->
+					<option id="40738" chance="0.9901" /> <!-- CHA +2 -->
+					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P. Critical Rate +6% ~ +15% -->
+					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +3% ~ +7.5% -->
+					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M. Critical Rate +8% ~ +15% -->
+					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P. Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M. Critical Damage +5% ~ +7% -->
+					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Attribute Attack +15 ~ +35 -->
+					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- Max HP +4.5% ~ +5% -->
+					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- Max MP +4.5% ~ +5% -->
+					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- Max CP +4.5% ~ +5% -->
+					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. Atk. +4.5% ~ +5% -->
+					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. Def. +4.5% ~ +5% -->
+					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4.5% ~ +5% -->
+					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed +13 ~ +15 -->
+					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. Atk. +4.5% ~ +5% -->
+					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. Def. +4.5% ~ +5% -->
+					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Casting Spd. +4.5% ~ +5% -->
+					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- PvP damage +4.5% ~ +5% -->
+					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- Received PvP damage -4.5% ~ -5% -->
+					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- PvE damage +4.5% ~ +5% -->
+					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- Received PvE damage-4.5% ~ -5% -->
+					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- XP (hunting) +4.5% ~ +5% -->
+					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- SP (hunting) +4.5 ~ +5% -->
+					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4.5~5% -->
+					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -4% ~ -5% -->
+					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -4% ~ -5% -->
+				</optionCategory>
+			</optionGroup>
 		</variation>
 		<!-- High-grade Cloak Augmenting Stone - Elmoreden -->
 		<variation mineralId="29166">
 			<optionGroup order="1">
 				<optionCategory chance="100">
-					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. atk -->
-					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. atk -->
-					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk speed -->
-					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Cast speed -->
-					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P accuracy -->
-					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M accuracy -->
-					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- HP -->
-					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- MP -->
-					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- CP -->
-					<option id="40726" chance="0.9901" /> <!-- STR -->
-					<option id="40732" chance="0.9901" /> <!-- DEX -->
-					<option id="40728" chance="0.9901" /> <!-- CON -->
-					<option id="40740" chance="0.9901" /> <!-- INT -->
-					<option id="40734" chance="0.9901" /> <!-- WIT -->
-					<option id="40730" chance="0.9901" /> <!-- MEN -->
-					<option id="40736" chance="0.9901" /> <!-- LUC -->
-					<option id="40738" chance="0.9901" /> <!-- CHA -->
-					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P crit rate -->
-					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P skill crit rate -->
-					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M crit rate -->
-					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P crit dmg -->
-					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P skill crit dmg -->
-					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M skill crit dmg -->
-					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Atk attribute -->
-					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion atk rate (2)--> 
-					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction atk rate (2) -->
-					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk rate (2) -->
-					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk rate (2) -->
-					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification atk rate (2) -->
-					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- HP % (2) -->
-					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- MP % (2) -->
-					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- CP % (2) -->
-					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. atk % (2)-->
-					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. def % (2)-->
-					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- P. atk speed % (2)-->
-					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed (2)-->
-					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. atk % (2)-->
-					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. def % (2)-->
-					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Cast speed % (2)-->
-					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- pvp dmg % (2)-->
-					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- pvp def % (2)-->
-					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- pve dmg % (2)-->
-					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- pve def % (2)-->
-					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- xp % (2)-->
-					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- sp % (2)-->
-					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- vampiric % (2)-->
-					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- p. skill mp consumption % (2)-->
-					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- m. skill mp consumption % (2)-->
-					<option id="40969" chance="0.9901" /> <!-- Fixed Damage Ressistance -->
-					<option id="40972" chance="0.9901" /> <!-- Reflect Debuffs -->
-					<option id="40973" chance="0.9901" /> <!-- Chance Silence -->
-					<option id="40984" chance="0.9901" /> <!-- Spallation -->
+					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. Atk. +251 ~ +628 -->
+					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. Atk. +269 ~ +672 -->
+					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk. Spd. +36 ~ +90 -->
+					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Casting Spd. +36 ~ +90 -->
+					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P. Accuracy +4 ~ +5 -->
+					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M. Accuracy +4 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +360 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +360 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +360 ~ +900 -->
+					<option id="40726" chance="0.9901" /> <!-- STR +2 -->
+					<option id="40732" chance="0.9901" /> <!-- DEX +2 -->
+					<option id="40728" chance="0.9901" /> <!-- CON +2 -->
+					<option id="40740" chance="0.9901" /> <!-- INT +2 -->
+					<option id="40734" chance="0.9901" /> <!-- WIT +2 -->
+					<option id="40730" chance="0.9901" /> <!-- MEN +2 -->
+					<option id="40736" chance="0.9901" /> <!-- LUC +2 -->
+					<option id="40738" chance="0.9901" /> <!-- CHA +2 -->
+					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P. Critical Rate +6% ~ +15% -->
+					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +3% ~ +7.5% -->
+					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M. Critical Rate +8% ~ +15% -->
+					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P. Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M. Critical Damage +5% ~ +7% -->
+					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Attribute Attack +15 ~ +35 -->
+					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- Max HP +4.5% ~ +5% -->
+					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- Max MP +4.5% ~ +5% -->
+					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- Max CP +4.5% ~ +5% -->
+					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. Atk. +4.5% ~ +5% -->
+					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. Def. +4.5% ~ +5% -->
+					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4.5% ~ +5% -->
+					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed +13 ~ +15 -->
+					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. Atk. +4.5% ~ +5% -->
+					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. Def. +4.5% ~ +5% -->
+					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Casting Spd. +4.5% ~ +5% -->
+					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- PvP damage +4.5% ~ +5% -->
+					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- Received PvP damage -4.5% ~ -5% -->
+					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- PvE damage +4.5% ~ +5% -->
+					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- Received PvE damage-4.5% ~ -5% -->
+					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- XP (hunting) +4.5% ~ +5% -->
+					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- SP (hunting) +4.5 ~ +5% -->
+					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4.5~5% -->
+					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -4% ~ -5% -->
+					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -4% ~ -5% -->
+					<option id="40969" chance="0.9901" /> <!-- Fixed Damage Resistance +10 -->
+					<option id="40972" chance="0.9901" /> <!-- Reflects 5% of debuffs. -->
+					<option id="40973" chance="0.9901" /> <!-- A chance to inflict Silence on the target after a consecutive attack -->
+					<option id="40984" chance="0.9901" /> <!-- A chance to twist the nearby area: for 15 sec., blocks all debuffs and range attacks, Speed +100. Attacks in the area deal damage to yourself. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -2958,60 +3289,59 @@
 		<variation mineralId="29167">
 			<optionGroup order="1">
 				<optionCategory chance="100">
-					<optionRange from="40652" to="40654" chance="0.9804" /> <!-- P. atk -->
-					<optionRange from="40662" to="40664" chance="0.9804" /> <!-- M. atk -->
-					<optionRange from="40672" to="40674" chance="0.9804" /> <!-- Atk speed -->
-					<optionRange from="40682" to="40684" chance="0.9804" /> <!-- Cast speed -->
-					<optionRange from="40688" to="40689" chance="0.9804" /> <!-- P accuracy -->
-					<optionRange from="40693" to="40694" chance="0.9804" /> <!-- M accuracy -->
-					<optionRange from="40702" to="40704" chance="0.9804" /> <!-- HP -->
-					<optionRange from="40712" to="40714" chance="0.9804" /> <!-- MP -->
-					<optionRange from="40722" to="40724" chance="0.9804" /> <!-- CP -->
-					<option id="40726" chance="0.9804" /> <!-- STR -->
-					<option id="40732" chance="0.9804" /> <!-- DEX -->
-					<option id="40728" chance="0.9804" /> <!-- CON -->
-					<option id="40740" chance="0.9804" /> <!-- INT -->
-					<option id="40734" chance="0.9804" /> <!-- WIT -->
-					<option id="40730" chance="0.9804" /> <!-- MEN -->
-					<option id="40736" chance="0.9804" /> <!-- LUC -->
-					<option id="40738" chance="0.9804" /> <!-- CHA -->
-					<optionRange from="40748" to="40750" chance="0.9804" /> <!-- P crit rate -->
-					<optionRange from="40758" to="40760" chance="0.9804" /> <!-- P skill crit rate -->
-					<optionRange from="40768" to="40770" chance="0.9804" /> <!-- M crit rate -->
-					<optionRange from="40778" to="40780" chance="0.9804" /> <!-- P crit dmg -->
-					<optionRange from="40788" to="40790" chance="0.9804" /> <!-- P skill crit dmg -->
-					<optionRange from="40798" to="40800" chance="0.9804" /> <!-- M skill crit dmg -->
-					<optionRange from="40808" to="40810" chance="0.9804" /> <!-- Atk attribute -->
-					<optionRange from="40818" to="40819" chance="0.9804" /> <!-- Confusion atk rate (2)--> 
-					<optionRange from="40827" to="40828" chance="0.9804" /> <!-- Obstruction atk rate (2) -->
-					<optionRange from="40836" to="40837" chance="0.9804" /> <!-- Infection Atk rate (2) -->
-					<optionRange from="40863" to="40864" chance="0.9804" /> <!-- Stupor Atk rate (2) -->
-					<optionRange from="40908" to="40909" chance="0.9804" /> <!-- Petrification atk rate (2) -->
-					<optionRange from="40911" to="40912" chance="0.9804" /> <!-- HP % (2) -->
-					<optionRange from="40914" to="40915" chance="0.9804" /> <!-- MP % (2) -->
-					<optionRange from="40917" to="40918" chance="0.9804" /> <!-- CP % (2) -->
-					<optionRange from="40920" to="40921" chance="0.9804" /> <!-- P. atk % (2)-->
-					<optionRange from="40923" to="40924" chance="0.9804" /> <!-- P. def % (2)-->
-					<optionRange from="40926" to="40927" chance="0.9804" /> <!-- P. atk speed % (2)-->
-					<optionRange from="40929" to="40930" chance="0.9804" /> <!-- Speed (2)-->
-					<optionRange from="40932" to="40933" chance="0.9804" /> <!-- M. atk % (2)-->
-					<optionRange from="40935" to="40936" chance="0.9804" /> <!-- M. def % (2)-->
-					<optionRange from="40938" to="40939" chance="0.9804" /> <!-- Cast speed % (2)-->
-					<optionRange from="40941" to="40942" chance="0.9804" /> <!-- pvp dmg % (2)-->
-					<optionRange from="40944" to="40945" chance="0.9804" /> <!-- pvp def % (2)-->
-					<optionRange from="40947" to="40948" chance="0.9804" /> <!-- pve dmg % (2)-->
-					<optionRange from="40950" to="40951" chance="0.9804" /> <!-- pve def % (2)-->
-					<optionRange from="40953" to="40954" chance="0.9804" /> <!-- xp % (2)-->
-					<optionRange from="40956" to="40957" chance="0.9804" /> <!-- sp % (2)-->
-					<optionRange from="40959" to="40960" chance="0.9804" /> <!-- vampiric % (2)-->
-					<optionRange from="40962" to="40963" chance="0.9804" /> <!-- p. skill mp consumption % (2)-->
-					<optionRange from="40965" to="40966" chance="0.9804" /> <!-- m. skill mp consumption % (2)-->
-					<option id="40969" chance="0.9804" /> <!-- Fixed Damage Ressistance -->
-					<option id="40977" chance="0.9804" /> <!-- Barrier -->
-					<option id="40979" chance="0.9804" /> <!-- P/M Skill Power 10% -->
-					<option id="40980" chance="0.9804" /> <!-- P/M Skill Power 15% -->
-					<option id="40986" chance="0.9804" /> <!-- Vitality Bonus 10% -->
-					<option id="40987" chance="0.9804" /> <!-- Vitality Bonus 20%% -->
+					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. Atk. +251 ~ +628 -->
+					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. Atk. +269 ~ +672 -->
+					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk. Spd. +36 ~ +90 -->
+					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Casting Spd. +36 ~ +90 -->
+					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P. Accuracy +4 ~ +5 -->
+					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M. Accuracy +4 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +360 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +360 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +360 ~ +900 -->
+					<option id="40726" chance="0.9901" /> <!-- STR +2 -->
+					<option id="40732" chance="0.9901" /> <!-- DEX +2 -->
+					<option id="40728" chance="0.9901" /> <!-- CON +2 -->
+					<option id="40740" chance="0.9901" /> <!-- INT +2 -->
+					<option id="40734" chance="0.9901" /> <!-- WIT +2 -->
+					<option id="40730" chance="0.9901" /> <!-- MEN +2 -->
+					<option id="40736" chance="0.9901" /> <!-- LUC +2 -->
+					<option id="40738" chance="0.9901" /> <!-- CHA +2 -->
+					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P. Critical Rate +6% ~ +15% -->
+					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +3% ~ +7.5% -->
+					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M. Critical Rate +8% ~ +15% -->
+					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P. Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M. Critical Damage +5% ~ +7% -->
+					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Attribute Attack +15 ~ +35 -->
+					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- Max HP +4.5% ~ +5% -->
+					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- Max MP +4.5% ~ +5% -->
+					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- Max CP +4.5% ~ +5% -->
+					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. Atk. +4.5% ~ +5% -->
+					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. Def. +4.5% ~ +5% -->
+					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4.5% ~ +5% -->
+					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed +13 ~ +15 -->
+					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. Atk. +4.5% ~ +5% -->
+					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. Def. +4.5% ~ +5% -->
+					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Casting Spd. +4.5% ~ +5% -->
+					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- PvP damage +4.5% ~ +5% -->
+					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- Received PvP damage -4.5% ~ -5% -->
+					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- PvE damage +4.5% ~ +5% -->
+					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- Received PvE damage-4.5% ~ -5% -->
+					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- XP (hunting) +4.5% ~ +5% -->
+					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- SP (hunting) +4.5 ~ +5% -->
+					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4.5~5% -->
+					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -4% ~ -5% -->
+					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -4% ~ -5% -->
+					<option id="40969" chance="0.9804" /> <!-- Fixed Damage Resistance +10 -->
+					<option id="40977" chance="0.9804" /> <!-- A chance to absorb 30,000 damage. -->
+					<option id="40979" chance="0.9804" /> <!-- P./ M. Skill Power +10% -->
+					<option id="40980" chance="0.9804" /> <!-- P./ M. Skill Power +15% -->
+					<optionRange from="40986" to="40987" chance="0.9804" /> <!-- Vitality bonus +10% ~ +20% -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -3019,60 +3349,59 @@
 		<variation mineralId="29168">
 			<optionGroup order="1">
 				<optionCategory chance="100">
-					<optionRange from="40652" to="40654" chance="0.9804" /> <!-- P. atk -->
-					<optionRange from="40662" to="40664" chance="0.9804" /> <!-- M. atk -->
-					<optionRange from="40672" to="40674" chance="0.9804" /> <!-- Atk speed -->
-					<optionRange from="40682" to="40684" chance="0.9804" /> <!-- Cast speed -->
-					<optionRange from="40688" to="40689" chance="0.9804" /> <!-- P accuracy -->
-					<optionRange from="40693" to="40694" chance="0.9804" /> <!-- M accuracy -->
-					<optionRange from="40702" to="40704" chance="0.9804" /> <!-- HP -->
-					<optionRange from="40712" to="40714" chance="0.9804" /> <!-- MP -->
-					<optionRange from="40722" to="40724" chance="0.9804" /> <!-- CP -->
-					<option id="40726" chance="0.9804" /> <!-- STR -->
-					<option id="40732" chance="0.9804" /> <!-- DEX -->
-					<option id="40728" chance="0.9804" /> <!-- CON -->
-					<option id="40740" chance="0.9804" /> <!-- INT -->
-					<option id="40734" chance="0.9804" /> <!-- WIT -->
-					<option id="40730" chance="0.9804" /> <!-- MEN -->
-					<option id="40736" chance="0.9804" /> <!-- LUC -->
-					<option id="40738" chance="0.9804" /> <!-- CHA -->
-					<optionRange from="40748" to="40750" chance="0.9804" /> <!-- P crit rate -->
-					<optionRange from="40758" to="40760" chance="0.9804" /> <!-- P skill crit rate -->
-					<optionRange from="40768" to="40770" chance="0.9804" /> <!-- M crit rate -->
-					<optionRange from="40778" to="40780" chance="0.9804" /> <!-- P crit dmg -->
-					<optionRange from="40788" to="40790" chance="0.9804" /> <!-- P skill crit dmg -->
-					<optionRange from="40798" to="40800" chance="0.9804" /> <!-- M skill crit dmg -->
-					<optionRange from="40808" to="40810" chance="0.9804" /> <!-- Atk attribute -->
-					<optionRange from="40818" to="40819" chance="0.9804" /> <!-- Confusion atk rate (2)--> 
-					<optionRange from="40827" to="40828" chance="0.9804" /> <!-- Obstruction atk rate (2) -->
-					<optionRange from="40836" to="40837" chance="0.9804" /> <!-- Infection Atk rate (2) -->
-					<optionRange from="40863" to="40864" chance="0.9804" /> <!-- Stupor Atk rate (2) -->
-					<optionRange from="40908" to="40909" chance="0.9804" /> <!-- Petrification atk rate (2) -->
-					<optionRange from="40911" to="40912" chance="0.9804" /> <!-- HP % (2) -->
-					<optionRange from="40914" to="40915" chance="0.9804" /> <!-- MP % (2) -->
-					<optionRange from="40917" to="40918" chance="0.9804" /> <!-- CP % (2) -->
-					<optionRange from="40920" to="40921" chance="0.9804" /> <!-- P. atk % (2)-->
-					<optionRange from="40923" to="40924" chance="0.9804" /> <!-- P. def % (2)-->
-					<optionRange from="40926" to="40927" chance="0.9804" /> <!-- P. atk speed % (2)-->
-					<optionRange from="40929" to="40930" chance="0.9804" /> <!-- Speed (2)-->
-					<optionRange from="40932" to="40933" chance="0.9804" /> <!-- M. atk % (2)-->
-					<optionRange from="40935" to="40936" chance="0.9804" /> <!-- M. def % (2)-->
-					<optionRange from="40938" to="40939" chance="0.9804" /> <!-- Cast speed % (2)-->
-					<optionRange from="40941" to="40942" chance="0.9804" /> <!-- pvp dmg % (2)-->
-					<optionRange from="40944" to="40945" chance="0.9804" /> <!-- pvp def % (2)-->
-					<optionRange from="40947" to="40948" chance="0.9804" /> <!-- pve dmg % (2)-->
-					<optionRange from="40950" to="40951" chance="0.9804" /> <!-- pve def % (2)-->
-					<optionRange from="40953" to="40954" chance="0.9804" /> <!-- xp % (2)-->
-					<optionRange from="40956" to="40957" chance="0.9804" /> <!-- sp % (2)-->
-					<optionRange from="40959" to="40960" chance="0.9804" /> <!-- vampiric % (2)-->
-					<optionRange from="40962" to="40963" chance="0.9804" /> <!-- p. skill mp consumption % (2)-->
-					<optionRange from="40965" to="40966" chance="0.9804" /> <!-- m. skill mp consumption % (2)-->
-					<option id="40969" chance="0.9804" /> <!-- Fixed Damage Ressistance -->
-					<option id="40977" chance="0.9804" /> <!-- Barrier -->
-					<option id="40979" chance="0.9804" /> <!-- P/M Skill Power 10% -->
-					<option id="40980" chance="0.9804" /> <!-- P/M Skill Power 15% -->
-					<option id="40986" chance="0.9804" /> <!-- Vitality Bonus 10% -->
-					<option id="40987" chance="0.9804" /> <!-- Vitality Bonus 20%% -->
+					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. Atk. +251 ~ +628 -->
+					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. Atk. +269 ~ +672 -->
+					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk. Spd. +36 ~ +90 -->
+					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Casting Spd. +36 ~ +90 -->
+					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P. Accuracy +4 ~ +5 -->
+					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M. Accuracy +4 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +360 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +360 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +360 ~ +900 -->
+					<option id="40726" chance="0.9901" /> <!-- STR +2 -->
+					<option id="40732" chance="0.9901" /> <!-- DEX +2 -->
+					<option id="40728" chance="0.9901" /> <!-- CON +2 -->
+					<option id="40740" chance="0.9901" /> <!-- INT +2 -->
+					<option id="40734" chance="0.9901" /> <!-- WIT +2 -->
+					<option id="40730" chance="0.9901" /> <!-- MEN +2 -->
+					<option id="40736" chance="0.9901" /> <!-- LUC +2 -->
+					<option id="40738" chance="0.9901" /> <!-- CHA +2 -->
+					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P. Critical Rate +6% ~ +15% -->
+					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +3% ~ +7.5% -->
+					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M. Critical Rate +8% ~ +15% -->
+					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P. Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M. Critical Damage +5% ~ +7% -->
+					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Attribute Attack +15 ~ +35 -->
+					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- Max HP +4.5% ~ +5% -->
+					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- Max MP +4.5% ~ +5% -->
+					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- Max CP +4.5% ~ +5% -->
+					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. Atk. +4.5% ~ +5% -->
+					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. Def. +4.5% ~ +5% -->
+					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4.5% ~ +5% -->
+					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed +13 ~ +15 -->
+					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. Atk. +4.5% ~ +5% -->
+					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. Def. +4.5% ~ +5% -->
+					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Casting Spd. +4.5% ~ +5% -->
+					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- PvP damage +4.5% ~ +5% -->
+					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- Received PvP damage -4.5% ~ -5% -->
+					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- PvE damage +4.5% ~ +5% -->
+					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- Received PvE damage-4.5% ~ -5% -->
+					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- XP (hunting) +4.5% ~ +5% -->
+					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- SP (hunting) +4.5 ~ +5% -->
+					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4.5~5% -->
+					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -4% ~ -5% -->
+					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -4% ~ -5% -->
+					<option id="40969" chance="0.9804" /> <!-- Fixed Damage Resistance +10 -->
+					<option id="40977" chance="0.9804" /> <!-- A chance to absorb 30,000 damage. -->
+					<option id="40979" chance="0.9804" /> <!-- P./ M. Skill Power +10% -->
+					<option id="40980" chance="0.9804" /> <!-- P./ M. Skill Power +15% -->
+					<optionRange from="40986" to="40987" chance="0.9804" /> <!-- Vitality bonus +10% ~ +20% -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -3080,58 +3409,58 @@
 		<variation mineralId="29169">
 			<optionGroup order="1">
 				<optionCategory chance="100">
-					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. atk -->
-					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. atk -->
-					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk speed -->
-					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Cast speed -->
-					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P accuracy -->
-					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M accuracy -->
-					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- HP -->
-					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- MP -->
-					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- CP -->
-					<option id="40726" chance="0.9901" /> <!-- STR -->
-					<option id="40732" chance="0.9901" /> <!-- DEX -->
-					<option id="40728" chance="0.9901" /> <!-- CON -->
-					<option id="40740" chance="0.9901" /> <!-- INT -->
-					<option id="40734" chance="0.9901" /> <!-- WIT -->
-					<option id="40730" chance="0.9901" /> <!-- MEN -->
-					<option id="40736" chance="0.9901" /> <!-- LUC -->
-					<option id="40738" chance="0.9901" /> <!-- CHA -->
-					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P crit rate -->
-					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P skill crit rate -->
-					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M crit rate -->
-					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P crit dmg -->
-					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P skill crit dmg -->
-					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M skill crit dmg -->
-					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Atk attribute -->
-					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion atk rate (2)--> 
-					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction atk rate (2) -->
-					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk rate (2) -->
-					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk rate (2) -->
-					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification atk rate (2) -->
-					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- HP % (2) -->
-					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- MP % (2) -->
-					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- CP % (2) -->
-					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. atk % (2)-->
-					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. def % (2)-->
-					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- P. atk speed % (2)-->
-					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed (2)-->
-					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. atk % (2)-->
-					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. def % (2)-->
-					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Cast speed % (2)-->
-					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- pvp dmg % (2)-->
-					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- pvp def % (2)-->
-					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- pve dmg % (2)-->
-					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- pve def % (2)-->
-					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- xp % (2)-->
-					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- sp % (2)-->
-					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- vampiric % (2)-->
-					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- p. skill mp consumption % (2)-->
-					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- m. skill mp consumption % (2)-->
-					<option id="40974" chance="0.9901" /> <!-- Shillien Protection -->
-					<option id="40981" chance="0.9901" /> <!-- Salvation -->
-					<option id="40982" chance="0.9901" /> <!-- Spallation -->
-					<option id="40983" chance="0.9901" /> <!-- Invincibility -->
+					<optionRange from="40652" to="40654" chance="0.9901" /> <!-- P. Atk. +251 ~ +628 -->
+					<optionRange from="40662" to="40664" chance="0.9901" /> <!-- M. Atk. +269 ~ +672 -->
+					<optionRange from="40672" to="40674" chance="0.9901" /> <!-- Atk. Spd. +36 ~ +90 -->
+					<optionRange from="40682" to="40684" chance="0.9901" /> <!-- Casting Spd. +36 ~ +90 -->
+					<optionRange from="40688" to="40689" chance="0.9901" /> <!-- P. Accuracy +4 ~ +5 -->
+					<optionRange from="40693" to="40694" chance="0.9901" /> <!-- M. Accuracy +4 ~ +5 -->
+					<optionRange from="40702" to="40704" chance="0.9901" /> <!-- Max HP +360 ~ +900 -->
+					<optionRange from="40712" to="40714" chance="0.9901" /> <!-- Max MP +360 ~ +900 -->
+					<optionRange from="40722" to="40724" chance="0.9901" /> <!-- Max CP +360 ~ +900 -->
+					<option id="40726" chance="0.9901" /> <!-- STR +2 -->
+					<option id="40732" chance="0.9901" /> <!-- DEX +2 -->
+					<option id="40728" chance="0.9901" /> <!-- CON +2 -->
+					<option id="40740" chance="0.9901" /> <!-- INT +2 -->
+					<option id="40734" chance="0.9901" /> <!-- WIT +2 -->
+					<option id="40730" chance="0.9901" /> <!-- MEN +2 -->
+					<option id="40736" chance="0.9901" /> <!-- LUC +2 -->
+					<option id="40738" chance="0.9901" /> <!-- CHA +2 -->
+					<optionRange from="40748" to="40750" chance="0.9901" /> <!-- P. Critical Rate +6% ~ +15% -->
+					<optionRange from="40758" to="40760" chance="0.9901" /> <!-- P. Skill Critical Rate +3% ~ +7.5% -->
+					<optionRange from="40768" to="40770" chance="0.9901" /> <!-- M. Critical Rate +8% ~ +15% -->
+					<optionRange from="40778" to="40780" chance="0.9901" /> <!-- P. Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40788" to="40790" chance="0.9901" /> <!-- P. Skill Critical Damage +3% ~ +7.5% -->
+					<optionRange from="40798" to="40800" chance="0.9901" /> <!-- M. Critical Damage +5% ~ +7% -->
+					<optionRange from="40808" to="40810" chance="0.9901" /> <!-- Attribute Attack +15 ~ +35 -->
+					<optionRange from="40818" to="40819" chance="0.9901" /> <!-- Confusion Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40827" to="40828" chance="0.9901" /> <!-- Obstruction Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40836" to="40837" chance="0.9901" /> <!-- Infection Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40863" to="40864" chance="0.9901" /> <!-- Stupor Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40908" to="40909" chance="0.9901" /> <!-- Petrification Atk. Rate +7.5% ~ +15% -->
+					<optionRange from="40911" to="40912" chance="0.9901" /> <!-- Max HP +4.5% ~ +5% -->
+					<optionRange from="40914" to="40915" chance="0.9901" /> <!-- Max MP +4.5% ~ +5% -->
+					<optionRange from="40917" to="40918" chance="0.9901" /> <!-- Max CP +4.5% ~ +5% -->
+					<optionRange from="40920" to="40921" chance="0.9901" /> <!-- P. Atk. +4.5% ~ +5% -->
+					<optionRange from="40923" to="40924" chance="0.9901" /> <!-- P. Def. +4.5% ~ +5% -->
+					<optionRange from="40926" to="40927" chance="0.9901" /> <!-- Atk. Spd. +4.5% ~ +5% -->
+					<optionRange from="40929" to="40930" chance="0.9901" /> <!-- Speed +13 ~ +15 -->
+					<optionRange from="40932" to="40933" chance="0.9901" /> <!-- M. Atk. +4.5% ~ +5% -->
+					<optionRange from="40935" to="40936" chance="0.9901" /> <!-- M. Def. +4.5% ~ +5% -->
+					<optionRange from="40938" to="40939" chance="0.9901" /> <!-- Casting Spd. +4.5% ~ +5% -->
+					<optionRange from="40941" to="40942" chance="0.9901" /> <!-- PvP damage +4.5% ~ +5% -->
+					<optionRange from="40944" to="40945" chance="0.9901" /> <!-- Received PvP damage -4.5% ~ -5% -->
+					<optionRange from="40947" to="40948" chance="0.9901" /> <!-- PvE damage +4.5% ~ +5% -->
+					<optionRange from="40950" to="40951" chance="0.9901" /> <!-- Received PvE damage-4.5% ~ -5% -->
+					<optionRange from="40953" to="40954" chance="0.9901" /> <!-- XP (hunting) +4.5% ~ +5% -->
+					<optionRange from="40956" to="40957" chance="0.9901" /> <!-- SP (hunting) +4.5 ~ +5% -->
+					<optionRange from="40959" to="40960" chance="0.9901" /> <!-- Vampiric Rage effect 4.5~5% -->
+					<optionRange from="40962" to="40963" chance="0.9901" /> <!-- P. Skill MP Consumption -4% ~ -5% -->
+					<optionRange from="40965" to="40966" chance="0.9901" /> <!-- M. Skill MP Consumption -4% ~ -5% -->
+					<option id="40974" chance="0.9901" /> <!-- Active skill: Recovers 100% HP/ CP if you die (duration: 1 min.). The effect is cancelled after activation. -->
+					<option id="40981" chance="0.9901" /> <!-- Active skill: Resurrects fully recovered. Buffs/ debuffs remain after death, except Noblesse Blessing and Lucky Charm. -->
+					<option id="40982" chance="0.9901" /> <!-- A chance to twist the nearby area: for 30 sec., blocks all debuffs and range attacks. Attacks in the area deal damage to yourself. -->
+					<option id="40983" chance="0.9901" /> <!-- Grants invincibility if HP is lower than 30%. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -4236,7 +4565,7 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
-		
+
 		<!-- Accessory Augmenting Stone -->
 		<variation mineralId="81729">
 			<optionGroup order="0">
@@ -4264,13 +4593,21 @@
 				<optionCategory chance="100">
 					<optionRange from="35449" to="35488" chance="2.5" />
 					<item id="48669" /> <!-- Angel's Necklace -->
+					<item id="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+					<item id="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+					<item id="81372" /> <!-- Angel's Necklace(Assault Lv. 3) -->
 					<item id="81212" /> <!-- Angel's Necklace -->
-					<item id="81370" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-					<item id="81371" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-					<item id="81372" /> <!-- Angel's Necklace (Assault Lv. 3) -->
-					<item id="81388" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-					<item id="81389" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-					<item id="81390" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+					<item id="81388" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+					<item id="81389" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+					<item id="81390" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+					<item id="81784" /> <!-- Blessed Angel's Necklace -->
+					<item id="81785" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+					<item id="81786" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+					<item id="81787" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+					<item id="81796" /> <!-- Blessed Angel's Necklace -->
+					<item id="81797" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+					<item id="81798" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+					<item id="81799" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
 				</optionCategory>
 				<optionCategory chance="100">
 					<optionRange from="35365" to="35404" chance="2.5" />
@@ -4283,28 +4620,48 @@
 					<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
 					<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
 					<item id="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+					<item id="81914" /> <!-- Blessed Fallen Angel's Ring -->
+					<item id="81915" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 1) -->
+					<item id="81916" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 2) -->
+					<item id="81917" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 3) -->
 				</optionCategory>
 				<optionCategory chance="100">
 					<optionRange from="35197" to="35236" chance="2.5" />
 					<item id="81154" /> <!-- Angel's Ring -->
+					<item id="81376" /> <!-- Angel's Ring(Elements Lv. 1) -->
+					<item id="81377" /> <!-- Angel's Ring(Elements Lv. 2) -->
+					<item id="81378" /> <!-- Angel's Ring(Elements Lv. 3) -->
 					<item id="81214" /> <!-- Angel's Ring -->
-					<item id="81376" /> <!-- Angel's Ring (Elements Lv. 1) -->
-					<item id="81377" /> <!-- Angel's Ring (Elements Lv. 2) -->
-					<item id="81378" /> <!-- Angel's Ring (Elements Lv. 3) -->
-					<item id="81394" /> <!-- Angel's Ring (Elements Lv. 1) -->
-					<item id="81395" /> <!-- Angel's Ring (Elements Lv. 2) -->
-					<item id="81396" /> <!-- Angel's Ring (Elements Lv. 3) -->
+					<item id="81394" /> <!-- Angel's Ring(Elements Lv. 1) -->
+					<item id="81395" /> <!-- Angel's Ring(Elements Lv. 2) -->
+					<item id="81396" /> <!-- Angel's Ring(Elements Lv. 3) -->
+					<item id="81792" /> <!-- Blessed Angel's Ring -->
+					<item id="81793" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+					<item id="81794" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+					<item id="81795" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+					<item id="81804" /> <!-- Blessed Angel's Ring -->
+					<item id="81805" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+					<item id="81806" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+					<item id="81807" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
 				</optionCategory>
 				<optionCategory chance="100">
 					<optionRange from="35113" to="35152" chance="2.5" />
 					<item id="48841" /> <!-- Angel's Earring -->
+					<item id="81373" /> <!-- Angel's Earring(Security Lv. 1) -->
+					<item id="81374" /> <!-- Angel's Earring(Security Lv. 2) -->
+					<item id="81375" /> <!-- Angel's Earring(Security Lv. 3) -->
 					<item id="81213" /> <!-- Angel's Earring -->
-					<item id="81373" /> <!-- Angel's Earring (Security Lv. 1) -->
-					<item id="81374" /> <!-- Angel's Earring (Security Lv. 2) -->
-					<item id="81375" /> <!-- Angel's Earring (Security Lv. 3) -->
-					<item id="81391" /> <!-- Angel's Earring (Security Lv. 1) -->
-					<item id="81392" /> <!-- Angel's Earring (Security Lv. 2) -->
-					<item id="81393" /> <!-- Angel's Earring (Security Lv. 3) -->
+					<item id="81391" /> <!-- Angel's Earring(Security Lv. 1) -->
+					<item id="81392" /> <!-- Angel's Earring(Security Lv. 2) -->
+					<item id="81393" /> <!-- Angel's Earring(Security Lv. 3) -->
+					<item id="81788" /> <!-- Blessed Angel's Earring -->
+					<item id="81789" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+					<item id="81790" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+					<item id="81791" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+					<item id="81800" /> <!-- Blessed Angel's Earring -->
+					<item id="81801" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+					<item id="81802" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+					<item id="81803" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup order="1">
@@ -4332,13 +4689,21 @@
 				<optionCategory chance="100">
 					<optionRange from="35489" to="35532" chance="2.272" />
 					<item id="48669" /> <!-- Angel's Necklace -->
+					<item id="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+					<item id="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+					<item id="81372" /> <!-- Angel's Necklace(Assault Lv. 3) -->
 					<item id="81212" /> <!-- Angel's Necklace -->
-					<item id="81370" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-					<item id="81371" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-					<item id="81372" /> <!-- Angel's Necklace (Assault Lv. 3) -->
-					<item id="81388" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-					<item id="81389" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-					<item id="81390" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+					<item id="81388" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+					<item id="81389" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+					<item id="81390" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+					<item id="81784" /> <!-- Blessed Angel's Necklace -->
+					<item id="81785" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+					<item id="81786" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+					<item id="81787" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+					<item id="81796" /> <!-- Blessed Angel's Necklace -->
+					<item id="81797" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+					<item id="81798" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+					<item id="81799" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
 				</optionCategory>
 				<optionCategory chance="100">
 					<optionRange from="35405" to="35448" chance="2.272" />
@@ -4351,28 +4716,48 @@
 					<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
 					<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
 					<item id="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+					<item id="81914" /> <!-- Blessed Fallen Angel's Ring -->
+					<item id="81915" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 1) -->
+					<item id="81916" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 2) -->
+					<item id="81917" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 3) -->
 				</optionCategory>
 				<optionCategory chance="100">
 					<optionRange from="35237" to="35280" chance="2.272" />
 					<item id="81154" /> <!-- Angel's Ring -->
+					<item id="81376" /> <!-- Angel's Ring(Elements Lv. 1) -->
+					<item id="81377" /> <!-- Angel's Ring(Elements Lv. 2) -->
+					<item id="81378" /> <!-- Angel's Ring(Elements Lv. 3) -->
 					<item id="81214" /> <!-- Angel's Ring -->
-					<item id="81376" /> <!-- Angel's Ring (Elements Lv. 1) -->
-					<item id="81377" /> <!-- Angel's Ring (Elements Lv. 2) -->
-					<item id="81378" /> <!-- Angel's Ring (Elements Lv. 3) -->
-					<item id="81394" /> <!-- Angel's Ring (Elements Lv. 1) -->
-					<item id="81395" /> <!-- Angel's Ring (Elements Lv. 2) -->
-					<item id="81396" /> <!-- Angel's Ring (Elements Lv. 3) -->
+					<item id="81394" /> <!-- Angel's Ring(Elements Lv. 1) -->
+					<item id="81395" /> <!-- Angel's Ring(Elements Lv. 2) -->
+					<item id="81396" /> <!-- Angel's Ring(Elements Lv. 3) -->
+					<item id="81792" /> <!-- Blessed Angel's Ring -->
+					<item id="81793" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+					<item id="81794" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+					<item id="81795" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+					<item id="81804" /> <!-- Blessed Angel's Ring -->
+					<item id="81805" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+					<item id="81806" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+					<item id="81807" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
 				</optionCategory>
 				<optionCategory chance="100">
 					<optionRange from="35153" to="35196" chance="2.272" />
 					<item id="48841" /> <!-- Angel's Earring -->
+					<item id="81373" /> <!-- Angel's Earring(Security Lv. 1) -->
+					<item id="81374" /> <!-- Angel's Earring(Security Lv. 2) -->
+					<item id="81375" /> <!-- Angel's Earring(Security Lv. 3) -->
 					<item id="81213" /> <!-- Angel's Earring -->
-					<item id="81373" /> <!-- Angel's Earring (Security Lv. 1) -->
-					<item id="81374" /> <!-- Angel's Earring (Security Lv. 2) -->
-					<item id="81375" /> <!-- Angel's Earring (Security Lv. 3) -->
-					<item id="81391" /> <!-- Angel's Earring (Security Lv. 1) -->
-					<item id="81392" /> <!-- Angel's Earring (Security Lv. 2) -->
-					<item id="81393" /> <!-- Angel's Earring (Security Lv. 3) -->
+					<item id="81391" /> <!-- Angel's Earring(Security Lv. 1) -->
+					<item id="81392" /> <!-- Angel's Earring(Security Lv. 2) -->
+					<item id="81393" /> <!-- Angel's Earring(Security Lv. 3) -->
+					<item id="81788" /> <!-- Blessed Angel's Earring -->
+					<item id="81789" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+					<item id="81790" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+					<item id="81791" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+					<item id="81800" /> <!-- Blessed Angel's Earring -->
+					<item id="81801" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+					<item id="81802" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+					<item id="81803" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -6489,7 +6874,7 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
-		
+
 		<!-- Dragon skin Shirt Augmenting Stone -->
 		<variation mineralId="81931">
 			<optionGroup order="0">
@@ -9365,39 +9750,67 @@
 		</itemGroup>
 		<itemGroup id="14">
 			<item id="48669" /> <!-- Angel's Necklace -->
+			<item id="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item id="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item id="81372" /> <!-- Angel's Necklace(Assault Lv. 3) -->
 			<item id="81212" /> <!-- Angel's Necklace -->
-			<item id="81370" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-			<item id="81371" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-			<item id="81372" /> <!-- Angel's Necklace (Assault Lv. 3) -->
-			<item id="81388" /> <!-- Angel's Necklace (Assault Lv. 1) -->
-			<item id="81389" /> <!-- Angel's Necklace (Assault Lv. 2) -->
-			<item id="81390" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+			<item id="81388" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item id="81389" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item id="81390" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item id="81784" /> <!-- Blessed Angel's Necklace -->
+			<item id="81785" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item id="81786" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item id="81787" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item id="81796" /> <!-- Blessed Angel's Necklace -->
+			<item id="81797" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item id="81798" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item id="81799" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
 		</itemGroup>
 		<itemGroup id="15">
 			<item id="48841" /> <!-- Angel's Earring -->
+			<item id="81373" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item id="81374" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item id="81375" /> <!-- Angel's Earring(Security Lv. 3) -->
 			<item id="81213" /> <!-- Angel's Earring -->
-			<item id="81373" /> <!-- Angel's Earring (Security Lv. 1) -->
-			<item id="81374" /> <!-- Angel's Earring (Security Lv. 2) -->
-			<item id="81375" /> <!-- Angel's Earring (Security Lv. 3) -->
-			<item id="81391" /> <!-- Angel's Earring (Security Lv. 1) -->
-			<item id="81392" /> <!-- Angel's Earring (Security Lv. 2) -->
-			<item id="81393" /> <!-- Angel's Earring (Security Lv. 3) -->
+			<item id="81391" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item id="81392" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item id="81393" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item id="81788" /> <!-- Blessed Angel's Earring -->
+			<item id="81789" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item id="81790" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item id="81791" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item id="81800" /> <!-- Blessed Angel's Earring -->
+			<item id="81801" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item id="81802" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item id="81803" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
 		</itemGroup>
 		<itemGroup id="16">
 			<item id="81154" /> <!-- Angel's Ring -->
+			<item id="81376" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item id="81377" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item id="81378" /> <!-- Angel's Ring(Elements Lv. 3) -->
 			<item id="81214" /> <!-- Angel's Ring -->
-			<item id="81376" /> <!-- Angel's Ring (Elements Lv. 1) -->
-			<item id="81377" /> <!-- Angel's Ring (Elements Lv. 2) -->
-			<item id="81378" /> <!-- Angel's Ring (Elements Lv. 3) -->
-			<item id="81394" /> <!-- Angel's Ring (Elements Lv. 1) -->
-			<item id="81395" /> <!-- Angel's Ring (Elements Lv. 2) -->
-			<item id="81396" /> <!-- Angel's Ring (Elements Lv. 3) -->
+			<item id="81394" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item id="81395" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item id="81396" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item id="81792" /> <!-- Blessed Angel's Ring -->
+			<item id="81793" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item id="81794" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item id="81795" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item id="81804" /> <!-- Blessed Angel's Ring -->
+			<item id="81805" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item id="81806" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item id="81807" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
 		</itemGroup>
 		<itemGroup id="17">
 			<item id="48864" /> <!-- Fallen Angel's Ring -->
 			<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
 			<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
 			<item id="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+			<item id="81914" /> <!-- Blessed Fallen Angel's Ring -->
+			<item id="81915" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 1) -->
+			<item id="81916" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 2) -->
+			<item id="81917" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 3) -->
 		</itemGroup>
 		<itemGroup id="18">
 			<item id="81350" /> <!-- Atlas’ Earring -->
@@ -10902,7 +11315,7 @@
 			<item id="30965" /> <!-- Bound Adamantite Necklace -->
 			<item id="30966" /> <!-- Bound Adamantite Earring -->
 		</itemGroup>
-		
+
 		<itemGroup id="50">
 			<item id="864" /> <!-- Black Ore Earring -->
 			<item id="895" /> <!-- Black Ore Ring -->
@@ -11021,7 +11434,7 @@
 			<item id="18067" /> <!-- Blessed Seraph Earring -->
 			<item id="18068" /> <!-- Blessed Seraph Ring -->
 		</itemGroup>
-		
+
 		<itemGroup id="60">
 			<item id="17447" /> <!-- Eternal Necklace -->
 			<item id="17448" /> <!-- Eternal Earring -->
