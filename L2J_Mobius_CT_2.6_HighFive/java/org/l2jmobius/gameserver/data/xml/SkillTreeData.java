@@ -578,19 +578,21 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems)
 	{
-		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
-		List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
-		for (int i = 0; i < 1000; i++) // Infinite loop warning
+		List<SkillLearn> learnable;
+		for (int i = 0; i < 1000; i++)
 		{
+			learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
+			if (learnable.isEmpty())
+			{
+				break;
+			}
+			
 			for (SkillLearn skillLearn : learnable)
 			{
 				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 				holder.addSkill(skill);
 			}
-			
-			// Get new available skills, some skills depend of previous skills to be available.
-			learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
 		}
 		return holder.getSkills().values();
 	}

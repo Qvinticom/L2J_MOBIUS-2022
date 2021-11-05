@@ -750,27 +750,34 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet, boolean includeRequiredItems)
 	{
-		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		final Set<Integer> removed = new HashSet<>();
-		for (int i = 0; i < 1000; i++) // Infinite loop warning
+		List<SkillLearn> learnable;
+		for (int i = 0; i < 1000; i++)
 		{
-			final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, includeRequiredItems, holder);
+			learnable = getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, includeRequiredItems, holder);
 			if (learnable.isEmpty())
 			{
-				// No more skills to learn
 				break;
 			}
 			
-			if (learnable.stream().allMatch(skillLearn -> removed.contains(skillLearn.getSkillId())))
+			// All remaining skills have been removed.
+			boolean allRemoved = true;
+			SEARCH: for (SkillLearn skillLearn : learnable)
 			{
-				// All remaining skills has been removed
+				if (!removed.contains(skillLearn.getSkillId()))
+				{
+					allRemoved = false;
+					break SEARCH;
+				}
+			}
+			if (allRemoved)
+			{
 				break;
 			}
 			
 			for (SkillLearn skillLearn : learnable)
 			{
-				final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 				// Cleanup skills that has to be removed
 				for (int skillId : skillLearn.getRemoveSkills())
 				{
@@ -794,8 +801,9 @@ public class SkillTreeData implements IXmlReader
 					}
 				}
 				
-				if (!removed.contains(skill.getId()))
+				if (!removed.contains(skillLearn.getSkillId()))
 				{
+					final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 					holder.addSkill(skill);
 				}
 			}

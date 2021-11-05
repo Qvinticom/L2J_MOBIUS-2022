@@ -597,33 +597,28 @@ public class SkillTreeTable
 		return 0;
 	}
 	
-	/**
-	 * @param player
-	 * @param classId
-	 * @return
-	 */
 	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId)
 	{
-		// Get available skills
-		int unLearnable = 0;
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player.getSkills());
-		List<SkillLearn> learnable = getAvailableSkills(player, classId, holder);
-		while (learnable.size() > unLearnable)
+		List<SkillLearn> learnable;
+		for (int i = 0; i < 1000; i++)
 		{
-			for (SkillLearn s : learnable)
+			learnable = getAvailableSkills(player, classId, holder);
+			if (learnable.isEmpty())
 			{
-				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
-				if ((sk == null) || ((sk.getId() == Skill.SKILL_DIVINE_INSPIRATION) && !Config.AUTO_LEARN_DIVINE_INSPIRATION && !player.isGM()))
+				break;
+			}
+			
+			for (SkillLearn skillLearn : learnable)
+			{
+				final Skill skill = SkillTable.getInstance().getSkill(skillLearn.getId(), skillLearn.getLevel());
+				if ((skill == null) || ((skill.getId() == Skill.SKILL_DIVINE_INSPIRATION) && !Config.AUTO_LEARN_DIVINE_INSPIRATION))
 				{
-					unLearnable++;
 					continue;
 				}
 				
-				holder.addSkill(sk);
+				holder.addSkill(skill);
 			}
-			
-			// Get new available skills, some skills depend of previous skills to be available.
-			learnable = getAvailableSkills(player, classId, holder);
 		}
 		return holder.getSkills().values();
 	}
