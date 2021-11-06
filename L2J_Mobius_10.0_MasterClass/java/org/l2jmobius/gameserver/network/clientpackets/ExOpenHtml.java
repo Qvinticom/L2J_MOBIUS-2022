@@ -66,7 +66,7 @@ public class ExOpenHtml implements IClientIncomingPacket
 			}
 			case 7:
 			{
-				client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/EinhasadStore/32477.html")));
+				client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/EinhasadStore/34487.html")));
 				break;
 			}
 			default:
