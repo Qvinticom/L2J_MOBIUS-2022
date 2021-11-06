@@ -18,8 +18,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -27,10 +29,12 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class ExOpenHtml implements IClientIncomingPacket
 {
+	private int _type;
+	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		packet.readC(); // html scope?
+		_type = packet.readC();
 		return true;
 	}
 	
@@ -38,11 +42,38 @@ public class ExOpenHtml implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		if ((player != null) && Config.PC_CAFE_ENABLED)
+		if (player == null)
 		{
-			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(player, "data/html/pccafe.htm");
-			player.sendPacket(html);
+			return;
+		}
+		
+		switch (_type)
+		{
+			case 1:
+			{
+				if (Config.PC_CAFE_ENABLED)
+				{
+					final NpcHtmlMessage html = new NpcHtmlMessage();
+					html.setFile(player, "data/html/pccafe.htm");
+					player.sendPacket(html);
+				}
+				break;
+			}
+			case 5:
+			{
+				client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
+				break;
+			}
+			case 7:
+			{
+				client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/EinhasadStore/32477.html")));
+				break;
+			}
+			default:
+			{
+				LOGGER.warning("Unknown ExOpenHtml type (" + _type + ")");
+				break;
+			}
 		}
 	}
 }
