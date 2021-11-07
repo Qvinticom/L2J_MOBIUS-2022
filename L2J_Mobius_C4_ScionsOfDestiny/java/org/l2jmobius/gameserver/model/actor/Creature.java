@@ -122,7 +122,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
-import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocationInVehicle;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
@@ -7792,10 +7791,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isBehind(WorldObject target)
 	{
-		double angleChar; //
-		double angleTarget;
-		double angleDiff;
-		final double maxAngleDiff = 40;
 		if (target == null)
 		{
 			return false;
@@ -7803,23 +7798,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (target instanceof Creature)
 		{
-			((Creature) target).sendPacket(new ValidateLocation(this));
-			sendPacket(new ValidateLocation(((Creature) target)));
+			// This was a Fix for avoid front backstab.
+			// Removed for problem with visual char rotation.
+			// ((Creature) target).sendPacket(new ValidateLocation(this));
+			// sendPacket(new ValidateLocation(((Creature) target)));
 			
 			final Creature target1 = (Creature) target;
-			angleChar = Util.calculateAngleFrom(target1, this);
-			angleTarget = Util.convertHeadingToDegree(target1.getHeading());
-			angleDiff = angleChar - angleTarget;
+			double angleChar = Util.calculateAngleFrom(target1, this);
+			double angleTarget = Util.convertHeadingToDegree(target1.getHeading());
+			double angleDiff = angleChar - angleTarget;
+			final double maxAngleDiff = 40;
 			if (angleDiff <= (-360 + maxAngleDiff))
 			{
 				angleDiff += 360;
 			}
-			
 			if (angleDiff >= (360 - maxAngleDiff))
 			{
 				angleDiff -= 360;
 			}
-			
 			if (Math.abs(angleDiff) <= maxAngleDiff)
 			{
 				return true;
@@ -7880,10 +7876,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isFront(WorldObject target)
 	{
-		double angleChar;
-		double angleTarget;
-		double angleDiff;
-		final double maxAngleDiff = 40;
 		if (target == null)
 		{
 			return false;
@@ -7891,23 +7883,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (target instanceof Creature)
 		{
-			((Creature) target).sendPacket(new ValidateLocation(this));
-			sendPacket(new ValidateLocation(((Creature) target)));
+			// This was a Fix for avoid front backstab.
+			// Removed for problem with visual char rotation.
+			// ((Creature) target).sendPacket(new ValidateLocation(this));
+			// sendPacket(new ValidateLocation(((Creature) target)));
 			
 			final Creature target1 = (Creature) target;
-			angleChar = Util.calculateAngleFrom(target1, this);
-			angleTarget = Util.convertHeadingToDegree(target1.getHeading());
-			angleDiff = angleChar - angleTarget;
+			double angleChar = Util.calculateAngleFrom(target1, this);
+			double angleTarget = Util.convertHeadingToDegree(target1.getHeading());
+			double angleDiff = angleChar - angleTarget;
+			final double maxAngleDiff = 40;
 			if (angleDiff <= (-180 + maxAngleDiff))
 			{
 				angleDiff += 180;
 			}
-			
 			if (angleDiff >= (180 - maxAngleDiff))
 			{
 				angleDiff -= 180;
 			}
-			
 			if (Math.abs(angleDiff) <= maxAngleDiff)
 			{
 				return !isBehind(_target);
