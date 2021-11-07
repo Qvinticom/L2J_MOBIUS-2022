@@ -628,7 +628,7 @@ public abstract class Summon extends Playable
 		}
 		
 		// Check if this skill is enabled (ex : reuse time)
-		if (isSkillDisabled(skill) && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
+		if (isSkillDisabled(skill))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
 			sm.addString(skill.getName());
