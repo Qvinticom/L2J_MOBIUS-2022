@@ -409,10 +409,16 @@ public class AdminEditChar implements IAdminCommandHandler
 							}
 						}
 					}
+					
 					// Death Knight checks.
-					if (player.isDeathKnight())
+					if ((classidval >= 196) && (classidval <= 207))
 					{
+						player.setDeathKnight(true);
 						player.getAppearance().setMale();
+					}
+					else
+					{
+						player.setDeathKnight(false);
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();

@@ -8707,6 +8707,11 @@ public class PlayerInstance extends Playable
 		return _isDeathKnight;
 	}
 	
+	public void setDeathKnight(boolean value)
+	{
+		_isDeathKnight = value;
+	}
+	
 	public boolean isMounted()
 	{
 		return _mountType != MountType.NONE;
