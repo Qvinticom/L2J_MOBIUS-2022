@@ -92,6 +92,7 @@
 									<xs:attribute type="xs:int" name="itemGroup" use="optional"/>
 									<xs:attribute type="xs:int" name="itemId" use="optional"/>
 									<xs:attribute type="xs:long" name="itemCount" use="optional"/>
+									<xs:attribute type="xs:long" name="adenaFee" use="optional"/>
 									<xs:attribute type="xs:long" name="cancelFee" use="optional"/>
 								</xs:complexType>
 							</xs:element>

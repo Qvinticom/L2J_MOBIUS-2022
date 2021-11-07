@@ -167,15 +167,16 @@ public class VariationData implements IXmlReader
 			{
 				final int itemGroupId = parseInteger(feeNode.getAttributes(), "itemGroup");
 				final List<Integer> itemGroup = itemGroups.get(itemGroupId);
-				final int itemId = parseInteger(feeNode.getAttributes(), "itemId");
-				final int itemCount = parseInteger(feeNode.getAttributes(), "itemCount");
-				final int cancelFee = parseInteger(feeNode.getAttributes(), "cancelFee");
-				if (ItemTable.getInstance().getTemplate(itemId) == null)
+				final int itemId = parseInteger(feeNode.getAttributes(), "itemId", 0);
+				final long itemCount = parseLong(feeNode.getAttributes(), "itemCount", 0L);
+				final long adenaFee = parseLong(feeNode.getAttributes(), "adenaFee", 0L);
+				final long cancelFee = parseLong(feeNode.getAttributes(), "cancelFee", 0L);
+				if ((itemId != 0) && (ItemTable.getInstance().getTemplate(itemId) == null))
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": Item with id " + itemId + " was not found.");
 				}
 				
-				final VariationFee fee = new VariationFee(itemId, itemCount, cancelFee);
+				final VariationFee fee = new VariationFee(itemId, itemCount, adenaFee, cancelFee);
 				final Map<Integer, VariationFee> feeByMinerals = new HashMap<>();
 				forEach(feeNode, "mineral", mineralNode ->
 				{

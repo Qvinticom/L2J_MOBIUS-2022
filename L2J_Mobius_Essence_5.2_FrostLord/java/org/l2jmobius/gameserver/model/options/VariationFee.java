@@ -23,12 +23,14 @@ public class VariationFee
 {
 	private final int _itemId;
 	private final long _itemCount;
+	private final long _adenaFee;
 	private final long _cancelFee;
 	
-	public VariationFee(int itemId, long itemCount, long cancelFee)
+	public VariationFee(int itemId, long itemCount, long adenaFee, long cancelFee)
 	{
 		_itemId = itemId;
 		_itemCount = itemCount;
+		_adenaFee = adenaFee;
 		_cancelFee = cancelFee;
 	}
 	
@@ -40,6 +42,11 @@ public class VariationFee
 	public long getItemCount()
 	{
 		return _itemCount;
+	}
+	
+	public long getAdenaFee()
+	{
+		return _adenaFee;
 	}
 	
 	public long getCancelFee()

@@ -97,6 +97,14 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
+		final long adenaFee = fee.getAdenaFee();
+		if ((adenaFee > 0) && (player.getAdena() < adenaFee))
+		{
+			player.sendPacket(new ExVariationResult(0, 0, false));
+			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
+			return;
+		}
+		
 		final Variation variation = VariationData.getInstance().getVariation(mineralItem.getId());
 		if (variation == null)
 		{
@@ -149,6 +157,12 @@ public class RequestRefine extends AbstractRefinePacket
 		
 		// Consume the gemstones.
 		if (!player.destroyItem("RequestRefine", feeItem, _feeCount, null, false))
+		{
+			return;
+		}
+		
+		// Consume Adena.
+		if ((adenaFee > 0) && !player.reduceAdena("RequestRefine", adenaFee, player, false))
 		{
 			return;
 		}
