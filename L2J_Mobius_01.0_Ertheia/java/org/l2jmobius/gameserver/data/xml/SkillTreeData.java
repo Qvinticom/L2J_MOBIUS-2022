@@ -24,7 +24,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -271,7 +270,7 @@ public class SkillTreeData implements IXmlReader
 										{
 											final int removeSkillId = parseInteger(attrs, "id");
 											skillLearn.addRemoveSkills(removeSkillId);
-											if (!parseBoolean(attrs, "onlyReplaceByLearn", false))
+											if (!parseBoolean(attrs, "onlyReplaceByLearn", false).booleanValue())
 											{
 												_removeSkillCache.computeIfAbsent(classId, k -> new HashSet<>()).add(removeSkillId);
 											}
@@ -665,7 +664,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	public Collection<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
 	{
 		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, true, player);
 	}
@@ -680,9 +679,9 @@ public class SkillTreeData implements IXmlReader
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
+	private Collection<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
 	{
-		final List<SkillLearn> result = new LinkedList<>();
+		final Set<SkillLearn> result = ConcurrentHashMap.newKeySet();
 		final Map<Long, SkillLearn> skills = getCompleteClassSkillTree(classId);
 		if (skills.isEmpty())
 		{
@@ -733,6 +732,35 @@ public class SkillTreeData implements IXmlReader
 				}
 			}
 		}
+		
+		// Manage skill unlearn.
+		for (Skill knownSkill : player.getSkillList())
+		{
+			final SkillLearn skillLearn = getClassSkill(knownSkill.getId(), knownSkill.getLevel(), classId);
+			if (skillLearn == null)
+			{
+				continue;
+			}
+			
+			final Set<Integer> removeSkills = skillLearn.getRemoveSkills();
+			if (removeSkills.isEmpty())
+			{
+				continue;
+			}
+			
+			for (Integer removeId : removeSkills)
+			{
+				SEARCH: for (SkillLearn knownLearn : result)
+				{
+					if (knownLearn.getSkillId() == removeId.intValue())
+					{
+						result.remove(knownLearn);
+						break SEARCH;
+					}
+				}
+			}
+		}
+		
 		return result;
 	}
 	
@@ -749,7 +777,7 @@ public class SkillTreeData implements IXmlReader
 	{
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		final Set<Integer> removed = new HashSet<>();
-		List<SkillLearn> learnable;
+		Collection<SkillLearn> learnable;
 		for (int i = 0; i < 1000; i++)
 		{
 			learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, includeRequiredItems, holder);
@@ -1460,14 +1488,15 @@ public class SkillTreeData implements IXmlReader
 		return minLevel;
 	}
 	
-	public List<SkillLearn> getNextAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	public Collection<SkillLearn> getNextAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
 	{
 		final Map<Long, SkillLearn> completeClassSkillTree = getCompleteClassSkillTree(classId);
-		final List<SkillLearn> result = new LinkedList<>();
+		final Set<SkillLearn> result = ConcurrentHashMap.newKeySet();
 		if (completeClassSkillTree.isEmpty())
 		{
 			return result;
 		}
+		
 		final int minLevelForNewSkill = getMinLevelForNewSkill(player, completeClassSkillTree);
 		if (minLevelForNewSkill > 0)
 		{
@@ -1477,10 +1506,12 @@ public class SkillTreeData implements IXmlReader
 				{
 					continue;
 				}
+				
 				if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()))
 				{
 					continue;
 				}
+				
 				if (minLevelForNewSkill <= skill.getGetLevel())
 				{
 					final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
@@ -1498,6 +1529,35 @@ public class SkillTreeData implements IXmlReader
 				}
 			}
 		}
+		
+		// Manage skill unlearn.
+		for (Skill knownSkill : player.getSkillList())
+		{
+			final SkillLearn skillLearn = getClassSkill(knownSkill.getId(), knownSkill.getLevel(), classId);
+			if (skillLearn == null)
+			{
+				continue;
+			}
+			
+			final Set<Integer> removeSkills = skillLearn.getRemoveSkills();
+			if (removeSkills.isEmpty())
+			{
+				continue;
+			}
+			
+			for (Integer removeId : removeSkills)
+			{
+				SEARCH: for (SkillLearn knownLearn : result)
+				{
+					if (knownLearn.getSkillId() == removeId.intValue())
+					{
+						result.remove(knownLearn);
+						break SEARCH;
+					}
+				}
+			}
+		}
+		
 		return result;
 	}
 	

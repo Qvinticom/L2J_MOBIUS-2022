@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.AcquireSkillType;
@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExAcquirableSkillListByClass implements IClientOutgoingPacket
 {
-	final List<SkillLearn> _learnable;
-	final AcquireSkillType _type;
+	private final Collection<SkillLearn> _learnable;
+	private final AcquireSkillType _type;
 	
-	public ExAcquirableSkillListByClass(List<SkillLearn> learnable, AcquireSkillType type)
+	public ExAcquirableSkillListByClass(Collection<SkillLearn> learnable, AcquireSkillType type)
 	{
 		_learnable = learnable;
 		_type = type;

@@ -16,13 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,7 +34,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class AcquireSkillList implements IClientOutgoingPacket
 {
 	private PlayerInstance _player;
-	private List<SkillLearn> _learnable;
+	private Collection<SkillLearn> _learnable;
 	
 	public AcquireSkillList(PlayerInstance player)
 	{
@@ -56,31 +59,27 @@ public class AcquireSkillList implements IClientOutgoingPacket
 		packet.writeH(_learnable.size());
 		for (SkillLearn skill : _learnable)
 		{
-			if (skill == null)
-			{
-				continue;
-			}
-			
 			packet.writeD(skill.getSkillId());
 			packet.writeH(skill.getSkillLevel());
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
 			packet.writeC(0x00); // Skill dual class level.
 			packet.writeC(_player.getKnownSkill(skill.getSkillId()) != null ? 0x00 : 0x01);
-			if (!skill.getRequiredItems().isEmpty())
+			
+			packet.writeC(skill.getRequiredItems().size());
+			for (ItemHolder item : skill.getRequiredItems())
 			{
-				for (ItemHolder item : skill.getRequiredItems())
-				{
-					packet.writeC(0x01);
-					packet.writeD(item.getId());
-					packet.writeQ(item.getCount());
-				}
+				packet.writeD(item.getId());
+				packet.writeQ(item.getCount());
 			}
-			else
+			
+			final Collection<Skill> removeSkills = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
+			packet.writeC(removeSkills.size());
+			for (Skill removed : removeSkills)
 			{
-				packet.writeC(0x00);
+				packet.writeD(removed.getId());
+				packet.writeD(removed.getLevel());
 			}
-			packet.writeC(0x00);
 		}
 		return true;
 	}

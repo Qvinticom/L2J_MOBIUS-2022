@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class AcquireSkillList implements IClientOutgoingPacket
 {
 	private PlayerInstance _player;
-	private List<SkillLearn> _learnable;
+	private Collection<SkillLearn> _learnable;
 	
 	public AcquireSkillList(PlayerInstance player)
 	{
@@ -71,7 +71,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 				packet.writeQ(item.getCount());
 			}
 			
-			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
+			final Collection<Skill> skillRem = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
 			packet.writeC(skillRem.size());
 			for (Skill skillRemove : skillRem)
 			{

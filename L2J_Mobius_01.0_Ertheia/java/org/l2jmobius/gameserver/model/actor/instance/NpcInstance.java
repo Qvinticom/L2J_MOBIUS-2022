@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -86,7 +87,7 @@ public class NpcInstance extends Npc
 		}
 		
 		// Normal skills, No LearnedByFS, no AutoGet skills.
-		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSkills(player, classId, false, false);
+		final Collection<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSkills(player, classId, false, false);
 		if (skills.isEmpty())
 		{
 			final Map<Long, SkillLearn> skillTree = SkillTreeData.getInstance().getCompleteClassSkillTree(classId);
