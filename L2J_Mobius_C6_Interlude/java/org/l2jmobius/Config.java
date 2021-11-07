@@ -91,7 +91,7 @@ public class Config
 	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/SevenSigns.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
-	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/Flood.ini";
+	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/FloodProtector.ini";
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/protected/Telnet.ini";
 	// events
@@ -805,6 +805,8 @@ public class Config
 	public static FloodProtectorConfig FLOOD_PROTECTOR_GLOBAL_CHAT;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_SUBCLASS;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_DROP_ITEM;
+	public static FloodProtectorConfig FLOOD_PROTECTOR_AUGMENT_SCRIPT;
+	public static FloodProtectorConfig FLOOD_PROTECTOR_ENCHANT_ITEM;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_SERVER_BYPASS;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_MULTISELL;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_TRANSACTION;
@@ -2266,6 +2268,8 @@ public class Config
 		FLOOD_PROTECTOR_GLOBAL_CHAT = new FloodProtectorConfig("GlobalChatFloodProtector");
 		FLOOD_PROTECTOR_SUBCLASS = new FloodProtectorConfig("SubclassFloodProtector");
 		FLOOD_PROTECTOR_DROP_ITEM = new FloodProtectorConfig("DropItemFloodProtector");
+		FLOOD_PROTECTOR_AUGMENT_SCRIPT = new FloodProtectorConfig("AugmentScriptFloodProtector");
+		FLOOD_PROTECTOR_ENCHANT_ITEM = new FloodProtectorConfig("EnchantItemFloodProtector");
 		FLOOD_PROTECTOR_SERVER_BYPASS = new FloodProtectorConfig("ServerBypassFloodProtector");
 		FLOOD_PROTECTOR_MULTISELL = new FloodProtectorConfig("MultiSellFloodProtector");
 		FLOOD_PROTECTOR_TRANSACTION = new FloodProtectorConfig("TransactionFloodProtector");
@@ -2877,6 +2881,8 @@ public class Config
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_GLOBAL_CHAT, "GlobalChat", 5);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SUBCLASS, "Subclass", 20);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_DROP_ITEM, "DropItem", 10);
+		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_AUGMENT_SCRIPT, "AugmentScript", 30);
+		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ENCHANT_ITEM, "EnchantItem", 15);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SERVER_BYPASS, "ServerBypass", 5);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MULTISELL, "MultiSell", 1);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_TRANSACTION, "Transaction", 10);

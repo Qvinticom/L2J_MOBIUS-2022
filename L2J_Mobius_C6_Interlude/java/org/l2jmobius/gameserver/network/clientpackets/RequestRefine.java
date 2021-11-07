@@ -60,6 +60,12 @@ public class RequestRefine implements IClientIncomingPacket
 			return;
 		}
 		
+		// Flood protect to augment script
+		if (!client.getFloodProtectors().getAugmentItem().tryPerformAction("augment"))
+		{
+			return;
+		}
+		
 		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
 		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
 		final ItemInstance gemstoneItem = (ItemInstance) World.getInstance().findObject(_gemstoneItemObjId);

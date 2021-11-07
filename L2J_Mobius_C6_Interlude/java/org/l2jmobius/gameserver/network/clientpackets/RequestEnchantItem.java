@@ -123,6 +123,12 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
+		// Flood protect to enchant script
+		if (!client.getFloodProtectors().getEnchantItem().tryPerformAction("enchant"))
+		{
+			return;
+		}
+		
 		if (player.getActiveTradeList() != null)
 		{
 			player.cancelActiveTrade();
