@@ -481,7 +481,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 		// Next add the adena amount, if any
 		if (totalAdenaCount > 0)
 		{
-			newEntry.addIngredient(new MultiSellIngredient(57, totalAdenaCount, false, false));
+			newEntry.addIngredient(new MultiSellIngredient(57, totalAdenaCount, 0, false, false));
 		}
 		
 		// Now modify the enchantment level of products, if necessary

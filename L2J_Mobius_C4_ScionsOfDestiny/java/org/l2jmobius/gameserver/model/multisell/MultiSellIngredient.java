@@ -27,11 +27,6 @@ public class MultiSellIngredient
 	private boolean _isTaxIngredient;
 	private boolean _mantainIngredient;
 	
-	public MultiSellIngredient(int itemId, int itemCount, boolean isTaxIngredient, boolean mantainIngredient)
-	{
-		this(itemId, itemCount, 0, isTaxIngredient, mantainIngredient);
-	}
-	
 	public MultiSellIngredient(int itemId, int itemCount, int enchantmentLevel, boolean isTaxIngredient, boolean mantainIngredient)
 	{
 		setItemId(itemId);

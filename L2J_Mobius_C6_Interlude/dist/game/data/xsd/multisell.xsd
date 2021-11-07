@@ -13,14 +13,14 @@
 										<xs:attribute name="count" type="xs:unsignedInt" use="required" />
 										<xs:attribute name="isTaxIngredient" type="xs:boolean" use="optional" />
 										<xs:attribute name="mantainIngredient" type="xs:boolean" use="optional" />
-										<xs:attribute name="enchant" type="xs:unsignedByte" use="optional" />
+										<xs:attribute name="enchantmentLevel" type="xs:unsignedByte" use="optional" />
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="production">
 									<xs:complexType>
 										<xs:attribute name="id" type="xs:unsignedShort" use="required" />
 										<xs:attribute name="count" type="xs:unsignedInt" use="required" />
-										<xs:attribute name="enchant" type="xs:unsignedByte" use="optional" />
+										<xs:attribute name="enchantmentLevel" type="xs:unsignedByte" use="optional" />
 									</xs:complexType>
 								</xs:element>
 							</xs:choice>

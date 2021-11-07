@@ -376,6 +376,13 @@ public class MultisellData
 			{
 				Node attribute;
 				
+				// Enable enchant level on multisell ingredient using attribue "enchantmentLevel".
+				int enchantmentLevel = 0;
+				if (n.getAttributes().getNamedItem("enchantmentLevel") != null)
+				{
+					enchantmentLevel = Integer.parseInt(n.getAttributes().getNamedItem("enchantmentLevel").getNodeValue());
+				}
+				
 				final int id = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 				final int count = Integer.parseInt(n.getAttributes().getNamedItem("count").getNodeValue());
 				boolean isTaxIngredient = false;
@@ -392,11 +399,18 @@ public class MultisellData
 					mantainIngredient = Boolean.parseBoolean(attribute.getNodeValue());
 				}
 				
-				final MultiSellIngredient e = new MultiSellIngredient(id, count, isTaxIngredient, mantainIngredient);
+				final MultiSellIngredient e = new MultiSellIngredient(id, count, enchantmentLevel, isTaxIngredient, mantainIngredient);
 				entry.addIngredient(e);
 			}
 			else if ("production".equalsIgnoreCase(n.getNodeName()))
 			{
+				// Enable enchant level on multisell production using attribue "enchantmentLevel".
+				int enchantmentLevel = 0;
+				if (n.getAttributes().getNamedItem("enchantmentLevel") != null)
+				{
+					enchantmentLevel = Integer.parseInt(n.getAttributes().getNamedItem("enchantmentLevel").getNodeValue());
+				}
+				
 				final int id = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 				final int count = Integer.parseInt(n.getAttributes().getNamedItem("count").getNodeValue());
 				if (ItemTable.getInstance().getTemplate(id) == null)
@@ -404,13 +418,7 @@ public class MultisellData
 					LOGGER.warning("Multisell: Item " + id + " does not exist.");
 				}
 				
-				int enchant = 0;
-				// By Azagthtot support enchantment in multisell
-				if (n.getAttributes().getNamedItem("enchant") != null)
-				{
-					enchant = Integer.parseInt(n.getAttributes().getNamedItem("enchant").getNodeValue());
-				}
-				final MultiSellIngredient e = new MultiSellIngredient(id, count, enchant, false, false);
+				MultiSellIngredient e = new MultiSellIngredient(id, count, enchantmentLevel, false, false);
 				entry.addProduct(e);
 			}
 		}
