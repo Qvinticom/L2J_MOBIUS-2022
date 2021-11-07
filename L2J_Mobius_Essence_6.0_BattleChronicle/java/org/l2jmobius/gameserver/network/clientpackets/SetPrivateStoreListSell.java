@@ -38,8 +38,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SetPrivateStoreListSell implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 20; // length of the one item
-	
 	private boolean _packageSale;
 	private Item[] _items = null;
 	
@@ -48,7 +46,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 	{
 		_packageSale = (packet.readD() == 1);
 		final int count = packet.readD();
-		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
+		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
 		}
@@ -64,6 +62,10 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 				_items = null;
 				return false;
 			}
+			
+			// Unknown.
+			packet.readS();
+			
 			_items[i] = new Item(itemId, cnt, price);
 		}
 		return true;

@@ -97,6 +97,14 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 				soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
 			}
 			
+			// Unknown.
+			packet.readC();
+			packet.readC();
+			packet.readC();
+			packet.readC();
+			packet.readC();
+			packet.readS();
+			
 			final TradeItem item = new TradeItem(template, cnt, price);
 			item.setEnchant(enchantLevel);
 			item.setAugmentation(option1, option2);
