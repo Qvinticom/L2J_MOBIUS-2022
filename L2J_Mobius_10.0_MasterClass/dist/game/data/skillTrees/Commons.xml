@@ -2,14 +2,15 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree">
 		<skill skillName="Lucky" skillId="194" skillLevel="1" getLevel="1" autoGet="true" />
-		<skill skillName="Create Common Item" skillId="30943" skillLevel="1" getLevel="85" autoGet="true" />
-		
+			
 		<skill skillName="Crystallize" skillId="248" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="2" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="4" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
+		
+		<skill skillName="Create Common Item" skillId="30943" skillLevel="1" getLevel="85" autoGet="true" />
 		
 		<!-- Hair accessory hide / show -->
 		<skill skillName="Change Hair Accessory" skillId="17192" skillLevel="1" getLevel="1" autoGet="true" />

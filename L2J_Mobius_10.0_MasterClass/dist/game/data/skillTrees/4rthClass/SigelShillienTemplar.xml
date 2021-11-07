@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sigil Shilien Templar -->
 	<skillTree type="classSkillTree" classId="151" parentClassId="106">
-		<skill skillName="Sharpness" skillId="1909" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1909" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Blessing of Wind" skillId="1911" skillLevel="1" getLevel="1" autoGet="true">
-			<removeSkill id="1911" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Challenge Aura" skillId="10030" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Provoke Aura" skillId="10028" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Iron Aura" skillId="10032" skillLevel="1" getLevel="85" levelUpSp="0">
@@ -179,7 +172,6 @@
 		</skill>
 		<skill skillName="Vanishing Stun" skillId="10010" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Templar's Frenzy" skillId="10101" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30740" /> <!-- Novice Final Ultimate Defense -->

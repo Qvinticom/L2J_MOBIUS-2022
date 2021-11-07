@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Othell Adventurer -->
 	<skillTree type="classSkillTree" classId="158" parentClassId="93">
-		<skill skillName="Aim" skillId="1901" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1901" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Mental Fortress" skillId="1902" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1902" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Angel of Death" skillId="10531" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30644" /> <!-- Novice Angel of Death -->
 		</skill>
@@ -166,7 +159,6 @@
 		<skill skillName="Superior Resistance" skillId="10552" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Istina Acid Swarm" skillId="19301" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Counter Flip" skillId="19296" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Critical Wound" skillId="30786" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30744" /> <!-- Novice Critical Wound -->
 		</skill>

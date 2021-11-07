@@ -2,19 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sayha's Seer -->
 	<skillTree type="classSkillTree" classId="189" parentClassId="187">
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
-		<skill skillName="Divine Wind" skillId="30400" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="30400" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Tenacity" skillId="30401" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="30401" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Efficacy" skillId="30402" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="30402" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Sayha's Seer Aura" skillId="30605" skillLevel="1" getLevel="85" autoGet="true" />
-		
 		<skill skillName="Hydro Attack" skillId="30001" skillLevel="18" getLevel="85" levelUpSp="15000" />
 		<skill skillName="Hydro Strike" skillId="30004" skillLevel="15" getLevel="85" levelUpSp="15000" />
 		<skill skillName="Squall" skillId="30017" skillLevel="3" getLevel="85" levelUpSp="15000" />

@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Feoh Mystic Muse -->
 	<skillTree type="classSkillTree" classId="168" parentClassId="103">
-		<skill skillName="Blessing of Water" skillId="1906" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1906" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Delicacy" skillId="1908" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1908" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Hell Binding" skillId="11050" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Superior Anti Magic" skillId="11003" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Mana of Spirit" skillId="11176" skillLevel="1" getLevel="85" autoGet="true" />
@@ -170,7 +163,6 @@
 		<skill skillName="Water Stance" skillId="11008" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Holy Stance" skillId="19312" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Ruin" skillId="11047" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Icicle Destruction" skillId="11025" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30679" /> <!-- Novice Icicle Destruction-->
 		</skill>

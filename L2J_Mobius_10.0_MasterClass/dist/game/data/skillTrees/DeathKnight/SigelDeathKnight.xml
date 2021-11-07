@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="216" parentClassId="215">
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" />
 		<skill skillName="Dual Class - Renewed Energy of Power" skillId="30820" skillLevel="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" autoGet="false" />
@@ -18,7 +17,6 @@
 		<skill skillName="Basic Mental Resistance" skillId="30832" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Basic Fantasia Harmony" skillId="30833" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Sigel's Defense Mastery" skillId="30891" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Create Common Item" skillId="30943" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Aura of Fury" skillId="30948" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Ignition" skillId="30953" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Death Sentence" skillId="30961" skillLevel="2" getLevel="85" levelUpSp="0" />
@@ -85,7 +83,6 @@
 		</skill>
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="4" getLevel="99" getDualClassLevel="99" levelUpSp="5000000" />
 		<skill skillName="Mount Night Mare" skillId="8911" skillLevel="1" getLevel="99" autoGet="true" />
-		<skill skillName="Knight Hidden Trigger" skillId="19178" skillLevel="1" getLevel="99" autoGet="true" />
 		<skill skillName="Basic Horn Melody" skillId="30823" skillLevel="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Basic Drum Melody" skillId="30824" skillLevel="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Basic Pipe Organ Melody" skillId="30825" skillLevel="4" getLevel="99" levelUpSp="5000000" />
@@ -126,7 +123,7 @@
 		<skill skillName="Pursuing Curse" skillId="30960" skillLevel="7" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Furious Eruption" skillId="30971" skillLevel="6" getLevel="103" levelUpSp="608946501" />
 
-		<skill skillName="Shrivelling" skillId="30957" skillLevel="2" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Shrivelling" skillId="30962" skillLevel="2" getLevel="104" levelUpSp="1461471604" />
 		<skill skillName="Hellfire" skillId="30963" skillLevel="7" getLevel="104" levelUpSp="1461471604" />
 		<skill skillName="Fateful Assault" skillId="30972" skillLevel="7" getLevel="104" levelUpSp="1461471604" />
 		<skill skillName="Superior Sword Mastery" skillId="30981" skillLevel="7" getLevel="104" levelUpSp="1461471604" />
@@ -170,9 +167,7 @@
 
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLevel="10" getLevel="110" getDualClassLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Sigel's Defense Mastery" skillId="30891" skillLevel="3" getLevel="110" levelUpSp="17455723311" />
-		<skill skillName="Masia's Shield" skillId="30931" skillLevel="1" getLevel="110" levelUpSp="17455723311">
-			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
-		</skill>
+		
 		<skill skillName="Hellfire" skillId="30963" skillLevel="9" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Fire Earthquake" skillId="30970" skillLevel="6" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Fateful Assault" skillId="30972" skillLevel="9" getLevel="110" levelUpSp="17455723311" />
@@ -182,39 +177,34 @@
 		<skill skillName="Superior Sword Mastery" skillId="30981" skillLevel="10" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Superior Heavy Armor Mastery" skillId="30982" skillLevel="10" getLevel="110" levelUpSp="17455723311" />
 		<skill skillName="Superior Elemental Mastery" skillId="30983" skillLevel="10" getLevel="110" levelUpSp="17455723311" />
-
+		
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="1" getLevel="110" levelUpSp="17455723311">
+			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
+		</skill>
 		<skill skillName="Masia's Shield" skillId="30931" skillLevel="2" getLevel="111" levelUpSp="20946867973" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-
 		<skill skillName="Masia's Shield" skillId="30931" skillLevel="3" getLevel="112" levelUpSp="49225139737" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-
 		<skill skillName="Masia's Shield" skillId="30931" skillLevel="4" getLevel="113" levelUpSp="49225139737" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-
 		<skill skillName="Masia's Shield" skillId="30931" skillLevel="5" getLevel="114" levelUpSp="49225139737" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-
 		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="1" getLevel="115" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-
 		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="2" getLevel="116" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-
 		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="3" getLevel="117" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-
 		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="4" getLevel="118" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-
 		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="5" getLevel="119" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>

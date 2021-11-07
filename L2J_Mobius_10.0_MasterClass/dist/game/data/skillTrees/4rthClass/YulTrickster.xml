@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Yul Trickster -->
 	<skillTree type="classSkillTree" classId="165" parentClassId="134">
-		<skill skillName="Battle Instinct" skillId="1923" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1923" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Dark Silence" skillId="1924" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1924" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Superior Critical Arrow" skillId="10756" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Survival Ability" skillId="10754" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Instinct Mastery" skillId="10951" skillLevel="1" getLevel="85" autoGet="true" />
@@ -168,7 +161,6 @@
 		<skill skillName="Impact Shot" skillId="10769" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30746" /> <!-- Novice Impact Shot -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Frost Trap" skillId="10791" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Final Ultimate Escape" skillId="10776" skillLevel="1" getLevel="85" levelUpSp="0" />

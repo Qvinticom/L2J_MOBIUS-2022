@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Iss Sword Muse -->
 	<skillTree type="classSkillTree" classId="172" parentClassId="100">
-		<skill skillName="Blessing of Water" skillId="1906" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1906" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Delicacy" skillId="1908" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1908" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Superior Shield Mastery" skillId="11620" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Crippling Attack" skillId="11509" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30623" /> <!-- Novice Radiant Crash -->
@@ -185,7 +178,6 @@
 		<skill skillName="Giant Root" skillId="11561" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Devil's Movement" skillId="11562" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Transform" skillId="11537" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Giant Root" skillId="11538" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Melody of Refection" skillId="19443" skillLevel="1" getLevel="85" levelUpSp="0" />

@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Tyrr Grand Khavatari -->
 	<skillTree type="classSkillTree" classId="155" parentClassId="114">
-		<skill skillName="Blessing of Fire" skillId="1915" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1915" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Energetic" skillId="1916" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1916" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Berserker" skillId="10274" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Hurricane Rush" skillId="10267" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30738" /> <!-- Novice Hurricane Rush -->
@@ -184,7 +177,6 @@
 		<skill skillName="Brave Spear" skillId="10289" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Wild Roar" skillId="10308" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Wolf's Cry" skillId="10322" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Maximum Force Mastery" skillId="10301" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Mega Strike" skillId="10260" skillLevel="1" getLevel="85" levelUpSp="0">

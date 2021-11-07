@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Wynn Arcana Lord -->
 	<skillTree type="classSkillTree" classId="176" parentClassId="96">
-		<skill skillName="Aim" skillId="1901" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1901" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Mental Fortress" skillId="1902" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1902" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Servitor Immortality" skillId="11310" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Blessing of the Giants" skillId="11297" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30657" /> <!-- Novice Blessing of the Giants -->
@@ -181,7 +174,6 @@
 		<skill skillName="Mark of Plague" skillId="11261" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30755" /> <!-- Novice Mark of Plague -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Servitor Blessing" skillId="11309" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Mass Servitor Empower" skillId="11306" skillLevel="1" getLevel="85" levelUpSp="0" />

@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Aeore Cardinal -->
 	<skillTree type="classSkillTree" classId="179" parentClassId="97">
-		<skill skillName="Aim" skillId="1901" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1901" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Mental Fortress" skillId="1902" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1902" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Brilliant Heal" skillId="11757" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30760" /> <!-- Novice Brilliant Heal-->
 		</skill>
@@ -164,7 +157,6 @@
 		<skill skillName="Giant's Favor" skillId="11772" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Dissolve" skillId="11770" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Mark of Lumi" skillId="11777" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Crystal Regeneration" skillId="11765" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Fatal Sleep" skillId="11832" skillLevel="1" getLevel="85" levelUpSp="0" />

@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sigel Phoenix Knight -->
 	<skillTree type="classSkillTree" classId="148" parentClassId="90">
-		<skill skillName="Aim" skillId="1901" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1901" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Mental Fortress" skillId="1902" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1902" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Challenge Aura" skillId="10030" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Provoke Aura" skillId="10028" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Iron Aura" skillId="10032" skillLevel="1" getLevel="85" levelUpSp="0">
@@ -178,7 +171,6 @@
 		</skill>
 		<skill skillName="Vanishing Stun" skillId="10010" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Paladin's Frenzy" skillId="10098" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30740" /> <!-- Novice Final Ultimate Defense -->

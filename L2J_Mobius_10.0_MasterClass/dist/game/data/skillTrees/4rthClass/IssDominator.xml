@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Iss Dominator -->
 	<skillTree type="classSkillTree" classId="174" parentClassId="115">
-		<skill skillName="Blessing of Fire" skillId="1915" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1915" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Energetic" skillId="1916" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1916" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Superior Shield Mastery" skillId="11620" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Crippling Attack" skillId="11509" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30623" /> <!-- Novice Radiant Crash -->
@@ -188,7 +181,6 @@
 		<skill skillName="Giant Root" skillId="11561" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Devil's Movement" skillId="11562" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Transform" skillId="11537" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" levelUpSp="0" />
 		<skill skillName="Pa'agrio's Fist" skillId="30793" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Giant Root" skillId="11538" skillLevel="1" getLevel="85" levelUpSp="0" />

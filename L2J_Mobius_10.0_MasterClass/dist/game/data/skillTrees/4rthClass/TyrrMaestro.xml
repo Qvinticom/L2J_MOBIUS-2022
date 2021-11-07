@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Tyrr Maestro -->
 	<skillTree type="classSkillTree" classId="156" parentClassId="118">
-		<skill skillName="Dexterity" skillId="1919" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1919" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Blessing of Earth" skillId="1921" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1921" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Superior Shield Mastery" skillId="11620" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Create Master Item" skillId="30945" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Berserker" skillId="10274" skillLevel="1" getLevel="85" levelUpSp="0" />
@@ -192,7 +185,6 @@
 		<skill skillName="Hurricane Blaster" skillId="10263" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Hawk Cry" skillId="10295" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Brave Spear" skillId="10289" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mega Strike" skillId="10260" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30616" /> <!-- Novice Mega Strike -->

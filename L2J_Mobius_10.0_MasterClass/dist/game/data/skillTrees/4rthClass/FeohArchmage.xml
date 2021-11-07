@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Feoh Archmage -->
 	<skillTree type="classSkillTree" classId="166" parentClassId="94">
-		<skill skillName="Aim" skillId="1901" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1901" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Mental Fortress" skillId="1902" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1902" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Hell Binding" skillId="11050" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Superior Anti Magic" skillId="11003" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Quick Recovery" skillId="11183" skillLevel="1" getLevel="85" autoGet="true" />
@@ -175,7 +168,6 @@
 		<skill skillName="Wind Stance" skillId="11009" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Fire Stance" skillId="11007" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Ruin" skillId="11047" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Death Lord" skillId="11030" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Mass Ruin" skillId="11048" skillLevel="1" getLevel="85" levelUpSp="0">

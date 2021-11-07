@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Yul Moonlight Sentinel -->
 	<skillTree type="classSkillTree" classId="163" parentClassId="102">
-		<skill skillName="Blessing of Water" skillId="1906" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1906" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Delicacy" skillId="1908" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1908" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Superior Critical Arrow" skillId="10756" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Survival Ability" skillId="10754" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Speed Mastery" skillId="10857" skillLevel="1" getLevel="85" autoGet="true" />
@@ -168,7 +161,6 @@
 		<skill skillName="Impact Shot" skillId="10769" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30746" /> <!-- Novice Impact Shot -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Frost Trap" skillId="10791" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Final Ultimate Escape" skillId="10776" skillLevel="1" getLevel="85" levelUpSp="0" />

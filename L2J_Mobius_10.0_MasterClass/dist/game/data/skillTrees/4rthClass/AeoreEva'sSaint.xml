@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Aeore Eva's Saint -->
 	<skillTree type="classSkillTree" classId="180" parentClassId="105">
-		<skill skillName="Blessing of Water" skillId="1906" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1906" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Delicacy" skillId="1908" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1908" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Brilliant Heal" skillId="11757" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30760" /> <!-- Novice Brilliant Heal-->
 		</skill>
@@ -165,7 +158,6 @@
 		<skill skillName="Giant's Favor" skillId="11772" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Dissolve" skillId="11770" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Mark of Lumi" skillId="11777" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Crystal Regeneration" skillId="11765" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Fatal Sleep" skillId="11832" skillLevel="1" getLevel="85" levelUpSp="0" />

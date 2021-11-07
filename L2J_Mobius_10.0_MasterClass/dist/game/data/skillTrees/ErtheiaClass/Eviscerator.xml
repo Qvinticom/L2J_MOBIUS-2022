@@ -2,19 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Eviscerator -->
 	<skillTree type="classSkillTree" classId="188" parentClassId="186">
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
-		<skill skillName="Divine Wind" skillId="30400" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="30400" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Tenacity" skillId="30401" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="30401" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Efficacy" skillId="30402" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="30402" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Eviscerator Aura" skillId="30602" skillLevel="1" getLevel="85" autoGet="true" />
-		
 		<skill skillName="Lateral Hit" skillId="30500" skillLevel="18" getLevel="85" levelUpSp="15000" />
 		<skill skillName="Gravity Hit" skillId="30504" skillLevel="6" getLevel="85" levelUpSp="75000" />
 		<skill skillName="Air Light" skillId="30511" skillLevel="2" getLevel="85" levelUpSp="15000" />

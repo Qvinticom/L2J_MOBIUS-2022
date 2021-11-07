@@ -2,13 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Tyrr Dreadnought -->
 	<skillTree type="classSkillTree" classId="153" parentClassId="89">
-		<skill skillName="Aim" skillId="1901" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1901" onlyReplaceByLearn="true"/>
-		</skill>
-		<skill skillName="Mental Fortress" skillId="1902" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1902" onlyReplaceByLearn="true"/>
-		</skill>
-
 		<skill skillName="Berserker" skillId="10274" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Hurricane Rush" skillId="10267" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30738" /> <!-- Novice Hurricane Rush -->
@@ -189,7 +182,6 @@
 			<removeSkill id="30661" /> <!-- Novice Thunder Spear -->
 		</skill>
 		<skill skillName="Brave Spear" skillId="10289" skillLevel="1" getLevel="85" levelUpSp="0" />
-		<skill skillName="Crystallize" skillId="248" skillLevel="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLevel="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mega Strike" skillId="10260" skillLevel="1" getLevel="85" levelUpSp="0">
 			<removeSkill id="30616" /> <!-- Novice Mega Strike -->
