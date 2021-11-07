@@ -96,6 +96,7 @@ public class Config
 	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
 	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
+	private static final String GAME_ASSISTANT_CONFIG_FILE = "./config/GameAssistant.ini";
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
@@ -133,7 +134,6 @@ public class Config
 	private static final String CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
-	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 	private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
 	private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
 	private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
@@ -850,6 +850,17 @@ public class Config
 	public static int TRAINING_CAMP_MAX_LEVEL;
 	public static double TRAINING_CAMP_EXP_MULTIPLIER;
 	public static double TRAINING_CAMP_SP_MULTIPLIER;
+	public static boolean PC_CAFE_ENABLED;
+	public static boolean PC_CAFE_ONLY_PREMIUM;
+	public static int PC_CAFE_MAX_POINTS;
+	public static boolean PC_CAFE_ENABLE_DOUBLE_POINTS;
+	public static int PC_CAFE_DOUBLE_POINTS_CHANCE;
+	public static double PC_CAFE_POINT_RATE;
+	public static boolean PC_CAFE_RANDOM_POINT;
+	public static boolean PC_CAFE_REWARD_LOW_EXP_KILLS;
+	public static int PC_CAFE_LOW_EXP_KILLS_CHANCE;
+	public static boolean GAME_ASSISTANT_ENABLED;
+	public static boolean EINHASAD_STORE_ENABLED;
 	public static boolean SHOW_LICENCE;
 	public static boolean SHOW_PI_AGREEMENT;
 	public static boolean ACCEPT_NEW_GAMESERVER;
@@ -1320,15 +1331,6 @@ public class Config
 	public static boolean PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL;
 	public static boolean PREMIUM_HENNA_SLOT_ALL_DYES;
 	public static boolean PREMIUM_ONLY_FISHING;
-	public static boolean PC_CAFE_ENABLED;
-	public static boolean PC_CAFE_ONLY_PREMIUM;
-	public static int PC_CAFE_MAX_POINTS;
-	public static boolean PC_CAFE_ENABLE_DOUBLE_POINTS;
-	public static int PC_CAFE_DOUBLE_POINTS_CHANCE;
-	public static double PC_CAFE_POINT_RATE;
-	public static boolean PC_CAFE_RANDOM_POINT;
-	public static boolean PC_CAFE_REWARD_LOW_EXP_KILLS;
-	public static int PC_CAFE_LOW_EXP_KILLS_CHANCE;
 	public static boolean SELLBUFF_ENABLED;
 	public static int SELLBUFF_MP_MULTIPLER;
 	public static int SELLBUFF_PAYMENT_ID;
@@ -2018,6 +2020,40 @@ public class Config
 			TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
 			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
 			TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
+			
+			// Load GameAssistant config file (if exists)
+			final PropertiesParser GameAssistant = new PropertiesParser(GAME_ASSISTANT_CONFIG_FILE);
+			PC_CAFE_ENABLED = GameAssistant.getBoolean("PcCafeEnabled", false);
+			PC_CAFE_ONLY_PREMIUM = GameAssistant.getBoolean("PcCafeOnlyPremium", false);
+			PC_CAFE_MAX_POINTS = GameAssistant.getInt("MaxPcCafePoints", 200000);
+			if (PC_CAFE_MAX_POINTS < 0)
+			{
+				PC_CAFE_MAX_POINTS = 0;
+			}
+			PC_CAFE_ENABLE_DOUBLE_POINTS = GameAssistant.getBoolean("DoublingAcquisitionPoints", false);
+			PC_CAFE_DOUBLE_POINTS_CHANCE = GameAssistant.getInt("DoublingAcquisitionPointsChance", 1);
+			if ((PC_CAFE_DOUBLE_POINTS_CHANCE < 0) || (PC_CAFE_DOUBLE_POINTS_CHANCE > 100))
+			{
+				PC_CAFE_DOUBLE_POINTS_CHANCE = 1;
+			}
+			PC_CAFE_POINT_RATE = GameAssistant.getDouble("AcquisitionPointsRate", 1.0);
+			PC_CAFE_RANDOM_POINT = GameAssistant.getBoolean("AcquisitionPointsRandom", false);
+			if (PC_CAFE_POINT_RATE < 0)
+			{
+				PC_CAFE_POINT_RATE = 1;
+			}
+			PC_CAFE_REWARD_LOW_EXP_KILLS = GameAssistant.getBoolean("RewardLowExpKills", true);
+			PC_CAFE_LOW_EXP_KILLS_CHANCE = GameAssistant.getInt("RewardLowExpKillsChance", 50);
+			if (PC_CAFE_LOW_EXP_KILLS_CHANCE < 0)
+			{
+				PC_CAFE_LOW_EXP_KILLS_CHANCE = 0;
+			}
+			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
+			{
+				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
+			}
+			GAME_ASSISTANT_ENABLED = GameAssistant.getBoolean("GameAssistantEnabled", false);
+			EINHASAD_STORE_ENABLED = GameAssistant.getBoolean("EinhasadStoreEnabled", false);
 			
 			// Load General config file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
@@ -3388,38 +3424,6 @@ public class Config
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
 			ALLOW_CHANGE_PASSWORD = PasswordChange.getBoolean("AllowChangePassword", false);
-			
-			// Load PcCafe config file (if exists)
-			final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
-			PC_CAFE_ENABLED = PcCafe.getBoolean("PcCafeEnabled", false);
-			PC_CAFE_ONLY_PREMIUM = PcCafe.getBoolean("PcCafeOnlyPremium", false);
-			PC_CAFE_MAX_POINTS = PcCafe.getInt("MaxPcCafePoints", 200000);
-			if (PC_CAFE_MAX_POINTS < 0)
-			{
-				PC_CAFE_MAX_POINTS = 0;
-			}
-			PC_CAFE_ENABLE_DOUBLE_POINTS = PcCafe.getBoolean("DoublingAcquisitionPoints", false);
-			PC_CAFE_DOUBLE_POINTS_CHANCE = PcCafe.getInt("DoublingAcquisitionPointsChance", 1);
-			if ((PC_CAFE_DOUBLE_POINTS_CHANCE < 0) || (PC_CAFE_DOUBLE_POINTS_CHANCE > 100))
-			{
-				PC_CAFE_DOUBLE_POINTS_CHANCE = 1;
-			}
-			PC_CAFE_POINT_RATE = PcCafe.getDouble("AcquisitionPointsRate", 1.0);
-			PC_CAFE_RANDOM_POINT = PcCafe.getBoolean("AcquisitionPointsRandom", false);
-			if (PC_CAFE_POINT_RATE < 0)
-			{
-				PC_CAFE_POINT_RATE = 1;
-			}
-			PC_CAFE_REWARD_LOW_EXP_KILLS = PcCafe.getBoolean("RewardLowExpKills", true);
-			PC_CAFE_LOW_EXP_KILLS_CHANCE = PcCafe.getInt("RewardLowExpKillsChance", 50);
-			if (PC_CAFE_LOW_EXP_KILLS_CHANCE < 0)
-			{
-				PC_CAFE_LOW_EXP_KILLS_CHANCE = 0;
-			}
-			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
-			{
-				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
-			}
 			
 			// Load PremiumSystem config file (if exists)
 			final PropertiesParser PremiumSystem = new PropertiesParser(CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE);

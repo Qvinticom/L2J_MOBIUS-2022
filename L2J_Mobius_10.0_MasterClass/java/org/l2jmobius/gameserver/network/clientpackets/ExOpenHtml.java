@@ -61,12 +61,18 @@ public class ExOpenHtml implements IClientIncomingPacket
 			}
 			case 5:
 			{
-				client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
+				if (Config.GAME_ASSISTANT_ENABLED)
+				{
+					client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
+				}
 				break;
 			}
 			case 7:
 			{
-				client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/EinhasadStore/34487.html")));
+				if (Config.EINHASAD_STORE_ENABLED)
+				{
+					client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/EinhasadStore/34487.html")));
+				}
 				break;
 			}
 			default:
