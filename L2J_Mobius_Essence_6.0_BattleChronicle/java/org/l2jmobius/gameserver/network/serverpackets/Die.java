@@ -33,7 +33,7 @@ public class Die implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final boolean _isSweepable;
-	private int _flags = 0;
+	private int _flags = 1; // To nearest village.
 	
 	public Die(Creature creature)
 	{
