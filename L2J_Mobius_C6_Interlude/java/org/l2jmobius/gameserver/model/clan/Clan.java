@@ -2112,6 +2112,7 @@ public class Clan
 		
 		setAllyId(0);
 		setAllyName(null);
+		changeAllyCrest(0, false);
 		setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000), PENALTY_TYPE_DISSOLVE_ALLY);
 		updateClanInDB();
 		
@@ -2385,7 +2386,7 @@ public class Clan
 		{
 			for (Clan clan : ClanTable.getInstance().getClans())
 			{
-				if ((clan.getAllyId() == getAllyId()) && (clan.getClanId() != getClanId()))
+				if (clan.getAllyId() == getAllyId())
 				{
 					clan.setAllyCrestId(crestId);
 					for (PlayerInstance member : clan.getOnlineMembers())
