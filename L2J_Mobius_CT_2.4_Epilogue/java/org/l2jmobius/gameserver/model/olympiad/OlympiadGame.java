@@ -1435,7 +1435,7 @@ class OlympiadGameTask implements Runnable
 		SystemMessage sm;
 		// Waiting for teleport to arena
 		byte step = 60;
-		for (byte i = Config.ALT_OLY_WAIT_TIME; i > 0; i -= step)
+		for (int i = Config.ALT_OLY_WAIT_TIME; i > 0; i -= step)
 		{
 			sm = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S);
 			sm.addInt(i);

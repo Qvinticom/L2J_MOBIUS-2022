@@ -192,11 +192,11 @@ public class GameServer
 		final long serverLoadStart = Chronos.currentTimeMillis();
 		
 		// GUI
-		final PropertiesParser interfaceSettings = new PropertiesParser(Config.INTERFACE_CONFIG_FILE);
-		Config.ENABLE_GUI = interfaceSettings.getBoolean("EnableGUI", true);
+		final PropertiesParser interfaceConfig = new PropertiesParser(Config.INTERFACE_CONFIG_FILE);
+		Config.ENABLE_GUI = interfaceConfig.getBoolean("EnableGUI", true);
 		if (Config.ENABLE_GUI && !GraphicsEnvironment.isHeadless())
 		{
-			Config.DARK_THEME = interfaceSettings.getBoolean("DarkTheme", true);
+			Config.DARK_THEME = interfaceConfig.getBoolean("DarkTheme", true);
 			System.out.println("GameServer: Running in GUI mode.");
 			new Gui();
 		}

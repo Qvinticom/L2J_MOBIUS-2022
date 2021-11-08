@@ -81,62 +81,62 @@ public class Config
 	public static void load()
 	{
 		// Load server config file (if exists)
-		final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
+		final PropertiesParser serverConfig = new PropertiesParser(SERVER_CONFIG_FILE);
 		
 		// Game
-		SERVER_HOST_NAME = serverSettings.getString("GameserverHostname", "*");
-		SERVER_PORT = serverSettings.getInt("GameserverPort", 7777);
-		CLIENT_PROTOCOL_VERSION = serverSettings.getInt("ClientProtocolVersion", 417);
-		MAXIMUM_ONLINE_PLAYERS = serverSettings.getInt("MaximumOnlineUsers", 2000);
+		SERVER_HOST_NAME = serverConfig.getString("GameserverHostname", "*");
+		SERVER_PORT = serverConfig.getInt("GameserverPort", 7777);
+		CLIENT_PROTOCOL_VERSION = serverConfig.getInt("ClientProtocolVersion", 417);
+		MAXIMUM_ONLINE_PLAYERS = serverConfig.getInt("MaximumOnlineUsers", 2000);
 		// Login
-		LOGIN_HOST_NAME = serverSettings.getString("LoginserverHostname", "*");
-		EXTERNAL_HOST_NAME = serverSettings.getString("ExternalHostname", "127.0.0.1");
+		LOGIN_HOST_NAME = serverConfig.getString("LoginserverHostname", "*");
+		EXTERNAL_HOST_NAME = serverConfig.getString("ExternalHostname", "127.0.0.1");
 		if (EXTERNAL_HOST_NAME == null)
 		{
 			EXTERNAL_HOST_NAME = "localhost";
 		}
-		INTERNAL_HOST_NAME = serverSettings.getString("InternalHostname", "127.0.0.1");
+		INTERNAL_HOST_NAME = serverConfig.getString("InternalHostname", "127.0.0.1");
 		if (INTERNAL_HOST_NAME == null)
 		{
 			INTERNAL_HOST_NAME = "localhost";
 		}
-		AUTO_CREATE_ACCOUNTS = serverSettings.getBoolean("AutoCreateAccounts", true);
+		AUTO_CREATE_ACCOUNTS = serverConfig.getBoolean("AutoCreateAccounts", true);
 		// Other
-		LOG_UNKNOWN_PACKETS = serverSettings.getBoolean("LogUnknownPackets", false);
+		LOG_UNKNOWN_PACKETS = serverConfig.getBoolean("LogUnknownPackets", false);
 		
 		// Load rates config file (if exists)
-		final PropertiesParser ratesSettings = new PropertiesParser(RATES_CONFIG_FILE);
-		RATE_XP = ratesSettings.getFloat("RateXp", 1);
-		RATE_SP = ratesSettings.getFloat("RateSp", 1);
-		RATE_DROP = ratesSettings.getFloat("RateDrop", 1);
-		RATE_ADENA = ratesSettings.getFloat("RateAdena", 1);
+		final PropertiesParser ratesConfig = new PropertiesParser(RATES_CONFIG_FILE);
+		RATE_XP = ratesConfig.getFloat("RateXp", 1);
+		RATE_SP = ratesConfig.getFloat("RateSp", 1);
+		RATE_DROP = ratesConfig.getFloat("RateDrop", 1);
+		RATE_ADENA = ratesConfig.getFloat("RateAdena", 1);
 		
 		// Load karma config file (if exists)
-		final PropertiesParser karmaSettings = new PropertiesParser(KARMA_CONFIG_FILE);
-		KARMA_MIN_KARMA = karmaSettings.getInt("KarmaMin", 240);
-		KARMA_MAX_KARMA = karmaSettings.getInt("KarmaMax", 10000);
-		KARMA_LOST_MULTIPLIER = karmaSettings.getFloat("KarmaLostMultiplier", 1);
-		KARMA_DROP_CHANCE = karmaSettings.getInt("KarmaDropChance", 5);
-		KARMA_PROTECTED_ITEMS = Arrays.stream(karmaSettings.getIntArray("KarmaProtectedItems", ";")).boxed().collect(Collectors.toList());
+		final PropertiesParser karmaConfig = new PropertiesParser(KARMA_CONFIG_FILE);
+		KARMA_MIN_KARMA = karmaConfig.getInt("KarmaMin", 240);
+		KARMA_MAX_KARMA = karmaConfig.getInt("KarmaMax", 10000);
+		KARMA_LOST_MULTIPLIER = karmaConfig.getFloat("KarmaLostMultiplier", 1);
+		KARMA_DROP_CHANCE = karmaConfig.getInt("KarmaDropChance", 5);
+		KARMA_PROTECTED_ITEMS = Arrays.stream(karmaConfig.getIntArray("KarmaProtectedItems", ";")).boxed().collect(Collectors.toList());
 		
 		// Load threadpool config file (if exists)
-		final PropertiesParser threadpoolSettings = new PropertiesParser(THREADPOOL_CONFIG_FILE);
-		SCHEDULED_THREAD_POOL_COUNT = threadpoolSettings.getInt("ScheduledThreadPoolCount", -1);
+		final PropertiesParser threadpoolConfig = new PropertiesParser(THREADPOOL_CONFIG_FILE);
+		SCHEDULED_THREAD_POOL_COUNT = threadpoolConfig.getInt("ScheduledThreadPoolCount", -1);
 		if (SCHEDULED_THREAD_POOL_COUNT == -1)
 		{
 			SCHEDULED_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
 		}
-		THREADS_PER_SCHEDULED_THREAD_POOL = threadpoolSettings.getInt("ThreadsPerScheduledThreadPool", 4);
-		INSTANT_THREAD_POOL_COUNT = threadpoolSettings.getInt("InstantThreadPoolCount", -1);
+		THREADS_PER_SCHEDULED_THREAD_POOL = threadpoolConfig.getInt("ThreadsPerScheduledThreadPool", 4);
+		INSTANT_THREAD_POOL_COUNT = threadpoolConfig.getInt("InstantThreadPoolCount", -1);
 		if (INSTANT_THREAD_POOL_COUNT == -1)
 		{
 			INSTANT_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
 		}
-		THREADS_PER_INSTANT_THREAD_POOL = threadpoolSettings.getInt("ThreadsPerInstantThreadPool", 2);
+		THREADS_PER_INSTANT_THREAD_POOL = threadpoolConfig.getInt("ThreadsPerInstantThreadPool", 2);
 		
 		// Load NPC config file (if exists)
-		final PropertiesParser npcSettings = new PropertiesParser(NPC_CONFIG_FILE);
-		SHOW_NPC_LEVEL = npcSettings.getBoolean("ShowNpcLevel", false);
-		SHOW_NPC_AGGRESSION = npcSettings.getBoolean("ShowNpcAggression", false);
+		final PropertiesParser npcConfig = new PropertiesParser(NPC_CONFIG_FILE);
+		SHOW_NPC_LEVEL = npcConfig.getBoolean("ShowNpcLevel", false);
+		SHOW_NPC_AGGRESSION = npcConfig.getBoolean("ShowNpcAggression", false);
 	}
 }

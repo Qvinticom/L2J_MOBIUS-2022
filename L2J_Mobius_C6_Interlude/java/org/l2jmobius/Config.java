@@ -84,7 +84,7 @@ public class Config
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 	private static final String OLYMP_CONFIG_FILE = "./config/Olympiad.ini";
 	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/FloodProtector.ini";
-	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/Other.ini";
+	private static final String OTHER_CONFIG_FILE = "./config/Other.ini";
 	private static final String PVP_CONFIG_FILE = "./config/PvP.ini";
 	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
 	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
@@ -101,7 +101,7 @@ public class Config
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/custom/RandomSpawns.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
-	private static final String OTHER_CONFIG_FILE = "./config/custom/Other.ini";
+	private static final String OTHER_CUSTOM_CONFIG_FILE = "./config/custom/Other.ini";
 	private static final String PC_BANG_POINT_CONFIG_FILE = "./config/custom/PcBang.ini";
 	private static final String PHYSICS_BALANCE_CONFIG_FILE = "./config/custom/PhysicsBalance.ini";
 	private static final String SCHEME_BUFFER_CONFIG_FILE = "./config/custom/SchemeBuffer.ini";
@@ -1795,7 +1795,7 @@ public class Config
 	
 	public static void loadCustomServerConfig()
 	{
-		final PropertiesParser customServerConfig = new PropertiesParser(OTHER_CONFIG_FILE);
+		final PropertiesParser customServerConfig = new PropertiesParser(OTHER_CUSTOM_CONFIG_FILE);
 		CUSTOM_SPAWNLIST_TABLE = customServerConfig.getBoolean("CustomSpawnlistTable", true);
 		SAVE_GMSPAWN_ON_CUSTOM = customServerConfig.getBoolean("SaveGmSpawnOnCustom", true);
 		DELETE_GMSPAWN_ON_CUSTOM = customServerConfig.getBoolean("DeleteGmSpawnOnCustom", true);
@@ -2302,34 +2302,34 @@ public class Config
 	
 	public static void loadProtectedOtherConfig()
 	{
-		final PropertiesParser protectedOtherConfig = new PropertiesParser(PROTECT_OTHER_CONFIG_FILE);
-		CHECK_NAME_ON_LOGIN = protectedOtherConfig.getBoolean("CheckNameOnEnter", true);
-		CHECK_SKILLS_ON_ENTER = protectedOtherConfig.getBoolean("CheckSkillsOnEnter", true);
-		L2WALKER_PROTECTION = protectedOtherConfig.getBoolean("L2WalkerProtection", false);
-		PROTECTED_ENCHANT = protectedOtherConfig.getBoolean("ProtectorEnchant", false);
-		ONLY_GM_TELEPORT_FREE = protectedOtherConfig.getBoolean("OnlyGMTeleportFree", false);
-		ONLY_GM_ITEMS_FREE = protectedOtherConfig.getBoolean("OnlyGMItemsFree", false);
-		BYPASS_VALIDATION = protectedOtherConfig.getBoolean("BypassValidation", true);
-		ALLOW_DUALBOX_OLY = protectedOtherConfig.getBoolean("AllowDualBoxInOly", true);
-		ALLOW_DUALBOX_EVENT = protectedOtherConfig.getBoolean("AllowDualBoxInEvent", true);
-		ALLOWED_BOXES = protectedOtherConfig.getInt("AllowedBoxes", 99);
-		ALLOW_DUALBOX = protectedOtherConfig.getBoolean("AllowDualBox", true);
+		final PropertiesParser otherConfig = new PropertiesParser(OTHER_CONFIG_FILE);
+		CHECK_NAME_ON_LOGIN = otherConfig.getBoolean("CheckNameOnEnter", true);
+		CHECK_SKILLS_ON_ENTER = otherConfig.getBoolean("CheckSkillsOnEnter", true);
+		L2WALKER_PROTECTION = otherConfig.getBoolean("L2WalkerProtection", false);
+		PROTECTED_ENCHANT = otherConfig.getBoolean("ProtectorEnchant", false);
+		ONLY_GM_TELEPORT_FREE = otherConfig.getBoolean("OnlyGMTeleportFree", false);
+		ONLY_GM_ITEMS_FREE = otherConfig.getBoolean("OnlyGMItemsFree", false);
+		BYPASS_VALIDATION = otherConfig.getBoolean("BypassValidation", true);
+		ALLOW_DUALBOX_OLY = otherConfig.getBoolean("AllowDualBoxInOly", true);
+		ALLOW_DUALBOX_EVENT = otherConfig.getBoolean("AllowDualBoxInEvent", true);
+		ALLOWED_BOXES = otherConfig.getInt("AllowedBoxes", 99);
+		ALLOW_DUALBOX = otherConfig.getBoolean("AllowDualBox", true);
 	}
 	
 	public static void loadPhysicsConfig()
 	{
-		final PropertiesParser physicsSetting = new PropertiesParser(PHYSICS_BALANCE_CONFIG_FILE);
-		ENABLE_CLASS_DAMAGE_SETTINGS = physicsSetting.getBoolean("EnableClassDamageSettings", true);
-		ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY = physicsSetting.getBoolean("EnableClassDamageSettingsInOly", true);
-		ENABLE_CLASS_DAMAGE_LOGGER = physicsSetting.getBoolean("EnableClassDamageLogger", false);
-		BLOW_ATTACK_FRONT = physicsSetting.getInt("BlowAttackFront", 50);
-		BLOW_ATTACK_SIDE = physicsSetting.getInt("BlowAttackSide", 60);
-		BLOW_ATTACK_BEHIND = physicsSetting.getInt("BlowAttackBehind", 70);
-		BACKSTAB_ATTACK_FRONT = physicsSetting.getInt("BackstabAttackFront", 0);
-		BACKSTAB_ATTACK_SIDE = physicsSetting.getInt("BackstabAttackSide", 0);
-		BACKSTAB_ATTACK_BEHIND = physicsSetting.getInt("BackstabAttackBehind", 70);
-		MAX_PATK_SPEED = physicsSetting.getInt("MaxPAtkSpeed", 1500);
-		MAX_MATK_SPEED = physicsSetting.getInt("MaxMAtkSpeed", 1999);
+		final PropertiesParser physicsConfig = new PropertiesParser(PHYSICS_BALANCE_CONFIG_FILE);
+		ENABLE_CLASS_DAMAGE_SETTINGS = physicsConfig.getBoolean("EnableClassDamageSettings", true);
+		ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY = physicsConfig.getBoolean("EnableClassDamageSettingsInOly", true);
+		ENABLE_CLASS_DAMAGE_LOGGER = physicsConfig.getBoolean("EnableClassDamageLogger", false);
+		BLOW_ATTACK_FRONT = physicsConfig.getInt("BlowAttackFront", 50);
+		BLOW_ATTACK_SIDE = physicsConfig.getInt("BlowAttackSide", 60);
+		BLOW_ATTACK_BEHIND = physicsConfig.getInt("BlowAttackBehind", 70);
+		BACKSTAB_ATTACK_FRONT = physicsConfig.getInt("BackstabAttackFront", 0);
+		BACKSTAB_ATTACK_SIDE = physicsConfig.getInt("BackstabAttackSide", 0);
+		BACKSTAB_ATTACK_BEHIND = physicsConfig.getInt("BackstabAttackBehind", 70);
+		MAX_PATK_SPEED = physicsConfig.getInt("MaxPAtkSpeed", 1500);
+		MAX_MATK_SPEED = physicsConfig.getInt("MaxMAtkSpeed", 1999);
 		if (MAX_PATK_SPEED < 1)
 		{
 			MAX_PATK_SPEED = Integer.MAX_VALUE;
@@ -2339,46 +2339,46 @@ public class Config
 		{
 			MAX_MATK_SPEED = Integer.MAX_VALUE;
 		}
-		MAX_PCRIT_RATE = physicsSetting.getInt("MaxPCritRate", 500);
-		MAX_MCRIT_RATE = physicsSetting.getInt("MaxMCritRate", 300);
-		MCRIT_RATE_MUL = physicsSetting.getFloat("McritMulDif", 1f);
-		MAGIC_CRITICAL_POWER = physicsSetting.getFloat("MagicCriticalPower", 3f);
-		STUN_CHANCE_MODIFIER = physicsSetting.getFloat("StunChanceModifier", 1f);
-		BLEED_CHANCE_MODIFIER = physicsSetting.getFloat("BleedChanceModifier", 1f);
-		POISON_CHANCE_MODIFIER = physicsSetting.getFloat("PoisonChanceModifier", 1f);
-		PARALYZE_CHANCE_MODIFIER = physicsSetting.getFloat("ParalyzeChanceModifier", 1f);
-		ROOT_CHANCE_MODIFIER = physicsSetting.getFloat("RootChanceModifier", 1f);
-		SLEEP_CHANCE_MODIFIER = physicsSetting.getFloat("SleepChanceModifier", 1f);
-		FEAR_CHANCE_MODIFIER = physicsSetting.getFloat("FearChanceModifier", 1f);
-		CONFUSION_CHANCE_MODIFIER = physicsSetting.getFloat("ConfusionChanceModifier", 1f);
-		DEBUFF_CHANCE_MODIFIER = physicsSetting.getFloat("DebuffChanceModifier", 1f);
-		BUFF_CHANCE_MODIFIER = physicsSetting.getFloat("BuffChanceModifier", 1f);
-		ALT_MAGES_PHYSICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltPDamageMages", 1f);
-		ALT_MAGES_MAGICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltMDamageMages", 1f);
-		ALT_FIGHTERS_PHYSICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltPDamageFighters", 1f);
-		ALT_FIGHTERS_MAGICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltMDamageFighters", 1f);
-		ALT_PETS_PHYSICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltPDamagePets", 1f);
-		ALT_PETS_MAGICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltMDamagePets", 1f);
-		ALT_NPC_PHYSICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltPDamageNpc", 1f);
-		ALT_NPC_MAGICAL_DAMAGE_MULTI = physicsSetting.getFloat("AltMDamageNpc", 1f);
-		ALT_DAGGER_DMG_VS_HEAVY = physicsSetting.getFloat("DaggerVSHeavy", 2.5f);
-		ALT_DAGGER_DMG_VS_ROBE = physicsSetting.getFloat("DaggerVSRobe", 1.8f);
-		ALT_DAGGER_DMG_VS_LIGHT = physicsSetting.getFloat("DaggerVSLight", 2f);
-		RUN_SPD_BOOST = physicsSetting.getInt("RunSpeedBoost", 0);
-		MAX_RUN_SPEED = physicsSetting.getInt("MaxRunSpeed", 250);
-		ALLOW_RAID_LETHAL = physicsSetting.getBoolean("AllowLethalOnRaids", false);
-		ALLOW_LETHAL_PROTECTION_MOBS = physicsSetting.getBoolean("AllowLethalProtectionMobs", false);
-		LETHAL_PROTECTED_MOBS = physicsSetting.getString("LethalProtectedMobs", "");
+		MAX_PCRIT_RATE = physicsConfig.getInt("MaxPCritRate", 500);
+		MAX_MCRIT_RATE = physicsConfig.getInt("MaxMCritRate", 300);
+		MCRIT_RATE_MUL = physicsConfig.getFloat("McritMulDif", 1f);
+		MAGIC_CRITICAL_POWER = physicsConfig.getFloat("MagicCriticalPower", 3f);
+		STUN_CHANCE_MODIFIER = physicsConfig.getFloat("StunChanceModifier", 1f);
+		BLEED_CHANCE_MODIFIER = physicsConfig.getFloat("BleedChanceModifier", 1f);
+		POISON_CHANCE_MODIFIER = physicsConfig.getFloat("PoisonChanceModifier", 1f);
+		PARALYZE_CHANCE_MODIFIER = physicsConfig.getFloat("ParalyzeChanceModifier", 1f);
+		ROOT_CHANCE_MODIFIER = physicsConfig.getFloat("RootChanceModifier", 1f);
+		SLEEP_CHANCE_MODIFIER = physicsConfig.getFloat("SleepChanceModifier", 1f);
+		FEAR_CHANCE_MODIFIER = physicsConfig.getFloat("FearChanceModifier", 1f);
+		CONFUSION_CHANCE_MODIFIER = physicsConfig.getFloat("ConfusionChanceModifier", 1f);
+		DEBUFF_CHANCE_MODIFIER = physicsConfig.getFloat("DebuffChanceModifier", 1f);
+		BUFF_CHANCE_MODIFIER = physicsConfig.getFloat("BuffChanceModifier", 1f);
+		ALT_MAGES_PHYSICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltPDamageMages", 1f);
+		ALT_MAGES_MAGICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltMDamageMages", 1f);
+		ALT_FIGHTERS_PHYSICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltPDamageFighters", 1f);
+		ALT_FIGHTERS_MAGICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltMDamageFighters", 1f);
+		ALT_PETS_PHYSICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltPDamagePets", 1f);
+		ALT_PETS_MAGICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltMDamagePets", 1f);
+		ALT_NPC_PHYSICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltPDamageNpc", 1f);
+		ALT_NPC_MAGICAL_DAMAGE_MULTI = physicsConfig.getFloat("AltMDamageNpc", 1f);
+		ALT_DAGGER_DMG_VS_HEAVY = physicsConfig.getFloat("DaggerVSHeavy", 2.5f);
+		ALT_DAGGER_DMG_VS_ROBE = physicsConfig.getFloat("DaggerVSRobe", 1.8f);
+		ALT_DAGGER_DMG_VS_LIGHT = physicsConfig.getFloat("DaggerVSLight", 2f);
+		RUN_SPD_BOOST = physicsConfig.getInt("RunSpeedBoost", 0);
+		MAX_RUN_SPEED = physicsConfig.getInt("MaxRunSpeed", 250);
+		ALLOW_RAID_LETHAL = physicsConfig.getBoolean("AllowLethalOnRaids", false);
+		ALLOW_LETHAL_PROTECTION_MOBS = physicsConfig.getBoolean("AllowLethalProtectionMobs", false);
+		LETHAL_PROTECTED_MOBS = physicsConfig.getString("LethalProtectedMobs", "");
 		LIST_LETHAL_PROTECTED_MOBS = new ArrayList<>();
 		for (String id : LETHAL_PROTECTED_MOBS.split(","))
 		{
 			LIST_LETHAL_PROTECTED_MOBS.add(Integer.parseInt(id));
 		}
-		SEND_SKILLS_CHANCE_TO_PLAYERS = physicsSetting.getBoolean("SendSkillsChanceToPlayers", false);
-		REMOVE_WEAPON_SUBCLASS = physicsSetting.getBoolean("RemoveWeaponSubclass", false);
-		REMOVE_CHEST_SUBCLASS = physicsSetting.getBoolean("RemoveChestSubclass", false);
-		REMOVE_LEG_SUBCLASS = physicsSetting.getBoolean("RemoveLegSubclass", false);
-		DISABLE_BOW_CLASSES_STRING = physicsSetting.getString("DisableBowForClasses", "");
+		SEND_SKILLS_CHANCE_TO_PLAYERS = physicsConfig.getBoolean("SendSkillsChanceToPlayers", false);
+		REMOVE_WEAPON_SUBCLASS = physicsConfig.getBoolean("RemoveWeaponSubclass", false);
+		REMOVE_CHEST_SUBCLASS = physicsConfig.getBoolean("RemoveChestSubclass", false);
+		REMOVE_LEG_SUBCLASS = physicsConfig.getBoolean("RemoveLegSubclass", false);
+		DISABLE_BOW_CLASSES_STRING = physicsConfig.getString("DisableBowForClasses", "");
 		DISABLE_BOW_CLASSES = new ArrayList<>();
 		for (String class_id : DISABLE_BOW_CLASSES_STRING.split(","))
 		{
@@ -2387,7 +2387,7 @@ public class Config
 				DISABLE_BOW_CLASSES.add(Integer.parseInt(class_id));
 			}
 		}
-		LEAVE_BUFFS_ON_DIE = physicsSetting.getBoolean("LeaveBuffsOnDie", true);
+		LEAVE_BUFFS_ON_DIE = physicsConfig.getBoolean("LeaveBuffsOnDie", true);
 	}
 	
 	public static void loadgeodataConfig()

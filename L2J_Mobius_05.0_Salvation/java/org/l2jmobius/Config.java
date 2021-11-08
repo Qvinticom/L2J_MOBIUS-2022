@@ -1368,25 +1368,25 @@ public class Config
 			FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 			FLOOD_PROTECTOR_PLAYER_ACTION = new FloodProtectorConfig("PlayerActionFloodProtector");
 			
-			final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
-			GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "0.0.0.0");
-			PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
-			GAME_SERVER_LOGIN_PORT = serverSettings.getInt("LoginPort", 9014);
-			GAME_SERVER_LOGIN_HOST = serverSettings.getString("LoginHost", "127.0.0.1");
-			REQUEST_ID = serverSettings.getInt("RequestServerID", 0);
-			ACCEPT_ALTERNATE_ID = serverSettings.getBoolean("AcceptAlternateID", true);
-			DATABASE_DRIVER = serverSettings.getString("Driver", "org.mariadb.jdbc.Driver");
-			DATABASE_URL = serverSettings.getString("URL", "jdbc:mariadb://localhost/l2jgs");
-			DATABASE_LOGIN = serverSettings.getString("Login", "root");
-			DATABASE_PASSWORD = serverSettings.getString("Password", "");
-			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
-			BACKUP_DATABASE = serverSettings.getBoolean("BackupDatabase", false);
-			MYSQL_BIN_PATH = serverSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
-			BACKUP_PATH = serverSettings.getString("BackupPath", "../backup/");
-			BACKUP_DAYS = serverSettings.getInt("BackupDays", 30);
+			final PropertiesParser serverConfig = new PropertiesParser(SERVER_CONFIG_FILE);
+			GAMESERVER_HOSTNAME = serverConfig.getString("GameserverHostname", "0.0.0.0");
+			PORT_GAME = serverConfig.getInt("GameserverPort", 7777);
+			GAME_SERVER_LOGIN_PORT = serverConfig.getInt("LoginPort", 9014);
+			GAME_SERVER_LOGIN_HOST = serverConfig.getString("LoginHost", "127.0.0.1");
+			REQUEST_ID = serverConfig.getInt("RequestServerID", 0);
+			ACCEPT_ALTERNATE_ID = serverConfig.getBoolean("AcceptAlternateID", true);
+			DATABASE_DRIVER = serverConfig.getString("Driver", "org.mariadb.jdbc.Driver");
+			DATABASE_URL = serverConfig.getString("URL", "jdbc:mariadb://localhost/l2jgs");
+			DATABASE_LOGIN = serverConfig.getString("Login", "root");
+			DATABASE_PASSWORD = serverConfig.getString("Password", "");
+			DATABASE_MAX_CONNECTIONS = serverConfig.getInt("MaximumDbConnections", 10);
+			BACKUP_DATABASE = serverConfig.getBoolean("BackupDatabase", false);
+			MYSQL_BIN_PATH = serverConfig.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
+			BACKUP_PATH = serverConfig.getString("BackupPath", "../backup/");
+			BACKUP_DAYS = serverConfig.getInt("BackupDays", 30);
 			try
 			{
-				DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
+				DATAPACK_ROOT = new File(serverConfig.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
 			}
 			catch (IOException e)
 			{
@@ -1395,7 +1395,7 @@ public class Config
 			}
 			try
 			{
-				SCRIPT_ROOT = new File(serverSettings.getString("ScriptRoot", "./data/scripts").replaceAll("\\\\", "/")).getCanonicalFile();
+				SCRIPT_ROOT = new File(serverConfig.getString("ScriptRoot", "./data/scripts").replaceAll("\\\\", "/")).getCanonicalFile();
 			}
 			catch (Exception e)
 			{
@@ -1405,7 +1405,7 @@ public class Config
 			Pattern charNamePattern;
 			try
 			{
-				charNamePattern = Pattern.compile(serverSettings.getString("CnameTemplate", ".*"));
+				charNamePattern = Pattern.compile(serverConfig.getString("CnameTemplate", ".*"));
 			}
 			catch (PatternSyntaxException e)
 			{
@@ -1413,18 +1413,18 @@ public class Config
 				charNamePattern = Pattern.compile(".*");
 			}
 			CHARNAME_TEMPLATE_PATTERN = charNamePattern;
-			PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
-			CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
-			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
-			MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 100);
-			HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
-			KICK_MISSING_HWID = serverSettings.getBoolean("KickMissingHWID", false);
-			MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
+			PET_NAME_TEMPLATE = serverConfig.getString("PetNameTemplate", ".*");
+			CLAN_NAME_TEMPLATE = serverConfig.getString("ClanNameTemplate", ".*");
+			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverConfig.getInt("CharMaxNumber", 7);
+			MAXIMUM_ONLINE_USERS = serverConfig.getInt("MaximumOnlineUsers", 100);
+			HARDWARE_INFO_ENABLED = serverConfig.getBoolean("EnableHardwareInfo", false);
+			KICK_MISSING_HWID = serverConfig.getBoolean("KickMissingHWID", false);
+			MAX_PLAYERS_PER_HWID = serverConfig.getInt("MaxPlayersPerHWID", 0);
 			if (MAX_PLAYERS_PER_HWID > 0)
 			{
 				KICK_MISSING_HWID = true;
 			}
-			final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "603;606;607").split(";");
+			final String[] protocols = serverConfig.getString("AllowedProtocolRevisions", "603;606;607").split(";");
 			PROTOCOL_LIST = new ArrayList<>(protocols.length);
 			for (String protocol : protocols)
 			{
@@ -1437,48 +1437,48 @@ public class Config
 					LOGGER.warning("Wrong config protocol version: " + protocol + ". Skipped.");
 				}
 			}
-			SERVER_LIST_TYPE = getServerTypeId(serverSettings.getString("ServerListType", "Free").split(","));
-			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
-			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
-			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
+			SERVER_LIST_TYPE = getServerTypeId(serverConfig.getString("ServerListType", "Free").split(","));
+			SERVER_LIST_AGE = serverConfig.getInt("ServerListAge", 0);
+			SERVER_LIST_BRACKET = serverConfig.getBoolean("ServerListBrackets", false);
+			SCHEDULED_THREAD_POOL_COUNT = serverConfig.getInt("ScheduledThreadPoolCount", -1);
 			if (SCHEDULED_THREAD_POOL_COUNT == -1)
 			{
 				SCHEDULED_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
 			}
-			THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
-			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
+			THREADS_PER_SCHEDULED_THREAD_POOL = serverConfig.getInt("ThreadsPerScheduledThreadPool", 4);
+			INSTANT_THREAD_POOL_COUNT = serverConfig.getInt("InstantThreadPoolCount", -1);
 			if (INSTANT_THREAD_POOL_COUNT == -1)
 			{
 				INSTANT_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
 			}
-			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
-			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", -1);
+			THREADS_PER_INSTANT_THREAD_POOL = serverConfig.getInt("ThreadsPerInstantThreadPool", 2);
+			IO_PACKET_THREAD_CORE_SIZE = serverConfig.getInt("UrgentPacketThreadCoreSize", -1);
 			if (IO_PACKET_THREAD_CORE_SIZE == -1)
 			{
 				IO_PACKET_THREAD_CORE_SIZE = Runtime.getRuntime().availableProcessors();
 			}
-			THREADS_FOR_LOADING = serverSettings.getBoolean("ThreadsForLoading", false);
-			DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
-			DEADLOCK_CHECK_INTERVAL = serverSettings.getInt("DeadLockCheckInterval", 20);
-			RESTART_ON_DEADLOCK = serverSettings.getBoolean("RestartOnDeadlock", false);
-			SERVER_RESTART_SCHEDULE_ENABLED = serverSettings.getBoolean("ServerRestartScheduleEnabled", false);
-			SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
-			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
-			SERVER_RESTART_SCHEDULE = serverSettings.getString("ServerRestartSchedule", "08:00").split(",");
+			THREADS_FOR_LOADING = serverConfig.getBoolean("ThreadsForLoading", false);
+			DEADLOCK_DETECTOR = serverConfig.getBoolean("DeadLockDetector", true);
+			DEADLOCK_CHECK_INTERVAL = serverConfig.getInt("DeadLockCheckInterval", 20);
+			RESTART_ON_DEADLOCK = serverConfig.getBoolean("RestartOnDeadlock", false);
+			SERVER_RESTART_SCHEDULE_ENABLED = serverConfig.getBoolean("ServerRestartScheduleEnabled", false);
+			SERVER_RESTART_SCHEDULE_MESSAGE = serverConfig.getBoolean("ServerRestartScheduleMessage", false);
+			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverConfig.getInt("ServerRestartScheduleCountdown", 600);
+			SERVER_RESTART_SCHEDULE = serverConfig.getString("ServerRestartSchedule", "08:00").split(",");
 			SERVER_RESTART_DAYS = new ArrayList<>();
-			for (String day : serverSettings.getString("ServerRestartDays", "").trim().split(","))
+			for (String day : serverConfig.getString("ServerRestartDays", "").trim().split(","))
 			{
 				if (Util.isDigit(day))
 				{
 					SERVER_RESTART_DAYS.add(Integer.parseInt(day));
 				}
 			}
-			PRECAUTIONARY_RESTART_ENABLED = serverSettings.getBoolean("PrecautionaryRestartEnabled", false);
-			PRECAUTIONARY_RESTART_CPU = serverSettings.getBoolean("PrecautionaryRestartCpu", true);
-			PRECAUTIONARY_RESTART_MEMORY = serverSettings.getBoolean("PrecautionaryRestartMemory", false);
-			PRECAUTIONARY_RESTART_CHECKS = serverSettings.getBoolean("PrecautionaryRestartChecks", true);
-			PRECAUTIONARY_RESTART_PERCENTAGE = serverSettings.getInt("PrecautionaryRestartPercentage", 95);
-			PRECAUTIONARY_RESTART_DELAY = serverSettings.getInt("PrecautionaryRestartDelay", 60) * 1000;
+			PRECAUTIONARY_RESTART_ENABLED = serverConfig.getBoolean("PrecautionaryRestartEnabled", false);
+			PRECAUTIONARY_RESTART_CPU = serverConfig.getBoolean("PrecautionaryRestartCpu", true);
+			PRECAUTIONARY_RESTART_MEMORY = serverConfig.getBoolean("PrecautionaryRestartMemory", false);
+			PRECAUTIONARY_RESTART_CHECKS = serverConfig.getBoolean("PrecautionaryRestartChecks", true);
+			PRECAUTIONARY_RESTART_PERCENTAGE = serverConfig.getInt("PrecautionaryRestartPercentage", 95);
+			PRECAUTIONARY_RESTART_DELAY = serverConfig.getInt("PrecautionaryRestartDelay", 60) * 1000;
 			
 			// Hosts and Subnets
 			final IPConfigData ipcd = new IPConfigData();
@@ -1486,171 +1486,171 @@ public class Config
 			GAME_SERVER_HOSTS = ipcd.getHosts();
 			
 			// Load Feature config file (if exists)
-			final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
+			final PropertiesParser featureConfig = new PropertiesParser(FEATURE_CONFIG_FILE);
 			SIEGE_HOUR_LIST = new ArrayList<>();
-			for (String hour : Feature.getString("SiegeHourList", "").split(","))
+			for (String hour : featureConfig.getString("SiegeHourList", "").split(","))
 			{
 				if (Util.isDigit(hour))
 				{
 					SIEGE_HOUR_LIST.add(Integer.parseInt(hour));
 				}
 			}
-			CASTLE_BUY_TAX_NEUTRAL = Feature.getInt("BuyTaxForNeutralSide", 15);
-			CASTLE_BUY_TAX_LIGHT = Feature.getInt("BuyTaxForLightSide", 0);
-			CASTLE_BUY_TAX_DARK = Feature.getInt("BuyTaxForDarkSide", 30);
-			CASTLE_SELL_TAX_NEUTRAL = Feature.getInt("SellTaxForNeutralSide", 0);
-			CASTLE_SELL_TAX_LIGHT = Feature.getInt("SellTaxForLightSide", 0);
-			CASTLE_SELL_TAX_DARK = Feature.getInt("SellTaxForDarkSide", 20);
-			CS_TELE_FEE_RATIO = Feature.getLong("CastleTeleportFunctionFeeRatio", 604800000);
-			CS_TELE1_FEE = Feature.getInt("CastleTeleportFunctionFeeLvl1", 1000);
-			CS_TELE2_FEE = Feature.getInt("CastleTeleportFunctionFeeLvl2", 10000);
-			CS_SUPPORT_FEE_RATIO = Feature.getLong("CastleSupportFunctionFeeRatio", 604800000);
-			CS_SUPPORT1_FEE = Feature.getInt("CastleSupportFeeLvl1", 49000);
-			CS_SUPPORT2_FEE = Feature.getInt("CastleSupportFeeLvl2", 120000);
-			CS_MPREG_FEE_RATIO = Feature.getLong("CastleMpRegenerationFunctionFeeRatio", 604800000);
-			CS_MPREG1_FEE = Feature.getInt("CastleMpRegenerationFeeLvl1", 45000);
-			CS_MPREG2_FEE = Feature.getInt("CastleMpRegenerationFeeLvl2", 65000);
-			CS_HPREG_FEE_RATIO = Feature.getLong("CastleHpRegenerationFunctionFeeRatio", 604800000);
-			CS_HPREG1_FEE = Feature.getInt("CastleHpRegenerationFeeLvl1", 12000);
-			CS_HPREG2_FEE = Feature.getInt("CastleHpRegenerationFeeLvl2", 20000);
-			CS_EXPREG_FEE_RATIO = Feature.getLong("CastleExpRegenerationFunctionFeeRatio", 604800000);
-			CS_EXPREG1_FEE = Feature.getInt("CastleExpRegenerationFeeLvl1", 63000);
-			CS_EXPREG2_FEE = Feature.getInt("CastleExpRegenerationFeeLvl2", 70000);
-			OUTER_DOOR_UPGRADE_PRICE2 = Feature.getInt("OuterDoorUpgradePriceLvl2", 3000000);
-			OUTER_DOOR_UPGRADE_PRICE3 = Feature.getInt("OuterDoorUpgradePriceLvl3", 4000000);
-			OUTER_DOOR_UPGRADE_PRICE5 = Feature.getInt("OuterDoorUpgradePriceLvl5", 5000000);
-			INNER_DOOR_UPGRADE_PRICE2 = Feature.getInt("InnerDoorUpgradePriceLvl2", 750000);
-			INNER_DOOR_UPGRADE_PRICE3 = Feature.getInt("InnerDoorUpgradePriceLvl3", 900000);
-			INNER_DOOR_UPGRADE_PRICE5 = Feature.getInt("InnerDoorUpgradePriceLvl5", 1000000);
-			WALL_UPGRADE_PRICE2 = Feature.getInt("WallUpgradePriceLvl2", 1600000);
-			WALL_UPGRADE_PRICE3 = Feature.getInt("WallUpgradePriceLvl3", 1800000);
-			WALL_UPGRADE_PRICE5 = Feature.getInt("WallUpgradePriceLvl5", 2000000);
-			TRAP_UPGRADE_PRICE1 = Feature.getInt("TrapUpgradePriceLvl1", 3000000);
-			TRAP_UPGRADE_PRICE2 = Feature.getInt("TrapUpgradePriceLvl2", 4000000);
-			TRAP_UPGRADE_PRICE3 = Feature.getInt("TrapUpgradePriceLvl3", 5000000);
-			TRAP_UPGRADE_PRICE4 = Feature.getInt("TrapUpgradePriceLvl4", 6000000);
-			FS_TELE_FEE_RATIO = Feature.getLong("FortressTeleportFunctionFeeRatio", 604800000);
-			FS_TELE1_FEE = Feature.getInt("FortressTeleportFunctionFeeLvl1", 1000);
-			FS_TELE2_FEE = Feature.getInt("FortressTeleportFunctionFeeLvl2", 10000);
-			FS_SUPPORT_FEE_RATIO = Feature.getLong("FortressSupportFunctionFeeRatio", 86400000);
-			FS_SUPPORT1_FEE = Feature.getInt("FortressSupportFeeLvl1", 7000);
-			FS_SUPPORT2_FEE = Feature.getInt("FortressSupportFeeLvl2", 17000);
-			FS_MPREG_FEE_RATIO = Feature.getLong("FortressMpRegenerationFunctionFeeRatio", 86400000);
-			FS_MPREG1_FEE = Feature.getInt("FortressMpRegenerationFeeLvl1", 6500);
-			FS_MPREG2_FEE = Feature.getInt("FortressMpRegenerationFeeLvl2", 9300);
-			FS_HPREG_FEE_RATIO = Feature.getLong("FortressHpRegenerationFunctionFeeRatio", 86400000);
-			FS_HPREG1_FEE = Feature.getInt("FortressHpRegenerationFeeLvl1", 2000);
-			FS_HPREG2_FEE = Feature.getInt("FortressHpRegenerationFeeLvl2", 3500);
-			FS_EXPREG_FEE_RATIO = Feature.getLong("FortressExpRegenerationFunctionFeeRatio", 86400000);
-			FS_EXPREG1_FEE = Feature.getInt("FortressExpRegenerationFeeLvl1", 9000);
-			FS_EXPREG2_FEE = Feature.getInt("FortressExpRegenerationFeeLvl2", 10000);
-			FS_UPDATE_FRQ = Feature.getInt("FortressPeriodicUpdateFrequency", 360);
-			FS_BLOOD_OATH_COUNT = Feature.getInt("FortressBloodOathCount", 1);
-			FS_MAX_SUPPLY_LEVEL = Feature.getInt("FortressMaxSupplyLevel", 6);
-			FS_FEE_FOR_CASTLE = Feature.getInt("FortressFeeForCastle", 25000);
-			FS_MAX_OWN_TIME = Feature.getInt("FortressMaximumOwnTime", 168);
-			TAKE_FORT_POINTS = Feature.getInt("TakeFortPoints", 200);
-			LOOSE_FORT_POINTS = Feature.getInt("LooseFortPoints", 0);
-			TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
-			LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
-			CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
-			FESTIVAL_WIN_POINTS = Feature.getInt("FestivalOfDarknessWin", 200);
-			HERO_POINTS = Feature.getInt("HeroPoints", 1000);
-			ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
-			KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
-			KNIGHT_REINFORCE_COST = Feature.getInt("ReinforceKnightUnitCost", 5000);
-			BALLISTA_POINTS = Feature.getInt("KillBallistaPoints", 500);
-			BLOODALLIANCE_POINTS = Feature.getInt("BloodAlliancePoints", 500);
-			BLOODOATH_POINTS = Feature.getInt("BloodOathPoints", 200);
-			KNIGHTSEPAULETTE_POINTS = Feature.getInt("KnightsEpaulettePoints", 20);
-			REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
-			JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
-			JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
-			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
-			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
-			ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
+			CASTLE_BUY_TAX_NEUTRAL = featureConfig.getInt("BuyTaxForNeutralSide", 15);
+			CASTLE_BUY_TAX_LIGHT = featureConfig.getInt("BuyTaxForLightSide", 0);
+			CASTLE_BUY_TAX_DARK = featureConfig.getInt("BuyTaxForDarkSide", 30);
+			CASTLE_SELL_TAX_NEUTRAL = featureConfig.getInt("SellTaxForNeutralSide", 0);
+			CASTLE_SELL_TAX_LIGHT = featureConfig.getInt("SellTaxForLightSide", 0);
+			CASTLE_SELL_TAX_DARK = featureConfig.getInt("SellTaxForDarkSide", 20);
+			CS_TELE_FEE_RATIO = featureConfig.getLong("CastleTeleportFunctionFeeRatio", 604800000);
+			CS_TELE1_FEE = featureConfig.getInt("CastleTeleportFunctionFeeLvl1", 1000);
+			CS_TELE2_FEE = featureConfig.getInt("CastleTeleportFunctionFeeLvl2", 10000);
+			CS_SUPPORT_FEE_RATIO = featureConfig.getLong("CastleSupportFunctionFeeRatio", 604800000);
+			CS_SUPPORT1_FEE = featureConfig.getInt("CastleSupportFeeLvl1", 49000);
+			CS_SUPPORT2_FEE = featureConfig.getInt("CastleSupportFeeLvl2", 120000);
+			CS_MPREG_FEE_RATIO = featureConfig.getLong("CastleMpRegenerationFunctionFeeRatio", 604800000);
+			CS_MPREG1_FEE = featureConfig.getInt("CastleMpRegenerationFeeLvl1", 45000);
+			CS_MPREG2_FEE = featureConfig.getInt("CastleMpRegenerationFeeLvl2", 65000);
+			CS_HPREG_FEE_RATIO = featureConfig.getLong("CastleHpRegenerationFunctionFeeRatio", 604800000);
+			CS_HPREG1_FEE = featureConfig.getInt("CastleHpRegenerationFeeLvl1", 12000);
+			CS_HPREG2_FEE = featureConfig.getInt("CastleHpRegenerationFeeLvl2", 20000);
+			CS_EXPREG_FEE_RATIO = featureConfig.getLong("CastleExpRegenerationFunctionFeeRatio", 604800000);
+			CS_EXPREG1_FEE = featureConfig.getInt("CastleExpRegenerationFeeLvl1", 63000);
+			CS_EXPREG2_FEE = featureConfig.getInt("CastleExpRegenerationFeeLvl2", 70000);
+			OUTER_DOOR_UPGRADE_PRICE2 = featureConfig.getInt("OuterDoorUpgradePriceLvl2", 3000000);
+			OUTER_DOOR_UPGRADE_PRICE3 = featureConfig.getInt("OuterDoorUpgradePriceLvl3", 4000000);
+			OUTER_DOOR_UPGRADE_PRICE5 = featureConfig.getInt("OuterDoorUpgradePriceLvl5", 5000000);
+			INNER_DOOR_UPGRADE_PRICE2 = featureConfig.getInt("InnerDoorUpgradePriceLvl2", 750000);
+			INNER_DOOR_UPGRADE_PRICE3 = featureConfig.getInt("InnerDoorUpgradePriceLvl3", 900000);
+			INNER_DOOR_UPGRADE_PRICE5 = featureConfig.getInt("InnerDoorUpgradePriceLvl5", 1000000);
+			WALL_UPGRADE_PRICE2 = featureConfig.getInt("WallUpgradePriceLvl2", 1600000);
+			WALL_UPGRADE_PRICE3 = featureConfig.getInt("WallUpgradePriceLvl3", 1800000);
+			WALL_UPGRADE_PRICE5 = featureConfig.getInt("WallUpgradePriceLvl5", 2000000);
+			TRAP_UPGRADE_PRICE1 = featureConfig.getInt("TrapUpgradePriceLvl1", 3000000);
+			TRAP_UPGRADE_PRICE2 = featureConfig.getInt("TrapUpgradePriceLvl2", 4000000);
+			TRAP_UPGRADE_PRICE3 = featureConfig.getInt("TrapUpgradePriceLvl3", 5000000);
+			TRAP_UPGRADE_PRICE4 = featureConfig.getInt("TrapUpgradePriceLvl4", 6000000);
+			FS_TELE_FEE_RATIO = featureConfig.getLong("FortressTeleportFunctionFeeRatio", 604800000);
+			FS_TELE1_FEE = featureConfig.getInt("FortressTeleportFunctionFeeLvl1", 1000);
+			FS_TELE2_FEE = featureConfig.getInt("FortressTeleportFunctionFeeLvl2", 10000);
+			FS_SUPPORT_FEE_RATIO = featureConfig.getLong("FortressSupportFunctionFeeRatio", 86400000);
+			FS_SUPPORT1_FEE = featureConfig.getInt("FortressSupportFeeLvl1", 7000);
+			FS_SUPPORT2_FEE = featureConfig.getInt("FortressSupportFeeLvl2", 17000);
+			FS_MPREG_FEE_RATIO = featureConfig.getLong("FortressMpRegenerationFunctionFeeRatio", 86400000);
+			FS_MPREG1_FEE = featureConfig.getInt("FortressMpRegenerationFeeLvl1", 6500);
+			FS_MPREG2_FEE = featureConfig.getInt("FortressMpRegenerationFeeLvl2", 9300);
+			FS_HPREG_FEE_RATIO = featureConfig.getLong("FortressHpRegenerationFunctionFeeRatio", 86400000);
+			FS_HPREG1_FEE = featureConfig.getInt("FortressHpRegenerationFeeLvl1", 2000);
+			FS_HPREG2_FEE = featureConfig.getInt("FortressHpRegenerationFeeLvl2", 3500);
+			FS_EXPREG_FEE_RATIO = featureConfig.getLong("FortressExpRegenerationFunctionFeeRatio", 86400000);
+			FS_EXPREG1_FEE = featureConfig.getInt("FortressExpRegenerationFeeLvl1", 9000);
+			FS_EXPREG2_FEE = featureConfig.getInt("FortressExpRegenerationFeeLvl2", 10000);
+			FS_UPDATE_FRQ = featureConfig.getInt("FortressPeriodicUpdateFrequency", 360);
+			FS_BLOOD_OATH_COUNT = featureConfig.getInt("FortressBloodOathCount", 1);
+			FS_MAX_SUPPLY_LEVEL = featureConfig.getInt("FortressMaxSupplyLevel", 6);
+			FS_FEE_FOR_CASTLE = featureConfig.getInt("FortressFeeForCastle", 25000);
+			FS_MAX_OWN_TIME = featureConfig.getInt("FortressMaximumOwnTime", 168);
+			TAKE_FORT_POINTS = featureConfig.getInt("TakeFortPoints", 200);
+			LOOSE_FORT_POINTS = featureConfig.getInt("LooseFortPoints", 0);
+			TAKE_CASTLE_POINTS = featureConfig.getInt("TakeCastlePoints", 1500);
+			LOOSE_CASTLE_POINTS = featureConfig.getInt("LooseCastlePoints", 3000);
+			CASTLE_DEFENDED_POINTS = featureConfig.getInt("CastleDefendedPoints", 750);
+			FESTIVAL_WIN_POINTS = featureConfig.getInt("FestivalOfDarknessWin", 200);
+			HERO_POINTS = featureConfig.getInt("HeroPoints", 1000);
+			ROYAL_GUARD_COST = featureConfig.getInt("CreateRoyalGuardCost", 5000);
+			KNIGHT_UNIT_COST = featureConfig.getInt("CreateKnightUnitCost", 10000);
+			KNIGHT_REINFORCE_COST = featureConfig.getInt("ReinforceKnightUnitCost", 5000);
+			BALLISTA_POINTS = featureConfig.getInt("KillBallistaPoints", 500);
+			BLOODALLIANCE_POINTS = featureConfig.getInt("BloodAlliancePoints", 500);
+			BLOODOATH_POINTS = featureConfig.getInt("BloodOathPoints", 200);
+			KNIGHTSEPAULETTE_POINTS = featureConfig.getInt("KnightsEpaulettePoints", 20);
+			REPUTATION_SCORE_PER_KILL = featureConfig.getInt("ReputationScorePerKill", 1);
+			JOIN_ACADEMY_MIN_REP_SCORE = featureConfig.getInt("CompleteAcademyMinPoints", 190);
+			JOIN_ACADEMY_MAX_REP_SCORE = featureConfig.getInt("CompleteAcademyMaxPoints", 650);
+			ALLOW_WYVERN_ALWAYS = featureConfig.getBoolean("AllowRideWyvernAlways", false);
+			ALLOW_WYVERN_DURING_SIEGE = featureConfig.getBoolean("AllowRideWyvernDuringSiege", true);
+			ALLOW_MOUNTS_DURING_SIEGE = featureConfig.getBoolean("AllowRideMountsDuringSiege", false);
 			
 			// Load Attendance config file (if exists)
-			final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
-			ENABLE_ATTENDANCE_REWARDS = Attandance.getBoolean("EnableAttendanceRewards", false);
-			PREMIUM_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("PremiumOnlyAttendanceRewards", false);
-			ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
-			ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
-			ATTENDANCE_POPUP_START = Attandance.getBoolean("AttendancePopupStart", true);
-			ATTENDANCE_POPUP_WINDOW = Attandance.getBoolean("AttendancePopupWindow", false);
+			final PropertiesParser attandanceConfig = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
+			ENABLE_ATTENDANCE_REWARDS = attandanceConfig.getBoolean("EnableAttendanceRewards", false);
+			PREMIUM_ONLY_ATTENDANCE_REWARDS = attandanceConfig.getBoolean("PremiumOnlyAttendanceRewards", false);
+			ATTENDANCE_REWARDS_SHARE_ACCOUNT = attandanceConfig.getBoolean("AttendanceRewardsShareAccount", false);
+			ATTENDANCE_REWARD_DELAY = attandanceConfig.getInt("AttendanceRewardDelay", 30);
+			ATTENDANCE_POPUP_START = attandanceConfig.getBoolean("AttendancePopupStart", true);
+			ATTENDANCE_POPUP_WINDOW = attandanceConfig.getBoolean("AttendancePopupWindow", false);
 			
 			// Load AttributeSystem config file (if exists)
-			final PropertiesParser AttributeSystem = new PropertiesParser(ATTRIBUTE_SYSTEM_FILE);
-			S_WEAPON_STONE = AttributeSystem.getInt("SWeaponStone", 50);
-			S80_WEAPON_STONE = AttributeSystem.getInt("S80WeaponStone", 50);
-			S84_WEAPON_STONE = AttributeSystem.getInt("S84WeaponStone", 50);
-			R_WEAPON_STONE = AttributeSystem.getInt("RWeaponStone", 50);
-			R95_WEAPON_STONE = AttributeSystem.getInt("R95WeaponStone", 50);
-			R99_WEAPON_STONE = AttributeSystem.getInt("R99WeaponStone", 50);
-			S_ARMOR_STONE = AttributeSystem.getInt("SArmorStone", 60);
-			S80_ARMOR_STONE = AttributeSystem.getInt("S80ArmorStone", 80);
-			S84_ARMOR_STONE = AttributeSystem.getInt("S84ArmorStone", 80);
-			R_ARMOR_STONE = AttributeSystem.getInt("RArmorStone", 100);
-			R95_ARMOR_STONE = AttributeSystem.getInt("R95ArmorStone", 100);
-			R99_ARMOR_STONE = AttributeSystem.getInt("R99ArmorStone", 100);
-			S_WEAPON_CRYSTAL = AttributeSystem.getInt("SWeaponCrystal", 30);
-			S80_WEAPON_CRYSTAL = AttributeSystem.getInt("S80WeaponCrystal", 40);
-			S84_WEAPON_CRYSTAL = AttributeSystem.getInt("S84WeaponCrystal", 50);
-			R_WEAPON_CRYSTAL = AttributeSystem.getInt("RWeaponCrystal", 60);
-			R95_WEAPON_CRYSTAL = AttributeSystem.getInt("R95WeaponCrystal", 60);
-			R99_WEAPON_CRYSTAL = AttributeSystem.getInt("R99WeaponCrystal", 60);
-			S_ARMOR_CRYSTAL = AttributeSystem.getInt("SArmorCrystal", 50);
-			S80_ARMOR_CRYSTAL = AttributeSystem.getInt("S80ArmorCrystal", 70);
-			S84_ARMOR_CRYSTAL = AttributeSystem.getInt("S84ArmorCrystal", 80);
-			R_ARMOR_CRYSTAL = AttributeSystem.getInt("RArmorCrystal", 80);
-			R95_ARMOR_CRYSTAL = AttributeSystem.getInt("R95ArmorCrystal", 100);
-			R99_ARMOR_CRYSTAL = AttributeSystem.getInt("R99ArmorCrystal", 100);
-			S_WEAPON_STONE_SUPER = AttributeSystem.getInt("SWeaponStoneSuper", 100);
-			S80_WEAPON_STONE_SUPER = AttributeSystem.getInt("S80WeaponStoneSuper", 100);
-			S84_WEAPON_STONE_SUPER = AttributeSystem.getInt("S84WeaponStoneSuper", 100);
-			R_WEAPON_STONE_SUPER = AttributeSystem.getInt("RWeaponStoneSuper", 100);
-			R95_WEAPON_STONE_SUPER = AttributeSystem.getInt("R95WeaponStoneSuper", 100);
-			R99_WEAPON_STONE_SUPER = AttributeSystem.getInt("R99WeaponStoneSuper", 100);
-			S_ARMOR_STONE_SUPER = AttributeSystem.getInt("SArmorStoneSuper", 100);
-			S80_ARMOR_STONE_SUPER = AttributeSystem.getInt("S80ArmorStoneSuper", 100);
-			S84_ARMOR_STONE_SUPER = AttributeSystem.getInt("S84ArmorStoneSuper", 100);
-			R_ARMOR_STONE_SUPER = AttributeSystem.getInt("RArmorStoneSuper", 100);
-			R95_ARMOR_STONE_SUPER = AttributeSystem.getInt("R95ArmorStoneSuper", 100);
-			R99_ARMOR_STONE_SUPER = AttributeSystem.getInt("R99ArmorStoneSuper", 100);
-			S_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("SWeaponCrystalSuper", 80);
-			S80_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("S80WeaponCrystalSuper", 90);
-			S84_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("S84WeaponCrystalSuper", 100);
-			R_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("RWeaponCrystalSuper", 100);
-			R95_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("R95WeaponCrystalSuper", 100);
-			R99_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("R99WeaponCrystalSuper", 100);
-			S_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("SArmorCrystalSuper", 100);
-			S80_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("S80ArmorCrystalSuper", 100);
-			S84_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("S84ArmorCrystalSuper", 100);
-			R_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("RArmorCrystalSuper", 100);
-			R95_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("R95ArmorCrystalSuper", 100);
-			R99_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("R99ArmorCrystalSuper", 100);
-			S_WEAPON_JEWEL = AttributeSystem.getInt("SWeaponJewel", 100);
-			S80_WEAPON_JEWEL = AttributeSystem.getInt("S80WeaponJewel", 100);
-			S84_WEAPON_JEWEL = AttributeSystem.getInt("S84WeaponJewel", 100);
-			R_WEAPON_JEWEL = AttributeSystem.getInt("RWeaponJewel", 100);
-			R95_WEAPON_JEWEL = AttributeSystem.getInt("R95WeaponJewel", 100);
-			R99_WEAPON_JEWEL = AttributeSystem.getInt("R99WeaponJewel", 100);
-			S_ARMOR_JEWEL = AttributeSystem.getInt("SArmorJewel", 100);
-			S80_ARMOR_JEWEL = AttributeSystem.getInt("S80ArmorJewel", 100);
-			S84_ARMOR_JEWEL = AttributeSystem.getInt("S84ArmorJewel", 100);
-			R_ARMOR_JEWEL = AttributeSystem.getInt("RArmorJewel", 100);
-			R95_ARMOR_JEWEL = AttributeSystem.getInt("R95ArmorJewel", 100);
-			R99_ARMOR_JEWEL = AttributeSystem.getInt("R99ArmorJewel", 100);
+			final PropertiesParser attributeConfig = new PropertiesParser(ATTRIBUTE_SYSTEM_FILE);
+			S_WEAPON_STONE = attributeConfig.getInt("SWeaponStone", 50);
+			S80_WEAPON_STONE = attributeConfig.getInt("S80WeaponStone", 50);
+			S84_WEAPON_STONE = attributeConfig.getInt("S84WeaponStone", 50);
+			R_WEAPON_STONE = attributeConfig.getInt("RWeaponStone", 50);
+			R95_WEAPON_STONE = attributeConfig.getInt("R95WeaponStone", 50);
+			R99_WEAPON_STONE = attributeConfig.getInt("R99WeaponStone", 50);
+			S_ARMOR_STONE = attributeConfig.getInt("SArmorStone", 60);
+			S80_ARMOR_STONE = attributeConfig.getInt("S80ArmorStone", 80);
+			S84_ARMOR_STONE = attributeConfig.getInt("S84ArmorStone", 80);
+			R_ARMOR_STONE = attributeConfig.getInt("RArmorStone", 100);
+			R95_ARMOR_STONE = attributeConfig.getInt("R95ArmorStone", 100);
+			R99_ARMOR_STONE = attributeConfig.getInt("R99ArmorStone", 100);
+			S_WEAPON_CRYSTAL = attributeConfig.getInt("SWeaponCrystal", 30);
+			S80_WEAPON_CRYSTAL = attributeConfig.getInt("S80WeaponCrystal", 40);
+			S84_WEAPON_CRYSTAL = attributeConfig.getInt("S84WeaponCrystal", 50);
+			R_WEAPON_CRYSTAL = attributeConfig.getInt("RWeaponCrystal", 60);
+			R95_WEAPON_CRYSTAL = attributeConfig.getInt("R95WeaponCrystal", 60);
+			R99_WEAPON_CRYSTAL = attributeConfig.getInt("R99WeaponCrystal", 60);
+			S_ARMOR_CRYSTAL = attributeConfig.getInt("SArmorCrystal", 50);
+			S80_ARMOR_CRYSTAL = attributeConfig.getInt("S80ArmorCrystal", 70);
+			S84_ARMOR_CRYSTAL = attributeConfig.getInt("S84ArmorCrystal", 80);
+			R_ARMOR_CRYSTAL = attributeConfig.getInt("RArmorCrystal", 80);
+			R95_ARMOR_CRYSTAL = attributeConfig.getInt("R95ArmorCrystal", 100);
+			R99_ARMOR_CRYSTAL = attributeConfig.getInt("R99ArmorCrystal", 100);
+			S_WEAPON_STONE_SUPER = attributeConfig.getInt("SWeaponStoneSuper", 100);
+			S80_WEAPON_STONE_SUPER = attributeConfig.getInt("S80WeaponStoneSuper", 100);
+			S84_WEAPON_STONE_SUPER = attributeConfig.getInt("S84WeaponStoneSuper", 100);
+			R_WEAPON_STONE_SUPER = attributeConfig.getInt("RWeaponStoneSuper", 100);
+			R95_WEAPON_STONE_SUPER = attributeConfig.getInt("R95WeaponStoneSuper", 100);
+			R99_WEAPON_STONE_SUPER = attributeConfig.getInt("R99WeaponStoneSuper", 100);
+			S_ARMOR_STONE_SUPER = attributeConfig.getInt("SArmorStoneSuper", 100);
+			S80_ARMOR_STONE_SUPER = attributeConfig.getInt("S80ArmorStoneSuper", 100);
+			S84_ARMOR_STONE_SUPER = attributeConfig.getInt("S84ArmorStoneSuper", 100);
+			R_ARMOR_STONE_SUPER = attributeConfig.getInt("RArmorStoneSuper", 100);
+			R95_ARMOR_STONE_SUPER = attributeConfig.getInt("R95ArmorStoneSuper", 100);
+			R99_ARMOR_STONE_SUPER = attributeConfig.getInt("R99ArmorStoneSuper", 100);
+			S_WEAPON_CRYSTAL_SUPER = attributeConfig.getInt("SWeaponCrystalSuper", 80);
+			S80_WEAPON_CRYSTAL_SUPER = attributeConfig.getInt("S80WeaponCrystalSuper", 90);
+			S84_WEAPON_CRYSTAL_SUPER = attributeConfig.getInt("S84WeaponCrystalSuper", 100);
+			R_WEAPON_CRYSTAL_SUPER = attributeConfig.getInt("RWeaponCrystalSuper", 100);
+			R95_WEAPON_CRYSTAL_SUPER = attributeConfig.getInt("R95WeaponCrystalSuper", 100);
+			R99_WEAPON_CRYSTAL_SUPER = attributeConfig.getInt("R99WeaponCrystalSuper", 100);
+			S_ARMOR_CRYSTAL_SUPER = attributeConfig.getInt("SArmorCrystalSuper", 100);
+			S80_ARMOR_CRYSTAL_SUPER = attributeConfig.getInt("S80ArmorCrystalSuper", 100);
+			S84_ARMOR_CRYSTAL_SUPER = attributeConfig.getInt("S84ArmorCrystalSuper", 100);
+			R_ARMOR_CRYSTAL_SUPER = attributeConfig.getInt("RArmorCrystalSuper", 100);
+			R95_ARMOR_CRYSTAL_SUPER = attributeConfig.getInt("R95ArmorCrystalSuper", 100);
+			R99_ARMOR_CRYSTAL_SUPER = attributeConfig.getInt("R99ArmorCrystalSuper", 100);
+			S_WEAPON_JEWEL = attributeConfig.getInt("SWeaponJewel", 100);
+			S80_WEAPON_JEWEL = attributeConfig.getInt("S80WeaponJewel", 100);
+			S84_WEAPON_JEWEL = attributeConfig.getInt("S84WeaponJewel", 100);
+			R_WEAPON_JEWEL = attributeConfig.getInt("RWeaponJewel", 100);
+			R95_WEAPON_JEWEL = attributeConfig.getInt("R95WeaponJewel", 100);
+			R99_WEAPON_JEWEL = attributeConfig.getInt("R99WeaponJewel", 100);
+			S_ARMOR_JEWEL = attributeConfig.getInt("SArmorJewel", 100);
+			S80_ARMOR_JEWEL = attributeConfig.getInt("S80ArmorJewel", 100);
+			S84_ARMOR_JEWEL = attributeConfig.getInt("S84ArmorJewel", 100);
+			R_ARMOR_JEWEL = attributeConfig.getInt("RArmorJewel", 100);
+			R95_ARMOR_JEWEL = attributeConfig.getInt("R95ArmorJewel", 100);
+			R99_ARMOR_JEWEL = attributeConfig.getInt("R99ArmorJewel", 100);
 			
 			// Load BalthusKnights config file (if exists)
-			final PropertiesParser BalthusKnights = new PropertiesParser(BALTHUS_KNIGHTS_CONFIG_FILE);
-			BALTHUS_KNIGHTS_ENABLED = BalthusKnights.getBoolean("BalthusKnightsEnabled", true);
-			BALTHUS_KNIGHTS_LEVEL = BalthusKnights.getInt("BalthusKnightsLevel", 85);
-			BALTHUS_KNIGHTS_PREMIUM = BalthusKnights.getBoolean("BalthusKnightsPremium", true);
-			final String[] balthusKnightsLocation = BalthusKnights.getString("BalthusKnightsLocation", "-114371,256483,-1286").split(",");
+			final PropertiesParser balthusKnightsConfig = new PropertiesParser(BALTHUS_KNIGHTS_CONFIG_FILE);
+			BALTHUS_KNIGHTS_ENABLED = balthusKnightsConfig.getBoolean("BalthusKnightsEnabled", true);
+			BALTHUS_KNIGHTS_LEVEL = balthusKnightsConfig.getInt("BalthusKnightsLevel", 85);
+			BALTHUS_KNIGHTS_PREMIUM = balthusKnightsConfig.getBoolean("BalthusKnightsPremium", true);
+			final String[] balthusKnightsLocation = balthusKnightsConfig.getString("BalthusKnightsLocation", "-114371,256483,-1286").split(",");
 			BALTHUS_KNIGHTS_LOCATION = new Location(Integer.parseInt(balthusKnightsLocation[0]), Integer.parseInt(balthusKnightsLocation[1]), Integer.parseInt(balthusKnightsLocation[2]));
 			BALTHUS_KNIGHTS_REWARDS = new ArrayList<>();
-			for (String s : BalthusKnights.getString("BalthusKnightsRewards", "46919;1").split(","))
+			for (String s : balthusKnightsConfig.getString("BalthusKnightsRewards", "46919;1").split(","))
 			{
 				if (s.isEmpty())
 				{
@@ -1658,26 +1658,26 @@ public class Config
 				}
 				BALTHUS_KNIGHTS_REWARDS.add(new ItemHolder(Integer.parseInt(s.split(";")[0]), Integer.parseInt(s.split(";")[1])));
 			}
-			BALTHUS_KNIGHTS_REWARD_SKILLS = BalthusKnights.getBoolean("BalthusKnightsRewardSkills", true);
+			BALTHUS_KNIGHTS_REWARD_SKILLS = balthusKnightsConfig.getBoolean("BalthusKnightsRewardSkills", true);
 			
 			// Load Character config file (if exists)
-			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-			PLAYER_DELEVEL = Character.getBoolean("Delevel", true);
-			DELEVEL_MINIMUM = Character.getInt("DelevelMinimum", 85);
-			DECREASE_SKILL_LEVEL = Character.getBoolean("DecreaseSkillOnDelevel", true);
-			ALT_WEIGHT_LIMIT = Character.getDouble("AltWeightLimit", 1);
-			RUN_SPD_BOOST = Character.getInt("RunSpeedBoost", 0);
-			DEATH_PENALTY_CHANCE = Character.getInt("DeathPenaltyChance", 20);
-			RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
-			RESPAWN_RESTORE_HP = Character.getDouble("RespawnRestoreHP", 65) / 100;
-			RESPAWN_RESTORE_MP = Character.getDouble("RespawnRestoreMP", 0) / 100;
-			HP_REGEN_MULTIPLIER = Character.getDouble("HpRegenMultiplier", 100) / 100;
-			MP_REGEN_MULTIPLIER = Character.getDouble("MpRegenMultiplier", 100) / 100;
-			CP_REGEN_MULTIPLIER = Character.getDouble("CpRegenMultiplier", 100) / 100;
-			ENABLE_MODIFY_SKILL_DURATION = Character.getBoolean("EnableModifySkillDuration", false);
+			final PropertiesParser characterConfig = new PropertiesParser(CHARACTER_CONFIG_FILE);
+			PLAYER_DELEVEL = characterConfig.getBoolean("Delevel", true);
+			DELEVEL_MINIMUM = characterConfig.getInt("DelevelMinimum", 85);
+			DECREASE_SKILL_LEVEL = characterConfig.getBoolean("DecreaseSkillOnDelevel", true);
+			ALT_WEIGHT_LIMIT = characterConfig.getDouble("AltWeightLimit", 1);
+			RUN_SPD_BOOST = characterConfig.getInt("RunSpeedBoost", 0);
+			DEATH_PENALTY_CHANCE = characterConfig.getInt("DeathPenaltyChance", 20);
+			RESPAWN_RESTORE_CP = characterConfig.getDouble("RespawnRestoreCP", 0) / 100;
+			RESPAWN_RESTORE_HP = characterConfig.getDouble("RespawnRestoreHP", 65) / 100;
+			RESPAWN_RESTORE_MP = characterConfig.getDouble("RespawnRestoreMP", 0) / 100;
+			HP_REGEN_MULTIPLIER = characterConfig.getDouble("HpRegenMultiplier", 100) / 100;
+			MP_REGEN_MULTIPLIER = characterConfig.getDouble("MpRegenMultiplier", 100) / 100;
+			CP_REGEN_MULTIPLIER = characterConfig.getDouble("CpRegenMultiplier", 100) / 100;
+			ENABLE_MODIFY_SKILL_DURATION = characterConfig.getBoolean("EnableModifySkillDuration", false);
 			if (ENABLE_MODIFY_SKILL_DURATION)
 			{
-				final String[] propertySplit = Character.getString("SkillDurationList", "").split(";");
+				final String[] propertySplit = characterConfig.getString("SkillDurationList", "").split(";");
 				SKILL_DURATION_LIST = new HashMap<>(propertySplit.length);
 				for (String skill : propertySplit)
 				{
@@ -1702,10 +1702,10 @@ public class Config
 					}
 				}
 			}
-			ENABLE_MODIFY_SKILL_REUSE = Character.getBoolean("EnableModifySkillReuse", false);
+			ENABLE_MODIFY_SKILL_REUSE = characterConfig.getBoolean("EnableModifySkillReuse", false);
 			if (ENABLE_MODIFY_SKILL_REUSE)
 			{
-				final String[] propertySplit = Character.getString("SkillReuseList", "").split(";");
+				final String[] propertySplit = characterConfig.getString("SkillReuseList", "").split(";");
 				SKILL_REUSE_LIST = new HashMap<>(propertySplit.length);
 				for (String skill : propertySplit)
 				{
@@ -1730,47 +1730,47 @@ public class Config
 					}
 				}
 			}
-			AUTO_LEARN_SKILLS = Character.getBoolean("AutoLearnSkills", false);
-			AUTO_LEARN_SKILLS_WITHOUT_ITEMS = Character.getBoolean("AutoLearnSkillsWithoutItems", false);
-			AUTO_LEARN_FS_SKILLS = Character.getBoolean("AutoLearnForgottenScrollSkills", false);
-			AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);
-			BUFFS_MAX_AMOUNT = Character.getByte("MaxBuffAmount", (byte) 20);
-			TRIGGERED_BUFFS_MAX_AMOUNT = Character.getByte("MaxTriggeredBuffAmount", (byte) 12);
-			DANCES_MAX_AMOUNT = Character.getByte("MaxDanceAmount", (byte) 12);
-			DANCE_CANCEL_BUFF = Character.getBoolean("DanceCancelBuff", false);
-			DANCE_CONSUME_ADDITIONAL_MP = Character.getBoolean("DanceConsumeAdditionalMP", true);
-			ALT_STORE_DANCES = Character.getBoolean("AltStoreDances", false);
-			AUTO_LEARN_DIVINE_INSPIRATION = Character.getBoolean("AutoLearnDivineInspiration", false);
-			ALT_GAME_CANCEL_BOW = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("bow") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
-			ALT_GAME_CANCEL_CAST = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("cast") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
-			ALT_GAME_MAGICFAILURES = Character.getBoolean("MagicFailures", true);
-			ALT_GAME_STUN_BREAK = Character.getBoolean("BreakStun", false);
-			PLAYER_FAKEDEATH_UP_PROTECTION = Character.getInt("PlayerFakeDeathUpProtection", 0);
-			STORE_SKILL_COOLTIME = Character.getBoolean("StoreSkillCooltime", true);
-			SUBCLASS_STORE_SKILL_COOLTIME = Character.getBoolean("SubclassStoreSkillCooltime", false);
-			SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
-			EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
-			ENABLE_ALTER_SKILLS = Character.getBoolean("EnableAlterSkills", true);
-			FAKE_DEATH_UNTARGET = Character.getBoolean("FakeDeathUntarget", true);
-			FAKE_DEATH_DAMAGE_STAND = Character.getBoolean("FakeDeathDamageStand", false);
-			LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
-			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
-			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
-			ALT_GAME_DUALCLASS_WITHOUT_QUEST = Character.getBoolean("AltDualClassWithoutQuest", false);
-			RESTORE_SERVITOR_ON_RECONNECT = Character.getBoolean("RestoreServitorOnReconnect", true);
-			RESTORE_PET_ON_RECONNECT = Character.getBoolean("RestorePetOnReconnect", true);
-			ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
-			FEE_DELETE_TRANSFER_SKILLS = Character.getInt("FeeDeleteTransferSkills", 10000000);
-			FEE_DELETE_SUBCLASS_SKILLS = Character.getInt("FeeDeleteSubClassSkills", 10000000);
-			FEE_DELETE_DUALCLASS_SKILLS = Character.getInt("FeeDeleteDualClassSkills", 20000000);
-			HARDIN_ENABLE_ALL_RACES = Character.getBoolean("HardinEnableAllRaces", true);
-			HARDIN_ENABLE_ALL_SPECS = Character.getBoolean("HardinEnableAllSpecs", false);
-			HARDIN_SAME_AWAKEN_GROUP = Character.getBoolean("HardinSameAwakenGroup", true);
-			HARDIN_RETAIL_LIMITATIONS = Character.getBoolean("HardinRetailLimitations", true);
-			HARDIN_ENABLE_DUALCLASS_CHECKS = Character.getBoolean("HardinEnableDualClassChecks", true);
-			HARDIN_ENABLE_ERTHEIAS = Character.getBoolean("HardinEnableErtheias", false);
+			AUTO_LEARN_SKILLS = characterConfig.getBoolean("AutoLearnSkills", false);
+			AUTO_LEARN_SKILLS_WITHOUT_ITEMS = characterConfig.getBoolean("AutoLearnSkillsWithoutItems", false);
+			AUTO_LEARN_FS_SKILLS = characterConfig.getBoolean("AutoLearnForgottenScrollSkills", false);
+			AUTO_LOOT_HERBS = characterConfig.getBoolean("AutoLootHerbs", false);
+			BUFFS_MAX_AMOUNT = characterConfig.getByte("MaxBuffAmount", (byte) 20);
+			TRIGGERED_BUFFS_MAX_AMOUNT = characterConfig.getByte("MaxTriggeredBuffAmount", (byte) 12);
+			DANCES_MAX_AMOUNT = characterConfig.getByte("MaxDanceAmount", (byte) 12);
+			DANCE_CANCEL_BUFF = characterConfig.getBoolean("DanceCancelBuff", false);
+			DANCE_CONSUME_ADDITIONAL_MP = characterConfig.getBoolean("DanceConsumeAdditionalMP", true);
+			ALT_STORE_DANCES = characterConfig.getBoolean("AltStoreDances", false);
+			AUTO_LEARN_DIVINE_INSPIRATION = characterConfig.getBoolean("AutoLearnDivineInspiration", false);
+			ALT_GAME_CANCEL_BOW = characterConfig.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("bow") || characterConfig.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
+			ALT_GAME_CANCEL_CAST = characterConfig.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("cast") || characterConfig.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
+			ALT_GAME_MAGICFAILURES = characterConfig.getBoolean("MagicFailures", true);
+			ALT_GAME_STUN_BREAK = characterConfig.getBoolean("BreakStun", false);
+			PLAYER_FAKEDEATH_UP_PROTECTION = characterConfig.getInt("PlayerFakeDeathUpProtection", 0);
+			STORE_SKILL_COOLTIME = characterConfig.getBoolean("StoreSkillCooltime", true);
+			SUBCLASS_STORE_SKILL_COOLTIME = characterConfig.getBoolean("SubclassStoreSkillCooltime", false);
+			SUMMON_STORE_SKILL_COOLTIME = characterConfig.getBoolean("SummonStoreSkillCooltime", true);
+			EFFECT_TICK_RATIO = characterConfig.getLong("EffectTickRatio", 666);
+			ENABLE_ALTER_SKILLS = characterConfig.getBoolean("EnableAlterSkills", true);
+			FAKE_DEATH_UNTARGET = characterConfig.getBoolean("FakeDeathUntarget", true);
+			FAKE_DEATH_DAMAGE_STAND = characterConfig.getBoolean("FakeDeathDamageStand", false);
+			LIFE_CRYSTAL_NEEDED = characterConfig.getBoolean("LifeCrystalNeeded", true);
+			DIVINE_SP_BOOK_NEEDED = characterConfig.getBoolean("DivineInspirationSpBookNeeded", true);
+			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = characterConfig.getBoolean("AltSubClassWithoutQuests", false);
+			ALT_GAME_DUALCLASS_WITHOUT_QUEST = characterConfig.getBoolean("AltDualClassWithoutQuest", false);
+			RESTORE_SERVITOR_ON_RECONNECT = characterConfig.getBoolean("RestoreServitorOnReconnect", true);
+			RESTORE_PET_ON_RECONNECT = characterConfig.getBoolean("RestorePetOnReconnect", true);
+			ALLOW_TRANSFORM_WITHOUT_QUEST = characterConfig.getBoolean("AltTransformationWithoutQuest", false);
+			FEE_DELETE_TRANSFER_SKILLS = characterConfig.getInt("FeeDeleteTransferSkills", 10000000);
+			FEE_DELETE_SUBCLASS_SKILLS = characterConfig.getInt("FeeDeleteSubClassSkills", 10000000);
+			FEE_DELETE_DUALCLASS_SKILLS = characterConfig.getInt("FeeDeleteDualClassSkills", 20000000);
+			HARDIN_ENABLE_ALL_RACES = characterConfig.getBoolean("HardinEnableAllRaces", true);
+			HARDIN_ENABLE_ALL_SPECS = characterConfig.getBoolean("HardinEnableAllSpecs", false);
+			HARDIN_SAME_AWAKEN_GROUP = characterConfig.getBoolean("HardinSameAwakenGroup", true);
+			HARDIN_RETAIL_LIMITATIONS = characterConfig.getBoolean("HardinRetailLimitations", true);
+			HARDIN_ENABLE_DUALCLASS_CHECKS = characterConfig.getBoolean("HardinEnableDualClassChecks", true);
+			HARDIN_ENABLE_ERTHEIAS = characterConfig.getBoolean("HardinEnableErtheias", false);
 			HARDIN_REMOVED_SKILLS = new HashMap<>();
-			for (String classRow : Character.getString("HardinRemovedSkills", "").split(";"))
+			for (String classRow : characterConfig.getString("HardinRemovedSkills", "").split(";"))
 			{
 				if (classRow.isEmpty())
 				{
@@ -1784,109 +1784,109 @@ public class Config
 					HARDIN_REMOVED_SKILLS.get(classId).add(Integer.parseInt(classInfo[i]));
 				}
 			}
-			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
-			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
-			RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
-			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
-			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
-			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);
-			MAX_PATK = Character.getInt("MaxPAtk", 999999);
-			MAX_MATK = Character.getInt("MaxMAtk", 999999);
-			MAX_PCRIT_RATE = Character.getInt("MaxPCritRate", 500);
-			MAX_MCRIT_RATE = Character.getInt("MaxMCritRate", 200);
-			MAX_PATK_SPEED = Character.getInt("MaxPAtkSpeed", 1500);
-			MAX_MATK_SPEED = Character.getInt("MaxMAtkSpeed", 1999);
-			MAX_EVASION = Character.getInt("MaxEvasion", 250);
-			MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
-			MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
-			MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
-			PLAYER_MAXIMUM_LEVEL = Character.getByte("MaximumPlayerLevel", (byte) 99);
+			ENABLE_VITALITY = characterConfig.getBoolean("EnableVitality", true);
+			STARTING_VITALITY_POINTS = characterConfig.getInt("StartingVitalityPoints", 140000);
+			RAIDBOSS_USE_VITALITY = characterConfig.getBoolean("RaidbossUseVitality", true);
+			MAX_BONUS_EXP = characterConfig.getDouble("MaxExpBonus", 0);
+			MAX_BONUS_SP = characterConfig.getDouble("MaxSpBonus", 0);
+			MAX_RUN_SPEED = characterConfig.getInt("MaxRunSpeed", 300);
+			MAX_PATK = characterConfig.getInt("MaxPAtk", 999999);
+			MAX_MATK = characterConfig.getInt("MaxMAtk", 999999);
+			MAX_PCRIT_RATE = characterConfig.getInt("MaxPCritRate", 500);
+			MAX_MCRIT_RATE = characterConfig.getInt("MaxMCritRate", 200);
+			MAX_PATK_SPEED = characterConfig.getInt("MaxPAtkSpeed", 1500);
+			MAX_MATK_SPEED = characterConfig.getInt("MaxMAtkSpeed", 1999);
+			MAX_EVASION = characterConfig.getInt("MaxEvasion", 250);
+			MIN_ABNORMAL_STATE_SUCCESS_RATE = characterConfig.getInt("MinAbnormalStateSuccessRate", 10);
+			MAX_ABNORMAL_STATE_SUCCESS_RATE = characterConfig.getInt("MaxAbnormalStateSuccessRate", 90);
+			MAX_SP = characterConfig.getLong("MaxSp", 50000000000L) >= 0 ? characterConfig.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
+			PLAYER_MAXIMUM_LEVEL = characterConfig.getByte("MaximumPlayerLevel", (byte) 99);
 			PLAYER_MAXIMUM_LEVEL++;
-			MAX_SUBCLASS = (byte) Math.min(3, Character.getByte("MaxSubclass", (byte) 3));
-			BASE_SUBCLASS_LEVEL = Character.getByte("BaseSubclassLevel", (byte) 40);
-			BASE_DUALCLASS_LEVEL = Character.getByte("BaseDualclassLevel", (byte) 85);
-			MAX_SUBCLASS_LEVEL = Character.getByte("MaxSubclassLevel", (byte) 80);
-			MAX_PVTSTORESELL_SLOTS_DWARF = Character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
-			MAX_PVTSTORESELL_SLOTS_OTHER = Character.getInt("MaxPvtStoreSellSlotsOther", 3);
-			MAX_PVTSTOREBUY_SLOTS_DWARF = Character.getInt("MaxPvtStoreBuySlotsDwarf", 5);
-			MAX_PVTSTOREBUY_SLOTS_OTHER = Character.getInt("MaxPvtStoreBuySlotsOther", 4);
-			INVENTORY_MAXIMUM_NO_DWARF = Character.getInt("MaximumSlotsForNoDwarf", 80);
-			INVENTORY_MAXIMUM_DWARF = Character.getInt("MaximumSlotsForDwarf", 100);
-			INVENTORY_MAXIMUM_GM = Character.getInt("MaximumSlotsForGMPlayer", 250);
-			INVENTORY_MAXIMUM_QUEST_ITEMS = Character.getInt("MaximumSlotsForQuestItems", 100);
+			MAX_SUBCLASS = (byte) Math.min(3, characterConfig.getByte("MaxSubclass", (byte) 3));
+			BASE_SUBCLASS_LEVEL = characterConfig.getByte("BaseSubclassLevel", (byte) 40);
+			BASE_DUALCLASS_LEVEL = characterConfig.getByte("BaseDualclassLevel", (byte) 85);
+			MAX_SUBCLASS_LEVEL = characterConfig.getByte("MaxSubclassLevel", (byte) 80);
+			MAX_PVTSTORESELL_SLOTS_DWARF = characterConfig.getInt("MaxPvtStoreSellSlotsDwarf", 4);
+			MAX_PVTSTORESELL_SLOTS_OTHER = characterConfig.getInt("MaxPvtStoreSellSlotsOther", 3);
+			MAX_PVTSTOREBUY_SLOTS_DWARF = characterConfig.getInt("MaxPvtStoreBuySlotsDwarf", 5);
+			MAX_PVTSTOREBUY_SLOTS_OTHER = characterConfig.getInt("MaxPvtStoreBuySlotsOther", 4);
+			INVENTORY_MAXIMUM_NO_DWARF = characterConfig.getInt("MaximumSlotsForNoDwarf", 80);
+			INVENTORY_MAXIMUM_DWARF = characterConfig.getInt("MaximumSlotsForDwarf", 100);
+			INVENTORY_MAXIMUM_GM = characterConfig.getInt("MaximumSlotsForGMPlayer", 250);
+			INVENTORY_MAXIMUM_QUEST_ITEMS = characterConfig.getInt("MaximumSlotsForQuestItems", 100);
 			MAX_ITEM_IN_PACKET = Math.max(INVENTORY_MAXIMUM_NO_DWARF, Math.max(INVENTORY_MAXIMUM_DWARF, INVENTORY_MAXIMUM_GM));
-			WAREHOUSE_SLOTS_DWARF = Character.getInt("MaximumWarehouseSlotsForDwarf", 120);
-			WAREHOUSE_SLOTS_NO_DWARF = Character.getInt("MaximumWarehouseSlotsForNoDwarf", 100);
-			WAREHOUSE_SLOTS_CLAN = Character.getInt("MaximumWarehouseSlotsForClan", 150);
-			ALT_FREIGHT_SLOTS = Character.getInt("MaximumFreightSlots", 200);
-			ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
-			MENTOR_PENALTY_FOR_MENTEE_COMPLETE = Character.getInt("MentorPenaltyForMenteeComplete", 1) * 24 * 60 * 60 * 1000;
-			MENTOR_PENALTY_FOR_MENTEE_COMPLETE = Character.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
-			final String[] notenchantable = Character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
+			WAREHOUSE_SLOTS_DWARF = characterConfig.getInt("MaximumWarehouseSlotsForDwarf", 120);
+			WAREHOUSE_SLOTS_NO_DWARF = characterConfig.getInt("MaximumWarehouseSlotsForNoDwarf", 100);
+			WAREHOUSE_SLOTS_CLAN = characterConfig.getInt("MaximumWarehouseSlotsForClan", 150);
+			ALT_FREIGHT_SLOTS = characterConfig.getInt("MaximumFreightSlots", 200);
+			ALT_FREIGHT_PRICE = characterConfig.getInt("FreightPrice", 1000);
+			MENTOR_PENALTY_FOR_MENTEE_COMPLETE = characterConfig.getInt("MentorPenaltyForMenteeComplete", 1) * 24 * 60 * 60 * 1000;
+			MENTOR_PENALTY_FOR_MENTEE_COMPLETE = characterConfig.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
+			final String[] notenchantable = characterConfig.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
 			ENCHANT_BLACKLIST = new int[notenchantable.length];
 			for (int i = 0; i < notenchantable.length; i++)
 			{
 				ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
 			}
 			Arrays.sort(ENCHANT_BLACKLIST);
-			DISABLE_OVER_ENCHANTING = Character.getBoolean("DisableOverEnchanting", true);
-			final String[] array = Character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
+			DISABLE_OVER_ENCHANTING = characterConfig.getBoolean("DisableOverEnchanting", true);
+			final String[] array = characterConfig.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
 			AUGMENTATION_BLACKLIST = new int[array.length];
 			for (int i = 0; i < array.length; i++)
 			{
 				AUGMENTATION_BLACKLIST[i] = Integer.parseInt(array[i]);
 			}
 			Arrays.sort(AUGMENTATION_BLACKLIST);
-			ALT_ALLOW_AUGMENT_PVP_ITEMS = Character.getBoolean("AltAllowAugmentPvPItems", false);
-			ALT_ALLOW_AUGMENT_TRADE = Character.getBoolean("AltAllowAugmentTrade", false);
-			ALT_ALLOW_AUGMENT_DESTROY = Character.getBoolean("AltAllowAugmentDestroy", true);
-			ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
-			ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
-			ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Character.getBoolean("AltKarmaPlayerCanTeleport", true);
-			ALT_GAME_KARMA_PLAYER_CAN_USE_GK = Character.getBoolean("AltKarmaPlayerCanUseGK", false);
-			ALT_GAME_KARMA_PLAYER_CAN_TRADE = Character.getBoolean("AltKarmaPlayerCanTrade", true);
-			ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
-			MAX_PERSONAL_FAME_POINTS = Character.getInt("MaxPersonalFamePoints", 100000);
-			FORTRESS_ZONE_FAME_TASK_FREQUENCY = Character.getInt("FortressZoneFameTaskFrequency", 300);
-			FORTRESS_ZONE_FAME_AQUIRE_POINTS = Character.getInt("FortressZoneFameAquirePoints", 31);
-			CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
-			CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
-			FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
-			IS_CRAFTING_ENABLED = Character.getBoolean("CraftingEnabled", true);
-			DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
-			COMMON_RECIPE_LIMIT = Character.getInt("CommonRecipeLimit", 50);
-			ALT_CLAN_LEADER_INSTANT_ACTIVATION = Character.getBoolean("AltClanLeaderInstantActivation", false);
-			ALT_CLAN_JOIN_DAYS = Character.getInt("DaysBeforeJoinAClan", 1);
-			ALT_CLAN_CREATE_DAYS = Character.getInt("DaysBeforeCreateAClan", 10);
-			ALT_CLAN_DISSOLVE_DAYS = Character.getInt("DaysToPassToDissolveAClan", 7);
-			ALT_ALLY_JOIN_DAYS_WHEN_LEAVED = Character.getInt("DaysBeforeJoinAllyWhenLeaved", 1);
-			ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED = Character.getInt("DaysBeforeJoinAllyWhenDismissed", 1);
-			ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED = Character.getInt("DaysBeforeAcceptNewClanWhenDismissed", 1);
-			ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED = Character.getInt("DaysBeforeCreateNewAllyWhenDissolved", 1);
-			ALT_MAX_NUM_OF_CLANS_IN_ALLY = Character.getInt("AltMaxNumOfClansInAlly", 3);
-			ALT_CLAN_MEMBERS_FOR_WAR = Character.getInt("AltClanMembersForWar", 15);
-			ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Character.getBoolean("AltMembersCanWithdrawFromClanWH", false);
-			ALT_CLAN_MEMBERS_TIME_FOR_BONUS = Character.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
-			REMOVE_CASTLE_CIRCLETS = Character.getBoolean("RemoveCastleCirclets", true);
-			ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
-			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1500);
-			ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
-			ALT_COMMAND_CHANNEL_FRIENDS = Character.getBoolean("AltCommandChannelFriends", false);
-			INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
-			STARTING_ADENA = Character.getLong("StartingAdena", 0);
-			STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
-			STARTING_SP = Character.getInt("StartingSP", 0);
-			MAX_ADENA = Character.getLong("MaxAdena", 99900000000L);
+			ALT_ALLOW_AUGMENT_PVP_ITEMS = characterConfig.getBoolean("AltAllowAugmentPvPItems", false);
+			ALT_ALLOW_AUGMENT_TRADE = characterConfig.getBoolean("AltAllowAugmentTrade", false);
+			ALT_ALLOW_AUGMENT_DESTROY = characterConfig.getBoolean("AltAllowAugmentDestroy", true);
+			ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = characterConfig.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
+			ALT_GAME_KARMA_PLAYER_CAN_SHOP = characterConfig.getBoolean("AltKarmaPlayerCanShop", true);
+			ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = characterConfig.getBoolean("AltKarmaPlayerCanTeleport", true);
+			ALT_GAME_KARMA_PLAYER_CAN_USE_GK = characterConfig.getBoolean("AltKarmaPlayerCanUseGK", false);
+			ALT_GAME_KARMA_PLAYER_CAN_TRADE = characterConfig.getBoolean("AltKarmaPlayerCanTrade", true);
+			ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = characterConfig.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
+			MAX_PERSONAL_FAME_POINTS = characterConfig.getInt("MaxPersonalFamePoints", 100000);
+			FORTRESS_ZONE_FAME_TASK_FREQUENCY = characterConfig.getInt("FortressZoneFameTaskFrequency", 300);
+			FORTRESS_ZONE_FAME_AQUIRE_POINTS = characterConfig.getInt("FortressZoneFameAquirePoints", 31);
+			CASTLE_ZONE_FAME_TASK_FREQUENCY = characterConfig.getInt("CastleZoneFameTaskFrequency", 300);
+			CASTLE_ZONE_FAME_AQUIRE_POINTS = characterConfig.getInt("CastleZoneFameAquirePoints", 125);
+			FAME_FOR_DEAD_PLAYERS = characterConfig.getBoolean("FameForDeadPlayers", true);
+			IS_CRAFTING_ENABLED = characterConfig.getBoolean("CraftingEnabled", true);
+			DWARF_RECIPE_LIMIT = characterConfig.getInt("DwarfRecipeLimit", 50);
+			COMMON_RECIPE_LIMIT = characterConfig.getInt("CommonRecipeLimit", 50);
+			ALT_CLAN_LEADER_INSTANT_ACTIVATION = characterConfig.getBoolean("AltClanLeaderInstantActivation", false);
+			ALT_CLAN_JOIN_DAYS = characterConfig.getInt("DaysBeforeJoinAClan", 1);
+			ALT_CLAN_CREATE_DAYS = characterConfig.getInt("DaysBeforeCreateAClan", 10);
+			ALT_CLAN_DISSOLVE_DAYS = characterConfig.getInt("DaysToPassToDissolveAClan", 7);
+			ALT_ALLY_JOIN_DAYS_WHEN_LEAVED = characterConfig.getInt("DaysBeforeJoinAllyWhenLeaved", 1);
+			ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED = characterConfig.getInt("DaysBeforeJoinAllyWhenDismissed", 1);
+			ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED = characterConfig.getInt("DaysBeforeAcceptNewClanWhenDismissed", 1);
+			ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED = characterConfig.getInt("DaysBeforeCreateNewAllyWhenDissolved", 1);
+			ALT_MAX_NUM_OF_CLANS_IN_ALLY = characterConfig.getInt("AltMaxNumOfClansInAlly", 3);
+			ALT_CLAN_MEMBERS_FOR_WAR = characterConfig.getInt("AltClanMembersForWar", 15);
+			ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = characterConfig.getBoolean("AltMembersCanWithdrawFromClanWH", false);
+			ALT_CLAN_MEMBERS_TIME_FOR_BONUS = characterConfig.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
+			REMOVE_CASTLE_CIRCLETS = characterConfig.getBoolean("RemoveCastleCirclets", true);
+			ALT_PARTY_MAX_MEMBERS = characterConfig.getInt("AltPartyMaxMembers", 7);
+			ALT_PARTY_RANGE = characterConfig.getInt("AltPartyRange", 1500);
+			ALT_LEAVE_PARTY_LEADER = characterConfig.getBoolean("AltLeavePartyLeader", false);
+			ALT_COMMAND_CHANNEL_FRIENDS = characterConfig.getBoolean("AltCommandChannelFriends", false);
+			INITIAL_EQUIPMENT_EVENT = characterConfig.getBoolean("InitialEquipmentEvent", false);
+			STARTING_ADENA = characterConfig.getLong("StartingAdena", 0);
+			STARTING_LEVEL = characterConfig.getByte("StartingLevel", (byte) 1);
+			STARTING_SP = characterConfig.getInt("StartingSP", 0);
+			MAX_ADENA = characterConfig.getLong("MaxAdena", 99900000000L);
 			if (MAX_ADENA < 0)
 			{
 				MAX_ADENA = Long.MAX_VALUE;
 			}
-			AUTO_LOOT = Character.getBoolean("AutoLoot", false);
-			AUTO_LOOT_RAIDS = Character.getBoolean("AutoLootRaids", false);
-			AUTO_LOOT_SLOT_LIMIT = Character.getBoolean("AutoLootSlotLimit", false);
-			LOOT_RAIDS_PRIVILEGE_INTERVAL = Character.getInt("RaidLootRightsInterval", 900) * 1000;
-			LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
-			final String[] autoLootItemIds = Character.getString("AutoLootItemIds", "0").split(",");
+			AUTO_LOOT = characterConfig.getBoolean("AutoLoot", false);
+			AUTO_LOOT_RAIDS = characterConfig.getBoolean("AutoLootRaids", false);
+			AUTO_LOOT_SLOT_LIMIT = characterConfig.getBoolean("AutoLootSlotLimit", false);
+			LOOT_RAIDS_PRIVILEGE_INTERVAL = characterConfig.getInt("RaidLootRightsInterval", 900) * 1000;
+			LOOT_RAIDS_PRIVILEGE_CC_SIZE = characterConfig.getInt("RaidLootRightsCCSize", 45);
+			final String[] autoLootItemIds = characterConfig.getString("AutoLootItemIds", "0").split(",");
 			AUTO_LOOT_ITEM_IDS = new ArrayList<>(autoLootItemIds.length);
 			for (String item : autoLootItemIds)
 			{
@@ -1905,24 +1905,24 @@ public class Config
 					AUTO_LOOT_ITEM_IDS.add(itm);
 				}
 			}
-			ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
-			UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
-			TELEPORT_WATCHDOG_TIMEOUT = Character.getInt("TeleportWatchdogTimeout", 0);
-			PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);
-			PLAYER_TELEPORT_PROTECTION = Character.getInt("PlayerTeleportProtection", 0);
-			RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);
-			OFFSET_ON_TELEPORT_ENABLED = Character.getBoolean("OffsetOnTeleportEnabled", true);
-			MAX_OFFSET_ON_TELEPORT = Character.getInt("MaxOffsetOnTeleport", 50);
-			TELEPORT_WHILE_SIEGE_IN_PROGRESS = Character.getBoolean("TeleportWhileSiegeInProgress", true);
-			PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
-			MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
-			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
-			MAX_FREE_TELEPORT_LEVEL = Character.getInt("MaxFreeTeleportLevel", 76);
-			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
-			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "level").toLowerCase();
-			PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);
-			PARTY_XP_CUTOFF_LEVEL = Character.getInt("PartyXpCutoffLevel", 20);
-			final String[] gaps = Character.getString("PartyXpCutoffGaps", "0,9;10,14;15,99").split(";");
+			ENABLE_KEYBOARD_MOVEMENT = characterConfig.getBoolean("KeyboardMovement", true);
+			UNSTUCK_INTERVAL = characterConfig.getInt("UnstuckInterval", 300);
+			TELEPORT_WATCHDOG_TIMEOUT = characterConfig.getInt("TeleportWatchdogTimeout", 0);
+			PLAYER_SPAWN_PROTECTION = characterConfig.getInt("PlayerSpawnProtection", 0);
+			PLAYER_TELEPORT_PROTECTION = characterConfig.getInt("PlayerTeleportProtection", 0);
+			RANDOM_RESPAWN_IN_TOWN_ENABLED = characterConfig.getBoolean("RandomRespawnInTownEnabled", true);
+			OFFSET_ON_TELEPORT_ENABLED = characterConfig.getBoolean("OffsetOnTeleportEnabled", true);
+			MAX_OFFSET_ON_TELEPORT = characterConfig.getInt("MaxOffsetOnTeleport", 50);
+			TELEPORT_WHILE_SIEGE_IN_PROGRESS = characterConfig.getBoolean("TeleportWhileSiegeInProgress", true);
+			PETITIONING_ALLOWED = characterConfig.getBoolean("PetitioningAllowed", true);
+			MAX_PETITIONS_PER_PLAYER = characterConfig.getInt("MaxPetitionsPerPlayer", 5);
+			MAX_PETITIONS_PENDING = characterConfig.getInt("MaxPetitionsPending", 25);
+			MAX_FREE_TELEPORT_LEVEL = characterConfig.getInt("MaxFreeTeleportLevel", 99);
+			DELETE_DAYS = characterConfig.getInt("DeleteCharAfterDays", 1);
+			PARTY_XP_CUTOFF_METHOD = characterConfig.getString("PartyXpCutoffMethod", "level").toLowerCase();
+			PARTY_XP_CUTOFF_PERCENT = characterConfig.getDouble("PartyXpCutoffPercent", 3);
+			PARTY_XP_CUTOFF_LEVEL = characterConfig.getInt("PartyXpCutoffLevel", 20);
+			final String[] gaps = characterConfig.getString("PartyXpCutoffGaps", "0,9;10,14;15,99").split(";");
 			PARTY_XP_CUTOFF_GAPS = new int[gaps.length][2];
 			for (int i = 0; i < gaps.length; i++)
 			{
@@ -1932,145 +1932,145 @@ public class Config
 					Integer.parseInt(gaps[i].split(",")[1])
 				};
 			}
-			final String[] percents = Character.getString("PartyXpCutoffGapPercent", "100;30;0").split(";");
+			final String[] percents = characterConfig.getString("PartyXpCutoffGapPercent", "100;30;0").split(";");
 			PARTY_XP_CUTOFF_GAP_PERCENTS = new int[percents.length];
 			for (int i = 0; i < percents.length; i++)
 			{
 				PARTY_XP_CUTOFF_GAP_PERCENTS[i] = Integer.parseInt(percents[i]);
 			}
-			DISABLE_TUTORIAL = Character.getBoolean("DisableTutorial", false);
-			EXPERTISE_PENALTY = Character.getBoolean("ExpertisePenalty", true);
-			STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
-			STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
-			FORBIDDEN_NAMES = Character.getString("ForbiddenNames", "").split(",");
-			SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
-			SHOW_GOD_VIDEO_INTRO = Character.getBoolean("GoDVideoIntro", true);
-			PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
-			ABILITY_POINTS_RESET_SP = Character.getLong("AbilityPointsResetSP", 500000000);
+			DISABLE_TUTORIAL = characterConfig.getBoolean("DisableTutorial", false);
+			EXPERTISE_PENALTY = characterConfig.getBoolean("ExpertisePenalty", true);
+			STORE_RECIPE_SHOPLIST = characterConfig.getBoolean("StoreRecipeShopList", false);
+			STORE_UI_SETTINGS = characterConfig.getBoolean("StoreCharUiSettings", true);
+			FORBIDDEN_NAMES = characterConfig.getString("ForbiddenNames", "").split(",");
+			SILENCE_MODE_EXCLUDE = characterConfig.getBoolean("SilenceModeExclude", false);
+			SHOW_GOD_VIDEO_INTRO = characterConfig.getBoolean("GoDVideoIntro", true);
+			PLAYER_MOVEMENT_BLOCK_TIME = characterConfig.getInt("NpcTalkBlockingTime", 0) * 1000;
+			ABILITY_POINTS_RESET_SP = characterConfig.getLong("AbilityPointsResetSP", 500000000);
 			
 			// Load Telnet config file (if exists)
-			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
-			TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
-			TELNET_PORT = telnetSettings.getInt("Port", 12345);
-			TELNET_HOSTNAME = telnetSettings.getString("BindAddress", "127.0.0.1");
-			TELNET_PASSWORD = telnetSettings.getString("Password", "");
-			TELNET_HOSTS = Arrays.asList(telnetSettings.getString("ListOfHosts", "127.0.0.1,::1").split(","));
+			final PropertiesParser telnetConfig = new PropertiesParser(TELNET_CONFIG_FILE);
+			TELNET_ENABLED = telnetConfig.getBoolean("EnableTelnet", false);
+			TELNET_PORT = telnetConfig.getInt("Port", 12345);
+			TELNET_HOSTNAME = telnetConfig.getString("BindAddress", "127.0.0.1");
+			TELNET_PASSWORD = telnetConfig.getString("Password", "");
+			TELNET_HOSTS = Arrays.asList(telnetConfig.getString("ListOfHosts", "127.0.0.1,::1").split(","));
 			
 			// Load Training Camp config file (if exists)
-			final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
-			TRAINING_CAMP_ENABLE = trainingCampSettings.getBoolean("TrainingCampEnable", false);
-			TRAINING_CAMP_PREMIUM_ONLY = trainingCampSettings.getBoolean("TrainingCampPremiumOnly", false);
-			TRAINING_CAMP_MAX_DURATION = trainingCampSettings.getInt("TrainingCampDuration", 18000);
-			TRAINING_CAMP_MIN_LEVEL = trainingCampSettings.getInt("TrainingCampMinLevel", 18);
-			TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
-			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
-			TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
+			final PropertiesParser trainingCampConfig = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
+			TRAINING_CAMP_ENABLE = trainingCampConfig.getBoolean("TrainingCampEnable", false);
+			TRAINING_CAMP_PREMIUM_ONLY = trainingCampConfig.getBoolean("TrainingCampPremiumOnly", false);
+			TRAINING_CAMP_MAX_DURATION = trainingCampConfig.getInt("TrainingCampDuration", 18000);
+			TRAINING_CAMP_MIN_LEVEL = trainingCampConfig.getInt("TrainingCampMinLevel", 18);
+			TRAINING_CAMP_MAX_LEVEL = trainingCampConfig.getInt("TrainingCampMaxLevel", 127);
+			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampConfig.getDouble("TrainingCampExpMultiplier", 1.0);
+			TRAINING_CAMP_SP_MULTIPLIER = trainingCampConfig.getDouble("TrainingCampSpMultiplier", 1.0);
 			
 			// Load General config file (if exists)
-			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-			DEFAULT_ACCESS_LEVEL = General.getInt("DefaultAccessLevel", 0);
-			SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
-			GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
-			GM_STARTUP_BUILDER_HIDE = General.getBoolean("GMStartupBuilderHide", false);
-			GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
-			GM_STARTUP_INVISIBLE = General.getBoolean("GMStartupInvisible", false);
-			GM_STARTUP_SILENCE = General.getBoolean("GMStartupSilence", false);
-			GM_STARTUP_AUTO_LIST = General.getBoolean("GMStartupAutoList", false);
-			GM_STARTUP_DIET_MODE = General.getBoolean("GMStartupDietMode", false);
-			GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
-			GM_SKILL_RESTRICTION = General.getBoolean("GMSkillRestriction", true);
-			GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
-			GM_RESTART_FIGHTING = General.getBoolean("GMRestartFighting", true);
-			GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
-			GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
-			GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
-			GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
-			USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
-			LOG_CHAT = General.getBoolean("LogChat", false);
-			LOG_AUTO_ANNOUNCEMENTS = General.getBoolean("LogAutoAnnouncements", false);
-			LOG_ITEMS = General.getBoolean("LogItems", false);
-			LOG_ITEMS_SMALL_LOG = General.getBoolean("LogItemsSmallLog", false);
-			LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
-			LOG_SKILL_ENCHANTS = General.getBoolean("LogSkillEnchants", false);
-			GMAUDIT = General.getBoolean("GMAudit", false);
-			SKILL_CHECK_ENABLE = General.getBoolean("SkillCheckEnable", false);
-			SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
-			SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
-			HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
-			DEVELOPER = General.getBoolean("Developer", false);
-			ALT_DEV_NO_QUESTS = General.getBoolean("AltDevNoQuests", false) || Boolean.getBoolean("noquests");
-			ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
-			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
-			ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-			ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
-			AUTODESTROY_ITEM_AFTER = General.getInt("AutoDestroyDroppedItemAfter", 600);
-			HERB_AUTO_DESTROY_TIME = General.getInt("AutoDestroyHerbTime", 60) * 1000;
-			final String[] split = General.getString("ListOfProtectedItems", "0").split(",");
+			final PropertiesParser generalConfig = new PropertiesParser(GENERAL_CONFIG_FILE);
+			DEFAULT_ACCESS_LEVEL = generalConfig.getInt("DefaultAccessLevel", 0);
+			SERVER_GMONLY = generalConfig.getBoolean("ServerGMOnly", false);
+			GM_HERO_AURA = generalConfig.getBoolean("GMHeroAura", false);
+			GM_STARTUP_BUILDER_HIDE = generalConfig.getBoolean("GMStartupBuilderHide", false);
+			GM_STARTUP_INVULNERABLE = generalConfig.getBoolean("GMStartupInvulnerable", false);
+			GM_STARTUP_INVISIBLE = generalConfig.getBoolean("GMStartupInvisible", false);
+			GM_STARTUP_SILENCE = generalConfig.getBoolean("GMStartupSilence", false);
+			GM_STARTUP_AUTO_LIST = generalConfig.getBoolean("GMStartupAutoList", false);
+			GM_STARTUP_DIET_MODE = generalConfig.getBoolean("GMStartupDietMode", false);
+			GM_ITEM_RESTRICTION = generalConfig.getBoolean("GMItemRestriction", true);
+			GM_SKILL_RESTRICTION = generalConfig.getBoolean("GMSkillRestriction", true);
+			GM_TRADE_RESTRICTED_ITEMS = generalConfig.getBoolean("GMTradeRestrictedItems", false);
+			GM_RESTART_FIGHTING = generalConfig.getBoolean("GMRestartFighting", true);
+			GM_ANNOUNCER_NAME = generalConfig.getBoolean("GMShowAnnouncerName", false);
+			GM_GIVE_SPECIAL_SKILLS = generalConfig.getBoolean("GMGiveSpecialSkills", false);
+			GM_GIVE_SPECIAL_AURA_SKILLS = generalConfig.getBoolean("GMGiveSpecialAuraSkills", false);
+			GM_DEBUG_HTML_PATHS = generalConfig.getBoolean("GMDebugHtmlPaths", true);
+			USE_SUPER_HASTE_AS_GM_SPEED = generalConfig.getBoolean("UseSuperHasteAsGMSpeed", false);
+			LOG_CHAT = generalConfig.getBoolean("LogChat", false);
+			LOG_AUTO_ANNOUNCEMENTS = generalConfig.getBoolean("LogAutoAnnouncements", false);
+			LOG_ITEMS = generalConfig.getBoolean("LogItems", false);
+			LOG_ITEMS_SMALL_LOG = generalConfig.getBoolean("LogItemsSmallLog", false);
+			LOG_ITEM_ENCHANTS = generalConfig.getBoolean("LogItemEnchants", false);
+			LOG_SKILL_ENCHANTS = generalConfig.getBoolean("LogSkillEnchants", false);
+			GMAUDIT = generalConfig.getBoolean("GMAudit", false);
+			SKILL_CHECK_ENABLE = generalConfig.getBoolean("SkillCheckEnable", false);
+			SKILL_CHECK_REMOVE = generalConfig.getBoolean("SkillCheckRemove", false);
+			SKILL_CHECK_GM = generalConfig.getBoolean("SkillCheckGM", true);
+			HTML_ACTION_CACHE_DEBUG = generalConfig.getBoolean("HtmlActionCacheDebug", false);
+			DEVELOPER = generalConfig.getBoolean("Developer", false);
+			ALT_DEV_NO_QUESTS = generalConfig.getBoolean("AltDevNoQuests", false) || Boolean.getBoolean("noquests");
+			ALT_DEV_NO_SPAWNS = generalConfig.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
+			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = generalConfig.getBoolean("AltDevShowQuestsLoadInLogs", false);
+			ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = generalConfig.getBoolean("AltDevShowScriptsLoadInLogs", false);
+			ALLOW_DISCARDITEM = generalConfig.getBoolean("AllowDiscardItem", true);
+			AUTODESTROY_ITEM_AFTER = generalConfig.getInt("AutoDestroyDroppedItemAfter", 600);
+			HERB_AUTO_DESTROY_TIME = generalConfig.getInt("AutoDestroyHerbTime", 60) * 1000;
+			final String[] split = generalConfig.getString("ListOfProtectedItems", "0").split(",");
 			LIST_PROTECTED_ITEMS = new ArrayList<>(split.length);
 			for (String id : split)
 			{
 				LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
 			}
-			DATABASE_CLEAN_UP = General.getBoolean("DatabaseCleanUp", true);
-			CHAR_DATA_STORE_INTERVAL = General.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;
-			CLAN_VARIABLES_STORE_INTERVAL = General.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
-			LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
-			UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
-			DESTROY_DROPPED_PLAYER_ITEM = General.getBoolean("DestroyPlayerDroppedItem", false);
-			DESTROY_EQUIPABLE_PLAYER_ITEM = General.getBoolean("DestroyEquipableItem", false);
-			DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
-			SAVE_DROPPED_ITEM = General.getBoolean("SaveDroppedItem", false);
-			EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD = General.getBoolean("EmptyDroppedItemTableAfterLoad", false);
-			SAVE_DROPPED_ITEM_INTERVAL = General.getInt("SaveDroppedItemInterval", 60) * 60000;
-			CLEAR_DROPPED_ITEM_TABLE = General.getBoolean("ClearDroppedItemTable", false);
-			ORDER_QUEST_LIST_BY_QUESTID = General.getBoolean("OrderQuestListByQuestId", true);
-			AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-			ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
-			EXALTED_FOR_GLORY_ITEM_MAX = new ItemHolder(Integer.parseInt(General.getString("ExaltedForGloryItemMax", "45872,80").split(",")[0]), Integer.parseInt(General.getString("ExaltedForGloryItemMax", "45872,80").split(",")[1]));
-			EXALTED_FOR_HONOR_ITEM_MAX = new ItemHolder(Integer.parseInt(General.getString("ExaltedForHonorItemMax", "45873,100").split(",")[0]), Integer.parseInt(General.getString("ExaltedForHonorItemMax", "45873,100").split(",")[1]));
-			MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
-			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
-			LAZY_CACHE = General.getBoolean("LazyCache", true);
-			CHECK_HTML_ENCODING = General.getBoolean("CheckHtmlEncoding", true);
-			CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
-			MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
-			MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
-			MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
-			MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
-			GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
-			GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
-			GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
-			CORRECT_PRICES = General.getBoolean("CorrectPrices", true);
-			PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
-			DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
-			DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
-			ENABLE_WORLD_CHAT = General.getBoolean("WorldChatEnabled", true);
-			MINIMUM_CHAT_LEVEL = General.getInt("MinimumChatLevel", 20);
-			ALLOW_WAREHOUSE = General.getBoolean("AllowWarehouse", true);
-			WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
-			WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
-			ALLOW_REFUND = General.getBoolean("AllowRefund", true);
-			ALLOW_MAIL = General.getBoolean("AllowMail", true);
-			ALLOW_ATTACHMENTS = General.getBoolean("AllowAttachments", true);
-			ALLOW_WEAR = General.getBoolean("AllowWear", true);
-			WEAR_DELAY = General.getInt("WearDelay", 5);
-			WEAR_PRICE = General.getInt("WearPrice", 10);
-			INSTANCE_FINISH_TIME = General.getInt("DefaultFinishTime", 5);
-			RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
-			EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);
-			ALLOW_RACE = General.getBoolean("AllowRace", true);
-			ALLOW_WATER = General.getBoolean("AllowWater", true);
-			ALLOW_FISHING = General.getBoolean("AllowFishing", true);
-			ALLOW_MANOR = General.getBoolean("AllowManor", true);
-			ALLOW_BOAT = General.getBoolean("AllowBoat", true);
-			BOAT_BROADCAST_RADIUS = General.getInt("BoatBroadcastRadius", 20000);
-			ALLOW_CURSED_WEAPONS = General.getBoolean("AllowCursedWeapons", true);
-			SERVER_NEWS = General.getBoolean("ShowServerNews", false);
-			ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
-			BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
-			USE_SAY_FILTER = General.getBoolean("UseChatFilter", false);
-			CHAT_FILTER_CHARS = General.getString("ChatFilterChars", "^_^");
-			final String[] propertySplit4 = General.getString("BanChatChannels", "GENERAL;SHOUT;WORLD;TRADE;HERO_VOICE").trim().split(";");
+			DATABASE_CLEAN_UP = generalConfig.getBoolean("DatabaseCleanUp", true);
+			CHAR_DATA_STORE_INTERVAL = generalConfig.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;
+			CLAN_VARIABLES_STORE_INTERVAL = generalConfig.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
+			LAZY_ITEMS_UPDATE = generalConfig.getBoolean("LazyItemsUpdate", false);
+			UPDATE_ITEMS_ON_CHAR_STORE = generalConfig.getBoolean("UpdateItemsOnCharStore", false);
+			DESTROY_DROPPED_PLAYER_ITEM = generalConfig.getBoolean("DestroyPlayerDroppedItem", false);
+			DESTROY_EQUIPABLE_PLAYER_ITEM = generalConfig.getBoolean("DestroyEquipableItem", false);
+			DESTROY_ALL_ITEMS = generalConfig.getBoolean("DestroyAllItems", false);
+			SAVE_DROPPED_ITEM = generalConfig.getBoolean("SaveDroppedItem", false);
+			EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD = generalConfig.getBoolean("EmptyDroppedItemTableAfterLoad", false);
+			SAVE_DROPPED_ITEM_INTERVAL = generalConfig.getInt("SaveDroppedItemInterval", 60) * 60000;
+			CLEAR_DROPPED_ITEM_TABLE = generalConfig.getBoolean("ClearDroppedItemTable", false);
+			ORDER_QUEST_LIST_BY_QUESTID = generalConfig.getBoolean("OrderQuestListByQuestId", true);
+			AUTODELETE_INVALID_QUEST_DATA = generalConfig.getBoolean("AutoDeleteInvalidQuestData", false);
+			ENABLE_STORY_QUEST_BUFF_REWARD = generalConfig.getBoolean("StoryQuestRewardBuff", true);
+			EXALTED_FOR_GLORY_ITEM_MAX = new ItemHolder(Integer.parseInt(generalConfig.getString("ExaltedForGloryItemMax", "45872,80").split(",")[0]), Integer.parseInt(generalConfig.getString("ExaltedForGloryItemMax", "45872,80").split(",")[1]));
+			EXALTED_FOR_HONOR_ITEM_MAX = new ItemHolder(Integer.parseInt(generalConfig.getString("ExaltedForHonorItemMax", "45873,100").split(",")[0]), Integer.parseInt(generalConfig.getString("ExaltedForHonorItemMax", "45873,100").split(",")[1]));
+			MULTIPLE_ITEM_DROP = generalConfig.getBoolean("MultipleItemDrop", true);
+			FORCE_INVENTORY_UPDATE = generalConfig.getBoolean("ForceInventoryUpdate", false);
+			LAZY_CACHE = generalConfig.getBoolean("LazyCache", true);
+			CHECK_HTML_ENCODING = generalConfig.getBoolean("CheckHtmlEncoding", true);
+			CACHE_CHAR_NAMES = generalConfig.getBoolean("CacheCharNames", true);
+			MIN_NPC_ANIMATION = generalConfig.getInt("MinNpcAnimation", 5);
+			MAX_NPC_ANIMATION = generalConfig.getInt("MaxNpcAnimation", 60);
+			MIN_MONSTER_ANIMATION = generalConfig.getInt("MinMonsterAnimation", 5);
+			MAX_MONSTER_ANIMATION = generalConfig.getInt("MaxMonsterAnimation", 60);
+			GRIDS_ALWAYS_ON = generalConfig.getBoolean("GridsAlwaysOn", false);
+			GRID_NEIGHBOR_TURNON_TIME = generalConfig.getInt("GridNeighborTurnOnTime", 1);
+			GRID_NEIGHBOR_TURNOFF_TIME = generalConfig.getInt("GridNeighborTurnOffTime", 90);
+			CORRECT_PRICES = generalConfig.getBoolean("CorrectPrices", true);
+			PEACE_ZONE_MODE = generalConfig.getInt("PeaceZoneMode", 0);
+			DEFAULT_GLOBAL_CHAT = generalConfig.getString("GlobalChat", "ON");
+			DEFAULT_TRADE_CHAT = generalConfig.getString("TradeChat", "ON");
+			ENABLE_WORLD_CHAT = generalConfig.getBoolean("WorldChatEnabled", true);
+			MINIMUM_CHAT_LEVEL = generalConfig.getInt("MinimumChatLevel", 20);
+			ALLOW_WAREHOUSE = generalConfig.getBoolean("AllowWarehouse", true);
+			WAREHOUSE_CACHE = generalConfig.getBoolean("WarehouseCache", false);
+			WAREHOUSE_CACHE_TIME = generalConfig.getInt("WarehouseCacheTime", 15);
+			ALLOW_REFUND = generalConfig.getBoolean("AllowRefund", true);
+			ALLOW_MAIL = generalConfig.getBoolean("AllowMail", true);
+			ALLOW_ATTACHMENTS = generalConfig.getBoolean("AllowAttachments", true);
+			ALLOW_WEAR = generalConfig.getBoolean("AllowWear", true);
+			WEAR_DELAY = generalConfig.getInt("WearDelay", 5);
+			WEAR_PRICE = generalConfig.getInt("WearPrice", 10);
+			INSTANCE_FINISH_TIME = generalConfig.getInt("DefaultFinishTime", 5);
+			RESTORE_PLAYER_INSTANCE = generalConfig.getBoolean("RestorePlayerInstance", false);
+			EJECT_DEAD_PLAYER_TIME = generalConfig.getInt("EjectDeadPlayerTime", 1);
+			ALLOW_RACE = generalConfig.getBoolean("AllowRace", true);
+			ALLOW_WATER = generalConfig.getBoolean("AllowWater", true);
+			ALLOW_FISHING = generalConfig.getBoolean("AllowFishing", true);
+			ALLOW_MANOR = generalConfig.getBoolean("AllowManor", true);
+			ALLOW_BOAT = generalConfig.getBoolean("AllowBoat", true);
+			BOAT_BROADCAST_RADIUS = generalConfig.getInt("BoatBroadcastRadius", 20000);
+			ALLOW_CURSED_WEAPONS = generalConfig.getBoolean("AllowCursedWeapons", true);
+			SERVER_NEWS = generalConfig.getBoolean("ShowServerNews", false);
+			ENABLE_COMMUNITY_BOARD = generalConfig.getBoolean("EnableCommunityBoard", true);
+			BBS_DEFAULT = generalConfig.getString("BBSDefault", "_bbshome");
+			USE_SAY_FILTER = generalConfig.getBoolean("UseChatFilter", false);
+			CHAT_FILTER_CHARS = generalConfig.getString("ChatFilterChars", "^_^");
+			final String[] propertySplit4 = generalConfig.getString("BanChatChannels", "GENERAL;SHOUT;WORLD;TRADE;HERO_VOICE").trim().split(";");
 			BAN_CHAT_CHANNELS = new HashSet<>();
 			try
 			{
@@ -2083,37 +2083,37 @@ public class Config
 			{
 				LOGGER.log(Level.WARNING, "There was an error while parsing ban chat channels: ", nfe);
 			}
-			WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 95);
-			WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
-			WORLD_CHAT_INTERVAL = General.getDuration("WorldChatInterval", "20secs", Duration.ofSeconds(20));
-			ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
-			ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
-			ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
-			ALT_MANOR_APPROVE_MIN = General.getInt("AltManorApproveMin", 30);
-			ALT_MANOR_MAINTENANCE_MIN = General.getInt("AltManorMaintenanceMin", 6);
-			ALT_MANOR_SAVE_ALL_ACTIONS = General.getBoolean("AltManorSaveAllActions", false);
-			ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
-			ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
-			ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
-			ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
-			DEFAULT_PUNISH = IllegalActionPunishmentType.findByName(General.getString("DefaultPunish", "KICK"));
-			DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
-			ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
-			JAIL_IS_PVP = General.getBoolean("JailIsPvp", false);
-			JAIL_DISABLE_CHAT = General.getBoolean("JailDisableChat", true);
-			JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
-			CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
-			CUSTOM_TELEPORT_TABLE = General.getBoolean("CustomTeleportTable", false);
-			CUSTOM_SKILLS_LOAD = General.getBoolean("CustomSkillsLoad", false);
-			CUSTOM_ITEMS_LOAD = General.getBoolean("CustomItemsLoad", false);
-			CUSTOM_MULTISELL_LOAD = General.getBoolean("CustomMultisellLoad", false);
-			CUSTOM_BUYLIST_LOAD = General.getBoolean("CustomBuyListLoad", false);
-			BOOKMARK_CONSUME_ITEM_ID = General.getInt("BookmarkConsumeItemId", -1);
-			ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
-			ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
-			ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");
-			ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
-			MIN_BLOCK_CHECKER_TEAM_MEMBERS = General.getInt("BlockCheckerMinTeamMembers", 2);
+			WORLD_CHAT_MIN_LEVEL = generalConfig.getInt("WorldChatMinLevel", 95);
+			WORLD_CHAT_POINTS_PER_DAY = generalConfig.getInt("WorldChatPointsPerDay", 10);
+			WORLD_CHAT_INTERVAL = generalConfig.getDuration("WorldChatInterval", "20secs", Duration.ofSeconds(20));
+			ALT_MANOR_REFRESH_TIME = generalConfig.getInt("AltManorRefreshTime", 20);
+			ALT_MANOR_REFRESH_MIN = generalConfig.getInt("AltManorRefreshMin", 0);
+			ALT_MANOR_APPROVE_TIME = generalConfig.getInt("AltManorApproveTime", 4);
+			ALT_MANOR_APPROVE_MIN = generalConfig.getInt("AltManorApproveMin", 30);
+			ALT_MANOR_MAINTENANCE_MIN = generalConfig.getInt("AltManorMaintenanceMin", 6);
+			ALT_MANOR_SAVE_ALL_ACTIONS = generalConfig.getBoolean("AltManorSaveAllActions", false);
+			ALT_MANOR_SAVE_PERIOD_RATE = generalConfig.getInt("AltManorSavePeriodRate", 2);
+			ALT_ITEM_AUCTION_ENABLED = generalConfig.getBoolean("AltItemAuctionEnabled", true);
+			ALT_ITEM_AUCTION_EXPIRED_AFTER = generalConfig.getInt("AltItemAuctionExpiredAfter", 14);
+			ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = generalConfig.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
+			DEFAULT_PUNISH = IllegalActionPunishmentType.findByName(generalConfig.getString("DefaultPunish", "KICK"));
+			DEFAULT_PUNISH_PARAM = generalConfig.getInt("DefaultPunishParam", 0);
+			ONLY_GM_ITEMS_FREE = generalConfig.getBoolean("OnlyGMItemsFree", true);
+			JAIL_IS_PVP = generalConfig.getBoolean("JailIsPvp", false);
+			JAIL_DISABLE_CHAT = generalConfig.getBoolean("JailDisableChat", true);
+			JAIL_DISABLE_TRANSACTION = generalConfig.getBoolean("JailDisableTransaction", false);
+			CUSTOM_NPC_DATA = generalConfig.getBoolean("CustomNpcData", false);
+			CUSTOM_TELEPORT_TABLE = generalConfig.getBoolean("CustomTeleportTable", false);
+			CUSTOM_SKILLS_LOAD = generalConfig.getBoolean("CustomSkillsLoad", false);
+			CUSTOM_ITEMS_LOAD = generalConfig.getBoolean("CustomItemsLoad", false);
+			CUSTOM_MULTISELL_LOAD = generalConfig.getBoolean("CustomMultisellLoad", false);
+			CUSTOM_BUYLIST_LOAD = generalConfig.getBoolean("CustomBuyListLoad", false);
+			BOOKMARK_CONSUME_ITEM_ID = generalConfig.getInt("BookmarkConsumeItemId", -1);
+			ALT_BIRTHDAY_GIFT = generalConfig.getInt("AltBirthdayGift", 22187);
+			ALT_BIRTHDAY_MAIL_SUBJECT = generalConfig.getString("AltBirthdayMailSubject", "Happy Birthday!");
+			ALT_BIRTHDAY_MAIL_TEXT = generalConfig.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");
+			ENABLE_BLOCK_CHECKER_EVENT = generalConfig.getBoolean("EnableBlockCheckerEvent", false);
+			MIN_BLOCK_CHECKER_TEAM_MEMBERS = generalConfig.getInt("BlockCheckerMinTeamMembers", 2);
 			if (MIN_BLOCK_CHECKER_TEAM_MEMBERS < 1)
 			{
 				MIN_BLOCK_CHECKER_TEAM_MEMBERS = 1;
@@ -2122,54 +2122,54 @@ public class Config
 			{
 				MIN_BLOCK_CHECKER_TEAM_MEMBERS = 6;
 			}
-			HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
-			BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
-			BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
-			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
-			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
-			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
+			HBCE_FAIR_PLAY = generalConfig.getBoolean("HBCEFairPlay", false);
+			BOTREPORT_ENABLE = generalConfig.getBoolean("EnableBotReportButton", false);
+			BOTREPORT_RESETPOINT_HOUR = generalConfig.getString("BotReportPointsResetHour", "00:00").split(":");
+			BOTREPORT_REPORT_DELAY = generalConfig.getInt("BotReportDelay", 30) * 60000;
+			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = generalConfig.getBoolean("AllowReportsFromSameClanMembers", false);
+			ENABLE_FALLING_DAMAGE = generalConfig.getBoolean("EnableFallingDamage", true);
 			
 			// Load FloodProtector config file
-			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
-			loadFloodProtectorConfigs(FloodProtectors);
+			final PropertiesParser floodProtectorConfig = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
+			loadFloodProtectorConfigs(floodProtectorConfig);
 			
 			// Load NPC config file (if exists)
-			final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
-			ANNOUNCE_MAMMON_SPAWN = NPC.getBoolean("AnnounceMammonSpawn", false);
-			ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
-			ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
-			ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
-			SHOW_NPC_LEVEL = NPC.getBoolean("ShowNpcLevel", false);
-			SHOW_NPC_AGGRESSION = NPC.getBoolean("ShowNpcAggression", false);
-			SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
-			ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
-			MIN_NPC_LEVEL_DMG_PENALTY = NPC.getInt("MinNPCLevelForDmgPenalty", 78);
-			NPC_DMG_PENALTY = parseConfigLine(NPC.getString("DmgPenaltyForLvLDifferences", "0.7, 0.6, 0.6, 0.55"));
-			NPC_CRIT_DMG_PENALTY = parseConfigLine(NPC.getString("CritDmgPenaltyForLvLDifferences", "0.75, 0.65, 0.6, 0.58"));
-			NPC_SKILL_DMG_PENALTY = parseConfigLine(NPC.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
-			MIN_NPC_LEVEL_MAGIC_PENALTY = NPC.getInt("MinNPCLevelForMagicPenalty", 78);
-			NPC_SKILL_CHANCE_PENALTY = parseConfigLine(NPC.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
-			DEFAULT_CORPSE_TIME = NPC.getInt("DefaultCorpseTime", 7);
-			SPOILED_CORPSE_EXTEND_TIME = NPC.getInt("SpoiledCorpseExtendTime", 10);
-			CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY = NPC.getInt("CorpseConsumeSkillAllowedTimeBeforeDecay", 2000);
-			MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
-			AGGRO_DISTANCE_CHECK_ENABLED = NPC.getBoolean("AggroDistanceCheckEnabled", true);
-			AGGRO_DISTANCE_CHECK_RANGE = NPC.getInt("AggroDistanceCheckRange", 1500);
-			AGGRO_DISTANCE_CHECK_RAIDS = NPC.getBoolean("AggroDistanceCheckRaids", false);
-			AGGRO_DISTANCE_CHECK_RAID_RANGE = NPC.getInt("AggroDistanceCheckRaidRange", 3000);
-			AGGRO_DISTANCE_CHECK_INSTANCES = NPC.getBoolean("AggroDistanceCheckInstances", false);
-			AGGRO_DISTANCE_CHECK_RESTORE_LIFE = NPC.getBoolean("AggroDistanceCheckRestoreLife", true);
-			GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
-			RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
-			RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
-			RAID_PDEFENCE_MULTIPLIER = NPC.getDouble("RaidPDefenceMultiplier", 100) / 100;
-			RAID_MDEFENCE_MULTIPLIER = NPC.getDouble("RaidMDefenceMultiplier", 100) / 100;
-			RAID_PATTACK_MULTIPLIER = NPC.getDouble("RaidPAttackMultiplier", 100) / 100;
-			RAID_MATTACK_MULTIPLIER = NPC.getDouble("RaidMAttackMultiplier", 100) / 100;
-			RAID_MIN_RESPAWN_MULTIPLIER = NPC.getFloat("RaidMinRespawnMultiplier", 1.0f);
-			RAID_MAX_RESPAWN_MULTIPLIER = NPC.getFloat("RaidMaxRespawnMultiplier", 1.0f);
-			RAID_MINION_RESPAWN_TIMER = NPC.getInt("RaidMinionRespawnTime", 300000);
-			final String[] propertySplit = NPC.getString("CustomMinionsRespawnTime", "").split(";");
+			final PropertiesParser npcConfig = new PropertiesParser(NPC_CONFIG_FILE);
+			ANNOUNCE_MAMMON_SPAWN = npcConfig.getBoolean("AnnounceMammonSpawn", false);
+			ALT_MOB_AGRO_IN_PEACEZONE = npcConfig.getBoolean("AltMobAgroInPeaceZone", true);
+			ALT_ATTACKABLE_NPCS = npcConfig.getBoolean("AltAttackableNpcs", true);
+			ALT_GAME_VIEWNPC = npcConfig.getBoolean("AltGameViewNpc", false);
+			SHOW_NPC_LEVEL = npcConfig.getBoolean("ShowNpcLevel", false);
+			SHOW_NPC_AGGRESSION = npcConfig.getBoolean("ShowNpcAggression", false);
+			SHOW_CREST_WITHOUT_QUEST = npcConfig.getBoolean("ShowCrestWithoutQuest", false);
+			ENABLE_RANDOM_ENCHANT_EFFECT = npcConfig.getBoolean("EnableRandomEnchantEffect", false);
+			MIN_NPC_LEVEL_DMG_PENALTY = npcConfig.getInt("MinNPCLevelForDmgPenalty", 78);
+			NPC_DMG_PENALTY = parseConfigLine(npcConfig.getString("DmgPenaltyForLvLDifferences", "0.7, 0.6, 0.6, 0.55"));
+			NPC_CRIT_DMG_PENALTY = parseConfigLine(npcConfig.getString("CritDmgPenaltyForLvLDifferences", "0.75, 0.65, 0.6, 0.58"));
+			NPC_SKILL_DMG_PENALTY = parseConfigLine(npcConfig.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
+			MIN_NPC_LEVEL_MAGIC_PENALTY = npcConfig.getInt("MinNPCLevelForMagicPenalty", 78);
+			NPC_SKILL_CHANCE_PENALTY = parseConfigLine(npcConfig.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
+			DEFAULT_CORPSE_TIME = npcConfig.getInt("DefaultCorpseTime", 7);
+			SPOILED_CORPSE_EXTEND_TIME = npcConfig.getInt("SpoiledCorpseExtendTime", 10);
+			CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY = npcConfig.getInt("CorpseConsumeSkillAllowedTimeBeforeDecay", 2000);
+			MAX_DRIFT_RANGE = npcConfig.getInt("MaxDriftRange", 300);
+			AGGRO_DISTANCE_CHECK_ENABLED = npcConfig.getBoolean("AggroDistanceCheckEnabled", true);
+			AGGRO_DISTANCE_CHECK_RANGE = npcConfig.getInt("AggroDistanceCheckRange", 1500);
+			AGGRO_DISTANCE_CHECK_RAIDS = npcConfig.getBoolean("AggroDistanceCheckRaids", false);
+			AGGRO_DISTANCE_CHECK_RAID_RANGE = npcConfig.getInt("AggroDistanceCheckRaidRange", 3000);
+			AGGRO_DISTANCE_CHECK_INSTANCES = npcConfig.getBoolean("AggroDistanceCheckInstances", false);
+			AGGRO_DISTANCE_CHECK_RESTORE_LIFE = npcConfig.getBoolean("AggroDistanceCheckRestoreLife", true);
+			GUARD_ATTACK_AGGRO_MOB = npcConfig.getBoolean("GuardAttackAggroMob", false);
+			RAID_HP_REGEN_MULTIPLIER = npcConfig.getDouble("RaidHpRegenMultiplier", 100) / 100;
+			RAID_MP_REGEN_MULTIPLIER = npcConfig.getDouble("RaidMpRegenMultiplier", 100) / 100;
+			RAID_PDEFENCE_MULTIPLIER = npcConfig.getDouble("RaidPDefenceMultiplier", 100) / 100;
+			RAID_MDEFENCE_MULTIPLIER = npcConfig.getDouble("RaidMDefenceMultiplier", 100) / 100;
+			RAID_PATTACK_MULTIPLIER = npcConfig.getDouble("RaidPAttackMultiplier", 100) / 100;
+			RAID_MATTACK_MULTIPLIER = npcConfig.getDouble("RaidMAttackMultiplier", 100) / 100;
+			RAID_MIN_RESPAWN_MULTIPLIER = npcConfig.getFloat("RaidMinRespawnMultiplier", 1.0f);
+			RAID_MAX_RESPAWN_MULTIPLIER = npcConfig.getFloat("RaidMaxRespawnMultiplier", 1.0f);
+			RAID_MINION_RESPAWN_TIMER = npcConfig.getInt("RaidMinionRespawnTime", 300000);
+			final String[] propertySplit = npcConfig.getString("CustomMinionsRespawnTime", "").split(";");
 			MINIONS_RESPAWN_TIME = new HashMap<>(propertySplit.length);
 			for (String prop : propertySplit)
 			{
@@ -2190,91 +2190,91 @@ public class Config
 					}
 				}
 			}
-			FORCE_DELETE_MINIONS = NPC.getBoolean("ForceDeleteMinions", false);
-			RAID_DISABLE_CURSE = NPC.getBoolean("DisableRaidCurse", false);
-			RAID_CHAOS_TIME = NPC.getInt("RaidChaosTime", 10);
-			GRAND_CHAOS_TIME = NPC.getInt("GrandChaosTime", 10);
-			MINION_CHAOS_TIME = NPC.getInt("MinionChaosTime", 10);
-			INVENTORY_MAXIMUM_PET = NPC.getInt("MaximumSlotsForPet", 12);
-			PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
-			PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
-			VITALITY_CONSUME_BY_MOB = NPC.getInt("VitalityConsumeByMob", 2250);
-			VITALITY_CONSUME_BY_BOSS = NPC.getInt("VitalityConsumeByBoss", 1125);
+			FORCE_DELETE_MINIONS = npcConfig.getBoolean("ForceDeleteMinions", false);
+			RAID_DISABLE_CURSE = npcConfig.getBoolean("DisableRaidCurse", false);
+			RAID_CHAOS_TIME = npcConfig.getInt("RaidChaosTime", 10);
+			GRAND_CHAOS_TIME = npcConfig.getInt("GrandChaosTime", 10);
+			MINION_CHAOS_TIME = npcConfig.getInt("MinionChaosTime", 10);
+			INVENTORY_MAXIMUM_PET = npcConfig.getInt("MaximumSlotsForPet", 12);
+			PET_HP_REGEN_MULTIPLIER = npcConfig.getDouble("PetHpRegenMultiplier", 100) / 100;
+			PET_MP_REGEN_MULTIPLIER = npcConfig.getDouble("PetMpRegenMultiplier", 100) / 100;
+			VITALITY_CONSUME_BY_MOB = npcConfig.getInt("VitalityConsumeByMob", 2250);
+			VITALITY_CONSUME_BY_BOSS = npcConfig.getInt("VitalityConsumeByBoss", 1125);
 			
 			// Load Rates config file (if exists)
-			final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
-			RATE_XP = RatesSettings.getFloat("RateXp", 1);
-			RATE_SP = RatesSettings.getFloat("RateSp", 1);
-			RATE_PARTY_XP = RatesSettings.getFloat("RatePartyXp", 1);
-			RATE_PARTY_SP = RatesSettings.getFloat("RatePartySp", 1);
-			RATE_INSTANCE_XP = RatesSettings.getFloat("RateInstanceXp", -1);
+			final PropertiesParser ratesConfig = new PropertiesParser(RATES_CONFIG_FILE);
+			RATE_XP = ratesConfig.getFloat("RateXp", 1);
+			RATE_SP = ratesConfig.getFloat("RateSp", 1);
+			RATE_PARTY_XP = ratesConfig.getFloat("RatePartyXp", 1);
+			RATE_PARTY_SP = ratesConfig.getFloat("RatePartySp", 1);
+			RATE_INSTANCE_XP = ratesConfig.getFloat("RateInstanceXp", -1);
 			if (RATE_INSTANCE_XP < 0)
 			{
 				RATE_INSTANCE_XP = RATE_XP;
 			}
-			RATE_INSTANCE_SP = RatesSettings.getFloat("RateInstanceSp", -1);
+			RATE_INSTANCE_SP = ratesConfig.getFloat("RateInstanceSp", -1);
 			if (RATE_INSTANCE_SP < 0)
 			{
 				RATE_INSTANCE_SP = RATE_SP;
 			}
-			RATE_INSTANCE_PARTY_XP = RatesSettings.getFloat("RateInstancePartyXp", -1);
+			RATE_INSTANCE_PARTY_XP = ratesConfig.getFloat("RateInstancePartyXp", -1);
 			if (RATE_INSTANCE_PARTY_XP < 0)
 			{
 				RATE_INSTANCE_PARTY_XP = RATE_PARTY_XP;
 			}
-			RATE_INSTANCE_PARTY_SP = RatesSettings.getFloat("RateInstancePartyXp", -1);
+			RATE_INSTANCE_PARTY_SP = ratesConfig.getFloat("RateInstancePartyXp", -1);
 			if (RATE_INSTANCE_PARTY_SP < 0)
 			{
 				RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
 			}
-			RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
-			RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);
-			RATE_QUEST_DROP = RatesSettings.getFloat("RateQuestDrop", 1);
-			RATE_QUEST_REWARD = RatesSettings.getFloat("RateQuestReward", 1);
-			RATE_QUEST_REWARD_XP = RatesSettings.getFloat("RateQuestRewardXP", 1);
-			RATE_QUEST_REWARD_SP = RatesSettings.getFloat("RateQuestRewardSP", 1);
-			RATE_QUEST_REWARD_FP = RatesSettings.getFloat("RateQuestRewardFP", 1);
-			RATE_QUEST_REWARD_ADENA = RatesSettings.getFloat("RateQuestRewardAdena", 1);
-			RATE_QUEST_REWARD_USE_MULTIPLIERS = RatesSettings.getBoolean("UseQuestRewardMultipliers", false);
-			RATE_QUEST_REWARD_POTION = RatesSettings.getFloat("RateQuestRewardPotion", 1);
-			RATE_QUEST_REWARD_SCROLL = RatesSettings.getFloat("RateQuestRewardScroll", 1);
-			RATE_QUEST_REWARD_RECIPE = RatesSettings.getFloat("RateQuestRewardRecipe", 1);
-			RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
-			RATE_RAIDBOSS_POINTS = RatesSettings.getFloat("RateRaidbossPointsReward", 1);
-			RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 2);
-			VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
-			RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
-			RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
-			RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
+			RATE_EXTRACTABLE = ratesConfig.getFloat("RateExtractable", 1);
+			RATE_DROP_MANOR = ratesConfig.getInt("RateDropManor", 1);
+			RATE_QUEST_DROP = ratesConfig.getFloat("RateQuestDrop", 1);
+			RATE_QUEST_REWARD = ratesConfig.getFloat("RateQuestReward", 1);
+			RATE_QUEST_REWARD_XP = ratesConfig.getFloat("RateQuestRewardXP", 1);
+			RATE_QUEST_REWARD_SP = ratesConfig.getFloat("RateQuestRewardSP", 1);
+			RATE_QUEST_REWARD_FP = ratesConfig.getFloat("RateQuestRewardFP", 1);
+			RATE_QUEST_REWARD_ADENA = ratesConfig.getFloat("RateQuestRewardAdena", 1);
+			RATE_QUEST_REWARD_USE_MULTIPLIERS = ratesConfig.getBoolean("UseQuestRewardMultipliers", false);
+			RATE_QUEST_REWARD_POTION = ratesConfig.getFloat("RateQuestRewardPotion", 1);
+			RATE_QUEST_REWARD_SCROLL = ratesConfig.getFloat("RateQuestRewardScroll", 1);
+			RATE_QUEST_REWARD_RECIPE = ratesConfig.getFloat("RateQuestRewardRecipe", 1);
+			RATE_QUEST_REWARD_MATERIAL = ratesConfig.getFloat("RateQuestRewardMaterial", 1);
+			RATE_RAIDBOSS_POINTS = ratesConfig.getFloat("RateRaidbossPointsReward", 1);
+			RATE_VITALITY_EXP_MULTIPLIER = ratesConfig.getFloat("RateVitalityExpMultiplier", 2);
+			VITALITY_MAX_ITEMS_ALLOWED = ratesConfig.getInt("VitalityMaxItemsAllowed", 999);
+			RATE_VITALITY_LOST = ratesConfig.getFloat("RateVitalityLost", 1);
+			RATE_VITALITY_GAIN = ratesConfig.getFloat("RateVitalityGain", 1);
+			RATE_KARMA_LOST = ratesConfig.getFloat("RateKarmaLost", -1);
 			if (RATE_KARMA_LOST == -1)
 			{
 				RATE_KARMA_LOST = RATE_XP;
 			}
-			RATE_KARMA_EXP_LOST = RatesSettings.getFloat("RateKarmaExpLost", 1);
-			RATE_SIEGE_GUARDS_PRICE = RatesSettings.getFloat("RateSiegeGuardsPrice", 1);
-			PLAYER_DROP_LIMIT = RatesSettings.getInt("PlayerDropLimit", 3);
-			PLAYER_RATE_DROP = RatesSettings.getInt("PlayerRateDrop", 5);
-			PLAYER_RATE_DROP_ITEM = RatesSettings.getInt("PlayerRateDropItem", 70);
-			PLAYER_RATE_DROP_EQUIP = RatesSettings.getInt("PlayerRateDropEquip", 25);
-			PLAYER_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("PlayerRateDropEquipWeapon", 5);
-			PET_XP_RATE = RatesSettings.getFloat("PetXpRate", 1);
-			PET_FOOD_RATE = RatesSettings.getInt("PetFoodRate", 1);
-			SINEATER_XP_RATE = RatesSettings.getFloat("SinEaterXpRate", 1);
-			LUCKY_CHANCE_MULTIPLIER = RatesSettings.getFloat("LuckyChanceMultiplier", 1);
-			KARMA_DROP_LIMIT = RatesSettings.getInt("KarmaDropLimit", 10);
-			KARMA_RATE_DROP = RatesSettings.getInt("KarmaRateDrop", 70);
-			KARMA_RATE_DROP_ITEM = RatesSettings.getInt("KarmaRateDropItem", 50);
-			KARMA_RATE_DROP_EQUIP = RatesSettings.getInt("KarmaRateDropEquip", 40);
-			KARMA_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("KarmaRateDropEquipWeapon", 10);
-			RATE_DEATH_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("DeathDropAmountMultiplier", 1);
-			RATE_SPOIL_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("SpoilDropAmountMultiplier", 1);
-			RATE_HERB_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("HerbDropAmountMultiplier", 1);
-			RATE_RAID_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("RaidDropAmountMultiplier", 1);
-			RATE_DEATH_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("DeathDropChanceMultiplier", 1);
-			RATE_SPOIL_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("SpoilDropChanceMultiplier", 1);
-			RATE_HERB_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("HerbDropChanceMultiplier", 1);
-			RATE_RAID_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("RaidDropChanceMultiplier", 1);
-			final String[] dropAmountMultiplier = RatesSettings.getString("DropAmountMultiplierByItemId", "").split(";");
+			RATE_KARMA_EXP_LOST = ratesConfig.getFloat("RateKarmaExpLost", 1);
+			RATE_SIEGE_GUARDS_PRICE = ratesConfig.getFloat("RateSiegeGuardsPrice", 1);
+			PLAYER_DROP_LIMIT = ratesConfig.getInt("PlayerDropLimit", 3);
+			PLAYER_RATE_DROP = ratesConfig.getInt("PlayerRateDrop", 5);
+			PLAYER_RATE_DROP_ITEM = ratesConfig.getInt("PlayerRateDropItem", 70);
+			PLAYER_RATE_DROP_EQUIP = ratesConfig.getInt("PlayerRateDropEquip", 25);
+			PLAYER_RATE_DROP_EQUIP_WEAPON = ratesConfig.getInt("PlayerRateDropEquipWeapon", 5);
+			PET_XP_RATE = ratesConfig.getFloat("PetXpRate", 1);
+			PET_FOOD_RATE = ratesConfig.getInt("PetFoodRate", 1);
+			SINEATER_XP_RATE = ratesConfig.getFloat("SinEaterXpRate", 1);
+			LUCKY_CHANCE_MULTIPLIER = ratesConfig.getFloat("LuckyChanceMultiplier", 1);
+			KARMA_DROP_LIMIT = ratesConfig.getInt("KarmaDropLimit", 10);
+			KARMA_RATE_DROP = ratesConfig.getInt("KarmaRateDrop", 70);
+			KARMA_RATE_DROP_ITEM = ratesConfig.getInt("KarmaRateDropItem", 50);
+			KARMA_RATE_DROP_EQUIP = ratesConfig.getInt("KarmaRateDropEquip", 40);
+			KARMA_RATE_DROP_EQUIP_WEAPON = ratesConfig.getInt("KarmaRateDropEquipWeapon", 10);
+			RATE_DEATH_DROP_AMOUNT_MULTIPLIER = ratesConfig.getFloat("DeathDropAmountMultiplier", 1);
+			RATE_SPOIL_DROP_AMOUNT_MULTIPLIER = ratesConfig.getFloat("SpoilDropAmountMultiplier", 1);
+			RATE_HERB_DROP_AMOUNT_MULTIPLIER = ratesConfig.getFloat("HerbDropAmountMultiplier", 1);
+			RATE_RAID_DROP_AMOUNT_MULTIPLIER = ratesConfig.getFloat("RaidDropAmountMultiplier", 1);
+			RATE_DEATH_DROP_CHANCE_MULTIPLIER = ratesConfig.getFloat("DeathDropChanceMultiplier", 1);
+			RATE_SPOIL_DROP_CHANCE_MULTIPLIER = ratesConfig.getFloat("SpoilDropChanceMultiplier", 1);
+			RATE_HERB_DROP_CHANCE_MULTIPLIER = ratesConfig.getFloat("HerbDropChanceMultiplier", 1);
+			RATE_RAID_DROP_CHANCE_MULTIPLIER = ratesConfig.getFloat("RaidDropChanceMultiplier", 1);
+			final String[] dropAmountMultiplier = ratesConfig.getString("DropAmountMultiplierByItemId", "").split(";");
 			RATE_DROP_AMOUNT_BY_ID = new HashMap<>(dropAmountMultiplier.length);
 			if (!dropAmountMultiplier[0].isEmpty())
 			{
@@ -2301,7 +2301,7 @@ public class Config
 					}
 				}
 			}
-			final String[] dropChanceMultiplier = RatesSettings.getString("DropChanceMultiplierByItemId", "").split(";");
+			final String[] dropChanceMultiplier = ratesConfig.getString("DropChanceMultiplierByItemId", "").split(";");
 			RATE_DROP_CHANCE_BY_ID = new HashMap<>(dropChanceMultiplier.length);
 			if (!dropChanceMultiplier[0].isEmpty())
 			{
@@ -2328,21 +2328,21 @@ public class Config
 					}
 				}
 			}
-			DROP_MAX_OCCURRENCES_NORMAL = RatesSettings.getInt("DropMaxOccurrencesNormal", 2);
-			DROP_MAX_OCCURRENCES_RAIDBOSS = RatesSettings.getInt("DropMaxOccurrencesRaidboss", 7);
-			DROP_ADENA_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMinLevelDifference", 8);
-			DROP_ADENA_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMaxLevelDifference", 15);
-			DROP_ADENA_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropAdenaMinLevelGapChance", 10);
-			DROP_ITEM_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMinLevelDifference", 5);
-			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
-			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
+			DROP_MAX_OCCURRENCES_NORMAL = ratesConfig.getInt("DropMaxOccurrencesNormal", 2);
+			DROP_MAX_OCCURRENCES_RAIDBOSS = ratesConfig.getInt("DropMaxOccurrencesRaidboss", 7);
+			DROP_ADENA_MIN_LEVEL_DIFFERENCE = ratesConfig.getInt("DropAdenaMinLevelDifference", 8);
+			DROP_ADENA_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("DropAdenaMaxLevelDifference", 15);
+			DROP_ADENA_MIN_LEVEL_GAP_CHANCE = ratesConfig.getDouble("DropAdenaMinLevelGapChance", 10);
+			DROP_ITEM_MIN_LEVEL_DIFFERENCE = ratesConfig.getInt("DropItemMinLevelDifference", 5);
+			DROP_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("DropItemMaxLevelDifference", 10);
+			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = ratesConfig.getDouble("DropItemMinLevelGapChance", 10);
 			
 			// Load PvP config file (if exists)
-			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
-			KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
-			KARMA_PK_LIMIT = PVPSettings.getInt("MinimumPKRequiredToDrop", 5);
-			KARMA_NONDROPPABLE_PET_ITEMS = PVPSettings.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
-			KARMA_NONDROPPABLE_ITEMS = PVPSettings.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
+			final PropertiesParser pvpConfig = new PropertiesParser(PVP_CONFIG_FILE);
+			KARMA_DROP_GM = pvpConfig.getBoolean("CanGMDropEquipment", false);
+			KARMA_PK_LIMIT = pvpConfig.getInt("MinimumPKRequiredToDrop", 5);
+			KARMA_NONDROPPABLE_PET_ITEMS = pvpConfig.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
+			KARMA_NONDROPPABLE_ITEMS = pvpConfig.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
 			String[] karma = KARMA_NONDROPPABLE_PET_ITEMS.split(",");
 			KARMA_LIST_NONDROPPABLE_PET_ITEMS = new int[karma.length];
 			for (int i = 0; i < karma.length; i++)
@@ -2357,49 +2357,49 @@ public class Config
 				KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
 			}
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_ITEMS);
-			ANTIFEED_ENABLE = PVPSettings.getBoolean("AntiFeedEnable", false);
-			ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
-			ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
-			ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
-			VAMPIRIC_ATTACK_AFFECTS_PVP = PVPSettings.getBoolean("VampiricAttackAffectsPvP", false);
-			MP_VAMPIRIC_ATTACK_AFFECTS_PVP = PVPSettings.getBoolean("MpVampiricAttackAffectsPvP", false);
-			PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
-			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
-			MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
-			REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
-			ANNOUNCE_GAINAK_SIEGE = PVPSettings.getBoolean("AnnounceGainakSiege", false);
+			ANTIFEED_ENABLE = pvpConfig.getBoolean("AntiFeedEnable", false);
+			ANTIFEED_DUALBOX = pvpConfig.getBoolean("AntiFeedDualbox", true);
+			ANTIFEED_DISCONNECTED_AS_DUALBOX = pvpConfig.getBoolean("AntiFeedDisconnectedAsDualbox", true);
+			ANTIFEED_INTERVAL = pvpConfig.getInt("AntiFeedInterval", 120) * 1000;
+			VAMPIRIC_ATTACK_AFFECTS_PVP = pvpConfig.getBoolean("VampiricAttackAffectsPvP", false);
+			MP_VAMPIRIC_ATTACK_AFFECTS_PVP = pvpConfig.getBoolean("MpVampiricAttackAffectsPvP", false);
+			PVP_NORMAL_TIME = pvpConfig.getInt("PvPVsNormalTime", 120000);
+			PVP_PVP_TIME = pvpConfig.getInt("PvPVsPvPTime", 60000);
+			MAX_REPUTATION = pvpConfig.getInt("MaxReputation", 500);
+			REPUTATION_INCREASE = pvpConfig.getInt("ReputationIncrease", 100);
+			ANNOUNCE_GAINAK_SIEGE = pvpConfig.getBoolean("AnnounceGainakSiege", false);
 			
 			// Load Olympiad config file (if exists)
-			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
-			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 20);
-			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
-			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 14400000);
-			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
-			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
-			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
-			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
-			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
-			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 10);
-			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
-			ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", "45584,12"));
-			ALT_OLY_LOSER_REWARD = parseItemsList(Olympiad.getString("AltOlyLoserReward", "45584,7"));
-			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 45584);
-			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 10);
-			ALT_OLY_MARK_PER_POINT = Olympiad.getInt("AltOlyMarkPerPoint", 20);
-			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 30);
-			ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 60);
-			ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 50);
-			ALT_OLY_RANK3_POINTS = Olympiad.getInt("AltOlyRank3Points", 45);
-			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 40);
-			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 30);
-			ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-			ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
-			ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 30);
-			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
-			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
-			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
-			final String olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "").trim();
+			final PropertiesParser olympiadConfig = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
+			ALT_OLY_START_TIME = olympiadConfig.getInt("AltOlyStartTime", 20);
+			ALT_OLY_MIN = olympiadConfig.getInt("AltOlyMin", 0);
+			ALT_OLY_CPERIOD = olympiadConfig.getLong("AltOlyCPeriod", 14400000);
+			ALT_OLY_BATTLE = olympiadConfig.getLong("AltOlyBattle", 300000);
+			ALT_OLY_WPERIOD = olympiadConfig.getLong("AltOlyWPeriod", 604800000);
+			ALT_OLY_VPERIOD = olympiadConfig.getLong("AltOlyVPeriod", 86400000);
+			ALT_OLY_START_POINTS = olympiadConfig.getInt("AltOlyStartPoints", 10);
+			ALT_OLY_WEEKLY_POINTS = olympiadConfig.getInt("AltOlyWeeklyPoints", 10);
+			ALT_OLY_CLASSED = olympiadConfig.getInt("AltOlyClassedParticipants", 10);
+			ALT_OLY_NONCLASSED = olympiadConfig.getInt("AltOlyNonClassedParticipants", 20);
+			ALT_OLY_WINNER_REWARD = parseItemsList(olympiadConfig.getString("AltOlyWinReward", "45584,12"));
+			ALT_OLY_LOSER_REWARD = parseItemsList(olympiadConfig.getString("AltOlyLoserReward", "45584,7"));
+			ALT_OLY_COMP_RITEM = olympiadConfig.getInt("AltOlyCompRewItem", 45584);
+			ALT_OLY_MIN_MATCHES = olympiadConfig.getInt("AltOlyMinMatchesForPoints", 10);
+			ALT_OLY_MARK_PER_POINT = olympiadConfig.getInt("AltOlyMarkPerPoint", 20);
+			ALT_OLY_HERO_POINTS = olympiadConfig.getInt("AltOlyHeroPoints", 30);
+			ALT_OLY_RANK1_POINTS = olympiadConfig.getInt("AltOlyRank1Points", 60);
+			ALT_OLY_RANK2_POINTS = olympiadConfig.getInt("AltOlyRank2Points", 50);
+			ALT_OLY_RANK3_POINTS = olympiadConfig.getInt("AltOlyRank3Points", 45);
+			ALT_OLY_RANK4_POINTS = olympiadConfig.getInt("AltOlyRank4Points", 40);
+			ALT_OLY_RANK5_POINTS = olympiadConfig.getInt("AltOlyRank5Points", 30);
+			ALT_OLY_MAX_POINTS = olympiadConfig.getInt("AltOlyMaxPoints", 10);
+			ALT_OLY_DIVIDER_CLASSED = olympiadConfig.getInt("AltOlyDividerClassed", 5);
+			ALT_OLY_DIVIDER_NON_CLASSED = olympiadConfig.getInt("AltOlyDividerNonClassed", 5);
+			ALT_OLY_MAX_WEEKLY_MATCHES = olympiadConfig.getInt("AltOlyMaxWeeklyMatches", 30);
+			ALT_OLY_LOG_FIGHTS = olympiadConfig.getBoolean("AltOlyLogFights", false);
+			ALT_OLY_SHOW_MONTHLY_WINNERS = olympiadConfig.getBoolean("AltOlyShowMonthlyWinners", true);
+			ALT_OLY_ANNOUNCE_GAMES = olympiadConfig.getBoolean("AltOlyAnnounceGames", true);
+			final String olyRestrictedItems = olympiadConfig.getString("AltOlyRestrictedItems", "").trim();
 			if (!olyRestrictedItems.isEmpty())
 			{
 				final String[] olyRestrictedItemsSplit = olyRestrictedItems.split(",");
@@ -2413,13 +2413,13 @@ public class Config
 			{
 				LIST_OLY_RESTRICTED_ITEMS.clear();
 			}
-			ALT_OLY_WEAPON_ENCHANT_LIMIT = Olympiad.getInt("AltOlyWeaponEnchantLimit", -1);
-			ALT_OLY_ARMOR_ENCHANT_LIMIT = Olympiad.getInt("AltOlyArmorEnchantLimit", -1);
-			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
-			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
-			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
+			ALT_OLY_WEAPON_ENCHANT_LIMIT = olympiadConfig.getInt("AltOlyWeaponEnchantLimit", -1);
+			ALT_OLY_ARMOR_ENCHANT_LIMIT = olympiadConfig.getInt("AltOlyArmorEnchantLimit", -1);
+			ALT_OLY_WAIT_TIME = olympiadConfig.getInt("AltOlyWaitTime", 60);
+			ALT_OLY_PERIOD = olympiadConfig.getString("AltOlyPeriod", "MONTH");
+			ALT_OLY_PERIOD_MULTIPLIER = olympiadConfig.getInt("AltOlyPeriodMultiplier", 1);
 			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
-			for (String s : Olympiad.getString("AltOlyCompetitionDays", "6,7").split(","))
+			for (String s : olympiadConfig.getString("AltOlyCompetitionDays", "6,7").split(","))
 			{
 				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
 			}
@@ -2447,62 +2447,62 @@ public class Config
 			}
 			
 			// Grand bosses
-			final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
-			ANTHARAS_WAIT_TIME = GrandBossSettings.getInt("AntharasWaitTime", 30);
-			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
-			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
-			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
-			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
-			VALAKAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfValakasSpawn", 72);
-			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
-			BAIUM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBaiumSpawn", 48);
-			CORE_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfCoreSpawn", 60);
-			CORE_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfCoreSpawn", 24);
-			ORFEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfOrfenSpawn", 48);
-			ORFEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfOrfenSpawn", 20);
-			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
-			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
-			BELETH_WAIT_TIME = GrandBossSettings.getInt("BelethWaitTime", 5);
-			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
-			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
-			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 49);
-			BELETH_MAX_PLAYERS = GrandBossSettings.getInt("BelethMaxPlayers", 350);
-			KELBIM_WAIT_TIME = GrandBossSettings.getInt("KelbimWaitTime", 5);
-			KELBIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfKelbimSpawn", 192);
-			KELBIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfKelbimSpawn", 148);
-			KELBIM_MIN_PLAYERS = GrandBossSettings.getInt("KelbimMinPlayers", 49);
-			KELBIM_MAX_PLAYERS = GrandBossSettings.getInt("KelbimMaxPlayers", 350);
-			ANAKIM_MIN_PLAYERS = GrandBossSettings.getInt("AnakimMinPlayers", 98);
-			ANAKIM_MAX_PLAYERS = GrandBossSettings.getInt("AnakimMaxPlayers", 120);
-			ANAKIM_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
-			ANAKIM_MAX_PLAYER_LEVEL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
-			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("LilithMinPlayers", 98);
-			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("LilithMaxPlayers", 120);
-			LILITH_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
-			LILITH_MAX_PLAYER_LEVEL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
-			TRASKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfTraskenSpawn", 264);
-			TRASKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfTraskenSpawn", 72);
-			TRASKEN_MIN_PLAYERS = GrandBossSettings.getInt("TraskenMinPlayers", 49);
-			TRASKEN_MAX_PLAYERS = GrandBossSettings.getInt("TraskenMaxPlayers", 112);
-			TRASKEN_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("TraskenMinPlayerLvl", 85);
-			LINDVIOR_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLindviorSpawn", 264);
-			LINDVIOR_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLindviorSpawn", 72);
-			LINDVIOR_MIN_PLAYERS = GrandBossSettings.getInt("LindviorMinPlayers", 49);
-			LINDVIOR_MAX_PLAYERS = GrandBossSettings.getInt("LindviorMaxPlayers", 112);
-			LINDVIOR_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("LindviorMinPlayerLvl", 99);
-			HELIOS_WAIT_TIME = GrandBossSettings.getInt("HeliosWaitTime", 10);
-			HELIOS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfHeliosSpawn", 264);
-			HELIOS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfHeliosSpawn", 72);
-			HELIOS_MIN_PLAYER = GrandBossSettings.getInt("HeliosMinPlayers", 70);
-			HELIOS_MIN_PLAYER_LEVEL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
-			RAMONA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfRamonaSpawn", 72);
-			RAMONA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfRamonaSpawn", 48);
-			RAMONA_MIN_PLAYER = GrandBossSettings.getInt("RamonaMinPlayers", 7);
+			final PropertiesParser grandBossConfig = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
+			ANTHARAS_WAIT_TIME = grandBossConfig.getInt("AntharasWaitTime", 30);
+			ANTHARAS_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfAntharasSpawn", 264);
+			ANTHARAS_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfAntharasSpawn", 72);
+			VALAKAS_WAIT_TIME = grandBossConfig.getInt("ValakasWaitTime", 30);
+			VALAKAS_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfValakasSpawn", 264);
+			VALAKAS_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfValakasSpawn", 72);
+			BAIUM_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfBaiumSpawn", 168);
+			BAIUM_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfBaiumSpawn", 48);
+			CORE_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfCoreSpawn", 60);
+			CORE_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfCoreSpawn", 24);
+			ORFEN_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfOrfenSpawn", 48);
+			ORFEN_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfOrfenSpawn", 20);
+			QUEEN_ANT_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfQueenAntSpawn", 36);
+			QUEEN_ANT_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfQueenAntSpawn", 17);
+			BELETH_WAIT_TIME = grandBossConfig.getInt("BelethWaitTime", 5);
+			BELETH_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfBelethSpawn", 192);
+			BELETH_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfBelethSpawn", 148);
+			BELETH_MIN_PLAYERS = grandBossConfig.getInt("BelethMinPlayers", 49);
+			BELETH_MAX_PLAYERS = grandBossConfig.getInt("BelethMaxPlayers", 350);
+			KELBIM_WAIT_TIME = grandBossConfig.getInt("KelbimWaitTime", 5);
+			KELBIM_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfKelbimSpawn", 192);
+			KELBIM_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfKelbimSpawn", 148);
+			KELBIM_MIN_PLAYERS = grandBossConfig.getInt("KelbimMinPlayers", 49);
+			KELBIM_MAX_PLAYERS = grandBossConfig.getInt("KelbimMaxPlayers", 350);
+			ANAKIM_MIN_PLAYERS = grandBossConfig.getInt("AnakimMinPlayers", 98);
+			ANAKIM_MAX_PLAYERS = grandBossConfig.getInt("AnakimMaxPlayers", 120);
+			ANAKIM_MIN_PLAYER_LEVEL = grandBossConfig.getInt("AnakimMinPlayerLvl", 105);
+			ANAKIM_MAX_PLAYER_LEVEL = grandBossConfig.getInt("AnakimMaxPlayerLvl", 94);
+			LILITH_MIN_PLAYERS = grandBossConfig.getInt("LilithMinPlayers", 98);
+			LILITH_MAX_PLAYERS = grandBossConfig.getInt("LilithMaxPlayers", 120);
+			LILITH_MIN_PLAYER_LEVEL = grandBossConfig.getInt("LilithMinPlayerLvl", 105);
+			LILITH_MAX_PLAYER_LEVEL = grandBossConfig.getInt("LilithMaxPlayerLvl", 89);
+			TRASKEN_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfTraskenSpawn", 264);
+			TRASKEN_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfTraskenSpawn", 72);
+			TRASKEN_MIN_PLAYERS = grandBossConfig.getInt("TraskenMinPlayers", 49);
+			TRASKEN_MAX_PLAYERS = grandBossConfig.getInt("TraskenMaxPlayers", 112);
+			TRASKEN_MIN_PLAYER_LEVEL = grandBossConfig.getInt("TraskenMinPlayerLvl", 85);
+			LINDVIOR_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfLindviorSpawn", 264);
+			LINDVIOR_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfLindviorSpawn", 72);
+			LINDVIOR_MIN_PLAYERS = grandBossConfig.getInt("LindviorMinPlayers", 49);
+			LINDVIOR_MAX_PLAYERS = grandBossConfig.getInt("LindviorMaxPlayers", 112);
+			LINDVIOR_MIN_PLAYER_LEVEL = grandBossConfig.getInt("LindviorMinPlayerLvl", 99);
+			HELIOS_WAIT_TIME = grandBossConfig.getInt("HeliosWaitTime", 10);
+			HELIOS_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfHeliosSpawn", 264);
+			HELIOS_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfHeliosSpawn", 72);
+			HELIOS_MIN_PLAYER = grandBossConfig.getInt("HeliosMinPlayers", 70);
+			HELIOS_MIN_PLAYER_LEVEL = grandBossConfig.getInt("HeliosMinPlayerLvl", 102);
+			RAMONA_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfRamonaSpawn", 72);
+			RAMONA_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfRamonaSpawn", 48);
+			RAMONA_MIN_PLAYER = grandBossConfig.getInt("RamonaMinPlayers", 7);
 			
 			// Gracia Seeds
-			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
-			SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
-			SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
+			final PropertiesParser graciaSeedsConfig = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
+			SOD_TIAT_KILL_COUNT = graciaSeedsConfig.getInt("TiatKillCountForNextState", 10);
+			SOD_STAGE_2_LENGTH = graciaSeedsConfig.getLong("Stage2Length", 720) * 60000;
 			try
 			{
 				//@formatter:off
@@ -2519,133 +2519,133 @@ public class Config
 			}
 			
 			// Load GeoEngine config file (if exists)
-			final PropertiesParser GeoEngine = new PropertiesParser(GEOENGINE_CONFIG_FILE);
-			GEODATA_PATH = Paths.get(GeoEngine.getString("GeoDataPath", "./data/geodata"));
-			GEODATA_TYPE = Enum.valueOf(GeoType.class, GeoEngine.getString("GeoDataType", "L2J"));
-			PATHFINDING = GeoEngine.getBoolean("PathFinding", true);
-			PATHFIND_BUFFERS = GeoEngine.getString("PathFindBuffers", "1200x10;2000x10;3000x5;5000x3;10000x3");
-			MOVE_WEIGHT = GeoEngine.getInt("MoveWeight", 10);
-			MOVE_WEIGHT_DIAG = GeoEngine.getInt("MoveWeightDiag", 14);
-			OBSTACLE_WEIGHT = GeoEngine.getInt("ObstacleWeight", 30);
+			final PropertiesParser geoEngineConfig = new PropertiesParser(GEOENGINE_CONFIG_FILE);
+			GEODATA_PATH = Paths.get(geoEngineConfig.getString("GeoDataPath", "./data/geodata"));
+			GEODATA_TYPE = Enum.valueOf(GeoType.class, geoEngineConfig.getString("GeoDataType", "L2J"));
+			PATHFINDING = geoEngineConfig.getBoolean("PathFinding", true);
+			PATHFIND_BUFFERS = geoEngineConfig.getString("PathFindBuffers", "1200x10;2000x10;3000x5;5000x3;10000x3");
+			MOVE_WEIGHT = geoEngineConfig.getInt("MoveWeight", 10);
+			MOVE_WEIGHT_DIAG = geoEngineConfig.getInt("MoveWeightDiag", 14);
+			OBSTACLE_WEIGHT = geoEngineConfig.getInt("ObstacleWeight", 30);
 			OBSTACLE_WEIGHT_DIAG = (int) (OBSTACLE_WEIGHT * Math.sqrt(2));
-			HEURISTIC_WEIGHT = GeoEngine.getInt("HeuristicWeight", 12);
-			HEURISTIC_WEIGHT_DIAG = GeoEngine.getInt("HeuristicWeightDiag", 18);
-			MAX_ITERATIONS = GeoEngine.getInt("MaxIterations", 3500);
-			PART_OF_CHARACTER_HEIGHT = GeoEngine.getInt("PartOfCharacterHeight", 75);
-			MAX_OBSTACLE_HEIGHT = GeoEngine.getInt("MaxObstacleHeight", 32);
+			HEURISTIC_WEIGHT = geoEngineConfig.getInt("HeuristicWeight", 12);
+			HEURISTIC_WEIGHT_DIAG = geoEngineConfig.getInt("HeuristicWeightDiag", 18);
+			MAX_ITERATIONS = geoEngineConfig.getInt("MaxIterations", 3500);
+			PART_OF_CHARACTER_HEIGHT = geoEngineConfig.getInt("PartOfCharacterHeight", 75);
+			MAX_OBSTACLE_HEIGHT = geoEngineConfig.getInt("MaxObstacleHeight", 32);
 			
 			// Load AllowedPlayerRaces config file (if exists)
-			final PropertiesParser AllowedPlayerRaces = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);
-			ALLOW_HUMAN = AllowedPlayerRaces.getBoolean("AllowHuman", true);
-			ALLOW_ELF = AllowedPlayerRaces.getBoolean("AllowElf", true);
-			ALLOW_DARKELF = AllowedPlayerRaces.getBoolean("AllowDarkElf", true);
-			ALLOW_ORC = AllowedPlayerRaces.getBoolean("AllowOrc", true);
-			ALLOW_DWARF = AllowedPlayerRaces.getBoolean("AllowDwarf", true);
-			ALLOW_KAMAEL = AllowedPlayerRaces.getBoolean("AllowKamael", true);
-			ALLOW_ERTHEIA = AllowedPlayerRaces.getBoolean("AllowErtheia", true);
+			final PropertiesParser allowedPlayerRacesConfig = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);
+			ALLOW_HUMAN = allowedPlayerRacesConfig.getBoolean("AllowHuman", true);
+			ALLOW_ELF = allowedPlayerRacesConfig.getBoolean("AllowElf", true);
+			ALLOW_DARKELF = allowedPlayerRacesConfig.getBoolean("AllowDarkElf", true);
+			ALLOW_ORC = allowedPlayerRacesConfig.getBoolean("AllowOrc", true);
+			ALLOW_DWARF = allowedPlayerRacesConfig.getBoolean("AllowDwarf", true);
+			ALLOW_KAMAEL = allowedPlayerRacesConfig.getBoolean("AllowKamael", true);
+			ALLOW_ERTHEIA = allowedPlayerRacesConfig.getBoolean("AllowErtheia", true);
 			
 			// Load AutoPotions config file (if exists)
-			final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
-			AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
-			AUTO_POTIONS_IN_OLYMPIAD = AutoPotions.getBoolean("AutoPotionsInOlympiad", false);
-			AUTO_POTION_MIN_LEVEL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
-			AUTO_CP_ENABLED = AutoPotions.getBoolean("AutoCpEnabled", true);
-			AUTO_HP_ENABLED = AutoPotions.getBoolean("AutoHpEnabled", true);
-			AUTO_MP_ENABLED = AutoPotions.getBoolean("AutoMpEnabled", true);
-			AUTO_CP_PERCENTAGE = AutoPotions.getInt("AutoCpPercentage", 70);
-			AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
-			AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
+			final PropertiesParser autoPotionsConfig = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
+			AUTO_POTIONS_ENABLED = autoPotionsConfig.getBoolean("AutoPotionsEnabled", false);
+			AUTO_POTIONS_IN_OLYMPIAD = autoPotionsConfig.getBoolean("AutoPotionsInOlympiad", false);
+			AUTO_POTION_MIN_LEVEL = autoPotionsConfig.getInt("AutoPotionMinimumLevel", 1);
+			AUTO_CP_ENABLED = autoPotionsConfig.getBoolean("AutoCpEnabled", true);
+			AUTO_HP_ENABLED = autoPotionsConfig.getBoolean("AutoHpEnabled", true);
+			AUTO_MP_ENABLED = autoPotionsConfig.getBoolean("AutoMpEnabled", true);
+			AUTO_CP_PERCENTAGE = autoPotionsConfig.getInt("AutoCpPercentage", 70);
+			AUTO_HP_PERCENTAGE = autoPotionsConfig.getInt("AutoHpPercentage", 70);
+			AUTO_MP_PERCENTAGE = autoPotionsConfig.getInt("AutoMpPercentage", 70);
 			AUTO_CP_ITEM_IDS = new ArrayList<>();
-			for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
+			for (String s : autoPotionsConfig.getString("AutoCpItemIds", "0").split(","))
 			{
 				AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
 			}
 			AUTO_HP_ITEM_IDS = new ArrayList<>();
-			for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
+			for (String s : autoPotionsConfig.getString("AutoHpItemIds", "0").split(","))
 			{
 				AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
 			}
 			AUTO_MP_ITEM_IDS = new ArrayList<>();
-			for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
+			for (String s : autoPotionsConfig.getString("AutoMpItemIds", "0").split(","))
 			{
 				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
 			}
 			
 			// Load Banking config file (if exists)
-			final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
-			BANKING_SYSTEM_ENABLED = Banking.getBoolean("BankingEnabled", false);
-			BANKING_SYSTEM_GOLDBARS = Banking.getInt("BankingGoldbarCount", 1);
-			BANKING_SYSTEM_ADENA = Banking.getInt("BankingAdenaCount", 500000000);
+			final PropertiesParser bankingConfig = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
+			BANKING_SYSTEM_ENABLED = bankingConfig.getBoolean("BankingEnabled", false);
+			BANKING_SYSTEM_GOLDBARS = bankingConfig.getInt("BankingGoldbarCount", 1);
+			BANKING_SYSTEM_ADENA = bankingConfig.getInt("BankingAdenaCount", 500000000);
 			
 			// Load BoostNpcStats config file (if exists)
-			final PropertiesParser BoostNpcStats = new PropertiesParser(CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE);
-			ENABLE_NPC_STAT_MULTIPLIERS = BoostNpcStats.getBoolean("EnableNpcStatMultipliers", false);
-			MONSTER_HP_MULTIPLIER = BoostNpcStats.getDouble("MonsterHP", 1.0);
-			MONSTER_MP_MULTIPLIER = BoostNpcStats.getDouble("MonsterMP", 1.0);
-			MONSTER_PATK_MULTIPLIER = BoostNpcStats.getDouble("MonsterPAtk", 1.0);
-			MONSTER_MATK_MULTIPLIER = BoostNpcStats.getDouble("MonsterMAtk", 1.0);
-			MONSTER_PDEF_MULTIPLIER = BoostNpcStats.getDouble("MonsterPDef", 1.0);
-			MONSTER_MDEF_MULTIPLIER = BoostNpcStats.getDouble("MonsterMDef", 1.0);
-			MONSTER_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("MonsterAggroRange", 1.0);
-			MONSTER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("MonsterClanHelpRange", 1.0);
-			RAIDBOSS_HP_MULTIPLIER = BoostNpcStats.getDouble("RaidbossHP", 1.0);
-			RAIDBOSS_MP_MULTIPLIER = BoostNpcStats.getDouble("RaidbossMP", 1.0);
-			RAIDBOSS_PATK_MULTIPLIER = BoostNpcStats.getDouble("RaidbossPAtk", 1.0);
-			RAIDBOSS_MATK_MULTIPLIER = BoostNpcStats.getDouble("RaidbossMAtk", 1.0);
-			RAIDBOSS_PDEF_MULTIPLIER = BoostNpcStats.getDouble("RaidbossPDef", 1.0);
-			RAIDBOSS_MDEF_MULTIPLIER = BoostNpcStats.getDouble("RaidbossMDef", 1.0);
-			RAIDBOSS_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("RaidbossAggroRange", 1.0);
-			RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("RaidbossClanHelpRange", 1.0);
-			GUARD_HP_MULTIPLIER = BoostNpcStats.getDouble("GuardHP", 1.0);
-			GUARD_MP_MULTIPLIER = BoostNpcStats.getDouble("GuardMP", 1.0);
-			GUARD_PATK_MULTIPLIER = BoostNpcStats.getDouble("GuardPAtk", 1.0);
-			GUARD_MATK_MULTIPLIER = BoostNpcStats.getDouble("GuardMAtk", 1.0);
-			GUARD_PDEF_MULTIPLIER = BoostNpcStats.getDouble("GuardPDef", 1.0);
-			GUARD_MDEF_MULTIPLIER = BoostNpcStats.getDouble("GuardMDef", 1.0);
-			GUARD_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("GuardAggroRange", 1.0);
-			GUARD_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("GuardClanHelpRange", 1.0);
-			DEFENDER_HP_MULTIPLIER = BoostNpcStats.getDouble("DefenderHP", 1.0);
-			DEFENDER_MP_MULTIPLIER = BoostNpcStats.getDouble("DefenderMP", 1.0);
-			DEFENDER_PATK_MULTIPLIER = BoostNpcStats.getDouble("DefenderPAtk", 1.0);
-			DEFENDER_MATK_MULTIPLIER = BoostNpcStats.getDouble("DefenderMAtk", 1.0);
-			DEFENDER_PDEF_MULTIPLIER = BoostNpcStats.getDouble("DefenderPDef", 1.0);
-			DEFENDER_MDEF_MULTIPLIER = BoostNpcStats.getDouble("DefenderMDef", 1.0);
-			DEFENDER_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("DefenderAggroRange", 1.0);
-			DEFENDER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("DefenderClanHelpRange", 1.0);
+			final PropertiesParser boostNpcStatConfig = new PropertiesParser(CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE);
+			ENABLE_NPC_STAT_MULTIPLIERS = boostNpcStatConfig.getBoolean("EnableNpcStatMultipliers", false);
+			MONSTER_HP_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterHP", 1.0);
+			MONSTER_MP_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterMP", 1.0);
+			MONSTER_PATK_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterPAtk", 1.0);
+			MONSTER_MATK_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterMAtk", 1.0);
+			MONSTER_PDEF_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterPDef", 1.0);
+			MONSTER_MDEF_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterMDef", 1.0);
+			MONSTER_AGRRO_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterAggroRange", 1.0);
+			MONSTER_CLAN_HELP_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("MonsterClanHelpRange", 1.0);
+			RAIDBOSS_HP_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossHP", 1.0);
+			RAIDBOSS_MP_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossMP", 1.0);
+			RAIDBOSS_PATK_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossPAtk", 1.0);
+			RAIDBOSS_MATK_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossMAtk", 1.0);
+			RAIDBOSS_PDEF_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossPDef", 1.0);
+			RAIDBOSS_MDEF_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossMDef", 1.0);
+			RAIDBOSS_AGRRO_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossAggroRange", 1.0);
+			RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("RaidbossClanHelpRange", 1.0);
+			GUARD_HP_MULTIPLIER = boostNpcStatConfig.getDouble("GuardHP", 1.0);
+			GUARD_MP_MULTIPLIER = boostNpcStatConfig.getDouble("GuardMP", 1.0);
+			GUARD_PATK_MULTIPLIER = boostNpcStatConfig.getDouble("GuardPAtk", 1.0);
+			GUARD_MATK_MULTIPLIER = boostNpcStatConfig.getDouble("GuardMAtk", 1.0);
+			GUARD_PDEF_MULTIPLIER = boostNpcStatConfig.getDouble("GuardPDef", 1.0);
+			GUARD_MDEF_MULTIPLIER = boostNpcStatConfig.getDouble("GuardMDef", 1.0);
+			GUARD_AGRRO_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("GuardAggroRange", 1.0);
+			GUARD_CLAN_HELP_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("GuardClanHelpRange", 1.0);
+			DEFENDER_HP_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderHP", 1.0);
+			DEFENDER_MP_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderMP", 1.0);
+			DEFENDER_PATK_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderPAtk", 1.0);
+			DEFENDER_MATK_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderMAtk", 1.0);
+			DEFENDER_PDEF_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderPDef", 1.0);
+			DEFENDER_MDEF_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderMDef", 1.0);
+			DEFENDER_AGRRO_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderAggroRange", 1.0);
+			DEFENDER_CLAN_HELP_RANGE_MULTIPLIER = boostNpcStatConfig.getDouble("DefenderClanHelpRange", 1.0);
 			
 			// Load ChampionMonster config file (if exists)
-			final PropertiesParser ChampionMonster = new PropertiesParser(CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE);
-			CHAMPION_ENABLE = ChampionMonster.getBoolean("ChampionEnable", false);
-			CHAMPION_PASSIVE = ChampionMonster.getBoolean("ChampionPassive", false);
-			CHAMPION_FREQUENCY = ChampionMonster.getInt("ChampionFrequency", 0);
-			CHAMP_TITLE = ChampionMonster.getString("ChampionTitle", "Champion");
-			SHOW_CHAMPION_AURA = ChampionMonster.getBoolean("ChampionAura", true);
-			CHAMP_MIN_LEVEL = ChampionMonster.getInt("ChampionMinLevel", 20);
-			CHAMP_MAX_LEVEL = ChampionMonster.getInt("ChampionMaxLevel", 60);
-			CHAMPION_HP = ChampionMonster.getInt("ChampionHp", 7);
-			CHAMPION_HP_REGEN = ChampionMonster.getFloat("ChampionHpRegen", 1);
-			CHAMPION_REWARDS_EXP_SP = ChampionMonster.getFloat("ChampionRewardsExpSp", 8);
-			CHAMPION_REWARDS_CHANCE = ChampionMonster.getFloat("ChampionRewardsChance", 8);
-			CHAMPION_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionRewardsAmount", 1);
-			CHAMPION_ADENAS_REWARDS_CHANCE = ChampionMonster.getFloat("ChampionAdenasRewardsChance", 1);
-			CHAMPION_ADENAS_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionAdenasRewardsAmount", 1);
-			CHAMPION_ATK = ChampionMonster.getFloat("ChampionAtk", 1);
-			CHAMPION_SPD_ATK = ChampionMonster.getFloat("ChampionSpdAtk", 1);
-			CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardLowerLvlItemChance", 0);
-			CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardHigherLvlItemChance", 0);
-			CHAMPION_REWARD_ID = ChampionMonster.getInt("ChampionRewardItemID", 6393);
-			CHAMPION_REWARD_QTY = ChampionMonster.getInt("ChampionRewardItemQty", 1);
-			CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);
-			CHAMPION_ENABLE_IN_INSTANCES = ChampionMonster.getBoolean("ChampionEnableInInstances", false);
+			final PropertiesParser championMonsterConfig = new PropertiesParser(CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE);
+			CHAMPION_ENABLE = championMonsterConfig.getBoolean("ChampionEnable", false);
+			CHAMPION_PASSIVE = championMonsterConfig.getBoolean("ChampionPassive", false);
+			CHAMPION_FREQUENCY = championMonsterConfig.getInt("ChampionFrequency", 0);
+			CHAMP_TITLE = championMonsterConfig.getString("ChampionTitle", "Champion");
+			SHOW_CHAMPION_AURA = championMonsterConfig.getBoolean("ChampionAura", true);
+			CHAMP_MIN_LEVEL = championMonsterConfig.getInt("ChampionMinLevel", 20);
+			CHAMP_MAX_LEVEL = championMonsterConfig.getInt("ChampionMaxLevel", 60);
+			CHAMPION_HP = championMonsterConfig.getInt("ChampionHp", 7);
+			CHAMPION_HP_REGEN = championMonsterConfig.getFloat("ChampionHpRegen", 1);
+			CHAMPION_REWARDS_EXP_SP = championMonsterConfig.getFloat("ChampionRewardsExpSp", 8);
+			CHAMPION_REWARDS_CHANCE = championMonsterConfig.getFloat("ChampionRewardsChance", 8);
+			CHAMPION_REWARDS_AMOUNT = championMonsterConfig.getFloat("ChampionRewardsAmount", 1);
+			CHAMPION_ADENAS_REWARDS_CHANCE = championMonsterConfig.getFloat("ChampionAdenasRewardsChance", 1);
+			CHAMPION_ADENAS_REWARDS_AMOUNT = championMonsterConfig.getFloat("ChampionAdenasRewardsAmount", 1);
+			CHAMPION_ATK = championMonsterConfig.getFloat("ChampionAtk", 1);
+			CHAMPION_SPD_ATK = championMonsterConfig.getFloat("ChampionSpdAtk", 1);
+			CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE = championMonsterConfig.getInt("ChampionRewardLowerLvlItemChance", 0);
+			CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE = championMonsterConfig.getInt("ChampionRewardHigherLvlItemChance", 0);
+			CHAMPION_REWARD_ID = championMonsterConfig.getInt("ChampionRewardItemID", 6393);
+			CHAMPION_REWARD_QTY = championMonsterConfig.getInt("ChampionRewardItemQty", 1);
+			CHAMPION_ENABLE_VITALITY = championMonsterConfig.getBoolean("ChampionEnableVitality", false);
+			CHAMPION_ENABLE_IN_INSTANCES = championMonsterConfig.getBoolean("ChampionEnableInInstances", false);
 			
 			// Load ChatModeration config file (if exists)
-			final PropertiesParser ChatModeration = new PropertiesParser(CUSTOM_CHAT_MODERATION_CONFIG_FILE);
-			CHAT_ADMIN = ChatModeration.getBoolean("ChatAdmin", true);
+			final PropertiesParser chatModerationConfig = new PropertiesParser(CUSTOM_CHAT_MODERATION_CONFIG_FILE);
+			CHAT_ADMIN = chatModerationConfig.getBoolean("ChatAdmin", true);
 			
 			// Load ClassBalance config file (if exists)
-			final PropertiesParser ClassBalance = new PropertiesParser(CUSTOM_CLASS_BALANCE_CONFIG_FILE);
+			final PropertiesParser classBalanceConfig = new PropertiesParser(CUSTOM_CLASS_BALANCE_CONFIG_FILE);
 			Arrays.fill(PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pveMagicalSkillDamageMultipliers = ClassBalance.getString("PveMagicalSkillDamageMultipliers", "").trim().split(";");
+			final String[] pveMagicalSkillDamageMultipliers = classBalanceConfig.getString("PveMagicalSkillDamageMultipliers", "").trim().split(";");
 			if (pveMagicalSkillDamageMultipliers.length > 0)
 			{
 				for (String info : pveMagicalSkillDamageMultipliers)
@@ -2659,7 +2659,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpMagicalSkillDamageMultipliers = ClassBalance.getString("PvpMagicalSkillDamageMultipliers", "").trim().split(";");
+			final String[] pvpMagicalSkillDamageMultipliers = classBalanceConfig.getString("PvpMagicalSkillDamageMultipliers", "").trim().split(";");
 			if (pvpMagicalSkillDamageMultipliers.length > 0)
 			{
 				for (String info : pvpMagicalSkillDamageMultipliers)
@@ -2673,7 +2673,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pveMagicalSkillDefenceMultipliers = ClassBalance.getString("PveMagicalSkillDefenceMultipliers", "").trim().split(";");
+			final String[] pveMagicalSkillDefenceMultipliers = classBalanceConfig.getString("PveMagicalSkillDefenceMultipliers", "").trim().split(";");
 			if (pveMagicalSkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pveMagicalSkillDefenceMultipliers)
@@ -2687,7 +2687,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvpMagicalSkillDefenceMultipliers = ClassBalance.getString("PvpMagicalSkillDefenceMultipliers", "").trim().split(";");
+			final String[] pvpMagicalSkillDefenceMultipliers = classBalanceConfig.getString("PvpMagicalSkillDefenceMultipliers", "").trim().split(";");
 			if (pvpMagicalSkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pvpMagicalSkillDefenceMultipliers)
@@ -2701,7 +2701,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS, 1f);
-			final String[] pveMagicalSkillCriticalChanceMultipliers = ClassBalance.getString("PveMagicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			final String[] pveMagicalSkillCriticalChanceMultipliers = classBalanceConfig.getString("PveMagicalSkillCriticalChanceMultipliers", "").trim().split(";");
 			if (pveMagicalSkillCriticalChanceMultipliers.length > 0)
 			{
 				for (String info : pveMagicalSkillCriticalChanceMultipliers)
@@ -2715,7 +2715,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS, 1f);
-			final String[] pvpMagicalSkillCriticalChanceMultipliers = ClassBalance.getString("PvpMagicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			final String[] pvpMagicalSkillCriticalChanceMultipliers = classBalanceConfig.getString("PvpMagicalSkillCriticalChanceMultipliers", "").trim().split(";");
 			if (pvpMagicalSkillCriticalChanceMultipliers.length > 0)
 			{
 				for (String info : pvpMagicalSkillCriticalChanceMultipliers)
@@ -2729,7 +2729,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pveMagicalSkillCriticalDamageMultipliers = ClassBalance.getString("PveMagicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			final String[] pveMagicalSkillCriticalDamageMultipliers = classBalanceConfig.getString("PveMagicalSkillCriticalDamageMultipliers", "").trim().split(";");
 			if (pveMagicalSkillCriticalDamageMultipliers.length > 0)
 			{
 				for (String info : pveMagicalSkillCriticalDamageMultipliers)
@@ -2743,7 +2743,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpMagicalSkillCriticalDamageMultipliers = ClassBalance.getString("PvpMagicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			final String[] pvpMagicalSkillCriticalDamageMultipliers = classBalanceConfig.getString("PvpMagicalSkillCriticalDamageMultipliers", "").trim().split(";");
 			if (pvpMagicalSkillCriticalDamageMultipliers.length > 0)
 			{
 				for (String info : pvpMagicalSkillCriticalDamageMultipliers)
@@ -2757,7 +2757,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalSkillDamageMultipliers = ClassBalance.getString("PvePhysicalSkillDamageMultipliers", "").trim().split(";");
+			final String[] pvePhysicalSkillDamageMultipliers = classBalanceConfig.getString("PvePhysicalSkillDamageMultipliers", "").trim().split(";");
 			if (pvePhysicalSkillDamageMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalSkillDamageMultipliers)
@@ -2771,7 +2771,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalSkillDamageMultipliers = ClassBalance.getString("PvpPhysicalSkillDamageMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalSkillDamageMultipliers = classBalanceConfig.getString("PvpPhysicalSkillDamageMultipliers", "").trim().split(";");
 			if (pvpPhysicalSkillDamageMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalSkillDamageMultipliers)
@@ -2785,7 +2785,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalSkillDefenceMultipliers = ClassBalance.getString("PvePhysicalSkillDefenceMultipliers", "").trim().split(";");
+			final String[] pvePhysicalSkillDefenceMultipliers = classBalanceConfig.getString("PvePhysicalSkillDefenceMultipliers", "").trim().split(";");
 			if (pvePhysicalSkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalSkillDefenceMultipliers)
@@ -2799,7 +2799,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalSkillDefenceMultipliers = ClassBalance.getString("PvpPhysicalSkillDefenceMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalSkillDefenceMultipliers = classBalanceConfig.getString("PvpPhysicalSkillDefenceMultipliers", "").trim().split(";");
 			if (pvpPhysicalSkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalSkillDefenceMultipliers)
@@ -2813,7 +2813,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalSkillCriticalChanceMultipliers = ClassBalance.getString("PvePhysicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			final String[] pvePhysicalSkillCriticalChanceMultipliers = classBalanceConfig.getString("PvePhysicalSkillCriticalChanceMultipliers", "").trim().split(";");
 			if (pvePhysicalSkillCriticalChanceMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalSkillCriticalChanceMultipliers)
@@ -2827,7 +2827,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalSkillCriticalChanceMultipliers = ClassBalance.getString("PvpPhysicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalSkillCriticalChanceMultipliers = classBalanceConfig.getString("PvpPhysicalSkillCriticalChanceMultipliers", "").trim().split(";");
 			if (pvpPhysicalSkillCriticalChanceMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalSkillCriticalChanceMultipliers)
@@ -2841,7 +2841,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalSkillCriticalDamageMultipliers = ClassBalance.getString("PvePhysicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			final String[] pvePhysicalSkillCriticalDamageMultipliers = classBalanceConfig.getString("PvePhysicalSkillCriticalDamageMultipliers", "").trim().split(";");
 			if (pvePhysicalSkillCriticalDamageMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalSkillCriticalDamageMultipliers)
@@ -2855,7 +2855,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalSkillCriticalDamageMultipliers = ClassBalance.getString("PvpPhysicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalSkillCriticalDamageMultipliers = classBalanceConfig.getString("PvpPhysicalSkillCriticalDamageMultipliers", "").trim().split(";");
 			if (pvpPhysicalSkillCriticalDamageMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalSkillCriticalDamageMultipliers)
@@ -2869,7 +2869,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalAttackDamageMultipliers = ClassBalance.getString("PvePhysicalAttackDamageMultipliers", "").trim().split(";");
+			final String[] pvePhysicalAttackDamageMultipliers = classBalanceConfig.getString("PvePhysicalAttackDamageMultipliers", "").trim().split(";");
 			if (pvePhysicalAttackDamageMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalAttackDamageMultipliers)
@@ -2883,7 +2883,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalAttackDamageMultipliers = ClassBalance.getString("PvpPhysicalAttackDamageMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalAttackDamageMultipliers = classBalanceConfig.getString("PvpPhysicalAttackDamageMultipliers", "").trim().split(";");
 			if (pvpPhysicalAttackDamageMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalAttackDamageMultipliers)
@@ -2897,7 +2897,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalAttackDefenceMultipliers = ClassBalance.getString("PvePhysicalAttackDefenceMultipliers", "").trim().split(";");
+			final String[] pvePhysicalAttackDefenceMultipliers = classBalanceConfig.getString("PvePhysicalAttackDefenceMultipliers", "").trim().split(";");
 			if (pvePhysicalAttackDefenceMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalAttackDefenceMultipliers)
@@ -2911,7 +2911,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalAttackDefenceMultipliers = ClassBalance.getString("PvpPhysicalAttackDefenceMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalAttackDefenceMultipliers = classBalanceConfig.getString("PvpPhysicalAttackDefenceMultipliers", "").trim().split(";");
 			if (pvpPhysicalAttackDefenceMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalAttackDefenceMultipliers)
@@ -2925,7 +2925,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalAttackCriticalChanceMultipliers = ClassBalance.getString("PvePhysicalAttackCriticalChanceMultipliers", "").trim().split(";");
+			final String[] pvePhysicalAttackCriticalChanceMultipliers = classBalanceConfig.getString("PvePhysicalAttackCriticalChanceMultipliers", "").trim().split(";");
 			if (pvePhysicalAttackCriticalChanceMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalAttackCriticalChanceMultipliers)
@@ -2939,7 +2939,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalAttackCriticalChanceMultipliers = ClassBalance.getString("PvpPhysicalAttackCriticalChanceMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalAttackCriticalChanceMultipliers = classBalanceConfig.getString("PvpPhysicalAttackCriticalChanceMultipliers", "").trim().split(";");
 			if (pvpPhysicalAttackCriticalChanceMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalAttackCriticalChanceMultipliers)
@@ -2953,7 +2953,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvePhysicalAttackCriticalDamageMultipliers = ClassBalance.getString("PvePhysicalAttackCriticalDamageMultipliers", "").trim().split(";");
+			final String[] pvePhysicalAttackCriticalDamageMultipliers = classBalanceConfig.getString("PvePhysicalAttackCriticalDamageMultipliers", "").trim().split(";");
 			if (pvePhysicalAttackCriticalDamageMultipliers.length > 0)
 			{
 				for (String info : pvePhysicalAttackCriticalDamageMultipliers)
@@ -2967,7 +2967,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpPhysicalAttackCriticalDamageMultipliers = ClassBalance.getString("PvpPhysicalAttackCriticalDamageMultipliers", "").trim().split(";");
+			final String[] pvpPhysicalAttackCriticalDamageMultipliers = classBalanceConfig.getString("PvpPhysicalAttackCriticalDamageMultipliers", "").trim().split(";");
 			if (pvpPhysicalAttackCriticalDamageMultipliers.length > 0)
 			{
 				for (String info : pvpPhysicalAttackCriticalDamageMultipliers)
@@ -2981,7 +2981,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_BLOW_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pveBlowSkillDamageMultipliers = ClassBalance.getString("PveBlowSkillDamageMultipliers", "").trim().split(";");
+			final String[] pveBlowSkillDamageMultipliers = classBalanceConfig.getString("PveBlowSkillDamageMultipliers", "").trim().split(";");
 			if (pveBlowSkillDamageMultipliers.length > 0)
 			{
 				for (String info : pveBlowSkillDamageMultipliers)
@@ -2995,7 +2995,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpBlowSkillDamageMultipliers = ClassBalance.getString("PvpBlowSkillDamageMultipliers", "").trim().split(";");
+			final String[] pvpBlowSkillDamageMultipliers = classBalanceConfig.getString("PvpBlowSkillDamageMultipliers", "").trim().split(";");
 			if (pvpBlowSkillDamageMultipliers.length > 0)
 			{
 				for (String info : pvpBlowSkillDamageMultipliers)
@@ -3009,7 +3009,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pveBlowSkillDefenceMultipliers = ClassBalance.getString("PveBlowSkillDefenceMultipliers", "").trim().split(";");
+			final String[] pveBlowSkillDefenceMultipliers = classBalanceConfig.getString("PveBlowSkillDefenceMultipliers", "").trim().split(";");
 			if (pveBlowSkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pveBlowSkillDefenceMultipliers)
@@ -3023,7 +3023,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvpBlowSkillDefenceMultipliers = ClassBalance.getString("PvpBlowSkillDefenceMultipliers", "").trim().split(";");
+			final String[] pvpBlowSkillDefenceMultipliers = classBalanceConfig.getString("PvpBlowSkillDefenceMultipliers", "").trim().split(";");
 			if (pvpBlowSkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pvpBlowSkillDefenceMultipliers)
@@ -3037,7 +3037,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pveEnergySkillDamageMultipliers = ClassBalance.getString("PveEnergySkillDamageMultipliers", "").trim().split(";");
+			final String[] pveEnergySkillDamageMultipliers = classBalanceConfig.getString("PveEnergySkillDamageMultipliers", "").trim().split(";");
 			if (pveEnergySkillDamageMultipliers.length > 0)
 			{
 				for (String info : pveEnergySkillDamageMultipliers)
@@ -3051,7 +3051,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS, 1f);
-			final String[] pvpEnergySkillDamageMultipliers = ClassBalance.getString("PvpEnergySkillDamageMultipliers", "").trim().split(";");
+			final String[] pvpEnergySkillDamageMultipliers = classBalanceConfig.getString("PvpEnergySkillDamageMultipliers", "").trim().split(";");
 			if (pvpEnergySkillDamageMultipliers.length > 0)
 			{
 				for (String info : pvpEnergySkillDamageMultipliers)
@@ -3065,7 +3065,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pveEnergySkillDefenceMultipliers = ClassBalance.getString("PveEnergySkillDefenceMultipliers", "").trim().split(";");
+			final String[] pveEnergySkillDefenceMultipliers = classBalanceConfig.getString("PveEnergySkillDefenceMultipliers", "").trim().split(";");
 			if (pveEnergySkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pveEnergySkillDefenceMultipliers)
@@ -3079,7 +3079,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS, 1f);
-			final String[] pvpEnergySkillDefenceMultipliers = ClassBalance.getString("PvpEnergySkillDefenceMultipliers", "").trim().split(";");
+			final String[] pvpEnergySkillDefenceMultipliers = classBalanceConfig.getString("PvpEnergySkillDefenceMultipliers", "").trim().split(";");
 			if (pvpEnergySkillDefenceMultipliers.length > 0)
 			{
 				for (String info : pvpEnergySkillDefenceMultipliers)
@@ -3093,7 +3093,7 @@ public class Config
 				}
 			}
 			Arrays.fill(PLAYER_HEALING_SKILL_MULTIPLIERS, 1f);
-			final String[] playerHealingSkillMultipliers = ClassBalance.getString("PlayerHealingSkillMultipliers", "").trim().split(";");
+			final String[] playerHealingSkillMultipliers = classBalanceConfig.getString("PlayerHealingSkillMultipliers", "").trim().split(";");
 			if (playerHealingSkillMultipliers.length > 0)
 			{
 				for (String info : playerHealingSkillMultipliers)
@@ -3107,7 +3107,7 @@ public class Config
 				}
 			}
 			Arrays.fill(SKILL_MASTERY_CHANCE_MULTIPLIERS, 1f);
-			final String[] skillMasteryChanceMultipliers = ClassBalance.getString("SkillMasteryChanceMultipliers", "").trim().split(";");
+			final String[] skillMasteryChanceMultipliers = classBalanceConfig.getString("SkillMasteryChanceMultipliers", "").trim().split(";");
 			if (skillMasteryChanceMultipliers.length > 0)
 			{
 				for (String info : skillMasteryChanceMultipliers)
@@ -3121,7 +3121,7 @@ public class Config
 				}
 			}
 			Arrays.fill(EXP_AMOUNT_MULTIPLIERS, 1f);
-			final String[] expAmountMultipliers = ClassBalance.getString("ExpAmountMultipliers", "").trim().split(";");
+			final String[] expAmountMultipliers = classBalanceConfig.getString("ExpAmountMultipliers", "").trim().split(";");
 			if (expAmountMultipliers.length > 0)
 			{
 				for (String info : expAmountMultipliers)
@@ -3135,7 +3135,7 @@ public class Config
 				}
 			}
 			Arrays.fill(SP_AMOUNT_MULTIPLIERS, 1f);
-			final String[] spAmountMultipliers = ClassBalance.getString("SpAmountMultipliers", "").trim().split(";");
+			final String[] spAmountMultipliers = classBalanceConfig.getString("SpAmountMultipliers", "").trim().split(";");
 			if (spAmountMultipliers.length > 0)
 			{
 				for (String info : spAmountMultipliers)
@@ -3150,31 +3150,31 @@ public class Config
 			}
 			
 			// Load CommunityBoard config file (if exists)
-			final PropertiesParser CommunityBoard = new PropertiesParser(CUSTOM_COMMUNITY_BOARD_CONFIG_FILE);
-			CUSTOM_CB_ENABLED = CommunityBoard.getBoolean("CustomCommunityBoard", false);
-			COMMUNITYBOARD_CURRENCY = CommunityBoard.getInt("CommunityCurrencyId", 57);
-			COMMUNITYBOARD_ENABLE_MULTISELLS = CommunityBoard.getBoolean("CommunityEnableMultisells", true);
-			COMMUNITYBOARD_ENABLE_TELEPORTS = CommunityBoard.getBoolean("CommunityEnableTeleports", true);
-			COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", true);
-			COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", true);
-			COMMUNITYBOARD_ENABLE_DELEVEL = CommunityBoard.getBoolean("CommunityEnableDelevel", false);
-			COMMUNITYBOARD_DELEVEL_REMOVE_ABILITIES = CommunityBoard.getBoolean("DelevelRemoveAbilities", false);
-			COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
-			COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
-			COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);
-			COMMUNITYBOARD_DELEVEL_PRICE = CommunityBoard.getInt("CommunityDelevelPrice", 0);
-			COMMUNITYBOARD_KARMA_DISABLED = CommunityBoard.getBoolean("CommunityKarmaDisabled", true);
-			COMMUNITYBOARD_CAST_ANIMATIONS = CommunityBoard.getBoolean("CommunityCastAnimations", false);
-			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CommunityBoard.getBoolean("CommunityPremiumSystem", false);
-			COMMUNITY_PREMIUM_COIN_ID = CommunityBoard.getInt("CommunityPremiumBuyCoinId", 57);
-			COMMUNITY_PREMIUM_PRICE_PER_DAY = CommunityBoard.getInt("CommunityPremiumPricePerDay", 1000000);
-			final String[] allowedBuffs = CommunityBoard.getString("CommunityAvailableBuffs", "").split(",");
+			final PropertiesParser communityBoardConfig = new PropertiesParser(CUSTOM_COMMUNITY_BOARD_CONFIG_FILE);
+			CUSTOM_CB_ENABLED = communityBoardConfig.getBoolean("CustomCommunityBoard", false);
+			COMMUNITYBOARD_CURRENCY = communityBoardConfig.getInt("CommunityCurrencyId", 57);
+			COMMUNITYBOARD_ENABLE_MULTISELLS = communityBoardConfig.getBoolean("CommunityEnableMultisells", true);
+			COMMUNITYBOARD_ENABLE_TELEPORTS = communityBoardConfig.getBoolean("CommunityEnableTeleports", true);
+			COMMUNITYBOARD_ENABLE_BUFFS = communityBoardConfig.getBoolean("CommunityEnableBuffs", true);
+			COMMUNITYBOARD_ENABLE_HEAL = communityBoardConfig.getBoolean("CommunityEnableHeal", true);
+			COMMUNITYBOARD_ENABLE_DELEVEL = communityBoardConfig.getBoolean("CommunityEnableDelevel", false);
+			COMMUNITYBOARD_DELEVEL_REMOVE_ABILITIES = communityBoardConfig.getBoolean("DelevelRemoveAbilities", false);
+			COMMUNITYBOARD_TELEPORT_PRICE = communityBoardConfig.getInt("CommunityTeleportPrice", 0);
+			COMMUNITYBOARD_BUFF_PRICE = communityBoardConfig.getInt("CommunityBuffPrice", 0);
+			COMMUNITYBOARD_HEAL_PRICE = communityBoardConfig.getInt("CommunityHealPrice", 0);
+			COMMUNITYBOARD_DELEVEL_PRICE = communityBoardConfig.getInt("CommunityDelevelPrice", 0);
+			COMMUNITYBOARD_KARMA_DISABLED = communityBoardConfig.getBoolean("CommunityKarmaDisabled", true);
+			COMMUNITYBOARD_CAST_ANIMATIONS = communityBoardConfig.getBoolean("CommunityCastAnimations", false);
+			COMMUNITY_PREMIUM_SYSTEM_ENABLED = communityBoardConfig.getBoolean("CommunityPremiumSystem", false);
+			COMMUNITY_PREMIUM_COIN_ID = communityBoardConfig.getInt("CommunityPremiumBuyCoinId", 57);
+			COMMUNITY_PREMIUM_PRICE_PER_DAY = communityBoardConfig.getInt("CommunityPremiumPricePerDay", 1000000);
+			final String[] allowedBuffs = communityBoardConfig.getString("CommunityAvailableBuffs", "").split(",");
 			COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
 			for (String s : allowedBuffs)
 			{
 				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
 			}
-			final String[] availableTeleports = CommunityBoard.getString("CommunityTeleportList", "").split(";");
+			final String[] availableTeleports = communityBoardConfig.getString("CommunityTeleportList", "").split(";");
 			COMMUNITY_AVAILABLE_TELEPORTS = new HashMap<>(availableTeleports.length);
 			for (String s : availableTeleports)
 			{
@@ -3183,30 +3183,30 @@ public class Config
 			}
 			
 			// Load CustomDepositableItems config file (if exists)
-			final PropertiesParser CustomDepositableItems = new PropertiesParser(CUSTOM_CUSTOM_DEPOSITABLE_ITEMS_CONFIG_FILE);
-			CUSTOM_DEPOSITABLE_ENABLED = CustomDepositableItems.getBoolean("CustomDepositableEnabled", false);
-			CUSTOM_DEPOSITABLE_QUEST_ITEMS = CustomDepositableItems.getBoolean("DepositableQuestItems", false);
+			final PropertiesParser customDepositableItemsConfig = new PropertiesParser(CUSTOM_CUSTOM_DEPOSITABLE_ITEMS_CONFIG_FILE);
+			CUSTOM_DEPOSITABLE_ENABLED = customDepositableItemsConfig.getBoolean("CustomDepositableEnabled", false);
+			CUSTOM_DEPOSITABLE_QUEST_ITEMS = customDepositableItemsConfig.getBoolean("DepositableQuestItems", false);
 			
 			// Load CustomMailManager config file (if exists)
-			final PropertiesParser CustomMailManager = new PropertiesParser(CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE);
-			CUSTOM_MAIL_MANAGER_ENABLED = CustomMailManager.getBoolean("CustomMailManagerEnabled", false);
-			CUSTOM_MAIL_MANAGER_DELAY = CustomMailManager.getInt("DatabaseQueryDelay", 30) * 1000;
+			final PropertiesParser customMailManagerConfig = new PropertiesParser(CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE);
+			CUSTOM_MAIL_MANAGER_ENABLED = customMailManagerConfig.getBoolean("CustomMailManagerEnabled", false);
+			CUSTOM_MAIL_MANAGER_DELAY = customMailManagerConfig.getInt("DatabaseQueryDelay", 30) * 1000;
 			
 			// Load DelevelManager config file (if exists)
-			final PropertiesParser DelevelManager = new PropertiesParser(CUSTOM_DELEVEL_MANAGER_CONFIG_FILE);
-			DELEVEL_MANAGER_ENABLED = DelevelManager.getBoolean("Enabled", false);
-			DELEVEL_MANAGER_NPCID = DelevelManager.getInt("NpcId", 1002000);
-			DELEVEL_MANAGER_ITEMID = DelevelManager.getInt("RequiredItemId", 4356);
-			DELEVEL_MANAGER_ITEMCOUNT = DelevelManager.getInt("RequiredItemCount", 2);
-			DELEVEL_MANAGER_MINIMUM_DELEVEL = DelevelManager.getInt("MimimumDelevel", 20);
+			final PropertiesParser delevelManagerConfig = new PropertiesParser(CUSTOM_DELEVEL_MANAGER_CONFIG_FILE);
+			DELEVEL_MANAGER_ENABLED = delevelManagerConfig.getBoolean("Enabled", false);
+			DELEVEL_MANAGER_NPCID = delevelManagerConfig.getInt("NpcId", 1002000);
+			DELEVEL_MANAGER_ITEMID = delevelManagerConfig.getInt("RequiredItemId", 4356);
+			DELEVEL_MANAGER_ITEMCOUNT = delevelManagerConfig.getInt("RequiredItemCount", 2);
+			DELEVEL_MANAGER_MINIMUM_DELEVEL = delevelManagerConfig.getInt("MimimumDelevel", 20);
 			
 			// Load DualboxCheck config file (if exists)
-			final PropertiesParser DualboxCheck = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);
-			DUALBOX_CHECK_MAX_PLAYERS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxPlayersPerIP", 0);
-			DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
-			DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
-			DUALBOX_COUNT_OFFLINE_TRADERS = DualboxCheck.getBoolean("DualboxCountOfflineTraders", false);
-			final String[] dualboxCheckWhiteList = DualboxCheck.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
+			final PropertiesParser dualboxCheckConfig = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);
+			DUALBOX_CHECK_MAX_PLAYERS_PER_IP = dualboxCheckConfig.getInt("DualboxCheckMaxPlayersPerIP", 0);
+			DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = dualboxCheckConfig.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
+			DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = dualboxCheckConfig.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
+			DUALBOX_COUNT_OFFLINE_TRADERS = dualboxCheckConfig.getBoolean("DualboxCountOfflineTraders", false);
+			final String[] dualboxCheckWhiteList = dualboxCheckConfig.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
 			DUALBOX_CHECK_WHITELIST = new HashMap<>(dualboxCheckWhiteList.length);
 			for (String entry : dualboxCheckWhiteList)
 			{
@@ -3235,58 +3235,58 @@ public class Config
 			}
 			
 			// Load FactionSystem config file (if exists)
-			final PropertiesParser FactionSystem = new PropertiesParser(CUSTOM_FACTION_SYSTEM_CONFIG_FILE);
+			final PropertiesParser factionSystemConfig = new PropertiesParser(CUSTOM_FACTION_SYSTEM_CONFIG_FILE);
 			String[] tempString;
-			FACTION_SYSTEM_ENABLED = FactionSystem.getBoolean("EnableFactionSystem", false);
-			tempString = FactionSystem.getString("StartingLocation", "85332,16199,-1252").split(",");
+			FACTION_SYSTEM_ENABLED = factionSystemConfig.getBoolean("EnableFactionSystem", false);
+			tempString = factionSystemConfig.getString("StartingLocation", "85332,16199,-1252").split(",");
 			FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-			tempString = FactionSystem.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
+			tempString = factionSystemConfig.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
 			FACTION_MANAGER_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]), tempString[3] != null ? Integer.parseInt(tempString[3]) : 0);
-			tempString = FactionSystem.getString("GoodBaseLocation", "45306,48878,-3058").split(",");
+			tempString = factionSystemConfig.getString("GoodBaseLocation", "45306,48878,-3058").split(",");
 			FACTION_GOOD_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-			tempString = FactionSystem.getString("EvilBaseLocation", "-44037,-113283,-237").split(",");
+			tempString = factionSystemConfig.getString("EvilBaseLocation", "-44037,-113283,-237").split(",");
 			FACTION_EVIL_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-			FACTION_GOOD_TEAM_NAME = FactionSystem.getString("GoodTeamName", "Good");
-			FACTION_EVIL_TEAM_NAME = FactionSystem.getString("EvilTeamName", "Evil");
-			FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + FactionSystem.getString("GoodNameColor", "00FF00"));
-			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + FactionSystem.getString("EvilNameColor", "0000FF"));
-			FACTION_GUARDS_ENABLED = FactionSystem.getBoolean("EnableFactionGuards", true);
-			FACTION_RESPAWN_AT_BASE = FactionSystem.getBoolean("RespawnAtFactionBase", true);
-			FACTION_AUTO_NOBLESS = FactionSystem.getBoolean("FactionAutoNobless", false);
-			FACTION_SPECIFIC_CHAT = FactionSystem.getBoolean("EnableFactionChat", true);
-			FACTION_BALANCE_ONLINE_PLAYERS = FactionSystem.getBoolean("BalanceOnlinePlayers", true);
-			FACTION_BALANCE_PLAYER_EXCEED_LIMIT = FactionSystem.getInt("BalancePlayerExceedLimit", 20);
+			FACTION_GOOD_TEAM_NAME = factionSystemConfig.getString("GoodTeamName", "Good");
+			FACTION_EVIL_TEAM_NAME = factionSystemConfig.getString("EvilTeamName", "Evil");
+			FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + factionSystemConfig.getString("GoodNameColor", "00FF00"));
+			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + factionSystemConfig.getString("EvilNameColor", "0000FF"));
+			FACTION_GUARDS_ENABLED = factionSystemConfig.getBoolean("EnableFactionGuards", true);
+			FACTION_RESPAWN_AT_BASE = factionSystemConfig.getBoolean("RespawnAtFactionBase", true);
+			FACTION_AUTO_NOBLESS = factionSystemConfig.getBoolean("FactionAutoNobless", false);
+			FACTION_SPECIFIC_CHAT = factionSystemConfig.getBoolean("EnableFactionChat", true);
+			FACTION_BALANCE_ONLINE_PLAYERS = factionSystemConfig.getBoolean("BalanceOnlinePlayers", true);
+			FACTION_BALANCE_PLAYER_EXCEED_LIMIT = factionSystemConfig.getInt("BalancePlayerExceedLimit", 20);
 			
 			// Load FakePlayers config file (if exists)
-			final PropertiesParser FakePlayers = new PropertiesParser(CUSTOM_FAKE_PLAYERS_CONFIG_FILE);
-			FAKE_PLAYERS_ENABLED = FakePlayers.getBoolean("EnableFakePlayers", false);
-			FAKE_PLAYER_CHAT = FakePlayers.getBoolean("FakePlayerChat", false);
-			FAKE_PLAYER_USE_SHOTS = FakePlayers.getBoolean("FakePlayerUseShots", false);
-			FAKE_PLAYER_KILL_PVP = FakePlayers.getBoolean("FakePlayerKillsRewardPvP", false);
-			FAKE_PLAYER_KILL_KARMA = FakePlayers.getBoolean("FakePlayerUnflaggedKillsKarma", false);
-			FAKE_PLAYER_AGGRO_MONSTERS = FakePlayers.getBoolean("FakePlayerAggroMonsters", false);
-			FAKE_PLAYER_AGGRO_PLAYERS = FakePlayers.getBoolean("FakePlayerAggroPlayers", false);
-			FAKE_PLAYER_AGGRO_FPC = FakePlayers.getBoolean("FakePlayerAggroFPC", false);
-			FAKE_PLAYER_CAN_DROP_ITEMS = FakePlayers.getBoolean("FakePlayerCanDropItems", false);
-			FAKE_PLAYER_CAN_PICKUP = FakePlayers.getBoolean("FakePlayerCanPickup", false);
+			final PropertiesParser fakePlayerConfig = new PropertiesParser(CUSTOM_FAKE_PLAYERS_CONFIG_FILE);
+			FAKE_PLAYERS_ENABLED = fakePlayerConfig.getBoolean("EnableFakePlayers", false);
+			FAKE_PLAYER_CHAT = fakePlayerConfig.getBoolean("FakePlayerChat", false);
+			FAKE_PLAYER_USE_SHOTS = fakePlayerConfig.getBoolean("FakePlayerUseShots", false);
+			FAKE_PLAYER_KILL_PVP = fakePlayerConfig.getBoolean("FakePlayerKillsRewardPvP", false);
+			FAKE_PLAYER_KILL_KARMA = fakePlayerConfig.getBoolean("FakePlayerUnflaggedKillsKarma", false);
+			FAKE_PLAYER_AGGRO_MONSTERS = fakePlayerConfig.getBoolean("FakePlayerAggroMonsters", false);
+			FAKE_PLAYER_AGGRO_PLAYERS = fakePlayerConfig.getBoolean("FakePlayerAggroPlayers", false);
+			FAKE_PLAYER_AGGRO_FPC = fakePlayerConfig.getBoolean("FakePlayerAggroFPC", false);
+			FAKE_PLAYER_CAN_DROP_ITEMS = fakePlayerConfig.getBoolean("FakePlayerCanDropItems", false);
+			FAKE_PLAYER_CAN_PICKUP = fakePlayerConfig.getBoolean("FakePlayerCanPickup", false);
 			
 			// Load FindPvP config file (if exists)
-			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
-			ENABLE_FIND_PVP = FindPvP.getBoolean("EnableFindPvP", false);
+			final PropertiesParser findPvpConfig = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
+			ENABLE_FIND_PVP = findPvpConfig.getBoolean("EnableFindPvP", false);
 			
 			// Load MerchantZeroSellPrice config file (if exists)
-			final PropertiesParser MerchantZeroSellPrice = new PropertiesParser(CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);
-			MERCHANT_ZERO_SELL_PRICE = MerchantZeroSellPrice.getBoolean("MerchantZeroSellPrice", false);
+			final PropertiesParser merchantZeroSellPriceConfig = new PropertiesParser(CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);
+			MERCHANT_ZERO_SELL_PRICE = merchantZeroSellPriceConfig.getBoolean("MerchantZeroSellPrice", false);
 			
 			// Load MultilingualSupport config file (if exists)
-			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
-			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en").toLowerCase();
-			MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
+			final PropertiesParser multilingualSupportConfig = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
+			MULTILANG_DEFAULT = multilingualSupportConfig.getString("MultiLangDefault", "en").toLowerCase();
+			MULTILANG_ENABLE = multilingualSupportConfig.getBoolean("MultiLangEnable", false);
 			if (MULTILANG_ENABLE)
 			{
 				CHECK_HTML_ENCODING = false;
 			}
-			final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
+			final String[] allowed = multilingualSupportConfig.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
 			MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)
 			{
@@ -3296,57 +3296,57 @@ public class Config
 			{
 				LOGGER.warning("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
 			}
-			MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
+			MULTILANG_VOICED_ALLOW = multilingualSupportConfig.getBoolean("MultiLangVoiceCommand", true);
 			
 			// Load NoblessMaster config file (if exists)
-			final PropertiesParser NoblessMaster = new PropertiesParser(CUSTOM_NOBLESS_MASTER_CONFIG_FILE);
-			NOBLESS_MASTER_ENABLED = NoblessMaster.getBoolean("Enabled", false);
-			NOBLESS_MASTER_NPCID = NoblessMaster.getInt("NpcId", 1003000);
-			NOBLESS_MASTER_LEVEL_REQUIREMENT = NoblessMaster.getInt("LevelRequirement", 80);
-			NOBLESS_MASTER_REWARD_TIARA = NoblessMaster.getBoolean("RewardTiara", false);
-			NOBLESS_MASTER_LEVEL_REWARDED = NoblessMaster.getInt("LevelRewarded", 1);
+			final PropertiesParser noblessMasterConfig = new PropertiesParser(CUSTOM_NOBLESS_MASTER_CONFIG_FILE);
+			NOBLESS_MASTER_ENABLED = noblessMasterConfig.getBoolean("Enabled", false);
+			NOBLESS_MASTER_NPCID = noblessMasterConfig.getInt("NpcId", 1003000);
+			NOBLESS_MASTER_LEVEL_REQUIREMENT = noblessMasterConfig.getInt("LevelRequirement", 80);
+			NOBLESS_MASTER_REWARD_TIARA = noblessMasterConfig.getBoolean("RewardTiara", false);
+			NOBLESS_MASTER_LEVEL_REWARDED = noblessMasterConfig.getInt("LevelRewarded", 1);
 			
 			// Load OfflineTrade config file (if exists)
-			final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
-			OFFLINE_TRADE_ENABLE = OfflineTrade.getBoolean("OfflineTradeEnable", false);
-			OFFLINE_CRAFT_ENABLE = OfflineTrade.getBoolean("OfflineCraftEnable", false);
-			OFFLINE_MODE_IN_PEACE_ZONE = OfflineTrade.getBoolean("OfflineModeInPeaceZone", false);
-			OFFLINE_MODE_NO_DAMAGE = OfflineTrade.getBoolean("OfflineModeNoDamage", false);
-			OFFLINE_SET_NAME_COLOR = OfflineTrade.getBoolean("OfflineSetNameColor", false);
-			OFFLINE_NAME_COLOR = Integer.decode("0x" + OfflineTrade.getString("OfflineNameColor", "808080"));
-			OFFLINE_FAME = OfflineTrade.getBoolean("OfflineFame", true);
-			RESTORE_OFFLINERS = OfflineTrade.getBoolean("RestoreOffliners", false);
-			OFFLINE_MAX_DAYS = OfflineTrade.getInt("OfflineMaxDays", 10);
-			OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
-			STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
+			final PropertiesParser offlineTradeConfig = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
+			OFFLINE_TRADE_ENABLE = offlineTradeConfig.getBoolean("OfflineTradeEnable", false);
+			OFFLINE_CRAFT_ENABLE = offlineTradeConfig.getBoolean("OfflineCraftEnable", false);
+			OFFLINE_MODE_IN_PEACE_ZONE = offlineTradeConfig.getBoolean("OfflineModeInPeaceZone", false);
+			OFFLINE_MODE_NO_DAMAGE = offlineTradeConfig.getBoolean("OfflineModeNoDamage", false);
+			OFFLINE_SET_NAME_COLOR = offlineTradeConfig.getBoolean("OfflineSetNameColor", false);
+			OFFLINE_NAME_COLOR = Integer.decode("0x" + offlineTradeConfig.getString("OfflineNameColor", "808080"));
+			OFFLINE_FAME = offlineTradeConfig.getBoolean("OfflineFame", true);
+			RESTORE_OFFLINERS = offlineTradeConfig.getBoolean("RestoreOffliners", false);
+			OFFLINE_MAX_DAYS = offlineTradeConfig.getInt("OfflineMaxDays", 10);
+			OFFLINE_DISCONNECT_FINISHED = offlineTradeConfig.getBoolean("OfflineDisconnectFinished", true);
+			STORE_OFFLINE_TRADE_IN_REALTIME = offlineTradeConfig.getBoolean("StoreOfflineTradeInRealtime", true);
 			
 			// Load PasswordChange config file (if exists)
-			final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
-			ALLOW_CHANGE_PASSWORD = PasswordChange.getBoolean("AllowChangePassword", false);
+			final PropertiesParser passwordChangeConfig = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
+			ALLOW_CHANGE_PASSWORD = passwordChangeConfig.getBoolean("AllowChangePassword", false);
 			
 			// Load PcCafe config file (if exists)
-			final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
-			PC_CAFE_ENABLED = PcCafe.getBoolean("PcCafeEnabled", false);
-			PC_CAFE_ONLY_PREMIUM = PcCafe.getBoolean("PcCafeOnlyPremium", false);
-			PC_CAFE_MAX_POINTS = PcCafe.getInt("MaxPcCafePoints", 200000);
+			final PropertiesParser pcCafeConfig = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
+			PC_CAFE_ENABLED = pcCafeConfig.getBoolean("PcCafeEnabled", false);
+			PC_CAFE_ONLY_PREMIUM = pcCafeConfig.getBoolean("PcCafeOnlyPremium", false);
+			PC_CAFE_MAX_POINTS = pcCafeConfig.getInt("MaxPcCafePoints", 200000);
 			if (PC_CAFE_MAX_POINTS < 0)
 			{
 				PC_CAFE_MAX_POINTS = 0;
 			}
-			PC_CAFE_ENABLE_DOUBLE_POINTS = PcCafe.getBoolean("DoublingAcquisitionPoints", false);
-			PC_CAFE_DOUBLE_POINTS_CHANCE = PcCafe.getInt("DoublingAcquisitionPointsChance", 1);
+			PC_CAFE_ENABLE_DOUBLE_POINTS = pcCafeConfig.getBoolean("DoublingAcquisitionPoints", false);
+			PC_CAFE_DOUBLE_POINTS_CHANCE = pcCafeConfig.getInt("DoublingAcquisitionPointsChance", 1);
 			if ((PC_CAFE_DOUBLE_POINTS_CHANCE < 0) || (PC_CAFE_DOUBLE_POINTS_CHANCE > 100))
 			{
 				PC_CAFE_DOUBLE_POINTS_CHANCE = 1;
 			}
-			PC_CAFE_POINT_RATE = PcCafe.getDouble("AcquisitionPointsRate", 1.0);
-			PC_CAFE_RANDOM_POINT = PcCafe.getBoolean("AcquisitionPointsRandom", false);
+			PC_CAFE_POINT_RATE = pcCafeConfig.getDouble("AcquisitionPointsRate", 1.0);
+			PC_CAFE_RANDOM_POINT = pcCafeConfig.getBoolean("AcquisitionPointsRandom", false);
 			if (PC_CAFE_POINT_RATE < 0)
 			{
 				PC_CAFE_POINT_RATE = 1;
 			}
-			PC_CAFE_REWARD_LOW_EXP_KILLS = PcCafe.getBoolean("RewardLowExpKills", true);
-			PC_CAFE_LOW_EXP_KILLS_CHANCE = PcCafe.getInt("RewardLowExpKillsChance", 50);
+			PC_CAFE_REWARD_LOW_EXP_KILLS = pcCafeConfig.getBoolean("RewardLowExpKills", true);
+			PC_CAFE_LOW_EXP_KILLS_CHANCE = pcCafeConfig.getInt("RewardLowExpKillsChance", 50);
 			if (PC_CAFE_LOW_EXP_KILLS_CHANCE < 0)
 			{
 				PC_CAFE_LOW_EXP_KILLS_CHANCE = 0;
@@ -3357,15 +3357,15 @@ public class Config
 			}
 			
 			// Load PremiumSystem config file (if exists)
-			final PropertiesParser PremiumSystem = new PropertiesParser(CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE);
-			PREMIUM_SYSTEM_ENABLED = PremiumSystem.getBoolean("EnablePremiumSystem", false);
-			PREMIUM_RATE_XP = PremiumSystem.getFloat("PremiumRateXp", 2);
-			PREMIUM_RATE_SP = PremiumSystem.getFloat("PremiumRateSp", 2);
-			PREMIUM_RATE_DROP_CHANCE = PremiumSystem.getFloat("PremiumRateDropChance", 2);
-			PREMIUM_RATE_DROP_AMOUNT = PremiumSystem.getFloat("PremiumRateDropAmount", 1);
-			PREMIUM_RATE_SPOIL_CHANCE = PremiumSystem.getFloat("PremiumRateSpoilChance", 2);
-			PREMIUM_RATE_SPOIL_AMOUNT = PremiumSystem.getFloat("PremiumRateSpoilAmount", 1);
-			final String[] premiumDropChanceMultiplier = PremiumSystem.getString("PremiumRateDropChanceByItemId", "").split(";");
+			final PropertiesParser premiumSystemConfig = new PropertiesParser(CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE);
+			PREMIUM_SYSTEM_ENABLED = premiumSystemConfig.getBoolean("EnablePremiumSystem", false);
+			PREMIUM_RATE_XP = premiumSystemConfig.getFloat("PremiumRateXp", 2);
+			PREMIUM_RATE_SP = premiumSystemConfig.getFloat("PremiumRateSp", 2);
+			PREMIUM_RATE_DROP_CHANCE = premiumSystemConfig.getFloat("PremiumRateDropChance", 2);
+			PREMIUM_RATE_DROP_AMOUNT = premiumSystemConfig.getFloat("PremiumRateDropAmount", 1);
+			PREMIUM_RATE_SPOIL_CHANCE = premiumSystemConfig.getFloat("PremiumRateSpoilChance", 2);
+			PREMIUM_RATE_SPOIL_AMOUNT = premiumSystemConfig.getFloat("PremiumRateSpoilAmount", 1);
+			final String[] premiumDropChanceMultiplier = premiumSystemConfig.getString("PremiumRateDropChanceByItemId", "").split(";");
 			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
 			if (!premiumDropChanceMultiplier[0].isEmpty())
 			{
@@ -3392,7 +3392,7 @@ public class Config
 					}
 				}
 			}
-			final String[] premiumDropAmountMultiplier = PremiumSystem.getString("PremiumRateDropAmountByItemId", "").split(";");
+			final String[] premiumDropAmountMultiplier = premiumSystemConfig.getString("PremiumRateDropAmountByItemId", "").split(";");
 			PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
 			if (!premiumDropAmountMultiplier[0].isEmpty())
 			{
@@ -3419,63 +3419,63 @@ public class Config
 					}
 				}
 			}
-			PREMIUM_HENNA_SLOT_ENABLED = PremiumSystem.getBoolean("EnablePremiumHennaSlot", true);
-			PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL = PremiumSystem.getBoolean("EnablePremiumHennaSlotforNonPremium", true);
-			PREMIUM_HENNA_SLOT_ALL_DYES = PremiumSystem.getBoolean("EnableAnyHennaAtPremiumSlot", false);
-			PREMIUM_ONLY_FISHING = PremiumSystem.getBoolean("PremiumOnlyFishing", true);
+			PREMIUM_HENNA_SLOT_ENABLED = premiumSystemConfig.getBoolean("EnablePremiumHennaSlot", true);
+			PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL = premiumSystemConfig.getBoolean("EnablePremiumHennaSlotforNonPremium", true);
+			PREMIUM_HENNA_SLOT_ALL_DYES = premiumSystemConfig.getBoolean("EnableAnyHennaAtPremiumSlot", false);
+			PREMIUM_ONLY_FISHING = premiumSystemConfig.getBoolean("PremiumOnlyFishing", true);
 			
 			// Load PrivateStoreRange config file (if exists)
-			final PropertiesParser PrivateStoreRange = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);
-			SHOP_MIN_RANGE_FROM_PLAYER = PrivateStoreRange.getInt("ShopMinRangeFromPlayer", 50);
-			SHOP_MIN_RANGE_FROM_NPC = PrivateStoreRange.getInt("ShopMinRangeFromNpc", 100);
+			final PropertiesParser privateStoreRangeConfig = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);
+			SHOP_MIN_RANGE_FROM_PLAYER = privateStoreRangeConfig.getInt("ShopMinRangeFromPlayer", 50);
+			SHOP_MIN_RANGE_FROM_NPC = privateStoreRangeConfig.getInt("ShopMinRangeFromNpc", 100);
 			
 			// Load PvpAnnounce config file (if exists)
-			final PropertiesParser PvpAnnounce = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);
-			ANNOUNCE_PK_PVP = PvpAnnounce.getBoolean("AnnouncePkPvP", false);
-			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = PvpAnnounce.getBoolean("AnnouncePkPvPNormalMessage", true);
-			ANNOUNCE_PK_MSG = PvpAnnounce.getString("AnnouncePkMsg", "$killer has slaughtered $target");
-			ANNOUNCE_PVP_MSG = PvpAnnounce.getString("AnnouncePvpMsg", "$killer has defeated $target");
+			final PropertiesParser pvpAnnounceConfig = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);
+			ANNOUNCE_PK_PVP = pvpAnnounceConfig.getBoolean("AnnouncePkPvP", false);
+			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = pvpAnnounceConfig.getBoolean("AnnouncePkPvPNormalMessage", true);
+			ANNOUNCE_PK_MSG = pvpAnnounceConfig.getString("AnnouncePkMsg", "$killer has slaughtered $target");
+			ANNOUNCE_PVP_MSG = pvpAnnounceConfig.getString("AnnouncePvpMsg", "$killer has defeated $target");
 			
 			// Load PvpRewardItem config file (if exists)
-			final PropertiesParser PvpRewardItem = new PropertiesParser(CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE);
-			REWARD_PVP_ITEM = PvpRewardItem.getBoolean("RewardPvpItem", false);
-			REWARD_PVP_ITEM_ID = PvpRewardItem.getInt("RewardPvpItemId", 57);
-			REWARD_PVP_ITEM_AMOUNT = PvpRewardItem.getInt("RewardPvpItemAmount", 1000);
-			REWARD_PVP_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPvpItemMessage", true);
-			REWARD_PK_ITEM = PvpRewardItem.getBoolean("RewardPkItem", false);
-			REWARD_PK_ITEM_ID = PvpRewardItem.getInt("RewardPkItemId", 57);
-			REWARD_PK_ITEM_AMOUNT = PvpRewardItem.getInt("RewardPkItemAmount", 500);
-			REWARD_PK_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPkItemMessage", true);
-			DISABLE_REWARDS_IN_INSTANCES = PvpRewardItem.getBoolean("DisableRewardsInInstances", true);
-			DISABLE_REWARDS_IN_PVP_ZONES = PvpRewardItem.getBoolean("DisableRewardsInPvpZones", true);
+			final PropertiesParser pvpRewardItemConfig = new PropertiesParser(CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE);
+			REWARD_PVP_ITEM = pvpRewardItemConfig.getBoolean("RewardPvpItem", false);
+			REWARD_PVP_ITEM_ID = pvpRewardItemConfig.getInt("RewardPvpItemId", 57);
+			REWARD_PVP_ITEM_AMOUNT = pvpRewardItemConfig.getInt("RewardPvpItemAmount", 1000);
+			REWARD_PVP_ITEM_MESSAGE = pvpRewardItemConfig.getBoolean("RewardPvpItemMessage", true);
+			REWARD_PK_ITEM = pvpRewardItemConfig.getBoolean("RewardPkItem", false);
+			REWARD_PK_ITEM_ID = pvpRewardItemConfig.getInt("RewardPkItemId", 57);
+			REWARD_PK_ITEM_AMOUNT = pvpRewardItemConfig.getInt("RewardPkItemAmount", 500);
+			REWARD_PK_ITEM_MESSAGE = pvpRewardItemConfig.getBoolean("RewardPkItemMessage", true);
+			DISABLE_REWARDS_IN_INSTANCES = pvpRewardItemConfig.getBoolean("DisableRewardsInInstances", true);
+			DISABLE_REWARDS_IN_PVP_ZONES = pvpRewardItemConfig.getBoolean("DisableRewardsInPvpZones", true);
 			
 			// Load PvpRewardItem config file (if exists)
-			final PropertiesParser PvpTitleColor = new PropertiesParser(CUSTOM_PVP_TITLE_CONFIG_FILE);
-			PVP_COLOR_SYSTEM_ENABLED = PvpTitleColor.getBoolean("EnablePvPColorSystem", false);
-			PVP_AMOUNT1 = PvpTitleColor.getInt("PvpAmount1", 500);
-			PVP_AMOUNT2 = PvpTitleColor.getInt("PvpAmount2", 1000);
-			PVP_AMOUNT3 = PvpTitleColor.getInt("PvpAmount3", 1500);
-			PVP_AMOUNT4 = PvpTitleColor.getInt("PvpAmount4", 2500);
-			PVP_AMOUNT5 = PvpTitleColor.getInt("PvpAmount5", 5000);
-			NAME_COLOR_FOR_PVP_AMOUNT1 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount1", "00FF00"));
-			NAME_COLOR_FOR_PVP_AMOUNT2 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount2", "00FF00"));
-			NAME_COLOR_FOR_PVP_AMOUNT3 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount3", "00FF00"));
-			NAME_COLOR_FOR_PVP_AMOUNT4 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount4", "00FF00"));
-			NAME_COLOR_FOR_PVP_AMOUNT5 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount5", "00FF00"));
-			TITLE_FOR_PVP_AMOUNT1 = PvpTitleColor.getString("PvPTitleForAmount1", "Title");
-			TITLE_FOR_PVP_AMOUNT2 = PvpTitleColor.getString("PvPTitleForAmount2", "Title");
-			TITLE_FOR_PVP_AMOUNT3 = PvpTitleColor.getString("PvPTitleForAmount3", "Title");
-			TITLE_FOR_PVP_AMOUNT4 = PvpTitleColor.getString("PvPTitleForAmount4", "Title");
-			TITLE_FOR_PVP_AMOUNT5 = PvpTitleColor.getString("PvPTitleForAmount5", "Title");
+			final PropertiesParser pvpTitleColorConfig = new PropertiesParser(CUSTOM_PVP_TITLE_CONFIG_FILE);
+			PVP_COLOR_SYSTEM_ENABLED = pvpTitleColorConfig.getBoolean("EnablePvPColorSystem", false);
+			PVP_AMOUNT1 = pvpTitleColorConfig.getInt("PvpAmount1", 500);
+			PVP_AMOUNT2 = pvpTitleColorConfig.getInt("PvpAmount2", 1000);
+			PVP_AMOUNT3 = pvpTitleColorConfig.getInt("PvpAmount3", 1500);
+			PVP_AMOUNT4 = pvpTitleColorConfig.getInt("PvpAmount4", 2500);
+			PVP_AMOUNT5 = pvpTitleColorConfig.getInt("PvpAmount5", 5000);
+			NAME_COLOR_FOR_PVP_AMOUNT1 = Integer.decode("0x" + pvpTitleColorConfig.getString("ColorForAmount1", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT2 = Integer.decode("0x" + pvpTitleColorConfig.getString("ColorForAmount2", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT3 = Integer.decode("0x" + pvpTitleColorConfig.getString("ColorForAmount3", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT4 = Integer.decode("0x" + pvpTitleColorConfig.getString("ColorForAmount4", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT5 = Integer.decode("0x" + pvpTitleColorConfig.getString("ColorForAmount5", "00FF00"));
+			TITLE_FOR_PVP_AMOUNT1 = pvpTitleColorConfig.getString("PvPTitleForAmount1", "Title");
+			TITLE_FOR_PVP_AMOUNT2 = pvpTitleColorConfig.getString("PvPTitleForAmount2", "Title");
+			TITLE_FOR_PVP_AMOUNT3 = pvpTitleColorConfig.getString("PvPTitleForAmount3", "Title");
+			TITLE_FOR_PVP_AMOUNT4 = pvpTitleColorConfig.getString("PvPTitleForAmount4", "Title");
+			TITLE_FOR_PVP_AMOUNT5 = pvpTitleColorConfig.getString("PvPTitleForAmount5", "Title");
 			
 			// Load RandomSpawns config file (if exists)
-			final PropertiesParser RandomSpawns = new PropertiesParser(CUSTOM_RANDOM_SPAWNS_CONFIG_FILE);
-			ENABLE_RANDOM_MONSTER_SPAWNS = RandomSpawns.getBoolean("EnableRandomMonsterSpawns", false);
-			MOB_MAX_SPAWN_RANGE = RandomSpawns.getInt("MaxSpawnMobRange", 150);
+			final PropertiesParser randomSpawnsConfig = new PropertiesParser(CUSTOM_RANDOM_SPAWNS_CONFIG_FILE);
+			ENABLE_RANDOM_MONSTER_SPAWNS = randomSpawnsConfig.getBoolean("EnableRandomMonsterSpawns", false);
+			MOB_MAX_SPAWN_RANGE = randomSpawnsConfig.getInt("MaxSpawnMobRange", 150);
 			MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
 			if (ENABLE_RANDOM_MONSTER_SPAWNS)
 			{
-				final String[] mobsIds = RandomSpawns.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
+				final String[] mobsIds = randomSpawnsConfig.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
 				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
 				for (String id : mobsIds)
 				{
@@ -3484,151 +3484,151 @@ public class Config
 			}
 			
 			// Load SayuneForAll config file (if exists)
-			final PropertiesParser SayuneForAll = new PropertiesParser(CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE);
-			FREE_JUMPS_FOR_ALL = SayuneForAll.getBoolean("FreeJumpsForAll", false);
+			final PropertiesParser sayuneForAllConfig = new PropertiesParser(CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE);
+			FREE_JUMPS_FOR_ALL = sayuneForAllConfig.getBoolean("FreeJumpsForAll", false);
 			
 			// Load ScreenWelcomeMessage config file (if exists)
-			final PropertiesParser ScreenWelcomeMessage = new PropertiesParser(CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE);
-			WELCOME_MESSAGE_ENABLED = ScreenWelcomeMessage.getBoolean("ScreenWelcomeMessageEnable", false);
-			WELCOME_MESSAGE_TEXT = ScreenWelcomeMessage.getString("ScreenWelcomeMessageText", "Welcome to our server!");
-			WELCOME_MESSAGE_TIME = ScreenWelcomeMessage.getInt("ScreenWelcomeMessageTime", 10) * 1000;
+			final PropertiesParser screenWelcomeMessageConfig = new PropertiesParser(CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE);
+			WELCOME_MESSAGE_ENABLED = screenWelcomeMessageConfig.getBoolean("ScreenWelcomeMessageEnable", false);
+			WELCOME_MESSAGE_TEXT = screenWelcomeMessageConfig.getString("ScreenWelcomeMessageText", "Welcome to our server!");
+			WELCOME_MESSAGE_TIME = screenWelcomeMessageConfig.getInt("ScreenWelcomeMessageTime", 10) * 1000;
 			
 			// Load SellBuffs config file (if exists)
-			final PropertiesParser SellBuffs = new PropertiesParser(CUSTOM_SELL_BUFFS_CONFIG_FILE);
-			SELLBUFF_ENABLED = SellBuffs.getBoolean("SellBuffEnable", false);
-			SELLBUFF_MP_MULTIPLER = SellBuffs.getInt("MpCostMultipler", 1);
-			SELLBUFF_PAYMENT_ID = SellBuffs.getInt("PaymentID", 57);
-			SELLBUFF_MIN_PRICE = SellBuffs.getLong("MinimalPrice", 100000);
-			SELLBUFF_MAX_PRICE = SellBuffs.getLong("MaximalPrice", 100000000);
-			SELLBUFF_MAX_BUFFS = SellBuffs.getInt("MaxBuffs", 15);
+			final PropertiesParser sellBuffConfig = new PropertiesParser(CUSTOM_SELL_BUFFS_CONFIG_FILE);
+			SELLBUFF_ENABLED = sellBuffConfig.getBoolean("SellBuffEnable", false);
+			SELLBUFF_MP_MULTIPLER = sellBuffConfig.getInt("MpCostMultipler", 1);
+			SELLBUFF_PAYMENT_ID = sellBuffConfig.getInt("PaymentID", 57);
+			SELLBUFF_MIN_PRICE = sellBuffConfig.getLong("MinimalPrice", 100000);
+			SELLBUFF_MAX_PRICE = sellBuffConfig.getLong("MaximalPrice", 100000000);
+			SELLBUFF_MAX_BUFFS = sellBuffConfig.getInt("MaxBuffs", 15);
 			
 			// Load ServerTime config file (if exists)
-			final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
-			DISPLAY_SERVER_TIME = ServerTime.getBoolean("DisplayServerTime", false);
+			final PropertiesParser serverTimeConfig = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
+			DISPLAY_SERVER_TIME = serverTimeConfig.getBoolean("DisplayServerTime", false);
 			
 			// Load StartingLocation config file (if exists)
-			final PropertiesParser StartingLocation = new PropertiesParser(CUSTOM_STARTING_LOCATION_CONFIG_FILE);
-			CUSTOM_STARTING_LOC = StartingLocation.getBoolean("CustomStartingLocation", false);
-			CUSTOM_STARTING_LOC_X = StartingLocation.getInt("CustomStartingLocX", 50821);
-			CUSTOM_STARTING_LOC_Y = StartingLocation.getInt("CustomStartingLocY", 186527);
-			CUSTOM_STARTING_LOC_Z = StartingLocation.getInt("CustomStartingLocZ", -3625);
+			final PropertiesParser startingLocationConfig = new PropertiesParser(CUSTOM_STARTING_LOCATION_CONFIG_FILE);
+			CUSTOM_STARTING_LOC = startingLocationConfig.getBoolean("CustomStartingLocation", false);
+			CUSTOM_STARTING_LOC_X = startingLocationConfig.getInt("CustomStartingLocX", 50821);
+			CUSTOM_STARTING_LOC_Y = startingLocationConfig.getInt("CustomStartingLocY", 186527);
+			CUSTOM_STARTING_LOC_Z = startingLocationConfig.getInt("CustomStartingLocZ", -3625);
 			
 			// Load VoteReward config file (if exists)
-			final PropertiesParser VoteReward = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);
+			final PropertiesParser voteRewardConfig = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);
 			// L2network.eu
-			ALLOW_NETWORK_VOTE_REWARD = VoteReward.getBoolean("AllowNetworkVoteReward", false);
-			NETWORK_SERVER_LINK = VoteReward.getString("NetworkServerLink", "");
-			NETWORK_VOTES_DIFFERENCE = VoteReward.getInt("NetworkVotesDifference", 5);
-			NETWORK_REWARD_CHECK_TIME = VoteReward.getInt("NetworkRewardCheckTime", 5);
-			final String NETWORK_SMALL_REWARD_VALUE = VoteReward.getString("NetworkReward", "57,100000000;");
-			final String[] NETWORK_small_reward_splitted_1 = NETWORK_SMALL_REWARD_VALUE.split(";");
-			for (String i : NETWORK_small_reward_splitted_1)
+			ALLOW_NETWORK_VOTE_REWARD = voteRewardConfig.getBoolean("AllowNetworkVoteReward", false);
+			NETWORK_SERVER_LINK = voteRewardConfig.getString("NetworkServerLink", "");
+			NETWORK_VOTES_DIFFERENCE = voteRewardConfig.getInt("NetworkVotesDifference", 5);
+			NETWORK_REWARD_CHECK_TIME = voteRewardConfig.getInt("NetworkRewardCheckTime", 5);
+			final String networkSmallRewardValue = voteRewardConfig.getString("NetworkReward", "57,100000000;");
+			final String[] networkSmallRewardSplit1 = networkSmallRewardValue.split(";");
+			for (String i : networkSmallRewardSplit1)
 			{
-				final String[] NETWORK_small_reward_splitted_2 = i.split(",");
-				NETWORK_REWARD.put(Integer.parseInt(NETWORK_small_reward_splitted_2[0]), Integer.parseInt(NETWORK_small_reward_splitted_2[1]));
+				final String[] networkSmallRewardSplit2 = i.split(",");
+				NETWORK_REWARD.put(Integer.parseInt(networkSmallRewardSplit2[0]), Integer.parseInt(networkSmallRewardSplit2[1]));
 			}
-			NETWORK_DUALBOXES_ALLOWED = VoteReward.getInt("NetworkDualboxesAllowed", 1);
-			ALLOW_NETWORK_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowNetworkGameServerReport", false);
+			NETWORK_DUALBOXES_ALLOWED = voteRewardConfig.getInt("NetworkDualboxesAllowed", 1);
+			ALLOW_NETWORK_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowNetworkGameServerReport", false);
 			// Topzone.com
-			ALLOW_TOPZONE_VOTE_REWARD = VoteReward.getBoolean("AllowTopzoneVoteReward", false);
-			TOPZONE_SERVER_LINK = VoteReward.getString("TopzoneServerLink", "");
-			TOPZONE_VOTES_DIFFERENCE = VoteReward.getInt("TopzoneVotesDifference", 5);
-			TOPZONE_REWARD_CHECK_TIME = VoteReward.getInt("TopzoneRewardCheckTime", 5);
-			final String TOPZONE_SMALL_REWARD_VALUE = VoteReward.getString("TopzoneReward", "57,100000000;");
-			final String[] topzone_small_reward_splitted_1 = TOPZONE_SMALL_REWARD_VALUE.split(";");
-			for (String i : topzone_small_reward_splitted_1)
+			ALLOW_TOPZONE_VOTE_REWARD = voteRewardConfig.getBoolean("AllowTopzoneVoteReward", false);
+			TOPZONE_SERVER_LINK = voteRewardConfig.getString("TopzoneServerLink", "");
+			TOPZONE_VOTES_DIFFERENCE = voteRewardConfig.getInt("TopzoneVotesDifference", 5);
+			TOPZONE_REWARD_CHECK_TIME = voteRewardConfig.getInt("TopzoneRewardCheckTime", 5);
+			final String topzoneSmallRewardValue = voteRewardConfig.getString("TopzoneReward", "57,100000000;");
+			final String[] topzoneSmallRewardSplit1 = topzoneSmallRewardValue.split(";");
+			for (String i : topzoneSmallRewardSplit1)
 			{
-				final String[] topzone_small_reward_splitted_2 = i.split(",");
-				TOPZONE_REWARD.put(Integer.parseInt(topzone_small_reward_splitted_2[0]), Integer.parseInt(topzone_small_reward_splitted_2[1]));
+				final String[] topzoneSmallRewardSplit2 = i.split(",");
+				TOPZONE_REWARD.put(Integer.parseInt(topzoneSmallRewardSplit2[0]), Integer.parseInt(topzoneSmallRewardSplit2[1]));
 			}
-			TOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("TopzoneDualboxesAllowed", 1);
-			ALLOW_TOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowTopzoneGameServerReport", false);
+			TOPZONE_DUALBOXES_ALLOWED = voteRewardConfig.getInt("TopzoneDualboxesAllowed", 1);
+			ALLOW_TOPZONE_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowTopzoneGameServerReport", false);
 			// Hopzone.net
-			ALLOW_HOPZONE_VOTE_REWARD = VoteReward.getBoolean("AllowHopzoneVoteReward", false);
-			HOPZONE_SERVER_LINK = VoteReward.getString("HopzoneServerLink", "");
-			HOPZONE_VOTES_DIFFERENCE = VoteReward.getInt("HopzoneVotesDifference", 5);
-			HOPZONE_REWARD_CHECK_TIME = VoteReward.getInt("HopzoneRewardCheckTime", 5);
-			final String HOPZONE_SMALL_REWARD_VALUE = VoteReward.getString("HopzoneReward", "57,100000000;");
-			final String[] hopzone_small_reward_splitted_1 = HOPZONE_SMALL_REWARD_VALUE.split(";");
-			for (String i : hopzone_small_reward_splitted_1)
+			ALLOW_HOPZONE_VOTE_REWARD = voteRewardConfig.getBoolean("AllowHopzoneVoteReward", false);
+			HOPZONE_SERVER_LINK = voteRewardConfig.getString("HopzoneServerLink", "");
+			HOPZONE_VOTES_DIFFERENCE = voteRewardConfig.getInt("HopzoneVotesDifference", 5);
+			HOPZONE_REWARD_CHECK_TIME = voteRewardConfig.getInt("HopzoneRewardCheckTime", 5);
+			final String hopzoneSmallRewardValue = voteRewardConfig.getString("HopzoneReward", "57,100000000;");
+			final String[] hopzoneSmallRewardSplit1 = hopzoneSmallRewardValue.split(";");
+			for (String i : hopzoneSmallRewardSplit1)
 			{
-				final String[] hopzone_small_reward_splitted_2 = i.split(",");
-				HOPZONE_REWARD.put(Integer.parseInt(hopzone_small_reward_splitted_2[0]), Integer.parseInt(hopzone_small_reward_splitted_2[1]));
+				final String[] hopzoneSmallRewardSplit2 = i.split(",");
+				HOPZONE_REWARD.put(Integer.parseInt(hopzoneSmallRewardSplit2[0]), Integer.parseInt(hopzoneSmallRewardSplit2[1]));
 			}
-			HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
-			ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
+			HOPZONE_DUALBOXES_ALLOWED = voteRewardConfig.getInt("HopzoneDualboxesAllowed", 1);
+			ALLOW_HOPZONE_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowHopzoneGameServerReport", false);
 			// L2top.co
-			ALLOW_L2TOP_VOTE_REWARD = VoteReward.getBoolean("AllowL2topVoteReward", false);
-			L2TOP_SERVER_LINK = VoteReward.getString("L2topServerLink", "");
-			L2TOP_VOTES_DIFFERENCE = VoteReward.getInt("L2topVotesDifference", 5);
-			L2TOP_REWARD_CHECK_TIME = VoteReward.getInt("L2topRewardCheckTime", 5);
-			final String L2TOP_SMALL_REWARD_VALUE = VoteReward.getString("L2topReward", "57,100000000;");
-			final String[] l2top_small_reward_splitted_1 = L2TOP_SMALL_REWARD_VALUE.split(";");
-			for (String i : l2top_small_reward_splitted_1)
+			ALLOW_L2TOP_VOTE_REWARD = voteRewardConfig.getBoolean("AllowL2topVoteReward", false);
+			L2TOP_SERVER_LINK = voteRewardConfig.getString("L2topServerLink", "");
+			L2TOP_VOTES_DIFFERENCE = voteRewardConfig.getInt("L2topVotesDifference", 5);
+			L2TOP_REWARD_CHECK_TIME = voteRewardConfig.getInt("L2topRewardCheckTime", 5);
+			final String l2topSmallRewardValue = voteRewardConfig.getString("L2topReward", "57,100000000;");
+			final String[] l2topSmallRewardsplit1 = l2topSmallRewardValue.split(";");
+			for (String i : l2topSmallRewardsplit1)
 			{
-				final String[] l2top_small_reward_splitted_2 = i.split(",");
-				L2TOP_REWARD.put(Integer.parseInt(l2top_small_reward_splitted_2[0]), Integer.parseInt(l2top_small_reward_splitted_2[1]));
+				final String[] l2topSmallRewardSplit2 = i.split(",");
+				L2TOP_REWARD.put(Integer.parseInt(l2topSmallRewardSplit2[0]), Integer.parseInt(l2topSmallRewardSplit2[1]));
 			}
-			L2TOP_DUALBOXES_ALLOWED = VoteReward.getInt("L2topDualboxesAllowed", 1);
-			ALLOW_L2TOP_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowL2topGameServerReport", false);
-			ALLOW_L2JBRASIL_VOTE_REWARD = VoteReward.getBoolean("AllowL2JBrasilVoteReward", false);
-			L2JBRASIL_SERVER_LINK = VoteReward.getString("L2JBrasilServerLink", "");
-			L2JBRASIL_VOTES_DIFFERENCE = VoteReward.getInt("L2JBrasilVotesDifference", 5);
-			L2JBRASIL_REWARD_CHECK_TIME = VoteReward.getInt("L2JBrasilRewardCheckTime", 5);
-			String L2JBRASIL_SMALL_REWARD_VALUE = VoteReward.getString("L2JBrasilReward", "57,100000000;");
-			String[] l2jbrasil_small_reward_splitted_1 = L2JBRASIL_SMALL_REWARD_VALUE.split(";");
-			for (String i : l2jbrasil_small_reward_splitted_1)
+			L2TOP_DUALBOXES_ALLOWED = voteRewardConfig.getInt("L2topDualboxesAllowed", 1);
+			ALLOW_L2TOP_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowL2topGameServerReport", false);
+			ALLOW_L2JBRASIL_VOTE_REWARD = voteRewardConfig.getBoolean("AllowL2JBrasilVoteReward", false);
+			L2JBRASIL_SERVER_LINK = voteRewardConfig.getString("L2JBrasilServerLink", "");
+			L2JBRASIL_VOTES_DIFFERENCE = voteRewardConfig.getInt("L2JBrasilVotesDifference", 5);
+			L2JBRASIL_REWARD_CHECK_TIME = voteRewardConfig.getInt("L2JBrasilRewardCheckTime", 5);
+			String l2jbrasilSmallRewardValue = voteRewardConfig.getString("L2JBrasilReward", "57,100000000;");
+			String[] l2jbrasilSmallRewardSplit1 = l2jbrasilSmallRewardValue.split(";");
+			for (String i : l2jbrasilSmallRewardSplit1)
 			{
-				String[] l2jbrasil_small_reward_splitted_2 = i.split(",");
-				HOPZONE_REWARD.put(Integer.parseInt(l2jbrasil_small_reward_splitted_2[0]), Integer.parseInt(l2jbrasil_small_reward_splitted_2[1]));
+				String[] l2jbrasilSmallRewardSplit2 = i.split(",");
+				HOPZONE_REWARD.put(Integer.parseInt(l2jbrasilSmallRewardSplit2[0]), Integer.parseInt(l2jbrasilSmallRewardSplit2[1]));
 			}
-			L2JBRASIL_DUALBOXES_ALLOWED = VoteReward.getInt("L2JBrasilDualboxesAllowed", 1);
-			ALLOW_L2JBRASIL_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowL2JBrasilGameServerReport", false);
+			L2JBRASIL_DUALBOXES_ALLOWED = voteRewardConfig.getInt("L2JBrasilDualboxesAllowed", 1);
+			ALLOW_L2JBRASIL_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowL2JBrasilGameServerReport", false);
 			
 			// Load WalkerBotProtection config file (if exists)
-			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
-			L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
+			final PropertiesParser walkerBotProtectionConfig = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
+			L2WALKER_PROTECTION = walkerBotProtectionConfig.getBoolean("L2WalkerProtection", false);
 		}
 		else if (SERVER_MODE == ServerMode.LOGIN)
 		{
-			final PropertiesParser ServerSettings = new PropertiesParser(LOGIN_CONFIG_FILE);
-			GAME_SERVER_LOGIN_HOST = ServerSettings.getString("LoginHostname", "127.0.0.1");
-			GAME_SERVER_LOGIN_PORT = ServerSettings.getInt("LoginPort", 9013);
-			LOGIN_BIND_ADDRESS = ServerSettings.getString("LoginserverHostname", "0.0.0.0");
-			PORT_LOGIN = ServerSettings.getInt("LoginserverPort", 2106);
+			final PropertiesParser loginConfig = new PropertiesParser(LOGIN_CONFIG_FILE);
+			GAME_SERVER_LOGIN_HOST = loginConfig.getString("LoginHostname", "127.0.0.1");
+			GAME_SERVER_LOGIN_PORT = loginConfig.getInt("LoginPort", 9013);
+			LOGIN_BIND_ADDRESS = loginConfig.getString("LoginserverHostname", "0.0.0.0");
+			PORT_LOGIN = loginConfig.getInt("LoginserverPort", 2106);
 			try
 			{
-				DATAPACK_ROOT = new File(ServerSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
+				DATAPACK_ROOT = new File(loginConfig.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
 			}
 			catch (IOException e)
 			{
 				LOGGER.log(Level.WARNING, "Error setting datapack root!", e);
 				DATAPACK_ROOT = new File(".");
 			}
-			ACCEPT_NEW_GAMESERVER = ServerSettings.getBoolean("AcceptNewGameServer", true);
-			LOGIN_TRY_BEFORE_BAN = ServerSettings.getInt("LoginTryBeforeBan", 5);
-			LOGIN_BLOCK_AFTER_BAN = ServerSettings.getInt("LoginBlockAfterBan", 900);
-			LOGIN_SERVER_SCHEDULE_RESTART = ServerSettings.getBoolean("LoginRestartSchedule", false);
-			LOGIN_SERVER_SCHEDULE_RESTART_TIME = ServerSettings.getLong("LoginRestartTime", 24);
-			DATABASE_DRIVER = ServerSettings.getString("Driver", "org.mariadb.jdbc.Driver");
-			DATABASE_URL = ServerSettings.getString("URL", "jdbc:mariadb://localhost/l2jls");
-			DATABASE_LOGIN = ServerSettings.getString("Login", "root");
-			DATABASE_PASSWORD = ServerSettings.getString("Password", "");
-			DATABASE_MAX_CONNECTIONS = ServerSettings.getInt("MaximumDbConnections", 10);
-			BACKUP_DATABASE = ServerSettings.getBoolean("BackupDatabase", false);
-			MYSQL_BIN_PATH = ServerSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
-			BACKUP_PATH = ServerSettings.getString("BackupPath", "../backup/");
-			BACKUP_DAYS = ServerSettings.getInt("BackupDays", 30);
-			SHOW_LICENCE = ServerSettings.getBoolean("ShowLicence", true);
-			SHOW_PI_AGREEMENT = ServerSettings.getBoolean("ShowPIAgreement", false);
-			AUTO_CREATE_ACCOUNTS = ServerSettings.getBoolean("AutoCreateAccounts", true);
-			FLOOD_PROTECTION = ServerSettings.getBoolean("EnableFloodProtection", true);
-			FAST_CONNECTION_LIMIT = ServerSettings.getInt("FastConnectionLimit", 15);
-			NORMAL_CONNECTION_TIME = ServerSettings.getInt("NormalConnectionTime", 700);
-			FAST_CONNECTION_TIME = ServerSettings.getInt("FastConnectionTime", 350);
-			MAX_CONNECTION_PER_IP = ServerSettings.getInt("MaxConnectionPerIP", 50);
-			ENABLE_CMD_LINE_LOGIN = ServerSettings.getBoolean("EnableCmdLineLogin", false);
-			ONLY_CMD_LINE_LOGIN = ServerSettings.getBoolean("OnlyCmdLineLogin", false);
+			ACCEPT_NEW_GAMESERVER = loginConfig.getBoolean("AcceptNewGameServer", true);
+			LOGIN_TRY_BEFORE_BAN = loginConfig.getInt("LoginTryBeforeBan", 5);
+			LOGIN_BLOCK_AFTER_BAN = loginConfig.getInt("LoginBlockAfterBan", 900);
+			LOGIN_SERVER_SCHEDULE_RESTART = loginConfig.getBoolean("LoginRestartSchedule", false);
+			LOGIN_SERVER_SCHEDULE_RESTART_TIME = loginConfig.getLong("LoginRestartTime", 24);
+			DATABASE_DRIVER = loginConfig.getString("Driver", "org.mariadb.jdbc.Driver");
+			DATABASE_URL = loginConfig.getString("URL", "jdbc:mariadb://localhost/l2jls");
+			DATABASE_LOGIN = loginConfig.getString("Login", "root");
+			DATABASE_PASSWORD = loginConfig.getString("Password", "");
+			DATABASE_MAX_CONNECTIONS = loginConfig.getInt("MaximumDbConnections", 10);
+			BACKUP_DATABASE = loginConfig.getBoolean("BackupDatabase", false);
+			MYSQL_BIN_PATH = loginConfig.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
+			BACKUP_PATH = loginConfig.getString("BackupPath", "../backup/");
+			BACKUP_DAYS = loginConfig.getInt("BackupDays", 30);
+			SHOW_LICENCE = loginConfig.getBoolean("ShowLicence", true);
+			SHOW_PI_AGREEMENT = loginConfig.getBoolean("ShowPIAgreement", false);
+			AUTO_CREATE_ACCOUNTS = loginConfig.getBoolean("AutoCreateAccounts", true);
+			FLOOD_PROTECTION = loginConfig.getBoolean("EnableFloodProtection", true);
+			FAST_CONNECTION_LIMIT = loginConfig.getInt("FastConnectionLimit", 15);
+			NORMAL_CONNECTION_TIME = loginConfig.getInt("NormalConnectionTime", 700);
+			FAST_CONNECTION_TIME = loginConfig.getInt("FastConnectionTime", 350);
+			MAX_CONNECTION_PER_IP = loginConfig.getInt("MaxConnectionPerIP", 50);
+			ENABLE_CMD_LINE_LOGIN = loginConfig.getBoolean("EnableCmdLineLogin", false);
+			ONLY_CMD_LINE_LOGIN = loginConfig.getBoolean("OnlyCmdLineLogin", false);
 		}
 		else
 		{
