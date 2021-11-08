@@ -5819,7 +5819,9 @@ public class PlayerInstance extends Playable
 		if (ammunition != null)
 		{
 			addAmmunitionSkills(ammunition);
-			sendItemList();
+			final InventoryUpdate iu = new InventoryUpdate();
+			iu.addModifiedItem(ammunition);
+			sendInventoryUpdate(iu);
 			return true;
 		}
 		

@@ -5810,11 +5810,14 @@ public class PlayerInstance extends Playable
 			{
 				arrows = _inventory.findBoltForCrossBow(weapon);
 			}
+			
+			// Equip arrows needed in left hand.
 			if (arrows != null)
 			{
-				// Equip arrows needed in left hand
 				_inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
-				sendItemList();
+				final InventoryUpdate iu = new InventoryUpdate();
+				iu.addModifiedItem(arrows);
+				sendInventoryUpdate(iu);
 				return true;
 			}
 		}
