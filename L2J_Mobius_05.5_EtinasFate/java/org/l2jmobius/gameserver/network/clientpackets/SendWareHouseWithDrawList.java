@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -159,7 +158,6 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		}
 		
 		// Proceed to the transfer
-		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (ItemHolder i : _items)
 		{
 			final ItemInstance oldItem = warehouse.getItemByObjectId(i.getId());
@@ -174,28 +172,9 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
 				return;
 			}
-			
-			if (playerIU != null)
-			{
-				if (newItem.getCount() > i.getCount())
-				{
-					playerIU.addModifiedItem(newItem);
-				}
-				else
-				{
-					playerIU.addNewItem(newItem);
-				}
-			}
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
-		{
-			player.sendInventoryUpdate(playerIU);
-		}
-		else
-		{
-			player.sendItemList();
-		}
+		player.sendItemList();
 	}
 }
