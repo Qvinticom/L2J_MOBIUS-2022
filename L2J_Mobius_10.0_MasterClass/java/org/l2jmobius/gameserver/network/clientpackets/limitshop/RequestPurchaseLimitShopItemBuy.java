@@ -59,14 +59,14 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		
 		switch (_shopIndex)
 		{
-			case 3: // Normal Lcoin Shop
-			{
-				_product = LimitShopData.getInstance().getProduct(_productId);
-				break;
-			}
 			case 4: // Lcoin Special Craft
 			{
 				_product = LimitShopCraftData.getInstance().getProduct(_productId);
+				break;
+			}
+			case 7: // Normal Lcoin Shop
+			{
+				_product = LimitShopData.getInstance().getProduct(_productId);
 				break;
 			}
 			default:
