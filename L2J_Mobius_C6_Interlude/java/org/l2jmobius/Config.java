@@ -72,40 +72,38 @@ public class Config
 	// interface
 	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
 	// main
-	private static final String ACCESS_CONFIG_FILE = "./config/main/Access.ini";
-	private static final String CHARACTER_CONFIG_FILE = "./config/main/Character.ini";
-	private static final String CLANHALL_CONFIG_FILE = "./config/main/Clanhall.ini";
-	public static final String CLASS_DAMAGE_CONFIG_FILE = "./config/main/ClassDamage.ini";
-	private static final String CONQUERABLE_CLANHALL_CONFIG_FILE = "./config/main/ConquerableClanHalls.ini";
-	private static final String CRAFTING_CONFIG_FILE = "./config/main/Crafting.ini";
-	private static final String ENCHANT_CONFIG_FILE = "./config/main/Enchant.ini";
-	public static final String FORTSIEGE_CONFIG_FILE = "./config/main/Fort.ini";
-	private static final String GENERAL_CONFIG_FILE = "./config/main/General.ini";
-	private static final String GEOENGINE_CONFIG_FILE = "./config/main/GeoEngine.ini";
-	private static final String OLYMP_CONFIG_FILE = "./config/main/Olympiad.ini";
-	private static final String PHYSICS_CONFIG_FILE = "./config/main/Physics.ini";
-	private static final String PVP_CONFIG_FILE = "./config/main/PvP.ini";
-	private static final String RAIDBOSS_CONFIG_FILE = "./config/main/RaidBoss.ini";
-	private static final String RATES_CONFIG_FILE = "./config/main/Rates.ini";
-	private static final String SERVER_CONFIG_FILE = "./config/main/Server.ini";
-	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/SevenSigns.ini";
-	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
-	// protected
-	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/FloodProtector.ini";
-	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";
-	public static final String TELNET_CONFIG_FILE = "./config/protected/Telnet.ini";
-	// events
-	private static final String EVENT_PC_BANG_POINT_CONFIG_FILE = "./config/events/PcBang.ini";
+	private static final String ACCESS_CONFIG_FILE = "./config/Access.ini";
+	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
+	private static final String CLANHALL_CONFIG_FILE = "./config/Clanhall.ini";
+	private static final String CONQUERABLE_CLANHALL_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
+	private static final String CRAFTING_CONFIG_FILE = "./config/Crafting.ini";
+	private static final String ENCHANT_CONFIG_FILE = "./config/Enchant.ini";
+	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
+	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
+	private static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
+	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+	private static final String OLYMP_CONFIG_FILE = "./config/Olympiad.ini";
+	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/FloodProtector.ini";
+	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/Other.ini";
+	private static final String PVP_CONFIG_FILE = "./config/PvP.ini";
+	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+	private static final String SEVENSIGNS_CONFIG_FILE = "./config/SevenSigns.ini";
+	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
+	public static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
 	// custom
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
 	private static final String CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE = "./config/custom/CancelSkillRestoreBuffs.ini";
 	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
+	public static final String CLASS_DAMAGE_CONFIG_FILE = "./config/custom/ClassDamage.ini";
 	private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/custom/AutoPotions.ini";
 	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/custom/CustomMailManager.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/custom/RandomSpawns.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
 	private static final String OTHER_CONFIG_FILE = "./config/custom/Other.ini";
+	private static final String PC_BANG_POINT_CONFIG_FILE = "./config/custom/PcBang.ini";
+	private static final String PHYSICS_BALANCE_CONFIG_FILE = "./config/custom/PhysicsBalance.ini";
 	private static final String SCHEME_BUFFER_CONFIG_FILE = "./config/custom/SchemeBuffer.ini";
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
@@ -1730,7 +1728,7 @@ public class Config
 	
 	public static void loadPCBPointConfig()
 	{
-		final PropertiesParser pcBangConfig = new PropertiesParser(EVENT_PC_BANG_POINT_CONFIG_FILE);
+		final PropertiesParser pcBangConfig = new PropertiesParser(PC_BANG_POINT_CONFIG_FILE);
 		PCB_ENABLE = pcBangConfig.getBoolean("PcBangPointEnable", true);
 		PCB_MIN_LEVEL = pcBangConfig.getInt("PcBangPointMinLevel", 20);
 		PCB_POINT_MIN = pcBangConfig.getInt("PcBangPointMinCount", 20);
@@ -2320,7 +2318,7 @@ public class Config
 	
 	public static void loadPhysicsConfig()
 	{
-		final PropertiesParser physicsSetting = new PropertiesParser(PHYSICS_CONFIG_FILE);
+		final PropertiesParser physicsSetting = new PropertiesParser(PHYSICS_BALANCE_CONFIG_FILE);
 		ENABLE_CLASS_DAMAGE_SETTINGS = physicsSetting.getBoolean("EnableClassDamageSettings", true);
 		ENABLE_CLASS_DAMAGE_SETTINGS_IN_OLY = physicsSetting.getBoolean("EnableClassDamageSettingsInOly", true);
 		ENABLE_CLASS_DAMAGE_LOGGER = physicsSetting.getBoolean("EnableClassDamageLogger", false);
@@ -2414,7 +2412,7 @@ public class Config
 	
 	public static void loadBossConfig()
 	{
-		final PropertiesParser bossConfig = new PropertiesParser(RAIDBOSS_CONFIG_FILE);
+		final PropertiesParser bossConfig = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
 		ALT_RAIDS_STATS_BONUS = bossConfig.getBoolean("AltRaidsStatsBonus", true);
 		RBLOCKRAGE = bossConfig.getInt("RBlockRage", 5000);
 		if ((RBLOCKRAGE > 0) && (RBLOCKRAGE < 100))

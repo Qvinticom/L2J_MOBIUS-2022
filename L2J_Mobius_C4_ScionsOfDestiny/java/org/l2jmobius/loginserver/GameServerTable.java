@@ -46,7 +46,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.loginserver.network.LoginClient;
@@ -141,7 +140,7 @@ public class GameServerTable
 		{
 			final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			final DocumentBuilder db = dbf.newDocumentBuilder();
-			final Document doc = db.parse(new File(Config.SERVER_NAME_FILE));
+			final Document doc = db.parse(new File("./data/servername.xml"));
 			final Node n = doc.getFirstChild();
 			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 			{

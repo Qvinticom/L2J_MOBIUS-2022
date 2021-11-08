@@ -130,7 +130,7 @@ public class Gui
 		mntmBannedIps.addActionListener(arg0 ->
 		{
 			LoginController.getInstance().getBannedIps().clear();
-			Config.loadBanFile();
+			LoginServer.getInstance().loadBanFile();
 		});
 		mnReload.add(mntmBannedIps);
 		

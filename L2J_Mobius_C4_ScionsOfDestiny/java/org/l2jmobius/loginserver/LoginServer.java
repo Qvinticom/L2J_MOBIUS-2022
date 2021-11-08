@@ -184,9 +184,9 @@ public class LoginServer extends FloodProtectedListener
 		}
 	}
 	
-	private void loadBanFile()
+	public void loadBanFile()
 	{
-		final File bannedFile = new File("./config/others/banned_ip.cfg");
+		final File bannedFile = new File("./banned_ip.cfg");
 		if (bannedFile.exists() && bannedFile.isFile())
 		{
 			String line;

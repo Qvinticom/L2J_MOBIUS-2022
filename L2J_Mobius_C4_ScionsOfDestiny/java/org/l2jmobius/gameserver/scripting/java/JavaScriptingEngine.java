@@ -40,7 +40,7 @@ public class JavaScriptingEngine
 	{
 		// Load config.
 		final Properties props = new Properties();
-		try (FileInputStream fis = new FileInputStream("config/protected/ScriptEngine.ini"))
+		try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini"))
 		{
 			props.load(fis);
 		}
