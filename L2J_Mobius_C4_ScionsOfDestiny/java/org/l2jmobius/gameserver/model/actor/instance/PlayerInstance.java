@@ -377,7 +377,6 @@ public class PlayerInstance extends Playable
 	private boolean _dietMode = false; // ignore weight penalty
 	private boolean _exchangeRefusal = false; // Exchange refusal
 	private Party _party;
-	private long _lastAttackPacket = 0;
 	private PlayerInstance _activeRequester;
 	private long _requestExpireTime = 0;
 	private final Request _request = new Request(this);
@@ -15172,16 +15171,6 @@ public class PlayerInstance extends Playable
 	public PlayerInstance getActingPlayer()
 	{
 		return this;
-	}
-	
-	public long getLastAttackPacket()
-	{
-		return _lastAttackPacket;
-	}
-	
-	public void setLastAttackPacket()
-	{
-		_lastAttackPacket = Chronos.currentTimeMillis();
 	}
 	
 	public void checkItemRestriction()

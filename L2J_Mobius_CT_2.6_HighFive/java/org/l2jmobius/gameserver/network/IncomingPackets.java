@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.clientpackets.*;
 public enum IncomingPackets implements IIncomingPackets<GameClient>
 {
 	LOGOUT(0x00, Logout::new, ConnectionState.AUTHENTICATED, ConnectionState.IN_GAME),
-	ATTACK(0x01, Attack::new, ConnectionState.IN_GAME),
+	ATTACK(0x01, AttackRequest::new, ConnectionState.IN_GAME),
 	REQUEST_START_PLEDGE_WAR(0x03, RequestStartPledgeWar::new, ConnectionState.IN_GAME),
 	REQUEST_REPLY_START_PLEDGE(0x04, RequestReplyStartPledgeWar::new, ConnectionState.IN_GAME),
 	REQUEST_STOP_PLEDGE_WAR(0x05, RequestStopPledgeWar::new, ConnectionState.IN_GAME),

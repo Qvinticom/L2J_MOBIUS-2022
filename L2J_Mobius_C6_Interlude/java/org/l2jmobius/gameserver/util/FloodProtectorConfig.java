@@ -29,7 +29,7 @@ public class FloodProtectorConfig
 	/**
 	 * Flood protection interval in game ticks.
 	 */
-	public float FLOOD_PROTECTION_INTERVAL;
+	public int FLOOD_PROTECTION_INTERVAL;
 	/**
 	 * Whether flooding should be logged.
 	 */
@@ -45,12 +45,7 @@ public class FloodProtectorConfig
 	/**
 	 * For how long should the char/account be punished.
 	 */
-	public int PUNISHMENT_TIME;
-	
-	/**
-	 * Alternative flood protection method: check if in given FLOOD_PROTECTION_INTERVAL more then PUNISHMENT_LIMIT actions are performed: if this condition has been verified apply PUNISHMENT_TYPE for PUNISHMENT_TIME minutes
-	 */
-	public boolean ALTERNATIVE_METHOD;
+	public long PUNISHMENT_TIME;
 	
 	/**
 	 * Creates new instance of FloodProtectorConfig.
@@ -60,18 +55,5 @@ public class FloodProtectorConfig
 	{
 		super();
 		FLOOD_PROTECTOR_TYPE = floodProtectorType;
-		ALTERNATIVE_METHOD = false;
-	}
-	
-	/**
-	 * Creates new instance of FloodProtectorConfig.
-	 * @param floodProtectorType {@link #FLOOD_PROTECTOR_TYPE}
-	 * @param altFunc
-	 */
-	public FloodProtectorConfig(String floodProtectorType, boolean altFunc)
-	{
-		super();
-		FLOOD_PROTECTOR_TYPE = floodProtectorType;
-		ALTERNATIVE_METHOD = altFunc;
 	}
 }

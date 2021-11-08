@@ -54,6 +54,11 @@ public class Action implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().getPlayerAction().tryPerformAction("PlayerAction"))
+		{
+			return;
+		}
+		
 		// Get the current PlayerInstance of the player
 		final PlayerInstance player = client.getPlayer();
 		if (player == null)

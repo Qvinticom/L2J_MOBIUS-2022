@@ -40,6 +40,11 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().getPlayerAction().tryPerformAction("PlayerAction"))
+		{
+			return;
+		}
+		
 		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || player.isTargetingDisabled())
 		{

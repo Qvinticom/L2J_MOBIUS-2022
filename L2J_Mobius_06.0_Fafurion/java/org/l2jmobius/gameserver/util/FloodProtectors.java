@@ -89,6 +89,10 @@ public class FloodProtectors
 	 * Item Auction
 	 */
 	private final FloodProtectorAction _itemAuction;
+	/**
+	 * Player Action
+	 */
+	private final FloodProtectorAction _playerAction;
 	
 	/**
 	 * Creates new instance of FloodProtectors.
@@ -113,6 +117,7 @@ public class FloodProtectors
 		_sendMail = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_SENDMAIL);
 		_characterSelect = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_CHARACTER_SELECT);
 		_itemAuction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ITEM_AUCTION);
+		_playerAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_PLAYER_ACTION);
 	}
 	
 	/**
@@ -256,5 +261,14 @@ public class FloodProtectors
 	public FloodProtectorAction getItemAuction()
 	{
 		return _itemAuction;
+	}
+	
+	/**
+	 * Returns {@link #_playerAction}.
+	 * @return {@link #_playerAction}
+	 */
+	public FloodProtectorAction getPlayerAction()
+	{
+		return _playerAction;
 	}
 }

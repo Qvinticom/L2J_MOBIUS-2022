@@ -813,13 +813,12 @@ public class Config
 	public static FloodProtectorConfig FLOOD_PROTECTOR_MANUFACTURE;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_MANOR;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
-	public static FloodProtectorConfig FLOOD_PROTECTOR_UNKNOWN_PACKETS;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_PARTY_INVITATION;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_SAY_ACTION;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_MOVE_ACTION;
-	public static FloodProtectorConfig FLOOD_PROTECTOR_GENERIC_ACTION;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_MACRO;
 	public static FloodProtectorConfig FLOOD_PROTECTOR_POTION;
+	public static FloodProtectorConfig FLOOD_PROTECTOR_PLAYER_ACTION;
 	
 	public static boolean CHECK_SKILLS_ON_ENTER;
 	public static boolean CHECK_NAME_ON_LOGIN;
@@ -2276,13 +2275,12 @@ public class Config
 		FLOOD_PROTECTOR_MANUFACTURE = new FloodProtectorConfig("ManufactureFloodProtector");
 		FLOOD_PROTECTOR_MANOR = new FloodProtectorConfig("ManorFloodProtector");
 		FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
-		FLOOD_PROTECTOR_UNKNOWN_PACKETS = new FloodProtectorConfig("UnknownPacketsFloodProtector");
 		FLOOD_PROTECTOR_PARTY_INVITATION = new FloodProtectorConfig("PartyInvitationFloodProtector");
 		FLOOD_PROTECTOR_SAY_ACTION = new FloodProtectorConfig("SayActionFloodProtector");
 		FLOOD_PROTECTOR_MOVE_ACTION = new FloodProtectorConfig("MoveActionFloodProtector");
-		FLOOD_PROTECTOR_GENERIC_ACTION = new FloodProtectorConfig("GenericActionFloodProtector", true);
-		FLOOD_PROTECTOR_MACRO = new FloodProtectorConfig("MacroFloodProtector", true);
-		FLOOD_PROTECTOR_POTION = new FloodProtectorConfig("PotionFloodProtector", true);
+		FLOOD_PROTECTOR_MACRO = new FloodProtectorConfig("MacroFloodProtector");
+		FLOOD_PROTECTOR_POTION = new FloodProtectorConfig("PotionFloodProtector");
+		FLOOD_PROTECTOR_PLAYER_ACTION = new FloodProtectorConfig("PlayerActionFloodProtector");
 		
 		final PropertiesParser floodProtectConfig = new PropertiesParser(PROTECT_FLOOD_CONFIG_FILE);
 		loadFloodProtectorConfigs(floodProtectConfig);
@@ -2295,9 +2293,9 @@ public class Config
 	 * @param configString flood protector configuration string that determines for which flood protector configuration should be read
 	 * @param defaultInterval default flood protector interval
 	 */
-	private static void loadFloodProtectorConfig(PropertiesParser properties, FloodProtectorConfig config, String configString, float defaultInterval)
+	private static void loadFloodProtectorConfig(PropertiesParser properties, FloodProtectorConfig config, String configString, int defaultInterval)
 	{
-		config.FLOOD_PROTECTION_INTERVAL = properties.getFloat(StringUtil.concat("FloodProtector", configString, "Interval"), defaultInterval);
+		config.FLOOD_PROTECTION_INTERVAL = properties.getInt(StringUtil.concat("FloodProtector", configString, "Interval"), defaultInterval);
 		config.LOG_FLOODING = properties.getBoolean(StringUtil.concat("FloodProtector", configString, "LogFlooding"), false);
 		config.PUNISHMENT_LIMIT = properties.getInt(StringUtil.concat("FloodProtector", configString, "PunishmentLimit"), 0);
 		config.PUNISHMENT_TYPE = properties.getString(StringUtil.concat("FloodProtector", configString, "PunishmentType"), "none");
@@ -2889,13 +2887,12 @@ public class Config
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANUFACTURE, "Manufacture", 3);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANOR, "Manor", 30);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_CHARACTER_SELECT, "CharacterSelect", 30);
-		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_UNKNOWN_PACKETS, "UnknownPackets", 5);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_PARTY_INVITATION, "PartyInvitation", 30);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SAY_ACTION, "SayAction", 100);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MOVE_ACTION, "MoveAction", 30);
-		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_GENERIC_ACTION, "GenericAction", 5);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MACRO, "Macro", 10);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_POTION, "Potion", 4);
+		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_PLAYER_ACTION, "PlayerAction", 3);
 	}
 	
 	public static void load(ServerMode serverMode)

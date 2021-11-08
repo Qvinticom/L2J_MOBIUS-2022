@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -25,13 +24,16 @@ import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-@SuppressWarnings("unused")
 public class AttackRequest implements IClientIncomingPacket
 {
 	private int _objectId;
+	@SuppressWarnings("unused")
 	private int _originX;
+	@SuppressWarnings("unused")
 	private int _originY;
+	@SuppressWarnings("unused")
 	private int _originZ;
+	@SuppressWarnings("unused")
 	private int _attackId;
 	
 	@Override
@@ -41,25 +43,23 @@ public class AttackRequest implements IClientIncomingPacket
 		_originX = packet.readD();
 		_originY = packet.readD();
 		_originZ = packet.readD();
-		_attackId = packet.readC(); // 0 for simple click - 1 for shift-click
+		_attackId = packet.readC(); // 0 for simple click 1 for shift-click
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().getPlayerAction().tryPerformAction("PlayerAction"))
+		{
+			return;
+		}
+		
 		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
-		
-		if ((Chronos.currentTimeMillis() - player.getLastAttackPacket()) < 500)
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		player.setLastAttackPacket();
 		
 		// avoid using expensive operations if not needed
 		final WorldObject target;

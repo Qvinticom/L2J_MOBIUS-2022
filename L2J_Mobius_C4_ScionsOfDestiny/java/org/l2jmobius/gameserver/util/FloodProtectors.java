@@ -86,10 +86,6 @@ public class FloodProtectors
 	 */
 	private final FloodProtectorAction _characterSelect;
 	/**
-	 * Unknown Packets protector
-	 */
-	private final FloodProtectorAction _unknownPackets;
-	/**
 	 * Party Invitation flood protector.
 	 */
 	private final FloodProtectorAction _partyInvitation;
@@ -102,10 +98,6 @@ public class FloodProtectors
 	 */
 	private final FloodProtectorAction _moveAction;
 	/**
-	 * Generic Action protector
-	 */
-	private final FloodProtectorAction _genericAction;
-	/**
 	 * Macro protector
 	 */
 	private final FloodProtectorAction _macro;
@@ -113,10 +105,14 @@ public class FloodProtectors
 	 * Potion protector
 	 */
 	private final FloodProtectorAction _potion;
+	/**
+	 * Player Action
+	 */
+	private final FloodProtectorAction _playerAction;
 	
 	/**
 	 * Creates new instance of FloodProtectors.
-	 * @param client for which the collection of flood protectors is being created.
+	 * @param client game client for which the collection of flood protectors is being created.
 	 */
 	public FloodProtectors(GameClient client)
 	{
@@ -136,13 +132,12 @@ public class FloodProtectors
 		_manufacture = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MANUFACTURE);
 		_manor = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MANOR);
 		_characterSelect = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_CHARACTER_SELECT);
-		_unknownPackets = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_UNKNOWN_PACKETS);
 		_partyInvitation = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_PARTY_INVITATION);
 		_sayAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_SAY_ACTION);
 		_moveAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MOVE_ACTION);
-		_genericAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_GENERIC_ACTION);
 		_macro = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MACRO);
 		_potion = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_POTION);
+		_playerAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_PLAYER_ACTION);
 	}
 	
 	/**
@@ -277,15 +272,6 @@ public class FloodProtectors
 	}
 	
 	/**
-	 * Returns {@link #_unknownPackets}.
-	 * @return {@link #_unknownPackets}
-	 */
-	public FloodProtectorAction getUnknownPackets()
-	{
-		return _unknownPackets;
-	}
-	
-	/**
 	 * Returns {@link #_partyInvitation}.
 	 * @return {@link #_partyInvitation}
 	 */
@@ -313,15 +299,6 @@ public class FloodProtectors
 	}
 	
 	/**
-	 * Returns {@link #_genericAction}.
-	 * @return {@link #_genericAction}
-	 */
-	public FloodProtectorAction getGenericAction()
-	{
-		return _genericAction;
-	}
-	
-	/**
 	 * Returns {@link #_macro}.
 	 * @return {@link #_macro}
 	 */
@@ -337,5 +314,14 @@ public class FloodProtectors
 	public FloodProtectorAction getUsePotion()
 	{
 		return _potion;
+	}
+	
+	/**
+	 * Returns {@link #_playerAction}.
+	 * @return {@link #_playerAction}
+	 */
+	public FloodProtectorAction getPlayerAction()
+	{
+		return _playerAction;
 	}
 }

@@ -56,9 +56,22 @@ public class AttackRequest implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().getPlayerAction().tryPerformAction("PlayerAction"))
+		{
+			return;
+		}
+		
 		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
+			return;
+		}
+		
+		// Avoid Attacks in Boat.
+		if (player.isPlayable() && player.isInBoat())
+		{
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_ALLOWED_WHILE_RIDING_A_FERRY_OR_BOAT);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -92,7 +105,8 @@ public class AttackRequest implements IClientIncomingPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if ((!target.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PlayerCondOverride.TARGET_ALL))
+		
+		if ((!target.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PlayerCondOverride.TARGET_ALL))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -109,6 +123,8 @@ public class AttackRequest implements IClientIncomingPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
+		
+		player.onActionRequest();
 		
 		if (player.getTarget() != target)
 		{

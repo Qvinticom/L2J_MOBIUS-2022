@@ -87,12 +87,12 @@ public class FloodProtectorAction
 	 */
 	public boolean tryPerformAction(String command)
 	{
-		final int curTick = GameTimeTaskManager.getInstance().getGameTicks();
 		if ((_client.getPlayer() != null) && _client.getPlayer().canOverrideCond(PlayerCondOverride.FLOOD_CONDITIONS))
 		{
 			return true;
 		}
 		
+		final int curTick = GameTimeTaskManager.getInstance().getGameTicks();
 		if ((curTick < _nextGameTick) || _punishmentInProgress)
 		{
 			if (_config.LOG_FLOODING && !_logged && LOGGER.isLoggable(Level.WARNING))
