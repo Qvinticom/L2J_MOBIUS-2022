@@ -78,7 +78,6 @@ public class CrestTable
 			while (rs.next())
 			{
 				final int id = rs.getInt("crest_id");
-				
 				if (_nextId.get() <= id)
 				{
 					_nextId.set(id + 1);
@@ -88,7 +87,7 @@ public class CrestTable
 				// a crest id because client will display wrong crest if its reused
 				if (!crestsInUse.contains(id) && (id != (_nextId.get() - 1)))
 				{
-					rs.deleteRow();
+					removeCrest(id);
 					continue;
 				}
 				
@@ -187,7 +186,7 @@ public class CrestTable
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement("DELETE FROM `crests` WHERE `crest_id` = ?"))
+			PreparedStatement statement = con.prepareStatement("DELETE FROM `crests` WHERE `crest_id`=?"))
 		{
 			statement.setInt(1, crestId);
 			statement.executeUpdate();
