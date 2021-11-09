@@ -108,7 +108,7 @@ public class ThreadPool
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(e.getMessage() + Config.EOL + e.getStackTrace());
+			LOGGER.warning(runnable.getClass().getSimpleName() + Config.EOL + e.getMessage() + Config.EOL + e.getStackTrace());
 			return null;
 		}
 	}
@@ -128,7 +128,7 @@ public class ThreadPool
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(e.getMessage() + Config.EOL + e.getStackTrace());
+			LOGGER.warning(runnable.getClass().getSimpleName() + Config.EOL + e.getMessage() + Config.EOL + e.getStackTrace());
 			return null;
 		}
 	}
@@ -145,7 +145,7 @@ public class ThreadPool
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(e.getMessage() + Config.EOL + e.getStackTrace());
+			LOGGER.warning(runnable.getClass().getSimpleName() + Config.EOL + e.getMessage() + Config.EOL + e.getStackTrace());
 		}
 	}
 	
