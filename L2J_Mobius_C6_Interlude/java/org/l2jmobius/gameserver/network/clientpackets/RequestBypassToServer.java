@@ -58,7 +58,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getServerBypass().tryPerformAction(_command))
+		if (!client.getFloodProtectors().canUseServerBypass())
 		{
 			return;
 		}

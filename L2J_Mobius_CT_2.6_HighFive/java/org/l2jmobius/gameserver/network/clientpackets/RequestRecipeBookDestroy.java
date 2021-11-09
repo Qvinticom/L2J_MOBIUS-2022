@@ -46,7 +46,7 @@ public class RequestRecipeBookDestroy implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

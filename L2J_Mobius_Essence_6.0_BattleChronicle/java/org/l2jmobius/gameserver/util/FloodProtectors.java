@@ -25,73 +25,20 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class FloodProtectors
 {
-	/**
-	 * Use-item flood protector.
-	 */
 	private final FloodProtectorAction _useItem;
-	/**
-	 * Roll-dice flood protector.
-	 */
 	private final FloodProtectorAction _rollDice;
-	/**
-	 * Firework flood protector.
-	 */
-	private final FloodProtectorAction _firework;
-	/**
-	 * Item-pet-summon flood protector.
-	 */
 	private final FloodProtectorAction _itemPetSummon;
-	/**
-	 * Hero-voice flood protector.
-	 */
 	private final FloodProtectorAction _heroVoice;
-	/**
-	 * Global-chat flood protector.
-	 */
 	private final FloodProtectorAction _globalChat;
-	/**
-	 * Subclass flood protector.
-	 */
 	private final FloodProtectorAction _subclass;
-	/**
-	 * Drop-item flood protector.
-	 */
 	private final FloodProtectorAction _dropItem;
-	/**
-	 * Server-bypass flood protector.
-	 */
 	private final FloodProtectorAction _serverBypass;
-	/**
-	 * Multisell flood protector.
-	 */
 	private final FloodProtectorAction _multiSell;
-	/**
-	 * Transaction flood protector.
-	 */
 	private final FloodProtectorAction _transaction;
-	/**
-	 * Manufacture flood protector.
-	 */
 	private final FloodProtectorAction _manufacture;
-	/**
-	 * Manor flood protector.
-	 */
-	private final FloodProtectorAction _manor;
-	/**
-	 * Send mail flood protector.
-	 */
 	private final FloodProtectorAction _sendMail;
-	/**
-	 * Character Select protector
-	 */
 	private final FloodProtectorAction _characterSelect;
-	/**
-	 * Item Auction
-	 */
 	private final FloodProtectorAction _itemAuction;
-	/**
-	 * Player Action
-	 */
 	private final FloodProtectorAction _playerAction;
 	
 	/**
@@ -103,7 +50,6 @@ public class FloodProtectors
 		super();
 		_useItem = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_USE_ITEM);
 		_rollDice = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ROLL_DICE);
-		_firework = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_FIREWORK);
 		_itemPetSummon = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ITEM_PET_SUMMON);
 		_heroVoice = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_HERO_VOICE);
 		_globalChat = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_GLOBAL_CHAT);
@@ -113,162 +59,84 @@ public class FloodProtectors
 		_multiSell = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MULTISELL);
 		_transaction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_TRANSACTION);
 		_manufacture = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MANUFACTURE);
-		_manor = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MANOR);
 		_sendMail = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_SENDMAIL);
 		_characterSelect = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_CHARACTER_SELECT);
 		_itemAuction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ITEM_AUCTION);
 		_playerAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_PLAYER_ACTION);
 	}
 	
-	/**
-	 * Returns {@link #_useItem}.
-	 * @return {@link #_useItem}
-	 */
-	public FloodProtectorAction getUseItem()
+	public boolean canUseItem()
 	{
-		return _useItem;
+		return _useItem.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_rollDice}.
-	 * @return {@link #_rollDice}
-	 */
-	public FloodProtectorAction getRollDice()
+	public boolean canRollDice()
 	{
-		return _rollDice;
+		return _rollDice.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_firework}.
-	 * @return {@link #_firework}
-	 */
-	public FloodProtectorAction getFirework()
+	public boolean canUsePetSummonItem()
 	{
-		return _firework;
+		return _itemPetSummon.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_itemPetSummon}.
-	 * @return {@link #_itemPetSummon}
-	 */
-	public FloodProtectorAction getItemPetSummon()
+	public boolean canUseHeroVoice()
 	{
-		return _itemPetSummon;
+		return _heroVoice.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_heroVoice}.
-	 * @return {@link #_heroVoice}
-	 */
-	public FloodProtectorAction getHeroVoice()
+	public boolean canUseGlobalChat()
 	{
-		return _heroVoice;
+		return _globalChat.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_globalChat}.
-	 * @return {@link #_globalChat}
-	 */
-	public FloodProtectorAction getGlobalChat()
+	public boolean canChangeSubclass()
 	{
-		return _globalChat;
+		return _subclass.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_subclass}.
-	 * @return {@link #_subclass}
-	 */
-	public FloodProtectorAction getSubclass()
+	public boolean canDropItem()
 	{
-		return _subclass;
+		return _dropItem.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_dropItem}.
-	 * @return {@link #_dropItem}
-	 */
-	public FloodProtectorAction getDropItem()
+	public boolean canUseServerBypass()
 	{
-		return _dropItem;
+		return _serverBypass.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_serverBypass}.
-	 * @return {@link #_serverBypass}
-	 */
-	public FloodProtectorAction getServerBypass()
+	public boolean canUseMultiSell()
 	{
-		return _serverBypass;
+		return _multiSell.canPerformAction();
 	}
 	
-	/**
-	 * @return {@link #_multiSell}
-	 */
-	public FloodProtectorAction getMultiSell()
+	public boolean canPerformTransaction()
 	{
-		return _multiSell;
+		return _transaction.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_transaction}.
-	 * @return {@link #_transaction}
-	 */
-	public FloodProtectorAction getTransaction()
+	public boolean canManufacture()
 	{
-		return _transaction;
+		return _manufacture.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_manufacture}.
-	 * @return {@link #_manufacture}
-	 */
-	public FloodProtectorAction getManufacture()
+	public boolean canSendMail()
 	{
-		return _manufacture;
+		return _sendMail.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_manor}.
-	 * @return {@link #_manor}
-	 */
-	public FloodProtectorAction getManor()
+	public boolean canSelectCharacter()
 	{
-		return _manor;
+		return _characterSelect.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_sendMail}.
-	 * @return {@link #_sendMail}
-	 */
-	public FloodProtectorAction getSendMail()
+	public boolean canUseItemAuction()
 	{
-		return _sendMail;
+		return _itemAuction.canPerformAction();
 	}
 	
-	/**
-	 * Returns {@link #_characterSelect}.
-	 * @return {@link #_characterSelect}
-	 */
-	public FloodProtectorAction getCharacterSelect()
+	public boolean canPerformPlayerAction()
 	{
-		return _characterSelect;
-	}
-	
-	/**
-	 * Returns {@link #_itemAuction}.
-	 * @return {@link #_itemAuction}
-	 */
-	public FloodProtectorAction getItemAuction()
-	{
-		return _itemAuction;
-	}
-	
-	/**
-	 * Returns {@link #_playerAction}.
-	 * @return {@link #_playerAction}
-	 */
-	public FloodProtectorAction getPlayerAction()
-	{
-		return _playerAction;
+		return _playerAction.canPerformAction();
 	}
 }

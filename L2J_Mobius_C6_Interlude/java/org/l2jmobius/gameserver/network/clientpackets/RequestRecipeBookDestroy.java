@@ -43,7 +43,7 @@ public class RequestRecipeBookDestroy implements IClientIncomingPacket
 		final PlayerInstance player = client.getPlayer();
 		if (player != null)
 		{
-			if (!client.getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
+			if (!client.getFloodProtectors().canPerformTransaction())
 			{
 				return;
 			}

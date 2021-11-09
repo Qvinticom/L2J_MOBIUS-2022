@@ -74,7 +74,7 @@ public class CharacterSelect implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
+		if (!client.getFloodProtectors().canSelectCharacter())
 		{
 			return;
 		}

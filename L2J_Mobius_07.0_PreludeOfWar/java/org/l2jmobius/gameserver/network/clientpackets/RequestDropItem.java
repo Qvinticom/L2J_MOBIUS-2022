@@ -68,7 +68,7 @@ public class RequestDropItem implements IClientIncomingPacket
 		}
 		
 		// Flood protect drop to avoid packet lag
-		if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item"))
+		if (!client.getFloodProtectors().canDropItem())
 		{
 			return;
 		}

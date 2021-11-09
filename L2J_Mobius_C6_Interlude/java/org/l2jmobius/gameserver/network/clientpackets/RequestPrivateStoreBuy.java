@@ -74,7 +74,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You buying items too fast.");
 			return;

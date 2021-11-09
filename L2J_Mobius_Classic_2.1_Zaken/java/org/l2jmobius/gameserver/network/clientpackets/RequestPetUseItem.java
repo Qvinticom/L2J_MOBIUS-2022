@@ -50,7 +50,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
+		if (!client.getFloodProtectors().canUseItem())
 		{
 			return;
 		}

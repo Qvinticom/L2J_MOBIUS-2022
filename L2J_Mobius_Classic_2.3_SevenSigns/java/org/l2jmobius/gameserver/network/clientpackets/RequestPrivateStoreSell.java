@@ -96,7 +96,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestoresell"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are selling items too fast.");
 			return;

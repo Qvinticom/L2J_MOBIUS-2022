@@ -84,14 +84,10 @@ public class RollingDice implements IItemHandler
 		return true;
 	}
 	
-	/**
-	 * @param player
-	 * @return
-	 */
 	private int rollDice(PlayerInstance player)
 	{
 		// Check if the dice is ready
-		if (!player.getFloodProtectors().getRollDice().tryPerformAction("roll dice"))
+		if (!player.getClient().getFloodProtectors().canRollDice())
 		{
 			return 0;
 		}

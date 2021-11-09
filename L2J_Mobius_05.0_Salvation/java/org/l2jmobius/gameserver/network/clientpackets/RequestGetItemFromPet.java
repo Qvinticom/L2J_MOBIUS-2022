@@ -53,7 +53,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("getfrompet"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You get items from pet too fast.");
 			return;

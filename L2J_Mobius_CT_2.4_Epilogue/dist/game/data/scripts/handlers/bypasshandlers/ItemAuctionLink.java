@@ -72,7 +72,7 @@ public class ItemAuctionLink implements IBypassHandler
 			final String cmd = st.nextToken();
 			if ("show".equalsIgnoreCase(cmd))
 			{
-				if (!player.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
+				if (!player.getClient().getFloodProtectors().canUseItemAuction())
 				{
 					return false;
 				}

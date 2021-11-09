@@ -77,7 +77,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("withdraw"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are withdrawing items too fast.");
 			return;

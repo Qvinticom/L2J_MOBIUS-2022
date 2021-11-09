@@ -57,7 +57,7 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("rejectattach"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

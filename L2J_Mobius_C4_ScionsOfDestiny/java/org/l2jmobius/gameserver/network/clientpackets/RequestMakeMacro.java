@@ -76,7 +76,7 @@ public class RequestMakeMacro implements IClientIncomingPacket
 		}
 		
 		// Macro exploit fix
-		if (!client.getFloodProtectors().getMacro().tryPerformAction("make macro"))
+		if (!client.getFloodProtectors().canUseMacro())
 		{
 			return;
 		}

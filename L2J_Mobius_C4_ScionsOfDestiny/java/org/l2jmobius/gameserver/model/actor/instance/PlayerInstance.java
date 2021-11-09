@@ -215,7 +215,6 @@ import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
-import org.l2jmobius.gameserver.util.FloodProtectors;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -15039,15 +15038,6 @@ public class PlayerInstance extends Playable
 	public void removeConfirmDlgRequestTime(int requestId)
 	{
 		_confirmDlgRequests.remove(requestId);
-	}
-	
-	/**
-	 * Gets the flood protectors.
-	 * @return the flood protectors
-	 */
-	public FloodProtectors getFloodProtectors()
-	{
-		return _client.getFloodProtectors();
 	}
 	
 	/**

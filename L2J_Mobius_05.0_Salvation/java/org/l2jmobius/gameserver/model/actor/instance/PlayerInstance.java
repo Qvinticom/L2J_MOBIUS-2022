@@ -352,7 +352,6 @@ import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.EnumIntBitmask;
-import org.l2jmobius.gameserver.util.FloodProtectors;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -11939,11 +11938,6 @@ public class PlayerInstance extends Playable
 	public boolean isInHideoutSiege()
 	{
 		return _isInHideoutSiege;
-	}
-	
-	public FloodProtectors getFloodProtectors()
-	{
-		return _client.getFloodProtectors();
 	}
 	
 	public boolean isFlyingMounted()

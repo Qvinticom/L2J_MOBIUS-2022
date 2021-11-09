@@ -90,7 +90,7 @@ public class RequestBuyProcure implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getManor().tryPerformAction("BuyProcure"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

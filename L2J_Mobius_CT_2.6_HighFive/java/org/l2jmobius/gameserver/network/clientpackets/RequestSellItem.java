@@ -83,7 +83,7 @@ public class RequestSellItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are buying too fast.");
 			return;

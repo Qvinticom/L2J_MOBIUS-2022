@@ -1875,7 +1875,7 @@ public class NpcInstance extends Creature
 	 * <li>If player level is out of range, display a message and return</li>
 	 * <li>According to player level cast buff</li><br>
 	 * <font color=#FF0000><b> Newbie Helper Buff list is define in sql table helper_buff_list</b></font>
-	 * @param player The PlayerInstance that talk with the NpcInstance if (!FloodProtector.getInstance().tryPerformAction(player.getObjectId(), FloodProtector.PROTECTED_USEITEM)) return;
+	 * @param player The PlayerInstance that talk with the NpcInstance if (!FloodProtector.getInstance().canPerformAction(player.getObjectId(), FloodProtector.PROTECTED_USEITEM)) return;
 	 */
 	public void makeSupportMagic(PlayerInstance player)
 	{

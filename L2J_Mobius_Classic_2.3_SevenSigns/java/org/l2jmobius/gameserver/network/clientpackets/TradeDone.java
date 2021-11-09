@@ -46,7 +46,7 @@ public class TradeDone implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("trade"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are trading too fast.");
 			return;

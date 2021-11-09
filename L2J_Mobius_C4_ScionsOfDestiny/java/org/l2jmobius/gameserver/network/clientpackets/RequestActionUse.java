@@ -298,7 +298,7 @@ public class RequestActionUse implements IClientIncomingPacket
 						{
 							return;
 						}
-						if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("mount"))
+						if (!client.getFloodProtectors().canUsePetSummonItem())
 						{
 							return;
 						}

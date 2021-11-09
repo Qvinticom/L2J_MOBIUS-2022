@@ -83,7 +83,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if (!client.getFloodProtectors().getManor().tryPerformAction("BuySeed"))
+		else if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are buying seeds too fast!");
 			return;

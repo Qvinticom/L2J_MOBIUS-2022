@@ -94,7 +94,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getMultiSell().tryPerformAction("multisell choose"))
+		if (!client.getFloodProtectors().canUseMultiSell())
 		{
 			player.setMultiSell(null);
 			return;

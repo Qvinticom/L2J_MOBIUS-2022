@@ -50,7 +50,7 @@ public class RollingDice implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		if (!player.getFloodProtectors().getRollDice().tryPerformAction("RollDice"))
+		if (!player.getClient().getFloodProtectors().canRollDice())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(itemId);

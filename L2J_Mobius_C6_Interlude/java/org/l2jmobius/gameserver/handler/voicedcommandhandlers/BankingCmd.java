@@ -37,7 +37,7 @@ public class BankingCmd implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
-		if (!activeChar.getClient().getFloodProtectors().getTransaction().tryPerformAction("bank"))
+		if (!activeChar.getClient().getFloodProtectors().canPerformTransaction())
 		{
 			activeChar.sendMessage("You Cannot Use The Banking System So Fast!");
 			return true;

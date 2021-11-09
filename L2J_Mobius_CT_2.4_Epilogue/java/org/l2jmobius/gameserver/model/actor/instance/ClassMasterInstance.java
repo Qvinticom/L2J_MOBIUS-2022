@@ -138,7 +138,7 @@ public class ClassMasterInstance extends MerchantInstance
 			return;
 		}
 		
-		if (!player.getFloodProtectors().getServerBypass().tryPerformAction("changeclass"))
+		if (!player.getClient().getFloodProtectors().canUseServerBypass())
 		{
 			return;
 		}

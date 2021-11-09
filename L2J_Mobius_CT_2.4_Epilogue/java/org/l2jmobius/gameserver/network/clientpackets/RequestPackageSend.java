@@ -82,7 +82,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You depositing items too fast.");
 			return;

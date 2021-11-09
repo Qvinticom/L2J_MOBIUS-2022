@@ -88,7 +88,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getManor().tryPerformAction("BuySeed"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

@@ -75,10 +75,9 @@ public class FloodProtectorAction
 	
 	/**
 	 * Checks whether the request is flood protected or not.
-	 * @param command command issued or short command description
 	 * @return true if action is allowed, otherwise false
 	 */
-	public boolean tryPerformAction(String command)
+	public boolean canPerformAction()
 	{
 		if ((_client.getPlayer() != null) && _client.getPlayer().isGM())
 		{
@@ -90,7 +89,7 @@ public class FloodProtectorAction
 		{
 			if (_config.LOG_FLOODING && !_logged && LOGGER.isLoggable(Level.WARNING))
 			{
-				log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeTaskManager.MILLIS_IN_TICK), " ms after previous command");
+				log(" called command ", _config.FLOOD_PROTECTOR_TYPE, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeTaskManager.MILLIS_IN_TICK), " ms after previous command");
 				_logged = true;
 			}
 			

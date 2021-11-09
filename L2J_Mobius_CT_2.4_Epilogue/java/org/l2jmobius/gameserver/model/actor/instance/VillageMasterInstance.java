@@ -535,7 +535,7 @@ public class VillageMasterInstance extends NpcInstance
 					/**
 					 * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice.
 					 */
-					if (!player.getFloodProtectors().getSubclass().tryPerformAction("add subclass"))
+					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
 						return;
 					}
@@ -596,7 +596,7 @@ public class VillageMasterInstance extends NpcInstance
 					/**
 					 * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice. Note: paramOne = classIndex
 					 */
-					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class"))
+					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
 						return;
 					}
@@ -686,7 +686,7 @@ public class VillageMasterInstance extends NpcInstance
 					/**
 					 * Warning: the information about this subclass will be removed from the subclass list even if false!
 					 */
-					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class"))
+					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
 						return;
 					}

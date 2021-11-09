@@ -72,7 +72,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("refund"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are using refund too fast.");
 			return;

@@ -333,7 +333,7 @@ public class VillageMasterInstance extends FolkInstance
 					boolean allowAddition = true;
 					
 					// Subclass exploit fix during add subclass
-					if (!player.getFloodProtectors().getSubclass().tryPerformAction("add subclass"))
+					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
 						LOGGER.warning("Player " + player.getName() + " has performed a subclass change too fast");
 						player.setLocked(false);
@@ -434,7 +434,7 @@ public class VillageMasterInstance extends FolkInstance
 					player.setLocked(true);
 					
 					// Subclass exploit fix during change subclass
-					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change subclass"))
+					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
 						LOGGER.warning("Player " + player.getName() + " has performed a subclass change too fast");
 						player.setLocked(false);
@@ -495,7 +495,7 @@ public class VillageMasterInstance extends FolkInstance
 					player.setLocked(true);
 					
 					// Subclass exploit fix during delete subclass
-					if (!player.getFloodProtectors().getSubclass().tryPerformAction("delete subclass"))
+					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
 						LOGGER.warning("Player " + player.getName() + " has performed a subclass change too fast");
 						player.setLocked(false);

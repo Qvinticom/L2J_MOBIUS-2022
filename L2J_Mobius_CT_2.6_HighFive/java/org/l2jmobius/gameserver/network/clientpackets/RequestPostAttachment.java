@@ -67,7 +67,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("getattach"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

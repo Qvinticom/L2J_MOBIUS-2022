@@ -45,7 +45,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
+		if (!client.getFloodProtectors().canManufacture())
 		{
 			return;
 		}

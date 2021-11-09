@@ -43,18 +43,12 @@ public class RequestJoinParty implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance requestor = client.getPlayer();
-		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		if (requestor == null)
 		{
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getPartyInvitation().tryPerformAction("PartyInvitation"))
-		{
-			requestor.sendMessage("You cannot invite into party so fast!");
-			return;
-		}
-		
+		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
@@ -113,14 +107,8 @@ public class RequestJoinParty implements IClientIncomingPacket
 		}
 	}
 	
-	/**
-	 * @param target
-	 * @param requestor
-	 */
 	private void addTargetToParty(PlayerInstance target, PlayerInstance requestor)
 	{
-		SystemMessage msg;
-		
 		// summary of ppl already in party and ppl that get invitation
 		if (requestor.getParty().getMemberCount() >= 9)
 		{
@@ -140,6 +128,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
+		SystemMessage msg;
 		if (!target.isProcessingRequest())
 		{
 			requestor.onTransactionRequest(target);
@@ -158,10 +147,6 @@ public class RequestJoinParty implements IClientIncomingPacket
 		}
 	}
 	
-	/**
-	 * @param target
-	 * @param requestor
-	 */
 	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
 	{
 		SystemMessage msg;

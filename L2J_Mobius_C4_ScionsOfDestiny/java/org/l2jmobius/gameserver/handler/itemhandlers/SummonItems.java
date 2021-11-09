@@ -51,7 +51,7 @@ public class SummonItems implements IItemHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) playable;
-		if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("summon pet"))
+		if (!player.getClient().getFloodProtectors().canUsePetSummonItem())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

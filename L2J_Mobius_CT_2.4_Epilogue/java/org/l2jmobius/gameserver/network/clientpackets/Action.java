@@ -54,7 +54,7 @@ public class Action implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if (!client.getFloodProtectors().getPlayerAction().tryPerformAction("PlayerAction"))
+		if (!client.getFloodProtectors().canPerformPlayerAction())
 		{
 			return;
 		}

@@ -109,14 +109,7 @@ public class UseItem implements IClientIncomingPacket
 		}
 		
 		// Flood protect UseItem
-		if (item.isPotion())
-		{
-			if (!client.getFloodProtectors().getUsePotion().tryPerformAction("use potion"))
-			{
-				return;
-			}
-		}
-		else if (!client.getFloodProtectors().getUseItem().tryPerformAction("use item"))
+		if (!client.getFloodProtectors().canUseItem())
 		{
 			return;
 		}

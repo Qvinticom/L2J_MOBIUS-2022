@@ -47,7 +47,7 @@ public class RequestInfoItemAuction implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
+		if (!client.getFloodProtectors().canUseItemAuction())
 		{
 			return;
 		}

@@ -34,7 +34,7 @@ public class CharacterRestore implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterRestore"))
+		if (!client.getFloodProtectors().canSelectCharacter())
 		{
 			return;
 		}

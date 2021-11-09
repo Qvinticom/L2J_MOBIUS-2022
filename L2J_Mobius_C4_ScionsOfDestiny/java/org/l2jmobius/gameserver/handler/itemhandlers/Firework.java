@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Firework implements IItemHandler
 {
@@ -39,20 +38,11 @@ public class Firework implements IItemHandler
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!playable.isPlayer())
 		{
-			return; // prevent Class cast exception
-		}
-		
-		final PlayerInstance player = (PlayerInstance) playable;
-		final int itemId = item.getItemId();
-		if (!player.getFloodProtectors().getFirework().tryPerformAction("firework"))
-		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addItemName(itemId);
-			player.sendPacket(sm);
 			return;
 		}
+		final PlayerInstance player = playable.getActingPlayer();
 		
 		if (player.isCastingNow())
 		{
@@ -102,6 +92,7 @@ public class Firework implements IItemHandler
 			return;
 		}
 		
+		final int itemId = item.getItemId();
 		if (itemId == 6403) // elven_firecracker, xml: 2023
 		{
 			final MagicSkillUse msu = new MagicSkillUse(playable, player, 2023, 1, 1, 0);

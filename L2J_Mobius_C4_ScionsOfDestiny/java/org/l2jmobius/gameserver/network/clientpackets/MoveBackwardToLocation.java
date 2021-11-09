@@ -80,7 +80,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		}
 		
 		// Move flood protection
-		if (!client.getFloodProtectors().getMoveAction().tryPerformAction("MoveBackwardToLocation"))
+		if (!client.getFloodProtectors().canPerformMoveAction())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

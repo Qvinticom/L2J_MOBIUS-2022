@@ -50,7 +50,7 @@ public class CharacterSelected implements IClientIncomingPacket
 		// to make this work, the first packet in the playback.dat has to be a [S]0x21 packet
 		// after playback is done, the client will not work correct and need to exit
 		// playLogFile(getConnection()); // try to play LOGGER file
-		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
+		if (!client.getFloodProtectors().canSelectCharacter())
 		{
 			return;
 		}

@@ -48,7 +48,7 @@ public class RequestGiveItemToPet implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("giveitemtopet"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You give items to pet too fast.");
 			return;

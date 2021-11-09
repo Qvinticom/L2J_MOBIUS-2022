@@ -57,7 +57,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("cancelpost"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

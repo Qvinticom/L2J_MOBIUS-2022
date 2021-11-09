@@ -41,7 +41,7 @@ public class RequestDeleteMacro implements IClientIncomingPacket
 		}
 		
 		// Macro exploit fix
-		if (!client.getFloodProtectors().getMacro().tryPerformAction("delete macro"))
+		if (!client.getFloodProtectors().canUseMacro())
 		{
 			return;
 		}

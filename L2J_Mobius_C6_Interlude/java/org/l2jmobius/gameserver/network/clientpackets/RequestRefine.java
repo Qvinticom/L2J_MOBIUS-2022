@@ -61,7 +61,7 @@ public class RequestRefine implements IClientIncomingPacket
 		}
 		
 		// Flood protect to augment script
-		if (!client.getFloodProtectors().getAugmentItem().tryPerformAction("augment"))
+		if (!client.getFloodProtectors().canAugmentItem())
 		{
 			return;
 		}

@@ -46,7 +46,7 @@ public class CharacterDelete implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		// if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
+		// if (!client.getFloodProtectors().canSelectCharacter())
 		// {
 		// sendPacket(new CharDeleteFail(CharDeleteFail.REASON_DELETION_FAILED));
 		// return;

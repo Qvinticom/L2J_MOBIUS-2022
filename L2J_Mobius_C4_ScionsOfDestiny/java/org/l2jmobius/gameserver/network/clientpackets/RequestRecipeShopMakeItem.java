@@ -48,7 +48,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeShopMake"))
+		if (!client.getFloodProtectors().canManufacture())
 		{
 			return;
 		}

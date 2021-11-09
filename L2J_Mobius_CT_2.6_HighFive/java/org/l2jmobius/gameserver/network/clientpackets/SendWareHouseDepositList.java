@@ -83,7 +83,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are depositing items too fast.");
 			return;

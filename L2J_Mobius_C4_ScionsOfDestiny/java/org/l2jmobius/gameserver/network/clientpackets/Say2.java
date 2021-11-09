@@ -124,7 +124,7 @@ public class Say2 implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getSayAction().tryPerformAction("Say2"))
+		if (!client.getFloodProtectors().canPerformSayAction())
 		{
 			player.sendMessage("You cannot speak too fast.");
 			return;
@@ -237,7 +237,7 @@ public class Say2 implements IClientIncomingPacket
 			case SHOUT:
 			{
 				// Flood protect Say
-				if (!client.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
+				if (!client.getFloodProtectors().canUseGlobalChat())
 				{
 					return;
 				}
@@ -509,7 +509,7 @@ public class Say2 implements IClientIncomingPacket
 				else if (player.isHero())
 				{
 					// Flood protect Hero Voice
-					if (!client.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice"))
+					if (!client.getFloodProtectors().canUseHeroVoice())
 					{
 						return;
 					}

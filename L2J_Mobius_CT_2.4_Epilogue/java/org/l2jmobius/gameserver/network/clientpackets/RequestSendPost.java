@@ -242,7 +242,7 @@ public class RequestSendPost implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
+		if (!client.getFloodProtectors().canSendMail())
 		{
 			player.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED);
 			return;

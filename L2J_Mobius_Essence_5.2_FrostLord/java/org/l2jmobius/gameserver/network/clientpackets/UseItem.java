@@ -76,7 +76,7 @@ public class UseItem implements IClientIncomingPacket
 		}
 		
 		// Flood protect UseItem
-		if (!client.getFloodProtectors().getUseItem().tryPerformAction("use item"))
+		if (!client.getFloodProtectors().canUseItem())
 		{
 			return;
 		}

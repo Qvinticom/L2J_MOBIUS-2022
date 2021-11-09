@@ -63,7 +63,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You destroying items too fast.");
 			return;

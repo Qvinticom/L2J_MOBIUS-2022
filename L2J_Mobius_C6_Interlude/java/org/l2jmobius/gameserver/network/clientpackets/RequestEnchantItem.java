@@ -124,7 +124,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// Flood protect to enchant script
-		if (!client.getFloodProtectors().getEnchantItem().tryPerformAction("enchant"))
+		if (!client.getFloodProtectors().canEnchantItem())
 		{
 			return;
 		}
@@ -176,7 +176,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		/*
-		 * if(!FloodProtector.getInstance().tryPerformAction(activeChar.getObjectId(), FloodProtector.PROTECTED_ENCHANT)) { activeChar.setActiveEnchantItem(null); activeChar.sendMessage("Enchant failed"); return; }
+		 * if(!FloodProtector.getInstance().canPerformAction(activeChar.getObjectId(), FloodProtector.PROTECTED_ENCHANT)) { activeChar.setActiveEnchantItem(null); activeChar.sendMessage("Enchant failed"); return; }
 		 */
 		
 		if (item.isWear())

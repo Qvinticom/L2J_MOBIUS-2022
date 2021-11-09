@@ -57,7 +57,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You crystallizing too fast.");
 			return;

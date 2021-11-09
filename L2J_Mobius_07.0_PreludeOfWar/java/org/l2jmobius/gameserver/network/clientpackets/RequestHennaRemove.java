@@ -46,7 +46,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("HennaRemove"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

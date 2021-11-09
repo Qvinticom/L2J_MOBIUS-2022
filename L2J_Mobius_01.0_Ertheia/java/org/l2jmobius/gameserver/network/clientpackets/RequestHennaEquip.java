@@ -52,7 +52,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("HennaEquip"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			return;
 		}

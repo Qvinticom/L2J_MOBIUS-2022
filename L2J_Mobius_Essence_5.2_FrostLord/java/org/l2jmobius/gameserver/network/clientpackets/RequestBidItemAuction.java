@@ -50,7 +50,7 @@ public class RequestBidItemAuction implements IClientIncomingPacket
 		}
 		
 		// can't use auction fp here
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("auction"))
+		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendMessage("You are bidding too fast.");
 			return;
