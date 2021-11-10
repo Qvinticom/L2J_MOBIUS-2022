@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Call Skill effect implementation.
@@ -46,6 +47,13 @@ public class CallSkill extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
+		// Prevent infinite loop.
+		final Skill skill = info.getSkill();
+		if ((skill != null) && (skill.getId() == _skill.getSkillId()) && (skill.getLevel() == _skill.getSkillLevel()))
+		{
+			return;
+		}
+		
 		info.getEffector().makeTriggerCast(_skill.getSkill(), info.getEffected(), true);
 	}
 }

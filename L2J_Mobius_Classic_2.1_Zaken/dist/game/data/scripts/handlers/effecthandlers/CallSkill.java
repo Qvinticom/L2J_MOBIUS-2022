@@ -86,6 +86,12 @@ public class CallSkill extends AbstractEffect
 		
 		if (triggerSkill != null)
 		{
+			// Prevent infinite loop.
+			if ((skill.getId() == triggerSkill.getId()) && (skill.getLevel() == triggerSkill.getLevel()))
+			{
+				return;
+			}
+			
 			SkillCaster.triggerCast(effector, effected, triggerSkill);
 		}
 		else
