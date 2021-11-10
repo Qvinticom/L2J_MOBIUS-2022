@@ -42,18 +42,24 @@ public class ClanHallAuctionManager
 	
 	protected ClanHallAuctionManager()
 	{
+		final long currentTime = Chronos.currentTimeMillis();
+		
 		// Schedule of the start, next Wednesday at 19:00.
 		final Calendar start = Calendar.getInstance();
-		if ((start.get(Calendar.DAY_OF_WEEK) >= Calendar.WEDNESDAY))
-		{
-			start.add(Calendar.DAY_OF_YEAR, 7);
-		}
 		start.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
 		start.set(Calendar.HOUR_OF_DAY, 19);
 		start.set(Calendar.MINUTE, 0);
 		start.set(Calendar.SECOND, 0);
-		final long startDelay = Math.max(0, start.getTimeInMillis() - Chronos.currentTimeMillis());
-		ThreadPool.scheduleAtFixedRate(() -> onStart(), startDelay, 604800000); // 604800000 = 1 week
+		if (start.getTimeInMillis() < currentTime)
+		{
+			start.add(Calendar.DAY_OF_YEAR, 1);
+			while (start.get(Calendar.DAY_OF_WEEK) != Calendar.WEDNESDAY)
+			{
+				start.add(Calendar.DAY_OF_YEAR, 1);
+			}
+		}
+		final long startDelay = Math.max(0, start.getTimeInMillis() - currentTime);
+		ThreadPool.scheduleAtFixedRate(this::onStart, startDelay, 604800000); // 604800000 = 1 week
 		if (startDelay > 0)
 		{
 			onStart();
@@ -61,16 +67,20 @@ public class ClanHallAuctionManager
 		
 		// Schedule of the end, next Wednesday at 11:00.
 		final Calendar end = Calendar.getInstance();
-		if ((end.get(Calendar.DAY_OF_WEEK) >= Calendar.WEDNESDAY))
-		{
-			end.add(Calendar.DAY_OF_YEAR, 7);
-		}
 		end.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
 		end.set(Calendar.HOUR_OF_DAY, 11);
 		end.set(Calendar.MINUTE, 0);
 		end.set(Calendar.SECOND, 0);
-		final long endDelay = Math.max(0, end.getTimeInMillis() - Chronos.currentTimeMillis());
-		_endTask = ThreadPool.scheduleAtFixedRate(() -> onEnd(), endDelay, 604800000); // 604800000 = 1 week
+		if (end.getTimeInMillis() < currentTime)
+		{
+			end.add(Calendar.DAY_OF_YEAR, 1);
+			while (end.get(Calendar.DAY_OF_WEEK) != Calendar.WEDNESDAY)
+			{
+				end.add(Calendar.DAY_OF_YEAR, 1);
+			}
+		}
+		final long endDelay = Math.max(0, end.getTimeInMillis() - currentTime);
+		_endTask = ThreadPool.scheduleAtFixedRate(this::onEnd, endDelay, 604800000); // 604800000 = 1 week
 	}
 	
 	private void onStart()

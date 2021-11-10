@@ -119,6 +119,8 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	
 	private CeremonyOfChaos()
 	{
+		final long currentTime = Chronos.currentTimeMillis();
+		
 		// Schedule event period end, 1st of next month 00:01.
 		final Calendar periodEnd = Calendar.getInstance();
 		periodEnd.add(Calendar.MONTH, 1);
@@ -126,18 +128,26 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		periodEnd.set(Calendar.HOUR_OF_DAY, 0);
 		periodEnd.set(Calendar.MINUTE, 1);
 		periodEnd.set(Calendar.SECOND, 0);
-		ThreadPool.scheduleAtFixedRate(() -> endMonth(), periodEnd.getTimeInMillis() - Chronos.currentTimeMillis(), 2629800000L); // 2629800000 = 1 month
+		if (periodEnd.getTimeInMillis() < currentTime)
+		{
+			periodEnd.add(Calendar.DAY_OF_YEAR, 1);
+			while (periodEnd.get(Calendar.DAY_OF_MONTH) != 1)
+			{
+				periodEnd.add(Calendar.DAY_OF_YEAR, 1);
+			}
+		}
+		ThreadPool.scheduleAtFixedRate(this::endMonth, periodEnd.getTimeInMillis() - currentTime, 2629800000L); // 2629800000 = 1 month
 		
 		// Daily task to start event at 18:00.
 		final Calendar startTime = Calendar.getInstance();
-		if ((startTime.get(Calendar.HOUR_OF_DAY) >= 18) && (startTime.get(Calendar.MINUTE) >= 0))
-		{
-			startTime.add(Calendar.DAY_OF_YEAR, 1);
-		}
 		startTime.set(Calendar.HOUR_OF_DAY, 18);
 		startTime.set(Calendar.MINUTE, 0);
 		startTime.set(Calendar.SECOND, 0);
-		ThreadPool.scheduleAtFixedRate(() -> startEvent(), startTime.getTimeInMillis() - Chronos.currentTimeMillis(), 86400000); // 86400000 = 1 day
+		if (startTime.getTimeInMillis() < currentTime)
+		{
+			startTime.add(Calendar.DAY_OF_YEAR, 1);
+		}
+		ThreadPool.scheduleAtFixedRate(this::startEvent, startTime.getTimeInMillis() - currentTime, 86400000); // 86400000 = 1 day
 	}
 	
 	private void endMonth()
@@ -207,7 +217,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			}
 		}
 		
-		ThreadPool.schedule(() -> registrationEnd(), 300000); // 300000 = 5 minutes
+		ThreadPool.schedule(this::registrationEnd, 300000); // 300000 = 5 minutes
 	}
 	
 	private void registrationEnd()
@@ -232,11 +242,11 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			params.set("time", 60);
 			getTimers().addTimer("count_down", params, 60000, null, null);
 			
-			ThreadPool.schedule(() -> prepareForFight(), 60000); // 60000 = 1 minute
+			ThreadPool.schedule(this::prepareForFight, 60000); // 60000 = 1 minute
 		}
 		else // Try again in 10 minutes.
 		{
-			ThreadPool.schedule(() -> startEvent(), 600000); // 600000 = 10 minutes
+			ThreadPool.schedule(this::startEvent, 600000); // 600000 = 10 minutes
 		}
 	}
 	
@@ -902,7 +912,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			instance.destroy();
 		}
 		
-		ThreadPool.schedule(() -> startEvent(), 60000); // 60000 = 1 minute
+		ThreadPool.schedule(this::startEvent, 60000); // 60000 = 1 minute
 	}
 	
 	public List<PlayerInstance> getWinners()

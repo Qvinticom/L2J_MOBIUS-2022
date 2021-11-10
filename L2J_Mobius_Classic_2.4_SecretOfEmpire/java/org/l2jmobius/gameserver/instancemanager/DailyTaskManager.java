@@ -57,16 +57,18 @@ public class DailyTaskManager
 	
 	protected DailyTaskManager()
 	{
+		final long currentTime = Chronos.currentTimeMillis();
+		
 		// Schedule reset everyday at 6:30.
 		final Calendar calendar = Calendar.getInstance();
-		if ((calendar.get(Calendar.HOUR_OF_DAY) >= 6) && (calendar.get(Calendar.MINUTE) >= 30))
-		{
-			calendar.add(Calendar.DAY_OF_YEAR, 1);
-		}
 		calendar.set(Calendar.HOUR_OF_DAY, 6);
 		calendar.set(Calendar.MINUTE, 30);
 		calendar.set(Calendar.SECOND, 0);
-		final long startDelay = Math.max(0, calendar.getTimeInMillis() - Chronos.currentTimeMillis());
+		if (calendar.getTimeInMillis() < currentTime)
+		{
+			calendar.add(Calendar.DAY_OF_YEAR, 1);
+		}
+		final long startDelay = Math.max(0, calendar.getTimeInMillis() - currentTime);
 		ThreadPool.scheduleAtFixedRate(this::onReset, startDelay, 86400000); // 86400000 = 1 day
 		
 		// Global save task.
