@@ -83,6 +83,7 @@ public class DailyTaskManager
 		{
 			clanLeaderApply();
 			resetVitalityWeekly();
+			resetMonsterArenaWeekly();
 			resetTimedHuntingZonesWeekly();
 		}
 		else
@@ -217,6 +218,14 @@ public class DailyTaskManager
 			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
 		}
 		LOGGER.info("Vitality resetted");
+	}
+	
+	private void resetMonsterArenaWeekly()
+	{
+		for (Clan clan : ClanTable.getInstance().getClans())
+		{
+			GlobalVariablesManager.getInstance().remove(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + clan.getId());
+		}
 	}
 	
 	private void resetClanBonus()

@@ -20,11 +20,21 @@ import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLeft;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 
@@ -32,7 +42,7 @@ import instances.AbstractInstance;
 
 /**
  * @author Mobius
- * @URL https://l2wiki.com/classic/Clan_-_Clan_Arena
+ * @URL https://www.l2central.info/essence/articles/793.html?lang=en
  */
 public class MonsterArena extends AbstractInstance
 {
@@ -62,6 +72,12 @@ public class MonsterArena extends AbstractInstance
 		25811, // Satur
 		25812, // Kosnak
 		25813, // Garaki
+		// TODO: 21-25 bosses
+		// 25834, // Shadai
+		// 25835, // Tyrobait
+		// 25836, // Tier
+		// 25837, // Cherkia
+		// 25838, // Spicula
 	};
 	// Rewards
 	private static final int BATTLE_BOX_1 = 90913;
@@ -71,9 +87,10 @@ public class MonsterArena extends AbstractInstance
 	private static final int VALOR_BOX = 90915;
 	private static final int TICKET_M = 90946;
 	private static final int TICKET_H = 90947;
+	// Skill
+	private static final int CLAN_EXUBERANCE = 1867;
 	// Misc
 	private static final Collection<PlayerInstance> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
-	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
 	
 	public MonsterArena()
@@ -151,16 +168,16 @@ public class MonsterArena extends AbstractInstance
 					machine.setScriptValue(player.getClanId());
 					
 					// Initialize progress if it does not exist.
-					if (GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), -1) == -1)
+					if (GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + machine.getScriptValue(), -1) == -1)
 					{
-						GlobalVariablesManager.getInstance().set(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
+						GlobalVariablesManager.getInstance().set(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
 					}
 					
 					// On max progress, set last four bosses.
-					final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
-					if (progress > 17)
+					final int progress = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + machine.getScriptValue());
+					if (progress > 17) // TODO: 22 for 25 total bosses.
 					{
-						GlobalVariablesManager.getInstance().set(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 17);
+						GlobalVariablesManager.getInstance().set(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 17); // TODO: 22 for 25 total bosses.
 					}
 					
 					startQuestTimer("machine_talk", 10000, machine, null);
@@ -196,7 +213,7 @@ public class MonsterArena extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					world.spawnGroup("boss_" + GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + npc.getScriptValue()));
+					world.spawnGroup("boss_" + GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + npc.getScriptValue()));
 				}
 				break;
 			}
@@ -215,7 +232,7 @@ public class MonsterArena extends AbstractInstance
 					
 					// Mandatory reward.
 					final Npc machine = world.getNpc(MACHINE);
-					final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
+					final int progress = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + machine.getScriptValue());
 					if (progress > 16)
 					{
 						giveItems(player, BATTLE_BOX_4, 1);
@@ -288,7 +305,7 @@ public class MonsterArena extends AbstractInstance
 			machine.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_NOT_BAD);
 			
 			// Save progress to global variables.
-			GlobalVariablesManager.getInstance().increaseInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
+			GlobalVariablesManager.getInstance().increaseInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
 			
 			// Spawn reward chests.
 			world.spawnGroup("supplies");
@@ -315,6 +332,48 @@ public class MonsterArena extends AbstractInstance
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + "-01.htm";
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerLogin(OnPlayerLogin event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		final Clan clan = player.getClan();
+		if (clan == null)
+		{
+			// Should never happen.
+			final Skill knownSkill = player.getKnownSkill(CLAN_EXUBERANCE);
+			if (knownSkill != null)
+			{
+				player.removeSkill(knownSkill, true);
+			}
+			return;
+		}
+		
+		final int stage = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + clan.getId(), 0);
+		if (stage > 4)
+		{
+			player.addSkill(SkillData.getInstance().getSkill(CLAN_EXUBERANCE, stage / 5), false);
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_CLAN_LEFT)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerClanLeft(OnPlayerClanLeft event)
+	{
+		final ClanMember member = event.getClanMember();
+		if ((member == null) || !member.isOnline())
+		{
+			return;
+		}
+		
+		member.getPlayerInstance().removeSkill(CLAN_EXUBERANCE, true);
 	}
 	
 	public static void main(String[] args)

@@ -21,7 +21,6 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeClassicRaidInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusOpen;
 import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeDonationInfo;
 
@@ -46,7 +45,6 @@ public class RequestPledgeBonusOpen implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new ExPledgeBonusOpen(player));
-		player.sendPacket(new ExPledgeClassicRaidInfo());
 		final long joinedTime = (player.getClanJoinExpiryTime() - (Config.ALT_CLAN_JOIN_DAYS * 60000));
 		player.sendPacket(new ExPledgeDonationInfo(player.getClanDonationPoints(), (joinedTime + 86400000) < System.currentTimeMillis()));
 	}

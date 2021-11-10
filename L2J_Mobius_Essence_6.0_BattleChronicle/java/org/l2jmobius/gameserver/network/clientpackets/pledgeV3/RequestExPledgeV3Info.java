@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeClassicRaidInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV3.ExPledgeV3Info;
 
 /**
@@ -53,5 +54,6 @@ public class RequestExPledgeV3Info implements IClientIncomingPacket
 		
 		player.sendPacket(new ExPledgeV3Info(player.getClan().getExp(), player.getClan().getRank(), player.getClan().getNotice(), player.getClan().isNoticeEnabled()));
 		player.sendPacket(new PledgeReceiveWarList(player.getClan(), _page));
+		player.sendPacket(new ExPledgeClassicRaidInfo(player));
 	}
 }

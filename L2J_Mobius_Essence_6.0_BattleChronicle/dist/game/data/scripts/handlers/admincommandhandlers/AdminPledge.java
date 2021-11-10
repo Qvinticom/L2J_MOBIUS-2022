@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -193,6 +194,26 @@ public class AdminPledge implements IAdminCommandHandler
 						catch (Exception e)
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <rep> <number>");
+						}
+						break;
+					}
+					case "arena":
+					{
+						if (clan == null)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Target player has no clan!");
+							break;
+						}
+						
+						try
+						{
+							final int stage = Integer.parseInt(param);
+							GlobalVariablesManager.getInstance().set(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + clan.getId(), stage);
+							BuilderUtil.sendSysMessage(activeChar, "You set " + stage + " Monster Arena stage for clan " + clan.getName() + "");
+						}
+						catch (Exception e)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge arena <number>");
 						}
 						break;
 					}

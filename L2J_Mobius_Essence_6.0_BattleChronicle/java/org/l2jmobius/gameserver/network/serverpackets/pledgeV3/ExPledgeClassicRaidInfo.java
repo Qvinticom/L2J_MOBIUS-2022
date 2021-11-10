@@ -17,16 +17,22 @@
 package org.l2jmobius.gameserver.network.serverpackets.pledgeV3;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * Written by Berezkin Nikolay, on 22.04.2021
+ * @author Index
  */
 public class ExPledgeClassicRaidInfo implements IClientOutgoingPacket
 {
-	public ExPledgeClassicRaidInfo()
+	private final Clan _clan;
+	
+	public ExPledgeClassicRaidInfo(PlayerInstance player)
 	{
+		_clan = player.getClan();
 	}
 	
 	@Override
@@ -34,13 +40,24 @@ public class ExPledgeClassicRaidInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PLEDGE_CLASSIC_RAID_INFO.writeId(packet);
 		
-		packet.writeD(0); // clan arena stage
-		packet.writeD(5);
-		for (int i = 1; i <= 5; i++)
+		if (_clan == null)
 		{
-			packet.writeD(1867);
-			packet.writeD(i);
+			packet.writeD(0);
 		}
+		else
+		{
+			final int stage = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + _clan.getId(), 0);
+			packet.writeD(stage);
+			
+			// Skill rewards.
+			packet.writeD(5);
+			for (int i = 1; i <= 5; i++)
+			{
+				packet.writeD(1867);
+				packet.writeD(i);
+			}
+		}
+		
 		return true;
 	}
 }
