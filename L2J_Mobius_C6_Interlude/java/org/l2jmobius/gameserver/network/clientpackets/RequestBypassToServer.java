@@ -102,6 +102,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				}
 				
 				ach.useAdminCommand(_command, player);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 			else if (_command.equals("come_here") && player.isGM())
 			{
