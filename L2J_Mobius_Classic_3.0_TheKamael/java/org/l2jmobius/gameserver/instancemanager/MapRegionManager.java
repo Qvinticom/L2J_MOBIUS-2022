@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -319,6 +320,17 @@ public class MapRegionManager implements IXmlReader
 							}
 						}
 					}
+				}
+			}
+			
+			// Timed Hunting zones.
+			final TimedHuntingZoneHolder timedHuntingZone = player.getTimedHuntingZone();
+			if (timedHuntingZone != null)
+			{
+				final Location exitLocation = timedHuntingZone.getExitLocation();
+				if (exitLocation != null)
+				{
+					return exitLocation;
 				}
 			}
 			

@@ -6,6 +6,7 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element type="xs:string" name="enterLocation" />
+							<xs:element type="xs:string" name="exitLocation" minOccurs="0"/>
 							<xs:element type="xs:int" name="initialTime" />
 							<xs:element type="xs:int" name="resetDelay" minOccurs="0" />
 							<xs:element type="xs:int" name="maxAddedTime" />

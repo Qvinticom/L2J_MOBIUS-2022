@@ -91,6 +91,7 @@ public class TimedHuntingZoneData implements IXmlReader
 							boolean soloInstance = true;
 							boolean weekly = false;
 							Location enterLocation = null;
+							Location exitLocation = null;
 							for (Node zoneNode = listNode.getFirstChild(); zoneNode != null; zoneNode = zoneNode.getNextSibling())
 							{
 								switch (zoneNode.getNodeName())
@@ -99,6 +100,12 @@ public class TimedHuntingZoneData implements IXmlReader
 									{
 										final String[] coordinates = zoneNode.getTextContent().split(",");
 										enterLocation = new Location(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]), Integer.parseInt(coordinates[2]));
+										break;
+									}
+									case "exitLocation":
+									{
+										final String[] coordinates = zoneNode.getTextContent().split(",");
+										exitLocation = new Location(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]), Integer.parseInt(coordinates[2]));
 										break;
 									}
 									case "initialTime":
@@ -163,7 +170,7 @@ public class TimedHuntingZoneData implements IXmlReader
 									}
 								}
 							}
-							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, soloInstance, weekly, enterLocation));
+							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, soloInstance, weekly, enterLocation, exitLocation));
 						}
 					}
 				}
