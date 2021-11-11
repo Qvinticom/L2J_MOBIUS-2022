@@ -2370,6 +2370,39 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
+	 * @return the Clan Contribution points of this PlayerInstance
+	 */
+	public int getClanContribution()
+	{
+		return getVariables().getInt(PlayerVariables.CLAN_CONTRIBUTION, 0);
+	}
+	
+	/**
+	 * @return the Clan Contribution total points of this PlayerInstance
+	 */
+	public int getClanContributionTotal()
+	{
+		return getVariables().getInt(PlayerVariables.CLAN_CONTRIBUTION_TOTAL, 0);
+	}
+	
+	/**
+	 * Increase the ClanContribution points of this PlayerInstance (max 100)
+	 * @param amount
+	 */
+	public void increaseClanContribution(int amount)
+	{
+		if ((amount <= 0) || (getClanContribution() >= Config.CLAN_CONTRIBUTION_REQUIRED))
+		{
+			return;
+		}
+		
+		getVariables().set(PlayerVariables.CLAN_CONTRIBUTION, Math.min(Config.CLAN_CONTRIBUTION_REQUIRED, getClanContribution() + amount));
+		getVariables().set(PlayerVariables.CLAN_CONTRIBUTION_TOTAL, Math.min(100000000, getClanContributionTotal() + amount));
+		
+		sendPacket(new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1).addInt(amount));
+	}
+	
+	/**
 	 * @return the ClassId object of the PlayerInstance contained in PlayerTemplate.
 	 */
 	public ClassId getClassId()
@@ -4952,6 +4985,7 @@ public class PlayerInstance extends Playable
 							final ClanWar clanWar = _clan.getWarWith(pkClan.getId());
 							if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this))
 							{
+								increaseClanContribution(Config.CLAN_CONTRIBUTION_REWARD_FOR_ENEMY);
 								clanWar.onKill(pk, this);
 							}
 						}
@@ -11201,6 +11235,8 @@ public class PlayerInstance extends Playable
 				final ClanMember clanMember = _clan.getClanMember(getObjectId());
 				if (clanMember != null)
 				{
+					clanMember.setClanContribution(getClanContribution());
+					clanMember.setClanContributionTotal(getClanContributionTotal());
 					clanMember.setPlayerInstance(null);
 				}
 			}

@@ -65,6 +65,9 @@ public class PlayerVariables extends AbstractVariables
 	public static final String FORTUNE_TELLING_VARIABLE = "FortuneTelling";
 	public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
 	public static final String DELUSION_RETURN = "DELUSION_RETURN";
+	public static final String CLAN_CONTRIBUTION = "CLAN_CONTRIBUTION";
+	public static final String CLAN_CONTRIBUTION_TOTAL = "CLAN_CONTRIBUTION_TOTAL";
+	public static final String CLAN_CONTRIBUTION_REWARDED = "CLAN_CONTRIBUTION_REWARDED";
 	public static final String AUTO_USE_SETTINGS = "AUTO_USE_SETTINGS";
 	public static final String AUTO_USE_SHORTCUTS = "AUTO_USE_SHORTCUTS";
 	public static final String HUNTING_ZONE_ENTRY = "HUNTING_ZONE_ENTRY_";

@@ -391,6 +391,10 @@ public class Config
 	public static int ROYAL_GUARD_COST;
 	public static int KNIGHT_UNIT_COST;
 	public static int KNIGHT_REINFORCE_COST;
+	public static int CLAN_CONTRIBUTION_REWARD_FOR_RAID;
+	public static int CLAN_CONTRIBUTION_REWARD_FOR_ENEMY;
+	public static int CLAN_CONTRIBUTION_REQUIRED;
+	public static int CLAN_CONTRIBUTION_FAME_REWARD;
 	public static int BALLISTA_POINTS;
 	public static int BLOODALLIANCE_POINTS;
 	public static int BLOODOATH_POINTS;
@@ -1590,6 +1594,10 @@ public class Config
 			ROYAL_GUARD_COST = featureConfig.getInt("CreateRoyalGuardCost", 5000);
 			KNIGHT_UNIT_COST = featureConfig.getInt("CreateKnightUnitCost", 10000);
 			KNIGHT_REINFORCE_COST = featureConfig.getInt("ReinforceKnightUnitCost", 5000);
+			CLAN_CONTRIBUTION_REWARD_FOR_RAID = featureConfig.getInt("ClanContributionRewardForRaid", 1);
+			CLAN_CONTRIBUTION_REWARD_FOR_ENEMY = featureConfig.getInt("ClanContributionRewardForEnemy", 1);
+			CLAN_CONTRIBUTION_REQUIRED = featureConfig.getInt("ClanContributionRequired", 100);
+			CLAN_CONTRIBUTION_FAME_REWARD = featureConfig.getInt("ClanContributionFameReward", 300);
 			BALLISTA_POINTS = featureConfig.getInt("KillBallistaPoints", 500);
 			BLOODALLIANCE_POINTS = featureConfig.getInt("BloodAlliancePoints", 500);
 			BLOODOATH_POINTS = featureConfig.getInt("BloodOathPoints", 200);

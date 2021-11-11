@@ -65,6 +65,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.ClanVariables;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -502,6 +503,9 @@ public class Clan implements IIdentifiable, INamable
 			}
 			player.setApprentice(0);
 			player.setSponsor(0);
+			
+			player.getVariables().remove(PlayerVariables.CLAN_CONTRIBUTION);
+			player.getVariables().remove(PlayerVariables.CLAN_CONTRIBUTION_TOTAL);
 			
 			if (player.isClanLeader())
 			{
@@ -965,7 +969,9 @@ public class Clan implements IIdentifiable, INamable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement("UPDATE characters SET clanid=0, title=?, clan_join_expiry_time=?, clan_create_expiry_time=?, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0 WHERE charId=?");
 			PreparedStatement ps2 = con.prepareStatement("UPDATE characters SET apprentice=0 WHERE apprentice=?");
-			PreparedStatement ps3 = con.prepareStatement("UPDATE characters SET sponsor=0 WHERE sponsor=?"))
+			PreparedStatement ps3 = con.prepareStatement("UPDATE characters SET sponsor=0 WHERE sponsor=?");
+			PreparedStatement ps4 = con.prepareStatement("DELETE FROM character_variables WHERE var=?");
+			PreparedStatement ps5 = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
 		{
 			ps1.setString(1, "");
 			ps1.setLong(2, clanJoinExpiryTime);
@@ -978,6 +984,11 @@ public class Clan implements IIdentifiable, INamable
 			// Remove sponsor.
 			ps3.setInt(1, member.getObjectId());
 			ps3.execute();
+			// Clan contribution.
+			ps4.setString(1, PlayerVariables.CLAN_CONTRIBUTION);
+			ps4.execute();
+			ps5.setString(1, PlayerVariables.CLAN_CONTRIBUTION_TOTAL);
+			ps5.execute();
 		}
 		catch (Exception e)
 		{

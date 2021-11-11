@@ -83,6 +83,9 @@ import org.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonster
 import org.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookOpen;
 import org.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeAnnounce;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeContributionInfo;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeContributionRank;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeContributionReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemBuy;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemList;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeLevelUp;
@@ -423,9 +426,9 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_ARENA_RANK_ALL(0x13B, null, ConnectionState.IN_GAME),
 	EX_ARENA_MYRANK(0x13C, null, ConnectionState.IN_GAME),
 	EX_SWAP_AGATHION_SLOT_ITEMS(0x13D, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_CONTRIBUTION_RANK(0x13E, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_CONTRIBUTION_INFO(0x13F, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_CONTRIBUTION_REWARD(0x140, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_RANK(0x13E, RequestExPledgeContributionRank::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_INFO(0x13F, RequestExPledgeContributionInfo::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_REWARD(0x140, RequestExPledgeContributionReward::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_LEVEL_UP(0x141, RequestExPledgeLevelUp::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MISSION_INFO(0x142, RequestExPledgeMissionInfo::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MISSION_REWARD(0x143, RequestExPledgeMissionReward::new, ConnectionState.IN_GAME),

@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
  * This class holds the clan members data.
@@ -47,6 +48,8 @@ public class ClanMember
 	private int _pledgeType;
 	private int _apprentice;
 	private int _sponsor;
+	private int _clanContribution = -1;
+	private int _clanContributionTotal = -1;
 	
 	/**
 	 * Used to restore a clan member from the database.
@@ -812,5 +815,79 @@ public class ClanMember
 		{
 			LOGGER.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
 		}
+	}
+	
+	public void setClanContribution(int value)
+	{
+		_clanContribution = value;
+	}
+	
+	public int getClanContribution()
+	{
+		if (_clanContribution == -1)
+		{
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("SELECT * FROM character_variables WHERE charId=? AND var=?"))
+			{
+				ps.setInt(1, _objectId);
+				ps.setString(2, PlayerVariables.CLAN_CONTRIBUTION);
+				try (ResultSet result = ps.executeQuery())
+				{
+					if (result.next())
+					{
+						_clanContribution = result.getInt("val");
+					}
+				}
+			}
+			catch (SQLException e)
+			{
+				LOGGER.log(Level.WARNING, "Could not load Clan Contribution: " + e.getMessage(), e);
+			}
+			
+			// Avoid further queries.
+			if (_clanContribution == -1)
+			{
+				_clanContribution = 0;
+			}
+		}
+		
+		return _clanContribution;
+	}
+	
+	public void setClanContributionTotal(int value)
+	{
+		_clanContributionTotal = value;
+	}
+	
+	public int getClanContributionTotal()
+	{
+		if (_clanContributionTotal == -1)
+		{
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("SELECT * FROM character_variables WHERE charId=? AND var=?"))
+			{
+				ps.setInt(1, _objectId);
+				ps.setString(2, PlayerVariables.CLAN_CONTRIBUTION_TOTAL);
+				try (ResultSet result = ps.executeQuery())
+				{
+					if (result.next())
+					{
+						_clanContributionTotal = result.getInt("val");
+					}
+				}
+			}
+			catch (SQLException e)
+			{
+				LOGGER.log(Level.WARNING, "Could not load Clan Contribution total: " + e.getMessage(), e);
+			}
+			
+			// Avoid further queries.
+			if (_clanContributionTotal == -1)
+			{
+				_clanContributionTotal = 0;
+			}
+		}
+		
+		return _clanContributionTotal;
 	}
 }

@@ -484,6 +484,7 @@ public class Attackable extends Npc
 						final int points = (int) (Math.max(raidbossPoints / members.size(), 1) * p.getStat().getValue(Stat.BONUS_RAID_POINTS, 1));
 						p.increaseRaidbossPoints(points);
 						p.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+						p.increaseClanContribution(Config.CLAN_CONTRIBUTION_REWARD_FOR_RAID);
 						if (p.getNobleLevel() > 0)
 						{
 							Hero.getInstance().setRBkilled(p.getObjectId(), getId());
@@ -495,6 +496,7 @@ public class Attackable extends Npc
 					final int points = (int) (Math.max(raidbossPoints, 1) * player.getStat().getValue(Stat.BONUS_RAID_POINTS, 1));
 					player.increaseRaidbossPoints(points);
 					player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+					player.increaseClanContribution(Config.CLAN_CONTRIBUTION_REWARD_FOR_RAID);
 					if (player.getNobleLevel() > 0)
 					{
 						Hero.getInstance().setRBkilled(player.getObjectId(), getId());

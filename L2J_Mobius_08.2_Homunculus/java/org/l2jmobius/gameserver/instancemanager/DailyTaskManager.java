@@ -83,6 +83,7 @@ public class DailyTaskManager
 		{
 			clanLeaderApply();
 			resetVitalityWeekly();
+			resetClanContribution();
 			resetTimedHuntingZonesWeekly();
 			resetThroneOfHeroes();
 		}
@@ -320,6 +321,41 @@ public class DailyTaskManager
 	private void resetDailyMissionRewards()
 	{
 		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
+	}
+	
+	private void resetClanContribution()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+		{
+			ps.setString(1, PlayerVariables.CLAN_CONTRIBUTION);
+			ps.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not reset Clan contributions: ", e);
+		}
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+		{
+			ps.setString(1, PlayerVariables.CLAN_CONTRIBUTION_REWARDED);
+			ps.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not reset Clan contributions: ", e);
+		}
+		
+		// Update data for online players.
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			player.getVariables().remove(PlayerVariables.CLAN_CONTRIBUTION);
+			player.getVariables().remove(PlayerVariables.CLAN_CONTRIBUTION_REWARDED);
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Clan contributions has been resetted.");
 	}
 	
 	public void resetThroneOfHeroes()
