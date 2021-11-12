@@ -3071,16 +3071,16 @@
 		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
 			<effect name="MpRegen">
 				<amount>20</amount>
 				<mode>PER</mode>
 				<armorType>
 					<item>SIGIL</item>
 				</armorType>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>INT</stat>
 			</effect>
 			<effect name="HealEffect">
 				<amount>40</amount>

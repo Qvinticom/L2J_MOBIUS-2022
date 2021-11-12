@@ -1132,6 +1132,9 @@
 			<value level="10">110</value>
 		</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
 			<effect name="ShieldDefenceRate">
 				<amount>50</amount>

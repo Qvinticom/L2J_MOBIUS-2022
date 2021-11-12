@@ -56,6 +56,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("EnergySaved", EnergySavedSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipArmor", EquipArmorSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipShield", EquipShieldSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("EquipSigil", EquipSigilSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipWeapon", EquipWeaponSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("MaxMpSkillCondition", MaxMpSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("NotFeared", NotFearedSkillCondition::new);

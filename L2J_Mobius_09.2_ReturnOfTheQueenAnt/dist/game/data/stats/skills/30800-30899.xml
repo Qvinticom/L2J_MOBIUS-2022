@@ -3270,6 +3270,9 @@
 		<!-- P. Atk. +$s1, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3278,9 +3281,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3289,9 +3289,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -3300,9 +3297,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3310,6 +3304,9 @@
 		<!-- P. Atk. +$s1, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3318,9 +3315,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3329,9 +3323,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -3340,9 +3331,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3350,6 +3338,9 @@
 		<!-- P. Atk. +$s1, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3358,9 +3349,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -3369,9 +3357,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3379,6 +3364,9 @@
 		<!-- P. Atk. +$s1, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3387,9 +3375,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -3398,9 +3383,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3408,6 +3390,9 @@
 		<!-- P. Atk. +$s1, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3416,9 +3401,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3427,9 +3409,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -3438,9 +3417,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3448,6 +3424,9 @@
 		<!-- P. Atk. +$s1, M. Atk. +$s2, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3456,9 +3435,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="MAtk">
 				<amount>
@@ -3467,9 +3443,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3478,9 +3451,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -3489,9 +3459,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3499,6 +3466,9 @@
 		<!-- P. Atk. +$s1, when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -3507,9 +3477,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3518,9 +3485,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
@@ -3529,9 +3493,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3539,6 +3500,9 @@
 		<!-- M. Skill Critical Damage +$s1 when a sigil is equipped. -->
 		<icon>icon.skill_guard_mastery_1</icon>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -3547,9 +3511,6 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="MagicalSkillPower">
 				<amount>
@@ -3558,9 +3519,6 @@
 					<value level="3">1</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>

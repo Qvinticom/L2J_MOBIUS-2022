@@ -182,20 +182,17 @@
 		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="MAtk">
 				<amount>5</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>20</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>

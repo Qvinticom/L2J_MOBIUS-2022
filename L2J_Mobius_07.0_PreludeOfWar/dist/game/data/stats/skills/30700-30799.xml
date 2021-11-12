@@ -1102,6 +1102,9 @@
 			<value level="1">40</value>
 			<value level="2">76</value>
 		</magicLevel>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1109,9 +1112,6 @@
 					<value level="2">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>
@@ -1119,9 +1119,6 @@
 					<value level="2">12</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -1412,6 +1409,9 @@
 		<icon>icon.skill0925</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="EquipSigil" />
+		</conditions>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1419,9 +1419,6 @@
 					<value level="2">3</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>
@@ -1429,9 +1426,6 @@
 					<value level="2">12</value>
 				</amount>
 				<mode>PER</mode>
-				<armorType>
-					<item>SIGIL</item>
-				</armorType>
 			</effect>
 		</effects>
 	</skill>
