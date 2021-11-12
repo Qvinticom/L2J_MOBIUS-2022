@@ -77,6 +77,16 @@ public class GameTimeTaskManager
 		return _gameTicks;
 	}
 	
+	public int getGameHour()
+	{
+		return getGameTime() / 60;
+	}
+	
+	public int getGameMinute()
+	{
+		return getGameTime() % 60;
+	}
+	
 	/**
 	 * Add a Creature to movingObjects of GameTimeTaskManager.<br>
 	 * <br>

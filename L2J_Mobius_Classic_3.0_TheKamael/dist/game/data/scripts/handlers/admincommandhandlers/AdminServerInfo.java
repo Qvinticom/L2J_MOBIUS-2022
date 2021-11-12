@@ -16,6 +16,11 @@
  */
 package handlers.admincommandhandlers;
 
+import java.lang.management.GarbageCollectorMXBean;
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.MemoryUsage;
+import java.lang.management.ThreadMXBean;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
@@ -40,6 +45,8 @@ import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 public class AdminServerInfo implements IAdminCommandHandler
 {
 	private static final SimpleDateFormat SDF = new SimpleDateFormat("hh:mm a");
+	private static final MemoryMXBean MEMORY_MX_BEAN = ManagementFactory.getMemoryMXBean();
+	private static final ThreadMXBean THREAD_MX_BEAN = ManagementFactory.getThreadMXBean();
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -51,9 +58,15 @@ public class AdminServerInfo implements IAdminCommandHandler
 	{
 		if (command.equals("admin_serverinfo"))
 		{
+			final MemoryUsage heapMemoryUsage = MEMORY_MX_BEAN.getHeapMemoryUsage();
+			final long freeMemory = heapMemoryUsage.getMax() - heapMemoryUsage.getUsed();
+			final int threadCount = THREAD_MX_BEAN.getThreadCount();
+			final int daemonCount = THREAD_MX_BEAN.getThreadCount();
+			final int nonDaemonCount = threadCount - daemonCount;
+			final int peakCount = THREAD_MX_BEAN.getPeakThreadCount();
+			final long totalCount = THREAD_MX_BEAN.getTotalStartedThreadCount();
+			
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			final Runtime runTime = Runtime.getRuntime();
-			final int mb = 1024 * 1024;
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/serverinfo.htm"));
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));
@@ -67,9 +80,20 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%offlineTrade%", getPlayersCount("OFF_TRADE"));
 			html.replace("%onlineGM%", getPlayersCount("GM"));
 			html.replace("%onlineReal%", getPlayersCount("ALL_REAL"));
-			html.replace("%usedMem%", (runTime.maxMemory() / mb) - (((runTime.maxMemory() - runTime.totalMemory()) + runTime.freeMemory()) / mb));
-			html.replace("%freeMem%", ((runTime.maxMemory() - runTime.totalMemory()) + runTime.freeMemory()) / mb);
-			html.replace("%totalMem%", Runtime.getRuntime().maxMemory() / 1048576);
+			html.replace("%usedMem%", (MEMORY_MX_BEAN.getHeapMemoryUsage().getUsed() / 0x100000) + " Mb");
+			html.replace("%freeMem%", (freeMemory / 0x100000) + " Mb");
+			html.replace("%totalMem%", (MEMORY_MX_BEAN.getHeapMemoryUsage().getMax() / 0x100000) + " Mb");
+			html.replace("%live%", threadCount);
+			html.replace("%nondaemon%", nonDaemonCount);
+			html.replace("%daemon%", daemonCount);
+			html.replace("%peak%", peakCount);
+			html.replace("%totalstarted%", totalCount);
+			for (GarbageCollectorMXBean gcBean : ManagementFactory.getGarbageCollectorMXBeans())
+			{
+				html.replace("%gcol%", gcBean.getName());
+				html.replace("%colcount%", gcBean.getCollectionCount());
+				html.replace("%coltime%", gcBean.getCollectionTime());
+			}
 			activeChar.sendPacket(html);
 		}
 		return true;

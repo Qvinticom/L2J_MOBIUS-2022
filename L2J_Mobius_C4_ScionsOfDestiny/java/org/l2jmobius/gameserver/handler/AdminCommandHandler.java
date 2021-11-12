@@ -70,6 +70,7 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminRepairChar;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminRes;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminRideWyvern;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminScript;
+import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminServerInfo;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminShop;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminShutdown;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminSiege;
@@ -143,6 +144,7 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminRes());
 		registerAdminCommandHandler(new AdminRideWyvern());
 		registerAdminCommandHandler(new AdminScript());
+		registerAdminCommandHandler(new AdminServerInfo());
 		registerAdminCommandHandler(new AdminShop());
 		registerAdminCommandHandler(new AdminShutdown());
 		registerAdminCommandHandler(new AdminSiege());

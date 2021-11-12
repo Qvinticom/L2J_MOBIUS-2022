@@ -364,6 +364,9 @@
 	<!-- Section: Script -->
 	<admin command="admin_load_script" accessLevel="90" />
 
+	<!-- Section: Server Info -->
+	<admin command="admin_serverinfo" accessLevel="90" />
+
 	<!-- Section: Shop --> <!-- Must be modified the Trade option. -->
 	<admin command="admin_buy" accessLevel="80" />
 	<admin command="admin_gmshop" accessLevel="80" />
