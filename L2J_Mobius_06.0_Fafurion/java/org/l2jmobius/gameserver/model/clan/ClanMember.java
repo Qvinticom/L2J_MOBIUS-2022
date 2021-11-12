@@ -128,7 +128,7 @@ public class ClanMember
 		if (player != null)
 		{
 			_clan.addSkillEffects(player);
-			if ((_clan.getLevel() > 3) && player.isClanLeader())
+			if ((_clan.getLevel() >= 5) && player.isClanLeader())
 			{
 				SiegeManager.getInstance().addSiegeSkills(player);
 			}
