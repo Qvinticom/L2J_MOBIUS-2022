@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.threads.ThreadPool;
@@ -55,6 +56,8 @@ public abstract class Vehicle extends Creature
 	
 	protected VehiclePathPoint[] _currentPath = null;
 	protected int _runState = 0;
+	private ScheduledFuture<?> _monitorTask = null;
+	private final Location _monitorLocation = new Location(this);
 	
 	public Vehicle(CreatureTemplate template)
 	{
@@ -129,6 +132,11 @@ public abstract class Vehicle extends Creature
 					{
 						point.setHeading(point.getRotationSpeed());
 						teleToLocation(point, false);
+						if (_monitorTask != null)
+						{
+							_monitorTask.cancel(true);
+							_monitorTask = null;
+						}
 						_currentPath = null;
 					}
 					else
@@ -159,12 +167,44 @@ public abstract class Vehicle extends Creature
 						m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 						_move = m;
 						GameTimeTaskManager.getInstance().registerMovingObject(this);
+						
+						// Make sure vehicle is not stuck.
+						if (_monitorTask == null)
+						{
+							_monitorTask = ThreadPool.scheduleAtFixedRate(() ->
+							{
+								if (!isInDock() && (calculateDistance3D(_monitorLocation) == 0))
+								{
+									if (_currentPath != null)
+									{
+										if (_runState < _currentPath.length)
+										{
+											moveToNextRoutePoint();
+										}
+										else
+										{
+											broadcastInfo();
+										}
+									}
+								}
+								else
+								{
+									_monitorLocation.setXYZ(this);
+								}
+							}, 1000, 1000);
+						}
+						
 						return true;
 					}
 				}
 			}
 			else
 			{
+				if (_monitorTask != null)
+				{
+					_monitorTask.cancel(true);
+					_monitorTask = null;
+				}
 				_currentPath = null;
 			}
 		}

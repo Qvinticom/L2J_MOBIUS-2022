@@ -219,7 +219,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 			return null;
 		}
-		else if (_ship.isInDock() && _ship.isInsideRadius3D(player, 600))
+		else if (_ship.isInDock() && World.getInstance().getVisibleObjects(player, AirShipInstance.class).contains(_ship))
 		{
 			_ship.addPassenger(player);
 		}
