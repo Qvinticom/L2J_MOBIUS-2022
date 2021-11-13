@@ -59,9 +59,7 @@ public class Q00647_InfluxOfMachines extends Quest
 		
 		if (event.equals("32069-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32069-06.htm"))
 		{
@@ -86,7 +84,7 @@ public class Q00647_InfluxOfMachines extends Quest
 				break;
 			
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "32069-04.htm";
@@ -117,7 +115,7 @@ public class Q00647_InfluxOfMachines extends Quest
 		
 		if (giveItemRandomly(partyMember, npc, DESTROYED_GOLEM_SHARD, 1, 500, 0.3, true))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

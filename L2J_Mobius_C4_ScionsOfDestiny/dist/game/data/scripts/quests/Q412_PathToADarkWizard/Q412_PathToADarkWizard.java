@@ -26,6 +26,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q412_PathToADarkWizard extends Quest
 {
+	// NPCs
+	private static final int VARIKA = 30421;
+	private static final int CHARKEREN = 30415;
+	private static final int ANNIKA = 30418;
+	private static final int ARKENIA = 30419;
 	// Items
 	private static final int SEED_OF_ANGER = 1253;
 	private static final int SEED_OF_DESPAIR = 1254;
@@ -40,21 +45,12 @@ public class Q412_PathToADarkWizard extends Quest
 	private static final int CANDLE = 1278;
 	private static final int HUB_SCENT = 1279;
 	
-	// NPCs
-	private static final int VARIKA = 30421;
-	private static final int CHARKEREN = 30415;
-	private static final int ANNIKA = 30418;
-	private static final int ARKENIA = 30419;
-	
 	public Q412_PathToADarkWizard()
 	{
 		super(412, "Path to a Dark Wizard");
-		
 		registerQuestItems(SEED_OF_ANGER, SEED_OF_DESPAIR, SEED_OF_HORROR, SEED_OF_LUNACY, FAMILY_REMAINS, VARIKA_LIQUOR, KNEE_BONE, HEART_OF_LUNACY, LUCKY_KEY, CANDLE, HUB_SCENT);
-		
 		addStartNpc(VARIKA);
 		addTalkId(VARIKA, CHARKEREN, ANNIKA, ARKENIA);
-		
 		addKillId(20015, 20022, 20045, 20517, 20518);
 	}
 	
@@ -68,70 +64,77 @@ public class Q412_PathToADarkWizard extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30421-05.htm"))
+		switch (event)
 		{
-			if (player.getClassId() != ClassId.DARK_MAGE)
+			case "30421-05.htm":
 			{
-				htmltext = (player.getClassId() == ClassId.DARK_WIZARD) ? "30421-02a.htm" : "30421-03.htm";
+				if (player.getClassId() != ClassId.DARK_MAGE)
+				{
+					htmltext = (player.getClassId() == ClassId.DARK_WIZARD) ? "30421-02a.htm" : "30421-03.htm";
+				}
+				else if (player.getLevel() < 19)
+				{
+					htmltext = "30421-02.htm";
+				}
+				else if (st.hasQuestItems(JEWEL_OF_DARKNESS))
+				{
+					htmltext = "30421-04.htm";
+				}
+				else
+				{
+					st.startQuest();
+					st.giveItems(SEED_OF_DESPAIR, 1);
+				}
+				break;
 			}
-			else if (player.getLevel() < 19)
+			case "30421-07.htm":
 			{
-				htmltext = "30421-02.htm";
+				if (st.hasQuestItems(SEED_OF_ANGER))
+				{
+					htmltext = "30421-06.htm";
+				}
+				else if (st.hasQuestItems(LUCKY_KEY))
+				{
+					htmltext = "30421-08.htm";
+				}
+				else if (st.getQuestItemsCount(FAMILY_REMAINS) == 3)
+				{
+					htmltext = "30421-18.htm";
+				}
+				break;
 			}
-			else if (st.hasQuestItems(JEWEL_OF_DARKNESS))
+			case "30421-10.htm":
 			{
-				htmltext = "30421-04.htm";
+				if (st.hasQuestItems(SEED_OF_HORROR))
+				{
+					htmltext = "30421-09.htm";
+				}
+				else if (st.getQuestItemsCount(KNEE_BONE) == 2)
+				{
+					htmltext = "30421-19.htm";
+				}
+				break;
 			}
-			else
+			case "30421-13.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-				st.giveItems(SEED_OF_DESPAIR, 1);
+				if (st.hasQuestItems(SEED_OF_LUNACY))
+				{
+					htmltext = "30421-12.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30421-07.htm"))
-		{
-			if (st.hasQuestItems(SEED_OF_ANGER))
+			case "30415-03.htm":
 			{
-				htmltext = "30421-06.htm";
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(LUCKY_KEY, 1);
+				break;
 			}
-			else if (st.hasQuestItems(LUCKY_KEY))
+			case "30418-02.htm":
 			{
-				htmltext = "30421-08.htm";
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(CANDLE, 1);
+				break;
 			}
-			else if (st.getQuestItemsCount(FAMILY_REMAINS) == 3)
-			{
-				htmltext = "30421-18.htm";
-			}
-		}
-		else if (event.equals("30421-10.htm"))
-		{
-			if (st.hasQuestItems(SEED_OF_HORROR))
-			{
-				htmltext = "30421-09.htm";
-			}
-			else if (st.getQuestItemsCount(KNEE_BONE) == 2)
-			{
-				htmltext = "30421-19.htm";
-			}
-		}
-		else if (event.equals("30421-13.htm"))
-		{
-			if (st.hasQuestItems(SEED_OF_LUNACY))
-			{
-				htmltext = "30421-12.htm";
-			}
-		}
-		else if (event.equals("30415-03.htm"))
-		{
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(LUCKY_KEY, 1);
-		}
-		else if (event.equals("30418-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(CANDLE, 1);
 		}
 		
 		return htmltext;
@@ -150,13 +153,16 @@ public class Q412_PathToADarkWizard extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30421-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case VARIKA:
+					{
 						if (st.hasQuestItems(SEED_OF_ANGER, SEED_OF_HORROR, SEED_OF_LUNACY))
 						{
 							htmltext = "30421-16.htm";
@@ -175,8 +181,9 @@ public class Q412_PathToADarkWizard extends Quest
 							htmltext = "30421-17.htm";
 						}
 						break;
-					
+					}
 					case CHARKEREN:
+					{
 						if (st.hasQuestItems(SEED_OF_ANGER))
 						{
 							htmltext = "30415-06.htm";
@@ -198,8 +205,9 @@ public class Q412_PathToADarkWizard extends Quest
 							htmltext = "30415-04.htm";
 						}
 						break;
-					
+					}
 					case ANNIKA:
+					{
 						if (st.hasQuestItems(SEED_OF_HORROR))
 						{
 							htmltext = "30418-04.htm";
@@ -221,8 +229,9 @@ public class Q412_PathToADarkWizard extends Quest
 							htmltext = "30418-03.htm";
 						}
 						break;
-					
+					}
 					case ARKENIA:
+					{
 						if (st.hasQuestItems(SEED_OF_LUNACY))
 						{
 							htmltext = "30419-03.htm";
@@ -246,8 +255,10 @@ public class Q412_PathToADarkWizard extends Quest
 							htmltext = "30419-02.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -265,27 +276,31 @@ public class Q412_PathToADarkWizard extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20015:
+			{
 				if (st.hasQuestItems(LUCKY_KEY))
 				{
 					st.dropItems(FAMILY_REMAINS, 1, 3, 500000);
 				}
 				break;
-			
+			}
 			case 20022:
 			case 20517:
 			case 20518:
+			{
 				if (st.hasQuestItems(CANDLE))
 				{
 					st.dropItems(KNEE_BONE, 1, 2, 500000);
 				}
 				break;
-			
+			}
 			case 20045:
+			{
 				if (st.hasQuestItems(HUB_SCENT))
 				{
 					st.dropItems(HEART_OF_LUNACY, 1, 3, 500000);
 				}
 				break;
+			}
 		}
 		
 		return null;

@@ -28,7 +28,6 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	// NPCs
 	private static final int ANDELLIA = 30362;
 	private static final int THALIA = 30371;
-	
 	// Items
 	private static final int ANDELLIA_LETTER = 1036;
 	private static final int MOTHERTREE_FRUIT = 1037;
@@ -36,9 +35,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	public Q161_FruitOfTheMotherTree()
 	{
 		super(161, "Fruit of the Mothertree");
-		
 		registerQuestItems(ANDELLIA_LETTER, MOTHERTREE_FRUIT);
-		
 		addStartNpc(ANDELLIA);
 		addTalkId(ANDELLIA, THALIA);
 	}
@@ -55,9 +52,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 		
 		if (event.equals("30362-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(ANDELLIA_LETTER, 1);
 		}
 		
@@ -77,6 +72,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30362-00.htm";
@@ -90,12 +86,14 @@ public class Q161_FruitOfTheMotherTree extends Quest
 					htmltext = "30362-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ANDELLIA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30362-05.htm";
@@ -110,12 +108,13 @@ public class Q161_FruitOfTheMotherTree extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case THALIA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30371-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ANDELLIA_LETTER, 1);
 							st.giveItems(MOTHERTREE_FRUIT, 1);
@@ -125,12 +124,15 @@ public class Q161_FruitOfTheMotherTree extends Quest
 							htmltext = "30371-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

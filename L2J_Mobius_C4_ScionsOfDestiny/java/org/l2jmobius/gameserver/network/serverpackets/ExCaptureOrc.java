@@ -28,7 +28,7 @@ public class ExCaptureOrc implements IClientOutgoingPacket
 	static
 	{
 		// TODO: Verify the data
-		//@formatter:off
+		// @formatter:off
 		_test = new byte[]
 		{
 			(byte) 0xE4 ,(byte) 0xAB ,(byte) 0x8E ,(byte) 0xC5 ,(byte) 0xE9 ,(byte) 0xF9 ,(byte) 0x86 ,(byte) 0x7B,
@@ -40,7 +40,7 @@ public class ExCaptureOrc implements IClientOutgoingPacket
 			(byte) 0x5E ,(byte) 0x1C ,(byte) 0x59 ,(byte) 0x8E ,(byte) 0x74 ,(byte) 0x01 ,(byte) 0x9E ,(byte) 0xC2,
 			(byte) 0x00 ,(byte) 0x95 ,(byte) 0xB0 ,(byte) 0x1D ,(byte) 0x87 ,(byte) 0xED ,(byte) 0x9C ,(byte) 0x8A
 		};
-		//@formatter:on
+		// @formatter:on
 	}
 	
 	@Override

@@ -154,46 +154,44 @@ public class Q336_CoinsOfMagic extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getInt("cond");
-		if ("30702-06.htm".equalsIgnoreCase(event))
+		final int cond = st.getCond();
+		if ("30702-06.htm".equals(event))
 		{
 			if (cond < 7)
 			{
-				st.set("cond", "7");
-				st.playSound("ItemSound.quest_accept");
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_ACCEPT);
 			}
 		}
-		else if ("30232-22.htm".equalsIgnoreCase(event))
+		else if ("30232-22.htm".equals(event))
 		{
 			if (cond < 6)
 			{
-				st.set("cond", "6");
+				st.setCond(6);
 			}
 		}
-		else if ("30232-23.htm".equalsIgnoreCase(event))
+		else if ("30232-23.htm".equals(event))
 		{
 			if (cond < 5)
 			{
-				st.set("cond", "5");
+				st.setCond(5);
 			}
 		}
-		else if ("30702-02.htm".equalsIgnoreCase(event))
+		else if ("30702-02.htm".equals(event))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
-		else if ("30232-05.htm".equalsIgnoreCase(event))
+		else if ("30232-05.htm".equals(event))
 		{
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 			st.giveItems(COIN_DIAGRAM, 1);
-			st.set("cond", "1");
 		}
-		else if ("30232-04.htm".equalsIgnoreCase(event) || "30232-18a.htm".equalsIgnoreCase(event))
+		else if ("30232-04.htm".equals(event) || "30232-18a.htm".equals(event))
 		{
 			st.exitQuest(true);
-			st.playSound("ItemSound.quest_giveup");
+			st.playSound(QuestState.SOUND_GIVEUP);
 		}
-		else if ("raise".equalsIgnoreCase(event))
+		else if ("raise".equals(event))
 		{
 			htmltext = promote(st);
 		}
@@ -230,11 +228,11 @@ public class Q336_CoinsOfMagic extends Quest
 				st.set("grade", "" + (grade - 1));
 				if (grade == 3)
 				{
-					st.set("cond", "9");
+					st.setCond(9);
 				}
 				else if (grade == 2)
 				{
-					st.set("cond", "11");
+					st.setCond(11);
 				}
 				st.playSound("ItemSound.quest_fanfare_middle");
 			}
@@ -243,11 +241,11 @@ public class Q336_CoinsOfMagic extends Quest
 				html = "30232-" + (16 - grade) + ".htm";
 				if (grade == 3)
 				{
-					st.set("cond", "8");
+					st.setCond(8);
 				}
 				else if (grade == 2)
 				{
-					st.set("cond", "9");
+					st.setCond(9);
 				}
 			}
 		}
@@ -291,7 +289,7 @@ public class Q336_CoinsOfMagic extends Quest
 						st.takeItems(COIN_DIAGRAM, -1);
 						st.giveItems(MEMBERSHIP_3, 1);
 						st.set("grade", "3");
-						st.set("cond", "4");
+						st.setCond(4);
 						st.playSound("ItemSound.quest_fanfare_middle");
 						htmltext = "30232-07.htm";
 					}
@@ -350,19 +348,20 @@ public class Q336_CoinsOfMagic extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
-		final int grade = st.getInt("grade");
-		final int chance = (npc.getLevel() + (grade * 3)) - 20;
+		final int cond = st.getCond();
 		final int npcId = npc.getNpcId();
 		if ((npcId == HARIT_LIZARDMAN_MATRIARCH) || (npcId == HARIT_LIZARDMAN_SHAMAN))
 		{
 			if ((cond == 2) && (Rnd.get(1000) < 63))
 			{
 				st.giveItems(KALDIS_COIN, 1);
-				st.set("cond", "3");
+				st.setCond(3);
 			}
 			return null;
 		}
+		
+		final int grade = st.getInt("grade");
+		final int chance = (npc.getLevel() + (grade * 3)) - 20;
 		for (int[] e : DROPLIST)
 		{
 			if (e[0] == npcId)
@@ -374,6 +373,7 @@ public class Q336_CoinsOfMagic extends Quest
 				return null;
 			}
 		}
+		
 		for (int u : MONSTERS)
 		{
 			if (u == npcId)
@@ -385,6 +385,7 @@ public class Q336_CoinsOfMagic extends Quest
 				return null;
 			}
 		}
+		
 		return null;
 	}
 }

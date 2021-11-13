@@ -57,9 +57,7 @@ public class Q634_InSearchOfFragmentsOfDimension extends Quest
 		
 		if (event.equals("02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("05.htm"))
 		{
@@ -83,12 +81,15 @@ public class Q634_InSearchOfFragmentsOfDimension extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "01a.htm" : "01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = "03.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

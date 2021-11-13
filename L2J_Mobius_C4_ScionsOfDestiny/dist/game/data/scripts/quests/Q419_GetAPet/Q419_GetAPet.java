@@ -29,6 +29,11 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q419_GetAPet extends Quest
 {
+	// NPCs
+	private static final int MARTIN = 30731;
+	private static final int BELLA = 30256;
+	private static final int METTY = 30072;
+	private static final int ELLIE = 30091;
 	// Items
 	private static final int ANIMAL_LOVER_LIST = 3417;
 	private static final int ANIMAL_SLAYER_LIST_1 = 3418;
@@ -41,105 +46,37 @@ public class Q419_GetAPet extends Quest
 	private static final int BLOODY_NAIL = 3425;
 	private static final int BLOODY_KASHA_FANG = 3426;
 	private static final int BLOODY_TARANTULA_NAIL = 3427;
-	
 	// Reward
 	private static final int WOLF_COLLAR = 2375;
-	
-	// NPCs
-	private static final int MARTIN = 30731;
-	private static final int BELLA = 30256;
-	private static final int METTY = 30072;
-	private static final int ELLIE = 30091;
-	
 	// Droplist
 	private static final Map<Integer, int[]> DROPLIST = new HashMap<>();
 	static
 	{
-		DROPLIST.put(20103, new int[]
-		{
-			BLOODY_FANG,
-			600000
-		});
-		DROPLIST.put(20106, new int[]
-		{
-			BLOODY_FANG,
-			750000
-		});
-		DROPLIST.put(20108, new int[]
-		{
-			BLOODY_FANG,
-			1000000
-		});
-		DROPLIST.put(20460, new int[]
-		{
-			BLOODY_CLAW,
-			600000
-		});
-		DROPLIST.put(20308, new int[]
-		{
-			BLOODY_CLAW,
-			750000
-		});
-		DROPLIST.put(20466, new int[]
-		{
-			BLOODY_CLAW,
-			1000000
-		});
-		DROPLIST.put(20025, new int[]
-		{
-			BLOODY_NAIL,
-			600000
-		});
-		DROPLIST.put(20105, new int[]
-		{
-			BLOODY_NAIL,
-			750000
-		});
-		DROPLIST.put(20034, new int[]
-		{
-			BLOODY_NAIL,
-			1000000
-		});
-		DROPLIST.put(20474, new int[]
-		{
-			BLOODY_KASHA_FANG,
-			600000
-		});
-		DROPLIST.put(20476, new int[]
-		{
-			BLOODY_KASHA_FANG,
-			750000
-		});
-		DROPLIST.put(20478, new int[]
-		{
-			BLOODY_KASHA_FANG,
-			1000000
-		});
-		DROPLIST.put(20403, new int[]
-		{
-			BLOODY_TARANTULA_NAIL,
-			750000
-		});
-		DROPLIST.put(20508, new int[]
-		{
-			BLOODY_TARANTULA_NAIL,
-			1000000
-		});
+		// @formatter:off
+		DROPLIST.put(20103, new int[]{BLOODY_FANG, 600000});
+		DROPLIST.put(20106, new int[]{BLOODY_FANG, 750000});
+		DROPLIST.put(20108, new int[]{BLOODY_FANG, 1000000});
+		DROPLIST.put(20460, new int[]{BLOODY_CLAW, 600000});
+		DROPLIST.put(20308, new int[]{BLOODY_CLAW, 750000});
+		DROPLIST.put(20466, new int[]{BLOODY_CLAW, 1000000});
+		DROPLIST.put(20025, new int[]{BLOODY_NAIL, 600000});
+		DROPLIST.put(20105, new int[]{BLOODY_NAIL, 750000});
+		DROPLIST.put(20034, new int[]{BLOODY_NAIL, 1000000});
+		DROPLIST.put(20474, new int[]{BLOODY_KASHA_FANG, 600000});
+		DROPLIST.put(20476, new int[]{BLOODY_KASHA_FANG, 750000});
+		DROPLIST.put(20478, new int[]{BLOODY_KASHA_FANG, 1000000});
+		DROPLIST.put(20403, new int[]{BLOODY_TARANTULA_NAIL, 750000});
+		DROPLIST.put(20508, new int[]{BLOODY_TARANTULA_NAIL, 1000000});
+		// @formatter:on
 	}
 	
 	public Q419_GetAPet()
 	{
 		super(419, "Get a Pet");
-		
 		registerQuestItems(ANIMAL_LOVER_LIST, ANIMAL_SLAYER_LIST_1, ANIMAL_SLAYER_LIST_2, ANIMAL_SLAYER_LIST_3, ANIMAL_SLAYER_LIST_4, ANIMAL_SLAYER_LIST_5, BLOODY_FANG, BLOODY_CLAW, BLOODY_NAIL, BLOODY_KASHA_FANG, BLOODY_TARANTULA_NAIL);
-		
 		addStartNpc(MARTIN);
 		addTalkId(MARTIN, BELLA, ELLIE, METTY);
-		
-		for (int npcId : DROPLIST.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(DROPLIST.keySet());
 	}
 	
 	@Override
@@ -152,69 +89,75 @@ public class Q419_GetAPet extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("task"))
+		switch (event)
 		{
-			final int race = player.getRace().ordinal();
-			htmltext = "30731-0" + (race + 4) + ".htm";
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(ANIMAL_SLAYER_LIST_1 + race, 1);
-		}
-		else if (event.equals("30731-12.htm"))
-		{
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ANIMAL_SLAYER_LIST_1, 1);
-			st.takeItems(ANIMAL_SLAYER_LIST_2, 1);
-			st.takeItems(ANIMAL_SLAYER_LIST_3, 1);
-			st.takeItems(ANIMAL_SLAYER_LIST_4, 1);
-			st.takeItems(ANIMAL_SLAYER_LIST_5, 1);
-			st.takeItems(BLOODY_FANG, -1);
-			st.takeItems(BLOODY_CLAW, -1);
-			st.takeItems(BLOODY_NAIL, -1);
-			st.takeItems(BLOODY_KASHA_FANG, -1);
-			st.takeItems(BLOODY_TARANTULA_NAIL, -1);
-			st.giveItems(ANIMAL_LOVER_LIST, 1);
-		}
-		else if (event.equals("30256-03.htm"))
-		{
-			st.set("progress", String.valueOf(st.getInt("progress") | 1));
-			if (st.getInt("progress") == 7)
+			case "task":
+			{
+				final int race = player.getRace().ordinal();
+				htmltext = "30731-0" + (race + 4) + ".htm";
+				st.startQuest();
+				st.giveItems(ANIMAL_SLAYER_LIST_1 + race, 1);
+				break;
+			}
+			case "30731-12.htm":
 			{
 				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ANIMAL_SLAYER_LIST_1, 1);
+				st.takeItems(ANIMAL_SLAYER_LIST_2, 1);
+				st.takeItems(ANIMAL_SLAYER_LIST_3, 1);
+				st.takeItems(ANIMAL_SLAYER_LIST_4, 1);
+				st.takeItems(ANIMAL_SLAYER_LIST_5, 1);
+				st.takeItems(BLOODY_FANG, -1);
+				st.takeItems(BLOODY_CLAW, -1);
+				st.takeItems(BLOODY_NAIL, -1);
+				st.takeItems(BLOODY_KASHA_FANG, -1);
+				st.takeItems(BLOODY_TARANTULA_NAIL, -1);
+				st.giveItems(ANIMAL_LOVER_LIST, 1);
+				break;
 			}
-		}
-		else if (event.equals("30072-02.htm"))
-		{
-			st.set("progress", String.valueOf(st.getInt("progress") | 2));
-			if (st.getInt("progress") == 7)
+			case "30256-03.htm":
 			{
-				st.playSound(QuestState.SOUND_MIDDLE);
+				st.set("progress", String.valueOf(st.getInt("progress") | 1));
+				if (st.getInt("progress") == 7)
+				{
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
 			}
-		}
-		else if (event.equals("30091-02.htm"))
-		{
-			st.set("progress", String.valueOf(st.getInt("progress") | 4));
-			if (st.getInt("progress") == 7)
+			case "30072-02.htm":
 			{
-				st.playSound(QuestState.SOUND_MIDDLE);
+				st.set("progress", String.valueOf(st.getInt("progress") | 2));
+				if (st.getInt("progress") == 7)
+				{
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
 			}
-		}
-		else if (event.equals("test"))
-		{
-			st.set("answers", "0");
-			st.set("quiz", "20 21 22 23 24 25 26 27 28 29 30 31 32 33");
-			return checkQuestions(st);
-		}
-		else if (event.equals("wrong"))
-		{
-			st.set("wrong", String.valueOf(st.getInt("wrong") + 1));
-			return checkQuestions(st);
-		}
-		else if (event.equals("right"))
-		{
-			st.set("correct", String.valueOf(st.getInt("correct") + 1));
-			return checkQuestions(st);
+			case "30091-02.htm":
+			{
+				st.set("progress", String.valueOf(st.getInt("progress") | 4));
+				if (st.getInt("progress") == 7)
+				{
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
+			}
+			case "test":
+			{
+				st.set("answers", "0");
+				st.set("quiz", "20 21 22 23 24 25 26 27 28 29 30 31 32 33");
+				return checkQuestions(st);
+			}
+			case "wrong":
+			{
+				st.set("wrong", String.valueOf(st.getInt("wrong") + 1));
+				return checkQuestions(st);
+			}
+			case "right":
+			{
+				st.set("correct", String.valueOf(st.getInt("correct") + 1));
+				return checkQuestions(st);
+			}
 		}
 		
 		return htmltext;
@@ -233,13 +176,16 @@ public class Q419_GetAPet extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30731-01.htm" : "30731-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case MARTIN:
+					{
 						if (st.hasAtLeastOneQuestItem(ANIMAL_SLAYER_LIST_1, ANIMAL_SLAYER_LIST_2, ANIMAL_SLAYER_LIST_3, ANIMAL_SLAYER_LIST_4, ANIMAL_SLAYER_LIST_5))
 						{
 							final int proofs = st.getQuestItemsCount(BLOODY_FANG) + st.getQuestItemsCount(BLOODY_CLAW) + st.getQuestItemsCount(BLOODY_NAIL) + st.getQuestItemsCount(BLOODY_KASHA_FANG) + st.getQuestItemsCount(BLOODY_TARANTULA_NAIL);
@@ -265,20 +211,25 @@ public class Q419_GetAPet extends Quest
 							htmltext = "30731-16.htm";
 						}
 						break;
-					
+					}
 					case BELLA:
+					{
 						htmltext = "30256-01.htm";
 						break;
-					
+					}
 					case METTY:
+					{
 						htmltext = "30072-01.htm";
 						break;
-					
+					}
 					case ELLIE:
+					{
 						htmltext = "30091-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

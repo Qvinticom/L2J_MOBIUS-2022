@@ -27,15 +27,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q357_WarehouseKeepersAmbition extends Quest
 {
-	// Item
-	private static final int JADE_CRYSTAL = 5867;
-	
 	// Monsters
 	private static final int FOREST_RUNNER = 20594;
 	private static final int FLINE_ELDER = 20595;
 	private static final int LIELE_ELDER = 20596;
 	private static final int VALLEY_TREANT_ELDER = 20597;
-	
+	// Item
+	private static final int JADE_CRYSTAL = 5867;
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -49,12 +47,9 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 	public Q357_WarehouseKeepersAmbition()
 	{
 		super(357, "Warehouse Keeper's Ambition");
-		
 		registerQuestItems(JADE_CRYSTAL);
-		
 		addStartNpc(30686); // Silva
 		addTalkId(30686);
-		
 		addKillId(FOREST_RUNNER, FLINE_ELDER, LIELE_ELDER, VALLEY_TREANT_ELDER);
 	}
 	
@@ -68,35 +63,39 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30686-2.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30686-7.htm"))
-		{
-			final int count = st.getQuestItemsCount(JADE_CRYSTAL);
-			if (count == 0)
+			case "30686-2.htm":
 			{
-				htmltext = "30686-4.htm";
+				st.startQuest();
+				break;
 			}
-			else
+			case "30686-7.htm":
 			{
-				int reward = (count * 425) + 3500;
-				if (count >= 100)
+				final int count = st.getQuestItemsCount(JADE_CRYSTAL);
+				if (count == 0)
 				{
-					reward += 7400;
+					htmltext = "30686-4.htm";
 				}
-				
-				st.takeItems(JADE_CRYSTAL, -1);
-				st.rewardItems(57, reward);
+				else
+				{
+					int reward = (count * 425) + 3500;
+					if (count >= 100)
+					{
+						reward += 7400;
+					}
+					
+					st.takeItems(JADE_CRYSTAL, -1);
+					st.rewardItems(57, reward);
+				}
+				break;
 			}
-		}
-		else if (event.equals("30686-8.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30686-8.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -115,12 +114,15 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 47) ? "30686-0a.htm" : "30686-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (!st.hasQuestItems(JADE_CRYSTAL)) ? "30686-4.htm" : "30686-6.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

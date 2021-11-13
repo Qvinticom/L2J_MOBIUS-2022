@@ -29,7 +29,6 @@ public class Q257_TheGuardIsBusy extends Quest
 	private static final int ORC_AMULET = 752;
 	private static final int ORC_NECKLACE = 1085;
 	private static final int WEREWOLF_FANG = 1086;
-	
 	// Newbie Items
 	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
@@ -37,12 +36,9 @@ public class Q257_TheGuardIsBusy extends Quest
 	public Q257_TheGuardIsBusy()
 	{
 		super(257, "The Guard is Busy");
-		
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG, GLUDIO_LORD_MARK);
-		
 		addStartNpc(30039); // Gilbert
 		addTalkId(30039);
-		
 		addKillId(20006, 20093, 20096, 20098, 20130, 20131, 20132, 20342, 20343);
 	}
 	
@@ -58,9 +54,7 @@ public class Q257_TheGuardIsBusy extends Quest
 		
 		if (event.equals("30039-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(GLUDIO_LORD_MARK, 1);
 		}
 		else if (event.equals("30039-05.htm"))
@@ -86,10 +80,12 @@ public class Q257_TheGuardIsBusy extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 6) ? "30039-01.htm" : "30039-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int amulets = st.getQuestItemsCount(ORC_AMULET);
 				final int necklaces = st.getQuestItemsCount(ORC_NECKLACE);
 				final int fangs = st.getQuestItemsCount(WEREWOLF_FANG);
@@ -132,6 +128,7 @@ public class Q257_TheGuardIsBusy extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -151,26 +148,32 @@ public class Q257_TheGuardIsBusy extends Quest
 			case 20006:
 			case 20130:
 			case 20131:
+			{
 				st.dropItems(ORC_AMULET, 1, 0, 500000);
 				break;
-			
+			}
 			case 20093:
 			case 20096:
 			case 20098:
+			{
 				st.dropItems(ORC_NECKLACE, 1, 0, 500000);
 				break;
-			
+			}
 			case 20342:
+			{
 				st.dropItems(WEREWOLF_FANG, 1, 0, 200000);
 				break;
-			
+			}
 			case 20343:
+			{
 				st.dropItems(WEREWOLF_FANG, 1, 0, 400000);
 				break;
-			
+			}
 			case 20132:
+			{
 				st.dropItems(WEREWOLF_FANG, 1, 0, 500000);
 				break;
+			}
 		}
 		
 		return null;

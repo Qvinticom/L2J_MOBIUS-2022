@@ -26,19 +26,15 @@ public class Q432_BirthdayPartySong extends Quest
 {
 	// NPC
 	private static final int OCTAVIA = 31043;
-	
 	// Item
 	private static final int RED_CRYSTAL = 7541;
 	
 	public Q432_BirthdayPartySong()
 	{
 		super(432, "Birthday Party Song");
-		
 		registerQuestItems(RED_CRYSTAL);
-		
 		addStartNpc(OCTAVIA);
 		addTalkId(OCTAVIA);
-		
 		addKillId(21103);
 	}
 	
@@ -54,20 +50,15 @@ public class Q432_BirthdayPartySong extends Quest
 		
 		if (event.equals("31043-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
-		else if (event.equals("31043-06.htm"))
+		else if (event.equals("31043-06.htm") && (st.getQuestItemsCount(RED_CRYSTAL) == 50))
 		{
-			if (st.getQuestItemsCount(RED_CRYSTAL) == 50)
-			{
-				htmltext = "31043-05.htm";
-				st.takeItems(RED_CRYSTAL, -1);
-				st.rewardItems(7061, 25);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
-			}
+			htmltext = "31043-05.htm";
+			st.takeItems(RED_CRYSTAL, -1);
+			st.rewardItems(7061, 25);
+			st.playSound(QuestState.SOUND_FINISH);
+			st.exitQuest(true);
 		}
 		
 		return htmltext;
@@ -86,12 +77,15 @@ public class Q432_BirthdayPartySong extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 31) ? "31043-00.htm" : "31043-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(RED_CRYSTAL) < 50) ? "31043-03.htm" : "31043-04.htm";
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -100,7 +94,7 @@ public class Q432_BirthdayPartySong extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -114,7 +108,7 @@ public class Q432_BirthdayPartySong extends Quest
 		
 		if (st.dropItems(RED_CRYSTAL, 1, 50, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -27,11 +27,9 @@ public class Q010_IntoTheWorld extends Quest
 {
 	// Items
 	private static final int VERY_EXPENSIVE_NECKLACE = 7574;
-	
 	// Rewards
 	private static final int SOE_GIRAN = 7559;
 	private static final int MARK_OF_TRAVELER = 7570;
-	
 	// NPCs
 	private static final int REED = 30520;
 	private static final int BALANKI = 30533;
@@ -40,9 +38,7 @@ public class Q010_IntoTheWorld extends Quest
 	public Q010_IntoTheWorld()
 	{
 		super(10, "Into the World");
-		
 		registerQuestItems(VERY_EXPENSIVE_NECKLACE);
-		
 		addStartNpc(BALANKI);
 		addTalkId(BALANKI, REED, GERALD);
 	}
@@ -57,35 +53,41 @@ public class Q010_IntoTheWorld extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30533-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30520-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(VERY_EXPENSIVE_NECKLACE, 1);
-		}
-		else if (event.equals("30650-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(VERY_EXPENSIVE_NECKLACE, 1);
-		}
-		else if (event.equals("30520-04.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30533-05.htm"))
-		{
-			st.giveItems(SOE_GIRAN, 1);
-			st.rewardItems(MARK_OF_TRAVELER, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30533-02.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30520-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(VERY_EXPENSIVE_NECKLACE, 1);
+				break;
+			}
+			case "30650-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(VERY_EXPENSIVE_NECKLACE, 1);
+				break;
+			}
+			case "30520-04.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30533-05.htm":
+			{
+				st.giveItems(SOE_GIRAN, 1);
+				st.rewardItems(MARK_OF_TRAVELER, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -104,6 +106,7 @@ public class Q010_IntoTheWorld extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getLevel() >= 3) && (player.getRace() == Race.DWARF))
 				{
 					htmltext = "30533-01.htm";
@@ -113,12 +116,14 @@ public class Q010_IntoTheWorld extends Quest
 					htmltext = "30533-01a.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case BALANKI:
+					{
 						if (cond < 4)
 						{
 							htmltext = "30533-03.htm";
@@ -128,8 +133,9 @@ public class Q010_IntoTheWorld extends Quest
 							htmltext = "30533-04.htm";
 						}
 						break;
-					
+					}
 					case REED:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30520-01.htm";
@@ -147,8 +153,9 @@ public class Q010_IntoTheWorld extends Quest
 							htmltext = "30520-04a.htm";
 						}
 						break;
-					
+					}
 					case GERALD:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30650-01.htm";
@@ -158,12 +165,15 @@ public class Q010_IntoTheWorld extends Quest
 							htmltext = "30650-04.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

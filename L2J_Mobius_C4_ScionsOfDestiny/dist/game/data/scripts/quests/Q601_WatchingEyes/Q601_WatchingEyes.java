@@ -27,41 +27,23 @@ public class Q601_WatchingEyes extends Quest
 {
 	// Items
 	private static final int PROOF_OF_AVENGER = 7188;
-	
 	// Rewards
 	private static final int[][] REWARDS =
 	{
-		{
-			6699,
-			90000,
-			20
-		},
-		{
-			6698,
-			80000,
-			40
-		},
-		{
-			6700,
-			40000,
-			50
-		},
-		{
-			0,
-			230000,
-			100
-		}
+		// @formatter:off
+		{6699, 90000, 20},
+		{6698, 80000, 40},
+		{6700, 40000, 50},
+		{0, 230000, 100}
+		// @formatter:on
 	};
 	
 	public Q601_WatchingEyes()
 	{
 		super(601, "Watching Eyes");
-		
 		registerQuestItems(PROOF_OF_AVENGER);
-		
 		addStartNpc(31683); // Eye of Argos
 		addTalkId(31683);
-		
 		addKillId(21306, 21308, 21309, 21310, 21311);
 	}
 	
@@ -83,9 +65,7 @@ public class Q601_WatchingEyes extends Quest
 			}
 			else
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				st.startQuest();
 			}
 		}
 		else if (event.equals("31683-07.htm"))
@@ -126,11 +106,13 @@ public class Q601_WatchingEyes extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "31683-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = (st.hasQuestItems(PROOF_OF_AVENGER)) ? "31683-05.htm" : "31683-04.htm";
@@ -140,6 +122,7 @@ public class Q601_WatchingEyes extends Quest
 					htmltext = "31683-06.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -148,7 +131,7 @@ public class Q601_WatchingEyes extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "cond", "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -162,7 +145,7 @@ public class Q601_WatchingEyes extends Quest
 		
 		if (st.dropItems(PROOF_OF_AVENGER, 1, 100, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

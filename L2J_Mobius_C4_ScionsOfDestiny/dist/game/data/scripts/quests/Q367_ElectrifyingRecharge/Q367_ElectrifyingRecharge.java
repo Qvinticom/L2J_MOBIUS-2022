@@ -28,7 +28,8 @@ public class Q367_ElectrifyingRecharge extends Quest
 {
 	// NPCs
 	private static final int LORAIN = 30673;
-	
+	// Monsters
+	private static final int CATHEROK = 21035;
 	// Item
 	private static final int LORAIN_LAMP = 5875;
 	private static final int TITAN_LAMP_1 = 5876;
@@ -36,7 +37,6 @@ public class Q367_ElectrifyingRecharge extends Quest
 	private static final int TITAN_LAMP_3 = 5878;
 	private static final int TITAN_LAMP_4 = 5879;
 	private static final int TITAN_LAMP_5 = 5880;
-	
 	// Reward
 	private static final int[] REWARD =
 	{
@@ -54,18 +54,12 @@ public class Q367_ElectrifyingRecharge extends Quest
 		4564
 	};
 	
-	// Mobs
-	private static final int CATHEROK = 21035;
-	
 	public Q367_ElectrifyingRecharge()
 	{
 		super(367, "Electrifying Recharge!");
-		
 		registerQuestItems(LORAIN_LAMP, TITAN_LAMP_1, TITAN_LAMP_2, TITAN_LAMP_3, TITAN_LAMP_4, TITAN_LAMP_5);
-		
 		addStartNpc(LORAIN);
 		addTalkId(LORAIN);
-		
 		addSpellFinishedId(CATHEROK);
 	}
 	
@@ -79,28 +73,33 @@ public class Q367_ElectrifyingRecharge extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30673-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(LORAIN_LAMP, 1);
-		}
-		else if (event.equals("30673-09.htm"))
-		{
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(LORAIN_LAMP, 1);
-		}
-		else if (event.equals("30673-08.htm"))
-		{
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30673-07.htm"))
-		{
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(LORAIN_LAMP, 1);
+			case "30673-03.htm":
+			{
+				st.startQuest();
+				st.giveItems(LORAIN_LAMP, 1);
+				break;
+			}
+			case "30673-09.htm":
+			{
+				st.playSound(QuestState.SOUND_ACCEPT);
+				st.giveItems(LORAIN_LAMP, 1);
+				break;
+			}
+			case "30673-08.htm":
+			{
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
+			}
+			case "30673-07.htm":
+			{
+				st.setCond(1);
+				st.playSound(QuestState.SOUND_ACCEPT);
+				st.giveItems(LORAIN_LAMP, 1);
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -118,11 +117,13 @@ public class Q367_ElectrifyingRecharge extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 37) ? "30673-02.htm" : "30673-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					if (st.hasQuestItems(5880))
@@ -160,6 +161,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 					st.playSound(QuestState.SOUND_FINISH);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -167,28 +169,25 @@ public class Q367_ElectrifyingRecharge extends Quest
 	@Override
 	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
 		}
 		
-		if (skill.getId() == 4072)
+		if ((skill.getId() == 4072) && st.hasQuestItems(LORAIN_LAMP))
 		{
-			if (st.hasQuestItems(LORAIN_LAMP))
+			final int randomItem = Rnd.get(5876, 5880);
+			st.takeItems(LORAIN_LAMP, 1);
+			st.giveItems(randomItem, 1);
+			if (randomItem == 5879)
 			{
-				final int randomItem = Rnd.get(5876, 5880);
-				st.takeItems(LORAIN_LAMP, 1);
-				st.giveItems(randomItem, 1);
-				if (randomItem == 5879)
-				{
-					st.set("cond", "2");
-					st.playSound(QuestState.SOUND_MIDDLE);
-				}
-				else
-				{
-					st.playSound(QuestState.SOUND_ITEMGET);
-				}
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+			}
+			else
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
 			}
 		}
 		

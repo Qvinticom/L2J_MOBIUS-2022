@@ -89,7 +89,7 @@ public class QuestList implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeD(qs.getInt("cond"));
+				packet.writeD(qs.getCond());
 			}
 		}
 		packet.writeB(new byte[128]);

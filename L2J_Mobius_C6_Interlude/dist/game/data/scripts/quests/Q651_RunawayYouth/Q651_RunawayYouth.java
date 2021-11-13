@@ -30,10 +30,8 @@ public class Q651_RunawayYouth extends Quest
 	// NPCs
 	private static final int IVAN = 32014;
 	private static final int BATIDAE = 31989;
-	
 	// Item
 	private static final int SCROLL_OF_ESCAPE = 736;
-	
 	// Table of possible spawns
 	private static final Location[] SPAWNS =
 	{
@@ -41,17 +39,14 @@ public class Q651_RunawayYouth extends Quest
 		new Location(108380, -150268, -2376, 0),
 		new Location(123254, -148126, -3425, 0)
 	};
-	
 	// Current position
 	private int _currentPosition = 0;
 	
 	public Q651_RunawayYouth()
 	{
 		super(651, "Runaway Youth");
-		
 		addStartNpc(IVAN);
 		addTalkId(IVAN, BATIDAE);
-		
 		addSpawn(IVAN, 118600, -161235, -1119, 0, false, 0);
 	}
 	
@@ -69,14 +64,11 @@ public class Q651_RunawayYouth extends Quest
 		{
 			if (st.hasQuestItems(SCROLL_OF_ESCAPE))
 			{
-				htmltext = "32014-03.htm";
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				st.startQuest();
 				st.takeItems(SCROLL_OF_ESCAPE, 1);
-				
 				npc.broadcastPacket(new MagicSkillUse(npc, npc, 2013, 1, 3500, 0));
 				startQuestTimer("apparition_npc", 4000, npc, player, false);
+				htmltext = "32014-03.htm";
 			}
 			else
 			{
@@ -117,24 +109,30 @@ public class Q651_RunawayYouth extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 26) ? "32014-01.htm" : "32014-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case BATIDAE:
+					{
 						htmltext = "31989-01.htm";
 						st.rewardItems(57, 2883);
 						st.playSound(QuestState.SOUND_FINISH);
 						st.exitQuest(true);
 						break;
-					
+					}
 					case IVAN:
+					{
 						htmltext = "32014-04a.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

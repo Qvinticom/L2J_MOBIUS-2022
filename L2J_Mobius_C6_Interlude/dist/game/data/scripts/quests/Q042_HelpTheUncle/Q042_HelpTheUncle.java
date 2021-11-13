@@ -27,26 +27,21 @@ public class Q042_HelpTheUncle extends Quest
 	// NPCs
 	private static final int WATERS = 30828;
 	private static final int SOPHYA = 30735;
-	
+	// Monsters
+	private static final int MONSTER_EYE_DESTROYER = 20068;
+	private static final int MONSTER_EYE_GAZER = 20266;
 	// Items
 	private static final int TRIDENT = 291;
 	private static final int MAP_PIECE = 7548;
 	private static final int MAP = 7549;
 	private static final int PET_TICKET = 7583;
 	
-	// Monsters
-	private static final int MONSTER_EYE_DESTROYER = 20068;
-	private static final int MONSTER_EYE_GAZER = 20266;
-	
 	public Q042_HelpTheUncle()
 	{
 		super(42, "Help the Uncle!");
-		
 		registerQuestItems(MAP_PIECE, MAP);
-		
 		addStartNpc(WATERS);
 		addTalkId(WATERS, SOPHYA);
-		
 		addKillId(MONSTER_EYE_DESTROYER, MONSTER_EYE_GAZER);
 	}
 	
@@ -60,36 +55,45 @@ public class Q042_HelpTheUncle extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30828-01.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30828-03.htm") && st.hasQuestItems(TRIDENT))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(TRIDENT, 1);
-		}
-		else if (event.equals("30828-05.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MAP_PIECE, 30);
-			st.giveItems(MAP, 1);
-		}
-		else if (event.equals("30735-06.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MAP, 1);
-		}
-		else if (event.equals("30828-07.htm"))
-		{
-			st.giveItems(PET_TICKET, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30828-01.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30828-03.htm":
+			{
+				if (st.hasQuestItems(TRIDENT))
+				{
+					st.setCond(2);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(TRIDENT, 1);
+				}
+				break;
+			}
+			case "30828-05.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MAP_PIECE, 30);
+				st.giveItems(MAP, 1);
+				break;
+			}
+			case "30735-06.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MAP, 1);
+				break;
+			}
+			case "30828-07.htm":
+			{
+				st.giveItems(PET_TICKET, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -108,14 +112,17 @@ public class Q042_HelpTheUncle extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 25) ? "30828-00a.htm" : "30828-00.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case WATERS:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(TRIDENT)) ? "30828-01a.htm" : "30828-02.htm";
@@ -137,8 +144,9 @@ public class Q042_HelpTheUncle extends Quest
 							htmltext = "30828-06.htm";
 						}
 						break;
-					
+					}
 					case SOPHYA:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30735-05.htm";
@@ -148,12 +156,15 @@ public class Q042_HelpTheUncle extends Quest
 							htmltext = "30735-06a.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -162,7 +173,7 @@ public class Q042_HelpTheUncle extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -170,7 +181,7 @@ public class Q042_HelpTheUncle extends Quest
 		
 		if (st.dropItemsAlways(MAP_PIECE, 1, 30))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;

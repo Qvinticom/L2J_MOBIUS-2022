@@ -33,11 +33,9 @@ public class Q165_ShilensHunt extends Quest
 	private static final int YOUNG_BROWN_KELTIR = 20529;
 	private static final int BROWN_KELTIR = 20532;
 	private static final int ELDER_BROWN_KELTIR = 20536;
-	
 	// Items
 	private static final int DARK_BEZOAR = 1160;
 	private static final int LESSER_HEALING_POTION = 1060;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -51,12 +49,9 @@ public class Q165_ShilensHunt extends Quest
 	public Q165_ShilensHunt()
 	{
 		super(165, "Shilen's Hunt");
-		
 		registerQuestItems(DARK_BEZOAR);
-		
 		addStartNpc(30348); // Nelsya
 		addTalkId(30348);
-		
 		addKillId(ASHEN_WOLF, YOUNG_BROWN_KELTIR, BROWN_KELTIR, ELDER_BROWN_KELTIR);
 	}
 	
@@ -72,9 +67,7 @@ public class Q165_ShilensHunt extends Quest
 		
 		if (event.equals("30348-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -93,6 +86,7 @@ public class Q165_ShilensHunt extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30348-00.htm";
@@ -106,8 +100,9 @@ public class Q165_ShilensHunt extends Quest
 					htmltext = "30348-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(DARK_BEZOAR) >= 13)
 				{
 					htmltext = "30348-05.htm";
@@ -122,10 +117,12 @@ public class Q165_ShilensHunt extends Quest
 					htmltext = "30348-04.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -134,7 +131,7 @@ public class Q165_ShilensHunt extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -142,7 +139,7 @@ public class Q165_ShilensHunt extends Quest
 		
 		if (st.dropItems(DARK_BEZOAR, 1, 13, CHANCES.get(npc.getNpcId())))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

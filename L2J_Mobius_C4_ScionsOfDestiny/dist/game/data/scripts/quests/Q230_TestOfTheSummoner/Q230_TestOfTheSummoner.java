@@ -34,6 +34,44 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q230_TestOfTheSummoner extends Quest
 {
+	// NPCs
+	private static final int LARA = 30063;
+	private static final int GALATEA = 30634;
+	private static final int ALMORS = 30635;
+	private static final int CAMONIELL = 30636;
+	private static final int BELTHUS = 30637;
+	private static final int BASILLA = 30638;
+	private static final int CELESTIEL = 30639;
+	private static final int BRYNTHEA = 30640;
+	// Monsters
+	private static final int NOBLE_ANT = 20089;
+	private static final int NOBLE_ANT_LEADER = 20090;
+	private static final int WYRM = 20176;
+	private static final int TYRANT = 20192;
+	private static final int TYRANT_KINGPIN = 20193;
+	private static final int BREKA_ORC = 20267;
+	private static final int BREKA_ORC_ARCHER = 20268;
+	private static final int BREKA_ORC_SHAMAN = 20269;
+	private static final int BREKA_ORC_OVERLORD = 20270;
+	private static final int BREKA_ORC_WARRIOR = 20271;
+	private static final int FETTERED_SOUL = 20552;
+	private static final int WINDSUS = 20553;
+	private static final int GIANT_FUNGUS = 20555;
+	private static final int MANASHEN_GARGOYLE = 20563;
+	private static final int LETO_LIZARDMAN = 20577;
+	private static final int LETO_LIZARDMAN_ARCHER = 20578;
+	private static final int LETO_LIZARDMAN_SOLDIER = 20579;
+	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
+	private static final int LETO_LIZARDMAN_SHAMAN = 20581;
+	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
+	private static final int KARUL_BUGBEAR = 20600;
+	// Quest Monsters
+	private static final int PAKO_THE_CAT = 27102;
+	private static final int UNICORN_RACER = 27103;
+	private static final int SHADOW_TUREN = 27104;
+	private static final int MIMI_THE_CAT = 27105;
+	private static final int UNICORN_PHANTASM = 27106;
+	private static final int SILHOUETTE_TILFO = 27107;
 	// Items
 	private static final int LETO_LIZARDMAN_AMULET = 3337;
 	private static final int SAC_OF_REDSPORES = 3338;
@@ -88,79 +126,19 @@ public class Q230_TestOfTheSummoner extends Quest
 	private static final int CRYSTAL_OF_FOUL_6 = 3387;
 	private static final int CRYSTAL_OF_DEFEAT_6 = 3388;
 	private static final int CRYSTAL_OF_VICTORY_6 = 3389;
-	
 	// Rewards
 	private static final int MARK_OF_SUMMONER = 3336;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
-	
-	// Npcs
-	private static final int LARA = 30063;
-	private static final int GALATEA = 30634;
-	private static final int ALMORS = 30635;
-	private static final int CAMONIELL = 30636;
-	private static final int BELTHUS = 30637;
-	private static final int BASILLA = 30638;
-	private static final int CELESTIEL = 30639;
-	private static final int BRYNTHEA = 30640;
-	
-	// Monsters
-	private static final int NOBLE_ANT = 20089;
-	private static final int NOBLE_ANT_LEADER = 20090;
-	private static final int WYRM = 20176;
-	private static final int TYRANT = 20192;
-	private static final int TYRANT_KINGPIN = 20193;
-	private static final int BREKA_ORC = 20267;
-	private static final int BREKA_ORC_ARCHER = 20268;
-	private static final int BREKA_ORC_SHAMAN = 20269;
-	private static final int BREKA_ORC_OVERLORD = 20270;
-	private static final int BREKA_ORC_WARRIOR = 20271;
-	private static final int FETTERED_SOUL = 20552;
-	private static final int WINDSUS = 20553;
-	private static final int GIANT_FUNGUS = 20555;
-	private static final int MANASHEN_GARGOYLE = 20563;
-	private static final int LETO_LIZARDMAN = 20577;
-	private static final int LETO_LIZARDMAN_ARCHER = 20578;
-	private static final int LETO_LIZARDMAN_SOLDIER = 20579;
-	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
-	private static final int LETO_LIZARDMAN_SHAMAN = 20581;
-	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
-	private static final int KARUL_BUGBEAR = 20600;
-	
-	// Quest Monsters
-	private static final int PAKO_THE_CAT = 27102;
-	private static final int UNICORN_RACER = 27103;
-	private static final int SHADOW_TUREN = 27104;
-	private static final int MIMI_THE_CAT = 27105;
-	private static final int UNICORN_PHANTASM = 27106;
-	private static final int SILHOUETTE_TILFO = 27107;
-	
+	// Other
 	private static final int[][] LARA_LISTS = new int[][]
 	{
-		{
-			LARA_LIST_1,
-			SAC_OF_REDSPORES,
-			LETO_LIZARDMAN_AMULET
-		},
-		{
-			LARA_LIST_2,
-			KARUL_BUGBEAR_TOTEM,
-			SHARDS_OF_MANASHEN
-		},
-		{
-			LARA_LIST_3,
-			CRIMSON_BLOODSTONE,
-			BREKA_ORC_TOTEM
-		},
-		{
-			LARA_LIST_4,
-			TUSK_OF_WINDSUS,
-			TALONS_OF_TYRANT
-		},
-		{
-			LARA_LIST_5,
-			WINGS_OF_DRONEANT,
-			FANGS_OF_WYRM
-		}
+		// @formatter:off
+		{LARA_LIST_1, SAC_OF_REDSPORES, LETO_LIZARDMAN_AMULET},
+		{LARA_LIST_2, KARUL_BUGBEAR_TOTEM, SHARDS_OF_MANASHEN},
+		{LARA_LIST_3, CRIMSON_BLOODSTONE, BREKA_ORC_TOTEM},
+		{LARA_LIST_4, TUSK_OF_WINDSUS, TALONS_OF_TYRANT},
+		{LARA_LIST_5, WINGS_OF_DRONEANT, FANGS_OF_WYRM}
+		// @formatter:on
 	};
 	
 	private static final Map<Integer, ProgressDuelMob> _duelsInProgress = new ConcurrentHashMap<>();
@@ -168,12 +146,9 @@ public class Q230_TestOfTheSummoner extends Quest
 	public Q230_TestOfTheSummoner()
 	{
 		super(230, "Test of the Summoner");
-		
 		registerQuestItems(LETO_LIZARDMAN_AMULET, SAC_OF_REDSPORES, KARUL_BUGBEAR_TOTEM, SHARDS_OF_MANASHEN, BREKA_ORC_TOTEM, CRIMSON_BLOODSTONE, TALONS_OF_TYRANT, WINGS_OF_DRONEANT, TUSK_OF_WINDSUS, FANGS_OF_WYRM, LARA_LIST_1, LARA_LIST_2, LARA_LIST_3, LARA_LIST_4, LARA_LIST_5, GALATEA_LETTER, BEGINNER_ARCANA, ALMORS_ARCANA, CAMONIELL_ARCANA, BELTHUS_ARCANA, BASILLIA_ARCANA, CELESTIEL_ARCANA, BRYNTHEA_ARCANA, CRYSTAL_OF_PROGRESS_1, CRYSTAL_OF_INPROGRESS_1, CRYSTAL_OF_FOUL_1, CRYSTAL_OF_DEFEAT_1, CRYSTAL_OF_VICTORY_1, CRYSTAL_OF_PROGRESS_2, CRYSTAL_OF_INPROGRESS_2, CRYSTAL_OF_FOUL_2, CRYSTAL_OF_DEFEAT_2, CRYSTAL_OF_VICTORY_2, CRYSTAL_OF_PROGRESS_3, CRYSTAL_OF_INPROGRESS_3, CRYSTAL_OF_FOUL_3, CRYSTAL_OF_DEFEAT_3, CRYSTAL_OF_VICTORY_3, CRYSTAL_OF_PROGRESS_4, CRYSTAL_OF_INPROGRESS_4, CRYSTAL_OF_FOUL_4, CRYSTAL_OF_DEFEAT_4, CRYSTAL_OF_VICTORY_4, CRYSTAL_OF_PROGRESS_5, CRYSTAL_OF_INPROGRESS_5, CRYSTAL_OF_FOUL_5, CRYSTAL_OF_DEFEAT_5, CRYSTAL_OF_VICTORY_5, CRYSTAL_OF_PROGRESS_6, CRYSTAL_OF_INPROGRESS_6, CRYSTAL_OF_FOUL_6, CRYSTAL_OF_DEFEAT_6, CRYSTAL_OF_VICTORY_6);
-		
 		addStartNpc(GALATEA);
 		addTalkId(GALATEA, ALMORS, CAMONIELL, BELTHUS, BASILLA, CELESTIEL, BRYNTHEA, LARA);
-		
 		addKillId(NOBLE_ANT, NOBLE_ANT_LEADER, WYRM, TYRANT, TYRANT_KINGPIN, BREKA_ORC, BREKA_ORC_ARCHER, BREKA_ORC_SHAMAN, BREKA_ORC_OVERLORD, BREKA_ORC_WARRIOR, FETTERED_SOUL, WINDSUS, GIANT_FUNGUS, MANASHEN_GARGOYLE, LETO_LIZARDMAN, LETO_LIZARDMAN_ARCHER, LETO_LIZARDMAN_SOLDIER, LETO_LIZARDMAN_WARRIOR, LETO_LIZARDMAN_SHAMAN, LETO_LIZARDMAN_OVERLORD, KARUL_BUGBEAR, PAKO_THE_CAT, UNICORN_RACER, SHADOW_TUREN, MIMI_THE_CAT, UNICORN_PHANTASM, SILHOUETTE_TILFO);
 		addAttackId(PAKO_THE_CAT, UNICORN_RACER, SHADOW_TUREN, MIMI_THE_CAT, UNICORN_PHANTASM, SILHOUETTE_TILFO);
 	}
@@ -181,173 +156,171 @@ public class Q230_TestOfTheSummoner extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
 		}
+		String htmltext = event;
 		
-		// GALATEA
-		if (event.equals("30634-08.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("Belthus", "1");
-			st.set("Brynthea", "1");
-			st.set("Celestiel", "1");
-			st.set("Camoniell", "1");
-			st.set("Basilla", "1");
-			st.set("Almors", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(GALATEA_LETTER, 1);
-			
-			if (!player.getVariables().getBoolean("secondClassChange39", false))
+			case "30634-08.htm":
 			{
-				htmltext = "30634-08a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
-				player.getVariables().set("secondClassChange39", true);
+				st.startQuest();
+				st.set("Belthus", "1");
+				st.set("Brynthea", "1");
+				st.set("Celestiel", "1");
+				st.set("Camoniell", "1");
+				st.set("Basilla", "1");
+				st.set("Almors", "1");
+				st.giveItems(GALATEA_LETTER, 1);
+				if (!player.getVariables().getBoolean("secondClassChange39", false))
+				{
+					htmltext = "30634-08a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
+					player.getVariables().set("secondClassChange39", true);
+				}
+				break;
 			}
-		}
-		// LARA
-		else if (event.equals("30063-02.htm")) // Lara first time to give a list out
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GALATEA_LETTER, 1);
-			
-			final int random = Rnd.get(5);
-			
-			st.giveItems(LARA_LISTS[random][0], 1);
-			st.set("Lara", String.valueOf(random + 1)); // avoid 0
-		}
-		else if (event.equals("30063-04.htm")) // Lara later to give a list out
-		{
-			final int random = Rnd.get(5);
-			
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(LARA_LISTS[random][0], 1);
-			st.set("Lara", String.valueOf(random + 1));
-		}
-		// ALMORS
-		else if (event.equals("30635-02.htm"))
-		{
-			if (st.hasQuestItems(BEGINNER_ARCANA))
+			case "30063-02.htm":
 			{
-				htmltext = "30635-03.htm";
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GALATEA_LETTER, 1);
+				final int random = Rnd.get(5);
+				st.giveItems(LARA_LISTS[random][0], 1);
+				st.set("Lara", String.valueOf(random + 1)); // avoid 0
+				break;
 			}
-		}
-		else if (event.equals("30635-04.htm"))
-		{
-			st.set("Almors", "2"); // set state ready to fight
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(CRYSTAL_OF_FOUL_1, -1); // just in case he cheated or lost
-			st.takeItems(CRYSTAL_OF_DEFEAT_1, -1);
-			st.takeItems(BEGINNER_ARCANA, 1);
-			st.giveItems(CRYSTAL_OF_PROGRESS_1, 1); // give Starting Crystal
-			
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
-		}
-		// CAMONIELL
-		else if (event.equals("30636-02.htm"))
-		{
-			if (st.hasQuestItems(BEGINNER_ARCANA))
+			case "30063-04.htm":
 			{
-				htmltext = "30636-03.htm";
+				final int random = Rnd.get(5);
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(LARA_LISTS[random][0], 1);
+				st.set("Lara", String.valueOf(random + 1));
+				break;
 			}
-		}
-		else if (event.equals("30636-04.htm"))
-		{
-			st.set("Camoniell", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(CRYSTAL_OF_FOUL_2, -1);
-			st.takeItems(CRYSTAL_OF_DEFEAT_2, -1);
-			st.takeItems(BEGINNER_ARCANA, 1);
-			st.giveItems(CRYSTAL_OF_PROGRESS_2, 1);
-			
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
-		}
-		// BELTHUS
-		else if (event.equals("30637-02.htm"))
-		{
-			if (st.hasQuestItems(BEGINNER_ARCANA))
+			case "30635-02.htm":
 			{
-				htmltext = "30637-03.htm";
+				if (st.hasQuestItems(BEGINNER_ARCANA))
+				{
+					htmltext = "30635-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30637-04.htm"))
-		{
-			st.set("Belthus", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(CRYSTAL_OF_FOUL_3, -1);
-			st.takeItems(CRYSTAL_OF_DEFEAT_3, -1);
-			st.takeItems(BEGINNER_ARCANA, 1);
-			st.giveItems(CRYSTAL_OF_PROGRESS_3, 1);
-			
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
-		}
-		// BASILLA
-		else if (event.equals("30638-02.htm"))
-		{
-			if (st.hasQuestItems(BEGINNER_ARCANA))
+			case "30635-04.htm":
 			{
-				htmltext = "30638-03.htm";
+				st.set("Almors", "2"); // set state ready to fight
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(CRYSTAL_OF_FOUL_1, -1); // just in case he cheated or lost
+				st.takeItems(CRYSTAL_OF_DEFEAT_1, -1);
+				st.takeItems(BEGINNER_ARCANA, 1);
+				st.giveItems(CRYSTAL_OF_PROGRESS_1, 1); // give Starting Crystal
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+				break;
 			}
-		}
-		else if (event.equals("30638-04.htm"))
-		{
-			st.set("Basilla", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(CRYSTAL_OF_FOUL_4, -1);
-			st.takeItems(CRYSTAL_OF_DEFEAT_4, -1);
-			st.takeItems(BEGINNER_ARCANA, 1);
-			st.giveItems(CRYSTAL_OF_PROGRESS_4, 1);
-			
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
-		}
-		// CELESTIEL
-		else if (event.equals("30639-02.htm"))
-		{
-			if (st.hasQuestItems(BEGINNER_ARCANA))
+			case "30636-02.htm":
 			{
-				htmltext = "30639-03.htm";
+				if (st.hasQuestItems(BEGINNER_ARCANA))
+				{
+					htmltext = "30636-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30639-04.htm"))
-		{
-			st.set("Celestiel", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(CRYSTAL_OF_FOUL_5, -1);
-			st.takeItems(CRYSTAL_OF_DEFEAT_5, -1);
-			st.takeItems(BEGINNER_ARCANA, 1);
-			st.giveItems(CRYSTAL_OF_PROGRESS_5, 1);
-			
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
-		}
-		// BRYNTHEA
-		else if (event.equals("30640-02.htm"))
-		{
-			if (st.hasQuestItems(BEGINNER_ARCANA))
+			case "30636-04.htm":
 			{
-				htmltext = "30640-03.htm";
+				st.set("Camoniell", "2");
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(CRYSTAL_OF_FOUL_2, -1);
+				st.takeItems(CRYSTAL_OF_DEFEAT_2, -1);
+				st.takeItems(BEGINNER_ARCANA, 1);
+				st.giveItems(CRYSTAL_OF_PROGRESS_2, 1);
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+				break;
 			}
-		}
-		else if (event.equals("30640-04.htm"))
-		{
-			st.set("Brynthea", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(CRYSTAL_OF_FOUL_6, -1);
-			st.takeItems(CRYSTAL_OF_DEFEAT_6, -1);
-			st.takeItems(BEGINNER_ARCANA, 1);
-			st.giveItems(CRYSTAL_OF_PROGRESS_6, 1);
-			
-			npc.setTarget(player);
-			npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+			case "30637-02.htm":
+			{
+				if (st.hasQuestItems(BEGINNER_ARCANA))
+				{
+					htmltext = "30637-03.htm";
+				}
+				break;
+			}
+			case "30637-04.htm":
+			{
+				st.set("Belthus", "2");
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(CRYSTAL_OF_FOUL_3, -1);
+				st.takeItems(CRYSTAL_OF_DEFEAT_3, -1);
+				st.takeItems(BEGINNER_ARCANA, 1);
+				st.giveItems(CRYSTAL_OF_PROGRESS_3, 1);
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+				break;
+			}
+			case "30638-02.htm":
+			{
+				if (st.hasQuestItems(BEGINNER_ARCANA))
+				{
+					htmltext = "30638-03.htm";
+				}
+				break;
+			}
+			case "30638-04.htm":
+			{
+				st.set("Basilla", "2");
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(CRYSTAL_OF_FOUL_4, -1);
+				st.takeItems(CRYSTAL_OF_DEFEAT_4, -1);
+				st.takeItems(BEGINNER_ARCANA, 1);
+				st.giveItems(CRYSTAL_OF_PROGRESS_4, 1);
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+				break;
+			}
+			case "30639-02.htm":
+			{
+				if (st.hasQuestItems(BEGINNER_ARCANA))
+				{
+					htmltext = "30639-03.htm";
+				}
+				break;
+			}
+			case "30639-04.htm":
+			{
+				st.set("Celestiel", "2");
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(CRYSTAL_OF_FOUL_5, -1);
+				st.takeItems(CRYSTAL_OF_DEFEAT_5, -1);
+				st.takeItems(BEGINNER_ARCANA, 1);
+				st.giveItems(CRYSTAL_OF_PROGRESS_5, 1);
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+				break;
+			}
+			case "30640-02.htm":
+			{
+				if (st.hasQuestItems(BEGINNER_ARCANA))
+				{
+					htmltext = "30640-03.htm";
+				}
+				break;
+			}
+			case "30640-04.htm":
+			{
+				st.set("Brynthea", "2");
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(CRYSTAL_OF_FOUL_6, -1);
+				st.takeItems(CRYSTAL_OF_DEFEAT_6, -1);
+				st.takeItems(BEGINNER_ARCANA, 1);
+				st.giveItems(CRYSTAL_OF_PROGRESS_6, 1);
+				npc.setTarget(player);
+				npc.doCast(SkillTable.getInstance().getSkill(4126, 1));
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -363,12 +336,12 @@ public class Q230_TestOfTheSummoner extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		final int npcId = npc.getNpcId();
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getClassId() != ClassId.WIZARD) && (player.getClassId() != ClassId.ELVEN_WIZARD) && (player.getClassId() != ClassId.DARK_WIZARD))
 				{
 					htmltext = "30634-01.htm";
@@ -382,11 +355,13 @@ public class Q230_TestOfTheSummoner extends Quest
 					htmltext = "30634-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npcId)
 				{
 					case LARA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30063-01.htm";
@@ -407,7 +382,7 @@ public class Q230_TestOfTheSummoner extends Quest
 								else
 								{
 									htmltext = "30063-06.htm";
-									st.set("cond", "3");
+									st.setCond(3);
 									st.unset("Lara");
 									st.playSound(QuestState.SOUND_MIDDLE);
 									st.takeItems(laraPart[0], 1);
@@ -418,8 +393,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							}
 						}
 						break;
-					
+					}
 					case GALATEA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30634-09.htm";
@@ -450,8 +426,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case ALMORS:
+					{
 						final int almorsStat = st.getInt("Almors");
 						if (almorsStat == 1)
 						{
@@ -482,7 +459,7 @@ public class Q230_TestOfTheSummoner extends Quest
 							
 							if (st.hasQuestItems(CAMONIELL_ARCANA, BELTHUS_ARCANA, BASILLIA_ARCANA, CELESTIEL_ARCANA, BRYNTHEA_ARCANA))
 							{
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -495,8 +472,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							htmltext = "30635-10.htm";
 						}
 						break;
-					
+					}
 					case CAMONIELL:
+					{
 						final int camoniellStat = st.getInt("Camoniell");
 						if (camoniellStat == 1)
 						{
@@ -527,7 +505,7 @@ public class Q230_TestOfTheSummoner extends Quest
 							
 							if (st.hasQuestItems(ALMORS_ARCANA, BELTHUS_ARCANA, BASILLIA_ARCANA, CELESTIEL_ARCANA, BRYNTHEA_ARCANA))
 							{
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -540,8 +518,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							htmltext = "30636-10.htm";
 						}
 						break;
-					
+					}
 					case BELTHUS:
+					{
 						final int belthusStat = st.getInt("Belthus");
 						if (belthusStat == 1)
 						{
@@ -572,7 +551,7 @@ public class Q230_TestOfTheSummoner extends Quest
 							
 							if (st.hasQuestItems(ALMORS_ARCANA, CAMONIELL_ARCANA, BASILLIA_ARCANA, CELESTIEL_ARCANA, BRYNTHEA_ARCANA))
 							{
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -585,8 +564,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							htmltext = "30637-10.htm";
 						}
 						break;
-					
+					}
 					case BASILLA:
+					{
 						final int basillaStat = st.getInt("Basilla");
 						if (basillaStat == 1)
 						{
@@ -617,7 +597,7 @@ public class Q230_TestOfTheSummoner extends Quest
 							
 							if (st.hasQuestItems(ALMORS_ARCANA, CAMONIELL_ARCANA, BELTHUS_ARCANA, CELESTIEL_ARCANA, BRYNTHEA_ARCANA))
 							{
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -630,8 +610,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							htmltext = "30638-10.htm";
 						}
 						break;
-					
+					}
 					case CELESTIEL:
+					{
 						final int celestielStat = st.getInt("Celestiel");
 						if (celestielStat == 1)
 						{
@@ -662,7 +643,7 @@ public class Q230_TestOfTheSummoner extends Quest
 							
 							if (st.hasQuestItems(ALMORS_ARCANA, CAMONIELL_ARCANA, BELTHUS_ARCANA, BASILLIA_ARCANA, BRYNTHEA_ARCANA))
 							{
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -675,8 +656,9 @@ public class Q230_TestOfTheSummoner extends Quest
 							htmltext = "30639-10.htm";
 						}
 						break;
-					
+					}
 					case BRYNTHEA:
+					{
 						final int bryntheaStat = st.getInt("Brynthea");
 						if (bryntheaStat == 1)
 						{
@@ -707,7 +689,7 @@ public class Q230_TestOfTheSummoner extends Quest
 							
 							if (st.hasQuestItems(ALMORS_ARCANA, CAMONIELL_ARCANA, BELTHUS_ARCANA, BASILLIA_ARCANA, CELESTIEL_ARCANA))
 							{
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -720,12 +702,15 @@ public class Q230_TestOfTheSummoner extends Quest
 							htmltext = "30640-10.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -747,6 +732,7 @@ public class Q230_TestOfTheSummoner extends Quest
 		switch (((NpcInstance) killer).getNpcId())
 		{
 			case PAKO_THE_CAT:
+			{
 				if (st.getInt("Almors") == 3)
 				{
 					st.set("Almors", "4");
@@ -754,8 +740,9 @@ public class Q230_TestOfTheSummoner extends Quest
 					st.giveItems(CRYSTAL_OF_DEFEAT_1, 1);
 				}
 				break;
-			
+			}
 			case UNICORN_RACER:
+			{
 				if (st.getInt("Camoniell") == 3)
 				{
 					st.set("Camoniell", "4");
@@ -763,8 +750,9 @@ public class Q230_TestOfTheSummoner extends Quest
 					st.giveItems(CRYSTAL_OF_DEFEAT_2, 1);
 				}
 				break;
-			
+			}
 			case SHADOW_TUREN:
+			{
 				if (st.getInt("Belthus") == 3)
 				{
 					st.set("Belthus", "4");
@@ -772,8 +760,9 @@ public class Q230_TestOfTheSummoner extends Quest
 					st.giveItems(CRYSTAL_OF_DEFEAT_3, 1);
 				}
 				break;
-			
+			}
 			case MIMI_THE_CAT:
+			{
 				if (st.getInt("Basilla") == 3)
 				{
 					st.set("Basilla", "4");
@@ -781,8 +770,9 @@ public class Q230_TestOfTheSummoner extends Quest
 					st.giveItems(CRYSTAL_OF_DEFEAT_4, 1);
 				}
 				break;
-			
+			}
 			case UNICORN_PHANTASM:
+			{
 				if (st.getInt("Celestiel") == 3)
 				{
 					st.set("Celestiel", "4");
@@ -790,8 +780,9 @@ public class Q230_TestOfTheSummoner extends Quest
 					st.giveItems(CRYSTAL_OF_DEFEAT_5, 1);
 				}
 				break;
-			
+			}
 			case SILHOUETTE_TILFO:
+			{
 				if (st.getInt("Brynthea") == 3)
 				{
 					st.set("Brynthea", "4");
@@ -799,6 +790,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					st.giveItems(CRYSTAL_OF_DEFEAT_6, 1);
 				}
 				break;
+			}
 		}
 		
 		return null;

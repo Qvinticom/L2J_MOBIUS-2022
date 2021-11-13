@@ -29,10 +29,8 @@ public class Q008_AnAdventureBegins extends Quest
 	private static final int JASMINE = 30134;
 	private static final int ROSELYN = 30355;
 	private static final int HARNE = 30144;
-	
 	// Items
 	private static final int ROSELYN_NOTE = 7573;
-	
 	// Rewards
 	private static final int SOE_GIRAN = 7559;
 	private static final int MARK_TRAVELER = 7570;
@@ -40,9 +38,7 @@ public class Q008_AnAdventureBegins extends Quest
 	public Q008_AnAdventureBegins()
 	{
 		super(8, "An Adventure Begins");
-		
 		registerQuestItems(ROSELYN_NOTE);
-		
 		addStartNpc(JASMINE);
 		addTalkId(JASMINE, ROSELYN, HARNE);
 	}
@@ -57,30 +53,35 @@ public class Q008_AnAdventureBegins extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30134-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30355-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(ROSELYN_NOTE, 1);
-		}
-		else if (event.equals("30144-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ROSELYN_NOTE, 1);
-		}
-		else if (event.equals("30134-06.htm"))
-		{
-			st.giveItems(MARK_TRAVELER, 1);
-			st.rewardItems(SOE_GIRAN, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30134-03.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30355-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(ROSELYN_NOTE, 1);
+				break;
+			}
+			case "30144-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ROSELYN_NOTE, 1);
+				break;
+			}
+			case "30134-06.htm":
+			{
+				st.giveItems(MARK_TRAVELER, 1);
+				st.rewardItems(SOE_GIRAN, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -99,6 +100,7 @@ public class Q008_AnAdventureBegins extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getLevel() >= 3) && (player.getRace() == Race.DARK_ELF))
 				{
 					htmltext = "30134-02.htm";
@@ -108,12 +110,14 @@ public class Q008_AnAdventureBegins extends Quest
 					htmltext = "30134-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case JASMINE:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30134-04.htm";
@@ -123,8 +127,9 @@ public class Q008_AnAdventureBegins extends Quest
 							htmltext = "30134-05.htm";
 						}
 						break;
-					
+					}
 					case ROSELYN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30355-01.htm";
@@ -134,8 +139,9 @@ public class Q008_AnAdventureBegins extends Quest
 							htmltext = "30355-03.htm";
 						}
 						break;
-					
+					}
 					case HARNE:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30144-01.htm";
@@ -145,12 +151,15 @@ public class Q008_AnAdventureBegins extends Quest
 							htmltext = "30144-03.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

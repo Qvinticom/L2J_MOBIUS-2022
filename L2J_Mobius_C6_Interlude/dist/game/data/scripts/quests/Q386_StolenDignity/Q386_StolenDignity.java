@@ -91,46 +91,16 @@ public class Q386_StolenDignity extends Quest
 	};
 	public static final int[][] MATRICE_3X3_LINES = new int[][]
 	{
-		{
-			1,
-			2,
-			3
-		},
-		{
-			4,
-			5,
-			6
-		},
-		{
-			7,
-			8,
-			9
-		},
-		{
-			1,
-			4,
-			7
-		},
-		{
-			2,
-			5,
-			8
-		},
-		{
-			3,
-			6,
-			9
-		},
-		{
-			1,
-			5,
-			9
-		},
-		{
-			3,
-			5,
-			7
-		}
+		// @formatter:off
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+		{1, 4, 7},
+		{2, 5, 8},
+		{3, 6, 9},
+		{1, 5, 9},
+		{3, 5, 7}
+		// @formatter:on
 	};
 	
 	public Q386_StolenDignity()
@@ -173,19 +143,17 @@ public class Q386_StolenDignity extends Quest
 		QuestState st = player.getQuestState("Q386_StolenDignity");
 		if (st == null)
 		{
-			return event;
+			return htmltext;
 		}
 		
 		if (event.equals("30843-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
+			st.startQuest();
 			st.set("state", "1");
-			st.playSound("ItemSound.quest_accept");
 		}
 		else if (event.equals("30843-08.htm"))
 		{
-			st.playSound("ItemSound.quest_giveup");
+			st.playSound(QuestState.SOUND_GIVEUP);
 			st.exitQuest(true);
 		}
 		else if (event.equals("30843-12.htm"))
@@ -212,7 +180,7 @@ public class Q386_StolenDignity extends Quest
 			if (event.startsWith("select_2-"))
 			{
 				number = event.substring(9);
-				playerArray = (String) st.get("playerArray");
+				playerArray = st.get("playerArray");
 				if (playerArray.contains(number))
 				{
 					htmltext = fillBoard(st, getHtmlText("30843-" + (13 + (2 * playerArray.length())) + ".htm"));
@@ -226,7 +194,7 @@ public class Q386_StolenDignity extends Quest
 			else if (event.startsWith("select_3-"))
 			{
 				number = event.substring(9);
-				playerArray = (String) st.get("playerArray");
+				playerArray = st.get("playerArray");
 				if (playerArray.contains(number))
 				{
 					htmltext = fillBoard(st, getHtmlText("30843-25.htm"));
@@ -234,7 +202,7 @@ public class Q386_StolenDignity extends Quest
 				else
 				{
 					String playerChoice = playerArray.concat(number);
-					String[] board = ((String) st.get("board")).split("");
+					String[] board = st.get("board").split("");
 					int winningLines = 0;
 					int[][] var11 = MATRICE_3X3_LINES;
 					int var12 = var11.length;
@@ -300,8 +268,8 @@ public class Q386_StolenDignity extends Quest
 	private static final String fillBoard(QuestState st, String htmltext)
 	{
 		String result = htmltext;
-		String playerArray = (String) st.get("playerArray");
-		String[] board = ((String) st.get("board")).split("");
+		String playerArray = st.get("playerArray");
+		String[] board = st.get("board").split("");
 		for (int i = 1; i < 10; ++i)
 		{
 			result = result.replace("<?Cell" + i + "?>", playerArray.contains(board[i - 1]) ? board[i - 1] : "?");

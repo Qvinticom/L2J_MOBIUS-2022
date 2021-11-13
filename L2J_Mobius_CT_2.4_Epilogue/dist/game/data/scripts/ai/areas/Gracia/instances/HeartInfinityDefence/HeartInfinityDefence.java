@@ -674,7 +674,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 					for (PlayerInstance player : _world.getAllowed())
 					{
 						final QuestState qs = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
-						if ((qs != null) && (qs.getInt("cond") == 1))
+						if ((qs != null) && qs.isCond(1))
 						{
 							qs.set("defenceDone", 1);
 						}

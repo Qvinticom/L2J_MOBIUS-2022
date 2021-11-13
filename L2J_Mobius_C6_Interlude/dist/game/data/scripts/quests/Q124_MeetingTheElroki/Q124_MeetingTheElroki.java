@@ -34,7 +34,6 @@ public class Q124_MeetingTheElroki extends Quest
 	public Q124_MeetingTheElroki()
 	{
 		super(124, "Meeting the Elroki");
-		
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
 	}
@@ -49,44 +48,52 @@ public class Q124_MeetingTheElroki extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32113-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32113-04.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32114-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32115-04.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32117-02.htm"))
-		{
-			if (st.getInt("cond") == 4)
+			case "32113-03.htm":
 			{
-				st.set("progress", "1");
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("32117-03.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32118-02.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(8778, 1); // Egg
+			case "32113-04.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32114-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32115-04.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32117-02.htm":
+			{
+				if (st.isCond(4))
+				{
+					st.set("progress", "1");
+				}
+				break;
+			}
+			case "32117-03.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32118-02.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(8778, 1); // Egg
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -105,14 +112,17 @@ public class Q124_MeetingTheElroki extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 75) ? "32113-01a.htm" : "32113-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case MARQUEZ:
+					{
 						if (cond == 1)
 						{
 							htmltext = "32113-03.htm";
@@ -122,8 +132,9 @@ public class Q124_MeetingTheElroki extends Quest
 							htmltext = "32113-04a.htm";
 						}
 						break;
-					
+					}
 					case MUSHIKA:
+					{
 						if (cond == 2)
 						{
 							htmltext = "32114-01.htm";
@@ -133,8 +144,9 @@ public class Q124_MeetingTheElroki extends Quest
 							htmltext = "32114-03.htm";
 						}
 						break;
-					
+					}
 					case ASAMAH:
+					{
 						if (cond == 3)
 						{
 							htmltext = "32115-01.htm";
@@ -148,8 +160,9 @@ public class Q124_MeetingTheElroki extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case KARAKAWEI:
+					{
 						if (cond == 4)
 						{
 							htmltext = "32117-01.htm";
@@ -163,8 +176,9 @@ public class Q124_MeetingTheElroki extends Quest
 							htmltext = "32117-04.htm";
 						}
 						break;
-					
+					}
 					case MANTARASA:
+					{
 						if (cond == 5)
 						{
 							htmltext = "32118-01.htm";
@@ -174,10 +188,12 @@ public class Q124_MeetingTheElroki extends Quest
 							htmltext = "32118-03.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				if (npc.getNpcId() == ASAMAH)
 				{
 					htmltext = "32115-06.htm";
@@ -187,6 +203,7 @@ public class Q124_MeetingTheElroki extends Quest
 					htmltext = getAlreadyCompletedMsg();
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

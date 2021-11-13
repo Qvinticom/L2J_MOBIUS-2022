@@ -27,7 +27,6 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 {
 	// Item
 	private static final int SCALE = 5868;
-	
 	// Reward
 	private static final int[] REWARD =
 	{
@@ -44,12 +43,9 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 	public Q358_IllegitimateChildOfAGoddess()
 	{
 		super(358, "Illegitimate Child of A Goddess");
-		
 		registerQuestItems(SCALE);
-		
 		addStartNpc(30862); // Oltlin
 		addTalkId(30862);
-		
 		addKillId(20672, 20673); // Trives, Falibati
 	}
 	
@@ -65,9 +61,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 		
 		if (event.equals("30862-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -86,11 +80,13 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 63) ? "30862-01.htm" : "30862-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30862-06.htm";
 				}
@@ -103,6 +99,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -111,7 +108,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -119,7 +116,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 		
 		if (st.dropItems(SCALE, 1, 108, (npc.getNpcId() == 20672) ? 680000 : 660000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

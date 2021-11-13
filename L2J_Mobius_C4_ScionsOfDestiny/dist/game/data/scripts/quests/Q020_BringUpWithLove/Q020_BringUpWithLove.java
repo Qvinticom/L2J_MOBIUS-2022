@@ -30,9 +30,7 @@ public class Q020_BringUpWithLove extends Quest
 	public Q020_BringUpWithLove()
 	{
 		super(20, "Bring Up With Love");
-		
 		registerQuestItems(JEWEL_OF_INNOCENCE);
-		
 		addStartNpc(31537); // Tunatun
 		addTalkId(31537);
 	}
@@ -49,9 +47,7 @@ public class Q020_BringUpWithLove extends Quest
 		
 		if (event.equals("31537-09.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31537-12.htm"))
 		{
@@ -77,11 +73,13 @@ public class Q020_BringUpWithLove extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 65) ? "31537-02.htm" : "31537-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 2)
+			{
+				if (st.isCond(2))
 				{
 					htmltext = "31537-11.htm";
 				}
@@ -90,10 +88,12 @@ public class Q020_BringUpWithLove extends Quest
 					htmltext = "31537-10.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

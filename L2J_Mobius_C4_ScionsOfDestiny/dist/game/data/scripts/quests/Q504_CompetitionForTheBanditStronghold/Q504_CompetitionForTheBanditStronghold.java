@@ -44,7 +44,6 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 	public Q504_CompetitionForTheBanditStronghold()
 	{
 		super(504, "Competition for the Bandit Stronghold");
-		
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
 		addKillId(TARLK_BUGBEAR, TARLK_BUGBEAR_WARRIOR, TARLK_BUGBEAR_HIGH_WARRIOR, TARLK_BASILISK, ELDER_TARLK_BASILISK);
@@ -62,9 +61,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 		
 		if (event.equals("a2.htm"))
 		{
-			qs.set("cond", "1");
-			qs.setState(State.STARTED);
-			qs.playSound("ItemSound.quest_accept");
+			qs.startQuest();
 		}
 		if (event.equals("a4.htm"))
 		{
@@ -72,7 +69,7 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 			{
 				qs.takeItems(TARLK_AMULET, -30);
 				qs.giveItems(ALLIANCE_TROPHEY, 1);
-				qs.playSound("ItemSound.quest_finish");
+				qs.playSound(QuestState.SOUND_FINISH);
 				qs.exitQuest(true);
 			}
 			else
@@ -94,8 +91,6 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
-		final int cond = qs.getInt("cond");
 		final Clan clan = player.getClan();
 		if (clan == null)
 		{
@@ -111,8 +106,9 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 		}
 		if (BanditStrongholdSiege.getInstance().isRegistrationPeriod())
 		{
-			if (npcId == MESSENGER)
+			if (npc.getNpcId() == MESSENGER)
 			{
+				final int cond = qs.getCond();
 				if (cond == 0)
 				{
 					htmltext = "a1.htm";
@@ -141,13 +137,13 @@ public class Q504_CompetitionForTheBanditStronghold extends Quest
 			return null;
 		}
 		
-		if ((qs.getInt("cond") < 2) && (qs.getQuestItemsCount(TARLK_AMULET) < 30))
+		if ((qs.getCond() < 2) && (qs.getQuestItemsCount(TARLK_AMULET) < 30))
 		{
 			qs.giveItems(TARLK_AMULET, 1);
-			qs.playSound("ItemSound.quest_itemget");
+			qs.playSound(QuestState.SOUND_ITEMGET);
 			if (qs.getQuestItemsCount(TARLK_AMULET) == 30)
 			{
-				qs.set("cond", "2");
+				qs.setCond(2);
 			}
 		}
 		

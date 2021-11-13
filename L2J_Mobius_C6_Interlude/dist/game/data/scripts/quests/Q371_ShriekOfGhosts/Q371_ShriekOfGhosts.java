@@ -31,41 +31,26 @@ public class Q371_ShriekOfGhosts extends Quest
 	// NPCs
 	private static final int REVA = 30867;
 	private static final int PATRIN = 30929;
-	
 	// Item
 	private static final int URN = 5903;
 	private static final int PORCELAIN = 6002;
-	
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
 	static
 	{
-		CHANCES.put(20818, new int[]
-		{
-			38,
-			43
-		});
-		CHANCES.put(20820, new int[]
-		{
-			48,
-			56
-		});
-		CHANCES.put(20824, new int[]
-		{
-			50,
-			58
-		});
+		// @formatter:off
+		CHANCES.put(20818, new int[]{38, 43});
+		CHANCES.put(20820, new int[]{48, 56});
+		CHANCES.put(20824, new int[]{50, 58});
+		// @formatter:on
 	}
 	
 	public Q371_ShriekOfGhosts()
 	{
 		super(371, "Shriek of Ghosts");
-		
 		registerQuestItems(URN, PORCELAIN);
-		
 		addStartNpc(REVA);
 		addTalkId(REVA, PATRIN);
-		
 		addKillId(20818, 20820, 20824);
 	}
 	
@@ -79,69 +64,74 @@ public class Q371_ShriekOfGhosts extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30867-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30867-07.htm"))
-		{
-			int urns = st.getQuestItemsCount(URN);
-			if (urns > 0)
+			case "30867-03.htm":
 			{
-				st.takeItems(URN, urns);
-				if (urns >= 100)
+				st.startQuest();
+				break;
+			}
+			case "30867-07.htm":
+			{
+				int urns = st.getQuestItemsCount(URN);
+				if (urns > 0)
 				{
-					urns += 13;
-					htmltext = "30867-08.htm";
+					st.takeItems(URN, urns);
+					if (urns >= 100)
+					{
+						urns += 13;
+						htmltext = "30867-08.htm";
+					}
+					else
+					{
+						urns += 7;
+					}
+					st.rewardItems(57, urns * 1000);
+				}
+				break;
+			}
+			case "30867-10.htm":
+			{
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
+			}
+			case "APPR":
+			{
+				if (st.hasQuestItems(PORCELAIN))
+				{
+					final int chance = Rnd.get(100);
+					st.takeItems(PORCELAIN, 1);
+					if (chance < 2)
+					{
+						st.giveItems(6003, 1);
+						htmltext = "30929-03.htm";
+					}
+					else if (chance < 32)
+					{
+						st.giveItems(6004, 1);
+						htmltext = "30929-04.htm";
+					}
+					else if (chance < 62)
+					{
+						st.giveItems(6005, 1);
+						htmltext = "30929-05.htm";
+					}
+					else if (chance < 77)
+					{
+						st.giveItems(6006, 1);
+						htmltext = "30929-06.htm";
+					}
+					else
+					{
+						htmltext = "30929-07.htm";
+					}
 				}
 				else
 				{
-					urns += 7;
+					htmltext = "30929-02.htm";
 				}
-				st.rewardItems(57, urns * 1000);
-			}
-		}
-		else if (event.equals("30867-10.htm"))
-		{
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
-		}
-		else if (event.equals("APPR"))
-		{
-			if (st.hasQuestItems(PORCELAIN))
-			{
-				final int chance = Rnd.get(100);
-				st.takeItems(PORCELAIN, 1);
-				if (chance < 2)
-				{
-					st.giveItems(6003, 1);
-					htmltext = "30929-03.htm";
-				}
-				else if (chance < 32)
-				{
-					st.giveItems(6004, 1);
-					htmltext = "30929-04.htm";
-				}
-				else if (chance < 62)
-				{
-					st.giveItems(6005, 1);
-					htmltext = "30929-05.htm";
-				}
-				else if (chance < 77)
-				{
-					st.giveItems(6006, 1);
-					htmltext = "30929-06.htm";
-				}
-				else
-				{
-					htmltext = "30929-07.htm";
-				}
-			}
-			else
-			{
-				htmltext = "30929-02.htm";
+				break;
 			}
 		}
 		
@@ -161,13 +151,16 @@ public class Q371_ShriekOfGhosts extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 59) ? "30867-01.htm" : "30867-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case REVA:
+					{
 						if (st.hasQuestItems(URN))
 						{
 							htmltext = (st.hasQuestItems(PORCELAIN)) ? "30867-05.htm" : "30867-04.htm";
@@ -177,12 +170,15 @@ public class Q371_ShriekOfGhosts extends Quest
 							htmltext = "30867-06.htm";
 						}
 						break;
-					
+					}
 					case PATRIN:
+					{
 						htmltext = "30929-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

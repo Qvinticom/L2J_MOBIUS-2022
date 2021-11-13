@@ -30,19 +30,16 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 	private static final int WOODLEY = 30838;
 	private static final int IAN = 30164;
 	private static final int LEIKAR = 31520;
-	
 	// Items
 	private static final int LEATHER = 1882;
 	private static final int THREAD = 1868;
 	private static final int ADENA = 57;
-	
 	// Rewards
 	public static final int DRESS_SHOES_BOX = 7113;
 	
 	public Q033_MakeAPairOfDressShoes()
 	{
 		super(33, "Make a Pair of Dress Shoes");
-		
 		addStartNpc(WOODLEY);
 		addTalkId(WOODLEY, IAN, LEIKAR);
 	}
@@ -57,55 +54,62 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30838-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31520-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30838-3.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30838-5.htm"))
-		{
-			if ((st.getQuestItemsCount(LEATHER) >= 200) && (st.getQuestItemsCount(THREAD) >= 600) && (st.getQuestItemsCount(ADENA) >= 200000))
+			case "30838-1.htm":
 			{
-				st.set("cond", "4");
+				st.startQuest();
+				break;
+			}
+			case "31520-1.htm":
+			{
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(ADENA, 200000);
-				st.takeItems(LEATHER, 200);
-				st.takeItems(THREAD, 600);
+				break;
 			}
-			else
+			case "30838-3.htm":
 			{
-				htmltext = "30838-4a.htm";
-			}
-		}
-		else if (event.equals("30164-1.htm"))
-		{
-			if (st.getQuestItemsCount(ADENA) >= 300000)
-			{
-				st.set("cond", "5");
+				st.setCond(3);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(ADENA, 300000);
+				break;
 			}
-			else
+			case "30838-5.htm":
 			{
-				htmltext = "30164-1a.htm";
+				if ((st.getQuestItemsCount(LEATHER) >= 200) && (st.getQuestItemsCount(THREAD) >= 600) && (st.getQuestItemsCount(ADENA) >= 200000))
+				{
+					st.setCond(4);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(ADENA, 200000);
+					st.takeItems(LEATHER, 200);
+					st.takeItems(THREAD, 600);
+				}
+				else
+				{
+					htmltext = "30838-4a.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30838-7.htm"))
-		{
-			st.giveItems(DRESS_SHOES_BOX, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30164-1.htm":
+			{
+				if (st.getQuestItemsCount(ADENA) >= 300000)
+				{
+					st.setCond(5);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(ADENA, 300000);
+				}
+				else
+				{
+					htmltext = "30164-1a.htm";
+				}
+				break;
+			}
+			case "30838-7.htm":
+			{
+				st.giveItems(DRESS_SHOES_BOX, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -124,10 +128,11 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() >= 60)
 				{
 					final QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
-					if ((fwear != null) && (fwear.getInt("cond") == 7))
+					if ((fwear != null) && fwear.isCond(7))
 					{
 						htmltext = "30838-0.htm";
 					}
@@ -141,12 +146,14 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 					htmltext = "30838-0b.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case WOODLEY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30838-1.htm";
@@ -175,8 +182,9 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 							htmltext = "30838-6.htm";
 						}
 						break;
-					
+					}
 					case LEIKAR:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31520-0.htm";
@@ -186,8 +194,9 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 							htmltext = "31520-1a.htm";
 						}
 						break;
-					
+					}
 					case IAN:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30164-0.htm";
@@ -197,12 +206,15 @@ public class Q033_MakeAPairOfDressShoes extends Quest
 							htmltext = "30164-2.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

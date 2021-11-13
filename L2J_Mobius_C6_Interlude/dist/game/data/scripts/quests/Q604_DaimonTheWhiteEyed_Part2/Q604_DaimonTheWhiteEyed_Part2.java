@@ -30,13 +30,11 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 {
-	// Monster
-	private static final int DAIMON_THE_WHITE_EYED = 25290;
-	
 	// NPCs
 	private static final int EYE_OF_ARGOS = 31683;
 	private static final int DAIMON_ALTAR = 31541;
-	
+	// Monster
+	private static final int DAIMON_THE_WHITE_EYED = 25290;
 	// Items
 	private static final int UNFINISHED_SUMMON_CRYSTAL = 7192;
 	private static final int SUMMON_CRYSTAL = 7193;
@@ -50,39 +48,37 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		4599,
 		4600
 	};
-	
 	// Other
 	private static final int CHECK_INTERVAL = 600000; // 10 minutes
 	private static final int IDLE_INTERVAL = 3; // (X * CHECK_INTERVAL) = 30 minutes
-	
 	private NpcInstance _npc = null;
 	private int _status = -1;
 	
 	public Q604_DaimonTheWhiteEyed_Part2()
 	{
 		super(604, "Daimon the White-Eyed - Part 2");
-		
 		registerQuestItems(SUMMON_CRYSTAL, ESSENCE_OF_DAIMON);
-		
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS, DAIMON_ALTAR);
-		
 		addAttackId(DAIMON_THE_WHITE_EYED);
 		addKillId(DAIMON_THE_WHITE_EYED);
-		
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(DAIMON_THE_WHITE_EYED))
 		{
 			case UNDEFINED:
+			{
 				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + DAIMON_THE_WHITE_EYED);
 				break;
-			
+			}
 			case ALIVE:
+			{
 				spawnNpc();
 				// fallthrough
-				
+			}
 			case DEAD:
+			{
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;
+			}
 		}
 	}
 	
@@ -113,58 +109,60 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 			return htmltext;
 		}
 		
-		// Eye of Argos
-		if (event.equals("31683-03.htm"))
+		switch (event)
 		{
-			if (st.hasQuestItems(UNFINISHED_SUMMON_CRYSTAL))
+			case "31683-03.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-				st.takeItems(UNFINISHED_SUMMON_CRYSTAL, 1);
-				st.giveItems(SUMMON_CRYSTAL, 1);
-			}
-			else
-			{
-				htmltext = "31683-04.htm";
-			}
-		}
-		else if (event.equals("31683-08.htm"))
-		{
-			if (st.hasQuestItems(ESSENCE_OF_DAIMON))
-			{
-				st.takeItems(ESSENCE_OF_DAIMON, 1);
-				st.rewardItems(REWARD_DYE[Rnd.get(REWARD_DYE.length)], 5);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
-			}
-			else
-			{
-				htmltext = "31683-09.htm";
-			}
-		}
-		// Diamon's Altar
-		else if (event.equals("31541-02.htm"))
-		{
-			if (st.hasQuestItems(SUMMON_CRYSTAL))
-			{
-				if (_status < 0)
+				if (st.hasQuestItems(UNFINISHED_SUMMON_CRYSTAL))
 				{
-					if (spawnRaid())
+					st.startQuest();
+					st.takeItems(UNFINISHED_SUMMON_CRYSTAL, 1);
+					st.giveItems(SUMMON_CRYSTAL, 1);
+				}
+				else
+				{
+					htmltext = "31683-04.htm";
+				}
+				break;
+			}
+			case "31683-08.htm":
+			{
+				if (st.hasQuestItems(ESSENCE_OF_DAIMON))
+				{
+					st.takeItems(ESSENCE_OF_DAIMON, 1);
+					st.rewardItems(REWARD_DYE[Rnd.get(REWARD_DYE.length)], 5);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					htmltext = "31683-09.htm";
+				}
+				break;
+			}
+			case "31541-02.htm":
+			{
+				if (st.hasQuestItems(SUMMON_CRYSTAL))
+				{
+					if (_status < 0)
 					{
-						st.set("cond", "2");
-						st.playSound(QuestState.SOUND_MIDDLE);
-						st.takeItems(SUMMON_CRYSTAL, 1);
+						if (spawnRaid())
+						{
+							st.setCond(2);
+							st.playSound(QuestState.SOUND_MIDDLE);
+							st.takeItems(SUMMON_CRYSTAL, 1);
+						}
+					}
+					else
+					{
+						htmltext = "31541-04.htm";
 					}
 				}
 				else
 				{
-					htmltext = "31541-04.htm";
+					htmltext = "31541-03.htm";
 				}
-			}
-			else
-			{
-				htmltext = "31541-03.htm";
+				break;
 			}
 		}
 		
@@ -184,6 +182,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 73)
 				{
 					htmltext = "31683-02.htm";
@@ -194,12 +193,14 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 					htmltext = "31683-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case EYE_OF_ARGOS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31683-05.htm";
@@ -213,8 +214,9 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 							htmltext = "31683-07.htm";
 						}
 						break;
-					
+					}
 					case DAIMON_ALTAR:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31541-01.htm";
@@ -224,8 +226,10 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 							htmltext = "31541-05.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -241,7 +245,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, 2))
 		{
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
@@ -249,7 +253,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 				continue;
 			}
 			
-			st.set("cond", "3");
+			st.setCond(3);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(ESSENCE_OF_DAIMON, 1);
 		}

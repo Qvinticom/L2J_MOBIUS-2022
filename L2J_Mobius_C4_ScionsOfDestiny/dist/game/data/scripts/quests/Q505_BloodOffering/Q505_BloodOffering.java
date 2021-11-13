@@ -46,7 +46,6 @@ public class Q505_BloodOffering extends Quest
 	public Q505_BloodOffering()
 	{
 		super(505, "Blood Offering");
-		
 		addStartNpc(TOWN_DAWN);
 		addTalkId(TOWN_DAWN);
 		addStartNpc(TOWN_DUSK);
@@ -81,9 +80,9 @@ public class Q505_BloodOffering extends Quest
 			if (qs2 != null)
 			{
 				qs2.setState(State.STARTED);
-				qs2.set("cond", "1");
+				qs2.setCond(1);
 			}
-			qs.playSound("ItemSound.quest_accept");
+			qs.playSound(QuestState.SOUND_ACCEPT);
 			qs.exitQuest(true);
 			return "guide.htm";
 		}
@@ -145,7 +144,7 @@ public class Q505_BloodOffering extends Quest
 				if (cabal.equals("dawn"))
 				{
 					qs.setState(State.STARTED);
-					qs.set("cond", "1");
+					qs.setCond(1);
 					qs.getPlayer().teleToLocation(-80157, 111344, -4901);
 					if (qs2 != null)
 					{
@@ -156,7 +155,7 @@ public class Q505_BloodOffering extends Quest
 				if (cabal.equals("dusk"))
 				{
 					qs.setState(State.STARTED);
-					qs.set("cond", "1");
+					qs.setCond(1);
 					if (qs2 != null)
 					{
 						qs2.unset("cond");

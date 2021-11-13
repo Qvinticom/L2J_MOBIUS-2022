@@ -145,7 +145,7 @@ public class LoginServer
 				InputStreamReader is = new InputStreamReader(fis);
 				LineNumberReader lnr = new LineNumberReader(is))
 			{
-				//@formatter:off
+				// @formatter:off
 				lnr.lines()
 					.map(String::trim)
 					.filter(l -> !l.isEmpty() && (l.charAt(0) != '#'))
@@ -179,7 +179,7 @@ public class LoginServer
 							LOGGER.warning("Skipped: Invalid address (" + address + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
 						}
 					});
-				//@formatter:on
+				// @formatter:on
 			}
 			catch (IOException e)
 			{

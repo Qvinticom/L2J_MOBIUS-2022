@@ -37,7 +37,6 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 	public Q636_TheTruthBeyondTheGate()
 	{
 		super(636, "Truth Beyond the Gate");
-		
 		addStartNpc(ELIYAH);
 		addTalkId(ELIYAH, FLAURON);
 	}
@@ -54,13 +53,11 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 		
 		if (event.equals("31329-04.htm"))
 		{
-			qs.set("cond", "1");
-			qs.setState(State.STARTED);
-			qs.playSound("ItemSound.quest_accept");
+			qs.startQuest();
 		}
 		else if (event.equals("32010-02.htm"))
 		{
-			qs.playSound("ItemSound.quest_finish");
+			qs.playSound(QuestState.SOUND_FINISH);
 			qs.giveItems(MARK, 1);
 			qs.unset("cond");
 			qs.exitQuest(true);
@@ -81,7 +78,7 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 		
 		final int npcId = npc.getNpcId();
 		final int id = qs.getState();
-		final int cond = qs.getInt("cond");
+		final int cond = qs.getCond();
 		if ((cond == 0) && (id == State.CREATED))
 		{
 			if (npcId == ELIYAH)
@@ -108,7 +105,7 @@ public class Q636_TheTruthBeyondTheGate extends Quest
 				if (cond == 1)
 				{
 					htmltext = "32010-01.htm";
-					qs.set("cond", "2");
+					qs.setCond(2);
 				}
 				else
 				{

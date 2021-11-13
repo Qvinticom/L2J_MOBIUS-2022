@@ -32,15 +32,6 @@ public class Q508_AClansReputation extends Quest
 {
 	// NPC
 	private static final int SIR_ERIC_RODEMAI = 30868;
-	
-	// Items
-	private static final int NUCLEUS_OF_FLAMESTONE_GIANT = 8494;
-	private static final int THEMIS_SCALE = 8277;
-	private static final int NUCLEUS_OF_HEKATON_PRIME = 8279;
-	private static final int TIPHON_SHARD = 8280;
-	private static final int GLAKIS_NUCLEUS = 8281;
-	private static final int RAHHAS_FANG = 8282;
-	
 	// Raidbosses
 	private static final int FLAMESTONE_GIANT = 25524;
 	private static final int PALIBATI_QUEEN_THEMIS = 25252;
@@ -48,92 +39,42 @@ public class Q508_AClansReputation extends Quest
 	private static final int GARGOYLE_LORD_TIPHON = 25255;
 	private static final int LAST_LESSER_GIANT_GLAKI = 25245;
 	private static final int RAHHA = 25051;
-	
+	// Items
+	private static final int NUCLEUS_OF_FLAMESTONE_GIANT = 8494;
+	private static final int THEMIS_SCALE = 8277;
+	private static final int NUCLEUS_OF_HEKATON_PRIME = 8279;
+	private static final int TIPHON_SHARD = 8280;
+	private static final int GLAKIS_NUCLEUS = 8281;
+	private static final int RAHHAS_FANG = 8282;
 	// Reward list (itemId, minClanPoints, maxClanPoints)
 	private static final int[][] REWARD_LIST =
 	{
-		{
-			PALIBATI_QUEEN_THEMIS,
-			THEMIS_SCALE,
-			65,
-			100
-		},
-		{
-			HEKATON_PRIME,
-			NUCLEUS_OF_HEKATON_PRIME,
-			40,
-			75
-		},
-		{
-			GARGOYLE_LORD_TIPHON,
-			TIPHON_SHARD,
-			30,
-			65
-		},
-		{
-			LAST_LESSER_GIANT_GLAKI,
-			GLAKIS_NUCLEUS,
-			105,
-			140
-		},
-		{
-			RAHHA,
-			RAHHAS_FANG,
-			40,
-			75
-		},
-		{
-			FLAMESTONE_GIANT,
-			NUCLEUS_OF_FLAMESTONE_GIANT,
-			60,
-			95
-		}
+		// @formatter:off
+		{PALIBATI_QUEEN_THEMIS, THEMIS_SCALE, 65, 100},
+		{HEKATON_PRIME, NUCLEUS_OF_HEKATON_PRIME, 40, 75},
+		{GARGOYLE_LORD_TIPHON, TIPHON_SHARD, 30, 65},
+		{LAST_LESSER_GIANT_GLAKI, GLAKIS_NUCLEUS, 105, 140},
+		{RAHHA, RAHHAS_FANG, 40, 75},
+		{FLAMESTONE_GIANT, NUCLEUS_OF_FLAMESTONE_GIANT, 60, 95}
 	};
-	
 	// Radar
 	private static final int[][] radar =
 	{
-		{
-			192346,
-			21528,
-			-3648
-		},
-		{
-			191979,
-			54902,
-			-7658
-		},
-		{
-			170038,
-			-26236,
-			-3824
-		},
-		{
-			171762,
-			55028,
-			-5992
-		},
-		{
-			117232,
-			-9476,
-			-3320
-		},
-		{
-			144218,
-			-5816,
-			-4722
-		}
+		{192346, 21528, -3648},
+		{191979, 54902, -7658},
+		{170038, -26236, -3824},
+		{171762, 55028, -5992},
+		{117232, -9476, -3320},
+		{144218, -5816, -4722}
+		// @formatter:on
 	};
 	
 	public Q508_AClansReputation()
 	{
 		super(508, "A Clan's Reputation");
-		
 		registerQuestItems(THEMIS_SCALE, NUCLEUS_OF_HEKATON_PRIME, TIPHON_SHARD, GLAKIS_NUCLEUS, RAHHAS_FANG, NUCLEUS_OF_FLAMESTONE_GIANT);
-		
 		addStartNpc(SIR_ERIC_RODEMAI);
 		addTalkId(SIR_ERIC_RODEMAI);
-		
 		addKillId(FLAMESTONE_GIANT, PALIBATI_QUEEN_THEMIS, HEKATON_PRIME, GARGOYLE_LORD_TIPHON, LAST_LESSER_GIANT_GLAKI, RAHHA);
 	}
 	
@@ -161,11 +102,9 @@ public class Q508_AClansReputation extends Quest
 				st.addRadar(x, y, z);
 			}
 			
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
-		else if (event.equalsIgnoreCase("30868-7.htm"))
+		else if (event.equals("30868-7.htm"))
 		{
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
@@ -185,10 +124,10 @@ public class Q508_AClansReputation extends Quest
 		}
 		
 		final Clan clan = player.getClan();
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (!player.isClanLeader())
 				{
 					st.exitQuest(true);
@@ -204,10 +143,11 @@ public class Q508_AClansReputation extends Quest
 					htmltext = "30868-0c.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int raid = st.getInt("raid");
-				if (st.getInt("cond") == 1)
+				if (st.isCond(1))
 				{
 					final int item = REWARD_LIST[raid - 1][1];
 					final int count = st.getQuestItemsCount(item);
@@ -226,6 +166,7 @@ public class Q508_AClansReputation extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

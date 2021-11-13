@@ -28,6 +28,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q171_ActsOfEvil extends Quest
 {
+	// NPCs
+	private static final int ALVAH = 30381;
+	private static final int ARODIN = 30207;
+	private static final int TYRA = 30420;
+	private static final int ROLENTO = 30437;
+	private static final int NETI = 30425;
+	private static final int BURAI = 30617;
 	// Items
 	private static final int BLADE_MOLD = 4239;
 	private static final int TYRA_BILL = 4240;
@@ -40,15 +47,6 @@ public class Q171_ActsOfEvil extends Quest
 	private static final int CERTIFICATE = 4247;
 	private static final int CARGO_BOX = 4248;
 	private static final int OL_MAHUM_HEAD = 4249;
-	
-	// NPCs
-	private static final int ALVAH = 30381;
-	private static final int ARODIN = 30207;
-	private static final int TYRA = 30420;
-	private static final int ROLENTO = 30437;
-	private static final int NETI = 30425;
-	private static final int BURAI = 30617;
-	
 	// Turek Orcs drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -62,12 +60,9 @@ public class Q171_ActsOfEvil extends Quest
 	public Q171_ActsOfEvil()
 	{
 		super(171, "Acts of Evil");
-		
 		registerQuestItems(BLADE_MOLD, TYRA_BILL, RANGER_REPORT_1, RANGER_REPORT_2, RANGER_REPORT_3, RANGER_REPORT_4, WEAPON_TRADE_CONTRACT, ATTACK_DIRECTIVES, CERTIFICATE, CARGO_BOX, OL_MAHUM_HEAD);
-		
 		addStartNpc(ALVAH);
 		addTalkId(ALVAH, ARODIN, TYRA, ROLENTO, NETI, BURAI);
-		
 		addKillId(20496, 20497, 20498, 20499, 20062, 20064, 20066, 20438);
 	}
 	
@@ -81,42 +76,49 @@ public class Q171_ActsOfEvil extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30381-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30207-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30381-04.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30381-07.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(WEAPON_TRADE_CONTRACT, 1);
-		}
-		else if (event.equals("30437-03.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(CARGO_BOX, 1);
-			st.giveItems(CERTIFICATE, 1);
-		}
-		else if (event.equals("30617-04.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ATTACK_DIRECTIVES, 1);
-			st.takeItems(CARGO_BOX, 1);
-			st.takeItems(CERTIFICATE, 1);
+			case "30381-02.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30207-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30381-04.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30381-07.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(WEAPON_TRADE_CONTRACT, 1);
+				break;
+			}
+			case "30437-03.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(CARGO_BOX, 1);
+				st.giveItems(CERTIFICATE, 1);
+				break;
+			}
+			case "30617-04.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ATTACK_DIRECTIVES, 1);
+				st.takeItems(CARGO_BOX, 1);
+				st.takeItems(CERTIFICATE, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -135,14 +137,17 @@ public class Q171_ActsOfEvil extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 27) ? "30381-01a.htm" : "30381-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ALVAH:
+					{
 						if (cond < 4)
 						{
 							htmltext = "30381-02a.htm";
@@ -156,7 +161,7 @@ public class Q171_ActsOfEvil extends Quest
 							if (st.hasQuestItems(RANGER_REPORT_1, RANGER_REPORT_2, RANGER_REPORT_3, RANGER_REPORT_4))
 							{
 								htmltext = "30381-05.htm";
-								st.set("cond", "6");
+								st.setCond(6);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(RANGER_REPORT_1, 1);
 								st.takeItems(RANGER_REPORT_2, 1);
@@ -191,8 +196,9 @@ public class Q171_ActsOfEvil extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case ARODIN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30207-01.htm";
@@ -206,7 +212,7 @@ public class Q171_ActsOfEvil extends Quest
 							if (st.hasQuestItems(TYRA_BILL))
 							{
 								htmltext = "30207-03.htm";
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(TYRA_BILL, 1);
 							}
@@ -220,14 +226,15 @@ public class Q171_ActsOfEvil extends Quest
 							htmltext = "30207-03a.htm";
 						}
 						break;
-					
+					}
 					case TYRA:
+					{
 						if (cond == 2)
 						{
 							if (st.getQuestItemsCount(BLADE_MOLD) >= 20)
 							{
 								htmltext = "30420-01.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(BLADE_MOLD, -1);
 								st.giveItems(TYRA_BILL, 1);
@@ -246,12 +253,13 @@ public class Q171_ActsOfEvil extends Quest
 							htmltext = "30420-02.htm";
 						}
 						break;
-					
+					}
 					case NETI:
+					{
 						if (cond == 7)
 						{
 							htmltext = "30425-01.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond > 7)
@@ -259,8 +267,9 @@ public class Q171_ActsOfEvil extends Quest
 							htmltext = "30425-02.htm";
 						}
 						break;
-					
+					}
 					case ROLENTO:
+					{
 						if (cond == 8)
 						{
 							htmltext = "30437-01.htm";
@@ -270,8 +279,9 @@ public class Q171_ActsOfEvil extends Quest
 							htmltext = "30437-03a.htm";
 						}
 						break;
-					
+					}
 					case BURAI:
+					{
 						if ((cond == 9) && st.hasQuestItems(CERTIFICATE, CARGO_BOX, ATTACK_DIRECTIVES))
 						{
 							htmltext = "30617-01.htm";
@@ -281,7 +291,7 @@ public class Q171_ActsOfEvil extends Quest
 							if (st.getQuestItemsCount(OL_MAHUM_HEAD) >= 30)
 							{
 								htmltext = "30617-05.htm";
-								st.set("cond", "11");
+								st.setCond(11);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(OL_MAHUM_HEAD, -1);
 								st.rewardItems(57, 8000);
@@ -292,12 +302,15 @@ public class Q171_ActsOfEvil extends Quest
 							}
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -313,14 +326,14 @@ public class Q171_ActsOfEvil extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		
 		switch (npcId)
 		{
 			case 20496:
 			case 20497:
 			case 20498:
 			case 20499:
-				if ((st.getInt("cond") == 2) && !st.dropItems(BLADE_MOLD, 1, 20, CHANCES.get(npcId)))
+			{
+				if (st.isCond(2) && !st.dropItems(BLADE_MOLD, 1, 20, CHANCES.get(npcId)))
 				{
 					final int count = st.getQuestItemsCount(BLADE_MOLD);
 					if ((count == 5) || ((count >= 10) && (Rnd.get(100) < 25)))
@@ -329,10 +342,11 @@ public class Q171_ActsOfEvil extends Quest
 					}
 				}
 				break;
-			
+			}
 			case 20062:
 			case 20064:
-				if (st.getInt("cond") == 5)
+			{
+				if (st.isCond(5))
 				{
 					if (!st.hasQuestItems(RANGER_REPORT_1))
 					{
@@ -359,22 +373,25 @@ public class Q171_ActsOfEvil extends Quest
 					}
 				}
 				break;
-			
+			}
 			case 20438:
-				if ((st.getInt("cond") == 6) && (Rnd.get(100) < 10) && !st.hasQuestItems(WEAPON_TRADE_CONTRACT, ATTACK_DIRECTIVES))
+			{
+				if (st.isCond(6) && (Rnd.get(100) < 10) && !st.hasQuestItems(WEAPON_TRADE_CONTRACT, ATTACK_DIRECTIVES))
 				{
 					st.playSound(QuestState.SOUND_ITEMGET);
 					st.giveItems(WEAPON_TRADE_CONTRACT, 1);
 					st.giveItems(ATTACK_DIRECTIVES, 1);
 				}
 				break;
-			
+			}
 			case 20066:
-				if (st.getInt("cond") == 10)
+			{
+				if (st.isCond(10))
 				{
 					st.dropItems(OL_MAHUM_HEAD, 1, 30, 500000);
 				}
 				break;
+			}
 		}
 		
 		return null;

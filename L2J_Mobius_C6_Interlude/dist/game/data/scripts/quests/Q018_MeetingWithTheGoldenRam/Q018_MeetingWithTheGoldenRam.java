@@ -24,20 +24,18 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q018_MeetingWithTheGoldenRam extends Quest
 {
-	// Items
-	private static final int SUPPLY_BOX = 7245;
-	
 	// NPCs
 	private static final int DONAL = 31314;
 	private static final int DAISY = 31315;
 	private static final int ABERCROMBIE = 31555;
+	// Items
+	private static final int SUPPLY_BOX = 7245;
 	
 	public Q018_MeetingWithTheGoldenRam()
 	{
 		super(18, "Meeting with the Golden Ram");
 		
 		registerQuestItems(SUPPLY_BOX);
-		
 		addStartNpc(DONAL);
 		addTalkId(DONAL, DAISY, ABERCROMBIE);
 	}
@@ -52,25 +50,29 @@ public class Q018_MeetingWithTheGoldenRam extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31314-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31315-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(SUPPLY_BOX, 1);
-		}
-		else if (event.equals("31555-02.htm"))
-		{
-			st.takeItems(SUPPLY_BOX, 1);
-			st.rewardItems(57, 15000);
-			st.rewardExpAndSp(50000, 0);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31314-03.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31315-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(SUPPLY_BOX, 1);
+				break;
+			}
+			case "31555-02.htm":
+			{
+				st.takeItems(SUPPLY_BOX, 1);
+				st.rewardItems(57, 15000);
+				st.rewardExpAndSp(50000, 0);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -89,18 +91,22 @@ public class Q018_MeetingWithTheGoldenRam extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 66) ? "31314-02.htm" : "31314-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case DONAL:
+					{
 						htmltext = "31314-04.htm";
 						break;
-					
+					}
 					case DAISY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31315-01.htm";
@@ -110,19 +116,23 @@ public class Q018_MeetingWithTheGoldenRam extends Quest
 							htmltext = "31315-03.htm";
 						}
 						break;
-					
+					}
 					case ABERCROMBIE:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31555-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

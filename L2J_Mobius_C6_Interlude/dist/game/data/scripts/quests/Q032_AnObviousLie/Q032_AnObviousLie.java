@@ -24,32 +24,27 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q032_AnObviousLie extends Quest
 {
+	// NPCs
+	private static final int GENTLER = 30094;
+	private static final int MAXIMILIAN = 30120;
+	private static final int MIKI_THE_CAT = 31706;
 	// Items
 	private static final int SUEDE = 1866;
 	private static final int THREAD = 1868;
 	private static final int SPIRIT_ORE = 3031;
 	private static final int MAP = 7165;
 	private static final int MEDICINAL_HERB = 7166;
-	
 	// Rewards
 	private static final int CAT_EARS = 6843;
 	private static final int RACOON_EARS = 7680;
 	private static final int RABBIT_EARS = 7683;
 	
-	// NPCs
-	private static final int GENTLER = 30094;
-	private static final int MAXIMILIAN = 30120;
-	private static final int MIKI_THE_CAT = 31706;
-	
 	public Q032_AnObviousLie()
 	{
 		super(32, "An Obvious Lie");
-		
 		registerQuestItems(MAP, MEDICINAL_HERB);
-		
 		addStartNpc(MAXIMILIAN);
 		addTalkId(MAXIMILIAN, GENTLER, MIKI_THE_CAT);
-		
 		addKillId(20135); // Alligator
 	}
 	
@@ -63,103 +58,115 @@ public class Q032_AnObviousLie extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30120-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30094-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(MAP, 1);
-		}
-		else if (event.equals("31706-1.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MAP, 1);
-		}
-		else if (event.equals("30094-4.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MEDICINAL_HERB, 20);
-		}
-		else if (event.equals("30094-7.htm"))
-		{
-			if (st.getQuestItemsCount(SPIRIT_ORE) < 500)
+			case "30120-1.htm":
 			{
-				htmltext = "30094-5.htm";
+				st.startQuest();
+				break;
 			}
-			else
+			case "30094-1.htm":
 			{
-				st.set("cond", "6");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(SPIRIT_ORE, 500);
+				st.giveItems(MAP, 1);
+				break;
 			}
-		}
-		else if (event.equals("31706-4.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30094-10.htm"))
-		{
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30094-13.htm"))
-		{
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("cat"))
-		{
-			if ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500))
+			case "31706-1.htm":
 			{
-				htmltext = "30094-11.htm";
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MAP, 1);
+				break;
 			}
-			else
+			case "30094-4.htm":
 			{
-				htmltext = "30094-14.htm";
-				st.takeItems(SUEDE, 500);
-				st.takeItems(THREAD, 1000);
-				st.giveItems(CAT_EARS, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MEDICINAL_HERB, 20);
+				break;
 			}
-		}
-		else if (event.equals("racoon"))
-		{
-			if ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500))
+			case "30094-7.htm":
 			{
-				htmltext = "30094-11.htm";
+				if (st.getQuestItemsCount(SPIRIT_ORE) < 500)
+				{
+					htmltext = "30094-5.htm";
+				}
+				else
+				{
+					st.setCond(6);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(SPIRIT_ORE, 500);
+				}
+				break;
 			}
-			else
+			case "31706-4.htm":
 			{
-				htmltext = "30094-14.htm";
-				st.takeItems(SUEDE, 500);
-				st.takeItems(THREAD, 1000);
-				st.giveItems(RACOON_EARS, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-		}
-		else if (event.equals("rabbit"))
-		{
-			if ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500))
+			case "30094-10.htm":
 			{
-				htmltext = "30094-11.htm";
+				st.setCond(8);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-			else
+			case "30094-13.htm":
 			{
-				htmltext = "30094-14.htm";
-				st.takeItems(SUEDE, 500);
-				st.takeItems(THREAD, 1000);
-				st.giveItems(RABBIT_EARS, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "cat":
+			{
+				if ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500))
+				{
+					htmltext = "30094-11.htm";
+				}
+				else
+				{
+					htmltext = "30094-14.htm";
+					st.takeItems(SUEDE, 500);
+					st.takeItems(THREAD, 1000);
+					st.giveItems(CAT_EARS, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				break;
+			}
+			case "racoon":
+			{
+				if ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500))
+				{
+					htmltext = "30094-11.htm";
+				}
+				else
+				{
+					htmltext = "30094-14.htm";
+					st.takeItems(SUEDE, 500);
+					st.takeItems(THREAD, 1000);
+					st.giveItems(RACOON_EARS, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				break;
+			}
+			case "rabbit":
+			{
+				if ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500))
+				{
+					htmltext = "30094-11.htm";
+				}
+				else
+				{
+					htmltext = "30094-14.htm";
+					st.takeItems(SUEDE, 500);
+					st.takeItems(THREAD, 1000);
+					st.giveItems(RABBIT_EARS, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				break;
 			}
 		}
 		
@@ -179,18 +186,22 @@ public class Q032_AnObviousLie extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 45) ? "30120-0a.htm" : "30120-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case MAXIMILIAN:
+					{
 						htmltext = "30120-2.htm";
 						break;
-					
+					}
 					case GENTLER:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30094-0.htm";
@@ -220,8 +231,9 @@ public class Q032_AnObviousLie extends Quest
 							htmltext = ((st.getQuestItemsCount(THREAD) < 1000) || (st.getQuestItemsCount(SUEDE) < 500)) ? "30094-11.htm" : "30094-12.htm";
 						}
 						break;
-					
+					}
 					case MIKI_THE_CAT:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31706-0.htm";
@@ -239,12 +251,15 @@ public class Q032_AnObviousLie extends Quest
 							htmltext = "31706-5.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -253,7 +268,7 @@ public class Q032_AnObviousLie extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "3");
+		final QuestState st = checkPlayerCondition(player, npc, 3);
 		if (st == null)
 		{
 			return null;
@@ -261,7 +276,7 @@ public class Q032_AnObviousLie extends Quest
 		
 		if (st.dropItemsAlways(MEDICINAL_HERB, 1, 20))
 		{
-			st.set("cond", "4");
+			st.setCond(4);
 		}
 		
 		return null;

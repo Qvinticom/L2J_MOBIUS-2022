@@ -29,7 +29,12 @@ public class Q292_BrigandsSweep extends Quest
 	// NPCs
 	private static final int SPIRON = 30532;
 	private static final int BALANKI = 30533;
-	
+	// Monsters
+	private static final int GOBLIN_BRIGAND = 20322;
+	private static final int GOBLIN_BRIGAND_LEADER = 20323;
+	private static final int GOBLIN_BRIGAND_LIEUTENANT = 20324;
+	private static final int GOBLIN_SNOOPER = 20327;
+	private static final int GOBLIN_LORD = 20528;
 	// Items
 	private static final int GOBLIN_NECKLACE = 1483;
 	private static final int GOBLIN_PENDANT = 1484;
@@ -37,22 +42,12 @@ public class Q292_BrigandsSweep extends Quest
 	private static final int SUSPICIOUS_MEMO = 1486;
 	private static final int SUSPICIOUS_CONTRACT = 1487;
 	
-	// Monsters
-	private static final int GOBLIN_BRIGAND = 20322;
-	private static final int GOBLIN_BRIGAND_LEADER = 20323;
-	private static final int GOBLIN_BRIGAND_LIEUTENANT = 20324;
-	private static final int GOBLIN_SNOOPER = 20327;
-	private static final int GOBLIN_LORD = 20528;
-	
 	public Q292_BrigandsSweep()
 	{
 		super(292, "Brigands Sweep");
-		
 		registerQuestItems(GOBLIN_NECKLACE, GOBLIN_PENDANT, GOBLIN_LORD_PENDANT, SUSPICIOUS_MEMO, SUSPICIOUS_CONTRACT);
-		
 		addStartNpc(SPIRON);
 		addTalkId(SPIRON, BALANKI);
-		
 		addKillId(GOBLIN_BRIGAND, GOBLIN_BRIGAND_LEADER, GOBLIN_BRIGAND_LIEUTENANT, GOBLIN_SNOOPER, GOBLIN_LORD);
 	}
 	
@@ -68,9 +63,7 @@ public class Q292_BrigandsSweep extends Quest
 		
 		if (event.equals("30532-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30532-06.htm"))
 		{
@@ -94,6 +87,7 @@ public class Q292_BrigandsSweep extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DWARF)
 				{
 					htmltext = "30532-00.htm";
@@ -107,11 +101,13 @@ public class Q292_BrigandsSweep extends Quest
 					htmltext = "30532-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case SPIRON:
+					{
 						final int goblinNecklaces = st.getQuestItemsCount(GOBLIN_NECKLACE);
 						final int goblinPendants = st.getQuestItemsCount(GOBLIN_PENDANT);
 						final int goblinLordPendants = st.getQuestItemsCount(GOBLIN_LORD_PENDANT);
@@ -149,15 +145,16 @@ public class Q292_BrigandsSweep extends Quest
 							st.takeItems(GOBLIN_LORD_PENDANT, -1);
 							if (hasContract)
 							{
-								st.set("cond", "1");
+								st.setCond(1);
 								st.takeItems(SUSPICIOUS_CONTRACT, -1);
 							}
 							
 							st.rewardItems(57, ((12 * goblinNecklaces) + (36 * goblinPendants) + (33 * goblinLordPendants) + (countAll >= 10 ? 1000 : 0) + ((hasContract) ? 1120 : 0)));
 						}
 						break;
-					
+					}
 					case BALANKI:
+					{
 						if (!st.hasQuestItems(SUSPICIOUS_CONTRACT))
 						{
 							htmltext = "30533-01.htm";
@@ -165,13 +162,15 @@ public class Q292_BrigandsSweep extends Quest
 						else
 						{
 							htmltext = "30533-02.htm";
-							st.set("cond", "1");
+							st.setCond(1);
 							st.takeItems(SUSPICIOUS_CONTRACT, -1);
 							st.rewardItems(57, 1500);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -194,21 +193,25 @@ public class Q292_BrigandsSweep extends Quest
 				case GOBLIN_BRIGAND:
 				case GOBLIN_SNOOPER:
 				case GOBLIN_BRIGAND_LIEUTENANT:
+				{
 					st.dropItemsAlways(GOBLIN_NECKLACE, 1, 0);
 					break;
-				
+				}
 				case GOBLIN_BRIGAND_LEADER:
+				{
 					st.dropItemsAlways(GOBLIN_PENDANT, 1, 0);
 					break;
-				
+				}
 				case GOBLIN_LORD:
+				{
 					st.dropItemsAlways(GOBLIN_LORD_PENDANT, 1, 0);
 					break;
+				}
 			}
 		}
-		else if ((chance > 4) && (st.getInt("cond") == 1) && st.dropItemsAlways(SUSPICIOUS_MEMO, 1, 3))
+		else if ((chance > 4) && st.isCond(1) && st.dropItemsAlways(SUSPICIOUS_MEMO, 1, 3))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 			st.takeItems(SUSPICIOUS_MEMO, -1);
 			st.giveItems(SUSPICIOUS_CONTRACT, 1);
 		}

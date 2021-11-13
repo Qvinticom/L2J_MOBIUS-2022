@@ -34,19 +34,14 @@ public class Q234_FatesWhisper extends Quest
 	private static final int KERMON_INFERNIUM_SCEPTER = 4667;
 	private static final int GOLKONDA_INFERNIUM_SCEPTER = 4668;
 	private static final int HALLATE_INFERNIUM_SCEPTER = 4669;
-	
 	private static final int INFERNIUM_VARNISH = 4672;
 	private static final int REORIN_HAMMER = 4670;
 	private static final int REORIN_MOLD = 4671;
-	
 	private static final int PIPETTE_KNIFE = 4665;
 	private static final int RED_PIPETTE_KNIFE = 4673;
-	
 	private static final int CRYSTAL_B = 1460;
-	
 	// Reward
 	private static final int STAR_OF_DESTINY = 5011;
-	
 	// Chest Spawn
 	private static final Map<Integer, Integer> CHEST_SPAWN = new HashMap<>();
 	static
@@ -56,7 +51,6 @@ public class Q234_FatesWhisper extends Quest
 		CHEST_SPAWN.put(25126, 31029);
 		CHEST_SPAWN.put(25220, 31030);
 	}
-	
 	// Weapons
 	private static final Map<Integer, String> WEAPONS = new HashMap<>();
 	static
@@ -79,15 +73,11 @@ public class Q234_FatesWhisper extends Quest
 	public Q234_FatesWhisper()
 	{
 		super(234, "Fate's Whisper");
-		
 		registerQuestItems(PIPETTE_KNIFE, RED_PIPETTE_KNIFE);
-		
 		addStartNpc(31002);
 		addTalkId(31002, 30182, 30847, 30178, 30833, 31028, 31029, 31030, 31027);
-		
 		// The 4 bosses which spawn chests
 		addKillId(25035, 25054, 25126, 25220);
-		
 		// Baium
 		addAttackId(29020);
 	}
@@ -104,9 +94,7 @@ public class Q234_FatesWhisper extends Quest
 		
 		if (event.equals("31002-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30182-01c.htm"))
 		{
@@ -115,12 +103,12 @@ public class Q234_FatesWhisper extends Quest
 		}
 		else if (event.equals("30178-01a.htm"))
 		{
-			st.set("cond", "6");
+			st.setCond(6);
 			st.playSound(QuestState.SOUND_MIDDLE);
 		}
 		else if (event.equals("30833-01b.htm"))
 		{
-			st.set("cond", "7");
+			st.setCond(7);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(PIPETTE_KNIFE, 1);
 		}
@@ -183,14 +171,17 @@ public class Q234_FatesWhisper extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 75) ? "31002-01.htm" : "31002-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case 31002:
+					{
 						if (cond == 1)
 						{
 							if (!st.hasQuestItems(REIRIA_SOUL_ORB))
@@ -200,7 +191,7 @@ public class Q234_FatesWhisper extends Quest
 							else
 							{
 								htmltext = "31002-05.htm";
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(REIRIA_SOUL_ORB, 1);
 							}
@@ -214,7 +205,7 @@ public class Q234_FatesWhisper extends Quest
 							else
 							{
 								htmltext = "31002-06.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(GOLKONDA_INFERNIUM_SCEPTER, 1);
 								st.takeItems(HALLATE_INFERNIUM_SCEPTER, 1);
@@ -230,7 +221,7 @@ public class Q234_FatesWhisper extends Quest
 							else
 							{
 								htmltext = "31002-07.htm";
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(INFERNIUM_VARNISH, 1);
 							}
@@ -244,7 +235,7 @@ public class Q234_FatesWhisper extends Quest
 							else
 							{
 								htmltext = "31002-08.htm";
-								st.set("cond", "5");
+								st.setCond(5);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(REORIN_HAMMER, 1);
 							}
@@ -256,7 +247,7 @@ public class Q234_FatesWhisper extends Quest
 						else if (cond == 8)
 						{
 							htmltext = "31002-09.htm";
-							st.set("cond", "9");
+							st.setCond(9);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(REORIN_MOLD, 1);
 						}
@@ -269,7 +260,7 @@ public class Q234_FatesWhisper extends Quest
 							else
 							{
 								htmltext = "31002-BGradeList.htm";
-								st.set("cond", "10");
+								st.setCond(10);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(CRYSTAL_B, 984);
 							}
@@ -290,15 +281,17 @@ public class Q234_FatesWhisper extends Quest
 							}
 						}
 						break;
-					
+					}
 					case 30182:
+					{
 						if (cond == 3)
 						{
 							htmltext = (!st.hasQuestItems(INFERNIUM_VARNISH)) ? "30182-01.htm" : "30182-02.htm";
 						}
 						break;
-					
+					}
 					case 30847:
+					{
 						if ((cond == 4) && !st.hasQuestItems(REORIN_HAMMER))
 						{
 							htmltext = "30847-01.htm";
@@ -310,8 +303,9 @@ public class Q234_FatesWhisper extends Quest
 							htmltext = "30847-02.htm";
 						}
 						break;
-					
+					}
 					case 30178:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30178-01.htm";
@@ -321,8 +315,9 @@ public class Q234_FatesWhisper extends Quest
 							htmltext = "30178-02.htm";
 						}
 						break;
-					
+					}
 					case 30833:
+					{
 						if (cond == 6)
 						{
 							htmltext = "30833-01.htm";
@@ -336,7 +331,7 @@ public class Q234_FatesWhisper extends Quest
 							else
 							{
 								htmltext = "30833-03.htm";
-								st.set("cond", "8");
+								st.setCond(8);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(RED_PIPETTE_KNIFE, 1);
 								st.giveItems(REORIN_MOLD, 1);
@@ -347,8 +342,9 @@ public class Q234_FatesWhisper extends Quest
 							htmltext = "30833-04.htm";
 						}
 						break;
-					
+					}
 					case 31027:
+					{
 						if ((cond == 1) && !st.hasQuestItems(REIRIA_SOUL_ORB))
 						{
 							htmltext = "31027-01.htm";
@@ -360,10 +356,11 @@ public class Q234_FatesWhisper extends Quest
 							htmltext = "31027-02.htm";
 						}
 						break;
-					
+					}
 					case 31028:
 					case 31029:
 					case 31030:
+					{
 						final int itemId = npc.getNpcId() - 26361;
 						if ((cond == 2) && !st.hasQuestItems(itemId))
 						{
@@ -376,12 +373,15 @@ public class Q234_FatesWhisper extends Quest
 							htmltext = npc.getNpcId() + "-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -390,7 +390,7 @@ public class Q234_FatesWhisper extends Quest
 	@Override
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(attacker, npc, "cond", "7");
+		final QuestState st = checkPlayerCondition(attacker, npc, 7);
 		if (st == null)
 		{
 			return null;

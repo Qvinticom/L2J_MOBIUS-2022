@@ -31,12 +31,9 @@ public class Q164_BloodFiend extends Quest
 	public Q164_BloodFiend()
 	{
 		super(164, "Blood Fiend");
-		
 		registerQuestItems(KIRUNAK_SKULL);
-		
 		addStartNpc(30149);
 		addTalkId(30149);
-		
 		addKillId(27021);
 	}
 	
@@ -52,9 +49,7 @@ public class Q164_BloodFiend extends Quest
 		
 		if (event.equals("30149-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -73,6 +68,7 @@ public class Q164_BloodFiend extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() == Race.DARK_ELF)
 				{
 					htmltext = "30149-00.htm";
@@ -86,8 +82,9 @@ public class Q164_BloodFiend extends Quest
 					htmltext = "30149-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.hasQuestItems(KIRUNAK_SKULL))
 				{
 					htmltext = "30149-06.htm";
@@ -101,10 +98,12 @@ public class Q164_BloodFiend extends Quest
 					htmltext = "30149-05.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -113,13 +112,13 @@ public class Q164_BloodFiend extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
 		}
 		
-		st.set("cond", "2");
+		st.setCond(2);
 		st.playSound(QuestState.SOUND_MIDDLE);
 		st.giveItems(KIRUNAK_SKULL, 1);
 		

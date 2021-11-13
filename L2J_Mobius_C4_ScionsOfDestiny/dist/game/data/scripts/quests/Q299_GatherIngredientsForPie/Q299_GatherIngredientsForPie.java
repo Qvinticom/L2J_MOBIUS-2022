@@ -28,7 +28,6 @@ public class Q299_GatherIngredientsForPie extends Quest
 	private static final int LARA = 30063;
 	private static final int BRIGHT = 30466;
 	private static final int EMILY = 30620;
-	
 	// Items
 	private static final int FRUIT_BASKET = 7136;
 	private static final int AVELLAN_SPICE = 7137;
@@ -37,12 +36,9 @@ public class Q299_GatherIngredientsForPie extends Quest
 	public Q299_GatherIngredientsForPie()
 	{
 		super(299, "Gather Ingredients for Pie");
-		
 		registerQuestItems(FRUIT_BASKET, AVELLAN_SPICE, HONEY_POUCH);
-		
 		addStartNpc(EMILY);
 		addTalkId(EMILY, LARA, BRIGHT);
-		
 		addKillId(20934, 20935); // Wasp Worker, Wasp Leader
 	}
 	
@@ -56,49 +52,56 @@ public class Q299_GatherIngredientsForPie extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30620-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30620-3.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(HONEY_POUCH, -1);
-		}
-		else if (event.equals("30063-1.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(AVELLAN_SPICE, 1);
-		}
-		else if (event.equals("30620-5.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(AVELLAN_SPICE, 1);
-		}
-		else if (event.equals("30466-1.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(FRUIT_BASKET, 1);
-		}
-		else if (event.equals("30620-7a.htm"))
-		{
-			if (st.hasQuestItems(FRUIT_BASKET))
+			case "30620-1.htm":
 			{
-				htmltext = "30620-7.htm";
-				st.takeItems(FRUIT_BASKET, 1);
-				st.rewardItems(57, 25000);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
+				st.startQuest();
+				break;
 			}
-			else
+			case "30620-3.htm":
 			{
-				st.set("cond", "5");
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(HONEY_POUCH, -1);
+				break;
+			}
+			case "30063-1.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(AVELLAN_SPICE, 1);
+				break;
+			}
+			case "30620-5.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(AVELLAN_SPICE, 1);
+				break;
+			}
+			case "30466-1.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(FRUIT_BASKET, 1);
+				break;
+			}
+			case "30620-7a.htm":
+			{
+				if (st.hasQuestItems(FRUIT_BASKET))
+				{
+					htmltext = "30620-7.htm";
+					st.takeItems(FRUIT_BASKET, 1);
+					st.rewardItems(57, 25000);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					st.setCond(5);
+				}
+				break;
 			}
 		}
 		
@@ -118,14 +121,17 @@ public class Q299_GatherIngredientsForPie extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 34) ? "30620-0a.htm" : "30620-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case EMILY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30620-1a.htm";
@@ -167,8 +173,9 @@ public class Q299_GatherIngredientsForPie extends Quest
 							htmltext = "30620-6.htm";
 						}
 						break;
-					
+					}
 					case LARA:
+					{
 						if (cond == 3)
 						{
 							htmltext = "30063-0.htm";
@@ -178,8 +185,9 @@ public class Q299_GatherIngredientsForPie extends Quest
 							htmltext = "30063-1a.htm";
 						}
 						break;
-					
+					}
 					case BRIGHT:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30466-0.htm";
@@ -189,8 +197,10 @@ public class Q299_GatherIngredientsForPie extends Quest
 							htmltext = "30466-1a.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -199,7 +209,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -213,7 +223,7 @@ public class Q299_GatherIngredientsForPie extends Quest
 		
 		if (st.dropItems(HONEY_POUCH, 1, 100, (npc.getNpcId() == 20934) ? 571000 : 625000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

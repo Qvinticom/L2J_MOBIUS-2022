@@ -29,68 +29,29 @@ public class Q640_TheZeroHour extends Quest
 {
 	// NPC
 	private static final int KAHMAN = 31554;
-	
 	// Item
 	private static final int FANG_OF_STAKATO = 8085;
-	
 	private static final int[][] REWARDS =
 	{
-		{
-			12,
-			4042,
-			1
-		},
-		{
-			6,
-			4043,
-			1
-		},
-		{
-			6,
-			4044,
-			1
-		},
-		{
-			81,
-			1887,
-			10
-		},
-		{
-			33,
-			1888,
-			5
-		},
-		{
-			30,
-			1889,
-			10
-		},
-		{
-			150,
-			5550,
-			10
-		},
-		{
-			131,
-			1890,
-			10
-		},
-		{
-			123,
-			1893,
-			5
-		}
+		// @formatter:off
+		{12, 4042, 1},
+		{6, 4043, 1},
+		{6, 4044, 1},
+		{81, 1887, 10},
+		{33, 1888, 5},
+		{30, 1889, 10},
+		{150, 5550, 10},
+		{131, 1890, 10},
+		{123, 1893, 5}
+		// @formatter:on
 	};
 	
 	public Q640_TheZeroHour()
 	{
 		super(640, "The Zero Hour");
-		
 		registerQuestItems(FANG_OF_STAKATO);
-		
 		addStartNpc(KAHMAN);
 		addTalkId(KAHMAN);
-		
 		// All "spiked" stakatos types, except babies and cannibalistic followers.
 		addKillId(22105, 22106, 22107, 22108, 22109, 22110, 22111, 22113, 22114, 22115, 22116, 22117, 22118, 22119, 22121);
 	}
@@ -107,9 +68,7 @@ public class Q640_TheZeroHour extends Quest
 		
 		if (event.equals("31554-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31554-05.htm"))
 		{
@@ -154,6 +113,7 @@ public class Q640_TheZeroHour extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 66)
 				{
 					htmltext = "31554-00.htm";
@@ -164,10 +124,12 @@ public class Q640_TheZeroHour extends Quest
 					htmltext = ((st2 != null) && st2.isCompleted()) ? "31554-01.htm" : "31554-10.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasQuestItems(FANG_OF_STAKATO)) ? "31554-04.htm" : "31554-03.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

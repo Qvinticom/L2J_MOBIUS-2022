@@ -25,24 +25,20 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q316_DestroyPlagueCarriers extends Quest
 {
-	// Items
-	private static final int WERERAT_FANG = 1042;
-	private static final int VAROOL_FOULCLAW_FANG = 1043;
-	
 	// Monsters
 	private static final int SUKAR_WERERAT = 20040;
 	private static final int SUKAR_WERERAT_LEADER = 20047;
 	private static final int VAROOL_FOULCLAW = 27020;
+	// Items
+	private static final int WERERAT_FANG = 1042;
+	private static final int VAROOL_FOULCLAW_FANG = 1043;
 	
 	public Q316_DestroyPlagueCarriers()
 	{
 		super(316, "Destroy Plague Carriers");
-		
 		registerQuestItems(WERERAT_FANG, VAROOL_FOULCLAW_FANG);
-		
 		addStartNpc(30155); // Ellenia
 		addTalkId(30155);
-		
 		addKillId(SUKAR_WERERAT, SUKAR_WERERAT_LEADER, VAROOL_FOULCLAW);
 	}
 	
@@ -58,9 +54,7 @@ public class Q316_DestroyPlagueCarriers extends Quest
 		
 		if (event.equals("30155-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30155-08.htm"))
 		{
@@ -84,6 +78,7 @@ public class Q316_DestroyPlagueCarriers extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30155-00.htm";
@@ -97,8 +92,9 @@ public class Q316_DestroyPlagueCarriers extends Quest
 					htmltext = "30155-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int ratFangs = st.getQuestItemsCount(WERERAT_FANG);
 				final int varoolFangs = st.getQuestItemsCount(VAROOL_FOULCLAW_FANG);
 				if ((ratFangs + varoolFangs) == 0)
@@ -113,6 +109,7 @@ public class Q316_DestroyPlagueCarriers extends Quest
 					st.rewardItems(57, (ratFangs * 30) + (varoolFangs * 10000) + ((ratFangs > 10) ? 5000 : 0));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -131,12 +128,15 @@ public class Q316_DestroyPlagueCarriers extends Quest
 		{
 			case SUKAR_WERERAT:
 			case SUKAR_WERERAT_LEADER:
+			{
 				st.dropItems(WERERAT_FANG, 1, 0, 400000);
 				break;
-			
+			}
 			case VAROOL_FOULCLAW:
+			{
 				st.dropItems(VAROOL_FOULCLAW_FANG, 1, 1, 200000);
 				break;
+			}
 		}
 		
 		return null;

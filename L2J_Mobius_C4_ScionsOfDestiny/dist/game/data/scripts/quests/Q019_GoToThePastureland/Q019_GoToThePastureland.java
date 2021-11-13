@@ -24,19 +24,16 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q019_GoToThePastureland extends Quest
 {
-	// Items
-	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
-	
 	// NPCs
 	private static final int VLADIMIR = 31302;
 	private static final int TUNATUN = 31537;
+	// Items
+	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
 	
 	public Q019_GoToThePastureland()
 	{
 		super(19, "Go to the Pastureland!");
-		
 		registerQuestItems(YOUNG_WILD_BEAST_MEAT);
-		
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, TUNATUN);
 	}
@@ -53,9 +50,7 @@ public class Q019_GoToThePastureland extends Quest
 		
 		if (event.equals("31302-01.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(YOUNG_WILD_BEAST_MEAT, 1);
 		}
 		else if (event.equals("019_finish"))
@@ -89,10 +84,12 @@ public class Q019_GoToThePastureland extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 63) ? "31302-03.htm" : "31302-00.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case VLADIMIR:
@@ -104,10 +101,12 @@ public class Q019_GoToThePastureland extends Quest
 						break;
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

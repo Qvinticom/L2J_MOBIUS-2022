@@ -30,10 +30,8 @@ public class Q663_SeductiveWhispers extends Quest
 {
 	// NPC
 	private static final int WILBERT = 30846;
-	
 	// Quest item
 	private static final int SPIRIT_BEAD = 8766;
-	
 	// Rewards
 	private static final int ADENA = 57;
 	private static final int ENCHANT_WEAPON_A = 729;
@@ -42,7 +40,6 @@ public class Q663_SeductiveWhispers extends Quest
 	private static final int ENCHANT_ARMOR_B = 948;
 	private static final int ENCHANT_WEAPON_C = 951;
 	private static final int ENCHANT_WEAPON_D = 955;
-	
 	private static final int[] RECIPES =
 	{
 		2353,
@@ -56,7 +53,6 @@ public class Q663_SeductiveWhispers extends Quest
 		5006,
 		5007
 	};
-	
 	private static final int[] BLADES =
 	{
 		2115,
@@ -70,7 +66,6 @@ public class Q663_SeductiveWhispers extends Quest
 		4120,
 		4121
 	};
-	
 	// Text of cards
 	private static final Map<Integer, String> CARDS = new HashMap<>();
 	static
@@ -87,7 +82,6 @@ public class Q663_SeductiveWhispers extends Quest
 		CARDS.put(24, "<font color=\"fff802\"> Moon Card: 4 </font>");
 		CARDS.put(25, "<font color=\"fff802\"> Moon Card: 5 </font>");
 	}
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -124,16 +118,10 @@ public class Q663_SeductiveWhispers extends Quest
 	public Q663_SeductiveWhispers()
 	{
 		super(663, "Seductive Whispers");
-		
 		registerQuestItems(SPIRIT_BEAD);
-		
 		addStartNpc(WILBERT);
 		addTalkId(WILBERT);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -147,283 +135,318 @@ public class Q663_SeductiveWhispers extends Quest
 		}
 		
 		final int state = st.getInt("state");
-		if (event.equals("30846-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("state", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30846-09.htm") && ((state % 10) <= 4))
-		{
-			if ((state / 10) < 1)
+			case "30846-03.htm":
 			{
-				if (st.getQuestItemsCount(SPIRIT_BEAD) >= 50)
-				{
-					st.takeItems(SPIRIT_BEAD, 50);
-					st.set("state", "5");
-				}
-				else
-				{
-					htmltext = "30846-10.htm";
-				}
+				st.startQuest();
+				st.set("state", "1");
+				break;
 			}
-			else
+			case "30846-09.htm":
 			{
-				st.set("state", String.valueOf(((state / 10) * 10) + 5));
-				st.set("stateEx", "0");
-				htmltext = "30846-09a.htm";
-			}
-		}
-		else if (event.equals("30846-14.htm") && ((state % 10) == 5) && ((state / 1000) == 0))
-		{
-			final int i0 = st.getInt("stateEx");
-			final int i1 = i0 % 10;
-			final int i2 = (i0 - i1) / 10;
-			final int param1 = Rnd.get(2) + 1;
-			final int param2 = Rnd.get(5) + 1;
-			final int i5 = state / 10;
-			final int param3 = (param1 * 10) + param2;
-			if (param1 == i2)
-			{
-				final int i3 = param2 + i1;
-				if (((i3 % 5) == 0) && (i3 != 10))
+				if (((state % 10) <= 4))
 				{
-					if (((state % 100) / 10) >= 7)
+					if ((state / 10) < 1)
 					{
-						st.set("state", "4");
-						st.rewardItems(ADENA, 2384000);
-						st.rewardItems(ENCHANT_WEAPON_A, 1);
-						st.rewardItems(ENCHANT_ARMOR_A, 1);
-						st.rewardItems(ENCHANT_ARMOR_A, 1);
-						htmltext = getHTML("30846-14.htm", i0, param3, player.getName());
+						if (st.getQuestItemsCount(SPIRIT_BEAD) >= 50)
+						{
+							st.takeItems(SPIRIT_BEAD, 50);
+							st.set("state", "5");
+						}
+						else
+						{
+							htmltext = "30846-10.htm";
+						}
 					}
 					else
 					{
-						st.set("state", String.valueOf(((state / 10) * 10) + 7));
-						htmltext = getHTML("30846-13.htm", i0, param3, player.getName()).replace("%wincount%", String.valueOf(i5 + 1));
+						st.set("state", String.valueOf(((state / 10) * 10) + 5));
+						st.set("stateEx", "0");
+						htmltext = "30846-09a.htm";
 					}
 				}
-				else
-				{
-					st.set("state", String.valueOf(((state / 10) * 10) + 6));
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-12.htm", i0, param3, player.getName());
-				}
+				break;
 			}
-			else
+			case "30846-14.htm":
 			{
-				if ((param2 == 5) || (i1 == 5))
+				if (((state % 10) == 5) && ((state / 1000) == 0))
 				{
-					if (((state % 100) / 10) >= 7)
+					final int i0 = st.getInt("stateEx");
+					final int i1 = i0 % 10;
+					final int i2 = (i0 - i1) / 10;
+					final int param1 = Rnd.get(2) + 1;
+					final int param2 = Rnd.get(5) + 1;
+					final int i5 = state / 10;
+					final int param3 = (param1 * 10) + param2;
+					if (param1 == i2)
 					{
-						st.set("state", "4");
-						st.rewardItems(ADENA, 2384000);
-						st.rewardItems(ENCHANT_WEAPON_A, 1);
-						st.rewardItems(ENCHANT_ARMOR_A, 1);
-						st.rewardItems(ENCHANT_ARMOR_A, 1);
-						htmltext = getHTML("30846-14.htm", i0, param3, player.getName());
+						final int i3 = param2 + i1;
+						if (((i3 % 5) == 0) && (i3 != 10))
+						{
+							if (((state % 100) / 10) >= 7)
+							{
+								st.set("state", "4");
+								st.rewardItems(ADENA, 2384000);
+								st.rewardItems(ENCHANT_WEAPON_A, 1);
+								st.rewardItems(ENCHANT_ARMOR_A, 1);
+								st.rewardItems(ENCHANT_ARMOR_A, 1);
+								htmltext = getHTML("30846-14.htm", i0, param3, player.getName());
+							}
+							else
+							{
+								st.set("state", String.valueOf(((state / 10) * 10) + 7));
+								htmltext = getHTML("30846-13.htm", i0, param3, player.getName()).replace("%wincount%", String.valueOf(i5 + 1));
+							}
+						}
+						else
+						{
+							st.set("state", String.valueOf(((state / 10) * 10) + 6));
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-12.htm", i0, param3, player.getName());
+						}
 					}
 					else
 					{
-						st.set("state", String.valueOf(((state / 10) * 10) + 7));
-						htmltext = getHTML("30846-13.htm", i0, param3, player.getName()).replace("%wincount%", String.valueOf(i5 + 1));
+						if ((param2 == 5) || (i1 == 5))
+						{
+							if (((state % 100) / 10) >= 7)
+							{
+								st.set("state", "4");
+								st.rewardItems(ADENA, 2384000);
+								st.rewardItems(ENCHANT_WEAPON_A, 1);
+								st.rewardItems(ENCHANT_ARMOR_A, 1);
+								st.rewardItems(ENCHANT_ARMOR_A, 1);
+								htmltext = getHTML("30846-14.htm", i0, param3, player.getName());
+							}
+							else
+							{
+								st.set("state", String.valueOf(((state / 10) * 10) + 7));
+								htmltext = getHTML("30846-13.htm", i0, param3, player.getName()).replace("%wincount%", String.valueOf(i5 + 1));
+							}
+						}
+						else
+						{
+							st.set("state", String.valueOf(((state / 10) * 10) + 6));
+							st.set("stateEx", String.valueOf((param1 * 10) + param2));
+							htmltext = getHTML("30846-12.htm", i0, param3, player.getName());
+						}
 					}
 				}
-				else
-				{
-					st.set("state", String.valueOf(((state / 10) * 10) + 6));
-					st.set("stateEx", String.valueOf((param1 * 10) + param2));
-					htmltext = getHTML("30846-12.htm", i0, param3, player.getName());
-				}
+				break;
 			}
-		}
-		else if (event.equals("30846-19.htm") && ((state % 10) == 6) && ((state / 1000) == 0))
-		{
-			final int i0 = st.getInt("stateEx");
-			final int i1 = i0 % 10;
-			final int i2 = (i0 - i1) / 10;
-			final int param1 = Rnd.get(2) + 1;
-			final int param2 = Rnd.get(5) + 1;
-			final int param3 = (param1 * 10) + param2;
-			if (param1 == i2)
+			case "30846-19.htm":
 			{
-				final int i3 = param1 + i1;
-				if (((i3 % 5) == 0) && (i3 != 10))
+				if (((state % 10) == 6) && ((state / 1000) == 0))
 				{
+					final int i0 = st.getInt("stateEx");
+					final int i1 = i0 % 10;
+					final int i2 = (i0 - i1) / 10;
+					final int param1 = Rnd.get(2) + 1;
+					final int param2 = Rnd.get(5) + 1;
+					final int param3 = (param1 * 10) + param2;
+					if (param1 == i2)
+					{
+						final int i3 = param1 + i1;
+						if (((i3 % 5) == 0) && (i3 != 10))
+						{
+							st.set("state", "1");
+							st.set("stateEx", "0");
+							htmltext = getHTML("30846-19.htm", i0, param3, player.getName());
+						}
+						else
+						{
+							st.set("state", String.valueOf(((state / 10) * 10) + 5));
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-18.htm", i0, param3, player.getName());
+						}
+					}
+					else
+					{
+						if ((param2 == 5) || (i1 == 5))
+						{
+							st.set("state", "1");
+							htmltext = getHTML("30846-19.htm", i0, param3, player.getName());
+						}
+						else
+						{
+							st.set("state", String.valueOf(((state / 10) * 10) + 5));
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-18.htm", i0, param3, player.getName());
+						}
+					}
+				}
+				break;
+			}
+			case "30846-20.htm":
+			{
+				if (((state % 10) == 7) && ((state / 1000) == 0))
+				{
+					st.set("state", String.valueOf((((state / 10) + 1) * 10) + 4));
+					st.set("stateEx", "0");
+				}
+				break;
+			}
+			case "30846-21.htm":
+			{
+				if (((state % 10) == 7) && ((state / 1000) == 0))
+				{
+					final int round = state / 10;
+					if (round == 0)
+					{
+						st.rewardItems(ADENA, 40000);
+					}
+					else if (round == 1)
+					{
+						st.rewardItems(ADENA, 80000);
+					}
+					else if (round == 2)
+					{
+						st.rewardItems(ADENA, 110000);
+						st.rewardItems(ENCHANT_WEAPON_D, 1);
+					}
+					else if (round == 3)
+					{
+						st.rewardItems(ADENA, 199000);
+						st.rewardItems(ENCHANT_WEAPON_C, 1);
+					}
+					else if (round == 4)
+					{
+						st.rewardItems(ADENA, 388000);
+						st.rewardItems(RECIPES[Rnd.get(RECIPES.length)], 1);
+					}
+					else if (round == 5)
+					{
+						st.rewardItems(ADENA, 675000);
+						st.rewardItems(BLADES[Rnd.get(BLADES.length)], 1);
+					}
+					else if (round == 6)
+					{
+						st.rewardItems(ADENA, 1284000);
+						st.rewardItems(ENCHANT_WEAPON_B, 1);
+						st.rewardItems(ENCHANT_ARMOR_B, 1);
+						st.rewardItems(ENCHANT_WEAPON_B, 1);
+						st.rewardItems(ENCHANT_ARMOR_B, 1);
+					}
+					
 					st.set("state", "1");
 					st.set("stateEx", "0");
-					htmltext = getHTML("30846-19.htm", i0, param3, player.getName());
 				}
-				else
+				break;
+			}
+			case "30846-22.htm":
+			{
+				if ((state % 10) == 1)
 				{
-					st.set("state", String.valueOf(((state / 10) * 10) + 5));
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-18.htm", i0, param3, player.getName());
+					if (st.hasQuestItems(SPIRIT_BEAD))
+					{
+						st.set("state", "1005");
+						st.takeItems(SPIRIT_BEAD, 1);
+					}
+					else
+					{
+						htmltext = "30846-22a.htm";
+					}
 				}
+				break;
 			}
-			else
+			case "30846-25.htm":
 			{
-				if ((param2 == 5) || (i1 == 5))
+				if (state == 1005)
 				{
-					st.set("state", "1");
-					htmltext = getHTML("30846-19.htm", i0, param3, player.getName());
+					final int i0 = st.getInt("stateEx");
+					final int i1 = i0 % 10;
+					final int i2 = (i0 - i1) / 10;
+					final int param1 = Rnd.get(2) + 1;
+					final int param2 = Rnd.get(5) + 1;
+					final int param3 = (param1 * 10) + param2;
+					if (param1 == i2)
+					{
+						final int i3 = param2 + i1;
+						if (((i3 % 5) == 0) && (i3 != 10))
+						{
+							st.set("state", "1");
+							st.set("stateEx", "0");
+							st.rewardItems(ADENA, 800);
+							htmltext = getHTML("30846-25.htm", i0, param3, player.getName()).replace("%card1%", String.valueOf(i1));
+						}
+						else
+						{
+							st.set("state", "1006");
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-24.htm", i0, param3, player.getName());
+						}
+					}
+					else
+					{
+						if ((param2 == 5) || (i2 == 5))
+						{
+							st.set("state", "1");
+							st.set("stateEx", "0");
+							st.rewardItems(ADENA, 800);
+							htmltext = getHTML("30846-25.htm", i0, param3, player.getName()).replace("%card1%", String.valueOf(i1));
+						}
+						else
+						{
+							st.set("state", "1006");
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-24.htm", i0, param3, player.getName());
+						}
+					}
 				}
-				else
+				break;
+			}
+			case "30846-29.htm":
+			{
+				if (state == 1006)
 				{
-					st.set("state", String.valueOf(((state / 10) * 10) + 5));
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-18.htm", i0, param3, player.getName());
+					final int i0 = st.getInt("stateEx");
+					final int i1 = i0 % 10;
+					final int i2 = (i0 - i1) / 10;
+					final int param1 = Rnd.get(2) + 1;
+					final int param2 = Rnd.get(5) + 1;
+					final int param3 = (param1 * 10) + param2;
+					if (param1 == i2)
+					{
+						final int i3 = param2 + i1;
+						if (((i3 % 5) == 0) && (i3 != 10))
+						{
+							st.set("state", "1");
+							st.set("stateEx", "0");
+							st.rewardItems(ADENA, 800);
+							htmltext = getHTML("30846-29.htm", i0, param3, player.getName()).replace("%card1%", String.valueOf(i1));
+						}
+						else
+						{
+							st.set("state", "1005");
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-28.htm", i0, param3, player.getName());
+						}
+					}
+					else
+					{
+						if ((param2 == 5) || (i1 == 5))
+						{
+							st.set("state", "1");
+							st.set("stateEx", "0");
+							htmltext = getHTML("30846-29.htm", i0, param3, player.getName());
+						}
+						else
+						{
+							st.set("state", "1005");
+							st.set("stateEx", String.valueOf(param3));
+							htmltext = getHTML("30846-28.htm", i0, param3, player.getName());
+						}
+					}
 				}
+				break;
 			}
-		}
-		else if (event.equals("30846-20.htm") && ((state % 10) == 7) && ((state / 1000) == 0))
-		{
-			st.set("state", String.valueOf((((state / 10) + 1) * 10) + 4));
-			st.set("stateEx", "0");
-		}
-		else if (event.equals("30846-21.htm") && ((state % 10) == 7) && ((state / 1000) == 0))
-		{
-			final int round = state / 10;
-			if (round == 0)
+			case "30846-30.htm":
 			{
-				st.rewardItems(ADENA, 40000);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
 			}
-			else if (round == 1)
-			{
-				st.rewardItems(ADENA, 80000);
-			}
-			else if (round == 2)
-			{
-				st.rewardItems(ADENA, 110000);
-				st.rewardItems(ENCHANT_WEAPON_D, 1);
-			}
-			else if (round == 3)
-			{
-				st.rewardItems(ADENA, 199000);
-				st.rewardItems(ENCHANT_WEAPON_C, 1);
-			}
-			else if (round == 4)
-			{
-				st.rewardItems(ADENA, 388000);
-				st.rewardItems(RECIPES[Rnd.get(RECIPES.length)], 1);
-			}
-			else if (round == 5)
-			{
-				st.rewardItems(ADENA, 675000);
-				st.rewardItems(BLADES[Rnd.get(BLADES.length)], 1);
-			}
-			else if (round == 6)
-			{
-				st.rewardItems(ADENA, 1284000);
-				st.rewardItems(ENCHANT_WEAPON_B, 1);
-				st.rewardItems(ENCHANT_ARMOR_B, 1);
-				st.rewardItems(ENCHANT_WEAPON_B, 1);
-				st.rewardItems(ENCHANT_ARMOR_B, 1);
-			}
-			
-			st.set("state", "1");
-			st.set("stateEx", "0");
-		}
-		else if (event.equals("30846-22.htm") && ((state % 10) == 1))
-		{
-			if (st.hasQuestItems(SPIRIT_BEAD))
-			{
-				st.set("state", "1005");
-				st.takeItems(SPIRIT_BEAD, 1);
-			}
-			else
-			{
-				htmltext = "30846-22a.htm";
-			}
-		}
-		else if (event.equals("30846-25.htm") && (state == 1005))
-		{
-			final int i0 = st.getInt("stateEx");
-			final int i1 = i0 % 10;
-			final int i2 = (i0 - i1) / 10;
-			final int param1 = Rnd.get(2) + 1;
-			final int param2 = Rnd.get(5) + 1;
-			final int param3 = (param1 * 10) + param2;
-			if (param1 == i2)
-			{
-				final int i3 = param2 + i1;
-				if (((i3 % 5) == 0) && (i3 != 10))
-				{
-					st.set("state", "1");
-					st.set("stateEx", "0");
-					st.rewardItems(ADENA, 800);
-					htmltext = getHTML("30846-25.htm", i0, param3, player.getName()).replace("%card1%", String.valueOf(i1));
-				}
-				else
-				{
-					st.set("state", "1006");
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-24.htm", i0, param3, player.getName());
-				}
-			}
-			else
-			{
-				if ((param2 == 5) || (i2 == 5))
-				{
-					st.set("state", "1");
-					st.set("stateEx", "0");
-					st.rewardItems(ADENA, 800);
-					htmltext = getHTML("30846-25.htm", i0, param3, player.getName()).replace("%card1%", String.valueOf(i1));
-				}
-				else
-				{
-					st.set("state", "1006");
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-24.htm", i0, param3, player.getName());
-				}
-			}
-		}
-		else if (event.equals("30846-29.htm") && (state == 1006))
-		{
-			final int i0 = st.getInt("stateEx");
-			final int i1 = i0 % 10;
-			final int i2 = (i0 - i1) / 10;
-			final int param1 = Rnd.get(2) + 1;
-			final int param2 = Rnd.get(5) + 1;
-			final int param3 = (param1 * 10) + param2;
-			if (param1 == i2)
-			{
-				final int i3 = param2 + i1;
-				if (((i3 % 5) == 0) && (i3 != 10))
-				{
-					st.set("state", "1");
-					st.set("stateEx", "0");
-					st.rewardItems(ADENA, 800);
-					htmltext = getHTML("30846-29.htm", i0, param3, player.getName()).replace("%card1%", String.valueOf(i1));
-				}
-				else
-				{
-					st.set("state", "1005");
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-28.htm", i0, param3, player.getName());
-				}
-			}
-			else
-			{
-				if ((param2 == 5) || (i1 == 5))
-				{
-					st.set("state", "1");
-					st.set("stateEx", "0");
-					htmltext = getHTML("30846-29.htm", i0, param3, player.getName());
-				}
-				else
-				{
-					st.set("state", "1005");
-					st.set("stateEx", String.valueOf(param3));
-					htmltext = getHTML("30846-28.htm", i0, param3, player.getName());
-				}
-			}
-		}
-		else if (event.equals("30846-30.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
 		}
 		
 		return htmltext;
@@ -442,10 +465,12 @@ public class Q663_SeductiveWhispers extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 50) ? "30846-02.htm" : "30846-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int state = st.getInt("state");
 				if (state < 4)
 				{
@@ -495,6 +520,7 @@ public class Q663_SeductiveWhispers extends Quest
 					htmltext = "30846-26.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

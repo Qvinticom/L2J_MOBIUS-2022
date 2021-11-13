@@ -33,12 +33,9 @@ public class Q169_OffspringOfNightmares extends Quest
 	public Q169_OffspringOfNightmares()
 	{
 		super(169, "Offspring of Nightmares");
-		
 		registerQuestItems(CRACKED_SKULL, PERFECT_SKULL);
-		
 		addStartNpc(30145); // Vlasty
 		addTalkId(30145);
-		
 		addKillId(20105, 20025);
 	}
 	
@@ -54,9 +51,7 @@ public class Q169_OffspringOfNightmares extends Quest
 		
 		if (event.equals("30145-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30145-08.htm"))
 		{
@@ -85,6 +80,7 @@ public class Q169_OffspringOfNightmares extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30145-00.htm";
@@ -98,9 +94,10 @@ public class Q169_OffspringOfNightmares extends Quest
 					htmltext = "30145-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					if (st.hasQuestItems(CRACKED_SKULL))
@@ -117,10 +114,12 @@ public class Q169_OffspringOfNightmares extends Quest
 					htmltext = "30145-07.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -135,9 +134,9 @@ public class Q169_OffspringOfNightmares extends Quest
 			return null;
 		}
 		
-		if ((st.getInt("cond") == 1) && st.dropItems(PERFECT_SKULL, 1, 1, 200000))
+		if (st.isCond(1) && st.dropItems(PERFECT_SKULL, 1, 1, 200000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		else
 		{

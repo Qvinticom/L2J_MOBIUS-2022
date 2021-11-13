@@ -27,11 +27,9 @@ public class Q379_FantasyWine extends Quest
 {
 	// NPCs
 	private static final int HARLAN = 30074;
-	
 	// Monsters
 	private static final int ENKU_CHAMPION = 20291;
 	private static final int ENKU_SHAMAN = 20292;
-	
 	// Items
 	private static final int LEAF = 5893;
 	private static final int STONE = 5894;
@@ -39,12 +37,9 @@ public class Q379_FantasyWine extends Quest
 	public Q379_FantasyWine()
 	{
 		super(379, "Fantasy Wine");
-		
 		registerQuestItems(LEAF, STONE);
-		
 		addStartNpc(HARLAN);
 		addTalkId(HARLAN);
-		
 		addKillId(ENKU_CHAMPION, ENKU_SHAMAN);
 	}
 	
@@ -58,40 +53,42 @@ public class Q379_FantasyWine extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30074-3.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30074-6.htm"))
-		{
-			st.takeItems(LEAF, 80);
-			st.takeItems(STONE, 100);
-			
-			final int rand = Rnd.get(10);
-			if (rand < 3)
+			case "30074-3.htm":
 			{
-				htmltext = "30074-6.htm";
-				st.giveItems(5956, 1);
+				st.startQuest();
+				break;
 			}
-			else if (rand < 9)
+			case "30074-6.htm":
 			{
-				htmltext = "30074-7.htm";
-				st.giveItems(5957, 1);
+				st.takeItems(LEAF, 80);
+				st.takeItems(STONE, 100);
+				final int rand = Rnd.get(10);
+				if (rand < 3)
+				{
+					htmltext = "30074-6.htm";
+					st.giveItems(5956, 1);
+				}
+				else if (rand < 9)
+				{
+					htmltext = "30074-7.htm";
+					st.giveItems(5957, 1);
+				}
+				else
+				{
+					htmltext = "30074-8.htm";
+					st.giveItems(5958, 1);
+				}
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
 			}
-			else
+			case "30074-2a.htm":
 			{
-				htmltext = "30074-8.htm";
-				st.giveItems(5958, 1);
+				st.exitQuest(true);
+				break;
 			}
-			
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30074-2a.htm"))
-		{
-			st.exitQuest(true);
 		}
 		
 		return htmltext;
@@ -110,10 +107,12 @@ public class Q379_FantasyWine extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "30074-0a.htm" : "30074-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int leaf = st.getQuestItemsCount(LEAF);
 				final int stone = st.getQuestItemsCount(STONE);
 				if ((leaf == 80) && (stone == 100))
@@ -133,6 +132,7 @@ public class Q379_FantasyWine extends Quest
 					htmltext = "30074-4.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -151,12 +151,12 @@ public class Q379_FantasyWine extends Quest
 		{
 			if (st.dropItemsAlways(LEAF, 1, 80) && (st.getQuestItemsCount(STONE) >= 100))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 			}
 		}
 		else if (st.dropItemsAlways(STONE, 1, 100) && (st.getQuestItemsCount(LEAF) >= 80))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

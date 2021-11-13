@@ -567,7 +567,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 					if (plr != null)
 					{
 						final QuestState qs = plr.getQuestState(Q00696_ConquerTheHallOfErosion.class.getSimpleName());
-						if ((qs != null) && (qs.getInt("cond") == 1))
+						if ((qs != null) && qs.isCond(1))
 						{
 							qs.set("cohemenes", "1");
 						}

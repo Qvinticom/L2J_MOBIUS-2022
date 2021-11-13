@@ -28,19 +28,15 @@ public class Q294_CovertBusiness extends Quest
 {
 	// Item
 	private static final int BAT_FANG = 1491;
-	
 	// Reward
 	private static final int RING_OF_RACCOON = 1508;
 	
 	public Q294_CovertBusiness()
 	{
 		super(294, "Covert Business");
-		
 		registerQuestItems(BAT_FANG);
-		
 		addStartNpc(30534); // Keef
 		addTalkId(30534);
-		
 		addKillId(20370, 20480); // Barded Bat, Blade Bat
 	}
 	
@@ -56,9 +52,7 @@ public class Q294_CovertBusiness extends Quest
 		
 		if (event.equals("30534-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -77,6 +71,7 @@ public class Q294_CovertBusiness extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DWARF)
 				{
 					htmltext = "30534-00.htm";
@@ -90,9 +85,10 @@ public class Q294_CovertBusiness extends Quest
 					htmltext = "30534-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30534-04.htm";
 				}
@@ -106,6 +102,7 @@ public class Q294_CovertBusiness extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -114,7 +111,7 @@ public class Q294_CovertBusiness extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -139,7 +136,7 @@ public class Q294_CovertBusiness extends Quest
 		
 		if (st.dropItemsAlways(BAT_FANG, count, 100))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

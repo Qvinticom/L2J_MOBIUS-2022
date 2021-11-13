@@ -27,19 +27,15 @@ public class Q295_DreamingOfTheSkies extends Quest
 {
 	// Item
 	private static final int FLOATING_STONE = 1492;
-	
 	// Reward
 	private static final int RING_OF_FIREFLY = 1509;
 	
 	public Q295_DreamingOfTheSkies()
 	{
 		super(295, "Dreaming of the Skies");
-		
 		registerQuestItems(FLOATING_STONE);
-		
 		addStartNpc(30536); // Arin
 		addTalkId(30536);
-		
 		addKillId(20153); // Magical Weaver
 	}
 	
@@ -55,9 +51,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 		
 		if (event.equals("30536-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -76,11 +70,13 @@ public class Q295_DreamingOfTheSkies extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 11) ? "30536-01.htm" : "30536-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30536-04.htm";
 				}
@@ -104,6 +100,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -112,7 +109,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -120,7 +117,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 		
 		if (st.dropItemsAlways(FLOATING_STONE, (Rnd.get(100) > 25) ? 1 : 2, 50))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

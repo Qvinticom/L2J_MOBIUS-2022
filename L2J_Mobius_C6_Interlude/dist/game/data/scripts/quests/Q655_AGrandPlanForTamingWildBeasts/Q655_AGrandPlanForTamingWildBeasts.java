@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.model.quest.State;
 
 /**
  * @author Mobius
@@ -38,7 +37,6 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 	public Q655_AGrandPlanForTamingWildBeasts()
 	{
 		super(655, "A Grand Plan for Taming Wild Beasts");
-		
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
 	}
@@ -55,9 +53,7 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 		
 		if (event.equals("a2.htm"))
 		{
-			qs.set("cond", "1");
-			qs.setState(State.STARTED);
-			qs.playSound("ItemSound.quest_accept");
+			qs.startQuest();
 		}
 		else if (event.equals("a4.htm"))
 		{
@@ -65,7 +61,7 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 			{
 				qs.takeItems(CRYSTAL_PURITY, -10);
 				qs.giveItems(LICENSE, 1);
-				qs.set("cond", "3");
+				qs.setCond(3);
 			}
 			else
 			{
@@ -85,23 +81,26 @@ public class Q655_AGrandPlanForTamingWildBeasts extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
-		final int cond = qs.getInt("cond");
 		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return "a6.htm";
 		}
+		
 		if (clan.getLevel() < 4)
 		{
 			return "a6.htm";
 		}
-		if (clan.getLeaderName() != player.getName())
+		
+		if (!clan.getLeaderName().equals(player.getName()))
 		{
 			return "a6.htm";
 		}
+		
+		final int npcId = npc.getNpcId();
 		if (npcId == MESSENGER)
 		{
+			final int cond = qs.getCond();
 			if (cond == 0)
 			{
 				htmltext = "a1.htm";

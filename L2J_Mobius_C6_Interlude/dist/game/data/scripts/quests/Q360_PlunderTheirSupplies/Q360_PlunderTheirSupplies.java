@@ -28,48 +28,21 @@ public class Q360_PlunderTheirSupplies extends Quest
 	private static final int SUPPLY_ITEM = 5872;
 	private static final int SUSPICIOUS_DOCUMENT = 5871;
 	private static final int RECIPE_OF_SUPPLY = 5870;
-	
+	// Drops
 	private static final int[][][] DROPLIST =
 	{
-		{
-			{
-				SUSPICIOUS_DOCUMENT,
-				1,
-				0,
-				50000
-			},
-			{
-				SUPPLY_ITEM,
-				1,
-				0,
-				500000
-			}
-		},
-		{
-			{
-				SUSPICIOUS_DOCUMENT,
-				1,
-				0,
-				50000
-			},
-			{
-				SUPPLY_ITEM,
-				1,
-				0,
-				660000
-			}
-		}
+		// @formatter:off
+		{{SUSPICIOUS_DOCUMENT, 1, 0, 50000},{SUPPLY_ITEM, 1, 0, 500000}},
+		{{SUSPICIOUS_DOCUMENT, 1, 0, 50000},{SUPPLY_ITEM, 1, 0, 660000}}
+		// @formatter:on
 	};
 	
 	public Q360_PlunderTheirSupplies()
 	{
 		super(360, "Plunder Their Supplies");
-		
 		registerQuestItems(RECIPE_OF_SUPPLY, SUPPLY_ITEM, SUSPICIOUS_DOCUMENT);
-		
 		addStartNpc(30873); // Coleman
 		addTalkId(30873);
-		
 		addKillId(20666, 20669);
 	}
 	
@@ -85,9 +58,7 @@ public class Q360_PlunderTheirSupplies extends Quest
 		
 		if (event.equals("30873-2.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30873-6.htm"))
 		{
@@ -114,10 +85,12 @@ public class Q360_PlunderTheirSupplies extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 52) ? "30873-0a.htm" : "30873-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int supplyItems = st.getQuestItemsCount(SUPPLY_ITEM);
 				if (supplyItems == 0)
 				{
@@ -132,6 +105,7 @@ public class Q360_PlunderTheirSupplies extends Quest
 					st.rewardItems(57, reward);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

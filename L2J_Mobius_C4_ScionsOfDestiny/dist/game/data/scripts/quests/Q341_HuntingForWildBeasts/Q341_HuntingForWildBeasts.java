@@ -29,7 +29,6 @@ public class Q341_HuntingForWildBeasts extends Quest
 {
 	// Item
 	private static final int BEAR_SKIN = 4259;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -43,12 +42,9 @@ public class Q341_HuntingForWildBeasts extends Quest
 	public Q341_HuntingForWildBeasts()
 	{
 		super(341, "Hunting for Wild Beasts");
-		
 		registerQuestItems(BEAR_SKIN);
-		
 		addStartNpc(30078); // Pano
 		addTalkId(30078);
-		
 		addKillId(20021, 20203, 20310, 20335);
 	}
 	
@@ -64,9 +60,7 @@ public class Q341_HuntingForWildBeasts extends Quest
 		
 		if (event.equals("30078-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -85,10 +79,12 @@ public class Q341_HuntingForWildBeasts extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "30078-00.htm" : "30078-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(BEAR_SKIN) < 20)
 				{
 					htmltext = "30078-03.htm";
@@ -102,6 +98,7 @@ public class Q341_HuntingForWildBeasts extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -26,6 +26,30 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q228_TestOfMagus extends Quest
 {
+	// NPCs
+	private static final int PARINA = 30391;
+	private static final int EARTH_SNAKE = 30409;
+	private static final int FLAME_SALAMANDER = 30411;
+	private static final int WIND_SYLPH = 30412;
+	private static final int WATER_UNDINE = 30413;
+	private static final int CASIAN = 30612;
+	private static final int RUKAL = 30629;
+	// Monsters
+	private static final int HARPY = 20145;
+	private static final int MARSH_STAKATO = 20157;
+	private static final int WYRM = 20176;
+	private static final int MARSH_STAKATO_WORKER = 20230;
+	private static final int TOAD_LORD = 20231;
+	private static final int MARSH_STAKATO_SOLDIER = 20232;
+	private static final int MARSH_STAKATO_DRONE = 20234;
+	private static final int WINDSUS = 20553;
+	private static final int ENCHANTED_MONSTEREYE = 20564;
+	private static final int ENCHANTED_STONE_GOLEM = 20565;
+	private static final int ENCHANTED_IRON_GOLEM = 20566;
+	private static final int SINGING_FLOWER_PHANTASM = 27095;
+	private static final int SINGING_FLOWER_NIGHTMARE = 27096;
+	private static final int SINGING_FLOWER_DARKLING = 27097;
+	private static final int GHOST_FIRE = 27098;
 	// Items
 	private static final int RUKAL_LETTER = 2841;
 	private static final int PARINA_LETTER = 2842;
@@ -50,46 +74,16 @@ public class Q228_TestOfMagus extends Quest
 	private static final int SYLPH_CHARM = 2861;
 	private static final int UNDINE_CHARM = 2862;
 	private static final int SERPENT_CHARM = 2863;
-	
 	// Rewards
 	private static final int MARK_OF_MAGUS = 2840;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	// NPCs
-	private static final int PARINA = 30391;
-	private static final int EARTH_SNAKE = 30409;
-	private static final int FLAME_SALAMANDER = 30411;
-	private static final int WIND_SYLPH = 30412;
-	private static final int WATER_UNDINE = 30413;
-	private static final int CASIAN = 30612;
-	private static final int RUKAL = 30629;
-	
-	// Monsters
-	private static final int HARPY = 20145;
-	private static final int MARSH_STAKATO = 20157;
-	private static final int WYRM = 20176;
-	private static final int MARSH_STAKATO_WORKER = 20230;
-	private static final int TOAD_LORD = 20231;
-	private static final int MARSH_STAKATO_SOLDIER = 20232;
-	private static final int MARSH_STAKATO_DRONE = 20234;
-	private static final int WINDSUS = 20553;
-	private static final int ENCHANTED_MONSTEREYE = 20564;
-	private static final int ENCHANTED_STONE_GOLEM = 20565;
-	private static final int ENCHANTED_IRON_GOLEM = 20566;
-	private static final int SINGING_FLOWER_PHANTASM = 27095;
-	private static final int SINGING_FLOWER_NIGHTMARE = 27096;
-	private static final int SINGING_FLOWER_DARKLING = 27097;
-	private static final int GHOST_FIRE = 27098;
-	
 	public Q228_TestOfMagus()
 	{
 		super(228, "Test of Magus");
-		
 		registerQuestItems(RUKAL_LETTER, PARINA_LETTER, LILAC_CHARM, GOLDEN_SEED_1, GOLDEN_SEED_2, GOLDEN_SEED_3, SCORE_OF_ELEMENTS, DAZZLING_DROP, FLAME_CRYSTAL, HARPY_FEATHER, WYRM_WINGBONE, WINDSUS_MANE, EN_MONSTEREYE_SHELL, EN_STONEGOLEM_POWDER, EN_IRONGOLEM_SCRAP, TONE_OF_WATER, TONE_OF_FIRE, TONE_OF_WIND, TONE_OF_EARTH, SALAMANDER_CHARM, SYLPH_CHARM, UNDINE_CHARM, SERPENT_CHARM);
-		
 		addStartNpc(RUKAL);
 		addTalkId(PARINA, EARTH_SNAKE, FLAME_SALAMANDER, WIND_SYLPH, WATER_UNDINE, CASIAN, RUKAL);
-		
 		addKillId(HARPY, MARSH_STAKATO, WYRM, MARSH_STAKATO_WORKER, TOAD_LORD, MARSH_STAKATO_SOLDIER, MARSH_STAKATO_DRONE, WINDSUS, ENCHANTED_MONSTEREYE, ENCHANTED_STONE_GOLEM, ENCHANTED_IRON_GOLEM, SINGING_FLOWER_PHANTASM, SINGING_FLOWER_NIGHTMARE, SINGING_FLOWER_DARKLING, GHOST_FIRE);
 	}
 	
@@ -103,58 +97,59 @@ public class Q228_TestOfMagus extends Quest
 			return htmltext;
 		}
 		
-		// RUKAL
-		if (event.equals("30629-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(RUKAL_LETTER, 1);
-			
-			if (!player.getVariables().getBoolean("secondClassChange39", false))
+			case "30629-04.htm":
 			{
-				htmltext = "30629-04a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
-				player.getVariables().set("secondClassChange39", true);
+				st.startQuest();
+				st.giveItems(RUKAL_LETTER, 1);
+				if (!player.getVariables().getBoolean("secondClassChange39", false))
+				{
+					htmltext = "30629-04a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
+					player.getVariables().set("secondClassChange39", true);
+				}
+				break;
 			}
-		}
-		else if (event.equals("30629-10.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GOLDEN_SEED_1, 1);
-			st.takeItems(GOLDEN_SEED_2, 1);
-			st.takeItems(GOLDEN_SEED_3, 1);
-			st.takeItems(LILAC_CHARM, 1);
-			st.giveItems(SCORE_OF_ELEMENTS, 1);
-		}
-		// PARINA
-		else if (event.equals("30391-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(RUKAL_LETTER, 1);
-			st.giveItems(PARINA_LETTER, 1);
-		}
-		// CASIAN
-		else if (event.equals("30612-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(PARINA_LETTER, 1);
-			st.giveItems(LILAC_CHARM, 1);
-		}
-		// WIND SYLPH
-		else if (event.equals("30412-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(SYLPH_CHARM, 1);
-		}
-		// EARTH SNAKE
-		else if (event.equals("30409-03.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(SERPENT_CHARM, 1);
+			case "30629-10.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GOLDEN_SEED_1, 1);
+				st.takeItems(GOLDEN_SEED_2, 1);
+				st.takeItems(GOLDEN_SEED_3, 1);
+				st.takeItems(LILAC_CHARM, 1);
+				st.giveItems(SCORE_OF_ELEMENTS, 1);
+				break;
+			}
+			case "30391-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(RUKAL_LETTER, 1);
+				st.giveItems(PARINA_LETTER, 1);
+				break;
+			}
+			case "30612-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(PARINA_LETTER, 1);
+				st.giveItems(LILAC_CHARM, 1);
+				break;
+			}
+			case "30412-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(SYLPH_CHARM, 1);
+				break;
+			}
+			case "30409-03.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(SERPENT_CHARM, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -173,6 +168,7 @@ public class Q228_TestOfMagus extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getClassId() != ClassId.WIZARD) && (player.getClassId() != ClassId.ELVEN_WIZARD) && (player.getClassId() != ClassId.DARK_WIZARD))
 				{
 					htmltext = "30629-01.htm";
@@ -186,12 +182,14 @@ public class Q228_TestOfMagus extends Quest
 					htmltext = "30629-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case RUKAL:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30629-05.htm";
@@ -227,8 +225,9 @@ public class Q228_TestOfMagus extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case PARINA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30391-01.htm";
@@ -246,8 +245,9 @@ public class Q228_TestOfMagus extends Quest
 							htmltext = "30391-05.htm";
 						}
 						break;
-					
+					}
 					case CASIAN:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30612-01.htm";
@@ -265,8 +265,9 @@ public class Q228_TestOfMagus extends Quest
 							htmltext = "30612-05.htm";
 						}
 						break;
-					
+					}
 					case WATER_UNDINE:
+					{
 						if (cond == 5)
 						{
 							if (st.hasQuestItems(UNDINE_CHARM))
@@ -284,7 +285,7 @@ public class Q228_TestOfMagus extends Quest
 									
 									if (st.hasQuestItems(TONE_OF_FIRE, TONE_OF_WIND, TONE_OF_EARTH))
 									{
-										st.set("cond", "6");
+										st.setCond(6);
 										st.playSound(QuestState.SOUND_MIDDLE);
 									}
 									else
@@ -309,8 +310,9 @@ public class Q228_TestOfMagus extends Quest
 							htmltext = "30413-04.htm";
 						}
 						break;
-					
+					}
 					case FLAME_SALAMANDER:
+					{
 						if (cond == 5)
 						{
 							if (st.hasQuestItems(SALAMANDER_CHARM))
@@ -328,7 +330,7 @@ public class Q228_TestOfMagus extends Quest
 									
 									if (st.hasQuestItems(TONE_OF_WATER, TONE_OF_WIND, TONE_OF_EARTH))
 									{
-										st.set("cond", "6");
+										st.setCond(6);
 										st.playSound(QuestState.SOUND_MIDDLE);
 									}
 									else
@@ -352,8 +354,9 @@ public class Q228_TestOfMagus extends Quest
 							htmltext = "30411-04.htm";
 						}
 						break;
-					
+					}
 					case WIND_SYLPH:
+					{
 						if (cond == 5)
 						{
 							if (st.hasQuestItems(SYLPH_CHARM))
@@ -373,7 +376,7 @@ public class Q228_TestOfMagus extends Quest
 									
 									if (st.hasQuestItems(TONE_OF_WATER, TONE_OF_FIRE, TONE_OF_EARTH))
 									{
-										st.set("cond", "6");
+										st.setCond(6);
 										st.playSound(QuestState.SOUND_MIDDLE);
 									}
 									else
@@ -396,8 +399,9 @@ public class Q228_TestOfMagus extends Quest
 							htmltext = "30412-05.htm";
 						}
 						break;
-					
+					}
 					case EARTH_SNAKE:
+					{
 						if (cond == 5)
 						{
 							if (st.hasQuestItems(SERPENT_CHARM))
@@ -417,7 +421,7 @@ public class Q228_TestOfMagus extends Quest
 									
 									if (st.hasQuestItems(TONE_OF_WATER, TONE_OF_FIRE, TONE_OF_WIND))
 									{
-										st.set("cond", "6");
+										st.setCond(6);
 										st.playSound(QuestState.SOUND_MIDDLE);
 									}
 									else
@@ -440,12 +444,15 @@ public class Q228_TestOfMagus extends Quest
 							htmltext = "30409-06.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -460,47 +467,50 @@ public class Q228_TestOfMagus extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
-		
+		final int cond = st.getCond();
 		if (cond == 3)
 		{
 			switch (npc.getNpcId())
 			{
 				case SINGING_FLOWER_PHANTASM:
+				{
 					if (!st.hasQuestItems(GOLDEN_SEED_1))
 					{
 						npc.broadcastNpcSay("I am a tree of nothing... a tree... that knows where to return...");
 						st.dropItemsAlways(GOLDEN_SEED_1, 1, 1);
 						if (st.hasQuestItems(GOLDEN_SEED_2, GOLDEN_SEED_3))
 						{
-							st.set("cond", "4");
+							st.setCond(4);
 						}
 					}
 					break;
-				
+				}
 				case SINGING_FLOWER_NIGHTMARE:
+				{
 					if (!st.hasQuestItems(GOLDEN_SEED_2))
 					{
 						npc.broadcastNpcSay("I am a creature that shows the truth of the place deep in my heart...");
 						st.dropItemsAlways(GOLDEN_SEED_2, 1, 1);
 						if (st.hasQuestItems(GOLDEN_SEED_1, GOLDEN_SEED_3))
 						{
-							st.set("cond", "4");
+							st.setCond(4);
 						}
 					}
 					break;
-				
+				}
 				case SINGING_FLOWER_DARKLING:
+				{
 					if (!st.hasQuestItems(GOLDEN_SEED_3))
 					{
 						npc.broadcastNpcSay("I am a mirror of darkness... a virtual image of darkness...");
 						st.dropItemsAlways(GOLDEN_SEED_3, 1, 1);
 						if (st.hasQuestItems(GOLDEN_SEED_1, GOLDEN_SEED_2))
 						{
-							st.set("cond", "4");
+							st.setCond(4);
 						}
 					}
 					break;
+				}
 			}
 		}
 		else if (cond == 5)
@@ -508,76 +518,87 @@ public class Q228_TestOfMagus extends Quest
 			switch (npc.getNpcId())
 			{
 				case GHOST_FIRE:
+				{
 					if (st.hasQuestItems(SALAMANDER_CHARM))
 					{
 						st.dropItems(FLAME_CRYSTAL, 1, 5, 500000);
 					}
 					break;
-				
+				}
 				case TOAD_LORD:
 				case MARSH_STAKATO:
 				case MARSH_STAKATO_WORKER:
+				{
 					if (st.hasQuestItems(UNDINE_CHARM))
 					{
 						st.dropItems(DAZZLING_DROP, 1, 20, 300000);
 					}
 					break;
-				
+				}
 				case MARSH_STAKATO_SOLDIER:
+				{
 					if (st.hasQuestItems(UNDINE_CHARM))
 					{
 						st.dropItems(DAZZLING_DROP, 1, 20, 400000);
 					}
 					break;
-				
+				}
 				case MARSH_STAKATO_DRONE:
+				{
 					if (st.hasQuestItems(UNDINE_CHARM))
 					{
 						st.dropItems(DAZZLING_DROP, 1, 20, 500000);
 					}
 					break;
-				
+				}
 				case HARPY:
+				{
 					if (st.hasQuestItems(SYLPH_CHARM))
 					{
 						st.dropItemsAlways(HARPY_FEATHER, 1, 20);
 					}
 					break;
-				
+				}
 				case WYRM:
+				{
 					if (st.hasQuestItems(SYLPH_CHARM))
 					{
 						st.dropItems(WYRM_WINGBONE, 1, 10, 500000);
 					}
 					break;
-				
+				}
 				case WINDSUS:
+				{
 					if (st.hasQuestItems(SYLPH_CHARM))
 					{
 						st.dropItems(WINDSUS_MANE, 1, 10, 500000);
 					}
 					break;
-				
+				}
 				case ENCHANTED_MONSTEREYE:
+				{
 					if (st.hasQuestItems(SERPENT_CHARM))
 					{
 						st.dropItemsAlways(EN_MONSTEREYE_SHELL, 1, 10);
 					}
 					break;
-				
+				}
 				case ENCHANTED_STONE_GOLEM:
+				{
 					if (st.hasQuestItems(SERPENT_CHARM))
 					{
 						st.dropItemsAlways(EN_STONEGOLEM_POWDER, 1, 10);
 					}
 					break;
-				
+				}
 				case ENCHANTED_IRON_GOLEM:
+				{
 					if (st.hasQuestItems(SERPENT_CHARM))
 					{
 						st.dropItemsAlways(EN_IRONGOLEM_SCRAP, 1, 10);
 					}
 					break;
+				}
 			}
 		}
 		

@@ -27,9 +27,8 @@ import quests.Q126_TheNameOfEvil_2.Q126_TheNameOfEvil_2;
 
 public class Q641_AttackSailren extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int STATUE = 32109;
-	
 	// Quest Item
 	private static final int GAZKH_FRAGMENT = 8782;
 	private static final int GAZKH = 8784;
@@ -37,30 +36,25 @@ public class Q641_AttackSailren extends Quest
 	public Q641_AttackSailren()
 	{
 		super(641, "Attack Sailren!");
-		
 		registerQuestItems(GAZKH_FRAGMENT);
-		
 		addStartNpc(STATUE);
 		addTalkId(STATUE);
-		
 		addKillId(22196, 22197, 22198, 22199, 22218, 22223);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;
 		}
+		String htmltext = event;
 		
 		if (event.equals("32109-5.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32109-8.htm"))
 		{
@@ -75,7 +69,7 @@ public class Q641_AttackSailren extends Quest
 			else
 			{
 				htmltext = "32109-6.htm";
-				st.set("cond", "1");
+				st.setCond(1);
 			}
 		}
 		
@@ -95,6 +89,7 @@ public class Q641_AttackSailren extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 77)
 				{
 					htmltext = "32109-3.htm";
@@ -105,9 +100,10 @@ public class Q641_AttackSailren extends Quest
 					htmltext = ((st2 != null) && st2.isCompleted()) ? "32109-1.htm" : "32109-2.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "32109-5.htm";
@@ -117,6 +113,7 @@ public class Q641_AttackSailren extends Quest
 					htmltext = "32109-7.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -125,7 +122,7 @@ public class Q641_AttackSailren extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "cond", "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -139,7 +136,7 @@ public class Q641_AttackSailren extends Quest
 		
 		if (st.dropItems(GAZKH_FRAGMENT, 1, 30, 50000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

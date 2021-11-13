@@ -29,14 +29,12 @@ public class Q106_ForgottenTruth extends Quest
 	// NPCs
 	private static final int THIFIELL = 30358;
 	private static final int KARTIA = 30133;
-	
 	// Items
 	private static final int ONYX_TALISMAN_1 = 984;
 	private static final int ONYX_TALISMAN_2 = 985;
 	private static final int ANCIENT_SCROLL = 986;
 	private static final int ANCIENT_CLAY_TABLET = 987;
 	private static final int KARTIA_TRANSLATION = 988;
-	
 	// Rewards
 	private static final int SPIRITSHOT_NO_GRADE = 2509;
 	private static final int SOULSHOT_NO_GRADE = 1835;
@@ -53,12 +51,9 @@ public class Q106_ForgottenTruth extends Quest
 	public Q106_ForgottenTruth()
 	{
 		super(106, "Forgotten Truth");
-		
 		registerQuestItems(ONYX_TALISMAN_1, ONYX_TALISMAN_2, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET, KARTIA_TRANSLATION);
-		
 		addStartNpc(THIFIELL);
 		addTalkId(THIFIELL, KARTIA);
-		
 		addKillId(27070); // Tumran Orc Brigand
 	}
 	
@@ -74,11 +69,10 @@ public class Q106_ForgottenTruth extends Quest
 		
 		if (event.equals("30358-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(ONYX_TALISMAN_1, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -95,6 +89,7 @@ public class Q106_ForgottenTruth extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30358-00.htm";
@@ -108,12 +103,14 @@ public class Q106_ForgottenTruth extends Quest
 					htmltext = "30358-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case THIFIELL:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30358-06.htm";
@@ -167,12 +164,13 @@ public class Q106_ForgottenTruth extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case KARTIA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30133-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ONYX_TALISMAN_1, 1);
 							st.giveItems(ONYX_TALISMAN_2, 1);
@@ -184,7 +182,7 @@ public class Q106_ForgottenTruth extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30133-03.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ONYX_TALISMAN_2, 1);
 							st.takeItems(ANCIENT_SCROLL, 1);
@@ -196,12 +194,15 @@ public class Q106_ForgottenTruth extends Quest
 							htmltext = "30133-04.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -209,7 +210,7 @@ public class Q106_ForgottenTruth extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -221,7 +222,7 @@ public class Q106_ForgottenTruth extends Quest
 		}
 		else if (st.dropItems(ANCIENT_CLAY_TABLET, 1, 1, 200000))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;

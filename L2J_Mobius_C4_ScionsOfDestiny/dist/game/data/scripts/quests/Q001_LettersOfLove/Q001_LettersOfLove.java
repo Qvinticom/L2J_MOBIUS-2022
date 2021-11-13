@@ -24,26 +24,22 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q001_LettersOfLove extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int DARIN = 30048;
 	private static final int ROXXY = 30006;
 	private static final int BAULRO = 30033;
-	
 	// Items
 	private static final int DARIN_LETTER = 687;
 	private static final int ROXXY_KERCHIEF = 688;
 	private static final int DARIN_RECEIPT = 1079;
 	private static final int BAULRO_POTION = 1080;
-	
 	// Reward
 	private static final int NECKLACE = 906;
 	
 	public Q001_LettersOfLove()
 	{
 		super(1, "Letters of Love");
-		
 		registerQuestItems(DARIN_LETTER, ROXXY_KERCHIEF, DARIN_RECEIPT, BAULRO_POTION);
-		
 		addStartNpc(DARIN);
 		addTalkId(DARIN, ROXXY, BAULRO);
 	}
@@ -60,9 +56,7 @@ public class Q001_LettersOfLove extends Quest
 		
 		if (event.equals("30048-06.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(DARIN_LETTER, 1);
 		}
 		
@@ -82,14 +76,17 @@ public class Q001_LettersOfLove extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 2) ? "30048-01.htm" : "30048-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case DARIN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30048-07.htm";
@@ -97,7 +94,7 @@ public class Q001_LettersOfLove extends Quest
 						else if (cond == 2)
 						{
 							htmltext = "30048-08.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ROXXY_KERCHIEF, 1);
 							st.giveItems(DARIN_RECEIPT, 1);
@@ -115,12 +112,13 @@ public class Q001_LettersOfLove extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case ROXXY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30006-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(DARIN_LETTER, 1);
 							st.giveItems(ROXXY_KERCHIEF, 1);
@@ -134,12 +132,13 @@ public class Q001_LettersOfLove extends Quest
 							htmltext = "30006-03.htm";
 						}
 						break;
-					
+					}
 					case BAULRO:
+					{
 						if (cond == 3)
 						{
 							htmltext = "30033-01.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(DARIN_RECEIPT, 1);
 							st.giveItems(BAULRO_POTION, 1);
@@ -149,12 +148,15 @@ public class Q001_LettersOfLove extends Quest
 							htmltext = "30033-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -30,12 +30,9 @@ public class Q303_CollectArrowheads extends Quest
 	public Q303_CollectArrowheads()
 	{
 		super(303, "Collect Arrowheads");
-		
 		registerQuestItems(ORCISH_ARROWHEAD);
-		
 		addStartNpc(30029); // Minia
 		addTalkId(30029);
-		
 		addKillId(20361);
 	}
 	
@@ -51,9 +48,7 @@ public class Q303_CollectArrowheads extends Quest
 		
 		if (event.equals("30029-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -72,11 +67,13 @@ public class Q303_CollectArrowheads extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 10) ? "30029-01.htm" : "30029-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30029-04.htm";
 				}
@@ -90,6 +87,7 @@ public class Q303_CollectArrowheads extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -98,7 +96,7 @@ public class Q303_CollectArrowheads extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -106,7 +104,7 @@ public class Q303_CollectArrowheads extends Quest
 		
 		if (st.dropItems(ORCISH_ARROWHEAD, 1, 10, 400000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

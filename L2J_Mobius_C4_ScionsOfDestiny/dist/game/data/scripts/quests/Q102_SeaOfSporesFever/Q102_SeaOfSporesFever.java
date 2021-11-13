@@ -26,6 +26,13 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q102_SeaOfSporesFever extends Quest
 {
+	// NPCs
+	private static final int ALBERIUS = 30284;
+	private static final int COBENDELL = 30156;
+	private static final int BERROS = 30217;
+	private static final int VELTRESS = 30219;
+	private static final int RAYEN = 30221;
+	private static final int GARTRANDELL = 30285;
 	// Items
 	private static final int ALBERIUS_LETTER = 964;
 	private static final int EVERGREEN_AMULET = 965;
@@ -36,7 +43,6 @@ public class Q102_SeaOfSporesFever extends Quest
 	private static final int COBENDELL_MEDICINE_3 = 1132;
 	private static final int COBENDELL_MEDICINE_4 = 1133;
 	private static final int COBENDELL_MEDICINE_5 = 1134;
-	
 	// Rewards
 	private static final int SPIRITSHOT_NO_GRADE = 2509;
 	private static final int SOULSHOT_NO_GRADE = 1835;
@@ -49,23 +55,12 @@ public class Q102_SeaOfSporesFever extends Quest
 	private static final int ECHO_FEAST = 4415;
 	private static final int ECHO_CELEBRATION = 4416;
 	
-	// NPCs
-	private static final int ALBERIUS = 30284;
-	private static final int COBENDELL = 30156;
-	private static final int BERROS = 30217;
-	private static final int VELTRESS = 30219;
-	private static final int RAYEN = 30221;
-	private static final int GARTRANDELL = 30285;
-	
 	public Q102_SeaOfSporesFever()
 	{
 		super(102, "Sea of Spores Fever");
-		
 		registerQuestItems(ALBERIUS_LETTER, EVERGREEN_AMULET, DRYAD_TEARS, COBENDELL_MEDICINE_1, COBENDELL_MEDICINE_2, COBENDELL_MEDICINE_3, COBENDELL_MEDICINE_4, COBENDELL_MEDICINE_5, ALBERIUS_LIST);
-		
 		addStartNpc(ALBERIUS);
 		addTalkId(ALBERIUS, COBENDELL, BERROS, RAYEN, GARTRANDELL, VELTRESS);
-		
 		addKillId(20013, 20019);
 	}
 	
@@ -81,9 +76,7 @@ public class Q102_SeaOfSporesFever extends Quest
 		
 		if (event.equals("30284-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(ALBERIUS_LETTER, 1);
 		}
 		
@@ -103,6 +96,7 @@ public class Q102_SeaOfSporesFever extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30284-00.htm";
@@ -116,12 +110,14 @@ public class Q102_SeaOfSporesFever extends Quest
 					htmltext = "30284-07.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ALBERIUS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30284-03.htm";
@@ -133,7 +129,7 @@ public class Q102_SeaOfSporesFever extends Quest
 						else if (cond == 4)
 						{
 							htmltext = "30284-04.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.set("medicines", "4");
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(COBENDELL_MEDICINE_1, 1);
@@ -170,12 +166,13 @@ public class Q102_SeaOfSporesFever extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case COBENDELL:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30156-03.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ALBERIUS_LETTER, 1);
 							st.giveItems(EVERGREEN_AMULET, 1);
@@ -191,7 +188,7 @@ public class Q102_SeaOfSporesFever extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30156-05.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(DRYAD_TEARS, -1);
 							st.takeItems(EVERGREEN_AMULET, 1);
@@ -206,44 +203,51 @@ public class Q102_SeaOfSporesFever extends Quest
 							htmltext = "30156-06.htm";
 						}
 						break;
-					
+					}
 					case BERROS:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30217-01.htm";
 							checkItem(st, COBENDELL_MEDICINE_2);
 						}
 						break;
-					
+					}
 					case VELTRESS:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30219-01.htm";
 							checkItem(st, COBENDELL_MEDICINE_3);
 						}
 						break;
-					
+					}
 					case RAYEN:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30221-01.htm";
 							checkItem(st, COBENDELL_MEDICINE_4);
 						}
 						break;
-					
+					}
 					case GARTRANDELL:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30285-01.htm";
 							checkItem(st, COBENDELL_MEDICINE_5);
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -252,7 +256,7 @@ public class Q102_SeaOfSporesFever extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -260,7 +264,7 @@ public class Q102_SeaOfSporesFever extends Quest
 		
 		if (st.dropItems(DRYAD_TEARS, 1, 10, 300000))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;
@@ -275,7 +279,7 @@ public class Q102_SeaOfSporesFever extends Quest
 			final int medicinesLeft = st.getInt("medicines") - 1;
 			if (medicinesLeft == 0)
 			{
-				st.set("cond", "6");
+				st.setCond(6);
 				st.playSound(QuestState.SOUND_MIDDLE);
 			}
 			else

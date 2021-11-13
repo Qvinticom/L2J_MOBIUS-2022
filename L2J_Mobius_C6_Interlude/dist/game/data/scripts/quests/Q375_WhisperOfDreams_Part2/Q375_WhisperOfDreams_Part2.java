@@ -27,16 +27,13 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 {
 	// NPCs
 	private static final int MANAKIA = 30515;
-	
 	// Monsters
 	private static final int KARIK = 20629;
 	private static final int CAVE_HOWLER = 20624;
-	
 	// Items
 	private static final int MYSTERIOUS_STONE = 5887;
 	private static final int KARIK_HORN = 5888;
 	private static final int CAVE_HOWLER_SKULL = 5889;
-	
 	// Rewards : A grade robe recipes
 	private static final int[] REWARDS =
 	{
@@ -48,12 +45,9 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 	public Q375_WhisperOfDreams_Part2()
 	{
 		super(375, "Whisper of Dreams, Part 2");
-		
 		registerQuestItems(KARIK_HORN, CAVE_HOWLER_SKULL);
-		
 		addStartNpc(MANAKIA);
 		addTalkId(MANAKIA);
-		
 		addKillId(KARIK, CAVE_HOWLER);
 	}
 	
@@ -70,9 +64,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 		// Manakia
 		if (event.equals("30515-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.takeItems(MYSTERIOUS_STONE, 1);
 		}
 		else if (event.equals("30515-07.htm"))
@@ -97,10 +89,12 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (!st.hasQuestItems(MYSTERIOUS_STONE) || (player.getLevel() < 60)) ? "30515-01.htm" : "30515-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if ((st.getQuestItemsCount(KARIK_HORN) >= 100) && (st.getQuestItemsCount(CAVE_HOWLER_SKULL) >= 100))
 				{
 					htmltext = "30515-05.htm";
@@ -114,6 +108,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 					htmltext = "30515-04.htm";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -137,12 +132,15 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 		switch (npc.getNpcId())
 		{
 			case KARIK:
+			{
 				st.dropItemsAlways(KARIK_HORN, 1, 100);
 				break;
-			
+			}
 			case CAVE_HOWLER:
+			{
 				st.dropItems(CAVE_HOWLER_SKULL, 1, 100, 900000);
 				break;
+			}
 		}
 		
 		return null;

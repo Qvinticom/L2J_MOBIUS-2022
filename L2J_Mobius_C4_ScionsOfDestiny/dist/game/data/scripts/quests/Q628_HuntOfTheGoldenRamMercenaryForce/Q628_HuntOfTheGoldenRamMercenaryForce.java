@@ -29,13 +29,11 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 {
 	// NPCs
 	private static final int KAHMAN = 31554;
-	
 	// Items
 	private static final int SPLINTER_STAKATO_CHITIN = 7248;
 	private static final int NEEDLE_STAKATO_CHITIN = 7249;
 	private static final int GOLDEN_RAM_BADGE_RECRUIT = 7246;
 	private static final int GOLDEN_RAM_BADGE_SOLDIER = 7247;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -55,16 +53,10 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 	public Q628_HuntOfTheGoldenRamMercenaryForce()
 	{
 		super(628, "Hunt of the Golden Ram Mercenary Force");
-		
 		registerQuestItems(SPLINTER_STAKATO_CHITIN, NEEDLE_STAKATO_CHITIN, GOLDEN_RAM_BADGE_RECRUIT, GOLDEN_RAM_BADGE_SOLDIER);
-		
 		addStartNpc(KAHMAN);
 		addTalkId(KAHMAN);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -77,27 +69,31 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31554-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31554-03a.htm"))
-		{
-			if ((st.getQuestItemsCount(SPLINTER_STAKATO_CHITIN) >= 100) && (st.getInt("cond") == 1)) // Giving GOLDEN_RAM_BADGE_RECRUIT Medals
+			case "31554-02.htm":
 			{
-				htmltext = "31554-04.htm";
-				st.set("cond", "2");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(SPLINTER_STAKATO_CHITIN, -1);
-				st.giveItems(GOLDEN_RAM_BADGE_RECRUIT, 1);
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("31554-07.htm")) // Cancel Quest
-		{
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
+			case "31554-03a.htm":
+			{
+				if ((st.getQuestItemsCount(SPLINTER_STAKATO_CHITIN) >= 100) && st.isCond(1)) // Giving GOLDEN_RAM_BADGE_RECRUIT Medals
+				{
+					htmltext = "31554-04.htm";
+					st.setCond(2);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(SPLINTER_STAKATO_CHITIN, -1);
+					st.giveItems(GOLDEN_RAM_BADGE_RECRUIT, 1);
+				}
+				break;
+			}
+			case "31554-07.htm":
+			{
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -116,11 +112,13 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 66) ? "31554-01a.htm" : "31554-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					if (st.getQuestItemsCount(SPLINTER_STAKATO_CHITIN) >= 100)
@@ -137,7 +135,7 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 					if ((st.getQuestItemsCount(SPLINTER_STAKATO_CHITIN) >= 100) && (st.getQuestItemsCount(NEEDLE_STAKATO_CHITIN) >= 100))
 					{
 						htmltext = "31554-05.htm";
-						st.set("cond", "3");
+						st.setCond(3);
 						st.playSound(QuestState.SOUND_FINISH);
 						st.takeItems(SPLINTER_STAKATO_CHITIN, -1);
 						st.takeItems(NEEDLE_STAKATO_CHITIN, -1);
@@ -158,6 +156,7 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 					htmltext = "31554-05a.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -178,9 +177,8 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		final int npcId = npc.getNpcId();
-		
 		switch (npcId)
 		{
 			case 21508:
@@ -188,22 +186,25 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 			case 21510:
 			case 21511:
 			case 21512:
+			{
 				if ((cond == 1) || (cond == 2))
 				{
 					st.dropItems(SPLINTER_STAKATO_CHITIN, 1, 100, CHANCES.get(npcId));
 				}
 				break;
-			
+			}
 			case 21513:
 			case 21514:
 			case 21515:
 			case 21516:
 			case 21517:
+			{
 				if (cond == 2)
 				{
 					st.dropItems(NEEDLE_STAKATO_CHITIN, 1, 100, CHANCES.get(npcId));
 				}
 				break;
+			}
 		}
 		
 		return null;

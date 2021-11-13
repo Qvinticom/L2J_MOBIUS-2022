@@ -28,11 +28,9 @@ public class Q296_TarantulasSpiderSilk extends Quest
 	// NPCs
 	private static final int MION = 30519;
 	private static final int DEFENDER_NATHAN = 30548;
-	
 	// Quest Items
 	private static final int TARANTULA_SPIDER_SILK = 1493;
 	private static final int TARANTULA_SPINNERETTE = 1494;
-	
 	// Items
 	private static final int RING_OF_RACCOON = 1508;
 	private static final int RING_OF_FIREFLY = 1509;
@@ -40,12 +38,9 @@ public class Q296_TarantulasSpiderSilk extends Quest
 	public Q296_TarantulasSpiderSilk()
 	{
 		super(296, "Tarantula's Spider Silk");
-		
 		registerQuestItems(TARANTULA_SPIDER_SILK, TARANTULA_SPINNERETTE);
-		
 		addStartNpc(MION);
 		addTalkId(MION, DEFENDER_NATHAN);
-		
 		addKillId(20394, 20403, 20508); // Crimson Tarantula, Hunter Tarantula, Plunder arantula
 	}
 	
@@ -59,34 +54,38 @@ public class Q296_TarantulasSpiderSilk extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30519-03.htm"))
+		switch (event)
 		{
-			if (st.hasAtLeastOneQuestItem(RING_OF_RACCOON, RING_OF_FIREFLY))
+			case "30519-03.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				if (st.hasAtLeastOneQuestItem(RING_OF_RACCOON, RING_OF_FIREFLY))
+				{
+					st.startQuest();
+				}
+				else
+				{
+					htmltext = "30519-03a.htm";
+				}
+				break;
 			}
-			else
+			case "30519-06.htm":
 			{
-				htmltext = "30519-03a.htm";
-			}
-		}
-		else if (event.equals("30519-06.htm"))
-		{
-			st.takeItems(TARANTULA_SPIDER_SILK, -1);
-			st.takeItems(TARANTULA_SPINNERETTE, -1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30548-02.htm"))
-		{
-			final int count = st.getQuestItemsCount(TARANTULA_SPINNERETTE);
-			if (count > 0)
-			{
-				htmltext = "30548-03.htm";
+				st.takeItems(TARANTULA_SPIDER_SILK, -1);
 				st.takeItems(TARANTULA_SPINNERETTE, -1);
-				st.giveItems(TARANTULA_SPIDER_SILK, count * (15 + Rnd.get(10)));
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "30548-02.htm":
+			{
+				final int count = st.getQuestItemsCount(TARANTULA_SPINNERETTE);
+				if (count > 0)
+				{
+					htmltext = "30548-03.htm";
+					st.takeItems(TARANTULA_SPINNERETTE, -1);
+					st.giveItems(TARANTULA_SPIDER_SILK, count * (15 + Rnd.get(10)));
+				}
+				break;
 			}
 		}
 		
@@ -106,13 +105,16 @@ public class Q296_TarantulasSpiderSilk extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30519-01.htm" : "30519-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case MION:
+					{
 						final int count = st.getQuestItemsCount(TARANTULA_SPIDER_SILK);
 						if (count == 0)
 						{
@@ -125,12 +127,15 @@ public class Q296_TarantulasSpiderSilk extends Quest
 							st.rewardItems(57, ((count >= 10) ? 2000 : 0) + (count * 30));
 						}
 						break;
-					
+					}
 					case DEFENDER_NATHAN:
+					{
 						htmltext = "30548-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

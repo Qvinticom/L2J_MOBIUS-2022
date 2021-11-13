@@ -27,7 +27,6 @@ public class Q163_LegacyOfThePoet extends Quest
 {
 	// NPC
 	private static final int STARDEN = 30220;
-	
 	// Items
 	private static final int[] RUMIELS_POEMS =
 	{
@@ -36,45 +35,23 @@ public class Q163_LegacyOfThePoet extends Quest
 		1040,
 		1041
 	};
-	
 	// Droplist
 	private static final int[][] DROPLIST =
 	{
-		{
-			RUMIELS_POEMS[0],
-			1,
-			1,
-			100000
-		},
-		{
-			RUMIELS_POEMS[1],
-			1,
-			1,
-			200000
-		},
-		{
-			RUMIELS_POEMS[2],
-			1,
-			1,
-			200000
-		},
-		{
-			RUMIELS_POEMS[3],
-			1,
-			1,
-			400000
-		}
+		// @formatter:off
+		{RUMIELS_POEMS[0], 1, 1, 100000},
+		{RUMIELS_POEMS[1], 1, 1, 200000},
+		{RUMIELS_POEMS[2], 1, 1, 200000},
+		{RUMIELS_POEMS[3], 1, 1, 400000}
+		// @formatter:on
 	};
 	
 	public Q163_LegacyOfThePoet()
 	{
 		super(163, "Legacy of the Poet");
-		
 		registerQuestItems(RUMIELS_POEMS);
-		
 		addStartNpc(STARDEN);
 		addTalkId(STARDEN);
-		
 		addKillId(20372, 20373);
 	}
 	
@@ -90,9 +67,7 @@ public class Q163_LegacyOfThePoet extends Quest
 		
 		if (event.equals("30220-07.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -111,6 +86,7 @@ public class Q163_LegacyOfThePoet extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() == Race.DARK_ELF)
 				{
 					htmltext = "30220-00.htm";
@@ -124,17 +100,16 @@ public class Q163_LegacyOfThePoet extends Quest
 					htmltext = "30220-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 2)
+			{
+				if (st.isCond(2))
 				{
 					htmltext = "30220-09.htm";
-					
 					for (int poem : RUMIELS_POEMS)
 					{
 						st.takeItems(poem, -1);
 					}
-					
 					st.rewardItems(57, 13890);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(false);
@@ -144,10 +119,12 @@ public class Q163_LegacyOfThePoet extends Quest
 					htmltext = "30220-08.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -156,7 +133,7 @@ public class Q163_LegacyOfThePoet extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -164,7 +141,7 @@ public class Q163_LegacyOfThePoet extends Quest
 		
 		if (st.dropMultipleItems(DROPLIST))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

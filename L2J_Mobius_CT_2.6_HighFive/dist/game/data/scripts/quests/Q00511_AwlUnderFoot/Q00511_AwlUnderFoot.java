@@ -209,7 +209,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		for (PlayerInstance partyMember : party.getMembers())
 		{
 			final QuestState qs = getQuestState(partyMember, false);
-			if ((qs == null) || (qs.getInt("cond") < 1))
+			if ((qs == null) || (qs.getCond() < 1))
 			{
 				return getHtm(player, "FortressWarden-05.htm").replace("%player%", partyMember.getName());
 			}
@@ -418,15 +418,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		else if (qs != null)
 		{
 			final int npcId = npc.getId();
-			int cond = 0;
-			if (qs.getState() == State.CREATED)
-			{
-				qs.set("cond", "0");
-			}
-			else
-			{
-				cond = qs.getInt("cond");
-			}
+			final int cond = qs.getCond();
 			if (_fortDungeons.containsKey(npcId) && (cond == 0))
 			{
 				if (player.getLevel() >= 60)

@@ -74,20 +74,19 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		// Caradine
 		if (event.equalsIgnoreCase("31740-04.htm"))
 		{
-			st.set("cond", "1");
+			st.startQuest();
 			takeItems(player, CARADINE_LETTER_2, 1);
-			st.setState(State.STARTED);
 		}
 		// Ossian
 		else if (event.equalsIgnoreCase("31741-02.htm"))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		else if (event.equalsIgnoreCase("31741-05.htm"))
 		{
 			if (hasQuestItems(player, WATERBINDER) && hasQuestItems(player, EVERGREEN))
 			{
-				st.set("cond", "4");
+				st.setCond(4);
 				takeItems(player, WATERBINDER, 1);
 				takeItems(player, EVERGREEN, 1);
 			}
@@ -100,7 +99,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		{
 			if (hasQuestItems(player, RAIN_SONG))
 			{
-				st.set("cond", "6");
+				st.setCond(6);
 				takeItems(player, RAIN_SONG, 1);
 				giveItems(player, RELIC_BOX, 1);
 			}
@@ -157,12 +156,11 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					break;
 				}
 				
-				final int cond = st.getInt("cond");
 				switch (npc.getId())
 				{
 					case CARADINE:
 					{
-						if (cond == 1)
+						if (st.isCond(1))
 						{
 							htmltext = "31740-05.htm";
 						}
@@ -170,7 +168,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					}
 					case OSSIAN:
 					{
-						switch (cond)
+						switch (st.getCond())
 						{
 							case 1:
 							{
@@ -213,7 +211,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					}
 					case LADD:
 					{
-						if ((cond == 6) && hasQuestItems(player, RELIC_BOX))
+						if (st.isCond(6) && hasQuestItems(player, RELIC_BOX))
 						{
 							htmltext = "30721-01.htm";
 						}
@@ -285,7 +283,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					}
 					else
 					{
-						st.set("cond", "3");
+						st.setCond(3);
 					}
 				}
 			}

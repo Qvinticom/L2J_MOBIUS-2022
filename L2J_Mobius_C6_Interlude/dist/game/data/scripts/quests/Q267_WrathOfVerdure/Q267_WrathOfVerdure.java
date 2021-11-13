@@ -27,19 +27,15 @@ public class Q267_WrathOfVerdure extends Quest
 {
 	// Items
 	private static final int GOBLIN_CLUB = 1335;
-	
 	// Reward
 	private static final int SILVERY_LEAF = 1340;
 	
 	public Q267_WrathOfVerdure()
 	{
 		super(267, "Wrath of Verdure");
-		
 		registerQuestItems(GOBLIN_CLUB);
-		
 		addStartNpc(31853); // Bremec
 		addTalkId(31853);
-		
 		addKillId(20325); // Goblin
 	}
 	
@@ -55,9 +51,7 @@ public class Q267_WrathOfVerdure extends Quest
 		
 		if (event.equals("31853-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31853-06.htm"))
 		{
@@ -81,6 +75,7 @@ public class Q267_WrathOfVerdure extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "31853-00.htm";
@@ -94,8 +89,9 @@ public class Q267_WrathOfVerdure extends Quest
 					htmltext = "31853-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int count = st.getQuestItemsCount(GOBLIN_CLUB);
 				if (count > 0)
 				{
@@ -108,6 +104,7 @@ public class Q267_WrathOfVerdure extends Quest
 					htmltext = "31853-04.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

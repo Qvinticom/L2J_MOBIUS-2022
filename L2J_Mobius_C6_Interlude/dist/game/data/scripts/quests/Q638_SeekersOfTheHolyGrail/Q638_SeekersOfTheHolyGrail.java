@@ -27,19 +27,15 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 {
 	// NPC
 	private static final int INNOCENTIN = 31328;
-	
 	// Item
 	private static final int PAGAN_TOTEM = 8068;
 	
 	public Q638_SeekersOfTheHolyGrail()
 	{
 		super(638, "Seekers of the Holy Grail");
-		
 		registerQuestItems(PAGAN_TOTEM);
-		
 		addStartNpc(INNOCENTIN);
 		addTalkId(INNOCENTIN);
-		
 		for (int i = 22138; i < 22175; i++)
 		{
 			addKillId(i);
@@ -58,9 +54,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 		
 		if (event.equals("31328-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31328-06.htm"))
 		{
@@ -84,10 +78,12 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 73) ? "31328-00.htm" : "31328-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(PAGAN_TOTEM) >= 2000)
 				{
 					htmltext = "31328-03.htm";
@@ -113,6 +109,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 					htmltext = "31328-04.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

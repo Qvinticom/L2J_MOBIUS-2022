@@ -45,19 +45,15 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	// NPCs
 	private static final int CRONOS = 30610;
 	private static final int MIMYU = 30747;
-	
 	// Item
 	private static final int FAIRY_LEAF = 4325;
 	
 	public Q421_LittleWingsBigAdventure()
 	{
 		super(421, "Little Wing's Big Adventure");
-		
 		registerQuestItems(FAIRY_LEAF);
-		
 		addStartNpc(CRONOS);
 		addTalkId(CRONOS, MIMYU);
-		
 		addAttackId(27185, 27186, 27187, 27188);
 		addKillId(27185, 27186, 27187, 27188);
 	}
@@ -72,50 +68,53 @@ public class Q421_LittleWingsBigAdventure extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30610-06.htm"))
+		switch (event)
 		{
-			if ((st.getQuestItemsCount(3500) + st.getQuestItemsCount(3501) + st.getQuestItemsCount(3502)) == 1)
+			case "30610-06.htm":
 			{
-				// Find the level of the flute.
-				for (int i = 3500; i < 3503; i++)
+				if ((st.getQuestItemsCount(3500) + st.getQuestItemsCount(3501) + st.getQuestItemsCount(3502)) == 1)
 				{
-					final ItemInstance item = player.getInventory().getItemByItemId(i);
-					if ((item != null) && (item.getEnchantLevel() >= 55))
+					// Find the level of the flute.
+					for (int i = 3500; i < 3503; i++)
 					{
-						st.setState(State.STARTED);
-						st.set("cond", "1");
-						st.set("iCond", "1");
-						st.set("summonOid", String.valueOf(item.getObjectId()));
-						st.playSound(QuestState.SOUND_ACCEPT);
-						return "30610-05.htm";
+						final ItemInstance item = player.getInventory().getItemByItemId(i);
+						if ((item != null) && (item.getEnchantLevel() >= 55))
+						{
+							st.startQuest();
+							st.set("iCond", "1");
+							st.set("summonOid", String.valueOf(item.getObjectId()));
+							return "30610-05.htm";
+						}
 					}
 				}
+				// Exit quest if you got more than one flute, or the flute level doesn't meat requirements.
+				st.exitQuest(true);
+				break;
 			}
-			
-			// Exit quest if you got more than one flute, or the flute level doesn't meat requirements.
-			st.exitQuest(true);
-		}
-		else if (event.equals("30747-02.htm"))
-		{
-			final Summon summon = player.getPet();
-			if (summon != null)
+			case "30747-02.htm":
 			{
-				htmltext = (summon.getControlItemId() == st.getInt("summonOid")) ? "30747-04.htm" : "30747-03.htm";
+				final Summon summon = player.getPet();
+				if (summon != null)
+				{
+					htmltext = (summon.getControlItemId() == st.getInt("summonOid")) ? "30747-04.htm" : "30747-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30747-05.htm"))
-		{
-			final Summon summon = player.getPet();
-			if ((summon == null) || (summon.getControlItemId() != st.getInt("summonOid")))
+			case "30747-05.htm":
 			{
-				htmltext = "30747-06.htm";
-			}
-			else
-			{
-				st.set("cond", "2");
-				st.set("iCond", "3");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.giveItems(FAIRY_LEAF, 4);
+				final Summon summon = player.getPet();
+				if ((summon == null) || (summon.getControlItemId() != st.getInt("summonOid")))
+				{
+					htmltext = "30747-06.htm";
+				}
+				else
+				{
+					st.setCond(2);
+					st.set("iCond", "3");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.giveItems(FAIRY_LEAF, 4);
+				}
+				break;
 			}
 		}
 		
@@ -135,6 +134,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				// Wrong level.
 				if (player.getLevel() < 45)
 				{
@@ -160,15 +160,18 @@ public class Q421_LittleWingsBigAdventure extends Quest
 					htmltext = "30610-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case CRONOS:
+					{
 						htmltext = "30610-07.htm";
 						break;
-					
+					}
 					case MIMYU:
+					{
 						final int id = st.getInt("iCond");
 						if (id == 1)
 						{
@@ -223,7 +226,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 								if ((item != null) && (item.getObjectId() == st.getInt("summonOid")))
 								{
 									st.takeItems(i, 1);
-									st.giveItems(i + 922, 1, item.getEnchantLevel()); // TODO rebuild entirely pet system in order enchant is given a fuck. Supposed to give an item level XX for a flute level XX.
+									st.giveItems(i + 922, 1, item.getEnchantLevel()); // TODO: rebuild entirely pet system in order enchant is given a fuck. Supposed to give an item level XX for a flute level XX.
 									st.playSound(QuestState.SOUND_FINISH);
 									st.exitQuest(true);
 									return "30747-16.htm";
@@ -240,8 +243,10 @@ public class Q421_LittleWingsBigAdventure extends Quest
 							}
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -263,7 +268,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		}
 		
 		// Condition required : 2.
-		final QuestState st = checkPlayerCondition(attacker, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(attacker, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -287,7 +292,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 					// Four leafs have been used ; update quest state.
 					if (st.getInt("iCond") == 63)
 					{
-						st.set("cond", "3");
+						st.setCond(3);
 						st.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else

@@ -238,9 +238,7 @@ public class SagasSuperClass extends Quest
 			}
 			else if (event.equals("accept"))
 			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				st.giveItems(_items[10], 1);
 				htmltext = "0-03.htm";
 			}
@@ -263,8 +261,8 @@ public class SagasSuperClass extends Quest
 			{
 				if (player.getLevel() >= 76)
 				{
+					st.setCond(0);
 					st.exitQuest(false);
-					st.set("cond", "0");
 					htmltext = "0-07.htm";
 					st.takeItems(_items[10], -1);
 					st.rewardExpAndSp(2299404, 0);
@@ -290,19 +288,19 @@ public class SagasSuperClass extends Quest
 				else
 				{
 					st.takeItems(_items[10], -1);
-					st.playSound("ItemSound.quest_middle");
-					st.set("cond", "20");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.setCond(20);
 					htmltext = "0-08.htm";
 				}
 			}
 			else if (event.equals("1-3"))
 			{
-				st.set("cond", "3");
+				st.setCond(3);
 				htmltext = "1-05.htm";
 			}
 			else if (event.equals("1-4"))
 			{
-				st.set("cond", "4");
+				st.setCond(4);
 				st.takeItems(_items[0], 1);
 				if (_items[11] != 0)
 				{
@@ -313,12 +311,12 @@ public class SagasSuperClass extends Quest
 			}
 			else if (event.equals("2-1"))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 				htmltext = "2-05.htm";
 			}
 			else if (event.equals("2-2"))
 			{
-				st.set("cond", "5");
+				st.setCond(5);
 				st.takeItems(_items[1], 1);
 				st.giveItems(_items[4], 1);
 				htmltext = "2-06.htm";
@@ -329,17 +327,17 @@ public class SagasSuperClass extends Quest
 			}
 			else if (event.equals("3-6"))
 			{
-				st.set("cond", "11");
+				st.setCond(11);
 				htmltext = "3-02.htm";
 			}
 			else if (event.equals("3-7"))
 			{
-				st.set("cond", "12");
+				st.setCond(12);
 				htmltext = "3-03.htm";
 			}
 			else if (event.equals("3-8"))
 			{
-				st.set("cond", "13");
+				st.setCond(13);
 				st.takeItems(_items[2], 1);
 				st.giveItems(_items[7], 1);
 				htmltext = "3-08.htm";
@@ -351,35 +349,35 @@ public class SagasSuperClass extends Quest
 			else if (event.equals("4-2"))
 			{
 				st.giveItems(_items[9], 1);
-				st.set("cond", "18");
-				st.playSound("ItemSound.quest_middle");
+				st.setCond(18);
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "4-011.htm";
 			}
 			else if (event.equals("4-3"))
 			{
 				st.giveItems(_items[9], 1);
-				st.set("cond", "18");
+				st.setCond(18);
 				npc.broadcastNpcSay(_text[13].replace("PLAYERNAME", player.getName()));
 				st.set("Quest0", "0");
 				cancelQuestTimer("Mob_2 has despawned", npc, player);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				deleteSpawn(npc);
 				return null;
 			}
 			else if (event.equals("5-1"))
 			{
-				st.set("cond", "6");
+				st.setCond(6);
 				st.takeItems(_items[4], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "5-02.htm";
 			}
 			else if (event.equals("6-1"))
 			{
-				st.set("cond", "8");
+				st.setCond(8);
 				st.takeItems(_items[5], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "6-03.htm";
 			}
 			else if (event.equals("7-1"))
@@ -404,26 +402,26 @@ public class SagasSuperClass extends Quest
 			}
 			else if (event.equals("7-2"))
 			{
-				st.set("cond", "10");
+				st.setCond(10);
 				st.takeItems(_items[6], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "7-06.htm";
 			}
 			else if (event.equals("8-1"))
 			{
-				st.set("cond", "14");
+				st.setCond(14);
 				st.takeItems(_items[7], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "8-02.htm";
 			}
 			else if (event.equals("9-1"))
 			{
-				st.set("cond", "17");
+				st.setCond(17);
 				st.takeItems(_items[8], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "9-03.htm";
 			}
 			else if (event.equals("10-1"))
@@ -454,15 +452,15 @@ public class SagasSuperClass extends Quest
 			}
 			else if (event.equals("10-2"))
 			{
-				st.set("cond", "19");
+				st.setCond(19);
 				st.takeItems(_items[9], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				htmltext = "10-06.htm";
 			}
 			else if (event.equals("11-9"))
 			{
-				st.set("cond", "15");
+				st.setCond(15);
 				htmltext = "11-03.htm";
 			}
 			else if (event.equals("Mob_1 Timer 1"))
@@ -580,7 +578,7 @@ public class SagasSuperClass extends Quest
 			}
 			else if (st.getPlayer().getClassId().getId() == getPrevClass(st.getPlayer()))
 			{
-				switch (st.getInt("cond"))
+				switch (st.getCond())
 				{
 					case 0:
 					{
@@ -803,8 +801,8 @@ public class SagasSuperClass extends Quest
 								htmltext = "0-09.htm";
 								if ((getClassId(st.getPlayer()) < 131) || (getClassId(st.getPlayer()) > 135)) // in Kamael quests, npc wants to chat for a bit before changing class
 								{
+									st.setCond(0);
 									st.exitQuest(false);
-									st.set("cond", "0");
 									st.rewardExpAndSp(2299404, 0);
 									st.giveItems(57, 5000000);
 									st.giveItems(6622, 1);
@@ -847,7 +845,7 @@ public class SagasSuperClass extends Quest
 		final int npcId = npc.getNpcId();
 		if (st != null)
 		{
-			final int cond = st.getInt("cond");
+			final int cond = st.getCond();
 			if (npcId == _npc[4])
 			{
 				if (cond == 17)
@@ -925,7 +923,8 @@ public class SagasSuperClass extends Quest
 		{
 			return super.onAttack(npc, player, damage, isPet);
 		}
-		final int cond = st2.getInt("cond");
+		
+		final int cond = st2.getCond();
 		final QuestState st = player.getQuestState(getName());
 		final int npcId = npc.getNpcId();
 		if ((npcId == _mob[2]) && (st == st2) && (cond == 17))
@@ -987,10 +986,9 @@ public class SagasSuperClass extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		QuestState st = player.getQuestState(getName());
-		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
+		for (int archonMinion = 21646; archonMinion < 21652; archonMinion++)
 		{
-			if (npcId == Archon_Minion)
+			if (npcId == archonMinion)
 			{
 				final Party party = player.getParty();
 				if (party != null)
@@ -999,7 +997,7 @@ public class SagasSuperClass extends Quest
 					for (PlayerInstance player1 : party.getPartyMembers())
 					{
 						final QuestState st1 = findQuest(player1);
-						if ((st1 != null) && (st1.getInt("cond") == 15))
+						if ((st1 != null) && st1.isCond(15))
 						{
 							partyQuestMembers.add(st1);
 						}
@@ -1013,7 +1011,7 @@ public class SagasSuperClass extends Quest
 				else
 				{
 					final QuestState st1 = findQuest(player);
-					if ((st1 != null) && (st1.getInt("cond") == 15))
+					if ((st1 != null) && st1.isCond(15))
 					{
 						giveHallishaMark(st1);
 					}
@@ -1027,14 +1025,14 @@ public class SagasSuperClass extends Quest
 			if (npcId == element)
 			{
 				final QuestState st1 = findQuest(player);
-				if ((st1 != null) && (st1.getInt("cond") == 15))
+				if ((st1 != null) && st1.isCond(15))
 				{
 					// This is just a guess....not really sure what it actually says, if anything
 					npc.broadcastNpcSay(_text[4].replace("PLAYERNAME", st1.getPlayer().getName()));
 					st1.giveItems(_items[8], 1);
 					st1.takeItems(_items[3], -1);
-					st1.set("cond", "16");
-					st1.playSound("ItemSound.quest_middle");
+					st1.setCond(16);
+					st1.playSound(QuestState.SOUND_MIDDLE);
 				}
 				return super.onKill(npc, player, isPet);
 			}
@@ -1045,7 +1043,7 @@ public class SagasSuperClass extends Quest
 			if (npcId == guardianAngel)
 			{
 				final QuestState st1 = findQuest(player);
-				if ((st1 != null) && (st1.getInt("cond") == 6))
+				if ((st1 != null) && st1.isCond(6))
 				{
 					if (st1.getInt("kills") < 9)
 					{
@@ -1053,14 +1051,16 @@ public class SagasSuperClass extends Quest
 					}
 					else
 					{
-						st1.playSound("ItemSound.quest_middle");
+						st1.playSound(QuestState.SOUND_MIDDLE);
 						st1.giveItems(_items[5], 1);
-						st1.set("cond", "7");
+						st1.setCond(7);
 					}
 				}
 				return super.onKill(npc, player, isPet);
 			}
 		}
+		
+		QuestState st = player.getQuestState(getName());
 		if ((st != null) && (npcId != _mob[2]))
 		{
 			final QuestState st2 = findRightState(npc);
@@ -1068,21 +1068,20 @@ public class SagasSuperClass extends Quest
 			{
 				return super.onKill(npc, player, isPet);
 			}
-			final int cond = st.getInt("cond");
-			if ((npcId == _mob[0]) && (cond == 8))
+			if ((npcId == _mob[0]) && st.isCond(8))
 			{
 				if (!player.isInParty() && (st == st2))
 				{
 					npc.broadcastNpcSay(_text[12].replace("PLAYERNAME", player.getName()));
 					st.giveItems(_items[6], 1);
-					st.set("cond", "9");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(9);
+					st.playSound(QuestState.SOUND_MIDDLE);
 				}
 				cancelQuestTimer("Mob_1 has despawned", npc, st2.getPlayer());
 				st2.set("spawned", "0");
 				deleteSpawn(npc);
 			}
-			else if ((npcId == _mob[1]) && (cond == 15))
+			else if ((npcId == _mob[1]) && st.isCond(15))
 			{
 				if (!player.isInParty())
 				{
@@ -1091,8 +1090,8 @@ public class SagasSuperClass extends Quest
 						npc.broadcastNpcSay(_text[4].replace("PLAYERNAME", player.getName()));
 						st.giveItems(_items[8], 1);
 						st.takeItems(_items[3], -1);
-						st.set("cond", "16");
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(16);
+						st.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else
 					{

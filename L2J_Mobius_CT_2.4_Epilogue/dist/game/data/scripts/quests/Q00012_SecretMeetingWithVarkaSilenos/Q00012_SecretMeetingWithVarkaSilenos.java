@@ -111,7 +111,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 			}
 			case State.STARTED:
 			{
-				final int cond = qs.getInt("cond");
+				final int cond = qs.getCond();
 				if ((npcId == CADMON) && (cond == 1))
 				{
 					htmltext = "31296-04.html";

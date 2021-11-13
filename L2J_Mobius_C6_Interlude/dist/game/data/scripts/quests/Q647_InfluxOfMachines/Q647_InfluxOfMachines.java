@@ -25,21 +25,17 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q647_InfluxOfMachines extends Quest
 {
-	// Item
-	private static final int DESTROYED_GOLEM_SHARD = 8100;
-	
 	// NPC
 	private static final int GUTENHAGEN = 32069;
+	// Item
+	private static final int DESTROYED_GOLEM_SHARD = 8100;
 	
 	public Q647_InfluxOfMachines()
 	{
 		super(647, "Influx of Machines");
-		
 		registerQuestItems(DESTROYED_GOLEM_SHARD);
-		
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
-		
 		for (int i = 22052; i < 22079; i++)
 		{
 			addKillId(i);
@@ -58,9 +54,7 @@ public class Q647_InfluxOfMachines extends Quest
 		
 		if (event.equals("32069-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32069-06.htm"))
 		{
@@ -86,11 +80,13 @@ public class Q647_InfluxOfMachines extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 46) ? "32069-03.htm" : "32069-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "32069-04.htm";
@@ -100,6 +96,7 @@ public class Q647_InfluxOfMachines extends Quest
 					htmltext = "32069-05.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -108,7 +105,7 @@ public class Q647_InfluxOfMachines extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -122,7 +119,7 @@ public class Q647_InfluxOfMachines extends Quest
 		
 		if (st.dropItems(DESTROYED_GOLEM_SHARD, 1, 500, 300000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

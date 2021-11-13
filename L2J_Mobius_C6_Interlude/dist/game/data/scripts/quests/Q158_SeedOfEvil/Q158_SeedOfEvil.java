@@ -26,19 +26,15 @@ public class Q158_SeedOfEvil extends Quest
 {
 	// Item
 	private static final int CLAY_TABLET = 1025;
-	
 	// Reward
 	private static final int ENCHANT_ARMOR_D = 956;
 	
 	public Q158_SeedOfEvil()
 	{
 		super(158, "Seed of Evil");
-		
 		registerQuestItems(CLAY_TABLET);
-		
 		addStartNpc(30031); // Biotin
 		addTalkId(30031);
-		
 		addKillId(27016); // Nerkas
 	}
 	
@@ -54,9 +50,7 @@ public class Q158_SeedOfEvil extends Quest
 		
 		if (event.equals("30031-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -75,10 +69,12 @@ public class Q158_SeedOfEvil extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 21) ? "30031-02.htm" : "30031-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (!st.hasQuestItems(CLAY_TABLET))
 				{
 					htmltext = "30031-05.htm";
@@ -92,10 +88,12 @@ public class Q158_SeedOfEvil extends Quest
 					st.exitQuest(false);
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -104,13 +102,13 @@ public class Q158_SeedOfEvil extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
 		}
 		
-		st.set("cond", "2");
+		st.setCond(2);
 		st.playSound(QuestState.SOUND_MIDDLE);
 		st.giveItems(CLAY_TABLET, 1);
 		

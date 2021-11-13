@@ -39,7 +39,7 @@ public class IdManager
 {
 	private static final Logger LOGGER = Logger.getLogger(IdManager.class.getName());
 	
-	//@formatter:off
+	// @formatter:off
 	private static final String[][] ID_EXTRACTS =
 	{
 		{"characters","charId"},
@@ -47,7 +47,7 @@ public class IdManager
 		{"clan_data","clan_id"},
 		{"itemsonground","object_id"}
 	};
-	//@formatter:on
+	// @formatter:on
 	
 	private static final String[] TIMESTAMPS_CLEAN =
 	{

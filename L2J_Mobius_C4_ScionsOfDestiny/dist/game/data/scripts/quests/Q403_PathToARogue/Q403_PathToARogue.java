@@ -28,6 +28,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q403_PathToARogue extends Quest
 {
+	// NPCs
+	private static final int BEZIQUE = 30379;
+	private static final int NETI = 30425;
 	// Items
 	private static final int BEZIQUE_LETTER = 1180;
 	private static final int NETI_BOW = 1181;
@@ -41,19 +44,12 @@ public class Q403_PathToARogue extends Quest
 	private static final int STOLEN_NECKLACE = 1189;
 	private static final int BEZIQUE_RECOMMENDATION = 1190;
 	
-	// NPCs
-	private static final int BEZIQUE = 30379;
-	private static final int NETI = 30425;
-	
 	public Q403_PathToARogue()
 	{
 		super(403, "Path to a Rogue");
-		
 		registerQuestItems(BEZIQUE_LETTER, NETI_BOW, NETI_DAGGER, SPARTOI_BONES, HORSESHOE_OF_LIGHT, MOST_WANTED_LIST, STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE);
-		
 		addStartNpc(BEZIQUE);
 		addTalkId(BEZIQUE, NETI);
-		
 		addKillId(20035, 20042, 20045, 20051, 20054, 20060, 27038);
 	}
 	
@@ -67,34 +63,38 @@ public class Q403_PathToARogue extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30379-05.htm"))
+		switch (event)
 		{
-			if (player.getClassId() != ClassId.FIGHTER)
+			case "30379-05.htm":
 			{
-				htmltext = (player.getClassId() == ClassId.ROGUE) ? "30379-02a.htm" : "30379-02.htm";
+				if (player.getClassId() != ClassId.FIGHTER)
+				{
+					htmltext = (player.getClassId() == ClassId.ROGUE) ? "30379-02a.htm" : "30379-02.htm";
+				}
+				else if (player.getLevel() < 19)
+				{
+					htmltext = "30379-02.htm";
+				}
+				else if (st.hasQuestItems(BEZIQUE_RECOMMENDATION))
+				{
+					htmltext = "30379-04.htm";
+				}
+				break;
 			}
-			else if (player.getLevel() < 19)
+			case "30379-06.htm":
 			{
-				htmltext = "30379-02.htm";
+				st.startQuest();
+				st.giveItems(BEZIQUE_LETTER, 1);
+				break;
 			}
-			else if (st.hasQuestItems(BEZIQUE_RECOMMENDATION))
+			case "30425-05.htm":
 			{
-				htmltext = "30379-04.htm";
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(NETI_BOW, 1);
+				st.giveItems(NETI_DAGGER, 1);
+				break;
 			}
-		}
-		else if (event.equals("30379-06.htm"))
-		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(BEZIQUE_LETTER, 1);
-		}
-		else if (event.equals("30425-05.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(NETI_BOW, 1);
-			st.giveItems(NETI_DAGGER, 1);
 		}
 		
 		return htmltext;
@@ -113,14 +113,17 @@ public class Q403_PathToARogue extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30379-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case BEZIQUE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30379-07.htm";
@@ -132,7 +135,7 @@ public class Q403_PathToARogue extends Quest
 						else if (cond == 4)
 						{
 							htmltext = "30379-08.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HORSESHOE_OF_LIGHT, 1);
 							st.giveItems(MOST_WANTED_LIST, 1);
@@ -157,8 +160,9 @@ public class Q403_PathToARogue extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case NETI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30425-01.htm";
@@ -170,7 +174,7 @@ public class Q403_PathToARogue extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30425-07.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(SPARTOI_BONES, 10);
 							st.giveItems(HORSESHOE_OF_LIGHT, 1);
@@ -180,8 +184,10 @@ public class Q403_PathToARogue extends Quest
 							htmltext = "30425-08.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -207,29 +213,33 @@ public class Q403_PathToARogue extends Quest
 			case 20035:
 			case 20045:
 			case 20051:
-				if ((st.getInt("cond") == 2) && st.dropItems(SPARTOI_BONES, 1, 10, 200000))
+			{
+				if (st.isCond(2) && st.dropItems(SPARTOI_BONES, 1, 10, 200000))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 20042:
-				if ((st.getInt("cond") == 2) && st.dropItems(SPARTOI_BONES, 1, 10, 300000))
+			{
+				if (st.isCond(2) && st.dropItems(SPARTOI_BONES, 1, 10, 300000))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 20054:
 			case 20060:
-				if ((st.getInt("cond") == 2) && st.dropItems(SPARTOI_BONES, 1, 10, 800000))
+			{
+				if (st.isCond(2) && st.dropItems(SPARTOI_BONES, 1, 10, 800000))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 27038:
-				if (st.getInt("cond") == 5)
+			{
+				if (st.isCond(5))
 				{
 					final int randomItem = Rnd.get(STOLEN_JEWELRY, STOLEN_NECKLACE);
 					if (!st.hasQuestItems(randomItem))
@@ -237,7 +247,7 @@ public class Q403_PathToARogue extends Quest
 						st.giveItems(randomItem, 1);
 						if (st.hasQuestItems(STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE))
 						{
-							st.set("cond", "6");
+							st.setCond(6);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else
@@ -247,6 +257,7 @@ public class Q403_PathToARogue extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return null;

@@ -32,7 +32,6 @@ public class Q015_SweetWhispers extends Quest
 	public Q015_SweetWhispers()
 	{
 		super(15, "Sweet Whispers");
-		
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, HIERARCH, MYSTERIOUS_NECRO);
 	}
@@ -47,22 +46,26 @@ public class Q015_SweetWhispers extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31302-01.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31518-01.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31517-01.htm"))
-		{
-			st.rewardExpAndSp(60217, 0);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31302-01.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31518-01.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31517-01.htm":
+			{
+				st.rewardExpAndSp(60217, 0);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -81,18 +84,22 @@ public class Q015_SweetWhispers extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 60) ? "31302-00a.htm" : "31302-00.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case VLADIMIR:
+					{
 						htmltext = "31302-01a.htm";
 						break;
-					
+					}
 					case MYSTERIOUS_NECRO:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31518-00.htm";
@@ -102,19 +109,23 @@ public class Q015_SweetWhispers extends Quest
 							htmltext = "31518-01a.htm";
 						}
 						break;
-					
+					}
 					case HIERARCH:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31517-00.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

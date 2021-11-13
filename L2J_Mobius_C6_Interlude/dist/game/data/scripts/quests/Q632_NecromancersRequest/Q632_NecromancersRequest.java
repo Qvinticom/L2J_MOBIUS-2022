@@ -42,7 +42,6 @@ public class Q632_NecromancersRequest extends Quest
 		21594,
 		21595
 	};
-	
 	private static final int[] UNDEADS =
 	{
 		21547,
@@ -58,7 +57,6 @@ public class Q632_NecromancersRequest extends Quest
 		21577,
 		21579
 	};
-	
 	// Items
 	private static final int VAMPIRE_HEART = 7542;
 	private static final int ZOMBIE_BRAIN = 7543;
@@ -66,12 +64,9 @@ public class Q632_NecromancersRequest extends Quest
 	public Q632_NecromancersRequest()
 	{
 		super(632, "Necromancer's Request");
-		
 		registerQuestItems(VAMPIRE_HEART, ZOMBIE_BRAIN);
-		
 		addStartNpc(31522); // Mysterious Wizard
 		addTalkId(31522);
-		
 		addKillId(VAMPIRES);
 		addKillId(UNDEADS);
 	}
@@ -88,15 +83,13 @@ public class Q632_NecromancersRequest extends Quest
 		
 		if (event.equals("31522-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31522-06.htm"))
 		{
 			if (st.getQuestItemsCount(VAMPIRE_HEART) >= 200)
 			{
-				st.set("cond", "1");
+				st.setCond(1);
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.takeItems(VAMPIRE_HEART, -1);
 				st.rewardItems(57, 120000);
@@ -128,12 +121,15 @@ public class Q632_NecromancersRequest extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 63) ? "31522-01.htm" : "31522-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(VAMPIRE_HEART) >= 200) ? "31522-05.htm" : "31522-04.htm";
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -163,9 +159,9 @@ public class Q632_NecromancersRequest extends Quest
 			}
 		}
 		
-		if ((st.getInt("cond") == 1) && st.dropItems(VAMPIRE_HEART, 1, 200, 500000))
+		if (st.isCond(1) && st.dropItems(VAMPIRE_HEART, 1, 200, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

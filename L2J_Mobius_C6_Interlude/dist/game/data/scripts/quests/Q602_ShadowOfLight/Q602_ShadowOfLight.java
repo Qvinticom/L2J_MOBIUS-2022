@@ -26,48 +26,22 @@ import org.l2jmobius.gameserver.model.quest.State;
 public class Q602_ShadowOfLight extends Quest
 {
 	private static final int EYE_OF_DARKNESS = 7189;
-	
 	private static final int[][] REWARDS =
 	{
-		{
-			6699,
-			40000,
-			120000,
-			20000,
-			20
-		},
-		{
-			6698,
-			60000,
-			110000,
-			15000,
-			40
-		},
-		{
-			6700,
-			40000,
-			150000,
-			10000,
-			50
-		},
-		{
-			0,
-			100000,
-			140000,
-			11250,
-			100
-		}
+		// @formatter:off
+		{6699, 40000, 120000, 20000, 20},
+		{6698, 60000, 110000, 15000, 40},
+		{6700, 40000, 150000, 10000, 50},
+		{0, 100000, 140000, 11250, 100}
+		// @formatter:on
 	};
 	
 	public Q602_ShadowOfLight()
 	{
 		super(602, "Shadow of Light");
-		
 		registerQuestItems(EYE_OF_DARKNESS);
-		
 		addStartNpc(31683); // Eye of Argos
 		addTalkId(31683);
-		
 		addKillId(21299, 21304);
 	}
 	
@@ -89,9 +63,7 @@ public class Q602_ShadowOfLight extends Quest
 			}
 			else
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				st.startQuest();
 			}
 		}
 		else if (event.equals("31683-05.htm"))
@@ -134,11 +106,13 @@ public class Q602_ShadowOfLight extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "31683-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31683-03.htm";
@@ -148,6 +122,7 @@ public class Q602_ShadowOfLight extends Quest
 					htmltext = "31683-04.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -156,7 +131,7 @@ public class Q602_ShadowOfLight extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "cond", "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -170,7 +145,7 @@ public class Q602_ShadowOfLight extends Quest
 		
 		if (st.dropItems(EYE_OF_DARKNESS, 1, 100, (npc.getNpcId() == 21299) ? 450000 : 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

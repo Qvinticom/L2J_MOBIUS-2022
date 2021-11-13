@@ -31,26 +31,20 @@ public class Q620_FourGoblets extends Quest
 	private static final int GHOST_OF_WIGOTH_1 = 31452;
 	private static final int NAMELESS_SPIRIT = 31453;
 	private static final int GHOST_OF_WIGOTH_2 = 31454;
-	
 	private static final int GHOST_CHAMBERLAIN_1 = 31919;
 	private static final int GHOST_CHAMBERLAIN_2 = 31920;
-	
 	private static final int CONQUERORS_SEPULCHER_MANAGER = 31921;
 	private static final int EMPERORS_SEPULCHER_MANAGER = 31922;
 	private static final int GREAT_SAGES_SEPULCHER_MANAGER = 31923;
 	private static final int JUDGES_SEPULCHER_MANAGER = 31924;
-	
 	// Items
 	private static final int RELIC = 7254;
 	private static final int SEALED_BOX = 7255;
-	
 	private static final int GOBLET_OF_ALECTIA = 7256;
 	private static final int GOBLET_OF_TISHAS = 7257;
 	private static final int GOBLET_OF_MEKARA = 7258;
 	private static final int GOBLET_OF_MORIGUL = 7259;
-	
 	private static final int USED_GRAVE_PASS = 7261;
-	
 	// Rewards
 	private static final int ANTIQUE_BROOCH = 7262;
 	private static final int[] RCP_REWARDS = new int[]
@@ -70,12 +64,9 @@ public class Q620_FourGoblets extends Quest
 	public Q620_FourGoblets()
 	{
 		super(620, "Four Goblets");
-		
 		registerQuestItems(SEALED_BOX, USED_GRAVE_PASS, GOBLET_OF_ALECTIA, GOBLET_OF_TISHAS, GOBLET_OF_MEKARA, GOBLET_OF_MORIGUL);
-		
 		addStartNpc(NAMELESS_SPIRIT, CONQUERORS_SEPULCHER_MANAGER, EMPERORS_SEPULCHER_MANAGER, GREAT_SAGES_SEPULCHER_MANAGER, JUDGES_SEPULCHER_MANAGER, GHOST_CHAMBERLAIN_1, GHOST_CHAMBERLAIN_2);
 		addTalkId(NAMELESS_SPIRIT, CONQUERORS_SEPULCHER_MANAGER, EMPERORS_SEPULCHER_MANAGER, GREAT_SAGES_SEPULCHER_MANAGER, JUDGES_SEPULCHER_MANAGER, GHOST_CHAMBERLAIN_1, GHOST_CHAMBERLAIN_2, GHOST_OF_WIGOTH_1, GHOST_OF_WIGOTH_2);
-		
 		for (int id = 18120; id <= 18256; id++)
 		{
 			addKillId(id);
@@ -105,15 +96,13 @@ public class Q620_FourGoblets extends Quest
 		}
 		else if (event.equals("31453-13.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31453-16.htm"))
 		{
 			if (st.hasQuestItems(GOBLET_OF_ALECTIA, GOBLET_OF_TISHAS, GOBLET_OF_MEKARA, GOBLET_OF_MORIGUL))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.takeItems(GOBLET_OF_ALECTIA, -1);
 				st.takeItems(GOBLET_OF_TISHAS, -1);
@@ -128,7 +117,7 @@ public class Q620_FourGoblets extends Quest
 		}
 		// else if (event.equals("31453-13.htm"))
 		// {
-		// if (st.getInt("cond") == 2)
+		// if (st.getCond()s == 2)
 		// {
 		// htmltext = "31453-19.htm";
 		// }
@@ -232,13 +221,7 @@ public class Q620_FourGoblets extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		final int id = st.getState();
-		final int cond = st.getInt("cond");
-		if (id == State.CREATED)
-		{
-			st.set("cond", "0");
-		}
-		
+		final int cond = st.getCond();
 		if (npcId == GHOST_OF_WIGOTH_1)
 		{
 			if (cond == 1)

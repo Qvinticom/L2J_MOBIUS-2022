@@ -26,19 +26,15 @@ public class Q053_LinnaeusSpecialBait extends Quest
 {
 	// Item
 	private static final int CRIMSON_DRAKE_HEART = 7624;
-	
 	// Reward
 	private static final int FLAMING_FISHING_LURE = 7613;
 	
 	public Q053_LinnaeusSpecialBait()
 	{
 		super(53, "Linnaeus' Special Bait");
-		
 		registerQuestItems(CRIMSON_DRAKE_HEART);
-		
 		addStartNpc(31577); // Linnaeus
 		addTalkId(31577);
-		
 		addKillId(20670); // Crimson Drake
 	}
 	
@@ -54,9 +50,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 		
 		if (event.equals("31577-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31577-07.htm"))
 		{
@@ -83,16 +77,20 @@ public class Q053_LinnaeusSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 60) ? "31577-02.htm" : "31577-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) == 100) ? "31577-04.htm" : "31577-05.htm";
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -101,7 +99,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -109,7 +107,7 @@ public class Q053_LinnaeusSpecialBait extends Quest
 		
 		if (st.dropItems(CRIMSON_DRAKE_HEART, 1, 100, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -24,20 +24,17 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q011_SecretMeetingWithKetraOrcs extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int CADMON = 31296;
 	private static final int LEON = 31256;
 	private static final int WAHKAN = 31371;
-	
 	// Items
 	private static final int MUNITIONS_BOX = 7231;
 	
 	public Q011_SecretMeetingWithKetraOrcs()
 	{
 		super(11, "Secret Meeting With Ketra Orcs");
-		
 		registerQuestItems(MUNITIONS_BOX);
-		
 		addStartNpc(CADMON);
 		addTalkId(CADMON, LEON, WAHKAN);
 	}
@@ -52,24 +49,28 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31296-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31256-02.htm"))
-		{
-			st.giveItems(MUNITIONS_BOX, 1);
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31371-02.htm"))
-		{
-			st.takeItems(MUNITIONS_BOX, 1);
-			st.rewardExpAndSp(79787, 0);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31296-03.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31256-02.htm":
+			{
+				st.giveItems(MUNITIONS_BOX, 1);
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31371-02.htm":
+			{
+				st.takeItems(MUNITIONS_BOX, 1);
+				st.rewardExpAndSp(79787, 0);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -88,21 +89,25 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 74) ? "31296-02.htm" : "31296-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case CADMON:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31296-04.htm";
 						}
 						break;
-					
+					}
 					case LEON:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31256-01.htm";
@@ -112,19 +117,23 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 							htmltext = "31256-03.htm";
 						}
 						break;
-					
+					}
 					case WAHKAN:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31371-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

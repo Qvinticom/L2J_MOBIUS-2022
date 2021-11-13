@@ -26,19 +26,15 @@ public class Q051_OFullesSpecialBait extends Quest
 {
 	// Item
 	private static final int LOST_BAIT = 7622;
-	
 	// Reward
 	private static final int ICY_AIR_LURE = 7611;
 	
 	public Q051_OFullesSpecialBait()
 	{
 		super(51, "O'Fulle's Special Bait");
-		
 		registerQuestItems(LOST_BAIT);
-		
 		addStartNpc(31572); // O'Fulle
 		addTalkId(31572);
-		
 		addKillId(20552); // Fettered Soul
 	}
 	
@@ -54,9 +50,7 @@ public class Q051_OFullesSpecialBait extends Quest
 		
 		if (event.equals("31572-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31572-07.htm"))
 		{
@@ -83,16 +77,20 @@ public class Q051_OFullesSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 36) ? "31572-02.htm" : "31572-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(LOST_BAIT) == 100) ? "31572-04.htm" : "31572-05.htm";
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -101,7 +99,7 @@ public class Q051_OFullesSpecialBait extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -109,7 +107,7 @@ public class Q051_OFullesSpecialBait extends Quest
 		
 		if (st.dropItemsAlways(LOST_BAIT, 1, 100))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

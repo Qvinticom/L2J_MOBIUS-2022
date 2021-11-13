@@ -31,6 +31,10 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q325_GrimCollector extends Quest
 {
+	// NPCs
+	private static final int CURTIS = 30336;
+	private static final int VARSAK = 30342;
+	private static final int SAMED = 30434;
 	// Items
 	private static final int ANATOMY_DIAGRAM = 1349;
 	private static final int ZOMBIE_HEAD = 1350;
@@ -42,12 +46,7 @@ public class Q325_GrimCollector extends Quest
 	private static final int ARM_BONE = 1356;
 	private static final int THIGH_BONE = 1357;
 	private static final int COMPLETE_SKELETON = 1358;
-	
-	// NPCs
-	private static final int CURTIS = 30336;
-	private static final int VARSAK = 30342;
-	private static final int SAMED = 30434;
-	
+	// Drops
 	private static final Map<Integer, List<ItemHolder>> DROPLIST = new HashMap<>();
 	static
 	{
@@ -66,16 +65,10 @@ public class Q325_GrimCollector extends Quest
 	public Q325_GrimCollector()
 	{
 		super(325, "Grim Collector");
-		
 		registerQuestItems(ZOMBIE_HEAD, ZOMBIE_HEART, ZOMBIE_LIVER, SKULL, RIB_BONE, SPINE, ARM_BONE, THIGH_BONE, COMPLETE_SKELETON, ANATOMY_DIAGRAM);
-		
 		addStartNpc(CURTIS);
 		addTalkId(CURTIS, VARSAK, SAMED);
-		
-		for (int npcId : DROPLIST.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(DROPLIST.keySet());
 	}
 	
 	private static int getNumberOfPieces(QuestState st)
@@ -123,60 +116,67 @@ public class Q325_GrimCollector extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30336-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30434-03.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(ANATOMY_DIAGRAM, 1);
-		}
-		else if (event.equals("30434-06.htm"))
-		{
-			st.takeItems(ANATOMY_DIAGRAM, -1);
-			payback(st);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30434-07.htm"))
-		{
-			payback(st);
-		}
-		else if (event.equals("30434-09.htm"))
-		{
-			final int skeletons = st.getQuestItemsCount(COMPLETE_SKELETON);
-			if (skeletons > 0)
+			case "30336-03.htm":
 			{
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(COMPLETE_SKELETON, -1);
-				st.rewardItems(57, 543 + (341 * skeletons));
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("30342-03.htm"))
-		{
-			if (!st.hasQuestItems(SPINE, ARM_BONE, SKULL, RIB_BONE, THIGH_BONE))
+			case "30434-03.htm":
 			{
-				htmltext = "30342-02.htm";
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(ANATOMY_DIAGRAM, 1);
+				break;
 			}
-			else
+			case "30434-06.htm":
 			{
-				st.takeItems(SPINE, 1);
-				st.takeItems(SKULL, 1);
-				st.takeItems(ARM_BONE, 1);
-				st.takeItems(RIB_BONE, 1);
-				st.takeItems(THIGH_BONE, 1);
-				
-				if (Rnd.get(10) < 9)
+				st.takeItems(ANATOMY_DIAGRAM, -1);
+				payback(st);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "30434-07.htm":
+			{
+				payback(st);
+				break;
+			}
+			case "30434-09.htm":
+			{
+				final int skeletons = st.getQuestItemsCount(COMPLETE_SKELETON);
+				if (skeletons > 0)
 				{
-					st.giveItems(COMPLETE_SKELETON, 1);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(COMPLETE_SKELETON, -1);
+					st.rewardItems(57, 543 + (341 * skeletons));
+				}
+				break;
+			}
+			case "30342-03.htm":
+			{
+				if (!st.hasQuestItems(SPINE, ARM_BONE, SKULL, RIB_BONE, THIGH_BONE))
+				{
+					htmltext = "30342-02.htm";
 				}
 				else
 				{
-					htmltext = "30342-04.htm";
+					st.takeItems(SPINE, 1);
+					st.takeItems(SKULL, 1);
+					st.takeItems(ARM_BONE, 1);
+					st.takeItems(RIB_BONE, 1);
+					st.takeItems(THIGH_BONE, 1);
+					
+					if (Rnd.get(10) < 9)
+					{
+						st.giveItems(COMPLETE_SKELETON, 1);
+					}
+					else
+					{
+						htmltext = "30342-04.htm";
+					}
 				}
+				break;
 			}
 		}
 		
@@ -196,17 +196,21 @@ public class Q325_GrimCollector extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30336-01.htm" : "30336-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case CURTIS:
+					{
 						htmltext = (!st.hasQuestItems(ANATOMY_DIAGRAM)) ? "30336-04.htm" : "30336-05.htm";
 						break;
-					
+					}
 					case SAMED:
+					{
 						if (!st.hasQuestItems(ANATOMY_DIAGRAM))
 						{
 							htmltext = "30434-01.htm";
@@ -223,12 +227,15 @@ public class Q325_GrimCollector extends Quest
 							}
 						}
 						break;
-					
+					}
 					case VARSAK:
+					{
 						htmltext = "30342-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

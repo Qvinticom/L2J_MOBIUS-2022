@@ -37,7 +37,6 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 	private static final int KASSANDRA = 31743;
 	private static final int CARADINE = 31740;
 	private static final int NOEL = 31272;
-	
 	// Monsters
 	private static final int BARAHAM = 27113;
 	private static final int MALRUK_SUCCUBUS_1 = 20244;
@@ -49,7 +48,6 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 	private static final int SPLINTER_STAKATO_SOLDIER = 21510;
 	private static final int SPLINTER_STAKATO_DRONE_1 = 21511;
 	private static final int SPLINTER_STAKATO_DRONE_2 = 21512;
-	
 	// Items
 	private static final int LEGEND_OF_SEVENTEEN = 7587;
 	private static final int MALRUK_SUCCUBUS_CLAW = 7597;
@@ -64,12 +62,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 	public Q241_PossessorOfAPreciousSoul()
 	{
 		super(241, "Possessor of a Precious Soul - 1");
-		
 		registerQuestItems(LEGEND_OF_SEVENTEEN, MALRUK_SUCCUBUS_CLAW, ECHO_CRYSTAL, POETRY_BOOK, CRIMSON_MOSS, RAHORAKTI_MEDICINE);
-		
 		addStartNpc(TALIEN);
 		addTalkId(TALIEN, GABRIELLE, GILMORE, KANTABILON, STEDMIEL, VIRGIL, OGMAR, RAHORAKTI, KASSANDRA, CARADINE, NOEL);
-		
 		addKillId(BARAHAM, MALRUK_SUCCUBUS_1, MALRUK_SUCCUBUS_2, MALRUK_SUCCUBUS_TUREN_1, MALRUK_SUCCUBUS_TUREN_2, SPLINTER_STAKATO, SPLINTER_STAKATO_WALKER, SPLINTER_STAKATO_SOLDIER, SPLINTER_STAKATO_DRONE_1, SPLINTER_STAKATO_DRONE_2);
 	}
 	
@@ -83,132 +78,141 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 			return htmltext;
 		}
 		
-		// Talien
-		if (event.equals("31739-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31739-07.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LEGEND_OF_SEVENTEEN, 1);
-		}
-		else if (event.equals("31739-10.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ECHO_CRYSTAL, 1);
-		}
-		else if (event.equals("31739-13.htm"))
-		{
-			st.set("cond", "11");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(POETRY_BOOK, 1);
-		}
-		// Gabrielle
-		else if (event.equals("30753-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		// Gilmore
-		else if (event.equals("30754-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		// Kantabilon
-		else if (event.equals("31042-02.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31042-05.htm"))
-		{
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MALRUK_SUCCUBUS_CLAW, -1);
-			st.giveItems(ECHO_CRYSTAL, 1);
-		}
-		// Stedmiel
-		else if (event.equals("30692-02.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(POETRY_BOOK, 1);
-		}
-		// Virgil
-		else if (event.equals("31742-02.htm"))
-		{
-			st.set("cond", "12");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31742-05.htm"))
-		{
-			st.set("cond", "18");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		// Ogmar
-		else if (event.equals("31744-02.htm"))
-		{
-			st.set("cond", "13");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		// Rahorakti
-		else if (event.equals("31336-02.htm"))
-		{
-			st.set("cond", "14");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31336-05.htm"))
-		{
-			st.set("cond", "16");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(CRIMSON_MOSS, -1);
-			st.giveItems(RAHORAKTI_MEDICINE, 1);
-		}
-		// Kassandra
-		else if (event.equals("31743-02.htm"))
-		{
-			st.set("cond", "17");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(RAHORAKTI_MEDICINE, 1);
-		}
-		// Caradine
-		else if (event.equals("31740-02.htm"))
-		{
-			st.set("cond", "19");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31740-05.htm"))
-		{
-			st.giveItems(VIRGIL_LETTER, 1);
-			st.rewardExpAndSp(263043, 0);
-			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
-		}
-		// Noel
-		else if (event.equals("31272-02.htm"))
-		{
-			st.set("cond", "20");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31272-05.htm"))
-		{
-			if (st.hasQuestItems(HELLFIRE_OIL) && (st.getQuestItemsCount(LUNARGENT) >= 5))
+			case "31739-03.htm":
 			{
-				st.set("cond", "21");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(LUNARGENT, 5);
-				st.takeItems(HELLFIRE_OIL, 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31739-07.htm":
 			{
-				htmltext = "31272-07.htm";
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LEGEND_OF_SEVENTEEN, 1);
+				break;
+			}
+			case "31739-10.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ECHO_CRYSTAL, 1);
+				break;
+			}
+			case "31739-13.htm":
+			{
+				st.setCond(11);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(POETRY_BOOK, 1);
+				break;
+			}
+			case "30753-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30754-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31042-02.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31042-05.htm":
+			{
+				st.setCond(8);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MALRUK_SUCCUBUS_CLAW, -1);
+				st.giveItems(ECHO_CRYSTAL, 1);
+				break;
+			}
+			case "30692-02.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(POETRY_BOOK, 1);
+				break;
+			}
+			case "31742-02.htm":
+			{
+				st.setCond(12);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31742-05.htm":
+			{
+				st.setCond(18);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31744-02.htm":
+			{
+				st.setCond(13);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31336-02.htm":
+			{
+				st.setCond(14);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31336-05.htm":
+			{
+				st.setCond(16);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(CRIMSON_MOSS, -1);
+				st.giveItems(RAHORAKTI_MEDICINE, 1);
+				break;
+			}
+			case "31743-02.htm":
+			{
+				st.setCond(17);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(RAHORAKTI_MEDICINE, 1);
+				break;
+			}
+			case "31740-02.htm":
+			{
+				st.setCond(19);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31740-05.htm":
+			{
+				st.giveItems(VIRGIL_LETTER, 1);
+				st.rewardExpAndSp(263043, 0);
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
+			case "31272-02.htm":
+			{
+				st.setCond(20);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31272-05.htm":
+			{
+				if (st.hasQuestItems(HELLFIRE_OIL) && (st.getQuestItemsCount(LUNARGENT) >= 5))
+				{
+					st.setCond(21);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(LUNARGENT, 5);
+					st.takeItems(HELLFIRE_OIL, 1);
+				}
+				else
+				{
+					htmltext = "31272-07.htm";
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -227,19 +231,22 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (!player.isSubClassActive() || (player.getLevel() < 50)) ? "31739-02.htm" : "31739-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (!player.isSubClassActive())
 				{
 					break;
 				}
 				
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case TALIEN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31739-04.htm";
@@ -273,8 +280,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31739-14.htm";
 						}
 						break;
-					
+					}
 					case GABRIELLE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30753-01.htm";
@@ -284,8 +292,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "30753-03.htm";
 						}
 						break;
-					
+					}
 					case GILMORE:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30754-01.htm";
@@ -295,8 +304,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "30754-03.htm";
 						}
 						break;
-					
+					}
 					case KANTABILON:
+					{
 						if (cond == 5)
 						{
 							htmltext = "31042-01.htm";
@@ -314,8 +324,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31042-06.htm";
 						}
 						break;
-					
+					}
 					case STEDMIEL:
+					{
 						if (cond == 9)
 						{
 							htmltext = "30692-01.htm";
@@ -325,8 +336,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "30692-03.htm";
 						}
 						break;
-					
+					}
 					case VIRGIL:
+					{
 						if (cond == 11)
 						{
 							htmltext = "31742-01.htm";
@@ -344,8 +356,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31742-06.htm";
 						}
 						break;
-					
+					}
 					case OGMAR:
+					{
 						if (cond == 12)
 						{
 							htmltext = "31744-01.htm";
@@ -355,8 +368,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31744-03.htm";
 						}
 						break;
-					
+					}
 					case RAHORAKTI:
+					{
 						if (cond == 13)
 						{
 							htmltext = "31336-01.htm";
@@ -374,8 +388,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31336-06.htm";
 						}
 						break;
-					
+					}
 					case KASSANDRA:
+					{
 						if (cond == 16)
 						{
 							htmltext = "31743-01.htm";
@@ -385,8 +400,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31743-03.htm";
 						}
 						break;
-					
+					}
 					case CARADINE:
+					{
 						if (cond == 18)
 						{
 							htmltext = "31740-01.htm";
@@ -400,8 +416,9 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31740-04.htm";
 						}
 						break;
-					
+					}
 					case NOEL:
+					{
 						if (cond == 19)
 						{
 							htmltext = "31272-01.htm";
@@ -422,12 +439,15 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31272-06.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -444,40 +464,45 @@ public class Q241_PossessorOfAPreciousSoul extends Quest
 		switch (npc.getNpcId())
 		{
 			case BARAHAM:
-				if (st.getInt("cond") == 3)
+			{
+				if (st.isCond(3))
 				{
-					st.set("cond", "4");
+					st.setCond(4);
 					st.giveItems(LEGEND_OF_SEVENTEEN, 1);
 					st.playSound(QuestState.SOUND_MIDDLE);
 				}
 				break;
-			
+			}
 			case MALRUK_SUCCUBUS_1:
 			case MALRUK_SUCCUBUS_2:
-				if ((st.getInt("cond") == 6) && st.dropItems(MALRUK_SUCCUBUS_CLAW, 1, 10, 100000))
+			{
+				if (st.isCond(6) && st.dropItems(MALRUK_SUCCUBUS_CLAW, 1, 10, 100000))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case MALRUK_SUCCUBUS_TUREN_1:
 			case MALRUK_SUCCUBUS_TUREN_2:
-				if ((st.getInt("cond") == 6) && st.dropItems(MALRUK_SUCCUBUS_CLAW, 1, 10, 120000))
+			{
+				if (st.isCond(6) && st.dropItems(MALRUK_SUCCUBUS_CLAW, 1, 10, 120000))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case SPLINTER_STAKATO:
 			case SPLINTER_STAKATO_WALKER:
 			case SPLINTER_STAKATO_SOLDIER:
 			case SPLINTER_STAKATO_DRONE_1:
 			case SPLINTER_STAKATO_DRONE_2:
-				if ((st.getInt("cond") == 14) && st.dropItems(CRIMSON_MOSS, 1, 5, 100000))
+			{
+				if (st.isCond(14) && st.dropItems(CRIMSON_MOSS, 1, 5, 100000))
 				{
-					st.set("cond", "15");
+					st.setCond(15);
 				}
 				break;
+			}
 		}
 		return null;
 	}

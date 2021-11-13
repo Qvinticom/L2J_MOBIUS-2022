@@ -29,49 +29,45 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q616_MagicalPowerOfFire_Part2 extends Quest
 {
-	// Monster
-	private static final int SOUL_OF_FIRE_NASTRON = 25306;
-	
 	// NPCs
 	private static final int UDAN_MARDUI = 31379;
 	private static final int KETRAS_HOLY_ALTAR = 31558;
-	
+	// Monster
+	private static final int SOUL_OF_FIRE_NASTRON = 25306;
 	// Items
 	private static final int RED_TOTEM = 7243;
 	private static final int FIRE_HEART_OF_NASTRON = 7244;
-	
 	// Other
 	private static final int CHECK_INTERVAL = 600000; // 10 minutes
 	private static final int IDLE_INTERVAL = 2; // (X * CHECK_INTERVAL) = 20 minutes
-	
 	private NpcInstance _npc = null;
 	private int _status = -1;
 	
 	public Q616_MagicalPowerOfFire_Part2()
 	{
 		super(616, "Magical Power of Fire - Part 2");
-		
 		registerQuestItems(FIRE_HEART_OF_NASTRON);
-		
 		addStartNpc(UDAN_MARDUI);
 		addTalkId(UDAN_MARDUI, KETRAS_HOLY_ALTAR);
-		
 		addAttackId(SOUL_OF_FIRE_NASTRON);
 		addKillId(SOUL_OF_FIRE_NASTRON);
-		
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(SOUL_OF_FIRE_NASTRON))
 		{
 			case UNDEFINED:
+			{
 				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + SOUL_OF_FIRE_NASTRON);
 				break;
-			
+			}
 			case ALIVE:
+			{
 				spawnNpc();
 				// fallthrough
-				
+			}
 			case DEAD:
+			{
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;
+			}
 		}
 	}
 	
@@ -102,56 +98,58 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 			return htmltext;
 		}
 		
-		// Udan Mardui
-		if (event.equals("31379-04.htm"))
+		switch (event)
 		{
-			if (st.hasQuestItems(RED_TOTEM))
+			case "31379-04.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-			}
-			else
-			{
-				htmltext = "31379-02.htm";
-			}
-		}
-		else if (event.equals("31379-08.htm"))
-		{
-			if (st.hasQuestItems(FIRE_HEART_OF_NASTRON))
-			{
-				st.takeItems(FIRE_HEART_OF_NASTRON, 1);
-				st.rewardExpAndSp(10000, 0);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
-			}
-			else
-			{
-				htmltext = "31379-09.htm";
-			}
-		}
-		// Ketra's Holy Altar
-		else if (event.equals("31558-02.htm"))
-		{
-			if (st.hasQuestItems(RED_TOTEM))
-			{
-				if (_status < 0)
+				if (st.hasQuestItems(RED_TOTEM))
 				{
-					if (spawnRaid())
+					st.startQuest();
+				}
+				else
+				{
+					htmltext = "31379-02.htm";
+				}
+				break;
+			}
+			case "31379-08.htm":
+			{
+				if (st.hasQuestItems(FIRE_HEART_OF_NASTRON))
+				{
+					st.takeItems(FIRE_HEART_OF_NASTRON, 1);
+					st.rewardExpAndSp(10000, 0);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					htmltext = "31379-09.htm";
+				}
+				break;
+			}
+			case "31558-02.htm":
+			{
+				if (st.hasQuestItems(RED_TOTEM))
+				{
+					if (_status < 0)
 					{
-						st.set("cond", "2");
-						st.playSound(QuestState.SOUND_MIDDLE);
-						st.takeItems(RED_TOTEM, 1);
+						if (spawnRaid())
+						{
+							st.setCond(2);
+							st.playSound(QuestState.SOUND_MIDDLE);
+							st.takeItems(RED_TOTEM, 1);
+						}
+					}
+					else
+					{
+						htmltext = "31558-04.htm";
 					}
 				}
 				else
 				{
-					htmltext = "31558-04.htm";
+					htmltext = "31558-03.htm";
 				}
-			}
-			else
-			{
-				htmltext = "31558-03.htm";
+				break;
 			}
 		}
 		
@@ -171,6 +169,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (!st.hasQuestItems(RED_TOTEM))
 				{
 					htmltext = "31379-02.htm";
@@ -184,12 +183,14 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 					htmltext = "31379-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case UDAN_MARDUI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31379-05.htm";
@@ -203,8 +204,9 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 							htmltext = "31379-07.htm";
 						}
 						break;
-					
+					}
 					case KETRAS_HOLY_ALTAR:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31558-01.htm";
@@ -214,8 +216,10 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 							htmltext = "31558-05.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -231,7 +235,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, 2))
 		{
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
@@ -239,7 +243,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 				continue;
 			}
 			
-			st.set("cond", "3");
+			st.setCond(3);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(FIRE_HEART_OF_NASTRON, 1);
 		}
@@ -282,6 +286,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 			
 			return true;
 		}
+		
 		return false;
 	}
 	

@@ -30,7 +30,6 @@ public class Q166_MassOfDarkness extends Quest
 	private static final int IRIA = 30135;
 	private static final int DORANKUS = 30139;
 	private static final int TRUDY = 30143;
-	
 	// Items
 	private static final int UNDRIAS_LETTER = 1088;
 	private static final int CEREMONIAL_DAGGER = 1089;
@@ -40,9 +39,7 @@ public class Q166_MassOfDarkness extends Quest
 	public Q166_MassOfDarkness()
 	{
 		super(166, "Mass of Darkness");
-		
 		registerQuestItems(UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIEL_SCRIPTURE);
-		
 		addStartNpc(UNDRIAS);
 		addTalkId(UNDRIAS, IRIA, DORANKUS, TRUDY);
 	}
@@ -59,9 +56,7 @@ public class Q166_MassOfDarkness extends Quest
 		
 		if (event.equals("30130-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(UNDRIAS_LETTER, 1);
 		}
 		
@@ -81,6 +76,7 @@ public class Q166_MassOfDarkness extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30130-00.htm";
@@ -94,12 +90,14 @@ public class Q166_MassOfDarkness extends Quest
 					htmltext = "30130-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case UNDRIAS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30130-05.htm";
@@ -117,15 +115,16 @@ public class Q166_MassOfDarkness extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case IRIA:
+					{
 						if ((cond == 1) && !st.hasQuestItems(CEREMONIAL_DAGGER))
 						{
 							htmltext = "30135-01.htm";
 							st.giveItems(CEREMONIAL_DAGGER, 1);
 							if (st.hasQuestItems(DREVIANT_WINE, GARMIEL_SCRIPTURE))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -138,15 +137,16 @@ public class Q166_MassOfDarkness extends Quest
 							htmltext = "30135-02.htm";
 						}
 						break;
-					
+					}
 					case DORANKUS:
+					{
 						if ((cond == 1) && !st.hasQuestItems(DREVIANT_WINE))
 						{
 							htmltext = "30139-01.htm";
 							st.giveItems(DREVIANT_WINE, 1);
 							if (st.hasQuestItems(CEREMONIAL_DAGGER, GARMIEL_SCRIPTURE))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -159,15 +159,16 @@ public class Q166_MassOfDarkness extends Quest
 							htmltext = "30139-02.htm";
 						}
 						break;
-					
+					}
 					case TRUDY:
+					{
 						if ((cond == 1) && !st.hasQuestItems(GARMIEL_SCRIPTURE))
 						{
 							htmltext = "30143-01.htm";
 							st.giveItems(GARMIEL_SCRIPTURE, 1);
 							if (st.hasQuestItems(CEREMONIAL_DAGGER, DREVIANT_WINE))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -180,12 +181,15 @@ public class Q166_MassOfDarkness extends Quest
 							htmltext = "30143-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

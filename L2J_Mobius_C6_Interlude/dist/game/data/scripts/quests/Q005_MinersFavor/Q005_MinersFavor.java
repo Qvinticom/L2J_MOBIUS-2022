@@ -30,7 +30,6 @@ public class Q005_MinersFavor extends Quest
 	private static final int GARITA = 30518;
 	private static final int REED = 30520;
 	private static final int BRUNON = 30526;
-	
 	// Items
 	private static final int BOLTERS_LIST = 1547;
 	private static final int MINING_BOOTS = 1548;
@@ -38,16 +37,13 @@ public class Q005_MinersFavor extends Quest
 	private static final int BOOMBOOM_POWDER = 1550;
 	private static final int REDSTONE_BEER = 1551;
 	private static final int BOLTERS_SMELLY_SOCKS = 1552;
-	
 	// Reward
 	private static final int NECKLACE = 906;
 	
 	public Q005_MinersFavor()
 	{
 		super(5, "Miner's Favor");
-		
 		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
-		
 		addStartNpc(BOLTER);
 		addTalkId(BOLTER, SHARI, GARITA, REED, BRUNON);
 	}
@@ -64,9 +60,7 @@ public class Q005_MinersFavor extends Quest
 		
 		if (event.equals("30554-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(BOLTERS_LIST, 1);
 			st.giveItems(BOLTERS_SMELLY_SOCKS, 1);
 		}
@@ -76,7 +70,7 @@ public class Q005_MinersFavor extends Quest
 			st.giveItems(MINERS_PICK, 1);
 			if (st.hasQuestItems(MINING_BOOTS, BOOMBOOM_POWDER, REDSTONE_BEER))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
 			}
 			else
@@ -101,14 +95,17 @@ public class Q005_MinersFavor extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 2) ? "30554-01.htm" : "30554-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case BOLTER:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30554-04.htm";
@@ -126,15 +123,16 @@ public class Q005_MinersFavor extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case SHARI:
+					{
 						if ((cond == 1) && !st.hasQuestItems(BOOMBOOM_POWDER))
 						{
 							htmltext = "30517-01.htm";
 							st.giveItems(BOOMBOOM_POWDER, 1);
 							if (st.hasQuestItems(MINING_BOOTS, MINERS_PICK, REDSTONE_BEER))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -147,15 +145,16 @@ public class Q005_MinersFavor extends Quest
 							htmltext = "30517-02.htm";
 						}
 						break;
-					
+					}
 					case GARITA:
+					{
 						if ((cond == 1) && !st.hasQuestItems(MINING_BOOTS))
 						{
 							htmltext = "30518-01.htm";
 							st.giveItems(MINING_BOOTS, 1);
 							if (st.hasQuestItems(MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -168,15 +167,16 @@ public class Q005_MinersFavor extends Quest
 							htmltext = "30518-02.htm";
 						}
 						break;
-					
+					}
 					case REED:
+					{
 						if ((cond == 1) && !st.hasQuestItems(REDSTONE_BEER))
 						{
 							htmltext = "30520-01.htm";
 							st.giveItems(REDSTONE_BEER, 1);
 							if (st.hasQuestItems(MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -189,8 +189,9 @@ public class Q005_MinersFavor extends Quest
 							htmltext = "30520-02.htm";
 						}
 						break;
-					
+					}
 					case BRUNON:
+					{
 						if ((cond == 1) && !st.hasQuestItems(MINERS_PICK))
 						{
 							htmltext = "30526-01.htm";
@@ -200,12 +201,15 @@ public class Q005_MinersFavor extends Quest
 							htmltext = "30526-03.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

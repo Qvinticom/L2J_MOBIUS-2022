@@ -28,19 +28,15 @@ public class Q654_JourneyToASettlement extends Quest
 {
 	// Item
 	private static final int ANTELOPE_SKIN = 8072;
-	
 	// Reward
 	private static final int FORCE_FIELD_REMOVAL_SCROLL = 8073;
 	
 	public Q654_JourneyToASettlement()
 	{
 		super(654, "Journey to a Settlement");
-		
 		registerQuestItems(ANTELOPE_SKIN);
-		
 		addStartNpc(31453); // Nameless Spirit
 		addTalkId(31453);
-		
 		addKillId(21294, 21295); // Canyon Antelope, Canyon Antelope Slave
 	}
 	
@@ -54,23 +50,27 @@ public class Q654_JourneyToASettlement extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31453-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31453-03.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31453-06.htm"))
-		{
-			st.takeItems(ANTELOPE_SKIN, -1);
-			st.giveItems(FORCE_FIELD_REMOVAL_SCROLL, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "31453-02.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31453-03.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31453-06.htm":
+			{
+				st.takeItems(ANTELOPE_SKIN, -1);
+				st.giveItems(FORCE_FIELD_REMOVAL_SCROLL, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -89,12 +89,14 @@ public class Q654_JourneyToASettlement extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState prevSt = player.getQuestState(Q119_LastImperialPrince.class.getSimpleName());
 				htmltext = ((prevSt == null) || !prevSt.isCompleted() || (player.getLevel() < 74)) ? "31453-00.htm" : "31453-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31453-02.htm";
@@ -108,6 +110,7 @@ public class Q654_JourneyToASettlement extends Quest
 					htmltext = "31453-05.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -116,7 +119,7 @@ public class Q654_JourneyToASettlement extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -124,7 +127,7 @@ public class Q654_JourneyToASettlement extends Quest
 		
 		if (st.dropItems(ANTELOPE_SKIN, 1, 1, 50000))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;

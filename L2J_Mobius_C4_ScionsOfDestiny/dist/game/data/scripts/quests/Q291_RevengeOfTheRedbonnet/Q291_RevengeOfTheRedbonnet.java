@@ -27,7 +27,6 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 {
 	// Quest items
 	private static final int BLACK_WOLF_PELT = 1482;
-	
 	// Rewards
 	private static final int SCROLL_OF_ESCAPE = 736;
 	private static final int GRANDMA_PEARL = 1502;
@@ -38,12 +37,9 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	public Q291_RevengeOfTheRedbonnet()
 	{
 		super(291, "Revenge of the Redbonnet");
-		
 		registerQuestItems(BLACK_WOLF_PELT);
-		
 		addStartNpc(30553); // Maryse Redbonnet
 		addTalkId(30553);
-		
 		addKillId(20317);
 	}
 	
@@ -59,9 +55,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 		
 		if (event.equals("30553-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -80,11 +74,13 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 4) ? "30553-01.htm" : "30553-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30553-04.htm";
@@ -117,6 +113,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -125,7 +122,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -133,7 +130,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 		
 		if (st.dropItemsAlways(BLACK_WOLF_PELT, 1, 40))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

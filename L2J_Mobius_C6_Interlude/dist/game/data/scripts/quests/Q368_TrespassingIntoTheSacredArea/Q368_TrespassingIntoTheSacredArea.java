@@ -29,10 +29,8 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 {
 	// NPC
 	private static final int RESTINA = 30926;
-	
 	// Item
 	private static final int FANG = 5881;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -46,12 +44,9 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 	public Q368_TrespassingIntoTheSacredArea()
 	{
 		super(368, "Trespassing into the Sacred Area");
-		
 		registerQuestItems(FANG);
-		
 		addStartNpc(RESTINA);
 		addTalkId(RESTINA);
-		
 		addKillId(20794, 20795, 20796, 20797);
 	}
 	
@@ -67,9 +62,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 		
 		if (event.equals("30926-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30926-05.htm"))
 		{
@@ -93,10 +86,12 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 36) ? "30926-01a.htm" : "30926-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int fangs = st.getQuestItemsCount(FANG);
 				if (fangs == 0)
 				{
@@ -110,6 +105,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 					st.rewardItems(57, reward);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

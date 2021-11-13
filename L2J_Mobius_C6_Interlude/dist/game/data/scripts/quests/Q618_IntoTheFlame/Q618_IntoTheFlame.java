@@ -27,23 +27,18 @@ public class Q618_IntoTheFlame extends Quest
 	// NPCs
 	private static final int KLEIN = 31540;
 	private static final int HILDA = 31271;
-	
 	// Items
 	private static final int VACUALITE_ORE = 7265;
 	private static final int VACUALITE = 7266;
-	
 	// Reward
 	private static final int FLOATING_STONE = 7267;
 	
 	public Q618_IntoTheFlame()
 	{
 		super(618, "Into the Flame");
-		
 		registerQuestItems(VACUALITE_ORE, VACUALITE);
-		
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN, HILDA);
-		
 		// Kookaburras, Bandersnatches, Grendels
 		addKillId(21274, 21275, 21276, 21277, 21282, 21283, 21284, 21285, 21290, 21291, 21292, 21293);
 	}
@@ -58,30 +53,35 @@ public class Q618_IntoTheFlame extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31540-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31540-05.htm"))
-		{
-			st.takeItems(VACUALITE, 1);
-			st.giveItems(FLOATING_STONE, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("31271-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31271-05.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(VACUALITE_ORE, -1);
-			st.giveItems(VACUALITE, 1);
+			case "31540-03.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31540-05.htm":
+			{
+				st.takeItems(VACUALITE, 1);
+				st.giveItems(FLOATING_STONE, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "31271-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31271-05.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(VACUALITE_ORE, -1);
+				st.giveItems(VACUALITE, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -100,18 +100,22 @@ public class Q618_IntoTheFlame extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 60) ? "31540-01.htm" : "31540-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case KLEIN:
+					{
 						htmltext = (cond == 4) ? "31540-04.htm" : "31540-03.htm";
 						break;
-					
+					}
 					case HILDA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31271-01.htm";
@@ -129,8 +133,10 @@ public class Q618_IntoTheFlame extends Quest
 							htmltext = "31271-06.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -139,7 +145,7 @@ public class Q618_IntoTheFlame extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "2");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 2);
 		if (partyMember == null)
 		{
 			return null;
@@ -153,7 +159,7 @@ public class Q618_IntoTheFlame extends Quest
 		
 		if (st.dropItems(VACUALITE_ORE, 1, 50, 500000))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;

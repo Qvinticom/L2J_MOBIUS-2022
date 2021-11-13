@@ -27,11 +27,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q337_AudienceWithTheLandDragon extends Quest
 {
-	// Variables
-	private static boolean _jewel1 = false;
-	private static boolean _jewel2 = false;
-	private static boolean _jewel3 = false;
-	
 	// NPCs
 	private static final int GABRIELLE = 30753;
 	private static final int ORVEN = 30857; // 1
@@ -42,8 +37,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	private static final int HELTON = 30678; // 2nd abyssal
 	private static final int GILMORE = 30754; // 3rd abyssal
 	private static final int THEODRIC = 30755;
-	
-	// Mobs
+	// Monsters
 	private static final int BLOOD_QUEEN = 18001; // 1
 	private static final int SACRIFICE_OF_THE_SACRIFICED = 27171; // 1
 	private static final int HARIT_LIZARDMAN_SHAMAN = 20644; // 2
@@ -63,7 +57,6 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	private static final int CAVE_KEEPER_2 = 20277;
 	private static final int ABYSSAL_JEWEL_3 = 27167;
 	private static final int JEWEL_GUARDIAN_PYTON = 27170;
-	
 	// Items
 	private static final int FEATHER_OF_GABRIELLE = 3852;
 	private static final int MARK_OF_WATCHMAN = 3864;
@@ -80,92 +73,31 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	private static final int HERALD_OF_SLAYER = 3890;
 	private static final int THIRD_FRAGMENT_OF_ABYSS_JEWEL = 3861; // 3rd abyssal
 	private static final int PORTAL_STONE = 3865;
-	
-	/**
-	 * 0..npcId, 1..cond, 2..cond2, 3..chance, 4..itemId
-	 */
+	// Variables
+	private static boolean _jewel1 = false;
+	private static boolean _jewel2 = false;
+	private static boolean _jewel3 = false;
+	// @formatter:off
 	private static final int[][] DROPS_ON_KILL =
 	{
-		{
-			SACRIFICE_OF_THE_SACRIFICED,
-			1,
-			1,
-			REMAINS_OF_SACRIFIED
-		},
-		{
-			HARIT_LIZARDMAN_ZEALOT,
-			1,
-			2,
-			TOTEM_OF_LAND_DRAGON
-		},
-		{
-			KRANROT,
-			1,
-			3,
-			KRANROT_SKIN
-		},
-		{
-			HAMRUT,
-			1,
-			3,
-			HAMRUT_LEG
-		},
-		{
-			MARSH_DRAKE,
-			1,
-			4,
-			MARSH_DRAKE_TALONS
-		},
-		{
-			MARSH_STALKER,
-			1,
-			4,
-			MARSH_STALKER_HORN
-		},
-		{
-			JEWEL_GUARDIAN_MARA,
-			2,
-			5,
-			MARA_FANG
-		},
-		{
-			JEWEL_GUARDIAN_MUSFEL,
-			2,
-			6,
-			MUSFEL_FANG
-		}
+		// 0..npcId, 1..cond, 2..cond2, 3..chance, 4..itemId
+		{SACRIFICE_OF_THE_SACRIFICED, 1, 1, REMAINS_OF_SACRIFIED},
+		{HARIT_LIZARDMAN_ZEALOT, 1, 2, TOTEM_OF_LAND_DRAGON},
+		{KRANROT, 1, 3, KRANROT_SKIN},
+		{HAMRUT, 1, 3, HAMRUT_LEG},
+		{MARSH_DRAKE, 1, 4, MARSH_DRAKE_TALONS},
+		{MARSH_STALKER, 1, 4, MARSH_STALKER_HORN},
+		{JEWEL_GUARDIAN_MARA, 2, 5, MARA_FANG},
+		{JEWEL_GUARDIAN_MUSFEL, 2, 6, MUSFEL_FANG}
 	};
-	
-	/**
-	 * 0..npcId, 1..cond, 2..cond2, 3..itemId, 4..amount of mobs, 5..mob
-	 */
 	private static final int[][] DROP_ON_ATTACK =
 	{
-		{
-			ABYSSAL_JEWEL_1,
-			2,
-			5,
-			FIRST_FRAGMENT_OF_ABYSS_JEWEL,
-			20,
-			JEWEL_GUARDIAN_MARA
-		},
-		{
-			ABYSSAL_JEWEL_2,
-			2,
-			6,
-			SECOND_FRAGMENT_OF_ABYSS_JEWEL,
-			20,
-			JEWEL_GUARDIAN_MUSFEL
-		},
-		{
-			ABYSSAL_JEWEL_3,
-			4,
-			7,
-			THIRD_FRAGMENT_OF_ABYSS_JEWEL,
-			3,
-			JEWEL_GUARDIAN_PYTON
-		},
+		// 0..npcId, 1..cond, 2..cond2, 3..itemId, 4..amount of mobs, 5..mob
+		{ABYSSAL_JEWEL_1, 2, 5, FIRST_FRAGMENT_OF_ABYSS_JEWEL, 20, JEWEL_GUARDIAN_MARA},
+		{ABYSSAL_JEWEL_2, 2, 6, SECOND_FRAGMENT_OF_ABYSS_JEWEL, 20, JEWEL_GUARDIAN_MUSFEL},
+		{ABYSSAL_JEWEL_3, 4, 7, THIRD_FRAGMENT_OF_ABYSS_JEWEL, 3, JEWEL_GUARDIAN_PYTON},
 	};
+	// @formatter:on
 	
 	public Q337_AudienceWithTheLandDragon()
 	{
@@ -190,47 +122,49 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			return htmltext;
 		}
 		
-		// Gabrielle
-		if (event.equals("30753-05.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("drop1", "1");
-			st.set("drop2", "1");
-			st.set("drop3", "1");
-			st.set("drop4", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(FEATHER_OF_GABRIELLE, 1);
-		}
-		else if (event.equals("30753-09.htm"))
-		{
-			if (st.getQuestItemsCount(MARK_OF_WATCHMAN) >= 4)
+			case "30753-05.htm":
 			{
-				st.set("cond", "2");
-				st.set("drop5", "2");
-				st.set("drop6", "2");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(MARK_OF_WATCHMAN, 4);
+				st.startQuest();
+				st.set("drop1", "1");
+				st.set("drop2", "1");
+				st.set("drop3", "1");
+				st.set("drop4", "1");
+				st.giveItems(FEATHER_OF_GABRIELLE, 1);
+				break;
 			}
-			else
+			case "30753-09.htm":
 			{
-				htmltext = null;
+				if (st.getQuestItemsCount(MARK_OF_WATCHMAN) >= 4)
+				{
+					st.setCond(2);
+					st.set("drop5", "2");
+					st.set("drop6", "2");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(MARK_OF_WATCHMAN, 4);
+				}
+				else
+				{
+					htmltext = null;
+				}
+				break;
 			}
-		}
-		// Theodric
-		else if (event.equals("30755-05.htm"))
-		{
-			if (st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL))
+			case "30755-05.htm":
 			{
-				st.takeItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL, 1);
-				st.takeItems(HERALD_OF_SLAYER, 1);
-				st.giveItems(PORTAL_STONE, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
-			}
-			else
-			{
-				htmltext = null;
+				if (st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL))
+				{
+					st.takeItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL, 1);
+					st.takeItems(HERALD_OF_SLAYER, 1);
+					st.giveItems(PORTAL_STONE, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					htmltext = null;
+				}
+				break;
 			}
 		}
 		
@@ -250,14 +184,17 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 50) ? "30753-02.htm" : "30753-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case GABRIELLE:
+					{
 						if (cond == 1)
 						{
 							htmltext = (st.getQuestItemsCount(MARK_OF_WATCHMAN) < 4) ? "30753-06.htm" : "30753-08.htm";
@@ -271,7 +208,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							else
 							{
 								htmltext = "30753-11.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(FEATHER_OF_GABRIELLE, 1);
 								st.takeItems(MARK_OF_WATCHMAN, 1);
@@ -287,8 +224,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							htmltext = "30753-13.htm";
 						}
 						break;
-					
+					}
 					case ORVEN:
+					{
 						if (cond == 1)
 						{
 							if (st.getInt("drop1") == 1)
@@ -316,8 +254,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							}
 						}
 						break;
-					
+					}
 					case KENDRA:
+					{
 						if (cond == 1)
 						{
 							if (st.getInt("drop2") == 1)
@@ -345,8 +284,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							}
 						}
 						break;
-					
+					}
 					case CHAKIRIS:
+					{
 						if (cond == 1)
 						{
 							if (st.getInt("drop3") == 1)
@@ -375,8 +315,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							}
 						}
 						break;
-					
+					}
 					case KAIENA:
+					{
 						if (cond == 1)
 						{
 							if (st.getInt("drop4") == 1)
@@ -405,18 +346,21 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							}
 						}
 						break;
-					
+					}
 					case MOKE:
+					{
 						if (cond == 2)
 						{
 							switch (st.getInt("drop5"))
 							{
 								case 2:
+								{
 									htmltext = "30498-01.htm";
 									st.set("drop5", "1");
 									break;
-								
+								}
 								case 1:
+								{
 									if (st.hasQuestItems(FIRST_FRAGMENT_OF_ABYSS_JEWEL, MARA_FANG))
 									{
 										htmltext = "30498-03.htm";
@@ -431,8 +375,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 										htmltext = "30498-02.htm";
 									}
 									break;
-								
+								}
 								case 0:
+								{
 									if (st.getQuestItemsCount(MARK_OF_WATCHMAN) < 2)
 									{
 										htmltext = "30498-04.htm";
@@ -442,21 +387,25 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 										htmltext = "30498-05.htm";
 									}
 									break;
+								}
 							}
 						}
 						break;
-					
+					}
 					case HELTON:
+					{
 						if (cond == 2)
 						{
 							switch (st.getInt("drop6"))
 							{
 								case 2:
+								{
 									htmltext = "30678-01.htm";
 									st.set("drop6", "1");
 									break;
-								
+								}
 								case 1:
+								{
 									if (st.hasQuestItems(SECOND_FRAGMENT_OF_ABYSS_JEWEL, MUSFEL_FANG))
 									{
 										htmltext = "30678-03.htm";
@@ -471,8 +420,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 										htmltext = "30678-02.htm";
 									}
 									break;
-								
+								}
 								case 0:
+								{
 									if (st.getQuestItemsCount(MARK_OF_WATCHMAN) < 2)
 									{
 										htmltext = "30678-04.htm";
@@ -482,11 +432,13 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 										htmltext = "30678-05.htm";
 									}
 									break;
+								}
 							}
 						}
 						break;
-					
+					}
 					case GILMORE:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30754-01.htm";
@@ -494,7 +446,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30754-02.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.set("drop7", "1");
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
@@ -503,8 +455,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							htmltext = (!st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL)) ? "30754-04.htm" : "30754-05.htm";
 						}
 						break;
-					
+					}
 					case THEODRIC:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30755-01.htm";
@@ -518,8 +471,10 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 							htmltext = (!st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL)) ? "30755-03.htm" : "30755-04.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -542,7 +497,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 				continue;
 			}
 			
-			if (npcInfo[1] != st.getInt("cond"))
+			if (npcInfo[1] != st.getCond())
 			{
 				break;
 			}
@@ -637,9 +592,8 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		final int npcId = npc.getNpcId();
-		
 		switch (npcId)
 		{
 			case SACRIFICE_OF_THE_SACRIFICED: // Orven's request
@@ -650,6 +604,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			case MARSH_STALKER:
 			case JEWEL_GUARDIAN_MARA:// Moke's request
 			case JEWEL_GUARDIAN_MUSFEL:// Helton's request
+			{
 				for (int[] npcInfo : DROPS_ON_KILL)
 				{
 					if (npcInfo[0] != npcId)
@@ -669,8 +624,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					break;
 				}
 				break;
-			
+			}
 			case BLOOD_QUEEN:// Orven's request
+			{
 				if ((cond == 1) && (st.getInt("drop1") == 1) && !st.hasQuestItems(REMAINS_OF_SACRIFIED))
 				{
 					for (int i = 0; i < 8; i++)
@@ -679,9 +635,10 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					}
 				}
 				break;
-			
+			}
 			case HARIT_LIZARDMAN_SHAMAN:// Kendra's request
 			case HARIT_LIZARDMAN_MATRIARCH:
+			{
 				if ((cond == 1) && (Rnd.get(5) == 0) && (st.getInt("drop2") == 1) && !st.hasQuestItems(TOTEM_OF_LAND_DRAGON))
 				{
 					for (int i = 0; i < 3; i++)
@@ -690,16 +647,18 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					}
 				}
 				break;
-			
+			}
 			case CAVE_MAIDEN_1:// Gilmore's request
 			case CAVE_MAIDEN_2:
 			case CAVE_KEEPER_1:
 			case CAVE_KEEPER_2:
+			{
 				if ((cond == 4) && (Rnd.get(5) == 0) && !st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL))
 				{
 					addSpawn(ABYSSAL_JEWEL_3, npc.getX() + Rnd.get(-50, 50), npc.getY() + Rnd.get(-50, 50), npc.getZ(), npc.getHeading(), true, 60000);
 				}
 				break;
+			}
 		}
 		
 		return null;

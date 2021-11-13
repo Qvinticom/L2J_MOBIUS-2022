@@ -29,10 +29,8 @@ public class Q366_SilverHairedShaman extends Quest
 {
 	// NPC
 	private static final int DIETER = 30111;
-	
 	// Item
 	private static final int HAIR = 5874;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -45,12 +43,9 @@ public class Q366_SilverHairedShaman extends Quest
 	public Q366_SilverHairedShaman()
 	{
 		super(366, "Silver Haired Shaman");
-		
 		registerQuestItems(HAIR);
-		
 		addStartNpc(DIETER);
 		addTalkId(DIETER);
-		
 		addKillId(20986, 20987, 20988);
 	}
 	
@@ -66,9 +61,7 @@ public class Q366_SilverHairedShaman extends Quest
 		
 		if (event.equals("30111-2.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30111-6.htm"))
 		{
@@ -92,10 +85,12 @@ public class Q366_SilverHairedShaman extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 48) ? "30111-0.htm" : "30111-1.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int count = st.getQuestItemsCount(HAIR);
 				if (count == 0)
 				{
@@ -108,6 +103,7 @@ public class Q366_SilverHairedShaman extends Quest
 					st.rewardItems(57, 12070 + (500 * count));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

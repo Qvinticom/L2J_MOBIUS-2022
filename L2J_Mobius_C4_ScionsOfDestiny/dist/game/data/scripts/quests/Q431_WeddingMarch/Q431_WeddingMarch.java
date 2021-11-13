@@ -26,22 +26,17 @@ public class Q431_WeddingMarch extends Quest
 {
 	// NPC
 	private static final int KANTABILON = 31042;
-	
 	// Item
 	private static final int SILVER_CRYSTAL = 7540;
-	
 	// Reward
 	private static final int WEDDING_ECHO_CRYSTAL = 7062;
 	
 	public Q431_WeddingMarch()
 	{
 		super(431, "Wedding March");
-		
 		registerQuestItems(SILVER_CRYSTAL);
-		
 		addStartNpc(KANTABILON);
 		addTalkId(KANTABILON);
-		
 		addKillId(20786, 20787);
 	}
 	
@@ -57,9 +52,7 @@ public class Q431_WeddingMarch extends Quest
 		
 		if (event.equals("31042-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31042-05.htm"))
 		{
@@ -92,11 +85,13 @@ public class Q431_WeddingMarch extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 38) ? "31042-00.htm" : "31042-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31042-02.htm";
@@ -106,6 +101,7 @@ public class Q431_WeddingMarch extends Quest
 					htmltext = (st.getQuestItemsCount(SILVER_CRYSTAL) < 50) ? "31042-03.htm" : "31042-04.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -114,7 +110,7 @@ public class Q431_WeddingMarch extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -128,7 +124,7 @@ public class Q431_WeddingMarch extends Quest
 		
 		if (st.dropItems(SILVER_CRYSTAL, 1, 50, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

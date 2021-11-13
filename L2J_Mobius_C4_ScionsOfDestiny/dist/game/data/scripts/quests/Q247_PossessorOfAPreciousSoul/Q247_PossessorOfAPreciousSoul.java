@@ -28,7 +28,6 @@ public class Q247_PossessorOfAPreciousSoul extends Quest
 	// NPCs
 	private static final int CARADINE = 31740;
 	private static final int LADY_OF_THE_LAKE = 31745;
-	
 	// Items
 	private static final int CARADINE_LETTER = 7679;
 	private static final int NOBLESS_TIARA = 7694;
@@ -36,7 +35,6 @@ public class Q247_PossessorOfAPreciousSoul extends Quest
 	public Q247_PossessorOfAPreciousSoul()
 	{
 		super(247, "Possessor of a Precious Soul - 4");
-		
 		addStartNpc(CARADINE);
 		addTalkId(CARADINE, LADY_OF_THE_LAKE);
 	}
@@ -51,28 +49,30 @@ public class Q247_PossessorOfAPreciousSoul extends Quest
 			return htmltext;
 		}
 		
-		// Caradine
-		if (event.equals("31740-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.takeItems(CARADINE_LETTER, 1);
-		}
-		else if (event.equals("31740-05.htm"))
-		{
-			st.set("cond", "2");
-			player.teleToLocation(143209, 43968, -3038);
-		}
-		// Lady of the lake
-		else if (event.equals("31745-05.htm"))
-		{
-			player.setNoble(true);
-			st.giveItems(NOBLESS_TIARA, 1);
-			st.rewardExpAndSp(93836, 0);
-			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31740-03.htm":
+			{
+				st.startQuest();
+				st.takeItems(CARADINE_LETTER, 1);
+				break;
+			}
+			case "31740-05.htm":
+			{
+				st.setCond(2);
+				player.teleToLocation(143209, 43968, -3038);
+				break;
+			}
+			case "31745-05.htm":
+			{
+				player.setNoble(true);
+				st.giveItems(NOBLESS_TIARA, 1);
+				st.rewardExpAndSp(93836, 0);
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -91,22 +91,25 @@ public class Q247_PossessorOfAPreciousSoul extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (st.hasQuestItems(CARADINE_LETTER))
 				{
 					htmltext = (!player.isSubClassActive() || (player.getLevel() < 75)) ? "31740-02.htm" : "31740-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (!player.isSubClassActive())
 				{
 					break;
 				}
 				
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case CARADINE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31740-04.htm";
@@ -116,19 +119,23 @@ public class Q247_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31740-06.htm";
 						}
 						break;
-					
+					}
 					case LADY_OF_THE_LAKE:
+					{
 						if (cond == 2)
 						{
 							htmltext = (player.getLevel() < 75) ? "31745-06.htm" : "31745-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

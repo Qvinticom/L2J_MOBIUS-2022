@@ -24,20 +24,17 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q155_FindSirWindawood extends Quest
 {
+	// NPCs
+	private static final int ABELLOS = 30042;
+	private static final int WINDAWOOD = 30311;
 	// Items
 	private static final int OFFICIAL_LETTER = 1019;
 	private static final int HASTE_POTION = 734;
 	
-	// NPCs
-	private static final int ABELLOS = 30042;
-	private static final int WINDAWOOD = 30311;
-	
 	public Q155_FindSirWindawood()
 	{
 		super(155, "Find Sir Windawood");
-		
 		registerQuestItems(OFFICIAL_LETTER);
-		
 		addStartNpc(ABELLOS);
 		addTalkId(WINDAWOOD, ABELLOS);
 	}
@@ -54,9 +51,7 @@ public class Q155_FindSirWindawood extends Quest
 		
 		if (event.equals("30042-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(OFFICIAL_LETTER, 1);
 		}
 		
@@ -76,17 +71,21 @@ public class Q155_FindSirWindawood extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 3) ? "30042-01a.htm" : "30042-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case ABELLOS:
+					{
 						htmltext = "30042-03.htm";
 						break;
-					
+					}
 					case WINDAWOOD:
+					{
 						if (st.hasQuestItems(OFFICIAL_LETTER))
 						{
 							htmltext = "30311-01.htm";
@@ -96,12 +95,15 @@ public class Q155_FindSirWindawood extends Quest
 							st.exitQuest(false);
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

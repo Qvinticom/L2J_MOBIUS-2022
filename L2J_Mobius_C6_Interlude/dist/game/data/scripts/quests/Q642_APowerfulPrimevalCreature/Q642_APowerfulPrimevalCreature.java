@@ -25,12 +25,11 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q642_APowerfulPrimevalCreature extends Quest
 {
+	// NPC
+	private static final int ANCIENT_EGG = 18344;
 	// Items
 	private static final int DINOSAUR_TISSUE = 8774;
 	private static final int DINOSAUR_EGG = 8775;
-	
-	private static final int ANCIENT_EGG = 18344;
-	
 	// Rewards
 	private static final int[] REWARDS =
 	{
@@ -50,12 +49,9 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 	public Q642_APowerfulPrimevalCreature()
 	{
 		super(642, "A Powerful Primeval Creature");
-		
 		registerQuestItems(DINOSAUR_TISSUE, DINOSAUR_EGG);
-		
 		addStartNpc(32105); // Dinn
 		addTalkId(32105);
-		
 		// Dinosaurs + egg
 		addKillId(22196, 22197, 22198, 22199, 22200, 22201, 22202, 22203, 22204, 22205, 22218, 22219, 22220, 22223, 22224, 22225, ANCIENT_EGG);
 	}
@@ -72,9 +68,7 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 		
 		if (event.equals("32105-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32105-08.htm"))
 		{
@@ -128,12 +122,15 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 75) ? "32105-00.htm" : "32105-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (!st.hasQuestItems(DINOSAUR_TISSUE)) ? "32105-08.htm" : "32105-05.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q622_SpecialtyLiquorDelivery extends Quest
 {
-	// Items
-	private static final int SPECIAL_DRINK = 7197;
-	private static final int FEE_OF_SPECIAL_DRINK = 7198;
-	
 	// NPCs
 	private static final int JEREMY = 31521;
 	private static final int PULIN = 31543;
@@ -37,7 +33,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 	private static final int KUBER = 31546;
 	private static final int BEOLIN = 31547;
 	private static final int LIETTA = 31267;
-	
+	// Items
+	private static final int SPECIAL_DRINK = 7197;
+	private static final int FEE_OF_SPECIAL_DRINK = 7198;
 	// Rewards
 	private static final int ADENA = 57;
 	private static final int HASTE_POTION = 1062;
@@ -51,9 +49,7 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 	public Q622_SpecialtyLiquorDelivery()
 	{
 		super(622, "Specialty Liquor Delivery");
-		
 		registerQuestItems(SPECIAL_DRINK, FEE_OF_SPECIAL_DRINK);
-		
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY, PULIN, NAFF, CROCUS, KUBER, BEOLIN, LIETTA);
 	}
@@ -68,67 +64,76 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31521-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(SPECIAL_DRINK, 5);
-		}
-		else if (event.equals("31547-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SPECIAL_DRINK, 1);
-			st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
-		}
-		else if (event.equals("31546-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SPECIAL_DRINK, 1);
-			st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
-		}
-		else if (event.equals("31545-02.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SPECIAL_DRINK, 1);
-			st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
-		}
-		else if (event.equals("31544-02.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SPECIAL_DRINK, 1);
-			st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
-		}
-		else if (event.equals("31543-02.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SPECIAL_DRINK, 1);
-			st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
-		}
-		else if (event.equals("31521-06.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(FEE_OF_SPECIAL_DRINK, 5);
-		}
-		else if (event.equals("31267-02.htm"))
-		{
-			if (Rnd.get(5) < 1)
+			case "31521-02.htm":
 			{
-				st.giveItems(RECIPES[Rnd.get(RECIPES.length)], 1);
+				st.startQuest();
+				st.giveItems(SPECIAL_DRINK, 5);
+				break;
 			}
-			else
+			case "31547-02.htm":
 			{
-				st.rewardItems(ADENA, 18800);
-				st.rewardItems(HASTE_POTION, 1);
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SPECIAL_DRINK, 1);
+				st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
+				break;
 			}
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "31546-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SPECIAL_DRINK, 1);
+				st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
+				break;
+			}
+			case "31545-02.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SPECIAL_DRINK, 1);
+				st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
+				break;
+			}
+			case "31544-02.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SPECIAL_DRINK, 1);
+				st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
+				break;
+			}
+			case "31543-02.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SPECIAL_DRINK, 1);
+				st.giveItems(FEE_OF_SPECIAL_DRINK, 1);
+				break;
+			}
+			case "31521-06.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(FEE_OF_SPECIAL_DRINK, 5);
+				break;
+			}
+			case "31267-02.htm":
+			{
+				if (Rnd.get(5) < 1)
+				{
+					st.giveItems(RECIPES[Rnd.get(RECIPES.length)], 1);
+				}
+				else
+				{
+					st.rewardItems(ADENA, 18800);
+					st.rewardItems(HASTE_POTION, 1);
+				}
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -147,14 +152,17 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 68) ? "31521-03.htm" : "31521-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case JEREMY:
+					{
 						if (cond < 6)
 						{
 							htmltext = "31521-04.htm";
@@ -168,8 +176,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 							htmltext = "31521-06.htm";
 						}
 						break;
-					
+					}
 					case BEOLIN:
+					{
 						if ((cond == 1) && (st.getQuestItemsCount(SPECIAL_DRINK) == 5))
 						{
 							htmltext = "31547-01.htm";
@@ -179,8 +188,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 							htmltext = "31547-03.htm";
 						}
 						break;
-					
+					}
 					case KUBER:
+					{
 						if ((cond == 2) && (st.getQuestItemsCount(SPECIAL_DRINK) == 4))
 						{
 							htmltext = "31546-01.htm";
@@ -190,8 +200,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 							htmltext = "31546-03.htm";
 						}
 						break;
-					
+					}
 					case CROCUS:
+					{
 						if ((cond == 3) && (st.getQuestItemsCount(SPECIAL_DRINK) == 3))
 						{
 							htmltext = "31545-01.htm";
@@ -201,8 +212,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 							htmltext = "31545-03.htm";
 						}
 						break;
-					
+					}
 					case NAFF:
+					{
 						if ((cond == 4) && (st.getQuestItemsCount(SPECIAL_DRINK) == 2))
 						{
 							htmltext = "31544-01.htm";
@@ -212,8 +224,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 							htmltext = "31544-03.htm";
 						}
 						break;
-					
+					}
 					case PULIN:
+					{
 						if ((cond == 5) && (st.getQuestItemsCount(SPECIAL_DRINK) == 1))
 						{
 							htmltext = "31543-01.htm";
@@ -223,14 +236,17 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 							htmltext = "31543-03.htm";
 						}
 						break;
-					
+					}
 					case LIETTA:
+					{
 						if (cond == 7)
 						{
 							htmltext = "31267-01.htm";
 						}
 						break;
+					}
 				}
+			}
 		}
 		
 		return htmltext;

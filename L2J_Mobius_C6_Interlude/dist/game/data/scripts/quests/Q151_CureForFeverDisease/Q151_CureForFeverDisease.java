@@ -24,23 +24,19 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q151_CureForFeverDisease extends Quest
 {
+	// NPCs
+	private static final int ELIAS = 30050;
+	private static final int YOHANES = 30032;
 	// Items
 	private static final int POISON_SAC = 703;
 	private static final int FEVER_MEDICINE = 704;
 	
-	// NPCs
-	private static final int ELIAS = 30050;
-	private static final int YOHANES = 30032;
-	
 	public Q151_CureForFeverDisease()
 	{
 		super(151, "Cure for Fever Disease");
-		
 		registerQuestItems(FEVER_MEDICINE, POISON_SAC);
-		
 		addStartNpc(ELIAS);
 		addTalkId(ELIAS, YOHANES);
-		
 		addKillId(20103, 20106, 20108);
 	}
 	
@@ -56,9 +52,7 @@ public class Q151_CureForFeverDisease extends Quest
 		
 		if (event.equals("30050-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -77,14 +71,17 @@ public class Q151_CureForFeverDisease extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30050-01.htm" : "30050-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ELIAS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30050-04.htm";
@@ -102,12 +99,13 @@ public class Q151_CureForFeverDisease extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case YOHANES:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30032-01.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(POISON_SAC, 1);
 							st.giveItems(FEVER_MEDICINE, 1);
@@ -117,12 +115,15 @@ public class Q151_CureForFeverDisease extends Quest
 							htmltext = "30032-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -131,7 +132,7 @@ public class Q151_CureForFeverDisease extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -139,7 +140,7 @@ public class Q151_CureForFeverDisease extends Quest
 		
 		if (st.dropItems(POISON_SAC, 1, 1, 200000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -244,7 +244,7 @@ public final class Q00708_PathToBecomingALordGludio extends Quest
 				}
 				else if (qs.isCond(4))
 				{
-					qs.set("cond", "5");
+					qs.setCond(5);
 					htmltext = "35100-09.html";
 				}
 				else if (qs.isCond(5))

@@ -29,7 +29,6 @@ public class Q324_SweetestVenom extends Quest
 {
 	// Item
 	private static final int VENOM_SAC = 1077;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -42,12 +41,9 @@ public class Q324_SweetestVenom extends Quest
 	public Q324_SweetestVenom()
 	{
 		super(324, "Sweetest Venom");
-		
 		registerQuestItems(VENOM_SAC);
-		
 		addStartNpc(30351); // Astaron
 		addTalkId(30351);
-		
 		addKillId(20034, 20038, 20043);
 	}
 	
@@ -63,9 +59,7 @@ public class Q324_SweetestVenom extends Quest
 		
 		if (event.equals("30351-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -84,11 +78,13 @@ public class Q324_SweetestVenom extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 18) ? "30351-02.htm" : "30351-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30351-05.htm";
 				}
@@ -101,6 +97,7 @@ public class Q324_SweetestVenom extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -109,7 +106,7 @@ public class Q324_SweetestVenom extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -117,7 +114,7 @@ public class Q324_SweetestVenom extends Quest
 		
 		if (st.dropItems(VENOM_SAC, 1, 10, CHANCES.get(npc.getNpcId())))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -55,38 +55,42 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31570-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31570-07.htm"))
-		{
-			if (st.hasQuestItems(LARGE_BLUE_TREASURE_CHEST))
+			case "31570-04.htm":
 			{
-				st.set("cond", "2");
-				st.takeItems(LARGE_BLUE_TREASURE_CHEST, 1);
-				st.giveItems(STRANGE_BLUEPRINT, 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31570-07.htm":
 			{
-				htmltext = "31570-08.htm";
+				if (st.hasQuestItems(LARGE_BLUE_TREASURE_CHEST))
+				{
+					st.setCond(2);
+					st.takeItems(LARGE_BLUE_TREASURE_CHEST, 1);
+					st.giveItems(STRANGE_BLUEPRINT, 1);
+				}
+				else
+				{
+					htmltext = "31570-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31434-02.htm"))
-		{
-			if (st.hasQuestItems(STRANGE_BLUEPRINT))
+			case "31434-02.htm":
 			{
-				htmltext = "31434-02.htm";
-				st.takeItems(STRANGE_BLUEPRINT, 1);
-				st.giveItems(BLACK_PEARL_RING, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
-			}
-			else
-			{
-				htmltext = "31434-03.htm";
+				if (st.hasQuestItems(STRANGE_BLUEPRINT))
+				{
+					htmltext = "31434-02.htm";
+					st.takeItems(STRANGE_BLUEPRINT, 1);
+					st.giveItems(BLACK_PEARL_RING, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "31434-03.htm";
+				}
+				break;
 			}
 		}
 		
@@ -106,6 +110,7 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 27)
 				{
 					htmltext = "31570-02.htm";
@@ -123,12 +128,14 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case LANOSCO:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(LARGE_BLUE_TREASURE_CHEST)) ? "31570-06.htm" : "31570-05.htm";
@@ -138,19 +145,23 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 							htmltext = "31570-09.htm";
 						}
 						break;
-					
+					}
 					case SHALING:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31434-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

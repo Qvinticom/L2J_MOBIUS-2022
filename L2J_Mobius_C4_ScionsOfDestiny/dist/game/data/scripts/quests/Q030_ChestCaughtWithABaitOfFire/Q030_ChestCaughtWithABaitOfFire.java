@@ -29,7 +29,6 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 	// NPCs
 	private static final int LINNAEUS = 31577;
 	private static final int RUKAL = 30629;
-	
 	// Items
 	private static final int RED_TREASURE_BOX = 6511;
 	private static final int MUSICAL_SCORE = 7628;
@@ -38,9 +37,7 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 	public Q030_ChestCaughtWithABaitOfFire()
 	{
 		super(30, "Chest caught with a bait of fire");
-		
 		registerQuestItems(MUSICAL_SCORE);
-		
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS, RUKAL);
 	}
@@ -55,38 +52,42 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31577-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31577-07.htm"))
-		{
-			if (st.hasQuestItems(RED_TREASURE_BOX))
+			case "31577-04.htm":
 			{
-				st.set("cond", "2");
-				st.takeItems(RED_TREASURE_BOX, 1);
-				st.giveItems(MUSICAL_SCORE, 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31577-07.htm":
 			{
-				htmltext = "31577-08.htm";
+				if (st.hasQuestItems(RED_TREASURE_BOX))
+				{
+					st.setCond(2);
+					st.takeItems(RED_TREASURE_BOX, 1);
+					st.giveItems(MUSICAL_SCORE, 1);
+				}
+				else
+				{
+					htmltext = "31577-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30629-02.htm"))
-		{
-			if (st.hasQuestItems(MUSICAL_SCORE))
+			case "30629-02.htm":
 			{
-				htmltext = "30629-02.htm";
-				st.takeItems(MUSICAL_SCORE, 1);
-				st.giveItems(NECKLACE_OF_PROTECTION, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
-			}
-			else
-			{
-				htmltext = "30629-03.htm";
+				if (st.hasQuestItems(MUSICAL_SCORE))
+				{
+					htmltext = "30629-02.htm";
+					st.takeItems(MUSICAL_SCORE, 1);
+					st.giveItems(NECKLACE_OF_PROTECTION, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "30629-03.htm";
+				}
+				break;
 			}
 		}
 		
@@ -106,6 +107,7 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 60)
 				{
 					htmltext = "31577-02.htm";
@@ -123,12 +125,14 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case LINNAEUS:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(RED_TREASURE_BOX)) ? "31577-06.htm" : "31577-05.htm";
@@ -138,19 +142,23 @@ public class Q030_ChestCaughtWithABaitOfFire extends Quest
 							htmltext = "31577-09.htm";
 						}
 						break;
-					
+					}
 					case RUKAL:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30629-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

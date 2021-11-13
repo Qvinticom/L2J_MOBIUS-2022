@@ -30,12 +30,9 @@ public class Q261_CollectorsDream extends Quest
 	public Q261_CollectorsDream()
 	{
 		super(261, "Collector's Dream");
-		
 		registerQuestItems(GIANT_SPIDER_LEG);
-		
 		addStartNpc(30222); // Alshupes
 		addTalkId(30222);
-		
 		addKillId(20308, 20460, 20466);
 	}
 	
@@ -51,9 +48,7 @@ public class Q261_CollectorsDream extends Quest
 		
 		if (event.equals("30222-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -72,11 +67,13 @@ public class Q261_CollectorsDream extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30222-01.htm" : "30222-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 2)
+			{
+				if (st.isCond(2))
 				{
 					htmltext = "30222-05.htm";
 					st.takeItems(GIANT_SPIDER_LEG, -1);
@@ -90,10 +87,12 @@ public class Q261_CollectorsDream extends Quest
 					htmltext = "30222-04.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -102,7 +101,7 @@ public class Q261_CollectorsDream extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -110,7 +109,7 @@ public class Q261_CollectorsDream extends Quest
 		
 		if (st.dropItemsAlways(GIANT_SPIDER_LEG, 1, 8))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

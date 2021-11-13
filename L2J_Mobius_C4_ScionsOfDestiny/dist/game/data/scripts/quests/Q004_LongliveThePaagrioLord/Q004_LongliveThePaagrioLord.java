@@ -43,9 +43,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	public Q004_LongliveThePaagrioLord()
 	{
 		super(4, "Long live the Pa'agrio Lord!");
-		
 		registerQuestItems(1541, 1542, 1543, 1544, 1545, 1546);
-		
 		addStartNpc(30578); // Nakusin
 		addTalkId(30578, 30585, 30566, 30562, 30560, 30559, 30587);
 	}
@@ -62,9 +60,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 		
 		if (event.equals("30578-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -83,6 +79,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30578-00.htm";
@@ -96,11 +93,11 @@ public class Q004_LongliveThePaagrioLord extends Quest
 					htmltext = "30578-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				final int npcId = npc.getNpcId();
-				
 				if (npcId == NAKUSIN)
 				{
 					if (cond == 1)
@@ -140,7 +137,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 						
 						if (count == 6)
 						{
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else
@@ -150,10 +147,12 @@ public class Q004_LongliveThePaagrioLord extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

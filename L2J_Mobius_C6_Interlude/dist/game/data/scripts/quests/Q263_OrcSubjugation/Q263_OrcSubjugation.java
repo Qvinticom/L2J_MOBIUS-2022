@@ -32,12 +32,9 @@ public class Q263_OrcSubjugation extends Quest
 	public Q263_OrcSubjugation()
 	{
 		super(263, "Orc Subjugation");
-		
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE);
-		
 		addStartNpc(30346); // Kayleen
 		addTalkId(30346);
-		
 		addKillId(20385, 20386, 20387, 20388);
 	}
 	
@@ -53,9 +50,7 @@ public class Q263_OrcSubjugation extends Quest
 		
 		if (event.equals("30346-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30346-06.htm"))
 		{
@@ -79,6 +74,7 @@ public class Q263_OrcSubjugation extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30346-00.htm";
@@ -92,11 +88,11 @@ public class Q263_OrcSubjugation extends Quest
 					htmltext = "30346-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int amulet = st.getQuestItemsCount(ORC_AMULET);
 				final int necklace = st.getQuestItemsCount(ORC_NECKLACE);
-				
 				if ((amulet == 0) && (necklace == 0))
 				{
 					htmltext = "30346-04.htm";
@@ -109,6 +105,7 @@ public class Q263_OrcSubjugation extends Quest
 					st.rewardItems(57, (amulet * 20) + (necklace * 30));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

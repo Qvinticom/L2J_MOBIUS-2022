@@ -30,13 +30,10 @@ public class Q652_AnAgedExAdventurer extends Quest
 	// NPCs
 	private static final int TANTAN = 32012;
 	private static final int SARA = 30180;
-	
 	// Item
 	private static final int SOULSHOT_C = 1464;
-	
 	// Reward
 	private static final int ENCHANT_ARMOR_D = 956;
-	
 	// Table of possible spawns
 	private static final Location[] SPAWNS =
 	{
@@ -46,17 +43,14 @@ public class Q652_AnAgedExAdventurer extends Quest
 		new Location(94500, -10129, -3290, 0),
 		new Location(96534, -1237, -3677, 0)
 	};
-	
 	// Current position
 	private int _currentPosition = 0;
 	
 	public Q652_AnAgedExAdventurer()
 	{
 		super(652, "An Aged Ex-Adventurer");
-		
 		addStartNpc(TANTAN);
 		addTalkId(TANTAN, SARA);
-		
 		addSpawn(TANTAN, 78355, -1325, -3659, 0, false, 0);
 	}
 	
@@ -74,11 +68,8 @@ public class Q652_AnAgedExAdventurer extends Quest
 		{
 			if (st.getQuestItemsCount(SOULSHOT_C) >= 100)
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				st.startQuest();
 				st.takeItems(SOULSHOT_C, 100);
-				
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(85326, 7869, -3620));
 				startQuestTimer("apparition_npc", 6000, npc, player, false);
 			}
@@ -122,13 +113,16 @@ public class Q652_AnAgedExAdventurer extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 46) ? "32012-00.htm" : "32012-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case SARA:
+					{
 						if (Rnd.get(100) < 50)
 						{
 							htmltext = "30180-01.htm";
@@ -143,12 +137,15 @@ public class Q652_AnAgedExAdventurer extends Quest
 						st.playSound(QuestState.SOUND_FINISH);
 						st.exitQuest(true);
 						break;
-					
+					}
 					case TANTAN:
+					{
 						htmltext = "32012-04a.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

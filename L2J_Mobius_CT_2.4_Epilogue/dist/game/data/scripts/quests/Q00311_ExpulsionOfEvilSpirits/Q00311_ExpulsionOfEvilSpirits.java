@@ -219,7 +219,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 			final PlayerInstance member = qs.getPlayer();
 			if (npc.getId() == VARANGKA)
 			{
-				if ((qs.getInt("cond") != 1))
+				if (!qs.isCond(1))
 				{
 					return null;
 				}

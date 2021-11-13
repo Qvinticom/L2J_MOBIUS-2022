@@ -55,7 +55,6 @@ public class Q025_HidingBehindTheTruth extends Quest
 	public Q025_HidingBehindTheTruth()
 	{
 		super(25, "Hiding Behind the Truth");
-		
 		addStartNpc(BENEDICT);
 		addTalkId(AGRIPEL, BENEDICT, BOOKSHELF, BOOKSHELF2, BOOKSHELF3, WIZARD, LIDIA, TOMBSTONE, COFFIN);
 		addKillId(TRIOL);
@@ -76,9 +75,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 		{
 			case "31349-02.htm":
 			{
-				qs.playSound("ItemSound.quest_accept");
-				qs.set("cond", "1");
-				qs.setState(State.STARTED);
+				qs.startQuest();
 				break;
 			}
 			case "31349-03.htm":
@@ -89,15 +86,15 @@ public class Q025_HidingBehindTheTruth extends Quest
 				}
 				else
 				{
-					qs.playSound("ItemSound.quest_middle");
-					qs.set("cond", "2");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.setCond(2);
 				}
 				break;
 			}
 			case "31349-10.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "4");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(4);
 				break;
 			}
 			case "31348-02.htm":
@@ -107,15 +104,15 @@ public class Q025_HidingBehindTheTruth extends Quest
 			}
 			case "31348-07.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "5");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(5);
 				qs.giveItems(GEMSTONE_KEY, 1);
 				break;
 			}
 			case "31522-04.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "6");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(6);
 				break;
 			}
 			case "31535-03.htm":
@@ -128,8 +125,8 @@ public class Q025_HidingBehindTheTruth extends Quest
 					triol.setRunning();
 					((Attackable) triol).addDamageHate(player, 0, 999);
 					triol.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-					qs.playSound("ItemSound.quest_middle");
-					qs.set("cond", "7");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.setCond(7);
 				}
 				else if (qs.getInt("step") == 2)
 				{
@@ -141,8 +138,8 @@ public class Q025_HidingBehindTheTruth extends Quest
 			{
 				qs.giveItems(CONTRACT, 1);
 				qs.takeItems(GEMSTONE_KEY, -1);
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "9");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(9);
 				break;
 			}
 			case "31532-02.htm":
@@ -152,27 +149,27 @@ public class Q025_HidingBehindTheTruth extends Quest
 			}
 			case "31532-06.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "11");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(11);
 				break;
 			}
 			case "31531-02.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "12");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(12);
 				qs.addSpawn(COFFIN, 60104, -35820, -664, 20000);
 				break;
 			}
 			case "31532-18.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "15");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(15);
 				break;
 			}
 			case "31522-12.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "16");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(16);
 			}
 				break;
 			case "31348-10.htm":
@@ -182,14 +179,14 @@ public class Q025_HidingBehindTheTruth extends Quest
 			}
 			case "31348-15.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "17");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(17);
 				break;
 			}
 			case "31348-16.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "18");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(18);
 				break;
 			}
 			case "31532-20.htm":
@@ -200,7 +197,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 				qs.rewardExpAndSp(572277, 53750);
 				qs.unset("cond");
 				qs.exitQuest(true);
-				qs.playSound("ItemSound.quest_finish");
+				qs.playSound(QuestState.SOUND_FINISH);
 				break;
 			}
 			case "31522-15.htm":
@@ -211,7 +208,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 				qs.rewardExpAndSp(572277, 53750);
 				qs.unset("cond");
 				qs.exitQuest(true);
-				qs.playSound("ItemSound.quest_finish");
+				qs.playSound(QuestState.SOUND_FINISH);
 				break;
 			}
 		}
@@ -231,7 +228,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 		
 		final int npcId = npc.getNpcId();
 		final int id = qs.getState();
-		final int cond = qs.getInt("cond");
+		final int cond = qs.getCond();
 		if (id == State.COMPLETED)
 		{
 			htmltext = getAlreadyCompletedMsg();
@@ -276,8 +273,8 @@ public class Q025_HidingBehindTheTruth extends Quest
 				if (cond == 2)
 				{
 					htmltext = "31522-01.htm";
-					qs.playSound("ItemSound.quest_middle");
-					qs.set("cond", "3");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.setCond(3);
 					qs.giveItems(SUSPICIOUS_TOTEM, 1);
 				}
 				else if (cond == 3)
@@ -295,8 +292,8 @@ public class Q025_HidingBehindTheTruth extends Quest
 				else if (cond == 9)
 				{
 					htmltext = "31522-05.htm";
-					qs.playSound("ItemSound.quest_middle");
-					qs.set("cond", "10");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.setCond(10);
 				}
 				else if (cond == 10)
 				{
@@ -380,7 +377,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 				else if (cond == 13)
 				{
 					htmltext = "31532-07.htm";
-					qs.set("cond", "14");
+					qs.setCond(14);
 					qs.takeItems(DRESS, -1);
 				}
 				else if (cond == 14)
@@ -417,8 +414,8 @@ public class Q025_HidingBehindTheTruth extends Quest
 				{
 					htmltext = "31536-01.htm";
 					qs.giveItems(DRESS, 1);
-					qs.playSound("ItemSound.quest_middle");
-					qs.set("cond", "13");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.setCond(13);
 					npc.deleteMe();
 				}
 			}
@@ -435,10 +432,10 @@ public class Q025_HidingBehindTheTruth extends Quest
 			return null;
 		}
 		
-		if ((qs.getState() == State.STARTED) && (qs.getInt("cond") == 7))
+		if ((qs.getState() == State.STARTED) && qs.isCond(7))
 		{
-			qs.playSound("ItemSound.quest_itemget");
-			qs.set("cond", "8");
+			qs.playSound(QuestState.SOUND_ITEMGET);
+			qs.setCond(8);
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "You've ended my immortal life! You've protected by the feudal lord, aren't you?"));
 			qs.giveItems(TOTEM_DOLL, 1);
 			qs.set("step", "2");

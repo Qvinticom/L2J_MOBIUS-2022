@@ -35,7 +35,8 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	private static final int STONE = 32046;
 	private static final int WENDY = 32047;
 	private static final int BOX = 32050;
-	
+	// Monsters
+	private static final int GOLEM = 27318;
 	// Items
 	private static final int LETTER = 8288;
 	private static final int DETECTOR = 8090;
@@ -43,18 +44,12 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	private static final int STARSTONE = 8287;
 	private static final int STARSTONE_2 = 8289;
 	
-	// Mobs
-	private static final int GOLEM = 27318;
-	
 	public Q114_ResurrectionOfAnOldManager()
 	{
 		super(114, "Resurrection of an Old Manager");
-		
 		registerQuestItems(LETTER, DETECTOR, DETECTOR_2, STARSTONE, STARSTONE_2);
-		
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONE, NEWYEAR);
-		
 		addKillId(GOLEM);
 	}
 	
@@ -68,260 +63,295 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32041-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("talk", "0");
-			st.set("golemSpawned", "0");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32041-06.htm"))
-		{
-			st.set("talk", "1");
-		}
-		else if (event.equals("32041-07.htm"))
-		{
-			st.set("cond", "2");
-			st.set("talk", "0");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32041-10.htm"))
-		{
-			final int choice = st.getInt("choice");
-			if (choice == 1)
+			case "32041-02.htm":
 			{
-				htmltext = "32041-10.htm";
+				st.startQuest();
+				st.set("golemSpawned", "0");
+				break;
 			}
-			else if (choice == 2)
-			{
-				htmltext = "32041-10a.htm";
-			}
-			else if (choice == 3)
-			{
-				htmltext = "32041-10b.htm";
-			}
-		}
-		else if (event.equals("32041-11.htm"))
-		{
-			st.set("talk", "1");
-		}
-		else if (event.equals("32041-18.htm"))
-		{
-			st.set("talk", "2");
-		}
-		else if (event.equals("32041-20.htm"))
-		{
-			st.set("cond", "6");
-			st.set("talk", "0");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32041-25.htm"))
-		{
-			st.set("cond", "17");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(DETECTOR, 1);
-		}
-		else if (event.equals("32041-28.htm"))
-		{
-			st.set("talk", "1");
-			st.takeItems(DETECTOR_2, 1);
-		}
-		else if (event.equals("32041-31.htm"))
-		{
-			if (st.getInt("choice") > 1)
-			{
-				htmltext = "32041-37.htm";
-			}
-		}
-		else if (event.equals("32041-32.htm"))
-		{
-			st.set("cond", "21");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(LETTER, 1);
-		}
-		else if (event.equals("32041-36.htm"))
-		{
-			st.set("cond", "20");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32046-02.htm"))
-		{
-			st.set("cond", "19");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32046-06.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
-		}
-		else if (event.equals("32047-01.htm"))
-		{
-			final int talk = st.getInt("talk");
-			final int talk1 = st.getInt("talk1");
-			if ((talk == 1) && (talk1 == 1))
-			{
-				htmltext = "32047-04.htm";
-			}
-			else if ((talk == 2) && (talk1 == 2) && (st.getInt("talk2") == 2))
-			{
-				htmltext = "32047-08.htm";
-			}
-		}
-		else if (event.equals("32047-02.htm"))
-		{
-			if (st.getInt("talk") == 0)
+			case "32041-06.htm":
 			{
 				st.set("talk", "1");
+				break;
 			}
-		}
-		else if (event.equals("32047-03.htm"))
-		{
-			if (st.getInt("talk1") == 0)
+			case "32041-07.htm":
 			{
-				st.set("talk1", "1");
-			}
-		}
-		else if (event.equals("32047-05.htm"))
-		{
-			st.set("cond", "3");
-			st.set("talk", "0");
-			st.set("choice", "1");
-			st.unset("talk1");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-06.htm"))
-		{
-			st.set("cond", "4");
-			st.set("talk", "0");
-			st.set("choice", "2");
-			st.unset("talk1");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-07.htm"))
-		{
-			st.set("cond", "5");
-			st.set("talk", "0");
-			st.set("choice", "3");
-			st.unset("talk1");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-13.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-13a.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-15.htm"))
-		{
-			if (st.getInt("talk") == 0)
-			{
-				st.set("talk", "1");
-			}
-		}
-		else if (event.equals("32047-15a.htm"))
-		{
-			if (st.getInt("golemSpawned") == 0)
-			{
-				final NpcInstance golem = addSpawn(GOLEM, 96977, -110625, -3322, 0, true, 0);
-				golem.broadcastNpcSay("You, " + player.getName() + ", you attacked Wendy. Prepare to die!");
-				((Attackable) golem).addDamageHate(player, 0, 999);
-				golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-				st.set("golemSpawned", "1");
-				startQuestTimer("golemDespawn", 900000, golem, player, false);
-			}
-			else
-			{
-				htmltext = "32047-19a.htm";
-			}
-		}
-		else if (event.equals("32047-17a.htm"))
-		{
-			st.set("cond", "12");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-20.htm"))
-		{
-			st.set("talk", "2");
-		}
-		else if (event.equals("32047-23.htm"))
-		{
-			st.set("cond", "13");
-			st.set("talk", "0");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-25.htm"))
-		{
-			st.set("cond", "15");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(STARSTONE, 1);
-		}
-		else if (event.equals("32047-30.htm"))
-		{
-			st.set("talk", "2");
-		}
-		else if (event.equals("32047-33.htm"))
-		{
-			final int cond = st.getInt("cond");
-			if (cond == 7)
-			{
-				st.set("cond", "8");
+				st.setCond(2);
 				st.set("talk", "0");
 				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-			else if (cond == 8)
+			case "32041-10.htm":
 			{
-				st.set("cond", "9");
-				htmltext = "32047-34.htm";
-				st.playSound(QuestState.SOUND_MIDDLE);
+				final int choice = st.getInt("choice");
+				if (choice == 1)
+				{
+					htmltext = "32041-10.htm";
+				}
+				else if (choice == 2)
+				{
+					htmltext = "32041-10a.htm";
+				}
+				else if (choice == 3)
+				{
+					htmltext = "32041-10b.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("32047-34.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32047-38.htm"))
-		{
-			if (st.getQuestItemsCount(57) >= 3000)
+			case "32041-11.htm":
 			{
-				st.set("cond", "26");
+				st.set("talk", "1");
+				break;
+			}
+			case "32041-18.htm":
+			{
+				st.set("talk", "2");
+				break;
+			}
+			case "32041-20.htm":
+			{
+				st.setCond(6);
+				st.set("talk", "0");
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(57, 3000);
+				break;
+			}
+			case "32041-25.htm":
+			{
+				st.setCond(17);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(DETECTOR, 1);
+				break;
+			}
+			case "32041-28.htm":
+			{
+				st.set("talk", "1");
+				st.takeItems(DETECTOR_2, 1);
+				break;
+			}
+			case "32041-31.htm":
+			{
+				if (st.getInt("choice") > 1)
+				{
+					htmltext = "32041-37.htm";
+				}
+				break;
+			}
+			case "32041-32.htm":
+			{
+				st.setCond(21);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(LETTER, 1);
+				break;
+			}
+			case "32041-36.htm":
+			{
+				st.setCond(20);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32046-02.htm":
+			{
+				st.setCond(19);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32046-06.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
+			case "32047-01.htm":
+			{
+				final int talk = st.getInt("talk");
+				final int talk1 = st.getInt("talk1");
+				if ((talk == 1) && (talk1 == 1))
+				{
+					htmltext = "32047-04.htm";
+				}
+				else if ((talk == 2) && (talk1 == 2) && (st.getInt("talk2") == 2))
+				{
+					htmltext = "32047-08.htm";
+				}
+				break;
+			}
+			case "32047-02.htm":
+			{
+				if (st.getInt("talk") == 0)
+				{
+					st.set("talk", "1");
+				}
+				break;
+			}
+			case "32047-03.htm":
+			{
+				if (st.getInt("talk1") == 0)
+				{
+					st.set("talk1", "1");
+				}
+				break;
+			}
+			case "32047-05.htm":
+			{
+				st.setCond(3);
+				st.set("talk", "0");
+				st.set("choice", "1");
+				st.unset("talk1");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-06.htm":
+			{
+				st.setCond(4);
+				st.set("talk", "0");
+				st.set("choice", "2");
+				st.unset("talk1");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-07.htm":
+			{
+				st.setCond(5);
+				st.set("talk", "0");
+				st.set("choice", "3");
+				st.unset("talk1");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-13.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-13a.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-15.htm":
+			{
+				if (st.getInt("talk") == 0)
+				{
+					st.set("talk", "1");
+				}
+				break;
+			}
+			case "32047-15a.htm":
+			{
+				if (st.getInt("golemSpawned") == 0)
+				{
+					final NpcInstance golem = addSpawn(GOLEM, 96977, -110625, -3322, 0, true, 0);
+					golem.broadcastNpcSay("You, " + player.getName() + ", you attacked Wendy. Prepare to die!");
+					((Attackable) golem).addDamageHate(player, 0, 999);
+					golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					st.set("golemSpawned", "1");
+					startQuestTimer("golemDespawn", 900000, golem, player, false);
+				}
+				else
+				{
+					htmltext = "32047-19a.htm";
+				}
+				break;
+			}
+			case "32047-17a.htm":
+			{
+				st.setCond(12);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-20.htm":
+			{
+				st.set("talk", "2");
+				break;
+			}
+			case "32047-23.htm":
+			{
+				st.setCond(13);
+				st.set("talk", "0");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-25.htm":
+			{
+				st.setCond(15);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(STARSTONE, 1);
+				break;
+			}
+			case "32047-30.htm":
+			{
+				st.set("talk", "2");
+				break;
+			}
+			case "32047-33.htm":
+			{
+				final int cond = st.getCond();
+				if (cond == 7)
+				{
+					st.setCond(8);
+					st.set("talk", "0");
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				else if (cond == 8)
+				{
+					st.setCond(9);
+					htmltext = "32047-34.htm";
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
+			}
+			case "32047-34.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32047-38.htm":
+			{
+				if (st.getQuestItemsCount(57) >= 3000)
+				{
+					st.setCond(26);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(57, 3000);
+					st.giveItems(STARSTONE_2, 1);
+				}
+				else
+				{
+					htmltext = "32047-39.htm";
+				}
+				break;
+			}
+			case "32050-02.htm":
+			{
+				st.set("talk", "1");
+				st.playSound("ItemSound.armor_wood_3");
+				break;
+			}
+			case "32050-04.htm":
+			{
+				st.setCond(14);
+				st.set("talk", "0");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(STARSTONE, 1);
+				break;
+			}
+			case "31961-02.htm":
+			{
+				st.setCond(22);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LETTER, 1);
 				st.giveItems(STARSTONE_2, 1);
+				break;
 			}
-			else
+			case "golemDespawn":
 			{
-				htmltext = "32047-39.htm";
+				st.unset("golemSpawned");
+				return null;
 			}
-		}
-		else if (event.equals("32050-02.htm"))
-		{
-			st.set("talk", "1");
-			st.playSound("ItemSound.armor_wood_3");
-		}
-		else if (event.equals("32050-04.htm"))
-		{
-			st.set("cond", "14");
-			st.set("talk", "0");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(STARSTONE, 1);
-		}
-		else if (event.equals("31961-02.htm"))
-		{
-			st.set("cond", "22");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER, 1);
-			st.giveItems(STARSTONE_2, 1);
-		}
-		else if (event.equals("golemDespawn"))
-		{
-			st.unset("golemSpawned");
-			return null;
 		}
 		
 		return htmltext;
@@ -340,17 +370,20 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState pavelReq = player.getQuestState(Q121_PavelTheGiant.class.getSimpleName());
 				htmltext = ((pavelReq == null) || !pavelReq.isCompleted() || (player.getLevel() < 49)) ? "32041-00.htm" : "32041-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				final int talk = st.getInt("talk");
 				
 				switch (npc.getNpcId())
 				{
 					case YUMI:
+					{
 						if (cond == 1)
 						{
 							if (talk == 0)
@@ -415,7 +448,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 						else if ((cond == 22) || (cond == 26))
 						{
 							htmltext = "32041-34.htm";
-							st.set("cond", "27");
+							st.setCond(27);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 27)
@@ -423,8 +456,9 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 							htmltext = "32041-35.htm";
 						}
 						break;
-					
+					}
 					case WENDY:
+					{
 						if (cond == 2)
 						{
 							if ((talk == 0) && (st.getInt("talk1") == 0))
@@ -524,7 +558,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 						else if (cond == 15)
 						{
 							htmltext = "32047-26.htm";
-							st.set("cond", "16");
+							st.setCond(16);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 16)
@@ -540,8 +574,9 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 							htmltext = "32047-40.htm";
 						}
 						break;
-					
+					}
 					case BOX:
+					{
 						if (cond == 13)
 						{
 							if (talk == 0)
@@ -558,11 +593,12 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 							htmltext = "32050-05.htm";
 						}
 						break;
-					
+					}
 					case STONE:
-						if (st.getInt("cond") == 17)
+					{
+						if (cond == 17)
 						{
-							st.set("cond", "18");
+							st.setCond(18);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(DETECTOR, 1);
 							st.giveItems(DETECTOR_2, 1);
@@ -582,8 +618,9 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 							htmltext = "32046-03.htm";
 						}
 						break;
-					
+					}
 					case NEWYEAR:
+					{
 						if (cond == 21)
 						{
 							htmltext = "31961-01.htm";
@@ -593,12 +630,15 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 							htmltext = "31961-03.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -606,14 +646,14 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "10");
+		final QuestState st = checkPlayerCondition(player, npc, 10);
 		if (st == null)
 		{
 			return null;
 		}
 		
 		npc.broadcastNpcSay("This enemy is far too powerful for me to fight. I must withdraw!");
-		st.set("cond", "11");
+		st.setCond(11);
 		st.unset("golemSpawned");
 		st.playSound(QuestState.SOUND_MIDDLE);
 		

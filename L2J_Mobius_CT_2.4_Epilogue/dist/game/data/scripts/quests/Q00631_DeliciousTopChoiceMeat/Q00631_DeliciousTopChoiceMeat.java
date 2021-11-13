@@ -123,9 +123,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		{
 			if (player.getLevel() >= 65)
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+				st.startQuest();
 			}
 			else
 			{
@@ -147,7 +145,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			}
 			else
 			{
-				st.set("cond", "1");
+				st.setCond(1);
 				htmltext = "31537-07.htm";
 			}
 		}
@@ -167,7 +165,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 				break;
 			
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31537-03a.htm";
@@ -180,7 +178,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 					}
 					else
 					{
-						st.set("cond", "1");
+						st.setCond(1);
 						htmltext = "31537-03a.htm";
 					}
 				}
@@ -206,7 +204,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		
 		if (giveItemRandomly(partyMember, npc, TOP_QUALITY_MEAT, 1, 120, CHANCES.get(npc.getId()), true))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

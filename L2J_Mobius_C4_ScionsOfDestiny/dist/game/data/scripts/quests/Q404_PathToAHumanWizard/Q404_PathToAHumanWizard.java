@@ -26,6 +26,13 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q404_PathToAHumanWizard extends Quest
 {
+	// NPCs
+	private static final int PARINA = 30391;
+	private static final int EARTH_SNAKE = 30409;
+	private static final int WASTELAND_LIZARDMAN = 30410;
+	private static final int FLAME_SALAMANDER = 30411;
+	private static final int WIND_SYLPH = 30412;
+	private static final int WATER_UNDINE = 30413;
 	// Items
 	private static final int MAP_OF_LUSTER = 1280;
 	private static final int KEY_OF_FLAME = 1281;
@@ -41,23 +48,12 @@ public class Q404_PathToAHumanWizard extends Quest
 	private static final int EARTH_RING = 1291;
 	private static final int BEAD_OF_SEASON = 1292;
 	
-	// NPCs
-	private static final int PARINA = 30391;
-	private static final int EARTH_SNAKE = 30409;
-	private static final int WASTELAND_LIZARDMAN = 30410;
-	private static final int FLAME_SALAMANDER = 30411;
-	private static final int WIND_SYLPH = 30412;
-	private static final int WATER_UNDINE = 30413;
-	
 	public Q404_PathToAHumanWizard()
 	{
 		super(404, "Path to a Human Wizard");
-		
 		registerQuestItems(MAP_OF_LUSTER, KEY_OF_FLAME, FLAME_EARING, BROKEN_BRONZE_MIRROR, WIND_FEATHER, WIND_BANGEL, RAMA_DIARY, SPARKLE_PEBBLE, WATER_NECKLACE, RUST_GOLD_COIN, RED_SOIL, EARTH_RING);
-		
 		addStartNpc(PARINA);
 		addTalkId(PARINA, EARTH_SNAKE, WASTELAND_LIZARDMAN, FLAME_SALAMANDER, WIND_SYLPH, WATER_UNDINE);
-		
 		addKillId(20021, 20359, 27030);
 	}
 	
@@ -73,13 +69,11 @@ public class Q404_PathToAHumanWizard extends Quest
 		
 		if (event.equals("30391-08.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30410-03.htm"))
 		{
-			st.set("cond", "6");
+			st.setCond(6);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.takeItems(BROKEN_BRONZE_MIRROR, 1);
 			st.giveItems(WIND_FEATHER, 1);
@@ -98,10 +92,11 @@ public class Q404_PathToAHumanWizard extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getClassId() != ClassId.MAGE)
 				{
 					htmltext = (player.getClassId() == ClassId.WIZARD) ? "30391-02a.htm" : "30391-01.htm";
@@ -119,11 +114,13 @@ public class Q404_PathToAHumanWizard extends Quest
 					htmltext = "30391-04.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case PARINA:
+					{
 						if (cond < 13)
 						{
 							htmltext = "30391-05.htm";
@@ -142,12 +139,13 @@ public class Q404_PathToAHumanWizard extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case FLAME_SALAMANDER:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30411-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(MAP_OF_LUSTER, 1);
 						}
@@ -158,7 +156,7 @@ public class Q404_PathToAHumanWizard extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30411-03.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(KEY_OF_FLAME, 1);
 							st.takeItems(MAP_OF_LUSTER, 1);
@@ -169,12 +167,13 @@ public class Q404_PathToAHumanWizard extends Quest
 							htmltext = "30411-04.htm";
 						}
 						break;
-					
+					}
 					case WIND_SYLPH:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30412-01.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(BROKEN_BRONZE_MIRROR, 1);
 						}
@@ -185,7 +184,7 @@ public class Q404_PathToAHumanWizard extends Quest
 						else if (cond == 6)
 						{
 							htmltext = "30412-03.htm";
-							st.set("cond", "7");
+							st.setCond(7);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(WIND_FEATHER, 1);
 							st.giveItems(WIND_BANGEL, 1);
@@ -195,8 +194,9 @@ public class Q404_PathToAHumanWizard extends Quest
 							htmltext = "30412-04.htm";
 						}
 						break;
-					
+					}
 					case WASTELAND_LIZARDMAN:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30410-01.htm";
@@ -206,12 +206,13 @@ public class Q404_PathToAHumanWizard extends Quest
 							htmltext = "30410-04.htm";
 						}
 						break;
-					
+					}
 					case WATER_UNDINE:
+					{
 						if (cond == 7)
 						{
 							htmltext = "30413-01.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(RAMA_DIARY, 1);
 						}
@@ -222,7 +223,7 @@ public class Q404_PathToAHumanWizard extends Quest
 						else if (cond == 9)
 						{
 							htmltext = "30413-03.htm";
-							st.set("cond", "10");
+							st.setCond(10);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(RAMA_DIARY, 1);
 							st.takeItems(SPARKLE_PEBBLE, -1);
@@ -233,12 +234,13 @@ public class Q404_PathToAHumanWizard extends Quest
 							htmltext = "30413-04.htm";
 						}
 						break;
-					
+					}
 					case EARTH_SNAKE:
+					{
 						if (cond == 10)
 						{
 							htmltext = "30409-01.htm";
-							st.set("cond", "11");
+							st.setCond(11);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(RUST_GOLD_COIN, 1);
 						}
@@ -249,7 +251,7 @@ public class Q404_PathToAHumanWizard extends Quest
 						else if (cond == 12)
 						{
 							htmltext = "30409-03.htm";
-							st.set("cond", "13");
+							st.setCond(13);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(RED_SOIL, 1);
 							st.takeItems(RUST_GOLD_COIN, 1);
@@ -260,8 +262,10 @@ public class Q404_PathToAHumanWizard extends Quest
 							htmltext = "30409-04.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -279,25 +283,29 @@ public class Q404_PathToAHumanWizard extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20359: // Ratman Warrior
-				if ((st.getInt("cond") == 2) && st.dropItems(KEY_OF_FLAME, 1, 1, 800000))
+			{
+				if (st.isCond(2) && st.dropItems(KEY_OF_FLAME, 1, 1, 800000))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 27030: // Water Seer
-				if ((st.getInt("cond") == 8) && st.dropItems(SPARKLE_PEBBLE, 1, 2, 800000))
+			{
+				if (st.isCond(8) && st.dropItems(SPARKLE_PEBBLE, 1, 2, 800000))
 				{
-					st.set("cond", "9");
+					st.setCond(9);
 				}
 				break;
-			
+			}
 			case 20021: // Red Bear
-				if ((st.getInt("cond") == 11) && st.dropItems(RED_SOIL, 1, 1, 200000))
+			{
+				if (st.isCond(11) && st.dropItems(RED_SOIL, 1, 1, 200000))
 				{
-					st.set("cond", "12");
+					st.setCond(12);
 				}
 				break;
+			}
 		}
 		
 		return null;

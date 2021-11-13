@@ -32,7 +32,6 @@ public class Q328_SenseForBusiness extends Quest
 	private static final int MONSTER_EYE_LENS = 1366;
 	private static final int MONSTER_EYE_CARCASS = 1347;
 	private static final int BASILISK_GIZZARD = 1348;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -48,12 +47,9 @@ public class Q328_SenseForBusiness extends Quest
 	public Q328_SenseForBusiness()
 	{
 		super(328, "Sense for Business");
-		
 		registerQuestItems(MONSTER_EYE_LENS, MONSTER_EYE_CARCASS, BASILISK_GIZZARD);
-		
 		addStartNpc(30436); // Sarien
 		addTalkId(30436);
-		
 		addKillId(20055, 20059, 20067, 20068, 20070, 20072);
 	}
 	
@@ -69,9 +65,7 @@ public class Q328_SenseForBusiness extends Quest
 		
 		if (event.equals("30436-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30436-06.htm"))
 		{
@@ -95,10 +89,12 @@ public class Q328_SenseForBusiness extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 21) ? "30436-01.htm" : "30436-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int carcasses = st.getQuestItemsCount(MONSTER_EYE_CARCASS);
 				final int lenses = st.getQuestItemsCount(MONSTER_EYE_LENS);
 				final int gizzards = st.getQuestItemsCount(BASILISK_GIZZARD);
@@ -116,6 +112,7 @@ public class Q328_SenseForBusiness extends Quest
 					st.rewardItems(57, (25 * carcasses) + (1000 * lenses) + (60 * gizzards) + ((all >= 10) ? 618 : 0));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

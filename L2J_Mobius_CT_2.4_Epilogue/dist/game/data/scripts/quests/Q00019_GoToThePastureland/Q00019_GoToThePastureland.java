@@ -54,9 +54,7 @@ public class Q00019_GoToThePastureland extends Quest
 		
 		if (event.equals("31302-01.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			st.startQuest();
 			giveItems(player, YOUNG_WILD_BEAST_MEAT, 1);
 		}
 		else if (event.equals("019_finish"))

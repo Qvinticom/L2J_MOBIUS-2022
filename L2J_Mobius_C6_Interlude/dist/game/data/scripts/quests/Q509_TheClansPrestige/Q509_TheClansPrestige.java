@@ -32,95 +32,45 @@ public class Q509_TheClansPrestige extends Quest
 {
 	// NPCs
 	private static final int VALDIS = 31331;
-	
-	// Items
-	private static final int DAIMONS_EYES = 8489;
-	private static final int HESTIAS_FAIRY_STONE = 8490;
-	private static final int NUCLEUS_OF_LESSER_GOLEM = 8491;
-	private static final int FALSTON_FANG = 8492;
-	private static final int SHAIDS_TALON = 8493;
-	
 	// Raid Bosses
 	private static final int DAIMON_THE_WHITE_EYED = 25290;
 	private static final int HESTIA_GUARDIAN_DEITY = 25293;
 	private static final int PLAGUE_GOLEM = 25523;
 	private static final int DEMONS_AGENT_FALSTON = 25322;
 	private static final int QUEEN_SHYEED = 25514;
-	
+	// Items
+	private static final int DAIMONS_EYES = 8489;
+	private static final int HESTIAS_FAIRY_STONE = 8490;
+	private static final int NUCLEUS_OF_LESSER_GOLEM = 8491;
+	private static final int FALSTON_FANG = 8492;
+	private static final int SHAIDS_TALON = 8493;
 	// Reward list (itemId, minClanPoints, maxClanPoints)
 	private static final int[][] REWARD_LIST =
 	{
-		{
-			DAIMON_THE_WHITE_EYED,
-			DAIMONS_EYES,
-			180,
-			215
-		},
-		{
-			HESTIA_GUARDIAN_DEITY,
-			HESTIAS_FAIRY_STONE,
-			430,
-			465
-		},
-		{
-			PLAGUE_GOLEM,
-			NUCLEUS_OF_LESSER_GOLEM,
-			380,
-			415
-		},
-		{
-			DEMONS_AGENT_FALSTON,
-			FALSTON_FANG,
-			220,
-			255
-		},
-		{
-			QUEEN_SHYEED,
-			SHAIDS_TALON,
-			130,
-			165
-		}
+		// @formatter:off
+		{DAIMON_THE_WHITE_EYED, DAIMONS_EYES, 180, 215},
+		{HESTIA_GUARDIAN_DEITY, HESTIAS_FAIRY_STONE, 430, 465},
+		{PLAGUE_GOLEM, NUCLEUS_OF_LESSER_GOLEM, 380, 415},
+		{DEMONS_AGENT_FALSTON, FALSTON_FANG, 220, 255},
+		{QUEEN_SHYEED, SHAIDS_TALON, 130, 165}
 	};
-	
 	// Radar
 	private static final int[][] radar =
 	{
-		{
-			186320,
-			-43904,
-			-3175
-		},
-		{
-			134672,
-			-115600,
-			-1216
-		},
-		{
-			170000,
-			-59900,
-			-3848
-		},
-		{
-			93296,
-			-75104,
-			-1824
-		},
-		{
-			79635,
-			-55612,
-			-5980
-		}
+		{186320, -43904, -3175},
+		{134672, -115600, -1216},
+		{170000, -59900, -3848},
+		{93296, -75104, -1824},
+		{79635, -55612, -5980}
+		// @formatter:on
 	};
 	
 	public Q509_TheClansPrestige()
 	{
 		super(509, "The Clan's Prestige");
-		
 		registerQuestItems(DAIMONS_EYES, HESTIAS_FAIRY_STONE, NUCLEUS_OF_LESSER_GOLEM, FALSTON_FANG, SHAIDS_TALON);
-		
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
-		
 		addKillId(DAIMON_THE_WHITE_EYED, HESTIA_GUARDIAN_DEITY, PLAGUE_GOLEM, DEMONS_AGENT_FALSTON, QUEEN_SHYEED);
 	}
 	
@@ -148,11 +98,9 @@ public class Q509_TheClansPrestige extends Quest
 				st.addRadar(x, y, z);
 			}
 			
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
-		else if (event.equalsIgnoreCase("31331-6.htm"))
+		else if (event.equals("31331-6.htm"))
 		{
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
@@ -176,6 +124,7 @@ public class Q509_TheClansPrestige extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (!player.isClanLeader())
 				{
 					st.exitQuest(true);
@@ -191,10 +140,11 @@ public class Q509_TheClansPrestige extends Quest
 					htmltext = "31331-0c.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int raid = st.getInt("raid");
-				if (st.getInt("cond") == 1)
+				if (st.isCond(1))
 				{
 					final int item = REWARD_LIST[raid - 1][1];
 					final int count = st.getQuestItemsCount(item);
@@ -213,6 +163,7 @@ public class Q509_TheClansPrestige extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

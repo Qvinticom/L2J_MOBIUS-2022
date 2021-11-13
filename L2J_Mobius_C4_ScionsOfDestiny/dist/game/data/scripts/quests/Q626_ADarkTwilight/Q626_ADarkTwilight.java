@@ -27,12 +27,10 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q626_ADarkTwilight extends Quest
 {
-	// Items
-	private static final int BLOOD_OF_SAINT = 7169;
-	
 	// NPC
 	private static final int HIERARCH = 31517;
-	
+	// Items
+	private static final int BLOOD_OF_SAINT = 7169;
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -56,16 +54,10 @@ public class Q626_ADarkTwilight extends Quest
 	public Q626_ADarkTwilight()
 	{
 		super(626, "A Dark Twilight");
-		
 		registerQuestItems(BLOOD_OF_SAINT);
-		
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -78,40 +70,44 @@ public class Q626_ADarkTwilight extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31517-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("reward1"))
-		{
-			if (st.getQuestItemsCount(BLOOD_OF_SAINT) == 300)
+			case "31517-03.htm":
 			{
-				htmltext = "31517-07.htm";
-				st.takeItems(BLOOD_OF_SAINT, 300);
-				st.rewardExpAndSp(162773, 12500);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.startQuest();
+				break;
 			}
-			else
+			case "reward1":
 			{
-				htmltext = "31517-08.htm";
+				if (st.getQuestItemsCount(BLOOD_OF_SAINT) == 300)
+				{
+					htmltext = "31517-07.htm";
+					st.takeItems(BLOOD_OF_SAINT, 300);
+					st.rewardExpAndSp(162773, 12500);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "31517-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("reward2"))
-		{
-			if (st.getQuestItemsCount(BLOOD_OF_SAINT) == 300)
+			case "reward2":
 			{
-				htmltext = "31517-07.htm";
-				st.takeItems(BLOOD_OF_SAINT, 300);
-				st.rewardItems(57, 100000);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
-			}
-			else
-			{
-				htmltext = "31517-08.htm";
+				if (st.getQuestItemsCount(BLOOD_OF_SAINT) == 300)
+				{
+					htmltext = "31517-07.htm";
+					st.takeItems(BLOOD_OF_SAINT, 300);
+					st.rewardItems(57, 100000);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "31517-08.htm";
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -130,11 +126,13 @@ public class Q626_ADarkTwilight extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 60) ? "31517-02.htm" : "31517-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31517-05.htm";
@@ -144,10 +142,12 @@ public class Q626_ADarkTwilight extends Quest
 					htmltext = "31517-04.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -156,7 +156,7 @@ public class Q626_ADarkTwilight extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -164,7 +164,7 @@ public class Q626_ADarkTwilight extends Quest
 		
 		if (st.dropItems(BLOOD_OF_SAINT, 1, 300, CHANCES.get(npc.getNpcId())))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -58,7 +58,7 @@ public class QuestList implements IClientOutgoingPacket
 		for (QuestState qs : _activeQuests)
 		{
 			packet.writeD(qs.getQuest().getId());
-			packet.writeD(qs.getCond());
+			packet.writeD(qs.getCondBitSet());
 		}
 		packet.writeB(_oneTimeQuestMask);
 		return true;

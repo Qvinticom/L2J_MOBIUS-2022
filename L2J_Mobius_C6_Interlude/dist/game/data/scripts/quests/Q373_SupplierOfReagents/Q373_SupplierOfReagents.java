@@ -28,14 +28,9 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q373_SupplierOfReagents extends Quest
 {
-	// Variables
-	private static final String INGREDIENT = "ingredient";
-	private static final String CATALYST = "catalyst";
-	
 	// NPCs
 	private static final int WESLEY = 30166;
 	private static final int URN = 31149;
-	
 	// Monsters
 	private static final int CRENDION = 20813;
 	private static final int HALLATE_MAID = 20822;
@@ -44,11 +39,9 @@ public class Q373_SupplierOfReagents extends Quest
 	private static final int PLATINUM_GUARDIAN_SHAMAN = 21066;
 	private static final int LAVA_WYRM = 21111;
 	private static final int HAMES_ORC_SHAMAN = 21115;
-	
 	// Quest items
 	private static final int MIXING_STONE = 5904;
 	private static final int MIXING_MANUAL = 6317;
-	
 	// Items - pouches
 	private static final int REAGENT_POUCH_1 = 6007;
 	private static final int REAGENT_POUCH_2 = 6008;
@@ -83,6 +76,9 @@ public class Q373_SupplierOfReagents extends Quest
 	private static final int HELLFIRE_OIL = 6033;
 	private static final int NIGHTMARE_OIL = 6034;
 	private static final int PURE_SILVER = 6320;
+	// Variables
+	private static final String INGREDIENT = "ingredient";
+	private static final String CATALYST = "catalyst";
 	
 	/**
 	 * This droplist defines the npcId, the item dropped and the luck.
@@ -99,177 +95,51 @@ public class Q373_SupplierOfReagents extends Quest
 	private static final Map<Integer, int[]> DROPLIST = new HashMap<>();
 	static
 	{
-		DROPLIST.put(PLATINUM_GUARDIAN_SHAMAN, new int[]
-		{
-			REAGENT_BOX,
-			442000,
-			0
-		});
-		DROPLIST.put(HAMES_ORC_SHAMAN, new int[]
-		{
-			REAGENT_POUCH_3,
-			470000,
-			0
-		});
-		DROPLIST.put(PLATINUM_TRIBE_SHAMAN, new int[]
-		{
-			REAGENT_POUCH_2,
-			QUICKSILVER,
-			680,
-			1000
-		});
-		DROPLIST.put(HALLATE_MAID, new int[]
-		{
-			REAGENT_POUCH_1,
-			VOLCANIC_ASH,
-			664,
-			844
-		});
-		DROPLIST.put(HALLATE_GUARDIAN, new int[]
-		{
-			DEMONS_BLOOD,
-			MOONSTONE_SHARD,
-			729,
-			833
-		});
-		DROPLIST.put(CRENDION, new int[]
-		{
-			ROTTEN_BONE,
-			QUICKSILVER,
-			618,
-			1000
-		});
-		DROPLIST.put(LAVA_WYRM, new int[]
-		{
-			WYRMS_BLOOD,
-			LAVA_STONE,
-			505,
-			750
-		});
+		// @formatter:off
+		DROPLIST.put(PLATINUM_GUARDIAN_SHAMAN, new int[]{REAGENT_BOX, 442000, 0});
+		DROPLIST.put(HAMES_ORC_SHAMAN, new int[]{REAGENT_POUCH_3, 470000, 0});
+		DROPLIST.put(PLATINUM_TRIBE_SHAMAN, new int[]{REAGENT_POUCH_2, QUICKSILVER, 680, 1000});
+		DROPLIST.put(HALLATE_MAID, new int[]{REAGENT_POUCH_1, VOLCANIC_ASH, 664, 844});
+		DROPLIST.put(HALLATE_GUARDIAN, new int[]{DEMONS_BLOOD, MOONSTONE_SHARD, 729, 833});
+		DROPLIST.put(CRENDION, new int[]{ROTTEN_BONE, QUICKSILVER, 618, 1000});
+		DROPLIST.put(LAVA_WYRM, new int[]{WYRMS_BLOOD, LAVA_STONE, 505, 750});
+		// @formatter:n
 	}
-	
 	private static final int[][] FORMULAS =
 	{
-		{
-			10,
-			WYRMS_BLOOD,
-			BLOOD_ROOT,
-			DRACOPLASM
-		},
-		{
-			10,
-			LAVA_STONE,
-			VOLCANIC_ASH,
-			MAGMA_DUST
-		},
-		{
-			10,
-			MOONSTONE_SHARD,
-			VOLCANIC_ASH,
-			MOON_DUST
-		},
-		{
-			10,
-			ROTTEN_BONE,
-			BLOOD_ROOT,
-			NECROPLASM
-		},
-		{
-			10,
-			DEMONS_BLOOD,
-			BLOOD_ROOT,
-			DEMONPLASM
-		},
-		{
-			10,
-			INFERNIUM_ORE,
-			VOLCANIC_ASH,
-			INFERNO_DUST
-		},
-		{
-			10,
-			DRACOPLASM,
-			QUICKSILVER,
-			DRACONIC_ESSENCE
-		},
-		{
-			10,
-			MAGMA_DUST,
-			SULFUR,
-			FIRE_ESSENCE
-		},
-		{
-			10,
-			MOON_DUST,
-			QUICKSILVER,
-			LUNARGENT
-		},
-		{
-			10,
-			NECROPLASM,
-			QUICKSILVER,
-			MIDNIGHT_OIL
-		},
-		{
-			10,
-			DEMONPLASM,
-			SULFUR,
-			DEMONIC_ESSENCE
-		},
-		{
-			10,
-			INFERNO_DUST,
-			SULFUR,
-			ABYSS_OIL
-		},
-		{
-			1,
-			FIRE_ESSENCE,
-			DEMONIC_ESSENCE,
-			HELLFIRE_OIL
-		},
-		{
-			1,
-			LUNARGENT,
-			MIDNIGHT_OIL,
-			NIGHTMARE_OIL
-		},
-		{
-			1,
-			LUNARGENT,
-			QUICKSILVER,
-			PURE_SILVER
-		}
+		// @formatter:off
+		{10, WYRMS_BLOOD, BLOOD_ROOT, DRACOPLASM},
+		{10, LAVA_STONE, VOLCANIC_ASH, MAGMA_DUST},
+		{10, MOONSTONE_SHARD, VOLCANIC_ASH, MOON_DUST},
+		{10, ROTTEN_BONE, BLOOD_ROOT, NECROPLASM},
+		{10, DEMONS_BLOOD, BLOOD_ROOT, DEMONPLASM},
+		{10, INFERNIUM_ORE, VOLCANIC_ASH, INFERNO_DUST},
+		{10, DRACOPLASM, QUICKSILVER, DRACONIC_ESSENCE},
+		{10, MAGMA_DUST, SULFUR, FIRE_ESSENCE},
+		{10, MOON_DUST, QUICKSILVER, LUNARGENT},
+		{10, NECROPLASM, QUICKSILVER, MIDNIGHT_OIL},
+		{10, DEMONPLASM, SULFUR, DEMONIC_ESSENCE},
+		{10, INFERNO_DUST, SULFUR, ABYSS_OIL},
+		{1, FIRE_ESSENCE, DEMONIC_ESSENCE, HELLFIRE_OIL},
+		{1, LUNARGENT, MIDNIGHT_OIL, NIGHTMARE_OIL},
+		{1, LUNARGENT, QUICKSILVER, PURE_SILVER}
+		// @formatter:on
 	};
-	
 	private static final int[][] TEMPERATURES =
 	{
-		{
-			1,
-			100,
-			1
-		},
-		{
-			2,
-			45,
-			3
-		},
-		{
-			3,
-			15,
-			5
-		}
+		// @formatter:off
+		{1, 100, 1},
+		{2, 45, 3},
+		{3, 15, 5}
+		// @formatter:on
 	};
 	
 	public Q373_SupplierOfReagents()
 	{
 		super(373, "Supplier of Reagents");
-		
 		registerQuestItems(MIXING_STONE, MIXING_MANUAL);
-		
 		addStartNpc(WESLEY);
 		addTalkId(WESLEY, URN);
-		
 		addKillId(CRENDION, HALLATE_MAID, HALLATE_GUARDIAN, PLATINUM_TRIBE_SHAMAN, PLATINUM_GUARDIAN_SHAMAN, LAVA_WYRM, HAMES_ORC_SHAMAN);
 	}
 	
@@ -286,10 +156,7 @@ public class Q373_SupplierOfReagents extends Quest
 		// Wesley
 		if (event.equals("30166-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			
+			st.startQuest();
 			st.giveItems(MIXING_STONE, 1);
 			st.giveItems(MIXING_MANUAL, 1);
 		}
@@ -399,10 +266,12 @@ public class Q373_SupplierOfReagents extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 57) ? "30166-01.htm" : "30166-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (npc.getNpcId() == WESLEY)
 				{
 					htmltext = "30166-05.htm";
@@ -412,6 +281,7 @@ public class Q373_SupplierOfReagents extends Quest
 					htmltext = "31149-01.htm";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -27,16 +27,13 @@ public class Q119_LastImperialPrince extends Quest
 	// NPCs
 	private static final int NAMELESS_SPIRIT = 31453;
 	private static final int DEVORIN = 32009;
-	
 	// Item
 	private static final int ANTIQUE_BROOCH = 7262;
 	
 	public Q119_LastImperialPrince()
 	{
 		super(119, "Last Imperial Prince");
-		
 		registerQuestItems(ANTIQUE_BROOCH);
-		
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT, DEVORIN);
 	}
@@ -51,38 +48,43 @@ public class Q119_LastImperialPrince extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31453-04.htm"))
+		switch (event)
 		{
-			if (st.hasQuestItems(ANTIQUE_BROOCH))
+			case "31453-04.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				if (st.hasQuestItems(ANTIQUE_BROOCH))
+				{
+					st.startQuest();
+				}
+				else
+				{
+					htmltext = "31453-04b.htm";
+					st.exitQuest(true);
+				}
+				break;
 			}
-			else
+			case "32009-02.htm":
 			{
-				htmltext = "31453-04b.htm";
-				st.exitQuest(true);
+				if (!st.hasQuestItems(ANTIQUE_BROOCH))
+				{
+					htmltext = "31453-02a.htm";
+					st.exitQuest(true);
+				}
+				break;
 			}
-		}
-		else if (event.equals("32009-02.htm"))
-		{
-			if (!st.hasQuestItems(ANTIQUE_BROOCH))
+			case "32009-03.htm":
 			{
-				htmltext = "31453-02a.htm";
-				st.exitQuest(true);
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-		}
-		else if (event.equals("32009-03.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31453-07.htm"))
-		{
-			st.rewardItems(57, 68787);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31453-07.htm":
+			{
+				st.rewardItems(57, 68787);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -100,14 +102,17 @@ public class Q119_LastImperialPrince extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (!st.hasQuestItems(ANTIQUE_BROOCH) || (player.getLevel() < 74)) ? "31453-00a.htm" : "31453-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case NAMELESS_SPIRIT:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31453-04a.htm";
@@ -117,8 +122,9 @@ public class Q119_LastImperialPrince extends Quest
 							htmltext = "31453-05.htm";
 						}
 						break;
-					
+					}
 					case DEVORIN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "32009-01.htm";
@@ -128,12 +134,15 @@ public class Q119_LastImperialPrince extends Quest
 							htmltext = "32009-04.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = "31453-00b.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

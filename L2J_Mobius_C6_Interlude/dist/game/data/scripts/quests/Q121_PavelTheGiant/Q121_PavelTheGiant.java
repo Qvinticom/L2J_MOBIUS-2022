@@ -31,7 +31,6 @@ public class Q121_PavelTheGiant extends Quest
 	public Q121_PavelTheGiant()
 	{
 		super(121, "Pavel the Giant");
-		
 		addStartNpc(NEWYEAR);
 		addTalkId(NEWYEAR, YUMI);
 	}
@@ -48,9 +47,7 @@ public class Q121_PavelTheGiant extends Quest
 		
 		if (event.equals("31961-2.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32041-2.htm"))
 		{
@@ -75,25 +72,32 @@ public class Q121_PavelTheGiant extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 46) ? "31961-1a.htm" : "31961-1.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case NEWYEAR:
+					{
 						htmltext = "31961-2a.htm";
 						break;
-					
+					}
 					case YUMI:
+					{
 						htmltext = "32041-1.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

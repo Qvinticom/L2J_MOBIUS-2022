@@ -29,7 +29,6 @@ public class Q378_MagnificentFeast extends Quest
 {
 	// NPC
 	private static final int RANSPO = 30594;
-	
 	// Items
 	private static final int WINE_15 = 5956;
 	private static final int WINE_30 = 5957;
@@ -39,71 +38,26 @@ public class Q378_MagnificentFeast extends Quest
 	private static final int SAUCE_RECIPE = 1456;
 	private static final int STEAK_RECIPE = 1457;
 	private static final int RITRON_DESSERT = 5959;
-	
 	// Rewards
 	private static final Map<String, int[]> REWARDS = new HashMap<>();
 	static
 	{
-		REWARDS.put("9", new int[]
-		{
-			847,
-			1,
-			5700
-		});
-		REWARDS.put("10", new int[]
-		{
-			846,
-			2,
-			0
-		});
-		REWARDS.put("12", new int[]
-		{
-			909,
-			1,
-			25400
-		});
-		REWARDS.put("17", new int[]
-		{
-			846,
-			2,
-			1200
-		});
-		REWARDS.put("18", new int[]
-		{
-			879,
-			1,
-			6900
-		});
-		REWARDS.put("20", new int[]
-		{
-			890,
-			2,
-			8500
-		});
-		REWARDS.put("33", new int[]
-		{
-			879,
-			1,
-			8100
-		});
-		REWARDS.put("34", new int[]
-		{
-			910,
-			1,
-			0
-		});
-		REWARDS.put("36", new int[]
-		{
-			848,
-			1,
-			2200
-		});
+		// @formatter:off
+		REWARDS.put("9", new int[]{847, 1, 5700});
+		REWARDS.put("10", new int[]{846, 2, 0});
+		REWARDS.put("12", new int[]{909, 1, 25400});
+		REWARDS.put("17", new int[]{846, 2, 1200});
+		REWARDS.put("18", new int[]{879, 1, 6900});
+		REWARDS.put("20", new int[]{890, 2, 8500});
+		REWARDS.put("33", new int[]{879, 1, 8100});
+		REWARDS.put("34", new int[]{910, 1, 0});
+		REWARDS.put("36", new int[]{848, 1, 2200});
+		// @formatter:on
 	}
 	
 	public Q378_MagnificentFeast()
 	{
 		super(378, "Magnificent Feast");
-		
 		addStartNpc(RANSPO);
 		addTalkId(RANSPO);
 	}
@@ -118,75 +72,78 @@ public class Q378_MagnificentFeast extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30594-2.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30594-4a.htm"))
-		{
-			if (st.hasQuestItems(WINE_15))
+			case "30594-2.htm":
 			{
-				st.set("cond", "2");
-				st.set("score", "1");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(WINE_15, 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "30594-4a.htm":
 			{
-				htmltext = "30594-4.htm";
+				if (st.hasQuestItems(WINE_15))
+				{
+					st.setCond(2);
+					st.set("score", "1");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(WINE_15, 1);
+				}
+				else
+				{
+					htmltext = "30594-4.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30594-4b.htm"))
-		{
-			if (st.hasQuestItems(WINE_30))
+			case "30594-4b.htm":
 			{
-				st.set("cond", "2");
-				st.set("score", "2");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(WINE_30, 1);
+				if (st.hasQuestItems(WINE_30))
+				{
+					st.setCond(2);
+					st.set("score", "2");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(WINE_30, 1);
+				}
+				else
+				{
+					htmltext = "30594-4.htm";
+				}
+				break;
 			}
-			else
+			case "30594-4c.htm":
 			{
-				htmltext = "30594-4.htm";
+				if (st.hasQuestItems(WINE_60))
+				{
+					st.setCond(2);
+					st.set("score", "4");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(WINE_60, 1);
+				}
+				else
+				{
+					htmltext = "30594-4.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30594-4c.htm"))
-		{
-			if (st.hasQuestItems(WINE_60))
+			case "30594-6.htm":
 			{
-				st.set("cond", "2");
-				st.set("score", "4");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(WINE_60, 1);
+				if (st.hasQuestItems(MUSICAL_SCORE))
+				{
+					st.setCond(3);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(MUSICAL_SCORE, 1);
+				}
+				else
+				{
+					htmltext = "30594-5.htm";
+				}
+				break;
 			}
-			else
-			{
-				htmltext = "30594-4.htm";
-			}
-		}
-		else if (event.equals("30594-6.htm"))
-		{
-			if (st.hasQuestItems(MUSICAL_SCORE))
-			{
-				st.set("cond", "3");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(MUSICAL_SCORE, 1);
-			}
-			else
-			{
-				htmltext = "30594-5.htm";
-			}
-		}
-		else
-		{
-			final int score = st.getInt("score");
-			if (event.equals("30594-8a.htm"))
+			case "30594-8a.htm":
 			{
 				if (st.hasQuestItems(SALAD_RECIPE))
 				{
-					st.set("cond", "4");
+					st.setCond(4);
+					final int score = st.getInt("score");
 					st.set("score", String.valueOf(score + 8));
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(SALAD_RECIPE, 1);
@@ -195,12 +152,14 @@ public class Q378_MagnificentFeast extends Quest
 				{
 					htmltext = "30594-8.htm";
 				}
+				break;
 			}
-			else if (event.equals("30594-8b.htm"))
+			case "30594-8b.htm":
 			{
 				if (st.hasQuestItems(SAUCE_RECIPE))
 				{
-					st.set("cond", "4");
+					st.setCond(4);
+					final int score = st.getInt("score");
 					st.set("score", String.valueOf(score + 16));
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(SAUCE_RECIPE, 1);
@@ -209,12 +168,14 @@ public class Q378_MagnificentFeast extends Quest
 				{
 					htmltext = "30594-8.htm";
 				}
+				break;
 			}
-			else if (event.equals("30594-8c.htm"))
+			case "30594-8c.htm":
 			{
 				if (st.hasQuestItems(STEAK_RECIPE))
 				{
-					st.set("cond", "4");
+					st.setCond(4);
+					final int score = st.getInt("score");
 					st.set("score", String.valueOf(score + 32));
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(STEAK_RECIPE, 1);
@@ -223,6 +184,7 @@ public class Q378_MagnificentFeast extends Quest
 				{
 					htmltext = "30594-8.htm";
 				}
+				break;
 			}
 		}
 		
@@ -242,11 +204,13 @@ public class Q378_MagnificentFeast extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "30594-0.htm" : "30594-1.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30594-3.htm";
@@ -283,6 +247,8 @@ public class Q378_MagnificentFeast extends Quest
 						htmltext = "30594-9.htm";
 					}
 				}
+				break;
+			}
 		}
 		
 		return htmltext;

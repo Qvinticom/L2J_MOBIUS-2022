@@ -29,10 +29,8 @@ public class Q006_StepIntoTheFuture extends Quest
 	private static final int ROXXY = 30006;
 	private static final int BAULRO = 30033;
 	private static final int SIR_COLLIN = 30311;
-	
 	// Items
 	private static final int BAULRO_LETTER = 7571;
-	
 	// Rewards
 	private static final int MARK_TRAVELER = 7570;
 	private static final int SOE_GIRAN = 7559;
@@ -40,9 +38,7 @@ public class Q006_StepIntoTheFuture extends Quest
 	public Q006_StepIntoTheFuture()
 	{
 		super(6, "Step into the Future");
-		
 		registerQuestItems(BAULRO_LETTER);
-		
 		addStartNpc(ROXXY);
 		addTalkId(ROXXY, BAULRO, SIR_COLLIN);
 	}
@@ -57,37 +53,42 @@ public class Q006_StepIntoTheFuture extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30006-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30033-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(BAULRO_LETTER, 1);
-		}
-		else if (event.equals("30311-02.htm"))
-		{
-			if (st.hasQuestItems(BAULRO_LETTER))
+			case "30006-03.htm":
 			{
-				st.set("cond", "3");
+				st.startQuest();
+				break;
+			}
+			case "30033-02.htm":
+			{
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BAULRO_LETTER, 1);
+				st.giveItems(BAULRO_LETTER, 1);
+				break;
 			}
-			else
+			case "30311-02.htm":
 			{
-				htmltext = "30311-03.htm";
+				if (st.hasQuestItems(BAULRO_LETTER))
+				{
+					st.setCond(3);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BAULRO_LETTER, 1);
+				}
+				else
+				{
+					htmltext = "30311-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30006-06.htm"))
-		{
-			st.giveItems(MARK_TRAVELER, 1);
-			st.rewardItems(SOE_GIRAN, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30006-06.htm":
+			{
+				st.giveItems(MARK_TRAVELER, 1);
+				st.rewardItems(SOE_GIRAN, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -106,6 +107,7 @@ public class Q006_StepIntoTheFuture extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getRace() != Race.HUMAN) || (player.getLevel() < 3))
 				{
 					htmltext = "30006-01.htm";
@@ -115,12 +117,14 @@ public class Q006_StepIntoTheFuture extends Quest
 					htmltext = "30006-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ROXXY:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30006-04.htm";
@@ -130,8 +134,9 @@ public class Q006_StepIntoTheFuture extends Quest
 							htmltext = "30006-05.htm";
 						}
 						break;
-					
+					}
 					case BAULRO:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30033-01.htm";
@@ -145,8 +150,9 @@ public class Q006_StepIntoTheFuture extends Quest
 							htmltext = "30033-04.htm";
 						}
 						break;
-					
+					}
 					case SIR_COLLIN:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30311-01.htm";
@@ -156,12 +162,15 @@ public class Q006_StepIntoTheFuture extends Quest
 							htmltext = "30311-03a.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -36,7 +36,6 @@ public class Q330_AdeptOfTaste extends Quest
 	private static final int PANO = 30078;
 	private static final int MIRIEN = 30461;
 	private static final int JONAS = 30469;
-	
 	// Items
 	private static final int INGREDIENT_LIST = 1420;
 	private static final int SONIA_BOTANY_BOOK = 1421;
@@ -70,57 +69,30 @@ public class Q330_AdeptOfTaste extends Quest
 	private static final int MIRIEN_REVIEW_3 = 1449;
 	private static final int MIRIEN_REVIEW_4 = 1450;
 	private static final int MIRIEN_REVIEW_5 = 1451;
-	
 	// Rewards
 	private static final int JONAS_SALAD_RECIPE = 1455;
 	private static final int JONAS_SAUCE_RECIPE = 1456;
 	private static final int JONAS_STEAK_RECIPE = 1457;
-	
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
 	static
 	{
-		CHANCES.put(20204, new int[]
-		{
-			92,
-			100
-		});
-		CHANCES.put(20229, new int[]
-		{
-			80,
-			95
-		});
-		CHANCES.put(20223, new int[]
-		{
-			70,
-			77
-		});
-		CHANCES.put(20154, new int[]
-		{
-			70,
-			77
-		});
-		CHANCES.put(20155, new int[]
-		{
-			87,
-			96
-		});
-		CHANCES.put(20156, new int[]
-		{
-			77,
-			85
-		});
+		// @formatter:off
+		CHANCES.put(20204, new int[]{92, 100});
+		CHANCES.put(20229, new int[]{80, 95});
+		CHANCES.put(20223, new int[]{70, 77});
+		CHANCES.put(20154, new int[]{70, 77});
+		CHANCES.put(20155, new int[]{87, 96});
+		CHANCES.put(20156, new int[]{77, 85});
+		// @formatter:on
 	}
 	
 	public Q330_AdeptOfTaste()
 	{
 		super(330, "Adept of Taste");
-		
 		registerQuestItems(INGREDIENT_LIST, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP, HONEY, GOLDEN_HONEY, DIONIAN_POTATO, GREEN_MOSS_BUNDLE, BROWN_MOSS_BUNDLE, MONSTER_EYE_MEAT, MIRIEN_REVIEW_1, MIRIEN_REVIEW_2, MIRIEN_REVIEW_3, MIRIEN_REVIEW_4, MIRIEN_REVIEW_5, JONAS_STEAK_DISH_1, JONAS_STEAK_DISH_2, JONAS_STEAK_DISH_3, JONAS_STEAK_DISH_4, JONAS_STEAK_DISH_5, SONIA_BOTANY_BOOK, RED_MANDRAGORA_ROOT, WHITE_MANDRAGORA_ROOT, JACOB_INSECT_BOOK, NECTAR, ROYAL_JELLY, PANO_CONTRACT, HOBGOBLIN_AMULET, GLYVKA_BOTANY_BOOK, GREEN_MARSH_MOSS, BROWN_MARSH_MOSS, ROLANT_CREATURE_BOOK, MONSTER_EYE_BODY);
-		
 		addStartNpc(JONAS); // Jonas
 		addTalkId(JONAS, SONIA, GLYVKA, ROLLANT, JACOB, PANO, MIRIEN);
-		
 		addKillId(20147, 20154, 20155, 20156, 20204, 20223, 20226, 20228, 20229, 20265, 20266);
 	}
 	
@@ -134,36 +106,41 @@ public class Q330_AdeptOfTaste extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30469-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(INGREDIENT_LIST, 1);
-		}
-		else if (event.equals("30062-05.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(SONIA_BOTANY_BOOK, 1);
-			st.takeItems(RED_MANDRAGORA_ROOT, -1);
-			st.takeItems(WHITE_MANDRAGORA_ROOT, -1);
-			st.giveItems(RED_MANDRAGORA_SAP, 1);
-		}
-		else if (event.equals("30073-05.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(JACOB_INSECT_BOOK, 1);
-			st.takeItems(NECTAR, -1);
-			st.takeItems(ROYAL_JELLY, -1);
-			st.giveItems(HONEY, 1);
-		}
-		else if (event.equals("30067-05.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(GLYVKA_BOTANY_BOOK, 1);
-			st.takeItems(GREEN_MARSH_MOSS, -1);
-			st.takeItems(BROWN_MARSH_MOSS, -1);
-			st.giveItems(GREEN_MOSS_BUNDLE, 1);
+			case "30469-03.htm":
+			{
+				st.startQuest();
+				st.giveItems(INGREDIENT_LIST, 1);
+				break;
+			}
+			case "30062-05.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(SONIA_BOTANY_BOOK, 1);
+				st.takeItems(RED_MANDRAGORA_ROOT, -1);
+				st.takeItems(WHITE_MANDRAGORA_ROOT, -1);
+				st.giveItems(RED_MANDRAGORA_SAP, 1);
+				break;
+			}
+			case "30073-05.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(JACOB_INSECT_BOOK, 1);
+				st.takeItems(NECTAR, -1);
+				st.takeItems(ROYAL_JELLY, -1);
+				st.giveItems(HONEY, 1);
+				break;
+			}
+			case "30067-05.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(GLYVKA_BOTANY_BOOK, 1);
+				st.takeItems(GREEN_MARSH_MOSS, -1);
+				st.takeItems(BROWN_MARSH_MOSS, -1);
+				st.giveItems(GREEN_MOSS_BUNDLE, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -182,13 +159,16 @@ public class Q330_AdeptOfTaste extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 24) ? "30469-01.htm" : "30469-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case JONAS:
+					{
 						if (st.hasQuestItems(INGREDIENT_LIST))
 						{
 							if (!hasAllIngredients(st))
@@ -273,8 +253,9 @@ public class Q330_AdeptOfTaste extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case MIRIEN:
+					{
 						if (st.hasQuestItems(INGREDIENT_LIST))
 						{
 							htmltext = "30461-01.htm";
@@ -318,8 +299,9 @@ public class Q330_AdeptOfTaste extends Quest
 							htmltext = "30461-04.htm";
 						}
 						break;
-					
+					}
 					case SONIA:
+					{
 						if (!st.hasQuestItems(RED_MANDRAGORA_SAP) && !st.hasQuestItems(WHITE_MANDRAGORA_SAP))
 						{
 							if (!st.hasQuestItems(SONIA_BOTANY_BOOK))
@@ -354,8 +336,9 @@ public class Q330_AdeptOfTaste extends Quest
 							htmltext = "30062-07.htm";
 						}
 						break;
-					
+					}
 					case JACOB:
+					{
 						if (!st.hasQuestItems(HONEY) && !st.hasQuestItems(GOLDEN_HONEY))
 						{
 							if (!st.hasQuestItems(JACOB_INSECT_BOOK))
@@ -393,8 +376,9 @@ public class Q330_AdeptOfTaste extends Quest
 							htmltext = "30073-07.htm";
 						}
 						break;
-					
+					}
 					case PANO:
+					{
 						if (!st.hasQuestItems(DIONIAN_POTATO))
 						{
 							if (!st.hasQuestItems(PANO_CONTRACT))
@@ -424,8 +408,9 @@ public class Q330_AdeptOfTaste extends Quest
 							htmltext = "30078-04.htm";
 						}
 						break;
-					
+					}
 					case GLYVKA:
+					{
 						if (!st.hasQuestItems(GREEN_MOSS_BUNDLE) && !st.hasQuestItems(BROWN_MOSS_BUNDLE))
 						{
 							if (!st.hasQuestItems(GLYVKA_BOTANY_BOOK))
@@ -460,8 +445,9 @@ public class Q330_AdeptOfTaste extends Quest
 							htmltext = "30067-07.htm";
 						}
 						break;
-					
+					}
 					case ROLLANT:
+					{
 						if (!st.hasQuestItems(MONSTER_EYE_MEAT))
 						{
 							if (!st.hasQuestItems(ROLANT_CREATURE_BOOK))
@@ -491,8 +477,10 @@ public class Q330_AdeptOfTaste extends Quest
 							htmltext = "30069-04.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -508,46 +496,51 @@ public class Q330_AdeptOfTaste extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		
 		switch (npcId)
 		{
 			case 20265:
+			{
 				if (st.hasQuestItems(ROLANT_CREATURE_BOOK))
 				{
 					st.dropItems(MONSTER_EYE_BODY, (Rnd.get(97) < 77) ? 2 : 3, 30, 970000);
 				}
 				break;
-			
+			}
 			case 20266:
+			{
 				if (st.hasQuestItems(ROLANT_CREATURE_BOOK))
 				{
 					st.dropItemsAlways(MONSTER_EYE_BODY, (Rnd.get(10) < 7) ? 1 : 2, 30);
 				}
 				break;
-			
+			}
 			case 20226:
+			{
 				if (st.hasQuestItems(GLYVKA_BOTANY_BOOK))
 				{
 					st.dropItems(((Rnd.get(96) < 87) ? GREEN_MARSH_MOSS : BROWN_MARSH_MOSS), 1, 20, 960000);
 				}
 				break;
-			
+			}
 			case 20228:
+			{
 				if (st.hasQuestItems(GLYVKA_BOTANY_BOOK))
 				{
 					st.dropItemsAlways(((Rnd.get(10) < 9) ? GREEN_MARSH_MOSS : BROWN_MARSH_MOSS), 1, 20);
 				}
 				break;
-			
+			}
 			case 20147:
+			{
 				if (st.hasQuestItems(PANO_CONTRACT))
 				{
 					st.dropItemsAlways(HOBGOBLIN_AMULET, 1, 30);
 				}
 				break;
-			
+			}
 			case 20204:
 			case 20229:
+			{
 				if (st.hasQuestItems(JACOB_INSECT_BOOK))
 				{
 					final int random = Rnd.get(100);
@@ -562,11 +555,12 @@ public class Q330_AdeptOfTaste extends Quest
 					}
 				}
 				break;
-			
+			}
 			case 20223:
 			case 20154:
 			case 20155:
 			case 20156:
+			{
 				if (st.hasQuestItems(SONIA_BOTANY_BOOK))
 				{
 					final int random = Rnd.get(100);
@@ -577,6 +571,7 @@ public class Q330_AdeptOfTaste extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return null;

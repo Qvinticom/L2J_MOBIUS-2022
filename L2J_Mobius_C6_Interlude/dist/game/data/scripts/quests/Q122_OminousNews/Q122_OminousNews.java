@@ -31,7 +31,6 @@ public class Q122_OminousNews extends Quest
 	public Q122_OminousNews()
 	{
 		super(122, "Ominous News");
-		
 		addStartNpc(MOIRA);
 		addTalkId(MOIRA, KARUDA);
 	}
@@ -48,9 +47,7 @@ public class Q122_OminousNews extends Quest
 		
 		if (event.equals("31979-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32017-02.htm"))
 		{
@@ -75,25 +72,32 @@ public class Q122_OminousNews extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "31979-01.htm" : "31979-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case MOIRA:
+					{
 						htmltext = "31979-03.htm";
 						break;
-					
+					}
 					case KARUDA:
+					{
 						htmltext = "32017-01.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -153,7 +153,6 @@ public class Q335_TheSongOfTheHunter extends Quest
 	public Q335_TheSongOfTheHunter()
 	{
 		super(335, "Song of the Hunter");
-		
 		addStartNpc(GREY);
 		addTalkId(GREY, CYBELLIN, TOR);
 		addKillId(BREKA_OVERLORD_HAKA);
@@ -229,7 +228,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		registerQuestItems(questItems.stream().mapToInt(i -> i).toArray());
 	}
 	
-	private static int CalcItemsConds(QuestState st, int[][][] itemConds)
+	private static int calcItemsConds(QuestState st, int[][][] itemConds)
 	{
 		int result = 0;
 		for (int[][] itemCond : itemConds)
@@ -247,7 +246,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private void DelItemsConds(QuestState st, int[][][] itemConds)
+	private void delItemsConds(QuestState st, int[][][] itemConds)
 	{
 		for (int[][] itemCond : itemConds)
 		{
@@ -258,7 +257,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 	}
 	
-	private static int Get_Blood_Crystal_Level(QuestState st)
+	private static int getBloodCrystalLevel(QuestState st)
 	{
 		for (int i = Q_BLOOD_CRYSTAL.length - 1; i >= 0; --i)
 		{
@@ -270,7 +269,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return -1;
 	}
 	
-	private static boolean Blood_Crystal2Adena(QuestState st, int bloodCrystalLevel)
+	private static boolean bloodCrystal2Adena(QuestState st, int bloodCrystalLevel)
 	{
 		if (bloodCrystalLevel < 2)
 		{
@@ -284,7 +283,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return true;
 	}
 	
-	private void GenList(QuestState st)
+	private void genList(QuestState st)
 	{
 		// final int grade_c = 12;
 		// final int grade_b = 6;
@@ -356,7 +355,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 	}
 	
-	private static String FormatList(QuestState st, Request[] requests)
+	private static String formatList(QuestState st, Request[] requests)
 	{
 		String result = "<html><head><body>Guild Member Tor:<br>%reply%<br>%reply%<br>%reply%<br>%reply%<br>%reply%<br></body></html>";
 		final int[] listpacked = unpackInt(st.getInt("list"), 5);
@@ -368,7 +367,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private static Request GetCurrentRequest(QuestState st, Request[] requests)
+	private static Request getCurrentRequest(QuestState st, Request[] requests)
 	{
 		for (Request r : requests)
 		{
@@ -418,22 +417,20 @@ public class Q335_TheSongOfTheHunter extends Quest
 				{
 					st.giveItems(TEST_INSTRUCTIONS1, 1);
 				}
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 		}
 		else if ("30744_09.htm".equals(htmltext))
 		{
 			if (state == 2)
 			{
-				if (GetCurrentRequest(st, REQUESTS1) != null)
+				if (getCurrentRequest(st, REQUESTS1) != null)
 				{
 					return "30744_09a.htm";
 				}
 				if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) == 0)
 				{
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(TEST_INSTRUCTIONS2, 1);
 				}
 			}
@@ -447,7 +444,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 					st.giveItems(57, 20000);
 					htmltext = "30744_17.htm";
 				}
-				st.playSound("ItemSound.quest_finish");
+				st.playSound(QuestState.SOUND_FINISH);
 				st.exitQuest(true);
 			}
 		}
@@ -471,18 +468,15 @@ public class Q335_TheSongOfTheHunter extends Quest
 				{
 					st.takeItems(i, -1);
 				}
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				st.giveItems(Q_BLOOD_CRYSTAL[1], 1);
 			}
 		}
 		else if ("30746_06.htm".equals(htmltext))
 		{
-			if (state == 2)
+			if ((state == 2) && !bloodCrystal2Adena(st, getBloodCrystalLevel(st)))
 			{
-				if (!Blood_Crystal2Adena(st, Get_Blood_Crystal_Level(st)))
-				{
-					return null;
-				}
+				return null;
 			}
 		}
 		else if ("30746_10.htm".equals(htmltext))
@@ -499,12 +493,9 @@ public class Q335_TheSongOfTheHunter extends Quest
 		}
 		else if ("30745_02.htm".equals(htmltext))
 		{
-			if (state == 2)
+			if ((state == 2) && (st.getQuestItemsCount(TEST_INSTRUCTIONS2) > 0))
 			{
-				if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) > 0)
-				{
-					return "30745_03.htm";
-				}
+				return "30745_03.htm";
 			}
 		}
 		else if ("30745_05b.htm".equals(htmltext))
@@ -531,13 +522,13 @@ public class Q335_TheSongOfTheHunter extends Quest
 		{
 			if ("30745-list1".equals(htmltext))
 			{
-				GenList(st);
-				return FormatList(st, REQUESTS1);
+				genList(st);
+				return formatList(st, REQUESTS1);
 			}
 			if ("30745-list2".equals(htmltext))
 			{
-				GenList(st);
-				return FormatList(st, REQUESTS2);
+				genList(st);
+				return formatList(st, REQUESTS2);
 			}
 			if (htmltext.startsWith("30745-request-"))
 			{
@@ -581,34 +572,40 @@ public class Q335_TheSongOfTheHunter extends Quest
 			{
 				return getNoQuestMsg();
 			}
+			
 			if (st.getPlayer().getLevel() < 35)
 			{
 				st.exitQuest(true);
 				return "30744_01.htm";
 			}
-			st.set("cond", "0");
+			
+			st.setCond(0);
 			st.unset("list");
 			return "30744_02.htm";
 		}
+		
 		if (_state != 2)
 		{
 			return getNoQuestMsg();
 		}
+		
 		if (npcId == GREY)
 		{
 			if (st.getQuestItemsCount(TEST_INSTRUCTIONS1) > 0)
 			{
-				if (CalcItemsConds(st, ITEMS_1ST_CIRCLE) < 3)
+				if (calcItemsConds(st, ITEMS_1ST_CIRCLE) < 3)
 				{
 					return "30744_05.htm";
 				}
-				DelItemsConds(st, ITEMS_1ST_CIRCLE);
+				
+				delItemsConds(st, ITEMS_1ST_CIRCLE);
 				st.takeItems(TEST_INSTRUCTIONS1, -1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				st.giveItems(CIRCLE_HUNTER_LICENSE1, 1);
-				st.set("cond", "2");
+				st.setCond(2);
 				return "30744_06.htm";
 			}
+			
 			if (st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE1) > 0)
 			{
 				if (st.getPlayer().getLevel() < 45)
@@ -620,18 +617,19 @@ public class Q335_TheSongOfTheHunter extends Quest
 					return "30744_08.htm";
 				}
 			}
+			
 			if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) > 0)
 			{
-				if (CalcItemsConds(st, ITEMS_2ND_CIRCLE) < 3)
+				if (calcItemsConds(st, ITEMS_2ND_CIRCLE) < 3)
 				{
 					return "30744_11.htm";
 				}
-				DelItemsConds(st, ITEMS_2ND_CIRCLE);
+				delItemsConds(st, ITEMS_2ND_CIRCLE);
 				st.takeItems(TEST_INSTRUCTIONS2, -1);
 				st.takeItems(CIRCLE_HUNTER_LICENSE1, -1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestState.SOUND_MIDDLE);
 				st.giveItems(CIRCLE_HUNTER_LICENSE2, 1);
-				st.set("cond", "3");
+				st.setCond(3);
 				return "30744_12.htm";
 			}
 			else if (st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE2) > 0)
@@ -649,24 +647,24 @@ public class Q335_TheSongOfTheHunter extends Quest
 			{
 				return "30746_02.htm";
 			}
-			final int Blood_Crystal_Level = Get_Blood_Crystal_Level(st);
-			if (Blood_Crystal_Level == -1)
+			final int bloodCrystalLevel = getBloodCrystalLevel(st);
+			if (bloodCrystalLevel == -1)
 			{
 				return "30746_08.htm";
 			}
-			if (Blood_Crystal_Level == 0)
+			if (bloodCrystalLevel == 0)
 			{
 				return "30746_09.htm";
 			}
-			if (Blood_Crystal_Level == 1)
+			if (bloodCrystalLevel == 1)
 			{
 				return "30746_04.htm";
 			}
-			if ((Blood_Crystal_Level > 1) && (Blood_Crystal_Level < 10))
+			if ((bloodCrystalLevel > 1) && (bloodCrystalLevel < 10))
 			{
 				return "30746_05.htm";
 			}
-			if ((Blood_Crystal_Level == 10) && Blood_Crystal2Adena(st, Blood_Crystal_Level))
+			if ((bloodCrystalLevel == 10) && bloodCrystal2Adena(st, bloodCrystalLevel))
 			{
 				return "30746_05a.htm";
 			}
@@ -679,10 +677,10 @@ public class Q335_TheSongOfTheHunter extends Quest
 			}
 			if (st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE1) > 0)
 			{
-				final Request request = GetCurrentRequest(st, REQUESTS1);
+				final Request request = getCurrentRequest(st, REQUESTS1);
 				if (request != null)
 				{
-					return request.Complete(st) ? "30745_06a.htm" : "30745_05.htm";
+					return request.complete(st) ? "30745_06a.htm" : "30745_05.htm";
 				}
 				if (st.getPlayer().getLevel() < 45)
 				{
@@ -692,12 +690,12 @@ public class Q335_TheSongOfTheHunter extends Quest
 			}
 			else if (st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE2) > 0)
 			{
-				final Request request = GetCurrentRequest(st, REQUESTS2);
+				final Request request = getCurrentRequest(st, REQUESTS2);
 				if (request == null)
 				{
 					return "30745_03b.htm";
 				}
-				return request.Complete(st) ? "30745_06b.htm" : "30745_05.htm";
+				return request.complete(st) ? "30745_06b.htm" : "30745_05.htm";
 			}
 		}
 		return getNoQuestMsg();
@@ -716,6 +714,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		{
 			return null;
 		}
+		
 		final int npcId = npc.getNpcId();
 		int[][][] itemsCircle = null;
 		if (st.getQuestItemsCount(TEST_INSTRUCTIONS1) > 0)
@@ -852,8 +851,8 @@ public class Q335_TheSongOfTheHunter extends Quest
 		{
 			if ((st.getQuestItemsCount(CYBELLINS_REQUEST) > 0) && (st.getPlayer().getActiveWeaponItem() != null) && (st.getPlayer().getActiveWeaponItem().getItemId() == 3471))
 			{
-				final int Blood_Crystal_Level = Get_Blood_Crystal_Level(st);
-				if ((Blood_Crystal_Level > 0) && (Blood_Crystal_Level < 10))
+				final int bloodCrystalLevel = getBloodCrystalLevel(st);
+				if ((bloodCrystalLevel > 0) && (bloodCrystalLevel < 10))
 				{
 					for (int lizardmen_id : Q_BLOOD_CRYSTAL_LIZARDMEN)
 					{
@@ -861,9 +860,9 @@ public class Q335_TheSongOfTheHunter extends Quest
 						{
 							if (Rnd.get(100) < 50)
 							{
-								st.takeItems(Q_BLOOD_CRYSTAL[Blood_Crystal_Level], -1);
-								st.playSound((Blood_Crystal_Level < 6) ? "ItemSound.quest_middle" : "ItemSound.quest_jackpot");
-								st.giveItems(Q_BLOOD_CRYSTAL[Blood_Crystal_Level + 1], 1);
+								st.takeItems(Q_BLOOD_CRYSTAL[bloodCrystalLevel], -1);
+								st.playSound((bloodCrystalLevel < 6) ? QuestState.SOUND_MIDDLE : QuestState.SOUND_JACKPOT);
+								st.giveItems(Q_BLOOD_CRYSTAL[bloodCrystalLevel + 1], 1);
 							}
 							else
 							{
@@ -877,10 +876,10 @@ public class Q335_TheSongOfTheHunter extends Quest
 					}
 				}
 			}
-			Request request = GetCurrentRequest(st, REQUESTS1);
+			Request request = getCurrentRequest(st, REQUESTS1);
 			if (request == null)
 			{
-				request = GetCurrentRequest(st, REQUESTS2);
+				request = getCurrentRequest(st, REQUESTS2);
 			}
 			if (request != null)
 			{
@@ -955,15 +954,16 @@ public class Q335_TheSongOfTheHunter extends Quest
 			return this;
 		}
 		
-		public boolean Complete(QuestState st)
+		public boolean complete(QuestState st)
 		{
 			if (st.getQuestItemsCount(request_item) < request_count)
 			{
 				return false;
 			}
+			
 			st.takeItems(request_id, -1);
 			st.takeItems(request_item, -1);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(LAUREL_LEAF_PIN, 1);
 			st.giveItems(57, reward_adena);
 			st.unset("list");

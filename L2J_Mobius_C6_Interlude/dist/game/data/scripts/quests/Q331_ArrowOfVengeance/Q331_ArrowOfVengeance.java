@@ -32,12 +32,9 @@ public class Q331_ArrowOfVengeance extends Quest
 	public Q331_ArrowOfVengeance()
 	{
 		super(331, "Arrow of Vengeance");
-		
 		registerQuestItems(HARPY_FEATHER, MEDUSA_VENOM, WYRM_TOOTH);
-		
 		addStartNpc(30125); // Belton
 		addTalkId(30125);
-		
 		addKillId(20145, 20158, 20176);
 	}
 	
@@ -53,9 +50,7 @@ public class Q331_ArrowOfVengeance extends Quest
 		
 		if (event.equals("30125-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30125-06.htm"))
 		{
@@ -79,10 +74,12 @@ public class Q331_ArrowOfVengeance extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 32) ? "30125-01.htm" : "30125-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int harpyFeather = st.getQuestItemsCount(HARPY_FEATHER);
 				final int medusaVenom = st.getQuestItemsCount(MEDUSA_VENOM);
 				final int wyrmTooth = st.getQuestItemsCount(WYRM_TOOTH);
@@ -107,6 +104,7 @@ public class Q331_ArrowOfVengeance extends Quest
 					htmltext = "30125-04.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -124,16 +122,20 @@ public class Q331_ArrowOfVengeance extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20145:
+			{
 				st.dropItems(HARPY_FEATHER, 1, 0, 500000);
 				break;
-			
+			}
 			case 20158:
+			{
 				st.dropItems(MEDUSA_VENOM, 1, 0, 500000);
 				break;
-			
+			}
 			case 20176:
+			{
 				st.dropItems(WYRM_TOOTH, 1, 0, 500000);
 				break;
+			}
 		}
 		
 		return null;

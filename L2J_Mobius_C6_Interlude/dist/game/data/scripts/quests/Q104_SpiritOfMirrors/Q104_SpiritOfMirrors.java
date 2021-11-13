@@ -27,12 +27,16 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q104_SpiritOfMirrors extends Quest
 {
+	// NPCs
+	private static final int GALLINT = 30017;
+	private static final int ARNOLD = 30041;
+	private static final int JOHNSTONE = 30043;
+	private static final int KENYOS = 30045;
 	// Items
 	private static final int GALLINS_OAK_WAND = 748;
 	private static final int WAND_SPIRITBOUND_1 = 1135;
 	private static final int WAND_SPIRITBOUND_2 = 1136;
 	private static final int WAND_SPIRITBOUND_3 = 1137;
-	
 	// Rewards
 	private static final int SPIRITSHOT_NO_GRADE = 2509;
 	private static final int SOULSHOT_NO_GRADE = 1835;
@@ -46,18 +50,10 @@ public class Q104_SpiritOfMirrors extends Quest
 	private static final int ECHO_FEAST = 4415;
 	private static final int ECHO_CELEBRATION = 4416;
 	
-	// NPCs
-	private static final int GALLINT = 30017;
-	private static final int ARNOLD = 30041;
-	private static final int JOHNSTONE = 30043;
-	private static final int KENYOS = 30045;
-	
 	public Q104_SpiritOfMirrors()
 	{
 		super(104, "Spirit of Mirrors");
-		
 		registerQuestItems(GALLINS_OAK_WAND, WAND_SPIRITBOUND_1, WAND_SPIRITBOUND_2, WAND_SPIRITBOUND_3);
-		
 		addStartNpc(GALLINT);
 		addTalkId(GALLINT, ARNOLD, JOHNSTONE, KENYOS);
 		
@@ -76,9 +72,7 @@ public class Q104_SpiritOfMirrors extends Quest
 		
 		if (event.equals("30017-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(GALLINS_OAK_WAND, 1);
 			st.giveItems(GALLINS_OAK_WAND, 1);
 			st.giveItems(GALLINS_OAK_WAND, 1);
@@ -100,6 +94,7 @@ public class Q104_SpiritOfMirrors extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.HUMAN)
 				{
 					htmltext = "30017-00.htm";
@@ -113,12 +108,14 @@ public class Q104_SpiritOfMirrors extends Quest
 					htmltext = "30017-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case GALLINT:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30017-04.htm";
@@ -168,23 +165,27 @@ public class Q104_SpiritOfMirrors extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case KENYOS:
 					case JOHNSTONE:
 					case ARNOLD:
+					{
 						htmltext = npc.getNpcId() + "-01.htm";
 						if (cond == 1)
 						{
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -210,7 +211,7 @@ public class Q104_SpiritOfMirrors extends Quest
 						st.giveItems(WAND_SPIRITBOUND_1, 1);
 						if (st.hasQuestItems(WAND_SPIRITBOUND_2, WAND_SPIRITBOUND_3))
 						{
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else
@@ -227,7 +228,7 @@ public class Q104_SpiritOfMirrors extends Quest
 						st.giveItems(WAND_SPIRITBOUND_2, 1);
 						if (st.hasQuestItems(WAND_SPIRITBOUND_1, WAND_SPIRITBOUND_3))
 						{
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else
@@ -244,7 +245,7 @@ public class Q104_SpiritOfMirrors extends Quest
 						st.giveItems(WAND_SPIRITBOUND_3, 1);
 						if (st.hasQuestItems(WAND_SPIRITBOUND_1, WAND_SPIRITBOUND_2))
 						{
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else

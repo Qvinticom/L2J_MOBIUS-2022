@@ -29,7 +29,6 @@ public class Q107_MercilessPunishment extends Quest
 	// NPCs
 	private static final int HATOS = 30568;
 	private static final int PARUGON = 30580;
-	
 	// Items
 	private static final int HATOS_ORDER_1 = 1553;
 	private static final int HATOS_ORDER_2 = 1554;
@@ -37,7 +36,6 @@ public class Q107_MercilessPunishment extends Quest
 	private static final int LETTER_TO_HUMAN = 1557;
 	private static final int LETTER_TO_DARKELF = 1556;
 	private static final int LETTER_TO_ELF = 1558;
-	
 	// Rewards
 	private static final int BUTCHER_SWORD = 1510;
 	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
@@ -52,12 +50,9 @@ public class Q107_MercilessPunishment extends Quest
 	public Q107_MercilessPunishment()
 	{
 		super(107, "Merciless Punishment");
-		
 		registerQuestItems(HATOS_ORDER_1, HATOS_ORDER_2, HATOS_ORDER_3, LETTER_TO_HUMAN, LETTER_TO_DARKELF, LETTER_TO_ELF);
-		
 		addStartNpc(HATOS);
 		addTalkId(HATOS, PARUGON);
-		
 		addKillId(27041); // Baranka's Messenger
 	}
 	
@@ -71,31 +66,36 @@ public class Q107_MercilessPunishment extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30568-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(HATOS_ORDER_1, 1);
-		}
-		else if (event.equals("30568-06.htm"))
-		{
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30568-07.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(HATOS_ORDER_1, 1);
-			st.giveItems(HATOS_ORDER_2, 1);
-		}
-		else if (event.equals("30568-09.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(HATOS_ORDER_2, 1);
-			st.giveItems(HATOS_ORDER_3, 1);
+			case "30568-03.htm":
+			{
+				st.startQuest();
+				st.giveItems(HATOS_ORDER_1, 1);
+				break;
+			}
+			case "30568-06.htm":
+			{
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
+			}
+			case "30568-07.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(HATOS_ORDER_1, 1);
+				st.giveItems(HATOS_ORDER_2, 1);
+				break;
+			}
+			case "30568-09.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(HATOS_ORDER_2, 1);
+				st.giveItems(HATOS_ORDER_3, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -114,6 +114,7 @@ public class Q107_MercilessPunishment extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30568-00.htm";
@@ -127,12 +128,14 @@ public class Q107_MercilessPunishment extends Quest
 					htmltext = "30568-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case HATOS:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30568-04.htm";
@@ -185,21 +188,25 @@ public class Q107_MercilessPunishment extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case PARUGON:
+					{
 						htmltext = "30580-01.htm";
 						if (cond == 1)
 						{
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -214,22 +221,22 @@ public class Q107_MercilessPunishment extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		if (cond == 2)
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(LETTER_TO_HUMAN, 1);
 		}
 		else if (cond == 4)
 		{
-			st.set("cond", "5");
+			st.setCond(5);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(LETTER_TO_DARKELF, 1);
 		}
 		else if (cond == 6)
 		{
-			st.set("cond", "7");
+			st.setCond(7);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(LETTER_TO_ELF, 1);
 		}

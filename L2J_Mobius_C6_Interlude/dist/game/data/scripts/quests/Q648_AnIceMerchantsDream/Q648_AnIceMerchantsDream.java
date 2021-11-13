@@ -41,150 +41,45 @@ public class Q648_AnIceMerchantsDream extends Quest
 	private static final Map<String, int[]> REWARDS = new HashMap<>();
 	static
 	{
-		REWARDS.put("a", new int[]
-		{
-			SILVER_ICE_CRYSTAL,
-			23,
-			1894 // Crafted Leather
-		});
-		REWARDS.put("b", new int[]
-		{
-			SILVER_ICE_CRYSTAL,
-			6,
-			1881 // Coarse Bone Powder
-		});
-		REWARDS.put("c", new int[]
-		{
-			SILVER_ICE_CRYSTAL,
-			8,
-			1880 // Steel
-		});
-		REWARDS.put("d", new int[]
-		{
-			BLACK_ICE_CRYSTAL,
-			1800,
-			729 // Scroll: Enchant Weapon (A-Grade)
-		});
-		REWARDS.put("e", new int[]
-		{
-			BLACK_ICE_CRYSTAL,
-			240,
-			730 // Scroll: Enchant Armor (A-Grade)
-		});
-		REWARDS.put("f", new int[]
-		{
-			BLACK_ICE_CRYSTAL,
-			500,
-			947 // Scroll: Enchant Weapon (B-Grade)
-		});
-		REWARDS.put("g", new int[]
-		{
-			BLACK_ICE_CRYSTAL,
-			80,
-			948 // Scroll: Enchant Armor (B-Grade)
-		});
+		// @formatter:off
+		REWARDS.put("a", new int[]{SILVER_ICE_CRYSTAL, 23, 1894}); // Crafted Leather
+		REWARDS.put("b", new int[]{SILVER_ICE_CRYSTAL, 6, 1881}); // Coarse Bone Powder
+		REWARDS.put("c", new int[]{SILVER_ICE_CRYSTAL, 8, 1880}); // Steel
+		REWARDS.put("d", new int[]{BLACK_ICE_CRYSTAL, 1800, 729}); // Scroll: Enchant Weapon (A-Grade)
+		REWARDS.put("e", new int[]{BLACK_ICE_CRYSTAL, 240, 730}); // Scroll: Enchant Armor (A-Grade)
+		REWARDS.put("f", new int[]{BLACK_ICE_CRYSTAL, 500, 947}); // Scroll: Enchant Weapon (B-Grade)
+		REWARDS.put("g", new int[]{BLACK_ICE_CRYSTAL, 80, 948}); // Scroll: Enchant Armor (B-Grade)
 	}
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
 	static
 	{
-		CHANCES.put(22080, new int[]
-		{
-			285000,
-			48000
-		}); // Massive Maze Bandersnatch
-		CHANCES.put(22081, new int[]
-		{
-			443000,
-			0
-		}); // Lost Watcher
-		CHANCES.put(22082, new int[]
-		{
-			510000,
-			0
-		});// Baby Panthera
-		CHANCES.put(22083, new int[]
-		{
-			510000,
-			0
-		}); // Elder Lost Watcher
-		CHANCES.put(22084, new int[]
-		{
-			477000,
-			49000
-		}); // Panthera
-		CHANCES.put(22085, new int[]
-		{
-			420000,
-			43000
-		}); // Lost Gargoyle
-		CHANCES.put(22086, new int[]
-		{
-			490000,
-			50000
-		}); // Lost Gargoyle Youngling
-		CHANCES.put(22087, new int[]
-		{
-			787000,
-			81000
-		}); // Pronghorn Spirit
-		CHANCES.put(22088, new int[]
-		{
-			480000,
-			49000
-		}); // Pronghorn
-		CHANCES.put(22089, new int[]
-		{
-			550000,
-			56000
-		}); // Ice Tarantula
-		CHANCES.put(22090, new int[]
-		{
-			570000,
-			58000
-		}); // Frost Tarantula
-		CHANCES.put(22092, new int[]
-		{
-			623000,
-			0
-		}); // Frost Iron Golem
-		CHANCES.put(22093, new int[]
-		{
-			910000,
-			93000
-		}); // Lost Buffalo
-		CHANCES.put(22094, new int[]
-		{
-			553000,
-			57000
-		}); // Frost Buffalo
-		CHANCES.put(22096, new int[]
-		{
-			593000,
-			61000
-		}); // Ursus
-		CHANCES.put(22097, new int[]
-		{
-			693000,
-			71000
-		}); // Lost Yeti
-		CHANCES.put(22098, new int[]
-		{
-			717000,
-			74000
-		}); // Frost Yeti
+		CHANCES.put(22080, new int[]{285000, 48000}); // Massive Maze Bandersnatch
+		CHANCES.put(22081, new int[]{443000, 0}); // Lost Watcher
+		CHANCES.put(22082, new int[]{510000, 0}); // Baby Panthera
+		CHANCES.put(22083, new int[]{510000, 0}); // Elder Lost Watcher
+		CHANCES.put(22084, new int[]{477000, 49000}); // Panthera
+		CHANCES.put(22085, new int[]{420000, 43000}); // Lost Gargoyle
+		CHANCES.put(22086, new int[]{490000, 50000}); // Lost Gargoyle Youngling
+		CHANCES.put(22087, new int[]{787000, 81000}); // Pronghorn Spirit
+		CHANCES.put(22088, new int[]{480000, 49000}); // Pronghorn
+		CHANCES.put(22089, new int[]{550000, 56000}); // Ice Tarantula
+		CHANCES.put(22090, new int[]{570000, 58000}); // Frost Tarantula
+		CHANCES.put(22092, new int[]{623000, 0}); // Frost Iron Golem
+		CHANCES.put(22093, new int[]{910000, 93000}); // Lost Buffalo
+		CHANCES.put(22094, new int[]{553000, 57000}); // Frost Buffalo
+		CHANCES.put(22096, new int[]{593000, 61000}); // Ursus
+		CHANCES.put(22097, new int[]{693000, 71000}); // Lost Yeti
+		CHANCES.put(22098, new int[]{717000, 74000}); // Frost Yeti
+		// @formatter:on
 	}
 	
 	public Q648_AnIceMerchantsDream()
 	{
 		super(648, "An Ice Merchant's Dream");
-		
 		addStartNpc(RAFFORTY, ICE_SHELF);
 		addTalkId(RAFFORTY, ICE_SHELF);
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -194,103 +89,107 @@ public class Q648_AnIceMerchantsDream extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return event;
+			return htmltext;
 		}
 		
-		if (event.equals("32020-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equals("32020-05.htm"))
-		{
-			st.setState(State.STARTED);
-			st.set("cond", "2");
-			st.playSound("ItemSound.quest_accept");
-		}
-		else
-		{
-			int exCond;
-			int val;
-			if (!event.equals("32020-14.htm") && !event.equals("32020-15.htm"))
+			case "32020-04.htm":
 			{
-				if (event.startsWith("32020-17"))
+				st.startQuest();
+				break;
+			}
+			case "32020-05.htm":
+			{
+				st.setState(State.STARTED);
+				st.setCond(2);
+				st.playSound("ItemSound.quest_accept");
+				break;
+			}
+			default:
+			{
+				int exCond;
+				int val;
+				if (!event.equals("32020-14.htm") && !event.equals("32020-15.htm"))
 				{
-					
-					int[] reward = REWARDS.get(event.substring(8, 9));
-					if (st.getQuestItemsCount(reward[0]) >= reward[1])
+					if (event.startsWith("32020-17"))
 					{
-						st.takeItems(reward[0], reward[1]);
-						st.rewardItems(reward[2], 1);
+						
+						int[] reward = REWARDS.get(event.substring(8, 9));
+						if (st.getQuestItemsCount(reward[0]) >= reward[1])
+						{
+							st.takeItems(reward[0], reward[1]);
+							st.rewardItems(reward[2], 1);
+						}
+						else
+						{
+							htmltext = "32020-15a.htm";
+						}
+					}
+					else if (!event.equals("32020-20.htm") && !event.equals("32020-22.htm"))
+					{
+						if (event.equals("32023-05.htm"))
+						{
+							if (st.getInt("exCond") == 0)
+							{
+								st.set("exCond", String.valueOf((Rnd.get(4) + 1) * 10));
+							}
+						}
+						else if (event.startsWith("32023-06-"))
+						{
+							exCond = st.getInt("exCond");
+							if (exCond > 0)
+							{
+								htmltext = "32023-06.htm";
+								st.set("exCond", String.valueOf(exCond + (event.endsWith("chisel") ? 1 : 2)));
+								st.playSound("ItemSound2.broken_key");
+								st.takeItems(8077, 1);
+							}
+						}
+						else if (event.startsWith("32023-07-"))
+						{
+							exCond = st.getInt("exCond");
+							if (exCond > 0)
+							{
+								val = exCond / 10;
+								if (val == ((exCond - (val * 10)) + (event.endsWith("knife") ? 0 : 2)))
+								{
+									htmltext = "32023-07.htm";
+									st.playSound("ItemSound3.sys_enchant_success");
+									st.rewardItems(8078, 1);
+								}
+								else
+								{
+									htmltext = "32023-08.htm";
+									st.playSound("ItemSound3.sys_enchant_failed");
+								}
+								
+								st.set("exCond", "0");
+							}
+						}
 					}
 					else
 					{
-						htmltext = "32020-15a.htm";
-					}
-				}
-				else if (!event.equals("32020-20.htm") && !event.equals("32020-22.htm"))
-				{
-					if (event.equals("32023-05.htm"))
-					{
-						if (st.getInt("exCond") == 0)
-						{
-							st.set("exCond", String.valueOf((Rnd.get(4) + 1) * 10));
-						}
-					}
-					else if (event.startsWith("32023-06-"))
-					{
-						exCond = st.getInt("exCond");
-						if (exCond > 0)
-						{
-							htmltext = "32023-06.htm";
-							st.set("exCond", String.valueOf(exCond + (event.endsWith("chisel") ? 1 : 2)));
-							st.playSound("ItemSound2.broken_key");
-							st.takeItems(8077, 1);
-						}
-					}
-					else if (event.startsWith("32023-07-"))
-					{
-						exCond = st.getInt("exCond");
-						if (exCond > 0)
-						{
-							val = exCond / 10;
-							if (val == ((exCond - (val * 10)) + (event.endsWith("knife") ? 0 : 2)))
-							{
-								htmltext = "32023-07.htm";
-								st.playSound("ItemSound3.sys_enchant_success");
-								st.rewardItems(8078, 1);
-							}
-							else
-							{
-								htmltext = "32023-08.htm";
-								st.playSound("ItemSound3.sys_enchant_failed");
-							}
-							
-							st.set("exCond", "0");
-						}
+						st.playSound(QuestState.SOUND_FINISH);
+						st.exitQuest(true);
 					}
 				}
 				else
 				{
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(true);
+					exCond = st.getQuestItemsCount(8078);
+					val = st.getQuestItemsCount(8077);
+					if ((val + exCond) > 0)
+					{
+						st.takeItems(8078, -1);
+						st.takeItems(8077, -1);
+						st.rewardItems(57, (val * 300) + (exCond * 1200));
+					}
+					else
+					{
+						htmltext = "32020-16a.htm";
+					}
 				}
-			}
-			else
-			{
-				exCond = st.getQuestItemsCount(8078);
-				val = st.getQuestItemsCount(8077);
-				if ((val + exCond) > 0)
-				{
-					st.takeItems(8078, -1);
-					st.takeItems(8077, -1);
-					st.rewardItems(57, (val * 300) + (exCond * 1200));
-				}
-				else
-				{
-					htmltext = "32020-16a.htm";
-				}
+				break;
 			}
 		}
 		
@@ -338,9 +237,9 @@ public class Q648_AnIceMerchantsDream extends Quest
 					if ((st2 != null) && st2.isCompleted())
 					{
 						htmltext = (hasItem) ? "32020-11.htm" : "32020-09.htm";
-						if (st.getInt("cond") == 1)
+						if (st.isCond(1))
 						{
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 					}
@@ -391,7 +290,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 		
 		final int[] chance = CHANCES.get(npc.getNpcId());
 		st.dropItems(SILVER_ICE_CRYSTAL, 1, 0, chance[0]);
-		if ((st.getInt("cond") == 2) && (chance[1] > 0))
+		if (st.isCond(2) && (chance[1] > 0))
 		{
 			st.dropItems(SILVER_HEMOCYTE, 1, 0, chance[1]);
 		}

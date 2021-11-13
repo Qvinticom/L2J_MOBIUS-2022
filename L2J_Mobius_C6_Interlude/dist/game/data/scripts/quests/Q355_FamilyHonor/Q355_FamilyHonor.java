@@ -31,13 +31,11 @@ public class Q355_FamilyHonor extends Quest
 	// NPCs
 	private static final int GALIBREDO = 30181;
 	private static final int PATRIN = 30929;
-	
 	// Monsters
 	private static final int TIMAK_ORC_TROOP_LEADER = 20767;
 	private static final int TIMAK_ORC_TROOP_SHAMAN = 20768;
 	private static final int TIMAK_ORC_TROOP_WARRIOR = 20769;
 	private static final int TIMAK_ORC_TROOP_ARCHER = 20770;
-	
 	// Items
 	private static final int GALIBREDO_BUST = 4252;
 	private static final int WORK_OF_BERONA = 4350;
@@ -45,42 +43,24 @@ public class Q355_FamilyHonor extends Quest
 	private static final int STATUE_ORIGINAL = 4352;
 	private static final int STATUE_REPLICA = 4353;
 	private static final int STATUE_FORGERY = 4354;
-	
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
 	static
 	{
-		CHANCES.put(TIMAK_ORC_TROOP_LEADER, new int[]
-		{
-			44,
-			54
-		});
-		CHANCES.put(TIMAK_ORC_TROOP_SHAMAN, new int[]
-		{
-			36,
-			45
-		});
-		CHANCES.put(TIMAK_ORC_TROOP_WARRIOR, new int[]
-		{
-			35,
-			43
-		});
-		CHANCES.put(TIMAK_ORC_TROOP_ARCHER, new int[]
-		{
-			32,
-			42
-		});
+		// @formatter:off
+		CHANCES.put(TIMAK_ORC_TROOP_LEADER, new int[]{44, 54});
+		CHANCES.put(TIMAK_ORC_TROOP_SHAMAN, new int[]{36, 45});
+		CHANCES.put(TIMAK_ORC_TROOP_WARRIOR, new int[]{35, 43});
+		CHANCES.put(TIMAK_ORC_TROOP_ARCHER, new int[]{32, 42});
+		// @formatter:on
 	}
 	
 	public Q355_FamilyHonor()
 	{
 		super(355, "Family Honor");
-		
 		registerQuestItems(GALIBREDO_BUST);
-		
 		addStartNpc(GALIBREDO);
 		addTalkId(GALIBREDO, PATRIN);
-		
 		addKillId(TIMAK_ORC_TROOP_LEADER, TIMAK_ORC_TROOP_SHAMAN, TIMAK_ORC_TROOP_WARRIOR, TIMAK_ORC_TROOP_ARCHER);
 	}
 	
@@ -94,67 +74,72 @@ public class Q355_FamilyHonor extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30181-2.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30181-4b.htm"))
-		{
-			final int count = st.getQuestItemsCount(GALIBREDO_BUST);
-			if (count > 0)
+			case "30181-2.htm":
 			{
-				htmltext = "30181-4.htm";
-				
-				int reward = 2800 + (count * 120);
-				if (count >= 100)
-				{
-					htmltext = "30181-4a.htm";
-					reward += 5000;
-				}
-				
-				st.takeItems(GALIBREDO_BUST, count);
-				st.rewardItems(57, reward);
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("30929-7.htm"))
-		{
-			if (st.hasQuestItems(WORK_OF_BERONA))
+			case "30181-4b.htm":
 			{
-				st.takeItems(WORK_OF_BERONA, 1);
-				
-				final int appraising = Rnd.get(100);
-				if (appraising < 20)
+				final int count = st.getQuestItemsCount(GALIBREDO_BUST);
+				if (count > 0)
 				{
-					htmltext = "30929-2.htm";
+					htmltext = "30181-4.htm";
+					
+					int reward = 2800 + (count * 120);
+					if (count >= 100)
+					{
+						htmltext = "30181-4a.htm";
+						reward += 5000;
+					}
+					
+					st.takeItems(GALIBREDO_BUST, count);
+					st.rewardItems(57, reward);
 				}
-				else if (appraising < 40)
-				{
-					htmltext = "30929-3.htm";
-					st.giveItems(STATUE_REPLICA, 1);
-				}
-				else if (appraising < 60)
-				{
-					htmltext = "30929-4.htm";
-					st.giveItems(STATUE_ORIGINAL, 1);
-				}
-				else if (appraising < 80)
-				{
-					htmltext = "30929-5.htm";
-					st.giveItems(STATUE_FORGERY, 1);
-				}
-				else
-				{
-					htmltext = "30929-6.htm";
-					st.giveItems(STATUE_PROTOTYPE, 1);
-				}
+				break;
 			}
-		}
-		else if (event.equals("30181-6.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30929-7.htm":
+			{
+				if (st.hasQuestItems(WORK_OF_BERONA))
+				{
+					st.takeItems(WORK_OF_BERONA, 1);
+					
+					final int appraising = Rnd.get(100);
+					if (appraising < 20)
+					{
+						htmltext = "30929-2.htm";
+					}
+					else if (appraising < 40)
+					{
+						htmltext = "30929-3.htm";
+						st.giveItems(STATUE_REPLICA, 1);
+					}
+					else if (appraising < 60)
+					{
+						htmltext = "30929-4.htm";
+						st.giveItems(STATUE_ORIGINAL, 1);
+					}
+					else if (appraising < 80)
+					{
+						htmltext = "30929-5.htm";
+						st.giveItems(STATUE_FORGERY, 1);
+					}
+					else
+					{
+						htmltext = "30929-6.htm";
+						st.giveItems(STATUE_PROTOTYPE, 1);
+					}
+				}
+				break;
+			}
+			case "30181-6.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -173,21 +158,27 @@ public class Q355_FamilyHonor extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 36) ? "30181-0a.htm" : "30181-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case GALIBREDO:
+					{
 						htmltext = (st.hasQuestItems(GALIBREDO_BUST)) ? "30181-3a.htm" : "30181-3.htm";
 						break;
-					
+					}
 					case PATRIN:
+					{
 						htmltext = "30929-0.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

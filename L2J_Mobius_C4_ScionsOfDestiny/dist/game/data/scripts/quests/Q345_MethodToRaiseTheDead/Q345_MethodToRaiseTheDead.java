@@ -25,6 +25,11 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q345_MethodToRaiseTheDead extends Quest
 {
+	// NPCs
+	private static final int XENOVIA = 30912;
+	private static final int DOROTHY = 30970;
+	private static final int ORPHEUS = 30971;
+	private static final int MEDIUM_JAR = 30973;
 	// Items
 	private static final int VICTIM_ARM_BONE = 4274;
 	private static final int VICTIM_THIGH_BONE = 4275;
@@ -33,13 +38,6 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	private static final int VICTIM_SPINE = 4278;
 	private static final int USELESS_BONE_PIECES = 4280;
 	private static final int POWDER_TO_SUMMON_DEAD_SOULS = 4281;
-	
-	// NPCs
-	private static final int XENOVIA = 30912;
-	private static final int DOROTHY = 30970;
-	private static final int ORPHEUS = 30971;
-	private static final int MEDIUM_JAR = 30973;
-	
 	// Rewards
 	private static final int BILL_OF_IASON_HEINE = 4310;
 	private static final int IMPERIAL_DIAMOND = 3456;
@@ -47,12 +45,9 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	public Q345_MethodToRaiseTheDead()
 	{
 		super(345, "Method to Raise the Dead");
-		
 		registerQuestItems(VICTIM_ARM_BONE, VICTIM_THIGH_BONE, VICTIM_SKULL, VICTIM_RIB_BONE, VICTIM_SPINE, POWDER_TO_SUMMON_DEAD_SOULS, USELESS_BONE_PIECES);
-		
 		addStartNpc(DOROTHY);
 		addTalkId(DOROTHY, XENOVIA, MEDIUM_JAR, ORPHEUS);
-		
 		addKillId(20789, 20791);
 	}
 	
@@ -66,77 +61,84 @@ public class Q345_MethodToRaiseTheDead extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30970-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30970-06.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30912-04.htm"))
-		{
-			if (player.getAdena() >= 1000)
+			case "30970-03.htm":
 			{
-				htmltext = "30912-03.htm";
-				st.set("cond", "3");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(57, 1000);
-				st.giveItems(POWDER_TO_SUMMON_DEAD_SOULS, 1);
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("30973-04.htm"))
-		{
-			if (st.getInt("cond") == 3)
+			case "30970-06.htm":
 			{
-				final int chance = Rnd.get(3);
-				if (chance == 0)
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30912-04.htm":
+			{
+				if (player.getAdena() >= 1000)
 				{
-					st.set("cond", "6");
-					htmltext = "30973-02a.htm";
+					htmltext = "30912-03.htm";
+					st.setCond(3);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(57, 1000);
+					st.giveItems(POWDER_TO_SUMMON_DEAD_SOULS, 1);
 				}
-				else if (chance == 1)
+				break;
+			}
+			case "30973-04.htm":
+			{
+				if (st.isCond(3))
 				{
-					st.set("cond", "6");
-					htmltext = "30973-02b.htm";
+					final int chance = Rnd.get(3);
+					if (chance == 0)
+					{
+						st.setCond(6);
+						htmltext = "30973-02a.htm";
+					}
+					else if (chance == 1)
+					{
+						st.setCond(6);
+						htmltext = "30973-02b.htm";
+					}
+					else
+					{
+						st.setCond(7);
+						htmltext = "30973-02c.htm";
+					}
+					
+					st.takeItems(POWDER_TO_SUMMON_DEAD_SOULS, -1);
+					st.takeItems(VICTIM_ARM_BONE, -1);
+					st.takeItems(VICTIM_THIGH_BONE, -1);
+					st.takeItems(VICTIM_SKULL, -1);
+					st.takeItems(VICTIM_RIB_BONE, -1);
+					st.takeItems(VICTIM_SPINE, -1);
+					
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
+			}
+			case "30971-02a.htm":
+			{
+				if (st.hasQuestItems(USELESS_BONE_PIECES))
+				{
+					htmltext = "30971-02.htm";
+				}
+				break;
+			}
+			case "30971-03.htm":
+			{
+				if (st.hasQuestItems(USELESS_BONE_PIECES))
+				{
+					final int amount = st.getQuestItemsCount(USELESS_BONE_PIECES) * 104;
+					st.takeItems(USELESS_BONE_PIECES, -1);
+					st.rewardItems(57, amount);
 				}
 				else
 				{
-					st.set("cond", "7");
-					htmltext = "30973-02c.htm";
+					htmltext = "30971-02a.htm";
 				}
-				
-				st.takeItems(POWDER_TO_SUMMON_DEAD_SOULS, -1);
-				st.takeItems(VICTIM_ARM_BONE, -1);
-				st.takeItems(VICTIM_THIGH_BONE, -1);
-				st.takeItems(VICTIM_SKULL, -1);
-				st.takeItems(VICTIM_RIB_BONE, -1);
-				st.takeItems(VICTIM_SPINE, -1);
-				
-				st.playSound(QuestState.SOUND_MIDDLE);
-			}
-		}
-		else if (event.equals("30971-02a.htm"))
-		{
-			if (st.hasQuestItems(USELESS_BONE_PIECES))
-			{
-				htmltext = "30971-02.htm";
-			}
-		}
-		else if (event.equals("30971-03.htm"))
-		{
-			if (st.hasQuestItems(USELESS_BONE_PIECES))
-			{
-				final int amount = st.getQuestItemsCount(USELESS_BONE_PIECES) * 104;
-				st.takeItems(USELESS_BONE_PIECES, -1);
-				st.rewardItems(57, amount);
-			}
-			else
-			{
-				htmltext = "30971-02a.htm";
+				break;
 			}
 		}
 		
@@ -156,14 +158,17 @@ public class Q345_MethodToRaiseTheDead extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 35) ? "30970-00.htm" : "30970-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case DOROTHY:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(VICTIM_ARM_BONE, VICTIM_THIGH_BONE, VICTIM_SKULL, VICTIM_RIB_BONE, VICTIM_SPINE)) ? "30970-04.htm" : "30970-05.htm";
@@ -209,8 +214,9 @@ public class Q345_MethodToRaiseTheDead extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case XENOVIA:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30912-01.htm";
@@ -220,16 +226,20 @@ public class Q345_MethodToRaiseTheDead extends Quest
 							htmltext = "30912-06.htm";
 						}
 						break;
-					
+					}
 					case MEDIUM_JAR:
+					{
 						htmltext = "30973-01.htm";
 						break;
-					
+					}
 					case ORPHEUS:
+					{
 						htmltext = "30971-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -238,7 +248,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;

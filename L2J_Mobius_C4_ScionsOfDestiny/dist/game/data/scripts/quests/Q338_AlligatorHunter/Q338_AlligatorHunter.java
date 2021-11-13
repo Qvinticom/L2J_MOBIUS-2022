@@ -30,12 +30,9 @@ public class Q338_AlligatorHunter extends Quest
 	public Q338_AlligatorHunter()
 	{
 		super(338, "Alligator Hunter");
-		
 		registerQuestItems(ALLIGATOR_PELT);
-		
 		addStartNpc(30892); // Enverun
 		addTalkId(30892);
-		
 		addKillId(20135); // Alligator
 	}
 	
@@ -49,28 +46,31 @@ public class Q338_AlligatorHunter extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30892-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30892-05.htm"))
-		{
-			final int pelts = st.getQuestItemsCount(ALLIGATOR_PELT);
-			int reward = pelts * 60;
-			if (pelts > 10)
+			case "30892-02.htm":
 			{
-				reward += 3430;
+				st.startQuest();
+				break;
 			}
-			
-			st.takeItems(ALLIGATOR_PELT, -1);
-			st.rewardItems(57, reward);
-		}
-		else if (event.equals("30892-08.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30892-05.htm":
+			{
+				final int pelts = st.getQuestItemsCount(ALLIGATOR_PELT);
+				int reward = pelts * 60;
+				if (pelts > 10)
+				{
+					reward += 3430;
+				}
+				st.takeItems(ALLIGATOR_PELT, -1);
+				st.rewardItems(57, reward);
+				break;
+			}
+			case "30892-08.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -89,12 +89,15 @@ public class Q338_AlligatorHunter extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 40) ? "30892-00.htm" : "30892-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasQuestItems(ALLIGATOR_PELT)) ? "30892-03.htm" : "30892-04.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

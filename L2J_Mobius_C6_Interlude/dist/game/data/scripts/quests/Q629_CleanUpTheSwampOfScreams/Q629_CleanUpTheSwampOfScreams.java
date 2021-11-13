@@ -29,11 +29,9 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 {
 	// NPC
 	private static final int PIERCE = 31553;
-	
-	// ITEMS
+	// Items
 	private static final int TALON_OF_STAKATO = 7250;
 	private static final int GOLDEN_RAM_COIN = 7251;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -53,16 +51,10 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 	public Q629_CleanUpTheSwampOfScreams()
 	{
 		super(629, "Clean up the Swamp of Screams");
-		
 		registerQuestItems(TALON_OF_STAKATO, GOLDEN_RAM_COIN);
-		
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -75,36 +67,40 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31553-1.htm"))
+		switch (event)
 		{
-			if (player.getLevel() >= 66)
+			case "31553-1.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				if (player.getLevel() >= 66)
+				{
+					st.startQuest();
+				}
+				else
+				{
+					htmltext = "31553-0a.htm";
+					st.exitQuest(true);
+				}
+				break;
 			}
-			else
+			case "31553-3.htm":
 			{
-				htmltext = "31553-0a.htm";
+				if (st.getQuestItemsCount(TALON_OF_STAKATO) >= 100)
+				{
+					st.takeItems(TALON_OF_STAKATO, 100);
+					st.giveItems(GOLDEN_RAM_COIN, 20);
+				}
+				else
+				{
+					htmltext = "31553-3a.htm";
+				}
+				break;
+			}
+			case "31553-5.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
 				st.exitQuest(true);
+				break;
 			}
-		}
-		else if (event.equals("31553-3.htm"))
-		{
-			if (st.getQuestItemsCount(TALON_OF_STAKATO) >= 100)
-			{
-				st.takeItems(TALON_OF_STAKATO, 100);
-				st.giveItems(GOLDEN_RAM_COIN, 20);
-			}
-			else
-			{
-				htmltext = "31553-3a.htm";
-			}
-		}
-		else if (event.equals("31553-5.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
 		}
 		
 		return htmltext;
@@ -128,12 +124,15 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 66) ? "31553-0a.htm" : "31553-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(TALON_OF_STAKATO) >= 100) ? "31553-2.htm" : "31553-1a.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -1409,7 +1409,7 @@ public class NpcInstance extends Creature
 			final QuestState qs = player.getQuestState(q.getName());
 			if (qs != null)
 			{
-				if (qs.isStarted() && (qs.getInt("cond") > 0))
+				if (qs.getCond() > 0)
 				{
 					state = " (In Progress)";
 				}

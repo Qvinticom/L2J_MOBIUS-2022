@@ -28,16 +28,13 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 {
 	// NPC
 	private static final int NEWYEAR = 31961;
-	
-	// Mobs
+	// Monsters
 	private static final int BRUIN_LIZARDMAN = 27321;
 	private static final int PICOT_ARENEID = 27322;
-	
 	// Items
 	private static final int BRUIN_LIZARDMAN_BLOOD = 8549;
 	private static final int PICOT_ARANEID_LEG = 8550;
 	private static final int CRYSTAL_D = 1458;
-	
 	// Rewards
 	private static final int CLAN_OATH_HELM = 7850;
 	private static final int CLAN_OATH_ARMOR = 7851;
@@ -53,12 +50,9 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	public Q123_TheLeaderAndTheFollower()
 	{
 		super(123, "The Leader and the Follower");
-		
 		registerQuestItems(BRUIN_LIZARDMAN_BLOOD, PICOT_ARANEID_LEG);
-		
 		addStartNpc(NEWYEAR);
 		addTalkId(NEWYEAR);
-		
 		addKillId(BRUIN_LIZARDMAN, PICOT_ARENEID);
 	}
 	
@@ -72,84 +66,90 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31961-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("state", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31961-05d.htm"))
-		{
-			if (st.getQuestItemsCount(BRUIN_LIZARDMAN_BLOOD) > 9)
+			case "31961-03.htm":
 			{
-				st.set("cond", "3");
-				st.set("state", "2");
-				st.set("stateEx", "1");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BRUIN_LIZARDMAN_BLOOD, -1);
+				st.startQuest();
+				st.set("st}ate", "1");
+				break;
 			}
-		}
-		else if (event.equals("31961-05e.htm"))
-		{
-			if (st.getQuestItemsCount(BRUIN_LIZARDMAN_BLOOD) > 9)
+			case "31961-05d.htm":
 			{
-				st.set("cond", "4");
-				st.set("state", "2");
-				st.set("stateEx", "2");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BRUIN_LIZARDMAN_BLOOD, -1);
-			}
-		}
-		else if (event.equals("31961-05f.htm"))
-		{
-			if (st.getQuestItemsCount(BRUIN_LIZARDMAN_BLOOD) > 9)
-			{
-				st.set("cond", "5");
-				st.set("state", "2");
-				st.set("stateEx", "3");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BRUIN_LIZARDMAN_BLOOD, -1);
-			}
-		}
-		else if (event.equals("31961-10.htm"))
-		{
-			final PlayerInstance academic = getApprentice(player);
-			if (academic != null)
-			{
-				final QuestState st2 = academic.getQuestState(getName());
-				if ((st2 != null) && (st2.getInt("state") == 2))
+				if (st.getQuestItemsCount(BRUIN_LIZARDMAN_BLOOD) > 9)
 				{
-					final int stateEx = st2.getInt("stateEx");
-					if (stateEx == 1)
+					st.setCond(3);
+					st.set("state", "2");
+					st.set("stateEx", "1");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BRUIN_LIZARDMAN_BLOOD, -1);
+				}
+				break;
+			}
+			case "31961-05e.htm":
+			{
+				if (st.getQuestItemsCount(BRUIN_LIZARDMAN_BLOOD) > 9)
+				{
+					st.setCond(4);
+					st.set("state", "2");
+					st.set("stateEx", "2");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BRUIN_LIZARDMAN_BLOOD, -1);
+				}
+				break;
+			}
+			case "31961-05f.htm":
+			{
+				if (st.getQuestItemsCount(BRUIN_LIZARDMAN_BLOOD) > 9)
+				{
+					st.setCond(5);
+					st.set("state", "2");
+					st.set("stateEx", "3");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BRUIN_LIZARDMAN_BLOOD, -1);
+				}
+				break;
+			}
+			case "31961-10.htm":
+			{
+				final PlayerInstance academic = getApprentice(player);
+				if (academic != null)
+				{
+					final QuestState st2 = academic.getQuestState(getName());
+					if ((st2 != null) && (st2.getInt("state") == 2))
 					{
-						if (st.getQuestItemsCount(CRYSTAL_D) > 921)
+						final int stateEx = st2.getInt("stateEx");
+						if (stateEx == 1)
 						{
-							st.takeItems(CRYSTAL_D, 922);
-							st2.set("cond", "6");
-							st2.set("state", "3");
-							st2.playSound(QuestState.SOUND_MIDDLE);
+							if (st.getQuestItemsCount(CRYSTAL_D) > 921)
+							{
+								st.takeItems(CRYSTAL_D, 922);
+								st2.setCond(6);
+								st2.set("state", "3");
+								st2.playSound(QuestState.SOUND_MIDDLE);
+							}
+							else
+							{
+								htmltext = "31961-11.htm";
+							}
 						}
 						else
 						{
-							htmltext = "31961-11.htm";
-						}
-					}
-					else
-					{
-						if (st.getQuestItemsCount(CRYSTAL_D) > 770)
-						{
-							st.takeItems(CRYSTAL_D, 771);
-							st2.set("cond", "6");
-							st2.set("state", "3");
-							st2.playSound(QuestState.SOUND_MIDDLE);
-						}
-						else
-						{
-							htmltext = "31961-11a.htm";
+							if (st.getQuestItemsCount(CRYSTAL_D) > 770)
+							{
+								st.takeItems(CRYSTAL_D, 771);
+								st2.setCond(6);
+								st2.set("state", "3");
+								st2.playSound(QuestState.SOUND_MIDDLE);
+							}
+							else
+							{
+								htmltext = "31961-11a.htm";
+							}
 						}
 					}
 				}
+				break;
 			}
 		}
 		
@@ -169,6 +169,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getSponsor() > 0)
 				{
 					final QuestState st2 = player.getQuestState(Q118_ToLeadAndBeLed.class.getSimpleName());
@@ -210,8 +211,9 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int state = st.getInt("state");
 				if (state == 1)
 				{
@@ -260,7 +262,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 				}
 				else if (state == 3)
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 					st.set("state", "4");
 					st.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = "31961-15.htm";
@@ -304,10 +306,12 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -328,22 +332,24 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
 		switch (npc.getNpcId())
 		{
 			case BRUIN_LIZARDMAN:
-				if ((cond == 1) && st.dropItems(BRUIN_LIZARDMAN_BLOOD, 1, 10, 700000))
+			{
+				if (st.isCond(1) && st.dropItems(BRUIN_LIZARDMAN_BLOOD, 1, 10, 700000))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case PICOT_ARENEID:
-				if ((cond == 7) && getSponsor(player) && st.dropItems(PICOT_ARANEID_LEG, 1, 8, 700000))
+			{
+				if (st.isCond(7) && getSponsor(player) && st.dropItems(PICOT_ARANEID_LEG, 1, 8, 700000))
 				{
-					st.set("cond", "8");
+					st.setCond(8);
 				}
 				break;
+			}
 		}
 		
 		return null;

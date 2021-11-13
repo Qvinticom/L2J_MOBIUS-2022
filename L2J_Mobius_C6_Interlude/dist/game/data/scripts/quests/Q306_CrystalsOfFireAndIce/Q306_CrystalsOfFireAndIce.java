@@ -31,47 +31,22 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 	// Droplist (npcId, itemId, chance)
 	private static final int[][] DROPLIST =
 	{
-		{
-			20109,
-			FLAME_SHARD,
-			300000
-		},
-		{
-			20110,
-			ICE_SHARD,
-			300000
-		},
-		{
-			20112,
-			FLAME_SHARD,
-			400000
-		},
-		{
-			20113,
-			ICE_SHARD,
-			400000
-		},
-		{
-			20114,
-			FLAME_SHARD,
-			500000
-		},
-		{
-			20115,
-			ICE_SHARD,
-			500000
-		}
+		// @formatter:off
+		{20109, FLAME_SHARD, 300000},
+		{20110, ICE_SHARD, 300000},
+		{20112, FLAME_SHARD, 400000},
+		{20113, ICE_SHARD, 400000},
+		{20114, FLAME_SHARD, 500000},
+		{20115, ICE_SHARD, 500000}
+		// @formatter:on
 	};
 	
 	public Q306_CrystalsOfFireAndIce()
 	{
 		super(306, "Crystals of Fire and Ice");
-		
 		registerQuestItems(FLAME_SHARD, ICE_SHARD);
-		
 		addStartNpc(30004); // Katerina
 		addTalkId(30004);
-		
 		addKillId(20109, 20110, 20112, 20113, 20114, 20115);
 	}
 	
@@ -87,9 +62,7 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 		
 		if (event.equals("30004-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30004-06.htm"))
 		{
@@ -113,10 +86,12 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 17) ? "30004-01.htm" : "30004-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int totalItems = st.getQuestItemsCount(FLAME_SHARD) + st.getQuestItemsCount(ICE_SHARD);
 				if (totalItems == 0)
 				{
@@ -130,6 +105,7 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 					st.rewardItems(57, (30 * totalItems) + ((totalItems > 10) ? 5000 : 0));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

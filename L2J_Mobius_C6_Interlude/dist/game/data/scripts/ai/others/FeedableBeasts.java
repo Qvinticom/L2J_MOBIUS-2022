@@ -174,7 +174,7 @@ public class FeedableBeasts extends Quest
 		// TODO: no grendels?
 		GrowthCapableMob temp;
 		
-		//@formatter:off
+		// @formatter:off
 		final int[][] Kookabura_0_Gold = {{ 21452, 21453, 21454, 21455 }};
 		final int[][] Kookabura_0_Crystal = {{ 21456, 21457, 21458, 21459 }};
 		final int[][] Kookabura_1_Gold_1= {{ 21460, 21462 }};
@@ -199,7 +199,7 @@ public class FeedableBeasts extends Quest
 		final int[][] Cougar_1_Crystal_2 = {{ 21503,21505 }};
 		final int[][] Cougar_2_1 = {{ 21506, 21828 }, { 16015,16016 }};
 		final int[][] Cougar_2_2 = {{ 21507, 21829 }, { 16015,16016 }};
-		//@formatter:on
+		// @formatter:on
 		
 		// Alpen Kookabura
 		temp = new GrowthCapableMob(0, 100);
@@ -412,7 +412,7 @@ public class FeedableBeasts extends Quest
 			if ((st != null) && (Rnd.get(100) < 5) && !st.hasQuestItems(7185))
 			{
 				st.giveItems(7185, 1);
-				st.set("cond", "2");
+				st.setCond(2);
 			}
 			
 			// Also, perform a rare random chat

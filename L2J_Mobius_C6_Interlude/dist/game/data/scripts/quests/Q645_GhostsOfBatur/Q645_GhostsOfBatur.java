@@ -27,46 +27,26 @@ public class Q645_GhostsOfBatur extends Quest
 {
 	// NPC
 	private static final int KARUDA = 32017;
-	
 	// Item
 	private static final int CURSED_GRAVE_GOODS = 8089;
-	
 	// Rewards
 	private static final int[][] REWARDS =
 	{
-		{
-			1878,
-			18
-		},
-		{
-			1879,
-			7
-		},
-		{
-			1880,
-			4
-		},
-		{
-			1881,
-			6
-		},
-		{
-			1882,
-			10
-		},
-		{
-			1883,
-			2
-		}
+		// @formatter:off
+		{1878, 18},
+		{1879, 7},
+		{1880, 4},
+		{1881, 6},
+		{1882, 10},
+		{1883, 2}
+		// @formatter:on
 	};
 	
 	public Q645_GhostsOfBatur()
 	{
 		super(645, "Ghosts of Batur");
-		
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
-		
 		addKillId(22007, 22009, 22010, 22011, 22012, 22013, 22014, 22015, 22016);
 	}
 	
@@ -82,9 +62,7 @@ public class Q645_GhostsOfBatur extends Quest
 		
 		if (event.equals("32017-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (Util.isDigit(event))
 		{
@@ -114,11 +92,13 @@ public class Q645_GhostsOfBatur extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 23) ? "32017-02.htm" : "32017-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "32017-04.htm";
@@ -128,6 +108,7 @@ public class Q645_GhostsOfBatur extends Quest
 					htmltext = "32017-05.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -136,7 +117,7 @@ public class Q645_GhostsOfBatur extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -150,7 +131,7 @@ public class Q645_GhostsOfBatur extends Quest
 		
 		if (st.dropItems(CURSED_GRAVE_GOODS, 1, 180, 750000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

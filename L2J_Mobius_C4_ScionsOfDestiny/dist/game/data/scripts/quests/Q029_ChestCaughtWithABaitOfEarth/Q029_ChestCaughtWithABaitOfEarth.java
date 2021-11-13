@@ -29,7 +29,6 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 	// NPCs
 	private static final int WILLIE = 31574;
 	private static final int ANABEL = 30909;
-	
 	// Items
 	private static final int SMALL_PURPLE_TREASURE_CHEST = 6507;
 	private static final int SMALL_GLASS_BOX = 7627;
@@ -38,9 +37,7 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 	public Q029_ChestCaughtWithABaitOfEarth()
 	{
 		super(29, "Chest caught with a bait of earth");
-		
 		registerQuestItems(SMALL_GLASS_BOX);
-		
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE, ANABEL);
 	}
@@ -55,38 +52,42 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31574-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31574-07.htm"))
-		{
-			if (st.hasQuestItems(SMALL_PURPLE_TREASURE_CHEST))
+			case "31574-04.htm":
 			{
-				st.set("cond", "2");
-				st.takeItems(SMALL_PURPLE_TREASURE_CHEST, 1);
-				st.giveItems(SMALL_GLASS_BOX, 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31574-07.htm":
 			{
-				htmltext = "31574-08.htm";
+				if (st.hasQuestItems(SMALL_PURPLE_TREASURE_CHEST))
+				{
+					st.setCond(2);
+					st.takeItems(SMALL_PURPLE_TREASURE_CHEST, 1);
+					st.giveItems(SMALL_GLASS_BOX, 1);
+				}
+				else
+				{
+					htmltext = "31574-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30909-02.htm"))
-		{
-			if (st.hasQuestItems(SMALL_GLASS_BOX))
+			case "30909-02.htm":
 			{
-				htmltext = "30909-02.htm";
-				st.takeItems(SMALL_GLASS_BOX, 1);
-				st.giveItems(PLATED_LEATHER_GLOVES, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
-			}
-			else
-			{
-				htmltext = "30909-03.htm";
+				if (st.hasQuestItems(SMALL_GLASS_BOX))
+				{
+					htmltext = "30909-02.htm";
+					st.takeItems(SMALL_GLASS_BOX, 1);
+					st.giveItems(PLATED_LEATHER_GLOVES, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "30909-03.htm";
+				}
+				break;
 			}
 		}
 		
@@ -106,6 +107,7 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 48)
 				{
 					htmltext = "31574-02.htm";
@@ -123,12 +125,14 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case WILLIE:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(SMALL_PURPLE_TREASURE_CHEST)) ? "31574-06.htm" : "31574-05.htm";
@@ -138,19 +142,23 @@ public class Q029_ChestCaughtWithABaitOfEarth extends Quest
 							htmltext = "31574-09.htm";
 						}
 						break;
-					
+					}
 					case ANABEL:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30909-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

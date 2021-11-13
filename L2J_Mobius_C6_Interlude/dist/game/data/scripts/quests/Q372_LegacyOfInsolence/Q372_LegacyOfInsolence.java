@@ -31,262 +31,50 @@ public class Q372_LegacyOfInsolence extends Quest
 	private static final int HOLLY = 30839;
 	private static final int CLAUDIA = 31001;
 	private static final int DESMOND = 30855;
-	
 	// Monsters
 	private static final int[][] MONSTERS_DROPS =
 	{
-		{ // npcId
-			20817,
-			20821,
-			20825,
-			20829,
-			21069,
-			21063
-		}, // parchment (red, blue, black, white)
-		{
-			5966,
-			5966,
-			5966,
-			5967,
-			5968,
-			5969
-		}, // rate
-		{
-			300000,
-			400000,
-			460000,
-			400000,
-			250000,
-			250000
-		}
+		// @formatter:off
+		{20817, 20821, 20825, 20829, 21069, 21063}, // npcId
+		{5966, 5966, 5966, 5967, 5968, 5969}, // parchment (red, blue, black, white)
+		{300000, 400000, 460000, 400000, 250000, 250000}// rate
 	};
-	
 	// Items
 	private static final int[][] SCROLLS =
 	{
-		// Walderal => 13 blueprints => parts, recipes.
-		{
-			5989,
-			6001
-		},
-		// Holly -> 5x Imperial Genealogy -> Dark Crystal parts/Adena
-		{
-			5984,
-			5988
-		},
-		// Patrin -> 5x Ancient Epic -> Tallum parts/Adena
-		{
-			5979,
-			5983
-		},
-		// Claudia -> 7x Revelation of the Seals -> Nightmare parts/Adena
-		{
-			5972,
-			5978
-		},
-		// Desmond -> 7x Revelation of the Seals -> Majestic parts/Adena
-		{
-			5972,
-			5978
-		}
+		{5989, 6001}, // Walderal => 13 blueprints => parts, recipes.
+		{5984, 5988}, // Holly -> 5x Imperial Genealogy -> Dark Crystal parts/Adena
+		{5979, 5983}, // Patrin -> 5x Ancient Epic -> Tallum parts/Adena
+		{5972, 5978}, // Claudia -> 7x Revelation of the Seals -> Nightmare parts/Adena
+		{5972, 5978}, // Desmond -> 7x Revelation of the Seals -> Majestic parts/Adena
 	};
-	
 	// Rewards matrice.
 	private static final int[][][] REWARDS_MATRICE =
 	{
 		// Walderal DC choice
-		{
-			{
-				13,
-				5496
-			},
-			{
-				26,
-				5508
-			},
-			{
-				40,
-				5525
-			},
-			{
-				58,
-				5368
-			},
-			{
-				76,
-				5392
-			},
-			{
-				100,
-				5426
-			}
-		},
+		{{13, 5496},{26, 5508},{40, 5525},{58, 5368},{76, 5392},{100, 5426}},
 		// Walderal Tallum choice
-		{
-			{
-				13,
-				5497
-			},
-			{
-				26,
-				5509
-			},
-			{
-				40,
-				5526
-			},
-			{
-				58,
-				5370
-			},
-			{
-				76,
-				5394
-			},
-			{
-				100,
-				5428
-			}
-		},
+		{{13, 5497},{26, 5509},{40, 5526},{58, 5370},{76, 5394},{100, 5428}},
 		// Walderal NM choice
-		{
-			{
-				20,
-				5502
-			},
-			{
-				40,
-				5514
-			},
-			{
-				58,
-				5527
-			},
-			{
-				73,
-				5380
-			},
-			{
-				87,
-				5404
-			},
-			{
-				100,
-				5430
-			}
-		},
+		{{20, 5502},{40, 5514},{58, 5527},{73, 5380},{87, 5404},{100, 5430}},
 		// Walderal Maja choice
-		{
-			{
-				20,
-				5503
-			},
-			{
-				40,
-				5515
-			},
-			{
-				58,
-				5528
-			},
-			{
-				73,
-				5382
-			},
-			{
-				87,
-				5406
-			},
-			{
-				100,
-				5432
-			}
-		},
+		{{20, 5503},{40, 5515},{58, 5528},{73, 5382},{87, 5406},{100, 5432}},
 		// Holly DC parts + adenas.
-		{
-			{
-				33,
-				5496
-			},
-			{
-				66,
-				5508
-			},
-			{
-				89,
-				5525
-			},
-			{
-				100,
-				57
-			}
-		},
+		{{33, 5496},{66, 5508},{89, 5525},{100, 57}},
 		// Patrin Tallum parts + adenas.
-		{
-			{
-				33,
-				5497
-			},
-			{
-				66,
-				5509
-			},
-			{
-				89,
-				5526
-			},
-			{
-				100,
-				57
-			}
-		},
+		{{33, 5497},{66, 5509},{89, 5526},{100, 57}},
 		// Claudia NM parts + adenas.
-		{
-			{
-				35,
-				5502
-			},
-			{
-				70,
-				5514
-			},
-			{
-				87,
-				5527
-			},
-			{
-				100,
-				57
-			}
-		},
+		{{35, 5502},{70, 5514},{87, 5527},{100, 57}},
 		// Desmond Maja choice
-		{
-			{
-				35,
-				5503
-			},
-			{
-				70,
-				5515
-			},
-			{
-				87,
-				5528
-			},
-			{
-				100,
-				57
-			}
-		}
+		{{35, 5503},{70, 5515},{87, 5528},{100, 57}}
+		// @formatter:on
 	};
 	
 	public Q372_LegacyOfInsolence()
 	{
 		super(372, "Legacy of Insolence");
-		
 		addStartNpc(WALDERAL);
 		addTalkId(WALDERAL, PATRIN, HOLLY, CLAUDIA, DESMOND);
-		
 		addKillId(MONSTERS_DROPS[0]);
 	}
 	
@@ -302,15 +90,13 @@ public class Q372_LegacyOfInsolence extends Quest
 		
 		if (event.equals("30844-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30844-05b.htm"))
 		{
-			if (st.getInt("cond") == 1)
+			if (st.isCond(1))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
 			}
 		}
@@ -351,33 +137,42 @@ public class Q372_LegacyOfInsolence extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 59) ? "30844-01.htm" : "30844-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case WALDERAL:
+					{
 						htmltext = "30844-05.htm";
 						break;
-					
+					}
 					case HOLLY:
+					{
 						htmltext = checkAndRewardItems(st, 1, 4, HOLLY);
 						break;
-					
+					}
 					case PATRIN:
+					{
 						htmltext = checkAndRewardItems(st, 2, 5, PATRIN);
 						break;
-					
+					}
 					case CLAUDIA:
+					{
 						htmltext = checkAndRewardItems(st, 3, 6, CLAUDIA);
 						break;
-					
+					}
 					case DESMOND:
+					{
 						htmltext = checkAndRewardItems(st, 4, 7, DESMOND);
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

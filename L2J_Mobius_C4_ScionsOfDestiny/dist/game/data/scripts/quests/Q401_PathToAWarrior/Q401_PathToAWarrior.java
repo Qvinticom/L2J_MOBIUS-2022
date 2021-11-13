@@ -36,7 +36,6 @@ public class Q401_PathToAWarrior extends Quest
 	private static final int SIMPLON_LETTER = 1143;
 	private static final int POISON_SPIDER_LEG = 1144;
 	private static final int MEDALLION_OF_WARRIOR = 1145;
-	
 	// NPCs
 	private static final int AURON = 30010;
 	private static final int SIMPLON = 30253;
@@ -44,12 +43,9 @@ public class Q401_PathToAWarrior extends Quest
 	public Q401_PathToAWarrior()
 	{
 		super(401, "Path to a Warrior");
-		
 		registerQuestItems(AURON_LETTER, WARRIOR_GUILD_MARK, RUSTED_BRONZE_SWORD_1, RUSTED_BRONZE_SWORD_2, RUSTED_BRONZE_SWORD_3, SIMPLON_LETTER, POISON_SPIDER_LEG);
-		
 		addStartNpc(AURON);
 		addTalkId(AURON, SIMPLON);
-		
 		addKillId(20035, 20038, 20042, 20043);
 	}
 	
@@ -80,21 +76,19 @@ public class Q401_PathToAWarrior extends Quest
 		}
 		else if (event.equals("30010-06.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(AURON_LETTER, 1);
 		}
 		else if (event.equals("30253-02.htm"))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.takeItems(AURON_LETTER, 1);
 			st.giveItems(WARRIOR_GUILD_MARK, 1);
 		}
 		else if (event.equals("30010-11.htm"))
 		{
-			st.set("cond", "5");
+			st.setCond(5);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.takeItems(RUSTED_BRONZE_SWORD_2, 1);
 			st.takeItems(SIMPLON_LETTER, 1);
@@ -117,14 +111,17 @@ public class Q401_PathToAWarrior extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30010-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case AURON:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30010-07.htm";
@@ -153,8 +150,9 @@ public class Q401_PathToAWarrior extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case SIMPLON:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30253-01.htm";
@@ -173,7 +171,7 @@ public class Q401_PathToAWarrior extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30253-04.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(RUSTED_BRONZE_SWORD_1, 10);
 							st.takeItems(WARRIOR_GUILD_MARK, 1);
@@ -185,8 +183,10 @@ public class Q401_PathToAWarrior extends Quest
 							htmltext = "30253-05.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -205,19 +205,22 @@ public class Q401_PathToAWarrior extends Quest
 		{
 			case 20035:
 			case 20042:
-				if ((st.getInt("cond") == 2) && st.dropItems(RUSTED_BRONZE_SWORD_1, 1, 10, 400000))
+			{
+				if (st.isCond(2) && st.dropItems(RUSTED_BRONZE_SWORD_1, 1, 10, 400000))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 20038:
 			case 20043:
-				if ((st.getInt("cond") == 5) && (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == RUSTED_BRONZE_SWORD_3) && st.dropItemsAlways(POISON_SPIDER_LEG, 1, 20))
+			{
+				if (st.isCond(5) && (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND) == RUSTED_BRONZE_SWORD_3) && st.dropItemsAlways(POISON_SPIDER_LEG, 1, 20))
 				{
-					st.set("cond", "6");
+					st.setCond(6);
 				}
 				break;
+			}
 		}
 		
 		return null;

@@ -25,6 +25,11 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q168_DeliverSupplies extends Quest
 {
+	// NPCs
+	private static final int JENNA = 30349;
+	private static final int ROSELYN = 30355;
+	private static final int KRISTIN = 30357;
+	private static final int HARANT = 30360;
 	// Items
 	private static final int JENNA_LETTER = 1153;
 	private static final int SENTRY_BLADE_1 = 1154;
@@ -32,18 +37,10 @@ public class Q168_DeliverSupplies extends Quest
 	private static final int SENTRY_BLADE_3 = 1156;
 	private static final int OLD_BRONZE_SWORD = 1157;
 	
-	// NPCs
-	private static final int JENNA = 30349;
-	private static final int ROSELYN = 30355;
-	private static final int KRISTIN = 30357;
-	private static final int HARANT = 30360;
-	
 	public Q168_DeliverSupplies()
 	{
 		super(168, "Deliver Supplies");
-		
 		registerQuestItems(JENNA_LETTER, SENTRY_BLADE_1, SENTRY_BLADE_2, SENTRY_BLADE_3, OLD_BRONZE_SWORD);
-		
 		addStartNpc(JENNA);
 		addTalkId(JENNA, ROSELYN, KRISTIN, HARANT);
 	}
@@ -60,9 +57,7 @@ public class Q168_DeliverSupplies extends Quest
 		
 		if (event.equals("30349-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(JENNA_LETTER, 1);
 		}
 		
@@ -82,6 +77,7 @@ public class Q168_DeliverSupplies extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30349-00.htm";
@@ -95,12 +91,14 @@ public class Q168_DeliverSupplies extends Quest
 					htmltext = "30349-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case JENNA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30349-04.htm";
@@ -108,7 +106,7 @@ public class Q168_DeliverSupplies extends Quest
 						else if (cond == 2)
 						{
 							htmltext = "30349-05.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(SENTRY_BLADE_1, 1);
 						}
@@ -125,12 +123,13 @@ public class Q168_DeliverSupplies extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case HARANT:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30360-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(JENNA_LETTER, 1);
 							st.giveItems(SENTRY_BLADE_1, 1);
@@ -142,8 +141,9 @@ public class Q168_DeliverSupplies extends Quest
 							htmltext = "30360-02.htm";
 						}
 						break;
-					
+					}
 					case ROSELYN:
+					{
 						if (cond == 3)
 						{
 							if (st.hasQuestItems(SENTRY_BLADE_2))
@@ -153,7 +153,7 @@ public class Q168_DeliverSupplies extends Quest
 								st.giveItems(OLD_BRONZE_SWORD, 1);
 								if (st.getQuestItemsCount(OLD_BRONZE_SWORD) == 2)
 								{
-									st.set("cond", "4");
+									st.setCond(4);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 							}
@@ -167,8 +167,9 @@ public class Q168_DeliverSupplies extends Quest
 							htmltext = "30355-02.htm";
 						}
 						break;
-					
+					}
 					case KRISTIN:
+					{
 						if (cond == 3)
 						{
 							if (st.hasQuestItems(SENTRY_BLADE_3))
@@ -178,7 +179,7 @@ public class Q168_DeliverSupplies extends Quest
 								st.giveItems(OLD_BRONZE_SWORD, 1);
 								if (st.getQuestItemsCount(OLD_BRONZE_SWORD) == 2)
 								{
-									st.set("cond", "4");
+									st.setCond(4);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 							}
@@ -192,12 +193,15 @@ public class Q168_DeliverSupplies extends Quest
 							htmltext = "30357-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

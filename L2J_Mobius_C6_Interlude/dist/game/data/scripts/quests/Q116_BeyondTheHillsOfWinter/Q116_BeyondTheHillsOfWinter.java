@@ -28,22 +28,18 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 	// NPCs
 	private static final int FILAUR = 30535;
 	private static final int OBI = 32052;
-	
 	// Items
 	private static final int BANDAGE = 1833;
 	private static final int ENERGY_STONE = 5589;
 	private static final int THIEF_KEY = 1661;
 	private static final int GOODS = 8098;
-	
 	// Reward
 	private static final int SSD = 1463;
 	
 	public Q116_BeyondTheHillsOfWinter()
 	{
 		super(116, "Beyond the Hills of Winter");
-		
 		registerQuestItems(GOODS);
-		
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR, OBI);
 	}
@@ -58,33 +54,38 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30535-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30535-05.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(GOODS, 1);
-		}
-		else if (event.equals("materials"))
-		{
-			htmltext = "32052-02.htm";
-			st.takeItems(GOODS, -1);
-			st.rewardItems(SSD, 1650);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
-		}
-		else if (event.equals("adena"))
-		{
-			htmltext = "32052-02.htm";
-			st.takeItems(GOODS, -1);
-			st.giveItems(57, 16500);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30535-02.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30535-05.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(GOODS, 1);
+				break;
+			}
+			case "materials":
+			{
+				htmltext = "32052-02.htm";
+				st.takeItems(GOODS, -1);
+				st.rewardItems(SSD, 1650);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
+			case "adena":
+			{
+				htmltext = "32052-02.htm";
+				st.takeItems(GOODS, -1);
+				st.giveItems(57, 16500);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -103,14 +104,17 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() < 30) || (player.getRace() != Race.DWARF)) ? "30535-00.htm" : "30535-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case FILAUR:
+					{
 						if (cond == 1)
 						{
 							if ((st.getQuestItemsCount(BANDAGE) >= 20) && (st.getQuestItemsCount(ENERGY_STONE) >= 5) && (st.getQuestItemsCount(THIEF_KEY) >= 10))
@@ -130,19 +134,23 @@ public class Q116_BeyondTheHillsOfWinter extends Quest
 							htmltext = "30535-05.htm";
 						}
 						break;
-					
+					}
 					case OBI:
+					{
 						if (cond == 2)
 						{
 							htmltext = "32052-00.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}

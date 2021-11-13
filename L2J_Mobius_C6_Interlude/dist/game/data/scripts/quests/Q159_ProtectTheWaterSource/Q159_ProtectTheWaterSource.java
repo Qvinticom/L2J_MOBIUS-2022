@@ -33,12 +33,9 @@ public class Q159_ProtectTheWaterSource extends Quest
 	public Q159_ProtectTheWaterSource()
 	{
 		super(159, "Protect the Water Source");
-		
 		registerQuestItems(PLAGUE_DUST, HYACINTH_CHARM_1, HYACINTH_CHARM_2);
-		
 		addStartNpc(30154); // Asterios
 		addTalkId(30154);
-		
 		addKillId(27017); // Plague Zombie
 	}
 	
@@ -54,9 +51,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 		
 		if (event.equals("30154-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(HYACINTH_CHARM_1, 1);
 		}
 		
@@ -76,6 +71,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30154-00.htm";
@@ -89,9 +85,10 @@ public class Q159_ProtectTheWaterSource extends Quest
 					htmltext = "30154-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30154-05.htm";
@@ -99,7 +96,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 				else if (cond == 2)
 				{
 					htmltext = "30154-06.htm";
-					st.set("cond", "3");
+					st.setCond(3);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(PLAGUE_DUST, -1);
 					st.takeItems(HYACINTH_CHARM_1, 1);
@@ -119,10 +116,12 @@ public class Q159_ProtectTheWaterSource extends Quest
 					st.exitQuest(false);
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -137,13 +136,13 @@ public class Q159_ProtectTheWaterSource extends Quest
 			return null;
 		}
 		
-		if ((st.getInt("cond") == 1) && st.dropItems(PLAGUE_DUST, 1, 1, 400000))
+		if (st.isCond(1) && st.dropItems(PLAGUE_DUST, 1, 1, 400000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
-		else if ((st.getInt("cond") == 3) && st.dropItems(PLAGUE_DUST, 1, 5, 400000))
+		else if (st.isCond(2) && st.dropItems(PLAGUE_DUST, 1, 5, 400000))
 		{
-			st.set("cond", "4");
+			st.setCond(4);
 		}
 		
 		return null;

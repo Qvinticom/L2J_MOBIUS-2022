@@ -29,49 +29,46 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q610_MagicalPowerOfWater_Part2 extends Quest
 {
-	// Monster
-	private static final int SOUL_OF_WATER_ASHUTAR = 25316;
-	
 	// NPCs
 	private static final int ASEFA = 31372;
 	private static final int VARKAS_HOLY_ALTAR = 31560;
-	
+	// Monster
+	private static final int SOUL_OF_WATER_ASHUTAR = 25316;
 	// Items
 	private static final int GREEN_TOTEM = 7238;
 	private static final int ICE_HEART_OF_ASHUTAR = 7239;
-	
 	// Other
 	private static final int CHECK_INTERVAL = 600000; // 10 minutes
 	private static final int IDLE_INTERVAL = 2; // (X * CHECK_INTERVAL) = 20 minutes
-	
 	private NpcInstance _npc = null;
 	private int _status = -1;
 	
 	public Q610_MagicalPowerOfWater_Part2()
 	{
 		super(610, "Magical Power of Water - Part 2");
-		
 		registerQuestItems(ICE_HEART_OF_ASHUTAR);
-		
 		addStartNpc(ASEFA);
 		addTalkId(ASEFA, VARKAS_HOLY_ALTAR);
-		
 		addAttackId(SOUL_OF_WATER_ASHUTAR);
 		addKillId(SOUL_OF_WATER_ASHUTAR);
 		
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(SOUL_OF_WATER_ASHUTAR))
 		{
 			case UNDEFINED:
+			{
 				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + SOUL_OF_WATER_ASHUTAR);
 				break;
-			
+			}
 			case ALIVE:
+			{
 				spawnNpc();
 				// fallthrough
-				
+			}
 			case DEAD:
+			{
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;
+			}
 		}
 	}
 	
@@ -102,56 +99,58 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 			return htmltext;
 		}
 		
-		// Asefa
-		if (event.equals("31372-04.htm"))
+		switch (event)
 		{
-			if (st.hasQuestItems(GREEN_TOTEM))
+			case "31372-04.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-			}
-			else
-			{
-				htmltext = "31372-02.htm";
-			}
-		}
-		else if (event.equals("31372-07.htm"))
-		{
-			if (st.hasQuestItems(ICE_HEART_OF_ASHUTAR))
-			{
-				st.takeItems(ICE_HEART_OF_ASHUTAR, 1);
-				st.rewardExpAndSp(10000, 0);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
-			}
-			else
-			{
-				htmltext = "31372-08.htm";
-			}
-		}
-		// Varka's Holy Altar
-		else if (event.equals("31560-02.htm"))
-		{
-			if (st.hasQuestItems(GREEN_TOTEM))
-			{
-				if (_status < 0)
+				if (st.hasQuestItems(GREEN_TOTEM))
 				{
-					if (spawnRaid())
+					st.startQuest();
+				}
+				else
+				{
+					htmltext = "31372-02.htm";
+				}
+				break;
+			}
+			case "31372-07.htm":
+			{
+				if (st.hasQuestItems(ICE_HEART_OF_ASHUTAR))
+				{
+					st.takeItems(ICE_HEART_OF_ASHUTAR, 1);
+					st.rewardExpAndSp(10000, 0);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					htmltext = "31372-08.htm";
+				}
+				break;
+			}
+			case "31560-02.htm":
+			{
+				if (st.hasQuestItems(GREEN_TOTEM))
+				{
+					if (_status < 0)
 					{
-						st.set("cond", "2");
-						st.playSound(QuestState.SOUND_MIDDLE);
-						st.takeItems(GREEN_TOTEM, 1);
+						if (spawnRaid())
+						{
+							st.setCond(2);
+							st.playSound(QuestState.SOUND_MIDDLE);
+							st.takeItems(GREEN_TOTEM, 1);
+						}
+					}
+					else
+					{
+						htmltext = "31560-04.htm";
 					}
 				}
 				else
 				{
-					htmltext = "31560-04.htm";
+					htmltext = "31560-03.htm";
 				}
-			}
-			else
-			{
-				htmltext = "31560-03.htm";
+				break;
 			}
 		}
 		
@@ -171,6 +170,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (!st.hasQuestItems(GREEN_TOTEM))
 				{
 					htmltext = "31372-02.htm";
@@ -184,16 +184,19 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 					htmltext = "31372-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ASEFA:
+					{
 						htmltext = (cond < 3) ? "31372-05.htm" : "31372-06.htm";
 						break;
-					
+					}
 					case VARKAS_HOLY_ALTAR:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31560-01.htm";
@@ -203,8 +206,10 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 							htmltext = "31560-05.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -220,7 +225,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, 2))
 		{
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
@@ -228,7 +233,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 				continue;
 			}
 			
-			st.set("cond", "3");
+			st.setCond(3);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(ICE_HEART_OF_ASHUTAR, 1);
 		}

@@ -24,22 +24,19 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q362_BardsMandolin extends Quest
 {
-	// Items
-	private static final int SWAN_FLUTE = 4316;
-	private static final int SWAN_LETTER = 4317;
-	
 	// NPCs
 	private static final int SWAN = 30957;
 	private static final int NANARIN = 30956;
 	private static final int GALION = 30958;
 	private static final int WOODROW = 30837;
+	// Items
+	private static final int SWAN_FLUTE = 4316;
+	private static final int SWAN_LETTER = 4317;
 	
 	public Q362_BardsMandolin()
 	{
 		super(362, "Bard's Mandolin");
-		
 		registerQuestItems(SWAN_FLUTE, SWAN_LETTER);
-		
 		addStartNpc(SWAN);
 		addTalkId(SWAN, NANARIN, GALION, WOODROW);
 	}
@@ -56,9 +53,7 @@ public class Q362_BardsMandolin extends Quest
 		
 		if (event.equals("30957-3.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30957-7.htm") || event.equals("30957-8.htm"))
 		{
@@ -84,14 +79,17 @@ public class Q362_BardsMandolin extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30957-2.htm" : "30957-1.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case SWAN:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30957-4.htm";
@@ -99,7 +97,7 @@ public class Q362_BardsMandolin extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30957-5.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(SWAN_LETTER, 1);
 						}
@@ -112,12 +110,13 @@ public class Q362_BardsMandolin extends Quest
 							htmltext = "30957-6.htm";
 						}
 						break;
-					
+					}
 					case WOODROW:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30837-1.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 2)
@@ -129,12 +128,13 @@ public class Q362_BardsMandolin extends Quest
 							htmltext = "30837-3.htm";
 						}
 						break;
-					
+					}
 					case GALION:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30958-1.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_ITEMGET);
 							st.giveItems(SWAN_FLUTE, 1);
 						}
@@ -143,12 +143,13 @@ public class Q362_BardsMandolin extends Quest
 							htmltext = "30958-2.htm";
 						}
 						break;
-					
+					}
 					case NANARIN:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30956-1.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(SWAN_FLUTE, 1);
 							st.takeItems(SWAN_LETTER, 1);
@@ -158,8 +159,10 @@ public class Q362_BardsMandolin extends Quest
 							htmltext = "30956-2.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

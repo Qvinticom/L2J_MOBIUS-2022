@@ -30,22 +30,17 @@ public class Q510_AClansReputation extends Quest
 {
 	// NPC
 	private static final int VALDIS = 31331;
-	
 	// Quest Item
 	private static final int CLAW = 8767;
-	
 	// Reward
 	private static final int CLAN_POINTS_REWARD = 50; // Quantity of points
 	
 	public Q510_AClansReputation()
 	{
 		super(510, "A Clan's Reputation");
-		
 		registerQuestItems(CLAW);
-		
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
-		
 		addKillId(22215, 22216, 22217);
 	}
 	
@@ -59,13 +54,11 @@ public class Q510_AClansReputation extends Quest
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31331-3.htm"))
+		if (event.equals("31331-3.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
-		else if (event.equalsIgnoreCase("31331-6.htm"))
+		else if (event.equals("31331-6.htm"))
 		{
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
@@ -87,6 +80,7 @@ public class Q510_AClansReputation extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (!player.isClanLeader())
 				{
 					st.exitQuest(true);
@@ -102,9 +96,10 @@ public class Q510_AClansReputation extends Quest
 					htmltext = "31331-1.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					final int count = st.getQuestItemsCount(CLAW);
 					if (count > 0)
@@ -123,6 +118,7 @@ public class Q510_AClansReputation extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

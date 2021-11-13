@@ -51,7 +51,6 @@ public class Q120_PavelsResearch extends Quest
 	public Q120_PavelsResearch()
 	{
 		super(120, "Pavel's Research");
-		
 		addStartNpc(STONES);
 		addTalkId(BOOKSHELF, STONES, WEATHER1, WEATHER2, WEATHER3, WENDY, YUMI);
 		registerQuestItems(FLOWER, REPORT, REPORT2, ENIGMA, HEART, NECKLACE);
@@ -71,34 +70,34 @@ public class Q120_PavelsResearch extends Quest
 		{
 			case "32041-03.htm":
 			{
-				qs.set("cond", "3");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(3);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32041-04.htm":
 			{
-				qs.set("cond", "4");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(4);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32041-12.htm":
 			{
-				qs.set("cond", "8");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(8);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32041-16.htm":
 			{
-				qs.set("cond", "16");
+				qs.setCond(16);
 				qs.giveItems(ENIGMA, 1);
-				qs.playSound("ItemSound.quest_middle");
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32041-22.htm":
 			{
-				qs.set("cond", "17");
+				qs.setCond(17);
 				qs.takeItems(ENIGMA, 1);
-				qs.playSound("ItemSound.quest_middle");
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32041-32.htm":
@@ -106,19 +105,19 @@ public class Q120_PavelsResearch extends Quest
 				qs.takeItems(NECKLACE, 1);
 				qs.giveItems(EAR_BINDING, 1);
 				qs.exitQuest(true);
-				qs.playSound("ItemSound.quest_finish");
+				qs.playSound(QuestState.SOUND_FINISH);
 				break;
 			}
 			case "32042-06.htm":
 			{
-				if (qs.getInt("cond") == 10)
+				if (qs.isCond(10))
 				{
 					if ((qs.getInt("talk") + qs.getInt("talk1")) == 2)
 					{
-						qs.set("cond", "11");
+						qs.setCond(11);
 						qs.set("talk", "0");
 						qs.set("talk1", "0");
-						qs.playSound("ItemSound.quest_middle");
+						qs.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else
 					{
@@ -161,23 +160,23 @@ public class Q120_PavelsResearch extends Quest
 			}
 			case "32042-15.htm":
 			{
-				qs.set("cond", "12");
+				qs.setCond(12);
 				qs.set("talk", "0");
 				qs.set("talk1", "0");
 				qs.set("talk2", "0");
-				qs.playSound("ItemSound.quest_middle");
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32043-06.htm":
 			{
-				if (qs.getInt("cond") == 17)
+				if (qs.isCond(17))
 				{
 					if ((qs.getInt("talk") + qs.getInt("talk1")) == 2)
 					{
-						qs.set("cond", "18");
+						qs.setCond(18);
 						qs.set("talk", "0");
 						qs.set("talk1", "0");
-						qs.playSound("ItemSound.quest_middle");
+						qs.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else
 					{
@@ -215,21 +214,21 @@ public class Q120_PavelsResearch extends Quest
 			}
 			case "32043-30.htm":
 			{
-				qs.set("cond", "19");
+				qs.setCond(19);
 				qs.set("talk", "0");
 				qs.set("talk1", "0");
 				break;
 			}
 			case "32044-06.htm":
 			{
-				if (qs.getInt("cond") == 20)
+				if (qs.isCond(20))
 				{
 					if ((qs.getInt("talk") + qs.getInt("talk1")) == 2)
 					{
-						qs.set("cond", "21");
+						qs.setCond(21);
 						qs.set("talk", "0");
 						qs.set("talk1", "0");
-						qs.playSound("ItemSound.quest_middle");
+						qs.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else
 					{
@@ -264,16 +263,16 @@ public class Q120_PavelsResearch extends Quest
 			}
 			case "32044-17.htm":
 			{
-				qs.set("cond", "22");
+				qs.setCond(22);
 				qs.set("talk", "0");
 				qs.set("talk1", "0");
-				qs.playSound("ItemSound.quest_middle");
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32045-02.htm":
 			{
-				qs.set("cond", "15");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(15);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.giveItems(REPORT2, 1);
 				npc.broadcastPacket(new MagicSkillUse(npc, qs.getPlayer(), 5073, 5, 1500, 0));
 				break;
@@ -288,9 +287,7 @@ public class Q120_PavelsResearch extends Quest
 			{
 				if (qs.getPlayer().getLevel() >= 50)
 				{
-					qs.setState(State.STARTED);
-					qs.playSound("ItemSound.quest_accept");
-					qs.set("cond", "1");
+					qs.startQuest();
 				}
 				else
 				{
@@ -301,78 +298,78 @@ public class Q120_PavelsResearch extends Quest
 			}
 			case "32046-08.htm":
 			{
-				qs.set("cond", "2");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(2);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32046-12.htm":
 			{
-				qs.set("cond", "6");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(6);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.giveItems(FLOWER, 1);
 				break;
 			}
 			case "32046-22.htm":
 			{
-				qs.set("cond", "10");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(10);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32046-29.htm":
 			{
-				qs.set("cond", "13");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(13);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32046-35.htm":
 			{
-				qs.set("cond", "20");
+				qs.setCond(20);
 				qs.playSound("ItemSou;nd.quest_middle");
 				break;
 			}
 			case "32046-38.htm":
 			{
-				qs.set("cond", "23");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(23);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.giveItems(HEART, 1);
 				break;
 			}
 			case "32047-06.htm":
 			{
-				qs.set("cond", "5");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(5);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32047-10.htm":
 			{
-				qs.set("cond", "7");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(7);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.takeItems(FLOWER, 1);
 				break;
 			}
 			case "32047-15.htm":
 			{
-				qs.set("cond", "9");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(9);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32047-18.htm":
 			{
-				qs.set("cond", "14");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(14);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				break;
 			}
 			case "32047-26.htm":
 			{
-				qs.set("cond", "24");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(24);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.takeItems(HEART, 1);
 				break;
 			}
 			case "32047-32.htm":
 			{
-				qs.set("cond", "25");
-				qs.playSound("ItemSound.quest_middle");
+				qs.setCond(25);
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.giveItems(NECKLACE, 1);
 				break;
 			}
@@ -429,7 +426,7 @@ public class Q120_PavelsResearch extends Quest
 		
 		final int state = qs.getState();
 		final int npcId = npc.getNpcId();
-		final int cond = qs.getInt("cond");
+		final int cond = qs.getCond();
 		if (state == State.COMPLETED)
 		{
 			htmltext = getAlreadyCompletedMsg();

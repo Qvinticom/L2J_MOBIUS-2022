@@ -95,86 +95,85 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		// Talien
 		if (event.equalsIgnoreCase("31739-03.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31739-07.htm"))
 		{
-			st.set("cond", "5");
+			st.setCond(5);
 			takeItems(player, LEGEND_OF_SEVENTEEN, 1);
 		}
 		else if (event.equalsIgnoreCase("31739-10.htm"))
 		{
-			st.set("cond", "9");
+			st.setCond(9);
 			takeItems(player, ECHO_CRYSTAL, 1);
 		}
 		else if (event.equalsIgnoreCase("31739-13.htm"))
 		{
-			st.set("cond", "11");
+			st.setCond(11);
 			takeItems(player, POETRY_BOOK, 1);
 		}
 		// Gabrielle
 		else if (event.equalsIgnoreCase("30753-02.htm"))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		// Gilmore
 		else if (event.equalsIgnoreCase("30754-02.htm"))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		// Kantabilon
 		else if (event.equalsIgnoreCase("31042-02.htm"))
 		{
-			st.set("cond", "6");
+			st.setCond(6);
 		}
 		else if (event.equalsIgnoreCase("31042-05.htm"))
 		{
-			st.set("cond", "8");
+			st.setCond(8);
 			takeItems(player, MALRUK_SUCCUBUS_CLAW, 10);
 			giveItems(player, ECHO_CRYSTAL, 1);
 		}
 		// Stedmiel
 		else if (event.equalsIgnoreCase("30692-02.htm"))
 		{
-			st.set("cond", "10");
+			st.setCond(10);
 			giveItems(player, POETRY_BOOK, 1);
 		}
 		// Virgil
 		else if (event.equalsIgnoreCase("31742-02.htm"))
 		{
-			st.set("cond", "12");
+			st.setCond(12);
 		}
 		else if (event.equalsIgnoreCase("31742-05.htm"))
 		{
-			st.set("cond", "18");
+			st.setCond(18);
 		}
 		// Ogmar
 		else if (event.equalsIgnoreCase("31744-02.htm"))
 		{
-			st.set("cond", "13");
+			st.setCond(13);
 		}
 		// Rahorakti
 		else if (event.equalsIgnoreCase("31336-02.htm"))
 		{
-			st.set("cond", "14");
+			st.setCond(14);
 		}
 		else if (event.equalsIgnoreCase("31336-05.htm"))
 		{
-			st.set("cond", "16");
+			st.setCond(16);
 			takeItems(player, CRIMSON_MOSS, 5);
 			giveItems(player, RAHORAKTIS_MEDICINE, 1);
 		}
 		// Kassandra
 		else if (event.equalsIgnoreCase("31743-02.htm"))
 		{
-			st.set("cond", "17");
+			st.setCond(17);
 			takeItems(player, RAHORAKTIS_MEDICINE, 1);
 		}
 		// Caradine
 		else if (event.equalsIgnoreCase("31740-02.htm"))
 		{
-			st.set("cond", "19");
+			st.setCond(19);
 		}
 		else if (event.equalsIgnoreCase("31740-05.htm"))
 		{
@@ -185,7 +184,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		// Noel
 		else if (event.equalsIgnoreCase("31272-02.htm"))
 		{
-			st.set("cond", "20");
+			st.setCond(20);
 		}
 		else if (event.equalsIgnoreCase("31272-05.htm"))
 		{
@@ -193,7 +192,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 			{
 				takeItems(player, LUNARGENT, 5);
 				takeItems(player, HELLFIRE_OIL, 1);
-				st.set("cond", "21");
+				st.setCond(21);
 			}
 			else
 			{
@@ -230,7 +229,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					break;
 				}
 				
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				switch (npc.getId())
 				{
 					case TALIEN:

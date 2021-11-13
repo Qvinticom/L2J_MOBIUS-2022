@@ -29,7 +29,6 @@ public class Q347_GoGetTheCalculator extends Quest
 	private static final int SILVERA = 30527;
 	private static final int SPIRON = 30532;
 	private static final int BALANKI = 30533;
-	
 	// Items
 	private static final int GEMSTONE_BEAST_CRYSTAL = 4286;
 	private static final int CALCULATOR_QUEST = 4285;
@@ -38,12 +37,9 @@ public class Q347_GoGetTheCalculator extends Quest
 	public Q347_GoGetTheCalculator()
 	{
 		super(347, "Go Get the Calculator");
-		
 		registerQuestItems(GEMSTONE_BEAST_CRYSTAL, CALCULATOR_QUEST);
-		
 		addStartNpc(BRUNON);
 		addTalkId(BRUNON, SILVERA, SPIRON, BALANKI);
-		
 		addKillId(20540);
 	}
 	
@@ -57,57 +53,62 @@ public class Q347_GoGetTheCalculator extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30526-05.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30533-03.htm"))
-		{
-			if (st.getQuestItemsCount(57) >= 100)
+			case "30526-05.htm":
 			{
-				htmltext = "30533-02.htm";
-				st.takeItems(57, 100);
-				
-				if (st.getInt("cond") == 3)
+				st.startQuest();
+				break;
+			}
+			case "30533-03.htm":
+			{
+				if (st.getQuestItemsCount(57) >= 100)
 				{
-					st.set("cond", "4");
+					htmltext = "30533-02.htm";
+					st.takeItems(57, 100);
+					
+					if (st.isCond(3))
+					{
+						st.setCond(4);
+					}
+					else
+					{
+						st.setCond(2);
+					}
+					
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
+			}
+			case "30532-02.htm":
+			{
+				if (st.isCond(2))
+				{
+					st.setCond(4);
 				}
 				else
 				{
-					st.set("cond", "2");
+					st.setCond(3);
 				}
-				
 				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-		}
-		else if (event.equals("30532-02.htm"))
-		{
-			if (st.getInt("cond") == 2)
+			case "30526-08.htm":
 			{
-				st.set("cond", "4");
+				st.takeItems(CALCULATOR_QUEST, -1);
+				st.giveItems(CALCULATOR_REAL, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
 			}
-			else
+			case "30526-09.htm":
 			{
-				st.set("cond", "3");
+				st.takeItems(CALCULATOR_QUEST, -1);
+				st.rewardItems(57, 1000);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
 			}
-			
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30526-08.htm"))
-		{
-			st.takeItems(CALCULATOR_QUEST, -1);
-			st.giveItems(CALCULATOR_REAL, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30526-09.htm"))
-		{
-			st.takeItems(CALCULATOR_QUEST, -1);
-			st.rewardItems(57, 1000);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
 		}
 		
 		return htmltext;
@@ -126,26 +127,32 @@ public class Q347_GoGetTheCalculator extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 12) ? "30526-00.htm" : "30526-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case BRUNON:
+					{
 						htmltext = (!st.hasQuestItems(CALCULATOR_QUEST)) ? "30526-06.htm" : "30526-07.htm";
 						break;
-					
+					}
 					case SPIRON:
+					{
 						htmltext = (cond < 4) ? "30532-01.htm" : "30532-05.htm";
 						break;
-					
+					}
 					case BALANKI:
+					{
 						htmltext = (cond < 4) ? "30533-01.htm" : "30533-04.htm";
 						break;
-					
+					}
 					case SILVERA:
+					{
 						if (cond < 4)
 						{
 							htmltext = "30527-00.htm";
@@ -153,7 +160,7 @@ public class Q347_GoGetTheCalculator extends Quest
 						else if (cond == 4)
 						{
 							htmltext = "30527-01.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 5)
@@ -165,7 +172,7 @@ public class Q347_GoGetTheCalculator extends Quest
 							else
 							{
 								htmltext = "30527-03.htm";
-								st.set("cond", "6");
+								st.setCond(6);
 								st.takeItems(GEMSTONE_BEAST_CRYSTAL, -1);
 								st.giveItems(CALCULATOR_QUEST, 1);
 								st.playSound(QuestState.SOUND_MIDDLE);
@@ -176,8 +183,10 @@ public class Q347_GoGetTheCalculator extends Quest
 							htmltext = "30527-04.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -186,7 +195,7 @@ public class Q347_GoGetTheCalculator extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "5");
+		final QuestState st = checkPlayerCondition(player, npc, 5);
 		if (st == null)
 		{
 			return null;

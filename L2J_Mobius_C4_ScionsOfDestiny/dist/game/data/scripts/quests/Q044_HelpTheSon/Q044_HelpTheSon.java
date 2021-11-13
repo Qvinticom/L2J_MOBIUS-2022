@@ -24,30 +24,25 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q044_HelpTheSon extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int LUNDY = 30827;
 	private static final int DRIKUS = 30505;
-	
+	// Monsters
+	private static final int MAILLE = 20919;
+	private static final int MAILLE_SCOUT = 20920;
+	private static final int MAILLE_GUARD = 20921;
 	// Items
 	private static final int WORK_HAMMER = 168;
 	private static final int GEMSTONE_FRAGMENT = 7552;
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
 	
-	// Monsters
-	private static final int MAILLE = 20919;
-	private static final int MAILLE_SCOUT = 20920;
-	private static final int MAILLE_GUARD = 20921;
-	
 	public Q044_HelpTheSon()
 	{
 		super(44, "Help the Son!");
-		
 		registerQuestItems(GEMSTONE_FRAGMENT, GEMSTONE);
-		
 		addStartNpc(LUNDY);
 		addTalkId(LUNDY, DRIKUS);
-		
 		addKillId(MAILLE, MAILLE_SCOUT, MAILLE_GUARD);
 	}
 	
@@ -61,36 +56,45 @@ public class Q044_HelpTheSon extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30827-01.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30827-03.htm") && st.hasQuestItems(WORK_HAMMER))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(WORK_HAMMER, 1);
-		}
-		else if (event.equals("30827-05.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GEMSTONE_FRAGMENT, 30);
-			st.giveItems(GEMSTONE, 1);
-		}
-		else if (event.equals("30505-06.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GEMSTONE, 1);
-		}
-		else if (event.equals("30827-07.htm"))
-		{
-			st.giveItems(PET_TICKET, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30827-01.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30827-03.htm":
+			{
+				if (st.hasQuestItems(WORK_HAMMER))
+				{
+					st.setCond(2);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(WORK_HAMMER, 1);
+				}
+				break;
+			}
+			case "30827-05.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GEMSTONE_FRAGMENT, 30);
+				st.giveItems(GEMSTONE, 1);
+				break;
+			}
+			case "30505-06.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GEMSTONE, 1);
+				break;
+			}
+			case "30827-07.htm":
+			{
+				st.giveItems(PET_TICKET, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -109,14 +113,17 @@ public class Q044_HelpTheSon extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 24) ? "30827-00a.htm" : "30827-00.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case LUNDY:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(WORK_HAMMER)) ? "30827-01a.htm" : "30827-02.htm";
@@ -138,8 +145,9 @@ public class Q044_HelpTheSon extends Quest
 							htmltext = "30827-06.htm";
 						}
 						break;
-					
+					}
 					case DRIKUS:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30505-05.htm";
@@ -149,12 +157,15 @@ public class Q044_HelpTheSon extends Quest
 							htmltext = "30505-06a.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -163,7 +174,7 @@ public class Q044_HelpTheSon extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -171,7 +182,7 @@ public class Q044_HelpTheSon extends Quest
 		
 		if (st.dropItemsAlways(GEMSTONE_FRAGMENT, 1, 30))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;

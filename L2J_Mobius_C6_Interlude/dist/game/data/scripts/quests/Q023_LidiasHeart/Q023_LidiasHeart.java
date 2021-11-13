@@ -64,105 +64,117 @@ public class Q023_LidiasHeart extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31328-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(FOREST_OF_DEADMAN_MAP, 1);
-			st.giveItems(SILVER_KEY, 1);
-		}
-		else if (event.equals("31328-06.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31526-05.htm"))
-		{
-			if (!st.hasQuestItems(LIDIA_HAIRPIN))
+			case "31328-02.htm":
 			{
-				st.giveItems(LIDIA_HAIRPIN, 1);
-				if (st.hasQuestItems(LIDIA_DIARY))
-				{
-					st.set("cond", "4");
-					st.playSound(QuestState.SOUND_MIDDLE);
-				}
-				else
-				{
-					st.playSound(QuestState.SOUND_ITEMGET);
-				}
+				st.startQuest();
+				st.giveItems(FOREST_OF_DEADMAN_MAP, 1);
+				st.giveItems(SILVER_KEY, 1);
+				break;
 			}
-		}
-		else if (event.equals("31526-11.htm"))
-		{
-			if (!st.hasQuestItems(LIDIA_DIARY))
+			case "31328-06.htm":
 			{
-				st.giveItems(LIDIA_DIARY, 1);
-				if (st.hasQuestItems(LIDIA_HAIRPIN))
-				{
-					st.set("cond", "4");
-					st.playSound(QuestState.SOUND_MIDDLE);
-				}
-				else
-				{
-					st.playSound(QuestState.SOUND_ITEMGET);
-				}
-			}
-		}
-		else if (event.equals("31328-11.htm"))
-		{
-			if (st.getInt("cond") < 5)
-			{
-				st.set("cond", "5");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-		}
-		else if (event.equals("31328-19.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31524-04.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LIDIA_DIARY, 1);
-		}
-		else if (event.equals("31523-02.htm"))
-		{
-			if (_ghost == null)
+			case "31526-05.htm":
 			{
-				_ghost = addSpawn(31524, 51432, -54570, -3136, 0, false, 60000);
-				_ghost.broadcastNpcSay("Who awoke me?");
-				startQuestTimer("ghost_cleanup", 58000, null, player, false);
+				if (!st.hasQuestItems(LIDIA_HAIRPIN))
+				{
+					st.giveItems(LIDIA_HAIRPIN, 1);
+					if (st.hasQuestItems(LIDIA_DIARY))
+					{
+						st.setCond(4);
+						st.playSound(QuestState.SOUND_MIDDLE);
+					}
+					else
+					{
+						st.playSound(QuestState.SOUND_ITEMGET);
+					}
+				}
+				break;
 			}
-		}
-		else if (event.equals("31523-05.htm"))
-		{
-			// Don't launch twice the same task...
-			if (getQuestTimer("tomb_digger", null, player) == null)
+			case "31526-11.htm":
 			{
-				startQuestTimer("tomb_digger", 10000, null, player, false);
+				if (!st.hasQuestItems(LIDIA_DIARY))
+				{
+					st.giveItems(LIDIA_DIARY, 1);
+					if (st.hasQuestItems(LIDIA_HAIRPIN))
+					{
+						st.setCond(4);
+						st.playSound(QuestState.SOUND_MIDDLE);
+					}
+					else
+					{
+						st.playSound(QuestState.SOUND_ITEMGET);
+					}
+				}
+				break;
 			}
-		}
-		else if (event.equals("tomb_digger"))
-		{
-			htmltext = "31523-06.htm";
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(SILVER_KEY, 1);
-		}
-		else if (event.equals("31530-02.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SILVER_KEY, 1);
-			st.giveItems(SILVER_SPEAR, 1);
-		}
-		else if (event.equals("ghost_cleanup"))
-		{
-			_ghost = null;
-			return null;
+			case "31328-11.htm":
+			{
+				if (st.getCond() < 5)
+				{
+					st.setCond(5);
+					st.playSound(QuestState.SOUND_MIDDLE);
+				}
+				break;
+			}
+			case "31328-19.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31524-04.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LIDIA_DIARY, 1);
+				break;
+			}
+			case "31523-02.htm":
+			{
+				if (_ghost == null)
+				{
+					_ghost = addSpawn(31524, 51432, -54570, -3136, 0, false, 60000);
+					_ghost.broadcastNpcSay("Who awoke me?");
+					startQuestTimer("ghost_cleanup", 58000, null, player, false);
+				}
+				break;
+			}
+			case "31523-05.htm":
+			{
+				// Don't launch twice the same task...
+				if (getQuestTimer("tomb_digger", null, player) == null)
+				{
+					startQuestTimer("tomb_digger", 10000, null, player, false);
+				}
+				break;
+			}
+			case "tomb_digger":
+			{
+				htmltext = "31523-06.htm";
+				st.setCond(8);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(SILVER_KEY, 1);
+				break;
+			}
+			case "31530-02.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SILVER_KEY, 1);
+				st.giveItems(SILVER_SPEAR, 1);
+				break;
+			}
+			case "ghost_cleanup":
+			{
+				_ghost = null;
+				return null;
+			}
 		}
 		return htmltext;
 	}
@@ -180,6 +192,7 @@ public class Q023_LidiasHeart extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState st2 = player.getQuestState(Q022_TragedyInVonHellmannForest.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted())
 				{
@@ -197,12 +210,14 @@ public class Q023_LidiasHeart extends Quest
 					htmltext = "31328-00.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case INNOCENTIN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31328-03.htm";
@@ -224,12 +239,13 @@ public class Q023_LidiasHeart extends Quest
 							htmltext = "31328-21.htm";
 						}
 						break;
-					
+					}
 					case BROKEN_BOOKSHELF:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31526-00.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 3)
@@ -248,8 +264,9 @@ public class Q023_LidiasHeart extends Quest
 							htmltext = "31526-13.htm";
 						}
 						break;
-					
+					}
 					case GHOST_OF_VON_HELLMANN:
+					{
 						if (cond == 6)
 						{
 							htmltext = "31524-01.htm";
@@ -259,8 +276,9 @@ public class Q023_LidiasHeart extends Quest
 							htmltext = "31524-05.htm";
 						}
 						break;
-					
+					}
 					case TOMBSTONE:
+					{
 						if (cond == 6)
 						{
 							htmltext = (_ghost == null) ? "31523-01.htm" : "31523-03.htm";
@@ -274,12 +292,13 @@ public class Q023_LidiasHeart extends Quest
 							htmltext = "31523-06.htm";
 						}
 						break;
-					
+					}
 					case VIOLET:
+					{
 						if (cond == 8)
 						{
 							htmltext = "31386-01.htm";
-							st.set("cond", "9");
+							st.setCond(9);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 9)
@@ -299,12 +318,13 @@ public class Q023_LidiasHeart extends Quest
 							else
 							{
 								htmltext = "31386-02.htm";
-								st.set("cond", "9");
+								st.setCond(9);
 							}
 						}
 						break;
-					
+					}
 					case BOX:
+					{
 						if (cond == 9)
 						{
 							htmltext = "31530-01.htm";
@@ -314,10 +334,12 @@ public class Q023_LidiasHeart extends Quest
 							htmltext = "31530-03.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				if (npc.getNpcId() == VIOLET)
 				{
 					htmltext = "31386-04.htm";
@@ -327,6 +349,7 @@ public class Q023_LidiasHeart extends Quest
 					htmltext = getAlreadyCompletedMsg();
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

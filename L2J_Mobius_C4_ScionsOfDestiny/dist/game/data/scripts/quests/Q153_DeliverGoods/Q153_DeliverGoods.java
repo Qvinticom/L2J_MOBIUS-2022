@@ -29,7 +29,6 @@ public class Q153_DeliverGoods extends Quest
 	private static final int SILVIA = 30003;
 	private static final int ARNOLD = 30041;
 	private static final int RANT = 30054;
-	
 	// Items
 	private static final int DELIVERY_LIST = 1012;
 	private static final int HEAVY_WOOD_BOX = 1013;
@@ -38,7 +37,6 @@ public class Q153_DeliverGoods extends Quest
 	private static final int JACKSON_RECEIPT = 1016;
 	private static final int SILVIA_RECEIPT = 1017;
 	private static final int RANT_RECEIPT = 1018;
-	
 	// Rewards
 	private static final int SOULSHOT_NO_GRADE = 1835;
 	private static final int RING_OF_KNOWLEDGE = 875;
@@ -46,9 +44,7 @@ public class Q153_DeliverGoods extends Quest
 	public Q153_DeliverGoods()
 	{
 		super(153, "Deliver Goods");
-		
 		registerQuestItems(DELIVERY_LIST, HEAVY_WOOD_BOX, CLOTH_BUNDLE, CLAY_POT, JACKSON_RECEIPT, SILVIA_RECEIPT, RANT_RECEIPT);
-		
 		addStartNpc(ARNOLD);
 		addTalkId(JACKSON, SILVIA, ARNOLD, RANT);
 	}
@@ -65,9 +61,7 @@ public class Q153_DeliverGoods extends Quest
 		
 		if (event.equals("30041-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(DELIVERY_LIST, 1);
 			st.giveItems(CLAY_POT, 1);
 			st.giveItems(CLOTH_BUNDLE, 1);
@@ -90,18 +84,21 @@ public class Q153_DeliverGoods extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 2) ? "30041-00.htm" : "30041-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case ARNOLD:
-						if (st.getInt("cond") == 1)
+					{
+						if (st.isCond(1))
 						{
 							htmltext = "30041-03.htm";
 						}
-						else if (st.getInt("cond") == 2)
+						else if (st.isCond(2))
 						{
 							htmltext = "30041-04.htm";
 							st.takeItems(DELIVERY_LIST, 1);
@@ -115,8 +112,9 @@ public class Q153_DeliverGoods extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case JACKSON:
+					{
 						if (st.hasQuestItems(HEAVY_WOOD_BOX))
 						{
 							htmltext = "30002-01.htm";
@@ -124,7 +122,7 @@ public class Q153_DeliverGoods extends Quest
 							st.giveItems(JACKSON_RECEIPT, 1);
 							if (st.hasQuestItems(SILVIA_RECEIPT, RANT_RECEIPT))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -137,8 +135,9 @@ public class Q153_DeliverGoods extends Quest
 							htmltext = "30002-02.htm";
 						}
 						break;
-					
+					}
 					case SILVIA:
+					{
 						if (st.hasQuestItems(CLOTH_BUNDLE))
 						{
 							htmltext = "30003-01.htm";
@@ -147,7 +146,7 @@ public class Q153_DeliverGoods extends Quest
 							st.giveItems(SOULSHOT_NO_GRADE, 3);
 							if (st.hasQuestItems(JACKSON_RECEIPT, RANT_RECEIPT))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -160,8 +159,9 @@ public class Q153_DeliverGoods extends Quest
 							htmltext = "30003-02.htm";
 						}
 						break;
-					
+					}
 					case RANT:
+					{
 						if (st.hasQuestItems(CLAY_POT))
 						{
 							htmltext = "30054-01.htm";
@@ -169,7 +169,7 @@ public class Q153_DeliverGoods extends Quest
 							st.giveItems(RANT_RECEIPT, 1);
 							if (st.hasQuestItems(JACKSON_RECEIPT, SILVIA_RECEIPT))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -182,12 +182,15 @@ public class Q153_DeliverGoods extends Quest
 							htmltext = "30054-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

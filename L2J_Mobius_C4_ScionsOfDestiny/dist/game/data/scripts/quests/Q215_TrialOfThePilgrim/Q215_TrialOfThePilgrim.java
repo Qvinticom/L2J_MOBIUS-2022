@@ -27,6 +27,22 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q215_TrialOfThePilgrim extends Quest
 {
+	// NPCs
+	private static final int SANTIAGO = 30648;
+	private static final int TANAPI = 30571;
+	private static final int ANCESTOR_MARTANKUS = 30649;
+	private static final int GAURI_TWINKLEROCK = 30550;
+	private static final int DORF = 30651;
+	private static final int GERALD = 30650;
+	private static final int PRIMOS = 30117;
+	private static final int PETRON = 30036;
+	private static final int ANDELLIA = 30362;
+	private static final int URUHA = 30652;
+	private static final int CASIAN = 30612;
+	// Monsters
+	private static final int LAVA_SALAMANDER = 27116;
+	private static final int NAHIR = 27117;
+	private static final int BLACK_WILLOW = 27118;
 	// Items
 	private static final int BOOK_OF_SAGE = 2722;
 	private static final int VOUCHER_OF_TRIAL = 2723;
@@ -40,38 +56,16 @@ public class Q215_TrialOfThePilgrim extends Quest
 	private static final int BOOK_OF_DARKNESS = 2731;
 	private static final int DEBRIS_OF_WILLOW = 2732;
 	private static final int TAG_OF_RUMOR = 2733;
-	
 	// Rewards
 	private static final int MARK_OF_PILGRIM = 2721;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	// NPCs
-	private static final int SANTIAGO = 30648;
-	private static final int TANAPI = 30571;
-	private static final int ANCESTOR_MARTANKUS = 30649;
-	private static final int GAURI_TWINKLEROCK = 30550;
-	private static final int DORF = 30651;
-	private static final int GERALD = 30650;
-	private static final int PRIMOS = 30117;
-	private static final int PETRON = 30036;
-	private static final int ANDELLIA = 30362;
-	private static final int URUHA = 30652;
-	private static final int CASIAN = 30612;
-	
-	// Monsters
-	private static final int LAVA_SALAMANDER = 27116;
-	private static final int NAHIR = 27117;
-	private static final int BLACK_WILLOW = 27118;
-	
 	public Q215_TrialOfThePilgrim()
 	{
 		super(215, "Trial of the Pilgrim");
-		
 		registerQuestItems(BOOK_OF_SAGE, VOUCHER_OF_TRIAL, SPIRIT_OF_FLAME, ESSENCE_OF_FLAME, BOOK_OF_GERALD, GRAY_BADGE, PICTURE_OF_NAHIR, HAIR_OF_NAHIR, STATUE_OF_EINHASAD, BOOK_OF_DARKNESS, DEBRIS_OF_WILLOW, TAG_OF_RUMOR);
-		
 		addStartNpc(SANTIAGO);
 		addTalkId(SANTIAGO, TANAPI, ANCESTOR_MARTANKUS, GAURI_TWINKLEROCK, DORF, GERALD, PRIMOS, PETRON, ANDELLIA, URUHA, CASIAN);
-		
 		addKillId(LAVA_SALAMANDER, NAHIR, BLACK_WILLOW);
 	}
 	
@@ -79,64 +73,69 @@ public class Q215_TrialOfThePilgrim extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (event.equals("30648-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(VOUCHER_OF_TRIAL, 1);
-			
-			if (!player.getVariables().getBoolean("secondClassChange35", false))
+			case "30648-04.htm":
 			{
-				htmltext = "30648-04a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));
-				player.getVariables().set("secondClassChange35", true);
+				st.startQuest();
+				st.giveItems(VOUCHER_OF_TRIAL, 1);
+				if (!player.getVariables().getBoolean("secondClassChange35", false))
+				{
+					htmltext = "30648-04a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));
+					player.getVariables().set("secondClassChange35", true);
+				}
+				break;
 			}
-		}
-		else if (event.equals("30649-04.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ESSENCE_OF_FLAME, 1);
-			st.giveItems(SPIRIT_OF_FLAME, 1);
-		}
-		else if (event.equals("30650-02.htm"))
-		{
-			if (st.getQuestItemsCount(57) >= 100000)
+			case "30649-04.htm":
 			{
-				st.playSound(QuestState.SOUND_ITEMGET);
-				st.takeItems(57, 100000);
-				st.giveItems(BOOK_OF_GERALD, 1);
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ESSENCE_OF_FLAME, 1);
+				st.giveItems(SPIRIT_OF_FLAME, 1);
+				break;
 			}
-			else
+			case "30650-02.htm":
 			{
-				htmltext = "30650-03.htm";
+				if (st.getQuestItemsCount(57) >= 100000)
+				{
+					st.playSound(QuestState.SOUND_ITEMGET);
+					st.takeItems(57, 100000);
+					st.giveItems(BOOK_OF_GERALD, 1);
+				}
+				else
+				{
+					htmltext = "30650-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30652-02.htm"))
-		{
-			st.set("cond", "15");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(DEBRIS_OF_WILLOW, 1);
-			st.giveItems(BOOK_OF_DARKNESS, 1);
-		}
-		else if (event.equals("30362-04.htm"))
-		{
-			st.set("cond", "16");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30362-05.htm"))
-		{
-			st.set("cond", "16");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(BOOK_OF_DARKNESS, 1);
+			case "30652-02.htm":
+			{
+				st.setCond(15);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(DEBRIS_OF_WILLOW, 1);
+				st.giveItems(BOOK_OF_DARKNESS, 1);
+				break;
+			}
+			case "30362-04.htm":
+			{
+				st.setCond(16);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30362-05.htm":
+			{
+				st.setCond(16);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(BOOK_OF_DARKNESS, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -155,6 +154,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getClassId() != ClassId.CLERIC) && (player.getClassId() != ClassId.ORACLE) && (player.getClassId() != ClassId.SHILLIEN_ORACLE) && (player.getClassId() != ClassId.ORC_SHAMAN))
 				{
 					htmltext = "30648-02.htm";
@@ -168,12 +168,14 @@ public class Q215_TrialOfThePilgrim extends Quest
 					htmltext = "30648-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case SANTIAGO:
+					{
 						if (cond < 17)
 						{
 							htmltext = "30648-09.htm";
@@ -189,12 +191,13 @@ public class Q215_TrialOfThePilgrim extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case TANAPI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30571-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(VOUCHER_OF_TRIAL, 1);
 						}
@@ -208,17 +211,18 @@ public class Q215_TrialOfThePilgrim extends Quest
 							
 							if (cond == 5)
 							{
-								st.set("cond", "6");
+								st.setCond(6);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 						}
 						break;
-					
+					}
 					case ANCESTOR_MARTANKUS:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30649-01.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 3)
@@ -230,12 +234,13 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30649-03.htm";
 						}
 						break;
-					
+					}
 					case GAURI_TWINKLEROCK:
+					{
 						if (cond == 6)
 						{
 							htmltext = "30550-01.htm";
-							st.set("cond", "7");
+							st.setCond(7);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(TAG_OF_RUMOR, 1);
 						}
@@ -244,12 +249,13 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30550-02.htm";
 						}
 						break;
-					
+					}
 					case DORF:
+					{
 						if (cond == 7)
 						{
 							htmltext = (!st.hasQuestItems(BOOK_OF_GERALD)) ? "30651-01.htm" : "30651-02.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(TAG_OF_RUMOR, 1);
 							st.giveItems(GRAY_BADGE, 1);
@@ -259,8 +265,9 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30651-03.htm";
 						}
 						break;
-					
+					}
 					case GERALD:
+					{
 						if ((cond == 7) && !st.hasQuestItems(BOOK_OF_GERALD))
 						{
 							htmltext = "30650-01.htm";
@@ -273,12 +280,13 @@ public class Q215_TrialOfThePilgrim extends Quest
 							st.giveItems(57, 100000);
 						}
 						break;
-					
+					}
 					case PRIMOS:
+					{
 						if (cond == 8)
 						{
 							htmltext = "30117-01.htm";
-							st.set("cond", "9");
+							st.setCond(9);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond > 8)
@@ -286,12 +294,13 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30117-02.htm";
 						}
 						break;
-					
+					}
 					case PETRON:
+					{
 						if (cond == 9)
 						{
 							htmltext = "30036-01.htm";
-							st.set("cond", "10");
+							st.setCond(10);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(PICTURE_OF_NAHIR, 1);
 						}
@@ -302,7 +311,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 						else if (cond == 11)
 						{
 							htmltext = "30036-03.htm";
-							st.set("cond", "12");
+							st.setCond(12);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HAIR_OF_NAHIR, 1);
 							st.takeItems(PICTURE_OF_NAHIR, 1);
@@ -313,8 +322,9 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30036-04.htm";
 						}
 						break;
-					
+					}
 					case ANDELLIA:
+					{
 						if (cond == 12)
 						{
 							if (player.getLevel() < 36)
@@ -324,7 +334,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 							else
 							{
 								htmltext = "30362-01.htm";
-								st.set("cond", "13");
+								st.setCond(13);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 						}
@@ -345,8 +355,9 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30362-06.htm";
 						}
 						break;
-					
+					}
 					case URUHA:
+					{
 						if (cond == 14)
 						{
 							htmltext = "30652-01.htm";
@@ -356,12 +367,13 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30652-03.htm";
 						}
 						break;
-					
+					}
 					case CASIAN:
+					{
 						if (cond == 16)
 						{
 							htmltext = "30612-01.htm";
-							st.set("cond", "17");
+							st.setCond(17);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BOOK_OF_DARKNESS, 1);
 							st.takeItems(GRAY_BADGE, 1);
@@ -374,12 +386,15 @@ public class Q215_TrialOfThePilgrim extends Quest
 							htmltext = "30612-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -397,25 +412,29 @@ public class Q215_TrialOfThePilgrim extends Quest
 		switch (npc.getNpcId())
 		{
 			case LAVA_SALAMANDER:
-				if ((st.getInt("cond") == 3) && st.dropItems(ESSENCE_OF_FLAME, 1, 1, 200000))
+			{
+				if (st.isCond(3) && st.dropItems(ESSENCE_OF_FLAME, 1, 1, 200000))
 				{
-					st.set("cond", "4");
+					st.setCond(4);
 				}
 				break;
-			
+			}
 			case NAHIR:
-				if ((st.getInt("cond") == 10) && st.dropItems(HAIR_OF_NAHIR, 1, 1, 200000))
+			{
+				if (st.isCond(10) && st.dropItems(HAIR_OF_NAHIR, 1, 1, 200000))
 				{
-					st.set("cond", "11");
+					st.setCond(11);
 				}
 				break;
-			
+			}
 			case BLACK_WILLOW:
-				if ((st.getInt("cond") == 13) && st.dropItems(DEBRIS_OF_WILLOW, 1, 1, 200000))
+			{
+				if (st.isCond(13) && st.dropItems(DEBRIS_OF_WILLOW, 1, 1, 200000))
 				{
-					st.set("cond", "14");
+					st.setCond(14);
 				}
 				break;
+			}
 		}
 		
 		return null;

@@ -336,7 +336,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				{
 					qs = QuestManager.getInstance().getQuest(Integer.parseInt(val[0])).newQuestState(target);
 					qs.setState(State.STARTED);
-					qs.set("cond", "1");
+					qs.setCond(1);
 					target.sendPacket(new QuestList(target));
 					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					val[0] = qs.getQuest().getName();

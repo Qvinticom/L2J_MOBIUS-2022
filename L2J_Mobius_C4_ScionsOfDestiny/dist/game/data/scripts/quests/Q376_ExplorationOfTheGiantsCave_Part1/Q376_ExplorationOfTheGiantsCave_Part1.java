@@ -36,74 +36,38 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 	private static final int DICTIONARY_INTERMEDIATE = 5892;
 	private static final int[][] BOOKS =
 	{
+		// @formatter:off
 		// medical theory -> tallum tunic, tallum stockings
-		{
-			5937,
-			5938,
-			5939,
-			5940,
-			5941
-		},
+		{5937, 5938, 5939, 5940, 5941},
 		// architecture -> dark crystal leather, tallum leather
-		{
-			5932,
-			5933,
-			5934,
-			5935,
-			5936
-		},
+		{5932, 5933, 5934, 5935, 5936},
 		// golem plans -> dark crystal breastplate, tallum plate
-		{
-			5922,
-			5923,
-			5924,
-			5925,
-			5926
-		},
+		{5922, 5923, 5924, 5925, 5926},
 		// basics of magic -> dark crystal gaiters, dark crystal leggings
-		{
-			5927,
-			5928,
-			5929,
-			5930,
-			5931
-		}
+		{5927, 5928, 5929, 5930, 5931}
+		// @formatter:on
 	};
-	
 	// Rewards
 	private static final int[][] RECIPES =
 	{
+		// @formatter:off
 		// medical theory -> tallum tunic, tallum stockings
-		{
-			5346,
-			5354
-		},
+		{5346, 5354},
 		// architecture -> dark crystal leather, tallum leather
-		{
-			5332,
-			5334
-		},
+		{5332, 5334},
 		// golem plans -> dark crystal breastplate, tallum plate
-		{
-			5416,
-			5418
-		},
+		{5416, 5418},
 		// basics of magic -> dark crystal gaiters, dark crystal leggings
-		{
-			5424,
-			5340
-		}
+		{5424, 5340}
+		// @formatter:on
 	};
 	
 	public Q376_ExplorationOfTheGiantsCave_Part1()
 	{
 		super(376, "Exploration of the Giants' Cave, Part 1");
-		
 		registerQuestItems(DICTIONARY_BASIC, MYSTERIOUS_BOOK);
-		
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING, CLIFF);
-		
 		addKillId(20647, 20648, 20649, 20650);
 	}
 	
@@ -117,31 +81,34 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 			return htmltext;
 		}
 		
-		// Sobling
-		if (event.equals("31147-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("condBook", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(DICTIONARY_BASIC, 1);
-		}
-		else if (event.equals("31147-04.htm"))
-		{
-			htmltext = checkItems(st);
-		}
-		else if (event.equals("31147-09.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		// Cliff
-		else if (event.equals("30182-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MYSTERIOUS_BOOK, -1);
-			st.giveItems(DICTIONARY_INTERMEDIATE, 1);
+			case "31147-03.htm":
+			{
+				st.startQuest();
+				st.set("condBook", "1");
+				st.giveItems(DICTIONARY_BASIC, 1);
+				break;
+			}
+			case "31147-04.htm":
+			{
+				htmltext = checkItems(st);
+				break;
+			}
+			case "31147-09.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "30182-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MYSTERIOUS_BOOK, -1);
+				st.giveItems(DICTIONARY_INTERMEDIATE, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -160,18 +127,22 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 51) ? "31147-01.htm" : "31147-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case SOBLING:
+					{
 						htmltext = checkItems(st);
 						break;
-					
+					}
 					case CLIFF:
+					{
 						if ((cond == 2) && st.hasQuestItems(MYSTERIOUS_BOOK))
 						{
 							htmltext = "30182-01.htm";
@@ -181,8 +152,10 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 							htmltext = "30182-03.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -207,7 +180,7 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 		st.dropItems(PARCHMENT, 1, 0, 20000);
 		
 		// Drop mysterious book to person who still need it
-		partyMember = getRandomPartyMember(player, npc, "condBook", "1");
+		partyMember = getRandomPartyMember(player, "condBook", "1");
 		if (partyMember == null)
 		{
 			return null;
@@ -231,10 +204,10 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 	{
 		if (st.hasQuestItems(MYSTERIOUS_BOOK))
 		{
-			final int cond = st.getInt("cond");
+			final int cond = st.getCond();
 			if (cond == 1)
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
 				return "31147-07.htm";
 			}

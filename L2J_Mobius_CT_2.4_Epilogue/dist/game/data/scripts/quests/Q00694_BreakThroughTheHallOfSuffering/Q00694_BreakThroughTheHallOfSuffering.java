@@ -57,9 +57,7 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		
 		if (event.equals("32603-02.html"))
 		{
-			qs.set("cond", "1");
-			qs.setState(State.STARTED);
-			playSound(player, "ItemSound.quest_accept");
+			qs.startQuest();
 		}
 		return htmltext;
 	}

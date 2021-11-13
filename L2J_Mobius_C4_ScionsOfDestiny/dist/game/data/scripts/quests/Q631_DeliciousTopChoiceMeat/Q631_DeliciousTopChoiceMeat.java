@@ -30,10 +30,8 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 {
 	// NPC
 	private static final int TUNATUN = 31537;
-	
 	// Item
 	private static final int TOP_QUALITY_MEAT = 7546;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -63,49 +61,26 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 		CHANCES.put(21504, 509000);
 		CHANCES.put(21505, 920000);
 	}
-	
 	// Rewards
 	private static final int[][] REWARDS =
 	{
-		{
-			4039,
-			15
-		},
-		{
-			4043,
-			15
-		},
-		{
-			4044,
-			15
-		},
-		{
-			4040,
-			10
-		},
-		{
-			4042,
-			10
-		},
-		{
-			4041,
-			5
-		}
+		// @formatter:off
+		{4039, 15},
+		{4043, 15},
+		{4044, 15},
+		{4040, 10},
+		{4042, 10},
+		{4041, 5}
+		// @formatter:on
 	};
 	
 	public Q631_DeliciousTopChoiceMeat()
 	{
 		super(631, "Delicious Top Choice Meat");
-		
 		registerQuestItems(TOP_QUALITY_MEAT);
-		
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -122,9 +97,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 		{
 			if (player.getLevel() >= 65)
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				st.startQuest();
 			}
 			else
 			{
@@ -147,7 +120,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 			}
 			else
 			{
-				st.set("cond", "1");
+				st.setCond(1);
 				htmltext = "31537-07.htm";
 			}
 		}
@@ -168,11 +141,13 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "31537-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31537-03a.htm";
@@ -185,11 +160,12 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 					}
 					else
 					{
-						st.set("cond", "1");
+						st.setCond(1);
 						htmltext = "31537-03a.htm";
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -198,7 +174,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -212,7 +188,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 		
 		if (st.dropItems(TOP_QUALITY_MEAT, 1, 120, CHANCES.get(npc.getNpcId())))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

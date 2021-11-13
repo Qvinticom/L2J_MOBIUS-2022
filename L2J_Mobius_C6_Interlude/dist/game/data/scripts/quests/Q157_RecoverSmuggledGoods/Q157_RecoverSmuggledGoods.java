@@ -26,19 +26,15 @@ public class Q157_RecoverSmuggledGoods extends Quest
 {
 	// Item
 	private static final int ADAMANTITE_ORE = 1024;
-	
 	// Reward
 	private static final int BUCKLER = 20;
 	
 	public Q157_RecoverSmuggledGoods()
 	{
 		super(157, "Recover Smuggled Goods");
-		
 		registerQuestItems(ADAMANTITE_ORE);
-		
 		addStartNpc(30005); // Wilford
 		addTalkId(30005);
-		
 		addKillId(20121); // Toad
 	}
 	
@@ -54,9 +50,7 @@ public class Q157_RecoverSmuggledGoods extends Quest
 		
 		if (event.equals("30005-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -75,11 +69,13 @@ public class Q157_RecoverSmuggledGoods extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 5) ? "30005-02.htm" : "30005-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30005-06.htm";
@@ -93,10 +89,12 @@ public class Q157_RecoverSmuggledGoods extends Quest
 					st.exitQuest(false);
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -104,7 +102,7 @@ public class Q157_RecoverSmuggledGoods extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -112,7 +110,7 @@ public class Q157_RecoverSmuggledGoods extends Quest
 		
 		if (st.dropItems(ADAMANTITE_ORE, 1, 20, 400000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -30,7 +30,10 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	private static final int CARADINE = 31740;
 	private static final int OSSIAN = 31741;
 	private static final int LADD = 30721;
-	
+	// Monsters
+	private static final int PILGRIM_OF_SPLENDOR = 21541;
+	private static final int JUDGE_OF_SPLENDOR = 21544;
+	private static final int BARAKIEL = 25325;
 	// Items
 	private static final int WATERBINDER = 7591;
 	private static final int EVERGREEN = 7592;
@@ -39,20 +42,12 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 	private static final int CARADINE_LETTER_1 = 7678;
 	private static final int CARADINE_LETTER_2 = 7679;
 	
-	// Mobs
-	private static final int PILGRIM_OF_SPLENDOR = 21541;
-	private static final int JUDGE_OF_SPLENDOR = 21544;
-	private static final int BARAKIEL = 25325;
-	
 	public Q246_PossessorOfAPreciousSoul()
 	{
 		super(246, "Possessor of a Precious Soul - 3");
-		
 		registerQuestItems(WATERBINDER, EVERGREEN, RAIN_SONG, RELIC_BOX);
-		
 		addStartNpc(CARADINE);
 		addTalkId(CARADINE, OSSIAN, LADD);
-		
 		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
 	}
 	
@@ -66,63 +61,66 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 			return htmltext;
 		}
 		
-		// Caradine
-		if (event.equals("31740-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.takeItems(CARADINE_LETTER_1, 1);
-		}
-		// Ossian
-		else if (event.equals("31741-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31741-05.htm"))
-		{
-			if (st.hasQuestItems(WATERBINDER, EVERGREEN))
+			case "31740-04.htm":
 			{
-				st.set("cond", "4");
+				st.startQuest();
+				st.takeItems(CARADINE_LETTER_1, 1);
+				break;
+			}
+			case "31741-02.htm":
+			{
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(WATERBINDER, 1);
-				st.takeItems(EVERGREEN, 1);
+				break;
 			}
-			else
+			case "31741-05.htm":
 			{
-				htmltext = null;
+				if (st.hasQuestItems(WATERBINDER, EVERGREEN))
+				{
+					st.setCond(4);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(WATERBINDER, 1);
+					st.takeItems(EVERGREEN, 1);
+				}
+				else
+				{
+					htmltext = null;
+				}
+				break;
 			}
-		}
-		else if (event.equals("31741-08.htm"))
-		{
-			if (st.hasQuestItems(RAIN_SONG))
+			case "31741-08.htm":
 			{
-				st.set("cond", "6");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(RAIN_SONG, 1);
-				st.giveItems(RELIC_BOX, 1);
+				if (st.hasQuestItems(RAIN_SONG))
+				{
+					st.setCond(6);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(RAIN_SONG, 1);
+					st.giveItems(RELIC_BOX, 1);
+				}
+				else
+				{
+					htmltext = null;
+				}
+				break;
 			}
-			else
+			case "30721-02.htm":
 			{
-				htmltext = null;
-			}
-		}
-		// Ladd
-		else if (event.equals("30721-02.htm"))
-		{
-			if (st.hasQuestItems(RELIC_BOX))
-			{
-				st.takeItems(RELIC_BOX, 1);
-				st.giveItems(CARADINE_LETTER_2, 1);
-				st.rewardExpAndSp(719843, 0);
-				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
-			}
-			else
-			{
-				htmltext = null;
+				if (st.hasQuestItems(RELIC_BOX))
+				{
+					st.takeItems(RELIC_BOX, 1);
+					st.giveItems(CARADINE_LETTER_2, 1);
+					st.rewardExpAndSp(719843, 0);
+					player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = null;
+				}
+				break;
 			}
 		}
 		
@@ -142,29 +140,33 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (st.hasQuestItems(CARADINE_LETTER_1))
 				{
 					htmltext = (!player.isSubClassActive() || (player.getLevel() < 65)) ? "31740-02.htm" : "31740-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (!player.isSubClassActive())
 				{
 					break;
 				}
 				
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case CARADINE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31740-05.htm";
 						}
 						break;
-					
+					}
 					case OSSIAN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31741-01.htm";
@@ -196,19 +198,23 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 							htmltext = "31741-09.htm";
 						}
 						break;
-					
+					}
 					case LADD:
+					{
 						if ((cond == 6) && st.hasQuestItems(RELIC_BOX))
 						{
 							htmltext = "30721-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -219,7 +225,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 		final int npcId = npc.getNpcId();
 		if (npcId == BARAKIEL)
 		{
-			for (PlayerInstance plr : getPartyMembers(player, npc, "cond", "4"))
+			for (PlayerInstance plr : getPartyMembers(player, npc, 4))
 			{
 				if (!plr.isSubClassActive())
 				{
@@ -229,7 +235,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 				final QuestState st = plr.getQuestState(getName());
 				if (!st.hasQuestItems(RAIN_SONG))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(RAIN_SONG, 1);
 				}
@@ -242,7 +248,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 				return null;
 			}
 			
-			final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+			final QuestState st = checkPlayerCondition(player, npc, 2);
 			if (st == null)
 			{
 				return null;
@@ -260,7 +266,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 					}
 					else
 					{
-						st.set("cond", "3");
+						st.setCond(3);
 						st.playSound(QuestState.SOUND_MIDDLE);
 					}
 				}

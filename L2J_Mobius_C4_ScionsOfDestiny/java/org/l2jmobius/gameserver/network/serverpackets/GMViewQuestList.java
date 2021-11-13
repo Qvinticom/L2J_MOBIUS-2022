@@ -55,7 +55,7 @@ public class GMViewQuestList implements IClientOutgoingPacket
 				continue;
 			}
 			
-			packet.writeD(qs.getInt("cond")); // stage of quest progress
+			packet.writeD(qs.getCond()); // stage of quest progress
 		}
 		return true;
 	}

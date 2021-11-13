@@ -29,7 +29,6 @@ public class Q351_BlackSwan extends Quest
 	private static final int GOSTA = 30916;
 	private static final int IASON_HEINE = 30969;
 	private static final int ROMAN = 30897;
-	
 	// Items
 	private static final int ORDER_OF_GOSTA = 4296;
 	private static final int LIZARD_FANG = 4297;
@@ -39,12 +38,9 @@ public class Q351_BlackSwan extends Quest
 	public Q351_BlackSwan()
 	{
 		super(351, "Black Swan");
-		
 		registerQuestItems(ORDER_OF_GOSTA, BARREL_OF_LEAGUE, LIZARD_FANG);
-		
 		addStartNpc(GOSTA);
 		addTalkId(GOSTA, IASON_HEINE, ROMAN);
-		
 		addKillId(20784, 20785, 21639, 21640);
 	}
 	
@@ -58,50 +54,55 @@ public class Q351_BlackSwan extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30916-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(ORDER_OF_GOSTA, 1);
-		}
-		else if (event.equals("30969-02a.htm"))
-		{
-			final int lizardFangs = st.getQuestItemsCount(LIZARD_FANG);
-			if (lizardFangs > 0)
+			case "30916-03.htm":
 			{
-				htmltext = "30969-02.htm";
-				
-				st.takeItems(LIZARD_FANG, -1);
-				st.rewardItems(57, lizardFangs * 20);
+				st.startQuest();
+				st.giveItems(ORDER_OF_GOSTA, 1);
+				break;
 			}
-		}
-		else if (event.equals("30969-03a.htm"))
-		{
-			final int barrels = st.getQuestItemsCount(BARREL_OF_LEAGUE);
-			if (barrels > 0)
+			case "30969-02a.htm":
 			{
-				htmltext = "30969-03.htm";
-				
-				st.takeItems(BARREL_OF_LEAGUE, -1);
-				st.rewardItems(BILL_OF_IASON_HEINE, barrels);
-				
-				// Heine explains than player can speak with Roman in order to exchange bills for rewards.
-				if (st.getInt("cond") == 1)
+				final int lizardFangs = st.getQuestItemsCount(LIZARD_FANG);
+				if (lizardFangs > 0)
 				{
-					st.set("cond", "2");
-					st.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = "30969-02.htm";
+					
+					st.takeItems(LIZARD_FANG, -1);
+					st.rewardItems(57, lizardFangs * 20);
 				}
+				break;
 			}
-		}
-		else if (event.equals("30969-06.htm"))
-		{
-			// If no more quest items finish the quest for real, else send a "Return" type HTM.
-			if (!st.hasQuestItems(BARREL_OF_LEAGUE, LIZARD_FANG))
+			case "30969-03a.htm":
 			{
-				htmltext = "30969-07.htm";
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
+				final int barrels = st.getQuestItemsCount(BARREL_OF_LEAGUE);
+				if (barrels > 0)
+				{
+					htmltext = "30969-03.htm";
+					
+					st.takeItems(BARREL_OF_LEAGUE, -1);
+					st.rewardItems(BILL_OF_IASON_HEINE, barrels);
+					
+					// Heine explains than player can speak with Roman in order to exchange bills for rewards.
+					if (st.isCond(1))
+					{
+						st.setCond(2);
+						st.playSound(QuestState.SOUND_MIDDLE);
+					}
+				}
+				break;
+			}
+			case "30969-06.htm":
+			{
+				// If no more quest items finish the quest for real, else send a "Return" type HTM.
+				if (!st.hasQuestItems(BARREL_OF_LEAGUE, LIZARD_FANG))
+				{
+					htmltext = "30969-07.htm";
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				break;
 			}
 		}
 		
@@ -121,25 +122,32 @@ public class Q351_BlackSwan extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 32) ? "30916-00.htm" : "30916-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case GOSTA:
+					{
 						htmltext = "30916-04.htm";
 						break;
-					
+					}
 					case IASON_HEINE:
+					{
 						htmltext = "30969-01.htm";
 						break;
-					
+					}
 					case ROMAN:
+					{
 						htmltext = (st.hasQuestItems(BILL_OF_IASON_HEINE)) ? "30897-01.htm" : "30897-02.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

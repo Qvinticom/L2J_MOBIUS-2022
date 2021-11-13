@@ -26,19 +26,15 @@ public class Q052_WilliesSpecialBait extends Quest
 {
 	// Item
 	private static final int TARLK_EYE = 7623;
-	
 	// Reward
 	private static final int EARTH_FISHING_LURE = 7612;
 	
 	public Q052_WilliesSpecialBait()
 	{
 		super(52, "Willie's Special Bait");
-		
 		registerQuestItems(TARLK_EYE);
-		
 		addStartNpc(31574); // Willie
 		addTalkId(31574);
-		
 		addKillId(20573); // Tarlk Basilik
 	}
 	
@@ -54,9 +50,7 @@ public class Q052_WilliesSpecialBait extends Quest
 		
 		if (event.equals("31574-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31574-07.htm"))
 		{
@@ -83,16 +77,20 @@ public class Q052_WilliesSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 48) ? "31574-02.htm" : "31574-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(TARLK_EYE) == 100) ? "31574-04.htm" : "31574-05.htm";
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -101,7 +99,7 @@ public class Q052_WilliesSpecialBait extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -109,7 +107,7 @@ public class Q052_WilliesSpecialBait extends Quest
 		
 		if (st.dropItems(TARLK_EYE, 1, 100, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

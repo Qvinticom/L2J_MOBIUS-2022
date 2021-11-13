@@ -31,12 +31,9 @@ public class Q272_WrathOfAncestors extends Quest
 	public Q272_WrathOfAncestors()
 	{
 		super(272, "Wrath of Ancestors");
-		
 		registerQuestItems(GRAVE_ROBBERS_HEAD);
-		
 		addStartNpc(30572); // Livina
 		addTalkId(30572);
-		
 		addKillId(20319, 20320); // Goblin Grave Robber, Goblin Tomb Raider Leader
 	}
 	
@@ -52,9 +49,7 @@ public class Q272_WrathOfAncestors extends Quest
 		
 		if (event.equals("30572-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -73,6 +68,7 @@ public class Q272_WrathOfAncestors extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30572-00.htm";
@@ -86,9 +82,10 @@ public class Q272_WrathOfAncestors extends Quest
 					htmltext = "30572-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30572-04.htm";
 				}
@@ -101,6 +98,7 @@ public class Q272_WrathOfAncestors extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -109,7 +107,7 @@ public class Q272_WrathOfAncestors extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -117,7 +115,7 @@ public class Q272_WrathOfAncestors extends Quest
 		
 		if (st.dropItemsAlways(GRAVE_ROBBERS_HEAD, 1, 50))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

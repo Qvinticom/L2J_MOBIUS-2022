@@ -28,6 +28,13 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q415_PathToAMonk extends Quest
 {
+	// NPCs
+	private static final int GANTAKI = 30587;
+	private static final int ROSHEEK = 30590;
+	private static final int KASMAN = 30501;
+	private static final int TORUKU = 30591;
+	private static final int AREN = 32056;
+	private static final int MOIRA = 31979;
 	// Items
 	private static final int POMEGRANATE = 1593;
 	private static final int LEATHER_POUCH_1 = 1594;
@@ -55,23 +62,12 @@ public class Q415_PathToAMonk extends Quest
 	private static final int KASHA_SPIDER_TOOTH = 8545;
 	private static final int HORN_OF_BAAR_DRE_VANUL = 8546;
 	
-	// NPCs
-	private static final int GANTAKI = 30587;
-	private static final int ROSHEEK = 30590;
-	private static final int KASMAN = 30501;
-	private static final int TORUKU = 30591;
-	private static final int AREN = 32056;
-	private static final int MOIRA = 31979;
-	
 	public Q415_PathToAMonk()
 	{
 		super(415, "Path to a Monk");
-		
 		registerQuestItems(POMEGRANATE, LEATHER_POUCH_1, LEATHER_POUCH_2, LEATHER_POUCH_3, LEATHER_POUCH_FULL_1, LEATHER_POUCH_FULL_2, LEATHER_POUCH_FULL_3, KASHA_BEAR_CLAW, KASHA_BLADE_SPIDER_TALON, SCARLET_SALAMANDER_SCALE, FIERY_SPIRIT_SCROLL, ROSHEEK_LETTER, GANTAKI_LETTER_OF_RECOMMENDATION, FIG, LEATHER_POUCH_4, LEATHER_POUCH_FULL_4, VUKU_ORC_TUSK, RATMAN_FANG, LANG_KLIZARDMAN_TOOTH, FELIM_LIZARDMAN_TOOTH, IRON_WILL_SCROLL, TORUKU_LETTER, KASHA_SPIDER_TOOTH, HORN_OF_BAAR_DRE_VANUL);
-		
 		addStartNpc(GANTAKI);
 		addTalkId(GANTAKI, ROSHEEK, KASMAN, TORUKU, AREN, MOIRA);
-		
 		addKillId(20014, 20017, 20024, 20359, 20415, 20476, 20478, 20479, 21118);
 	}
 	
@@ -85,59 +81,67 @@ public class Q415_PathToAMonk extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30587-05.htm"))
+		switch (event)
 		{
-			if (player.getClassId() != ClassId.ORC_FIGHTER)
+			case "30587-05.htm":
 			{
-				htmltext = (player.getClassId() == ClassId.ORC_MONK) ? "30587-02a.htm" : "30587-02.htm";
+				if (player.getClassId() != ClassId.ORC_FIGHTER)
+				{
+					htmltext = (player.getClassId() == ClassId.ORC_MONK) ? "30587-02a.htm" : "30587-02.htm";
+				}
+				else if (player.getLevel() < 19)
+				{
+					htmltext = "30587-03.htm";
+				}
+				else if (st.hasQuestItems(KHAVATARI_TOTEM))
+				{
+					htmltext = "30587-04.htm";
+				}
+				break;
 			}
-			else if (player.getLevel() < 19)
+			case "30587-06.htm":
 			{
-				htmltext = "30587-03.htm";
+				st.startQuest();
+				st.giveItems(POMEGRANATE, 1);
+				break;
 			}
-			else if (st.hasQuestItems(KHAVATARI_TOTEM))
+			case "30587-09a.htm":
 			{
-				htmltext = "30587-04.htm";
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ROSHEEK_LETTER, 1);
+				st.giveItems(GANTAKI_LETTER_OF_RECOMMENDATION, 1);
+				break;
 			}
-		}
-		else if (event.equals("30587-06.htm"))
-		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(POMEGRANATE, 1);
-		}
-		else if (event.equals("30587-09a.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ROSHEEK_LETTER, 1);
-			st.giveItems(GANTAKI_LETTER_OF_RECOMMENDATION, 1);
-		}
-		else if (event.equals("30587-09b.htm"))
-		{
-			st.set("cond", "14");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ROSHEEK_LETTER, 1);
-		}
-		else if (event.equals("32056-03.htm"))
-		{
-			st.set("cond", "15");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32056-08.htm"))
-		{
-			st.set("cond", "20");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31979-03.htm"))
-		{
-			st.takeItems(FIERY_SPIRIT_SCROLL, 1);
-			st.giveItems(KHAVATARI_TOTEM, 1);
-			st.rewardExpAndSp(3200, 4230);
-			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30587-09b.htm":
+			{
+				st.setCond(14);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ROSHEEK_LETTER, 1);
+				break;
+			}
+			case "32056-03.htm":
+			{
+				st.setCond(15);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32056-08.htm":
+			{
+				st.setCond(20);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31979-03.htm":
+			{
+				st.takeItems(FIERY_SPIRIT_SCROLL, 1);
+				st.giveItems(KHAVATARI_TOTEM, 1);
+				st.rewardExpAndSp(3200, 4230);
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -156,14 +160,17 @@ public class Q415_PathToAMonk extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30587-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case GANTAKI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30587-07.htm";
@@ -185,12 +192,13 @@ public class Q415_PathToAMonk extends Quest
 							htmltext = "30587-11.htm";
 						}
 						break;
-					
+					}
 					case ROSHEEK:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30590-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(POMEGRANATE, 1);
 							st.giveItems(LEATHER_POUCH_1, 1);
@@ -202,7 +210,7 @@ public class Q415_PathToAMonk extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30590-03.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LEATHER_POUCH_FULL_1, 1);
 							st.giveItems(LEATHER_POUCH_2, 1);
@@ -214,7 +222,7 @@ public class Q415_PathToAMonk extends Quest
 						else if (cond == 5)
 						{
 							htmltext = "30590-05.htm";
-							st.set("cond", "6");
+							st.setCond(6);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LEATHER_POUCH_FULL_2, 1);
 							st.giveItems(LEATHER_POUCH_3, 1);
@@ -226,7 +234,7 @@ public class Q415_PathToAMonk extends Quest
 						else if (cond == 7)
 						{
 							htmltext = "30590-07.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LEATHER_POUCH_FULL_3, 1);
 							st.giveItems(FIERY_SPIRIT_SCROLL, 1);
@@ -241,12 +249,13 @@ public class Q415_PathToAMonk extends Quest
 							htmltext = "30590-09.htm";
 						}
 						break;
-					
+					}
 					case KASMAN:
+					{
 						if (cond == 9)
 						{
 							htmltext = "30501-01.htm";
-							st.set("cond", "10");
+							st.setCond(10);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(GANTAKI_LETTER_OF_RECOMMENDATION, 1);
 							st.giveItems(FIG, 1);
@@ -272,12 +281,13 @@ public class Q415_PathToAMonk extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case TORUKU:
+					{
 						if (cond == 10)
 						{
 							htmltext = "30591-01.htm";
-							st.set("cond", "11");
+							st.setCond(11);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(FIG, 1);
 							st.giveItems(LEATHER_POUCH_4, 1);
@@ -289,7 +299,7 @@ public class Q415_PathToAMonk extends Quest
 						else if (cond == 12)
 						{
 							htmltext = "30591-03.htm";
-							st.set("cond", "13");
+							st.setCond(13);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LEATHER_POUCH_FULL_4, 1);
 							st.giveItems(IRON_WILL_SCROLL, 1);
@@ -300,8 +310,9 @@ public class Q415_PathToAMonk extends Quest
 							htmltext = "30591-04.htm";
 						}
 						break;
-					
+					}
 					case AREN:
+					{
 						if (cond == 14)
 						{
 							htmltext = "32056-01.htm";
@@ -313,7 +324,7 @@ public class Q415_PathToAMonk extends Quest
 						else if (cond == 16)
 						{
 							htmltext = "32056-05.htm";
-							st.set("cond", "17");
+							st.setCond(17);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(KASHA_SPIDER_TOOTH, -1);
 						}
@@ -324,7 +335,7 @@ public class Q415_PathToAMonk extends Quest
 						else if (cond == 18)
 						{
 							htmltext = "32056-07.htm";
-							st.set("cond", "19");
+							st.setCond(19);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HORN_OF_BAAR_DRE_VANUL, -1);
 						}
@@ -333,16 +344,19 @@ public class Q415_PathToAMonk extends Quest
 							htmltext = "32056-09.htm";
 						}
 						break;
-					
+					}
 					case MOIRA:
+					{
 						if (cond == 20)
 						{
 							htmltext = "31979-01.htm";
 						}
 						break;
+					}
 					
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -368,50 +382,55 @@ public class Q415_PathToAMonk extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20479:
-				if ((st.getInt("cond") == 2) && st.dropItemsAlways(KASHA_BEAR_CLAW, 1, 5))
+			{
+				if (st.isCond(2) && st.dropItemsAlways(KASHA_BEAR_CLAW, 1, 5))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 					st.takeItems(KASHA_BEAR_CLAW, -1);
 					st.takeItems(LEATHER_POUCH_1, 1);
 					st.giveItems(LEATHER_POUCH_FULL_1, 1);
 				}
 				break;
-			
+			}
 			case 20478:
-				if ((st.getInt("cond") == 4) && st.dropItemsAlways(KASHA_BLADE_SPIDER_TALON, 1, 5))
+			{
+				if (st.isCond(4) && st.dropItemsAlways(KASHA_BLADE_SPIDER_TALON, 1, 5))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 					st.takeItems(KASHA_BLADE_SPIDER_TALON, -1);
 					st.takeItems(LEATHER_POUCH_2, 1);
 					st.giveItems(LEATHER_POUCH_FULL_2, 1);
 				}
-				else if ((st.getInt("cond") == 15) && st.dropItems(KASHA_SPIDER_TOOTH, 1, 6, 500000))
+				else if (st.isCond(15) && st.dropItems(KASHA_SPIDER_TOOTH, 1, 6, 500000))
 				{
-					st.set("cond", "16");
+					st.setCond(16);
 				}
 				break;
-			
+			}
 			case 20476:
-				if ((st.getInt("cond") == 15) && st.dropItems(KASHA_SPIDER_TOOTH, 1, 6, 500000))
+			{
+				if (st.isCond(15) && st.dropItems(KASHA_SPIDER_TOOTH, 1, 6, 500000))
 				{
-					st.set("cond", "16");
+					st.setCond(16);
 				}
 				break;
-			
+			}
 			case 20415:
-				if ((st.getInt("cond") == 6) && st.dropItemsAlways(SCARLET_SALAMANDER_SCALE, 1, 5))
+			{
+				if (st.isCond(6) && st.dropItemsAlways(SCARLET_SALAMANDER_SCALE, 1, 5))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 					st.takeItems(SCARLET_SALAMANDER_SCALE, -1);
 					st.takeItems(LEATHER_POUCH_3, 1);
 					st.giveItems(LEATHER_POUCH_FULL_3, 1);
 				}
 				break;
-			
+			}
 			case 20014:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(FELIM_LIZARDMAN_TOOTH, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
+			{
+				if (st.isCond(11) && st.dropItemsAlways(FELIM_LIZARDMAN_TOOTH, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
 				{
-					st.set("cond", "12");
+					st.setCond(12);
 					st.takeItems(VUKU_ORC_TUSK, -1);
 					st.takeItems(RATMAN_FANG, -1);
 					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
@@ -420,11 +439,12 @@ public class Q415_PathToAMonk extends Quest
 					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
-			
+			}
 			case 20017:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(VUKU_ORC_TUSK, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3))
+			{
+				if (st.isCond(11) && st.dropItemsAlways(VUKU_ORC_TUSK, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3))
 				{
-					st.set("cond", "12");
+					st.setCond(12);
 					st.takeItems(VUKU_ORC_TUSK, -1);
 					st.takeItems(RATMAN_FANG, -1);
 					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
@@ -433,11 +453,12 @@ public class Q415_PathToAMonk extends Quest
 					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
-			
+			}
 			case 20024:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(LANG_KLIZARDMAN_TOOTH, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
+			{
+				if (st.isCond(11) && st.dropItemsAlways(LANG_KLIZARDMAN_TOOTH, 1, 3) && (st.getQuestItemsCount(RATMAN_FANG) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
 				{
-					st.set("cond", "12");
+					st.setCond(12);
 					st.takeItems(VUKU_ORC_TUSK, -1);
 					st.takeItems(RATMAN_FANG, -1);
 					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
@@ -446,11 +467,12 @@ public class Q415_PathToAMonk extends Quest
 					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
-			
+			}
 			case 20359:
-				if ((st.getInt("cond") == 11) && st.dropItemsAlways(RATMAN_FANG, 1, 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
+			{
+				if (st.isCond(11) && st.dropItemsAlways(RATMAN_FANG, 1, 3) && (st.getQuestItemsCount(LANG_KLIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(FELIM_LIZARDMAN_TOOTH) == 3) && (st.getQuestItemsCount(VUKU_ORC_TUSK) == 3))
 				{
-					st.set("cond", "12");
+					st.setCond(12);
 					st.takeItems(VUKU_ORC_TUSK, -1);
 					st.takeItems(RATMAN_FANG, -1);
 					st.takeItems(LANG_KLIZARDMAN_TOOTH, -1);
@@ -459,15 +481,17 @@ public class Q415_PathToAMonk extends Quest
 					st.giveItems(LEATHER_POUCH_FULL_4, 1);
 				}
 				break;
-			
+			}
 			case 21118:
-				if (st.getInt("cond") == 17)
+			{
+				if (st.isCond(17))
 				{
-					st.set("cond", "18");
+					st.setCond(18);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(HORN_OF_BAAR_DRE_VANUL, 1);
 				}
 				break;
+			}
 		}
 		
 		return null;

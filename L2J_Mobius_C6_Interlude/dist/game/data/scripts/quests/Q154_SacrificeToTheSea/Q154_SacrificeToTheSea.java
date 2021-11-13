@@ -28,24 +28,19 @@ public class Q154_SacrificeToTheSea extends Quest
 	private static final int ROCKSWELL = 30312;
 	private static final int CRISTEL = 30051;
 	private static final int ROLFE = 30055;
-	
 	// Items
 	private static final int FOX_FUR = 1032;
 	private static final int FOX_FUR_YARN = 1033;
 	private static final int MAIDEN_DOLL = 1034;
-	
 	// Reward
 	private static final int EARING = 113;
 	
 	public Q154_SacrificeToTheSea()
 	{
 		super(154, "Sacrifice to the Sea");
-		
 		registerQuestItems(FOX_FUR, FOX_FUR_YARN, MAIDEN_DOLL);
-		
 		addStartNpc(ROCKSWELL);
 		addTalkId(ROCKSWELL, CRISTEL, ROLFE);
-		
 		addKillId(20481, 20544, 20545); // Following Keltirs can be found near Talking Island.
 	}
 	
@@ -61,9 +56,7 @@ public class Q154_SacrificeToTheSea extends Quest
 		
 		if (event.equals("30312-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -82,14 +75,17 @@ public class Q154_SacrificeToTheSea extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 2) ? "30312-02.htm" : "30312-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ROCKSWELL:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30312-05.htm";
@@ -112,8 +108,9 @@ public class Q154_SacrificeToTheSea extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case CRISTEL:
+					{
 						if (cond == 1)
 						{
 							htmltext = (st.hasQuestItems(FOX_FUR)) ? "30051-01.htm" : "30051-01a.htm";
@@ -121,7 +118,7 @@ public class Q154_SacrificeToTheSea extends Quest
 						else if (cond == 2)
 						{
 							htmltext = "30051-02.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(FOX_FUR, -1);
 							st.giveItems(FOX_FUR_YARN, 1);
@@ -135,8 +132,9 @@ public class Q154_SacrificeToTheSea extends Quest
 							htmltext = "30051-04.htm";
 						}
 						break;
-					
+					}
 					case ROLFE:
+					{
 						if (cond < 3)
 						{
 							htmltext = "30055-03.htm";
@@ -144,7 +142,7 @@ public class Q154_SacrificeToTheSea extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30055-01.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(FOX_FUR_YARN, 1);
 							st.giveItems(MAIDEN_DOLL, 1);
@@ -154,12 +152,15 @@ public class Q154_SacrificeToTheSea extends Quest
 							htmltext = "30055-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -168,7 +169,7 @@ public class Q154_SacrificeToTheSea extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -176,7 +177,7 @@ public class Q154_SacrificeToTheSea extends Quest
 		
 		if (st.dropItems(FOX_FUR, 1, 10, 400000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

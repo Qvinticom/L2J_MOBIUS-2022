@@ -30,7 +30,6 @@ public class Q382_KailsMagicCoin extends Quest
 	private static final int FALLEN_ORC_ARCHER = 21019;
 	private static final int FALLEN_ORC_SHAMAN = 21020;
 	private static final int FALLEN_ORC_CAPTAIN = 21022;
-	
 	// Items
 	private static final int ROYAL_MEMBERSHIP = 5898;
 	private static final int SILVER_BASILISK = 5961;
@@ -40,12 +39,9 @@ public class Q382_KailsMagicCoin extends Quest
 	public Q382_KailsMagicCoin()
 	{
 		super(382, "Kail's Magic Coin");
-		
 		registerQuestItems(SILVER_BASILISK, GOLD_GOLEM, BLOOD_DRAGON);
-		
 		addStartNpc(30687); // Vergara
 		addTalkId(30687);
-		
 		addKillId(FALLEN_ORC, FALLEN_ORC_ARCHER, FALLEN_ORC_SHAMAN, FALLEN_ORC_CAPTAIN);
 	}
 	
@@ -61,9 +57,7 @@ public class Q382_KailsMagicCoin extends Quest
 		
 		if (event.equals("30687-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -82,12 +76,15 @@ public class Q382_KailsMagicCoin extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() < 55) || !st.hasQuestItems(ROYAL_MEMBERSHIP)) ? "30687-01.htm" : "30687-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = "30687-04.htm";
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -96,7 +93,7 @@ public class Q382_KailsMagicCoin extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -105,20 +102,25 @@ public class Q382_KailsMagicCoin extends Quest
 		switch (npc.getNpcId())
 		{
 			case FALLEN_ORC:
+			{
 				st.dropItems(SILVER_BASILISK, 1, 0, 100000);
 				break;
-			
+			}
 			case FALLEN_ORC_ARCHER:
+			{
 				st.dropItems(GOLD_GOLEM, 1, 0, 100000);
 				break;
-			
+			}
 			case FALLEN_ORC_SHAMAN:
+			{
 				st.dropItems(BLOOD_DRAGON, 1, 0, 100000);
 				break;
-			
+			}
 			case FALLEN_ORC_CAPTAIN:
+			{
 				st.dropItems(5961 + Rnd.get(3), 1, 0, 100000);
 				break;
+			}
 		}
 		
 		return null;

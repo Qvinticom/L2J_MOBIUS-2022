@@ -26,19 +26,15 @@ public class Q050_LanoscosSpecialBait extends Quest
 {
 	// Item
 	private static final int ESSENCE_OF_WIND = 7621;
-	
 	// Reward
 	private static final int WIND_FISHING_LURE = 7610;
 	
 	public Q050_LanoscosSpecialBait()
 	{
 		super(50, "Lanosco's Special Bait");
-		
 		registerQuestItems(ESSENCE_OF_WIND);
-		
 		addStartNpc(31570); // Lanosco
 		addTalkId(31570);
-		
 		addKillId(21026); // Singing wind
 	}
 	
@@ -54,9 +50,7 @@ public class Q050_LanoscosSpecialBait extends Quest
 		
 		if (event.equals("31570-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31570-07.htm"))
 		{
@@ -83,16 +77,20 @@ public class Q050_LanoscosSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 27) ? "31570-02.htm" : "31570-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.getQuestItemsCount(ESSENCE_OF_WIND) == 100) ? "31570-04.htm" : "31570-05.htm";
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -101,7 +99,7 @@ public class Q050_LanoscosSpecialBait extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -109,7 +107,7 @@ public class Q050_LanoscosSpecialBait extends Quest
 		
 		if (st.dropItems(ESSENCE_OF_WIND, 1, 100, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

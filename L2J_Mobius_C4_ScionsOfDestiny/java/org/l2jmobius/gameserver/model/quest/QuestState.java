@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.quest;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -49,6 +50,9 @@ public class QuestState
 {
 	protected static final Logger LOGGER = Logger.getLogger(QuestState.class.getName());
 	
+	// Constants
+	private static final String COND_VAR = "cond";
+	
 	public static final String SOUND_ACCEPT = "ItemSound.quest_accept";
 	public static final String SOUND_ITEMGET = "ItemSound.quest_itemget";
 	public static final String SOUND_MIDDLE = "ItemSound.quest_middle";
@@ -72,16 +76,14 @@ public class QuestState
 	/** The current state of the quest */
 	private byte _state;
 	
+	/** The current condition of the quest */
+	private int _cond = 0;
+	
 	/** A map of key->value pairs containing the quest state variables and their values */
 	private Map<String, String> _vars;
 	
 	/**
-	 * Constructor of the QuestState : save the quest in the list of quests of the player.<BR/>
-	 * <BR/>
-	 * <u><i>Actions :</u></i><BR/>
-	 * <li>Save informations in the object QuestState created (Quest, Player, Completion, State)</li>
-	 * <li>Add the QuestState in the player's list of quests by using setQuestState()</li>
-	 * <li>Add drops gotten by the quest</li> <BR/>
+	 * Constructor of the QuestState. Creates the QuestState object and sets the player's progress of the quest to this QuestState.
 	 * @param quest the {@link Quest} object associated with the QuestState
 	 * @param player the owner of this {@link QuestState} object
 	 * @param state the initial state of the quest
@@ -210,9 +212,9 @@ public class QuestState
 			// Otherwise, delete variables for quest and update database (quest CANNOT be created again => not repeatable)
 			if (_vars != null)
 			{
-				for (String var : _vars.keySet())
+				for (String variable : _vars.keySet())
 				{
-					Quest.deleteQuestVarInDb(this, var);
+					Quest.deleteQuestVarInDb(this, variable);
 				}
 				_vars.clear();
 			}
@@ -222,60 +224,74 @@ public class QuestState
 	
 	/**
 	 * Add parameter used in quests.
-	 * @param var String pointing out the name of the variable for quest
-	 * @param val String pointing out the value of the variable for quest
+	 * @param variable String pointing out the name of the variable for quest
+	 * @param value String pointing out the value of the variable for quest
 	 */
-	public void setInternal(String var, String val)
+	public void setInternal(String variable, String value)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
-		String value = val;
 		if (value == null)
 		{
-			value = "";
+			_vars.put(variable, "");
+			return;
 		}
 		
-		_vars.put(var, value);
+		if (COND_VAR.equals(variable))
+		{
+			try
+			{
+				_cond = Integer.parseInt(value);
+			}
+			catch (Exception ignored)
+			{
+			}
+		}
+		
+		_vars.put(variable, value);
 	}
 	
 	/**
 	 * Return value of parameter "value" after adding the couple (var,value) in class variable "vars".<br>
-	 * <u><i>Actions :</i></u><br>
-	 * <li>Initialize class variable "vars" if is null</li>
+	 * Actions:<br>
+	 * <ul>
+	 * <li>Initialize class variable "vars" if is null.</li>
 	 * <li>Initialize parameter "value" if is null</li>
 	 * <li>Add/Update couple (var,value) in class variable Map "vars"</li>
-	 * <li>If the key represented by "var" exists in Map "vars", the couple (var,value) is updated in the database. The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<br>
-	 * If the key doesn't exist, the couple is added/created in the database</li><br>
-	 * @param var : String indicating the name of the variable for quest
-	 * @param val : String indicating the value of the variable for quest
+	 * <li>If the key represented by "var" exists in Map "vars", the couple (var,value) is updated in the database.<br>
+	 * The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<br>
+	 * If the key doesn't exist, the couple is added/created in the database</li>
+	 * <ul>
+	 * @param variable String indicating the name of the variable for quest
+	 * @param value String indicating the value of the variable for quest
 	 */
-	public void set(String var, String val)
+	public void set(String variable, String value)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
-		String value = val;
-		if (value == null)
+		String newValue = value;
+		if (newValue == null)
 		{
-			value = "";
+			newValue = "";
 		}
 		
-		final String old = _vars.put(var, value);
+		final String old = _vars.put(variable, newValue);
 		if (old != null)
 		{
-			Quest.updateQuestVarInDb(this, var, value);
+			Quest.updateQuestVarInDb(this, variable, newValue);
 		}
 		else
 		{
-			Quest.createQuestVarInDb(this, var, value);
+			Quest.createQuestVarInDb(this, variable, newValue);
 		}
 		
-		if (var.equals("cond"))
+		if (COND_VAR.equals(variable))
 		{
 			try
 			{
@@ -284,29 +300,40 @@ public class QuestState
 				{
 					previousVal = Integer.parseInt(old);
 				}
-				catch (Exception ex)
+				catch (Exception ignored)
 				{
-					previousVal = 0;
 				}
-				setCond(Integer.parseInt(value), previousVal);
+				int newCond = 0;
+				try
+				{
+					newCond = Integer.parseInt(newValue);
+				}
+				catch (Exception ignored)
+				{
+				}
+				
+				_cond = newCond;
+				setCond(newCond, previousVal);
 			}
 			catch (Exception e)
 			{
-				LOGGER.finer(_player.getName() + ", " + _questName + " cond [" + value + "] is not an integer.  Value stored, but no packet was sent: " + e);
+				LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + newValue + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
 			}
 		}
 	}
 	
 	/**
-	 * Internally handles the progression of the quest so that it is ready for sending appropriate packets to the client<br>
+	 * Internally handles the progression of the quest so that it is ready for sending appropriate packets to the client.<br>
 	 * <u><i>Actions :</i></u><br>
-	 * <li>Check if the new progress number resets the quest to a previous (smaller) step</li>
-	 * <li>If not, check if quest progress steps have been skipped</li>
-	 * <li>If skipped, prepare the variable completedStateFlags appropriately to be ready for sending to clients</li>
+	 * <ul>
+	 * <li>Check if the new progress number resets the quest to a previous (smaller) step.</li>
+	 * <li>If not, check if quest progress steps have been skipped.</li>
+	 * <li>If skipped, prepare the variable completedStateFlags appropriately to be ready for sending to clients.</li>
 	 * <li>If no steps were skipped, flags do not need to be prepared...</li>
-	 * <li>If the passed step resets the quest to a previous step, reset such that steps after the parameter are not considered, while skipped steps before the parameter, if any, maintain their info</li><br>
-	 * @param cond : int indicating the step number for the current quest progress (as will be shown to the client)
-	 * @param old : int indicating the previously noted step For more info on the variable communicating the progress steps to the client, please see
+	 * <li>If the passed step resets the quest to a previous step, reset such that steps after the parameter are not considered, while skipped steps before the parameter, if any, maintain their info.</li>
+	 * </ul>
+	 * @param cond the current quest progress condition (0 - 31 including)
+	 * @param old the previous quest progress condition to check against
 	 */
 	private void setCond(int cond, int old)
 	{
@@ -386,75 +413,120 @@ public class QuestState
 	
 	/**
 	 * Removes a quest variable from the list of existing quest variables.
-	 * @param var the name of the variable to remove
+	 * @param variable the name of the variable to remove
 	 */
-	public void unset(String var)
+	public void unset(String variable)
 	{
 		if (_vars == null)
 		{
 			return;
 		}
 		
-		final String old = _vars.remove(var);
+		final String old = _vars.remove(variable);
 		if (old != null)
 		{
-			Quest.deleteQuestVarInDb(this, var);
+			if (COND_VAR.equals(variable))
+			{
+				_cond = 0;
+			}
+			
+			Quest.deleteQuestVarInDb(this, variable);
 		}
 	}
 	
 	/**
-	 * Return the value of the variable of quest represented by "var"
-	 * @param var : name of the variable of quest
-	 * @return Object
+	 * @param variable the name of the variable to get
+	 * @return the value of the variable from the list of quest variables
 	 */
-	public Object get(String var)
+	public String get(String variable)
 	{
 		if (_vars == null)
 		{
 			return null;
 		}
-		return _vars.get(var);
+		
+		return _vars.get(variable);
+	}
+	
+	/**
+	 * @param variable the name of the variable to get
+	 * @return the integer value of the variable or 0 if the variable does not exist or its value is not an integer
+	 */
+	public int getInt(String variable)
+	{
+		int varInt = 0;
+		if (_vars != null)
+		{
+			final String value = _vars.get(variable);
+			if (value != null)
+			{
+				try
+				{
+					varInt = Integer.parseInt(value);
+				}
+				catch (Exception e)
+				{
+					LOGGER.info(_player.getName() + ": variable " + variable + " isn't an integer: returned value will be " + varInt + e);
+					if (Config.AUTODELETE_INVALID_QUEST_DATA)
+					{
+						exitQuest(true);
+					}
+				}
+			}
+		}
+		return varInt;
 	}
 	
 	/**
 	 * Return the value of the variable of quest represented by "var"
-	 * @param var : name of the variable of quest
+	 * @param variable : name of the variable of quest
 	 * @return String
 	 */
-	public String getString(String var)
+	public String getString(String variable)
 	{
 		if (_vars == null)
 		{
 			return "";
 		}
-		return _vars.get(var);
+		
+		return _vars.get(variable);
 	}
 	
 	/**
-	 * Return the value of the variable of quest represented by "var"
-	 * @param var : String designating the variable for the quest
-	 * @return int
+	 * Checks if the quest state progress ({@code cond}) is at the specified step.
+	 * @param condition the condition to check against
+	 * @return {@code true} if the quest condition is equal to {@code condition}, {@code false} otherwise
+	 * @see #getInt(String var)
 	 */
-	public int getInt(String var)
+	public boolean isCond(int condition)
 	{
-		int varint = 0;
-		String value = "";
-		if ((_vars != null) && ((value = _vars.get(var)) != null))
+		return _cond == condition;
+	}
+	
+	/**
+	 * Sets the quest state progress ({@code cond}) to the specified step.
+	 * @param value the new value of the quest state progress
+	 * @see #set(String var, String value)
+	 */
+	public void setCond(int value)
+	{
+		if (isStarted())
 		{
-			try
-			{
-				varint = Integer.parseInt(value);
-			}
-			catch (Exception e)
-			{
-				LOGGER.info(_player.getName() + ": variable " + var + " isn't an integer: returned value will be " + varint + e);
-				if (Config.AUTODELETE_INVALID_QUEST_DATA)
-				{
-					exitQuest(true);
-				}
-			}
+			set(COND_VAR, Integer.toString(value));
 		}
-		return varint;
+	}
+	
+	/**
+	 * @return the current quest progress ({@code cond})
+	 */
+	public int getCond()
+	{
+		if (isStarted())
+		{
+			return _cond;
+		}
+		
+		return 0;
 	}
 	
 	/**
@@ -879,14 +951,14 @@ public class QuestState
 	 */
 	public void rewardItems(int itemId, int itemCount)
 	{
-		if (itemId == 57)
-		{
-			giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0); // TODO: RATE_QUEST_REWARD_ADENA
-		}
-		else
-		{
-			giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0);
-		}
+		// if (itemId == 57)
+		// {
+		// giveItems(itemId, (int) (itemCount * Config.RATE_QUEST_REWARD_ADENA), 0); // TODO: RATE_QUEST_REWARD_ADENA
+		// }
+		// else
+		// {
+		giveItems(itemId, (int) (itemCount * Config.RATE_QUESTS_REWARD), 0);
+		// }
 	}
 	
 	/**
@@ -1066,6 +1138,20 @@ public class QuestState
 	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
 		return getQuest().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
+	}
+	
+	/**
+	 * Set condition to 1, state to STARTED and play the "ItemSound.quest_accept".<br>
+	 * Works only if state is CREATED and the quest is not a custom quest.
+	 */
+	public void startQuest()
+	{
+		if (isCreated())
+		{
+			set(COND_VAR, "1");
+			setState(State.STARTED);
+			_player.sendPacket(new PlaySound(QuestState.SOUND_ACCEPT));
+		}
 	}
 	
 	public void showQuestionMark(int number)

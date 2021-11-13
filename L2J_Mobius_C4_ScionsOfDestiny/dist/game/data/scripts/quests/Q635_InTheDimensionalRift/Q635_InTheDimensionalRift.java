@@ -55,7 +55,6 @@ public class Q635_InTheDimensionalRift extends Quest
 	public Q635_InTheDimensionalRift()
 	{
 		super(635, "In the Dimensional Rift");
-		
 		for (int i = 31494; i <= 31508; i++)
 		{
 			addTalkId(i);
@@ -89,7 +88,7 @@ public class Q635_InTheDimensionalRift extends Quest
 				}
 				qs.set("count", "" + (count + 1));
 				qs.setState(State.STARTED);
-				qs.set("cond", "1");
+				qs.setCond(1);
 				qs.getPlayer().teleToLocation(-114790, -180576, -6781);
 			}
 			else

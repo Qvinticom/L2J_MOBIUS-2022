@@ -27,6 +27,15 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q105_SkirmishWithTheOrcs extends Quest
 {
+	// Monster
+	private static final int KABOO_CHIEF_UOPH = 27059;
+	private static final int KABOO_CHIEF_KRACHA = 27060;
+	private static final int KABOO_CHIEF_BATOH = 27061;
+	private static final int KABOO_CHIEF_TANUKIA = 27062;
+	private static final int KABOO_CHIEF_TUREL = 27064;
+	private static final int KABOO_CHIEF_ROKO = 27065;
+	private static final int KABOO_CHIEF_KAMUT = 27067;
+	private static final int KABOO_CHIEF_MURTIKA = 27068;
 	// Item
 	private static final int KENDELL_ORDER_1 = 1836;
 	private static final int KENDELL_ORDER_2 = 1837;
@@ -38,17 +47,6 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 	private static final int KENDELL_ORDER_8 = 1843;
 	private static final int KABOO_CHIEF_TORC_1 = 1844;
 	private static final int KABOO_CHIEF_TORC_2 = 1845;
-	
-	// Monster
-	private static final int KABOO_CHIEF_UOPH = 27059;
-	private static final int KABOO_CHIEF_KRACHA = 27060;
-	private static final int KABOO_CHIEF_BATOH = 27061;
-	private static final int KABOO_CHIEF_TANUKIA = 27062;
-	private static final int KABOO_CHIEF_TUREL = 27064;
-	private static final int KABOO_CHIEF_ROKO = 27065;
-	private static final int KABOO_CHIEF_KAMUT = 27067;
-	private static final int KABOO_CHIEF_MURTIKA = 27068;
-	
 	// Rewards
 	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
@@ -63,12 +61,9 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 	public Q105_SkirmishWithTheOrcs()
 	{
 		super(105, "Skirmish with the Orcs");
-		
 		registerQuestItems(KENDELL_ORDER_1, KENDELL_ORDER_2, KENDELL_ORDER_3, KENDELL_ORDER_4, KENDELL_ORDER_5, KENDELL_ORDER_6, KENDELL_ORDER_7, KENDELL_ORDER_8, KABOO_CHIEF_TORC_1, KABOO_CHIEF_TORC_2);
-		
 		addStartNpc(30218); // Kendell
 		addTalkId(30218);
-		
 		addKillId(KABOO_CHIEF_UOPH, KABOO_CHIEF_KRACHA, KABOO_CHIEF_BATOH, KABOO_CHIEF_TANUKIA, KABOO_CHIEF_TUREL, KABOO_CHIEF_ROKO, KABOO_CHIEF_KAMUT, KABOO_CHIEF_MURTIKA);
 	}
 	
@@ -84,11 +79,10 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 		
 		if (event.equals("30218-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(Rnd.get(1836, 1839), 1); // Kendell's orders 1 to 4.
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,6 +99,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30218-00.htm";
@@ -118,9 +113,10 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 					htmltext = "30218-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30218-05.htm";
@@ -128,7 +124,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 				else if (cond == 2)
 				{
 					htmltext = "30218-06.htm";
-					st.set("cond", "3");
+					st.setCond(3);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(KABOO_CHIEF_TORC_1, 1);
 					st.takeItems(KENDELL_ORDER_1, 1);
@@ -184,10 +180,12 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 					st.exitQuest(false);
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -207,33 +205,37 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 			case KABOO_CHIEF_KRACHA:
 			case KABOO_CHIEF_BATOH:
 			case KABOO_CHIEF_TANUKIA:
-				if ((st.getInt("cond") == 1) && st.hasQuestItems(npc.getNpcId() - 25223)) // npcId - 25223 = itemId to verify.
+			{
+				if (st.isCond(1) && st.hasQuestItems(npc.getNpcId() - 25223)) // npcId - 25223 = itemId to verify.
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(KABOO_CHIEF_TORC_1, 1);
 				}
 				break;
-			
+			}
 			case KABOO_CHIEF_TUREL:
 			case KABOO_CHIEF_ROKO:
-				if ((st.getInt("cond") == 3) && st.hasQuestItems(npc.getNpcId() - 25224)) // npcId - 25224 = itemId to verify.
+			{
+				if (st.isCond(3) && st.hasQuestItems(npc.getNpcId() - 25224)) // npcId - 25224 = itemId to verify.
 				{
-					st.set("cond", "4");
+					st.setCond(4);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(KABOO_CHIEF_TORC_2, 1);
 				}
 				break;
-			
+			}
 			case KABOO_CHIEF_KAMUT:
 			case KABOO_CHIEF_MURTIKA:
-				if ((st.getInt("cond") == 3) && st.hasQuestItems(npc.getNpcId() - 25225)) // npcId - 25225 = itemId to verify.
+			{
+				if (st.isCond(3) && st.hasQuestItems(npc.getNpcId() - 25225)) // npcId - 25225 = itemId to verify.
 				{
-					st.set("cond", "4");
+					st.setCond(4);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(KABOO_CHIEF_TORC_2, 1);
 				}
 				break;
+			}
 		}
 		
 		return null;

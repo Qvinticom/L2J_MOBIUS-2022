@@ -27,23 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class Q422_RepentYourSins extends Quest
 {
-	// Items
-	private static final int RATMAN_SCAVENGER_SKULL = 4326;
-	private static final int TUREK_WAR_HOUND_TAIL = 4327;
-	private static final int TYRANT_KINGPIN_HEART = 4328;
-	private static final int TRISALIM_TARANTULA_VENOM_SAC = 4329;
-	
-	private static final int QITEM_PENITENT_MANACLES = 4330;
-	private static final int MANUAL_OF_MANACLES = 4331;
-	private static final int PENITENT_MANACLES = 4425;
-	private static final int LEFT_PENITENT_MANACLES = 4426;
-	
-	private static final int SILVER_NUGGET = 1873;
-	private static final int ADAMANTINE_NUGGET = 1877;
-	private static final int BLACKSMITH_FRAME = 1892;
-	private static final int COKES = 1879;
-	private static final int STEEL = 1880;
-	
 	// NPCs
 	private static final int BLACK_JUDGE = 30981;
 	private static final int KATARI = 30668;
@@ -51,16 +34,27 @@ public class Q422_RepentYourSins extends Quest
 	private static final int CASIAN = 30612;
 	private static final int JOAN = 30718;
 	private static final int PUSHKIN = 30300;
+	// Items
+	private static final int RATMAN_SCAVENGER_SKULL = 4326;
+	private static final int TUREK_WAR_HOUND_TAIL = 4327;
+	private static final int TYRANT_KINGPIN_HEART = 4328;
+	private static final int TRISALIM_TARANTULA_VENOM_SAC = 4329;
+	private static final int QITEM_PENITENT_MANACLES = 4330;
+	private static final int MANUAL_OF_MANACLES = 4331;
+	private static final int PENITENT_MANACLES = 4425;
+	private static final int LEFT_PENITENT_MANACLES = 4426;
+	private static final int SILVER_NUGGET = 1873;
+	private static final int ADAMANTINE_NUGGET = 1877;
+	private static final int BLACKSMITH_FRAME = 1892;
+	private static final int COKES = 1879;
+	private static final int STEEL = 1880;
 	
 	public Q422_RepentYourSins()
 	{
 		super(422, "Repent Your Sins");
-		
 		registerQuestItems(RATMAN_SCAVENGER_SKULL, TUREK_WAR_HOUND_TAIL, TYRANT_KINGPIN_HEART, TRISALIM_TARANTULA_VENOM_SAC, MANUAL_OF_MANACLES, PENITENT_MANACLES, QITEM_PENITENT_MANACLES);
-		
 		addStartNpc(BLACK_JUDGE);
 		addTalkId(BLACK_JUDGE, KATARI, PIOTUR, CASIAN, JOAN, PUSHKIN);
-		
 		addKillId(20039, 20494, 20193, 20561);
 	}
 	
@@ -74,119 +68,121 @@ public class Q422_RepentYourSins extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("Start"))
+		switch (event)
 		{
-			st.set("cond", "1");
-			if (player.getLevel() <= 20)
+			case "Start":
 			{
-				htmltext = "30981-03.htm";
-				st.set("cond", "2");
-			}
-			else if ((player.getLevel() >= 20) && (player.getLevel() <= 30))
-			{
-				htmltext = "30981-04.htm";
-				st.set("cond", "3");
-			}
-			else if ((player.getLevel() >= 30) && (player.getLevel() <= 40))
-			{
-				htmltext = "30981-05.htm";
-				st.set("cond", "4");
-			}
-			else
-			{
-				htmltext = "30981-06.htm";
-				st.set("cond", "5");
-			}
-			st.setState(State.STARTED);
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30981-11.htm"))
-		{
-			if (!st.hasQuestItems(PENITENT_MANACLES))
-			{
-				final int cond = st.getInt("cond");
-				
-				// Case you return back the qitem to Black Judge. She rewards you with the pet item.
-				if (cond == 15)
+				st.startQuest();
+				if (player.getLevel() <= 20)
 				{
-					st.set("cond", "16");
-					st.set("level", String.valueOf(player.getLevel()));
-					st.playSound(QuestState.SOUND_ITEMGET);
-					st.takeItems(QITEM_PENITENT_MANACLES, -1);
-					st.giveItems(PENITENT_MANACLES, 1);
+					htmltext = "30981-03.htm";
+					st.setCond(2);
 				}
-				// Case you return back to Black Judge with leftover of previous quest.
-				else if (cond == 16)
+				else if ((player.getLevel() >= 20) && (player.getLevel() <= 30))
 				{
-					st.set("level", String.valueOf(player.getLevel()));
-					st.playSound(QuestState.SOUND_ITEMGET);
-					st.takeItems(LEFT_PENITENT_MANACLES, -1);
-					st.giveItems(PENITENT_MANACLES, 1);
+					htmltext = "30981-04.htm";
+					st.setCond(3);
 				}
-			}
-		}
-		else if (event.equals("30981-19.htm"))
-		{
-			if (st.hasQuestItems(LEFT_PENITENT_MANACLES))
-			{
-				st.setState(State.STARTED);
-				st.set("cond", "16");
-				st.playSound(QuestState.SOUND_ACCEPT);
-			}
-		}
-		else if (event.equals("Pk"))
-		{
-			final Summon pet = player.getPet();
-			
-			// If Sin Eater is currently summoned, show a warning.
-			if ((pet != null) && (pet.getNpcId() == 12564))
-			{
-				htmltext = "30981-16.htm";
-			}
-			else if (findSinEaterLvl(player) > st.getInt("level"))
-			{
-				st.takeItems(PENITENT_MANACLES, 1);
-				st.giveItems(LEFT_PENITENT_MANACLES, 1);
-				
-				final int removePkAmount = Rnd.get(10) + 1;
-				
-				// Player's PKs are lower than random amount ; finish the quest.
-				if (player.getPkKills() <= removePkAmount)
+				else if ((player.getLevel() >= 30) && (player.getLevel() <= 40))
 				{
-					htmltext = "30981-15.htm";
-					st.playSound(QuestState.SOUND_FINISH);
-					st.exitQuest(true);
-					
-					player.setPkKills(0);
-					player.sendPacket(new UserInfo(player));
+					htmltext = "30981-05.htm";
+					st.setCond(4);
 				}
-				// Player's PK are bigger than random amount ; continue the quest.
 				else
 				{
-					htmltext = "30981-14.htm";
-					st.set("level", String.valueOf(player.getLevel()));
-					st.playSound(QuestState.SOUND_MIDDLE);
-					
-					player.setPkKills(player.getPkKills() - removePkAmount);
-					player.sendPacket(new UserInfo(player));
+					htmltext = "30981-06.htm";
+					st.setCond(5);
 				}
+				break;
 			}
-		}
-		else if (event.equals("Quit"))
-		{
-			htmltext = "30981-20.htm";
-			
-			st.takeItems(RATMAN_SCAVENGER_SKULL, -1);
-			st.takeItems(TUREK_WAR_HOUND_TAIL, -1);
-			st.takeItems(TYRANT_KINGPIN_HEART, -1);
-			st.takeItems(TRISALIM_TARANTULA_VENOM_SAC, -1);
-			
-			st.takeItems(MANUAL_OF_MANACLES, -1);
-			st.takeItems(PENITENT_MANACLES, -1);
-			st.takeItems(QITEM_PENITENT_MANACLES, -1);
-			
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30981-11.htm":
+			{
+				if (!st.hasQuestItems(PENITENT_MANACLES))
+				{
+					final int cond = st.getCond();
+					
+					// Case you return back the qitem to Black Judge. She rewards you with the pet item.
+					if (cond == 15)
+					{
+						st.setCond(16);
+						st.set("level", String.valueOf(player.getLevel()));
+						st.playSound(QuestState.SOUND_ITEMGET);
+						st.takeItems(QITEM_PENITENT_MANACLES, -1);
+						st.giveItems(PENITENT_MANACLES, 1);
+					}
+					// Case you return back to Black Judge with leftover of previous quest.
+					else if (cond == 16)
+					{
+						st.set("level", String.valueOf(player.getLevel()));
+						st.playSound(QuestState.SOUND_ITEMGET);
+						st.takeItems(LEFT_PENITENT_MANACLES, -1);
+						st.giveItems(PENITENT_MANACLES, 1);
+					}
+				}
+				break;
+			}
+			case "30981-19.htm":
+			{
+				if (st.hasQuestItems(LEFT_PENITENT_MANACLES))
+				{
+					st.setState(State.STARTED);
+					st.setCond(16);
+					st.playSound(QuestState.SOUND_ACCEPT);
+				}
+				break;
+			}
+			case "Pk":
+			{
+				final Summon pet = player.getPet();
+				// If Sin Eater is currently summoned, show a warning.
+				if ((pet != null) && (pet.getNpcId() == 12564))
+				{
+					htmltext = "30981-16.htm";
+				}
+				else if (findSinEaterLvl(player) > st.getInt("level"))
+				{
+					st.takeItems(PENITENT_MANACLES, 1);
+					st.giveItems(LEFT_PENITENT_MANACLES, 1);
+					
+					final int removePkAmount = Rnd.get(10) + 1;
+					
+					// Player's PKs are lower than random amount ; finish the quest.
+					if (player.getPkKills() <= removePkAmount)
+					{
+						htmltext = "30981-15.htm";
+						st.playSound(QuestState.SOUND_FINISH);
+						st.exitQuest(true);
+						
+						player.setPkKills(0);
+						player.sendPacket(new UserInfo(player));
+					}
+					// Player's PK are bigger than random amount ; continue the quest.
+					else
+					{
+						htmltext = "30981-14.htm";
+						st.set("level", String.valueOf(player.getLevel()));
+						st.playSound(QuestState.SOUND_MIDDLE);
+						
+						player.setPkKills(player.getPkKills() - removePkAmount);
+						player.sendPacket(new UserInfo(player));
+					}
+				}
+				break;
+			}
+			case "Quit":
+			{
+				htmltext = "30981-20.htm";
+				st.takeItems(RATMAN_SCAVENGER_SKULL, -1);
+				st.takeItems(TUREK_WAR_HOUND_TAIL, -1);
+				st.takeItems(TYRANT_KINGPIN_HEART, -1);
+				st.takeItems(TRISALIM_TARANTULA_VENOM_SAC, -1);
+				st.takeItems(MANUAL_OF_MANACLES, -1);
+				st.takeItems(PENITENT_MANACLES, -1);
+				st.takeItems(QITEM_PENITENT_MANACLES, -1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -205,6 +201,7 @@ public class Q422_RepentYourSins extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getPkKills() >= 1)
 				{
 					htmltext = (st.hasQuestItems(LEFT_PENITENT_MANACLES)) ? "30981-18.htm" : "30981-02.htm";
@@ -214,12 +211,14 @@ public class Q422_RepentYourSins extends Quest
 					htmltext = "30981-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case BLACK_JUDGE:
+					{
 						if (cond <= 9)
 						{
 							htmltext = "30981-07.htm";
@@ -227,7 +226,7 @@ public class Q422_RepentYourSins extends Quest
 						else if ((cond > 9) && (cond < 14))
 						{
 							htmltext = "30981-08.htm";
-							st.set("cond", "14");
+							st.setCond(14);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(MANUAL_OF_MANACLES, 1);
 						}
@@ -251,12 +250,13 @@ public class Q422_RepentYourSins extends Quest
 							}
 						}
 						break;
-					
+					}
 					case KATARI:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30668-01.htm";
-							st.set("cond", "6");
+							st.setCond(6);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 6)
@@ -268,7 +268,7 @@ public class Q422_RepentYourSins extends Quest
 							else
 							{
 								htmltext = "30668-03.htm";
-								st.set("cond", "10");
+								st.setCond(10);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(RATMAN_SCAVENGER_SKULL, -1);
 							}
@@ -278,12 +278,13 @@ public class Q422_RepentYourSins extends Quest
 							htmltext = "30668-04.htm";
 						}
 						break;
-					
+					}
 					case PIOTUR:
+					{
 						if (cond == 3)
 						{
 							htmltext = "30597-01.htm";
-							st.set("cond", "7");
+							st.setCond(7);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 7)
@@ -295,7 +296,7 @@ public class Q422_RepentYourSins extends Quest
 							else
 							{
 								htmltext = "30597-03.htm";
-								st.set("cond", "11");
+								st.setCond(11);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(TUREK_WAR_HOUND_TAIL, -1);
 							}
@@ -305,12 +306,13 @@ public class Q422_RepentYourSins extends Quest
 							htmltext = "30597-04.htm";
 						}
 						break;
-					
+					}
 					case CASIAN:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30612-01.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 8)
@@ -322,7 +324,7 @@ public class Q422_RepentYourSins extends Quest
 							else
 							{
 								htmltext = "30612-03.htm";
-								st.set("cond", "12");
+								st.setCond(12);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(TYRANT_KINGPIN_HEART, -1);
 							}
@@ -332,12 +334,13 @@ public class Q422_RepentYourSins extends Quest
 							htmltext = "30612-04.htm";
 						}
 						break;
-					
+					}
 					case JOAN:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30718-01.htm";
-							st.set("cond", "9");
+							st.setCond(9);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 9)
@@ -349,7 +352,7 @@ public class Q422_RepentYourSins extends Quest
 							else
 							{
 								htmltext = "30718-03.htm";
-								st.set("cond", "13");
+								st.setCond(13);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(TRISALIM_TARANTULA_VENOM_SAC, -1);
 							}
@@ -359,8 +362,9 @@ public class Q422_RepentYourSins extends Quest
 							htmltext = "30718-04.htm";
 						}
 						break;
-					
+					}
 					case PUSHKIN:
+					{
 						if ((cond == 14) && (st.getQuestItemsCount(MANUAL_OF_MANACLES) == 1))
 						{
 							if ((st.getQuestItemsCount(SILVER_NUGGET) < 10) || (st.getQuestItemsCount(STEEL) < 5) || (st.getQuestItemsCount(ADAMANTINE_NUGGET) < 2) || (st.getQuestItemsCount(COKES) < 10) || (st.getQuestItemsCount(BLACKSMITH_FRAME) < 1))
@@ -370,7 +374,7 @@ public class Q422_RepentYourSins extends Quest
 							else
 							{
 								htmltext = "30300-01.htm";
-								st.set("cond", "15");
+								st.setCond(15);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								
 								st.takeItems(MANUAL_OF_MANACLES, 1);
@@ -388,8 +392,10 @@ public class Q422_RepentYourSins extends Quest
 							htmltext = "30300-03.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -407,32 +413,37 @@ public class Q422_RepentYourSins extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20039:
-				if (st.getInt("cond") == 6)
+			{
+				if (st.isCond(6))
 				{
 					st.dropItemsAlways(RATMAN_SCAVENGER_SKULL, 1, 10);
 				}
 				break;
-			
+			}
 			case 20494:
-				if (st.getInt("cond") == 7)
+			{
+				if (st.isCond(7))
 				{
 					st.dropItemsAlways(TUREK_WAR_HOUND_TAIL, 1, 10);
 				}
 				break;
-			
+			}
 			case 20193:
-				if (st.getInt("cond") == 8)
+			{
+				if (st.isCond(8))
 				{
 					st.dropItemsAlways(TYRANT_KINGPIN_HEART, 1, 1);
 				}
 				break;
-			
+			}
 			case 20561:
-				if (st.getInt("cond") == 9)
+			{
+				if (st.isCond(9))
 				{
 					st.dropItemsAlways(TRISALIM_TARANTULA_VENOM_SAC, 1, 3);
 				}
 				break;
+			}
 		}
 		
 		return null;

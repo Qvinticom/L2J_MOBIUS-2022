@@ -29,7 +29,6 @@ public class Q009_IntoTheCityOfHumans extends Quest
 	private static final int PETUKAI = 30583;
 	private static final int TANAPI = 30571;
 	private static final int TAMIL = 30576;
-	
 	// Rewards
 	private static final int MARK_OF_TRAVELER = 7570;
 	private static final int SOE_GIRAN = 7126;
@@ -37,7 +36,6 @@ public class Q009_IntoTheCityOfHumans extends Quest
 	public Q009_IntoTheCityOfHumans()
 	{
 		super(9, "Into the City of Humans");
-		
 		addStartNpc(PETUKAI);
 		addTalkId(PETUKAI, TANAPI, TAMIL);
 	}
@@ -52,23 +50,27 @@ public class Q009_IntoTheCityOfHumans extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30583-01.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30571-01.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30576-01.htm"))
-		{
-			st.giveItems(MARK_OF_TRAVELER, 1);
-			st.rewardItems(SOE_GIRAN, 1);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30583-01.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30571-01.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30576-01.htm":
+			{
+				st.giveItems(MARK_OF_TRAVELER, 1);
+				st.rewardItems(SOE_GIRAN, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -87,6 +89,7 @@ public class Q009_IntoTheCityOfHumans extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getLevel() >= 3) && (player.getRace() == Race.ORC))
 				{
 					htmltext = "30583-00.htm";
@@ -96,19 +99,22 @@ public class Q009_IntoTheCityOfHumans extends Quest
 					htmltext = "30583-00a.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case PETUKAI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30583-01a.htm";
 						}
 						break;
-					
+					}
 					case TANAPI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30571-00.htm";
@@ -118,19 +124,23 @@ public class Q009_IntoTheCityOfHumans extends Quest
 							htmltext = "30571-01a.htm";
 						}
 						break;
-					
+					}
 					case TAMIL:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30576-00.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

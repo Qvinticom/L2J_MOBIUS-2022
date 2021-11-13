@@ -27,7 +27,6 @@ public class Q298_LizardmensConspiracy extends Quest
 	// NPCs
 	private static final int PRAGA = 30333;
 	private static final int ROHMER = 30344;
-	
 	// Items
 	private static final int PATROL_REPORT = 7182;
 	private static final int WHITE_GEM = 7183;
@@ -36,12 +35,9 @@ public class Q298_LizardmensConspiracy extends Quest
 	public Q298_LizardmensConspiracy()
 	{
 		super(298, "Lizardmen's Conspiracy");
-		
 		registerQuestItems(PATROL_REPORT, WHITE_GEM, RED_GEM);
-		
 		addStartNpc(PRAGA);
 		addTalkId(PRAGA, ROHMER);
-		
 		addKillId(20926, 20927, 20922, 20923, 20924);
 	}
 	
@@ -55,29 +51,33 @@ public class Q298_LizardmensConspiracy extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30333-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(PATROL_REPORT, 1);
-		}
-		else if (event.equals("30344-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(PATROL_REPORT, 1);
-		}
-		else if (event.equals("30344-4.htm"))
-		{
-			if (st.getInt("cond") == 3)
+			case "30333-1.htm":
 			{
-				htmltext = "30344-3.htm";
-				st.takeItems(WHITE_GEM, -1);
-				st.takeItems(RED_GEM, -1);
-				st.rewardExpAndSp(0, 42000);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
+				st.startQuest();
+				st.giveItems(PATROL_REPORT, 1);
+				break;
+			}
+			case "30344-1.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(PATROL_REPORT, 1);
+				break;
+			}
+			case "30344-4.htm":
+			{
+				if (st.isCond(3))
+				{
+					htmltext = "30344-3.htm";
+					st.takeItems(WHITE_GEM, -1);
+					st.takeItems(RED_GEM, -1);
+					st.rewardExpAndSp(0, 42000);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				break;
 			}
 		}
 		
@@ -97,18 +97,22 @@ public class Q298_LizardmensConspiracy extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 25) ? "30333-0b.htm" : "30333-0a.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case PRAGA:
+					{
 						htmltext = "30333-2.htm";
 						break;
-					
+					}
 					case ROHMER:
-						if (st.getInt("cond") == 1)
+					{
+						if (st.isCond(1))
 						{
 							htmltext = (st.hasQuestItems(PATROL_REPORT)) ? "30344-0.htm" : "30344-0a.htm";
 						}
@@ -117,8 +121,10 @@ public class Q298_LizardmensConspiracy extends Quest
 							htmltext = "30344-2.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -127,7 +133,7 @@ public class Q298_LizardmensConspiracy extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "2");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 2);
 		if (partyMember == null)
 		{
 			return null;
@@ -142,33 +148,38 @@ public class Q298_LizardmensConspiracy extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20922:
+			{
 				if (st.dropItems(WHITE_GEM, 1, 50, 400000) && (st.getQuestItemsCount(RED_GEM) >= 50))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 20923:
+			{
 				if (st.dropItems(WHITE_GEM, 1, 50, 450000) && (st.getQuestItemsCount(RED_GEM) >= 50))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 20924:
+			{
 				if (st.dropItems(WHITE_GEM, 1, 50, 350000) && (st.getQuestItemsCount(RED_GEM) >= 50))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case 20926:
 			case 20927:
+			{
 				if (st.dropItems(RED_GEM, 1, 50, 400000) && (st.getQuestItemsCount(WHITE_GEM) >= 50))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
+			}
 		}
 		
 		return null;

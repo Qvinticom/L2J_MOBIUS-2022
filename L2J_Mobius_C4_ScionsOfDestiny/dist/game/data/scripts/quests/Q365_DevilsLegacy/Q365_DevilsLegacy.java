@@ -30,19 +30,15 @@ public class Q365_DevilsLegacy extends Quest
 	// NPCs
 	private static final int RANDOLF = 30095;
 	private static final int COLLOB = 30092;
-	
 	// Item
 	private static final int PIRATE_TREASURE_CHEST = 5873;
 	
 	public Q365_DevilsLegacy()
 	{
 		super(365, "Devil's Legacy");
-		
 		registerQuestItems(PIRATE_TREASURE_CHEST);
-		
 		addStartNpc(RANDOLF);
 		addTalkId(RANDOLF, COLLOB);
-		
 		addKillId(20836, 20845, 21629, 21630); // Pirate Zombie && Pirate Zombie Captain.
 	}
 	
@@ -56,104 +52,108 @@ public class Q365_DevilsLegacy extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30095-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30095-06.htm"))
-		{
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30092-05.htm"))
-		{
-			if (!st.hasQuestItems(PIRATE_TREASURE_CHEST))
+			case "30095-02.htm":
 			{
-				htmltext = "30092-02.htm";
+				st.startQuest();
+				break;
 			}
-			else if (st.getQuestItemsCount(57) < 600)
+			case "30095-06.htm":
 			{
-				htmltext = "30092-03.htm";
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
 			}
-			else
+			case "30092-05.htm":
 			{
-				st.takeItems(PIRATE_TREASURE_CHEST, 1);
-				st.takeItems(57, 600);
-				
-				int i0;
-				if (Rnd.get(100) < 80)
+				if (!st.hasQuestItems(PIRATE_TREASURE_CHEST))
 				{
-					i0 = Rnd.get(100);
-					if (i0 < 1)
-					{
-						st.giveItems(955, 1);
-					}
-					else if (i0 < 4)
-					{
-						st.giveItems(956, 1);
-					}
-					else if (i0 < 36)
-					{
-						st.giveItems(1868, 1);
-					}
-					else if (i0 < 68)
-					{
-						st.giveItems(1884, 1);
-					}
-					else
-					{
-						st.giveItems(1872, 1);
-					}
-					
-					htmltext = "30092-05.htm";
+					htmltext = "30092-02.htm";
+				}
+				else if (st.getQuestItemsCount(57) < 600)
+				{
+					htmltext = "30092-03.htm";
 				}
 				else
 				{
-					i0 = Rnd.get(1000);
-					if (i0 < 10)
+					st.takeItems(PIRATE_TREASURE_CHEST, 1);
+					st.takeItems(57, 600);
+					
+					int i0;
+					if (Rnd.get(100) < 80)
 					{
-						st.giveItems(951, 1);
-					}
-					else if (i0 < 40)
-					{
-						st.giveItems(952, 1);
-					}
-					else if (i0 < 60)
-					{
-						st.giveItems(955, 1);
-					}
-					else if (i0 < 260)
-					{
-						st.giveItems(956, 1);
-					}
-					else if (i0 < 445)
-					{
-						st.giveItems(1879, 1);
-					}
-					else if (i0 < 630)
-					{
-						st.giveItems(1880, 1);
-					}
-					else if (i0 < 815)
-					{
-						st.giveItems(1882, 1);
+						i0 = Rnd.get(100);
+						if (i0 < 1)
+						{
+							st.giveItems(955, 1);
+						}
+						else if (i0 < 4)
+						{
+							st.giveItems(956, 1);
+						}
+						else if (i0 < 36)
+						{
+							st.giveItems(1868, 1);
+						}
+						else if (i0 < 68)
+						{
+							st.giveItems(1884, 1);
+						}
+						else
+						{
+							st.giveItems(1872, 1);
+						}
+						
+						htmltext = "30092-05.htm";
 					}
 					else
 					{
-						st.giveItems(1881, 1);
-					}
-					
-					htmltext = "30092-06.htm";
-					
-					// Curse effect !
-					final Skill skill = SkillTable.getInstance().getSkill(4082, 1);
-					if ((skill != null) && (player.getFirstEffect(skill) == null))
-					{
-						skill.applyEffects(npc, player);
+						i0 = Rnd.get(1000);
+						if (i0 < 10)
+						{
+							st.giveItems(951, 1);
+						}
+						else if (i0 < 40)
+						{
+							st.giveItems(952, 1);
+						}
+						else if (i0 < 60)
+						{
+							st.giveItems(955, 1);
+						}
+						else if (i0 < 260)
+						{
+							st.giveItems(956, 1);
+						}
+						else if (i0 < 445)
+						{
+							st.giveItems(1879, 1);
+						}
+						else if (i0 < 630)
+						{
+							st.giveItems(1880, 1);
+						}
+						else if (i0 < 815)
+						{
+							st.giveItems(1882, 1);
+						}
+						else
+						{
+							st.giveItems(1881, 1);
+						}
+						
+						htmltext = "30092-06.htm";
+						
+						// Curse effect !
+						final Skill skill = SkillTable.getInstance().getSkill(4082, 1);
+						if ((skill != null) && (player.getFirstEffect(skill) == null))
+						{
+							skill.applyEffects(npc, player);
+						}
 					}
 				}
+				break;
 			}
 		}
 		
@@ -173,13 +173,16 @@ public class Q365_DevilsLegacy extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 39) ? "30095-00.htm" : "30095-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case RANDOLF:
+					{
 						if (!st.hasQuestItems(PIRATE_TREASURE_CHEST))
 						{
 							htmltext = "30095-03.htm";
@@ -194,11 +197,15 @@ public class Q365_DevilsLegacy extends Quest
 							st.rewardItems(57, reward + 19800);
 						}
 						break;
-					
+					}
 					case COLLOB:
+					{
 						htmltext = "30092-01.htm";
 						break;
+					}
 				}
+				break;
+			}
 		}
 		
 		return htmltext;

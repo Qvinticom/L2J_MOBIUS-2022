@@ -34,9 +34,7 @@ public class Q612_WarWithKetraOrcs extends Quest
 	public Q612_WarWithKetraOrcs()
 	{
 		super(612, "War with Ketra Orcs");
-		
 		registerQuestItems(MOLAR_OF_KETRA_ORC);
-		
 		addStartNpc(31377); // Ashas Varka Durai
 		addTalkId(31377);
 	}
@@ -51,29 +49,33 @@ public class Q612_WarWithKetraOrcs extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31377-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31377-07.htm"))
-		{
-			if (st.getQuestItemsCount(MOLAR_OF_KETRA_ORC) >= 100)
+			case "31377-03.htm":
 			{
-				st.playSound(QuestState.SOUND_ITEMGET);
-				st.takeItems(MOLAR_OF_KETRA_ORC, 100);
-				st.giveItems(NEPENTHES_SEED, 20);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31377-07.htm":
 			{
-				htmltext = "31377-08.htm";
+				if (st.getQuestItemsCount(MOLAR_OF_KETRA_ORC) >= 100)
+				{
+					st.playSound(QuestState.SOUND_ITEMGET);
+					st.takeItems(MOLAR_OF_KETRA_ORC, 100);
+					st.giveItems(NEPENTHES_SEED, 20);
+				}
+				else
+				{
+					htmltext = "31377-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31377-09.htm"))
-		{
-			st.takeItems(MOLAR_OF_KETRA_ORC, -1);
-			st.exitQuest(true);
+			case "31377-09.htm":
+			{
+				st.takeItems(MOLAR_OF_KETRA_ORC, -1);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -92,12 +94,15 @@ public class Q612_WarWithKetraOrcs extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() >= 74) && player.isAlliedWithVarka()) ? "31377-01.htm" : "31377-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasQuestItems(MOLAR_OF_KETRA_ORC)) ? "31377-04.htm" : "31377-05.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

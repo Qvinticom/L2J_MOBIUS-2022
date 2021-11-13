@@ -30,12 +30,9 @@ public class Q353_PowerOfDarkness extends Quest
 	public Q353_PowerOfDarkness()
 	{
 		super(353, "Power of Darkness");
-		
 		registerQuestItems(STONE);
-		
 		addStartNpc(31044); // Galman
 		addTalkId(31044);
-		
 		addKillId(20244, 20245, 20283, 20284);
 	}
 	
@@ -51,9 +48,7 @@ public class Q353_PowerOfDarkness extends Quest
 		
 		if (event.equals("31044-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31044-08.htm"))
 		{
@@ -77,10 +72,12 @@ public class Q353_PowerOfDarkness extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 55) ? "31044-01.htm" : "31044-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int stones = st.getQuestItemsCount(STONE);
 				if (stones == 0)
 				{
@@ -93,6 +90,7 @@ public class Q353_PowerOfDarkness extends Quest
 					st.rewardItems(57, 2500 + (230 * stones));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -29,7 +29,6 @@ public class Q275_DarkWingedSpies extends Quest
 	// Monsters
 	private static final int DARKWING_BAT = 20316;
 	private static final int VARANGKA_TRACKER = 27043;
-	
 	// Items
 	private static final int DARKWING_BAT_FANG = 1478;
 	private static final int VARANGKA_PARASITE = 1479;
@@ -37,12 +36,9 @@ public class Q275_DarkWingedSpies extends Quest
 	public Q275_DarkWingedSpies()
 	{
 		super(275, "Dark Winged Spies");
-		
 		registerQuestItems(DARKWING_BAT_FANG, VARANGKA_PARASITE);
-		
 		addStartNpc(30567); // Tantus
 		addTalkId(30567);
-		
 		addKillId(DARKWING_BAT, VARANGKA_TRACKER);
 	}
 	
@@ -58,9 +54,7 @@ public class Q275_DarkWingedSpies extends Quest
 		
 		if (event.equals("30567-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -79,6 +73,7 @@ public class Q275_DarkWingedSpies extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30567-00.htm";
@@ -92,9 +87,10 @@ public class Q275_DarkWingedSpies extends Quest
 					htmltext = "30567-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30567-04.htm";
 				}
@@ -108,6 +104,7 @@ public class Q275_DarkWingedSpies extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -116,7 +113,7 @@ public class Q275_DarkWingedSpies extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -125,9 +122,10 @@ public class Q275_DarkWingedSpies extends Quest
 		switch (npc.getNpcId())
 		{
 			case DARKWING_BAT:
+			{
 				if (st.dropItemsAlways(DARKWING_BAT_FANG, 1, 70))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				else if ((Rnd.get(100) < 10) && (st.getQuestItemsCount(DARKWING_BAT_FANG) > 10) && (st.getQuestItemsCount(DARKWING_BAT_FANG) < 66))
 				{
@@ -136,17 +134,19 @@ public class Q275_DarkWingedSpies extends Quest
 					st.giveItems(VARANGKA_PARASITE, 1);
 				}
 				break;
-			
+			}
 			case VARANGKA_TRACKER:
+			{
 				if (st.hasQuestItems(VARANGKA_PARASITE))
 				{
 					st.takeItems(VARANGKA_PARASITE, -1);
 					if (st.dropItemsAlways(DARKWING_BAT_FANG, 5, 70))
 					{
-						st.set("cond", "2");
+						st.setCond(2);
 					}
 				}
 				break;
+			}
 		}
 		
 		return null;

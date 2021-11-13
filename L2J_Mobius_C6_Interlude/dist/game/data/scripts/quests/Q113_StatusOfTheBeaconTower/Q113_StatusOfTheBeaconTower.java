@@ -27,16 +27,13 @@ public class Q113_StatusOfTheBeaconTower extends Quest
 	// NPCs
 	private static final int MOIRA = 31979;
 	private static final int TORRANT = 32016;
-	
 	// Item
 	private static final int BOX = 8086;
 	
 	public Q113_StatusOfTheBeaconTower()
 	{
 		super(113, "Status of the Beacon Tower");
-		
 		registerQuestItems(BOX);
-		
 		addStartNpc(MOIRA);
 		addTalkId(MOIRA, TORRANT);
 	}
@@ -53,9 +50,7 @@ public class Q113_StatusOfTheBeaconTower extends Quest
 		
 		if (event.equals("31979-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(BOX, 1);
 		}
 		else if (event.equals("32016-02.htm"))
@@ -82,25 +77,32 @@ public class Q113_StatusOfTheBeaconTower extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 40) ? "31979-00.htm" : "31979-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case MOIRA:
+					{
 						htmltext = "31979-03.htm";
 						break;
-					
+					}
 					case TORRANT:
+					{
 						htmltext = "32016-01.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

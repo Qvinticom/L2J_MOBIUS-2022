@@ -30,12 +30,10 @@ public class Q627_HeartInSearchOfPower extends Quest
 	// NPCs
 	private static final int NECROMANCER = 31518;
 	private static final int ENFEUX = 31519;
-	
 	// Items
 	private static final int SEAL_OF_LIGHT = 7170;
 	private static final int BEAD_OF_OBEDIENCE = 7171;
 	private static final int GEM_OF_SAINTS = 7172;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -55,56 +53,26 @@ public class Q627_HeartInSearchOfPower extends Quest
 		CHANCES.put(21540, 762000);
 		CHANCES.put(21658, 690000);
 	}
-	
 	// Rewards
 	private static final Map<String, int[]> REWARDS = new HashMap<>();
 	static
 	{
-		REWARDS.put("adena", new int[]
-		{
-			0,
-			0,
-			100000
-		});
-		REWARDS.put("asofe", new int[]
-		{
-			4043,
-			13,
-			6400
-		});
-		REWARDS.put("thon", new int[]
-		{
-			4044,
-			13,
-			6400
-		});
-		REWARDS.put("enria", new int[]
-		{
-			4042,
-			6,
-			13600
-		});
-		REWARDS.put("mold", new int[]
-		{
-			4041,
-			3,
-			17200
-		});
+		// @formatter:off
+		REWARDS.put("adena", new int[]{0, 0, 100000});
+		REWARDS.put("asofe", new int[]{4043, 13, 6400});
+		REWARDS.put("thon", new int[]{4044, 13, 6400});
+		REWARDS.put("enria", new int[]{4042, 6, 13600});
+		REWARDS.put("mold", new int[]{4041, 3, 17200});
+		// @formatter:on
 	}
 	
 	public Q627_HeartInSearchOfPower()
 	{
 		super(627, "Heart in Search of Power");
-		
 		registerQuestItems(BEAD_OF_OBEDIENCE);
-		
 		addStartNpc(NECROMANCER);
 		addTalkId(NECROMANCER, ENFEUX);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -119,31 +87,29 @@ public class Q627_HeartInSearchOfPower extends Quest
 		
 		if (event.equals("31518-01.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31518-03.htm"))
 		{
 			if (st.getQuestItemsCount(BEAD_OF_OBEDIENCE) == 300)
 			{
-				st.set("cond", "3");
+				st.setCond(3);
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.takeItems(BEAD_OF_OBEDIENCE, -1);
 				st.giveItems(SEAL_OF_LIGHT, 1);
 			}
 			else
 			{
-				htmltext = "31518-03a.htm";
-				st.set("cond", "1");
+				st.setCond(1);
 				st.takeItems(BEAD_OF_OBEDIENCE, -1);
+				htmltext = "31518-03a.htm";
 			}
 		}
 		else if (event.equals("31519-01.htm"))
 		{
 			if (st.getQuestItemsCount(SEAL_OF_LIGHT) == 1)
 			{
-				st.set("cond", "4");
+				st.setCond(4);
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.takeItems(SEAL_OF_LIGHT, 1);
 				st.giveItems(GEM_OF_SAINTS, 1);
@@ -187,14 +153,17 @@ public class Q627_HeartInSearchOfPower extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 60) ? "31518-00a.htm" : "31518-00.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case NECROMANCER:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31518-01a.htm";
@@ -212,8 +181,9 @@ public class Q627_HeartInSearchOfPower extends Quest
 							htmltext = "31518-05.htm";
 						}
 						break;
-					
+					}
 					case ENFEUX:
+					{
 						if (cond == 3)
 						{
 							htmltext = "31519-00.htm";
@@ -223,8 +193,10 @@ public class Q627_HeartInSearchOfPower extends Quest
 							htmltext = "31519-02.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			
 		}
 		
@@ -234,7 +206,7 @@ public class Q627_HeartInSearchOfPower extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -242,7 +214,7 @@ public class Q627_HeartInSearchOfPower extends Quest
 		
 		if (st.dropItems(BEAD_OF_OBEDIENCE, 1, 300, CHANCES.get(npc.getNpcId())))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

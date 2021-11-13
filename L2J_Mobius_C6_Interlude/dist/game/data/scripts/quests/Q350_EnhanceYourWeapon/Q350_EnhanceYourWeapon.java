@@ -43,7 +43,6 @@ public class Q350_EnhanceYourWeapon extends Quest
 	public Q350_EnhanceYourWeapon()
 	{
 		super(350, "Enhance Your Weapon");
-		
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
@@ -64,9 +63,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 			case "30856-04.htm":
 			case "30194-04.htm":
 			{
-				qs.set("cond", "1");
-				qs.setState(State.STARTED);
-				qs.playSound("ItemSound.quest_accept");
+				qs.startQuest();
 				break;
 			}
 			case "30115-09.htm":
@@ -113,10 +110,6 @@ public class Q350_EnhanceYourWeapon extends Quest
 		final int npcId = npc.getNpcId();
 		final int id = qs.getState();
 		if (id == State.CREATED)
-		{
-			qs.set("cond", "0");
-		}
-		if (qs.getInt("cond") == 0)
 		{
 			htmltext = npcId + "-01.htm";
 		}

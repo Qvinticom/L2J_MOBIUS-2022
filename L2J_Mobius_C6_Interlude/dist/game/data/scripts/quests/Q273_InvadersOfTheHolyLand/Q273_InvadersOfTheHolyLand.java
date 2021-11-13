@@ -29,19 +29,15 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 	// Items
 	private static final int BLACK_SOULSTONE = 1475;
 	private static final int RED_SOULSTONE = 1476;
-	
 	// Reward
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
 	
 	public Q273_InvadersOfTheHolyLand()
 	{
 		super(273, "Invaders of the Holy Land");
-		
 		registerQuestItems(BLACK_SOULSTONE, RED_SOULSTONE);
-		
 		addStartNpc(30566); // Varkees
 		addTalkId(30566);
-		
 		addKillId(20311, 20312, 20313);
 	}
 	
@@ -57,9 +53,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 		
 		if (event.equals("30566-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30566-07.htm"))
 		{
@@ -83,6 +77,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30566-00.htm";
@@ -96,8 +91,9 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 					htmltext = "30566-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int red = st.getQuestItemsCount(RED_SOULSTONE);
 				final int black = st.getQuestItemsCount(BLACK_SOULSTONE);
 				if ((red + black) == 0)
@@ -127,6 +123,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

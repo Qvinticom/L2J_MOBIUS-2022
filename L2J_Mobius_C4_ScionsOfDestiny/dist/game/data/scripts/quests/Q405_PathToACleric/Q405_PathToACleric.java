@@ -26,6 +26,13 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q405_PathToACleric extends Quest
 {
+	// NPCs
+	private static final int GALLINT = 30017;
+	private static final int ZIGAUNT = 30022;
+	private static final int VIVYAN = 30030;
+	private static final int PRAGA = 30333;
+	private static final int SIMPLON = 30253;
+	private static final int LIONEL = 30408;
 	// Items
 	private static final int LETTER_OF_ORDER_1 = 1191;
 	private static final int LETTER_OF_ORDER_2 = 1192;
@@ -37,27 +44,15 @@ public class Q405_PathToACleric extends Quest
 	private static final int PENDANT_OF_MOTHER = 1198;
 	private static final int NECKLACE_OF_MOTHER = 1199;
 	private static final int LIONEL_COVENANT = 1200;
-	
-	// NPCs
-	private static final int GALLINT = 30017;
-	private static final int ZIGAUNT = 30022;
-	private static final int VIVYAN = 30030;
-	private static final int PRAGA = 30333;
-	private static final int SIMPLON = 30253;
-	private static final int LIONEL = 30408;
-	
 	// Reward
 	private static final int MARK_OF_FATE = 1201;
 	
 	public Q405_PathToACleric()
 	{
 		super(405, "Path to a Cleric");
-		
 		registerQuestItems(LETTER_OF_ORDER_1, BOOK_OF_SIMPLON, BOOK_OF_PRAGA, BOOK_OF_VIVYAN, NECKLACE_OF_MOTHER, PENDANT_OF_MOTHER, LETTER_OF_ORDER_2, LIONEL_BOOK, CERTIFICATE_OF_GALLINT, LIONEL_COVENANT);
-		
 		addStartNpc(ZIGAUNT);
 		addTalkId(ZIGAUNT, SIMPLON, PRAGA, VIVYAN, LIONEL, GALLINT);
-		
 		addKillId(20029, 20026);
 	}
 	
@@ -73,9 +68,7 @@ public class Q405_PathToACleric extends Quest
 		
 		if (event.equals("30022-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(LETTER_OF_ORDER_1, 1);
 		}
 		
@@ -95,6 +88,7 @@ public class Q405_PathToACleric extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getClassId() != ClassId.MAGE)
 				{
 					htmltext = (player.getClassId() == ClassId.CLERIC) ? "30022-02a.htm" : "30022-02.htm";
@@ -112,12 +106,14 @@ public class Q405_PathToACleric extends Quest
 					htmltext = "30022-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ZIGAUNT:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30022-06.htm";
@@ -125,7 +121,7 @@ public class Q405_PathToACleric extends Quest
 						else if (cond == 2)
 						{
 							htmltext = "30022-08.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BOOK_OF_PRAGA, 1);
 							st.takeItems(BOOK_OF_VIVYAN, 1);
@@ -149,8 +145,9 @@ public class Q405_PathToACleric extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case SIMPLON:
+					{
 						if ((cond == 1) && !st.hasQuestItems(BOOK_OF_SIMPLON))
 						{
 							htmltext = "30253-01.htm";
@@ -162,8 +159,9 @@ public class Q405_PathToACleric extends Quest
 							htmltext = "30253-02.htm";
 						}
 						break;
-					
+					}
 					case PRAGA:
+					{
 						if (cond == 1)
 						{
 							if (!st.hasQuestItems(BOOK_OF_PRAGA) && !st.hasQuestItems(NECKLACE_OF_MOTHER) && st.hasQuestItems(BOOK_OF_SIMPLON))
@@ -185,7 +183,7 @@ public class Q405_PathToACleric extends Quest
 								
 								if (st.hasQuestItems(BOOK_OF_VIVYAN))
 								{
-									st.set("cond", "2");
+									st.setCond(2);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 								else
@@ -199,8 +197,9 @@ public class Q405_PathToACleric extends Quest
 							htmltext = "30333-04.htm";
 						}
 						break;
-					
+					}
 					case VIVYAN:
+					{
 						if ((cond == 1) && !st.hasQuestItems(BOOK_OF_VIVYAN) && st.hasQuestItems(BOOK_OF_SIMPLON))
 						{
 							htmltext = "30030-01.htm";
@@ -208,7 +207,7 @@ public class Q405_PathToACleric extends Quest
 							
 							if (st.hasQuestItems(BOOK_OF_PRAGA))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -221,8 +220,9 @@ public class Q405_PathToACleric extends Quest
 							htmltext = "30030-02.htm";
 						}
 						break;
-					
+					}
 					case LIONEL:
+					{
 						if (cond < 3)
 						{
 							htmltext = "30408-02.htm";
@@ -230,7 +230,7 @@ public class Q405_PathToACleric extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30408-01.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(LIONEL_BOOK, 1);
 						}
@@ -241,7 +241,7 @@ public class Q405_PathToACleric extends Quest
 						else if (cond == 5)
 						{
 							htmltext = "30408-04.htm";
-							st.set("cond", "6");
+							st.setCond(6);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(CERTIFICATE_OF_GALLINT, 1);
 							st.giveItems(LIONEL_COVENANT, 1);
@@ -251,12 +251,13 @@ public class Q405_PathToACleric extends Quest
 							htmltext = "30408-05.htm";
 						}
 						break;
-					
+					}
 					case GALLINT:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30017-01.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LIONEL_BOOK, 1);
 							st.giveItems(CERTIFICATE_OF_GALLINT, 1);
@@ -266,8 +267,10 @@ public class Q405_PathToACleric extends Quest
 							htmltext = "30017-02.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -276,7 +279,7 @@ public class Q405_PathToACleric extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;

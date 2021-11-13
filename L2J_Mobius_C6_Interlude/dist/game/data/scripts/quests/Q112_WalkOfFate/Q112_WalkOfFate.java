@@ -27,14 +27,12 @@ public class Q112_WalkOfFate extends Quest
 	// NPCs
 	private static final int LIVINA = 30572;
 	private static final int KARUDA = 32017;
-	
 	// Rewards
 	private static final int ENCHANT_D = 956;
 	
 	public Q112_WalkOfFate()
 	{
 		super(112, "Walk of Fate");
-		
 		addStartNpc(LIVINA);
 		addTalkId(LIVINA, KARUDA);
 	}
@@ -51,9 +49,7 @@ public class Q112_WalkOfFate extends Quest
 		
 		if (event.equals("30572-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("32017-02.htm"))
 		{
@@ -79,25 +75,32 @@ public class Q112_WalkOfFate extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "30572-00.htm" : "30572-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case LIVINA:
+					{
 						htmltext = "30572-03.htm";
 						break;
-					
+					}
 					case KARUDA:
+					{
 						htmltext = "32017-01.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

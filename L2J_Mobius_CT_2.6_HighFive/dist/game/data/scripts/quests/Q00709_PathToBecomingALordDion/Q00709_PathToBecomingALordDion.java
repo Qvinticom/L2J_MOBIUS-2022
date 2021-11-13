@@ -125,13 +125,13 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 			}
 			case "30735-02.html":
 			{
-				qs.set("cond", "6");
+				qs.setCond(6);
 				break;
 			}
 			case "30735-05.html":
 			{
 				takeItems(player, BLOODY_AXE_BLACK_EPAULETTE, 1);
-				qs.set("cond", "8");
+				qs.setCond(8);
 				break;
 			}
 			case "31418-05.html":
@@ -232,7 +232,7 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 				}
 				else if (qs.isCond(1))
 				{
-					qs.set("cond", "2");
+					qs.setCond(2);
 					htmltext = "35142-04.html";
 				}
 				else if (qs.isCond(2) || qs.isCond(3))
@@ -241,7 +241,7 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 				}
 				else if (qs.isCond(4))
 				{
-					qs.set("cond", "5");
+					qs.setCond(5);
 					htmltext = "35142-07.html";
 				}
 				else if (qs.isCond(5))

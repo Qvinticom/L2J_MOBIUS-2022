@@ -28,20 +28,16 @@ public class Q650_ABrokenDream extends Quest
 {
 	// NPC
 	private static final int GHOST = 32054;
-	
-	// Item
-	private static final int DREAM_FRAGMENT = 8514;
-	
 	// Monsters
 	private static final int CREWMAN = 22027;
 	private static final int VAGABOND = 22028;
+	// Item
+	private static final int DREAM_FRAGMENT = 8514;
 	
 	public Q650_ABrokenDream()
 	{
 		super(650, "A Broken Dream");
-		
 		registerQuestItems(DREAM_FRAGMENT);
-		
 		addStartNpc(GHOST);
 		addTalkId(GHOST);
 		addKillId(CREWMAN, VAGABOND);
@@ -57,23 +53,27 @@ public class Q650_ABrokenDream extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32054-01a.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32054-03.htm"))
-		{
-			if (!st.hasQuestItems(DREAM_FRAGMENT))
+			case "32054-01a.htm":
 			{
-				htmltext = "32054-04.htm";
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("32054-05.htm"))
-		{
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
+			case "32054-03.htm":
+			{
+				if (!st.hasQuestItems(DREAM_FRAGMENT))
+				{
+					htmltext = "32054-04.htm";
+				}
+				break;
+			}
+			case "32054-05.htm":
+			{
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -92,6 +92,7 @@ public class Q650_ABrokenDream extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState st2 = player.getQuestState(Q117_TheOceanOfDistantStars.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 39))
 				{
@@ -103,10 +104,12 @@ public class Q650_ABrokenDream extends Quest
 					st.exitQuest(true);
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = "32054-02.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -26,19 +26,15 @@ public class Q297_GatekeepersFavor extends Quest
 {
 	// Item
 	private static final int STARSTONE = 1573;
-	
 	// Reward
 	private static final int GATEKEEPER_TOKEN = 1659;
 	
 	public Q297_GatekeepersFavor()
 	{
 		super(297, "Gatekeeper's Favor");
-		
 		registerQuestItems(STARSTONE);
-		
 		addStartNpc(30540); // Wirphy
 		addTalkId(30540);
-		
 		addKillId(20521); // Whinstone Golem
 	}
 	
@@ -54,9 +50,7 @@ public class Q297_GatekeepersFavor extends Quest
 		
 		if (event.equals("30540-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -75,11 +69,13 @@ public class Q297_GatekeepersFavor extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30540-01.htm" : "30540-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30540-04.htm";
 				}
@@ -92,6 +88,7 @@ public class Q297_GatekeepersFavor extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -100,7 +97,7 @@ public class Q297_GatekeepersFavor extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -108,7 +105,7 @@ public class Q297_GatekeepersFavor extends Quest
 		
 		if (st.dropItems(STARSTONE, 1, 20, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

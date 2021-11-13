@@ -27,7 +27,6 @@ public class Q258_BringWolfPelts extends Quest
 {
 	// Item
 	private static final int WOLF_PELT = 702;
-	
 	// Rewards
 	private static final int COTTON_SHIRT = 390;
 	private static final int LEATHER_PANTS = 29;
@@ -38,12 +37,9 @@ public class Q258_BringWolfPelts extends Quest
 	public Q258_BringWolfPelts()
 	{
 		super(258, "Bring Wolf Pelts");
-		
 		registerQuestItems(WOLF_PELT);
-		
 		addStartNpc(30001); // Lector
 		addTalkId(30001);
-		
 		addKillId(20120, 20442); // Wolf, Elder Wolf
 	}
 	
@@ -59,9 +55,7 @@ public class Q258_BringWolfPelts extends Quest
 		
 		if (event.equals("30001-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -80,10 +74,12 @@ public class Q258_BringWolfPelts extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 3) ? "30001-01.htm" : "30001-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(WOLF_PELT) < 40)
 				{
 					htmltext = "30001-05.htm";
@@ -129,6 +125,7 @@ public class Q258_BringWolfPelts extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -137,7 +134,7 @@ public class Q258_BringWolfPelts extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -145,7 +142,7 @@ public class Q258_BringWolfPelts extends Quest
 		
 		if (st.dropItemsAlways(WOLF_PELT, 1, 40))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -27,6 +27,36 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q217_TestimonyOfTrust extends Quest
 {
+	// NPCs
+	private static final int HOLLINT = 30191;
+	private static final int ASTERIOS = 30154;
+	private static final int THIFIELL = 30358;
+	private static final int CLAYTON = 30464;
+	private static final int SERESIN = 30657;
+	private static final int KAKAI = 30565;
+	private static final int MANAKIA = 30515;
+	private static final int LOCKIRIN = 30531;
+	private static final int NIKOLA = 30621;
+	private static final int BIOTIN = 30031;
+	// Monsters
+	private static final int DRYAD = 20013;
+	private static final int DRYAD_ELDER = 20019;
+	private static final int LIREIN = 20036;
+	private static final int LIREIN_ELDER = 20044;
+	private static final int ACTEA_OF_VERDANT_WILDS = 27121;
+	private static final int LUELL_OF_ZEPHYR_WINDS = 27120;
+	private static final int GUARDIAN_BASILIK = 20550;
+	private static final int ANT_RECRUIT = 20082;
+	private static final int ANT_PATROL = 20084;
+	private static final int ANT_GUARD = 20086;
+	private static final int ANT_SOLDIER = 20087;
+	private static final int ANT_WARRIOR_CAPTAIN = 20088;
+	private static final int MARSH_STAKATO = 20157;
+	private static final int MARSH_STAKATO_WORKER = 20230;
+	private static final int MARSH_STAKATO_SOLDIER = 20232;
+	private static final int MARSH_STAKATO_DRONE = 20234;
+	private static final int WINDSUS = 20553;
+	private static final int PORTA = 20213;
 	// Items
 	private static final int LETTER_TO_ELF = 2735;
 	private static final int LETTER_TO_DARK_ELF = 2736;
@@ -55,52 +85,16 @@ public class Q217_TestimonyOfTrust extends Quest
 	private static final int LETTER_TO_NIKOLA = 2759;
 	private static final int ORDER_OF_NIKOLA = 2760;
 	private static final int HEARTSTONE_OF_PORTA = 2761;
-	
 	// Rewards
 	private static final int MARK_OF_TRUST = 2734;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	// NPCs
-	private static final int HOLLINT = 30191;
-	private static final int ASTERIOS = 30154;
-	private static final int THIFIELL = 30358;
-	private static final int CLAYTON = 30464;
-	private static final int SERESIN = 30657;
-	private static final int KAKAI = 30565;
-	private static final int MANAKIA = 30515;
-	private static final int LOCKIRIN = 30531;
-	private static final int NIKOLA = 30621;
-	private static final int BIOTIN = 30031;
-	
-	// Monsters
-	private static final int DRYAD = 20013;
-	private static final int DRYAD_ELDER = 20019;
-	private static final int LIREIN = 20036;
-	private static final int LIREIN_ELDER = 20044;
-	private static final int ACTEA_OF_VERDANT_WILDS = 27121;
-	private static final int LUELL_OF_ZEPHYR_WINDS = 27120;
-	private static final int GUARDIAN_BASILIK = 20550;
-	private static final int ANT_RECRUIT = 20082;
-	private static final int ANT_PATROL = 20084;
-	private static final int ANT_GUARD = 20086;
-	private static final int ANT_SOLDIER = 20087;
-	private static final int ANT_WARRIOR_CAPTAIN = 20088;
-	private static final int MARSH_STAKATO = 20157;
-	private static final int MARSH_STAKATO_WORKER = 20230;
-	private static final int MARSH_STAKATO_SOLDIER = 20232;
-	private static final int MARSH_STAKATO_DRONE = 20234;
-	private static final int WINDSUS = 20553;
-	private static final int PORTA = 20213;
-	
 	public Q217_TestimonyOfTrust()
 	{
 		super(217, "Testimony of Trust");
-		
 		registerQuestItems(LETTER_TO_ELF, LETTER_TO_DARK_ELF, LETTER_TO_DWARF, LETTER_TO_ORC, LETTER_TO_SERESIN, SCROLL_OF_DARK_ELF_TRUST, SCROLL_OF_ELF_TRUST, SCROLL_OF_DWARF_TRUST, SCROLL_OF_ORC_TRUST, RECOMMENDATION_OF_HOLLINT, ORDER_OF_ASTERIOS, BREATH_OF_WINDS, SEED_OF_VERDURE, LETTER_FROM_THIFIELL, BLOOD_GUARDIAN_BASILIK, GIANT_APHID, STAKATO_FLUIDS, BASILIK_PLASMA, HONEY_DEW, STAKATO_ICHOR, ORDER_OF_CLAYTON, PARASITE_OF_LOTA, LETTER_TO_MANAKIA, LETTER_OF_MANAKIA, LETTER_TO_NIKOLA, ORDER_OF_NIKOLA, HEARTSTONE_OF_PORTA);
-		
 		addStartNpc(HOLLINT);
 		addTalkId(HOLLINT, ASTERIOS, THIFIELL, CLAYTON, SERESIN, KAKAI, MANAKIA, LOCKIRIN, NIKOLA, BIOTIN);
-		
 		addKillId(DRYAD, DRYAD_ELDER, LIREIN, LIREIN_ELDER, ACTEA_OF_VERDANT_WILDS, LUELL_OF_ZEPHYR_WINDS, GUARDIAN_BASILIK, ANT_RECRUIT, ANT_PATROL, ANT_GUARD, ANT_SOLDIER, ANT_WARRIOR_CAPTAIN, MARSH_STAKATO, MARSH_STAKATO_WORKER, MARSH_STAKATO_SOLDIER, MARSH_STAKATO_DRONE, WINDSUS, PORTA);
 	}
 	
@@ -108,87 +102,94 @@ public class Q217_TestimonyOfTrust extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (event.equals("30191-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(LETTER_TO_ELF, 1);
-			st.giveItems(LETTER_TO_DARK_ELF, 1);
-			
-			if (!player.getVariables().getBoolean("secondClassChange37", false))
+			case "30191-04.htm":
 			{
-				htmltext = "30191-04a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));
-				player.getVariables().set("secondClassChange37", true);
-			}
-		}
-		else if (event.equals("30154-03.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_TO_ELF, 1);
-			st.giveItems(ORDER_OF_ASTERIOS, 1);
-		}
-		else if (event.equals("30358-02.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_TO_DARK_ELF, 1);
-			st.giveItems(LETTER_FROM_THIFIELL, 1);
-		}
-		else if (event.equals("30515-02.htm"))
-		{
-			st.set("cond", "14");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_TO_MANAKIA, 1);
-		}
-		else if (event.equals("30531-02.htm"))
-		{
-			st.set("cond", "18");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_TO_DWARF, 1);
-			st.giveItems(LETTER_TO_NIKOLA, 1);
-		}
-		else if (event.equals("30565-02.htm"))
-		{
-			st.set("cond", "13");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_TO_ORC, 1);
-			st.giveItems(LETTER_TO_MANAKIA, 1);
-		}
-		else if (event.equals("30621-02.htm"))
-		{
-			st.set("cond", "19");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_TO_NIKOLA, 1);
-			st.giveItems(ORDER_OF_NIKOLA, 1);
-		}
-		else if (event.equals("30657-03.htm"))
-		{
-			if (player.getLevel() < 38)
-			{
-				htmltext = "30657-02.htm";
-				if (st.getInt("cond") == 10)
+				st.startQuest();
+				st.giveItems(LETTER_TO_ELF, 1);
+				st.giveItems(LETTER_TO_DARK_ELF, 1);
+				if (!player.getVariables().getBoolean("secondClassChange37", false))
 				{
-					st.set("cond", "11");
-					st.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = "30191-04a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));
+					player.getVariables().set("secondClassChange37", true);
 				}
+				break;
 			}
-			else
+			case "30154-03.htm":
 			{
-				st.set("cond", "12");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(LETTER_TO_SERESIN, 1);
-				st.giveItems(LETTER_TO_DWARF, 1);
-				st.giveItems(LETTER_TO_ORC, 1);
+				st.takeItems(LETTER_TO_ELF, 1);
+				st.giveItems(ORDER_OF_ASTERIOS, 1);
+				break;
+			}
+			case "30358-02.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LETTER_TO_DARK_ELF, 1);
+				st.giveItems(LETTER_FROM_THIFIELL, 1);
+				break;
+			}
+			case "30515-02.htm":
+			{
+				st.setCond(14);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LETTER_TO_MANAKIA, 1);
+				break;
+			}
+			case "30531-02.htm":
+			{
+				st.setCond(18);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LETTER_TO_DWARF, 1);
+				st.giveItems(LETTER_TO_NIKOLA, 1);
+				break;
+			}
+			case "30565-02.htm":
+			{
+				st.setCond(13);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LETTER_TO_ORC, 1);
+				st.giveItems(LETTER_TO_MANAKIA, 1);
+				break;
+			}
+			case "30621-02.htm":
+			{
+				st.setCond(19);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LETTER_TO_NIKOLA, 1);
+				st.giveItems(ORDER_OF_NIKOLA, 1);
+				break;
+			}
+			case "30657-03.htm":
+			{
+				if (player.getLevel() < 38)
+				{
+					htmltext = "30657-02.htm";
+					if (st.isCond(10))
+					{
+						st.setCond(11);
+						st.playSound(QuestState.SOUND_MIDDLE);
+					}
+				}
+				else
+				{
+					st.setCond(12);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(LETTER_TO_SERESIN, 1);
+					st.giveItems(LETTER_TO_DWARF, 1);
+					st.giveItems(LETTER_TO_ORC, 1);
+				}
+				break;
 			}
 		}
 		
@@ -208,6 +209,7 @@ public class Q217_TestimonyOfTrust extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getClassId().level() != 1)
 				{
 					htmltext = "30191-01a.htm";
@@ -225,12 +227,14 @@ public class Q217_TestimonyOfTrust extends Quest
 					htmltext = "30191-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case HOLLINT:
+					{
 						if (cond < 9)
 						{
 							htmltext = "30191-08.htm";
@@ -238,7 +242,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 9)
 						{
 							htmltext = "30191-05.htm";
-							st.set("cond", "10");
+							st.setCond(10);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(SCROLL_OF_DARK_ELF_TRUST, 1);
 							st.takeItems(SCROLL_OF_ELF_TRUST, 1);
@@ -251,7 +255,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 22)
 						{
 							htmltext = "30191-06.htm";
-							st.set("cond", "23");
+							st.setCond(23);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(SCROLL_OF_DWARF_TRUST, 1);
 							st.takeItems(SCROLL_OF_ORC_TRUST, 1);
@@ -262,8 +266,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30191-07.htm";
 						}
 						break;
-					
+					}
 					case ASTERIOS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30154-01.htm";
@@ -275,7 +280,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30154-05.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BREATH_OF_WINDS, 1);
 							st.takeItems(SEED_OF_VERDURE, 1);
@@ -287,8 +292,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30154-06.htm";
 						}
 						break;
-					
+					}
 					case THIFIELL:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30358-01.htm";
@@ -300,7 +306,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 8)
 						{
 							htmltext = "30358-03.htm";
-							st.set("cond", "9");
+							st.setCond(9);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BASILIK_PLASMA, 1);
 							st.takeItems(HONEY_DEW, 1);
@@ -312,12 +318,13 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30358-04.htm";
 						}
 						break;
-					
+					}
 					case CLAYTON:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30464-01.htm";
-							st.set("cond", "6");
+							st.setCond(6);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LETTER_FROM_THIFIELL, 1);
 							st.giveItems(ORDER_OF_CLAYTON, 1);
@@ -331,14 +338,15 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30464-03.htm";
 							if (cond == 7)
 							{
-								st.set("cond", "8");
+								st.setCond(8);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(ORDER_OF_CLAYTON, 1);
 							}
 						}
 						break;
-					
+					}
 					case SERESIN:
+					{
 						if ((cond == 10) || (cond == 11))
 						{
 							htmltext = "30657-01.htm";
@@ -352,8 +360,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30657-05.htm";
 						}
 						break;
-					
+					}
 					case KAKAI:
+					{
 						if (cond == 12)
 						{
 							htmltext = "30565-01.htm";
@@ -365,7 +374,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 16)
 						{
 							htmltext = "30565-04.htm";
-							st.set("cond", "17");
+							st.setCond(17);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(LETTER_OF_MANAKIA, 1);
 							st.giveItems(SCROLL_OF_ORC_TRUST, 1);
@@ -375,8 +384,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30565-05.htm";
 						}
 						break;
-					
+					}
 					case MANAKIA:
+					{
 						if (cond == 13)
 						{
 							htmltext = "30515-01.htm";
@@ -388,7 +398,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 15)
 						{
 							htmltext = "30515-04.htm";
-							st.set("cond", "16");
+							st.setCond(16);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(PARASITE_OF_LOTA, -1);
 							st.giveItems(LETTER_OF_MANAKIA, 1);
@@ -398,8 +408,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30515-05.htm";
 						}
 						break;
-					
+					}
 					case LOCKIRIN:
+					{
 						if (cond == 17)
 						{
 							htmltext = "30531-01.htm";
@@ -411,7 +422,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 21)
 						{
 							htmltext = "30531-04.htm";
-							st.set("cond", "22");
+							st.setCond(22);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(SCROLL_OF_DWARF_TRUST, 1);
 						}
@@ -420,8 +431,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30531-05.htm";
 						}
 						break;
-					
+					}
 					case NIKOLA:
+					{
 						if (cond == 18)
 						{
 							htmltext = "30621-01.htm";
@@ -433,7 +445,7 @@ public class Q217_TestimonyOfTrust extends Quest
 						else if (cond == 20)
 						{
 							htmltext = "30621-04.htm";
-							st.set("cond", "21");
+							st.setCond(21);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HEARTSTONE_OF_PORTA, -1);
 							st.takeItems(ORDER_OF_NIKOLA, 1);
@@ -443,8 +455,9 @@ public class Q217_TestimonyOfTrust extends Quest
 							htmltext = "30621-05.htm";
 						}
 						break;
-					
+					}
 					case BIOTIN:
+					{
 						if (cond == 23)
 						{
 							htmltext = "30031-01.htm";
@@ -456,12 +469,15 @@ public class Q217_TestimonyOfTrust extends Quest
 							st.exitQuest(false);
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -476,34 +492,36 @@ public class Q217_TestimonyOfTrust extends Quest
 			return null;
 		}
 		
-		final int npcId = npc.getNpcId();
-		switch (npcId)
+		switch (npc.getNpcId())
 		{
 			case DRYAD:
 			case DRYAD_ELDER:
-				if ((st.getInt("cond") == 2) && !st.hasQuestItems(SEED_OF_VERDURE) && (Rnd.get(100) < 33))
+			{
+				if (st.isCond(2) && !st.hasQuestItems(SEED_OF_VERDURE) && (Rnd.get(100) < 33))
 				{
 					addSpawn(ACTEA_OF_VERDANT_WILDS, npc, true, 200000);
 					st.playSound(QuestState.SOUND_BEFORE_BATTLE);
 				}
 				break;
-			
+			}
 			case LIREIN:
 			case LIREIN_ELDER:
-				if ((st.getInt("cond") == 2) && !st.hasQuestItems(BREATH_OF_WINDS) && (Rnd.get(100) < 33))
+			{
+				if (st.isCond(2) && !st.hasQuestItems(BREATH_OF_WINDS) && (Rnd.get(100) < 33))
 				{
 					addSpawn(LUELL_OF_ZEPHYR_WINDS, npc, true, 200000);
 					st.playSound(QuestState.SOUND_BEFORE_BATTLE);
 				}
 				break;
-			
+			}
 			case ACTEA_OF_VERDANT_WILDS:
-				if ((st.getInt("cond") == 2) && !st.hasQuestItems(SEED_OF_VERDURE))
+			{
+				if (st.isCond(2) && !st.hasQuestItems(SEED_OF_VERDURE))
 				{
 					st.giveItems(SEED_OF_VERDURE, 1);
 					if (st.hasQuestItems(BREATH_OF_WINDS))
 					{
-						st.set("cond", "3");
+						st.setCond(3);
 						st.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else
@@ -512,14 +530,15 @@ public class Q217_TestimonyOfTrust extends Quest
 					}
 				}
 				break;
-			
+			}
 			case LUELL_OF_ZEPHYR_WINDS:
-				if ((st.getInt("cond") == 2) && !st.hasQuestItems(BREATH_OF_WINDS))
+			{
+				if (st.isCond(2) && !st.hasQuestItems(BREATH_OF_WINDS))
 				{
 					st.giveItems(BREATH_OF_WINDS, 1);
 					if (st.hasQuestItems(SEED_OF_VERDURE))
 					{
-						st.set("cond", "3");
+						st.setCond(3);
 						st.playSound(QuestState.SOUND_MIDDLE);
 					}
 					else
@@ -528,66 +547,72 @@ public class Q217_TestimonyOfTrust extends Quest
 					}
 				}
 				break;
-			
+			}
 			case MARSH_STAKATO:
 			case MARSH_STAKATO_WORKER:
 			case MARSH_STAKATO_SOLDIER:
 			case MARSH_STAKATO_DRONE:
-				if ((st.getInt("cond") == 6) && !st.hasQuestItems(STAKATO_ICHOR) && st.dropItemsAlways(STAKATO_FLUIDS, 1, 10))
+			{
+				if (st.isCond(6) && !st.hasQuestItems(STAKATO_ICHOR) && st.dropItemsAlways(STAKATO_FLUIDS, 1, 10))
 				{
 					st.takeItems(STAKATO_FLUIDS, -1);
 					st.giveItems(STAKATO_ICHOR, 1);
 					
 					if (st.hasQuestItems(BASILIK_PLASMA, HONEY_DEW))
 					{
-						st.set("cond", "7");
+						st.setCond(7);
 					}
 				}
 				break;
-			
+			}
 			case ANT_RECRUIT:
 			case ANT_PATROL:
 			case ANT_GUARD:
 			case ANT_SOLDIER:
 			case ANT_WARRIOR_CAPTAIN:
-				if ((st.getInt("cond") == 6) && !st.hasQuestItems(HONEY_DEW) && st.dropItemsAlways(GIANT_APHID, 1, 10))
+			{
+				if (st.isCond(6) && !st.hasQuestItems(HONEY_DEW) && st.dropItemsAlways(GIANT_APHID, 1, 10))
 				{
 					st.takeItems(GIANT_APHID, -1);
 					st.giveItems(HONEY_DEW, 1);
 					
 					if (st.hasQuestItems(BASILIK_PLASMA, STAKATO_ICHOR))
 					{
-						st.set("cond", "7");
+						st.setCond(7);
 					}
 				}
 				break;
-			
+			}
 			case GUARDIAN_BASILIK:
-				if ((st.getInt("cond") == 6) && !st.hasQuestItems(BASILIK_PLASMA) && st.dropItemsAlways(BLOOD_GUARDIAN_BASILIK, 1, 10))
+			{
+				if (st.isCond(6) && !st.hasQuestItems(BASILIK_PLASMA) && st.dropItemsAlways(BLOOD_GUARDIAN_BASILIK, 1, 10))
 				{
 					st.takeItems(BLOOD_GUARDIAN_BASILIK, -1);
 					st.giveItems(BASILIK_PLASMA, 1);
 					
 					if (st.hasQuestItems(HONEY_DEW, STAKATO_ICHOR))
 					{
-						st.set("cond", "7");
+						st.setCond(7);
 					}
 				}
 				break;
-			
+			}
 			case WINDSUS:
-				if ((st.getInt("cond") == 14) && st.dropItems(PARASITE_OF_LOTA, 1, 10, 500000))
+			{
+				if (st.isCond(14) && st.dropItems(PARASITE_OF_LOTA, 1, 10, 500000))
 				{
-					st.set("cond", "15");
+					st.setCond(15);
 				}
 				break;
-			
+			}
 			case PORTA:
-				if ((st.getInt("cond") == 19) && st.dropItemsAlways(HEARTSTONE_OF_PORTA, 1, 10))
+			{
+				if (st.isCond(19) && st.dropItemsAlways(HEARTSTONE_OF_PORTA, 1, 10))
 				{
-					st.set("cond", "20");
+					st.setCond(20);
 				}
 				break;
+			}
 		}
 		
 		return null;

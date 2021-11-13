@@ -26,17 +26,14 @@ public class Q277_GatekeepersOffering extends Quest
 {
 	// Item
 	private static final int STARSTONE = 1572;
-	
 	// Reward
 	private static final int GATEKEEPER_CHARM = 1658;
 	
 	public Q277_GatekeepersOffering()
 	{
 		super(277, "Gatekeeper's Offering");
-		
 		addStartNpc(30576); // Tamil
 		addTalkId(30576);
-		
 		addKillId(20333); // Graystone Golem
 	}
 	
@@ -52,9 +49,7 @@ public class Q277_GatekeepersOffering extends Quest
 		
 		if (event.equals("30576-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -73,11 +68,13 @@ public class Q277_GatekeepersOffering extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30576-01.htm" : "30576-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30576-04.htm";
 				}
@@ -90,6 +87,7 @@ public class Q277_GatekeepersOffering extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -98,7 +96,7 @@ public class Q277_GatekeepersOffering extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -106,7 +104,7 @@ public class Q277_GatekeepersOffering extends Quest
 		
 		if (st.dropItems(STARSTONE, 1, 20, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

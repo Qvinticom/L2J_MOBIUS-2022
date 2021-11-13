@@ -27,7 +27,6 @@ public class Q264_KeenClaws extends Quest
 {
 	// Item
 	private static final int WOLF_CLAW = 1367;
-	
 	// Rewards
 	private static final int LEATHER_SANDALS = 36;
 	private static final int WOODEN_HELMET = 43;
@@ -39,12 +38,9 @@ public class Q264_KeenClaws extends Quest
 	public Q264_KeenClaws()
 	{
 		super(264, "Keen Claws");
-		
 		registerQuestItems(WOLF_CLAW);
-		
 		addStartNpc(30136); // Payne
 		addTalkId(30136);
-		
 		addKillId(20003, 20456); // Goblin, Wolf
 	}
 	
@@ -60,9 +56,7 @@ public class Q264_KeenClaws extends Quest
 		
 		if (event.equals("30136-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -81,10 +75,12 @@ public class Q264_KeenClaws extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 3) ? "30136-01.htm" : "30136-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int count = st.getQuestItemsCount(WOLF_CLAW);
 				if (count < 50)
 				{
@@ -131,6 +127,7 @@ public class Q264_KeenClaws extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -139,7 +136,7 @@ public class Q264_KeenClaws extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -149,12 +146,12 @@ public class Q264_KeenClaws extends Quest
 		{
 			if (st.dropItems(WOLF_CLAW, Rnd.nextBoolean() ? 2 : 4, 50, 500000))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 			}
 		}
 		else if (st.dropItemsAlways(WOLF_CLAW, (Rnd.get(5) < 4) ? 1 : 2, 50))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

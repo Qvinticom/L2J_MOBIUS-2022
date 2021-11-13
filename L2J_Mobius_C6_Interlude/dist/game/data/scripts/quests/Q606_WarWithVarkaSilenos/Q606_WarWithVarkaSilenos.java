@@ -34,9 +34,7 @@ public class Q606_WarWithVarkaSilenos extends Quest
 	public Q606_WarWithVarkaSilenos()
 	{
 		super(606, "War with Varka Silenos");
-		
 		registerQuestItems(VARKA_MANE);
-		
 		addStartNpc(31370); // Kadun Zu Ketra
 		addTalkId(31370);
 	}
@@ -51,29 +49,33 @@ public class Q606_WarWithVarkaSilenos extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31370-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31370-07.htm"))
-		{
-			if (st.getQuestItemsCount(VARKA_MANE) >= 100)
+			case "31370-03.htm":
 			{
-				st.playSound(QuestState.SOUND_ITEMGET);
-				st.takeItems(VARKA_MANE, 100);
-				st.giveItems(HORN_OF_BUFFALO, 20);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31370-07.htm":
 			{
-				htmltext = "31370-08.htm";
+				if (st.getQuestItemsCount(VARKA_MANE) >= 100)
+				{
+					st.playSound(QuestState.SOUND_ITEMGET);
+					st.takeItems(VARKA_MANE, 100);
+					st.giveItems(HORN_OF_BUFFALO, 20);
+				}
+				else
+				{
+					htmltext = "31370-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31370-09.htm"))
-		{
-			st.takeItems(VARKA_MANE, -1);
-			st.exitQuest(true);
+			case "31370-09.htm":
+			{
+				st.takeItems(VARKA_MANE, -1);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -92,12 +94,15 @@ public class Q606_WarWithVarkaSilenos extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() >= 74) && player.isAlliedWithKetra()) ? "31370-01.htm" : "31370-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasQuestItems(VARKA_MANE)) ? "31370-04.htm" : "31370-05.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

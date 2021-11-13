@@ -67,105 +67,122 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return event;
 		}
-		if (event.equals("31389-03.htm"))
+		
+		String htmltext = event;
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("state", "1");
-			st.playSound("ItemSound.quest_accept");
-			st.giveItems(FLOWER, 1);
-		}
-		else if (event.equals("31389-08.htm"))
-		{
-			st.set("state", "3");
-		}
-		else if (event.equals("31389-13.htm"))
-		{
-			st.set("cond", "3");
-			st.set("state", "4");
-			st.playSound("ItemSound.quest_middle");
-			st.giveItems(SILVER_CROSS, 1);
-		}
-		else if (event.equals("31389-18.htm"))
-		{
-			st.playSound("InterfaceSound.charstat_open_01");
-		}
-		else if (event.equals("31389-19.htm"))
-		{
-			st.set("cond", "5");
-			st.set("state", "5");
-			st.takeItems(BROKEN_SILVER_CROSS, -1);
-			st.playSound("ItemSound.quest_middle");
-		}
-		else if (event.equals("31522-03.htm"))
-		{
-			st.set("state", "12");
-			st.takeItems(TOTEM, -1);
-		}
-		else if (event.equals("31522-08.htm"))
-		{
-			st.set("cond", "11");
-			st.set("state", "13");
-			st.playSound("ItemSound.quest_middle");
-		}
-		else if (event.equals("31522-17.htm"))
-		{
-			st.set("state", "14");
-		}
-		else if (event.equals("31522-21.htm"))
-		{
-			st.giveItems(SUSPICIOUS_TOTEM, 1);
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(false);
-		}
-		else if (event.equals("31532-04.htm"))
-		{
-			st.set("cond", "6");
-			st.set("state", "6");
-			st.giveItems(LETTER, 1);
-			st.playSound("ItemSound.quest_middle");
-		}
-		else if (event.equals("31532-06.htm"))
-		{
-			if (st.hasQuestItems(HAIRPIN))
+			case "31389-03.htm":
 			{
-				st.set("state", "8");
-				st.takeItems(LETTER, -1);
-				st.takeItems(HAIRPIN, -1);
+				st.startQuest();
+				st.set("state", "1");
+				st.giveItems(FLOWER, 1);
+				break;
 			}
-			else
+			case "31389-08.htm":
 			{
-				st.set("cond", "7");
-				st.set("state", "7");
-				htmltext = "31532-07.htm";
+				st.set("state", "3");
+				break;
 			}
-		}
-		else if (event.equals("31532-10.htm"))
-		{
-			st.set("state", "9");
-		}
-		else if (event.equals("31532-14.htm"))
-		{
-			st.set("state", "10");
-		}
-		else if (event.equals("31532-19.htm"))
-		{
-			st.set("cond", "9");
-			st.set("state", "11");
-			st.playSound("ItemSound.quest_middle");
-		}
-		else if (event.equals("31531-02.htm"))
-		{
-			st.set("cond", "2");
-			st.set("state", "2");
-			st.takeItems(FLOWER, -1);
-			st.playSound("ItemSound.quest_middle");
+			case "31389-13.htm":
+			{
+				st.setCond(3);
+				st.set("state", "4");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(SILVER_CROSS, 1);
+				break;
+			}
+			case "31389-18.htm":
+			{
+				st.playSound("InterfaceSound.charstat_open_01");
+				break;
+			}
+			case "31389-19.htm":
+			{
+				st.setCond(5);
+				st.set("state", "5");
+				st.takeItems(BROKEN_SILVER_CROSS, -1);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31522-03.htm":
+			{
+				st.set("state", "12");
+				st.takeItems(TOTEM, -1);
+				break;
+			}
+			case "31522-08.htm":
+			{
+				st.setCond(11);
+				st.set("state", "13");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31522-17.htm":
+			{
+				st.set("state", "14");
+				break;
+			}
+			case "31522-21.htm":
+			{
+				st.giveItems(SUSPICIOUS_TOTEM, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
+			case "31532-04.htm":
+			{
+				st.setCond(6);
+				st.set("state", "6");
+				st.giveItems(LETTER, 1);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31532-06.htm":
+			{
+				if (st.hasQuestItems(HAIRPIN))
+				{
+					st.set("state", "8");
+					st.takeItems(LETTER, -1);
+					st.takeItems(HAIRPIN, -1);
+				}
+				else
+				{
+					st.setCond(7);
+					st.set("state", "7");
+					htmltext = "31532-07.htm";
+				}
+				break;
+			}
+			case "31532-10.htm":
+			{
+				st.set("state", "9");
+				break;
+			}
+			case "31532-14.htm":
+			{
+				st.set("state", "10");
+				break;
+			}
+			case "31532-19.htm":
+			{
+				st.setCond(9);
+				st.set("state", "11");
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31531-02.htm":
+			{
+				st.setCond(2);
+				st.set("state", "2");
+				st.takeItems(FLOWER, -1);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -175,15 +192,17 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState st2 = player.getQuestState(Q023_LidiasHeart.class.getSimpleName());
+			{
+				final QuestState st2 = player.getQuestState(Q023_LidiasHeart.class.getSimpleName());
 				if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 65))
 				{
 					htmltext = "31389-01.htm";
@@ -193,11 +212,14 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 					htmltext = "31389-02.htm";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				int state = st.getInt("state");
 				switch (npc.getNpcId())
 				{
 					case 31389:
+					{
 						if (state == 1)
 						{
 							htmltext = "31389-04.htm";
@@ -237,9 +259,9 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 							if ((state == 7) && !st.hasQuestItems(HAIRPIN))
 							{
 								htmltext = "31389-21.htm";
-								st.set("cond", "8");
+								st.setCond(8);
 								st.giveItems(HAIRPIN, 1);
-								st.playSound("ItemSound.quest_middle");
+								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else if (((state == 7) && st.hasQuestItems(HAIRPIN)) || (state == 6))
 							{
@@ -249,7 +271,9 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 							
 							return htmltext;
 						}
+					}
 					case 31522:
+					{
 						if ((state == 11) && st.hasQuestItems(TOTEM))
 						{
 							htmltext = "31522-01.htm";
@@ -274,7 +298,9 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 							
 							return htmltext;
 						}
+					}
 					case 31531:
+					{
 						if ((state == 1) && st.hasQuestItems(FLOWER))
 						{
 							htmltext = "31531-01.htm";
@@ -287,7 +313,9 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 						}
 						
 						return htmltext;
+					}
 					case 31532:
+					{
 						if (state == 5)
 						{
 							htmltext = "31532-01.htm";
@@ -327,10 +355,15 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 							
 							return htmltext;
 						}
+					}
 					default:
+					{
 						return htmltext;
+					}
 				}
+			}
 			case State.COMPLETED:
+			{
 				if (npc.getNpcId() == 31522)
 				{
 					htmltext = "31522-22.htm";
@@ -339,6 +372,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 				{
 					htmltext = getAlreadyCompletedMsg();
 				}
+			}
 		}
 		
 		return htmltext;
@@ -359,7 +393,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 			{
 				qs.takeItems(SILVER_CROSS, -1);
 				qs.giveItems(BROKEN_SILVER_CROSS, 1);
-				qs.set("cond", "4");
+				qs.setCond(4);
 				for (PlayerInstance nearby : npc.getKnownList().getKnownPlayers().values())
 				{
 					nearby.sendPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "That sign!"));
@@ -372,7 +406,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isSummon)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "9");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 9);
 		if (partyMember == null)
 		{
 			return null;
@@ -385,7 +419,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 		}
 		if (st.dropItems(TOTEM, 1, 1, 100000))
 		{
-			st.set("cond", "10");
+			st.setCond(10);
 		}
 		
 		return null;

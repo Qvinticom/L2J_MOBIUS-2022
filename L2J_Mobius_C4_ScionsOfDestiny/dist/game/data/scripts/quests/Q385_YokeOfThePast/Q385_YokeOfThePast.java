@@ -60,13 +60,10 @@ public class Q385_YokeOfThePast extends Quest
 		31125,
 		31126
 	};
-	
 	// Item
 	private static final int ANCIENT_SCROLL = 5902;
-	
 	// Reward
 	private static final int BLANK_SCROLL = 5965;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -117,16 +114,10 @@ public class Q385_YokeOfThePast extends Quest
 	public Q385_YokeOfThePast()
 	{
 		super(385, "Yoke of the Past");
-		
 		registerQuestItems(ANCIENT_SCROLL);
-		
 		addStartNpc(GATEKEEPER_ZIGGURAT);
 		addTalkId(GATEKEEPER_ZIGGURAT);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -141,9 +132,7 @@ public class Q385_YokeOfThePast extends Quest
 		
 		if (event.equals("05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("10.htm"))
 		{
@@ -167,10 +156,12 @@ public class Q385_YokeOfThePast extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "02.htm" : "01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (!st.hasQuestItems(ANCIENT_SCROLL))
 				{
 					htmltext = "08.htm";
@@ -183,6 +174,7 @@ public class Q385_YokeOfThePast extends Quest
 					st.rewardItems(BLANK_SCROLL, count);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

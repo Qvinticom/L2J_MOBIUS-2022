@@ -40,7 +40,22 @@ public class Q219_TestimonyOfFate extends Quest
 	private static final int ARKENIA = 30419;
 	private static final int BLOODY_PIXY = 31845;
 	private static final int BLIGHT_TREANT = 31850;
-	
+	// Monsters
+	private static final int HANGMAN_TREE = 20144;
+	private static final int MARSH_STAKATO = 20157;
+	private static final int MEDUSA = 20158;
+	private static final int TYRANT = 20192;
+	private static final int TYRANT_KINGPIN = 20193;
+	private static final int DEAD_SEEKER = 20202;
+	private static final int MARSH_STAKATO_WORKER = 20230;
+	private static final int MARSH_STAKATO_SOLDIER = 20232;
+	private static final int MARSH_SPIDER = 20233;
+	private static final int MARSH_STAKATO_DRONE = 20234;
+	private static final int BREKA_ORC_OVERLORD = 20270;
+	private static final int GRANDIS = 20554;
+	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
+	private static final int KARUL_BUGBEAR = 20600;
+	private static final int BLACK_WILLOW_LURKER = 27079;
 	// Items
 	private static final int KAIRA_LETTER = 3173;
 	private static final int METHEUS_FUNERAL_JAR = 3174;
@@ -72,28 +87,9 @@ public class Q219_TestimonyOfFate extends Quest
 	private static final int BLACK_WILLOW_LEAF = 3200;
 	private static final int BLIGHT_TREANT_SAP = 3201;
 	private static final int ARKENIA_LETTER = 3202;
-	
 	// Rewards
 	private static final int MARK_OF_FATE = 3172;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
-	
-	// Monsters
-	private static final int HANGMAN_TREE = 20144;
-	private static final int MARSH_STAKATO = 20157;
-	private static final int MEDUSA = 20158;
-	private static final int TYRANT = 20192;
-	private static final int TYRANT_KINGPIN = 20193;
-	private static final int DEAD_SEEKER = 20202;
-	private static final int MARSH_STAKATO_WORKER = 20230;
-	private static final int MARSH_STAKATO_SOLDIER = 20232;
-	private static final int MARSH_SPIDER = 20233;
-	private static final int MARSH_STAKATO_DRONE = 20234;
-	private static final int BREKA_ORC_OVERLORD = 20270;
-	private static final int GRANDIS = 20554;
-	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
-	private static final int KARUL_BUGBEAR = 20600;
-	private static final int BLACK_WILLOW_LURKER = 27079;
-	
 	// Cond 6 drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -112,12 +108,9 @@ public class Q219_TestimonyOfFate extends Quest
 	public Q219_TestimonyOfFate()
 	{
 		super(219, "Testimony of Fate");
-		
 		registerQuestItems(KAIRA_LETTER, METHEUS_FUNERAL_JAR, KASANDRA_REMAINS, HERBALISM_TEXTBOOK, IXIA_LIST, MEDUSA_ICHOR, MARSH_SPIDER_FLUIDS, DEAD_SEEKER_DUNG, TYRANT_BLOOD, NIGHTSHADE_ROOT, BELLADONNA, ALDER_SKULL_1, ALDER_SKULL_2, ALDER_RECEIPT, REVELATIONS_MANUSCRIPT, KAIRA_RECOMMENDATION, KAIRA_INSTRUCTIONS, PALUS_CHARM, THIFIELL_LETTER, ARKENIA_NOTE, PIXY_GARNET, GRANDIS_SKULL, KARUL_BUGBEAR_SKULL, BREKA_OVERLORD_SKULL, LETO_OVERLORD_SKULL, RED_FAIRY_DUST, BLIGHT_TREANT_SEED, BLACK_WILLOW_LEAF, BLIGHT_TREANT_SAP, ARKENIA_LETTER);
-		
 		addStartNpc(KAIRA);
 		addTalkId(KAIRA, METHEUS, IXIA, ALDER_SPIRIT, ROA, NORMAN, THIFIELL, ARKENIA, BLOODY_PIXY, BLIGHT_TREANT);
-		
 		addKillId(HANGMAN_TREE, MARSH_STAKATO, MEDUSA, TYRANT, TYRANT_KINGPIN, DEAD_SEEKER, MARSH_STAKATO_WORKER, MARSH_STAKATO_SOLDIER, MARSH_SPIDER, MARSH_STAKATO_DRONE, BREKA_ORC_OVERLORD, GRANDIS, LETO_LIZARDMAN_OVERLORD, KARUL_BUGBEAR, BLACK_WILLOW_LURKER);
 	}
 	
@@ -131,69 +124,75 @@ public class Q219_TestimonyOfFate extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30476-05.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(KAIRA_LETTER, 1);
-			
-			if (!player.getVariables().getBoolean("secondClassChange37", false))
+			case "30476-05.htm":
 			{
-				htmltext = "30476-05a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));
-				player.getVariables().set("secondClassChange37", true);
+				st.startQuest();
+				st.giveItems(KAIRA_LETTER, 1);
+				if (!player.getVariables().getBoolean("secondClassChange37", false))
+				{
+					htmltext = "30476-05a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_37.get(player.getRace().ordinal()));
+					player.getVariables().set("secondClassChange37", true);
+				}
+				break;
 			}
-		}
-		else if (event.equals("30114-04.htm"))
-		{
-			st.set("cond", "12");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ALDER_SKULL_2, 1);
-			st.giveItems(ALDER_RECEIPT, 1);
-		}
-		else if (event.equals("30476-12.htm"))
-		{
-			st.playSound(QuestState.SOUND_MIDDLE);
-			
-			if (player.getLevel() < 38)
+			case "30114-04.htm":
 			{
-				htmltext = "30476-13.htm";
-				st.set("cond", "14");
-				st.giveItems(KAIRA_INSTRUCTIONS, 1);
+				st.setCond(12);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ALDER_SKULL_2, 1);
+				st.giveItems(ALDER_RECEIPT, 1);
+				break;
 			}
-			else
+			case "30476-12.htm":
 			{
-				st.set("cond", "15");
-				st.takeItems(REVELATIONS_MANUSCRIPT, 1);
-				st.giveItems(KAIRA_RECOMMENDATION, 1);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				if (player.getLevel() < 38)
+				{
+					htmltext = "30476-13.htm";
+					st.setCond(14);
+					st.giveItems(KAIRA_INSTRUCTIONS, 1);
+				}
+				else
+				{
+					st.setCond(15);
+					st.takeItems(REVELATIONS_MANUSCRIPT, 1);
+					st.giveItems(KAIRA_RECOMMENDATION, 1);
+				}
+				break;
 			}
-		}
-		else if (event.equals("30419-02.htm"))
-		{
-			st.set("cond", "17");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(THIFIELL_LETTER, 1);
-			st.giveItems(ARKENIA_NOTE, 1);
-		}
-		else if (event.equals("31845-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(PIXY_GARNET, 1);
-		}
-		else if (event.equals("31850-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(BLIGHT_TREANT_SEED, 1);
-		}
-		else if (event.equals("30419-05.htm"))
-		{
-			st.set("cond", "18");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ARKENIA_NOTE, 1);
-			st.takeItems(BLIGHT_TREANT_SAP, 1);
-			st.takeItems(RED_FAIRY_DUST, 1);
-			st.giveItems(ARKENIA_LETTER, 1);
+			case "30419-02.htm":
+			{
+				st.setCond(17);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(THIFIELL_LETTER, 1);
+				st.giveItems(ARKENIA_NOTE, 1);
+				break;
+			}
+			case "31845-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(PIXY_GARNET, 1);
+				break;
+			}
+			case "31850-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(BLIGHT_TREANT_SEED, 1);
+				break;
+			}
+			case "30419-05.htm":
+			{
+				st.setCond(18);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ARKENIA_NOTE, 1);
+				st.takeItems(BLIGHT_TREANT_SAP, 1);
+				st.takeItems(RED_FAIRY_DUST, 1);
+				st.giveItems(ARKENIA_LETTER, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -212,6 +211,7 @@ public class Q219_TestimonyOfFate extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30476-02.htm";
@@ -225,12 +225,14 @@ public class Q219_TestimonyOfFate extends Quest
 					htmltext = "30476-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case KAIRA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30476-06.htm";
@@ -246,7 +248,7 @@ public class Q219_TestimonyOfFate extends Quest
 						else if (cond == 9)
 						{
 							htmltext = "30476-09.htm";
-							st.set("cond", "10");
+							st.setCond(10);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ALDER_SKULL_1, 1);
 							addSpawn(ALDER_SPIRIT, player, false, 0);
@@ -268,7 +270,7 @@ public class Q219_TestimonyOfFate extends Quest
 							else
 							{
 								htmltext = "30476-12.htm";
-								st.set("cond", "15");
+								st.setCond(15);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(KAIRA_INSTRUCTIONS, 1);
 								st.takeItems(REVELATIONS_MANUSCRIPT, 1);
@@ -284,12 +286,13 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "30476-17.htm";
 						}
 						break;
-					
+					}
 					case METHEUS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30614-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(KAIRA_LETTER, 1);
 							st.giveItems(METHEUS_FUNERAL_JAR, 1);
@@ -301,8 +304,8 @@ public class Q219_TestimonyOfFate extends Quest
 						else if (cond == 3)
 						{
 							htmltext = "30614-03.htm";
-							st.set("cond", "4");
-							st.set("cond", "5");
+							st.setCond(4);
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(KASANDRA_REMAINS, 1);
 							st.giveItems(HERBALISM_TEXTBOOK, 1);
@@ -314,7 +317,7 @@ public class Q219_TestimonyOfFate extends Quest
 						else if (cond == 8)
 						{
 							htmltext = "30614-05.htm";
-							st.set("cond", "9");
+							st.setCond(9);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BELLADONNA, 1);
 							st.giveItems(ALDER_SKULL_1, 1);
@@ -324,12 +327,13 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "30614-06.htm";
 						}
 						break;
-					
+					}
 					case IXIA:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30463-01.htm";
-							st.set("cond", "6");
+							st.setCond(6);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HERBALISM_TEXTBOOK, 1);
 							st.giveItems(IXIA_LIST, 1);
@@ -341,7 +345,7 @@ public class Q219_TestimonyOfFate extends Quest
 						else if (cond == 7)
 						{
 							htmltext = "30463-03.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(IXIA_LIST, 1);
 							st.takeItems(DEAD_SEEKER_DUNG, -1);
@@ -360,19 +364,21 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "30463-05.htm";
 						}
 						break;
-					
+					}
 					case ALDER_SPIRIT:
+					{
 						if (cond == 10)
 						{
 							htmltext = "30613-01.htm";
-							st.set("cond", "11");
+							st.setCond(11);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(ALDER_SKULL_2, 1);
 							npc.deleteMe();
 						}
 						break;
-					
+					}
 					case ROA:
+					{
 						if (cond == 11)
 						{
 							htmltext = "30114-01.htm";
@@ -386,12 +392,13 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "30114-06.htm";
 						}
 						break;
-					
+					}
 					case NORMAN:
+					{
 						if (cond == 12)
 						{
 							htmltext = "30210-01.htm";
-							st.set("cond", "13");
+							st.setCond(13);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ALDER_RECEIPT, 1);
 							st.giveItems(REVELATIONS_MANUSCRIPT, 1);
@@ -401,12 +408,13 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "30210-02.htm";
 						}
 						break;
-					
+					}
 					case THIFIELL:
+					{
 						if (cond == 15)
 						{
 							htmltext = "30358-01.htm";
-							st.set("cond", "16");
+							st.setCond(16);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(KAIRA_RECOMMENDATION, 1);
 							st.giveItems(PALUS_CHARM, 1);
@@ -432,8 +440,9 @@ public class Q219_TestimonyOfFate extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case ARKENIA:
+					{
 						if (cond == 16)
 						{
 							htmltext = "30419-01.htm";
@@ -447,8 +456,9 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "30419-06.htm";
 						}
 						break;
-					
+					}
 					case BLOODY_PIXY:
+					{
 						if (cond == 17)
 						{
 							if (st.hasQuestItems(PIXY_GARNET))
@@ -483,8 +493,9 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "31845-05.htm";
 						}
 						break;
-					
+					}
 					case BLIGHT_TREANT:
+					{
 						if (cond == 17)
 						{
 							if (st.hasQuestItems(BLIGHT_TREANT_SEED))
@@ -516,12 +527,15 @@ public class Q219_TestimonyOfFate extends Quest
 							htmltext = "31850-05.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -541,88 +555,100 @@ public class Q219_TestimonyOfFate extends Quest
 		switch (npcId)
 		{
 			case HANGMAN_TREE:
-				if (st.getInt("cond") == 2)
+			{
+				if (st.isCond(2))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(METHEUS_FUNERAL_JAR, 1);
 					st.giveItems(KASANDRA_REMAINS, 1);
 				}
 				break;
-			
+			}
 			case DEAD_SEEKER:
-				if ((st.getInt("cond") == 6) && st.dropItems(DEAD_SEEKER_DUNG, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
+			{
+				if (st.isCond(6) && st.dropItems(DEAD_SEEKER_DUNG, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case TYRANT:
 			case TYRANT_KINGPIN:
-				if ((st.getInt("cond") == 6) && st.dropItems(TYRANT_BLOOD, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
+			{
+				if (st.isCond(6) && st.dropItems(TYRANT_BLOOD, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case MEDUSA:
-				if ((st.getInt("cond") == 6) && st.dropItems(MEDUSA_ICHOR, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
+			{
+				if (st.isCond(6) && st.dropItems(MEDUSA_ICHOR, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case MARSH_STAKATO:
 			case MARSH_STAKATO_WORKER:
 			case MARSH_STAKATO_SOLDIER:
 			case MARSH_STAKATO_DRONE:
-				if ((st.getInt("cond") == 6) && st.dropItems(NIGHTSHADE_ROOT, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
+			{
+				if (st.isCond(6) && st.dropItems(NIGHTSHADE_ROOT, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(MARSH_SPIDER_FLUIDS) >= 10))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case MARSH_SPIDER:
-				if ((st.getInt("cond") == 6) && st.dropItems(MARSH_SPIDER_FLUIDS, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10))
+			{
+				if (st.isCond(6) && st.dropItems(MARSH_SPIDER_FLUIDS, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(DEAD_SEEKER_DUNG) >= 10) && (st.getQuestItemsCount(TYRANT_BLOOD) >= 10) && (st.getQuestItemsCount(MEDUSA_ICHOR) >= 10) && (st.getQuestItemsCount(NIGHTSHADE_ROOT) >= 10))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
-			
+			}
 			case GRANDIS:
+			{
 				if (st.hasQuestItems(PIXY_GARNET))
 				{
 					st.dropItemsAlways(GRANDIS_SKULL, 1, 10);
 				}
 				break;
-			
+			}
 			case LETO_LIZARDMAN_OVERLORD:
+			{
 				if (st.hasQuestItems(PIXY_GARNET))
 				{
 					st.dropItemsAlways(LETO_OVERLORD_SKULL, 1, 10);
 				}
 				break;
-			
+			}
 			case BREKA_ORC_OVERLORD:
+			{
 				if (st.hasQuestItems(PIXY_GARNET))
 				{
 					st.dropItemsAlways(BREKA_OVERLORD_SKULL, 1, 10);
 				}
 				break;
-			
+			}
 			case KARUL_BUGBEAR:
+			{
 				if (st.hasQuestItems(PIXY_GARNET))
 				{
 					st.dropItemsAlways(KARUL_BUGBEAR_SKULL, 1, 10);
 				}
 				break;
-			
+			}
 			case BLACK_WILLOW_LURKER:
+			{
 				if (st.hasQuestItems(BLIGHT_TREANT_SEED))
 				{
 					st.dropItemsAlways(BLACK_WILLOW_LEAF, 1, 1);
 				}
 				break;
+			}
 		}
 		
 		return null;

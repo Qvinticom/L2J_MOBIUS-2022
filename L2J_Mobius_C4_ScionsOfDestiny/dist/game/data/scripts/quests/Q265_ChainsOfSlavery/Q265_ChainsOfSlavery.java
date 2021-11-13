@@ -27,7 +27,6 @@ public class Q265_ChainsOfSlavery extends Quest
 {
 	// Item
 	private static final int SHACKLE = 1368;
-	
 	// Newbie Items
 	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
@@ -35,12 +34,9 @@ public class Q265_ChainsOfSlavery extends Quest
 	public Q265_ChainsOfSlavery()
 	{
 		super(265, "Chains of Slavery");
-		
 		registerQuestItems(SHACKLE);
-		
 		addStartNpc(30357); // Kristin
 		addTalkId(30357);
-		
 		addKillId(20004, 20005);
 	}
 	
@@ -56,9 +52,7 @@ public class Q265_ChainsOfSlavery extends Quest
 		
 		if (event.equals("30357-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30357-06.htm"))
 		{
@@ -82,6 +76,7 @@ public class Q265_ChainsOfSlavery extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30357-00.htm";
@@ -95,8 +90,9 @@ public class Q265_ChainsOfSlavery extends Quest
 					htmltext = "30357-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int shackles = st.getQuestItemsCount(SHACKLE);
 				if (shackles == 0)
 				{
@@ -132,6 +128,7 @@ public class Q265_ChainsOfSlavery extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

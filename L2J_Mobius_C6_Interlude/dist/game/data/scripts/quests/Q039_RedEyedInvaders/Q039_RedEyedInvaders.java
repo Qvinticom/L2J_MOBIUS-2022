@@ -30,64 +30,34 @@ public class Q039_RedEyedInvaders extends Quest
 	// NPCs
 	private static final int BABENCO = 30334;
 	private static final int BATHIS = 30332;
-	
-	// Mobs
+	// Monsters
 	private static final int MAILLE_LIZARDMAN = 20919;
 	private static final int MAILLE_LIZARDMAN_SCOUT = 20920;
 	private static final int MAILLE_LIZARDMAN_GUARD = 20921;
 	private static final int ARANEID = 20925;
-	
 	// Items
 	private static final int BLACK_BONE_NECKLACE = 7178;
 	private static final int RED_BONE_NECKLACE = 7179;
 	private static final int INCENSE_POUCH = 7180;
 	private static final int GEM_OF_MAILLE = 7181;
-	
+	// @formatter:off
 	// First droplist
 	private static final Map<Integer, int[]> FIRST_DP = new HashMap<>();
 	static
 	{
-		FIRST_DP.put(MAILLE_LIZARDMAN_GUARD, new int[]
-		{
-			RED_BONE_NECKLACE,
-			BLACK_BONE_NECKLACE
-		});
-		FIRST_DP.put(MAILLE_LIZARDMAN, new int[]
-		{
-			BLACK_BONE_NECKLACE,
-			RED_BONE_NECKLACE
-		});
-		FIRST_DP.put(MAILLE_LIZARDMAN_SCOUT, new int[]
-		{
-			BLACK_BONE_NECKLACE,
-			RED_BONE_NECKLACE
-		});
+		FIRST_DP.put(MAILLE_LIZARDMAN_GUARD, new int[]{RED_BONE_NECKLACE, BLACK_BONE_NECKLACE});
+		FIRST_DP.put(MAILLE_LIZARDMAN, new int[]{BLACK_BONE_NECKLACE, RED_BONE_NECKLACE});
+		FIRST_DP.put(MAILLE_LIZARDMAN_SCOUT, new int[]{BLACK_BONE_NECKLACE, RED_BONE_NECKLACE});
 	}
-	
 	// Second droplist
 	private static final Map<Integer, int[]> SECOND_DP = new HashMap<>();
 	static
 	{
-		SECOND_DP.put(ARANEID, new int[]
-		{
-			GEM_OF_MAILLE,
-			INCENSE_POUCH,
-			500000
-		});
-		SECOND_DP.put(MAILLE_LIZARDMAN_GUARD, new int[]
-		{
-			INCENSE_POUCH,
-			GEM_OF_MAILLE,
-			300000
-		});
-		SECOND_DP.put(MAILLE_LIZARDMAN_SCOUT, new int[]
-		{
-			INCENSE_POUCH,
-			GEM_OF_MAILLE,
-			250000
-		});
+		SECOND_DP.put(ARANEID, new int[]{GEM_OF_MAILLE, INCENSE_POUCH, 500000});
+		SECOND_DP.put(MAILLE_LIZARDMAN_GUARD, new int[]{INCENSE_POUCH, GEM_OF_MAILLE, 300000});
+		SECOND_DP.put(MAILLE_LIZARDMAN_SCOUT, new int[]{INCENSE_POUCH, GEM_OF_MAILLE, 250000});
 	}
-	
+	// @formatter:on
 	// Rewards
 	private static final int GREEN_COLORED_LURE_HG = 6521;
 	private static final int BABY_DUCK_RODE = 6529;
@@ -96,12 +66,9 @@ public class Q039_RedEyedInvaders extends Quest
 	public Q039_RedEyedInvaders()
 	{
 		super(39, "Red-Eyed Invaders");
-		
 		registerQuestItems(BLACK_BONE_NECKLACE, RED_BONE_NECKLACE, INCENSE_POUCH, GEM_OF_MAILLE);
-		
 		addStartNpc(BABENCO);
 		addTalkId(BABENCO, BATHIS);
-		
 		addKillId(MAILLE_LIZARDMAN, MAILLE_LIZARDMAN_SCOUT, MAILLE_LIZARDMAN_GUARD, ARANEID);
 	}
 	
@@ -115,33 +82,38 @@ public class Q039_RedEyedInvaders extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30334-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30332-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30332-3.htm"))
-		{
-			st.set("cond", "4");
-			st.takeItems(BLACK_BONE_NECKLACE, -1);
-			st.takeItems(RED_BONE_NECKLACE, -1);
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30332-5.htm"))
-		{
-			st.takeItems(INCENSE_POUCH, -1);
-			st.takeItems(GEM_OF_MAILLE, -1);
-			st.giveItems(GREEN_COLORED_LURE_HG, 60);
-			st.giveItems(BABY_DUCK_RODE, 1);
-			st.giveItems(FISHING_SHOT_NG, 500);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30334-1.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30332-1.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30332-3.htm":
+			{
+				st.setCond(4);
+				st.takeItems(BLACK_BONE_NECKLACE, -1);
+				st.takeItems(RED_BONE_NECKLACE, -1);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30332-5.htm":
+			{
+				st.takeItems(INCENSE_POUCH, -1);
+				st.takeItems(GEM_OF_MAILLE, -1);
+				st.giveItems(GREEN_COLORED_LURE_HG, 60);
+				st.giveItems(BABY_DUCK_RODE, 1);
+				st.giveItems(FISHING_SHOT_NG, 500);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -160,18 +132,22 @@ public class Q039_RedEyedInvaders extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 20) ? "30334-2.htm" : "30334-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case BABENCO:
+					{
 						htmltext = "30334-3.htm";
 						break;
-					
+					}
 					case BATHIS:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30332-0.htm";
@@ -193,12 +169,15 @@ public class Q039_RedEyedInvaders extends Quest
 							htmltext = "30332-4.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -208,7 +187,7 @@ public class Q039_RedEyedInvaders extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		PlayerInstance partyMember = getRandomPartyMember(player, npc, "2");
+		PlayerInstance partyMember = getRandomPartyMember(player, npc, 2);
 		if ((partyMember != null) && (npcId != ARANEID))
 		{
 			final QuestState st = partyMember.getQuestState(getName());
@@ -220,12 +199,12 @@ public class Q039_RedEyedInvaders extends Quest
 			final int[] list = FIRST_DP.get(npcId);
 			if (st.dropItems(list[0], 1, 100, 500000) && (st.getQuestItemsCount(list[1]) == 100))
 			{
-				st.set("cond", "3");
+				st.setCond(3);
 			}
 		}
 		else
 		{
-			partyMember = getRandomPartyMember(player, npc, "4");
+			partyMember = getRandomPartyMember(player, npc, 4);
 			if ((partyMember != null) && (npcId != MAILLE_LIZARDMAN))
 			{
 				final QuestState st = partyMember.getQuestState(getName());
@@ -237,7 +216,7 @@ public class Q039_RedEyedInvaders extends Quest
 				final int[] list = SECOND_DP.get(npcId);
 				if (st.dropItems(list[0], 1, 30, list[2]) && (st.getQuestItemsCount(list[1]) == 30))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 				}
 			}
 		}

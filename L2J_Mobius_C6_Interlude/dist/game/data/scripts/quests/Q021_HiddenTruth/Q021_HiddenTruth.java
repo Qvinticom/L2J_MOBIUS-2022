@@ -36,7 +36,6 @@ public class Q021_HiddenTruth extends Quest
 	private static final int DOMINIC = 31350;
 	private static final int BENEDICT = 31349;
 	private static final int INNOCENTIN = 31328;
-	
 	// Items
 	private static final int CROSS_OF_EINHASAD = 7140;
 	private static final int CROSS_OF_EINHASAD_NEXT_QUEST = 7141;
@@ -54,9 +53,7 @@ public class Q021_HiddenTruth extends Quest
 	public Q021_HiddenTruth()
 	{
 		super(21, "Hidden Truth");
-		
 		registerQuestItems(CROSS_OF_EINHASAD);
-		
 		addStartNpc(MYSTERIOUS_WIZARD);
 		addTalkId(MYSTERIOUS_WIZARD, TOMBSTONE, VON_HELLMAN_DUKE, VON_HELLMAN_PAGE, BROKEN_BOOKSHELF, AGRIPEL, DOMINIC, BENEDICT, INNOCENTIN);
 	}
@@ -71,87 +68,94 @@ public class Q021_HiddenTruth extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31522-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31523-03.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			spawnTheDuke(player);
-		}
-		else if (event.equals("31524-06.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			spawnThePage(player);
-		}
-		else if (event.equals("31526-08.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31526-14.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(CROSS_OF_EINHASAD, 1);
-		}
-		else if (event.equals("1"))
-		{
-			_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[0]);
-			_page.broadcastNpcSay("Follow me...");
-			startQuestTimer("2", 5000, _page, player, false);
-			return null;
-		}
-		else if (event.equals("2"))
-		{
-			_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[1]);
-			startQuestTimer("3", 12000, _page, player, false);
-			return null;
-		}
-		else if (event.equals("3"))
-		{
-			_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[2]);
-			startQuestTimer("4", 18000, _page, player, false);
-			return null;
-		}
-		else if (event.equals("4"))
-		{
-			st.set("end_walk", "1");
-			_page.broadcastNpcSay("Please check this bookcase, " + player.getName() + ".");
-			startQuestTimer("5", 47000, _page, player, false);
-			return null;
-		}
-		else if (event.equals("5"))
-		{
-			_page.broadcastNpcSay("I'm confused! Maybe it's time to go back.");
-			return null;
-		}
-		else if (event.equals("31328-05.htm"))
-		{
-			if (st.hasQuestItems(CROSS_OF_EINHASAD))
+			case "31522-02.htm":
 			{
-				st.takeItems(CROSS_OF_EINHASAD, 1);
-				st.giveItems(CROSS_OF_EINHASAD_NEXT_QUEST, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("dukeDespawn"))
-		{
-			_duke.deleteMe();
-			_duke = null;
-			return null;
-		}
-		else if (event.equals("pageDespawn"))
-		{
-			_page.deleteMe();
-			_page = null;
-			return null;
+			case "31523-03.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				spawnTheDuke(player);
+				break;
+			}
+			case "31524-06.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				spawnThePage(player);
+				break;
+			}
+			case "31526-08.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31526-14.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(CROSS_OF_EINHASAD, 1);
+				break;
+			}
+			case "1":
+			{
+				_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[0]);
+				_page.broadcastNpcSay("Follow me...");
+				startQuestTimer("2", 5000, _page, player, false);
+				return null;
+			}
+			case "2":
+			{
+				_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[1]);
+				startQuestTimer("3", 12000, _page, player, false);
+				return null;
+			}
+			case "3":
+			{
+				_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[2]);
+				startQuestTimer("4", 18000, _page, player, false);
+				return null;
+			}
+			case "4":
+			{
+				st.set("end_walk", "1");
+				_page.broadcastNpcSay("Please check this bookcase, " + player.getName() + ".");
+				startQuestTimer("5", 47000, _page, player, false);
+				return null;
+			}
+			case "5":
+			{
+				_page.broadcastNpcSay("I'm confused! Maybe it's time to go back.");
+				return null;
+			}
+			case "31328-05.htm":
+			{
+				if (st.hasQuestItems(CROSS_OF_EINHASAD))
+				{
+					st.takeItems(CROSS_OF_EINHASAD, 1);
+					st.giveItems(CROSS_OF_EINHASAD_NEXT_QUEST, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				break;
+			}
+			case "dukeDespawn":
+			{
+				_duke.deleteMe();
+				_duke = null;
+				return null;
+			}
+			case "pageDespawn":
+			{
+				_page.deleteMe();
+				_page = null;
+				return null;
+			}
 		}
 		
 		return htmltext;
@@ -170,18 +174,22 @@ public class Q021_HiddenTruth extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 63) ? "31522-03.htm" : "31522-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case MYSTERIOUS_WIZARD:
+					{
 						htmltext = "31522-05.htm";
 						break;
-					
+					}
 					case TOMBSTONE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31523-01.htm";
@@ -196,8 +204,9 @@ public class Q021_HiddenTruth extends Quest
 							htmltext = "31523-04.htm";
 						}
 						break;
-					
+					}
 					case VON_HELLMAN_DUKE:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31524-01.htm";
@@ -212,14 +221,15 @@ public class Q021_HiddenTruth extends Quest
 							htmltext = "31524-07a.htm";
 						}
 						break;
-					
+					}
 					case VON_HELLMAN_PAGE:
+					{
 						if (cond == 3)
 						{
 							if (st.getInt("end_walk") == 1)
 							{
 								htmltext = "31525-02.htm";
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -232,12 +242,13 @@ public class Q021_HiddenTruth extends Quest
 							htmltext = "31525-02.htm";
 						}
 						break;
-					
+					}
 					case BROKEN_BOOKSHELF:
+					{
 						if (((cond == 3) && (st.getInt("end_walk") == 1)) || (cond == 4))
 						{
 							htmltext = "31526-01.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							
 							if (_page != null)
@@ -264,10 +275,11 @@ public class Q021_HiddenTruth extends Quest
 							htmltext = "31526-15.htm";
 						}
 						break;
-					
+					}
 					case AGRIPEL:
 					case BENEDICT:
 					case DOMINIC:
+					{
 						if (((cond == 6) || (cond == 7)) && st.hasQuestItems(CROSS_OF_EINHASAD))
 						{
 							final int npcId = npc.getNpcId();
@@ -295,7 +307,7 @@ public class Q021_HiddenTruth extends Quest
 								
 								if ((st.getInt(String.valueOf(npcId1)) == 1) && (st.getInt(String.valueOf(npcId2)) == 1))
 								{
-									st.set("cond", "7");
+									st.setCond(7);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 								else
@@ -307,17 +319,20 @@ public class Q021_HiddenTruth extends Quest
 							htmltext = npcId + "-01.htm";
 						}
 						break;
-					
+					}
 					case INNOCENTIN:
+					{
 						if ((cond == 7) && st.hasQuestItems(CROSS_OF_EINHASAD))
 						{
 							htmltext = "31328-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				if (npc.getNpcId() == INNOCENTIN)
 				{
 					htmltext = "31328-06.htm";
@@ -327,6 +342,7 @@ public class Q021_HiddenTruth extends Quest
 					htmltext = getAlreadyCompletedMsg();
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

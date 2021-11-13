@@ -34,14 +34,12 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	private static final int ORVEN = 30857;
 	private static final int KAIEN = 30623;
 	private static final int GARVARENTZ = 30704;
-	
 	// Items
 	private static final int ARTICLE_DEAD_HERO = 4269;
 	private static final int OLD_KEY = 4270;
 	private static final int OLD_HILT = 4271;
 	private static final int OLD_TOTEM = 4272;
 	private static final int CRUCIFIX = 4273;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -61,12 +59,9 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	public Q344_1000YearsTheEndOfLamentation()
 	{
 		super(344, "1000 years, the End of Lamentation");
-		
 		registerQuestItems(ARTICLE_DEAD_HERO, OLD_KEY, OLD_HILT, OLD_TOTEM, CRUCIFIX);
-		
 		addStartNpc(GILMORE);
 		addTalkId(GILMORE, RODEMAI, ORVEN, GARVARENTZ, KAIEN);
-		
 		addKillId(20236, 20237, 20238, 20239, 20240, 20272, 20273, 20274, 20275, 20276);
 	}
 	
@@ -80,71 +75,76 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30754-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30754-07.htm"))
-		{
-			if (st.get("success") != null)
+			case "30754-04.htm":
 			{
-				st.set("cond", "1");
-				st.unset("success");
-				st.playSound(QuestState.SOUND_MIDDLE);
+				st.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("30754-08.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30754-06.htm"))
-		{
-			if (!st.hasQuestItems(ARTICLE_DEAD_HERO))
+			case "30754-07.htm":
 			{
-				htmltext = "30754-06a.htm";
-			}
-			else
-			{
-				final int amount = st.getQuestItemsCount(ARTICLE_DEAD_HERO);
-				
-				st.takeItems(ARTICLE_DEAD_HERO, -1);
-				st.giveItems(57, amount * 60);
-				
-				// Special item, % based on actual number of qItems.
-				if (Rnd.get(1000) < Math.min(10, Math.max(1, amount / 10)))
+				if (st.get("success") != null)
 				{
-					htmltext = "30754-10.htm";
+					st.setCond(1);
+					st.unset("success");
+					st.playSound(QuestState.SOUND_MIDDLE);
 				}
+				break;
 			}
-		}
-		else if (event.equals("30754-11.htm"))
-		{
-			final int random = Rnd.get(4);
-			if (random < 1)
+			case "30754-08.htm":
 			{
-				htmltext = "30754-12.htm";
-				st.giveItems(OLD_KEY, 1);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
 			}
-			else if (random < 2)
+			case "30754-06.htm":
 			{
-				htmltext = "30754-13.htm";
-				st.giveItems(OLD_HILT, 1);
+				if (!st.hasQuestItems(ARTICLE_DEAD_HERO))
+				{
+					htmltext = "30754-06a.htm";
+				}
+				else
+				{
+					final int amount = st.getQuestItemsCount(ARTICLE_DEAD_HERO);
+					
+					st.takeItems(ARTICLE_DEAD_HERO, -1);
+					st.giveItems(57, amount * 60);
+					
+					// Special item, % based on actual number of qItems.
+					if (Rnd.get(1000) < Math.min(10, Math.max(1, amount / 10)))
+					{
+						htmltext = "30754-10.htm";
+					}
+				}
+				break;
 			}
-			else if (random < 3)
+			case "30754-11.htm":
 			{
-				htmltext = "30754-14.htm";
-				st.giveItems(OLD_TOTEM, 1);
+				final int random = Rnd.get(4);
+				if (random < 1)
+				{
+					htmltext = "30754-12.htm";
+					st.giveItems(OLD_KEY, 1);
+				}
+				else if (random < 2)
+				{
+					htmltext = "30754-13.htm";
+					st.giveItems(OLD_HILT, 1);
+				}
+				else if (random < 3)
+				{
+					htmltext = "30754-14.htm";
+					st.giveItems(OLD_TOTEM, 1);
+				}
+				else
+				{
+					st.giveItems(CRUCIFIX, 1);
+				}
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-			else
-			{
-				st.giveItems(CRUCIFIX, 1);
-			}
-			
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
 		}
 		
 		return htmltext;
@@ -163,14 +163,17 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 48) ? "30754-01.htm" : "30754-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case GILMORE:
+					{
 						if (cond == 1)
 						{
 							htmltext = (st.hasQuestItems(ARTICLE_DEAD_HERO)) ? "30754-05.htm" : "30754-09.htm";
@@ -180,8 +183,9 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 							htmltext = (st.get("success") != null) ? "30754-16.htm" : "30754-15.htm";
 						}
 						break;
-					
+					}
 					default:
+					{
 						if (cond == 2)
 						{
 							if (st.get("success") != null)
@@ -195,8 +199,10 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 							}
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -206,6 +212,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 		switch (npcId)
 		{
 			case ORVEN:
+			{
 				if (st.hasQuestItems(CRUCIFIX))
 				{
 					st.set("success", "1");
@@ -226,8 +233,9 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					}
 				}
 				break;
-			
+			}
 			case GARVARENTZ:
+			{
 				if (st.hasQuestItems(OLD_TOTEM))
 				{
 					st.set("success", "1");
@@ -248,8 +256,9 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					}
 				}
 				break;
-			
+			}
 			case KAIEN:
+			{
 				if (st.hasQuestItems(OLD_HILT))
 				{
 					st.set("success", "1");
@@ -274,8 +283,9 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					}
 				}
 				break;
-			
+			}
 			case RODEMAI:
+			{
 				if (st.hasQuestItems(OLD_KEY))
 				{
 					st.set("success", "1");
@@ -296,13 +306,14 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					}
 				}
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;

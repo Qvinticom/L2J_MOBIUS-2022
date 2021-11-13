@@ -27,16 +27,13 @@ public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 	// NPCs
 	private static final int LIESEL = 31263;
 	private static final int GHOST_OF_ADVENTURER = 31538;
-	
 	// Items
 	private static final int LETTER = 7253;
 	
 	public Q014_WhereaboutsOfTheArchaeologist()
 	{
 		super(14, "Whereabouts of the Archaeologist");
-		
 		registerQuestItems(LETTER);
-		
 		addStartNpc(LIESEL);
 		addTalkId(LIESEL, GHOST_OF_ADVENTURER);
 	}
@@ -53,9 +50,7 @@ public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 		
 		if (event.equals("31263-2.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(LETTER, 1);
 		}
 		else if (event.equals("31538-1.htm"))
@@ -82,25 +77,32 @@ public class Q014_WhereaboutsOfTheArchaeologist extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 74) ? "31263-1.htm" : "31263-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case LIESEL:
+					{
 						htmltext = "31263-2.htm";
 						break;
-					
+					}
 					case GHOST_OF_ADVENTURER:
+					{
 						htmltext = "31538-0.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

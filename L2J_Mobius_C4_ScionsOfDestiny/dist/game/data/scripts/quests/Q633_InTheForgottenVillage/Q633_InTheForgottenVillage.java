@@ -27,14 +27,12 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q633_InTheForgottenVillage extends Quest
 {
-	// NPCS
+	// NPCs
 	private static final int MINA = 31388;
-	
-	// ITEMS
+	// Items
 	private static final int RIB_BONE = 7544;
 	private static final int ZOMBIE_LIVER = 7545;
-	
-	// MOBS / DROP chances
+	// Monsters / Drop chances
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
 	static
 	{
@@ -55,7 +53,6 @@ public class Q633_InTheForgottenVillage extends Quest
 		MOBS.put(21583, 397000); // Bone Scavenger
 		MOBS.put(21584, 401000); // Bone Scavenger
 	}
-	
 	private static final Map<Integer, Integer> UNDEADS = new HashMap<>();
 	static
 	{
@@ -74,21 +71,11 @@ public class Q633_InTheForgottenVillage extends Quest
 	public Q633_InTheForgottenVillage()
 	{
 		super(633, "In the Forgotten Village");
-		
 		registerQuestItems(RIB_BONE, ZOMBIE_LIVER);
-		
 		addStartNpc(MINA);
 		addTalkId(MINA);
-		
-		for (int i : MOBS.keySet())
-		{
-			addKillId(i);
-		}
-		
-		for (int i : UNDEADS.keySet())
-		{
-			addKillId(i);
-		}
+		addKillId(MOBS.keySet());
+		addKillId(UNDEADS.keySet());
 	}
 	
 	@Override
@@ -101,29 +88,33 @@ public class Q633_InTheForgottenVillage extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31388-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31388-10.htm"))
-		{
-			st.takeItems(RIB_BONE, -1);
-			st.playSound(QuestState.SOUND_GIVEUP);
-			st.exitQuest(true);
-		}
-		else if (event.equals("31388-09.htm"))
-		{
-			if (st.getQuestItemsCount(RIB_BONE) >= 200)
+			case "31388-04.htm":
 			{
-				htmltext = "31388-08.htm";
-				st.takeItems(RIB_BONE, 200);
-				st.rewardItems(57, 25000);
-				st.rewardExpAndSp(305235, 0);
-				st.playSound(QuestState.SOUND_FINISH);
+				st.startQuest();
+				break;
 			}
-			st.set("cond", "1");
+			case "31388-10.htm":
+			{
+				st.takeItems(RIB_BONE, -1);
+				st.playSound(QuestState.SOUND_GIVEUP);
+				st.exitQuest(true);
+				break;
+			}
+			case "31388-09.htm":
+			{
+				if (st.getQuestItemsCount(RIB_BONE) >= 200)
+				{
+					htmltext = "31388-08.htm";
+					st.takeItems(RIB_BONE, 200);
+					st.rewardItems(57, 25000);
+					st.rewardExpAndSp(305235, 0);
+					st.playSound(QuestState.SOUND_FINISH);
+				}
+				st.setCond(1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -142,11 +133,13 @@ public class Q633_InTheForgottenVillage extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 65) ? "31388-03.htm" : "31388-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31388-06.htm";
@@ -156,6 +149,7 @@ public class Q633_InTheForgottenVillage extends Quest
 					htmltext = "31388-05.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -177,7 +171,7 @@ public class Q633_InTheForgottenVillage extends Quest
 		}
 		else if (MOBS.containsKey(npcId))
 		{
-			final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+			final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 			if (partyMember == null)
 			{
 				return null;
@@ -191,7 +185,7 @@ public class Q633_InTheForgottenVillage extends Quest
 			
 			if (st.dropItems(RIB_BONE, 1, 200, MOBS.get(npcId)))
 			{
-				st.set("cond", "2");
+				st.setCond(2);
 			}
 		}
 		

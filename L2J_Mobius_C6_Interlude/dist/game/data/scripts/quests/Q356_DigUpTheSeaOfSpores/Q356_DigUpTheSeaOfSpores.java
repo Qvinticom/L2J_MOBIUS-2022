@@ -27,7 +27,6 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 	// Items
 	private static final int HERB_SPORE = 5866;
 	private static final int CARN_SPORE = 5865;
-	
 	// Monsters
 	private static final int ROTTING_TREE = 20558;
 	private static final int SPORE_ZOMBIE = 20562;
@@ -35,12 +34,9 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 	public Q356_DigUpTheSeaOfSpores()
 	{
 		super(356, "Dig Up the Sea of Spores!");
-		
 		registerQuestItems(HERB_SPORE, CARN_SPORE);
-		
 		addStartNpc(30717); // Gauen
 		addTalkId(30717);
-		
 		addKillId(ROTTING_TREE, SPORE_ZOMBIE);
 	}
 	
@@ -54,37 +50,43 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30717-06.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30717-17.htm"))
-		{
-			st.takeItems(HERB_SPORE, -1);
-			st.takeItems(CARN_SPORE, -1);
-			st.rewardItems(57, 20950);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30717-14.htm"))
-		{
-			st.takeItems(HERB_SPORE, -1);
-			st.takeItems(CARN_SPORE, -1);
-			st.rewardExpAndSp(35000, 2600);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30717-12.htm"))
-		{
-			st.takeItems(HERB_SPORE, -1);
-			st.rewardExpAndSp(24500, 0);
-		}
-		else if (event.equals("30717-13.htm"))
-		{
-			st.takeItems(CARN_SPORE, -1);
-			st.rewardExpAndSp(0, 1820);
+			case "30717-06.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "30717-17.htm":
+			{
+				st.takeItems(HERB_SPORE, -1);
+				st.takeItems(CARN_SPORE, -1);
+				st.rewardItems(57, 20950);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "30717-14.htm":
+			{
+				st.takeItems(HERB_SPORE, -1);
+				st.takeItems(CARN_SPORE, -1);
+				st.rewardExpAndSp(35000, 2600);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "30717-12.htm":
+			{
+				st.takeItems(HERB_SPORE, -1);
+				st.rewardExpAndSp(24500, 0);
+				break;
+			}
+			case "30717-13.htm":
+			{
+				st.takeItems(CARN_SPORE, -1);
+				st.rewardExpAndSp(0, 1820);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -103,11 +105,13 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 43) ? "30717-01.htm" : "30717-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30717-07.htm";
@@ -132,6 +136,8 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 					htmltext = "30717-10.htm";
 				}
 				break;
+			}
+			
 		}
 		
 		return htmltext;
@@ -146,24 +152,27 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		if (cond < 3)
 		{
 			switch (npc.getNpcId())
 			{
 				case ROTTING_TREE:
+				{
 					if (st.dropItems(HERB_SPORE, 1, 50, 630000))
 					{
-						st.set("cond", (cond == 2) ? "3" : "2");
+						st.setCond((cond == 2) ? 3 : 2);
 					}
 					break;
-				
+				}
 				case SPORE_ZOMBIE:
+				{
 					if (st.dropItems(CARN_SPORE, 1, 50, 760000))
 					{
-						st.set("cond", (cond == 2) ? "3" : "2");
+						st.setCond((cond == 2) ? 3 : 2);
 					}
 					break;
+				}
 			}
 		}
 		

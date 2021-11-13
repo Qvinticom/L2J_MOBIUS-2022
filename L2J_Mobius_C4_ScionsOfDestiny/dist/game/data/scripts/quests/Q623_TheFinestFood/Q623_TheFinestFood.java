@@ -25,28 +25,23 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q623_TheFinestFood extends Quest
 {
+	// NPC
+	private static final int JEREMY = 31521;
+	// Monsters
+	private static final int FLAVA = 21316;
+	private static final int BUFFALO = 21315;
+	private static final int ANTELOPE = 21318;
 	// Items
 	private static final int LEAF_OF_FLAVA = 7199;
 	private static final int BUFFALO_MEAT = 7200;
 	private static final int ANTELOPE_HORN = 7201;
 	
-	// NPC
-	private static final int JEREMY = 31521;
-	
-	// Monsters
-	private static final int FLAVA = 21316;
-	private static final int BUFFALO = 21315;
-	private static final int ANTELOPE = 21318;
-	
 	public Q623_TheFinestFood()
 	{
 		super(623, "The Finest Food");
-		
 		registerQuestItems(LEAF_OF_FLAVA, BUFFALO_MEAT, ANTELOPE_HORN);
-		
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY);
-		
 		addKillId(FLAVA, BUFFALO, ANTELOPE);
 	}
 	
@@ -64,9 +59,7 @@ public class Q623_TheFinestFood extends Quest
 		{
 			if (player.getLevel() >= 71)
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
+				st.startQuest();
 			}
 			else
 			{
@@ -121,11 +114,13 @@ public class Q623_TheFinestFood extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "31521-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31521-06.htm";
@@ -142,6 +137,7 @@ public class Q623_TheFinestFood extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -150,7 +146,7 @@ public class Q623_TheFinestFood extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -165,25 +161,29 @@ public class Q623_TheFinestFood extends Quest
 		switch (npc.getNpcId())
 		{
 			case FLAVA:
+			{
 				if (st.dropItemsAlways(LEAF_OF_FLAVA, 1, 100) && (st.getQuestItemsCount(BUFFALO_MEAT) >= 100) && (st.getQuestItemsCount(ANTELOPE_HORN) >= 100))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case BUFFALO:
+			{
 				if (st.dropItemsAlways(BUFFALO_MEAT, 1, 100) && (st.getQuestItemsCount(LEAF_OF_FLAVA) >= 100) && (st.getQuestItemsCount(ANTELOPE_HORN) >= 100))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case ANTELOPE:
+			{
 				if (st.dropItemsAlways(ANTELOPE_HORN, 1, 100) && (st.getQuestItemsCount(LEAF_OF_FLAVA) >= 100) && (st.getQuestItemsCount(BUFFALO_MEAT) >= 100))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
+			}
 		}
 		
 		return null;

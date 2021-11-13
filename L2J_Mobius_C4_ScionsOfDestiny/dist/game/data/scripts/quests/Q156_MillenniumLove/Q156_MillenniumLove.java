@@ -24,20 +24,17 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q156_MillenniumLove extends Quest
 {
+	// NPCs
+	private static final int LILITH = 30368;
+	private static final int BAENEDES = 30369;
 	// Items
 	private static final int LILITH_LETTER = 1022;
 	private static final int THEON_DIARY = 1023;
 	
-	// NPCs
-	private static final int LILITH = 30368;
-	private static final int BAENEDES = 30369;
-	
 	public Q156_MillenniumLove()
 	{
 		super(156, "Millennium Love");
-		
 		registerQuestItems(LILITH_LETTER, THEON_DIARY);
-		
 		addStartNpc(LILITH);
 		addTalkId(LILITH, BAENEDES);
 	}
@@ -52,26 +49,30 @@ public class Q156_MillenniumLove extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30368-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(LILITH_LETTER, 1);
-		}
-		else if (event.equals("30369-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LILITH_LETTER, 1);
-			st.giveItems(THEON_DIARY, 1);
-		}
-		else if (event.equals("30369-03.htm"))
-		{
-			st.takeItems(LILITH_LETTER, 1);
-			st.rewardExpAndSp(3000, 0);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30368-04.htm":
+			{
+				st.startQuest();
+				st.giveItems(LILITH_LETTER, 1);
+				break;
+			}
+			case "30369-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(LILITH_LETTER, 1);
+				st.giveItems(THEON_DIARY, 1);
+				break;
+			}
+			case "30369-03.htm":
+			{
+				st.takeItems(LILITH_LETTER, 1);
+				st.rewardExpAndSp(3000, 0);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -90,13 +91,16 @@ public class Q156_MillenniumLove extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30368-00.htm" : "30368-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case LILITH:
+					{
 						if (st.hasQuestItems(LILITH_LETTER))
 						{
 							htmltext = "30368-05.htm";
@@ -111,8 +115,9 @@ public class Q156_MillenniumLove extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case BAENEDES:
+					{
 						if (st.hasQuestItems(LILITH_LETTER))
 						{
 							htmltext = "30369-01.htm";
@@ -122,12 +127,15 @@ public class Q156_MillenniumLove extends Quest
 							htmltext = "30369-04.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

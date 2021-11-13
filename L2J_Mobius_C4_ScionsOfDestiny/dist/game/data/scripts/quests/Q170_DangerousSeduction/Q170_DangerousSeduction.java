@@ -31,12 +31,9 @@ public class Q170_DangerousSeduction extends Quest
 	public Q170_DangerousSeduction()
 	{
 		super(170, "Dangerous Seduction");
-		
 		registerQuestItems(NIGHTMARE_CRYSTAL);
-		
 		addStartNpc(30305); // Vellior
 		addTalkId(30305);
-		
 		addKillId(27022); // Merkenis
 	}
 	
@@ -52,9 +49,7 @@ public class Q170_DangerousSeduction extends Quest
 		
 		if (event.equals("30305-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -73,6 +68,7 @@ public class Q170_DangerousSeduction extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30305-00.htm";
@@ -86,8 +82,9 @@ public class Q170_DangerousSeduction extends Quest
 					htmltext = "30305-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.hasQuestItems(NIGHTMARE_CRYSTAL))
 				{
 					htmltext = "30305-06.htm";
@@ -101,10 +98,12 @@ public class Q170_DangerousSeduction extends Quest
 					htmltext = "30305-05.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -113,13 +112,13 @@ public class Q170_DangerousSeduction extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
 		}
 		
-		st.set("cond", "2");
+		st.setCond(2);
 		st.playSound(QuestState.SOUND_MIDDLE);
 		st.giveItems(NIGHTMARE_CRYSTAL, 1);
 		

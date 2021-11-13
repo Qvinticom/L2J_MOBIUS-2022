@@ -30,29 +30,23 @@ public class Q034_InSearchOfCloth extends Quest
 	private static final int RADIA = 30088;
 	private static final int RALFORD = 30165;
 	private static final int VARAN = 30294;
-	
 	// Monsters
 	private static final int TRISALIM_SPIDER = 20560;
 	private static final int TRISALIM_TARANTULA = 20561;
-	
 	// Items
 	private static final int SPINNERET = 7528;
 	private static final int SUEDE = 1866;
 	private static final int THREAD = 1868;
 	private static final int SPIDERSILK = 7161;
-	
 	// Rewards
 	private static final int MYSTERIOUS_CLOTH = 7076;
 	
 	public Q034_InSearchOfCloth()
 	{
 		super(34, "In Search of Cloth");
-		
 		registerQuestItems(SPINNERET, SPIDERSILK);
-		
 		addStartNpc(RADIA);
 		addTalkId(RADIA, RALFORD, VARAN);
-		
 		addKillId(TRISALIM_SPIDER, TRISALIM_TARANTULA);
 	}
 	
@@ -66,48 +60,55 @@ public class Q034_InSearchOfCloth extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30088-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30294-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30088-3.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30165-1.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30165-3.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SPINNERET, 10);
-			st.giveItems(SPIDERSILK, 1);
-		}
-		else if (event.equals("30088-5.htm"))
-		{
-			if ((st.getQuestItemsCount(SUEDE) >= 3000) && (st.getQuestItemsCount(THREAD) >= 5000) && st.hasQuestItems(SPIDERSILK))
+			case "30088-1.htm":
 			{
-				st.takeItems(SPIDERSILK, 1);
-				st.takeItems(SUEDE, 3000);
-				st.takeItems(THREAD, 5000);
-				st.giveItems(MYSTERIOUS_CLOTH, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.startQuest();
+				break;
 			}
-			else
+			case "30294-1.htm":
 			{
-				htmltext = "30088-4a.htm";
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30088-3.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30165-1.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30165-3.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SPINNERET, 10);
+				st.giveItems(SPIDERSILK, 1);
+				break;
+			}
+			case "30088-5.htm":
+			{
+				if ((st.getQuestItemsCount(SUEDE) >= 3000) && (st.getQuestItemsCount(THREAD) >= 5000) && st.hasQuestItems(SPIDERSILK))
+				{
+					st.takeItems(SPIDERSILK, 1);
+					st.takeItems(SUEDE, 3000);
+					st.takeItems(THREAD, 5000);
+					st.giveItems(MYSTERIOUS_CLOTH, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "30088-4a.htm";
+				}
+				break;
 			}
 		}
 		
@@ -127,10 +128,11 @@ public class Q034_InSearchOfCloth extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() >= 60)
 				{
 					final QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
-					if ((fwear != null) && (fwear.getInt("cond") == 6))
+					if ((fwear != null) && fwear.isCond(6))
 					{
 						htmltext = "30088-0.htm";
 					}
@@ -144,12 +146,14 @@ public class Q034_InSearchOfCloth extends Quest
 					htmltext = "30088-0b.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case RADIA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30088-1a.htm";
@@ -174,8 +178,9 @@ public class Q034_InSearchOfCloth extends Quest
 							}
 						}
 						break;
-					
+					}
 					case VARAN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30294-0.htm";
@@ -185,8 +190,9 @@ public class Q034_InSearchOfCloth extends Quest
 							htmltext = "30294-1a.htm";
 						}
 						break;
-					
+					}
 					case RALFORD:
+					{
 						if (cond == 3)
 						{
 							htmltext = "30165-0.htm";
@@ -204,12 +210,15 @@ public class Q034_InSearchOfCloth extends Quest
 							htmltext = "30165-3a.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -218,7 +227,7 @@ public class Q034_InSearchOfCloth extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "4");
+		final QuestState st = checkPlayerCondition(player, npc, 4);
 		if (st == null)
 		{
 			return null;
@@ -226,7 +235,7 @@ public class Q034_InSearchOfCloth extends Quest
 		
 		if (st.dropItems(SPINNERET, 1, 10, 500000))
 		{
-			st.set("cond", "5");
+			st.setCond(5);
 		}
 		
 		return null;

@@ -28,19 +28,15 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 	// NPCs
 	private static final int SINGSING = 32106;
 	private static final int KARAKAWEI = 32117;
-	
 	// Items
 	private static final int BONES = 8776;
 	
 	public Q643_RiseAndFallOfTheElrokiTribe()
 	{
 		super(643, "Rise and Fall of the Elroki Tribe");
-		
 		registerQuestItems(BONES);
-		
 		addStartNpc(SINGSING);
 		addTalkId(SINGSING, KARAKAWEI);
-		
 		addKillId(22208, 22209, 22210, 22211, 22212, 22213, 22221, 22222, 22226, 22227);
 	}
 	
@@ -54,34 +50,39 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32106-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32106-07.htm"))
-		{
-			final int count = st.getQuestItemsCount(BONES);
-			st.takeItems(BONES, count);
-			st.rewardItems(57, count * 1374);
-		}
-		else if (event.equals("32106-09.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("32117-03.htm"))
-		{
-			final int count = st.getQuestItemsCount(BONES);
-			if (count >= 300)
+			case "32106-03.htm":
 			{
-				st.takeItems(BONES, 300);
-				st.rewardItems(Rnd.get(8712, 8722), 5);
+				st.startQuest();
+				break;
 			}
-			else
+			case "32106-07.htm":
 			{
-				htmltext = "32117-04.htm";
+				final int count = st.getQuestItemsCount(BONES);
+				st.takeItems(BONES, count);
+				st.rewardItems(57, count * 1374);
+				break;
+			}
+			case "32106-09.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "32117-03.htm":
+			{
+				final int count = st.getQuestItemsCount(BONES);
+				if (count >= 300)
+				{
+					st.takeItems(BONES, 300);
+					st.rewardItems(Rnd.get(8712, 8722), 5);
+				}
+				else
+				{
+					htmltext = "32117-04.htm";
+				}
+				break;
 			}
 		}
 		
@@ -101,21 +102,27 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 75) ? "32106-00.htm" : "32106-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case SINGSING:
+					{
 						htmltext = (st.hasQuestItems(BONES)) ? "32106-06.htm" : "32106-05.htm";
 						break;
-					
+					}
 					case KARAKAWEI:
+					{
 						htmltext = "32117-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

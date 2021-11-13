@@ -32,12 +32,9 @@ public class Q613_ProveYourCourage extends Quest
 	public Q613_ProveYourCourage()
 	{
 		super(613, "Prove your courage!");
-		
 		registerQuestItems(HEAD_OF_HEKATON);
-		
 		addStartNpc(31377); // Ashas Varka Durai
 		addTalkId(31377);
-		
 		addKillId(25299); // Hekaton
 	}
 	
@@ -53,9 +50,7 @@ public class Q613_ProveYourCourage extends Quest
 		
 		if (event.equals("31377-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31377-07.htm"))
 		{
@@ -70,7 +65,7 @@ public class Q613_ProveYourCourage extends Quest
 			else
 			{
 				htmltext = "31377-06.htm";
-				st.set("cond", "1");
+				st.setCond(1);
 				st.playSound(QuestState.SOUND_ACCEPT);
 			}
 		}
@@ -91,6 +86,7 @@ public class Q613_ProveYourCourage extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 75)
 				{
 					htmltext = "31377-03.htm";
@@ -104,10 +100,12 @@ public class Q613_ProveYourCourage extends Quest
 					htmltext = "31377-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasQuestItems(HEAD_OF_HEKATON)) ? "31377-05.htm" : "31377-06.htm";
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -116,7 +114,7 @@ public class Q613_ProveYourCourage extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "1"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, 1))
 		{
 			if (partyMember.getAllianceWithVarkaKetra() <= -3)
 			{
@@ -128,7 +126,7 @@ public class Q613_ProveYourCourage extends Quest
 				
 				if (st.hasQuestItems(VARKA_ALLIANCE_3))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(HEAD_OF_HEKATON, 1);
 				}

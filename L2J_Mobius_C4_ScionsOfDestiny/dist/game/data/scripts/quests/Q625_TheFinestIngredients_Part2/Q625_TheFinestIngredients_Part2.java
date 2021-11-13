@@ -30,13 +30,11 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q625_TheFinestIngredients_Part2 extends Quest
 {
-	// Monster
-	private static final int ICICLE_EMPEROR_BUMBALUMP = 25296;
-	
 	// NPCs
 	private static final int JEREMY = 31521;
 	private static final int YETI_TABLE = 31542;
-	
+	// Monster
+	private static final int ICICLE_EMPEROR_BUMBALUMP = 25296;
 	// Items
 	private static final int SOY_SAUCE_JAR = 7205;
 	private static final int FOOD_FOR_BUMBALUMP = 7209;
@@ -50,39 +48,38 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 		4593,
 		4594
 	};
-	
 	// Other
 	private static final int CHECK_INTERVAL = 600000; // 10 minutes
 	private static final int IDLE_INTERVAL = 3; // (X * CHECK_INTERVAL) = 30 minutes
-	
 	private NpcInstance _npc = null;
 	private int _status = -1;
 	
 	public Q625_TheFinestIngredients_Part2()
 	{
 		super(625, "The Finest Ingredients - Part 2");
-		
 		registerQuestItems(FOOD_FOR_BUMBALUMP, SPECIAL_YETI_MEAT);
-		
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY, YETI_TABLE);
-		
 		addAttackId(ICICLE_EMPEROR_BUMBALUMP);
 		addKillId(ICICLE_EMPEROR_BUMBALUMP);
 		
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(ICICLE_EMPEROR_BUMBALUMP))
 		{
 			case UNDEFINED:
+			{
 				LOGGER.log(Level.WARNING, getName() + ": can not find spawned RaidBoss id=" + ICICLE_EMPEROR_BUMBALUMP);
 				break;
-			
+			}
 			case ALIVE:
+			{
 				spawnNpc();
 				// fallthrough
-				
+			}
 			case DEAD:
+			{
 				startQuestTimer("check", CHECK_INTERVAL, null, null, true);
 				break;
+			}
 		}
 	}
 	
@@ -113,58 +110,60 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 			return htmltext;
 		}
 		
-		// Jeremy
-		if (event.equals("31521-03.htm"))
+		switch (event)
 		{
-			if (st.hasQuestItems(SOY_SAUCE_JAR))
+			case "31521-03.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-				st.takeItems(SOY_SAUCE_JAR, 1);
-				st.giveItems(FOOD_FOR_BUMBALUMP, 1);
-			}
-			else
-			{
-				htmltext = "31521-04.htm";
-			}
-		}
-		else if (event.equals("31521-08.htm"))
-		{
-			if (st.hasQuestItems(SPECIAL_YETI_MEAT))
-			{
-				st.takeItems(SPECIAL_YETI_MEAT, 1);
-				st.rewardItems(REWARD_DYE[Rnd.get(REWARD_DYE.length)], 5);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
-			}
-			else
-			{
-				htmltext = "31521-09.htm";
-			}
-		}
-		// Yeti's Table
-		else if (event.equals("31542-02.htm"))
-		{
-			if (st.hasQuestItems(FOOD_FOR_BUMBALUMP))
-			{
-				if (_status < 0)
+				if (st.hasQuestItems(SOY_SAUCE_JAR))
 				{
-					if (spawnRaid())
+					st.startQuest();
+					st.takeItems(SOY_SAUCE_JAR, 1);
+					st.giveItems(FOOD_FOR_BUMBALUMP, 1);
+				}
+				else
+				{
+					htmltext = "31521-04.htm";
+				}
+				break;
+			}
+			case "31521-08.htm":
+			{
+				if (st.hasQuestItems(SPECIAL_YETI_MEAT))
+				{
+					st.takeItems(SPECIAL_YETI_MEAT, 1);
+					st.rewardItems(REWARD_DYE[Rnd.get(REWARD_DYE.length)], 5);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					htmltext = "31521-09.htm";
+				}
+				break;
+			}
+			case "31542-02.htm":
+			{
+				if (st.hasQuestItems(FOOD_FOR_BUMBALUMP))
+				{
+					if (_status < 0)
 					{
-						st.set("cond", "2");
-						st.playSound(QuestState.SOUND_MIDDLE);
-						st.takeItems(FOOD_FOR_BUMBALUMP, 1);
+						if (spawnRaid())
+						{
+							st.setCond(2);
+							st.playSound(QuestState.SOUND_MIDDLE);
+							st.takeItems(FOOD_FOR_BUMBALUMP, 1);
+						}
+					}
+					else
+					{
+						htmltext = "31542-04.htm";
 					}
 				}
 				else
 				{
-					htmltext = "31542-04.htm";
+					htmltext = "31542-03.htm";
 				}
-			}
-			else
-			{
-				htmltext = "31542-03.htm";
+				break;
 			}
 		}
 		
@@ -184,14 +183,17 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 73) ? "31521-02.htm" : "31521-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case JEREMY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31521-05.htm";
@@ -205,8 +207,9 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 							htmltext = "31521-07.htm";
 						}
 						break;
-					
+					}
 					case YETI_TABLE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31542-01.htm";
@@ -216,8 +219,10 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 							htmltext = "31542-05.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -233,7 +238,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, 2))
 		{
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
@@ -241,7 +246,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 				continue;
 			}
 			
-			st.set("cond", "3");
+			st.setCond(3);
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(SPECIAL_YETI_MEAT, 1);
 		}

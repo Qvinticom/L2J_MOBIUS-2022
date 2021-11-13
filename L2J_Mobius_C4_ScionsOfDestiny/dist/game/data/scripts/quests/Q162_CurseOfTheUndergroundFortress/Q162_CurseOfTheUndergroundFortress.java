@@ -35,14 +35,11 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	private static final int DUNGEON_SKELETON_ARCHER = 20463;
 	private static final int DUNGEON_SKELETON = 20464;
 	private static final int DREAD_SOLDIER = 20504;
-	
 	// Items
 	private static final int BONE_FRAGMENT = 1158;
 	private static final int ELF_SKULL = 1159;
-	
 	// Rewards
 	private static final int BONE_SHIELD = 625;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -58,12 +55,9 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	public Q162_CurseOfTheUndergroundFortress()
 	{
 		super(162, "Curse of the Underground Fortress");
-		
 		registerQuestItems(BONE_FRAGMENT, ELF_SKULL);
-		
 		addStartNpc(30147); // Unoren
 		addTalkId(30147);
-		
 		addKillId(SHADE_HORROR, DARK_TERROR, MIST_TERROR, DUNGEON_SKELETON_ARCHER, DUNGEON_SKELETON, DREAD_SOLDIER);
 	}
 	
@@ -79,9 +73,7 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 		
 		if (event.equals("30147-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -100,6 +92,7 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() == Race.DARK_ELF)
 				{
 					htmltext = "30147-00.htm";
@@ -113,9 +106,10 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 					htmltext = "30147-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30147-05.htm";
@@ -131,10 +125,12 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 					st.exitQuest(false);
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -143,33 +139,35 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
 		}
 		
 		final int npcId = npc.getNpcId();
-		
 		switch (npcId)
 		{
 			case DUNGEON_SKELETON:
 			case DUNGEON_SKELETON_ARCHER:
 			case DREAD_SOLDIER:
+			{
 				if (st.dropItems(BONE_FRAGMENT, 1, 10, CHANCES.get(npcId)) && (st.getQuestItemsCount(ELF_SKULL) >= 3))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case SHADE_HORROR:
 			case DARK_TERROR:
 			case MIST_TERROR:
+			{
 				if (st.dropItems(ELF_SKULL, 1, 3, CHANCES.get(npcId)) && (st.getQuestItemsCount(BONE_FRAGMENT) >= 10))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
+			}
 		}
 		
 		return null;

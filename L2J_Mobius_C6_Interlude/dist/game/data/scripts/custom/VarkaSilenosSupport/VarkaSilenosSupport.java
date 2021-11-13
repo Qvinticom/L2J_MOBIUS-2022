@@ -49,9 +49,7 @@ public class VarkaSilenosSupport extends Quest
 	private static final int HAGOS = 31381; // Warehouse Keeper
 	private static final int SHIKON = 31382; // Trader
 	private static final int TERANU = 31383; // Teleporter
-	
 	private static final int SEED = 7187;
-	
 	private static final int[] VARKAS =
 	{
 		21350,
@@ -76,44 +74,19 @@ public class VarkaSilenosSupport extends Quest
 		21374,
 		21375
 	};
-	
 	private static final int[][] BUFF =
 	{
-		{
-			4359,
-			2
-		}, // Focus: Requires 2 Nepenthese Seeds
-		{
-			4360,
-			2
-		}, // Death Whisper: Requires 2 Nepenthese Seeds
-		{
-			4345,
-			3
-		}, // Might: Requires 3 Nepenthese Seeds
-		{
-			4355,
-			3
-		}, // Acumen: Requires 3 Nepenthese Seeds
-		{
-			4352,
-			3
-		}, // Berserker: Requires 3 Nepenthese Seeds
-		{
-			4354,
-			3
-		}, // Vampiric Rage: Requires 3 Nepenthese Seeds
-		{
-			4356,
-			6
-		}, // Empower: Requires 6 Nepenthese Seeds
-		{
-			4357,
-			6
-		}
-		// Haste: Requires 6 Nepenthese Seeds
+		// @formatter:off
+		{4359, 2}, // Focus: Requires 2 Nepenthese Seeds
+		{4360, 2}, // Death Whisper: Requires 2 Nepenthese Seeds
+		{4345, 3}, // Might: Requires 3 Nepenthese Seeds
+		{4355, 3}, // Acumen: Requires 3 Nepenthese Seeds
+		{4352, 3}, // Berserker: Requires 3 Nepenthese Seeds
+		{4354, 3}, // Vampiric Rage: Requires 3 Nepenthese Seeds
+		{4356, 6}, // Empower: Requires 6 Nepenthese Seeds
+		{4357, 6}, // Haste: Requires 6 Nepenthese Seeds
+		// @formatter:on
 	};
-	
 	private static final Skill VARKA_KETRA_PETRIFICATION = SkillTable.getInstance().getSkill(4578, 1);
 	
 	/**
@@ -184,11 +157,15 @@ public class VarkaSilenosSupport extends Quest
 			switch (player.getAllianceWithVarkaKetra())
 			{
 				case -4:
+				{
 					htmltext = "31383-4.htm";
 					break;
+				}
 				case -5:
+				{
 					htmltext = "31383-5.htm";
 					break;
+				}
 			}
 		}
 		
@@ -210,6 +187,7 @@ public class VarkaSilenosSupport extends Quest
 		switch (npc.getNpcId())
 		{
 			case ASHAS:
+			{
 				if (allianceLevel < 0)
 				{
 					htmltext = "31377-friend.htm";
@@ -219,8 +197,9 @@ public class VarkaSilenosSupport extends Quest
 					htmltext = "31377-no.htm";
 				}
 				break;
-			
+			}
 			case NARAN:
+			{
 				if (allianceLevel < 0)
 				{
 					htmltext = "31378-friend.htm";
@@ -230,8 +209,9 @@ public class VarkaSilenosSupport extends Quest
 					htmltext = "31378-no.htm";
 				}
 				break;
-			
+			}
 			case UDAN:
+			{
 				st.setState(State.STARTED);
 				if (allianceLevel > -1)
 				{
@@ -253,8 +233,9 @@ public class VarkaSilenosSupport extends Quest
 					}
 				}
 				break;
-			
+			}
 			case DIYABU:
+			{
 				if (player.getKarma() >= 1)
 				{
 					htmltext = "31380-pk.htm";
@@ -272,18 +253,24 @@ public class VarkaSilenosSupport extends Quest
 					htmltext = "31380-2.htm";
 				}
 				break;
-			
+			}
 			case HAGOS:
+			{
 				switch (allianceLevel)
 				{
 					case -1:
+					{
 						htmltext = "31381-1.htm";
 						break;
+					}
 					case -2:
 					case -3:
+					{
 						htmltext = "31381-2.htm";
 						break;
+					}
 					default:
+					{
 						if (allianceLevel >= 0)
 						{
 							htmltext = "31381-no.htm";
@@ -297,29 +284,40 @@ public class VarkaSilenosSupport extends Quest
 							htmltext = "31381-4.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case SHIKON:
+			{
 				switch (allianceLevel)
 				{
 					case -2:
+					{
 						htmltext = "31382-1.htm";
 						break;
+					}
 					case -3:
 					case -4:
+					{
 						htmltext = "31382-2.htm";
 						break;
+					}
 					case -5:
+					{
 						htmltext = "31382-3.htm";
 						break;
+					}
 					default:
+					{
 						htmltext = "31382-no.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case TERANU:
+			{
 				if (allianceLevel >= 0)
 				{
 					htmltext = "31383-no.htm";
@@ -337,6 +335,7 @@ public class VarkaSilenosSupport extends Quest
 					htmltext = "31383-3.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -375,6 +374,7 @@ public class VarkaSilenosSupport extends Quest
 				case HEAL_STATIC:
 				case BALANCE_LIFE:
 				case HOT:
+				{
 					for (WorldObject target : skill.getTargetList(caster))
 					{
 						// Character isn't existing, or is current caster, we drop check.
@@ -418,6 +418,7 @@ public class VarkaSilenosSupport extends Quest
 						}
 					}
 					break;
+				}
 			}
 		}
 		

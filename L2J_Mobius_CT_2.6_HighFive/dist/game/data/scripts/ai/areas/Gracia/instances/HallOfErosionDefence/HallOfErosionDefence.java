@@ -620,7 +620,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 						if (player != null)
 						{
 							final QuestState qs = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
-							if ((qs != null) && (qs.getInt("cond") == 1))
+							if ((qs != null) && qs.isCond(1))
 							{
 								qs.set("defenceDone", 1);
 							}

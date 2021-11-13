@@ -27,6 +27,15 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q414_PathToAnOrcRaider extends Quest
 {
+	// NPCs
+	private static final int KARUKIA = 30570;
+	private static final int KASMAN = 30501;
+	private static final int TAZEER = 31978;
+	// Monsters
+	private static final int GOBLIN_TOMB_RAIDER_LEADER = 20320;
+	private static final int KURUKA_RATMAN_LEADER = 27045;
+	private static final int UMBAR_ORC = 27054;
+	private static final int TIMORA_ORC = 27320;
 	// Items
 	private static final int GREEN_BLOOD = 1578;
 	private static final int GOBLIN_DWELLING_MAP = 1579;
@@ -37,26 +46,12 @@ public class Q414_PathToAnOrcRaider extends Quest
 	private static final int MARK_OF_RAIDER = 1592;
 	private static final int TIMORA_ORC_HEAD = 8544;
 	
-	// NPCs
-	private static final int KARUKIA = 30570;
-	private static final int KASMAN = 30501;
-	private static final int TAZEER = 31978;
-	
-	// Monsters
-	private static final int GOBLIN_TOMB_RAIDER_LEADER = 20320;
-	private static final int KURUKA_RATMAN_LEADER = 27045;
-	private static final int UMBAR_ORC = 27054;
-	private static final int TIMORA_ORC = 27320;
-	
 	public Q414_PathToAnOrcRaider()
 	{
 		super(414, "Path to an Orc Raider");
-		
 		registerQuestItems(GREEN_BLOOD, GOBLIN_DWELLING_MAP, KURUKA_RATMAN_TOOTH, BETRAYER_REPORT_1, BETRAYER_REPORT_2, HEAD_OF_BETRAYER, TIMORA_ORC_HEAD);
-		
 		addStartNpc(KARUKIA);
 		addTalkId(KARUKIA, KASMAN, TAZEER);
-		
 		addKillId(GOBLIN_TOMB_RAIDER_LEADER, KURUKA_RATMAN_LEADER, UMBAR_ORC, TIMORA_ORC);
 	}
 	
@@ -70,50 +65,53 @@ public class Q414_PathToAnOrcRaider extends Quest
 			return htmltext;
 		}
 		
-		// KARUKIA
-		if (event.equals("30570-05.htm"))
+		switch (event)
 		{
-			if (player.getClassId() != ClassId.ORC_FIGHTER)
+			case "30570-05.htm":
 			{
-				htmltext = (player.getClassId() == ClassId.ORC_RAIDER) ? "30570-02a.htm" : "30570-03.htm";
+				if (player.getClassId() != ClassId.ORC_FIGHTER)
+				{
+					htmltext = (player.getClassId() == ClassId.ORC_RAIDER) ? "30570-02a.htm" : "30570-03.htm";
+				}
+				else if (player.getLevel() < 19)
+				{
+					htmltext = "30570-02.htm";
+				}
+				else if (st.hasQuestItems(MARK_OF_RAIDER))
+				{
+					htmltext = "30570-04.htm";
+				}
+				else
+				{
+					st.startQuest();
+					st.giveItems(GOBLIN_DWELLING_MAP, 1);
+				}
+				break;
 			}
-			else if (player.getLevel() < 19)
+			case "30570-07a.htm":
 			{
-				htmltext = "30570-02.htm";
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GOBLIN_DWELLING_MAP, 1);
+				st.takeItems(KURUKA_RATMAN_TOOTH, -1);
+				st.giveItems(BETRAYER_REPORT_1, 1);
+				st.giveItems(BETRAYER_REPORT_2, 1);
+				break;
 			}
-			else if (st.hasQuestItems(MARK_OF_RAIDER))
+			case "30570-07b.htm":
 			{
-				htmltext = "30570-04.htm";
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GOBLIN_DWELLING_MAP, 1);
+				st.takeItems(KURUKA_RATMAN_TOOTH, -1);
+				break;
 			}
-			else
+			case "31978-03.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-				st.giveItems(GOBLIN_DWELLING_MAP, 1);
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
 			}
-		}
-		else if (event.equals("30570-07a.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GOBLIN_DWELLING_MAP, 1);
-			st.takeItems(KURUKA_RATMAN_TOOTH, -1);
-			st.giveItems(BETRAYER_REPORT_1, 1);
-			st.giveItems(BETRAYER_REPORT_2, 1);
-		}
-		else if (event.equals("30570-07b.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GOBLIN_DWELLING_MAP, 1);
-			st.takeItems(KURUKA_RATMAN_TOOTH, -1);
-		}
-		// TAZEER
-		else if (event.equals("31978-03.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
 		}
 		
 		return htmltext;
@@ -132,14 +130,17 @@ public class Q414_PathToAnOrcRaider extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30570-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case KARUKIA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30570-06.htm";
@@ -157,8 +158,9 @@ public class Q414_PathToAnOrcRaider extends Quest
 							htmltext = "30570-07b.htm";
 						}
 						break;
-					
+					}
 					case KASMAN:
+					{
 						if (cond == 3)
 						{
 							htmltext = "30501-01.htm";
@@ -183,8 +185,9 @@ public class Q414_PathToAnOrcRaider extends Quest
 							}
 						}
 						break;
-					
+					}
 					case TAZEER:
+					{
 						if (cond == 5)
 						{
 							htmltext = "31978-01.htm";
@@ -204,8 +207,10 @@ public class Q414_PathToAnOrcRaider extends Quest
 							st.exitQuest(true);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -220,12 +225,11 @@ public class Q414_PathToAnOrcRaider extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
-		
 		switch (npc.getNpcId())
 		{
 			case GOBLIN_TOMB_RAIDER_LEADER:
-				if (cond == 1)
+			{
+				if (st.isCond(1))
 				{
 					if (st.getQuestItemsCount(GREEN_BLOOD) <= Rnd.get(20))
 					{
@@ -239,33 +243,37 @@ public class Q414_PathToAnOrcRaider extends Quest
 					}
 				}
 				break;
-			
+			}
 			case KURUKA_RATMAN_LEADER:
-				if ((cond == 1) && st.dropItemsAlways(KURUKA_RATMAN_TOOTH, 1, 10))
+			{
+				if (st.isCond(1) && st.dropItemsAlways(KURUKA_RATMAN_TOOTH, 1, 10))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case UMBAR_ORC:
-				if (((cond == 3) || (cond == 4)) && (st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2) && (Rnd.get(10) < 2))
+			{
+				if ((st.isCond(3) || st.isCond(4)) && (st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2) && (Rnd.get(10) < 2))
 				{
-					if (cond == 3)
+					if (st.isCond(3))
 					{
-						st.set("cond", "4");
+						st.setCond(4);
 					}
 					
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(HEAD_OF_BETRAYER, 1);
 				}
 				break;
-			
+			}
 			case TIMORA_ORC:
-				if ((cond == 6) && st.dropItems(TIMORA_ORC_HEAD, 1, 1, 600000))
+			{
+				if (st.isCond(6) && st.dropItems(TIMORA_ORC_HEAD, 1, 1, 600000))
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 				}
 				break;
+			}
 		}
 		
 		return null;

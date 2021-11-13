@@ -27,16 +27,13 @@ public class Q110_ToThePrimevalIsle extends Quest
 	// NPCs
 	private static final int ANTON = 31338;
 	private static final int MARQUEZ = 32113;
-	
 	// Item
 	private static final int ANCIENT_BOOK = 8777;
 	
 	public Q110_ToThePrimevalIsle()
 	{
 		super(110, "To the Primeval Isle");
-		
 		registerQuestItems(ANCIENT_BOOK);
-		
 		addStartNpc(ANTON);
 		addTalkId(ANTON, MARQUEZ);
 	}
@@ -53,9 +50,7 @@ public class Q110_ToThePrimevalIsle extends Quest
 		
 		if (event.equals("31338-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(ANCIENT_BOOK, 1);
 		}
 		else if (event.equals("32113-03.htm") && st.hasQuestItems(ANCIENT_BOOK))
@@ -82,25 +77,32 @@ public class Q110_ToThePrimevalIsle extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 75) ? "31338-00.htm" : "31338-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case ANTON:
+					{
 						htmltext = "31338-01c.htm";
 						break;
-					
+					}
 					case MARQUEZ:
+					{
 						htmltext = "32113-01.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

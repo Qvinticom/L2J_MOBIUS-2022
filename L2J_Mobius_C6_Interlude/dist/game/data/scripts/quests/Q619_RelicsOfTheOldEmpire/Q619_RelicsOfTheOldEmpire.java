@@ -27,11 +27,9 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 {
 	// NPC
 	private static int GHOST_OF_ADVENTURER = 31538;
-	
 	// Items
 	private static int RELICS = 7254;
 	private static int ENTRANCE = 7075;
-	
 	// Rewards ; all S grade weapons recipe (60%)
 	private static int[] RCP_REWARDS = new int[]
 	{
@@ -50,21 +48,16 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 	public Q619_RelicsOfTheOldEmpire()
 	{
 		super(619, "Relics of the Old Empire");
-		
 		registerQuestItems(RELICS);
-		
 		addStartNpc(GHOST_OF_ADVENTURER);
 		addTalkId(GHOST_OF_ADVENTURER);
-		
 		for (int id = 21396; id <= 21434; id++)
 		{
 			// IT monsters
 			addKillId(id);
 		}
-		
 		// monsters at IT entrance
 		addKillId(21798, 21799, 21800);
-		
 		for (int id = 18120; id <= 18256; id++)
 		{
 			// Sepulchers monsters
@@ -82,29 +75,33 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31538-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31538-09.htm"))
-		{
-			if (st.getQuestItemsCount(RELICS) >= 1000)
+			case "31538-03.htm":
 			{
-				htmltext = "31538-09.htm";
-				st.takeItems(RELICS, 1000);
-				st.giveItems(RCP_REWARDS[Rnd.get(RCP_REWARDS.length)], 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31538-09.htm":
 			{
-				htmltext = "31538-06.htm";
+				if (st.getQuestItemsCount(RELICS) >= 1000)
+				{
+					htmltext = "31538-09.htm";
+					st.takeItems(RELICS, 1000);
+					st.giveItems(RCP_REWARDS[Rnd.get(RCP_REWARDS.length)], 1);
+				}
+				else
+				{
+					htmltext = "31538-06.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31538-10.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "31538-10.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -122,10 +119,12 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 74) ? "31538-02.htm" : "31538-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(RELICS) >= 1000)
 				{
 					htmltext = "31538-04.htm";
@@ -139,6 +138,7 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 					htmltext = "31538-07.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

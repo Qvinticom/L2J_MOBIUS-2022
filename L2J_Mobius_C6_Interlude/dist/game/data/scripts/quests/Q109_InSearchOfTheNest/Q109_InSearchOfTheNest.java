@@ -28,7 +28,6 @@ public class Q109_InSearchOfTheNest extends Quest
 	private static final int PIERCE = 31553;
 	private static final int KAHMAN = 31554;
 	private static final int SCOUT_CORPSE = 32015;
-	
 	// Items
 	private static final int SCOUT_MEMO = 8083;
 	private static final int RECRUIT_BADGE = 7246;
@@ -37,9 +36,7 @@ public class Q109_InSearchOfTheNest extends Quest
 	public Q109_InSearchOfTheNest()
 	{
 		super(109, "In Search of the Nest");
-		
 		registerQuestItems(SCOUT_MEMO);
-		
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE, SCOUT_CORPSE, KAHMAN);
 	}
@@ -54,29 +51,34 @@ public class Q109_InSearchOfTheNest extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31553-01.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32015-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(SCOUT_MEMO, 1);
-		}
-		else if (event.equals("31553-03.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SCOUT_MEMO, 1);
-		}
-		else if (event.equals("31554-02.htm"))
-		{
-			st.rewardItems(57, 5168);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31553-01.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "32015-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(SCOUT_MEMO, 1);
+				break;
+			}
+			case "31553-03.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SCOUT_MEMO, 1);
+				break;
+			}
+			case "31554-02.htm":
+			{
+				st.rewardItems(57, 5168);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -95,6 +97,7 @@ public class Q109_InSearchOfTheNest extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				// Must worn one or other Golden Ram Badge in order to be accepted.
 				if ((player.getLevel() >= 66) && st.hasAtLeastOneQuestItem(RECRUIT_BADGE, SOLDIER_BADGE))
 				{
@@ -105,12 +108,14 @@ public class Q109_InSearchOfTheNest extends Quest
 					htmltext = "31553-00a.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case PIERCE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31553-01a.htm";
@@ -124,8 +129,9 @@ public class Q109_InSearchOfTheNest extends Quest
 							htmltext = "31553-03.htm";
 						}
 						break;
-					
+					}
 					case SCOUT_CORPSE:
+					{
 						if (cond == 1)
 						{
 							htmltext = "32015-01.htm";
@@ -135,19 +141,23 @@ public class Q109_InSearchOfTheNest extends Quest
 							htmltext = "32015-02.htm";
 						}
 						break;
-					
+					}
 					case KAHMAN:
+					{
 						if (cond == 3)
 						{
 							htmltext = "31554-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

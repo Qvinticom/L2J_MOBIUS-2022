@@ -30,23 +30,19 @@ public class Q002_WhatWomenWant extends Quest
 	private static final int MIRABEL = 30146;
 	private static final int HERBIEL = 30150;
 	private static final int GREENIS = 30157;
-	
 	// Items
 	private static final int ARUJIEN_LETTER_1 = 1092;
 	private static final int ARUJIEN_LETTER_2 = 1093;
 	private static final int ARUJIEN_LETTER_3 = 1094;
 	private static final int POETRY_BOOK = 689;
 	private static final int GREENIS_LETTER = 693;
-	
 	// Rewards
 	private static final int MYSTICS_EARRING = 113;
 	
 	public Q002_WhatWomenWant()
 	{
 		super(2, "What Women Want");
-		
 		registerQuestItems(ARUJIEN_LETTER_1, ARUJIEN_LETTER_2, ARUJIEN_LETTER_3, POETRY_BOOK, GREENIS_LETTER);
-		
 		addStartNpc(ARUJIEN);
 		addTalkId(ARUJIEN, MIRABEL, HERBIEL, GREENIS);
 	}
@@ -61,26 +57,30 @@ public class Q002_WhatWomenWant extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30223-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(ARUJIEN_LETTER_1, 1);
-		}
-		else if (event.equals("30223-08.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ARUJIEN_LETTER_3, 1);
-			st.giveItems(POETRY_BOOK, 1);
-		}
-		else if (event.equals("30223-09.htm"))
-		{
-			st.takeItems(ARUJIEN_LETTER_3, 1);
-			st.rewardItems(57, 450);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30223-04.htm":
+			{
+				st.startQuest();
+				st.giveItems(ARUJIEN_LETTER_1, 1);
+				break;
+			}
+			case "30223-08.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ARUJIEN_LETTER_3, 1);
+				st.giveItems(POETRY_BOOK, 1);
+				break;
+			}
+			case "30223-09.htm":
+			{
+				st.takeItems(ARUJIEN_LETTER_3, 1);
+				st.rewardItems(57, 450);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -99,6 +99,7 @@ public class Q002_WhatWomenWant extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getRace() != Race.ELF) && (player.getRace() != Race.HUMAN))
 				{
 					htmltext = "30223-00.htm";
@@ -112,12 +113,14 @@ public class Q002_WhatWomenWant extends Quest
 					htmltext = "30223-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ARUJIEN:
+					{
 						if (st.hasQuestItems(ARUJIEN_LETTER_1))
 						{
 							htmltext = "30223-05.htm";
@@ -143,12 +146,13 @@ public class Q002_WhatWomenWant extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case MIRABEL:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30146-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ARUJIEN_LETTER_1, 1);
 							st.giveItems(ARUJIEN_LETTER_2, 1);
@@ -158,12 +162,13 @@ public class Q002_WhatWomenWant extends Quest
 							htmltext = "30146-02.htm";
 						}
 						break;
-					
+					}
 					case HERBIEL:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30150-01.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(ARUJIEN_LETTER_2, 1);
 							st.giveItems(ARUJIEN_LETTER_3, 1);
@@ -173,8 +178,9 @@ public class Q002_WhatWomenWant extends Quest
 							htmltext = "30150-02.htm";
 						}
 						break;
-					
+					}
 					case GREENIS:
+					{
 						if (cond < 4)
 						{
 							htmltext = "30157-01.htm";
@@ -182,7 +188,7 @@ public class Q002_WhatWomenWant extends Quest
 						else if (cond == 4)
 						{
 							htmltext = "30157-02.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(POETRY_BOOK, 1);
 							st.giveItems(GREENIS_LETTER, 1);
@@ -192,12 +198,15 @@ public class Q002_WhatWomenWant extends Quest
 							htmltext = "30157-03.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

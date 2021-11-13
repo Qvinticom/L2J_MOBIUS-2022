@@ -30,12 +30,9 @@ public class Q317_CatchTheWind extends Quest
 	public Q317_CatchTheWind()
 	{
 		super(317, "Catch the Wind");
-		
 		registerQuestItems(WIND_SHARD);
-		
 		addStartNpc(30361); // Rizraell
 		addTalkId(30361);
-		
 		addKillId(20036, 20044);
 	}
 	
@@ -51,9 +48,7 @@ public class Q317_CatchTheWind extends Quest
 		
 		if (event.equals("30361-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30361-08.htm"))
 		{
@@ -77,10 +72,12 @@ public class Q317_CatchTheWind extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 18) ? "30361-02.htm" : "30361-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int shards = st.getQuestItemsCount(WIND_SHARD);
 				if (shards == 0)
 				{
@@ -93,6 +90,7 @@ public class Q317_CatchTheWind extends Quest
 					st.rewardItems(57, (40 * shards) + (shards >= 10 ? 2988 : 0));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

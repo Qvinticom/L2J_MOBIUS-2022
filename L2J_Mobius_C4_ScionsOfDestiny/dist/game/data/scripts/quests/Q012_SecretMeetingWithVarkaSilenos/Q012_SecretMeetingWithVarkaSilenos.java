@@ -28,16 +28,13 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 	private static final int CADMON = 31296;
 	private static final int HELMUT = 31258;
 	private static final int NARAN_ASHANUK = 31378;
-	
 	// Items
 	private static final int MUNITIONS_BOX = 7232;
 	
 	public Q012_SecretMeetingWithVarkaSilenos()
 	{
 		super(12, "Secret Meeting With Varka Silenos");
-		
 		registerQuestItems(MUNITIONS_BOX);
-		
 		addStartNpc(CADMON);
 		addTalkId(CADMON, HELMUT, NARAN_ASHANUK);
 	}
@@ -52,24 +49,28 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31296-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31258-02.htm"))
-		{
-			st.giveItems(MUNITIONS_BOX, 1);
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31378-02.htm"))
-		{
-			st.takeItems(MUNITIONS_BOX, 1);
-			st.rewardExpAndSp(79761, 0);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "31296-03.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31258-02.htm":
+			{
+				st.giveItems(MUNITIONS_BOX, 1);
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "31378-02.htm":
+			{
+				st.takeItems(MUNITIONS_BOX, 1);
+				st.rewardExpAndSp(79761, 0);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -88,21 +89,25 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 74) ? "31296-02.htm" : "31296-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case CADMON:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31296-04.htm";
 						}
 						break;
-					
+					}
 					case HELMUT:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31258-01.htm";
@@ -112,19 +117,23 @@ public class Q012_SecretMeetingWithVarkaSilenos extends Quest
 							htmltext = "31258-03.htm";
 						}
 						break;
-					
+					}
 					case NARAN_ASHANUK:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31378-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

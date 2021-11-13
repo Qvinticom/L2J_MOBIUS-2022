@@ -28,49 +28,31 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 	// Items
 	private static final int ANCIENT_BOOK = 5955;
 	private static final int DICTIONARY_INTERMEDIATE = 5892;
-	
 	private static final int[][] BOOKS =
 	{
+		// @formatter:off
 		// science & technology -> majestic leather, leather armor of nightmare
-		{
-			5945,
-			5946,
-			5947,
-			5948,
-			5949
-		},
+		{5945, 5946, 5947, 5948, 5949},
 		// culture -> armor of nightmare, majestic plate
-		{
-			5950,
-			5951,
-			5952,
-			5953,
-			5954
-		}
+		{5950, 5951, 5952, 5953, 5954}
+		// @formatter:on
 	};
-	
 	// Rewards
 	private static final int[][] RECIPES =
 	{
+		// @formatter:off
 		// science & technology -> majestic leather, leather armor of nightmare
-		{
-			5338,
-			5336
-		},
+		{5338, 5336},
 		// culture -> armor of nightmare, majestic plate
-		{
-			5420,
-			5422
-		}
+		{5420, 5422}
+		// @formatter:on
 	};
 	
 	public Q377_ExplorationOfTheGiantsCave_Part2()
 	{
 		super(377, "Exploration of Giants Cave, Part 2");
-		
 		addStartNpc(31147); // Sobling
 		addTalkId(31147);
-		
 		addKillId(20654, 20656, 20657, 20658);
 	}
 	
@@ -84,20 +66,24 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31147-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31147-04.htm"))
-		{
-			htmltext = checkItems(st);
-		}
-		else if (event.equals("31147-07.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "31147-03.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "31147-04.htm":
+			{
+				htmltext = checkItems(st);
+				break;
+			}
+			case "31147-07.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -116,12 +102,15 @@ public class Q377_ExplorationOfTheGiantsCave_Part2 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() < 57) || !st.hasQuestItems(DICTIONARY_INTERMEDIATE)) ? "31147-01.htm" : "31147-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = checkItems(st);
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -30,19 +30,15 @@ public class Q036_MakeASewingKit extends Quest
 	private static final int REINFORCED_STEEL = 7163;
 	private static final int ARTISANS_FRAME = 1891;
 	private static final int ORIHARUKON = 1893;
-	
 	// Reward
 	private static final int SEWING_KIT = 7078;
 	
 	public Q036_MakeASewingKit()
 	{
 		super(36, "Make a Sewing Kit");
-		
 		registerQuestItems(REINFORCED_STEEL);
-		
 		addStartNpc(30847); // Ferris
 		addTalkId(30847);
-		
 		addKillId(20566); // Iron Golem
 	}
 	
@@ -56,31 +52,35 @@ public class Q036_MakeASewingKit extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30847-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30847-3.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(REINFORCED_STEEL, 5);
-		}
-		else if (event.equals("30847-5.htm"))
-		{
-			if ((st.getQuestItemsCount(ORIHARUKON) >= 10) && (st.getQuestItemsCount(ARTISANS_FRAME) >= 10))
+			case "30847-1.htm":
 			{
-				st.takeItems(ARTISANS_FRAME, 10);
-				st.takeItems(ORIHARUKON, 10);
-				st.giveItems(SEWING_KIT, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.startQuest();
+				break;
 			}
-			else
+			case "30847-3.htm":
 			{
-				htmltext = "30847-4a.htm";
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(REINFORCED_STEEL, 5);
+				break;
+			}
+			case "30847-5.htm":
+			{
+				if ((st.getQuestItemsCount(ORIHARUKON) >= 10) && (st.getQuestItemsCount(ARTISANS_FRAME) >= 10))
+				{
+					st.takeItems(ARTISANS_FRAME, 10);
+					st.takeItems(ORIHARUKON, 10);
+					st.giveItems(SEWING_KIT, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "30847-4a.htm";
+				}
+				break;
 			}
 		}
 		
@@ -100,10 +100,11 @@ public class Q036_MakeASewingKit extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() >= 60)
 				{
 					final QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
-					if ((fwear != null) && (fwear.getInt("cond") == 6))
+					if ((fwear != null) && fwear.isCond(6))
 					{
 						htmltext = "30847-0.htm";
 					}
@@ -117,9 +118,10 @@ public class Q036_MakeASewingKit extends Quest
 					htmltext = "30847-0b.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30847-1a.htm";
@@ -133,10 +135,12 @@ public class Q036_MakeASewingKit extends Quest
 					htmltext = ((st.getQuestItemsCount(ORIHARUKON) < 10) || (st.getQuestItemsCount(ARTISANS_FRAME) < 10)) ? "30847-4a.htm" : "30847-4.htm";
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -145,7 +149,7 @@ public class Q036_MakeASewingKit extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -153,7 +157,7 @@ public class Q036_MakeASewingKit extends Quest
 		
 		if (st.dropItems(REINFORCED_STEEL, 1, 5, 500000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

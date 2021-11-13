@@ -44,14 +44,12 @@ public class NewbieHelper extends Quest
 	private static final int LICENSE_OF_MINER = 1498;
 	// Orc
 	private static final int VOUCHER_OF_FLAME = 1496;
-	
 	// Items Reward
 	private static final int SOULSHOT_NOVICE = 5789;
 	private static final int SPIRITSHOT_NOVICE = 5790;
 	private static final int BLUE_GEM = 6353;
 	private static final int TOKEN = 8542;
 	private static final int SCROLL = 8594;
-	
 	private static final Map<String, Event> _events = new HashMap<>();
 	static
 	{
@@ -62,7 +60,6 @@ public class NewbieHelper extends Quest
 		_events.put("30528_02", new Event("30528-03.htm", 115642, -178046, -941, LICENSE_OF_MINER, 0x35, SOULSHOT_NOVICE, 200, 0x00, 0, 0));
 		_events.put("30573_02", new Event("30573-03.htm", -45067, -113549, -235, VOUCHER_OF_FLAME, 0x31, SOULSHOT_NOVICE, 200, 0x2c, SOULSHOT_NOVICE, 200));
 	}
-	
 	// @formatter:off
 	private static final Map<Integer, Talk> _talks = new HashMap<>();
 	static
@@ -91,11 +88,8 @@ public class NewbieHelper extends Quest
 	public NewbieHelper()
 	{
 		super(-1, "ai/others");
-		
 		addStartNpc(30009, 30019, 30131, 30400, 30530, 30575);
-		
 		addTalkId(30009, 30019, 30131, 30400, 30530, 30575, 30008, 30017, 30129, 30370, 30528, 30573);
-		
 		addFirstTalkId(new int[]
 		{
 			30009, // Newbie Helper - Human
@@ -118,7 +112,6 @@ public class NewbieHelper extends Quest
 			30528, // Foreman - Dwarf
 			30573 // Flame Guardian - Orc
 		});
-		
 		addKillId(18342);
 	}
 	
@@ -250,12 +243,12 @@ public class NewbieHelper extends Quest
 	{
 		String htmltext = "";
 		QuestState qs1 = player.getQuestState(getName());
-		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
 		if (qs1 == null)
 		{
 			qs1 = newQuestState(player);
 		}
 		
+		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
 		if ((qs2 == null) || Config.DISABLE_TUTORIAL)
 		{
 			npc.showChatWindow(player);

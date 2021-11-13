@@ -30,21 +30,17 @@ public class Q117_TheOceanOfDistantStars extends Quest
 	private static final int ANCIENT_GHOST = 32055;
 	private static final int OBI = 32052;
 	private static final int BOX = 32076;
-	
+	// Monsters
+	private static final int BANDIT_WARRIOR = 22023;
+	private static final int BANDIT_INSPECTOR = 22024;
 	// Items
 	private static final int GREY_STAR = 8495;
 	private static final int ENGRAVED_HAMMER = 8488;
 	
-	// Monsters
-	private static final int BANDIT_WARRIOR = 22023;
-	private static final int BANDIT_INSPECTOR = 22024;
-	
 	public Q117_TheOceanOfDistantStars()
 	{
 		super(117, "The Ocean of Distant Stars");
-		
 		registerQuestItems(GREY_STAR, ENGRAVED_HAMMER);
-		
 		addStartNpc(ABEY);
 		addTalkId(ABEY, ANCIENT_GHOST, GHOST, OBI, BOX);
 		addKillId(BANDIT_WARRIOR, BANDIT_INSPECTOR);
@@ -60,60 +56,71 @@ public class Q117_TheOceanOfDistantStars extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32053-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32055-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32052-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32053-04.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32076-02.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(ENGRAVED_HAMMER, 1);
-		}
-		else if (event.equals("32053-06.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32052-04.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32052-06.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GREY_STAR, 1);
-		}
-		else if (event.equals("32055-04.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ENGRAVED_HAMMER, 1);
-		}
-		else if (event.equals("32054-03.htm"))
-		{
-			st.rewardExpAndSp(63591, 0);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "32053-02.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "32055-02.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32052-02.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32053-04.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32076-02.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(ENGRAVED_HAMMER, 1);
+				break;
+			}
+			case "32053-06.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32052-04.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32052-06.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GREY_STAR, 1);
+				break;
+			}
+			case "32055-04.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ENGRAVED_HAMMER, 1);
+				break;
+			}
+			case "32054-03.htm":
+			{
+				st.rewardExpAndSp(63591, 0);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -132,14 +139,17 @@ public class Q117_TheOceanOfDistantStars extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 39) ? "32053-00.htm" : "32053-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ANCIENT_GHOST:
+					{
 						if (cond == 1)
 						{
 							htmltext = "32055-01.htm";
@@ -157,8 +167,9 @@ public class Q117_TheOceanOfDistantStars extends Quest
 							htmltext = "32055-05.htm";
 						}
 						break;
-					
+					}
 					case OBI:
+					{
 						if (cond == 2)
 						{
 							htmltext = "32052-01.htm";
@@ -184,8 +195,9 @@ public class Q117_TheOceanOfDistantStars extends Quest
 							htmltext = "32052-06.htm";
 						}
 						break;
-					
+					}
 					case ABEY:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "32053-02.htm";
@@ -207,8 +219,9 @@ public class Q117_TheOceanOfDistantStars extends Quest
 							htmltext = "32053-06.htm";
 						}
 						break;
-					
+					}
 					case BOX:
+					{
 						if (cond == 4)
 						{
 							htmltext = "32076-01.htm";
@@ -218,19 +231,23 @@ public class Q117_TheOceanOfDistantStars extends Quest
 							htmltext = "32076-03.htm";
 						}
 						break;
-					
+					}
 					case GHOST:
+					{
 						if (cond == 10)
 						{
 							htmltext = "32054-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -239,7 +256,7 @@ public class Q117_TheOceanOfDistantStars extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "7");
+		final QuestState st = checkPlayerCondition(player, npc, 7);
 		if (st == null)
 		{
 			return null;
@@ -247,7 +264,7 @@ public class Q117_TheOceanOfDistantStars extends Quest
 		
 		if (st.dropItems(GREY_STAR, 1, 1, 200000))
 		{
-			st.set("cond", "8");
+			st.setCond(8);
 		}
 		
 		return null;

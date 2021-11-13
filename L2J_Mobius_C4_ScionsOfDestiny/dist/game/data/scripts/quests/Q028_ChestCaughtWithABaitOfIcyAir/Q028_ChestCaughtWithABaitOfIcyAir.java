@@ -29,7 +29,6 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 	// NPCs
 	private static final int OFULLE = 31572;
 	private static final int KIKI = 31442;
-	
 	// Items
 	private static final int BIG_YELLOW_TREASURE_CHEST = 6503;
 	private static final int KIKI_LETTER = 7626;
@@ -38,9 +37,7 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 	public Q028_ChestCaughtWithABaitOfIcyAir()
 	{
 		super(28, "Chest caught with a bait of icy air");
-		
 		registerQuestItems(KIKI_LETTER);
-		
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE, KIKI);
 	}
@@ -55,38 +52,42 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31572-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31572-07.htm"))
-		{
-			if (st.hasQuestItems(BIG_YELLOW_TREASURE_CHEST))
+			case "31572-04.htm":
 			{
-				st.set("cond", "2");
-				st.takeItems(BIG_YELLOW_TREASURE_CHEST, 1);
-				st.giveItems(KIKI_LETTER, 1);
+				st.startQuest();
+				break;
 			}
-			else
+			case "31572-07.htm":
 			{
-				htmltext = "31572-08.htm";
+				if (st.hasQuestItems(BIG_YELLOW_TREASURE_CHEST))
+				{
+					st.setCond(2);
+					st.takeItems(BIG_YELLOW_TREASURE_CHEST, 1);
+					st.giveItems(KIKI_LETTER, 1);
+				}
+				else
+				{
+					htmltext = "31572-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31442-02.htm"))
-		{
-			if (st.hasQuestItems(KIKI_LETTER))
+			case "31442-02.htm":
 			{
-				htmltext = "31442-02.htm";
-				st.takeItems(KIKI_LETTER, 1);
-				st.giveItems(ELVEN_RING, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
-			}
-			else
-			{
-				htmltext = "31442-03.htm";
+				if (st.hasQuestItems(KIKI_LETTER))
+				{
+					htmltext = "31442-02.htm";
+					st.takeItems(KIKI_LETTER, 1);
+					st.giveItems(ELVEN_RING, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "31442-03.htm";
+				}
+				break;
 			}
 		}
 		
@@ -106,6 +107,7 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 36)
 				{
 					htmltext = "31572-02.htm";
@@ -123,12 +125,14 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case OFULLE:
+					{
 						if (cond == 1)
 						{
 							htmltext = (!st.hasQuestItems(BIG_YELLOW_TREASURE_CHEST)) ? "31572-06.htm" : "31572-05.htm";
@@ -138,19 +142,23 @@ public class Q028_ChestCaughtWithABaitOfIcyAir extends Quest
 							htmltext = "31572-09.htm";
 						}
 						break;
-					
+					}
 					case KIKI:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31442-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

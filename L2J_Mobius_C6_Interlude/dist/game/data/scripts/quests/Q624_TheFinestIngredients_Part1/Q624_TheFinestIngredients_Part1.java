@@ -24,17 +24,15 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q624_TheFinestIngredients_Part1 extends Quest
 {
-	// Mobs
+	// Monsters
 	private static final int NEPENTHES = 21319;
 	private static final int ATROX = 21321;
 	private static final int ATROXSPAWN = 21317;
 	private static final int BANDERSNATCH = 21314;
-	
 	// Items
 	private static final int TRUNK_OF_NEPENTHES = 7202;
 	private static final int FOOT_OF_BANDERSNATCHLING = 7203;
 	private static final int SECRET_SPICE = 7204;
-	
 	// Rewards
 	private static final int ICE_CRYSTAL = 7080;
 	private static final int SOY_SAUCE_JAR = 7205;
@@ -42,12 +40,9 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 	public Q624_TheFinestIngredients_Part1()
 	{
 		super(624, "The Finest Ingredients - Part 1");
-		
 		registerQuestItems(TRUNK_OF_NEPENTHES, FOOT_OF_BANDERSNATCHLING, SECRET_SPICE);
-		
 		addStartNpc(31521); // Jeremy
 		addTalkId(31521);
-		
 		addKillId(NEPENTHES, ATROX, ATROXSPAWN, BANDERSNATCH);
 	}
 	
@@ -63,9 +58,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 		
 		if (event.equals("31521-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31521-05.htm"))
 		{
@@ -81,7 +74,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 			}
 			else
 			{
-				st.set("cond", "1");
+				st.setCond(1);
 				htmltext = "31521-07.htm";
 			}
 		}
@@ -102,11 +95,13 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 73) ? "31521-03.htm" : "31521-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "31521-06.htm";
@@ -123,6 +118,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -131,7 +127,7 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -146,26 +142,30 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 		switch (npc.getNpcId())
 		{
 			case NEPENTHES:
+			{
 				if (st.dropItemsAlways(TRUNK_OF_NEPENTHES, 1, 50) && (st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) >= 50) && (st.getQuestItemsCount(SECRET_SPICE) >= 50))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case ATROX:
 			case ATROXSPAWN:
+			{
 				if (st.dropItemsAlways(SECRET_SPICE, 1, 50) && (st.getQuestItemsCount(TRUNK_OF_NEPENTHES) >= 50) && (st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) >= 50))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case BANDERSNATCH:
+			{
 				if (st.dropItemsAlways(FOOT_OF_BANDERSNATCHLING, 1, 50) && (st.getQuestItemsCount(TRUNK_OF_NEPENTHES) >= 50) && (st.getQuestItemsCount(SECRET_SPICE) >= 50))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
+			}
 		}
 		
 		return null;

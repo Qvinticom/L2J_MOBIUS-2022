@@ -29,13 +29,11 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 	private static final int DIRE_WOLF = 20205;
 	private static final int KADIF_WEREWOLF = 20206;
 	private static final int GIANT_MIST_LEECH = 20225;
-	
 	// Items
 	private static final int RITRON_FRUIT = 5895;
 	private static final int MOON_FACE_FLOWER = 5896;
 	private static final int LEECH_FLUIDS = 5897;
 	private static final int ANTIDOTE = 1831;
-	
 	// Rewards
 	private static final int RITRON_JELLY = 5960;
 	private static final int JELLY_RECIPE = 5959;
@@ -43,12 +41,9 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 	public Q380_BringOutTheFlavorOfIngredients()
 	{
 		super(380, "Bring Out the Flavor of Ingredients!");
-		
 		registerQuestItems(RITRON_FRUIT, MOON_FACE_FLOWER, LEECH_FLUIDS);
-		
 		addStartNpc(30069); // Rollant
 		addTalkId(30069);
-		
 		addKillId(DIRE_WOLF, KADIF_WEREWOLF, GIANT_MIST_LEECH);
 	}
 	
@@ -64,9 +59,7 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 		
 		if (event.equals("30069-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30069-12.htm"))
 		{
@@ -91,11 +84,13 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 24) ? "30069-00.htm" : "30069-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "30069-06.htm";
@@ -105,7 +100,7 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 					if (st.getQuestItemsCount(ANTIDOTE) >= 2)
 					{
 						htmltext = "30069-07.htm";
-						st.set("cond", "3");
+						st.setCond(3);
 						st.playSound(QuestState.SOUND_MIDDLE);
 						st.takeItems(RITRON_FRUIT, -1);
 						st.takeItems(MOON_FACE_FLOWER, -1);
@@ -120,19 +115,19 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 				else if (cond == 3)
 				{
 					htmltext = "30069-08.htm";
-					st.set("cond", "4");
+					st.setCond(4);
 					st.playSound(QuestState.SOUND_MIDDLE);
 				}
 				else if (cond == 4)
 				{
 					htmltext = "30069-09.htm";
-					st.set("cond", "5");
+					st.setCond(5);
 					st.playSound(QuestState.SOUND_MIDDLE);
 				}
 				else if (cond == 5)
 				{
 					htmltext = "30069-10.htm";
-					st.set("cond", "6");
+					st.setCond(6);
 					st.playSound(QuestState.SOUND_MIDDLE);
 				}
 				else if (cond == 6)
@@ -150,6 +145,7 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -158,7 +154,7 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -169,21 +165,21 @@ public class Q380_BringOutTheFlavorOfIngredients extends Quest
 			case DIRE_WOLF:
 				if (st.dropItems(RITRON_FRUIT, 1, 4, 100000) && (st.getQuestItemsCount(MOON_FACE_FLOWER) == 20) && (st.getQuestItemsCount(LEECH_FLUIDS) == 10))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
 			
 			case KADIF_WEREWOLF:
 				if (st.dropItems(MOON_FACE_FLOWER, 1, 20, 500000) && (st.getQuestItemsCount(RITRON_FRUIT) == 4) && (st.getQuestItemsCount(LEECH_FLUIDS) == 10))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
 			
 			case GIANT_MIST_LEECH:
 				if (st.dropItems(LEECH_FLUIDS, 1, 10, 500000) && (st.getQuestItemsCount(RITRON_FRUIT) == 4) && (st.getQuestItemsCount(MOON_FACE_FLOWER) == 20))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
 		}

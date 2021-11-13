@@ -30,12 +30,9 @@ public class Q319_ScentOfDeath extends Quest
 	public Q319_ScentOfDeath()
 	{
 		super(319, "Scent of Death");
-		
 		registerQuestItems(ZOMBIE_SKIN);
-		
 		addStartNpc(30138); // Minaless
 		addTalkId(30138);
-		
 		addKillId(20015, 20020);
 	}
 	
@@ -51,9 +48,7 @@ public class Q319_ScentOfDeath extends Quest
 		
 		if (event.equals("30138-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -72,11 +67,13 @@ public class Q319_ScentOfDeath extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 11) ? "30138-02.htm" : "30138-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30138-05.htm";
 				}
@@ -90,6 +87,7 @@ public class Q319_ScentOfDeath extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -97,7 +95,7 @@ public class Q319_ScentOfDeath extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -105,7 +103,7 @@ public class Q319_ScentOfDeath extends Quest
 		
 		if (st.dropItems(ZOMBIE_SKIN, 1, 5, 200000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

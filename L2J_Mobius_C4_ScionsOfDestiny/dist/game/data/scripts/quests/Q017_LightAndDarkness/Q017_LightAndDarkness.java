@@ -24,22 +24,19 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q017_LightAndDarkness extends Quest
 {
-	// Items
-	private static final int BLOOD_OF_SAINT = 7168;
-	
 	// NPCs
 	private static final int HIERARCH = 31517;
 	private static final int SAINT_ALTAR_1 = 31508;
 	private static final int SAINT_ALTAR_2 = 31509;
 	private static final int SAINT_ALTAR_3 = 31510;
 	private static final int SAINT_ALTAR_4 = 31511;
+	// Items
+	private static final int BLOOD_OF_SAINT = 7168;
 	
 	public Q017_LightAndDarkness()
 	{
 		super(17, "Light and Darkness");
-		
 		registerQuestItems(BLOOD_OF_SAINT);
-		
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH, SAINT_ALTAR_1, SAINT_ALTAR_2, SAINT_ALTAR_3, SAINT_ALTAR_4);
 	}
@@ -54,63 +51,69 @@ public class Q017_LightAndDarkness extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31517-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(BLOOD_OF_SAINT, 4);
-		}
-		else if (event.equals("31508-02.htm"))
-		{
-			if (st.hasQuestItems(BLOOD_OF_SAINT))
+			case "31517-04.htm":
 			{
-				st.set("cond", "2");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_SAINT, 1);
+				st.startQuest();
+				st.giveItems(BLOOD_OF_SAINT, 4);
+				break;
 			}
-			else
+			case "31508-02.htm":
 			{
-				htmltext = "31508-03.htm";
+				if (st.hasQuestItems(BLOOD_OF_SAINT))
+				{
+					st.setCond(2);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_SAINT, 1);
+				}
+				else
+				{
+					htmltext = "31508-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31509-02.htm"))
-		{
-			if (st.hasQuestItems(BLOOD_OF_SAINT))
+			case "31509-02.htm":
 			{
-				st.set("cond", "3");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_SAINT, 1);
+				if (st.hasQuestItems(BLOOD_OF_SAINT))
+				{
+					st.setCond(3);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_SAINT, 1);
+				}
+				else
+				{
+					htmltext = "31509-03.htm";
+				}
+				break;
 			}
-			else
+			case "31510-02.htm":
 			{
-				htmltext = "31509-03.htm";
+				if (st.hasQuestItems(BLOOD_OF_SAINT))
+				{
+					st.setCond(4);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_SAINT, 1);
+				}
+				else
+				{
+					htmltext = "31510-03.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31510-02.htm"))
-		{
-			if (st.hasQuestItems(BLOOD_OF_SAINT))
+			case "31511-02.htm":
 			{
-				st.set("cond", "4");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_SAINT, 1);
-			}
-			else
-			{
-				htmltext = "31510-03.htm";
-			}
-		}
-		else if (event.equals("31511-02.htm"))
-		{
-			if (st.hasQuestItems(BLOOD_OF_SAINT))
-			{
-				st.set("cond", "5");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_SAINT, 1);
-			}
-			else
-			{
-				htmltext = "31511-03.htm";
+				if (st.hasQuestItems(BLOOD_OF_SAINT))
+				{
+					st.setCond(5);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_SAINT, 1);
+				}
+				else
+				{
+					htmltext = "31511-03.htm";
+				}
+				break;
 			}
 		}
 		
@@ -130,14 +133,17 @@ public class Q017_LightAndDarkness extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 61) ? "31517-03.htm" : "31517-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case HIERARCH:
+					{
 						if (cond == 5)
 						{
 							htmltext = "31517-07.htm";
@@ -158,8 +164,9 @@ public class Q017_LightAndDarkness extends Quest
 							}
 						}
 						break;
-					
+					}
 					case SAINT_ALTAR_1:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31508-01.htm";
@@ -169,8 +176,9 @@ public class Q017_LightAndDarkness extends Quest
 							htmltext = "31508-04.htm";
 						}
 						break;
-					
+					}
 					case SAINT_ALTAR_2:
+					{
 						if (cond == 2)
 						{
 							htmltext = "31509-01.htm";
@@ -180,8 +188,9 @@ public class Q017_LightAndDarkness extends Quest
 							htmltext = "31509-04.htm";
 						}
 						break;
-					
+					}
 					case SAINT_ALTAR_3:
+					{
 						if (cond == 3)
 						{
 							htmltext = "31510-01.htm";
@@ -191,8 +200,9 @@ public class Q017_LightAndDarkness extends Quest
 							htmltext = "31510-04.htm";
 						}
 						break;
-					
+					}
 					case SAINT_ALTAR_4:
+					{
 						if (cond == 4)
 						{
 							htmltext = "31511-01.htm";
@@ -202,12 +212,15 @@ public class Q017_LightAndDarkness extends Quest
 							htmltext = "31511-04.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

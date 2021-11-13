@@ -32,12 +32,9 @@ public class Q607_ProveYourCourage extends Quest
 	public Q607_ProveYourCourage()
 	{
 		super(607, "Prove your courage!");
-		
 		registerQuestItems(HEAD_OF_SHADITH);
-		
 		addStartNpc(31370); // Kadun Zu Ketra
 		addTalkId(31370);
-		
 		addKillId(25309); // Shadith
 	}
 	
@@ -53,9 +50,7 @@ public class Q607_ProveYourCourage extends Quest
 		
 		if (event.equals("31370-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31370-07.htm"))
 		{
@@ -70,7 +65,7 @@ public class Q607_ProveYourCourage extends Quest
 			else
 			{
 				htmltext = "31370-06.htm";
-				st.set("cond", "1");
+				st.setCond(1);
 				st.playSound(QuestState.SOUND_ACCEPT);
 			}
 		}
@@ -91,6 +86,7 @@ public class Q607_ProveYourCourage extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() < 75)
 				{
 					htmltext = "31370-03.htm";
@@ -104,10 +100,12 @@ public class Q607_ProveYourCourage extends Quest
 					htmltext = "31370-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasQuestItems(HEAD_OF_SHADITH)) ? "31370-05.htm" : "31370-06.htm";
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -116,7 +114,7 @@ public class Q607_ProveYourCourage extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "1"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, 1))
 		{
 			if (partyMember.getAllianceWithVarkaKetra() >= 3)
 			{
@@ -128,7 +126,7 @@ public class Q607_ProveYourCourage extends Quest
 				
 				if (st.hasQuestItems(KETRA_ALLIANCE_3))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.giveItems(HEAD_OF_SHADITH, 1);
 				}

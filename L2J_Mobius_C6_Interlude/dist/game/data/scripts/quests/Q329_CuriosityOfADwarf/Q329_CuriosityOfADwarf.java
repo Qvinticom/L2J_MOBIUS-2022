@@ -32,10 +32,8 @@ public class Q329_CuriosityOfADwarf extends Quest
 	public Q329_CuriosityOfADwarf()
 	{
 		super(329, "Curiosity of a Dwarf");
-		
 		addStartNpc(30437); // Rolento
 		addTalkId(30437);
-		
 		addKillId(20083, 20085); // Granite golem, Puncher
 	}
 	
@@ -51,9 +49,7 @@ public class Q329_CuriosityOfADwarf extends Quest
 		
 		if (event.equals("30437-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30437-06.htm"))
 		{
@@ -77,10 +73,12 @@ public class Q329_CuriosityOfADwarf extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 33) ? "30437-01.htm" : "30437-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int golem = st.getQuestItemsCount(GOLEM_HEARTSTONE);
 				final int broken = st.getQuestItemsCount(BROKEN_HEARTSTONE);
 				if ((golem + broken) == 0)
@@ -95,6 +93,7 @@ public class Q329_CuriosityOfADwarf extends Quest
 					st.rewardItems(57, (broken * 50) + (golem * 1000) + (((golem + broken) > 10) ? 1183 : 0));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q621_EggDelivery extends Quest
 {
-	// Items
-	private static final int BOILED_EGGS = 7195;
-	private static final int FEE_OF_BOILED_EGG = 7196;
-	
 	// NPCs
 	private static final int JEREMY = 31521;
 	private static final int PULIN = 31543;
@@ -37,7 +33,9 @@ public class Q621_EggDelivery extends Quest
 	private static final int KUBER = 31546;
 	private static final int BEOLIN = 31547;
 	private static final int VALENTINE = 31584;
-	
+	// Items
+	private static final int BOILED_EGGS = 7195;
+	private static final int FEE_OF_BOILED_EGG = 7196;
 	// Rewards
 	private static final int HASTE_POTION = 1062;
 	private static final int[] RECIPES =
@@ -50,9 +48,7 @@ public class Q621_EggDelivery extends Quest
 	public Q621_EggDelivery()
 	{
 		super(621, "Egg Delivery");
-		
 		registerQuestItems(BOILED_EGGS, FEE_OF_BOILED_EGG);
-		
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY, PULIN, NAFF, CROCUS, KUBER, BEOLIN, VALENTINE);
 	}
@@ -67,77 +63,86 @@ public class Q621_EggDelivery extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31521-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(BOILED_EGGS, 5);
-		}
-		else if (event.equals("31543-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(BOILED_EGGS, 1);
-			st.giveItems(FEE_OF_BOILED_EGG, 1);
-		}
-		else if (event.equals("31544-02.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(BOILED_EGGS, 1);
-			st.giveItems(FEE_OF_BOILED_EGG, 1);
-		}
-		else if (event.equals("31545-02.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(BOILED_EGGS, 1);
-			st.giveItems(FEE_OF_BOILED_EGG, 1);
-		}
-		else if (event.equals("31546-02.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(BOILED_EGGS, 1);
-			st.giveItems(FEE_OF_BOILED_EGG, 1);
-		}
-		else if (event.equals("31547-02.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(BOILED_EGGS, 1);
-			st.giveItems(FEE_OF_BOILED_EGG, 1);
-		}
-		else if (event.equals("31521-06.htm"))
-		{
-			if (st.getQuestItemsCount(FEE_OF_BOILED_EGG) < 5)
+			case "31521-02.htm":
 			{
-				htmltext = "31521-08.htm";
-				st.playSound(QuestState.SOUND_GIVEUP);
-				st.exitQuest(true);
+				st.startQuest();
+				st.giveItems(BOILED_EGGS, 5);
+				break;
 			}
-			else
+			case "31543-02.htm":
 			{
-				st.set("cond", "7");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(FEE_OF_BOILED_EGG, 5);
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(BOILED_EGGS, 1);
+				st.giveItems(FEE_OF_BOILED_EGG, 1);
+				break;
 			}
-		}
-		else if (event.equals("31584-02.htm"))
-		{
-			if (Rnd.get(5) < 1)
+			case "31544-02.htm":
 			{
-				st.rewardItems(RECIPES[Rnd.get(3)], 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(BOILED_EGGS, 1);
+				st.giveItems(FEE_OF_BOILED_EGG, 1);
+				break;
 			}
-			else
+			case "31545-02.htm":
 			{
-				st.rewardItems(57, 18800);
-				st.rewardItems(HASTE_POTION, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(BOILED_EGGS, 1);
+				st.giveItems(FEE_OF_BOILED_EGG, 1);
+				break;
+			}
+			case "31546-02.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(BOILED_EGGS, 1);
+				st.giveItems(FEE_OF_BOILED_EGG, 1);
+				break;
+			}
+			case "31547-02.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(BOILED_EGGS, 1);
+				st.giveItems(FEE_OF_BOILED_EGG, 1);
+				break;
+			}
+			case "31521-06.htm":
+			{
+				if (st.getQuestItemsCount(FEE_OF_BOILED_EGG) < 5)
+				{
+					htmltext = "31521-08.htm";
+					st.playSound(QuestState.SOUND_GIVEUP);
+					st.exitQuest(true);
+				}
+				else
+				{
+					st.setCond(7);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(FEE_OF_BOILED_EGG, 5);
+				}
+				break;
+			}
+			case "31584-02.htm":
+			{
+				if (Rnd.get(5) < 1)
+				{
+					st.rewardItems(RECIPES[Rnd.get(3)], 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				else
+				{
+					st.rewardItems(57, 18800);
+					st.rewardItems(HASTE_POTION, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(true);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -156,14 +161,17 @@ public class Q621_EggDelivery extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 68) ? "31521-03.htm" : "31521-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case JEREMY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "31521-04.htm";
@@ -177,8 +185,9 @@ public class Q621_EggDelivery extends Quest
 							htmltext = "31521-07.htm";
 						}
 						break;
-					
+					}
 					case PULIN:
+					{
 						if ((cond == 1) && (st.getQuestItemsCount(BOILED_EGGS) == 5))
 						{
 							htmltext = "31543-01.htm";
@@ -188,8 +197,9 @@ public class Q621_EggDelivery extends Quest
 							htmltext = "31543-03.htm";
 						}
 						break;
-					
+					}
 					case NAFF:
+					{
 						if ((cond == 2) && (st.getQuestItemsCount(BOILED_EGGS) == 4))
 						{
 							htmltext = "31544-01.htm";
@@ -199,8 +209,9 @@ public class Q621_EggDelivery extends Quest
 							htmltext = "31544-03.htm";
 						}
 						break;
-					
+					}
 					case CROCUS:
+					{
 						if ((cond == 3) && (st.getQuestItemsCount(BOILED_EGGS) == 3))
 						{
 							htmltext = "31545-01.htm";
@@ -210,8 +221,9 @@ public class Q621_EggDelivery extends Quest
 							htmltext = "31545-03.htm";
 						}
 						break;
-					
+					}
 					case KUBER:
+					{
 						if ((cond == 4) && (st.getQuestItemsCount(BOILED_EGGS) == 2))
 						{
 							htmltext = "31546-01.htm";
@@ -221,8 +233,9 @@ public class Q621_EggDelivery extends Quest
 							htmltext = "31546-03.htm";
 						}
 						break;
-					
+					}
 					case BEOLIN:
+					{
 						if ((cond == 5) && (st.getQuestItemsCount(BOILED_EGGS) == 1))
 						{
 							htmltext = "31547-01.htm";
@@ -232,15 +245,18 @@ public class Q621_EggDelivery extends Quest
 							htmltext = "31547-03.htm";
 						}
 						break;
-					
+					}
 					case VALENTINE:
+					{
 						if (cond == 7)
 						{
 							htmltext = "31584-01.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

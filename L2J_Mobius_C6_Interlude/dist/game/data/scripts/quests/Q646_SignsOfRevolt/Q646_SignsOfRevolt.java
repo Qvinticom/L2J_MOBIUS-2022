@@ -27,40 +27,25 @@ public class Q646_SignsOfRevolt extends Quest
 {
 	// NPC
 	private static final int TORRANT = 32016;
-	
 	// Item
 	private static final int CURSED_DOLL = 8087;
-	
 	// Rewards
 	private static final int[][] REWARDS =
 	{
-		{
-			1880,
-			9
-		},
-		{
-			1881,
-			12
-		},
-		{
-			1882,
-			20
-		},
-		{
-			57,
-			21600
-		}
+		// @formatter:off
+		{1880, 9},
+		{1881, 12},
+		{1882, 20},
+		{57, 21600}
+		// @formatter:on
 	};
 	
 	public Q646_SignsOfRevolt()
 	{
 		super(646, "Signs of Revolt");
-		
 		registerQuestItems(CURSED_DOLL);
-		
 		addStartNpc(TORRANT);
 		addTalkId(TORRANT);
-		
 		addKillId(22029, 22030, 22031, 22032, 22033, 22034, 22035, 22036, 22037, 22038, 22039, 22040, 22041, 22042, 22043, 22044, 22045, 22047, 22049);
 	}
 	
@@ -76,9 +61,7 @@ public class Q646_SignsOfRevolt extends Quest
 		
 		if (event.equals("32016-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (Util.isDigit(event))
 		{
@@ -108,11 +91,13 @@ public class Q646_SignsOfRevolt extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 40) ? "32016-02.htm" : "32016-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				if (cond == 1)
 				{
 					htmltext = "32016-04.htm";
@@ -122,6 +107,7 @@ public class Q646_SignsOfRevolt extends Quest
 					htmltext = "32016-05.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -130,7 +116,7 @@ public class Q646_SignsOfRevolt extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -144,7 +130,7 @@ public class Q646_SignsOfRevolt extends Quest
 		
 		if (st.dropItems(CURSED_DOLL, 1, 180, 750000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

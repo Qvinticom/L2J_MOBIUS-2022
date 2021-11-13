@@ -28,13 +28,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 	// NPCs
 	private static final int MARIA = 30608;
 	private static final int ALEX = 30291;
-	
-	// Items
-	private static final int WATCHING_EYES = 8074;
-	private static final int GOLEM_SHARD = 8075;
-	private static final int LIZARDMEN_SCALE = 8076;
-	
-	// Mobs
+	// Monsters
 	private static final int PLAIN_WATCHMAN = 21102;
 	private static final int ROCK_GOLEM = 21103;
 	private static final int LIZARDMEN_SUPPLIER = 21104;
@@ -42,7 +36,10 @@ public class Q660_AidingTheFloranVillage extends Quest
 	private static final int CURSED_SEER = 21106;
 	private static final int LIZARDMEN_COMMANDER = 21107;
 	private static final int LIZARDMEN_SHAMAN = 20781;
-	
+	// Items
+	private static final int WATCHING_EYES = 8074;
+	private static final int GOLEM_SHARD = 8075;
+	private static final int LIZARDMEN_SCALE = 8076;
 	// Rewards
 	private static final int ADENA = 57;
 	private static final int ENCHANT_WEAPON_D = 955;
@@ -51,12 +48,9 @@ public class Q660_AidingTheFloranVillage extends Quest
 	public Q660_AidingTheFloranVillage()
 	{
 		super(660, "Aiding the Floran Village");
-		
 		registerQuestItems(WATCHING_EYES, LIZARDMEN_SCALE, GOLEM_SHARD);
-		
 		addStartNpc(MARIA, ALEX);
 		addTalkId(MARIA, ALEX);
-		
 		addKillId(CURSED_SEER, PLAIN_WATCHMAN, ROCK_GOLEM, LIZARDMEN_SHAMAN, LIZARDMEN_SUPPLIER, LIZARDMEN_COMMANDER, LIZARDMEN_AGENT);
 	}
 	
@@ -70,120 +64,128 @@ public class Q660_AidingTheFloranVillage extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30608-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30291-02.htm"))
-		{
-			if (player.getLevel() < 30)
+			case "30608-04.htm":
 			{
-				htmltext = "30291-02a.htm";
+				st.startQuest();
+				break;
 			}
-			else
+			case "30291-02.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "2");
-				st.playSound(QuestState.SOUND_ACCEPT);
-			}
-		}
-		else if (event.equals("30291-05.htm"))
-		{
-			final int count = st.getQuestItemsCount(WATCHING_EYES) + st.getQuestItemsCount(LIZARDMEN_SCALE) + st.getQuestItemsCount(GOLEM_SHARD);
-			if (count == 0)
-			{
-				htmltext = "30291-05a.htm";
-			}
-			else
-			{
-				st.takeItems(GOLEM_SHARD, -1);
-				st.takeItems(LIZARDMEN_SCALE, -1);
-				st.takeItems(WATCHING_EYES, -1);
-				st.rewardItems(ADENA, (count * 100) + ((count >= 45) ? 9000 : 0));
-			}
-		}
-		else if (event.equals("30291-06.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30291-11.htm"))
-		{
-			if (!verifyAndRemoveItems(st, 100))
-			{
-				htmltext = "30291-11a.htm";
-			}
-			else
-			{
-				if (Rnd.get(10) < 8)
+				if (player.getLevel() < 30)
 				{
-					st.rewardItems(ADENA, 1000);
+					htmltext = "30291-02a.htm";
 				}
 				else
 				{
-					st.rewardItems(ADENA, 13000);
-					st.rewardItems(ENCHANT_ARMOR_D, 1);
+					st.startQuest();
+					st.setCond(2);
 				}
+				break;
 			}
-		}
-		else if (event.equals("30291-12.htm"))
-		{
-			if (!verifyAndRemoveItems(st, 200))
+			case "30291-05.htm":
 			{
-				htmltext = "30291-12a.htm";
-			}
-			else
-			{
-				final int luck = Rnd.get(15);
-				if (luck < 8)
+				final int count = st.getQuestItemsCount(WATCHING_EYES) + st.getQuestItemsCount(LIZARDMEN_SCALE) + st.getQuestItemsCount(GOLEM_SHARD);
+				if (count == 0)
 				{
-					st.rewardItems(ADENA, 2000);
-				}
-				else if (luck < 12)
-				{
-					st.rewardItems(ADENA, 20000);
-					st.rewardItems(ENCHANT_ARMOR_D, 1);
+					htmltext = "30291-05a.htm";
 				}
 				else
 				{
-					st.rewardItems(ENCHANT_WEAPON_D, 1);
+					st.takeItems(GOLEM_SHARD, -1);
+					st.takeItems(LIZARDMEN_SCALE, -1);
+					st.takeItems(WATCHING_EYES, -1);
+					st.rewardItems(ADENA, (count * 100) + ((count >= 45) ? 9000 : 0));
 				}
+				break;
 			}
-		}
-		else if (event.equals("30291-13.htm"))
-		{
-			if (!verifyAndRemoveItems(st, 500))
+			case "30291-06.htm":
 			{
-				htmltext = "30291-13a.htm";
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
 			}
-			else
+			case "30291-11.htm":
 			{
-				if (Rnd.get(10) < 8)
+				if (!verifyAndRemoveItems(st, 100))
 				{
-					st.rewardItems(ADENA, 5000);
+					htmltext = "30291-11a.htm";
 				}
 				else
 				{
-					st.rewardItems(ADENA, 45000);
-					st.rewardItems(ENCHANT_WEAPON_D, 1);
+					if (Rnd.get(10) < 8)
+					{
+						st.rewardItems(ADENA, 1000);
+					}
+					else
+					{
+						st.rewardItems(ADENA, 13000);
+						st.rewardItems(ENCHANT_ARMOR_D, 1);
+					}
 				}
+				break;
 			}
-		}
-		else if (event.equals("30291-17.htm"))
-		{
-			final int count = st.getQuestItemsCount(WATCHING_EYES) + st.getQuestItemsCount(LIZARDMEN_SCALE) + st.getQuestItemsCount(GOLEM_SHARD);
-			if (count != 0)
+			case "30291-12.htm":
 			{
-				htmltext = "30291-17a.htm";
-				st.takeItems(WATCHING_EYES, -1);
-				st.takeItems(LIZARDMEN_SCALE, -1);
-				st.takeItems(GOLEM_SHARD, -1);
-				st.rewardItems(ADENA, (count * 100) + ((count >= 45) ? 9000 : 0));
+				if (!verifyAndRemoveItems(st, 200))
+				{
+					htmltext = "30291-12a.htm";
+				}
+				else
+				{
+					final int luck = Rnd.get(15);
+					if (luck < 8)
+					{
+						st.rewardItems(ADENA, 2000);
+					}
+					else if (luck < 12)
+					{
+						st.rewardItems(ADENA, 20000);
+						st.rewardItems(ENCHANT_ARMOR_D, 1);
+					}
+					else
+					{
+						st.rewardItems(ENCHANT_WEAPON_D, 1);
+					}
+				}
+				break;
 			}
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30291-13.htm":
+			{
+				if (!verifyAndRemoveItems(st, 500))
+				{
+					htmltext = "30291-13a.htm";
+				}
+				else
+				{
+					if (Rnd.get(10) < 8)
+					{
+						st.rewardItems(ADENA, 5000);
+					}
+					else
+					{
+						st.rewardItems(ADENA, 45000);
+						st.rewardItems(ENCHANT_WEAPON_D, 1);
+					}
+				}
+				break;
+			}
+			case "30291-17.htm":
+			{
+				final int count = st.getQuestItemsCount(WATCHING_EYES) + st.getQuestItemsCount(LIZARDMEN_SCALE) + st.getQuestItemsCount(GOLEM_SHARD);
+				if (count != 0)
+				{
+					htmltext = "30291-17a.htm";
+					st.takeItems(WATCHING_EYES, -1);
+					st.takeItems(LIZARDMEN_SCALE, -1);
+					st.takeItems(GOLEM_SHARD, -1);
+					st.rewardItems(ADENA, (count * 100) + ((count >= 45) ? 9000 : 0));
+				}
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -202,6 +204,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				switch (npc.getNpcId())
 				{
 					case MARIA:
@@ -213,20 +216,23 @@ public class Q660_AidingTheFloranVillage extends Quest
 						break;
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case MARIA:
+					{
 						htmltext = "30608-06.htm";
 						break;
-					
+					}
 					case ALEX:
-						final int cond = st.getInt("cond");
+					{
+						final int cond = st.getCond();
 						if (cond == 1)
 						{
 							htmltext = "30291-03.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						else if (cond == 2)
@@ -234,8 +240,10 @@ public class Q660_AidingTheFloranVillage extends Quest
 							htmltext = (st.hasAtLeastOneQuestItem(WATCHING_EYES, LIZARDMEN_SCALE, GOLEM_SHARD)) ? "30291-04.htm" : "30291-05a.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -244,7 +252,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "2");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 2);
 		if (partyMember == null)
 		{
 			return null;
@@ -260,19 +268,23 @@ public class Q660_AidingTheFloranVillage extends Quest
 		{
 			case PLAIN_WATCHMAN:
 			case CURSED_SEER:
+			{
 				st.dropItems(WATCHING_EYES, 1, 0, 790000);
 				break;
-			
+			}
 			case ROCK_GOLEM:
+			{
 				st.dropItems(GOLEM_SHARD, 1, 0, 750000);
 				break;
-			
+			}
 			case LIZARDMEN_SHAMAN:
 			case LIZARDMEN_SUPPLIER:
 			case LIZARDMEN_AGENT:
 			case LIZARDMEN_COMMANDER:
+			{
 				st.dropItems(LIZARDMEN_SCALE, 1, 0, 670000);
 				break;
+			}
 		}
 		
 		return null;

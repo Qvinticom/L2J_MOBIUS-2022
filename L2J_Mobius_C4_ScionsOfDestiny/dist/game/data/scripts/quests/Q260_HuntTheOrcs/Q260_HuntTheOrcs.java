@@ -27,11 +27,6 @@ public class Q260_HuntTheOrcs extends Quest
 {
 	// NPC
 	private static final int RAYEN = 30221;
-	
-	// Items
-	private static final int ORC_AMULET = 1114;
-	private static final int ORC_NECKLACE = 1115;
-	
 	// Monsters
 	private static final int KABOO_ORC = 20468;
 	private static final int KABOO_ORC_ARCHER = 20469;
@@ -39,16 +34,16 @@ public class Q260_HuntTheOrcs extends Quest
 	private static final int KABOO_ORC_FIGHTER = 20471;
 	private static final int KABOO_ORC_FIGHTER_LEADER = 20472;
 	private static final int KABOO_ORC_FIGHTER_LIEUTENANT = 20473;
+	// Items
+	private static final int ORC_AMULET = 1114;
+	private static final int ORC_NECKLACE = 1115;
 	
 	public Q260_HuntTheOrcs()
 	{
 		super(260, "Hunt the Orcs");
-		
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE);
-		
 		addStartNpc(RAYEN);
 		addTalkId(RAYEN);
-		
 		addKillId(KABOO_ORC, KABOO_ORC_ARCHER, KABOO_ORC_GRUNT, KABOO_ORC_FIGHTER, KABOO_ORC_FIGHTER_LEADER, KABOO_ORC_FIGHTER_LIEUTENANT);
 	}
 	
@@ -64,9 +59,7 @@ public class Q260_HuntTheOrcs extends Quest
 		
 		if (event.equals("30221-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30221-06.htm"))
 		{
@@ -90,6 +83,7 @@ public class Q260_HuntTheOrcs extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30221-00.htm";
@@ -103,8 +97,9 @@ public class Q260_HuntTheOrcs extends Quest
 					htmltext = "30221-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int amulet = st.getQuestItemsCount(ORC_AMULET);
 				final int necklace = st.getQuestItemsCount(ORC_NECKLACE);
 				
@@ -120,6 +115,7 @@ public class Q260_HuntTheOrcs extends Quest
 					st.rewardItems(57, (amulet * 5) + (necklace * 15));
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -139,14 +135,17 @@ public class Q260_HuntTheOrcs extends Quest
 			case KABOO_ORC:
 			case KABOO_ORC_GRUNT:
 			case KABOO_ORC_ARCHER:
+			{
 				st.dropItems(ORC_AMULET, 1, 0, 500000);
 				break;
-			
+			}
 			case KABOO_ORC_FIGHTER:
 			case KABOO_ORC_FIGHTER_LEADER:
 			case KABOO_ORC_FIGHTER_LIEUTENANT:
+			{
 				st.dropItems(ORC_NECKLACE, 1, 0, 500000);
 				break;
+			}
 		}
 		
 		return null;

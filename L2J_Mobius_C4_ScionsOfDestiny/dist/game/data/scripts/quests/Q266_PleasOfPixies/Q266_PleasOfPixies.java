@@ -28,7 +28,6 @@ public class Q266_PleasOfPixies extends Quest
 {
 	// Items
 	private static final int PREDATOR_FANG = 1334;
-	
 	// Rewards
 	private static final int GLASS_SHARD = 1336;
 	private static final int EMERALD = 1337;
@@ -38,12 +37,9 @@ public class Q266_PleasOfPixies extends Quest
 	public Q266_PleasOfPixies()
 	{
 		super(266, "Pleas of Pixies");
-		
 		registerQuestItems(PREDATOR_FANG);
-		
 		addStartNpc(31852); // Murika
 		addTalkId(31852);
-		
 		addKillId(20525, 20530, 20534, 20537);
 	}
 	
@@ -59,9 +55,7 @@ public class Q266_PleasOfPixies extends Quest
 		
 		if (event.equals("31852-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -80,6 +74,7 @@ public class Q266_PleasOfPixies extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "31852-00.htm";
@@ -93,8 +88,9 @@ public class Q266_PleasOfPixies extends Quest
 					htmltext = "31852-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(PREDATOR_FANG) < 100)
 				{
 					htmltext = "31852-04.htm";
@@ -127,6 +123,7 @@ public class Q266_PleasOfPixies extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -135,7 +132,7 @@ public class Q266_PleasOfPixies extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -144,32 +141,37 @@ public class Q266_PleasOfPixies extends Quest
 		switch (npc.getNpcId())
 		{
 			case 20525:
+			{
 				if (st.dropItemsAlways(PREDATOR_FANG, Rnd.get(2, 3), 100))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case 20530:
+			{
 				if (st.dropItems(PREDATOR_FANG, 1, 100, 800000))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case 20534:
+			{
 				if (st.dropItems(PREDATOR_FANG, (Rnd.get(3) == 0) ? 1 : 2, 100, 600000))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case 20537:
+			{
 				if (st.dropItemsAlways(PREDATOR_FANG, 2, 100))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
+			}
 		}
 		
 		return null;

@@ -31,12 +31,9 @@ public class Q320_BonesTellTheFuture extends Quest
 	public Q320_BonesTellTheFuture()
 	{
 		super(320, "Bones Tell the Future");
-		
 		registerQuestItems(BONE_FRAGMENT);
-		
 		addStartNpc(30359); // Kaitar
 		addTalkId(30359);
-		
 		addKillId(20517, 20518);
 	}
 	
@@ -52,9 +49,7 @@ public class Q320_BonesTellTheFuture extends Quest
 		
 		if (event.equals("30359-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return event;
@@ -73,6 +68,7 @@ public class Q320_BonesTellTheFuture extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DARK_ELF)
 				{
 					htmltext = "30359-00.htm";
@@ -86,9 +82,10 @@ public class Q320_BonesTellTheFuture extends Quest
 					htmltext = "30359-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30359-05.htm";
 				}
@@ -101,6 +98,7 @@ public class Q320_BonesTellTheFuture extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -109,7 +107,7 @@ public class Q320_BonesTellTheFuture extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -117,7 +115,7 @@ public class Q320_BonesTellTheFuture extends Quest
 		
 		if (st.dropItems(BONE_FRAGMENT, 1, 10, (npc.getNpcId() == 20517) ? 180000 : 200000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

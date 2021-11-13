@@ -33,7 +33,6 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 	private static final int OLTLIN = 30862;
 	private static final int JURIS = 30113;
 	private static final int RODEMAI = 30756;
-	
 	// Items
 	private static final int MARK_DOMINIC = 8939;
 	private static final int MARK_HUMAN = 8940;
@@ -45,9 +44,7 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 	public Q127_KamaelAWindowToTheFuture()
 	{
 		super(127, "Kamael: A Window to the Future");
-		
 		registerQuestItems(MARK_DOMINIC, MARK_HUMAN, MARK_DWARF, MARK_ORC, MARK_DELF, MARK_ELF);
-		
 		addStartNpc(DOMINIC);
 		addTalkId(DOMINIC, KLAUS, ALDER, AKLAN, OLTLIN, JURIS, RODEMAI);
 	}
@@ -62,70 +59,80 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31350-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(MARK_DOMINIC, 1);
-		}
-		else if (event.equals("31350-06.htm"))
-		{
-			st.takeItems(MARK_HUMAN, -1);
-			st.takeItems(MARK_DWARF, -1);
-			st.takeItems(MARK_ELF, -1);
-			st.takeItems(MARK_DELF, -1);
-			st.takeItems(MARK_ORC, -1);
-			st.takeItems(MARK_DOMINIC, -1);
-			st.rewardItems(57, 159100);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
-		}
-		else if (event.equals("30187-06.htm"))
-		{
-			st.set("cond", "2");
-		}
-		else if (event.equals("30187-08.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(MARK_HUMAN, 1);
-		}
-		else if (event.equals("32092-05.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(MARK_DWARF, 1);
-		}
-		else if (event.equals("31288-04.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(MARK_ORC, 1);
-		}
-		else if (event.equals("30862-04.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(MARK_DELF, 1);
-		}
-		else if (event.equals("30113-04.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(MARK_ELF, 1);
-		}
-		else if (event.equals("kamaelstory"))
-		{
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			player.sendPacket(ExShowSlideshowKamael.STATIC_PACKET);
-			return null;
-		}
-		else if (event.equals("30756-05.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
+			case "31350-04.htm":
+			{
+				st.startQuest();
+				st.giveItems(MARK_DOMINIC, 1);
+				break;
+			}
+			case "31350-06.htm":
+			{
+				st.takeItems(MARK_HUMAN, -1);
+				st.takeItems(MARK_DWARF, -1);
+				st.takeItems(MARK_ELF, -1);
+				st.takeItems(MARK_DELF, -1);
+				st.takeItems(MARK_ORC, -1);
+				st.takeItems(MARK_DOMINIC, -1);
+				st.rewardItems(57, 159100);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
+			case "30187-06.htm":
+			{
+				st.setCond(2);
+				break;
+			}
+			case "30187-08.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(MARK_HUMAN, 1);
+				break;
+			}
+			case "32092-05.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(MARK_DWARF, 1);
+				break;
+			}
+			case "31288-04.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(MARK_ORC, 1);
+				break;
+			}
+			case "30862-04.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(MARK_DELF, 1);
+				break;
+			}
+			case "30113-04.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(MARK_ELF, 1);
+				break;
+			}
+			case "kamaelstory":
+			{
+				st.setCond(8);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				player.sendPacket(ExShowSlideshowKamael.STATIC_PACKET);
+				return null;
+			}
+			case "30756-05.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -141,80 +148,89 @@ public class Q127_KamaelAWindowToTheFuture extends Quest
 			return htmltext;
 		}
 		
-		npc.getNpcId();
-		final int cond = st.getInt("cond");
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "31350-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case KLAUS:
-						if (cond == 1)
+					{
+						if (st.isCond(1))
 						{
 							htmltext = "30187-01.htm";
 						}
-						else if (cond == 2)
+						else if (st.isCond(2))
 						{
 							htmltext = "30187-06.htm";
 						}
 						break;
-					
+					}
 					case ALDER:
-						if (cond == 3)
+					{
+						if (st.isCond(3))
 						{
 							htmltext = "32092-01.htm";
 						}
 						break;
-					
+					}
 					case AKLAN:
-						if (cond == 4)
+					{
+						if (st.isCond(4))
 						{
 							htmltext = "31288-01.htm";
 						}
 						break;
-					
+					}
 					case OLTLIN:
-						if (cond == 5)
+					{
+						if (st.isCond(5))
 						{
 							htmltext = "30862-01.htm";
 						}
 						break;
-					
+					}
 					case JURIS:
-						if (cond == 6)
+					{
+						if (st.isCond(6))
 						{
 							htmltext = "30113-01.htm";
 						}
 						break;
-					
+					}
 					case RODEMAI:
-						if (cond == 7)
+					{
+						if (st.isCond(7))
 						{
 							htmltext = "30756-01.htm";
 						}
-						else if (cond == 8)
+						else if (st.isCond(8))
 						{
 							htmltext = "30756-04.htm";
 						}
 						break;
-					
+					}
 					case DOMINIC:
-						if (cond == 9)
+					{
+						if (st.isCond(9))
 						{
 							htmltext = "31350-05.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				return htmltext;
+			}
 		}
 		
 		return htmltext;

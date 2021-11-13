@@ -48,7 +48,6 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	public Q115_TheOtherSideOfTruth()
 	{
 		super(115, "The Other Side of Truth");
-		
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, MISA, SCULPTURE1, SCULPTURE2, SCULPTURE3, SCULPTURE4, KIERRE);
 		registerQuestItems(LETTER, LETTER2, TABLET, REPORT);
@@ -68,22 +67,20 @@ public class Q115_TheOtherSideOfTruth extends Quest
 		{
 			case "32018-04.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "7");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(7);
 				qs.takeItems(LETTER2, 1);
 				break;
 			}
 			case "32020-02.htm":
 			{
-				qs.setState(State.STARTED);
-				qs.playSound("ItemSound.quest_accept");
-				qs.set("cond", "1");
+				qs.startQuest();
 				break;
 			}
 			case "32020-05.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "3");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(3);
 				qs.takeItems(LETTER, 1);
 				break;
 			}
@@ -91,26 +88,26 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			case "32020-08a.htm":
 			{
 				qs.exitQuest(true);
-				qs.playSound("ItemSound.quest_finish");
+				qs.playSound(QuestState.SOUND_FINISH);
 				break;
 			}
 			case "32020-08.htm":
 			case "32020-07a.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "4");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(4);
 				break;
 			}
 			case "32020-12.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "5");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(5);
 				break;
 			}
 			case "32020-16.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "10");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(10);
 				qs.takeItems(REPORT, 1);
 				break;
 			}
@@ -118,14 +115,14 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			{
 				if (qs.getQuestItemsCount(TABLET) == 0)
 				{
-					qs.playSound("ItemSound.quest_middle");
-					qs.set("cond", "11");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.setCond(11);
 					htmltext = "32020-19.htm";
 				}
 				else
 				{
 					qs.exitQuest(false);
-					qs.playSound("ItemSound.quest_finish");
+					qs.playSound(QuestState.SOUND_FINISH);
 					qs.giveItems(57, 115673);
 					qs.rewardExpAndSp(493595, 40442);
 				}
@@ -133,14 +130,14 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			}
 			case "32020-19.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "11");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(11);
 				break;
 			}
 			case "32022-02.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "9");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(9);
 				final NpcInstance man = qs.addSpawn(SUSPICIOUS, 104562, -107598, -3688, 0, false, 4000);
 				man.broadcastPacket(new CreatureSay(man.getObjectId(), ChatType.GENERAL, man.getName(), "We meet again."));
 				startQuestTimer("2", 3700, man, player);
@@ -156,8 +153,8 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			}
 			case "Sculpture-04a.htm":
 			{
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "8");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(8);
 				final NpcInstance man = qs.addSpawn(SUSPICIOUS, 117890, -126478, -2584, 0, false, 4000);
 				man.broadcastPacket(new CreatureSay(man.getObjectId(), ChatType.GENERAL, man.getName(), "This looks like the right place..."));
 				startQuestTimer("1", 3700, man, player);
@@ -200,7 +197,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 		
 		final int state = qs.getState();
 		final int npcId = npc.getNpcId();
-		final int cond = qs.getInt("cond");
+		final int cond = qs.getCond();
 		if (state == State.COMPLETED)
 		{
 			htmltext = getAlreadyCompletedMsg();
@@ -238,9 +235,9 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			else if (cond == 5)
 			{
 				htmltext = "32020-13.htm";
-				qs.playSound("ItemSound.quest_middle");
+				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.giveItems(LETTER2, 1);
-				qs.set("cond", "6");
+				qs.setCond(6);
 			}
 			else if (cond == 6)
 			{
@@ -262,7 +259,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			{
 				htmltext = "32020-18.htm";
 				qs.exitQuest(false);
-				qs.playSound("ItemSound.quest_finish");
+				qs.playSound(QuestState.SOUND_FINISH);
 				qs.giveItems(57, 60044);
 			}
 		}
@@ -272,8 +269,8 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			{
 				htmltext = "32018-01.htm";
 				qs.giveItems(LETTER, 1);
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "2");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(2);
 			}
 			else if (cond == 2)
 			{
@@ -312,8 +309,8 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			else if (cond == 11)
 			{
 				qs.giveItems(TABLET, 1);
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "12");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(12);
 				htmltext = "Sculpture-07.htm";
 			}
 			else if (cond == 12)
@@ -345,8 +342,8 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			else if (cond == 11)
 			{
 				qs.giveItems(TABLET, 1);
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "12");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(12);
 				htmltext = "Sculpture-07.htm";
 			}
 			else if (cond == 12)
@@ -375,8 +372,8 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			else if (cond == 11)
 			{
 				qs.giveItems(TABLET, 1);
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "12");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(12);
 				htmltext = "Sculpture-07.htm";
 			}
 			else if (cond == 12)
@@ -405,8 +402,8 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			else if (cond == 11)
 			{
 				qs.giveItems(TABLET, 1);
-				qs.playSound("ItemSound.quest_middle");
-				qs.set("cond", "12");
+				qs.playSound(QuestState.SOUND_MIDDLE);
+				qs.setCond(12);
 				htmltext = "Sculpture-07.htm";
 			}
 			else if (cond == 12)

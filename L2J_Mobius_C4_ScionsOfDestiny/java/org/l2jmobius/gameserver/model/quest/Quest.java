@@ -1242,11 +1242,10 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Checks the player's condition. Player member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance condition is ignored.
 	 * @param player : the instance of a player whose party is to be searched
 	 * @param npc : the instance of a Npc to compare distance
-	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
-	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
+	 * @param cond : an integer specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return QuestState : The QuestState of that player.
 	 */
-	public QuestState checkPlayerCondition(PlayerInstance player, NpcInstance npc, String var, String value)
+	public QuestState checkPlayerCondition(PlayerInstance player, NpcInstance npc, int cond)
 	{
 		// No valid player or npc instance is passed, there is nothing to check.
 		if ((player == null) || (npc == null))
@@ -1261,8 +1260,8 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		// Condition exists? Condition has correct value?
-		if ((qs.get(var) == null) || !value.equalsIgnoreCase(qs.get(var).toString()))
+		// Condition has correct value?
+		if (!qs.isCond(cond))
 		{
 			return null;
 		}
@@ -1347,12 +1346,11 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player : the instance of a player whose party is to be searched
 	 * @param npc : the instance of a Npc to compare distance
-	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
-	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
+	 * @param cond : an integer specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return List<Player> : List of party members that matches the specified condition, empty list if none matches. If the var is null, empty list is returned (i.e. no condition is applied). The party member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance
 	 *         condition is ignored.
 	 */
-	public List<PlayerInstance> getPartyMembers(PlayerInstance player, NpcInstance npc, String var, String value)
+	public List<PlayerInstance> getPartyMembers(PlayerInstance player, NpcInstance npc, int cond)
 	{
 		if (player == null)
 		{
@@ -1362,13 +1360,13 @@ public class Quest extends ManagedScript
 		final Party party = player.getParty();
 		if (party == null)
 		{
-			return (checkPlayerCondition(player, npc, var, value) != null) ? Arrays.asList(player) : Collections.emptyList();
+			return (checkPlayerCondition(player, npc, cond) != null) ? Arrays.asList(player) : Collections.emptyList();
 		}
 		
 		final List<PlayerInstance> result = new ArrayList<>();
 		for (PlayerInstance member : party.getPartyMembers())
 		{
-			if (checkPlayerCondition(member, npc, var, value) != null)
+			if (checkPlayerCondition(member, npc, cond) != null)
 			{
 				result.add(member);
 			}
@@ -1381,11 +1379,10 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player : the instance of a player whose party is to be searched
 	 * @param npc : the instance of a Npc to compare distance
-	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
-	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
-	 * @return Player : Player for a random party member that matches the specified condition, or null if no match. If the var is null, null is returned (i.e. no condition is applied). The party member must be within 1500 distance from the npc. If npc is null, distance condition is ignored.
+	 * @param cond : an integer specifying a quest condition that must be satisfied for a party member to be considered.
+	 * @return Player : Player for a random party member that matches the specified condition, or null if no match. If the cond is null, null is returned (i.e. no condition is applied). The party member must be within 1500 distance from the npc. If npc is null, distance condition is ignored.
 	 */
-	public PlayerInstance getRandomPartyMember(PlayerInstance player, NpcInstance npc, String var, String value)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player, NpcInstance npc, int cond)
 	{
 		// No valid player instance is passed, there is nothing to check.
 		if (player == null)
@@ -1394,17 +1391,13 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		final List<PlayerInstance> members = getPartyMembers(player, npc, var, value);
+		final List<PlayerInstance> members = getPartyMembers(player, npc, cond);
 		if (members.isEmpty())
 		{
 			final QuestState qs = player.getQuestState(getName());
-			if (qs != null)
+			if ((qs != null) && qs.isCond(cond))
 			{
-				final Object sVar = qs.get(var);
-				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value))
-				{
-					return player; // match
-				}
+				return player; // match
 			}
 			return null; // no match
 		}
@@ -1412,26 +1405,14 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own.
-	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a Npc to compare distance
-	 * @param value : the value of the "cond" variable that must be matched
-	 * @return Player : Player for a random party member that matches the specified condition, or null if no match.
-	 */
-	public PlayerInstance getRandomPartyMember(PlayerInstance player, NpcInstance npc, String value)
-	{
-		return getRandomPartyMember(player, npc, "cond", value);
-	}
-	
-	/**
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player the instance of a player whose party is to be searched
-	 * @param var a tuple specifying a quest condition that must be satisfied for a party member to be considered.
+	 * @param variable a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value
 	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
 	 *         player, or if no target exists, 1500 distance from the player itself.
 	 */
-	public PlayerInstance getRandomPartyMember(PlayerInstance player, String var, String value)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player, String variable, String value)
 	{
 		// if no valid player instance is passed, there is nothing to check...
 		if (player == null)
@@ -1440,7 +1421,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// for null var condition, return any random party member.
-		if (var == null)
+		if (variable == null)
 		{
 			return getRandomPartyMember(player);
 		}
@@ -1454,7 +1435,7 @@ public class Quest extends ManagedScript
 			final QuestState qs = player.getQuestState(getName());
 			if (qs != null)
 			{
-				final Object sVar = qs.get(var);
+				final Object sVar = qs.get(variable);
 				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value))
 				{
 					return player; // match
@@ -1478,7 +1459,7 @@ public class Quest extends ManagedScript
 			final QuestState qs = partyMember.getQuestState(getName());
 			if (qs != null)
 			{
-				final Object sVar = qs.get(var);
+				final Object sVar = qs.get(variable);
 				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE))
 				{
 					candidates.add(partyMember);

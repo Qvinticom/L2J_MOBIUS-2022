@@ -32,12 +32,9 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 	public Q352_HelpRoodRaiseANewPet()
 	{
 		super(352, "Help Rood Raise A New Pet!");
-		
 		registerQuestItems(LIENRIK_EGG_1, LIENRIK_EGG_2);
-		
 		addStartNpc(31067); // Rood
 		addTalkId(31067);
-		
 		addKillId(20786, 20787, 21644, 21645);
 	}
 	
@@ -53,9 +50,7 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 		
 		if (event.equals("31067-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31067-09.htm"))
 		{
@@ -79,10 +74,12 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 39) ? "31067-00.htm" : "31067-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int eggs1 = st.getQuestItemsCount(LIENRIK_EGG_1);
 				final int eggs2 = st.getQuestItemsCount(LIENRIK_EGG_2);
 				if ((eggs1 + eggs2) == 0)
@@ -116,6 +113,7 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

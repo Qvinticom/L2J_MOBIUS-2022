@@ -40,6 +40,12 @@ public class QuestState
 {
 	protected static final Logger LOGGER = Logger.getLogger(QuestState.class.getName());
 	
+	// Constants
+	private static final String COND_VAR = "cond";
+	private static final String RESTART_VAR = "restartTime";
+	private static final String MEMO_VAR = "memoState";
+	private static final String MEMO_EX_VAR = "memoStateEx";
+	
 	/** The name of the quest of this QuestState */
 	private final String _questName;
 	
@@ -48,6 +54,9 @@ public class QuestState
 	
 	/** The current state of the quest */
 	private byte _state;
+	
+	/** The current condition of the quest */
+	private int _cond = 0;
 	
 	/** Used for simulating Quest onTalk */
 	private boolean _simulated = false;
@@ -156,10 +165,12 @@ public class QuestState
 		{
 			return;
 		}
+		
 		if (_state == state)
 		{
 			return;
 		}
+		
 		final boolean newQuest = isCreated();
 		_state = state;
 		if (saveInDb)
@@ -179,10 +190,10 @@ public class QuestState
 	
 	/**
 	 * Add parameter used in quests.
-	 * @param var String pointing out the name of the variable for quest
+	 * @param variable String pointing out the name of the variable for quest
 	 * @param value String pointing out the value of the variable for quest
 	 */
-	public void setInternal(String var, String value)
+	public void setInternal(String variable, String value)
 	{
 		if (_simulated)
 		{
@@ -196,20 +207,32 @@ public class QuestState
 		
 		if (value == null)
 		{
-			_vars.put(var, "");
+			_vars.put(variable, "");
 			return;
 		}
 		
-		_vars.put(var, value);
+		if (COND_VAR.equals(variable))
+		{
+			try
+			{
+				_cond = Integer.parseInt(value);
+			}
+			catch (Exception ignored)
+			{
+			}
+		}
+		
+		_vars.put(variable, value);
 	}
 	
-	public void set(String var, int value)
+	public void set(String variable, int value)
 	{
 		if (_simulated)
 		{
 			return;
 		}
-		set(var, Integer.toString(value));
+		
+		set(variable, Integer.toString(value));
 	}
 	
 	/**
@@ -223,10 +246,10 @@ public class QuestState
 	 * The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<br>
 	 * If the key doesn't exist, the couple is added/created in the database</li>
 	 * <ul>
-	 * @param var String indicating the name of the variable for quest
-	 * @param val String indicating the value of the variable for quest
+	 * @param variable String indicating the name of the variable for quest
+	 * @param value String indicating the value of the variable for quest
 	 */
-	public void set(String var, String val)
+	public void set(String variable, String value)
 	{
 		if (_simulated)
 		{
@@ -238,23 +261,23 @@ public class QuestState
 			_vars = new HashMap<>();
 		}
 		
-		String value = val;
-		if (value == null)
+		String newValue = value;
+		if (newValue == null)
 		{
-			value = "";
+			newValue = "";
 		}
 		
-		final String old = _vars.put(var, value);
+		final String old = _vars.put(variable, newValue);
 		if (old != null)
 		{
-			Quest.updateQuestVarInDb(this, var, value);
+			Quest.updateQuestVarInDb(this, variable, newValue);
 		}
 		else
 		{
-			Quest.createQuestVarInDb(this, var, value);
+			Quest.createQuestVarInDb(this, variable, newValue);
 		}
 		
-		if ("cond".equals(var))
+		if (COND_VAR.equals(variable))
 		{
 			try
 			{
@@ -263,16 +286,25 @@ public class QuestState
 				{
 					previousVal = Integer.parseInt(old);
 				}
-				catch (Exception ex)
+				catch (Exception ignored)
 				{
-					previousVal = 0;
 				}
-				setCond(Integer.parseInt(value), previousVal);
+				int newCond = 0;
+				try
+				{
+					newCond = Integer.parseInt(newValue);
+				}
+				catch (Exception ignored)
+				{
+				}
+				
+				_cond = newCond;
+				setCond(newCond, previousVal);
 				getQuest().sendNpcLogList(getPlayer());
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + value + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + newValue + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
 			}
 		}
 	}
@@ -373,9 +405,9 @@ public class QuestState
 	
 	/**
 	 * Removes a quest variable from the list of existing quest variables.
-	 * @param var the name of the variable to remove
+	 * @param variable the name of the variable to remove
 	 */
-	public void unset(String var)
+	public void unset(String variable)
 	{
 		if (_simulated)
 		{
@@ -387,54 +419,60 @@ public class QuestState
 			return;
 		}
 		
-		final String old = _vars.remove(var);
+		final String old = _vars.remove(variable);
 		if (old != null)
 		{
-			Quest.deleteQuestVarInDb(this, var);
+			if (COND_VAR.equals(variable))
+			{
+				_cond = 0;
+			}
+			
+			Quest.deleteQuestVarInDb(this, variable);
 		}
 	}
 	
 	/**
-	 * @param var the name of the variable to get
+	 * @param variable the name of the variable to get
 	 * @return the value of the variable from the list of quest variables
 	 */
-	public String get(String var)
+	public String get(String variable)
 	{
 		if (_vars == null)
 		{
 			return null;
 		}
-		return _vars.get(var);
+		
+		return _vars.get(variable);
 	}
 	
 	/**
-	 * @param var the name of the variable to get
+	 * @param variable the name of the variable to get
 	 * @return the integer value of the variable or 0 if the variable does not exist or its value is not an integer
 	 */
-	public int getInt(String var)
+	public int getInt(String variable)
 	{
 		if (_vars == null)
 		{
 			return 0;
 		}
 		
-		final String variable = _vars.get(var);
-		if ((variable == null) || variable.isEmpty())
+		final String varStr = _vars.get(variable);
+		if ((varStr == null) || varStr.isEmpty())
 		{
 			return 0;
 		}
 		
-		int varint = 0;
+		int varInt = 0;
 		try
 		{
-			varint = Integer.parseInt(variable);
+			varInt = Integer.parseInt(varStr);
 		}
 		catch (NumberFormatException nfe)
 		{
-			LOGGER.log(Level.INFO, "Quest " + _questName + ", method getInt(" + var + "), tried to parse a non-integer value (" + variable + "). Char Id: " + _player.getObjectId(), nfe);
+			LOGGER.log(Level.INFO, "Quest " + _questName + ", method getInt(" + variable + "), tried to parse a non-integer value (" + varStr + "). Char Id: " + _player.getObjectId(), nfe);
 		}
 		
-		return varint;
+		return varInt;
 	}
 	
 	/**
@@ -445,7 +483,7 @@ public class QuestState
 	 */
 	public boolean isCond(int condition)
 	{
-		return getInt("cond") == condition;
+		return _cond == condition;
 	}
 	
 	/**
@@ -463,7 +501,7 @@ public class QuestState
 		
 		if (isStarted())
 		{
-			set("cond", Integer.toString(value));
+			set(COND_VAR, Integer.toString(value));
 		}
 	}
 	
@@ -474,7 +512,21 @@ public class QuestState
 	{
 		if (isStarted())
 		{
-			int val = getInt("cond");
+			return _cond;
+		}
+		
+		return 0;
+	}
+	
+	/**
+	 * Get bit set representing completed conds.
+	 * @return if none cond is set {@code 0}, otherwise cond bit set.
+	 */
+	public int getCondBitSet()
+	{
+		if (isStarted())
+		{
+			int val = getInt(COND_VAR);
 			if ((val & 0x80000000) != 0)
 			{
 				val &= 0x7fffffff;
@@ -524,7 +576,8 @@ public class QuestState
 		{
 			return;
 		}
-		set("cond", String.valueOf(value));
+		
+		set(COND_VAR, String.valueOf(value));
 		if (playQuestMiddle)
 		{
 			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_MIDDLE.getPacket());
@@ -537,7 +590,8 @@ public class QuestState
 		{
 			return;
 		}
-		set("memoState", String.valueOf(value));
+		
+		set(MEMO_VAR, String.valueOf(value));
 	}
 	
 	/**
@@ -547,14 +601,15 @@ public class QuestState
 	{
 		if (isStarted())
 		{
-			return getInt("memoState");
+			return getInt(MEMO_VAR);
 		}
+		
 		return 0;
 	}
 	
 	public boolean isMemoState(int memoState)
 	{
-		return getInt("memoState") == memoState;
+		return getInt(MEMO_VAR) == memoState;
 	}
 	
 	/**
@@ -566,8 +621,9 @@ public class QuestState
 	{
 		if (isStarted())
 		{
-			return getInt("memoStateEx" + slot);
+			return getInt(MEMO_EX_VAR + slot);
 		}
+		
 		return 0;
 	}
 	
@@ -582,7 +638,8 @@ public class QuestState
 		{
 			return;
 		}
-		set("memoStateEx" + slot, String.valueOf(value));
+		
+		set(MEMO_EX_VAR + slot, String.valueOf(value));
 	}
 	
 	/**
@@ -613,6 +670,7 @@ public class QuestState
 		{
 			return;
 		}
+		
 		_isExitQuestOnCleanUp = isExitQuestOnCleanUp;
 	}
 	
@@ -626,9 +684,10 @@ public class QuestState
 		{
 			return;
 		}
+		
 		if (isCreated() && !getQuest().isCustomQuest())
 		{
-			set("cond", "1");
+			set(COND_VAR, "1");
 			setState(State.STARTED);
 			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_ACCEPT.getPacket());
 			getQuest().sendNpcLogList(getPlayer());
@@ -686,6 +745,7 @@ public class QuestState
 		{
 			return;
 		}
+		
 		exitQuest(type);
 		if (playExitQuest)
 		{
@@ -776,7 +836,7 @@ public class QuestState
 		}
 		reDo.set(Calendar.HOUR_OF_DAY, getQuest().getResetHour());
 		reDo.set(Calendar.MINUTE, getQuest().getResetMinutes());
-		set("restartTime", String.valueOf(reDo.getTimeInMillis()));
+		set(RESTART_VAR, String.valueOf(reDo.getTimeInMillis()));
 	}
 	
 	/**
@@ -785,7 +845,7 @@ public class QuestState
 	 */
 	public boolean isNowAvailable()
 	{
-		final String val = get("restartTime");
+		final String val = get(RESTART_VAR);
 		return (val != null) && (Long.parseLong(val) <= Chronos.currentTimeMillis());
 	}
 	

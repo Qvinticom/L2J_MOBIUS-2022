@@ -26,29 +26,23 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 {
 	// NPC
 	private static final int NORMAN = 30210;
-	
-	// Items
-	private static final int STING_OF_GIANT_POISON_BEE = 8283;
-	private static final int CLOUDY_GEM = 8284;
-	private static final int TALON_OF_YOUNG_ARANEID = 8285;
-	
-	// Reward
-	private static final int ADENA = 57;
-	
 	// Monsters
 	private static final int GIANT_POISON_BEE = 21095;
 	private static final int CLOUDY_BEAST = 21096;
 	private static final int YOUNG_ARANEID = 21097;
+	// Items
+	private static final int STING_OF_GIANT_POISON_BEE = 8283;
+	private static final int CLOUDY_GEM = 8284;
+	private static final int TALON_OF_YOUNG_ARANEID = 8285;
+	// Reward
+	private static final int ADENA = 57;
 	
 	public Q661_MakingTheHarvestGroundsSafe()
 	{
 		super(661, "Making the Harvest Grounds Safe");
-		
 		registerQuestItems(STING_OF_GIANT_POISON_BEE, CLOUDY_GEM, TALON_OF_YOUNG_ARANEID);
-		
 		addStartNpc(NORMAN);
 		addTalkId(NORMAN);
-		
 		addKillId(GIANT_POISON_BEE, CLOUDY_BEAST, YOUNG_ARANEID);
 	}
 	
@@ -62,32 +56,35 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30210-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30210-04.htm"))
-		{
-			final int item1 = st.getQuestItemsCount(STING_OF_GIANT_POISON_BEE);
-			final int item2 = st.getQuestItemsCount(CLOUDY_GEM);
-			final int item3 = st.getQuestItemsCount(TALON_OF_YOUNG_ARANEID);
-			int sum = 0;
-			sum = (item1 * 57) + (item2 * 56) + (item3 * 60);
-			if ((item1 + item2 + item3) >= 10)
+			case "30210-02.htm":
 			{
-				sum += 2871;
+				st.startQuest();
+				break;
 			}
-			
-			st.takeItems(STING_OF_GIANT_POISON_BEE, item1);
-			st.takeItems(CLOUDY_GEM, item2);
-			st.takeItems(TALON_OF_YOUNG_ARANEID, item3);
-			st.rewardItems(ADENA, sum);
-		}
-		else if (event.equals("30210-06.htm"))
-		{
-			st.exitQuest(true);
+			case "30210-04.htm":
+			{
+				final int item1 = st.getQuestItemsCount(STING_OF_GIANT_POISON_BEE);
+				final int item2 = st.getQuestItemsCount(CLOUDY_GEM);
+				final int item3 = st.getQuestItemsCount(TALON_OF_YOUNG_ARANEID);
+				int sum = 0;
+				sum = (item1 * 57) + (item2 * 56) + (item3 * 60);
+				if ((item1 + item2 + item3) >= 10)
+				{
+					sum += 2871;
+				}
+				st.takeItems(STING_OF_GIANT_POISON_BEE, item1);
+				st.takeItems(CLOUDY_GEM, item2);
+				st.takeItems(TALON_OF_YOUNG_ARANEID, item3);
+				st.rewardItems(ADENA, sum);
+				break;
+			}
+			case "30210-06.htm":
+			{
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -106,12 +103,15 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 21) ? "30210-01a.htm" : "30210-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.hasAtLeastOneQuestItem(STING_OF_GIANT_POISON_BEE, CLOUDY_GEM, TALON_OF_YOUNG_ARANEID)) ? "30210-03.htm" : "30210-05.htm";
 				break;
+			}
 		}
 		
 		return htmltext;

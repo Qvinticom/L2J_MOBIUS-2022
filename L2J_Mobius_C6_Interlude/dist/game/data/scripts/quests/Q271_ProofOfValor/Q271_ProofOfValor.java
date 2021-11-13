@@ -28,7 +28,6 @@ public class Q271_ProofOfValor extends Quest
 {
 	// Item
 	private static final int KASHA_WOLF_FANG = 1473;
-	
 	// Rewards
 	private static final int NECKLACE_OF_VALOR = 1507;
 	private static final int NECKLACE_OF_COURAGE = 1506;
@@ -36,12 +35,9 @@ public class Q271_ProofOfValor extends Quest
 	public Q271_ProofOfValor()
 	{
 		super(271, "Proof of Valor");
-		
 		registerQuestItems(KASHA_WOLF_FANG);
-		
 		addStartNpc(30577); // Rukain
 		addTalkId(30577);
-		
 		addKillId(20475); // Kasha Wolf
 	}
 	
@@ -57,10 +53,7 @@ public class Q271_ProofOfValor extends Quest
 		
 		if (event.equals("30577-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			
+			st.startQuest();
 			if (st.hasAtLeastOneQuestItem(NECKLACE_OF_COURAGE, NECKLACE_OF_VALOR))
 			{
 				htmltext = "30577-07.htm";
@@ -83,6 +76,7 @@ public class Q271_ProofOfValor extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30577-00.htm";
@@ -96,9 +90,10 @@ public class Q271_ProofOfValor extends Quest
 					htmltext = (st.hasAtLeastOneQuestItem(NECKLACE_OF_COURAGE, NECKLACE_OF_VALOR)) ? "30577-06.htm" : "30577-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = (st.hasAtLeastOneQuestItem(NECKLACE_OF_COURAGE, NECKLACE_OF_VALOR)) ? "30577-07.htm" : "30577-04.htm";
 				}
@@ -111,6 +106,7 @@ public class Q271_ProofOfValor extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -119,7 +115,7 @@ public class Q271_ProofOfValor extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -127,7 +123,7 @@ public class Q271_ProofOfValor extends Quest
 		
 		if (st.dropItemsAlways(KASHA_WOLF_FANG, (Rnd.get(4) == 0) ? 2 : 1, 50))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

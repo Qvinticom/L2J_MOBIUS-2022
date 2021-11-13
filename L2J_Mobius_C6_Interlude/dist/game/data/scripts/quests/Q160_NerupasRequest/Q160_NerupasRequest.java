@@ -25,27 +25,23 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q160_NerupasRequest extends Quest
 {
-	// Items
-	private static final int SILVERY_SPIDERSILK = 1026;
-	private static final int UNOREN_RECEIPT = 1027;
-	private static final int CREAMEES_TICKET = 1028;
-	private static final int NIGHTSHADE_LEAF = 1029;
-	
-	// Reward
-	private static final int LESSER_HEALING_POTION = 1060;
-	
 	// NPCs
 	private static final int NERUPA = 30370;
 	private static final int UNOREN = 30147;
 	private static final int CREAMEES = 30149;
 	private static final int JULIA = 30152;
+	// Items
+	private static final int SILVERY_SPIDERSILK = 1026;
+	private static final int UNOREN_RECEIPT = 1027;
+	private static final int CREAMEES_TICKET = 1028;
+	private static final int NIGHTSHADE_LEAF = 1029;
+	// Reward
+	private static final int LESSER_HEALING_POTION = 1060;
 	
 	public Q160_NerupasRequest()
 	{
 		super(160, "Nerupa's Request");
-		
 		registerQuestItems(SILVERY_SPIDERSILK, UNOREN_RECEIPT, CREAMEES_TICKET, NIGHTSHADE_LEAF);
-		
 		addStartNpc(NERUPA);
 		addTalkId(NERUPA, UNOREN, CREAMEES, JULIA);
 	}
@@ -62,9 +58,7 @@ public class Q160_NerupasRequest extends Quest
 		
 		if (event.equals("30370-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(SILVERY_SPIDERSILK, 1);
 		}
 		
@@ -84,6 +78,7 @@ public class Q160_NerupasRequest extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ELF)
 				{
 					htmltext = "30370-00.htm";
@@ -97,12 +92,14 @@ public class Q160_NerupasRequest extends Quest
 					htmltext = "30370-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case NERUPA:
+					{
 						if (cond < 4)
 						{
 							htmltext = "30370-05.htm";
@@ -117,12 +114,13 @@ public class Q160_NerupasRequest extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case UNOREN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30147-01.htm";
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(SILVERY_SPIDERSILK, 1);
 							st.giveItems(UNOREN_RECEIPT, 1);
@@ -136,12 +134,13 @@ public class Q160_NerupasRequest extends Quest
 							htmltext = "30147-03.htm";
 						}
 						break;
-					
+					}
 					case CREAMEES:
+					{
 						if (cond == 2)
 						{
 							htmltext = "30149-01.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(UNOREN_RECEIPT, 1);
 							st.giveItems(CREAMEES_TICKET, 1);
@@ -155,12 +154,13 @@ public class Q160_NerupasRequest extends Quest
 							htmltext = "30149-03.htm";
 						}
 						break;
-					
+					}
 					case JULIA:
+					{
 						if (cond == 3)
 						{
 							htmltext = "30152-01.htm";
-							st.set("cond", "4");
+							st.setCond(4);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(CREAMEES_TICKET, 1);
 							st.giveItems(NIGHTSHADE_LEAF, 1);
@@ -170,12 +170,15 @@ public class Q160_NerupasRequest extends Quest
 							htmltext = "30152-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

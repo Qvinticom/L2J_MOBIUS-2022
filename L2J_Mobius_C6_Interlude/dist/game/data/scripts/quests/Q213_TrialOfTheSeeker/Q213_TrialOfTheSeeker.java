@@ -26,6 +26,23 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q213_TrialOfTheSeeker extends Quest
 {
+	// NPCs
+	private static final int TERRY = 30064;
+	private static final int DUFNER = 30106;
+	private static final int BRUNON = 30526;
+	private static final int VIKTOR = 30684;
+	private static final int MARINA = 30715;
+	// Monsters
+	private static final int NEER_GHOUL_BERSERKER = 20198;
+	private static final int ANT_CAPTAIN = 20080;
+	private static final int OL_MAHUM_CAPTAIN = 20211;
+	private static final int TURAK_BUGBEAR_WARRIOR = 20249;
+	private static final int TUREK_ORC_WARLORD = 20495;
+	private static final int MEDUSA = 20158;
+	private static final int ANT_WARRIOR_CAPTAIN = 20088;
+	private static final int MARSH_STAKATO_DRONE = 20234;
+	private static final int BREKA_ORC_OVERLORD = 20270;
+	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
 	// Items
 	private static final int DUFNER_LETTER = 2647;
 	private static final int TERRY_ORDER_1 = 2648;
@@ -53,39 +70,16 @@ public class Q213_TrialOfTheSeeker extends Quest
 	private static final int ABYSS_RUNESTONE_3 = 2670;
 	private static final int ABYSS_RUNESTONE_4 = 2671;
 	private static final int TERRY_REPORT = 2672;
-	
 	// Rewards
 	private static final int MARK_OF_SEEKER = 2673;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	// NPCs
-	private static final int TERRY = 30064;
-	private static final int DUFNER = 30106;
-	private static final int BRUNON = 30526;
-	private static final int VIKTOR = 30684;
-	private static final int MARINA = 30715;
-	
-	// Monsters
-	private static final int NEER_GHOUL_BERSERKER = 20198;
-	private static final int ANT_CAPTAIN = 20080;
-	private static final int OL_MAHUM_CAPTAIN = 20211;
-	private static final int TURAK_BUGBEAR_WARRIOR = 20249;
-	private static final int TUREK_ORC_WARLORD = 20495;
-	private static final int MEDUSA = 20158;
-	private static final int ANT_WARRIOR_CAPTAIN = 20088;
-	private static final int MARSH_STAKATO_DRONE = 20234;
-	private static final int BREKA_ORC_OVERLORD = 20270;
-	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
-	
 	public Q213_TrialOfTheSeeker()
 	{
 		super(213, "Trial of the Seeker");
-		
 		registerQuestItems(DUFNER_LETTER, TERRY_ORDER_1, TERRY_ORDER_2, TERRY_LETTER, VIKTOR_LETTER, HAWKEYE_LETTER, MYSTERIOUS_RUNESTONE, OL_MAHUM_RUNESTONE, TUREK_RUNESTONE, ANT_RUNESTONE, TURAK_BUGBEAR_RUNESTONE, TERRY_BOX, VIKTOR_REQUEST, MEDUSA_SCALES, SHILEN_RUNESTONE, ANALYSIS_REQUEST, MARINA_LETTER, EXPERIMENT_TOOLS, ANALYSIS_RESULT, TERRY_ORDER_3, LIST_OF_HOST, ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_3, ABYSS_RUNESTONE_4, TERRY_REPORT);
-		
 		addStartNpc(DUFNER);
 		addTalkId(TERRY, DUFNER, BRUNON, VIKTOR, MARINA);
-		
 		addKillId(NEER_GHOUL_BERSERKER, ANT_CAPTAIN, OL_MAHUM_CAPTAIN, TURAK_BUGBEAR_WARRIOR, TUREK_ORC_WARLORD, ANT_WARRIOR_CAPTAIN, MARSH_STAKATO_DRONE, BREKA_ORC_OVERLORD, LETO_LIZARDMAN_WARRIOR, MEDUSA);
 	}
 	
@@ -99,108 +93,114 @@ public class Q213_TrialOfTheSeeker extends Quest
 			return htmltext;
 		}
 		
-		// DUFNER
-		if (event.equals("30106-05.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(DUFNER_LETTER, 1);
-			
-			if (!player.getVariables().getBoolean("secondClassChange35", false))
+			case "30106-05.htm":
 			{
-				htmltext = "30106-05a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));
-				player.getVariables().set("secondClassChange35", true);
+				st.startQuest();
+				st.giveItems(DUFNER_LETTER, 1);
+				if (!player.getVariables().getBoolean("secondClassChange35", false))
+				{
+					htmltext = "30106-05a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_35.get(player.getClassId().getId()));
+					player.getVariables().set("secondClassChange35", true);
+				}
+				break;
 			}
-		}
-		// TERRY
-		else if (event.equals("30064-03.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(DUFNER_LETTER, 1);
-			st.giveItems(TERRY_ORDER_1, 1);
-		}
-		else if (event.equals("30064-06.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(MYSTERIOUS_RUNESTONE, 1);
-			st.takeItems(TERRY_ORDER_1, 1);
-			st.giveItems(TERRY_ORDER_2, 1);
-		}
-		else if (event.equals("30064-10.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ANT_RUNESTONE, 1);
-			st.takeItems(OL_MAHUM_RUNESTONE, 1);
-			st.takeItems(TURAK_BUGBEAR_RUNESTONE, 1);
-			st.takeItems(TUREK_RUNESTONE, 1);
-			st.takeItems(TERRY_ORDER_2, 1);
-			st.giveItems(TERRY_BOX, 1);
-			st.giveItems(TERRY_LETTER, 1);
-		}
-		else if (event.equals("30064-18.htm"))
-		{
-			if (player.getLevel() < 36)
+			case "30064-03.htm":
 			{
-				htmltext = "30064-17.htm";
-				st.playSound(QuestState.SOUND_ITEMGET);
-				st.takeItems(ANALYSIS_RESULT, 1);
-				st.giveItems(TERRY_ORDER_3, 1);
-			}
-			else
-			{
-				st.set("cond", "16");
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(ANALYSIS_RESULT, 1);
-				st.giveItems(LIST_OF_HOST, 1);
+				st.takeItems(DUFNER_LETTER, 1);
+				st.giveItems(TERRY_ORDER_1, 1);
+				break;
 			}
-		}
-		// VIKTOR
-		else if (event.equals("30684-05.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(TERRY_LETTER, 1);
-			st.giveItems(VIKTOR_LETTER, 1);
-		}
-		else if (event.equals("30684-11.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(TERRY_LETTER, 1);
-			st.takeItems(TERRY_BOX, 1);
-			st.takeItems(HAWKEYE_LETTER, 1);
-			st.takeItems(VIKTOR_LETTER, 1);
-			st.giveItems(VIKTOR_REQUEST, 1);
-		}
-		else if (event.equals("30684-15.htm"))
-		{
-			st.set("cond", "11");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(VIKTOR_REQUEST, 1);
-			st.takeItems(MEDUSA_SCALES, 10);
-			st.giveItems(ANALYSIS_REQUEST, 1);
-			st.giveItems(SHILEN_RUNESTONE, 1);
-		}
-		// MARINA
-		else if (event.equals("30715-02.htm"))
-		{
-			st.set("cond", "12");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(SHILEN_RUNESTONE, 1);
-			st.takeItems(ANALYSIS_REQUEST, 1);
-			st.giveItems(MARINA_LETTER, 1);
-		}
-		else if (event.equals("30715-05.htm"))
-		{
-			st.set("cond", "14");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(EXPERIMENT_TOOLS, 1);
-			st.giveItems(ANALYSIS_RESULT, 1);
+			case "30064-06.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(MYSTERIOUS_RUNESTONE, 1);
+				st.takeItems(TERRY_ORDER_1, 1);
+				st.giveItems(TERRY_ORDER_2, 1);
+				break;
+			}
+			case "30064-10.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ANT_RUNESTONE, 1);
+				st.takeItems(OL_MAHUM_RUNESTONE, 1);
+				st.takeItems(TURAK_BUGBEAR_RUNESTONE, 1);
+				st.takeItems(TUREK_RUNESTONE, 1);
+				st.takeItems(TERRY_ORDER_2, 1);
+				st.giveItems(TERRY_BOX, 1);
+				st.giveItems(TERRY_LETTER, 1);
+				break;
+			}
+			case "30064-18.htm":
+			{
+				if (player.getLevel() < 36)
+				{
+					htmltext = "30064-17.htm";
+					st.playSound(QuestState.SOUND_ITEMGET);
+					st.takeItems(ANALYSIS_RESULT, 1);
+					st.giveItems(TERRY_ORDER_3, 1);
+				}
+				else
+				{
+					st.setCond(16);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(ANALYSIS_RESULT, 1);
+					st.giveItems(LIST_OF_HOST, 1);
+				}
+				break;
+			}
+			case "30684-05.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(TERRY_LETTER, 1);
+				st.giveItems(VIKTOR_LETTER, 1);
+				break;
+			}
+			case "30684-11.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(TERRY_LETTER, 1);
+				st.takeItems(TERRY_BOX, 1);
+				st.takeItems(HAWKEYE_LETTER, 1);
+				st.takeItems(VIKTOR_LETTER, 1);
+				st.giveItems(VIKTOR_REQUEST, 1);
+				break;
+			}
+			case "30684-15.htm":
+			{
+				st.setCond(11);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(VIKTOR_REQUEST, 1);
+				st.takeItems(MEDUSA_SCALES, 10);
+				st.giveItems(ANALYSIS_REQUEST, 1);
+				st.giveItems(SHILEN_RUNESTONE, 1);
+				break;
+			}
+			case "30715-02.htm":
+			{
+				st.setCond(12);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(SHILEN_RUNESTONE, 1);
+				st.takeItems(ANALYSIS_REQUEST, 1);
+				st.giveItems(MARINA_LETTER, 1);
+				break;
+			}
+			case "30715-05.htm":
+			{
+				st.setCond(14);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(EXPERIMENT_TOOLS, 1);
+				st.giveItems(ANALYSIS_RESULT, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -219,6 +219,7 @@ public class Q213_TrialOfTheSeeker extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getClassId() == ClassId.ROGUE) || (player.getClassId() == ClassId.ELVEN_SCOUT) || (player.getClassId() == ClassId.ASSASSIN))
 				{
 					htmltext = (player.getLevel() < 35) ? "30106-02.htm" : "30106-03.htm";
@@ -228,12 +229,14 @@ public class Q213_TrialOfTheSeeker extends Quest
 					htmltext = "30106-00.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case DUFNER:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30106-06.htm";
@@ -256,8 +259,9 @@ public class Q213_TrialOfTheSeeker extends Quest
 							}
 						}
 						break;
-					
+					}
 					case TERRY:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30064-01.htm";
@@ -285,7 +289,7 @@ public class Q213_TrialOfTheSeeker extends Quest
 						else if (cond == 7)
 						{
 							htmltext = "30064-12.htm";
-							st.set("cond", "8");
+							st.setCond(8);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(VIKTOR_LETTER, 1);
 							st.giveItems(HAWKEYE_LETTER, 1);
@@ -311,7 +315,7 @@ public class Q213_TrialOfTheSeeker extends Quest
 							else
 							{
 								htmltext = "30064-21.htm";
-								st.set("cond", "15");
+								st.setCond(15);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(TERRY_ORDER_3, 1);
 								st.giveItems(LIST_OF_HOST, 1);
@@ -340,8 +344,9 @@ public class Q213_TrialOfTheSeeker extends Quest
 							}
 						}
 						break;
-					
+					}
 					case VIKTOR:
+					{
 						if (cond == 6)
 						{
 							htmltext = "30684-01.htm";
@@ -371,8 +376,9 @@ public class Q213_TrialOfTheSeeker extends Quest
 							htmltext = "30684-17.htm";
 						}
 						break;
-					
+					}
 					case MARINA:
+					{
 						if (cond == 11)
 						{
 							htmltext = "30715-01.htm";
@@ -390,12 +396,13 @@ public class Q213_TrialOfTheSeeker extends Quest
 							htmltext = "30715-06.htm";
 						}
 						break;
-					
+					}
 					case BRUNON:
+					{
 						if (cond == 12)
 						{
 							htmltext = "30526-01.htm";
-							st.set("cond", "13");
+							st.setCond(13);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(MARINA_LETTER, 1);
 							st.giveItems(EXPERIMENT_TOOLS, 1);
@@ -405,12 +412,15 @@ public class Q213_TrialOfTheSeeker extends Quest
 							htmltext = "30526-02.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -425,79 +435,88 @@ public class Q213_TrialOfTheSeeker extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
-		
 		switch (npc.getNpcId())
 		{
 			case NEER_GHOUL_BERSERKER:
-				if ((cond == 2) && st.dropItems(MYSTERIOUS_RUNESTONE, 1, 1, 100000))
+			{
+				if (st.isCond(2) && st.dropItems(MYSTERIOUS_RUNESTONE, 1, 1, 100000))
 				{
-					st.set("cond", "3");
+					st.setCond(3);
 				}
 				break;
-			
+			}
 			case ANT_CAPTAIN:
-				if ((cond == 4) && st.dropItems(ANT_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(OL_MAHUM_RUNESTONE, TURAK_BUGBEAR_RUNESTONE, TUREK_RUNESTONE))
+			{
+				if (st.isCond(4) && st.dropItems(ANT_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(OL_MAHUM_RUNESTONE, TURAK_BUGBEAR_RUNESTONE, TUREK_RUNESTONE))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 				}
 				break;
-			
+			}
 			case OL_MAHUM_CAPTAIN:
-				if ((cond == 4) && st.dropItems(OL_MAHUM_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(ANT_RUNESTONE, TURAK_BUGBEAR_RUNESTONE, TUREK_RUNESTONE))
+			{
+				if (st.isCond(4) && st.dropItems(OL_MAHUM_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(ANT_RUNESTONE, TURAK_BUGBEAR_RUNESTONE, TUREK_RUNESTONE))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 				}
 				break;
-			
+			}
 			case TURAK_BUGBEAR_WARRIOR:
-				if ((cond == 4) && st.dropItems(TURAK_BUGBEAR_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(ANT_RUNESTONE, OL_MAHUM_RUNESTONE, TUREK_RUNESTONE))
+			{
+				if (st.isCond(4) && st.dropItems(TURAK_BUGBEAR_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(ANT_RUNESTONE, OL_MAHUM_RUNESTONE, TUREK_RUNESTONE))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 				}
 				break;
-			
+			}
 			case TUREK_ORC_WARLORD:
-				if ((cond == 4) && st.dropItems(TUREK_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(ANT_RUNESTONE, OL_MAHUM_RUNESTONE, TURAK_BUGBEAR_RUNESTONE))
+			{
+				if (st.isCond(4) && st.dropItems(TUREK_RUNESTONE, 1, 1, 250000) && st.hasQuestItems(ANT_RUNESTONE, OL_MAHUM_RUNESTONE, TURAK_BUGBEAR_RUNESTONE))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 				}
 				break;
-			
+			}
 			case MEDUSA:
-				if ((cond == 9) && st.dropItems(MEDUSA_SCALES, 1, 10, 300000))
+			{
+				if (st.isCond(9) && st.dropItems(MEDUSA_SCALES, 1, 10, 300000))
 				{
-					st.set("cond", "10");
+					st.setCond(10);
 				}
 				break;
-			
+			}
 			case MARSH_STAKATO_DRONE:
-				if (((cond == 15) || (cond == 16)) && st.dropItems(ABYSS_RUNESTONE_1, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_3, ABYSS_RUNESTONE_4))
+			{
+				if ((st.isCond(15) || st.isCond(16)) && st.dropItems(ABYSS_RUNESTONE_1, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_3, ABYSS_RUNESTONE_4))
 				{
-					st.set("cond", "17");
+					st.setCond(17);
 				}
 				break;
-			
+			}
 			case BREKA_ORC_OVERLORD:
-				if (((cond == 15) || (cond == 16)) && st.dropItems(ABYSS_RUNESTONE_2, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_3, ABYSS_RUNESTONE_4))
+			{
+				if ((st.isCond(15) || st.isCond(16)) && st.dropItems(ABYSS_RUNESTONE_2, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_3, ABYSS_RUNESTONE_4))
 				{
-					st.set("cond", "17");
+					st.setCond(17);
 				}
 				break;
-			
+			}
 			case ANT_WARRIOR_CAPTAIN:
-				if (((cond == 15) || (cond == 16)) && st.dropItems(ABYSS_RUNESTONE_3, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_4))
+			{
+				if ((st.isCond(15) || st.isCond(16)) && st.dropItems(ABYSS_RUNESTONE_3, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_4))
 				{
-					st.set("cond", "17");
+					st.setCond(17);
 				}
 				break;
-			
+			}
 			case LETO_LIZARDMAN_WARRIOR:
-				if (((cond == 15) || (cond == 16)) && st.dropItems(ABYSS_RUNESTONE_4, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_3))
+			{
+				if ((st.isCond(15) || st.isCond(16)) && st.dropItems(ABYSS_RUNESTONE_4, 1, 1, 250000) && st.hasQuestItems(ABYSS_RUNESTONE_1, ABYSS_RUNESTONE_2, ABYSS_RUNESTONE_3))
 				{
-					st.set("cond", "17");
+					st.setCond(17);
 				}
 				break;
+			}
 		}
 		
 		return null;

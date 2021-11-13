@@ -29,25 +29,20 @@ public class Q035_FindGlitteringJewelry extends Quest
 	// NPCs
 	private static final int ELLIE = 30091;
 	private static final int FELTON = 30879;
-	
 	// Items
 	private static final int ROUGH_JEWEL = 7162;
 	private static final int ORIHARUKON = 1893;
 	private static final int SILVER_NUGGET = 1873;
 	private static final int THONS = 4044;
-	
 	// Reward
 	private static final int JEWEL_BOX = 7077;
 	
 	public Q035_FindGlitteringJewelry()
 	{
 		super(35, "Find Glittering Jewelry");
-		
 		registerQuestItems(ROUGH_JEWEL);
-		
 		addStartNpc(ELLIE);
 		addTalkId(ELLIE, FELTON);
-		
 		addKillId(20135); // Alligator
 	}
 	
@@ -61,37 +56,42 @@ public class Q035_FindGlitteringJewelry extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30091-1.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30879-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("30091-3.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(ROUGH_JEWEL, 10);
-		}
-		else if (event.equals("30091-5.htm"))
-		{
-			if ((st.getQuestItemsCount(ORIHARUKON) >= 5) && (st.getQuestItemsCount(SILVER_NUGGET) >= 500) && (st.getQuestItemsCount(THONS) >= 150))
+			case "30091-1.htm":
 			{
-				st.takeItems(ORIHARUKON, 5);
-				st.takeItems(SILVER_NUGGET, 500);
-				st.takeItems(THONS, 150);
-				st.giveItems(JEWEL_BOX, 1);
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(false);
+				st.startQuest();
+				break;
 			}
-			else
+			case "30879-1.htm":
 			{
-				htmltext = "30091-4a.htm";
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "30091-3.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(ROUGH_JEWEL, 10);
+				break;
+			}
+			case "30091-5.htm":
+			{
+				if ((st.getQuestItemsCount(ORIHARUKON) >= 5) && (st.getQuestItemsCount(SILVER_NUGGET) >= 500) && (st.getQuestItemsCount(THONS) >= 150))
+				{
+					st.takeItems(ORIHARUKON, 5);
+					st.takeItems(SILVER_NUGGET, 500);
+					st.takeItems(THONS, 150);
+					st.giveItems(JEWEL_BOX, 1);
+					st.playSound(QuestState.SOUND_FINISH);
+					st.exitQuest(false);
+				}
+				else
+				{
+					htmltext = "30091-4a.htm";
+				}
+				break;
 			}
 		}
 		
@@ -111,10 +111,11 @@ public class Q035_FindGlitteringJewelry extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() >= 60)
 				{
 					final QuestState fwear = player.getQuestState(Q037_MakeFormalWear.class.getSimpleName());
-					if ((fwear != null) && (fwear.getInt("cond") == 6))
+					if ((fwear != null) && fwear.isCond(6))
 					{
 						htmltext = "30091-0.htm";
 					}
@@ -128,12 +129,14 @@ public class Q035_FindGlitteringJewelry extends Quest
 					htmltext = "30091-0b.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case ELLIE:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30091-1a.htm";
@@ -147,8 +150,9 @@ public class Q035_FindGlitteringJewelry extends Quest
 							htmltext = ((st.getQuestItemsCount(ORIHARUKON) >= 5) && (st.getQuestItemsCount(SILVER_NUGGET) >= 500) && (st.getQuestItemsCount(THONS) >= 150)) ? "30091-4.htm" : "30091-4a.htm";
 						}
 						break;
-					
+					}
 					case FELTON:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30879-0.htm";
@@ -158,12 +162,15 @@ public class Q035_FindGlitteringJewelry extends Quest
 							htmltext = "30879-1a.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -172,7 +179,7 @@ public class Q035_FindGlitteringJewelry extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "2");
+		final QuestState st = checkPlayerCondition(player, npc, 2);
 		if (st == null)
 		{
 			return null;
@@ -180,7 +187,7 @@ public class Q035_FindGlitteringJewelry extends Quest
 		
 		if (st.dropItems(ROUGH_JEWEL, 1, 10, 500000))
 		{
-			st.set("cond", "3");
+			st.setCond(3);
 		}
 		
 		return null;

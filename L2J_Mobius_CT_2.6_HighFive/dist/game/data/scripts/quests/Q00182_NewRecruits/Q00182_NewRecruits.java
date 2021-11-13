@@ -104,7 +104,7 @@ public class Q00182_NewRecruits extends Quest
 				}
 				case State.STARTED:
 				{
-					if (qs.getInt("cond") == 1)
+					if (qs.isCond(1))
 					{
 						htmltext = "32138-04.html";
 					}

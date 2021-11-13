@@ -30,12 +30,9 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 	public Q262_TradeWithTheIvoryTower()
 	{
 		super(262, "Trade with the Ivory Tower");
-		
 		registerQuestItems(FUNGUS_SAC);
-		
 		addStartNpc(30137); // Vollodos
 		addTalkId(30137);
-		
 		addKillId(20400, 20007);
 	}
 	
@@ -51,9 +48,7 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 		
 		if (event.equals("30137-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -72,10 +67,12 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 8) ? "30137-01.htm" : "30137-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				if (st.getQuestItemsCount(FUNGUS_SAC) < 10)
 				{
 					htmltext = "30137-04.htm";
@@ -89,6 +86,7 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -97,7 +95,7 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -105,7 +103,7 @@ public class Q262_TradeWithTheIvoryTower extends Quest
 		
 		if (st.dropItems(FUNGUS_SAC, 1, 10, (npc.getNpcId() == 20400) ? 400000 : 300000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

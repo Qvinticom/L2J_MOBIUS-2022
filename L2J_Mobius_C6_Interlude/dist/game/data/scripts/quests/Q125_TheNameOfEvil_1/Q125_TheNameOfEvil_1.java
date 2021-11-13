@@ -33,12 +33,10 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	private static final int ULU_KAIMU = 32119;
 	private static final int BALU_KAIMU = 32120;
 	private static final int CHUTA_KAIMU = 32121;
-	
 	private static final int ORNITHOMIMUS_CLAW = 8779;
 	private static final int DEINONYCHUS_BONE = 8780;
 	private static final int EPITAPH_OF_WISDOM = 8781;
 	private static final int GAZKH_FRAGMENT = 8782;
-	
 	private static final int[] ORNITHOMIMUS =
 	{
 		22200,
@@ -49,7 +47,6 @@ public class Q125_TheNameOfEvil_1 extends Quest
 		22742,
 		22744
 	};
-	
 	private static final int[] DEINONYCHUS =
 	{
 		16067,
@@ -65,21 +62,11 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	public Q125_TheNameOfEvil_1()
 	{
 		super(125, "The Name of Evil - 1");
-		
 		registerQuestItems(ORNITHOMIMUS_CLAW, DEINONYCHUS_BONE, EPITAPH_OF_WISDOM, GAZKH_FRAGMENT);
-		
 		addStartNpc(MUSHIKA);
 		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
-		
-		for (int i : ORNITHOMIMUS)
-		{
-			addKillId(i);
-		}
-		
-		for (int i : DEINONYCHUS)
-		{
-			addKillId(i);
-		}
+		addKillId(ORNITHOMIMUS);
+		addKillId(DEINONYCHUS);
 	}
 	
 	@Override
@@ -92,44 +79,52 @@ public class Q125_TheNameOfEvil_1 extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32114-05.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32114-09.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(GAZKH_FRAGMENT, 1);
-		}
-		else if (event.equals("32117-08.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32117-14.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32119-14.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32120-15.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32121-16.htm"))
-		{
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GAZKH_FRAGMENT, -1);
-			st.giveItems(EPITAPH_OF_WISDOM, 1);
+			case "32114-05.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "32114-09.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(GAZKH_FRAGMENT, 1);
+				break;
+			}
+			case "32117-08.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32117-14.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32119-14.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32120-15.htm":
+			{
+				st.setCond(7);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32121-16.htm":
+			{
+				st.setCond(8);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(GAZKH_FRAGMENT, -1);
+				st.giveItems(EPITAPH_OF_WISDOM, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -148,6 +143,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState first = player.getQuestState(Q124_MeetingTheElroki.class.getSimpleName());
 				if ((first != null) && first.isCompleted() && (player.getLevel() >= 76))
 				{
@@ -158,12 +154,14 @@ public class Q125_TheNameOfEvil_1 extends Quest
 					htmltext = "32114-00.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case MUSHIKA:
+					{
 						if (cond == 1)
 						{
 							htmltext = "32114-07.htm";
@@ -184,8 +182,9 @@ public class Q125_TheNameOfEvil_1 extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case KARAKAWEI:
+					{
 						if (cond == 2)
 						{
 							htmltext = "32117-01.htm";
@@ -206,7 +205,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 							else
 							{
 								htmltext = "32117-09.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 							}
 						}
 						else if (cond == 5)
@@ -222,8 +221,9 @@ public class Q125_TheNameOfEvil_1 extends Quest
 							htmltext = "32117-17.htm";
 						}
 						break;
-					
+					}
 					case ULU_KAIMU:
+					{
 						if (cond == 5)
 						{
 							npc.doCast(SkillTable.getInstance().getSkill(5089, 1));
@@ -234,8 +234,9 @@ public class Q125_TheNameOfEvil_1 extends Quest
 							htmltext = "32119-14.htm";
 						}
 						break;
-					
+					}
 					case BALU_KAIMU:
+					{
 						if (cond == 6)
 						{
 							npc.doCast(SkillTable.getInstance().getSkill(5089, 1));
@@ -246,8 +247,9 @@ public class Q125_TheNameOfEvil_1 extends Quest
 							htmltext = "32120-16.htm";
 						}
 						break;
-					
+					}
 					case CHUTA_KAIMU:
+					{
 						if (cond == 7)
 						{
 							npc.doCast(SkillTable.getInstance().getSkill(5089, 1));
@@ -258,12 +260,15 @@ public class Q125_TheNameOfEvil_1 extends Quest
 							htmltext = "32121-17.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -272,7 +277,7 @@ public class Q125_TheNameOfEvil_1 extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "3");
+		final QuestState st = checkPlayerCondition(player, npc, 3);
 		if (st == null)
 		{
 			return null;
@@ -283,16 +288,17 @@ public class Q125_TheNameOfEvil_1 extends Quest
 		{
 			if (st.dropItems(ORNITHOMIMUS_CLAW, 1, 2, 50000) && (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2))
 			{
-				st.set("cond", "4");
+				st.setCond(4);
 			}
 		}
 		else if (Util.contains(DEINONYCHUS, npcId))
 		{
 			if (st.dropItems(DEINONYCHUS_BONE, 1, 2, 50000) && (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2))
 			{
-				st.set("cond", "4");
+				st.setCond(4);
 			}
 		}
+		
 		return null;
 	}
 }

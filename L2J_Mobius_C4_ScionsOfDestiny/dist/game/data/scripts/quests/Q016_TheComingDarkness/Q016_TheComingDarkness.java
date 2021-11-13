@@ -38,9 +38,7 @@ public class Q016_TheComingDarkness extends Quest
 	public Q016_TheComingDarkness()
 	{
 		super(16, "The Coming Darkness");
-		
 		registerQuestItems(CRYSTAL_OF_SEAL);
-		
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH, EVIL_ALTAR_1, EVIL_ALTAR_2, EVIL_ALTAR_3, EVIL_ALTAR_4, EVIL_ALTAR_5);
 	}
@@ -55,42 +53,49 @@ public class Q016_TheComingDarkness extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("31517-2.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			st.giveItems(CRYSTAL_OF_SEAL, 5);
-		}
-		else if (event.equals("31512-1.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(CRYSTAL_OF_SEAL, 1);
-		}
-		else if (event.equals("31513-1.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(CRYSTAL_OF_SEAL, 1);
-		}
-		else if (event.equals("31514-1.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(CRYSTAL_OF_SEAL, 1);
-		}
-		else if (event.equals("31515-1.htm"))
-		{
-			st.set("cond", "5");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(CRYSTAL_OF_SEAL, 1);
-		}
-		else if (event.equals("31516-1.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(CRYSTAL_OF_SEAL, 1);
+			case "31517-2.htm":
+			{
+				st.startQuest();
+				st.giveItems(CRYSTAL_OF_SEAL, 5);
+				break;
+			}
+			case "31512-1.htm":
+			{
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(CRYSTAL_OF_SEAL, 1);
+				break;
+			}
+			case "31513-1.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(CRYSTAL_OF_SEAL, 1);
+				break;
+			}
+			case "31514-1.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(CRYSTAL_OF_SEAL, 1);
+				break;
+			}
+			case "31515-1.htm":
+			{
+				st.setCond(5);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(CRYSTAL_OF_SEAL, 1);
+				break;
+			}
+			case "31516-1.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(CRYSTAL_OF_SEAL, 1);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -109,16 +114,19 @@ public class Q016_TheComingDarkness extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 62) ? "31517-0a.htm" : "31517-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				final int npcId = npc.getNpcId();
 				
 				switch (npcId)
 				{
 					case HIERARCH:
+					{
 						if (cond == 6)
 						{
 							htmltext = "31517-4.htm";
@@ -139,12 +147,13 @@ public class Q016_TheComingDarkness extends Quest
 							}
 						}
 						break;
-					
+					}
 					case EVIL_ALTAR_1:
 					case EVIL_ALTAR_2:
 					case EVIL_ALTAR_3:
 					case EVIL_ALTAR_4:
 					case EVIL_ALTAR_5:
+					{
 						final int condAltar = npcId - 31511;
 						if (cond == condAltar)
 						{
@@ -162,12 +171,15 @@ public class Q016_TheComingDarkness extends Quest
 							htmltext = npcId + "-2.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

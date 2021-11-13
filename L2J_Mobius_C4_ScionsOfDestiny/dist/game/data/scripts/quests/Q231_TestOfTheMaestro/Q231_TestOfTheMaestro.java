@@ -28,6 +28,24 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q231_TestOfTheMaestro extends Quest
 {
+	// NPCs
+	private static final int LOCKIRIN = 30531;
+	private static final int SPIRON = 30532;
+	private static final int BALANKI = 30533;
+	private static final int KEEF = 30534;
+	private static final int FILAUR = 30535;
+	private static final int ARIN = 30536;
+	private static final int TOMA = 30556;
+	private static final int CROTO = 30671;
+	private static final int DUBABAH = 30672;
+	private static final int LORAIN = 30673;
+	// Monsters
+	private static final int KING_BUGBEAR = 20150;
+	private static final int GIANT_MIST_LEECH = 20225;
+	private static final int STINGER_WASP = 20229;
+	private static final int MARSH_SPIDER = 20233;
+	private static final int EVIL_EYE_LORD = 27133;
+	// Items
 	private static final int RECOMMENDATION_OF_BALANKI = 2864;
 	private static final int RECOMMENDATION_OF_FILAUR = 2865;
 	private static final int RECOMMENDATION_OF_ARIN = 2866;
@@ -43,39 +61,16 @@ public class Q231_TestOfTheMaestro extends Quest
 	private static final int MARSH_SPIDER_WEB = 2877;
 	private static final int BLOOD_OF_LEECH = 2878;
 	private static final int BROKEN_TELEPORT_DEVICE = 2916;
-	
 	// Rewards
 	private static final int MARK_OF_MAESTRO = 2867;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	// NPCs
-	private static final int LOCKIRIN = 30531;
-	private static final int SPIRON = 30532;
-	private static final int BALANKI = 30533;
-	private static final int KEEF = 30534;
-	private static final int FILAUR = 30535;
-	private static final int ARIN = 30536;
-	private static final int TOMA = 30556;
-	private static final int CROTO = 30671;
-	private static final int DUBABAH = 30672;
-	private static final int LORAIN = 30673;
-	
-	// Monsters
-	private static final int KING_BUGBEAR = 20150;
-	private static final int GIANT_MIST_LEECH = 20225;
-	private static final int STINGER_WASP = 20229;
-	private static final int MARSH_SPIDER = 20233;
-	private static final int EVIL_EYE_LORD = 27133;
-	
 	public Q231_TestOfTheMaestro()
 	{
 		super(231, "Test of the Maestro");
-		
 		registerQuestItems(RECOMMENDATION_OF_BALANKI, RECOMMENDATION_OF_FILAUR, RECOMMENDATION_OF_ARIN, LETTER_OF_SOLDER_DETACHMENT, PAINT_OF_KAMURU, NECKLACE_OF_KAMURU, PAINT_OF_TELEPORT_DEVICE, TELEPORT_DEVICE, ARCHITECTURE_OF_KRUMA, REPORT_OF_KRUMA, INGREDIENTS_OF_ANTIDOTE, STINGER_WASP_NEEDLE, MARSH_SPIDER_WEB, BLOOD_OF_LEECH, BROKEN_TELEPORT_DEVICE);
-		
 		addStartNpc(LOCKIRIN);
 		addTalkId(LOCKIRIN, SPIRON, BALANKI, KEEF, FILAUR, ARIN, TOMA, CROTO, DUBABAH, LORAIN);
-		
 		addKillId(GIANT_MIST_LEECH, STINGER_WASP, MARSH_SPIDER, EVIL_EYE_LORD);
 	}
 	
@@ -89,66 +84,63 @@ public class Q231_TestOfTheMaestro extends Quest
 			return htmltext;
 		}
 		
-		// LOCKIRIN
-		if (event.equals("30531-04.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			
-			if (!player.getVariables().getBoolean("secondClassChange39", false))
+			case "30531-04.htm":
 			{
-				htmltext = "30531-04a.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
-				player.getVariables().set("secondClassChange39", true);
+				st.startQuest();
+				if (!player.getVariables().getBoolean("secondClassChange39", false))
+				{
+					htmltext = "30531-04a.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
+					player.getVariables().set("secondClassChange39", true);
+				}
+				break;
 			}
-		}
-		// BALANKI
-		else if (event.equals("30533-02.htm"))
-		{
-			st.set("bCond", "1");
-		}
-		else if (event.equals("30671-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(PAINT_OF_KAMURU, 1);
-		}
-		// TOMA
-		else if (event.equals("30556-05.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(PAINT_OF_TELEPORT_DEVICE, 1);
-			st.giveItems(BROKEN_TELEPORT_DEVICE, 1);
-			player.teleToLocation(140352, -194133, -3146);
-			startQuestTimer("spawn_bugbears", 5000, null, player, false);
-		}
-		// LORAIN
-		else if (event.equals("30673-04.htm"))
-		{
-			st.set("fCond", "2");
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.takeItems(BLOOD_OF_LEECH, -1);
-			st.takeItems(INGREDIENTS_OF_ANTIDOTE, 1);
-			st.takeItems(MARSH_SPIDER_WEB, -1);
-			st.takeItems(STINGER_WASP_NEEDLE, -1);
-			st.giveItems(REPORT_OF_KRUMA, 1);
-		}
-		// Spawns 3 King Bugbears
-		else if (event.equals("spawn_bugbears"))
-		{
-			final Attackable bugbear1 = (Attackable) addSpawn(KING_BUGBEAR, 140333, -194153, -3138, 0, false, 200000);
-			bugbear1.addDamageHate(player, 0, 999);
-			bugbear1.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-			
-			final Attackable bugbear2 = (Attackable) addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000);
-			bugbear2.addDamageHate(player, 0, 999);
-			bugbear2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-			
-			final Attackable bugbear3 = (Attackable) addSpawn(KING_BUGBEAR, 140304, -194082, -3157, 0, false, 200000);
-			bugbear3.addDamageHate(player, 0, 999);
-			bugbear3.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-			
-			return null;
+			case "30533-02.htm":
+			{
+				st.set("bCond", "1");
+				break;
+			}
+			case "30671-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(PAINT_OF_KAMURU, 1);
+				break;
+			}
+			case "30556-05.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(PAINT_OF_TELEPORT_DEVICE, 1);
+				st.giveItems(BROKEN_TELEPORT_DEVICE, 1);
+				player.teleToLocation(140352, -194133, -3146);
+				startQuestTimer("spawn_bugbears", 5000, null, player, false);
+				break;
+			}
+			case "30673-04.htm":
+			{
+				st.set("fCond", "2");
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.takeItems(BLOOD_OF_LEECH, -1);
+				st.takeItems(INGREDIENTS_OF_ANTIDOTE, 1);
+				st.takeItems(MARSH_SPIDER_WEB, -1);
+				st.takeItems(STINGER_WASP_NEEDLE, -1);
+				st.giveItems(REPORT_OF_KRUMA, 1);
+				break;
+			}
+			case "spawn_bugbears":
+			{
+				final Attackable bugbear1 = (Attackable) addSpawn(KING_BUGBEAR, 140333, -194153, -3138, 0, false, 200000);
+				bugbear1.addDamageHate(player, 0, 999);
+				bugbear1.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				final Attackable bugbear2 = (Attackable) addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000);
+				bugbear2.addDamageHate(player, 0, 999);
+				bugbear2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				final Attackable bugbear3 = (Attackable) addSpawn(KING_BUGBEAR, 140304, -194082, -3157, 0, false, 200000);
+				bugbear3.addDamageHate(player, 0, 999);
+				bugbear3.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				return null;
+			}
 		}
 		
 		return htmltext;
@@ -167,6 +159,7 @@ public class Q231_TestOfTheMaestro extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getClassId() != ClassId.ARTISAN)
 				{
 					htmltext = "30531-01.htm";
@@ -180,12 +173,14 @@ public class Q231_TestOfTheMaestro extends Quest
 					htmltext = "30531-03.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case LOCKIRIN:
-						final int cond = st.getInt("cond");
+					{
+						final int cond = st.getCond();
 						if (cond == 1)
 						{
 							htmltext = "30531-05.htm";
@@ -203,18 +198,20 @@ public class Q231_TestOfTheMaestro extends Quest
 							st.exitQuest(false);
 						}
 						break;
-					
+					}
 					case SPIRON:
+					{
 						htmltext = "30532-01.htm";
 						break;
-					
+					}
 					case KEEF:
+					{
 						htmltext = "30534-01.htm";
 						break;
-					
-					// Part 1
+					}
 					case BALANKI:
-						int bCond = st.getInt("bCond");
+					{
+						final int bCond = st.getInt("bCond");
 						if (bCond == 0)
 						{
 							htmltext = "30533-01.htm";
@@ -232,7 +229,7 @@ public class Q231_TestOfTheMaestro extends Quest
 							
 							if (st.hasQuestItems(RECOMMENDATION_OF_ARIN, RECOMMENDATION_OF_FILAUR))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -245,9 +242,10 @@ public class Q231_TestOfTheMaestro extends Quest
 							htmltext = "30533-05.htm";
 						}
 						break;
-					
+					}
 					case CROTO:
-						bCond = st.getInt("bCond");
+					{
+						final int bCond = st.getInt("bCond");
 						if (bCond == 1)
 						{
 							if (!st.hasQuestItems(PAINT_OF_KAMURU))
@@ -273,14 +271,15 @@ public class Q231_TestOfTheMaestro extends Quest
 							htmltext = "30671-05.htm";
 						}
 						break;
-					
+					}
 					case DUBABAH:
+					{
 						htmltext = "30672-01.htm";
 						break;
-					
-					// Part 2
+					}
 					case ARIN:
-						int aCond = st.getInt("aCond");
+					{
+						final int aCond = st.getInt("aCond");
 						if (aCond == 0)
 						{
 							htmltext = "30536-01.htm";
@@ -300,7 +299,7 @@ public class Q231_TestOfTheMaestro extends Quest
 							
 							if (st.hasQuestItems(RECOMMENDATION_OF_BALANKI, RECOMMENDATION_OF_FILAUR))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -313,9 +312,10 @@ public class Q231_TestOfTheMaestro extends Quest
 							htmltext = "30536-04.htm";
 						}
 						break;
-					
+					}
 					case TOMA:
-						aCond = st.getInt("aCond");
+					{
+						final int aCond = st.getInt("aCond");
 						if (aCond == 1)
 						{
 							if (!st.hasQuestItems(BROKEN_TELEPORT_DEVICE))
@@ -336,10 +336,10 @@ public class Q231_TestOfTheMaestro extends Quest
 							htmltext = "30556-07.htm";
 						}
 						break;
-					
-					// Part 3
+					}
 					case FILAUR:
-						int fCond = st.getInt("fCond");
+					{
+						final int fCond = st.getInt("fCond");
 						if (fCond == 0)
 						{
 							htmltext = "30535-01.htm";
@@ -360,7 +360,7 @@ public class Q231_TestOfTheMaestro extends Quest
 							
 							if (st.hasQuestItems(RECOMMENDATION_OF_BALANKI, RECOMMENDATION_OF_ARIN))
 							{
-								st.set("cond", "2");
+								st.setCond(2);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							else
@@ -373,9 +373,10 @@ public class Q231_TestOfTheMaestro extends Quest
 							htmltext = "30535-04.htm";
 						}
 						break;
-					
+					}
 					case LORAIN:
-						fCond = st.getInt("fCond");
+					{
+						final int fCond = st.getInt("fCond");
 						if (fCond == 1)
 						{
 							if (!st.hasQuestItems(REPORT_OF_KRUMA))
@@ -402,12 +403,15 @@ public class Q231_TestOfTheMaestro extends Quest
 							htmltext = "30673-05.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -416,7 +420,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -425,32 +429,37 @@ public class Q231_TestOfTheMaestro extends Quest
 		switch (npc.getNpcId())
 		{
 			case GIANT_MIST_LEECH:
+			{
 				if (st.hasQuestItems(INGREDIENTS_OF_ANTIDOTE))
 				{
 					st.dropItemsAlways(BLOOD_OF_LEECH, 1, 10);
 				}
 				break;
-			
+			}
 			case STINGER_WASP:
+			{
 				if (st.hasQuestItems(INGREDIENTS_OF_ANTIDOTE))
 				{
 					st.dropItemsAlways(STINGER_WASP_NEEDLE, 1, 10);
 				}
 				break;
-			
+			}
 			case MARSH_SPIDER:
+			{
 				if (st.hasQuestItems(INGREDIENTS_OF_ANTIDOTE))
 				{
 					st.dropItemsAlways(MARSH_SPIDER_WEB, 1, 10);
 				}
 				break;
-			
+			}
 			case EVIL_EYE_LORD:
+			{
 				if (st.hasQuestItems(PAINT_OF_KAMURU))
 				{
 					st.dropItemsAlways(NECKLACE_OF_KAMURU, 1, 1);
 				}
 				break;
+			}
 		}
 		
 		return null;

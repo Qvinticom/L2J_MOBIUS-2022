@@ -30,12 +30,9 @@ public class Q313_CollectSpores extends Quest
 	public Q313_CollectSpores()
 	{
 		super(313, "Collect Spores");
-		
 		registerQuestItems(SPORE_SAC);
-		
 		addStartNpc(30150); // Herbiel
 		addTalkId(30150);
-		
 		addKillId(20509); // Spore Fungus
 	}
 	
@@ -51,9 +48,7 @@ public class Q313_CollectSpores extends Quest
 		
 		if (event.equals("30150-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -72,11 +67,13 @@ public class Q313_CollectSpores extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 8) ? "30150-02.htm" : "30150-03.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30150-06.htm";
 				}
@@ -89,6 +86,7 @@ public class Q313_CollectSpores extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -97,7 +95,7 @@ public class Q313_CollectSpores extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -105,7 +103,7 @@ public class Q313_CollectSpores extends Quest
 		
 		if (st.dropItems(SPORE_SAC, 1, 10, 400000))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

@@ -33,10 +33,8 @@ public class Q617_GatherTheFlames extends Quest
 	private static final int HILDA = 31271;
 	private static final int VULCAN = 31539;
 	private static final int ROONEY = 32049;
-	
 	// Items
 	private static final int TORCH = 7264;
-	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -68,7 +66,6 @@ public class Q617_GatherTheFlames extends Quest
 		CHANCES.put(21379, 590000);
 		CHANCES.put(21380, 490000);
 	}
-	
 	// Rewards
 	private static final int[] REWARD =
 	{
@@ -87,16 +84,10 @@ public class Q617_GatherTheFlames extends Quest
 	public Q617_GatherTheFlames()
 	{
 		super(617, "Gather the Flames");
-		
 		registerQuestItems(TORCH);
-		
 		addStartNpc(VULCAN, HILDA);
 		addTalkId(VULCAN, HILDA, ROONEY);
-		
-		for (int mobs : CHANCES.keySet())
-		{
-			addKillId(mobs);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -111,9 +102,7 @@ public class Q617_GatherTheFlames extends Quest
 		
 		if (event.equals("31539-03.htm") || event.equals("31271-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("31539-05.htm"))
 		{
@@ -159,25 +148,32 @@ public class Q617_GatherTheFlames extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = npc.getNpcId() + ((player.getLevel() >= 74) ? "-01.htm" : "-02.htm");
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case VULCAN:
+					{
 						htmltext = (st.getQuestItemsCount(TORCH) >= 1000) ? "31539-04.htm" : "31539-05.htm";
 						break;
-					
+					}
 					case HILDA:
+					{
 						htmltext = "31271-04.htm";
 						break;
-					
+					}
 					case ROONEY:
+					{
 						htmltext = (st.getQuestItemsCount(TORCH) >= 1200) ? "32049-01.htm" : "32049-02.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

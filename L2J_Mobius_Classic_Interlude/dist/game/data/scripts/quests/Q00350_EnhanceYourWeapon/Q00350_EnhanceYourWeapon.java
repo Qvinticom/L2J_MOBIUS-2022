@@ -223,10 +223,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		
 		if (qs.getState() == State.CREATED)
 		{
-			qs.set("cond", "0");
-		}
-		if (qs.getInt("cond") == 0)
-		{
 			htmltext = npc.getId() + "-01.htm";
 		}
 		else if (check(player))

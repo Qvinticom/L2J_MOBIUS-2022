@@ -28,19 +28,15 @@ public class Q326_VanquishRemnants extends Quest
 	private static final int RED_CROSS_BADGE = 1359;
 	private static final int BLUE_CROSS_BADGE = 1360;
 	private static final int BLACK_CROSS_BADGE = 1361;
-	
 	// Reward
 	private static final int BLACK_LION_MARK = 1369;
 	
 	public Q326_VanquishRemnants()
 	{
 		super(326, "Vanquish Remnants");
-		
 		registerQuestItems(RED_CROSS_BADGE, BLUE_CROSS_BADGE, BLACK_CROSS_BADGE);
-		
 		addStartNpc(30435); // Leopold
 		addTalkId(30435);
-		
 		addKillId(20053, 20437, 20058, 20436, 20061, 20439, 20063, 20066, 20438);
 	}
 	
@@ -56,9 +52,7 @@ public class Q326_VanquishRemnants extends Quest
 		
 		if (event.equals("30435-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals("30435-07.htm"))
 		{
@@ -82,10 +76,12 @@ public class Q326_VanquishRemnants extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 21) ? "30435-01.htm" : "30435-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int redBadges = st.getQuestItemsCount(RED_CROSS_BADGE);
 				final int blueBadges = st.getQuestItemsCount(BLUE_CROSS_BADGE);
 				final int blackBadges = st.getQuestItemsCount(BLACK_CROSS_BADGE);
@@ -119,6 +115,7 @@ public class Q326_VanquishRemnants extends Quest
 					htmltext = "30435-04.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -138,20 +135,24 @@ public class Q326_VanquishRemnants extends Quest
 			case 20053:
 			case 20437:
 			case 20058:
+			{
 				st.dropItems(RED_CROSS_BADGE, 1, 0, 330000);
 				break;
-			
+			}
 			case 20436:
 			case 20061:
 			case 20439:
 			case 20063:
+			{
 				st.dropItems(BLUE_CROSS_BADGE, 1, 0, 160000);
 				break;
-			
+			}
 			case 20066:
 			case 20438:
+			{
 				st.dropItems(BLACK_CROSS_BADGE, 1, 0, 120000);
 				break;
+			}
 		}
 		
 		return null;

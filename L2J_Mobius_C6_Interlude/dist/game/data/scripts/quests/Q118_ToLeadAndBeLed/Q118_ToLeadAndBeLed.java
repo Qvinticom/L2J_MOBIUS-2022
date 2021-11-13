@@ -26,20 +26,17 @@ import quests.Q123_TheLeaderAndTheFollower.Q123_TheLeaderAndTheFollower;
 
 public class Q118_ToLeadAndBeLed extends Quest
 {
-	// Npc
+	// NPC
 	private static final int PINTER = 30298;
-	
-	// Mobs
+	// Monsters
 	private static final int MAILLE_LIZARDMAN = 20919;
 	private static final int MAILLE_LIZARDMAN_SCOUT = 20920;
 	private static final int MAILLE_LIZARDMAN_GUARD = 20921;
 	private static final int KING_OF_THE_ARANEID = 20927;
-	
 	// Items
 	private static final int BLOOD_OF_MAILLE_LIZARDMAN = 8062;
 	private static final int LEG_OF_KING_ARANEID = 8063;
 	private static final int CRYSTAL_D = 1458;
-	
 	// Rewards
 	private static final int CLAN_OATH_HELM = 7850;
 	private static final int CLAN_OATH_ARMOR = 7851;
@@ -55,12 +52,9 @@ public class Q118_ToLeadAndBeLed extends Quest
 	public Q118_ToLeadAndBeLed()
 	{
 		super(118, "To Lead and Be Led");
-		
 		registerQuestItems(BLOOD_OF_MAILLE_LIZARDMAN, LEG_OF_KING_ARANEID);
-		
 		addStartNpc(PINTER);
 		addTalkId(PINTER);
-		
 		addKillId(MAILLE_LIZARDMAN, MAILLE_LIZARDMAN_SCOUT, MAILLE_LIZARDMAN_GUARD, KING_OF_THE_ARANEID);
 	}
 	
@@ -74,84 +68,90 @@ public class Q118_ToLeadAndBeLed extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30298-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("state", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30298-05d.htm"))
-		{
-			if (st.getQuestItemsCount(BLOOD_OF_MAILLE_LIZARDMAN) > 9)
+			case "30298-03.htm":
 			{
-				st.set("cond", "3");
-				st.set("state", "2");
-				st.set("stateEx", "1");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_MAILLE_LIZARDMAN, -1);
+				st.startQuest();
+				st.set("state", "1");
+				break;
 			}
-		}
-		else if (event.equals("30298-05e.htm"))
-		{
-			if (st.getQuestItemsCount(BLOOD_OF_MAILLE_LIZARDMAN) > 9)
+			case "30298-05d.htm":
 			{
-				st.set("cond", "4");
-				st.set("state", "2");
-				st.set("stateEx", "2");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_MAILLE_LIZARDMAN, -1);
-			}
-		}
-		else if (event.equals("30298-05f.htm"))
-		{
-			if (st.getQuestItemsCount(BLOOD_OF_MAILLE_LIZARDMAN) > 9)
-			{
-				st.set("cond", "5");
-				st.set("state", "2");
-				st.set("stateEx", "3");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(BLOOD_OF_MAILLE_LIZARDMAN, -1);
-			}
-		}
-		else if (event.equals("30298-10.htm"))
-		{
-			final PlayerInstance academic = getApprentice(player);
-			if (academic != null)
-			{
-				final QuestState st2 = academic.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
-				if ((st2 != null) && (st2.getInt("state") == 2))
+				if (st.getQuestItemsCount(BLOOD_OF_MAILLE_LIZARDMAN) > 9)
 				{
-					final int stateEx = st2.getInt("stateEx");
-					if (stateEx == 1)
+					st.setCond(3);
+					st.set("state", "2");
+					st.set("stateEx", "1");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_MAILLE_LIZARDMAN, -1);
+				}
+				break;
+			}
+			case "30298-05e.htm":
+			{
+				if (st.getQuestItemsCount(BLOOD_OF_MAILLE_LIZARDMAN) > 9)
+				{
+					st.setCond(4);
+					st.set("state", "2");
+					st.set("stateEx", "2");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_MAILLE_LIZARDMAN, -1);
+				}
+				break;
+			}
+			case "30298-05f.htm":
+			{
+				if (st.getQuestItemsCount(BLOOD_OF_MAILLE_LIZARDMAN) > 9)
+				{
+					st.setCond(5);
+					st.set("state", "2");
+					st.set("stateEx", "3");
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(BLOOD_OF_MAILLE_LIZARDMAN, -1);
+				}
+				break;
+			}
+			case "30298-10.htm":
+			{
+				final PlayerInstance academic = getApprentice(player);
+				if (academic != null)
+				{
+					final QuestState st2 = academic.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
+					if ((st2 != null) && (st2.getInt("state") == 2))
 					{
-						if (st.getQuestItemsCount(CRYSTAL_D) > 921)
+						final int stateEx = st2.getInt("stateEx");
+						if (stateEx == 1)
 						{
-							st.takeItems(CRYSTAL_D, 922);
-							st2.set("cond", "6");
-							st2.set("state", "3");
-							st2.playSound(QuestState.SOUND_MIDDLE);
+							if (st.getQuestItemsCount(CRYSTAL_D) > 921)
+							{
+								st.takeItems(CRYSTAL_D, 922);
+								st2.setCond(6);
+								st2.set("state", "3");
+								st2.playSound(QuestState.SOUND_MIDDLE);
+							}
+							else
+							{
+								htmltext = "30298-11.htm";
+							}
 						}
 						else
 						{
-							htmltext = "30298-11.htm";
-						}
-					}
-					else
-					{
-						if (st.getQuestItemsCount(CRYSTAL_D) > 770)
-						{
-							st.takeItems(CRYSTAL_D, 771);
-							st2.set("cond", "6");
-							st2.set("state", "3");
-							st2.playSound(QuestState.SOUND_MIDDLE);
-						}
-						else
-						{
-							htmltext = "30298-11a.htm";
+							if (st.getQuestItemsCount(CRYSTAL_D) > 770)
+							{
+								st.takeItems(CRYSTAL_D, 771);
+								st2.setCond(6);
+								st2.set("state", "3");
+								st2.playSound(QuestState.SOUND_MIDDLE);
+							}
+							else
+							{
+								htmltext = "30298-11a.htm";
+							}
 						}
 					}
 				}
+				break;
 			}
 		}
 		
@@ -171,6 +171,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getSponsor() > 0)
 				{
 					final QuestState st2 = player.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
@@ -212,8 +213,9 @@ public class Q118_ToLeadAndBeLed extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				final int state = st.getInt("state");
 				if (state == 1)
 				{
@@ -262,7 +264,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 				}
 				else if (state == 3)
 				{
-					st.set("cond", "7");
+					st.setCond(7);
 					st.set("state", "4");
 					st.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = "30298-15.htm";
@@ -306,10 +308,12 @@ public class Q118_ToLeadAndBeLed extends Quest
 					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -330,24 +334,26 @@ public class Q118_ToLeadAndBeLed extends Quest
 			return null;
 		}
 		
-		final int cond = st.getInt("cond");
 		switch (npc.getNpcId())
 		{
 			case MAILLE_LIZARDMAN:
 			case MAILLE_LIZARDMAN_SCOUT:
 			case MAILLE_LIZARDMAN_GUARD:
-				if ((cond == 1) && st.dropItems(BLOOD_OF_MAILLE_LIZARDMAN, 1, 10, 700000))
+			{
+				if (st.isCond(1) && st.dropItems(BLOOD_OF_MAILLE_LIZARDMAN, 1, 10, 700000))
 				{
-					st.set("cond", "2");
+					st.setCond(2);
 				}
 				break;
-			
+			}
 			case KING_OF_THE_ARANEID:
-				if ((cond == 7) && getSponsor(player) && st.dropItems(LEG_OF_KING_ARANEID, 1, 8, 700000))
+			{
+				if (st.isCond(7) && getSponsor(player) && st.dropItems(LEG_OF_KING_ARANEID, 1, 8, 700000))
 				{
-					st.set("cond", "8");
+					st.setCond(8);
 				}
 				break;
+			}
 		}
 		
 		return null;

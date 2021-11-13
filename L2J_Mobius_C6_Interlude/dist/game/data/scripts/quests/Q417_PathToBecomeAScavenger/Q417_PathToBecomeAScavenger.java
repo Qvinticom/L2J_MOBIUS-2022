@@ -27,6 +27,21 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q417_PathToBecomeAScavenger extends Quest
 {
+	// NPCs
+	private static final int RAUT = 30316;
+	private static final int SHARI = 30517;
+	private static final int MION = 30519;
+	private static final int PIPPI = 30524;
+	private static final int BRONK = 30525;
+	private static final int ZIMENF = 30538;
+	private static final int TOMA = 30556;
+	private static final int TORAI = 30557;
+	private static final int YASHENI = 31958;
+	// Monsters
+	private static final int HUNTER_TARANTULA = 20403;
+	private static final int PLUNDER_TARANTULA = 20508;
+	private static final int HUNTER_BEAR = 20777;
+	private static final int HONEY_BEAR = 27058;
 	// Items
 	private static final int RING_OF_RAVEN = 1642;
 	private static final int PIPPI_LETTER = 1643;
@@ -46,32 +61,12 @@ public class Q417_PathToBecomeAScavenger extends Quest
 	private static final int BEAD_PARCEL_1 = 1657;
 	private static final int BEAD_PARCEL_2 = 8543;
 	
-	// NPCs
-	private static final int RAUT = 30316;
-	private static final int SHARI = 30517;
-	private static final int MION = 30519;
-	private static final int PIPPI = 30524;
-	private static final int BRONK = 30525;
-	private static final int ZIMENF = 30538;
-	private static final int TOMA = 30556;
-	private static final int TORAI = 30557;
-	private static final int YASHENI = 31958;
-	
-	// Monsters
-	private static final int HUNTER_TARANTULA = 20403;
-	private static final int PLUNDER_TARANTULA = 20508;
-	private static final int HUNTER_BEAR = 20777;
-	private static final int HONEY_BEAR = 27058;
-	
 	public Q417_PathToBecomeAScavenger()
 	{
 		super(417, "Path to become a Scavenger");
-		
 		registerQuestItems(PIPPI_LETTER, RAUT_TELEPORT_SCROLL, SUCCUBUS_UNDIES, MION_LETTER, BRONK_INGOT, SHARI_AXE, ZIMENF_POTION, BRONK_PAY, SHARI_PAY, ZIMENF_PAY, BEAR_PICTURE, TARANTULA_PICTURE, HONEY_JAR, BEAD, BEAD_PARCEL_1, BEAD_PARCEL_2);
-		
 		addStartNpc(PIPPI);
 		addTalkId(RAUT, SHARI, MION, PIPPI, BRONK, ZIMENF, TOMA, TORAI, YASHENI);
-		
 		addKillId(HUNTER_TARANTULA, PLUNDER_TARANTULA, HUNTER_BEAR, HONEY_BEAR);
 	}
 	
@@ -85,122 +80,131 @@ public class Q417_PathToBecomeAScavenger extends Quest
 			return htmltext;
 		}
 		
-		// PIPPI
-		if (event.equals("30524-05.htm"))
+		switch (event)
 		{
-			if (player.getClassId() != ClassId.DWARVEN_FIGHTER)
+			case "30524-05.htm":
 			{
-				htmltext = (player.getClassId() == ClassId.SCAVENGER) ? "30524-02a.htm" : "30524-08.htm";
+				if (player.getClassId() != ClassId.DWARVEN_FIGHTER)
+				{
+					htmltext = (player.getClassId() == ClassId.SCAVENGER) ? "30524-02a.htm" : "30524-08.htm";
+				}
+				else if (player.getLevel() < 19)
+				{
+					htmltext = "30524-02.htm";
+				}
+				else if (st.hasQuestItems(RING_OF_RAVEN))
+				{
+					htmltext = "30524-04.htm";
+				}
+				else
+				{
+					st.startQuest();
+					st.giveItems(PIPPI_LETTER, 1);
+				}
+				break;
 			}
-			else if (player.getLevel() < 19)
+			case "30519_1":
 			{
-				htmltext = "30524-02.htm";
-			}
-			else if (st.hasQuestItems(RING_OF_RAVEN))
-			{
-				htmltext = "30524-04.htm";
-			}
-			else
-			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound(QuestState.SOUND_ACCEPT);
-				st.giveItems(PIPPI_LETTER, 1);
-			}
-		}
-		// MION
-		else if (event.equals("30519_1"))
-		{
-			final int random = Rnd.get(3);
-			
-			htmltext = "30519-0" + (random + 2) + ".htm";
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(PIPPI_LETTER, -1);
-			st.giveItems(ZIMENF_POTION - random, 1);
-		}
-		else if (event.equals("30519_2"))
-		{
-			final int random = Rnd.get(3);
-			
-			htmltext = "30519-0" + (random + 2) + ".htm";
-			st.takeItems(BRONK_PAY, -1);
-			st.takeItems(SHARI_PAY, -1);
-			st.takeItems(ZIMENF_PAY, -1);
-			st.giveItems(ZIMENF_POTION - random, 1);
-		}
-		else if (event.equals("30519-07.htm"))
-		{
-			st.set("id", String.valueOf(st.getInt("id") + 1));
-		}
-		else if (event.equals("30519-09.htm"))
-		{
-			final int id = st.getInt("id");
-			if ((id / 10) < 2)
-			{
-				htmltext = "30519-07.htm";
-				st.set("id", String.valueOf(id + 1));
-			}
-			else if ((id / 10) == 2)
-			{
-				st.set("id", String.valueOf(id + 1));
-			}
-			else if ((id / 10) >= 3)
-			{
-				htmltext = "30519-10.htm";
-				st.set("cond", "4");
+				final int random = Rnd.get(3);
+				htmltext = "30519-0" + (random + 2) + ".htm";
+				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(SHARI_AXE, -1);
-				st.takeItems(ZIMENF_POTION, -1);
-				st.takeItems(BRONK_INGOT, -1);
-				st.giveItems(MION_LETTER, 1);
+				st.takeItems(PIPPI_LETTER, -1);
+				st.giveItems(ZIMENF_POTION - random, 1);
+				break;
 			}
-		}
-		else if (event.equals("30519-11.htm") && Rnd.nextBoolean())
-		{
-			htmltext = "30519-06.htm";
-		}
-		else if (event.equals("30556-05b.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(BEAD, -1);
-			st.takeItems(TARANTULA_PICTURE, 1);
-			st.giveItems(BEAD_PARCEL_1, 1);
-		}
-		else if (event.equals("30556-06b.htm"))
-		{
-			st.set("cond", "12");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(BEAD, -1);
-			st.takeItems(TARANTULA_PICTURE, 1);
-			st.giveItems(BEAD_PARCEL_2, 1);
-		}
-		// RAUT
-		else if (event.equals("30316-02.htm") || event.equals("30316-03.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(BEAD_PARCEL_1, 1);
-			st.giveItems(RAUT_TELEPORT_SCROLL, 1);
-		}
-		// TORAI
-		else if (event.equals("30557-03.htm"))
-		{
-			st.set("cond", "11");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(RAUT_TELEPORT_SCROLL, 1);
-			st.giveItems(SUCCUBUS_UNDIES, 1);
-		}
-		// YASHENI
-		else if (event.equals("31958-02.htm"))
-		{
-			st.takeItems(BEAD_PARCEL_2, 1);
-			st.giveItems(RING_OF_RAVEN, 1);
-			st.rewardExpAndSp(3200, 7080);
-			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
+			case "30519_2":
+			{
+				final int random = Rnd.get(3);
+				htmltext = "30519-0" + (random + 2) + ".htm";
+				st.takeItems(BRONK_PAY, -1);
+				st.takeItems(SHARI_PAY, -1);
+				st.takeItems(ZIMENF_PAY, -1);
+				st.giveItems(ZIMENF_POTION - random, 1);
+				break;
+			}
+			case "30519-07.htm":
+			{
+				st.set("id", String.valueOf(st.getInt("id") + 1));
+				break;
+			}
+			case "30519-09.htm":
+			{
+				final int id = st.getInt("id");
+				if ((id / 10) < 2)
+				{
+					htmltext = "30519-07.htm";
+					st.set("id", String.valueOf(id + 1));
+				}
+				else if ((id / 10) == 2)
+				{
+					st.set("id", String.valueOf(id + 1));
+				}
+				else if ((id / 10) >= 3)
+				{
+					htmltext = "30519-10.htm";
+					st.setCond(4);
+					st.playSound(QuestState.SOUND_MIDDLE);
+					st.takeItems(SHARI_AXE, -1);
+					st.takeItems(ZIMENF_POTION, -1);
+					st.takeItems(BRONK_INGOT, -1);
+					st.giveItems(MION_LETTER, 1);
+				}
+				break;
+			}
+			case "30519-11.htm":
+			{
+				if (Rnd.nextBoolean())
+				{
+					htmltext = "30519-06.htm";
+				}
+				break;
+			}
+			case "30556-05b.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(BEAD, -1);
+				st.takeItems(TARANTULA_PICTURE, 1);
+				st.giveItems(BEAD_PARCEL_1, 1);
+				break;
+			}
+			case "30556-06b.htm":
+			{
+				st.setCond(12);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(BEAD, -1);
+				st.takeItems(TARANTULA_PICTURE, 1);
+				st.giveItems(BEAD_PARCEL_2, 1);
+				break;
+			}
+			case "30316-02.htm":
+			case "30316-03.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(BEAD_PARCEL_1, 1);
+				st.giveItems(RAUT_TELEPORT_SCROLL, 1);
+				break;
+			}
+			case "30557-03.htm":
+			{
+				st.setCond(11);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(RAUT_TELEPORT_SCROLL, 1);
+				st.giveItems(SUCCUBUS_UNDIES, 1);
+				break;
+			}
+			case "31958-02.htm":
+			{
+				st.takeItems(BEAD_PARCEL_2, 1);
+				st.giveItems(RING_OF_RAVEN, 1);
+				st.rewardExpAndSp(3200, 7080);
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -219,14 +223,17 @@ public class Q417_PathToBecomeAScavenger extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30524-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case PIPPI:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30524-06.htm";
@@ -236,8 +243,9 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							htmltext = "30524-07.htm";
 						}
 						break;
-					
+					}
 					case MION:
+					{
 						if (st.hasQuestItems(PIPPI_LETTER))
 						{
 							htmltext = "30519-01.htm";
@@ -264,7 +272,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							else
 							{
 								htmltext = "30519-15.htm";
-								st.set("cond", "4");
+								st.setCond(4);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								st.takeItems(BRONK_PAY, -1);
 								st.takeItems(SHARI_PAY, -1);
@@ -281,8 +289,9 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							htmltext = "30519-14.htm";
 						}
 						break;
-					
+					}
 					case SHARI:
+					{
 						if (st.hasQuestItems(SHARI_AXE))
 						{
 							final int id = st.getInt("id");
@@ -293,7 +302,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							else
 							{
 								htmltext = "30517-02.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							st.set("id", String.valueOf(id + 10));
@@ -305,8 +314,9 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							htmltext = "30517-03.htm";
 						}
 						break;
-					
+					}
 					case BRONK:
+					{
 						if (st.hasQuestItems(BRONK_INGOT))
 						{
 							final int id = st.getInt("id");
@@ -317,7 +327,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							else
 							{
 								htmltext = "30525-02.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							st.set("id", String.valueOf(id + 10));
@@ -329,8 +339,9 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							htmltext = "30525-03.htm";
 						}
 						break;
-					
+					}
 					case ZIMENF:
+					{
 						if (st.hasQuestItems(ZIMENF_POTION))
 						{
 							final int id = st.getInt("id");
@@ -341,7 +352,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							else
 							{
 								htmltext = "30538-02.htm";
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 							}
 							st.set("id", String.valueOf(id + 10));
@@ -353,12 +364,13 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							htmltext = "30538-03.htm";
 						}
 						break;
-					
+					}
 					case TOMA:
+					{
 						if (cond == 4)
 						{
 							htmltext = "30556-01.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(MION_LETTER, 1);
 							st.giveItems(BEAR_PICTURE, 1);
@@ -370,7 +382,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 						else if (cond == 6)
 						{
 							htmltext = "30556-03.htm";
-							st.set("cond", "7");
+							st.setCond(7);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HONEY_JAR, -1);
 							st.takeItems(BEAR_PICTURE, 1);
@@ -397,8 +409,9 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							htmltext = "30556-06c.htm";
 						}
 						break;
-					
+					}
 					case RAUT:
+					{
 						if (cond == 9)
 						{
 							htmltext = "30316-01.htm";
@@ -418,22 +431,26 @@ public class Q417_PathToBecomeAScavenger extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case TORAI:
+					{
 						if (cond == 10)
 						{
 							htmltext = "30557-01.htm";
 						}
 						break;
-					
+					}
 					case YASHENI:
+					{
 						if (cond == 12)
 						{
 							htmltext = "31958-01.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -451,7 +468,8 @@ public class Q417_PathToBecomeAScavenger extends Quest
 		switch (npc.getNpcId())
 		{
 			case HUNTER_BEAR:
-				if (st.getInt("cond") == 5)
+			{
+				if (st.isCond(5))
 				{
 					final int step = st.getInt("step");
 					if (step > 20)
@@ -472,21 +490,24 @@ public class Q417_PathToBecomeAScavenger extends Quest
 					}
 				}
 				break;
-			
+			}
 			case HONEY_BEAR:
-				if ((st.getInt("cond") == 5) && (npc.getSpoiledBy() == player.getObjectId()) && st.dropItemsAlways(HONEY_JAR, 1, 5))
+			{
+				if (st.isCond(5) && (npc.getSpoiledBy() == player.getObjectId()) && st.dropItemsAlways(HONEY_JAR, 1, 5))
 				{
-					st.set("cond", "6");
+					st.setCond(6);
 				}
 				break;
-			
+			}
 			case HUNTER_TARANTULA:
 			case PLUNDER_TARANTULA:
-				if ((st.getInt("cond") == 7) && (npc.getSpoiledBy() == player.getObjectId()) && st.dropItems(BEAD, 1, 20, (npc.getNpcId() == HUNTER_TARANTULA) ? 333333 : 600000))
+			{
+				if (st.isCond(7) && (npc.getSpoiledBy() == player.getObjectId()) && st.dropItems(BEAD, 1, 20, (npc.getNpcId() == HUNTER_TARANTULA) ? 333333 : 600000))
 				{
-					st.set("cond", "8");
+					st.setCond(8);
 				}
 				break;
+			}
 		}
 		
 		return null;

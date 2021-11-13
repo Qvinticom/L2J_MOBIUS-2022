@@ -26,32 +26,26 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q293_TheHiddenVeins extends Quest
 {
+	// NPCs
+	private static final int FILAUR = 30535;
+	private static final int CHINCHIRIN = 30539;
+	// Monsters
+	private static final int UTUKU_ORC = 20446;
+	private static final int UTUKU_ARCHER = 20447;
+	private static final int UTUKU_GRUNT = 20448;
 	// Items
 	private static final int CHRYSOLITE_ORE = 1488;
 	private static final int TORN_MAP_FRAGMENT = 1489;
 	private static final int HIDDEN_VEIN_MAP = 1490;
-	
 	// Reward
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
-	
-	// NPCs
-	private static final int FILAUR = 30535;
-	private static final int CHINCHIRIN = 30539;
-	
-	// Mobs
-	private static final int UTUKU_ORC = 20446;
-	private static final int UTUKU_ARCHER = 20447;
-	private static final int UTUKU_GRUNT = 20448;
 	
 	public Q293_TheHiddenVeins()
 	{
 		super(293, "The Hidden Veins");
-		
 		registerQuestItems(CHRYSOLITE_ORE, TORN_MAP_FRAGMENT, HIDDEN_VEIN_MAP);
-		
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR, CHINCHIRIN);
-		
 		addKillId(UTUKU_ORC, UTUKU_ARCHER, UTUKU_GRUNT);
 	}
 	
@@ -65,25 +59,29 @@ public class Q293_TheHiddenVeins extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30535-03.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30535-06.htm"))
-		{
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(true);
-		}
-		else if (event.equals("30539-02.htm"))
-		{
-			if (st.getQuestItemsCount(TORN_MAP_FRAGMENT) >= 4)
+			case "30535-03.htm":
 			{
-				htmltext = "30539-03.htm";
-				st.playSound(QuestState.SOUND_ITEMGET);
-				st.takeItems(TORN_MAP_FRAGMENT, 4);
-				st.giveItems(HIDDEN_VEIN_MAP, 1);
+				st.startQuest();
+				break;
+			}
+			case "30535-06.htm":
+			{
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(true);
+				break;
+			}
+			case "30539-02.htm":
+			{
+				if (st.getQuestItemsCount(TORN_MAP_FRAGMENT) >= 4)
+				{
+					htmltext = "30539-03.htm";
+					st.playSound(QuestState.SOUND_ITEMGET);
+					st.takeItems(TORN_MAP_FRAGMENT, 4);
+					st.giveItems(HIDDEN_VEIN_MAP, 1);
+				}
+				break;
 			}
 		}
 		
@@ -103,6 +101,7 @@ public class Q293_TheHiddenVeins extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.DWARF)
 				{
 					htmltext = "30535-00.htm";
@@ -116,11 +115,13 @@ public class Q293_TheHiddenVeins extends Quest
 					htmltext = "30535-02.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case FILAUR:
+					{
 						final int chrysoliteOres = st.getQuestItemsCount(CHRYSOLITE_ORE);
 						final int hiddenVeinMaps = st.getQuestItemsCount(HIDDEN_VEIN_MAP);
 						if ((chrysoliteOres + hiddenVeinMaps) == 0)
@@ -157,12 +158,15 @@ public class Q293_TheHiddenVeins extends Quest
 							}
 						}
 						break;
-					
+					}
 					case CHINCHIRIN:
+					{
 						htmltext = "30539-01.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

@@ -50,9 +50,7 @@ public class KetraOrcSupport extends Quest
 	private static final int JAFF = 31374; // Warehouse Keeper
 	private static final int JUMARA = 31375; // Trader
 	private static final int KURFA = 31376; // Gate Keeper
-	
 	private static final int HORN = 7186;
-	
 	private static final int[] KETRAS =
 	{
 		21324,
@@ -77,44 +75,19 @@ public class KetraOrcSupport extends Quest
 		21348,
 		21349
 	};
-	
 	private static final int[][] BUFF =
 	{
-		{
-			4359,
-			2
-		}, // Focus: Requires 2 Buffalo Horns
-		{
-			4360,
-			2
-		}, // Death Whisper: Requires 2 Buffalo Horns
-		{
-			4345,
-			3
-		}, // Might: Requires 3 Buffalo Horns
-		{
-			4355,
-			3
-		}, // Acumen: Requires 3 Buffalo Horns
-		{
-			4352,
-			3
-		}, // Berserker: Requires 3 Buffalo Horns
-		{
-			4354,
-			3
-		}, // Vampiric Rage: Requires 3 Buffalo Horns
-		{
-			4356,
-			6
-		}, // Empower: Requires 6 Buffalo Horns
-		{
-			4357,
-			6
-		}
-		// Haste: Requires 6 Buffalo Horns
+		// @formatter:off
+		{4359, 2}, // Focus: Requires 2 Buffalo Horns
+		{4360, 2}, // Death Whisper: Requires 2 Buffalo Horns
+		{4345, 3}, // Might: Requires 3 Buffalo Horns
+		{4355, 3}, // Acumen: Requires 3 Buffalo Horns
+		{4352, 3}, // Berserker: Requires 3 Buffalo Horns
+		{4354, 3}, // Vampiric Rage: Requires 3 Buffalo Horns
+		{4356, 6}, // Empower: Requires 6 Buffalo Horns
+		{4357, 6}, // Haste: Requires 6 Buffalo Horns
+		// @formatter:on
 	};
-	
 	private static final Skill VARKA_KETRA_PETRIFICATION = SkillTable.getInstance().getSkill(4578, 1);
 	
 	/**
@@ -185,11 +158,15 @@ public class KetraOrcSupport extends Quest
 			switch (player.getAllianceWithVarkaKetra())
 			{
 				case 4:
+				{
 					htmltext = "31376-4.htm";
 					break;
+				}
 				case 5:
+				{
 					htmltext = "31376-5.htm";
 					break;
+				}
 			}
 		}
 		
@@ -211,6 +188,7 @@ public class KetraOrcSupport extends Quest
 		switch (npc.getNpcId())
 		{
 			case KADUN:
+			{
 				if (allianceLevel > 0)
 				{
 					htmltext = "31370-friend.htm";
@@ -220,8 +198,9 @@ public class KetraOrcSupport extends Quest
 					htmltext = "31370-no.htm";
 				}
 				break;
-			
+			}
 			case WAHKAN:
+			{
 				if (allianceLevel > 0)
 				{
 					htmltext = "31371-friend.htm";
@@ -231,8 +210,9 @@ public class KetraOrcSupport extends Quest
 					htmltext = "31371-no.htm";
 				}
 				break;
-			
+			}
 			case ASEFA:
+			{
 				st.setState(State.STARTED);
 				if (allianceLevel < 1)
 				{
@@ -254,8 +234,9 @@ public class KetraOrcSupport extends Quest
 					}
 				}
 				break;
-			
+			}
 			case ATAN:
+			{
 				if (player.getKarma() >= 1)
 				{
 					htmltext = "31373-pk.htm";
@@ -273,18 +254,24 @@ public class KetraOrcSupport extends Quest
 					htmltext = "31373-2.htm";
 				}
 				break;
-			
+			}
 			case JAFF:
+			{
 				switch (allianceLevel)
 				{
 					case 1:
+					{
 						htmltext = "31374-1.htm";
 						break;
+					}
 					case 2:
 					case 3:
+					{
 						htmltext = "31374-2.htm";
 						break;
+					}
 					default:
+					{
 						if (allianceLevel <= 0)
 						{
 							htmltext = "31374-no.htm";
@@ -298,29 +285,40 @@ public class KetraOrcSupport extends Quest
 							htmltext = "31374-4.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case JUMARA:
+			{
 				switch (allianceLevel)
 				{
 					case 2:
+					{
 						htmltext = "31375-1.htm";
 						break;
+					}
 					case 3:
 					case 4:
+					{
 						htmltext = "31375-2.htm";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "31375-3.htm";
 						break;
+					}
 					default:
+					{
 						htmltext = "31375-no.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case KURFA:
+			{
 				if (allianceLevel <= 0)
 				{
 					htmltext = "31376-no.htm";
@@ -338,6 +336,7 @@ public class KetraOrcSupport extends Quest
 					htmltext = "31376-3.htm";
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -376,6 +375,7 @@ public class KetraOrcSupport extends Quest
 				case HEAL_STATIC:
 				case BALANCE_LIFE:
 				case HOT:
+				{
 					for (WorldObject target : skill.getTargetList(caster))
 					{
 						// Character isn't existing, or is current caster, we drop check.
@@ -419,6 +419,7 @@ public class KetraOrcSupport extends Quest
 						}
 					}
 					break;
+				}
 			}
 		}
 		

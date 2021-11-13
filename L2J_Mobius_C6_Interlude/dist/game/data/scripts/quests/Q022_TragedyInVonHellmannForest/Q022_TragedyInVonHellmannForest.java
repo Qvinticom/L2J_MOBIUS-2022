@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
-import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.util.Util;
 
 import quests.Q021_HiddenTruth.Q021_HiddenTruth;
@@ -38,7 +37,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	private static final int WELL = 31527;
 	private static final int GHOST_OF_PRIEST = 31528;
 	private static final int GHOST_OF_ADVENTURER = 31529;
-	// Mobs
+	// Monsters
 	private static final int[] MOBS =
 	{
 		21553, // Trampled Man
@@ -66,7 +65,6 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	public Q022_TragedyInVonHellmannForest()
 	{
 		super(22, "Tragedy in von Hellmann Forest");
-		
 		addKillId(MOBS);
 		addKillId(SOUL_OF_WELL);
 		addAttackId(SOUL_OF_WELL);
@@ -135,9 +133,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			{
 				if (qs.isCreated())
 				{
-					qs.setState(State.STARTED);
-					qs.set("cond", "1");
-					qs.playSound(QuestState.SOUND_ACCEPT);
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -146,21 +142,21 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			{
 				if (!qs.hasQuestItems(CROSS_OF_EINHASAD))
 				{
-					qs.set("cond", "2");
+					qs.setCond(2);
 					htmltext = event;
 				}
 				else
 				{
 					htmltext = "31334-06.htm";
-					qs.set("cond", "3");
+					qs.setCond(3);
 				}
 				break;
 			}
 			case "31334-08.htm":
 			{
-				if (qs.getInt("cond") == 3)
+				if (qs.isCond(3))
 				{
-					qs.set("cond", "4");
+					qs.setCond(4);
 					qs.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = event;
 				}
@@ -168,7 +164,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31334-13.htm":
 			{
-				final int cond = qs.getInt("cond");
+				final int cond = qs.getCond();
 				if (((5 <= cond) && (cond <= 7)) && qs.hasQuestItems(CROSS_OF_EINHASAD))
 				{
 					if (_tifarenOwner == 0)
@@ -181,14 +177,14 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 						if (((cond == 5) || (cond == 6)) && qs.hasQuestItems(LOST_SKULL_OF_ELF))
 						{
 							qs.takeItems(LOST_SKULL_OF_ELF, -1);
-							qs.set("cond", "7");
+							qs.setCond(7);
 							qs.playSound(QuestState.SOUND_MIDDLE);
 						}
 						htmltext = event;
 					}
 					else
 					{
-						qs.set("cond", "6");
+						qs.setCond(6);
 						htmltext = "31334-14.htm";
 					}
 				}
@@ -211,7 +207,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 					qt.cancel();
 					npc.setScriptValue(0);
 					startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc, player);
-					qs.set("cond", "8");
+					qs.setCond(8);
 					qs.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = event;
 				}
@@ -229,7 +225,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31328-03.htm":
 			{
-				if (qs.getInt("cond") == 8)
+				if (qs.isCond(8))
 				{
 					
 					qs.takeItems(CROSS_OF_EINHASAD, -1);
@@ -239,10 +235,10 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31328-09.htm":
 			{
-				if (qs.getInt("cond") == 8)
+				if (qs.isCond(8))
 				{
 					qs.giveItems(LETTER_OF_INNOCENTIN, 1);
-					qs.set("cond", "9");
+					qs.setCond(9);
 					qs.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = event;
 				}
@@ -250,10 +246,10 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31328-11.htm":
 			{
-				if ((qs.getInt("cond") == 14) && qs.hasQuestItems(REPORT_BOX))
+				if (qs.isCond(14) && qs.hasQuestItems(REPORT_BOX))
 				{
 					qs.takeItems(REPORT_BOX, -1);
-					qs.set("cond", "15");
+					qs.setCond(15);
 					qs.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = event;
 				}
@@ -261,9 +257,9 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31328-19.htm":
 			{
-				if (qs.getInt("cond") == 15)
+				if (qs.isCond(15))
 				{
-					qs.set("cond", "16");
+					qs.setCond(16);
 					qs.playSound(QuestState.SOUND_MIDDLE);
 					htmltext = event;
 				}
@@ -271,7 +267,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31527-02.htm":
 			{
-				if ((qs.getInt("cond") == 10) && (_soulWellNpc == null))
+				if (qs.isCond(10) && (_soulWellNpc == null))
 				{
 					_soulWellNpc = addSpawn(SOUL_OF_WELL, SOUL_WELL_LOC, true, 0);
 					startQuestTimer("activateSoulOfWell", 90000, _soulWellNpc, player);
@@ -304,7 +300,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31529-03.htm":
 			{
-				if ((qs.getInt("cond") == 9) && qs.hasQuestItems(LETTER_OF_INNOCENTIN))
+				if (qs.isCond(9) && qs.hasQuestItems(LETTER_OF_INNOCENTIN))
 				{
 					qs.set("memoState", "8");
 					htmltext = event;
@@ -325,7 +321,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 				if (qs.getInt("memoState") == 9)
 				{
 					qs.giveItems(JEWEL_OF_ADVENTURER_1, 1);
-					qs.set("cond", "10");
+					qs.setCond(10);
 					qs.playSound(QuestState.SOUND_MIDDLE);
 					qs.set("memoState", "10");
 					htmltext = event;
@@ -345,7 +341,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 		{
 			case TIFAREN:
 			{
-				switch (qs.getInt("cond"))
+				switch (qs.getCond())
 				{
 					case 0:
 					{
@@ -401,7 +397,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 							else
 							{
 								htmltext = "31334-16.htm";
-								qs.set("cond", "6");
+								qs.setCond(6);
 							}
 						}
 						break;
@@ -431,14 +427,14 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case INNOCENTIN:
 			{
-				switch (qs.getInt("cond"))
+				switch (qs.getCond())
 				{
 					case 2:
 					{
 						if (!qs.hasQuestItems(CROSS_OF_EINHASAD))
 						{
 							qs.giveItems(CROSS_OF_EINHASAD, 1);
-							qs.set("cond", "3");
+							qs.setCond(3);
 							htmltext = "31328-01.htm";
 						}
 						break;
@@ -500,7 +496,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case WELL:
 			{
-				switch (qs.getInt("cond"))
+				switch (qs.getCond())
 				{
 					case 10:
 					{
@@ -516,7 +512,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_2) && !qs.hasQuestItems(SEALED_REPORT_BOX))
 						{
 							qs.giveItems(SEALED_REPORT_BOX, 1);
-							qs.set("cond", "13");
+							qs.setCond(13);
 							htmltext = "31527-04.htm";
 						}
 						break;
@@ -534,7 +530,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			}
 			case GHOST_OF_ADVENTURER:
 			{
-				switch (qs.getInt("cond"))
+				switch (qs.getCond())
 				{
 					case 9:
 					{
@@ -586,7 +582,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_2) && !qs.hasQuestItems(SEALED_REPORT_BOX))
 						{
 							htmltext = "31529-15.htm";
-							qs.set("cond", "12");
+							qs.setCond(12);
 						}
 						break;
 					}
@@ -597,7 +593,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 							qs.giveItems(REPORT_BOX, 1);
 							qs.takeItems(SEALED_REPORT_BOX, -1);
 							qs.takeItems(JEWEL_OF_ADVENTURER_2, -1);
-							qs.set("cond", "14");
+							qs.setCond(14);
 							htmltext = "31529-16.htm";
 						}
 						break;
@@ -621,7 +617,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = attacker.getQuestState(getName());
-		if ((qs != null) && (qs.getInt("cond") == 10) && qs.hasQuestItems(JEWEL_OF_ADVENTURER_1))
+		if ((qs != null) && qs.isCond(10) && qs.hasQuestItems(JEWEL_OF_ADVENTURER_1))
 		{
 			if (qs.getInt("memoState") == 10)
 			{
@@ -631,7 +627,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			{
 				qs.takeItems(JEWEL_OF_ADVENTURER_1, -1);
 				qs.giveItems(JEWEL_OF_ADVENTURER_2, 1);
-				qs.set("cond", "11");
+				qs.setCond(11);
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -649,10 +645,10 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			else
 			{
 				final QuestState qs = killer.getQuestState(getName());
-				if ((qs != null) && (qs.getInt("cond") == 4) && qs.hasQuestItems(CROSS_OF_EINHASAD) && !qs.hasQuestItems(LOST_SKULL_OF_ELF) && (Rnd.get(100) < 10))
+				if ((qs != null) && qs.isCond(4) && qs.hasQuestItems(CROSS_OF_EINHASAD) && !qs.hasQuestItems(LOST_SKULL_OF_ELF) && (Rnd.get(100) < 10))
 				{
 					qs.giveItems(LOST_SKULL_OF_ELF, 1);
-					qs.set("cond", "5");
+					qs.setCond(5);
 				}
 			}
 		}

@@ -28,6 +28,27 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q233_TestOfTheWarSpirit extends Quest
 {
+	// NPCs
+	private static final int VIVYAN = 30030;
+	private static final int SARIEN = 30436;
+	private static final int RACOY = 30507;
+	private static final int SOMAK = 30510;
+	private static final int MANAKIA = 30515;
+	private static final int ORIM = 30630;
+	private static final int ANCESTOR_MARTANKUS = 30649;
+	private static final int PEKIRON = 30682;
+	// Monsters
+	private static final int NOBLE_ANT = 20089;
+	private static final int NOBLE_ANT_LEADER = 20090;
+	private static final int MEDUSA = 20158;
+	private static final int PORTA = 20213;
+	private static final int EXCURO = 20214;
+	private static final int MORDEO = 20215;
+	private static final int LETO_LIZARDMAN_SHAMAN = 20581;
+	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
+	private static final int TAMLIN_ORC = 20601;
+	private static final int TAMLIN_ORC_ARCHER = 20602;
+	private static final int STENOA_GORGON_QUEEN = 27108;
 	// Items
 	private static final int VENDETTA_TOTEM = 2880;
 	private static final int TAMLIN_ORC_HEAD = 2881;
@@ -64,40 +85,14 @@ public class Q233_TestOfTheWarSpirit extends Quest
 	private static final int TONAR_REMAINS_2 = 2912;
 	private static final int HERMODT_REMAINS_2 = 2913;
 	private static final int KIRUNA_REMAINS_2 = 2914;
-	
 	// Rewards
 	private static final int MARK_OF_WARSPIRIT = 2879;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	// NPCs
-	private static final int VIVYAN = 30030;
-	private static final int SARIEN = 30436;
-	private static final int RACOY = 30507;
-	private static final int SOMAK = 30510;
-	private static final int MANAKIA = 30515;
-	private static final int ORIM = 30630;
-	private static final int ANCESTOR_MARTANKUS = 30649;
-	private static final int PEKIRON = 30682;
-	
-	// Monsters
-	private static final int NOBLE_ANT = 20089;
-	private static final int NOBLE_ANT_LEADER = 20090;
-	private static final int MEDUSA = 20158;
-	private static final int PORTA = 20213;
-	private static final int EXCURO = 20214;
-	private static final int MORDEO = 20215;
-	private static final int LETO_LIZARDMAN_SHAMAN = 20581;
-	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
-	private static final int TAMLIN_ORC = 20601;
-	private static final int TAMLIN_ORC_ARCHER = 20602;
-	private static final int STENOA_GORGON_QUEEN = 27108;
-	
 	public Q233_TestOfTheWarSpirit()
 	{
 		super(233, "Test of the War Spirit");
-		
 		registerQuestItems(VENDETTA_TOTEM, TAMLIN_ORC_HEAD, WARSPIRIT_TOTEM, ORIM_CONTRACT, PORTA_EYE, EXCURO_SCALE, MORDEO_TALON, BRAKI_REMAINS_1, PEKIRON_TOTEM, TONAR_SKULL, TONAR_RIBBONE, TONAR_SPINE, TONAR_ARMBONE, TONAR_THIGHBONE, TONAR_REMAINS_1, MANAKIA_TOTEM, HERMODT_SKULL, HERMODT_RIBBONE, HERMODT_SPINE, HERMODT_ARMBONE, HERMODT_THIGHBONE, HERMODT_REMAINS_1, RACOY_TOTEM, VIVYAN_LETTER, INSECT_DIAGRAM_BOOK, KIRUNA_SKULL, KIRUNA_RIBBONE, KIRUNA_SPINE, KIRUNA_ARMBONE, KIRUNA_THIGHBONE, KIRUNA_REMAINS_1, BRAKI_REMAINS_2, TONAR_REMAINS_2, HERMODT_REMAINS_2, KIRUNA_REMAINS_2);
-		
 		addStartNpc(SOMAK);
 		addTalkId(SOMAK, VIVYAN, SARIEN, RACOY, MANAKIA, ORIM, ANCESTOR_MARTANKUS, PEKIRON);
 		addKillId(NOBLE_ANT, NOBLE_ANT_LEADER, MEDUSA, PORTA, EXCURO, MORDEO, LETO_LIZARDMAN_SHAMAN, LETO_LIZARDMAN_OVERLORD, TAMLIN_ORC, TAMLIN_ORC_ARCHER, STENOA_GORGON_QUEEN);
@@ -113,64 +108,64 @@ public class Q233_TestOfTheWarSpirit extends Quest
 			return htmltext;
 		}
 		
-		// SOMAK
-		if (event.equals("30510-05.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-			
-			if (!player.getVariables().getBoolean("secondClassChange39", false))
+			case "30510-05.htm":
 			{
-				htmltext = "30510-05e.htm";
-				st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
-				player.getVariables().set("secondClassChange39", true);
+				st.startQuest();
+				if (!player.getVariables().getBoolean("secondClassChange39", false))
+				{
+					htmltext = "30510-05e.htm";
+					st.giveItems(DIMENSIONAL_DIAMOND, DF_REWARD_39.get(player.getClassId().getId()));
+					player.getVariables().set("secondClassChange39", true);
+				}
+				break;
 			}
-		}
-		// ORIM
-		else if (event.equals("30630-04.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(ORIM_CONTRACT, 1);
-		}
-		// RACOY
-		else if (event.equals("30507-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(RACOY_TOTEM, 1);
-		}
-		// VIVYAN
-		else if (event.equals("30030-04.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(VIVYAN_LETTER, 1);
-		}
-		// PEKIRON
-		else if (event.equals("30682-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(PEKIRON_TOTEM, 1);
-		}
-		// MANAKIA
-		else if (event.equals("30515-02.htm"))
-		{
-			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(MANAKIA_TOTEM, 1);
-		}
-		// ANCESTOR MARTANKUS
-		else if (event.equals("30649-03.htm"))
-		{
-			st.takeItems(TAMLIN_ORC_HEAD, -1);
-			st.takeItems(WARSPIRIT_TOTEM, -1);
-			st.takeItems(BRAKI_REMAINS_2, -1);
-			st.takeItems(HERMODT_REMAINS_2, -1);
-			st.takeItems(KIRUNA_REMAINS_2, -1);
-			st.takeItems(TONAR_REMAINS_2, -1);
-			st.giveItems(MARK_OF_WARSPIRIT, 1);
-			st.rewardExpAndSp(63483, 17500);
-			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "30630-04.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(ORIM_CONTRACT, 1);
+				break;
+			}
+			case "30507-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(RACOY_TOTEM, 1);
+				break;
+			}
+			case "30030-04.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(VIVYAN_LETTER, 1);
+				break;
+			}
+			case "30682-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(PEKIRON_TOTEM, 1);
+				break;
+			}
+			case "30515-02.htm":
+			{
+				st.playSound(QuestState.SOUND_ITEMGET);
+				st.giveItems(MANAKIA_TOTEM, 1);
+				break;
+			}
+			case "30649-03.htm":
+			{
+				st.takeItems(TAMLIN_ORC_HEAD, -1);
+				st.takeItems(WARSPIRIT_TOTEM, -1);
+				st.takeItems(BRAKI_REMAINS_2, -1);
+				st.takeItems(HERMODT_REMAINS_2, -1);
+				st.takeItems(KIRUNA_REMAINS_2, -1);
+				st.takeItems(TONAR_REMAINS_2, -1);
+				st.giveItems(MARK_OF_WARSPIRIT, 1);
+				st.rewardExpAndSp(63483, 17500);
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -189,6 +184,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getClassId() == ClassId.ORC_SHAMAN)
 				{
 					htmltext = (player.getLevel() < 39) ? "30510-03.htm" : "30510-04.htm";
@@ -198,12 +194,14 @@ public class Q233_TestOfTheWarSpirit extends Quest
 					htmltext = (player.getRace() == Race.ORC) ? "30510-02.htm" : "30510-01.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case SOMAK:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30510-06.htm";
@@ -211,7 +209,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 						else if (cond == 2)
 						{
 							htmltext = "30510-07.htm";
-							st.set("cond", "3");
+							st.setCond(3);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BRAKI_REMAINS_1, 1);
 							st.takeItems(HERMODT_REMAINS_1, 1);
@@ -226,7 +224,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 						else if (cond == 4)
 						{
 							htmltext = "30510-09.htm";
-							st.set("cond", "5");
+							st.setCond(5);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(VENDETTA_TOTEM, 1);
 							st.giveItems(BRAKI_REMAINS_2, 1);
@@ -240,8 +238,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30510-10.htm";
 						}
 						break;
-					
+					}
 					case ORIM:
+					{
 						if ((cond == 1) && !st.hasQuestItems(BRAKI_REMAINS_1))
 						{
 							if (!st.hasQuestItems(ORIM_CONTRACT))
@@ -259,7 +258,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 								
 								if (st.hasQuestItems(HERMODT_REMAINS_1, KIRUNA_REMAINS_1, TONAR_REMAINS_1))
 								{
-									st.set("cond", "2");
+									st.setCond(2);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 								else
@@ -277,8 +276,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30630-07.htm";
 						}
 						break;
-					
+					}
 					case RACOY:
+					{
 						if ((cond == 1) && !st.hasQuestItems(KIRUNA_REMAINS_1))
 						{
 							if (!st.hasQuestItems(RACOY_TOTEM))
@@ -305,7 +305,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 									
 									if (st.hasQuestItems(BRAKI_REMAINS_1, HERMODT_REMAINS_1, TONAR_REMAINS_1))
 									{
-										st.set("cond", "2");
+										st.setCond(2);
 										st.playSound(QuestState.SOUND_MIDDLE);
 									}
 									else
@@ -328,8 +328,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30507-07.htm";
 						}
 						break;
-					
+					}
 					case VIVYAN:
+					{
 						if ((cond == 1) && st.hasQuestItems(RACOY_TOTEM))
 						{
 							if (st.hasQuestItems(VIVYAN_LETTER))
@@ -350,8 +351,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30030-07.htm";
 						}
 						break;
-					
+					}
 					case SARIEN:
+					{
 						if ((cond == 1) && st.hasQuestItems(RACOY_TOTEM))
 						{
 							if (st.hasQuestItems(VIVYAN_LETTER))
@@ -371,8 +373,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30436-03.htm";
 						}
 						break;
-					
+					}
 					case PEKIRON:
+					{
 						if ((cond == 1) && !st.hasQuestItems(TONAR_REMAINS_1))
 						{
 							if (!st.hasQuestItems(PEKIRON_TOTEM))
@@ -392,7 +395,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 								
 								if (st.hasQuestItems(BRAKI_REMAINS_1, HERMODT_REMAINS_1, KIRUNA_REMAINS_1))
 								{
-									st.set("cond", "2");
+									st.setCond(2);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 								else
@@ -410,8 +413,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30682-05.htm";
 						}
 						break;
-					
+					}
 					case MANAKIA:
+					{
 						if ((cond == 1) && !st.hasQuestItems(HERMODT_REMAINS_1))
 						{
 							if (!st.hasQuestItems(MANAKIA_TOTEM))
@@ -431,7 +435,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 								
 								if (st.hasQuestItems(BRAKI_REMAINS_1, KIRUNA_REMAINS_1, TONAR_REMAINS_1))
 								{
-									st.set("cond", "2");
+									st.setCond(2);
 									st.playSound(QuestState.SOUND_MIDDLE);
 								}
 								else
@@ -449,19 +453,23 @@ public class Q233_TestOfTheWarSpirit extends Quest
 							htmltext = "30515-05.htm";
 						}
 						break;
-					
+					}
 					case ANCESTOR_MARTANKUS:
+					{
 						if (cond == 5)
 						{
 							htmltext = "30649-01.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -479,28 +487,32 @@ public class Q233_TestOfTheWarSpirit extends Quest
 		switch (npc.getNpcId())
 		{
 			case PORTA:
+			{
 				if (st.hasQuestItems(ORIM_CONTRACT))
 				{
 					st.dropItemsAlways(PORTA_EYE, 1, 10);
 				}
 				break;
-			
+			}
 			case EXCURO:
+			{
 				if (st.hasQuestItems(ORIM_CONTRACT))
 				{
 					st.dropItemsAlways(EXCURO_SCALE, 1, 10);
 				}
 				break;
-			
+			}
 			case MORDEO:
+			{
 				if (st.hasQuestItems(ORIM_CONTRACT))
 				{
 					st.dropItemsAlways(MORDEO_TALON, 1, 10);
 				}
 				break;
-			
+			}
 			case NOBLE_ANT:
 			case NOBLE_ANT_LEADER:
+			{
 				if (st.hasQuestItems(INSECT_DIAGRAM_BOOK))
 				{
 					final int rndAnt = Rnd.get(100);
@@ -532,9 +544,10 @@ public class Q233_TestOfTheWarSpirit extends Quest
 					}
 				}
 				break;
-			
+			}
 			case LETO_LIZARDMAN_SHAMAN:
 			case LETO_LIZARDMAN_OVERLORD:
+			{
 				if (st.hasQuestItems(PEKIRON_TOTEM) && Rnd.nextBoolean())
 				{
 					if (!st.hasQuestItems(TONAR_SKULL))
@@ -559,8 +572,9 @@ public class Q233_TestOfTheWarSpirit extends Quest
 					}
 				}
 				break;
-			
+			}
 			case MEDUSA:
+			{
 				if (st.hasQuestItems(MANAKIA_TOTEM) && Rnd.nextBoolean())
 				{
 					if (!st.hasQuestItems(HERMODT_RIBBONE))
@@ -581,21 +595,24 @@ public class Q233_TestOfTheWarSpirit extends Quest
 					}
 				}
 				break;
-			
+			}
 			case STENOA_GORGON_QUEEN:
+			{
 				if (st.hasQuestItems(MANAKIA_TOTEM))
 				{
 					st.dropItemsAlways(HERMODT_SKULL, 1, 1);
 				}
 				break;
-			
+			}
 			case TAMLIN_ORC:
 			case TAMLIN_ORC_ARCHER:
+			{
 				if (st.hasQuestItems(VENDETTA_TOTEM) && st.dropItems(TAMLIN_ORC_HEAD, 1, 13, 500000))
 				{
-					st.set("cond", "4");
+					st.setCond(4);
 				}
 				break;
+			}
 		}
 		
 		return null;

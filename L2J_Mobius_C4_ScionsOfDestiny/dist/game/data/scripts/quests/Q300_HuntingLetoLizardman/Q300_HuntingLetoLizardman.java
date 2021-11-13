@@ -28,16 +28,14 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q300_HuntingLetoLizardman extends Quest
 {
-	// Item
-	private static final int BRACELET = 7139;
-	
 	// Monsters
 	private static final int LETO_LIZARDMAN = 20577;
 	private static final int LETO_LIZARDMAN_ARCHER = 20578;
 	private static final int LETO_LIZARDMAN_SOLDIER = 20579;
 	private static final int LETO_LIZARDMAN_WARRIOR = 20580;
 	private static final int LETO_LIZARDMAN_OVERLORD = 20582;
-	
+	// Item
+	private static final int BRACELET = 7139;
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
@@ -52,12 +50,9 @@ public class Q300_HuntingLetoLizardman extends Quest
 	public Q300_HuntingLetoLizardman()
 	{
 		super(300, "Hunting Leto Lizardman");
-		
 		registerQuestItems(BRACELET);
-		
 		addStartNpc(30126); // Rath
 		addTalkId(30126);
-		
 		addKillId(LETO_LIZARDMAN, LETO_LIZARDMAN_ARCHER, LETO_LIZARDMAN_SOLDIER, LETO_LIZARDMAN_WARRIOR, LETO_LIZARDMAN_OVERLORD);
 	}
 	
@@ -73,34 +68,29 @@ public class Q300_HuntingLetoLizardman extends Quest
 		
 		if (event.equals("30126-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
-		else if (event.equals("30126-05.htm"))
+		else if (event.equals("30126-05.htm") && (st.getQuestItemsCount(BRACELET) >= 60))
 		{
-			if (st.getQuestItemsCount(BRACELET) >= 60)
+			htmltext = "30126-06.htm";
+			st.takeItems(BRACELET, -1);
+			
+			final int luck = Rnd.get(3);
+			if (luck == 0)
 			{
-				htmltext = "30126-06.htm";
-				st.takeItems(BRACELET, -1);
-				
-				final int luck = Rnd.get(3);
-				if (luck == 0)
-				{
-					st.rewardItems(57, 30000);
-				}
-				else if (luck == 1)
-				{
-					st.rewardItems(1867, 50);
-				}
-				else if (luck == 2)
-				{
-					st.rewardItems(1872, 50);
-				}
-				
-				st.playSound(QuestState.SOUND_FINISH);
-				st.exitQuest(true);
+				st.rewardItems(57, 30000);
 			}
+			else if (luck == 1)
+			{
+				st.rewardItems(1867, 50);
+			}
+			else if (luck == 2)
+			{
+				st.rewardItems(1872, 50);
+			}
+			
+			st.playSound(QuestState.SOUND_FINISH);
+			st.exitQuest(true);
 		}
 		
 		return htmltext;
@@ -119,12 +109,15 @@ public class Q300_HuntingLetoLizardman extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 34) ? "30126-01.htm" : "30126-02.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				htmltext = (st.getInt("cond") == 1) ? "30126-04a.htm" : "30126-04.htm";
+			{
+				htmltext = st.isCond(1) ? "30126-04a.htm" : "30126-04.htm";
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -133,7 +126,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -147,7 +140,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 		
 		if (st.dropItems(BRACELET, 1, 60, CHANCES.get(npc.getNpcId())))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		return null;

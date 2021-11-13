@@ -29,7 +29,6 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	// Needed items
 	private static final int NECKLACE_OF_VALOR = 1507;
 	private static final int NECKLACE_OF_COURAGE = 1506;
-	
 	// Items
 	private static final int MARAKU_WEREWOLF_HEAD = 1477;
 	private static final int MARAKU_WOLFMEN_TOTEM = 1501;
@@ -37,12 +36,9 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	public Q274_SkirmishWithTheWerewolves()
 	{
 		super(274, "Skirmish with the Werewolves");
-		
 		registerQuestItems(MARAKU_WEREWOLF_HEAD, MARAKU_WOLFMEN_TOTEM);
-		
 		addStartNpc(30569);
 		addTalkId(30569);
-		
 		addKillId(20363, 20364);
 	}
 	
@@ -58,9 +54,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 		
 		if (event.equals("30569-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		
 		return htmltext;
@@ -79,6 +73,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getRace() != Race.ORC)
 				{
 					htmltext = "30569-00.htm";
@@ -96,9 +91,10 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 					htmltext = "30569-07.htm";
 				}
 				break;
-			
+			}
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+			{
+				if (st.isCond(1))
 				{
 					htmltext = "30569-04.htm";
 				}
@@ -114,6 +110,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 					st.exitQuest(true);
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -122,7 +119,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = checkPlayerCondition(player, npc, "cond", "1");
+		final QuestState st = checkPlayerCondition(player, npc, 1);
 		if (st == null)
 		{
 			return null;
@@ -130,7 +127,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 		
 		if (st.dropItemsAlways(MARAKU_WEREWOLF_HEAD, 1, 40))
 		{
-			st.set("cond", "2");
+			st.setCond(2);
 		}
 		
 		if (Rnd.get(100) < 6)

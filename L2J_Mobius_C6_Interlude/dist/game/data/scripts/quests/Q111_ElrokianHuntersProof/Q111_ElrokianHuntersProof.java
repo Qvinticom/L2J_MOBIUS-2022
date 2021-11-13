@@ -29,7 +29,6 @@ public class Q111_ElrokianHuntersProof extends Quest
 	private static final int MUSHIKA = 32114;
 	private static final int ASAMAH = 32115;
 	private static final int KIRIKASHIN = 32116;
-	
 	// Items
 	private static final int FRAGMENT = 8768;
 	private static final int EXPEDITION_LETTER = 8769;
@@ -41,12 +40,9 @@ public class Q111_ElrokianHuntersProof extends Quest
 	public Q111_ElrokianHuntersProof()
 	{
 		super(111, "Elrokian Hunter's Proof");
-		
 		registerQuestItems(FRAGMENT, EXPEDITION_LETTER, CLAW, BONE, SKIN, PRACTICE_TRAP);
-		
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KIRIKASHIN);
-		
 		addKillId(22196, 22197, 22198, 22218, 22200, 22201, 22202, 22219, 22208, 22209, 22210, 22221, 22203, 22204, 22205, 22220);
 	}
 	
@@ -60,57 +56,67 @@ public class Q111_ElrokianHuntersProof extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("32113-002.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("32115-002.htm"))
-		{
-			st.set("cond", "3");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32113-009.htm"))
-		{
-			st.set("cond", "4");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32113-018.htm"))
-		{
-			st.set("cond", "6");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(FRAGMENT, -1);
-			st.giveItems(EXPEDITION_LETTER, 1);
-		}
-		else if (event.equals("32116-003.htm"))
-		{
-			st.set("cond", "7");
-			st.playSound("EtcSound.elcroki_song_full");
-		}
-		else if (event.equals("32116-005.htm"))
-		{
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32115-004.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32115-006.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("32116-007.htm"))
-		{
-			st.takeItems(PRACTICE_TRAP, 1);
-			st.giveItems(8763, 1);
-			st.giveItems(8764, 100);
-			st.rewardItems(57, 1022636);
-			st.playSound(QuestState.SOUND_FINISH);
-			st.exitQuest(false);
+			case "32113-002.htm":
+			{
+				st.startQuest();
+				break;
+			}
+			case "32115-002.htm":
+			{
+				st.setCond(3);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32113-009.htm":
+			{
+				st.setCond(4);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32113-018.htm":
+			{
+				st.setCond(6);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.takeItems(FRAGMENT, -1);
+				st.giveItems(EXPEDITION_LETTER, 1);
+				break;
+			}
+			case "32116-003.htm":
+			{
+				st.setCond(7);
+				st.playSound("EtcSound.elcroki_song_full");
+				break;
+			}
+			case "32116-005.htm":
+			{
+				st.setCond(8);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32115-004.htm":
+			{
+				st.setCond(9);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32115-006.htm":
+			{
+				st.setCond(10);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				break;
+			}
+			case "32116-007.htm":
+			{
+				st.takeItems(PRACTICE_TRAP, 1);
+				st.giveItems(8763, 1);
+				st.giveItems(8764, 100);
+				st.rewardItems(57, 1022636);
+				st.playSound(QuestState.SOUND_FINISH);
+				st.exitQuest(false);
+				break;
+			}
 		}
 		
 		return htmltext;
@@ -129,14 +135,17 @@ public class Q111_ElrokianHuntersProof extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 75) ? "32113-000.htm" : "32113-001.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				switch (npc.getNpcId())
 				{
 					case MARQUEZ:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "32113-002.htm";
@@ -154,17 +163,19 @@ public class Q111_ElrokianHuntersProof extends Quest
 							htmltext = "32113-010.htm";
 						}
 						break;
-					
+					}
 					case MUSHIKA:
+					{
 						if (cond == 1)
 						{
-							st.set("cond", "2");
+							st.setCond(2);
 							st.playSound(QuestState.SOUND_MIDDLE);
 						}
 						htmltext = "32114-001.htm";
 						break;
-					
+					}
 					case ASAMAH:
+					{
 						if (cond == 2)
 						{
 							htmltext = "32115-001.htm";
@@ -188,7 +199,7 @@ public class Q111_ElrokianHuntersProof extends Quest
 						else if (cond == 11)
 						{
 							htmltext = "32115-007.htm";
-							st.set("cond", "12");
+							st.setCond(12);
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(BONE, -1);
 							st.takeItems(CLAW, -1);
@@ -196,8 +207,9 @@ public class Q111_ElrokianHuntersProof extends Quest
 							st.giveItems(PRACTICE_TRAP, 1);
 						}
 						break;
-					
+					}
 					case KIRIKASHIN:
+					{
 						if (cond < 6)
 						{
 							htmltext = "32116-008.htm";
@@ -216,12 +228,15 @@ public class Q111_ElrokianHuntersProof extends Quest
 							htmltext = "32116-006.htm";
 						}
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -248,41 +263,46 @@ public class Q111_ElrokianHuntersProof extends Quest
 			case 22197:
 			case 22198:
 			case 22218:
-				if ((st.getInt("cond") == 4) && st.dropItems(FRAGMENT, 1, 50, 250000))
+			{
+				if (st.isCond(4) && st.dropItems(FRAGMENT, 1, 50, 250000))
 				{
-					st.set("cond", "5");
+					st.setCond(5);
 				}
 				break;
-			
+			}
 			case 22200:
 			case 22201:
 			case 22202:
 			case 22219:
-				if ((st.getInt("cond") == 10) && st.dropItems(CLAW, 1, 10, 650000) && (st.getQuestItemsCount(BONE) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
+			{
+				if (st.isCond(10) && st.dropItems(CLAW, 1, 10, 650000) && (st.getQuestItemsCount(BONE) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
 				{
-					st.set("cond", "11");
+					st.setCond(11);
 				}
 				break;
-			
+			}
 			case 22208:
 			case 22209:
 			case 22210:
 			case 22221:
-				if ((st.getInt("cond") == 10) && st.dropItems(SKIN, 1, 10, 650000) && (st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(BONE) >= 10))
+			{
+				if (st.isCond(10) && st.dropItems(SKIN, 1, 10, 650000) && (st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(BONE) >= 10))
 				{
-					st.set("cond", "11");
+					st.setCond(11);
 				}
 				break;
-			
+			}
 			case 22203:
 			case 22204:
 			case 22205:
 			case 22220:
-				if ((st.getInt("cond") == 10) && st.dropItems(BONE, 1, 10, 650000) && (st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
+			{
+				if (st.isCond(10) && st.dropItems(BONE, 1, 10, 650000) && (st.getQuestItemsCount(CLAW) >= 10) && (st.getQuestItemsCount(SKIN) >= 10))
 				{
-					st.set("cond", "11");
+					st.setCond(11);
 				}
 				break;
+			}
 		}
 		
 		return null;

@@ -33,10 +33,8 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	// NPCs
 	private static final int CLIFF = 30182;
 	private static final int BAXT = 30685;
-	
 	// Items
 	private static final int MEDAL = 5964;
-	
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
 	{
@@ -67,160 +65,58 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		CHANCES.put(20677, 340000); // Tulben
 		CHANCES.put(20605, 150000); // Weird Drake
 	}
-	
+	// @formatter:off
 	private static final int[][] MATRICE_3X3_LINES = new int[][]
 	{
-		{
-			1,
-			2,
-			3
-		},
-		{
-			4,
-			5,
-			6
-		},
-		{
-			7,
-			8,
-			9
-		},
-		{
-			1,
-			4,
-			7
-		},
-		{
-			2,
-			5,
-			8
-		},
-		{
-			3,
-			6,
-			9
-		},
-		{
-			1,
-			5,
-			9
-		},
-		{
-			3,
-			5,
-			7
-		}
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+		{1, 4, 7},
+		{2, 5, 8},
+		{3, 6, 9},
+		{1, 5, 9},
+		{3, 5, 7}
 	};
-	
 	private static final int[][] _rewards_10_win =
 	{
-		{
-			16,
-			1888
-		}, // Synthetic Cokes
-		{
-			32,
-			1887
-		}, // Varnish of Purity
-		{
-			50,
-			1894
-		}, // Crafted Leather
-		{
-			80,
-			952
-		}, // Scroll: Enchant Armor (C)
-		{
-			89,
-			1890
-		}, // Mithril Alloy
-		{
-			98,
-			1893
-		}, // Oriharukon
-		{
-			100,
-			951
-		}
-		// Scroll: Enchant Weapon (C)
+		{16, 1888}, // Synthetic Cokes
+		{32, 1887}, // Varnish of Purity
+		{50, 1894}, // Crafted Leather
+		{80, 952}, // Scroll: Enchant Armor (C)
+		{89, 1890}, // Mithril Alloy
+		{98, 1893}, // Oriharukon
+		{100, 951} // Scroll: Enchant Weapon (C)
 	};
-	
 	private static final int[][] _rewards_10_lose =
 	{
-		{
-			50,
-			4041
-		}, // Mold Hardener
-		{
-			80,
-			952
-		}, // Scroll: Enchant Armor (C)
-		{
-			98,
-			1892
-		}, // Blacksmith's Frame
-		{
-			100,
-			917
-		}
-		// Necklace of Mermaid
+		{50, 4041}, // Mold Hardener
+		{80, 952}, // Scroll: Enchant Armor (C)
+		{98, 1892}, // Blacksmith's Frame
+		{100, 917} // Necklace of Mermaid
 	};
-	
 	private static final int[][] _rewards_100_win =
 	{
-		{
-			50,
-			883
-		}, // Aquastone Ring
-		{
-			80,
-			951
-		}, // Scroll: Enchant Weapon (C)
-		{
-			98,
-			852
-		}, // Moonstone Earring
-		{
-			100,
-			401
-		}
-		// Drake Leather Armor
+		{50, 883}, // Aquastone Ring
+		{80, 951}, // Scroll: Enchant Weapon (C)
+		{98, 852}, // Moonstone Earring
+		{100, 401} // Drake Leather Armor
 	};
-	
 	private static final int[][] _rewards_100_lose =
 	{
-		{
-			50,
-			951
-		}, // Scroll: Enchant Weapon (C)
-		{
-			80,
-			500
-		}, // Great Helmet
-		{
-			98,
-			2437
-		}, // Drake Leather Boots
-		{
-			100,
-			135
-		}
-		// Samurai Longsword
+		{50, 951}, // Scroll: Enchant Weapon (C)
+		{80, 500}, // Great Helmet
+		{98, 2437}, // Drake Leather Boots
+		{100, 135} // Samurai Longsword
 	};
+	// @formatter:on
 	
 	public Q384_WarehouseKeepersPastime()
 	{
 		super(384, "Warehouse Keeper's Pastime");
-		
 		registerQuestItems(MEDAL);
-		
 		addStartNpc(CLIFF);
 		addTalkId(CLIFF, BAXT);
-		
-		for (int npcId : CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
@@ -236,9 +132,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		final int npcId = npc.getNpcId();
 		if (event.equals("30182-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 		}
 		else if (event.equals(npcId + "-08.htm"))
 		{
@@ -318,7 +212,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 				String playerChoice = playerArray.concat(number);
 				
 				// Transform the generated board (9 string length) into a 2d matrice (3x3 int).
-				String[] board = ((String) st.get("board")).split("");
+				String[] board = st.get("board").split("");
 				
 				// test for all line combination
 				int winningLines = 0;
@@ -445,8 +339,8 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	private static final String fillBoard(QuestState st, String htmltext)
 	{
 		String result = htmltext;
-		String playerArray = (String) st.get("playerArray");
-		String[] board = ((String) st.get("board")).split("");
+		String playerArray = st.get("playerArray");
+		String[] board = st.get("board").split("");
 		for (int i = 1; i < 10; ++i)
 		{
 			result = result.replace("<?Cell" + i + "?>", playerArray.contains(board[i - 1]) ? board[i - 1] : "?");

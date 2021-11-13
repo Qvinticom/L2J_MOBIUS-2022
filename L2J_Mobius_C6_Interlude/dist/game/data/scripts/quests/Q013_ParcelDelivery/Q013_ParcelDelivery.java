@@ -27,16 +27,13 @@ public class Q013_ParcelDelivery extends Quest
 	// NPCs
 	private static final int FUNDIN = 31274;
 	private static final int VULCAN = 31539;
-	
 	// Item
 	private static final int PACKAGE = 7263;
 	
 	public Q013_ParcelDelivery()
 	{
 		super(13, "Parcel Delivery");
-		
 		registerQuestItems(PACKAGE);
-		
 		addStartNpc(FUNDIN);
 		addTalkId(FUNDIN, VULCAN);
 	}
@@ -53,9 +50,7 @@ public class Q013_ParcelDelivery extends Quest
 		
 		if (event.equals("31274-2.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
+			st.startQuest();
 			st.giveItems(PACKAGE, 1);
 		}
 		else if (event.equals("31539-1.htm"))
@@ -82,25 +77,32 @@ public class Q013_ParcelDelivery extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 74) ? "31274-1.htm" : "31274-0.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
 					case FUNDIN:
+					{
 						htmltext = "31274-2.htm";
 						break;
-					
+					}
 					case VULCAN:
+					{
 						htmltext = "31539-0.htm";
 						break;
+					}
 				}
 				break;
-			
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg();
 				break;
+			}
 		}
 		
 		return htmltext;

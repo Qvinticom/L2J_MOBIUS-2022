@@ -32,7 +32,6 @@ public class Q364_JovialAccordion extends Quest
 	private static final int XABER = 30075;
 	private static final int CLOTH_CHEST = 30961;
 	private static final int BEER_CHEST = 30960;
-	
 	// Items
 	private static final int KEY_1 = 4323;
 	private static final int KEY_2 = 4324;
@@ -43,9 +42,7 @@ public class Q364_JovialAccordion extends Quest
 	public Q364_JovialAccordion()
 	{
 		super(364, "Jovial Accordion");
-		
 		registerQuestItems(KEY_1, KEY_2, STOLEN_BEER, STOLEN_CLOTHES);
-		
 		addStartNpc(BARBADO);
 		addTalkId(BARBADO, SWAN, SABRIN, XABER, CLOTH_CHEST, BEER_CHEST);
 	}
@@ -60,44 +57,49 @@ public class Q364_JovialAccordion extends Quest
 			return htmltext;
 		}
 		
-		if (event.equals("30959-02.htm"))
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.set("items", "0");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("30957-02.htm"))
-		{
-			st.set("cond", "2");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(KEY_1, 1);
-			st.giveItems(KEY_2, 1);
-		}
-		else if (event.equals("30960-04.htm"))
-		{
-			if (st.hasQuestItems(KEY_2))
+			case "30959-02.htm":
 			{
-				st.takeItems(KEY_2, 1);
-				if (Rnd.nextBoolean())
-				{
-					htmltext = "30960-02.htm";
-					st.giveItems(STOLEN_BEER, 1);
-					st.playSound(QuestState.SOUND_ITEMGET);
-				}
+				st.startQuest();
+				st.set("items", "0");
+				break;
 			}
-		}
-		else if (event.equals("30961-04.htm"))
-		{
-			if (st.hasQuestItems(KEY_1))
+			case "30957-02.htm":
 			{
-				st.takeItems(KEY_1, 1);
-				if (Rnd.nextBoolean())
+				st.setCond(2);
+				st.playSound(QuestState.SOUND_MIDDLE);
+				st.giveItems(KEY_1, 1);
+				st.giveItems(KEY_2, 1);
+				break;
+			}
+			case "30960-04.htm":
+			{
+				if (st.hasQuestItems(KEY_2))
 				{
-					htmltext = "30961-02.htm";
-					st.giveItems(STOLEN_CLOTHES, 1);
-					st.playSound(QuestState.SOUND_ITEMGET);
+					st.takeItems(KEY_2, 1);
+					if (Rnd.nextBoolean())
+					{
+						htmltext = "30960-02.htm";
+						st.giveItems(STOLEN_BEER, 1);
+						st.playSound(QuestState.SOUND_ITEMGET);
+					}
 				}
+				break;
+			}
+			case "30961-04.htm":
+			{
+				if (st.hasQuestItems(KEY_1))
+				{
+					st.takeItems(KEY_1, 1);
+					if (Rnd.nextBoolean())
+					{
+						htmltext = "30961-02.htm";
+						st.giveItems(STOLEN_CLOTHES, 1);
+						st.playSound(QuestState.SOUND_ITEMGET);
+					}
+				}
+				break;
 			}
 		}
 		
@@ -117,16 +119,18 @@ public class Q364_JovialAccordion extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < 15) ? "30959-00.htm" : "30959-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
-				final int cond = st.getInt("cond");
+			{
+				final int cond = st.getCond();
 				final int stolenItems = st.getInt("items");
-				
 				switch (npc.getNpcId())
 				{
 					case BARBADO:
+					{
 						if ((cond == 1) || (cond == 2))
 						{
 							htmltext = "30959-03.htm";
@@ -139,8 +143,9 @@ public class Q364_JovialAccordion extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+					}
 					case SWAN:
+					{
 						if (cond == 1)
 						{
 							htmltext = "30957-01.htm";
@@ -149,7 +154,7 @@ public class Q364_JovialAccordion extends Quest
 						{
 							if (stolenItems > 0)
 							{
-								st.set("cond", "3");
+								st.setCond(3);
 								st.playSound(QuestState.SOUND_MIDDLE);
 								
 								if (stolenItems == 2)
@@ -181,24 +186,27 @@ public class Q364_JovialAccordion extends Quest
 							htmltext = "30957-07.htm";
 						}
 						break;
-					
+					}
 					case BEER_CHEST:
+					{
 						htmltext = "30960-03.htm";
 						if ((cond == 2) && st.hasQuestItems(KEY_2))
 						{
 							htmltext = "30960-01.htm";
 						}
 						break;
-					
+					}
 					case CLOTH_CHEST:
+					{
 						htmltext = "30961-03.htm";
 						if ((cond == 2) && st.hasQuestItems(KEY_1))
 						{
 							htmltext = "30961-01.htm";
 						}
 						break;
-					
+					}
 					case SABRIN:
+					{
 						if (st.hasQuestItems(STOLEN_BEER))
 						{
 							htmltext = "30060-01.htm";
@@ -211,8 +219,9 @@ public class Q364_JovialAccordion extends Quest
 							htmltext = "30060-02.htm";
 						}
 						break;
-					
+					}
 					case XABER:
+					{
 						if (st.hasQuestItems(STOLEN_CLOTHES))
 						{
 							htmltext = "30075-01.htm";
@@ -225,8 +234,10 @@ public class Q364_JovialAccordion extends Quest
 							htmltext = "30075-02.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;

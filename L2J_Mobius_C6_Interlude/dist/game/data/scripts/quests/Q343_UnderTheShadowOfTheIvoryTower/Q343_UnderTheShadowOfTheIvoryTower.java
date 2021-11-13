@@ -85,9 +85,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 		{
 			case "30834-03.htm":
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			}
 			case "30834-08.htm":
@@ -105,7 +103,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			}
 			case "30834-09.htm":
 			{
-				st.playSound("ItemSound.quest_finish");
+				st.playSound(QuestState.SOUND_FINISH);
 				st.exitQuest(true);
 				break;
 			}
@@ -440,7 +438,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 		if (Rnd.get(100) < CHANCE)
 		{
 			st.giveItems(ORB, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestState.SOUND_ITEMGET);
 		}
 		
 		return null;
