@@ -50,6 +50,10 @@ public class CreatureSay implements IClientOutgoingPacket
 		_sender = sender;
 		_chatType = chatType;
 		_messageId = npcStringId.getId();
+		if (sender != null)
+		{
+			_senderName = sender.getName();
+		}
 	}
 	
 	public CreatureSay(ChatType chatType, int charId, SystemMessageId systemMessageId)
