@@ -495,7 +495,8 @@ public class Q227_TestOfTheReformer extends Quest
 				if ((cond == 12) && !npc.isScriptValue(1))
 				{
 					npc.setScriptValue(1);
-					startQuestTimer("werewolf_despawn", 1000, npc, attacker, false);
+					// TODO: Proper skill check.
+					// startQuestTimer("werewolf_despawn", 1000, npc, attacker, false);
 				}
 				break;
 			}
@@ -562,6 +563,9 @@ public class Q227_TestOfTheReformer extends Quest
 			{
 				if (cond == 12)
 				{
+					// TODO: Remove message when proper skill check is done.
+					npc.broadcastNpcSay("Cowardly guy!");
+					
 					st.setCond(13);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					cancelQuestTimer("werewolf_cleanup", null, player);
