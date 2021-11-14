@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -465,7 +466,12 @@ public class PlayerStat extends PlayableStat
 	{
 		if (getActiveChar().isSubClassActive())
 		{
-			return Math.min(MAX_VITALITY_POINTS, getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getVitalityPoints());
+			final SubClassHolder subClassHolder = getActiveChar().getSubClasses().get(getActiveChar().getClassIndex());
+			if (subClassHolder == null)
+			{
+				return 0;
+			}
+			return Math.min(MAX_VITALITY_POINTS, subClassHolder.getVitalityPoints());
 		}
 		return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
 	}
