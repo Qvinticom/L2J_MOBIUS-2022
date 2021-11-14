@@ -4559,13 +4559,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Returns true if cp update should be done, false if not.
-	 * @param barPixels the bar pixels
 	 * @return boolean
 	 */
-	private boolean needCpUpdate(int barPixels)
+	private boolean needCpUpdate()
 	{
 		final double currentCp = getCurrentCp();
-		if ((currentCp <= 1.0) || (getMaxCp() < barPixels))
+		if ((currentCp <= 1.0) || (getMaxCp() < MAX_HP_BAR_PX))
 		{
 			return true;
 		}
@@ -4581,7 +4580,7 @@ public class PlayerInstance extends Playable
 			{
 				final double doubleMulti = currentCp / _cpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				_cpUpdateDecCheck = _cpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+				_cpUpdateDecCheck = _cpUpdateInterval * (doubleMulti < intMulti ? intMulti - 1 : intMulti);
 				_cpUpdateIncCheck = _cpUpdateDecCheck + _cpUpdateInterval;
 			}
 			
@@ -4593,13 +4592,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Returns true if mp update should be done, false if not.
-	 * @param barPixels the bar pixels
 	 * @return boolean
 	 */
-	private boolean needMpUpdate(int barPixels)
+	private boolean needMpUpdate()
 	{
 		final double currentMp = getCurrentMp();
-		if ((currentMp <= 1.0) || (getMaxMp() < barPixels))
+		if ((currentMp <= 1.0) || (getMaxMp() < MAX_HP_BAR_PX))
 		{
 			return true;
 		}
@@ -4615,7 +4613,7 @@ public class PlayerInstance extends Playable
 			{
 				final double doubleMulti = currentMp / _mpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				_mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+				_mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ? intMulti - 1 : intMulti);
 				_mpUpdateIncCheck = _mpUpdateDecCheck + _mpUpdateInterval;
 			}
 			
@@ -4657,7 +4655,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if a party is in progress and party window update is usefull
-		if (isInParty() && (needCpUpdate(352) || super.needHpUpdate(352) || needMpUpdate(352)))
+		if (isInParty() && (needCpUpdate() || needHpUpdate() || needMpUpdate()))
 		{
 			// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other PlayerInstance of the Party
 			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));

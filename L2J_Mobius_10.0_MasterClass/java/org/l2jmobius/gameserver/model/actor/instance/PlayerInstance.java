@@ -4015,7 +4015,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Returns true if cp update should be done, false if not
+	 * Returns true if cp update should be done, false if not.
 	 * @return boolean
 	 */
 	private boolean needCpUpdate()
@@ -4037,7 +4037,7 @@ public class PlayerInstance extends Playable
 			{
 				final double doubleMulti = currentCp / _cpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				_cpUpdateDecCheck = _cpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+				_cpUpdateDecCheck = _cpUpdateInterval * (doubleMulti < intMulti ? intMulti - 1 : intMulti);
 				_cpUpdateIncCheck = _cpUpdateDecCheck + _cpUpdateInterval;
 			}
 			
@@ -4048,7 +4048,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Returns true if mp update should be done, false if not
+	 * Returns true if mp update should be done, false if not.
 	 * @return boolean
 	 */
 	private boolean needMpUpdate()
@@ -4070,7 +4070,7 @@ public class PlayerInstance extends Playable
 			{
 				final double doubleMulti = currentMp / _mpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				_mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+				_mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ? intMulti - 1 : intMulti);
 				_mpUpdateIncCheck = _mpUpdateDecCheck + _mpUpdateInterval;
 			}
 			

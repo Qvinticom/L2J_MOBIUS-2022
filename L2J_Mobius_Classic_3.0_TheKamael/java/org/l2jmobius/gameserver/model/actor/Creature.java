@@ -695,7 +695,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * @return true if hp update should be done, false if not
+	 * @return true if hp update should be done, false if not.
 	 */
 	protected boolean needHpUpdate()
 	{
@@ -706,9 +706,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		if ((currentHp < _hpUpdateDecCheck) || (Math.abs(currentHp - _hpUpdateDecCheck) <= 1e-6) || (currentHp > _hpUpdateIncCheck) || (Math.abs(currentHp - _hpUpdateIncCheck) <= 1e-6))
+		if ((currentHp <= _hpUpdateDecCheck) || (currentHp >= _hpUpdateIncCheck))
 		{
-			if (Math.abs(currentHp - maxHp) <= 1e-6)
+			if (currentHp == maxHp)
 			{
 				_hpUpdateIncCheck = currentHp + 1;
 				_hpUpdateDecCheck = currentHp - _hpUpdateInterval;
@@ -717,7 +717,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				final double doubleMulti = currentHp / _hpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				_hpUpdateDecCheck = _hpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+				_hpUpdateDecCheck = _hpUpdateInterval * (doubleMulti < intMulti ? intMulti - 1 : intMulti);
 				_hpUpdateIncCheck = _hpUpdateDecCheck + _hpUpdateInterval;
 			}
 			

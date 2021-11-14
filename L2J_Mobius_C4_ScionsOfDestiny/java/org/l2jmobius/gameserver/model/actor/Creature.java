@@ -143,6 +143,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 {
 	protected static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
 	
+	public static final double MAX_HP_BAR_PX = 352.0;
+	
 	private long attackStance;
 	private List<Creature> _attackByList;
 	private Skill _lastSkillCast;
@@ -285,9 +287,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	protected void initCharStatusUpdateValues()
 	{
-		_hpUpdateInterval = getStat().getMaxHp() / 352.0; // MAX_HP div MAX_HP_BAR_PX
-		_hpUpdateIncCheck = getStat().getMaxHp();
-		_hpUpdateDecCheck = getStat().getMaxHp() - _hpUpdateInterval;
+		_hpUpdateInterval = _stat.getMaxHp() / MAX_HP_BAR_PX;
+		_hpUpdateIncCheck = _stat.getMaxHp();
+		_hpUpdateDecCheck = _stat.getMaxHp() - _hpUpdateInterval;
 	}
 	
 	/**
@@ -412,21 +414,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Need hp update.
-	 * @param barPixels the bar pixels
 	 * @return true if hp update should be done, false if not
 	 */
-	protected boolean needHpUpdate(int barPixels)
+	protected boolean needHpUpdate()
 	{
-		final double currentHp = getStatus().getCurrentHp();
-		if ((currentHp <= 1.0) || (getStat().getMaxHp() < barPixels))
+		final double currentHp = _status.getCurrentHp();
+		final double maxHp = _stat.getMaxHp();
+		if ((currentHp <= 1.0) || (maxHp < MAX_HP_BAR_PX))
 		{
 			return true;
 		}
 		
 		if ((currentHp <= _hpUpdateDecCheck) || (currentHp >= _hpUpdateIncCheck))
 		{
-			if (currentHp == getStat().getMaxHp())
+			if (currentHp == maxHp)
 			{
 				_hpUpdateIncCheck = currentHp + 1;
 				_hpUpdateDecCheck = currentHp - _hpUpdateInterval;
@@ -435,9 +436,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				final double doubleMulti = currentHp / _hpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				_hpUpdateDecCheck = _hpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
+				_hpUpdateDecCheck = _hpUpdateInterval * (doubleMulti < intMulti ? intMulti - 1 : intMulti);
 				_hpUpdateIncCheck = _hpUpdateDecCheck + _hpUpdateInterval;
 			}
+			
 			return true;
 		}
 		
@@ -463,7 +465,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if (!needHpUpdate(352))
+		if (!needHpUpdate())
 		{
 			return;
 		}
