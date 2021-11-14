@@ -182,6 +182,7 @@ public abstract class Vehicle extends Creature
 									{
 										if (_runState < _currentPath.length)
 										{
+											_runState = Math.max(0, _runState - 1);
 											moveToNextRoutePoint();
 										}
 										else
