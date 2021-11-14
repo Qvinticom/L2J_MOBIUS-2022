@@ -7234,7 +7234,13 @@
 			<item id="81471" /> <!-- Blessed Exalted Helmet Heavy Armor -->
 		</requiredItems>
 		<skills>
-			<skill id="35636" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Heavy Armor, 5-piece -->
+			<skill id="35636" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Heavy Armor, 5-piece -->			
+			<skill id="8785" level="1" optional="true" /> <!-- Equip Shield -->
+			<skill id="35957" level="1" minimumPieces="5" minimumEnchant="6" /> <!-- Enchant Heavy Armor Set + 6 (R-grade) -->
+			<skill id="35957" level="2" minimumPieces="5" minimumEnchant="7" /> <!-- Enchant Heavy Armor Set + 7 (R-grade) -->
+			<skill id="35957" level="3" minimumPieces="5" minimumEnchant="8" /> <!-- Enchant Heavy Armor Set + 8 (R-grade) -->
+			<skill id="35957" level="4" minimumPieces="5" minimumEnchant="9" /> <!-- Enchant Heavy Armor Set + 9 (R-grade) -->
+			<skill id="35957" level="5" minimumPieces="5" minimumEnchant="10" /> <!-- Enchant Heavy Armor Set + 10 (R-grade) -->
 		</skills>
 	</set>
 	<set id="320" minimumPieces="5">
@@ -7247,7 +7253,12 @@
 			<item id="81477" /> <!-- Blessed Exalted Leather Helmet Light Armor -->
 		</requiredItems>
 		<skills>
-			<skill id="35637" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Light Armor, 5-piece -->
+			<skill id="35637" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Light Armor, 5-piece -->			
+			<skill id="35958" level="1" minimumPieces="5" minimumEnchant="6" /> <!-- Enchant Light Armor Set + 6 (R-grade) -->
+			<skill id="35958" level="2" minimumPieces="5" minimumEnchant="7" /> <!-- Enchant Light Armor Set + 7 (R-grade) -->
+			<skill id="35958" level="3" minimumPieces="5" minimumEnchant="8" /> <!-- Enchant Light Armor Set + 8 (R-grade) -->
+			<skill id="35958" level="4" minimumPieces="5" minimumEnchant="9" /> <!-- Enchant Light Armor Set + 9 (R-grade) -->
+			<skill id="35958" level="5" minimumPieces="5" minimumEnchant="10" /> <!-- Enchant Light Armor Set + 10 (R-grade) -->
 		</skills>
 	</set>
 	<set id="321" minimumPieces="5">
@@ -7261,6 +7272,11 @@
 		</requiredItems>
 		<skills>
 			<skill id="35638" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Robe Armor, 5-piece -->
+			<skill id="35959" level="1" minimumPieces="5" minimumEnchant="6" /> <!-- Enchant Robe Armor Set + 6 (R-grade) -->
+			<skill id="35959" level="2" minimumPieces="5" minimumEnchant="7" /> <!-- Enchant Robe Armor Set + 7 (R-grade) -->
+			<skill id="35959" level="3" minimumPieces="5" minimumEnchant="8" /> <!-- Enchant Robe Armor Set + 8 (R-grade) -->
+			<skill id="35959" level="4" minimumPieces="5" minimumEnchant="9" /> <!-- Enchant Robe Armor Set + 9 (R-grade) -->
+			<skill id="35959" level="5" minimumPieces="5" minimumEnchant="10" /> <!-- Enchant Robe Armor Set + 10 (R-grade) -->
 		</skills>
 	</set>
 	<set id="400" minimumPieces="1">

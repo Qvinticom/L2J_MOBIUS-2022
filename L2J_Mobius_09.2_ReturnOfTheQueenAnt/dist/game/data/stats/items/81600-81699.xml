@@ -637,6 +637,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81467" min="1" max="1" chance="100" /> <!-- Blessed Exalted Helmet Heavy -->
+			<item id="81468" min="1" max="1" chance="100" /> <!-- Blessed Exalted Breastplate Heavy -->
+			<item id="81469" min="1" max="1" chance="100" /> <!-- Blessed Exalted Leggins Heavy -->
+			<item id="81470" min="1" max="1" chance="100" /> <!-- Blessed Exalted Gloves Heavy -->
+			<item id="81471" min="1" max="1" chance="100" /> <!-- Blessed Exalted Boots Heavy -->
+			<item id="81484" min="1" max="1" chance="100" /> <!-- Blessed Exalted Circlet -->
+			<item id="81488" min="1" max="1" chance="100" /> <!-- Blessed Exalted Agathion Braclet -->
+			<item id="81489" min="1" max="1" chance="100" /> <!-- Blessed Exalted Enchanting Stone -->
+			<item id="81485" min="1" max="1" chance="100" /> <!-- Blessed Exalted Soul Stone -->
+			<item id="81486" min="1" max="1" chance="100" /> <!-- Blessed Exalted Talisman of Longing -->
+			<item id="81487" min="1" max="1" chance="100" /> <!-- Blessed Exalted Sayha Talisman -->
+			<item id="81650" min="1" max="1" chance="100" /> <!-- Blessed Exalted Box with Supplies -->
+			<item id="81472" min="1" max="1" chance="100" /> <!-- Blessed Exalted Shield -->
+			<item id="81492" min="1" max="1" chance="100" /> <!-- Blessed Exalted Earring ( Vampire Rage ) -->			
+			<item id="81491" min="1" max="1" chance="100" /> <!-- Blessed Exalted Earring ( MP Consumption ) -->			
+			<item id="81493" min="1" max="1" chance="100" /> <!-- Blessed Exalted Ring ( Critical Rate ) -->			
+			<item id="81494" min="1" max="1" chance="100" /> <!-- Blessed Exalted Ring ( Critical Damage ) -->		
+			<item id="81490" min="1" max="1" chance="100" /> <!-- Blessed Exalted Necklace ( Skill Cooldown ) -->
+		</capsuled_items>
 	</item>
 	<item id="81648" name="Blessed Exalted Light Armor Set Box" additionalName="Light armor" type="EtcItem">
 		<!-- A box containing Exalted light armor set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Light Armor Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->
@@ -649,6 +670,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81473" min="1" max="1" chance="100" /> <!-- Blessed Exalted Helmet Light -->
+			<item id="81474" min="1" max="1" chance="100" /> <!-- Blessed Exalted Breastplate Light -->
+			<item id="81475" min="1" max="1" chance="100" /> <!-- Blessed Exalted Leggins Light -->
+			<item id="81476" min="1" max="1" chance="100" /> <!-- Blessed Exalted Gloves Light -->
+			<item id="81477" min="1" max="1" chance="100" /> <!-- Blessed Exalted Boots Light -->
+			<item id="81484" min="1" max="1" chance="100" /> <!-- Blessed Exalted Circlet -->
+			<item id="81488" min="1" max="1" chance="100" /> <!-- Blessed Exalted Agathion Braclet -->
+			<item id="81489" min="1" max="1" chance="100" /> <!-- Blessed Exalted Enchanting Stone -->
+			<item id="81485" min="1" max="1" chance="100" /> <!-- Blessed Exalted Soul Stone -->
+			<item id="81486" min="1" max="1" chance="100" /> <!-- Blessed Exalted Talisman of Longing -->
+			<item id="81487" min="1" max="1" chance="100" /> <!-- Blessed Exalted Sayha Talisman -->
+			<item id="81650" min="1" max="1" chance="100" /> <!-- Blessed Exalted Box with Supplies -->
+			<item id="81472" min="1" max="1" chance="100" /> <!-- Blessed Exalted Shield -->
+			<item id="81492" min="1" max="1" chance="100" /> <!-- Blessed Exalted Earring ( Vampire Rage ) -->			
+			<item id="81491" min="1" max="1" chance="100" /> <!-- Blessed Exalted Earring ( MP Consumption ) -->			
+			<item id="81493" min="1" max="1" chance="100" /> <!-- Blessed Exalted Ring ( Critical Rate ) -->			
+			<item id="81494" min="1" max="1" chance="100" /> <!-- Blessed Exalted Ring ( Critical Damage ) -->		
+			<item id="81490" min="1" max="1" chance="100" /> <!-- Blessed Exalted Necklace ( Skill Cooldown ) -->
+		</capsuled_items>
 	</item>
 	<item id="81649" name="Blessed Exalted Robe Set Box" additionalName="Robe" type="EtcItem">
 		<!-- A box containing Exalted robe set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Robe Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->

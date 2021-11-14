@@ -568,15 +568,15 @@
 			<!-- Reward 1 chance="33.33" -->
 			<item id="57" min="3000000" max="3000000" chance="33.33" /> <!-- Adena -->
 			<!-- Reward 2 chance="33.33" -->
-			<item id="80636" min="1" max="1" chance="5.55" /> <!-- Artifact Crystal -->
+			<item id="39573" min="1" max="1" chance="5.55" /> <!-- Sealed Talisman of Insanity -->
+			<item id="47420" min="1" max="1" chance="5.55" /> <!-- Energy of Longing -->
+			<item id="47494" min="1" max="1" chance="5.55" /> <!-- Selenite -->
 			<item id="48418" min="1" max="1" chance="5.55" /> <!-- Authority Ornament -->
+			<item id="48876" min="1" max="1" chance="5.55" /> <!-- Forgotten Spellbook Chapter 1 -->
+			<item id="80636" min="1" max="1" chance="5.55" /> <!-- Artifact Crystal -->
+			<item id="80964" min="1" max="1" chance="5.55" /> <!-- Energy of Protection -->
 			<item id="80839" min="1" max="1" chance="5.55" /> <!-- Crystal of Dawn -->
 			<item id="81134" min="1" max="1" chance="5.55" /> <!-- Crystal of Dyes -->
-			<item id="47420" min="1" max="1" chance="5.55" /> <!-- Energy of Longing -->
-			<item id="80964" min="1" max="1" chance="5.55" /> <!-- Energy of Protection -->
-			<item id="48876" min="1" max="1" chance="5.55" /> <!-- Forgotten Spellbook Chapter 1 -->
-			<item id="39573" min="1" max="1" chance="5.55" /> <!-- Sealed Talisman of Insanity -->
-			<item id="47494" min="1" max="1" chance="5.55" /> <!-- Selenite -->
 			<!-- Reward 3 chance="33.33" -->
 			<!-- R99 Armors -->
 			<item id="17434" min="1" max="1" chance="0.54" /> <!-- Eternal Boots - Heavy armor -->
@@ -833,6 +833,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">169</stat>
 		</stats>
@@ -850,6 +851,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">451</stat>
 		</stats>
@@ -867,6 +869,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">282</stat>
 		</stats>
@@ -883,6 +886,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -899,6 +903,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -915,9 +920,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">604</stat>
+			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
 	<item id="81473" name="Blessed Exalted Leather Helmet" additionalName="Light armor" type="Armor">
@@ -932,6 +939,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">169</stat>
 		</stats>
@@ -949,6 +957,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">360</stat>
 		</stats>
@@ -966,6 +975,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">225</stat>
 		</stats>
@@ -982,6 +992,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -998,6 +1009,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -1014,6 +1026,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">169</stat>
 		</stats>
@@ -1031,6 +1044,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">61</stat>
 			<stat type="pDef">248</stat>
@@ -1050,6 +1064,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="pDef">155</stat>
@@ -1068,6 +1083,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -1084,6 +1100,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -1104,6 +1121,7 @@
 		<stats>
 			<stat type="pDef">56</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
 	<item id="81484" name="Blessed Exalted Circlet" type="Armor">
@@ -1117,6 +1135,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35653" level="1" /> <!-- Exalted Circlet -->
+		</skills>
 	</item>
 	<item id="81485" name="Exalted Soul Crystal" type="EtcItem">
 		<!-- A special Soul Crystal with the power of the Exalted. Can bestow crystal effect to weapons. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
@@ -1127,6 +1148,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 	</item>
 	<item id="81486" name="Talisman of Longing" additionalName="Exalted" type="Armor">
 		<!-- Talisman of Longing imbued with the power of the Exalted. Max HP/ MP/ CP +600, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +50, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +303, M. Atk. +356, Skill Power +4%, Damage Reflection Resistance +30%, P./ M. Def. +60, STR/ INT/ CON/ MEN/ DEX/ WIT +2, Skill MP consumption -3%. Cannot be stacked with effects other Talisman of Longing. Cannot be sealed or upgraded. -->
@@ -1139,6 +1161,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="deco1" />
+		<skills>
+			<skill id="13395" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Longing -->
+			<skill id="13389" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Longing -->
+			<skill id="8864" level="6" /> <!-- Talisman - Longing -->
+		</skills>
 	</item>
 	<item id="81487" name="Sayha's Talisman" additionalName="Exalted" type="Armor">
 		<!-- Sayha's Talisman imbued with the power of the Exalted. P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. Cannot be upgraded. -->
@@ -1151,6 +1178,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="deco1" />
+		<skills>
+			<skill id="13970" level="4" /> <!-- Skill -->
+		</skills>
 	</item>
 	<item id="81488" name="Blessed Exalted Seed Bracelet" type="Armor">
 		<!-- Seed Bracelet imbued with Lionel Hunter's blessing. Unlocks an agathion's main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. 3. P./ M. Atk. and P./ M. Def. +5%. -->
@@ -1199,6 +1229,9 @@
 			<stat type="mDef">201</stat>
 			<stat type="maxMp">65</stat>
 		</stats>
+		<skills>
+			<skill id="35639" level="1" /> <!-- Blessed Exalted Necklace - Cooldown -->
+		</skills>
 	</item>
 	<item id="81491" name="Blessed Exalted Earring" additionalName="MP Consumption" type="Armor">
 		<!-- An earring imbued with Lionel Hunter's blessing. MP +49, Confusion Resistance/ Atk. Rate +30%, Vampiric Rage +3%, Received Healing +10%, Skill MP Consumption -5%. Cannot be enchanted, crystallized or augmented. -->
@@ -1216,6 +1249,9 @@
 			<stat type="mDef">151</stat>
 			<stat type="maxMp">49</stat>
 		</stats>
+		<skills>
+			<skill id="35640" level="1" /> <!-- Blessed Exalted Earring - MP Consumption -->
+		</skills>
 	</item>
 	<item id="81492" name="Blessed Exalted Earring" additionalName="Vampiric Rage" type="Armor">
 		<!-- An earring imbued with Lionel Hunter's blessing. MP +49, Obstruction Atk. Rate/ Resistance +30%, Vampiric Rage +5%, Attribute Resistance -10. Cannot be enchanted, crystallized or augmented. -->
@@ -1233,6 +1269,9 @@
 			<stat type="mDef">151</stat>
 			<stat type="maxMp">49</stat>
 		</stats>
+		<skills>
+			<skill id="35641" level="1" /> <!-- Blessed Exalted Earring - Vampiric Rage -->
+		</skills>
 	</item>
 	<item id="81493" name="Blessed Exalted Ring" additionalName="Critical Rate" type="Armor">
 		<!-- A ring imbued with Lionel Hunter's blessing. MP +33, Stupor Atk. Rate/ Resistance +20%, P./ M. Critical Rate +50, P. Critical Damage/ M. Skill Critical Damage +10%. Cannot be enchanted, crystallized or augmented. -->
@@ -1250,6 +1289,9 @@
 			<stat type="mDef">100</stat>
 			<stat type="maxMp">33</stat>
 		</stats>
+		<skills>
+			<skill id="35642" level="1" /> <!-- Blessed Exalted Ring - Critical Rate -->
+		</skills>
 	</item>
 	<item id="81494" name="Blessed Exalted Ring" additionalName="Critical Damage" type="Armor">
 		<!-- A ring imbued with Lionel Hunter's blessing. Max MP +33, Infection Atk. Rate/ Resistance +20%, P. Critical Damage and P./ M. Skill Critical Damage +15%. Cannot be enchanted, crystallized or augmented. -->
@@ -1267,6 +1309,9 @@
 			<stat type="mDef">100</stat>
 			<stat type="maxMp">33</stat>
 		</stats>
+		<skills>
+			<skill id="35643" level="1" /> <!-- Blessed Exalted Ring - Critical Damage -->
+		</skills>
 	</item>
 	<item id="81495" name="Superior Topaz Lv. 1" type="Armor">
 		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 22,005 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding with Jewel Energy. -->

@@ -1076,6 +1076,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39726" level="1" /> <!-- Scroll: Enchant Blessed Exalted Armor -->
+		</skills>
 	</item>
 	<item id="81899" name="17th Anniversary Box" type="EtcItem">
 		<!-- Double-click to obtain 300 of each of the following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass, Honey Dark Beer, and also 150 Emperor's Special Cocktails and 17th Anniversary Coin.\n\nCan be transferred within the account before being opened. -->
