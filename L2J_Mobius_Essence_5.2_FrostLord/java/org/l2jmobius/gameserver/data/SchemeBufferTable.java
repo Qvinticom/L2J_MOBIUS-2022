@@ -57,42 +57,6 @@ public class SchemeBufferTable
 	
 	public SchemeBufferTable()
 	{
-		int count = 0;
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
-			final ResultSet rs = st.executeQuery();
-			
-			while (rs.next())
-			{
-				final int objectId = rs.getInt("object_id");
-				final String schemeName = rs.getString("scheme_name");
-				final String[] skills = rs.getString("skills").split(",");
-				final ArrayList<Integer> schemeList = new ArrayList<>();
-				for (String skill : skills)
-				{
-					// Don't feed the skills list if the list is empty.
-					if (skill.isEmpty())
-					{
-						break;
-					}
-					
-					schemeList.add(Integer.parseInt(skill));
-				}
-				
-				setScheme(objectId, schemeName, schemeList);
-				count++;
-			}
-			
-			rs.close();
-			st.close();
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("SchemeBufferTable: Failed to load buff schemes : " + e);
-		}
-		
 		try
 		{
 			final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -124,6 +88,42 @@ public class SchemeBufferTable
 		{
 			LOGGER.warning("SchemeBufferTable: Failed to load buff info : " + e);
 		}
+		
+		int count = 0;
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
+			ResultSet rs = st.executeQuery())
+		{
+			while (rs.next())
+			{
+				final int objectId = rs.getInt("object_id");
+				final String schemeName = rs.getString("scheme_name");
+				final String[] skills = rs.getString("skills").split(",");
+				final List<Integer> schemeList = new ArrayList<>();
+				for (String skill : skills)
+				{
+					// Don't feed the skills list if the list is empty.
+					if (skill.isEmpty())
+					{
+						break;
+					}
+					
+					final Integer skillId = Integer.parseInt(skill);
+					if (_availableBuffs.containsKey(skillId))
+					{
+						schemeList.add(skillId);
+					}
+				}
+				
+				setScheme(objectId, schemeName, schemeList);
+				count++;
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("SchemeBufferTable: Failed to load buff schemes: " + e);
+		}
+		
 		LOGGER.info("SchemeBufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
 	}
 	
