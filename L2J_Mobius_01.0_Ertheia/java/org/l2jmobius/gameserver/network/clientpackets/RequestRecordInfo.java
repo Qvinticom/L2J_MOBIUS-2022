@@ -51,7 +51,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 				if (object.isCreature())
 				{
 					// Update the state of the Creature object client side by sending Server->Client packet
-					// MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
+					// MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance
 					final Creature creature = (Creature) object;
 					if (creature.hasAI())
 					{

@@ -3154,6 +3154,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Set the timer of last position update to now
 		m._moveTimestamp = gameTicks;
 		
+		// Broadcast MoveToLocation when Playable tries to reach a Playable target (once per second).
+		if (isPlayable())
+		{
+			final WorldObject target = _target;
+			if ((target != null) && target.isPlayable() && ((gameTicks % 10) == 0) && (calculateDistance3D(target) > 150))
+			{
+				broadcastPacket(new MoveToLocation(this));
+			}
+		}
+		
 		if (distFraction > 1)
 		{
 			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
@@ -3294,7 +3304,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>Add the Creature to movingObjects of the GameTimeTaskManager</li>
 	 * <li>Create a task to notify the AI that Creature arrives at a check point of the movement</li>
 	 * </ul>
-	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation.</b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/MoveToLocation.</b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b>
 	 * <ul>
@@ -3642,7 +3652,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
 		// to destination by GameTimeTaskManager
 		
-		// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+		// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 		broadcastMoveToLocation();
 		return true;
 	}

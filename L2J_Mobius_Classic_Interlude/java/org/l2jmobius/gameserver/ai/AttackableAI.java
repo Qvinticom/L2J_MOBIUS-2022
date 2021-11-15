@@ -526,7 +526,7 @@ public class AttackableAI extends CreatureAI
 					y1 = (leader.getY() - y1) + minRadius;
 				}
 				
-				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
+				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)
 				moveTo(x1, y1, leader.getZ());
 			}
 			else if (Rnd.get(RANDOM_WALK_RATE) == 0)
@@ -574,7 +574,7 @@ public class AttackableAI extends CreatureAI
 				z1 = npc.getZ();
 			}
 			
-			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
+			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)
 			final Location moveLoc = _actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().getValidLocation(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceWorld());
 			moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
 		}

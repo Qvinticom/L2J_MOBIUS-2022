@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * 0000: 01 7a 73 10 4c b2 0b 00 00 a3 fc 00 00 e8 f1 ff .zs.L........... 0010: ff bd 0b 00 00 b3 fc 00 00 e8 f1 ff ff ............. ddddddd
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class CharMoveToLocation implements IClientOutgoingPacket
+public class MoveToLocation implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _x;
@@ -34,7 +34,7 @@ public class CharMoveToLocation implements IClientOutgoingPacket
 	private final int _yDst;
 	private final int _zDst;
 	
-	public CharMoveToLocation(Creature creature)
+	public MoveToLocation(Creature creature)
 	{
 		_objectId = creature.getObjectId();
 		_x = creature.getX();

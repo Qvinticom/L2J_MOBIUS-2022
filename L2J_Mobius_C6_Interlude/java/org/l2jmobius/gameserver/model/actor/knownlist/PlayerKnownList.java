@@ -64,20 +64,20 @@ public class PlayerKnownList extends PlayableKnownList
 	 * <br>
 	 * <b><u>object is a DoorInstance</u>:</b><br>
 	 * <li>Send Server-Client Packets DoorInfo and DoorStatusUpdate to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
 	 * <br>
 	 * <b><u>object is a NpcInstance</u>:</b><br>
 	 * <li>Send Server-Client Packet NpcInfo to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
 	 * <br>
 	 * <b><u>object is a Summon</u>:</b><br>
 	 * <li>Send Server-Client Packet NpcInfo/PetItemList (if the PlayerInstance is the owner) to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
 	 * <br>
 	 * <b><u>object is a PlayerInstance</u>:</b><br>
 	 * <li>Send Server-Client Packet CharInfo to the PlayerInstance</li>
 	 * <li>If the object has a private store, Send Server-Client Packet PrivateStoreMsgSell to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
 	 * @param object The WorldObject to add to _knownObjects and _knownPlayer
 	 */
 	@Override
@@ -225,7 +225,7 @@ public class PlayerKnownList extends PlayableKnownList
 			
 			if (object.isCreature())
 			{
-				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
+				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance
 				final Creature obj = (Creature) object;
 				final CreatureAI objAi = obj.getAI();
 				if (objAi != null)

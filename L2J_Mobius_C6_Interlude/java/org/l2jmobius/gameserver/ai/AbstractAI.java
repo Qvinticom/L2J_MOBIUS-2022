@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
-import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToLocationInVehicle;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
@@ -483,7 +483,7 @@ abstract class AbstractAI implements Ctrl
 			// return;
 			// }
 			
-			// Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToPawn/MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 			if (pawn instanceof Creature)
 			{
 				if (_actor.isOnGeodataPath())
@@ -512,7 +512,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation <i>(broadcast)</i>.<br>
+	 * Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation <i>(broadcast)</i>.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param x
 	 * @param y
@@ -530,7 +530,7 @@ abstract class AbstractAI implements Ctrl
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
 			_accessor.moveTo(x, y, z);
 			
-			// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 			_actor.broadcastMoveToLocation();
 		}
 		else
@@ -544,8 +544,8 @@ abstract class AbstractAI implements Ctrl
 		// Chek if actor can move
 		if (!_actor.isMovementDisabled())
 		{
-			// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-			// CharMoveToLocation msg = new CharMoveToLocation(_actor);
+			// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// MoveToLocation msg = new MoveToLocation(_actor);
 			if (((PlayerInstance) _actor).getBoat() != null)
 			{
 				_actor.broadcastPacket(new MoveToLocationInVehicle(_actor, destination, origin));
@@ -687,7 +687,7 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance player.<br>
+	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance player.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param player The PlayerIstance to notify with state of this Creature
 	 */
@@ -702,8 +702,8 @@ abstract class AbstractAI implements Ctrl
 			}
 			else
 			{
-				// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-				player.sendPacket(new CharMoveToLocation(_actor));
+				// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+				player.sendPacket(new MoveToLocation(_actor));
 			}
 		}
 	}

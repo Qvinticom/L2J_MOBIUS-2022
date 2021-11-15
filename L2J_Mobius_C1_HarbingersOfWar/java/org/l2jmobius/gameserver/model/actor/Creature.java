@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
-import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.FinishRotation;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
@@ -845,7 +845,7 @@ public abstract class Creature extends WorldObject
 					setPawnTarget(null);
 				}
 				calculateMovement(x, y, z, distance);
-				final CharMoveToLocation mov = new CharMoveToLocation(this);
+				final MoveToLocation mov = new MoveToLocation(this);
 				if (getCurrentState() == CreatureState.CASTING)
 				{
 					setCurrentState(CreatureState.IDLE);

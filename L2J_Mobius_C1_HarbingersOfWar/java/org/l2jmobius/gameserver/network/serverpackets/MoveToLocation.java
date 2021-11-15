@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 
-public class CharMoveToLocation extends ServerBasePacket
+public class MoveToLocation extends ServerBasePacket
 {
 	private final Creature _cha;
 	
-	public CharMoveToLocation(Creature cha)
+	public MoveToLocation(Creature cha)
 	{
 		_cha = cha;
 	}

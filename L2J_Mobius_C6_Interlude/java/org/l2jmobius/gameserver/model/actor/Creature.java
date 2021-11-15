@@ -105,13 +105,13 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
-import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicEffectIcons;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PartySpelled;
@@ -387,14 +387,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (isPlayable())
 		{
-			broadcastPacket(new CharMoveToLocation(this));
+			broadcastPacket(new MoveToLocation(this));
 		}
 		else
 		{
 			final WorldRegion region = getWorldRegion();
 			if ((region != null) && region.areNeighborsActive())
 			{
-				broadcastPacket(new CharMoveToLocation(this));
+				broadcastPacket(new MoveToLocation(this));
 			}
 		}
 	}
@@ -5035,6 +5035,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Set the timer of last position update to now
 		m._moveTimestamp = gameTicks;
+		
+		// Broadcast MoveToLocation when Playable tries to reach a Playable target (once per second).
+		if (isPlayable())
+		{
+			final WorldObject target = _target;
+			if ((target != null) && target.isPlayable() && ((gameTicks % 10) == 0) && (calculateDistance3D(target.getLocation()) > 150))
+			{
+				broadcastPacket(new MoveToLocation(this));
+			}
+		}
+		
 		return distFraction > 1;
 	}
 	
@@ -5203,7 +5214,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>Set the Creature _move object to MoveData object</li>
 	 * <li>Add the Creature to movingObjects of the GameTimeTaskManager</li>
 	 * <li>Create a task to notify the AI that Creature arrives at a check point of the movement</li><br>
-	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation </b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/MoveToLocation </b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
@@ -5576,7 +5587,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeTaskManager
 		
-		// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+		// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 		broadcastMoveToLocation();
 		return true;
 	}

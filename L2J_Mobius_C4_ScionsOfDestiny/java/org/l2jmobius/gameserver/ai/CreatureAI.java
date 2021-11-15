@@ -308,7 +308,7 @@ public class CreatureAI extends AbstractAI
 	 * <ul>
 	 * <li>Stop the actor auto-attack server side AND client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_MOVE_TO</li>
-	 * <li>Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)</li>
+	 * <li>Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)</li>
 	 * </ul>
 	 */
 	@Override
@@ -355,7 +355,7 @@ public class CreatureAI extends AbstractAI
 			_actor.abortAttack();
 		}
 		
-		// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
+		// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)
 		moveTo(pos.getX(), pos.getY(), pos.getZ());
 	}
 	
@@ -390,7 +390,7 @@ public class CreatureAI extends AbstractAI
 		// Abort the attack of the Creature and send Server->Client ActionFailed packet
 		_actor.abortAttack();
 		
-		// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
+		// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)
 		moveToInABoat(destination, origin);
 	}
 	

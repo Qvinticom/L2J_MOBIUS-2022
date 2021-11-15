@@ -530,7 +530,7 @@ public class AttackableAI extends CreatureAI
 				x1 = (((MinionInstance) _actor).getLeader().getX() + Rnd.get((offset - 30) * 2)) - (offset - 30);
 				y1 = (((MinionInstance) _actor).getLeader().getY() + Rnd.get((offset - 30) * 2)) - (offset - 30);
 				z1 = ((MinionInstance) _actor).getLeader().getZ();
-				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
+				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet MoveToLocation (broadcast)
 				moveTo(x1, y1, z1);
 			}
 		}

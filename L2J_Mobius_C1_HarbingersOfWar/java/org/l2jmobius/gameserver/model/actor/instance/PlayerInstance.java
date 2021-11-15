@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import org.l2jmobius.gameserver.network.serverpackets.GetItem;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -1119,7 +1119,7 @@ public class PlayerInstance extends Creature
 			final Creature obj = (Creature) object;
 			if (obj.isMoving())
 			{
-				sendPacket(new CharMoveToLocation(obj));
+				sendPacket(new MoveToLocation(obj));
 			}
 			else if (obj.isMovingToPawn())
 			{
