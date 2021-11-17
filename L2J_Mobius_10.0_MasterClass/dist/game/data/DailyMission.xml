@@ -1385,4 +1385,14 @@
 		</items>
 	</reward>
 	-->
+	<reward id="4103" name="Power of Freya's Ice Rose" requiredCompletion="8" isOneTime="false" dailyReset="true">
+		<handler name="useitem">
+			<param name="minLevel">85</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" />
+			<item id="-300" count="250" />
+		</items>
+	</reward>
 </list>
