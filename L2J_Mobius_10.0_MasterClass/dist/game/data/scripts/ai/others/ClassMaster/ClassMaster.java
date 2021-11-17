@@ -563,6 +563,11 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						htmltext = "test_server_helper026k.html";
 						break;
 					}
+					case DEATH_SOLDIER:
+					{
+						htmltext = "test_server_helper026l.html";
+						break;
+					}
 				}
 			}
 		}
@@ -616,6 +621,16 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					case ROGUE:
 					{
 						htmltext = "test_server_helper012c.html";
+						break;
+					}
+					case DEATH_SOLDIER:
+					{
+						htmltext = "test_server_helper012d.html";
+						break;
+					}
+					case DEATH_WARRIOR:
+					{
+						htmltext = "test_server_helper012e.html";
 						break;
 					}
 					case MAGE:

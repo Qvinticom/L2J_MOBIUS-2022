@@ -501,6 +501,11 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						htmltext = "test_server_helper026m.html";
 						break;
 					}
+					case SYLPH_GUNNER:
+					{
+						htmltext = "test_server_helper026n.html";
+						break;
+					}
 				}
 			}
 		}
@@ -691,6 +696,11 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					case DEATH_BLADE_DARK_ELF:
 					{
 						htmltext = "test_server_helper020h.html";
+						break;
+					}
+					case SHARPSHOOTER:
+					{
+						htmltext = "test_server_helper020i.html";
 						break;
 					}
 				}
