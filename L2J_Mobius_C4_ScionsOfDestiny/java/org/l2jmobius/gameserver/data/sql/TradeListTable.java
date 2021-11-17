@@ -28,7 +28,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * This class manages buylists from database
@@ -98,7 +98,7 @@ public class TradeListTable
 						final int count = rset.getInt("count");
 						final int currentCount = rset.getInt("currentCount");
 						final int time = rset.getInt("time");
-						final ItemInstance buyItem = ItemTable.getInstance().createDummyItem(itemId);
+						final Item buyItem = ItemTable.getInstance().createDummyItem(itemId);
 						if (buyItem == null)
 						{
 							continue;
@@ -253,7 +253,7 @@ public class TradeListTable
 				}
 				
 				listId = list.getListId();
-				for (ItemInstance Item : list.getItems())
+				for (Item Item : list.getItems())
 				{
 					if (Item.getCount() < Item.getInitCount()) // needed?
 					{

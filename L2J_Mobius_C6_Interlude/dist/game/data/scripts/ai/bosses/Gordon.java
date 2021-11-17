@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -124,7 +124,7 @@ public class Gordon extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		int x = WALKS[_isWalkTo - 1][0];
 		int y = WALKS[_isWalkTo - 1][1];
@@ -147,7 +147,7 @@ public class Gordon extends Quest
 				cancelQuestTimer("check_ai", null, null);
 				if (!_isSpawned)
 				{
-					final NpcInstance gordon = findTemplate(GORDON);
+					final Npc gordon = findTemplate(GORDON);
 					if (gordon != null)
 					{
 						_isSpawned = true;
@@ -165,10 +165,10 @@ public class Gordon extends Quest
 					// Check if player have Cursed Weapon and in radius.
 					if (npc.getNpcId() == GORDON)
 					{
-						final Collection<PlayerInstance> chars = npc.getKnownList().getKnownPlayers().values();
+						final Collection<Player> chars = npc.getKnownList().getKnownPlayers().values();
 						if ((chars != null) && !chars.isEmpty())
 						{
-							for (PlayerInstance pc : chars)
+							for (Player pc : chars)
 							{
 								if (pc.isCursedWeaponEquipped() && pc.isInsideRadius2D(npc, 5000))
 								{
@@ -240,7 +240,7 @@ public class Gordon extends Quest
 	}
 	
 	@Override
-	public String onSpawn(NpcInstance npc)
+	public String onSpawn(Npc npc)
 	{
 		if ((npc.getNpcId() == GORDON) && (_npcBlock == 0))
 		{
@@ -252,7 +252,7 @@ public class Gordon extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance player, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player player, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == GORDON)
 		{
@@ -270,7 +270,7 @@ public class Gordon extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (npc.getNpcId() == GORDON)
 		{
@@ -281,9 +281,9 @@ public class Gordon extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public NpcInstance findTemplate(int npcId)
+	public Npc findTemplate(int npcId)
 	{
-		NpcInstance npc = null;
+		Npc npc = null;
 		for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
 		{
 			if ((spawn != null) && (spawn.getNpcId() == npcId))

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,13 +27,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExOlympiadUserInfo implements IClientOutgoingPacket
 {
 	private final int _side;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/**
 	 * @param player
 	 * @param side (1 = right, 2 = left)
 	 */
-	public ExOlympiadUserInfo(PlayerInstance player, int side)
+	public ExOlympiadUserInfo(Player player, int side)
 	{
 		_player = player;
 		_side = side;

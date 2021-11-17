@@ -21,10 +21,10 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -61,7 +61,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -129,7 +129,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 		{
 			for (ItemHolder offer : _offeredItems)
 			{
-				final ItemInstance item = player.getInventory().getItemByObjectId(offer.getId());
+				final Item item = player.getInventory().getItemByObjectId(offer.getId());
 				if ((item == null) || (item.getCount() < offer.getCount()) || !item.isDestroyable())
 				{
 					return;
@@ -152,7 +152,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			long offeredAdenaWorth = 0;
 			for (ItemHolder offer : _offeredItems)
 			{
-				final ItemInstance item = player.getInventory().getItemByObjectId(offer.getId());
+				final Item item = player.getInventory().getItemByObjectId(offer.getId());
 				if (player.destroyItem("CraftOffering", item, offer.getCount(), null, true))
 				{
 					offeredAdenaWorth += (item.getItem().getReferencePrice() * offer.getCount());

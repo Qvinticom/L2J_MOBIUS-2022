@@ -35,8 +35,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 
@@ -493,13 +493,13 @@ public class AugmentationData
 	 * @param targetItem
 	 * @return
 	 */
-	public Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, ItemInstance targetItem)
+	public Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, Item targetItem)
 	{
 		switch (bodyPart)
 		{
-			case Item.SLOT_LR_FINGER:
-			case Item.SLOT_LR_EAR:
-			case Item.SLOT_NECK:
+			case ItemTemplate.SLOT_LR_FINGER:
+			case ItemTemplate.SLOT_LR_EAR:
+			case ItemTemplate.SLOT_NECK:
 			{
 				return generateRandomAccessoryAugmentation(lifeStoneLevel, bodyPart, lifeStoneId);
 			}
@@ -510,7 +510,7 @@ public class AugmentationData
 		}
 	}
 	
-	private Augmentation generateRandomWeaponAugmentation(int level, int lifeStoneGrade, int lifeStoneId, ItemInstance item)
+	private Augmentation generateRandomWeaponAugmentation(int level, int lifeStoneGrade, int lifeStoneId, Item item)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -958,19 +958,19 @@ public class AugmentationData
 		
 		switch (bodyPart)
 		{
-			case Item.SLOT_LR_FINGER:
+			case ItemTemplate.SLOT_LR_FINGER:
 			{
 				base = ACC_RING_START + (ACC_RING_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_RING_SKILLS;
 				break;
 			}
-			case Item.SLOT_LR_EAR:
+			case ItemTemplate.SLOT_LR_EAR:
 			{
 				base = ACC_EAR_START + (ACC_EAR_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_EAR_SKILLS;
 				break;
 			}
-			case Item.SLOT_NECK:
+			case ItemTemplate.SLOT_NECK:
 			{
 				base = ACC_NECK_START + (ACC_NECK_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_NECK_SKILLS;

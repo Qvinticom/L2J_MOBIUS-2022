@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -41,7 +41,7 @@ public class BaseStatFinalizer implements IStatFunction
 		// Should not apply armor set and henna bonus to summons.
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			
 			// Armor sets calculation
 			baseValue += player.getInventory().getPaperdollCache().getBaseStatValue(player, BaseStat.valueOf(stat));

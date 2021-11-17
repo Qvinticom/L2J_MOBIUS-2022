@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -40,13 +40,13 @@ public class RequestEvaluate implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		SystemMessage sm;
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!(player.getTarget() instanceof PlayerInstance))
+		if (!(player.getTarget() instanceof Player))
 		{
 			sm = new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			player.sendPacket(sm);
@@ -74,7 +74,7 @@ public class RequestEvaluate implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance target = (PlayerInstance) player.getTarget();
+		final Player target = (Player) player.getTarget();
 		if (target.getRecomHave() >= Config.ALT_RECOMMENDATIONS_NUMBER)
 		{
 			sm = new SystemMessage(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);

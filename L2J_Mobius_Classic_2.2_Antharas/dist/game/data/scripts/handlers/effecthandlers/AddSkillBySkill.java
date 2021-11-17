@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -50,7 +50,7 @@ public class AddSkillBySkill extends AbstractEffect
 	{
 		if (effected.isPlayer())
 		{
-			((PlayerInstance) effected).addSkill(_addedSkill.getSkill(), false);
+			((Player) effected).addSkill(_addedSkill.getSkill(), false);
 		}
 	}
 	

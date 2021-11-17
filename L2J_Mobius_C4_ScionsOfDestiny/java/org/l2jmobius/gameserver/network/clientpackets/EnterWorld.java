@@ -30,11 +30,11 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
@@ -47,10 +47,10 @@ import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Wedding;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -107,7 +107,7 @@ public class EnterWorld implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("EnterWorld failed! player is null...");
@@ -207,7 +207,7 @@ public class EnterWorld implements IClientIncomingPacket
 		// SECURE FIX - Anti Overenchant Cheat!!
 		if (Config.MAX_ITEM_ENCHANT_KICK > 0)
 		{
-			for (ItemInstance i : player.getInventory().getItems())
+			for (Item i : player.getInventory().getItems())
 			{
 				if (!player.isGM() && i.isEquipable() && (i.getEnchantLevel() > Config.MAX_ITEM_ENCHANT_KICK))
 				{
@@ -368,7 +368,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 			
 			// Add message at connexion if clanHall not paid. Possibly this is custom...
-			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
+			final ClanHall clanHall = ClanHallTable.getInstance().getClanHallByOwner(player.getClan());
 			if ((clanHall != null) && !clanHall.getPaid())
 			{
 				player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
@@ -400,21 +400,21 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS)
 		{
-			final ClassMasterInstance master = ClassMasterInstance.getInstance();
+			final ClassMaster master = ClassMaster.getInstance();
 			if (master != null)
 			{
 				final int lvlnow = player.getClassId().level();
 				if ((player.getLevel() >= 20) && (lvlnow == 0))
 				{
-					ClassMasterInstance.getInstance().onAction(player);
+					ClassMaster.getInstance().onAction(player);
 				}
 				else if ((player.getLevel() >= 40) && (lvlnow == 1))
 				{
-					ClassMasterInstance.getInstance().onAction(player);
+					ClassMaster.getInstance().onAction(player);
 				}
 				else if ((player.getLevel() >= 76) && (lvlnow == 2))
 				{
-					ClassMasterInstance.getInstance().onAction(player);
+					ClassMaster.getInstance().onAction(player);
 				}
 			}
 			else
@@ -479,7 +479,7 @@ public class EnterWorld implements IClientIncomingPacket
 		return result;
 	}
 	
-	private void enterGM(PlayerInstance player)
+	private void enterGM(Player player)
 	{
 		if (player.isGM())
 		{
@@ -536,7 +536,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void Hellows(PlayerInstance player)
+	private void Hellows(Player player)
 	{
 		if (Config.ALT_SERVER_NAME_ENABLED)
 		{
@@ -587,7 +587,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void colorSystem(PlayerInstance player)
+	private void colorSystem(Player player)
 	{
 		// Color System checks - Start
 		// Check if the custom PvP and PK color systems are enabled and if so check the character's counters
@@ -681,7 +681,7 @@ public class EnterWorld implements IClientIncomingPacket
 		player.broadcastUserInfo();
 	}
 	
-	private void onEnterAio(PlayerInstance player)
+	private void onEnterAio(Player player)
 	{
 		final long now = Calendar.getInstance().getTimeInMillis();
 		final long endDay = player.getAioEndTime();
@@ -712,7 +712,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void engage(PlayerInstance player)
+	private void engage(Player player)
 	{
 		final int _chaid = player.getObjectId();
 		for (Wedding cl : CoupleManager.getInstance().getCouples())
@@ -739,14 +739,14 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void notifyPartner(PlayerInstance player)
+	private void notifyPartner(Player player)
 	{
 		if (player.getPartnerId() != 0)
 		{
-			PlayerInstance partner = null;
-			if (World.getInstance().findObject(player.getPartnerId()) instanceof PlayerInstance)
+			Player partner = null;
+			if (World.getInstance().findObject(player.getPartnerId()) instanceof Player)
 			{
-				partner = (PlayerInstance) World.getInstance().findObject(player.getPartnerId());
+				partner = (Player) World.getInstance().findObject(player.getPartnerId());
 			}
 			
 			if (partner != null)
@@ -756,18 +756,18 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void notifyClanMembers(PlayerInstance player)
+	private void notifyClanMembers(Player player)
 	{
 		final Clan clan = player.getClan();
 		if (clan != null)
 		{
-			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
+			clan.getClanMember(player.getObjectId()).setPlayer(player);
 			clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addString(player.getName()), player);
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
 		}
 	}
 	
-	private void loadTutorial(PlayerInstance player)
+	private void loadTutorial(Player player)
 	{
 		final QuestState qs = player.getQuestState("Tutorial");
 		if (qs != null)
@@ -776,7 +776,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void setPledgeClass(PlayerInstance player)
+	private void setPledgeClass(Player player)
 	{
 		int pledgeClass = 0;
 		if (player.getClan() != null)
@@ -797,7 +797,7 @@ public class EnterWorld implements IClientIncomingPacket
 		player.setPledgeClass(pledgeClass);
 	}
 	
-	private void notifyCastleOwner(PlayerInstance player)
+	private void notifyCastleOwner(Player player)
 	{
 		final Clan clan = player.getClan();
 		if ((clan != null) && (clan.getCastleId() > 0))

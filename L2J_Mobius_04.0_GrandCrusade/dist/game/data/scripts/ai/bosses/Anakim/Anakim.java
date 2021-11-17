@@ -38,8 +38,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.holders.SpawnHolder;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -363,7 +363,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -481,7 +481,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if ((npc.getId() == ENTER_CUBIC) || (npc.getId() == ANAKIM_CUBIC))
 		{
@@ -500,7 +500,7 @@ public class Anakim extends AbstractNpcAI
 			}
 			final Party party = player.getParty();
 			final boolean isInCC = party.isInCommandChannel();
-			final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 			if (!isPartyLeader)
 			{
@@ -516,7 +516,7 @@ public class Anakim extends AbstractNpcAI
 				return null;
 			}
 			
-			for (PlayerInstance member : members)
+			for (Player member : members)
 			{
 				if ((member.getLevel() < Config.ANAKIM_MIN_PLAYER_LEVEL) || (member.getLevel() > Config.ANAKIM_MAX_PLAYER_LEVEL))
 				{
@@ -529,7 +529,7 @@ public class Anakim extends AbstractNpcAI
 				}
 			}
 			
-			for (PlayerInstance member : members)
+			for (Player member : members)
 			{
 				if (member.isInsideRadius3D(npc, 1000) && (npc.getId() == ENTER_CUBIC))
 				{
@@ -559,7 +559,7 @@ public class Anakim extends AbstractNpcAI
 				GrandBossManager.getInstance().setBossStatus(ANAKIM, FIGHTING);
 				// Spawn the rb
 				_anakimBoss = addSpawn(ANAKIM, 185080, -12613, -5499, 16550, false, 0);
-				GrandBossManager.getInstance().addBoss((GrandBossInstance) _anakimBoss);
+				GrandBossManager.getInstance().addBoss((GrandBoss) _anakimBoss);
 				startQuestTimer("end_anakim", 60 * 60000, null, null); // 1h
 				if (!_remnants.isEmpty())
 				{
@@ -571,13 +571,13 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".html";
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		_lastAction = Chronos.currentTimeMillis();
 		if (npc.isMinion() || npc.isRaid())// Anakim and minions
@@ -605,7 +605,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (npc.getId() == ANAKIM)
 		{
@@ -633,7 +633,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if ((npc.getId() == REMNANT) && PRE_ANAKIM_ZONE.isInsideZone(npc) && (skill == REMANT_TELE))
 		{
@@ -643,7 +643,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (CommonUtil.contains(ANAKIM_MINIONS, npc.getId()) && Rnd.nextBoolean() && (skill.getAbnormalType() == AbnormalType.HP_RECOVER) && !npc.isCastingNow() && (npc.getTarget() != npc) && (npc.getTarget() != caster) && (npc.getTarget() != _anakimBoss))
 		{

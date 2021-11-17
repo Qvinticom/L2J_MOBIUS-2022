@@ -21,7 +21,7 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -71,7 +71,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -115,7 +115,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -151,7 +151,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted() && (qs.getCond() < 4) && (getRandom(100) < 75))
@@ -170,7 +170,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(3))
@@ -183,7 +183,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		return (qs != null) && (qs.getCond() < 4) ? "19545.html" : "19545-no.html";

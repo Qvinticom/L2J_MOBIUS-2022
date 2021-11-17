@@ -23,7 +23,7 @@ import java.util.Collections;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.Mentee;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -35,7 +35,7 @@ public class ExMentorList implements IClientOutgoingPacket
 	private final int _type;
 	private final Collection<Mentee> _mentees;
 	
-	public ExMentorList(PlayerInstance player)
+	public ExMentorList(Player player)
 	{
 		if (player.isMentor())
 		{

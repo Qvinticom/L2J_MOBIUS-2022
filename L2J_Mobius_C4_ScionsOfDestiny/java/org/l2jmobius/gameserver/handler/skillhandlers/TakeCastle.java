@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Artefact;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.util.Util;
@@ -43,12 +43,12 @@ public class TakeCastle implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
@@ -78,7 +78,7 @@ public class TakeCastle implements ISkillHandler
 		
 		try
 		{
-			if ((castle != null) && (targets.get(0) instanceof ArtefactInstance))
+			if ((castle != null) && (targets.get(0) instanceof Artefact))
 			{
 				castle.engrave(player.getClan(), targets.get(0).getObjectId());
 			}
@@ -111,12 +111,12 @@ public class TakeCastle implements ISkillHandler
 	
 	public static boolean checkIfOkToCastSealOfRule(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -162,12 +162,12 @@ public class TakeCastle implements ISkillHandler
 	
 	public static boolean checkIfOkToCastFlagDisplay(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		String message = "";
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{

@@ -25,7 +25,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -53,7 +53,7 @@ public class FavoriteBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		// None of this commands can be added to favorites.
 		if (command.startsWith("_bbsgetfav"))

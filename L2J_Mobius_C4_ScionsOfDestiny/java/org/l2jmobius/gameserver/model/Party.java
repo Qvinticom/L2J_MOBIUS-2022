@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
@@ -77,7 +77,7 @@ public class Party
 	public static final int ITEM_ORDER = 3;
 	public static final int ITEM_ORDER_SPOIL = 4;
 	
-	private final List<PlayerInstance> _members;
+	private final List<Player> _members;
 	private boolean _pendingInvitation = false;
 	private long _pendingInviteTimeout;
 	private int _partyLvl = 0;
@@ -95,7 +95,7 @@ public class Party
 	 * @param leader
 	 * @param itemDistribution
 	 */
-	public Party(PlayerInstance leader, int itemDistribution)
+	public Party(Player leader, int itemDistribution)
 	{
 		_members = new ArrayList<>();
 		_itemDistribution = itemDistribution;
@@ -128,13 +128,13 @@ public class Party
 	public void setPendingInvitation(boolean value)
 	{
 		_pendingInvitation = value;
-		_pendingInviteTimeout = GameTimeTaskManager.getGameTicks() + (PlayerInstance.REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
+		_pendingInviteTimeout = GameTimeTaskManager.getGameTicks() + (Player.REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
 	}
 	
 	/**
 	 * Check if player invitation is expired
 	 * @return boolean if time is expired
-	 * @see org.l2jmobius.gameserver.model.actor.instance.PlayerInstance#isRequestExpired()
+	 * @see org.l2jmobius.gameserver.model.actor.Player#isRequestExpired()
 	 */
 	public boolean isInvitationRequestExpired()
 	{
@@ -145,7 +145,7 @@ public class Party
 	 * returns all party members
 	 * @return
 	 */
-	public List<PlayerInstance> getPartyMembers()
+	public List<Player> getPartyMembers()
 	{
 		return _members;
 	}
@@ -156,10 +156,10 @@ public class Party
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getCheckedRandomMember(int itemId, Creature target)
+	private Player getCheckedRandomMember(int itemId, Creature target)
 	{
-		final List<PlayerInstance> availableMembers = new ArrayList<>();
-		for (PlayerInstance member : _members)
+		final List<Player> availableMembers = new ArrayList<>();
+		for (Player member : _members)
 		{
 			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
@@ -180,17 +180,17 @@ public class Party
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getCheckedNextLooter(int itemId, Creature target)
+	private Player getCheckedNextLooter(int itemId, Creature target)
 	{
 		for (@SuppressWarnings("unused")
-		PlayerInstance member : _members)
+		Player member : _members)
 		{
 			if (++_itemLastLoot >= _members.size())
 			{
 				_itemLastLoot = 0;
 			}
 			
-			PlayerInstance player;
+			Player player;
 			try
 			{
 				player = _members.get(_itemLastLoot);
@@ -216,9 +216,9 @@ public class Party
 	 * @param target
 	 * @return
 	 */
-	private PlayerInstance getActualLooter(PlayerInstance player, int itemId, boolean spoil, Creature target)
+	private Player getActualLooter(Player player, int itemId, boolean spoil, Creature target)
 	{
-		PlayerInstance looter = player;
+		Player looter = player;
 		
 		switch (_itemDistribution)
 		{
@@ -263,7 +263,7 @@ public class Party
 	 * @param player
 	 * @return
 	 */
-	public boolean isLeader(PlayerInstance player)
+	public boolean isLeader(Player player)
 	{
 		return getLeader().equals(player);
 	}
@@ -283,7 +283,7 @@ public class Party
 	 */
 	public void broadcastToPartyMembers(IClientOutgoingPacket msg)
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if (member != null)
 			{
@@ -294,7 +294,7 @@ public class Party
 	
 	public void broadcastToPartyMembersNewLeader()
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if (member != null)
 			{
@@ -305,9 +305,9 @@ public class Party
 		}
 	}
 	
-	public void broadcastCSToPartyMembers(CreatureSay msg, PlayerInstance broadcaster)
+	public void broadcastCSToPartyMembers(CreatureSay msg, Player broadcaster)
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if ((member == null) || (broadcaster == null))
 			{
@@ -323,13 +323,13 @@ public class Party
 	}
 	
 	/**
-	 * Send a Server->Client packet to all other PlayerInstance of the Party.
+	 * Send a Server->Client packet to all other Player of the Party.
 	 * @param player
 	 * @param msg
 	 */
-	public void broadcastToPartyMembers(PlayerInstance player, IClientOutgoingPacket msg)
+	public void broadcastToPartyMembers(Player player, IClientOutgoingPacket msg)
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if ((member != null) && !member.equals(player))
 			{
@@ -342,7 +342,7 @@ public class Party
 	 * adds new member to party
 	 * @param player
 	 */
-	public synchronized void addPartyMember(PlayerInstance player)
+	public synchronized void addPartyMember(Player player)
 	{
 		if (_members.contains(player))
 		{
@@ -359,7 +359,7 @@ public class Party
 		msg.addString(player.getName());
 		broadcastToPartyMembers(msg);
 		broadcastToPartyMembers(new PartySmallWindowAdd(player, this));
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			player.sendPacket(new PartySmallWindowAdd(member, this));
 		}
@@ -372,7 +372,7 @@ public class Party
 		}
 		
 		// update partySpelled
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if (member != null)
 			{
@@ -405,7 +405,7 @@ public class Party
 	 */
 	public void removePartyMember(String name)
 	{
-		final PlayerInstance player = getPlayerByName(name);
+		final Player player = getPlayerByName(name);
 		if (player != null)
 		{
 			removePartyMember(player);
@@ -416,12 +416,12 @@ public class Party
 	 * Remove player from party
 	 * @param player
 	 */
-	public void removePartyMember(PlayerInstance player)
+	public void removePartyMember(Player player)
 	{
 		removePartyMember(player, true);
 	}
 	
-	public synchronized void removePartyMember(PlayerInstance player, boolean sendMessage)
+	public synchronized void removePartyMember(Player player, boolean sendMessage)
 	{
 		if (_members.contains(player))
 		{
@@ -480,7 +480,7 @@ public class Party
 					}
 				}
 				
-				final PlayerInstance leader = getLeader();
+				final Player leader = getLeader();
 				if (leader != null)
 				{
 					leader.setParty(null);
@@ -503,7 +503,7 @@ public class Party
 	
 	public void changePartyLeader(String name)
 	{
-		final PlayerInstance player = getPlayerByName(name);
+		final Player player = getPlayerByName(name);
 		if (player != null)
 		{
 			if (_members.contains(player))
@@ -515,7 +515,7 @@ public class Party
 				else
 				{
 					// Swap party members
-					PlayerInstance temp;
+					Player temp;
 					final int p1 = _members.indexOf(player);
 					temp = getLeader();
 					_members.set(0, _members.get(p1));
@@ -552,9 +552,9 @@ public class Party
 	 * @param name
 	 * @return
 	 */
-	private PlayerInstance getPlayerByName(String name)
+	private Player getPlayerByName(String name)
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if (member.getName().equalsIgnoreCase(name))
 			{
@@ -569,7 +569,7 @@ public class Party
 	 * @param player
 	 * @param item
 	 */
-	public void distributeItem(PlayerInstance player, ItemInstance item)
+	public void distributeItem(Player player, Item item)
 	{
 		if (item.getItemId() == 57)
 		{
@@ -578,7 +578,7 @@ public class Party
 			return;
 		}
 		
-		final PlayerInstance target = getActualLooter(player, item.getItemId(), false, player);
+		final Player target = getActualLooter(player, item.getItemId(), false, player);
 		target.addItem("Party", item, player, true);
 		
 		// Send messages to other party members about reward
@@ -606,7 +606,7 @@ public class Party
 	 * @param spoil
 	 * @param target
 	 */
-	public void distributeItem(PlayerInstance player, Attackable.RewardItem item, boolean spoil, Attackable target)
+	public void distributeItem(Player player, Attackable.RewardItem item, boolean spoil, Attackable target)
 	{
 		if (item == null)
 		{
@@ -619,7 +619,7 @@ public class Party
 			return;
 		}
 		
-		final PlayerInstance looter = getActualLooter(player, item.getItemId(), spoil, target);
+		final Player looter = getActualLooter(player, item.getItemId(), spoil, target);
 		looter.addItem(spoil ? "Sweep" : "Party", item.getItemId(), item.getCount(), player, true);
 		
 		// Send messages to other aprty members about reward
@@ -646,14 +646,14 @@ public class Party
 	 * @param adena
 	 * @param target
 	 */
-	public void distributeAdena(PlayerInstance player, int adena, Creature target)
+	public void distributeAdena(Player player, int adena, Creature target)
 	{
 		// Get all the party members
-		final List<PlayerInstance> membersList = _members;
+		final List<Player> membersList = _members;
 		
 		// Check the number of party members that must be rewarded (The party member must be in range to receive its reward)
-		final List<PlayerInstance> rewarded = new ArrayList<>();
-		for (PlayerInstance member : membersList)
+		final List<Player> rewarded = new ArrayList<>();
+		for (Player member : membersList)
 		{
 			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
@@ -670,29 +670,29 @@ public class Party
 		
 		// Now we can actually distribute the adena reward (Total adena split by the number of party members that are in range and must be rewarded)
 		final int count = adena / rewarded.size();
-		for (PlayerInstance member : rewarded)
+		for (Player member : rewarded)
 		{
 			member.addAdena("Party", count, player, true);
 		}
 	}
 	
 	/**
-	 * Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker.<br>
+	 * Distribute Experience and SP rewards to Player Party members in the known area of the last attacker.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Get the PlayerInstance owner of the SummonInstance (if necessary)</li>
+	 * <li>Get the Player owner of the Summon (if necessary)</li>
 	 * <li>Calculate the Experience and SP reward distribution rate</li>
-	 * <li>Add Experience and SP to the PlayerInstance</li><br>
-	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T GIVE rewards to PetInstance</b></font><br>
-	 * Exception are PetInstances that leech from the owner's XP; they get the exp indirectly, via the owner's exp gain
+	 * <li>Add Experience and SP to the Player</li><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T GIVE rewards to Pet</b></font><br>
+	 * Exception are Pets that leech from the owner's XP; they get the exp indirectly, via the owner's exp gain
 	 * @param xpRewardValue The Experience reward to distribute
 	 * @param spRewardValue The SP reward to distribute
-	 * @param rewardedMembers The list of PlayerInstance to reward
+	 * @param rewardedMembers The list of Player to reward
 	 * @param topLvl
 	 */
 	public void distributeXpAndSp(long xpRewardValue, int spRewardValue, List<Playable> rewardedMembers, int topLvl)
 	{
-		SummonInstance summon = null;
+		Servitor summon = null;
 		final List<Playable> validMembers = getValidMembers(rewardedMembers, topLvl);
 		float penalty;
 		double sqLevel;
@@ -705,7 +705,7 @@ public class Party
 			sqLevelSum += character.getLevel() * character.getLevel();
 		}
 		
-		// Go through the PlayerInstances and PetInstances (not SummonInstances) that must be rewarded
+		// Go through the Players and Pets (not Summons) that must be rewarded
 		synchronized (rewardedMembers)
 		{
 			for (Creature member : rewardedMembers)
@@ -717,17 +717,17 @@ public class Party
 				
 				penalty = 0;
 				
-				// The SummonInstance penalty
-				if (member.getPet() instanceof SummonInstance)
+				// The Summon penalty
+				if (member.getPet() instanceof Servitor)
 				{
-					summon = (SummonInstance) member.getPet();
+					summon = (Servitor) member.getPet();
 					penalty = summon.getExpPenalty();
 				}
 				
 				// Pets that leech xp from the owner (like babypets) do not get rewarded directly
-				if (member instanceof PetInstance)
+				if (member instanceof Pet)
 				{
-					if (((PetInstance) member).getPetData().getOwnerExpTaken() > 0)
+					if (((Pet) member).getPetData().getOwnerExpTaken() > 0)
 					{
 						continue;
 					}
@@ -770,7 +770,7 @@ public class Party
 	public void recalculatePartyLevel()
 	{
 		int newLevel = 0;
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if (member == null)
 			{
@@ -928,7 +928,7 @@ public class Party
 		return _dr;
 	}
 	
-	public PlayerInstance getLeader()
+	public Player getLeader()
 	{
 		try
 		{

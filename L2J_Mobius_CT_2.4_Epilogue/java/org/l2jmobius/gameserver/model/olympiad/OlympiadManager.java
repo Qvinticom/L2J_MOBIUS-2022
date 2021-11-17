@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author GodKratos
@@ -125,7 +125,7 @@ class OlympiadManager implements Runnable
 								{
 									if (_olympiadInstances.get(i) != null)
 									{
-										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
+										for (Player player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
 											player.setInOlympiadMode(false);
@@ -157,7 +157,7 @@ class OlympiadManager implements Runnable
 								{
 									if (_olympiadInstances.get(i) != null)
 									{
-										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
+										for (Player player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
 											player.setInOlympiadMode(false);
@@ -192,7 +192,7 @@ class OlympiadManager implements Runnable
 								{
 									if (_olympiadInstances.get(i) != null)
 									{
-										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
+										for (Player player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
 											player.setInOlympiadMode(false);
@@ -224,7 +224,7 @@ class OlympiadManager implements Runnable
 								{
 									if (_olympiadInstances.get(i) != null)
 									{
-										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
+										for (Player player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
 											player.setInOlympiadMode(false);
@@ -366,7 +366,7 @@ class OlympiadManager implements Runnable
 		return (_olympiadInstances == null) ? null : _olympiadInstances;
 	}
 	
-	protected List<PlayerInstance> getRandomClassList(Map<Integer, List<PlayerInstance>> list, List<Integer> classList)
+	protected List<Player> getRandomClassList(Map<Integer, List<Player>> list, List<Integer> classList)
 	{
 		if ((list == null) || (classList == null) || list.isEmpty() || classList.isEmpty())
 		{
@@ -375,9 +375,9 @@ class OlympiadManager implements Runnable
 		return list.get(classList.get(Rnd.get(classList.size())));
 	}
 	
-	protected List<PlayerInstance> nextOpponents(List<PlayerInstance> list)
+	protected List<Player> nextOpponents(List<Player> list)
 	{
-		final List<PlayerInstance> opponents = new ArrayList<>();
+		final List<Player> opponents = new ArrayList<>();
 		if (list.isEmpty())
 		{
 			return opponents;
@@ -401,7 +401,7 @@ class OlympiadManager implements Runnable
 		return opponents;
 	}
 	
-	protected boolean existNextOpponents(List<PlayerInstance> list)
+	protected boolean existNextOpponents(List<Player> list)
 	{
 		if (list == null)
 		{

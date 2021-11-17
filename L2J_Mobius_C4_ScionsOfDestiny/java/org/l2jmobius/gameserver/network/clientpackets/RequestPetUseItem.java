@@ -20,9 +20,9 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.PetDataTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
@@ -43,7 +43,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -54,13 +54,13 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final PetInstance pet = (PetInstance) player.getPet();
+		final Pet pet = (Pet) player.getPet();
 		if (pet == null)
 		{
 			return;
 		}
 		
-		final ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
+		final Item item = pet.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			return;
@@ -159,7 +159,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 		}
 	}
 	
-	private synchronized void useItem(PetInstance pet, ItemInstance item, PlayerInstance player)
+	private synchronized void useItem(Pet pet, Item item, Player player)
 	{
 		if (item.isEquipable())
 		{
@@ -198,7 +198,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 	 * @param pet
 	 * @param item
 	 */
-	private void feed(PetInstance pet, ItemInstance item)
+	private void feed(Pet pet, Item item)
 	{
 		// if pet has food in inventory
 		if (pet.destroyItem("Feed", item.getObjectId(), 1, pet, false))

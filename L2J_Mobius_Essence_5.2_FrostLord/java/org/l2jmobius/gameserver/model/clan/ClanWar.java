@@ -25,7 +25,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanWarState;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -99,7 +99,7 @@ public class ClanWar
 		}
 	}
 	
-	public void onKill(PlayerInstance killer, PlayerInstance victim)
+	public void onKill(Player killer, Player victim)
 	{
 		final Clan victimClan = victim.getClan();
 		final Clan killerClan = killer.getClan();
@@ -162,7 +162,7 @@ public class ClanWar
 		}
 	}
 	
-	public void cancel(PlayerInstance player, Clan cancelor)
+	public void cancel(Player player, Clan cancelor)
 	{
 		final Clan winnerClan = cancelor.getId() == _attackerClanId ? ClanTable.getInstance().getClan(_attackedClanId) : ClanTable.getInstance().getClan(_attackerClanId);
 		

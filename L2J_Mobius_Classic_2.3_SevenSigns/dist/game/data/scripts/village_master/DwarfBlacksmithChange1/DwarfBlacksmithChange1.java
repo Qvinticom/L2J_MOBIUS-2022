@@ -19,7 +19,7 @@ package village_master.DwarfBlacksmithChange1;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -50,7 +50,7 @@ public class DwarfBlacksmithChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -84,7 +84,7 @@ public class DwarfBlacksmithChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String ClassChangeRequested(PlayerInstance player, Npc npc, int classId)
+	private String ClassChangeRequested(Player player, Npc npc, int classId)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
@@ -131,7 +131,7 @@ public class DwarfBlacksmithChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.WARSMITH_GROUP))

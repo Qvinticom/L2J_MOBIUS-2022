@@ -5,10 +5,10 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -35,12 +35,12 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
-		final PetInstance pet = player.getPet();
+		final Pet pet = player.getPet();
 		if (pet == null)
 		{
 			return;
@@ -70,7 +70,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
+		final Item item = pet.getInventory().getItemByObjectId(_objectId);
 		
 		// No UseItem is allowed while the player is in special conditions
 		if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead())
@@ -111,7 +111,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 			}
 			// Prevent players to equip weapon while wearing combat flag
 			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
-			if ((item.getItem().getBodyPart() == Item.SLOT_LR_HAND) || (item.getItem().getBodyPart() == Item.SLOT_L_HAND) || (item.getItem().getBodyPart() == Item.SLOT_R_HAND))
+			if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND))
 			{
 				if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819))
 				{
@@ -119,7 +119,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == Item.SLOT_DECO)
+			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_DECO)
 			{
 				if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 				{
@@ -127,7 +127,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == Item.SLOT_BROOCH_JEWEL)
+			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL)
 			{
 				if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0))
 				{
@@ -137,7 +137,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == Item.SLOT_AGATHION)
+			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_AGATHION)
 			{
 				if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0))
 				{
@@ -145,7 +145,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == Item.SLOT_ARTIFACT)
+			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT)
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{

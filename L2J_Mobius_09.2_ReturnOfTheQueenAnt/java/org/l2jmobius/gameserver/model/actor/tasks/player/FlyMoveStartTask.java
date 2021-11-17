@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.tasks.player;
 import java.util.Objects;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.sayune.ExNotifyFlyMoveStart;
@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.network.serverpackets.sayune.ExNotifyFlyMoveStar
  */
 public class FlyMoveStartTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final ZoneType _zone;
 	
-	public FlyMoveStartTask(ZoneType zone, PlayerInstance player)
+	public FlyMoveStartTask(ZoneType zone, Player player)
 	{
 		Objects.requireNonNull(zone);
 		Objects.requireNonNull(player);

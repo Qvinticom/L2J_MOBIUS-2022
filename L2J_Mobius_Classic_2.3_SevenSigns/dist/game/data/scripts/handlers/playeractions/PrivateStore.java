@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -38,7 +38,7 @@ public class PrivateStore implements IPlayerActionHandler
 	private static final Logger LOGGER = Logger.getLogger(PrivateStore.class.getName());
 	
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		final PrivateStoreType type = PrivateStoreType.findById(data.getOptionId());
 		if (type == null)

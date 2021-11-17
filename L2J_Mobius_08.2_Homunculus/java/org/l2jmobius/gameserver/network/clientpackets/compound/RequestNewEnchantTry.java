@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.network.clientpackets.compound;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItem;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItemReward;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItemType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -47,7 +47,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -74,8 +74,8 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		
 		request.setProcessing(true);
 		
-		final ItemInstance itemOne = request.getItemOne();
-		final ItemInstance itemTwo = request.getItemTwo();
+		final Item itemOne = request.getItemOne();
+		final Item itemTwo = request.getItemTwo();
 		if ((itemOne == null) || (itemTwo == null))
 		{
 			client.sendPacket(ExEnchantFail.STATIC_PACKET);
@@ -110,7 +110,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			final double random = (Rnd.nextDouble() * 100);
 			final boolean success = random <= combinationItem.getChance();
 			final CombinationItemReward rewardItem = combinationItem.getReward(success ? CombinationItemType.ON_SUCCESS : CombinationItemType.ON_FAILURE);
-			final ItemInstance item = player.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
+			final Item item = player.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
 			if (success)
 			{
 				client.sendPacket(new ExEnchantSucess(item.getId()));

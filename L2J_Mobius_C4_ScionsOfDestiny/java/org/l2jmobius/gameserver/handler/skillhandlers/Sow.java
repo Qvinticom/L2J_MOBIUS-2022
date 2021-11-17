@@ -25,9 +25,9 @@ import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -43,19 +43,19 @@ public class Sow implements ISkillHandler
 		SkillType.SOW
 	};
 	
-	private PlayerInstance _player;
-	private MonsterInstance _target;
+	private Player _player;
+	private Monster _target;
 	private int _seedId;
 	
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		_player = (PlayerInstance) creature;
+		_player = (Player) creature;
 		
 		final List<Creature> targetList = skill.getTargetList(creature);
 		if (targetList == null)
@@ -66,12 +66,12 @@ public class Sow implements ISkillHandler
 		for (@SuppressWarnings("unused")
 		Creature element : targetList)
 		{
-			if (!(targetList.get(0) instanceof MonsterInstance))
+			if (!(targetList.get(0) instanceof Monster))
 			{
 				continue;
 			}
 			
-			_target = (MonsterInstance) targetList.get(0);
+			_target = (Monster) targetList.get(0);
 			if (_target.isSeeded())
 			{
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -97,7 +97,7 @@ public class Sow implements ISkillHandler
 				continue;
 			}
 			
-			final ItemInstance item = _player.getInventory().getItemByItemId(_seedId);
+			final Item item = _player.getInventory().getItemByItemId(_seedId);
 			if (item == null)
 			{
 				_player.sendPacket(ActionFailed.STATIC_PACKET);

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -131,7 +131,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -255,7 +255,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -337,7 +337,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 	{
 		if (event.getMarkId() == getId())
 		{
-			final PlayerInstance player = event.getPlayer();
+			final Player player = event.getPlayer();
 			player.sendPacket(new TutorialShowHtml(getHtm(player, "popupInvite.html")));
 		}
 	}
@@ -351,7 +351,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
 		if ((oldLevel < newLevel) && (newLevel == _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
@@ -369,7 +369,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((player.getLevel() >= _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
 			if (getQuestState(player, true).isCreated())

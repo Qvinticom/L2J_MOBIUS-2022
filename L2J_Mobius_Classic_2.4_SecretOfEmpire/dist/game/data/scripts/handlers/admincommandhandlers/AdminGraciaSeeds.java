@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class AdminGraciaSeeds implements IAdminCommandHandler
@@ -35,7 +35,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
@@ -58,7 +58,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showMenu(PlayerInstance activeChar)
+	private void showMenu(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/graciaseeds.htm");

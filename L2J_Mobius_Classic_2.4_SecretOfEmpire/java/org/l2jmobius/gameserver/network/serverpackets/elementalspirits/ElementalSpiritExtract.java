@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ElementalSpiritExtract extends UpdateElementalSpiritPacket
 {
-	public ElementalSpiritExtract(PlayerInstance player, byte type, boolean extracted)
+	public ElementalSpiritExtract(Player player, byte type, boolean extracted)
 	{
 		super(player, type, extracted);
 	}

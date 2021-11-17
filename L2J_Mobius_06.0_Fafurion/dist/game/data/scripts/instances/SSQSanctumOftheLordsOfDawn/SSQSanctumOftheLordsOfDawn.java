@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -75,7 +75,7 @@ public class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		// Spawn guards and set save points
 		for (int i = 1; i <= 4; i++)
@@ -89,7 +89,7 @@ public class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -130,7 +130,7 @@ public class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		switch (npc.getId())
 		{
@@ -199,7 +199,7 @@ public class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));
 		startQuestTimer("teleportPlayer", 2000, npc, player);

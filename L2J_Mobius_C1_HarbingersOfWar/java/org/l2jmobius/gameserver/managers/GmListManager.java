@@ -20,13 +20,13 @@ package org.l2jmobius.gameserver.managers;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
 
 public class GmListManager
 {
 	private static GmListManager _instance;
-	private final List<PlayerInstance> _gmList = new ArrayList<>();
+	private final List<Player> _gmList = new ArrayList<>();
 	
 	public static GmListManager getInstance()
 	{
@@ -41,17 +41,17 @@ public class GmListManager
 	{
 	}
 	
-	public void addGm(PlayerInstance player)
+	public void addGm(Player player)
 	{
 		_gmList.add(player);
 	}
 	
-	public void deleteGm(PlayerInstance player)
+	public void deleteGm(Player player)
 	{
 		_gmList.remove(player);
 	}
 	
-	public void sendListToPlayer(PlayerInstance player)
+	public void sendListToPlayer(Player player)
 	{
 		if (_gmList.isEmpty())
 		{

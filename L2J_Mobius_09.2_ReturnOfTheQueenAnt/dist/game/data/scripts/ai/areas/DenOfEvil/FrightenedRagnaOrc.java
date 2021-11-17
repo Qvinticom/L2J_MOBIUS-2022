@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -50,7 +50,7 @@ public class FrightenedRagnaOrc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -67,7 +67,7 @@ public class FrightenedRagnaOrc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final NpcStringId msg = getRandomBoolean() ? NpcStringId.A_CURSE_UPON_YOU_2 : NpcStringId.I_REALLY_DIDN_T_WANT_TO_FIGHT;
 		npc.broadcastSay(ChatType.NPC_GENERAL, msg);
@@ -77,7 +77,7 @@ public class FrightenedRagnaOrc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{

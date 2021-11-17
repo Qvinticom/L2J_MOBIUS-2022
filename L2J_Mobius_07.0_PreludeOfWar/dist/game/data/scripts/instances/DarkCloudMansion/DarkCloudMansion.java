@@ -22,7 +22,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -122,7 +122,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -152,7 +152,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == YIYEN)
 		{
@@ -170,7 +170,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -241,7 +241,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -281,7 +281,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)

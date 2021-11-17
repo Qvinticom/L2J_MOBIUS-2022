@@ -25,7 +25,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -89,7 +89,7 @@ public class HermuncusMinion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String eventValue, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String eventValue, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final StringTokenizer st = new StringTokenizer(eventValue, " ");
@@ -151,7 +151,7 @@ public class HermuncusMinion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) ? "HermuncusMinion.html" : "HermuncusMinion-no.html";
 	}

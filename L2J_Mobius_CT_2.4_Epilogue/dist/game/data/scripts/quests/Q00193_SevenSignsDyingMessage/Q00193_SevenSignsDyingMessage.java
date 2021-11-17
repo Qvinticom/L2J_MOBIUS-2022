@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -65,7 +65,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc.getId() == SHILENS_EVIL_THOUGHTS) && "despawn".equals(event))
 		{
@@ -164,7 +164,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 					ns.addStringParameter(player.getName());
 					npc.broadcastPacket(ns);
 					startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
-					final MonsterInstance monster = (MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, 82425, 47232, -3216, 0, false, 0, false);
+					final Monster monster = (Monster) addSpawn(SHILENS_EVIL_THOUGHTS, 82425, 47232, -3216, 0, false, 0, false);
 					monster.broadcastPacket(new NpcSay(monster.getObjectId(), ChatType.NPC_GENERAL, monster.getId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
 					monster.setRunning();
 					monster.addDamageHate(player, 0, 999);
@@ -211,9 +211,9 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, 4);
+		final Player partyMember = getRandomPartyMember(player, 4);
 		if (partyMember == null)
 		{
 			return null;
@@ -235,7 +235,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

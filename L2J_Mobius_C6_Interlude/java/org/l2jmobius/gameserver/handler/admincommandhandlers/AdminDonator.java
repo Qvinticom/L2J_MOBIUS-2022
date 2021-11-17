@@ -22,7 +22,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
@@ -37,7 +37,7 @@ public class AdminDonator implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -56,7 +56,7 @@ public class AdminDonator implements IAdminCommandHandler
 			final WorldObject target = activeChar.getTarget();
 			if (target.isPlayer())
 			{
-				final PlayerInstance targetPlayer = target.getActingPlayer();
+				final Player targetPlayer = target.getActingPlayer();
 				final long donatorTime = Long.valueOf(value) * 24 * 60 * 60 * 1000;
 				if (donatorTime > 0)
 				{

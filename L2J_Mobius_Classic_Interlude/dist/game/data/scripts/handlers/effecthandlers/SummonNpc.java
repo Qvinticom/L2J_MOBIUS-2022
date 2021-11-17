@@ -25,13 +25,13 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Decoy;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -71,7 +71,7 @@ public class SummonNpc extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{
@@ -84,7 +84,7 @@ public class SummonNpc extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player.isMounted())
 		{
 			return;
@@ -128,7 +128,7 @@ public class SummonNpc extends AbstractEffect
 		{
 			case "Decoy":
 			{
-				final DecoyInstance decoy = new DecoyInstance(npcTemplate, player, _despawnDelay);
+				final Decoy decoy = new Decoy(npcTemplate, player, _despawnDelay);
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
@@ -139,7 +139,7 @@ public class SummonNpc extends AbstractEffect
 			}
 			case "EffectPoint": // TODO: Implement proper signet skills.
 			{
-				final EffectPointInstance effectPoint = new EffectPointInstance(npcTemplate, player);
+				final EffectPoint effectPoint = new EffectPoint(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
 				effectPoint.setInvul(true);

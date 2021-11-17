@@ -19,8 +19,8 @@ package handlers.bypasshandlers;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class BuyShadowItem implements IBypassHandler
@@ -31,9 +31,9 @@ public class BuyShadowItem implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!(target instanceof MerchantInstance))
+		if (!(target instanceof Merchant))
 		{
 			return false;
 		}

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -43,7 +43,7 @@ public class OfflineShop implements IVoicedCommandHandler
 	
 	@SuppressWarnings("null")
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance player, String target)
+	public boolean useVoicedCommand(String command, Player player, String target)
 	{
 		if (player == null)
 		{

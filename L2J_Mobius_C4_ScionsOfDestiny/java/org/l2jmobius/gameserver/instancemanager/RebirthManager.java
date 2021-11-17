@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
@@ -59,7 +59,7 @@ public class RebirthManager
 	 * @param player the player
 	 * @param command the command
 	 */
-	public void handleCommand(PlayerInstance player, String command)
+	public void handleCommand(Player player, String command)
 	{
 		if (command.startsWith("custom_rebirth_requestrebirth"))
 		{
@@ -75,7 +75,7 @@ public class RebirthManager
 	 * Display's an HTML window with the Rebirth Options.
 	 * @param player the player
 	 */
-	public void displayRebirthWindow(PlayerInstance player)
+	public void displayRebirthWindow(Player player)
 	{
 		try
 		{
@@ -110,7 +110,7 @@ public class RebirthManager
 	 * Checks to see if the player is eligible for a Rebirth, if so it grants it and stores information.
 	 * @param player the player
 	 */
-	public void requestRebirth(PlayerInstance player)
+	public void requestRebirth(Player player)
 	{
 		// Check to see if Rebirth is enabled to avoid hacks
 		if (!Config.REBIRTH_ENABLE)
@@ -172,7 +172,7 @@ public class RebirthManager
 	 * @param newBirthCount the new birth count
 	 * @param firstBirth the first birth
 	 */
-	public void grantRebirth(PlayerInstance player, int newBirthCount, boolean firstBirth)
+	public void grantRebirth(Player player, int newBirthCount, boolean firstBirth)
 	{
 		try
 		{
@@ -256,7 +256,7 @@ public class RebirthManager
 	 * Special effects when the player levels.
 	 * @param player the player
 	 */
-	public void displayCongrats(PlayerInstance player)
+	public void displayCongrats(Player player)
 	{
 		// Victory Social Action.
 		player.setTarget(player);
@@ -271,10 +271,10 @@ public class RebirthManager
 	 * @param itemAmount the item amount
 	 * @return true, if successful
 	 */
-	public boolean playerIsEligible(PlayerInstance player, int itemId, int itemAmount)
+	public boolean playerIsEligible(Player player, int itemId, int itemAmount)
 	{
 		final String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
-		final ItemInstance itemNeeded = player.getInventory().getItemByItemId(itemId);
+		final Item itemNeeded = player.getInventory().getItemByItemId(itemId);
 		if ((itemNeeded == null) || (itemNeeded.getCount() < itemAmount))
 		{
 			player.sendMessage("You need at least " + itemAmount + "  " + itemName + " to request a Rebirth!");
@@ -291,7 +291,7 @@ public class RebirthManager
 	 * Gives the available Bonus Skills to the player.
 	 * @param player the player
 	 */
-	public void grantRebirthSkills(PlayerInstance player)
+	public void grantRebirthSkills(Player player)
 	{
 		// returns the current Rebirth Level
 		final int rebirthLevel = getRebirthLevel(player);
@@ -322,7 +322,7 @@ public class RebirthManager
 	 * @param player the player
 	 * @return the rebirth level
 	 */
-	public int getRebirthLevel(PlayerInstance player)
+	public int getRebirthLevel(Player player)
 	{
 		final int playerId = player.getObjectId();
 		if (_playersRebirthInfo.get(playerId) == null)
@@ -378,7 +378,7 @@ public class RebirthManager
 	 * Database caller to retrieve player's current Rebirth Level.
 	 * @param player the player
 	 */
-	public void loadRebirthInfo(PlayerInstance player)
+	public void loadRebirthInfo(Player player)
 	{
 		final int playerId = player.getObjectId();
 		int rebirthCount = 0;
@@ -409,7 +409,7 @@ public class RebirthManager
 	 * Stores the player's information in the DB.
 	 * @param player the player
 	 */
-	public void storePlayerBirth(PlayerInstance player)
+	public void storePlayerBirth(Player player)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -430,7 +430,7 @@ public class RebirthManager
 	 * @param player the player
 	 * @param newRebirthCount the new rebirth count
 	 */
-	public void updatePlayerBirth(PlayerInstance player, int newRebirthCount)
+	public void updatePlayerBirth(Player player, int newRebirthCount)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{

@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
@@ -47,7 +47,7 @@ public class ClanHallZone extends ZoneRespawn
 			{
 				_clanHallId = Integer.parseInt(value);
 				// Register self to the correct clan hall
-				final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
+				final ClanHall clanHall = ClanHallTable.getInstance().getClanHallById(_clanHallId);
 				if (clanHall != null)
 				{
 					clanHall.setZone(this);
@@ -65,24 +65,24 @@ public class ClanHallZone extends ZoneRespawn
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			// Set as in clan hall
 			creature.setInsideZone(ZoneId.CLAN_HALL, true);
 			
-			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
+			final ClanHall clanHall = ClanHallTable.getInstance().getClanHallById(_clanHallId);
 			if (clanHall == null)
 			{
 				return;
 			}
 			
 			// Send decoration packet
-			((PlayerInstance) creature).sendPacket(new ClanHallDecoration(clanHall));
+			((Player) creature).sendPacket(new ClanHallDecoration(clanHall));
 			
 			// Send a message
-			if ((clanHall.getOwnerId() != 0) && (clanHall.getOwnerId() == ((PlayerInstance) creature).getClanId()))
+			if ((clanHall.getOwnerId() != 0) && (clanHall.getOwnerId() == ((Player) creature).getClanId()))
 			{
-				((PlayerInstance) creature).sendMessage("You have entered your clan hall.");
+				((Player) creature).sendMessage("You have entered your clan hall.");
 			}
 		}
 	}
@@ -90,15 +90,15 @@ public class ClanHallZone extends ZoneRespawn
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			// Unset clanhall zone
 			creature.setInsideZone(ZoneId.CLAN_HALL, false);
 			
 			// Send a message
-			if ((((PlayerInstance) creature).getClanId() != 0) && (ClanHallManager.getInstance().getClanHallById(_clanHallId).getOwnerId() == ((PlayerInstance) creature).getClanId()))
+			if ((((Player) creature).getClanId() != 0) && (ClanHallTable.getInstance().getClanHallById(_clanHallId).getOwnerId() == ((Player) creature).getClanId()))
 			{
-				((PlayerInstance) creature).sendMessage("You have left your clan hall.");
+				((Player) creature).sendMessage("You have left your clan hall.");
 			}
 		}
 	}
@@ -121,17 +121,17 @@ public class ClanHallZone extends ZoneRespawn
 	{
 		for (Creature temp : getCharactersInside())
 		{
-			if (!(temp instanceof PlayerInstance))
+			if (!(temp instanceof Player))
 			{
 				continue;
 			}
 			
-			if (((PlayerInstance) temp).getClanId() == owningClanId)
+			if (((Player) temp).getClanId() == owningClanId)
 			{
 				continue;
 			}
 			
-			((PlayerInstance) temp).teleToLocation(TeleportWhereType.TOWN);
+			((Player) temp).teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 }

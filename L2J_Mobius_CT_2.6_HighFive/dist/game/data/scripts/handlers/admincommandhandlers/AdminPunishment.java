@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -67,7 +67,7 @@ public class AdminPunishment implements IAdminCommandHandler
 	private static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		if (!st.hasMoreTokens())
@@ -157,7 +157,7 @@ public class AdminPunishment implements IAdminCommandHandler
 						}
 						case "player":
 						{
-							PlayerInstance target = null;
+							Player target = null;
 							if (st.hasMoreTokens())
 							{
 								final String playerName = st.nextToken();

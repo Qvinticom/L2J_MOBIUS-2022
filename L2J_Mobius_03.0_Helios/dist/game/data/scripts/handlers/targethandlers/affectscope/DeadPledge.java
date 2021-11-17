@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -45,7 +45,7 @@ public class DeadPledge implements IAffectScopeHandler
 		if (target.isPlayable())
 		{
 			final Playable playable = (Playable) target;
-			final PlayerInstance player = playable.getActingPlayer();
+			final Player player = playable.getActingPlayer();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
@@ -56,7 +56,7 @@ public class DeadPledge implements IAffectScopeHandler
 					return false;
 				}
 				
-				final PlayerInstance p = plbl.getActingPlayer();
+				final Player p = plbl.getActingPlayer();
 				if ((p == null) || !p.isDead())
 				{
 					return false;

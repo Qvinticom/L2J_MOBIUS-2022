@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -97,7 +97,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -107,8 +107,8 @@ public class EtinaHelperAliber extends AbstractNpcAI
 				case "CHECK_ACTION":
 				{
 					final StatSet npcVars = npc.getVariables();
-					final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
-					final MonsterInstance monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 2500));
+					final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
+					final Monster monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 					if (plr != null)
 					{
 						final double distance = npc.calculateDistance2D(plr);
@@ -125,7 +125,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 								npc.setRunning();
 							}
 							addMoveToDesire(npc, randLoc, 23);
-							((FriendlyNpcInstance) npc).setCanReturnToSpawnPoint(false);
+							((FriendlyNpc) npc).setCanReturnToSpawnPoint(false);
 						}
 						else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
 						{
@@ -138,7 +138,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 							{
 								npc.setInvul(true);
 								npc.setRunning();
-								((FriendlyNpcInstance) npc).setCanReturnToSpawnPoint(false);
+								((FriendlyNpc) npc).setCanReturnToSpawnPoint(false);
 								addAttackDesire(npc, (Creature) target);
 								// addSkillCastDesire(npc, target, ALIBER_SPLASH, 23);
 								// npc.reduceCurrentHp(1, monster, null);
@@ -149,7 +149,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 				}
 				case "DESTROY_BARRICADES":
 				{
-					final FriendlyNpcInstance _aliber = (FriendlyNpcInstance) instance.getNpc(ETINA_HELPER_ALIBER);
+					final FriendlyNpc _aliber = (FriendlyNpc) instance.getNpc(ETINA_HELPER_ALIBER);
 					boolean BARRICADE_DESTROYED = instance.getParameters().getBoolean("BARRICADE_DESTROYED", false);
 					if (!instance.getNpcsOfGroup("BARRICADES_1").isEmpty())
 					{
@@ -237,7 +237,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final FriendlyNpcInstance npc = (FriendlyNpcInstance) event.getTarget();
+		final FriendlyNpc npc = (FriendlyNpc) event.getTarget();
 		if (npc != null)
 		{
 			final Instance instance = npc.getInstanceWorld();

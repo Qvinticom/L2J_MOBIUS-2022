@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class PlayerFreight extends ItemContainer
 {
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private final int _ownerId;
 	
 	public PlayerFreight(int objectId)
@@ -36,7 +36,7 @@ public class PlayerFreight extends ItemContainer
 		restore();
 	}
 	
-	public PlayerFreight(PlayerInstance owner)
+	public PlayerFreight(Player owner)
 	{
 		_owner = owner;
 		_ownerId = owner.getObjectId();
@@ -49,7 +49,7 @@ public class PlayerFreight extends ItemContainer
 	}
 	
 	@Override
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}

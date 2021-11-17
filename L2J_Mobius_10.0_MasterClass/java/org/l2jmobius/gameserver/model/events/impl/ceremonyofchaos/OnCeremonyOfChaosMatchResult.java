@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.events.impl.ceremonyofchaos;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,21 +27,21 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnCeremonyOfChaosMatchResult implements IBaseEvent
 {
-	private final List<PlayerInstance> _winners;
-	private final List<PlayerInstance> _members;
+	private final List<Player> _winners;
+	private final List<Player> _members;
 	
-	public OnCeremonyOfChaosMatchResult(List<PlayerInstance> winners, List<PlayerInstance> members)
+	public OnCeremonyOfChaosMatchResult(List<Player> winners, List<Player> members)
 	{
 		_winners = winners;
 		_members = members;
 	}
 	
-	public List<PlayerInstance> getWinners()
+	public List<Player> getWinners()
 	{
 		return _winners;
 	}
 	
-	public List<PlayerInstance> getMembers()
+	public List<Player> getMembers()
 	{
 		return _members;
 	}

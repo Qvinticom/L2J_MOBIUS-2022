@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.util.Util;
@@ -39,8 +39,8 @@ public class PartyNotMe implements ITargetTypeHandler
 		final List<Creature> targetList = new ArrayList<>();
 		if (creature.getParty() != null)
 		{
-			final List<PlayerInstance> partyList = creature.getParty().getMembers();
-			for (PlayerInstance partyMember : partyList)
+			final List<Player> partyList = creature.getParty().getMembers();
+			for (Player partyMember : partyList)
 			{
 				if ((partyMember != null) && !partyMember.isDead() && (partyMember != creature) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, creature, partyMember, true) && ((skill.getAffectRange() <= 0) || Util.checkIfInRange(skill.getAffectRange(), creature, partyMember, true)))
 				{

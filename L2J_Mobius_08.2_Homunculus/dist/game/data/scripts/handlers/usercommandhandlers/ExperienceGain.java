@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author xban1x
@@ -31,7 +31,7 @@ public class ExperienceGain implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance player, String params)
+	public boolean useVoicedCommand(String command, Player player, String params)
 	{
 		if (command.equals("expoff"))
 		{

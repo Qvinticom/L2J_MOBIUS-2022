@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerLevelChanged implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _oldLevel;
 	private final int _newLevel;
 	
-	public OnPlayerLevelChanged(PlayerInstance player, int oldLevel, int newLevel)
+	public OnPlayerLevelChanged(Player player, int oldLevel, int newLevel)
 	{
 		_player = player;
 		_oldLevel = oldLevel;
 		_newLevel = newLevel;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

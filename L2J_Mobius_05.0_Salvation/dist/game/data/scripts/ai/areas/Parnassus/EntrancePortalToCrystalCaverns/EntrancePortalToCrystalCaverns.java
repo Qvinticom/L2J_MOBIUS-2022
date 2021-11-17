@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
@@ -60,7 +60,7 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -94,7 +94,7 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "EntrancePortal_" + getCurrentInstanceTemplateId() + ".html";
 	}
@@ -107,12 +107,12 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		if (event.equals("LOOP_TIMER"))
 		{
 			final int currentTemplateId = getCurrentInstanceTemplateId();
-			World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 500, p -> updateTriggersForPlayer(player, currentTemplateId));
+			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 500, p -> updateTriggersForPlayer(player, currentTemplateId));
 		}
 	}
 	
@@ -128,7 +128,7 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 		return super.onCreatureSee(npc, creature);
 	}
 	
-	public void updateTriggersForPlayer(PlayerInstance player, int currentTemplateId)
+	public void updateTriggersForPlayer(Player player, int currentTemplateId)
 	{
 		if (player != null)
 		{

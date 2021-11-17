@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -49,7 +49,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_itemcreate"))
 		{
@@ -139,13 +139,13 @@ public class AdminCreateItem implements IAdminCommandHandler
 					final int idval = Integer.parseInt(id);
 					final String num = st.nextToken();
 					final long numval = Long.parseLong(num);
-					createItem(activeChar, (PlayerInstance) target, idval, numval);
+					createItem(activeChar, (Player) target, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
 					final String id = st.nextToken();
 					final int idval = Integer.parseInt(id);
-					createItem(activeChar, (PlayerInstance) target, idval, 1);
+					createItem(activeChar, (Player) target, idval, 1);
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -178,7 +178,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				numval = 1;
 			}
 			int counter = 0;
-			final Item template = ItemTable.getInstance().getTemplate(idval);
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(idval);
 			if (template == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");
@@ -189,7 +189,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 				return false;
 			}
-			for (PlayerInstance onlinePlayer : World.getInstance().getPlayers())
+			for (Player onlinePlayer : World.getInstance().getPlayers())
 			{
 				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{
@@ -219,11 +219,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 				idval = Integer.parseInt(id);
 				numval = 1;
 			}
-			final ItemInstance item = (ItemInstance) World.getInstance().findObject(idval);
+			final Item item = (Item) World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final PlayerInstance player = World.getInstance().getPlayer(ownerId);
+				final Player player = World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
@@ -249,11 +249,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			final String val = command.substring(15);
 			final int idval = Integer.parseInt(val);
-			final ItemInstance item = (ItemInstance) World.getInstance().findObject(idval);
+			final Item item = (Item) World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final PlayerInstance player = World.getInstance().getPlayer(ownerId);
+				final Player player = World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
@@ -290,9 +290,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void createItem(PlayerInstance activeChar, PlayerInstance target, int id, long num)
+	private void createItem(Player activeChar, Player target, int id, long num)
 	{
-		final Item template = ItemTable.getInstance().getTemplate(id);
+		final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");

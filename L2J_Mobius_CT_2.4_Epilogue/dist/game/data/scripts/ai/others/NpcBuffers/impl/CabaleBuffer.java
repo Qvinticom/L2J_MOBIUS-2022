@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -66,7 +66,7 @@ public class CabaleBuffer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return null;
 	}
@@ -135,7 +135,7 @@ public class CabaleBuffer extends AbstractNpcAI
 				losingCabal = SevenSigns.CABAL_DAWN;
 			}
 			
-			for (PlayerInstance player : World.getInstance().getVisibleObjects(_npc, PlayerInstance.class))
+			for (Player player : World.getInstance().getVisibleObjects(_npc, Player.class))
 			{
 				if ((player == null) || player.isInvul())
 				{
@@ -238,7 +238,7 @@ public class CabaleBuffer extends AbstractNpcAI
 		 * @param skillId
 		 * @return
 		 */
-		private boolean handleCast(PlayerInstance player, int skillId)
+		private boolean handleCast(Player player, int skillId)
 		{
 			if (player.isDead() || !player.isSpawned() || !_npc.isInsideRadius2D(player, DISTANCE_TO_WATCH_OBJECT))
 			{
@@ -282,7 +282,7 @@ public class CabaleBuffer extends AbstractNpcAI
 		}
 	}
 	
-	public int getAbnormalLevel(PlayerInstance player, int skillId)
+	public int getAbnormalLevel(Player player, int skillId)
 	{
 		final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(skillId);
 		return (info != null) ? info.getSkill().getAbnormalLevel() : 0;

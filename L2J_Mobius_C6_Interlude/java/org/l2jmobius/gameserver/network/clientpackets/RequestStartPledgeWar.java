@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -96,7 +96,7 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 		
 		// LOGGER.warning("RequestStartPledgeWar, leader: " + clan.getLeaderName() + " clan: "+ _clan.getName());
 		
-		// PlayerInstance leader = World.getInstance().getPlayer(clan.getLeaderName());
+		// Player leader = World.getInstance().getPlayer(clan.getLeaderName());
 		
 		// if(leader == null)
 		// return;
@@ -128,7 +128,7 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 		// player.setTransactionRequester(leader);
 		// leader.sendPacket(new StartPledgeWar(_clan.getName(),player.getName()));
 		ClanTable.getInstance().storeClanWars(player.getClanId(), clan.getClanId());
-		for (PlayerInstance cha : World.getInstance().getAllPlayers())
+		for (Player cha : World.getInstance().getAllPlayers())
 		{
 			if ((cha.getClan() == player.getClan()) || (cha.getClan() == clan))
 			{

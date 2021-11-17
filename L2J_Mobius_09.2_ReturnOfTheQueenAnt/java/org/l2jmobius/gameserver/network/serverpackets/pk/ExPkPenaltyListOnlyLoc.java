@@ -20,7 +20,7 @@ import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -38,10 +38,10 @@ public class ExPkPenaltyListOnlyLoc implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PK_PENALTY_LIST_ONLY_LOC.writeId(packet);
 		
-		final Set<PlayerInstance> players = World.getInstance().getPkPlayers();
+		final Set<Player> players = World.getInstance().getPkPlayers();
 		packet.writeD(World.getInstance().getLastPkTime());
 		packet.writeD(players.size());
-		for (PlayerInstance player : players)
+		for (Player player : players)
 		{
 			packet.writeD(player.getObjectId());
 			packet.writeD(player.getX());

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,16 +25,16 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerMentorStatus implements IBaseEvent
 {
-	private final PlayerInstance _mentor;
+	private final Player _mentor;
 	private final boolean _isOnline;
 	
-	public OnPlayerMentorStatus(PlayerInstance mentor, boolean isOnline)
+	public OnPlayerMentorStatus(Player mentor, boolean isOnline)
 	{
 		_mentor = mentor;
 		_isOnline = isOnline;
 	}
 	
-	public PlayerInstance getMentor()
+	public Player getMentor()
 	{
 		return _mentor;
 	}

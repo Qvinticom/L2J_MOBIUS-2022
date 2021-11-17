@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +43,7 @@ public class Spoil implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
@@ -55,12 +55,12 @@ public class Spoil implements ISkillHandler
 		
 		for (WorldObject target1 : targets)
 		{
-			if (!(target1 instanceof MonsterInstance))
+			if (!(target1 instanceof Monster))
 			{
 				continue;
 			}
 			
-			final MonsterInstance target = (MonsterInstance) target1;
+			final Monster target = (Monster) target1;
 			if (target.isSpoil())
 			{
 				creature.sendPacket(new SystemMessage(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED));

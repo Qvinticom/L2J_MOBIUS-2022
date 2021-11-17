@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -44,7 +44,7 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -54,7 +54,7 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 		{
 			final int usedResetKills = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_RESET_KILLS, 0);
 			final int usedKillConvert = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_KILL_CONVERT, 0);
-			final ItemInstance fish = player.getInventory().getItemByItemId(POWERFUL_FISH);
+			final Item fish = player.getInventory().getItemByItemId(POWERFUL_FISH);
 			if (((fish == null) || (fish.getCount() < FISH_COUNT)) || ((usedResetKills <= 3) && (usedKillConvert == 0)))
 			{
 				player.sendPacket(new ExHomunculusInitPointResult(false, _type));
@@ -72,7 +72,7 @@ public class RequestExHomunculusInitPoint implements IClientIncomingPacket
 		{
 			final int usedResetVp = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_RESET_VP, 0);
 			final int usedVpConvert = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_VP_CONVERT, 0);
-			final ItemInstance fish = player.getInventory().getItemByItemId(POWERFUL_FISH);
+			final Item fish = player.getInventory().getItemByItemId(POWERFUL_FISH);
 			if (((fish == null) || (fish.getCount() < FISH_COUNT)) || ((usedResetVp <= 3) && (usedVpConvert == 0)))
 			{
 				player.sendPacket(new ExHomunculusInitPointResult(false, _type));

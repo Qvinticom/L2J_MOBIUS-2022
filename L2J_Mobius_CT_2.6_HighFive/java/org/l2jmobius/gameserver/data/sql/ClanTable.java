@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
@@ -156,7 +156,7 @@ public class ClanTable
 	 * @param clanName
 	 * @return NULL if clan with same name already exists
 	 */
-	public Clan createClan(PlayerInstance player, String clanName)
+	public Clan createClan(Player player, String clanName)
 	{
 		if (null == player)
 		{
@@ -201,7 +201,7 @@ public class ClanTable
 		final Clan clan = new Clan(IdManager.getInstance().getNextId(), clanName);
 		final ClanMember leader = new ClanMember(clan, player);
 		clan.setLeader(leader);
-		leader.setPlayerInstance(player);
+		leader.setPlayer(player);
 		clan.store();
 		player.setClan(clan);
 		player.setPledgeClass(ClanMember.calculatePledgeClass(player));
@@ -265,7 +265,7 @@ public class ClanTable
 		}
 		
 		final ClanMember leaderMember = clan.getLeader();
-		clan.getWarehouse().destroyAllItems("ClanRemove", leaderMember == null ? null : clan.getLeader().getPlayerInstance(), null);
+		clan.getWarehouse().destroyAllItems("ClanRemove", leaderMember == null ? null : clan.getLeader().getPlayer(), null);
 		
 		for (ClanMember member : clan.getMembers())
 		{
@@ -454,7 +454,7 @@ public class ClanTable
 		int count = 0;
 		for (ClanMember player : clan1.getMembers())
 		{
-			if ((player != null) && (player.getPlayerInstance().getWantsPeace() == 1))
+			if ((player != null) && (player.getPlayer().getWantsPeace() == 1))
 			{
 				count++;
 			}

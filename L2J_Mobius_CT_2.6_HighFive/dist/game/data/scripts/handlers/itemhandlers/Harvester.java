@@ -21,9 +21,9 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public class Harvester implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!Config.ALLOW_MANOR)
 		{
@@ -52,7 +52,7 @@ public class Harvester implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		final WorldObject target = player.getTarget();
 		if ((target == null) || !target.isMonster() || !((Creature) target).isDead())
 		{

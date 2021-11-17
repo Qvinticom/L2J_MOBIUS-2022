@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -39,7 +39,7 @@ public class ChatShout implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, PlayerInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, Player activeChar, String target, String text)
 	{
 		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
@@ -61,7 +61,7 @@ public class ChatShout implements IChatHandler
 		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.canOverrideCond(PlayerCondOverride.CHAT_CONDITIONS)))
 		{
 			final int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()) && !BlockList.isBlocked(activeChar, player))
 				{
@@ -94,7 +94,7 @@ public class ChatShout implements IChatHandler
 				return;
 			}
 			
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if (!BlockList.isBlocked(player, activeChar))
 				{

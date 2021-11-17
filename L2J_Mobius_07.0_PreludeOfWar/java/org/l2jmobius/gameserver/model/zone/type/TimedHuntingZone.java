@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -40,7 +40,7 @@ public class TimedHuntingZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, true);
@@ -71,7 +71,7 @@ public class TimedHuntingZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, false);

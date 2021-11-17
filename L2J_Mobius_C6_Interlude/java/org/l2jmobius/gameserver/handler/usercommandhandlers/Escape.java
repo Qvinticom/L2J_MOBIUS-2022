@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -36,7 +36,7 @@ public class Escape implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, PlayerInstance player)
+	public boolean useUserCommand(int id, Player player)
 	{
 		final int unstuckTimer = player.isGM() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
 		
@@ -118,9 +118,9 @@ public class Escape implements IUserCommandHandler
 	
 	private static class EscapeFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		
-		EscapeFinalizer(PlayerInstance player)
+		EscapeFinalizer(Player player)
 		{
 			_player = player;
 		}

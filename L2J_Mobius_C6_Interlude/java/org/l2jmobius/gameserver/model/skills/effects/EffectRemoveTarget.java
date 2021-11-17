@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -62,7 +62,7 @@ public class EffectRemoveTarget extends Effect
 	public void onStart()
 	{
 		// RaidBoss and GrandBoss are immune to RemoveTarget effect
-		if ((getEffected() instanceof RaidBossInstance) || (getEffected() instanceof GrandBossInstance))
+		if ((getEffected() instanceof RaidBoss) || (getEffected() instanceof GrandBoss))
 		{
 			return;
 		}

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -78,7 +78,7 @@ public class TerritoryWarSuperClass extends Quest
 		return 0; // TODO: Implement this.
 	}
 	
-	private void handleKillTheQuest(PlayerInstance player)
+	private void handleKillTheQuest(Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		int kill = 1;
@@ -148,14 +148,14 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		if ((npc.getCurrentHp() == npc.getMaxHp()) && CommonUtil.contains(NPC_IDS, npc.getId()))
 		{
 			final int territoryId = getTerritoryIdForThisNPCId(npc.getId());
 			if ((territoryId >= 81) && (territoryId <= 89))
 			{
-				for (PlayerInstance pl : World.getInstance().getPlayers())
+				for (Player pl : World.getInstance().getPlayers())
 				{
 					if (pl.getSiegeSide() == territoryId)
 					{
@@ -183,12 +183,12 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			return "";
 		}
-		final PlayerInstance actingPlayer = killer.getActingPlayer();
+		final Player actingPlayer = killer.getActingPlayer();
 		if ((actingPlayer != null) && (qs.getPlayer() != null))
 		{
 			if (actingPlayer.getParty() != null)
 			{
-				for (PlayerInstance pl : actingPlayer.getParty().getMembers())
+				for (Player pl : actingPlayer.getParty().getMembers())
 				{
 					if ((pl.getSiegeSide() == qs.getPlayer().getSiegeSide()) || (pl.getSiegeSide() == 0) || !Util.checkIfInRange(2000, killer, pl, false))
 					{
@@ -214,7 +214,7 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onEnterWorld(PlayerInstance player)
+	public String onEnterWorld(Player player)
 	{
 		final int territoryId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
 		if (territoryId > 0)
@@ -252,7 +252,7 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final TerritoryWarManager manager = TerritoryWarManager.getInstance();
 		if (npc.getId() == CATAPULT_ID)
@@ -275,7 +275,7 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (CommonUtil.contains(targets, npc))
 		{
@@ -342,7 +342,7 @@ public class TerritoryWarSuperClass extends Quest
 	{
 		super.setOnEnterWorld(value);
 		
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			if (player.getSiegeSide() > 0)
 			{
@@ -402,7 +402,7 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
-	private void handleBecomeMercenaryQuest(PlayerInstance player, boolean catapult)
+	private void handleBecomeMercenaryQuest(Player player, boolean catapult)
 	{
 		int enemyCount = 10;
 		int catapultCount = 1;
@@ -441,7 +441,7 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
-	private void handleStepsForHonor(PlayerInstance player)
+	private void handleStepsForHonor(Player player)
 	{
 		final QuestState _sfh = player.getQuestState(Q00176_StepsForHonor.class.getSimpleName());
 		if ((_sfh != null) && _sfh.isStarted())

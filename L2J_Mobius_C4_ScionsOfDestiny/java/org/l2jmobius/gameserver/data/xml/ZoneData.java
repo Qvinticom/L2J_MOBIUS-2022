@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
@@ -76,7 +76,7 @@ public class ZoneData
 	private static final Logger LOGGER = Logger.getLogger(ZoneData.class.getName());
 	
 	private final Map<Class<? extends ZoneType>, Map<Integer, ? extends ZoneType>> _classZones = new HashMap<>();
-	private final Map<Integer, ItemInstance> _debugItems = new ConcurrentHashMap<>();
+	private final Map<Integer, Item> _debugItems = new ConcurrentHashMap<>();
 	
 	private int _lastDynamicId = 300000;
 	
@@ -631,7 +631,7 @@ public class ZoneData
 	 * Add an item on debug list. Used to visualize zones.
 	 * @param item : The item to add.
 	 */
-	public void addDebugItem(ItemInstance item)
+	public void addDebugItem(Item item)
 	{
 		_debugItems.put(item.getObjectId(), item);
 	}
@@ -641,7 +641,7 @@ public class ZoneData
 	 */
 	public void clearDebugItems()
 	{
-		for (ItemInstance item : _debugItems.values())
+		for (Item item : _debugItems.values())
 		{
 			item.decayMe();
 		}

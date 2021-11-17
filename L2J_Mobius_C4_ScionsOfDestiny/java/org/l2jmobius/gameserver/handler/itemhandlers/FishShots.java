@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -53,15 +53,15 @@ public class FishShots implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
-		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Player player = (Player) playable;
+		final Item weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
@@ -77,7 +77,7 @@ public class FishShots implements IItemHandler
 		final int FishshotId = item.getItemId();
 		final int grade = weaponItem.getCrystalType();
 		final int count = item.getCount();
-		if (((grade == Item.CRYSTAL_NONE) && (FishshotId != 6535)) || ((grade == Item.CRYSTAL_D) && (FishshotId != 6536)) || ((grade == Item.CRYSTAL_C) && (FishshotId != 6537)) || ((grade == Item.CRYSTAL_B) && (FishshotId != 6538)) || ((grade == Item.CRYSTAL_A) && (FishshotId != 6539)) || ((grade == Item.CRYSTAL_S) && (FishshotId != 6540)))
+		if (((grade == ItemTemplate.CRYSTAL_NONE) && (FishshotId != 6535)) || ((grade == ItemTemplate.CRYSTAL_D) && (FishshotId != 6536)) || ((grade == ItemTemplate.CRYSTAL_C) && (FishshotId != 6537)) || ((grade == ItemTemplate.CRYSTAL_B) && (FishshotId != 6538)) || ((grade == ItemTemplate.CRYSTAL_A) && (FishshotId != 6539)) || ((grade == ItemTemplate.CRYSTAL_S) && (FishshotId != 6540)))
 		{
 			// 1479 - This fishing shot is not fit for the fishing pole crystal.
 			player.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);

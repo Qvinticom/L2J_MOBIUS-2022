@@ -18,14 +18,14 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -64,7 +64,7 @@ public class AdminSiege implements IAdminCommandHandler
 	
 	@SuppressWarnings("null")
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command, " ");
@@ -75,7 +75,7 @@ public class AdminSiege implements IAdminCommandHandler
 		ClanHall clanhall = null;
 		if (command.startsWith("admin_clanhall"))
 		{
-			clanhall = ClanHallManager.getInstance().getClanHallById(Integer.parseInt(st.nextToken()));
+			clanhall = ClanHallTable.getInstance().getClanHallById(Integer.parseInt(st.nextToken()));
 		}
 		else if (st.hasMoreTokens())
 		{
@@ -97,10 +97,10 @@ public class AdminSiege implements IAdminCommandHandler
 		else
 		{
 			final WorldObject target = activeChar.getTarget();
-			PlayerInstance player = null;
-			if (target instanceof PlayerInstance)
+			Player player = null;
+			if (target instanceof Player)
 			{
-				player = (PlayerInstance) target;
+				player = (Player) target;
 			}
 			
 			if (command.equalsIgnoreCase("admin_add_attacker"))
@@ -188,13 +188,13 @@ public class AdminSiege implements IAdminCommandHandler
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 				}
-				else if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
+				else if (!ClanHallTable.getInstance().isFree(clanhall.getId()))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "This ClanHall isn't free!");
 				}
 				else if (player.getClan().getHideoutId() == 0)
 				{
-					ClanHallManager.getInstance().setOwner(clanhall.getId(), player.getClan());
+					ClanHallTable.getInstance().setOwner(clanhall.getId(), player.getClan());
 					if (AuctionManager.getInstance().getAuction(clanhall.getId()) != null)
 					{
 						AuctionManager.getInstance().getAuction(clanhall.getId()).deleteAuctionFromDB();
@@ -207,9 +207,9 @@ public class AdminSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_clanhalldel"))
 			{
-				if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
+				if (!ClanHallTable.getInstance().isFree(clanhall.getId()))
 				{
-					ClanHallManager.getInstance().setFree(clanhall.getId());
+					ClanHallTable.getInstance().setFree(clanhall.getId());
 					AuctionManager.getInstance().initNPC(clanhall.getId());
 				}
 				else
@@ -255,7 +255,7 @@ public class AdminSiege implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showCastleSelectPage(PlayerInstance activeChar)
+	private void showCastleSelectPage(Player activeChar)
 	{
 		int i = 0;
 		
@@ -286,7 +286,7 @@ public class AdminSiege implements IAdminCommandHandler
 		adminReply.replace("%castles%", cList.toString());
 		cList = new StringBuilder();
 		i = 0;
-		for (ClanHall clanhall : ClanHallManager.getInstance().getClanHalls().values())
+		for (ClanHall clanhall : ClanHallTable.getInstance().getClanHalls().values())
 		{
 			if (clanhall != null)
 			{
@@ -305,7 +305,7 @@ public class AdminSiege implements IAdminCommandHandler
 		adminReply.replace("%clanhalls%", cList.toString());
 		cList = new StringBuilder();
 		i = 0;
-		for (ClanHall clanhall : ClanHallManager.getInstance().getFreeClanHalls().values())
+		for (ClanHall clanhall : ClanHallTable.getInstance().getFreeClanHalls().values())
 		{
 			if (clanhall != null)
 			{
@@ -324,7 +324,7 @@ public class AdminSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showSiegePage(PlayerInstance activeChar, String castleName)
+	private void showSiegePage(Player activeChar, String castleName)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/castle.htm");
@@ -332,7 +332,7 @@ public class AdminSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showClanHallPage(PlayerInstance activeChar, ClanHall clanhall)
+	private void showClanHallPage(Player activeChar, ClanHall clanhall)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/clanhall.htm");

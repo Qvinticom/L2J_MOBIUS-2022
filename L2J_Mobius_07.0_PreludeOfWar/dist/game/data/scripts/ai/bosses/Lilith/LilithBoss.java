@@ -19,7 +19,7 @@ package ai.bosses.Lilith;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -51,7 +51,7 @@ public class LilithBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -68,7 +68,7 @@ public class LilithBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.getId() == LILITH)
 		{
@@ -125,7 +125,7 @@ public class LilithBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
 		

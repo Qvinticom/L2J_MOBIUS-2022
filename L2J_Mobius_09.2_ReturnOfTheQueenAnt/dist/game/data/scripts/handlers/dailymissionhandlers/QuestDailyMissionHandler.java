@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerQuestComplete;
@@ -47,7 +47,7 @@ public class QuestDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(PlayerInstance player)
+	public boolean isAvailable(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
@@ -74,7 +74,7 @@ public class QuestDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private void onQuestComplete(OnPlayerQuestComplete event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (event.getQuestType() == QuestType.DAILY)
 		{
 			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);

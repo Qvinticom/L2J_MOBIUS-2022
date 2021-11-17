@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.conditions;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -37,10 +37,10 @@ public class ConditionPlayerCanEscape extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		boolean canTeleport = true;
-		final PlayerInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		if (player == null)
 		{
 			canTeleport = false;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
@@ -58,9 +58,9 @@ public class TaskRaidPointsReset extends Task
 				for (Entry<Integer, Integer> entry : rankList.entrySet())
 				{
 					final WorldObject obj = World.getInstance().findObject(entry.getKey());
-					if (obj instanceof PlayerInstance)
+					if (obj instanceof Player)
 					{
-						playerName = ((PlayerInstance) obj).getName();
+						playerName = ((Player) obj).getName();
 					}
 					if ((entry.getValue() <= 100) && c.isMember(playerName))
 					{

@@ -22,7 +22,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -97,7 +97,7 @@ public class DamageZone extends ZoneType
 		Future<?> task = _task;
 		if ((task == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0)))
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			final Castle castle = getCastle();
 			if (castle != null) // Castle zone
 			{
@@ -192,7 +192,7 @@ public class DamageZone extends ZoneType
 					if (siege)
 					{
 						// during siege defenders not affected
-						final PlayerInstance player = character.getActingPlayer();
+						final Player player = character.getActingPlayer();
 						if ((player != null) && player.isInSiege() && (player.getSiegeState() == 2))
 						{
 							continue;

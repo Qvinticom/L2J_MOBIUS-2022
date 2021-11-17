@@ -18,15 +18,15 @@ package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStatus extends SummonStatus
 {
-	private int _currentFed = 0; // Current Fed of the PetInstance
+	private int _currentFed = 0; // Current Fed of the Pet
 	
-	public PetStatus(PetInstance activeChar)
+	public PetStatus(Pet activeChar)
 	{
 		super(activeChar);
 	}
@@ -71,8 +71,8 @@ public class PetStatus extends SummonStatus
 	}
 	
 	@Override
-	public PetInstance getActiveChar()
+	public Pet getActiveChar()
 	{
-		return (PetInstance) super.getActiveChar();
+		return (Pet) super.getActiveChar();
 	}
 }

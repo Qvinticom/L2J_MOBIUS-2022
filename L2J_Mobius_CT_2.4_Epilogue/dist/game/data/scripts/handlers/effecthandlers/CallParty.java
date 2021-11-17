@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -47,7 +47,7 @@ public class CallParty extends AbstractEffect
 			return;
 		}
 		
-		for (PlayerInstance partyMember : info.getEffector().getParty().getMembers())
+		for (Player partyMember : info.getEffector().getParty().getMembers())
 		{
 			if (CallPc.checkSummonTargetStatus(partyMember, info.getEffector().getActingPlayer()) && (info.getEffector() != partyMember))
 			{

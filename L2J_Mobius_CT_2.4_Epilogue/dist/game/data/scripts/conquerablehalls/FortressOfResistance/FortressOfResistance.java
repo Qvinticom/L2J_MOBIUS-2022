@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.clanhalls.ClanHallSiegeEngine;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -100,14 +100,14 @@ public class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		player.sendPacket(_messengerMsg);
 		return null;
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{
@@ -125,7 +125,7 @@ public class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{

@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,10 +34,10 @@ public class TradeRequest extends ClientBasePacket
 	{
 		super(decrypt);
 		final int objectId = readD();
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		final World world = World.getInstance();
 		final WorldObject target = world.findObject(objectId);
-		if (!(target instanceof PlayerInstance) || (target.getObjectId() != objectId))
+		if (!(target instanceof Player) || (target.getObjectId() != objectId))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.TARGET_IS_INCORRECT));
 			return;
@@ -47,7 +47,7 @@ public class TradeRequest extends ClientBasePacket
 			player.sendPacket(new SystemMessage(SystemMessage.ALREADY_TRADING));
 			return;
 		}
-		final PlayerInstance pcTarget = (PlayerInstance) target;
+		final Player pcTarget = (Player) target;
 		if (player.knownsObject(target) && !pcTarget.isTransactionInProgress())
 		{
 			pcTarget.setTransactionRequester(player);

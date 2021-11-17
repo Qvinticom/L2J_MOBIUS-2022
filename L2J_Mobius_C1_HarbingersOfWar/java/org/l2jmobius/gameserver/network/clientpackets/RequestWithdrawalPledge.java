@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
@@ -32,7 +32,7 @@ public class RequestWithdrawalPledge extends ClientBasePacket
 	{
 		super(rawPacket);
 		// Connection con = client.getConnection();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (activeChar.getClanId() == 0)
 		{
 			return;
@@ -42,7 +42,7 @@ public class RequestWithdrawalPledge extends ClientBasePacket
 		clan.removeClanMember(activeChar.getName());
 		clan.store();
 		activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_MEMBERSHIP_TERMINATED));
-		final PlayerInstance player = member.getPlayerInstance();
+		final Player player = member.getPlayer();
 		player.setClan(null);
 		player.setClanId(0);
 		player.setTitle("");

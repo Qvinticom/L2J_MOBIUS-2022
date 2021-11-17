@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class WareHouseDepositList extends AbstractItemPacket
@@ -32,7 +32,7 @@ public class WareHouseDepositList extends AbstractItemPacket
 	public static final int FREIGHT = 1;
 	private final long _playerAdena;
 	private final int _warehouseSize;
-	private final List<ItemInstance> _items = new ArrayList<>();
+	private final List<Item> _items = new ArrayList<>();
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
 	 * <ul>
@@ -44,14 +44,14 @@ public class WareHouseDepositList extends AbstractItemPacket
 	 */
 	private final int _whType;
 	
-	public WareHouseDepositList(PlayerInstance player, int type)
+	public WareHouseDepositList(Player player, int type)
 	{
 		_whType = type;
 		_playerAdena = player.getAdena();
 		_warehouseSize = player.getActiveWarehouse() != null ? player.getActiveWarehouse().getSize() : 0;
 		
 		final boolean isPrivate = _whType == PRIVATE;
-		for (ItemInstance temp : player.getInventory().getAvailableItems(true, isPrivate, false))
+		for (Item temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{
 			if ((temp != null) && temp.isDepositable(isPrivate))
 			{
@@ -81,7 +81,7 @@ public class WareHouseDepositList extends AbstractItemPacket
 		
 		packet.writeH(_items.size());
 		
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeItem(packet, item);
 			packet.writeD(item.getObjectId());

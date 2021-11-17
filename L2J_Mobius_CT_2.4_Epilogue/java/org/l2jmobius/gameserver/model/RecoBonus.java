@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Gnacik
@@ -135,7 +135,7 @@ public class RecoBonus
 		}
 	};
 	
-	public static int getRecoBonus(PlayerInstance player)
+	public static int getRecoBonus(Player player)
 	{
 		if ((player != null) && player.isOnline() && (player.getRecomHave() != 0))
 		{
@@ -146,7 +146,7 @@ public class RecoBonus
 		return 0;
 	}
 	
-	public static double getRecoMultiplier(PlayerInstance player)
+	public static double getRecoMultiplier(Player player)
 	{
 		double multiplier = 1.0;
 		final double bonus = getRecoBonus(player);

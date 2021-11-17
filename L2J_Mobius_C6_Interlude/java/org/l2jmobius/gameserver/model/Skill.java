@@ -31,17 +31,17 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Artefact;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.siege.Siege;
@@ -1385,7 +1385,7 @@ public abstract class Skill
 	 * Return all targets of the skill in a table in function a the skill type.<br>
 	 * <br>
 	 * <b><u>Values of skill type</u>:</b><br>
-	 * <li>ONE : The skill can only be used on the PlayerInstance targeted, or on the caster if it's a PlayerInstance and no PlayerInstance targeted</li>
+	 * <li>ONE : The skill can only be used on the Player targeted, or on the caster if it's a Player and no Player targeted</li>
 	 * <li>SELF</li>
 	 * <li>HOLY, UNDEAD</li>
 	 * <li>PET</li>
@@ -1404,7 +1404,7 @@ public abstract class Skill
 	public List<Creature> getTargetList(Creature creature, boolean onlyFirst, Creature targetCreature)
 	{
 		// to avoid attacks during oly start period
-		if ((creature instanceof PlayerInstance) && _isOffensive && (((PlayerInstance) creature).isInOlympiadMode() && !((PlayerInstance) creature).isOlympiadStart()))
+		if ((creature instanceof Player) && _isOffensive && (((Player) creature).isInOlympiadMode() && !((Player) creature).isOlympiadStart()))
 		{
 			creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 			return null;
@@ -1495,7 +1495,7 @@ public abstract class Skill
 					case MANADAM:
 					{
 						// Like L2OFF if the skills is TARGET_ONE (skillType) can't be used on Npc
-						if ((target instanceof NpcInstance) && !(target instanceof MonsterInstance))
+						if ((target instanceof Npc) && !(target instanceof Monster))
 						{
 							creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 							return null;
@@ -1505,7 +1505,7 @@ public abstract class Skill
 				}
 				
 				// Like L2OFF Shield stun can't be used on Npc
-				if ((_id == 92) && (target instanceof NpcInstance) && !(target instanceof MonsterInstance))
+				if ((_id == 92) && (target instanceof Npc) && !(target instanceof Monster))
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
@@ -1530,9 +1530,9 @@ public abstract class Skill
 			}
 			case TARGET_HOLY:
 			{
-				if ((creature instanceof PlayerInstance) && (creature.getTarget() instanceof ArtefactInstance))
+				if ((creature instanceof Player) && (creature.getTarget() instanceof Artefact))
 				{
-					targetList.add((ArtefactInstance) creature.getTarget());
+					targetList.add((Artefact) creature.getTarget());
 					return targetList;
 				}
 				return null;
@@ -1563,7 +1563,7 @@ public abstract class Skill
 			}
 			case TARGET_CORPSE_PET:
 			{
-				if (creature instanceof PlayerInstance)
+				if (creature instanceof Player)
 				{
 					target = creature.getPet();
 					if ((target != null) && target.isDead())
@@ -1578,10 +1578,10 @@ public abstract class Skill
 			{
 				final int radius = _skillRadius;
 				final boolean srcInArena = creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE);
-				PlayerInstance src = null;
-				if (creature instanceof PlayerInstance)
+				Player src = null;
+				if (creature instanceof Player)
 				{
-					src = (PlayerInstance) creature;
+					src = (Player) creature;
 				}
 				if (creature instanceof Summon)
 				{
@@ -1610,14 +1610,14 @@ public abstract class Skill
 						{
 							continue;
 						}
-						// check if both attacker and target are PlayerInstances and if they are in same party
-						if (nearby instanceof PlayerInstance)
+						// check if both attacker and target are Players and if they are in same party
+						if (nearby instanceof Player)
 						{
-							if (((PlayerInstance) nearby).isDead())
+							if (((Player) nearby).isDead())
 							{
 								continue;
 							}
-							if (((PlayerInstance) nearby).getAppearance().isInvisible())
+							if (((Player) nearby).getAppearance().isInvisible())
 							{
 								continue;
 							}
@@ -1631,7 +1631,7 @@ public abstract class Skill
 								{
 									continue;
 								}
-								if ((src.getAllyId() != 0) && (src.getAllyId() == ((PlayerInstance) nearby).getAllyId()))
+								if ((src.getAllyId() != 0) && (src.getAllyId() == ((Player) nearby).getAllyId()))
 								{
 									continue;
 								}
@@ -1639,7 +1639,7 @@ public abstract class Skill
 						}
 						if (nearby instanceof Summon)
 						{
-							final PlayerInstance trg = ((Summon) nearby).getOwner();
+							final Player trg = ((Summon) nearby).getOwner();
 							if (trg == null)
 							{
 								continue;
@@ -1685,7 +1685,7 @@ public abstract class Skill
 			case TARGET_AREA:
 			{
 				// Like L2OFF players can use TARGET_AREA skills on NPC in peacezone
-				if ((!(target instanceof Attackable) && !(target instanceof Playable) && !(target instanceof NpcInstance)) || // Target is not Attackable or PlayableInstance or NpcInstance
+				if ((!(target instanceof Attackable) && !(target instanceof Playable) && !(target instanceof Npc)) || // Target is not Attackable or PlayableInstance or Npc
 					((_castRange >= 0) && ((target == creature) || target.isAlikeDead()))) // target is null or self or dead/faking
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
@@ -1707,10 +1707,10 @@ public abstract class Skill
 					cha = creature;
 				}
 				
-				PlayerInstance src = null;
-				if (creature instanceof PlayerInstance)
+				Player src = null;
+				if (creature instanceof Player)
 				{
-					src = (PlayerInstance) creature;
+					src = (Player) creature;
 				}
 				else if (creature instanceof Summon)
 				{
@@ -1757,9 +1757,9 @@ public abstract class Skill
 						if (src != null) // caster is a playable instance and exists
 						{
 							// check for Events
-							if (obj instanceof PlayerInstance)
+							if (obj instanceof Player)
 							{
-								final PlayerInstance trg = (PlayerInstance) obj;
+								final Player trg = (Player) obj;
 								if (trg == src)
 								{
 									continue;
@@ -1772,7 +1772,7 @@ public abstract class Skill
 							}
 							else if (obj instanceof Summon)
 							{
-								final PlayerInstance trg = ((Summon) obj).getOwner();
+								final Player trg = ((Summon) obj).getOwner();
 								if (trg == src)
 								{
 									continue;
@@ -1790,14 +1790,14 @@ public abstract class Skill
 								continue;
 							}
 							
-							if (obj instanceof PlayerInstance)
+							if (obj instanceof Player)
 							{
-								final PlayerInstance trg = (PlayerInstance) obj;
+								final Player trg = (Player) obj;
 								if (trg == src)
 								{
 									continue;
 								}
-								if (((PlayerInstance) obj).getAppearance().isInvisible())
+								if (((Player) obj).getAppearance().isInvisible())
 								{
 									continue;
 								}
@@ -1823,7 +1823,7 @@ public abstract class Skill
 							}
 							else if (obj instanceof Summon)
 							{
-								final PlayerInstance trg = ((Summon) obj).getOwner();
+								final Player trg = ((Summon) obj).getOwner();
 								if (trg == null)
 								{
 									continue;
@@ -1865,7 +1865,7 @@ public abstract class Skill
 			}
 			case TARGET_MULTIFACE:
 			{
-				if (!(target instanceof Attackable) && !(target instanceof PlayerInstance))
+				if (!(target instanceof Attackable) && !(target instanceof Player))
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
@@ -1878,10 +1878,10 @@ public abstract class Skill
 				}
 				
 				final int radius = _skillRadius;
-				PlayerInstance src = null;
-				if (creature instanceof PlayerInstance)
+				Player src = null;
+				if (creature instanceof Player)
 				{
-					src = (PlayerInstance) creature;
+					src = (Player) creature;
 				}
 				else if (creature instanceof Summon)
 				{
@@ -1900,9 +1900,9 @@ public abstract class Skill
 					// check for Events
 					if (src != null)
 					{
-						if (obj instanceof PlayerInstance)
+						if (obj instanceof Player)
 						{
-							final PlayerInstance trg = (PlayerInstance) obj;
+							final Player trg = (Player) obj;
 							if (trg == src)
 							{
 								continue;
@@ -1915,7 +1915,7 @@ public abstract class Skill
 						}
 						else if (obj instanceof Summon)
 						{
-							final PlayerInstance trg = ((Summon) obj).getOwner();
+							final Player trg = ((Summon) obj).getOwner();
 							if (trg == src)
 							{
 								continue;
@@ -1948,7 +1948,7 @@ public abstract class Skill
 					return targetList;
 				}
 				
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				if (player == null)
 				{
 					targetList.add(creature);
@@ -1958,7 +1958,7 @@ public abstract class Skill
 				{
 					targetList.add(player);
 				}
-				else if (creature instanceof PlayerInstance)
+				else if (creature instanceof Player)
 				{
 					if (player.getPet() != null)
 					{
@@ -1969,8 +1969,8 @@ public abstract class Skill
 				{
 					// Get all visible objects in a spheric area near the Creature
 					// Get a list of Party Members
-					final List<PlayerInstance> partyList = creature.getParty().getPartyMembers();
-					for (PlayerInstance partyMember : partyList)
+					final List<Player> partyList = creature.getParty().getPartyMembers();
+					for (Player partyMember : partyList)
 					{
 						if ((partyMember == null) || (partyMember == player))
 						{
@@ -1979,16 +1979,16 @@ public abstract class Skill
 						
 						if (!partyMember.isDead() && Util.checkIfInRange(_skillRadius, creature, partyMember, true))
 						{
-							PlayerInstance src = null;
-							if (creature instanceof PlayerInstance)
+							Player src = null;
+							if (creature instanceof Player)
 							{
-								src = (PlayerInstance) creature;
+								src = (Player) creature;
 							}
 							else if (creature instanceof Summon)
 							{
 								src = ((Summon) creature).getOwner();
 							}
-							final PlayerInstance trg = partyMember;
+							final Player trg = partyMember;
 							// if src is in event and trg not or viceversa
 							if ((src != null) && ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent())))
 							{
@@ -2030,10 +2030,10 @@ public abstract class Skill
 			case TARGET_CORPSE_ALLY:
 			case TARGET_ALLY:
 			{
-				if (creature instanceof PlayerInstance)
+				if (creature instanceof Player)
 				{
 					final int radius = _skillRadius;
-					final PlayerInstance player = (PlayerInstance) creature;
+					final Player player = (Player) creature;
 					final Clan clan = player.getClan();
 					if (_targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpse, the caster is not included
 					{
@@ -2054,7 +2054,7 @@ public abstract class Skill
 						// Get all visible objects in a spheric area near the Creature
 						for (WorldObject newTarget : player.getKnownList().getKnownCharactersInRadius(radius))
 						{
-							final PlayerInstance newPlayer = newTarget.getActingPlayer();
+							final Player newPlayer = newTarget.getActingPlayer();
 							if (newPlayer == null)
 							{
 								continue;
@@ -2085,10 +2085,10 @@ public abstract class Skill
 			case TARGET_CORPSE_CLAN:
 			case TARGET_CLAN:
 			{
-				if (creature instanceof PlayerInstance)
+				if (creature instanceof Player)
 				{
 					final int radius = _skillRadius;
-					final PlayerInstance player = (PlayerInstance) creature;
+					final Player player = (Player) creature;
 					final Clan clan = player.getClan();
 					if (_targetType != SkillTargetType.TARGET_CORPSE_CLAN)
 					{
@@ -2110,7 +2110,7 @@ public abstract class Skill
 						// Get Clan Members
 						for (ClanMember member : clan.getMembers())
 						{
-							final PlayerInstance newTarget = member.getPlayerInstance();
+							final Player newTarget = member.getPlayer();
 							if ((newTarget == null) || (newTarget == player))
 							{
 								continue;
@@ -2120,8 +2120,8 @@ public abstract class Skill
 								continue;
 							}
 							
-							final PlayerInstance trg = newTarget;
-							final PlayerInstance src = player;
+							final Player trg = newTarget;
+							final Player src = player;
 							// if src is in event and trg not or viceversa
 							if ((src.isOnEvent() && !trg.isOnEvent()) || (trg.isOnEvent() && !src.isOnEvent()))
 							{
@@ -2167,10 +2167,10 @@ public abstract class Skill
 						}
 					}
 				}
-				else if (creature instanceof NpcInstance)
+				else if (creature instanceof Npc)
 				{
 					// for buff purposes, returns friendly mobs nearby and mob itself
-					final NpcInstance npc = (NpcInstance) creature;
+					final Npc npc = (Npc) creature;
 					if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty())
 					{
 						targetList.add(creature);
@@ -2182,13 +2182,13 @@ public abstract class Skill
 					{
 						for (WorldObject newTarget : objs)
 						{
-							if ((newTarget instanceof NpcInstance) && npc.getFactionId().equals(((NpcInstance) newTarget).getFactionId()))
+							if ((newTarget instanceof Npc) && npc.getFactionId().equals(((Npc) newTarget).getFactionId()))
 							{
 								if (!Util.checkIfInRange(_castRange, creature, newTarget, true))
 								{
 									continue;
 								}
-								targetList.add((NpcInstance) newTarget);
+								targetList.add((Npc) newTarget);
 							}
 						}
 					}
@@ -2199,20 +2199,20 @@ public abstract class Skill
 			{
 				if ((target != null) && target.isDead())
 				{
-					PlayerInstance player = null;
-					if (creature instanceof PlayerInstance)
+					Player player = null;
+					if (creature instanceof Player)
 					{
-						player = (PlayerInstance) creature;
+						player = (Player) creature;
 					}
-					PlayerInstance targetPlayer = null;
-					if (target instanceof PlayerInstance)
+					Player targetPlayer = null;
+					if (target instanceof Player)
 					{
-						targetPlayer = (PlayerInstance) target;
+						targetPlayer = (Player) target;
 					}
-					PetInstance targetPet = null;
-					if (target instanceof PetInstance)
+					Pet targetPet = null;
+					if (target instanceof Pet)
 					{
-						targetPet = (PetInstance) target;
+						targetPet = (Pet) target;
 					}
 					if ((player != null) && ((targetPlayer != null) || (targetPet != null)))
 					{
@@ -2285,12 +2285,12 @@ public abstract class Skill
 				}
 				
 				final boolean srcInArena = creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE);
-				PlayerInstance src = null;
-				if (creature instanceof PlayerInstance)
+				Player src = null;
+				if (creature instanceof Player)
 				{
-					src = (PlayerInstance) creature;
+					src = (Player) creature;
 				}
-				PlayerInstance trg = null;
+				Player trg = null;
 				final int radius = _skillRadius;
 				if (creature.getKnownList() != null)
 				{
@@ -2316,9 +2316,9 @@ public abstract class Skill
 						{
 							continue;
 						}
-						if ((obj instanceof PlayerInstance) && (src != null))
+						if ((obj instanceof Player) && (src != null))
 						{
-							trg = (PlayerInstance) obj;
+							trg = (Player) obj;
 							if ((src.getParty() != null) && (trg.getParty() != null) && (src.getParty().getPartyLeaderOID() == trg.getParty().getPartyLeaderOID()))
 							{
 								continue;
@@ -2389,7 +2389,7 @@ public abstract class Skill
 			}
 			case TARGET_UNLOCKABLE:
 			{
-				if (!(target instanceof DoorInstance) && !(target instanceof ChestInstance))
+				if (!(target instanceof Door) && !(target instanceof Chest))
 				{
 					// Like L2OFF if target isn't door or chest send message of incorrect target
 					creature.sendPacket(new SystemMessage(SystemMessageId.INVALID_TARGET));
@@ -2406,7 +2406,7 @@ public abstract class Skill
 			}
 			case TARGET_UNDEAD:
 			{
-				if ((target instanceof NpcInstance) || (target instanceof SummonInstance))
+				if ((target instanceof Npc) || (target instanceof Servitor))
 				{
 					if (!target.isUndead() || target.isDead())
 					{
@@ -2424,7 +2424,7 @@ public abstract class Skill
 			{
 				Creature cha;
 				final int radius = _skillRadius;
-				if ((_castRange >= 0) && ((target instanceof NpcInstance) || (target instanceof SummonInstance)) && target.isUndead() && !target.isAlikeDead())
+				if ((_castRange >= 0) && ((target instanceof Npc) || (target instanceof Servitor)) && target.isUndead() && !target.isAlikeDead())
 				{
 					cha = target;
 					targetList.add(cha);
@@ -2445,13 +2445,13 @@ public abstract class Skill
 						{
 							continue;
 						}
-						if (obj instanceof NpcInstance)
+						if (obj instanceof Npc)
 						{
-							target = (NpcInstance) obj;
+							target = (Npc) obj;
 						}
-						else if (obj instanceof SummonInstance)
+						else if (obj instanceof Servitor)
 						{
-							target = (SummonInstance) obj;
+							target = (Servitor) obj;
 						}
 						else
 						{
@@ -2491,7 +2491,7 @@ public abstract class Skill
 				if (target instanceof Summon)
 				{
 					final Summon targetSummon = (Summon) target;
-					if (((creature instanceof PlayerInstance) && (creature.getPet() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0) || targetSummon.getOwner().isInDuel())) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && ((PlayerInstance) creature).isInsideZone(ZoneId.PVP)))
+					if (((creature instanceof Player) && (creature.getPet() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0) || targetSummon.getOwner().isInDuel())) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && ((Player) creature).isInsideZone(ZoneId.PVP)))
 					{
 						targetList.add(targetSummon);
 						return targetList;
@@ -2501,7 +2501,7 @@ public abstract class Skill
 			}
 			case TARGET_SIEGE:
 			{
-				if ((target != null) && !target.isDead() && ((target instanceof DoorInstance) || (target instanceof ControlTowerInstance)))
+				if ((target != null) && !target.isDead() && ((target instanceof Door) || (target instanceof ControlTower)))
 				{
 					targetList.add(target);
 					return targetList;
@@ -2510,12 +2510,12 @@ public abstract class Skill
 			}
 			case TARGET_TYRANNOSAURUS:
 			{
-				if (target instanceof PlayerInstance)
+				if (target instanceof Player)
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 					return null;
 				}
-				if ((target instanceof MonsterInstance) && ((((MonsterInstance) target).getNpcId() == 22217) || (((MonsterInstance) target).getNpcId() == 22216) || (((MonsterInstance) target).getNpcId() == 22215)))
+				if ((target instanceof Monster) && ((((Monster) target).getNpcId() == 22217) || (((Monster) target).getNpcId() == 22216) || (((Monster) target).getNpcId() == 22215)))
 				{
 					targetList.add(target);
 					return targetList;
@@ -2534,10 +2534,10 @@ public abstract class Skill
 			// npc only for now - untested
 			case TARGET_CLAN_MEMBER:
 			{
-				if (creature instanceof NpcInstance)
+				if (creature instanceof Npc)
 				{
 					// for buff purposes, returns friendly mobs nearby and mob itself
-					final NpcInstance npc = (NpcInstance) creature;
+					final Npc npc = (Npc) creature;
 					if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty())
 					{
 						targetList.add(creature);
@@ -2546,17 +2546,17 @@ public abstract class Skill
 					final Collection<WorldObject> objs = creature.getKnownList().getKnownObjects().values();
 					for (WorldObject newTarget : objs)
 					{
-						if ((newTarget instanceof NpcInstance) && npc.getFactionId().equals(((NpcInstance) newTarget).getFactionId()))
+						if ((newTarget instanceof Npc) && npc.getFactionId().equals(((Npc) newTarget).getFactionId()))
 						{
 							if (!Util.checkIfInRange(_castRange, creature, newTarget, true))
 							{
 								continue;
 							}
-							if (((NpcInstance) newTarget).getFirstEffect(this) != null)
+							if (((Npc) newTarget).getFirstEffect(this) != null)
 							{
 								continue;
 							}
-							targetList.add((NpcInstance) newTarget);
+							targetList.add((Npc) newTarget);
 							break; // found
 						}
 					}
@@ -2592,7 +2592,7 @@ public abstract class Skill
 	
 	public List<Func> getStatFuncs(Effect effect, Creature creature)
 	{
-		if (!(creature instanceof PlayerInstance) && !(creature instanceof Attackable) && !(creature instanceof Summon))
+		if (!(creature instanceof Player) && !(creature instanceof Attackable) && !(creature instanceof Summon))
 		{
 			return Collections.emptyList();
 		}
@@ -2718,9 +2718,9 @@ public abstract class Skill
 						{
 							effectcharge++;
 							effect.addNumCharges(effectcharge);
-							if (env.target instanceof PlayerInstance)
+							if (env.target instanceof Player)
 							{
-								env.target.sendPacket(new EtcStatusUpdate((PlayerInstance) env.target));
+								env.target.sendPacket(new EtcStatusUpdate((Player) env.target));
 								final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 								sm.addNumber(effectcharge);
 								env.target.sendPacket(sm);
@@ -2836,10 +2836,10 @@ public abstract class Skill
 	
 	public boolean checkPartyClan(Creature creature, WorldObject target)
 	{
-		if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance))
+		if ((creature instanceof Player) && (target instanceof Player))
 		{
-			final PlayerInstance targetChar = (PlayerInstance) target;
-			final PlayerInstance activeCh = (PlayerInstance) creature;
+			final Player targetChar = (Player) target;
+			final Player activeCh = (Player) creature;
 			if (activeCh.isInOlympiadMode() && activeCh.isOlympiadStart() && targetChar.isInOlympiadMode() && targetChar.isOlympiadStart())
 			{
 				return false;

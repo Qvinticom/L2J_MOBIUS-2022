@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -51,7 +51,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || !Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 		{
 			return;
@@ -112,7 +112,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		
 		int weight = 0;
 		int slots = 0;
-		for (ItemInstance item : attachments.getItems())
+		for (Item item : attachments.getItems())
 		{
 			if (item == null)
 			{
@@ -162,7 +162,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		
 		// Proceed to the transfer
 		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (ItemInstance item : attachments.getItems())
+		for (Item item : attachments.getItems())
 		{
 			if (item == null)
 			{
@@ -170,7 +170,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 			}
 			
 			final long count = item.getCount();
-			final ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, player.getInventory(), player, null);
+			final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, player.getInventory(), player, null);
 			if (newItem == null)
 			{
 				return;
@@ -205,7 +205,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 			player.sendItemList();
 		}
 		
-		final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
+		final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);

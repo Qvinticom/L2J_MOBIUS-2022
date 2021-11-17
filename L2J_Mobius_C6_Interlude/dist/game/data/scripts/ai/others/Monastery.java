@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -69,7 +69,7 @@ public class Monastery extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		if (Util.contains(MOBS_1, npc.getNpcId()) && !npc.isInCombat() && (npc.getTarget() == null))
 		{
@@ -105,7 +105,7 @@ public class Monastery extends Quest
 	}
 	
 	@Override
-	public String onSpawn(NpcInstance npc)
+	public String onSpawn(Npc npc)
 	{
 		if (Util.contains(MOBS_1, npc.getNpcId()))
 		{
@@ -113,15 +113,15 @@ public class Monastery extends Quest
 			final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
 			for (WorldObject obj : objs)
 			{
-				if (((obj instanceof PlayerInstance) || (obj instanceof PetInstance)) && Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
+				if (((obj instanceof Player) || (obj instanceof Pet)) && Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
 				{
 					result.add((Playable) obj);
 				}
 			}
 			for (Object obj : result)
 			{
-				final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
-				if ((target.getActiveWeaponInstance() == null) || ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving()) || ((target instanceof Summon) && ((Summon) target).getOwner().isSilentMoving()))
+				final Playable target = (Playable) (obj instanceof Player ? obj : ((Summon) obj).getOwner());
+				if ((target.getActiveWeaponInstance() == null) || ((target instanceof Player) && ((Player) target).isSilentMoving()) || ((target instanceof Summon) && ((Summon) target).getOwner().isSilentMoving()))
 				{
 					continue;
 				}
@@ -156,7 +156,7 @@ public class Monastery extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (Util.contains(MOBS_1, npc.getNpcId()) && (skill.getId() == 4589))
 		{

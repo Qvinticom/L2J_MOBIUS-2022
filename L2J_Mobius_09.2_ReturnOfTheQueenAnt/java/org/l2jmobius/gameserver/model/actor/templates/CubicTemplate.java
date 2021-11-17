@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.cubic.CubicInstance;
+import org.l2jmobius.gameserver.model.cubic.Cubic;
 import org.l2jmobius.gameserver.model.cubic.CubicSkill;
 import org.l2jmobius.gameserver.model.cubic.CubicTargetType;
 import org.l2jmobius.gameserver.model.cubic.ICubicConditionHolder;
@@ -110,7 +110,7 @@ public class CubicTemplate implements ICubicConditionHolder
 	}
 	
 	@Override
-	public boolean validateConditions(CubicInstance cubic, Creature owner, WorldObject target)
+	public boolean validateConditions(Cubic cubic, Creature owner, WorldObject target)
 	{
 		return _conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target));
 	}

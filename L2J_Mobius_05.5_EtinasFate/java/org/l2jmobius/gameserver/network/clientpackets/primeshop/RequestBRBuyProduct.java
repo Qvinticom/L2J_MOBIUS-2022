@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
@@ -55,7 +55,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -118,7 +118,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 	 * @param player
 	 * @return
 	 */
-	private static boolean validatePlayer(PrimeShopGroup item, int count, PlayerInstance player)
+	private static boolean validatePlayer(PrimeShopGroup item, int count, Player player)
 	{
 		final long currentTime = Chronos.currentTimeMillis() / 1000;
 		if (item == null)

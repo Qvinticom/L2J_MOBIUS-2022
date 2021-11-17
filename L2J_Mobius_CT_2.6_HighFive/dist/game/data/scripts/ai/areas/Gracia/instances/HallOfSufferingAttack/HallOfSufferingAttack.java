@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -144,7 +144,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		addKillId(TUMOR_MOBIDS);
 	}
 	
-	private boolean checkConditions(PlayerInstance player)
+	private boolean checkConditions(Player player)
 	{
 		if (debug || player.isGM())
 		{
@@ -162,7 +162,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 82))
 			{
@@ -201,13 +201,13 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		return true;
 	}
 	
-	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(Player player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	protected void enterInstance(PlayerInstance player, int[] coords)
+	protected void enterInstance(Player player, int[] coords)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -239,7 +239,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			}
 			else
 			{
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -341,7 +341,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		
 		boss.stopAllEffectsExceptThoseThatLastThroughDeath();
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		boss.broadcastStatusUpdate();
 		
 		// Notify Creature AI
@@ -354,7 +354,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (skill.hasEffectType(EffectType.REBALANCE_HP, EffectType.HEAL))
 		{
@@ -369,7 +369,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSAWorld)
@@ -414,7 +414,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 				npc.setCurrentHp(aliveTwin.getCurrentHp());
 				
 				// get most hated of other boss
-				final Creature hated = ((MonsterInstance) aliveTwin).getMostHated();
+				final Creature hated = ((Monster) aliveTwin).getMostHated();
 				if (hated != null)
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, hated, 1000);
@@ -432,7 +432,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSAWorld)
@@ -448,7 +448,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 				sm.addInstanceName(INSTANCEID);
 				
 				// set instance reenter time for all allowed players
-				for (PlayerInstance player : tmpworld.getAllowed())
+				for (Player player : tmpworld.getAllowed())
 				{
 					if (player != null)
 					{
@@ -487,7 +487,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSAWorld)
@@ -568,7 +568,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 				cancelQuestTimers("isTwinSeparated");
 				addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false, 0, false, world.getInstanceId());
 				
-				for (PlayerInstance killer : world.getAllowed())
+				for (Player killer : world.getAllowed())
 				{
 					if (killer != null)
 					{
@@ -585,7 +585,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{

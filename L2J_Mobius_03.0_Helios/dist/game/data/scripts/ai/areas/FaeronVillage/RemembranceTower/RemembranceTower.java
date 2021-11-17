@@ -17,7 +17,7 @@
 package ai.areas.FaeronVillage.RemembranceTower;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 import ai.AbstractNpcAI;
@@ -41,7 +41,7 @@ public class RemembranceTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("action") && npc.isScriptValue(0))
 		{

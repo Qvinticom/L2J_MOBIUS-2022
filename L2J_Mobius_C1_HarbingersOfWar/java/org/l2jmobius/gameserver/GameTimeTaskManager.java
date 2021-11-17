@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
 import org.l2jmobius.gameserver.network.serverpackets.SunRise;
 import org.l2jmobius.gameserver.network.serverpackets.SunSet;
@@ -65,7 +65,7 @@ public class GameTimeTaskManager extends Thread
 	
 	private void broadcastToPlayers(ServerBasePacket packet)
 	{
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(packet);
 		}

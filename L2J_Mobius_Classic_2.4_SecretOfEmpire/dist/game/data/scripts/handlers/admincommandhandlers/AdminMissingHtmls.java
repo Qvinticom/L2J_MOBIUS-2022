@@ -26,13 +26,13 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FlyTerrainObjectInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ObservationInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.WarehouseInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
+import org.l2jmobius.gameserver.model.actor.instance.FlyTerrainObject;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
+import org.l2jmobius.gameserver.model.actor.instance.BroadcastingTower;
+import org.l2jmobius.gameserver.model.actor.instance.Warehouse;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -49,7 +49,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -70,18 +70,18 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
 						&& !(obj.isArtefact()) //
-						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof FlyTerrainObjectInstance) //
+						&& !(obj instanceof BroadcastingTower) //
+						&& !(obj instanceof FlyTerrainObject) //
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
 						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
 							if ((npc.getHtmlPath(npc.getId(), 0, null).equals("data/html/npcdefault.htm"))//
-								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
-								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof GuardInstance) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
+								|| ((obj instanceof Fisherman) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
+								|| ((obj instanceof Warehouse) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
+								|| (((obj instanceof Merchant) && !(obj instanceof Fisherman)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
+								|| ((obj instanceof Guard) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
 							{
 								results.add(npc.getId());
 							}
@@ -105,18 +105,18 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
 						&& !(obj.isArtefact()) //
-						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof FlyTerrainObjectInstance) //
+						&& !(obj instanceof BroadcastingTower) //
+						&& !(obj instanceof FlyTerrainObject) //
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
 							if ((npc.getHtmlPath(npc.getId(), 0, null).equals("data/html/npcdefault.htm")) //
-								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
-								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof GuardInstance) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
+								|| ((obj instanceof Fisherman) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
+								|| ((obj instanceof Warehouse) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
+								|| (((obj instanceof Merchant) && !(obj instanceof Fisherman)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
+								|| ((obj instanceof Guard) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
 							{
 								results.add(npc.getId());
 							}
@@ -138,17 +138,17 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
 						&& !(obj.isArtefact()) //
-						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof FlyTerrainObjectInstance))
+						&& !(obj instanceof BroadcastingTower) //
+						&& !(obj instanceof FlyTerrainObject))
 					{
 						final Npc npc = (Npc) obj;
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
 							if ((npc.getHtmlPath(npc.getId(), 0, null).equals("data/html/npcdefault.htm")) //
-								|| ((obj instanceof FishermanInstance) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof WarehouseInstance) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
-								|| (((obj instanceof MerchantInstance) && !(obj instanceof FishermanInstance)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
-								|| ((obj instanceof GuardInstance) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
+								|| ((obj instanceof Fisherman) && (HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm") == null)) //
+								|| ((obj instanceof Warehouse) && (HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm") == null)) //
+								|| (((obj instanceof Merchant) && !(obj instanceof Fisherman)) && (HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm") == null)) //
+								|| ((obj instanceof Guard) && (HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm") == null)))
 							{
 								activeChar.teleToLocation(npc);
 								BuilderUtil.sendSysMessage(activeChar, "NPC " + npc.getId() + " does not have a default html.");

@@ -35,8 +35,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -1470,7 +1470,7 @@ public class EffectList
 			{
 				if (_owner.isSummon())
 				{
-					final PlayerInstance summonOwner = ((Summon) _owner).getOwner();
+					final Player summonOwner = ((Summon) _owner).getOwner();
 					if (summonOwner != null)
 					{
 						if (summonOwner.isInParty())
@@ -1492,10 +1492,10 @@ public class EffectList
 			
 			if (os != null)
 			{
-				final List<PlayerInstance> specs = Olympiad.getInstance().getSpectators(((PlayerInstance) _owner).getOlympiadGameId());
+				final List<Player> specs = Olympiad.getInstance().getSpectators(((Player) _owner).getOlympiadGameId());
 				if ((specs != null) && !specs.isEmpty())
 				{
-					for (PlayerInstance spec : specs)
+					for (Player spec : specs)
 					{
 						if (spec != null)
 						{

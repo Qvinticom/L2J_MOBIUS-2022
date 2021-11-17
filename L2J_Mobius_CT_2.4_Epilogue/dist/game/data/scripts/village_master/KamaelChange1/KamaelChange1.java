@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -56,7 +56,7 @@ public class KamaelChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -83,7 +83,7 @@ public class KamaelChange1 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String ClassChangeRequested(PlayerInstance player, int classId)
+	private String ClassChangeRequested(Player player, int classId)
 	{
 		String htmltext = null;
 		if (CategoryData.getInstance().isInCategory(CategoryType.KAMAEL_SECOND_CLASS_GROUP, classId))
@@ -163,7 +163,7 @@ public class KamaelChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (player.getRace() != Race.KAMAEL)

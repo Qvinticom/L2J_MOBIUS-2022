@@ -21,7 +21,7 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -53,7 +53,7 @@ public class Q10368_RebellionOfMonsters extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -92,7 +92,7 @@ public class Q10368_RebellionOfMonsters extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -126,7 +126,7 @@ public class Q10368_RebellionOfMonsters extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && qs.isCond(1))
@@ -189,7 +189,7 @@ public class Q10368_RebellionOfMonsters extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted() && qs.isCond(1))

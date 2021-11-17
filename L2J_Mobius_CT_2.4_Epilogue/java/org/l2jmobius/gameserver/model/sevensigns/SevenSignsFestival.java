@@ -49,10 +49,10 @@ import org.l2jmobius.gameserver.model.SpawnListener;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FestivalMonster;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -1097,7 +1097,7 @@ public class SevenSignsFestival implements SpawnListener
 	
 	private void addReputationPointsForPartyMemberClan(String partyMemberName)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(partyMemberName);
+		final Player player = World.getInstance().getPlayer(partyMemberName);
 		if (player != null)
 		{
 			if (player.getClan() != null)
@@ -1201,9 +1201,9 @@ public class SevenSignsFestival implements SpawnListener
 		saveFestivalData(updateSettings);
 		
 		// Remove any unused blood offerings from online players.
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
-			final ItemInstance bloodOfferings = player.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
+			final Item bloodOfferings = player.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
 			if (bloodOfferings != null)
 			{
 				player.destroyItem("SevenSigns", bloodOfferings, null, false);
@@ -1270,7 +1270,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player
 	 * @return int[] playerFestivalInfo
 	 */
-	public int[] getFestivalForPlayer(PlayerInstance player)
+	public int[] getFestivalForPlayer(Player player)
 	{
 		final int[] playerFestivalInfo =
 		{
@@ -1306,7 +1306,7 @@ public class SevenSignsFestival implements SpawnListener
 		return playerFestivalInfo;
 	}
 	
-	public boolean isParticipant(PlayerInstance player)
+	public boolean isParticipant(Player player)
 	{
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -1361,7 +1361,7 @@ public class SevenSignsFestival implements SpawnListener
 		if (festivalParty != null)
 		{
 			participants = new ArrayList<>(festivalParty.getMemberCount());
-			for (PlayerInstance player : festivalParty.getMembers())
+			for (Player player : festivalParty.getMembers())
 			{
 				if (player == null)
 				{
@@ -1381,7 +1381,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 	}
 	
-	public void updateParticipants(PlayerInstance player, Party festivalParty)
+	public void updateParticipants(Player player, Party festivalParty)
 	{
 		if (!isParticipant(player))
 		{
@@ -1400,7 +1400,7 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					for (int partyMemberObjId : getParticipants(oracle, festivalId))
 					{
-						final PlayerInstance partyMember = World.getInstance().getPlayer(partyMemberObjId);
+						final Player partyMember = World.getInstance().getPlayer(partyMemberObjId);
 						if (partyMember == null)
 						{
 							continue;
@@ -1511,7 +1511,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param offeringScore
 	 * @return boolean isHighestScore
 	 */
-	public boolean setFinalScore(PlayerInstance player, int oracle, int festivalId, long offeringScore)
+	public boolean setFinalScore(Player player, int oracle, int festivalId, long offeringScore)
 	{
 		List<String> partyMembers;
 		
@@ -1622,7 +1622,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param player
 	 * @return playerBonus (the share of the bonus for the party)
 	 */
-	public int distribAccumulatedBonus(PlayerInstance player)
+	public int distribAccumulatedBonus(Player player)
 	{
 		int playerBonus = 0;
 		final String playerName = player.getName();
@@ -2015,7 +2015,7 @@ public class SevenSignsFestival implements SpawnListener
 		private FestivalSpawn _witchSpawn;
 		
 		private Npc _witchInst;
-		List<FestivalMonsterInstance> _npcInsts = new ArrayList<>();
+		List<FestivalMonster> _npcInsts = new ArrayList<>();
 		
 		private List<Integer> _participants;
 		private final Map<Integer, FestivalSpawn> _originalLocations = new ConcurrentHashMap<>();
@@ -2055,7 +2055,7 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					for (int participantObjId : _participants)
 					{
-						final PlayerInstance participant = World.getInstance().getPlayer(participantObjId);
+						final Player participant = World.getInstance().getPlayer(participantObjId);
 						if (participant == null)
 						{
 							continue;
@@ -2084,7 +2084,7 @@ public class SevenSignsFestival implements SpawnListener
 						participant.stopAllEffectsExceptThoseThatLastThroughDeath();
 						
 						// Remove any stray blood offerings in inventory
-						final ItemInstance bloodOfferings = participant.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
+						final Item bloodOfferings = participant.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
 						if (bloodOfferings != null)
 						{
 							participant.destroyItem("SevenSigns", bloodOfferings, null, true);
@@ -2106,7 +2106,7 @@ public class SevenSignsFestival implements SpawnListener
 				npcSpawn.setAmount(1);
 				npcSpawn.setRespawnDelay(1);
 				
-				// Needed as doSpawn() is required to be called also for the NpcInstance it returns.
+				// Needed as doSpawn() is required to be called also for the Npc it returns.
 				npcSpawn.startRespawn();
 				
 				SpawnTable.getInstance().addNewSpawn(npcSpawn, false);
@@ -2136,7 +2136,7 @@ public class SevenSignsFestival implements SpawnListener
 		
 		protected void moveMonstersToCenter()
 		{
-			for (FestivalMonsterInstance festivalMob : _npcInsts)
+			for (FestivalMonster festivalMob : _npcInsts)
 			{
 				if (festivalMob.isDead())
 				{
@@ -2228,11 +2228,11 @@ public class SevenSignsFestival implements SpawnListener
 					npcSpawn.setAmount(1);
 					npcSpawn.setRespawnDelay(respawnDelay);
 					
-					// Needed as doSpawn() is required to be called also for the NpcInstance it returns.
+					// Needed as doSpawn() is required to be called also for the Npc it returns.
 					npcSpawn.startRespawn();
 					
 					SpawnTable.getInstance().addNewSpawn(npcSpawn, false);
-					final FestivalMonsterInstance festivalMob = (FestivalMonsterInstance) npcSpawn.doSpawn();
+					final FestivalMonster festivalMob = (FestivalMonster) npcSpawn.doSpawn();
 					
 					// Set the offering bonus to 2x or 5x the amount per kill,
 					// if this spawn is part of an increased challenge or is a festival chest.
@@ -2293,7 +2293,7 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					try
 					{
-						final PlayerInstance participant = World.getInstance().getPlayer(participantObjId);
+						final Player participant = World.getInstance().getPlayer(participantObjId);
 						if (participant == null)
 						{
 							continue;
@@ -2331,7 +2331,7 @@ public class SevenSignsFestival implements SpawnListener
 				SpawnTable.getInstance().deleteSpawn(_witchInst.getSpawn(), false);
 			}
 			
-			for (FestivalMonsterInstance monsterInst : _npcInsts)
+			for (FestivalMonster monsterInst : _npcInsts)
 			{
 				if (monsterInst != null)
 				{
@@ -2342,7 +2342,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 		}
 		
-		public void relocatePlayer(PlayerInstance participant, boolean isRemoving)
+		public void relocatePlayer(Player participant, boolean isRemoving)
 		{
 			try
 			{

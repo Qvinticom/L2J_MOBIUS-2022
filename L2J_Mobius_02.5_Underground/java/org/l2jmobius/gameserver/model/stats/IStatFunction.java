@@ -21,11 +21,11 @@ import java.util.OptionalDouble;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.transform.TransformType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
@@ -48,7 +48,7 @@ public interface IStatFunction
 		double value = 0;
 		for (int slot : slots)
 		{
-			final ItemInstance item = creature.getInventory().getPaperdollItemByItemId(slot);
+			final Item item = creature.getInventory().getPaperdollItemByItemId(slot);
 			if ((item != null) && (item.getEnchantLevel() >= 4) && (item.getItem().getCrystalTypePlus() == CrystalType.R))
 			{
 				value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getItem().isBlessed());
@@ -68,14 +68,14 @@ public interface IStatFunction
 		double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 		if (creature.isPet())
 		{
-			final PetInstance pet = (PetInstance) creature;
-			final ItemInstance weapon = pet.getActiveWeaponInstance();
+			final Pet pet = (Pet) creature;
+			final Item weapon = pet.getActiveWeaponInstance();
 			final double baseVal = stat == Stat.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stat.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
 			baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
 		}
 		else if (creature.isPlayer() && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE)))
 		{
-			final ItemInstance weapon = creature.getActiveWeaponInstance();
+			final Item weapon = creature.getActiveWeaponInstance();
 			baseValue = (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
 		}
 		
@@ -107,13 +107,13 @@ public interface IStatFunction
 		}
 		
 		double value = 0;
-		for (ItemInstance equippedItem : creature.getInventory().getPaperdollItems(ItemInstance::isEnchanted))
+		for (Item equippedItem : creature.getInventory().getPaperdollItems(Item::isEnchanted))
 		{
-			final Item item = equippedItem.getItem();
+			final ItemTemplate item = equippedItem.getItem();
 			final int bodypart = item.getBodyPart();
-			if ((bodypart == Item.SLOT_HAIR) || //
-				(bodypart == Item.SLOT_HAIR2) || //
-				(bodypart == Item.SLOT_HAIRALL))
+			if ((bodypart == ItemTemplate.SLOT_HAIR) || //
+				(bodypart == ItemTemplate.SLOT_HAIR2) || //
+				(bodypart == ItemTemplate.SLOT_HAIRALL))
 			{
 				// TODO: Item after enchant shows pDef, but scroll says mDef increase.
 				if ((stat != Stat.PHYSICAL_DEFENCE) && (stat != Stat.MAGICAL_DEFENCE))
@@ -169,7 +169,7 @@ public interface IStatFunction
 	 * @param enchant
 	 * @return
 	 */
-	static double calcEnchantDefBonus(ItemInstance item, double blessedBonus, int enchant)
+	static double calcEnchantDefBonus(Item item, double blessedBonus, int enchant)
 	{
 		switch (item.getItem().getCrystalTypePlus())
 		{
@@ -190,7 +190,7 @@ public interface IStatFunction
 	 * @param enchant
 	 * @return
 	 */
-	static double calcEnchantMatkBonus(ItemInstance item, double blessedBonus, int enchant)
+	static double calcEnchantMatkBonus(Item item, double blessedBonus, int enchant)
 	{
 		switch (item.getItem().getCrystalTypePlus())
 		{
@@ -227,13 +227,13 @@ public interface IStatFunction
 	 * @param enchant
 	 * @return
 	 */
-	static double calcEnchantedPAtkBonus(ItemInstance item, double blessedBonus, int enchant)
+	static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant)
 	{
 		switch (item.getItem().getCrystalTypePlus())
 		{
 			case R:
 			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
+				if ((item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
@@ -245,7 +245,7 @@ public interface IStatFunction
 			}
 			case S:
 			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
+				if ((item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
@@ -263,7 +263,7 @@ public interface IStatFunction
 			}
 			case A:
 			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
+				if ((item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
@@ -282,7 +282,7 @@ public interface IStatFunction
 			case B:
 			case C:
 			{
-				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
+				if ((item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{

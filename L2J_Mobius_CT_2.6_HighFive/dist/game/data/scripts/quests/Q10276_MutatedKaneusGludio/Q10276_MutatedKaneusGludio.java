@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -52,7 +52,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -78,7 +78,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		QuestState qs = getQuestState(killer, false);
 		if (qs == null)
@@ -89,8 +89,8 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
-			final List<PlayerInstance> partyMembers = new ArrayList<>();
-			for (PlayerInstance member : killer.getParty().getMembers())
+			final List<Player> partyMembers = new ArrayList<>();
+			for (Player member : killer.getParty().getMembers())
 			{
 				qs = getQuestState(member, false);
 				if ((qs != null) && qs.isStarted() && (((npcId == TOMLAN_KAMOS) && !hasQuestItems(member, TISSUE_TK)) || ((npcId == OL_ARIOSH) && !hasQuestItems(member, TISSUE_OA))))
@@ -112,7 +112,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -169,7 +169,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	 * @param npcId the ID of the killed monster
 	 * @param player
 	 */
-	private final void rewardItem(int npcId, PlayerInstance player)
+	private final void rewardItem(int npcId, Player player)
 	{
 		if ((npcId == TOMLAN_KAMOS) && !hasQuestItems(player, TISSUE_TK))
 		{

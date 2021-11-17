@@ -17,7 +17,7 @@
 package handlers.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.areas.Hellbound.HellboundEngine;
 
@@ -33,7 +33,7 @@ public class Hellbound implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (HellboundEngine.getInstance().isLocked())
 		{

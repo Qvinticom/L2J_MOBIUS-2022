@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -115,13 +115,13 @@ public class KartiaHelperElise extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
 			final StatSet npcVars = npc.getVariables();
-			final FriendlyNpcInstance adolph = npcVars.getObject("ADOLPH_OBJECT", FriendlyNpcInstance.class);
+			final FriendlyNpc adolph = npcVars.getObject("ADOLPH_OBJECT", FriendlyNpc.class);
 			if (!npc.isCastingNow())
 			{
 				healFriends(npc);
@@ -157,7 +157,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 			final StatSet instParams = instance.getTemplateParameters();
 			if (!npc.isCastingNow())
 			{
-				final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
+				final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
 				final SkillHolder progressiveHeal = instParams.getSkillHolder("eliseProgressiveHeal"); // AOE heal
 				final SkillHolder radiantHeal = instParams.getSkillHolder("eliseRadiantHeal"); // Single target heal
 				final SkillHolder recharge = instParams.getSkillHolder("eliseRecharge");
@@ -193,9 +193,9 @@ public class KartiaHelperElise extends AbstractNpcAI
 						npc.setTarget(npc);
 						for (WorldObject personToHeal : peopleToHeal)
 						{
-							if (personToHeal.getInstanceType() == InstanceType.PlayerInstance)
+							if (personToHeal.getInstanceType() == InstanceType.Player)
 							{
-								final PlayerInstance thePlayer = (PlayerInstance) personToHeal;
+								final Player thePlayer = (Player) personToHeal;
 								thePlayer.setCurrentHp((thePlayer.getMaxHp() * .20) + thePlayer.getCurrentHp());
 							}
 							else
@@ -245,7 +245,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 	@Override
 	public String onCreatureSee(Npc npc, Creature creature)
 	{
-		if (creature.isPlayer() || (creature instanceof FriendlyNpcInstance))
+		if (creature.isPlayer() || (creature instanceof FriendlyNpc))
 		{
 			final StatSet npcVars = npc.getVariables();
 			if (creature.isPlayer())

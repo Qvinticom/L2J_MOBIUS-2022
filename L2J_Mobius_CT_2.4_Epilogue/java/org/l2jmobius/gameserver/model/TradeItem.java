@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 public class TradeItem
 {
 	private int _objectId;
-	private final Item _item;
+	private final ItemTemplate _item;
 	private final int _location;
 	private int _enchant;
 	private final int _type1;
@@ -43,7 +43,7 @@ public class TradeItem
 	};
 	private final int[] _enchantOptions;
 	
-	public TradeItem(ItemInstance item, long count, long price)
+	public TradeItem(Item item, long count, long price)
 	{
 		_objectId = item.getObjectId();
 		_item = item.getItem();
@@ -62,7 +62,7 @@ public class TradeItem
 		_enchantOptions = item.getEnchantOptions();
 	}
 	
-	public TradeItem(Item item, long count, long price)
+	public TradeItem(ItemTemplate item, long count, long price)
 	{
 		_objectId = 0;
 		_item = item;
@@ -75,7 +75,7 @@ public class TradeItem
 		_price = price;
 		_elemAtkType = Elementals.NONE;
 		_elemAtkPower = 0;
-		_enchantOptions = ItemInstance.DEFAULT_ENCHANT_OPTIONS;
+		_enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
 	}
 	
 	public TradeItem(TradeItem item, long count, long price)
@@ -108,7 +108,7 @@ public class TradeItem
 		return _objectId;
 	}
 	
-	public Item getItem()
+	public ItemTemplate getItem()
 	{
 		return _item;
 	}

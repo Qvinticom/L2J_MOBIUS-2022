@@ -19,8 +19,8 @@ package quests.Q337_AudienceWithTheLandDragon;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -113,7 +113,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -172,7 +172,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -481,7 +481,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
@@ -540,7 +540,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					{
 						for (int i = 0; i < npcInfo[4]; i++)
 						{
-							final NpcInstance mob = addSpawn(npcInfo[5], npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), npc.getHeading(), true, 60000);
+							final Npc mob = addSpawn(npcInfo[5], npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), npc.getHeading(), true, 60000);
 							mob.setRunning();
 							((Attackable) mob).addDamageHate(attacker, 0, 500);
 							mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -584,7 +584,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

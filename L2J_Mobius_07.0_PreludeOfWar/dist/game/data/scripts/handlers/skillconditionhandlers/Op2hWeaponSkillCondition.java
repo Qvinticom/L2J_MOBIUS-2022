@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -52,6 +52,6 @@ public class Op2hWeaponSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		return _weaponTypes.stream().anyMatch(weaponType -> (weapon.getItemType() == weaponType) && ((weapon.getBodyPart() & Item.SLOT_LR_HAND) != 0));
+		return _weaponTypes.stream().anyMatch(weaponType -> (weapon.getItemType() == weaponType) && ((weapon.getBodyPart() & ItemTemplate.SLOT_LR_HAND) != 0));
 	}
 }

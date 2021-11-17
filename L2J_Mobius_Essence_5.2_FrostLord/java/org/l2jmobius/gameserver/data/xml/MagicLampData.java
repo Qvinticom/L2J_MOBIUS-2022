@@ -25,7 +25,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.GreaterMagicLampHolder;
 import org.l2jmobius.gameserver.model.holders.MagicLampDataHolder;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -69,7 +69,7 @@ public class MagicLampData implements IXmlReader
 		}));
 	}
 	
-	public void addLampExp(PlayerInstance player, double exp, boolean rateModifiers)
+	public void addLampExp(Player player, double exp, boolean rateModifiers)
 	{
 		if (Config.ENABLE_MAGIC_LAMP)
 		{

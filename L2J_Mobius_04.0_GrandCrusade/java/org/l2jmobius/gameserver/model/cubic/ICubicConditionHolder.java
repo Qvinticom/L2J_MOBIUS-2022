@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.cubic.conditions.ICubicCondition;
  */
 public interface ICubicConditionHolder
 {
-	boolean validateConditions(CubicInstance cubic, Creature owner, WorldObject target);
+	boolean validateConditions(Cubic cubic, Creature owner, WorldObject target);
 	
 	void addCondition(ICubicCondition condition);
 }

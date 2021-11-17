@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.events.impl.item;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
@@ -27,11 +27,11 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 public class OnItemCreate implements IBaseEvent
 {
 	private final String _process;
-	private final ItemInstance _item;
+	private final Item _item;
 	private final Creature _creature;
 	private final Object _reference;
 	
-	public OnItemCreate(String process, ItemInstance item, Creature actor, Object reference)
+	public OnItemCreate(String process, Item item, Creature actor, Object reference)
 	{
 		_process = process;
 		_item = item;
@@ -44,7 +44,7 @@ public class OnItemCreate implements IBaseEvent
 		return _process;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

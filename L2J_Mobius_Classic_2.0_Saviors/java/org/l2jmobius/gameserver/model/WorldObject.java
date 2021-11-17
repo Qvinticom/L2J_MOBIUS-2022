@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.handler.IActionShiftHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IDecayable;
@@ -106,12 +106,12 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		return _instanceType.isTypes(instanceTypes);
 	}
 	
-	public void onAction(PlayerInstance player)
+	public void onAction(Player player)
 	{
 		onAction(player, true);
 	}
 	
-	public void onAction(PlayerInstance player, boolean interact)
+	public void onAction(Player player, boolean interact)
 	{
 		final IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
 		if (handler != null)
@@ -122,7 +122,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	public void onActionShift(PlayerInstance player)
+	public void onActionShift(Player player)
 	{
 		final IActionShiftHandler handler = ActionShiftHandler.getInstance().getHandler(getInstanceType());
 		if (handler != null)
@@ -133,7 +133,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	public void onForcedAttack(PlayerInstance player)
+	public void onForcedAttack(Player player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
@@ -253,7 +253,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		return _objectId;
 	}
 	
-	public abstract void sendInfo(PlayerInstance player);
+	public abstract void sendInfo(Player player);
 	
 	public void sendPacket(IClientOutgoingPacket... packets)
 	{
@@ -263,7 +263,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	{
 	}
 	
-	public PlayerInstance getActingPlayer()
+	public Player getActingPlayer()
 	{
 		return null;
 	}
@@ -287,8 +287,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of DoorInstance.
-	 * @return {@code true} if object is instance of DoorInstance, {@code false} otherwise
+	 * Verify if object is instance of Door.
+	 * @return {@code true} if object is instance of Door, {@code false} otherwise
 	 */
 	public boolean isDoor()
 	{
@@ -296,8 +296,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of ArtefactInstance.
-	 * @return {@code true} if object is instance of ArtefactInstance, {@code false} otherwise
+	 * Verify if object is instance of Artefact.
+	 * @return {@code true} if object is instance of Artefact, {@code false} otherwise
 	 */
 	public boolean isArtefact()
 	{
@@ -305,8 +305,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of MonsterInstance.
-	 * @return {@code true} if object is instance of MonsterInstance, {@code false} otherwise
+	 * Verify if object is instance of Monster.
+	 * @return {@code true} if object is instance of Monster, {@code false} otherwise
 	 */
 	public boolean isMonster()
 	{
@@ -323,8 +323,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of PetInstance.
-	 * @return {@code true} if object is instance of PetInstance, {@code false} otherwise
+	 * Verify if object is instance of Pet.
+	 * @return {@code true} if object is instance of Pet, {@code false} otherwise
 	 */
 	public boolean isPet()
 	{
@@ -332,8 +332,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of PlayerInstance.
-	 * @return {@code true} if object is instance of PlayerInstance, {@code false} otherwise
+	 * Verify if object is instance of Player.
+	 * @return {@code true} if object is instance of Player, {@code false} otherwise
 	 */
 	public boolean isPlayer()
 	{
@@ -359,8 +359,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of ServitorInstance.
-	 * @return {@code true} if object is instance of ServitorInstance, {@code false} otherwise
+	 * Verify if object is instance of Servitor.
+	 * @return {@code true} if object is instance of Servitor, {@code false} otherwise
 	 */
 	public boolean isServitor()
 	{
@@ -377,8 +377,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of TrapInstance.
-	 * @return {@code true} if object is instance of TrapInstance, {@code false} otherwise
+	 * Verify if object is instance of Trap.
+	 * @return {@code true} if object is instance of Trap, {@code false} otherwise
 	 */
 	public boolean isTrap()
 	{
@@ -386,8 +386,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
-	 * Verify if object is instance of ItemInstance.
-	 * @return {@code true} if object is instance of ItemInstance, {@code false} otherwise
+	 * Verify if object is instance of Item.
+	 * @return {@code true} if object is instance of Item, {@code false} otherwise
 	 */
 	public boolean isItem()
 	{
@@ -860,7 +860,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		if (invis)
 		{
 			final DeleteObject deletePacket = new DeleteObject(this);
-			World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+			World.getInstance().forEachVisibleObject(this, Player.class, player ->
 			{
 				if (!isVisibleFor(player))
 				{
@@ -877,7 +877,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 * @param player
 	 * @return {@code true} if player can see an invisible object if it's invisible, {@code false} otherwise.
 	 */
-	public boolean isVisibleFor(PlayerInstance player)
+	public boolean isVisibleFor(Player player)
 	{
 		return !_isInvisible || player.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS);
 	}
@@ -887,7 +887,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	public void broadcastInfo()
 	{
-		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+		World.getInstance().forEachVisibleObject(this, Player.class, player ->
 		{
 			if (isVisibleFor(player))
 			{

@@ -22,11 +22,11 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.CubicData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.CubicTemplate;
-import org.l2jmobius.gameserver.model.cubic.CubicInstance;
+import org.l2jmobius.gameserver.model.cubic.Cubic;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
@@ -55,7 +55,7 @@ public class SummonCubic extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{
@@ -68,14 +68,14 @@ public class SummonCubic extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
 			return;
 		}
 		
 		// If cubic is already present, it's replaced.
-		final CubicInstance cubic = player.getCubicById(_cubicId);
+		final Cubic cubic = player.getCubicById(_cubicId);
 		if (cubic != null)
 		{
 			if (cubic.getTemplate().getLevel() > _cubicLvl)
@@ -108,7 +108,7 @@ public class SummonCubic extends AbstractEffect
 		}
 		
 		// Adding a new cubic.
-		player.addCubic(new CubicInstance(player, effector.getActingPlayer(), template));
+		player.addCubic(new Cubic(player, effector.getActingPlayer(), template));
 		player.sendPacket(new ExUserInfoCubic(player));
 		player.broadcastCharInfo();
 	}

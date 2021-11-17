@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,10 +25,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PrivateStoreMsgBuy implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private String _storeMsg;
 	
-	public PrivateStoreMsgBuy(PlayerInstance player)
+	public PrivateStoreMsgBuy(Player player)
 	{
 		_player = player;
 		if (_player.getBuyList() != null)

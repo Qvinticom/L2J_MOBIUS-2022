@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -42,7 +42,7 @@ public class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!_skill.getSkill().isSynergySkill())
 		{
@@ -61,7 +61,7 @@ public class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effector.isDead())
 		{

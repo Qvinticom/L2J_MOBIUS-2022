@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -41,7 +41,7 @@ public class AreaFriendly implements ITargetTypeHandler
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
 		final List<Creature> targetList = new ArrayList<>();
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (!checkTarget(player, target) && (skill.getCastRange() >= 0))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -90,9 +90,9 @@ public class AreaFriendly implements ITargetTypeHandler
 		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
-	private boolean checkTarget(PlayerInstance player, Creature target)
+	private boolean checkTarget(Player player, Creature target)
 	{
-		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof SiegeFlagInstance) || target.isMonster())
+		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof SiegeFlag) || target.isMonster())
 		{
 			return false;
 		}
@@ -104,7 +104,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (target.isPlayable())
 		{
-			final PlayerInstance targetPlayer = target.getActingPlayer();
+			final Player targetPlayer = target.getActingPlayer();
 			if (player == targetPlayer)
 			{
 				return true;

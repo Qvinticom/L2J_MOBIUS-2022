@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -45,7 +45,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	private int _sp;
 	private final int _adenacount;
 	
-	public ExEnchantSkillInfoDetail(int type, int skillId, int skillLevel, PlayerInstance ply)
+	public ExEnchantSkillInfoDetail(int type, int skillId, int skillLevel, Player ply)
 	{
 		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillId);
 		EnchantSkillHolder esd = null;

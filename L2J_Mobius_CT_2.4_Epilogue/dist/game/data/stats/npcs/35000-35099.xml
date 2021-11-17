@@ -2180,7 +2180,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35060" level="85" type="Npc" name="Nephilim Mercenary">
+	<npc id="35060" level="85" type="Folk" name="Nephilim Mercenary">
 		<parameters>
 			<skill name="PhysicalSpecial" id="5112" level="7" /> <!-- Stun -->
 			<skill name="Dispel" id="5113" level="7" /> <!-- Castle Self AE Dispell Buff -->
@@ -2229,7 +2229,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35061" level="82" type="Npc" name="Nephilim Mercenary">
+	<npc id="35061" level="82" type="Folk" name="Nephilim Mercenary">
 		<parameters>
 			<skill name="DDMagic" id="5052" level="6" /> <!-- Castle Long AE Fire -->
 			<skill name="Hold" id="5114" level="7" /> <!-- Hold -->
@@ -2278,7 +2278,7 @@
 			<height normal="21.957" />
 		</collision>
 	</npc>
-	<npc id="35062" level="1" type="Npc" name="Headquarters">
+	<npc id="35062" level="1" type="Folk" name="Headquarters">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3760,7 +3760,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35095" level="75" type="Npc" name="Mass Gatekeeper" title="Gludio">
+	<npc id="35095" level="75" type="Folk" name="Mass Gatekeeper" title="Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3898,7 +3898,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35098" level="75" type="Npc" name="Blacksmith" title="Gludio">
+	<npc id="35098" level="75" type="Folk" name="Blacksmith" title="Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />

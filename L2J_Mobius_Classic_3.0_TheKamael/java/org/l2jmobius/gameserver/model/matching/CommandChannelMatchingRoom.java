@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExDissmissMPCCRoom;
 import org.l2jmobius.gameserver.network.serverpackets.ExMPCCRoomInfo;
@@ -36,28 +36,28 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class CommandChannelMatchingRoom extends MatchingRoom
 {
-	public CommandChannelMatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance leader)
+	public CommandChannelMatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, Player leader)
 	{
 		super(title, loot, minLevel, maxLevel, maxmem, leader);
 	}
 	
 	@Override
-	protected void onRoomCreation(PlayerInstance player)
+	protected void onRoomCreation(Player player)
 	{
 		player.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED);
 	}
 	
 	@Override
-	protected void notifyInvalidCondition(PlayerInstance player)
+	protected void notifyInvalidCondition(Player player)
 	{
 		player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_THE_COMMAND_CHANNEL_MATCHING_ROOM_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 	}
 	
 	@Override
-	protected void notifyNewMember(PlayerInstance player)
+	protected void notifyNewMember(Player player)
 	{
 		// Update other players
-		for (PlayerInstance member : getMembers())
+		for (Player member : getMembers())
 		{
 			if (member != player)
 			{
@@ -68,7 +68,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 		// Send SystemMessage to other players
 		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM);
 		sm.addPcName(player);
-		for (PlayerInstance member : getMembers())
+		for (Player member : getMembers())
 		{
 			if (member != player)
 			{
@@ -82,7 +82,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	protected void notifyRemovedMember(PlayerInstance player, boolean kicked, boolean leaderChanged)
+	protected void notifyRemovedMember(Player player, boolean kicked, boolean leaderChanged)
 	{
 		getMembers().forEach(p ->
 		{
@@ -117,7 +117,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	public MatchingMemberType getMemberType(PlayerInstance player)
+	public MatchingMemberType getMemberType(Player player)
 	{
 		if (isLeader(player))
 		{

@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -62,7 +62,7 @@ public class PlainsOfDion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -76,7 +76,7 @@ public class PlainsOfDion extends AbstractNpcAI
 				npc.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_MSG[i]);
 			}
 			
-			World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, npc.getTemplate().getClanHelpRange(), obj ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, npc.getTemplate().getClanHelpRange(), obj ->
 			{
 				if (CommonUtil.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoEngine.getInstance().canSeeTarget(npc, obj))
 				{

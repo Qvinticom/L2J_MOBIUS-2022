@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.templates;
 
-public class Weapon extends Item
+public class Weapon extends ItemTemplate
 {
 	public static final int WEAPON_TYPE_NONE = 1;
 	public static final int WEAPON_TYPE_SWORD = 2;

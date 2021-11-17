@@ -20,16 +20,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class SellList extends ServerBasePacket
 {
-	private final PlayerInstance _char;
+	private final Player _char;
 	private final int _money;
-	private final List<ItemInstance> _selllist = new ArrayList<>();
+	private final List<Item> _selllist = new ArrayList<>();
 	
-	public SellList(PlayerInstance player)
+	public SellList(Player player)
 	{
 		_char = player;
 		_money = _char.getAdena();
@@ -41,7 +41,7 @@ public class SellList extends ServerBasePacket
 		writeC(0x1C);
 		writeD(_money);
 		writeD(0);
-		for (ItemInstance item : _char.getInventory().getItems())
+		for (Item item : _char.getInventory().getItems())
 		{
 			if (item.isEquipped() || (item.getItemId() == 57) || (item.getItem().getType2() == 3))
 			{
@@ -50,7 +50,7 @@ public class SellList extends ServerBasePacket
 			_selllist.add(item);
 		}
 		writeH(_selllist.size());
-		for (ItemInstance item : _selllist)
+		for (Item item : _selllist)
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());

@@ -17,9 +17,9 @@
 package handlers.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
@@ -36,11 +36,11 @@ public class AdminDestroyItems implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final PlayerInventory inventory = activeChar.getInventory();
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (ItemInstance item : inventory.getItems())
+		for (Item item : inventory.getItems())
 		{
 			if (item.isEquipped() && !command.contains("all"))
 			{

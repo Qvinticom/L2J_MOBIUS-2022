@@ -17,8 +17,8 @@
 package custom.MissQueen;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -61,7 +61,7 @@ public class MissQueen extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -111,7 +111,7 @@ public class MissQueen extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)

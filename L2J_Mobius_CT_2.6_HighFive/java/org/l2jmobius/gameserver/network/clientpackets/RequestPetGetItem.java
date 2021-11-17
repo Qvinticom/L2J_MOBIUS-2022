@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -42,7 +42,7 @@ public class RequestPetGetItem implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final World world = World.getInstance();
-		final ItemInstance item = (ItemInstance) world.findObject(_objectId);
+		final Item item = (Item) world.findObject(_objectId);
 		if ((item == null) || (client.getPlayer() == null) || !client.getPlayer().hasPet())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -62,7 +62,7 @@ public class RequestPetGetItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final PetInstance pet = (PetInstance) client.getPlayer().getSummon();
+		final Pet pet = (Pet) client.getPlayer().getSummon();
 		if (pet.isDead() || pet.isOutOfControl())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);

@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.OlympiadManagerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.OlympiadManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -99,7 +99,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	
 	public void openDoors()
 	{
-		for (DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
+		for (Door door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
 		{
 			if ((door != null) && !door.isOpen())
 			{
@@ -110,7 +110,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	
 	public void closeDoors()
 	{
-		for (DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
+		for (Door door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
 		{
 			if ((door != null) && door.isOpen())
 			{
@@ -123,7 +123,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	{
 		for (Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
 		{
-			if ((buffer instanceof OlympiadManagerInstance) && !buffer.isSpawned())
+			if ((buffer instanceof OlympiadManager) && !buffer.isSpawned())
 			{
 				buffer.spawnMe();
 			}
@@ -134,17 +134,17 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	{
 		for (Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
 		{
-			if ((buffer instanceof OlympiadManagerInstance) && buffer.isSpawned())
+			if ((buffer instanceof OlympiadManager) && buffer.isSpawned())
 			{
 				buffer.decayMe();
 			}
 		}
 	}
 	
-	public void broadcastStatusUpdate(PlayerInstance player)
+	public void broadcastStatusUpdate(Player player)
 	{
 		final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
-		for (PlayerInstance target : getPlayersInside())
+		for (Player target : getPlayersInside())
 		{
 			if ((target != null) && (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())) && (target.getInstanceId() == player.getInstanceId()))
 			{
@@ -155,7 +155,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	
 	public void broadcastPacketToObservers(IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance creature : getPlayersInside())
+		for (Player creature : getPlayersInside())
 		{
 			if ((creature != null) && creature.inObserverMode() && (creature.getInstanceId() == getInstanceId()))
 			{
@@ -167,7 +167,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	@Override
 	public void broadcastPacket(IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance creature : getPlayersInside())
+		for (Player creature : getPlayersInside())
 		{
 			if ((creature != null) && (creature.getInstanceId() == getInstanceId()))
 			{
@@ -209,7 +209,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		{
 			return;
 		}
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
 			// only participants, observers and GMs allowed
@@ -285,9 +285,9 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	
 	private static final class KickPlayer implements Runnable
 	{
-		private PlayerInstance _player;
+		private Player _player;
 		
-		public KickPlayer(PlayerInstance player)
+		public KickPlayer(Player player)
 		{
 			_player = player;
 		}

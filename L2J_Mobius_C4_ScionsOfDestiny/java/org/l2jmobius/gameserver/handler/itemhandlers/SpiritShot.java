@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -53,15 +53,15 @@ public class SpiritShot implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
-		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Player player = (Player) playable;
+		final Item weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
 		final int itemId = item.getItemId();
 		
@@ -76,14 +76,14 @@ public class SpiritShot implements IItemHandler
 		}
 		
 		// Check if Spiritshot is already active
-		if (weaponInst.getChargedSpiritshot() != ItemInstance.CHARGED_NONE)
+		if (weaponInst.getChargedSpiritshot() != Item.CHARGED_NONE)
 		{
 			return;
 		}
 		
 		// Check for correct grade
 		final int weaponGrade = weaponItem.getCrystalType();
-		if (((weaponGrade == Item.CRYSTAL_NONE) && (itemId != 5790) && (itemId != 2509)) || ((weaponGrade == Item.CRYSTAL_D) && (itemId != 2510)) || ((weaponGrade == Item.CRYSTAL_C) && (itemId != 2511)) || ((weaponGrade == Item.CRYSTAL_B) && (itemId != 2512)) || ((weaponGrade == Item.CRYSTAL_A) && (itemId != 2513)) || ((weaponGrade == Item.CRYSTAL_S) && (itemId != 2514)))
+		if (((weaponGrade == ItemTemplate.CRYSTAL_NONE) && (itemId != 5790) && (itemId != 2509)) || ((weaponGrade == ItemTemplate.CRYSTAL_D) && (itemId != 2510)) || ((weaponGrade == ItemTemplate.CRYSTAL_C) && (itemId != 2511)) || ((weaponGrade == ItemTemplate.CRYSTAL_B) && (itemId != 2512)) || ((weaponGrade == ItemTemplate.CRYSTAL_A) && (itemId != 2513)) || ((weaponGrade == ItemTemplate.CRYSTAL_S) && (itemId != 2514)))
 		{
 			if (!player.getAutoSoulShot().containsKey(itemId))
 			{
@@ -116,7 +116,7 @@ public class SpiritShot implements IItemHandler
 		{
 			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
 		}
-		weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_SPIRITSHOT);
+		weaponInst.setChargedSpiritshot(Item.CHARGED_SPIRITSHOT);
 		
 		// Send message to client
 		player.sendPacket(SystemMessageId.POWER_OF_MANA_ENABLED);

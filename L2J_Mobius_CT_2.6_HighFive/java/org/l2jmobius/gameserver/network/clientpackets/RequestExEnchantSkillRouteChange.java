@@ -25,10 +25,10 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -66,7 +66,7 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -122,7 +122,7 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 		if (player.getSp() >= requiredSp)
 		{
 			// only first level requires book
-			final ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+			final Item spb = player.getInventory().getItemByItemId(reqItemId);
 			// does not have spellbook
 			if (Config.ES_SP_BOOK_NEEDED && (spb == null))
 			{

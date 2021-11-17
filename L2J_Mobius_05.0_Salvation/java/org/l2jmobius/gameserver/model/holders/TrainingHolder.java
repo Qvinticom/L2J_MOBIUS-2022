@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Sdw
@@ -79,7 +79,7 @@ public class TrainingHolder implements Serializable
 		return _endTime == -1;
 	}
 	
-	public boolean isValid(PlayerInstance player)
+	public boolean isValid(Player player)
 	{
 		return Config.TRAINING_CAMP_ENABLE && (player.getObjectId() == _objectId) && (player.getClassIndex() == _classIndex);
 	}

@@ -24,10 +24,10 @@ import java.util.List;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.AppearanceHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -105,7 +105,7 @@ public class AppearanceStone
 		}
 		
 		final int bodyPart = ItemTable.SLOTS.get(set.getString("bodyPart", "none"));
-		if (bodyPart != Item.SLOT_NONE)
+		if (bodyPart != ItemTemplate.SLOT_NONE)
 		{
 			addBodyPart(bodyPart);
 		}
@@ -257,7 +257,7 @@ public class AppearanceStone
 	 * @param targetItem the item to be modified with this appearance.
 	 * @return {@code true} if the item is valid for appearance change, {@code false} otherwise.
 	 */
-	public boolean checkConditions(PlayerInstance player, ItemInstance targetItem)
+	public boolean checkConditions(Player player, Item targetItem)
 	{
 		if (targetItem == null)
 		{
@@ -285,13 +285,13 @@ public class AppearanceStone
 					return false;
 				}
 				
-				if ((targetItem.isWeapon() && !getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !getTargetTypes().contains(AppearanceTargetType.ARMOR) && !((targetItem.getItem().getBodyPart() == Item.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == Item.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == Item.SLOT_HAIRALL))) || (targetItem.isEtcItem() && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY)))
+				if ((targetItem.isWeapon() && !getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !getTargetTypes().contains(AppearanceTargetType.ARMOR) && !((targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIRALL))) || (targetItem.isEtcItem() && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY)))
 				{
 					player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return false;
 				}
 				
-				if (((targetItem.getItem().getBodyPart() == Item.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == Item.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == Item.SLOT_HAIRALL)) && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY))
+				if (((targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIRALL)) && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY))
 				{
 					player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return false;
@@ -341,7 +341,7 @@ public class AppearanceStone
 					}
 					case ACCESSORY:
 					{
-						if ((targetItem.getItem().getBodyPart() != Item.SLOT_HAIR) && (targetItem.getItem().getBodyPart() != Item.SLOT_HAIR2) && (targetItem.getItem().getBodyPart() != Item.SLOT_HAIRALL))
+						if ((targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_HAIR) && (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_HAIR2) && (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_HAIRALL))
 						{
 							player.sendPacket(SystemMessageId.HAIR_ACCESSORIES_ONLY);
 							return false;
@@ -400,7 +400,7 @@ public class AppearanceStone
 			{
 				case ONE_HANDED:
 				{
-					if ((targetItem.getItem().getBodyPart() & Item.SLOT_R_HAND) != Item.SLOT_R_HAND)
+					if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_R_HAND) != ItemTemplate.SLOT_R_HAND)
 					{
 						player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 						return false;
@@ -409,7 +409,7 @@ public class AppearanceStone
 				}
 				case TWO_HANDED:
 				{
-					if ((targetItem.getItem().getBodyPart() & Item.SLOT_LR_HAND) != Item.SLOT_LR_HAND)
+					if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_LR_HAND) != ItemTemplate.SLOT_LR_HAND)
 					{
 						player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 						return false;
@@ -467,7 +467,7 @@ public class AppearanceStone
 		return true;
 	}
 	
-	public AppearanceHolder findVisualChange(ItemInstance targetItem)
+	public AppearanceHolder findVisualChange(Item targetItem)
 	{
 		for (AppearanceHolder holder : _allVisualIds)
 		{
@@ -494,7 +494,7 @@ public class AppearanceStone
 				{
 					case ONE_HANDED:
 					{
-						if ((targetItem.getItem().getBodyPart() & Item.SLOT_R_HAND) != Item.SLOT_R_HAND)
+						if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_R_HAND) != ItemTemplate.SLOT_R_HAND)
 						{
 							continue;
 						}
@@ -502,7 +502,7 @@ public class AppearanceStone
 					}
 					case TWO_HANDED:
 					{
-						if ((targetItem.getItem().getBodyPart() & Item.SLOT_LR_HAND) != Item.SLOT_LR_HAND)
+						if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_LR_HAND) != ItemTemplate.SLOT_LR_HAND)
 						{
 							continue;
 						}

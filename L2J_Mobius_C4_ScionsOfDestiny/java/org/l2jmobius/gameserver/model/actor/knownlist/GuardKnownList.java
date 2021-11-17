@@ -21,13 +21,13 @@ import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 public class GuardKnownList extends AttackableKnownList
 {
-	public GuardKnownList(GuardInstance activeChar)
+	public GuardKnownList(Guard activeChar)
 	{
 		super(activeChar);
 	}
@@ -41,7 +41,7 @@ public class GuardKnownList extends AttackableKnownList
 	@Override
 	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
-		if (!Config.ALLOW_GUARDS && (object instanceof MonsterInstance))
+		if (!Config.ALLOW_GUARDS && (object instanceof Monster))
 		{
 			return false;
 		}
@@ -56,10 +56,10 @@ public class GuardKnownList extends AttackableKnownList
 			getActiveChar().getHomeLocation();
 		}
 		
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			// Check if the object added is a PlayerInstance that owns Karma
-			final PlayerInstance player = (PlayerInstance) object;
+			// Check if the object added is a Player that owns Karma
+			final Player player = (Player) object;
 			
 			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
 			if ((player.getKarma() > 0) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
@@ -67,10 +67,10 @@ public class GuardKnownList extends AttackableKnownList
 				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			}
 		}
-		else if (Config.ALLOW_GUARDS && (object instanceof MonsterInstance))
+		else if (Config.ALLOW_GUARDS && (object instanceof Monster))
 		{
-			// Check if the object added is an aggressive MonsterInstance
-			final MonsterInstance mob = (MonsterInstance) object;
+			// Check if the object added is an aggressive Monster
+			final Monster mob = (Monster) object;
 			
 			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
 			if (mob.isAggressive() && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
@@ -105,8 +105,8 @@ public class GuardKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public GuardInstance getActiveChar()
+	public Guard getActiveChar()
 	{
-		return (GuardInstance) super.getActiveChar();
+		return (Guard) super.getActiveChar();
 	}
 }

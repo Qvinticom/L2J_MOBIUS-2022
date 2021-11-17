@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
@@ -375,7 +375,7 @@ public class CastleManorManager
 			}
 			
 			// Sending notification to a clan leader
-			PlayerInstance clanLeader = null;
+			Player clanLeader = null;
 			if ((clan.getLeader() != null) && (clan.getLeader().getName() != null))
 			{
 				clanLeader = World.getInstance().getPlayer(clan.getLeader().getName());
@@ -408,7 +408,7 @@ public class CastleManorManager
 						LOGGER.info(c.getName() + "|" + -manorCost + "|ManorManager Error@approveNextPeriod");
 					}
 					final Clan clan = ClanTable.getInstance().getClan(c.getOwnerId());
-					PlayerInstance clanLeader = null;
+					Player clanLeader = null;
 					if (clan != null)
 					{
 						clanLeader = World.getInstance().getPlayer(clan.getLeader().getName());

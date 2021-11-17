@@ -20,12 +20,12 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -56,7 +56,7 @@ public class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffected().getActingPlayer();
+		final Player player = info.getEffected().getActingPlayer();
 		if (player.isEnchanting())
 		{
 			return;
@@ -68,7 +68,7 @@ public class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		Item wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (wpn == null)
 		{
 			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
@@ -87,9 +87,9 @@ public class ConvertItem extends AbstractEffect
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final Elementals elementals = wpn.getElementals() == null ? null : wpn.getElementals()[0];
-		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final List<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (ItemInstance item : unequipped)
+		for (Item item : unequipped)
 		{
 			iu.addModifiedItem(item);
 		}
@@ -101,7 +101,7 @@ public class ConvertItem extends AbstractEffect
 		}
 		
 		byte count = 0;
-		for (ItemInstance item : unequipped)
+		for (Item item : unequipped)
 		{
 			if (!(item.getItem() instanceof Weapon))
 			{
@@ -129,13 +129,13 @@ public class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final ItemInstance destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
+		final Item destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
 		if (destroyItem == null)
 		{
 			return;
 		}
 		
-		final ItemInstance newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
+		final Item newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
 		if (newItem == null)
 		{
 			return;

@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -70,7 +70,7 @@ public class ChamberOfProphecies extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -155,7 +155,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					ferin.deleteMe(); // probably needs another npc id for initial room
 				}
-				if (world.isStatus(0) && world.getAliveNpcs(MonsterInstance.class).isEmpty())
+				if (world.isStatus(0) && world.getAliveNpcs(Monster.class).isEmpty())
 				{
 					world.spawnGroup("q10753_16_instance_halter_1_1");
 					world.spawnGroup("wof_room1");
@@ -198,7 +198,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					case 0:
 					{
-						if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+						if (world.getAliveNpcs(Monster.class).isEmpty())
 						{
 							startQuestTimer("SEY2", 14000, world.getNpc(FERIN), player);
 							startQuestTimer("SEY_KAIN", 24000, world.getNpc(VAN_HALTER), player);
@@ -209,7 +209,7 @@ public class ChamberOfProphecies extends AbstractInstance
 					}
 					case 1:
 					{
-						if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+						if (world.getAliveNpcs(Monster.class).isEmpty())
 						{
 							world.spawnGroup("wof_room2_1");
 							world.setStatus(2);
@@ -219,7 +219,7 @@ public class ChamberOfProphecies extends AbstractInstance
 					}
 					case 2:
 					{
-						if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+						if (world.getAliveNpcs(Monster.class).isEmpty())
 						{
 							startQuestTimer("SEY3", 8000, world.getNpc(FERIN), player);
 							startQuestTimer("OPEN_DOOR2", 5000, npc, player);
@@ -229,7 +229,7 @@ public class ChamberOfProphecies extends AbstractInstance
 					}
 					case 3:
 					{
-						if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+						if (world.getAliveNpcs(Monster.class).isEmpty())
 						{
 							world.setStatus(4);
 							world.spawnGroup("wof_room3_2");
@@ -241,7 +241,7 @@ public class ChamberOfProphecies extends AbstractInstance
 					}
 					case 4:
 					{
-						if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+						if (world.getAliveNpcs(Monster.class).isEmpty())
 						{
 							world.setStatus(5);
 							world.spawnGroup("wof_room4");
@@ -268,14 +268,14 @@ public class ChamberOfProphecies extends AbstractInstance
 				}
 				npc.setRunning();
 				((Attackable) npc).setCanReturnToSpawnPoint(false);
-				if (npc.isScriptValue(0) && world.getAliveNpcs(MonsterInstance.class).isEmpty())
+				if (npc.isScriptValue(0) && world.getAliveNpcs(Monster.class).isEmpty())
 				{
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 				}
 				else if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 3000, monster ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 3000, monster ->
 					{
 						addAttackDesire(npc, monster);
 						return;
@@ -469,7 +469,7 @@ public class ChamberOfProphecies extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10753_WindsOfFateChoices.class.getSimpleName());
 		String htmltext = null;
@@ -512,7 +512,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					if (creature.isPlayer() && !creature.isDead() && npc.isScriptValue(0))
 					{
-						startQuestTimer("BROADCAST_TEXT", 12000, npc, (PlayerInstance) creature);
+						startQuestTimer("BROADCAST_TEXT", 12000, npc, (Player) creature);
 					}
 					break;
 				}
@@ -520,7 +520,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					if (creature.isPlayer() && !creature.isDead() && world.isStatus(0))
 					{
-						startQuestTimer("ATTACK", 2000, npc, (PlayerInstance) creature, true);
+						startQuestTimer("ATTACK", 2000, npc, (Player) creature, true);
 					}
 					break;
 				}

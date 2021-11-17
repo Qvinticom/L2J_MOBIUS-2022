@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.skills.effects;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -94,7 +94,7 @@ final class EffectCancel extends Effect
 				}
 			}
 		}
-		else if (getEffector() instanceof PlayerInstance)
+		else if (getEffector() instanceof Player)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 			sm.addString(getEffected().getName());

@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IActionHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonTalk;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.pet.PetStatusShow;
 public class SummonAction implements IActionHandler
 {
 	@Override
-	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		// Aggression target lock effect
 		if (player.isLockedTarget() && (player.getLockedTarget() != target))

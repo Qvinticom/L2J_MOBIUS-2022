@@ -20,10 +20,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -50,7 +50,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("RequestCrystalizeItem: activeChar was null");
@@ -87,7 +87,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final PlayerInventory inventory = player.getInventory();
 		if (inventory != null)
 		{
-			final ItemInstance item = inventory.getItemByObjectId(_objectId);
+			final Item item = inventory.getItemByObjectId(_objectId);
 			if ((item == null) || item.isWear())
 			{
 				final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -107,20 +107,20 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			}
 		}
 		
-		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
+		final Item itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		if ((itemToRemove == null) || itemToRemove.isWear())
 		{
 			return;
 		}
 		
-		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == Item.CRYSTAL_NONE))
+		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == ItemTemplate.CRYSTAL_NONE))
 		{
 			LOGGER.warning("" + player.getObjectId() + " tried to crystallize " + itemToRemove.getItem().getItemId());
 			return;
 		}
 		
 		// Check if the char can crystallize C items and return if false;
-		if ((itemToRemove.getItem().getCrystalType() == Item.CRYSTAL_C) && (skillLevel <= 1))
+		if ((itemToRemove.getItem().getCrystalType() == ItemTemplate.CRYSTAL_C) && (skillLevel <= 1))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -129,7 +129,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		}
 		
 		// Check if the user can crystallize B items and return if false;
-		if ((itemToRemove.getItem().getCrystalType() == Item.CRYSTAL_B) && (skillLevel <= 2))
+		if ((itemToRemove.getItem().getCrystalType() == ItemTemplate.CRYSTAL_B) && (skillLevel <= 2))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -138,7 +138,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		}
 		
 		// Check if the user can crystallize A items and return if false;
-		if ((itemToRemove.getItem().getCrystalType() == Item.CRYSTAL_A) && (skillLevel <= 3))
+		if ((itemToRemove.getItem().getCrystalType() == ItemTemplate.CRYSTAL_A) && (skillLevel <= 3))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -147,7 +147,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		}
 		
 		// Check if the user can crystallize S items and return if false;
-		if ((itemToRemove.getItem().getCrystalType() == Item.CRYSTAL_S) && (skillLevel <= 4))
+		if ((itemToRemove.getItem().getCrystalType() == ItemTemplate.CRYSTAL_S) && (skillLevel <= 4))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -161,7 +161,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		if (itemToRemove.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot()))
+			for (Item element : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot()))
 			{
 				iu.addModifiedItem(element);
 			}
@@ -175,12 +175,12 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		}
 		
 		// remove from inventory
-		final ItemInstance removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
+		final Item removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
 		
 		// add crystals
 		final int crystalId = itemToRemove.getItem().getCrystalItemId();
 		final int crystalAmount = itemToRemove.getCrystalCount();
-		final ItemInstance createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, itemToRemove);
+		final Item createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, itemToRemove);
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(crystalId);
 		sm.addNumber(crystalAmount);

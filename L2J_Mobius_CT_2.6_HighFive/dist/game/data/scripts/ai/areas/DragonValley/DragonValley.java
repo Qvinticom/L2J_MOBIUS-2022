@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -137,7 +137,7 @@ public class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("SELF_DESTRUCTION") && (npc != null) && !npc.isDead())
 		{
@@ -156,7 +156,7 @@ public class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.getId() == NECROMANCER_OF_THE_VALLEY)
 		{
@@ -180,7 +180,7 @@ public class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == NECROMANCER_OF_THE_VALLEY)
 		{
@@ -210,7 +210,7 @@ public class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (skill == SELF_DESTRUCTION.getSkill())
 		{
@@ -219,13 +219,13 @@ public class DragonValley extends AbstractNpcAI
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	private void manageMoraleBoost(PlayerInstance player, Npc npc)
+	private void manageMoraleBoost(Player player, Npc npc)
 	{
 		double points = 0;
 		int moraleBoostLv = 0;
 		if (player.isInParty() && (player.getParty().getMemberCount() >= MIN_MEMBERS) && (npc != null))
 		{
-			for (PlayerInstance member : player.getParty().getMembers())
+			for (Player member : player.getParty().getMembers())
 			{
 				if ((member.getLevel() >= MIN_LEVEL) && (member.getClassId().level() >= CLASS_LEVEL) && (npc.calculateDistance3D(member) < MIN_DISTANCE))
 				{
@@ -246,7 +246,7 @@ public class DragonValley extends AbstractNpcAI
 				moraleBoostLv = 1;
 			}
 			
-			for (PlayerInstance member : player.getParty().getMembers())
+			for (Player member : player.getParty().getMembers())
 			{
 				if (npc.calculateDistance3D(member) < MIN_DISTANCE)
 				{
@@ -273,7 +273,7 @@ public class DragonValley extends AbstractNpcAI
 		}
 	}
 	
-	private void spawnGhost(Npc npc, PlayerInstance player, boolean isSummon, int chance)
+	private void spawnGhost(Npc npc, Player player, boolean isSummon, int chance)
 	{
 		if ((npc.getScriptValue() < 2) && (getRandom(100) < chance))
 		{

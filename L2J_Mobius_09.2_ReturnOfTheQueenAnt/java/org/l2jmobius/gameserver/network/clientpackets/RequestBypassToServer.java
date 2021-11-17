@@ -32,13 +32,13 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMenuSelect;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.Disconnection;
@@ -82,7 +82,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -184,7 +184,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				}
 				try
 				{
-					final ItemInstance item = player.getInventory().getItemByObjectId(Integer.parseInt(id));
+					final Item item = player.getInventory().getItemByObjectId(Integer.parseInt(id));
 					if ((item != null) && (endOfId > 0))
 					{
 						item.onBypassFeedback(player, _command.substring(endOfId + 1));
@@ -325,7 +325,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 	/**
 	 * @param player
 	 */
-	private void comeHere(PlayerInstance player)
+	private void comeHere(Player player)
 	{
 		final WorldObject obj = player.getTarget();
 		if (obj == null)

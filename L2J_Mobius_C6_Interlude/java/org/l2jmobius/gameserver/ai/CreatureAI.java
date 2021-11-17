@@ -32,12 +32,12 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
@@ -118,7 +118,7 @@ public class CreatureAI extends AbstractAI
 	protected void onIntentionActive(Creature target)
 	{
 		// If attacker have karma and have level >= 10 than his target and target have Newbie Protection Buff.
-		if ((target instanceof PlayerInstance) && (_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).getKarma() > 0) && ((_actor.getLevel() - target.getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !target.isInsideZone(ZoneId.PVP))
+		if ((target instanceof Player) && (_actor instanceof Player) && (((Player) _actor).getKarma() > 0) && ((_actor.getLevel() - target.getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !target.isInsideZone(ZoneId.PVP))
 		{
 			clientActionFailed();
 			return;
@@ -188,14 +188,14 @@ public class CreatureAI extends AbstractAI
 		
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if (_actor.isAllSkillsDisabled() || _actor.isAfraid())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -241,7 +241,7 @@ public class CreatureAI extends AbstractAI
 	 * <ul>
 	 * <li>Set the AI cast target</li>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
-	 * <li>Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor</li>
+	 * <li>Cancel action client side by sending Server->Client packet ActionFailed to the Player actor</li>
 	 * <li>Set the AI skill used by INTENTION_CAST</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_CAST</li>
 	 * <li>Launch the Think Event</li>
@@ -258,7 +258,7 @@ public class CreatureAI extends AbstractAI
 		
 		if (_actor.isAllSkillsDisabled() && !skill.isPotion())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -266,12 +266,12 @@ public class CreatureAI extends AbstractAI
 		// can't cast if muted
 		if (_actor.isMuted() && skill.isMagic())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		// If attacker have karma and have level >= 10 than his target and target have Newbie Protection Buff.
-		if ((target instanceof PlayerInstance) && (_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).getKarma() > 0) && ((_actor.getLevel() - ((PlayerInstance) target).getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !((Creature) target).isInsideZone(ZoneId.PVP))
+		if ((target instanceof Player) && (_actor instanceof Player) && (((Player) _actor).getKarma() > 0) && ((_actor.getLevel() - ((Player) target).getLevel()) >= 10) && ((Playable) target).getProtectionBlessing() && !((Creature) target).isInsideZone(ZoneId.PVP))
 		{
 			clientActionFailed();
 			return;
@@ -286,7 +286,7 @@ public class CreatureAI extends AbstractAI
 			// Abort the attack of the Creature and send Server->Client ActionFailed packet
 			_actor.abortAttack();
 			
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			// no need for second ActionFailed packet, abortAttack() already sent it
 			// clientActionFailed();
 		}
@@ -316,14 +316,14 @@ public class CreatureAI extends AbstractAI
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if ((_actor.isPlayer()))
 		{
-			final ItemInstance rhand = ((PlayerInstance) _actor).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			final Item rhand = ((Player) _actor).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if ((_actor.isAttackingNow() && (rhand != null) && (rhand.getItemType() == WeaponType.BOW)) || (_actor.isCastingNow() && !_actor.isMoving()))
 			{
 				clientActionFailed();
@@ -368,21 +368,21 @@ public class CreatureAI extends AbstractAI
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if (_actor.isAllSkillsDisabled())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		// Set the Intention of this AbstractAI to AI_INTENTION_MOVE_TO
 		//
-		// changeIntention(AI_INTENTION_MOVE_TO, new Location(((PlayerInstance)_actor).getBoat().getX() - destination.x, ((PlayerInstance)_actor).getBoat().getY() - destination.y, ((PlayerInstance)_actor).getBoat().getZ() - destination.z, 0) , null);
+		// changeIntention(AI_INTENTION_MOVE_TO, new Location(((Player)_actor).getBoat().getX() - destination.x, ((Player)_actor).getBoat().getY() - destination.y, ((Player)_actor).getBoat().getZ() - destination.z, 0) , null);
 		
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		clientStopAutoAttack();
@@ -409,21 +409,21 @@ public class CreatureAI extends AbstractAI
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if (_actor.isAllSkillsDisabled())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if (_actor.isImmobilized() || _actor.isRooted())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -467,21 +467,21 @@ public class CreatureAI extends AbstractAI
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if (_actor.isAllSkillsDisabled() || _actor.isCastingNow())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
-		if ((object instanceof ItemInstance) && (((ItemInstance) object).getItemLocation() != ItemLocation.VOID))
+		if ((object instanceof Item) && (((Item) object).getItemLocation() != ItemLocation.VOID))
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -498,7 +498,7 @@ public class CreatureAI extends AbstractAI
 		if ((object.getX() == 0) && (object.getY() == 0))
 		{
 			final Creature creature = getActor();
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
 				clientActionFailed();
 				return;
@@ -526,14 +526,14 @@ public class CreatureAI extends AbstractAI
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
 		
 		if (_actor.isAllSkillsDisabled())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -727,9 +727,9 @@ public class CreatureAI extends AbstractAI
 	protected void onEvtArrived()
 	{
 		// Launch an explore task if necessary
-		if (_accessor.getActor() instanceof PlayerInstance)
+		if (_accessor.getActor() instanceof Player)
 		{
-			((PlayerInstance) _accessor.getActor()).revalidateZone(true);
+			((Player) _accessor.getActor()).revalidateZone(true);
 		}
 		else
 		{
@@ -752,9 +752,9 @@ public class CreatureAI extends AbstractAI
 		// Launch actions corresponding to the Event Think
 		onEvtThink();
 		
-		if (_actor instanceof BoatInstance)
+		if (_actor instanceof Boat)
 		{
-			((BoatInstance) _actor).evtArrived();
+			((Boat) _actor).evtArrived();
 		}
 	}
 	
@@ -925,7 +925,7 @@ public class CreatureAI extends AbstractAI
 		// Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)
 		clientNotifyDead();
 		
-		if (!(_actor instanceof PlayerInstance))
+		if (!(_actor instanceof Player))
 		{
 			_actor.setWalking();
 		}
@@ -1012,7 +1012,7 @@ public class CreatureAI extends AbstractAI
 				if ((getAttackTarget() != null) && (_actor instanceof Playable) && (target instanceof Playable) && (getAttackTarget() == follow))
 				{
 					// allow GMs to keep following
-					final boolean isGM = (_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isGM();
+					final boolean isGM = (_actor instanceof Player) && ((Player) _actor).isGM();
 					if (Creature.isInsidePeaceZone(_actor, target) && !isGM)
 					{
 						stopFollow();
@@ -1041,7 +1041,7 @@ public class CreatureAI extends AbstractAI
 				return true;
 			}
 			
-			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 			if (!_actor.isRunning() && !(this instanceof PlayerAI))
 			{
 				_actor.setRunning();
@@ -1049,7 +1049,7 @@ public class CreatureAI extends AbstractAI
 			
 			stopFollow();
 			int offset = offsetValue;
-			if ((target instanceof Creature) && !(target instanceof DoorInstance))
+			if ((target instanceof Creature) && !(target instanceof Door))
 			{
 				if (((Creature) target).isMoving())
 				{
@@ -1134,9 +1134,9 @@ public class CreatureAI extends AbstractAI
 	protected boolean checkTargetLost(WorldObject target)
 	{
 		// check if player is fakedeath
-		if (target instanceof PlayerInstance)
+		if (target instanceof Player)
 		{
-			final PlayerInstance target2 = (PlayerInstance) target; // convert object to chara
+			final Player target2 = (Player) target; // convert object to chara
 			if (target2.isFakeDeath())
 			{
 				target2.stopFakeDeath(null);

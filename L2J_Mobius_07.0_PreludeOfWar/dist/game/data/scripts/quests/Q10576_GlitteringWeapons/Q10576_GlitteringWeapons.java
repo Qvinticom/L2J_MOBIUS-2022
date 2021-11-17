@@ -18,7 +18,7 @@ package quests.Q10576_GlitteringWeapons;
 
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemEnchantAdd;
@@ -62,7 +62,7 @@ public class Q10576_GlitteringWeapons extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -150,7 +150,7 @@ public class Q10576_GlitteringWeapons extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -192,7 +192,7 @@ public class Q10576_GlitteringWeapons extends Quest
 	
 	public void OnItemEnchantAdd(OnItemEnchantAdd event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((player == null) || (event.getItem().getId() != ENHANCEMENT_PRACTICE_LONG_SWORD))
 		{
 			return;

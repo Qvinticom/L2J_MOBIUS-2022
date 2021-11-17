@@ -36,8 +36,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
@@ -108,10 +108,10 @@ public class TvT extends Event
 	private static final int PARTY_MEMBER_COUNT = 7;
 	private static final ItemHolder REWARD = new ItemHolder(57, 1000000); // Adena
 	// Misc
-	private static final Map<PlayerInstance, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
-	private static final Set<PlayerInstance> PLAYER_LIST = ConcurrentHashMap.newKeySet();
-	private static final Set<PlayerInstance> BLUE_TEAM = ConcurrentHashMap.newKeySet();
-	private static final Set<PlayerInstance> RED_TEAM = ConcurrentHashMap.newKeySet();
+	private static final Map<Player, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
+	private static final Set<Player> PLAYER_LIST = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> BLUE_TEAM = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> RED_TEAM = ConcurrentHashMap.newKeySet();
 	private static volatile int BLUE_SCORE;
 	private static volatile int RED_SCORE;
 	private static Instance PVP_WORLD = null;
@@ -138,7 +138,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (!EVENT_ACTIVE)
 		{
@@ -221,7 +221,7 @@ public class TvT extends Event
 			case "TeleportToArena":
 			{
 				// Remove offline players.
-				for (PlayerInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					if ((participant == null) || (participant.isOnlineInt() != 1))
 					{
@@ -233,7 +233,7 @@ public class TvT extends Event
 				if (PLAYER_LIST.size() < MINIMUM_PARTICIPANT_COUNT)
 				{
 					Broadcast.toAllOnlinePlayers("TvT Event: Event was canceled, not enough participants.");
-					for (PlayerInstance participant : PLAYER_LIST)
+					for (Player participant : PLAYER_LIST)
 					{
 						removeListeners(participant);
 						participant.setRegisteredOnEvent(false);
@@ -246,13 +246,13 @@ public class TvT extends Event
 				final InstanceTemplate template = manager.getInstanceTemplate(INSTANCE_ID);
 				PVP_WORLD = manager.createInstance(template, null);
 				// Randomize player list and separate teams.
-				final List<PlayerInstance> playerList = new ArrayList<>(PLAYER_LIST.size());
+				final List<Player> playerList = new ArrayList<>(PLAYER_LIST.size());
 				playerList.addAll(PLAYER_LIST);
 				Collections.shuffle(playerList);
 				PLAYER_LIST.clear();
 				PLAYER_LIST.addAll(playerList);
 				boolean team = getRandomBoolean(); // If teams are not even, randomize where extra player goes.
-				for (PlayerInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					if (team)
 					{
@@ -281,7 +281,7 @@ public class TvT extends Event
 					CommandChannel blueCC = null;
 					Party lastBlueParty = null;
 					int blueParticipantCounter = 0;
-					for (PlayerInstance participant : BLUE_TEAM)
+					for (Player participant : BLUE_TEAM)
 					{
 						blueParticipantCounter++;
 						if (blueParticipantCounter == 1)
@@ -316,7 +316,7 @@ public class TvT extends Event
 					CommandChannel redCC = null;
 					Party lastRedParty = null;
 					int redParticipantCounter = 0;
-					for (PlayerInstance participant : RED_TEAM)
+					for (Player participant : RED_TEAM)
 					{
 						redParticipantCounter++;
 						if (redParticipantCounter == 1)
@@ -389,7 +389,7 @@ public class TvT extends Event
 				closeDoor(BLUE_DOOR_ID, PVP_WORLD.getId());
 				closeDoor(RED_DOOR_ID, PVP_WORLD.getId());
 				// Disable players.
-				for (PlayerInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					participant.setInvul(true);
 					participant.setImmobilized(true);
@@ -402,7 +402,7 @@ public class TvT extends Event
 					}
 				}
 				// Make sure noone is dead.
-				for (PlayerInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					if (participant.isDead())
 					{
@@ -414,7 +414,7 @@ public class TvT extends Event
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Blue won the event!", 7);
-					for (PlayerInstance participant : BLUE_TEAM)
+					for (Player participant : BLUE_TEAM)
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
@@ -429,7 +429,7 @@ public class TvT extends Event
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Red won the event!", 7);
-					for (PlayerInstance participant : RED_TEAM)
+					for (Player participant : RED_TEAM)
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
@@ -443,7 +443,7 @@ public class TvT extends Event
 				else
 				{
 					broadcastScreenMessageWithEffect("The event ended with a tie!", 7);
-					for (PlayerInstance participant : PLAYER_LIST)
+					for (Player participant : PLAYER_LIST)
 					{
 						participant.broadcastSocialAction(13);
 					}
@@ -460,7 +460,7 @@ public class TvT extends Event
 			case "TeleportOut":
 			{
 				// Remove event listeners.
-				for (PlayerInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					removeListeners(participant);
 					participant.setTeam(Team.NONE);
@@ -474,7 +474,7 @@ public class TvT extends Event
 					PVP_WORLD = null;
 				}
 				// Enable players.
-				for (PlayerInstance participant : PLAYER_LIST)
+				for (Player participant : PLAYER_LIST)
 				{
 					participant.setInvul(false);
 					participant.setImmobilized(false);
@@ -566,7 +566,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		// Event not active.
 		if (!EVENT_ACTIVE)
@@ -620,7 +620,7 @@ public class TvT extends Event
 	{
 		if (creature.isPlayer() && creature.getActingPlayer().isOnEvent())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			cancelQuestTimer("KickPlayer" + creature.getObjectId(), null, player);
 			cancelQuestTimer("KickPlayerWarning" + creature.getObjectId(), null, player);
 			// Removed invulnerability shield.
@@ -632,7 +632,7 @@ public class TvT extends Event
 		return super.onExitZone(creature, zone);
 	}
 	
-	private boolean canRegister(PlayerInstance player)
+	private boolean canRegister(Player player)
 	{
 		if (PLAYER_LIST.contains(player))
 		{
@@ -714,7 +714,7 @@ public class TvT extends Event
 		return true;
 	}
 	
-	private void sendScreenMessage(PlayerInstance player, String message, int duration)
+	private void sendScreenMessage(Player player, String message, int duration)
 	{
 		player.sendPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
 	}
@@ -734,17 +734,17 @@ public class TvT extends Event
 		PVP_WORLD.broadcastPacket(new ExShowScreenMessage("Blue: " + BLUE_SCORE + " - Red: " + RED_SCORE, ExShowScreenMessage.BOTTOM_RIGHT, 15000, 0, true, false));
 	}
 	
-	private void addLogoutListener(PlayerInstance player)
+	private void addLogoutListener(Player player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> onPlayerLogout(event), this));
 	}
 	
-	private void addDeathListener(PlayerInstance player)
+	private void addDeathListener(Player player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_CREATURE_DEATH, (OnCreatureDeath event) -> onPlayerDeath(event), this));
 	}
 	
-	private void removeListeners(PlayerInstance player)
+	private void removeListeners(Player player)
 	{
 		for (AbstractEventListener listener : player.getListeners(EventType.ON_PLAYER_LOGOUT))
 		{
@@ -762,7 +762,7 @@ public class TvT extends Event
 		}
 	}
 	
-	private void resetActivityTimers(PlayerInstance player)
+	private void resetActivityTimers(Player player)
 	{
 		cancelQuestTimer("KickPlayer" + player.getObjectId(), null, player);
 		cancelQuestTimer("KickPlayerWarning" + player.getObjectId(), null, player);
@@ -790,7 +790,7 @@ public class TvT extends Event
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	private void onPlayerLogout(OnPlayerLogout event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		// Remove player from lists.
 		PLAYER_LIST.remove(player);
 		PLAYER_SCORES.remove(player);
@@ -809,8 +809,8 @@ public class TvT extends Event
 	{
 		if (event.getTarget().isPlayer())
 		{
-			final PlayerInstance killedPlayer = event.getTarget().getActingPlayer();
-			final PlayerInstance killer = event.getAttacker().getActingPlayer();
+			final Player killedPlayer = event.getTarget().getActingPlayer();
+			final Player killer = event.getAttacker().getActingPlayer();
 			// Confirm Blue team kill.
 			if ((killer.getTeam() == Team.BLUE) && (killedPlayer.getTeam() == Team.RED))
 			{
@@ -833,7 +833,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public boolean eventStart(PlayerInstance eventMaker)
+	public boolean eventStart(Player eventMaker)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -889,7 +889,7 @@ public class TvT extends Event
 			}
 		}
 		// Remove participants.
-		for (PlayerInstance participant : PLAYER_LIST)
+		for (Player participant : PLAYER_LIST)
 		{
 			removeListeners(participant);
 			participant.setTeam(Team.NONE);
@@ -906,7 +906,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public boolean eventBypass(PlayerInstance player, String bypass)
+	public boolean eventBypass(Player player, String bypass)
 	{
 		return false;
 	}

@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -48,7 +48,7 @@ public class AdminWalker implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		try
 		{
@@ -179,7 +179,7 @@ public class AdminWalker implements IAdminCommandHandler
 		}
 	}
 	
-	private void mainMenu(PlayerInstance activeChar)
+	private void mainMenu(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(activeChar.getObjectId());
 		final StringBuilder sb = new StringBuilder();
@@ -195,7 +195,7 @@ public class AdminWalker implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void addMenu(PlayerInstance activeChar)
+	private void addMenu(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(activeChar.getObjectId());
 		final StringBuilder sb = new StringBuilder();

@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public class ConditionPlayerCanResurrect extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		// Need skill rework for fix that properly
 		if (skill.getAffectRange() > 0)
@@ -55,7 +55,7 @@ public class ConditionPlayerCanResurrect extends Condition
 		boolean canResurrect = true;
 		if (effected.isPlayer())
 		{
-			final PlayerInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			if (!player.isDead())
 			{
 				canResurrect = false;
@@ -126,7 +126,7 @@ public class ConditionPlayerCanResurrect extends Condition
 		else if (effected.isSummon())
 		{
 			final Summon summon = (Summon) effected;
-			final PlayerInstance player = summon.getOwner();
+			final Player player = summon.getOwner();
 			if (!summon.isDead())
 			{
 				canResurrect = false;

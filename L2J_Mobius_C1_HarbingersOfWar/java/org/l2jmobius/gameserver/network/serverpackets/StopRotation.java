@@ -17,14 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class StopRotation extends ServerBasePacket
 {
-	private final PlayerInstance _char;
+	private final Player _char;
 	private final int _degree;
 	
-	public StopRotation(PlayerInstance player, int degree)
+	public StopRotation(Player player, int degree)
 	{
 		_char = player;
 		_degree = degree;

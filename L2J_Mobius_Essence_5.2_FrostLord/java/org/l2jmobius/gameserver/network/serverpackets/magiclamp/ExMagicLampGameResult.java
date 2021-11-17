@@ -27,7 +27,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.enums.LampMode;
 import org.l2jmobius.gameserver.enums.LampType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.MagicLampDataHolder;
 import org.l2jmobius.gameserver.model.holders.MagicLampHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -40,7 +40,7 @@ public class ExMagicLampGameResult implements IClientOutgoingPacket
 {
 	private final Map<LampType, MagicLampHolder> _reward = new HashMap<>();
 	
-	public ExMagicLampGameResult(PlayerInstance player, int count, byte mode)
+	public ExMagicLampGameResult(Player player, int count, byte mode)
 	{
 		final LampMode type = LampMode.getByMode(mode);
 		final int consume = calcConsume(type, count);

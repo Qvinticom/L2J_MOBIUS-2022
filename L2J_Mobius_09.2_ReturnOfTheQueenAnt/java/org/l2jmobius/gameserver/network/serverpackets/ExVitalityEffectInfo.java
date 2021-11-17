@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,7 +30,7 @@ public class ExVitalityEffectInfo implements IClientOutgoingPacket
 	private final int _vitalityItemsRemaining;
 	private final int _points;
 	
-	public ExVitalityEffectInfo(PlayerInstance player)
+	public ExVitalityEffectInfo(Player player)
 	{
 		_points = player.getVitalityPoints();
 		_vitalityBonus = (int) player.getStat().getVitalityExpBonus() * 100;

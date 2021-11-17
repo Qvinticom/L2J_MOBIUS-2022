@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.enums.InstanceRemoveBuffType;
 import org.l2jmobius.gameserver.enums.InstanceTeleportType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -75,7 +75,7 @@ public class InstanceManager implements IXmlReader
 	private int _currentInstanceId = 0;
 	private final Map<Integer, Instance> _instanceWorlds = new ConcurrentHashMap<>();
 	// Player reenter times
-	private final Map<Integer, Map<Integer, Long>> _playerInstanceTimes = new ConcurrentHashMap<>();
+	private final Map<Integer, Map<Integer, Long>> _PlayerTimes = new ConcurrentHashMap<>();
 	
 	protected InstanceManager()
 	{
@@ -97,9 +97,9 @@ public class InstanceManager implements IXmlReader
 		parseDatapackDirectory("data/instances", true);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceTemplates.size() + " instance templates.");
 		// Load player's reenter data
-		_playerInstanceTimes.clear();
+		_PlayerTimes.clear();
 		restoreInstanceTimes();
-		LOGGER.info(getClass().getSimpleName() + ": Loaded instance reenter times for " + _playerInstanceTimes.size() + " players.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded instance reenter times for " + _PlayerTimes.size() + " players.");
 	}
 	
 	@Override
@@ -390,7 +390,7 @@ public class InstanceManager implements IXmlReader
 	 * @param player player who create instance.
 	 * @return newly created instance if success, otherwise {@code null}
 	 */
-	public Instance createInstance(InstanceTemplate template, PlayerInstance player)
+	public Instance createInstance(InstanceTemplate template, Player player)
 	{
 		return (template != null) ? new Instance(getNewInstanceId(), template, player) : null;
 	}
@@ -401,7 +401,7 @@ public class InstanceManager implements IXmlReader
 	 * @param player player who create instance
 	 * @return newly created instance if template was found, otherwise {@code null}
 	 */
-	public Instance createInstance(int id, PlayerInstance player)
+	public Instance createInstance(int id, Player player)
 	{
 		if (!_instanceTemplates.containsKey(id))
 		{
@@ -436,7 +436,7 @@ public class InstanceManager implements IXmlReader
 	 * @param isInside when {@code true} find world where player is currently located, otherwise find world where player can enter
 	 * @return instance if found, otherwise {@code null}
 	 */
-	public Instance getPlayerInstance(PlayerInstance player, boolean isInside)
+	public Instance getPlayer(Player player, boolean isInside)
 	{
 		for (Instance instance : _instanceWorlds.values())
 		{
@@ -547,10 +547,10 @@ public class InstanceManager implements IXmlReader
 	 * @param player instance of player who wants to get re-enter data
 	 * @return map in form templateId, penaltyEndTime
 	 */
-	public Map<Integer, Long> getAllInstanceTimes(PlayerInstance player)
+	public Map<Integer, Long> getAllInstanceTimes(Player player)
 	{
 		// When player don't have any instance penalty
-		final Map<Integer, Long> instanceTimes = _playerInstanceTimes.get(player.getObjectId());
+		final Map<Integer, Long> instanceTimes = _PlayerTimes.get(player.getObjectId());
 		if ((instanceTimes == null) || instanceTimes.isEmpty())
 		{
 			return Collections.emptyMap();
@@ -598,7 +598,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	public void setReenterPenalty(int objectId, int id, long time)
 	{
-		_playerInstanceTimes.computeIfAbsent(objectId, k -> new ConcurrentHashMap<>()).put(id, time);
+		_PlayerTimes.computeIfAbsent(objectId, k -> new ConcurrentHashMap<>()).put(id, time);
 	}
 	
 	/**
@@ -608,10 +608,10 @@ public class InstanceManager implements IXmlReader
 	 * @param id template ID of instance
 	 * @return penalty end time if penalty is found, otherwise -1
 	 */
-	public long getInstanceTime(PlayerInstance player, int id)
+	public long getInstanceTime(Player player, int id)
 	{
 		// Check if exists reenter data for player
-		final Map<Integer, Long> playerData = _playerInstanceTimes.get(player.getObjectId());
+		final Map<Integer, Long> playerData = _PlayerTimes.get(player.getObjectId());
 		if ((playerData == null) || !playerData.containsKey(id))
 		{
 			return -1;
@@ -632,7 +632,7 @@ public class InstanceManager implements IXmlReader
 	 * @param player player who wants to delete penalty
 	 * @param id template id of instance world
 	 */
-	public void deleteInstanceTime(PlayerInstance player, int id)
+	public void deleteInstanceTime(Player player, int id)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_INSTANCE_TIME))
@@ -640,9 +640,9 @@ public class InstanceManager implements IXmlReader
 			ps.setInt(1, player.getObjectId());
 			ps.setInt(2, id);
 			ps.execute();
-			if (_playerInstanceTimes.get(player.getObjectId()) != null)
+			if (_PlayerTimes.get(player.getObjectId()) != null)
 			{
-				_playerInstanceTimes.get(player.getObjectId()).remove(id);
+				_PlayerTimes.get(player.getObjectId()).remove(id);
 			}
 		}
 		catch (Exception e)

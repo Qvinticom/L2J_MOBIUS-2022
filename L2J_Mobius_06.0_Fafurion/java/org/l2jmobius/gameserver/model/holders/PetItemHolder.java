@@ -16,21 +16,21 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class PetItemHolder
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	
-	public PetItemHolder(ItemInstance item)
+	public PetItemHolder(Item item)
 	{
 		_item = item;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

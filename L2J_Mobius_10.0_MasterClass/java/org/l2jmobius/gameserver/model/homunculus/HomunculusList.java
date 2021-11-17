@@ -24,7 +24,7 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.HomunculusManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -38,10 +38,10 @@ public class HomunculusList
 	private int _def;
 	private int _critRate;
 	
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private final Map<Integer, SkillHolder> _skills = new HashMap<>();
 	
-	public HomunculusList(PlayerInstance owner)
+	public HomunculusList(Player owner)
 	{
 		_owner = owner;
 	}

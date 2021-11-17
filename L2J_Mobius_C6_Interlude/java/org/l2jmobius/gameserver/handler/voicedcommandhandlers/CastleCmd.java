@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
 
@@ -33,11 +33,11 @@ public class CastleCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
 		if (command.startsWith("open doors") && target.equals("castle") && activeChar.isClanLeader())
 		{
-			final DoorInstance door = (DoorInstance) activeChar.getTarget();
+			final Door door = (Door) activeChar.getTarget();
 			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getCastleId());
 			if ((door == null) || (castle == null))
 			{
@@ -51,7 +51,7 @@ public class CastleCmd implements IVoicedCommandHandler
 		}
 		else if (command.startsWith("close doors") && target.equals("castle") && activeChar.isClanLeader())
 		{
-			final DoorInstance door = (DoorInstance) activeChar.getTarget();
+			final Door door = (Door) activeChar.getTarget();
 			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getCastleId());
 			if ((door == null) || (castle == null))
 			{

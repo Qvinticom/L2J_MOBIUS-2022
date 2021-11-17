@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -83,7 +83,7 @@ public class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("make_spawn_1"))
 		{
@@ -120,7 +120,7 @@ public class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		if (getRandom(10000) < 2000)
 		{
@@ -132,7 +132,7 @@ public class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		int atkIndex = _atkIndex.containsKey(npc.getObjectId()) ? _atkIndex.get(npc.getObjectId()) : 0;
 		if (atkIndex == 0)
@@ -166,7 +166,7 @@ public class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (getSpawnGroup(npc) >= 0)
 		{
@@ -246,11 +246,11 @@ public class AnomicFoundry extends AbstractNpcAI
 	}
 	
 	// Zoey76: TODO: This should be done with onFactionCall(..)
-	private void requestHelp(Npc requester, PlayerInstance agressor, int range, int helperId)
+	private void requestHelp(Npc requester, Player agressor, int range, int helperId)
 	{
 		for (Spawn spawn : SpawnTable.getInstance().getSpawns(helperId))
 		{
-			final MonsterInstance monster = (MonsterInstance) spawn.getLastSpawn();
+			final Monster monster = (Monster) spawn.getLastSpawn();
 			if ((monster != null) && (agressor != null) && !monster.isDead() && monster.isInsideRadius3D(requester, range) && !agressor.isDead())
 			{
 				monster.addDamageHate(agressor, 0, 1000);

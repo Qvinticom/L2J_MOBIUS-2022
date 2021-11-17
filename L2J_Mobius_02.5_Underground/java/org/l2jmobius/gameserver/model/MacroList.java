@@ -33,7 +33,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.MacroType;
 import org.l2jmobius.gameserver.enums.MacroUpdateType;
 import org.l2jmobius.gameserver.enums.ShortcutType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IRestorable;
 import org.l2jmobius.gameserver.network.serverpackets.SendMacroList;
 
@@ -41,11 +41,11 @@ public class MacroList implements IRestorable
 {
 	private static final Logger LOGGER = Logger.getLogger(MacroList.class.getName());
 	
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private int _macroId;
 	private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<>());
 	
-	public MacroList(PlayerInstance owner)
+	public MacroList(Player owner)
 	{
 		_owner = owner;
 		_macroId = 1000;

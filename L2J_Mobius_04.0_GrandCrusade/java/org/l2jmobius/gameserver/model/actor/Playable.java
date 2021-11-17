@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
@@ -32,7 +31,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -41,14 +40,14 @@ import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
  * This class represents all Playable characters in the world.<br>
  * Playable:
  * <ul>
- * <li>PlayerInstance</li>
+ * <li>Player</li>
  * <li>Summon</li>
  * </ul>
  */
 public abstract class Playable extends Creature
 {
 	private Creature _lockedTarget = null;
-	private PlayerInstance transferDmgTo = null;
+	private Player transferDmgTo = null;
 	
 	/**
 	 * Constructor of Playable.<br>
@@ -145,7 +144,7 @@ public abstract class Playable extends Creature
 		}
 		if (isPlayer())
 		{
-			final PlayerInstance player = getActingPlayer();
+			final Player player = getActingPlayer();
 			if (player.hasCharmOfCourage())
 			{
 				if (player.isInSiege())
@@ -162,13 +161,13 @@ public abstract class Playable extends Creature
 			stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		broadcastStatusUpdate();
 		
 		ZoneManager.getInstance().getRegion(this).onDeath(this);
 		
 		// Notify Quest of Playable's death
-		final PlayerInstance actingPlayer = getActingPlayer();
+		final Player actingPlayer = getActingPlayer();
 		if (!actingPlayer.isNotifyQuestOfDeathEmpty())
 		{
 			for (QuestState qs : actingPlayer.getNotifyQuestOfDeath())
@@ -188,7 +187,7 @@ public abstract class Playable extends Creature
 		
 		if (killer != null)
 		{
-			final PlayerInstance killerPlayer = killer.getActingPlayer();
+			final Player killerPlayer = killer.getActingPlayer();
 			if ((killerPlayer != null) && isPlayable())
 			{
 				killerPlayer.onPlayerKill(this);
@@ -200,9 +199,9 @@ public abstract class Playable extends Creature
 		return true;
 	}
 	
-	public boolean checkIfPvP(PlayerInstance target)
+	public boolean checkIfPvP(Player target)
 	{
-		final PlayerInstance player = getActingPlayer();
+		final Player player = getActingPlayer();
 		if ((player == null) //
 			|| (target == null) //
 			|| (player == target) //
@@ -287,19 +286,19 @@ public abstract class Playable extends Creature
 		_lockedTarget = creature;
 	}
 	
-	public void setTransferDamageTo(PlayerInstance val)
+	public void setTransferDamageTo(Player val)
 	{
 		transferDmgTo = val;
 	}
 	
-	public PlayerInstance getTransferingDamageTo()
+	public Player getTransferingDamageTo()
 	{
 		return transferDmgTo;
 	}
 	
 	public abstract void doPickupItem(WorldObject object);
 	
-	public abstract boolean useMagic(Skill skill, ItemInstance item, boolean forceUse, boolean dontMove);
+	public abstract boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove);
 	
 	public abstract void storeMe();
 	

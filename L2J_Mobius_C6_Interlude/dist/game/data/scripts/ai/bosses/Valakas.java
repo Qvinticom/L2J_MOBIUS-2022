@@ -32,10 +32,10 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
@@ -112,7 +112,7 @@ public class Valakas extends Quest
 			// Respawn to original location.
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, 213004, -114890, -1595, 0, false, 0);
+			final GrandBoss valakas = (GrandBoss) addSpawn(VALAKAS, 213004, -114890, -1595, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			ThreadPool.schedule(() ->
 			{
@@ -139,7 +139,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (npc != null)
 		{
@@ -164,7 +164,7 @@ public class Valakas extends Quest
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						
 						// delete the actual boss
-						final GrandBossInstance boss = GrandBossManager.getInstance().deleteBoss(VALAKAS);
+						final GrandBoss boss = GrandBossManager.getInstance().deleteBoss(VALAKAS);
 						boss.decayMe();
 						GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 						// npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
@@ -338,7 +338,7 @@ public class Valakas extends Quest
 			final int loc_y = -114890;
 			final int loc_z = -1595;
 			final int heading = 0;
-			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBoss valakas = (GrandBoss) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			
 			lastAttackTime = Chronos.currentTimeMillis();
@@ -356,7 +356,7 @@ public class Valakas extends Quest
 		}
 		else if (event.equals("valakas_unlock"))
 		{
-			// GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
+			// GrandBoss valakas = (GrandBoss) addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
 			// GrandBossManager.getInstance().addBoss(valakas);
 			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 		}
@@ -369,7 +369,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (npc.isInvul())
 		{
@@ -586,7 +586,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0));
 		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
@@ -601,7 +601,7 @@ public class Valakas extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public void getRandomSkill(NpcInstance npc)
+	public void getRandomSkill(Npc npc)
 	{
 		if (npc.isInvul() || npc.isCastingNow())
 		{
@@ -898,7 +898,7 @@ public class Valakas extends Quest
 		}
 	}
 	
-	public void callSkillAI(NpcInstance npc, Creature creature, Skill skill)
+	public void callSkillAI(Npc npc, Creature creature, Skill skill)
 	{
 		final QuestTimer timer = getQuestTimer("launch_random_skill", npc, null);
 		if (npc == null)
@@ -947,11 +947,11 @@ public class Valakas extends Quest
 		}
 	}
 	
-	public void broadcastSpawn(NpcInstance npc)
+	public void broadcastSpawn(Npc npc)
 	{
 		for (WorldObject obj : npc.getKnownList().getKnownObjects().values())
 		{
-			if ((obj instanceof PlayerInstance) && Util.checkIfInRange(10000, npc, obj, true))
+			if ((obj instanceof Player) && Util.checkIfInRange(10000, npc, obj, true))
 			{
 				((Creature) obj).sendPacket(new PlaySound(1, "B03_A", npc));
 				((Creature) obj).sendPacket(new SocialAction(npc.getObjectId(), 3));
@@ -959,14 +959,14 @@ public class Valakas extends Quest
 		}
 	}
 	
-	public Creature getRandomTarget(NpcInstance npc)
+	public Creature getRandomTarget(Npc npc)
 	{
 		final List<Creature> result = new ArrayList<>();
 		final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
 		{
 			for (WorldObject obj : objs)
 			{
-				if (((obj instanceof PlayerInstance) || (obj instanceof Summon)) && Util.checkIfInRange(5000, npc, obj, true) && !((Creature) obj).isDead() && (obj instanceof PlayerInstance) && !((PlayerInstance) obj).isGM())
+				if (((obj instanceof Player) || (obj instanceof Summon)) && Util.checkIfInRange(5000, npc, obj, true) && !((Creature) obj).isDead() && (obj instanceof Player) && !((Player) obj).isGM())
 				{
 					result.add((Creature) obj);
 				}
@@ -980,7 +980,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (npc.isInvul())
 		{
@@ -994,7 +994,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		int i1 = 0;
 		
@@ -1518,7 +1518,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public String onSkillUse(Npc npc, Player caster, Skill skill)
 	{
 		if (npc.isInvul())
 		{

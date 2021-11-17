@@ -23,8 +23,8 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -108,8 +108,8 @@ public class Servitors extends AbstractNpcAI
 		if (event.getAttacker().isNpc() && event.getTarget().isServitor() //
 			&& Util.checkIfInRange(1500, event.getAttacker(), event.getTarget(), true))
 		{
-			final ServitorInstance target = (ServitorInstance) event.getTarget();
-			final PlayerInstance master = target.getOwner();
+			final Servitor target = (Servitor) event.getTarget();
+			final Player master = target.getOwner();
 			final QuestState qs = master.getQuestState(Q00230_TestOfTheSummoner.class.getSimpleName());
 			if ((qs != null) && hasQuestItems(master, CRYSTAL_OF_INPROGRESS_3RD))
 			{

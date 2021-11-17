@@ -16,8 +16,8 @@
  */
 package quests.Q118_ToLeadAndBeLed;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -59,7 +59,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -114,7 +114,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 			}
 			case "30298-10.htm":
 			{
-				final PlayerInstance academic = getApprentice(player);
+				final Player academic = getApprentice(player);
 				if (academic != null)
 				{
 					final QuestState st2 = academic.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
@@ -159,7 +159,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -186,7 +186,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 				}
 				else if (player.getApprentice() > 0)
 				{
-					final PlayerInstance academic = getApprentice(player);
+					final Player academic = getApprentice(player);
 					if (academic != null)
 					{
 						final QuestState st3 = academic.getQuestState(getName());
@@ -320,7 +320,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

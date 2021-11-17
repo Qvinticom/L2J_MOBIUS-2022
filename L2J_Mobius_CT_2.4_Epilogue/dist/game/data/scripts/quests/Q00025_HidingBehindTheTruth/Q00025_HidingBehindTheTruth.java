@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -81,7 +81,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
@@ -429,7 +429,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.getCurrentHp() <= (0.30 * npc.getMaxHp()))
 		{
@@ -452,7 +452,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);

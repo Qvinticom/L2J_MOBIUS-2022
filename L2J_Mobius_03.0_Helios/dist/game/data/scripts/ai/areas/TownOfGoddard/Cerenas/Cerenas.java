@@ -17,7 +17,7 @@
 package ai.areas.TownOfGoddard.Cerenas;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -41,7 +41,7 @@ public class Cerenas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10369_NoblesseSoulTesting.class.getSimpleName());
 		String htmltext = null;

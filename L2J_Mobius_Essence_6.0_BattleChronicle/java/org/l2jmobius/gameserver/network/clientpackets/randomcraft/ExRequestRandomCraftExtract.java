@@ -23,9 +23,9 @@ import java.util.Map.Entry;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.RandomCraftData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.RandomCraftRequest;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftExtract;
@@ -59,7 +59,7 @@ public class ExRequestRandomCraftExtract implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -83,7 +83,7 @@ public class ExRequestRandomCraftExtract implements IClientIncomingPacket
 				player.removeRequest(RandomCraftRequest.class);
 				return;
 			}
-			final ItemInstance item = player.getInventory().getItemByObjectId(objId);
+			final Item item = player.getInventory().getItemByObjectId(objId);
 			if (item != null)
 			{
 				count = Math.min(item.getCount(), count);

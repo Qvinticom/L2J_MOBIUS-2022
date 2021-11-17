@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public class CanTransformSkillCondition implements ISkillCondition
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		boolean canTransform = true;
-		final PlayerInstance player = caster.getActingPlayer();
+		final Player player = caster.getActingPlayer();
 		if ((player == null) || player.isAlikeDead() || player.isCursedWeaponEquipped())
 		{
 			canTransform = false;

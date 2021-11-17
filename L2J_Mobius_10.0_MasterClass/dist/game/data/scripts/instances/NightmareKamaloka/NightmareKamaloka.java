@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
@@ -76,7 +76,7 @@ public class NightmareKamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.contains("enterInstance"))
 		{
@@ -105,7 +105,7 @@ public class NightmareKamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -113,7 +113,7 @@ public class NightmareKamaloka extends AbstractInstance
 			final int nextDoorId = instance.getTemplateId() == TEMPLATE_IDS[0] ? BOSS_MAP.getOrDefault(npc.getId(), -1) : BOSS_MAP_110.getOrDefault(npc.getId(), -1);
 			if (nextDoorId == -1)
 			{
-				for (PlayerInstance member : instance.getPlayers())
+				for (Player member : instance.getPlayers())
 				{
 					giveItems(member, instance.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}

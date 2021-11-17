@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.util;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -28,11 +28,11 @@ import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 public class Broadcast
 {
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature that have the Character targeted.<br>
+	 * Send a packet to all Player in the _KnownPlayers of the Creature that have the Character targeted.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * Player in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
 	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
@@ -40,7 +40,7 @@ public class Broadcast
 	 */
 	public static void toPlayersTargettingMyself(Creature creature, IClientOutgoingPacket mov)
 	{
-		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
+		for (Player player : creature.getKnownList().getKnownPlayers().values())
 		{
 			if ((player == null) || (player.getTarget() != creature))
 			{
@@ -52,11 +52,11 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature.<br>
+	 * Send a packet to all Player in the _KnownPlayers of the Creature.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * Player in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
 	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
@@ -64,7 +64,7 @@ public class Broadcast
 	 */
 	public static void toKnownPlayers(Creature creature, IClientOutgoingPacket mov)
 	{
-		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
+		for (Player player : creature.getKnownList().getKnownPlayers().values())
 		{
 			if (player == null)
 			{
@@ -72,7 +72,7 @@ public class Broadcast
 			}
 			
 			// TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
-			if ((creature instanceof PlayerInstance) && !player.isGM() && (((PlayerInstance) creature).getAppearance().isInvisible() || ((PlayerInstance) creature).inObserverMode()))
+			if ((creature instanceof Player) && !player.isGM() && (((Player) creature).getAppearance().isInvisible() || ((Player) creature).inObserverMode()))
 			{
 				return;
 			}
@@ -80,12 +80,12 @@ public class Broadcast
 			try
 			{
 				player.sendPacket(mov);
-				if ((mov instanceof CharInfo) && (creature instanceof PlayerInstance))
+				if ((mov instanceof CharInfo) && (creature instanceof Player))
 				{
-					final int relation = ((PlayerInstance) creature).getRelation(player);
+					final int relation = ((Player) creature).getRelation(player);
 					if ((creature.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (creature.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 					{
-						player.sendPacket(new RelationChanged((PlayerInstance) creature, relation, player.isAutoAttackable(creature)));
+						player.sendPacket(new RelationChanged((Player) creature, relation, player.isAutoAttackable(creature)));
 					}
 				}
 			}
@@ -96,11 +96,11 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers (in the specified radius) of the Creature.<br>
+	 * Send a packet to all Player in the _KnownPlayers (in the specified radius) of the Creature.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * Player in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
 	 * In order to inform other players of state modification on the Creature, server just needs to go through _knownPlayers to send Server->Client Packet and check the distance between the targets.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
@@ -115,7 +115,7 @@ public class Broadcast
 			radius = 1500;
 		}
 		
-		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
+		for (Player player : creature.getKnownList().getKnownPlayers().values())
 		{
 			if (player == null)
 			{
@@ -130,18 +130,18 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance in the _KnownPlayers of the Creature and to the specified character.<br>
+	 * Send a packet to all Player in the _KnownPlayers of the Creature and to the specified character.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
+	 * Player in the detection area of the Creature are identified in <b>_knownPlayers</b>.<br>
 	 * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
 	 * @param creature
 	 * @param mov
 	 */
 	public static void toSelfAndKnownPlayers(Creature creature, IClientOutgoingPacket mov)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.sendPacket(mov);
 		}
@@ -158,12 +158,12 @@ public class Broadcast
 			radiusSq = 360000;
 		}
 		
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.sendPacket(mov);
 		}
 		
-		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
+		for (Player player : creature.getKnownList().getKnownPlayers().values())
 		{
 			if ((player != null) && (creature.calculateDistanceSq3D(player) <= radiusSq))
 			{
@@ -173,7 +173,7 @@ public class Broadcast
 	}
 	
 	/**
-	 * Send a packet to all PlayerInstance present in the world.<br>
+	 * Send a packet to all Player present in the world.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
@@ -183,7 +183,7 @@ public class Broadcast
 	 */
 	public static void toAllOnlinePlayers(IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
+		for (Player onlinePlayer : World.getInstance().getAllPlayers())
 		{
 			if (onlinePlayer == null)
 			{

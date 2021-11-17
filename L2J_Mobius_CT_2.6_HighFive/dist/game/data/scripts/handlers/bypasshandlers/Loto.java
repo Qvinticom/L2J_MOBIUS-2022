@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -40,7 +40,7 @@ public class Loto implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -71,15 +71,15 @@ public class Loto implements IBypassHandler
 	}
 	
 	/**
-	 * Open a Loto window on client with the text of the NpcInstance.<br>
+	 * Open a Loto window on client with the text of the Npc.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li><br>
-	 * @param player The PlayerInstance that talk with the NpcInstance
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player</li>
+	 * <li>Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet</li><br>
+	 * @param player The Player that talk with the Npc
 	 * @param npc Npc loto instance
-	 * @param value The number of the page of the NpcInstance to display
+	 * @param value The number of the page of the Npc to display
 	 */
 	// 0 - first buy lottery ticket window
 	// 1-20 - buttons
@@ -88,7 +88,7 @@ public class Loto implements IBypassHandler
 	// 23 - current lottery jackpot
 	// 24 - Previous winning numbers/Prize claim
 	// >24 - check lottery ticket by item object id
-	public static void showLotoWindow(PlayerInstance player, Npc npc, int value)
+	public static void showLotoWindow(Player player, Npc npc, int value)
 	{
 		final int npcId = npc.getTemplate().getId();
 		String filename;
@@ -225,7 +225,7 @@ public class Loto implements IBypassHandler
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), 4442);
+			final Item item = new Item(IdManager.getInstance().getNextId(), 4442);
 			item.setCount(1);
 			item.setCustomType1(lotonumber);
 			item.setEnchantLevel(enchant);
@@ -234,7 +234,7 @@ public class Loto implements IBypassHandler
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
-			final ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
+			final Item adenaupdate = player.getInventory().getItemByItemId(57);
 			if (adenaupdate != null)
 			{
 				iu.addModifiedItem(adenaupdate);
@@ -256,7 +256,7 @@ public class Loto implements IBypassHandler
 			
 			final int lotonumber = Lottery.getInstance().getId();
 			String message = "";
-			for (ItemInstance item : player.getInventory().getItems())
+			for (Item item : player.getInventory().getItems())
 			{
 				if (item == null)
 				{
@@ -315,7 +315,7 @@ public class Loto implements IBypassHandler
 		else if (value > 25) // >25 - check lottery ticket by item object id
 		{
 			final int lotonumber = Lottery.getInstance().getId();
-			final ItemInstance item = player.getInventory().getItemByObjectId(value);
+			final Item item = player.getInventory().getItemByObjectId(value);
 			if ((item == null) || (item.getId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;
@@ -345,7 +345,7 @@ public class Loto implements IBypassHandler
 		html.replace("%enddate%", "" + DateFormat.getDateInstance().format(Lottery.getInstance().getEndDate()));
 		player.sendPacket(html);
 		
-		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	

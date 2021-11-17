@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -43,7 +43,7 @@ final class EffectImobilePetBuff extends Effect
 	public void onStart()
 	{
 		_pet = null;
-		if ((getEffected() instanceof Summon) && (getEffector() instanceof PlayerInstance) && (((Summon) getEffected()).getOwner() == getEffector()))
+		if ((getEffected() instanceof Summon) && (getEffector() instanceof Player) && (((Summon) getEffected()).getOwner() == getEffector()))
 		{
 			_pet = (Summon) getEffected();
 			_pet.setImmobilized(true);

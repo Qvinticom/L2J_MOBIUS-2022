@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.request;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
@@ -25,7 +25,7 @@ public class BlessingItemRequest extends AbstractRequest
 {
 	private volatile int _blessScrollId;
 	
-	public BlessingItemRequest(PlayerInstance player, int itemId)
+	public BlessingItemRequest(Player player, int itemId)
 	{
 		super(player);
 		_blessScrollId = itemId;

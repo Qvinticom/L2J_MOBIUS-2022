@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -97,7 +97,7 @@ public class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -248,7 +248,7 @@ public class ClanHallManager extends AbstractNpcAI
 										case 2:
 										case 3:
 										{
-											((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
+											((Merchant) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
 											break;
 										}
 										default:
@@ -420,7 +420,7 @@ public class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		final ClanHall clanHall = npc.getClanHall();
@@ -459,7 +459,7 @@ public class ClanHallManager extends AbstractNpcAI
 	
 	private void updateVisualEffects(ClanHall clanHall, Npc npc)
 	{
-		World.getInstance().forEachVisibleObject(npc, PlayerInstance.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
+		World.getInstance().forEachVisibleObject(npc, Player.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
 	private String getFunctionInfo(ResidenceFunction func, String htmltextValue, String name)
@@ -482,7 +482,7 @@ public class ClanHallManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean isOwningClan(PlayerInstance player, Npc npc)
+	private boolean isOwningClan(Player player, Npc npc)
 	{
 		return ((npc.getClanHall().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -36,7 +36,7 @@ public class Action extends ClientBasePacket
 		@SuppressWarnings("unused")
 		final int originZ = readD();
 		final int actionId = readC();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final WorldObject obj = World.getInstance().findObject(objectId);
 		if ((obj != null) && !activeChar.isDead() && (activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null))
 		{

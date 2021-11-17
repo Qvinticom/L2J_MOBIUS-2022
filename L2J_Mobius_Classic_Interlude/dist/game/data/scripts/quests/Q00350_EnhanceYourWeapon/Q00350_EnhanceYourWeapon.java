@@ -36,8 +36,8 @@ import org.l2jmobius.gameserver.model.AbsorberInfo;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -148,7 +148,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
@@ -176,7 +176,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.isAttackable() && NPC_LEVELING_INFO.containsKey(npc.getId()))
 		{
@@ -187,7 +187,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		super.onSkillSee(npc, caster, skill, targets, isSummon);
 		
@@ -216,7 +216,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -236,7 +236,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		return htmltext;
 	}
 	
-	private static boolean check(PlayerInstance player)
+	private static boolean check(Player player)
 	{
 		for (int i = 4629; i < 4665; i++)
 		{
@@ -248,9 +248,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		return false;
 	}
 	
-	private static void exchangeCrystal(PlayerInstance player, Attackable mob, int takeid, int giveid, boolean broke)
+	private static void exchangeCrystal(Player player, Attackable mob, int takeid, int giveid, boolean broke)
 	{
-		ItemInstance Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
+		Item Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
 		if (Item != null)
 		{
 			// Prepare inventory update packet
@@ -281,7 +281,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		}
 	}
 	
-	private static SoulCrystal getSCForPlayer(PlayerInstance player)
+	private static SoulCrystal getSCForPlayer(Player player)
 	{
 		final QuestState qs = player.getQuestState(Q00350_EnhanceYourWeapon.class.getSimpleName());
 		if ((qs == null) || !qs.isStarted())
@@ -289,9 +289,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			return null;
 		}
 		
-		final Collection<ItemInstance> inv = player.getInventory().getItems();
+		final Collection<Item> inv = player.getInventory().getItems();
 		SoulCrystal ret = null;
-		for (ItemInstance item : inv)
+		for (Item item : inv)
 		{
 			final int itemId = item.getId();
 			if (!SOUL_CRYSTALS.containsKey(itemId))
@@ -320,7 +320,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		return false;
 	}
 	
-	private static void levelCrystal(PlayerInstance player, SoulCrystal sc, Attackable mob)
+	private static void levelCrystal(Player player, SoulCrystal sc, Attackable mob)
 	{
 		if ((sc == null) || !NPC_LEVELING_INFO.containsKey(mob.getId()))
 		{
@@ -349,23 +349,23 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	 * @param mob
 	 * @param killer The player that last killed this Attackable $ Rewrite 06.12.06 - Yesod $ Rewrite 08.01.10 - Gigiikun
 	 */
-	public static void levelSoulCrystals(Attackable mob, PlayerInstance killer)
+	public static void levelSoulCrystals(Attackable mob, Player killer)
 	{
-		// Only PlayerInstance can absorb a soul
+		// Only Player can absorb a soul
 		if (killer == null)
 		{
 			mob.resetAbsorbList();
 			return;
 		}
 		
-		final Map<PlayerInstance, SoulCrystal> players = new HashMap<>();
+		final Map<Player, SoulCrystal> players = new HashMap<>();
 		int maxSCLevel = 0;
 		
 		// TODO: what if mob support last_hit + party?
 		if (isPartyLevelingMonster(mob.getId()) && (killer.getParty() != null))
 		{
 			// firts get the list of players who has one Soul Cry and the quest
-			for (PlayerInstance pl : killer.getParty().getMembers())
+			for (Player pl : killer.getParty().getMembers())
 			{
 				if (pl == null)
 				{
@@ -446,7 +446,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 				// among those who have crystals, only. However, this might actually be correct (same as retail).
 				if (killer.getParty() != null)
 				{
-					final PlayerInstance lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
+					final Player lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
 					levelCrystal(lucky, players.get(lucky), mob);
 				}
 				else
@@ -459,11 +459,11 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			{
 				if (killer.getParty() != null)
 				{
-					final List<PlayerInstance> luckyParty = new ArrayList<>();
+					final List<Player> luckyParty = new ArrayList<>();
 					luckyParty.addAll(killer.getParty().getMembers());
 					while ((getRandom(100) < 33) && !luckyParty.isEmpty())
 					{
-						final PlayerInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
+						final Player lucky = luckyParty.remove(getRandom(luckyParty.size()));
 						if (players.containsKey(lucky))
 						{
 							levelCrystal(lucky, players.get(lucky), mob);
@@ -480,7 +480,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			{
 				if (killer.getParty() != null)
 				{
-					for (PlayerInstance pl : killer.getParty().getMembers())
+					for (Player pl : killer.getParty().getMembers())
 					{
 						levelCrystal(pl, players.get(pl), mob);
 					}

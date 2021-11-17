@@ -24,14 +24,14 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 
 /**
  * @author Mobius
  */
 public class RandomAnimationTaskManager implements Runnable
 {
-	private static final Map<NpcInstance, Long> PENDING_ANIMATIONS = new ConcurrentHashMap<>();
+	private static final Map<Npc, Long> PENDING_ANIMATIONS = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
 	protected RandomAnimationTaskManager()
@@ -49,11 +49,11 @@ public class RandomAnimationTaskManager implements Runnable
 		_working = true;
 		
 		final long time = Chronos.currentTimeMillis();
-		for (Entry<NpcInstance, Long> entry : PENDING_ANIMATIONS.entrySet())
+		for (Entry<Npc, Long> entry : PENDING_ANIMATIONS.entrySet())
 		{
 			if (time > entry.getValue().longValue())
 			{
-				final NpcInstance npc = entry.getKey();
+				final Npc npc = entry.getKey();
 				if (npc.isInActiveRegion() && !npc.isDead() && !npc.isInCombat() && !npc.isMoving() && !npc.isStunned() && !npc.isSleeping() && !npc.isParalyzed())
 				{
 					npc.onRandomAnimation(Rnd.get(2, 3));
@@ -65,7 +65,7 @@ public class RandomAnimationTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(NpcInstance npc)
+	public void add(Npc npc)
 	{
 		if (npc.isRandomAnimationEnabled())
 		{
@@ -73,7 +73,7 @@ public class RandomAnimationTaskManager implements Runnable
 		}
 	}
 	
-	public void remove(NpcInstance npc)
+	public void remove(Npc npc)
 	{
 		PENDING_ANIMATIONS.remove(npc);
 	}

@@ -19,7 +19,7 @@ package quests.Q00118_ToLeadAndBeLed;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -70,13 +70,13 @@ public class Q00118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		// Manage Sponsor's quest events.
 		if (player.getApprentice() > 0)
 		{
-			final PlayerInstance apprentice = World.getInstance().getPlayer(player.getApprentice());
+			final Player apprentice = World.getInstance().getPlayer(player.getApprentice());
 			if (apprentice == null)
 			{
 				return htmltext;
@@ -220,7 +220,7 @@ public class Q00118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted())
@@ -241,7 +241,7 @@ public class Q00118_ToLeadAndBeLed extends Quest
 				{
 					if (qs.isMemoState(4) && (killer.getSponsor() > 0))
 					{
-						final PlayerInstance c0 = World.getInstance().getPlayer(killer.getSponsor());
+						final Player c0 = World.getInstance().getPlayer(killer.getSponsor());
 						if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true) && giveItemRandomly(killer, npc, LEG_OF_KING_ARANEID, 1, 8, 7, true))
 						{
 							qs.setCond(8);
@@ -255,7 +255,7 @@ public class Q00118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final QuestState q123 = player.getQuestState(Q00123_TheLeaderAndTheFollower.class.getSimpleName());
@@ -314,7 +314,7 @@ public class Q00118_ToLeadAndBeLed extends Quest
 					}
 					else
 					{
-						final PlayerInstance c0 = World.getInstance().getPlayer(player.getSponsor());
+						final Player c0 = World.getInstance().getPlayer(player.getSponsor());
 						if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
 						{
 							htmltext = "30298-07.html";

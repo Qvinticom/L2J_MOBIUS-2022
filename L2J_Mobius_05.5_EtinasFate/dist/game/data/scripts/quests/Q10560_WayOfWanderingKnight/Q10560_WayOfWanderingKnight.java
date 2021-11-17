@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -80,7 +80,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final ClassId classId = player.getClassId();
@@ -222,7 +222,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -284,7 +284,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 		return htmltext;
 	}
 	
-	public String applyBuffs(Npc npc, PlayerInstance player, Skill skill)
+	public String applyBuffs(Npc npc, Player player, Skill skill)
 	{
 		for (SkillHolder holder : GROUP_BUFFS)
 		{

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -50,7 +50,7 @@ public class Die implements IClientOutgoingPacket
 		_creature = creature;
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			_access = player.getAccessLevel();
 			_clan = player.getClan();
 			_isJailed = player.isJailed();

@@ -60,22 +60,20 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcWalkerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.Minion;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.NpcWalker;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RiftInvader;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.knownlist.CreatureKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
@@ -84,7 +82,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.EventType;
@@ -130,8 +128,8 @@ import org.l2jmobius.gameserver.util.Util;
  * Mother class of all character objects of the world (PC, NPC...)<br>
  * Creature:<br>
  * <ul>
- * <li>DoorInstance</li>
- * <li>NpcInstance</li>
+ * <li>Door</li>
+ * <li>Npc</li>
  * <li>PlayableInstance</li><br>
  * <b>Concept of CreatureTemplate:</b><br>
  * Each Creature owns generic and static properties (ex : all Keltir have the same number of HP...).<br>
@@ -233,10 +231,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the _template of the Creature</li>
 	 * <li>Set _overloaded to false (the charcater can take more items)</li>
-	 * <li>If Creature is a NPCInstance, copy skills from template to object</li>
-	 * <li>If Creature is a NPCInstance, link _calculators to NPC_STD_CALCULATOR</li>
-	 * <li>If Creature is NOT a NPCInstance, create an empty _skills slot</li>
-	 * <li>If Creature is a PlayerInstance or Summon, copy basic Calculator set to object</li><br>
+	 * <li>If Creature is a Npc, copy skills from template to object</li>
+	 * <li>If Creature is a Npc, link _calculators to NPC_STD_CALCULATOR</li>
+	 * <li>If Creature is NOT a Npc, create an empty _skills slot</li>
+	 * <li>If Creature is a Player or Summon, copy basic Calculator set to object</li><br>
 	 * @param objectId Identifier of the object to initialized
 	 * @param template The CreatureTemplate to apply to the object
 	 */
@@ -248,34 +246,34 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Set its template to the new Creature
 		_template = template;
 		_triggeredSkills = new HashMap<>();
-		if ((template != null) && (this instanceof NpcInstance))
+		if ((template != null) && (this instanceof Npc))
 		{
-			// Copy the Standard Calcultors of the NPCInstance in _calculators
+			// Copy the Standard Calcultors of the Npc in _calculators
 			_calculators = NPC_STD_CALCULATOR;
 			
-			// Copy the skills of the NPCInstance from its template to the Creature Instance
-			// The skills list can be affected by spell effects so it's necessary to make a copy to avoid that a spell affecting a NPCInstance, affects others NPCInstance of the same type too.
+			// Copy the skills of the Npc from its template to the Creature Instance
+			// The skills list can be affected by spell effects so it's necessary to make a copy to avoid that a spell affecting a Npc, affects others Npc of the same type too.
 			_skills = ((NpcTemplate) template).getSkills();
 			for (Entry<Integer, Skill> skill : _skills.entrySet())
 			{
 				addStatFuncs(skill.getValue().getStatFuncs(null, this));
 			}
 			
-			if (!Config.NPC_ATTACKABLE || (!(this instanceof Attackable) && !(this instanceof ControlTowerInstance) && !(this instanceof SiegeFlagInstance) && !(this instanceof EffectPointInstance)))
+			if (!Config.NPC_ATTACKABLE || (!(this instanceof Attackable) && !(this instanceof ControlTower) && !(this instanceof SiegeFlag) && !(this instanceof EffectPoint)))
 			{
 				setInvul(true);
 			}
 		}
-		else // not NpcInstance
+		else // not Npc
 		{
 			// Initialize the Map _skills to null
 			_skills = new ConcurrentHashMap<>();
 			
-			// If Creature is a PlayerInstance or a Summon, create the basic calculator set
+			// If Creature is a Player or a Summon, create the basic calculator set
 			_calculators = new Calculator[Stat.NUM_STATS];
 			Formulas.getInstance().addFuncsToNewCharacter(this);
 			
-			if (!isAttackable() && !canBeAttacked() && !(this instanceof DoorInstance))
+			if (!isAttackable() && !canBeAttacked() && !(this instanceof Door))
 			{
 				setInvul(true);
 			}
@@ -362,7 +360,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
-		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			player.sendPacket(mov);
 		}
@@ -370,7 +368,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	public void broadcastPacket(IClientOutgoingPacket mov, int radius)
 	{
-		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!isInsideRadius3D(player, radius))
 			{
@@ -447,7 +445,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform.<br>
+	 * Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Create the Server->Client packet StatusUpdate with current HP and MP</li>
@@ -456,7 +454,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance : Send current HP,MP and CP to the PlayerInstance and only current HP, MP and Level to all other PlayerInstance of the Party</li>
+	 * <li>Player : Send current HP,MP and CP to the Player and only current HP, MP and Level to all other Player of the Party</li>
 	 */
 	public void broadcastStatusUpdate()
 	{
@@ -472,9 +470,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Create the Server->Client packet StatusUpdate with current HP and MP
 		StatusUpdate su = null;
-		if (Config.FORCE_COMPLETE_STATUS_UPDATE && (this instanceof PlayerInstance))
+		if (Config.FORCE_COMPLETE_STATUS_UPDATE && (this instanceof Player))
 		{
-			su = new StatusUpdate((PlayerInstance) this);
+			su = new StatusUpdate((Player) this);
 		}
 		else
 		{
@@ -498,7 +496,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Not Implemented.<br>
 	 * <br>
 	 * <b><u>Overridden in</u>:</b><br>
-	 * <li>PlayerInstance</li><br>
+	 * <li>Player</li><br>
 	 * @param mov the mov
 	 */
 	public void sendPacket(IClientOutgoingPacket mov)
@@ -521,7 +519,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Stop the movement of the Creature</li>
 	 * <li>Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion</li>
-	 * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in its _KnownPlayers</li>
+	 * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all Player in its _KnownPlayers</li>
 	 * <li>Modify the position of the pet if necessary</li><br>
 	 * @param xValue the x
 	 * @param yValue the y
@@ -596,9 +594,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		int x = loc.getX();
 		int y = loc.getY();
 		int z = loc.getZ();
-		if ((this instanceof PlayerInstance) && DimensionalRiftManager.getInstance().checkIfInRiftZone(getX(), getY(), getZ(), true)) // true -> ignore waiting room :)
+		if ((this instanceof Player) && DimensionalRiftManager.getInstance().checkIfInRiftZone(getX(), getY(), getZ(), true)) // true -> ignore waiting room :)
 		{
-			final PlayerInstance player = (PlayerInstance) this;
+			final Player player = (Player) this;
 			player.sendMessage("You have been sent to the waiting room.");
 			if (player.isInParty() && player.getParty().isInDimensionalRift())
 			{
@@ -649,11 +647,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Get the active weapon (always equipped in the right hand)</li>
-	 * <li>If weapon is a bow, check for arrows, MP and bow re-use delay (if necessary, equip the PlayerInstance with arrows in left hand)</li>
+	 * <li>If weapon is a bow, check for arrows, MP and bow re-use delay (if necessary, equip the Player with arrows in left hand)</li>
 	 * <li>If weapon is a bow, consume MP and set the new period of bow non re-use</li>
 	 * <li>Get the Attack Speed of the Creature (delay (in milliseconds) before next attack)</li>
 	 * <li>Select the type of attack to start (Simple, Bow, Pole or Dual) and verify if SoulShot are charged then start calculation</li>
-	 * <li>If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature</li>
+	 * <li>If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack to the Creature AND to all Player in the _KnownPlayers of the Creature</li>
 	 * <li>Notify AI with EVT_READY_TO_ACT</li><br>
 	 * @param target The Creature targeted
 	 */
@@ -666,23 +664,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (isAlikeDead())
 		{
-			// If PlayerInstance is dead or the target is dead, the action is stoped
+			// If Player is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((this instanceof NpcInstance) && target.isAlikeDead())
+		if ((this instanceof Npc) && target.isAlikeDead())
 		{
-			// If PlayerInstance is dead or the target is dead, the action is stoped
+			// If Player is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((this instanceof PlayerInstance) && target.isDead() && !target.isFakeDeath())
+		if ((this instanceof Player) && target.isDead() && !target.isFakeDeath())
 		{
-			// If PlayerInstance is dead or the target is dead, the action is stoped
+			// If Player is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -690,21 +688,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (!getKnownList().knowsObject(target))
 		{
-			// If PlayerInstance is dead or the target is dead, the action is stoped
+			// If Player is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((this instanceof PlayerInstance) && isDead())
+		if ((this instanceof Player) && isDead())
 		{
-			// If PlayerInstance is dead or the target is dead, the action is stoped
+			// If Player is dead or the target is dead, the action is stoped
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((target instanceof DoorInstance) && !((DoorInstance) target).isAttackable(this))
+		if ((target instanceof Door) && !((Door) target).isAttackable(this))
 		{
 			return;
 		}
@@ -714,9 +712,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
-			if (((PlayerInstance) this).inObserverMode())
+			if (((Player) this).inObserverMode())
 			{
 				sendPacket(new SystemMessage(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE));
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -729,33 +727,33 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return;
 			}
 			
-			if ((target instanceof NpcInstance) && Config.DISABLE_ATTACK_NPC_TYPE)
+			if ((target instanceof Npc) && Config.DISABLE_ATTACK_NPC_TYPE)
 			{
-				final String mobtype = ((NpcInstance) target).getTemplate().getType();
+				final String mobtype = ((Npc) target).getTemplate().getType();
 				if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 				{
-					((PlayerInstance) this).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
-					((PlayerInstance) this).sendPacket(ActionFailed.STATIC_PACKET);
+					((Player) this).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
+					((Player) this).sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 		}
 		
 		// Get the active weapon instance (always equipped in the right hand)
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		
 		// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
 		final Weapon weaponItem = getActiveWeaponItem();
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.ROD))
 		{
 			// You can't make an attack with a fishing pole.
-			((PlayerInstance) this).sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
+			((Player) this).sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((target instanceof GrandBossInstance) && (((GrandBossInstance) target).getNpcId() == 29022) && (Math.abs(_clientZ - target.getZ()) > 200))
+		if ((target instanceof GrandBoss) && (((GrandBoss) target).getNpcId() == 29022) && (Math.abs(_clientZ - target.getZ()) > 200))
 		{
 			sendPacket(new SystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -775,10 +773,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Check for a bow
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.BOW))
 		{
-			// Equip arrows needed in left hand and send a Server->Client packet ItemList to the PlayerInstance then return True
+			// Equip arrows needed in left hand and send a Server->Client packet ItemList to the Player then return True
 			if (!checkAndEquipArrows())
 			{
-				// Cancel the action because the PlayerInstance have no arrow
+				// Cancel the action because the Player have no arrow
 				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS));
@@ -786,11 +784,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// Check for arrows and MP
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				// Checking if target has moved to peace zone - only for player-bow attacks at the moment
 				// Other melee is checked in movement code and for offensive spells a check is done every time
-				if (target.isInsidePeaceZone((PlayerInstance) this))
+				if (target.isInsidePeaceZone((Player) this))
 				{
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
@@ -800,18 +798,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				// Verify if the bow can be use
 				if (_disableBowAttackEndTime <= GameTimeTaskManager.getGameTicks())
 				{
-					// Verify if PlayerInstance owns enough MP
+					// Verify if Player owns enough MP
 					final int saMpConsume = (int) getStat().calcStat(Stat.MP_CONSUME, 0, null, null);
 					final int mpConsume = saMpConsume == 0 ? weaponItem.getMpConsume() : saMpConsume;
 					if (getStatus().getCurrentMp() < mpConsume)
 					{
-						// If PlayerInstance doesn't have enough MP, stop the attack
+						// If Player doesn't have enough MP, stop the attack
 						ThreadPool.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), 1000);
 						sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					// If PlayerInstance have enough MP, the bow consummes it
+					// If Player have enough MP, the bow consummes it
 					getStatus().reduceMp(mpConsume);
 					
 					// Set the period of bow non re-use
@@ -825,7 +823,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					return;
 				}
 			}
-			else if (this instanceof NpcInstance)
+			else if (this instanceof Npc)
 			{
 				if (_disableBowAttackEndTime > GameTimeTaskManager.getGameTicks())
 				{
@@ -834,7 +832,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		// Add the PlayerInstance to _knownObjects and _knownPlayer of the target
+		// Add the Player to _knownObjects and _knownPlayer of the target
 		target.getKnownList().addKnownObject(this);
 		
 		// Reduce the current CP if TIREDNESS configuration is activated
@@ -844,9 +842,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Recharge any active auto soulshot tasks for player (or player's summon if one exists).
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
-			((PlayerInstance) this).rechargeAutoSoulShot(true, false, false);
+			((Player) this).rechargeAutoSoulShot(true, false, false);
 		}
 		else if (this instanceof Summon)
 		{
@@ -855,13 +853,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Verify if soulshots are charged.
 		boolean wasSSCharged;
-		if ((this instanceof Summon) && !(this instanceof PetInstance))
+		if ((this instanceof Summon) && !(this instanceof Pet))
 		{
-			wasSSCharged = ((Summon) this).getChargedSoulShot() != ItemInstance.CHARGED_NONE;
+			wasSSCharged = ((Summon) this).getChargedSoulShot() != Item.CHARGED_NONE;
 		}
 		else
 		{
-			wasSSCharged = (weaponInst != null) && (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE);
+			wasSSCharged = (weaponInst != null) && (weaponInst.getChargedSoulshot() != Item.CHARGED_NONE);
 		}
 		
 		// Mobius: Do not move when attack is launched.
@@ -918,11 +916,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			hitted = doAttackHitSimple(attack, target, timeToHit);
 		}
 		
-		// Flag the attacker if it's a PlayerInstance outside a PvP area
-		PlayerInstance player = null;
-		if (this instanceof PlayerInstance)
+		// Flag the attacker if it's a Player outside a PvP area
+		Player player = null;
+		if (this instanceof Player)
 		{
-			player = (PlayerInstance) this;
+			player = (Player) this;
 		}
 		else if (this instanceof Summon)
 		{
@@ -944,28 +942,28 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else
 		{
 			// If we didn't miss the hit, discharge the shoulshots, if any
-			if ((this instanceof Summon) && !(this instanceof PetInstance))
+			if ((this instanceof Summon) && !(this instanceof Pet))
 			{
-				((Summon) this).setChargedSoulShot(ItemInstance.CHARGED_NONE);
+				((Summon) this).setChargedSoulShot(Item.CHARGED_NONE);
 			}
 			else if (weaponInst != null)
 			{
-				weaponInst.setChargedSoulshot(ItemInstance.CHARGED_NONE);
+				weaponInst.setChargedSoulshot(Item.CHARGED_NONE);
 			}
 		}
 		
 		// If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack
-		// to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
+		// to the Creature AND to all Player in the _KnownPlayers of the Creature
 		if (attack.hasHits())
 		{
 			broadcastPacket(attack);
 		}
 		
 		// Like L2OFF mobs id 27181 can teleport players near cabrio
-		if ((this instanceof MonsterInstance) && (((MonsterInstance) this).getNpcId() == 27181))
+		if ((this instanceof Monster) && (((Monster) this).getNpcId() == 27181))
 		{
 			final int rndNum = Rnd.get(100);
-			final PlayerInstance gettarget = (PlayerInstance) _target;
+			final Player gettarget = (Player) _target;
 			if ((rndNum < 5) && (gettarget != null))
 			{
 				gettarget.teleToLocation(179768, 6364, -2734);
@@ -973,10 +971,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Like L2OFF if target is not auto attackable you give only one hit
-		if ((this instanceof PlayerInstance) && (target instanceof PlayerInstance) && !target.isAutoAttackable(this))
+		if ((this instanceof Player) && (target instanceof Player) && !target.isAutoAttackable(this))
 		{
-			((PlayerInstance) this).getAI().clientStopAutoAttack();
-			((PlayerInstance) this).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, this);
+			((Player) this).getAI().clientStopAutoAttack();
+			((Player) this).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, this);
 		}
 		
 		// Notify AI with EVT_READY_TO_ACT
@@ -992,7 +990,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>If hit isn't missed, calculate if shield defense is efficient</li>
 	 * <li>If hit isn't missed, calculate if hit is critical</li>
 	 * <li>If hit isn't missed, calculate physical damages</li>
-	 * <li>If the Creature is a PlayerInstance, Send a Server->Client packet SetupGauge</li>
+	 * <li>If the Creature is a Player, Send a Server->Client packet SetupGauge</li>
 	 * <li>Create a new hit task with Medium priority</li>
 	 * <li>Calculate and set the disable delay of the bow in function of the Attack Speed</li>
 	 * <li>Add this hit to the Server-Client packet Attack</li><br>
@@ -1029,8 +1027,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			damage1 = (int) Formulas.calcPhysDam(this, target, null, shld1, crit1, false, attack.soulshot);
 		}
 		
-		// Check if the Creature is a PlayerInstance
-		if (this instanceof PlayerInstance)
+		// Check if the Creature is a Player
+		if (this instanceof Player)
 		{
 			// Send a system message
 			sendPacket(new SystemMessage(SystemMessageId.YOU_CAREFULLY_NOCK_AN_ARROW));
@@ -1161,7 +1159,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (obj instanceof Creature)
 			{
-				if ((obj instanceof PetInstance) && (this instanceof PlayerInstance) && (((PetInstance) obj).getOwner() == (PlayerInstance) this))
+				if ((obj instanceof Pet) && (this instanceof Player) && (((Pet) obj).getOwner() == (Player) this))
 				{
 					continue;
 				}
@@ -1192,9 +1190,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						attackpercent /= 1.15;
 						
 						// Flag player if the target is another player
-						if ((this instanceof PlayerInstance) && (obj instanceof PlayerInstance))
+						if ((this instanceof Player) && (obj instanceof Player))
 						{
-							((PlayerInstance) this).updatePvPStatus(target);
+							((Player) this).updatePvPStatus(target);
 						}
 					}
 				}
@@ -1315,16 +1313,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Can't use Hero and resurrect skills during Olympiad
-		if ((creature instanceof PlayerInstance) && ((PlayerInstance) creature).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
+		if ((creature instanceof Player) && ((Player) creature).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
 		{
 			sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_GRAND_OLYMPIAD_GAMES_MATCH));
 			return;
 		}
 		
 		// Like L2OFF you can't use skills when you are attacking now
-		if ((creature instanceof PlayerInstance) && !skill.isPotion())
+		if ((creature instanceof Player) && !skill.isPotion())
 		{
-			final ItemInstance rhand = ((PlayerInstance) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			final Item rhand = ((Player) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)) && isAttackingNow())
 			{
 				return;
@@ -1340,9 +1338,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return;
 			}
 			boolean canCast = true;
-			if ((skill.getTargetType() == SkillTargetType.TARGET_GROUND) && (this instanceof PlayerInstance))
+			if ((skill.getTargetType() == SkillTargetType.TARGET_GROUND) && (this instanceof Player))
 			{
-				final Location wp = ((PlayerInstance) this).getCurrentSkillWorldPosition();
+				final Location wp = ((Player) this).getCurrentSkillWorldPosition();
 				if (!region.checkEffectRangeInsidePeaceZone(skill, wp.getX(), wp.getY(), wp.getZ()))
 				{
 					canCast = false;
@@ -1364,9 +1362,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Recharge AutoSoulShot
 		if (skill.useSoulShot())
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				((PlayerInstance) creature).rechargeAutoSoulShot(true, false, false);
+				((Player) creature).rechargeAutoSoulShot(true, false, false);
 			}
 			else if (this instanceof Summon)
 			{
@@ -1375,9 +1373,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		if (skill.useSpiritShot())
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				((PlayerInstance) creature).rechargeAutoSoulShot(false, true, false);
+				((Player) creature).rechargeAutoSoulShot(false, true, false);
 			}
 			else if (this instanceof Summon)
 			{
@@ -1414,19 +1412,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Player can't heal rb config
-		if (!Config.PLAYERS_CAN_HEAL_RB && (creature instanceof PlayerInstance) && !((PlayerInstance) creature).isGM() && ((target instanceof RaidBossInstance) || (target instanceof GrandBossInstance)) && ((skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.HEAL_PERCENT)))
+		if (!Config.PLAYERS_CAN_HEAL_RB && (creature instanceof Player) && !((Player) creature).isGM() && ((target instanceof RaidBoss) || (target instanceof GrandBoss)) && ((skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.HEAL_PERCENT)))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((creature instanceof PlayerInstance) && (target instanceof NpcInstance) && Config.DISABLE_ATTACK_NPC_TYPE)
+		if ((creature instanceof Player) && (target instanceof Npc) && Config.DISABLE_ATTACK_NPC_TYPE)
 		{
-			final String mobtype = ((NpcInstance) target).getTemplate().getType();
+			final String mobtype = ((Npc) target).getTemplate().getType();
 			if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 			{
-				((PlayerInstance) creature).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
-				((PlayerInstance) creature).sendPacket(ActionFailed.STATIC_PACKET);
+				((Player) creature).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
+				((Player) creature).sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
@@ -1457,7 +1455,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		int hitTime = skill.getHitTime();
 		int coolTime = skill.getCoolTime();
 		final boolean effectWhileCasting = skill.hasEffectWhileCasting();
-		final boolean forceBuff = (skill.getSkillType() == SkillType.FORCE_BUFF) && (target instanceof PlayerInstance);
+		final boolean forceBuff = (skill.getSkillType() == SkillType.FORCE_BUFF) && (target instanceof Player);
 		
 		// Calculate the casting time of the skill (base + modifier of MAtkSpd)
 		// Don't modify the skill time for FORCE_BUFF skills. The skill time for those skills represent the buff time.
@@ -1493,7 +1491,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Init the reuse time of the skill
 		int reuseDelay = skill.getReuseDelay();
-		if ((creature instanceof PlayerInstance) && Formulas.getInstance().calcSkillMastery(creature))
+		if ((creature instanceof Player) && Formulas.getInstance().calcSkillMastery(creature))
 		{
 			reuseDelay = 0;
 		}
@@ -1515,7 +1513,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		setHeading(Util.calculateHeadingFrom(getX(), getY(), target.getX(), target.getY()));
 		
 		// Like L2OFF after a skill the player must stop the movement, unless it is toggle or potion.
-		if (!skill.isToggle() && !skill.isPotion() && (this instanceof PlayerInstance))
+		if (!skill.isToggle() && !skill.isPotion() && (this instanceof Player))
 		{
 			stopMove(null);
 		}
@@ -1529,12 +1527,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (!skill.isToggle())
 		{
 			// Send a Server->Client packet MagicSkillUse with target, displayId, level, skillTime, reuseDelay
-			// to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
+			// to the Creature AND to all Player in the _KnownPlayers of the Creature
 			broadcastPacket(new MagicSkillUse(this, target, displayId, level, hitTime, reuseDelay));
 		}
 		
 		// Send a system message USE_S1 to the Creature
-		if ((creature instanceof PlayerInstance) && (magicId != 1312))
+		if ((creature instanceof Player) && (magicId != 1312))
 		{
 			if (skill.isPotion())
 			{
@@ -1637,7 +1635,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (hitTime > 210)
 		{
 			// Send a Server->Client packet SetupGauge with the color of the gauge and the casting time
-			if ((creature instanceof PlayerInstance) && !forceBuff)
+			if ((creature instanceof Player) && !forceBuff)
 			{
 				sendPacket(new SetupGauge(SetupGauge.BLUE, hitTime));
 			}
@@ -1708,14 +1706,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>Stop movement</li>
 	 * <li>Stop HP/MP/CP Regeneration task</li>
 	 * <li>Stop all active skills effects in progress on the Creature</li>
-	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform</li>
+	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform</li>
 	 * <li>Notify Creature AI</li><br>
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>NpcInstance : Create a DecayTask to remove the corpse of the NpcInstance after 7 seconds</li>
+	 * <li>Npc : Create a DecayTask to remove the corpse of the Npc after 7 seconds</li>
 	 * <li>Attackable : Distribute rewards (EXP, SP, Drops...) and notify Quest Engine</li>
-	 * <li>PlayerInstance : Apply Death Penalty, Manage gain/loss Karma and Item Drop</li><br>
+	 * <li>Player : Apply Death Penalty, Manage gain/loss Karma and Item Drop</li><br>
 	 * @param killer The Creature who killed it
 	 * @return true, if successful
 	 */
@@ -1733,7 +1731,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Calculate rewards for main damage dealer.
-		final Creature mainDamageDealer = isMonster() ? ((MonsterInstance) this).getMainDamageDealer() : null;
+		final Creature mainDamageDealer = isMonster() ? ((Monster) this).getMainDamageDealer() : null;
 		calculateRewards(mainDamageDealer != null ? mainDamageDealer : killer);
 		
 		// Set target to null and cancel Attack or Cast
@@ -1773,7 +1771,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				((Playable) this).stopCharmOfLuck(null);
 			}
 		}
-		else if (this instanceof PlayerInstance)
+		else if (this instanceof Player)
 		{
 			if (Config.LEAVE_BUFFS_ON_DIE)
 			{
@@ -1785,7 +1783,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			stopAllEffects();
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		broadcastStatusUpdate();
 		
 		// Notify Creature AI
@@ -1808,7 +1806,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// If character is PhoenixBlessed a resurrection popup will show up
 		if ((this instanceof Playable) && ((Playable) this).isPhoenixBlessed())
 		{
-			((PlayerInstance) this).reviveRequest(((PlayerInstance) this), null, false);
+			((Player) this).reviveRequest(((Player) this), null, false);
 		}
 		
 		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
@@ -2301,7 +2299,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Set the overloaded status of the Creature is overloaded (if True, the PlayerInstance can't take more item).
+	 * Set the overloaded status of the Creature is overloaded (if True, the Player can't take more item).
 	 * @param value the new checks if is overloaded
 	 */
 	public void setOverloaded(boolean value)
@@ -2354,7 +2352,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 * @return the pet
 	 */
 	public Summon getPet()
@@ -2418,7 +2416,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance.
+	 * Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player.
 	 */
 	public void setRunning()
 	{
@@ -2656,7 +2654,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			title = "";
 		}
 		
-		if ((this instanceof PlayerInstance) && (title.length() > 16))
+		if ((this instanceof Player) && (title.length() > 16))
 		{
 			title = title.substring(0, 15);
 		}
@@ -2665,7 +2663,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Set the Creature movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance.
+	 * Set the Creature movement type to walk and send Server->Client packet ChangeMoveType to all others Player.
 	 */
 	public void setWalking()
 	{
@@ -2715,8 +2713,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Task lauching the function onHitTimer().<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)</li>
-	 * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance</li>
+	 * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a Player)</li>
+	 * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are Player</li>
 	 * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
 	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li>
 	 */
@@ -2828,7 +2826,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	class QueuedMagicUseTask implements Runnable
 	{
-		PlayerInstance _currPlayer;
+		Player _currPlayer;
 		Skill _queuedSkill;
 		boolean _isCtrlPressed;
 		boolean _isShiftPressed;
@@ -2840,7 +2838,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		 * @param isCtrlPressed the is ctrl pressed
 		 * @param isShiftPressed the is shift pressed
 		 */
-		public QueuedMagicUseTask(PlayerInstance currPlayer, Skill queuedSkill, boolean isCtrlPressed, boolean isShiftPressed)
+		public QueuedMagicUseTask(Player currPlayer, Skill queuedSkill, boolean isCtrlPressed, boolean isShiftPressed)
 		{
 			_currPlayer = currPlayer;
 			_queuedSkill = queuedSkill;
@@ -3307,7 +3305,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Calculate the success rate of the Stun Abnormal Effect on this Creature</li>
 	 * <li>If Stun succeed, active the abnormal effect Stun flag, notify the Creature AI and send Server->Client UserInfo/CharInfo packet</li>
-	 * <li>If Stun NOT succeed, send a system message Failed to the PlayerInstance attacker</li>
+	 * <li>If Stun NOT succeed, send a system message Failed to the Player attacker</li>
 	 */
 	public void startStunning()
 	{
@@ -3366,9 +3364,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			effect.exit(true);
 		}
 		
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
-			((PlayerInstance) this).updateAndBroadcastStatus(2);
+			((Player) this).updateAndBroadcastStatus(2);
 		}
 	}
 	
@@ -3532,9 +3530,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		setFakeDeath(false);
 		setFalling(false);
 		// if this is a player instance, start the grace period for this character (grace from mobs only)!
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
-			((PlayerInstance) this).setRecentFakeDeath(true);
+			((Player) this).setRecentFakeDeath(true);
 		}
 		
 		broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STOP_FAKEDEATH));
@@ -3698,10 +3696,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Not Implemented.<br>
 	 * <br>
 	 * <b><u>Overridden in</u>:</b><br>
-	 * <li>NPCInstance</li>
-	 * <li>PlayerInstance</li>
+	 * <li>Npc</li>
+	 * <li>Player</li>
 	 * <li>Summon</li>
-	 * <li>DoorInstance</li>
+	 * <li>Door</li>
 	 */
 	public abstract void updateAbnormalEffect();
 	
@@ -3724,11 +3722,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void updateEffectIcons(boolean partyOnly)
 	{
-		// Create a PlayerInstance of this if needed
-		PlayerInstance player = null;
-		if (this instanceof PlayerInstance)
+		// Create a Player of this if needed
+		Player player = null;
+		if (this instanceof Player)
 		{
-			player = (PlayerInstance) this;
+			player = (Player) this;
 		}
 		
 		// Create a Summon of this if needed
@@ -3839,7 +3837,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if ((os != null) && (player != null) && (Olympiad.getInstance().getSpectators(player.getOlympiadGameId()) != null))
 		{
-			for (PlayerInstance spectator : Olympiad.getInstance().getSpectators(player.getOlympiadGameId()))
+			for (Player spectator : Olympiad.getInstance().getSpectators(player.getOlympiadGameId()))
 			{
 				if (spectator == null)
 				{
@@ -4224,8 +4222,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
-	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
+	 * Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * That's why, if a Npc is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>If _calculators is linked to NPC_STD_CALCULATOR, create a copy of NPC_STD_CALCULATOR in _calculators</li>
@@ -4270,7 +4268,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...).<br>
-	 * <font color=#FF0000><b><u>Caution</u>: This method is ONLY for PlayerInstance</b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method is ONLY for Player</b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Equip an item from inventory</li>
@@ -4295,12 +4293,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
-	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
+	 * Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * That's why, if a Npc is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the Func object from _calculators</li>
-	 * <li>If Creature is a NPCInstance and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><br>
+	 * <li>If Creature is a Npc and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><br>
 	 * @param f The Func object to remove from the Calculator corresponding to the state affected
 	 */
 	public synchronized void removeStatFunc(Func f)
@@ -4326,7 +4324,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// If possible, free the memory and just create a link on NPC_STD_CALCULATOR
-		if (this instanceof NpcInstance)
+		if (this instanceof Npc)
 		{
 			int i = 0;
 			for (; i < Stat.NUM_STATS; i++)
@@ -4345,12 +4343,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Remove a list of Funcs from the Calculator set of the PlayerInstance.<br>
+	 * Remove a list of Funcs from the Calculator set of the Player.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...).<br>
-	 * <font color=#FF0000><b><u>Caution</u>: This method is ONLY for PlayerInstance</b></font><br>
+	 * <font color=#FF0000><b><u>Caution</u>: This method is ONLY for Player</b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Unequip an item from inventory</li>
@@ -4374,12 +4372,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
-	 * That's why, if a NPCInstance is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
+	 * Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * That's why, if a Npc is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove all Func objects of the selected owner from _calculators</li>
-	 * <li>If Creature is a NPCInstance and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><br>
+	 * <li>If Creature is a Npc and _calculators is equal to NPC_STD_CALCULATOR, free cache memory and just create a link on NPC_STD_CALCULATOR in _calculators</li><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Unequip an item from inventory</li>
@@ -4416,7 +4414,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// If possible, free the memory and just create a link on NPC_STD_CALCULATOR
-			if (this instanceof NpcInstance)
+			if (this instanceof Npc)
 			{
 				i = 0;
 				for (; i < Stat.NUM_STATS; i++)
@@ -4476,7 +4474,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			else if (stat == Stat.MAX_CP)
 			{
-				if (this instanceof PlayerInstance)
+				if (this instanceof Player)
 				{
 					if (su == null)
 					{
@@ -4496,18 +4494,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
 			if (broadcastFull)
 			{
-				((PlayerInstance) this).updateAndBroadcastStatus(2);
+				((Player) this).updateAndBroadcastStatus(2);
 			}
 			else if (otherStats)
 			{
-				((PlayerInstance) this).updateAndBroadcastStatus(1);
+				((Player) this).updateAndBroadcastStatus(1);
 				if (su != null)
 				{
-					for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+					for (Player player : getKnownList().getKnownPlayers().values())
 					{
 						// try
 						// {
@@ -4525,15 +4523,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				broadcastPacket(su);
 			}
 		}
-		else if (this instanceof NpcInstance)
+		else if (this instanceof Npc)
 		{
 			if (broadcastFull && (getKnownList() != null) && (getKnownList().getKnownPlayers() != null))
 			{
-				for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+				for (Player player : getKnownList().getKnownPlayers().values())
 				{
 					if (player != null)
 					{
-						player.sendPacket(new NpcInfo((NpcInstance) this, player));
+						player.sendPacket(new NpcInfo((Npc) this, player));
 					}
 				}
 			}
@@ -4546,7 +4544,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if (broadcastFull)
 			{
-				for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+				for (Player player : getKnownList().getKnownPlayers().values())
 				{
 					if (player != null)
 					{
@@ -4845,7 +4843,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			// cancels the skill hit scheduled task
 			enableAllSkills(); // re-enables the skills
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING); // setting back previous intention
 			}
@@ -4905,9 +4903,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		double dz = m._zDestination - zPrev; // Z coordinate will follow client values
 		
 		float speed;
-		if (this instanceof BoatInstance)
+		if (this instanceof Boat)
 		{
-			speed = ((BoatInstance) this).boatSpeed;
+			speed = ((Boat) this).boatSpeed;
 		}
 		else
 		{
@@ -4963,7 +4961,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (isBoat())
 			{
-				((BoatInstance) this).updatePeopleInTheBoat(m._xDestination, m._yDestination, m._zDestination);
+				((Boat) this).updatePeopleInTheBoat(m._xDestination, m._yDestination, m._zDestination);
 			}
 			else
 			{
@@ -4977,9 +4975,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			// Set the position of the Creature to estimated after parcial move
 			super.setXYZ((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
-			if (this instanceof BoatInstance)
+			if (this instanceof Boat)
 			{
-				((BoatInstance) this).updatePeopleInTheBoat((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
+				((Boat) this).updatePeopleInTheBoat((int) m._xAccurate, (int) m._yAccurate, zPrev + (int) ((dz * distFraction) + 0.5));
 			}
 			else
 			{
@@ -5043,9 +5041,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		_cursorKeyMovement = false;
 		
 		// Set AI_INTENTION_IDLE
-		if ((this instanceof PlayerInstance) && (getAI() != null))
+		if ((this instanceof Player) && (getAI() != null))
 		{
-			((PlayerInstance) this).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			((Player) this).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 		
 		// Set the current position (x,y,z), its current WorldRegion if necessary and its heading
@@ -5055,10 +5053,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			getPosition().setXYZ(pos.getX(), pos.getY(), pos.getZ());
 			setHeading(pos.getHeading());
 			
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
-				((PlayerInstance) this).revalidateZone(true);
-				if (((PlayerInstance) this).isInBoat())
+				((Player) this).revalidateZone(true);
+				if (((Player) this).isInBoat())
 				{
 					broadcastPacket(new ValidateLocationInVehicle(this));
 				}
@@ -5087,7 +5085,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance : Remove the PlayerInstance from the old target _statusListener and add it to the new target if it was a Creature</li><br>
+	 * <li>Player : Remove the Player from the old target _statusListener and add it to the new target if it was a Creature</li><br>
 	 * @param worldObject WorldObject to target
 	 */
 	public void setTarget(WorldObject worldObject)
@@ -5110,7 +5108,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			final TargetUnselected my = new TargetUnselected(this);
 			
 			// No need to broadcast the packet to all players
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				// Send packet just to me and to party, not to any other that does not use the information
 				if (!isInParty())
@@ -5286,7 +5284,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// GEODATA MOVEMENT CHECKS AND PATHFINDING
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
-		if (!_isFlying && !isInWater && !isBoat() && !(this instanceof NpcWalkerInstance) && !_cursorKeyMovement)
+		if (!_isFlying && !isInWater && !isBoat() && !(this instanceof NpcWalker) && !_cursorKeyMovement)
 		{
 			final boolean isInBoat = isPlayer() && getActingPlayer().isInBoat();
 			if (isInBoat)
@@ -5403,7 +5401,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// If no distance to go through, the movement is cancelled
-			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || _isAfraid || (this instanceof RiftInvaderInstance)))
+			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || _isAfraid || (this instanceof RiftInvader)))
 			{
 				if (isSummon())
 				{
@@ -5541,7 +5539,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeTaskManager
 		
-		// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+		// Send a Server->Client packet MoveToLocation to the actor and all Player in its _knownPlayers
 		broadcastMoveToLocation();
 		return true;
 	}
@@ -5656,7 +5654,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 * @return true, if successful
 	 */
 	protected boolean checkAndEquipArrows()
@@ -5669,8 +5667,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
-	 * <li>PetInstance</li><br>
+	 * <li>Player</li>
+	 * <li>Pet</li><br>
 	 * @param addToExp the add to exp
 	 * @param addToSp the add to sp
 	 */
@@ -5684,17 +5682,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 * @return the active weapon instance
 	 */
-	public abstract ItemInstance getActiveWeaponInstance();
+	public abstract Item getActiveWeaponInstance();
 	
 	/**
 	 * Return the active weapon item (always equipped in the right hand).<br>
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 * @return the active weapon item
 	 */
 	public abstract Weapon getActiveWeaponItem();
@@ -5704,17 +5702,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 * @return the secondary weapon instance
 	 */
-	public abstract ItemInstance getSecondaryWeaponInstance();
+	public abstract Item getSecondaryWeaponInstance();
 	
 	/**
 	 * Return the secondary weapon item (always equipped in the left hand).<br>
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 * @return the secondary weapon item
 	 */
 	public abstract Weapon getSecondaryWeaponItem();
@@ -5723,8 +5721,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Manage hit process (called by Hit Task).<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)</li>
-	 * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance</li>
+	 * <li>If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL and send a Server->Client packet ActionFailed (if attacker is a Player)</li>
+	 * <li>If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are Player</li>
 	 * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
 	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li><br>
 	 * @param target The Creature targeted
@@ -5737,14 +5735,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	protected void onHitTimer(Creature target, int damageValue, boolean crit, boolean miss, boolean soulshot, boolean shld)
 	{
 		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
-		// and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)
+		// and send a Server->Client packet ActionFailed (if attacker is a Player)
 		if ((target == null) || isAlikeDead())
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
 		}
 		
-		if (((this instanceof NpcInstance) && target.isAlikeDead()) || target.isDead() || (!getKnownList().knowsObject(target) && !(this instanceof DoorInstance)))
+		if (((this instanceof Npc) && target.isAlikeDead()) || target.isDead() || (!getKnownList().knowsObject(target) && !(this instanceof Door)))
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -5753,7 +5751,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (miss)
 		{
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_S1_S_ATTACK);
 				if (this instanceof Summon)
@@ -5764,23 +5762,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					sm.addString(getName());
 				}
-				((PlayerInstance) target).sendPacket(sm);
+				((Player) target).sendPacket(sm);
 			}
 		}
 		
-		// If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance
+		// If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are Player
 		if (!isAttackAborted())
 		{
 			int damage = damageValue;
-			if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
+			if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof Player) || (this instanceof Summon))) // Check if option is True Or False.
 			{
 				boolean toBeCursed = false;
 				
 				// check on BossZone raid lvl
-				if (!(target instanceof Playable) && !(target instanceof SummonInstance))
+				if (!(target instanceof Playable) && !(target instanceof Servitor))
 				{
 					// this must work just on mobs/raids
-					if ((target.isRaid() && (getLevel() > (target.getLevel() + 8))) || (!(target instanceof PlayerInstance) && ((target.getTarget() != null) && (target.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) target.getTarget()).getLevel() + 8)))) || (!(target instanceof PlayerInstance) && ((target.getTarget() != null) && (target.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) target.getTarget()).getLevel() + 8)))))
+					if ((target.isRaid() && (getLevel() > (target.getLevel() + 8))) || (!(target instanceof Player) && ((target.getTarget() != null) && (target.getTarget() instanceof RaidBoss) && (getLevel() > (((RaidBoss) target.getTarget()).getLevel() + 8)))) || (!(target instanceof Player) && ((target.getTarget() != null) && (target.getTarget() instanceof GrandBoss) && (getLevel() > (((GrandBoss) target.getTarget()).getLevel() + 8)))))
 					{
 						toBeCursed = true;
 					}
@@ -5801,7 +5799,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							bossTemplate = NpcTable.getInstance().getTemplate(bossId);
 							if ((bossTemplate != null) && (getLevel() > (bossTemplate.getLevel() + 8)))
 							{
-								MonsterInstance bossInstance = null;
+								Monster bossInstance = null;
 								if (bossTemplate.getType().equals("RaidBoss"))
 								{
 									if (RaidBossSpawnManager.getInstance().getStatSet(bossId) != null)
@@ -5853,13 +5851,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						LOGGER.warning("Skill 4515 at level 1 is missing in DP.");
 					}
 					
-					if (target instanceof MinionInstance)
+					if (target instanceof Minion)
 					{
-						final MonsterInstance leader = ((MinionInstance) target).getLeader();
+						final Monster leader = ((Minion) target).getLeader();
 						leader.stopHating(this);
 						if (leader.hasMinions())
 						{
-							for (MinionInstance minion : leader.getSpawnedMinions())
+							for (Minion minion : leader.getSpawnedMinions())
 							{
 								if (leader.getMostHated() == null)
 								{
@@ -5881,10 +5879,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					else
 					{
 						((Attackable) target).stopHating(this);
-						final Collection<MinionInstance> spawnedMinions = ((MonsterInstance) target).getSpawnedMinions();
+						final Collection<Minion> spawnedMinions = ((Monster) target).getSpawnedMinions();
 						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 						{
-							for (MinionInstance minion : spawnedMinions)
+							for (Minion minion : spawnedMinions)
 							{
 								if (((Attackable) target).getMostHated() == null)
 								{
@@ -5910,10 +5908,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			sendDamageMessage(target, damage, false, crit, miss);
 			
-			// If Creature target is a PlayerInstance, send a system message
-			if (target instanceof PlayerInstance)
+			// If Creature target is a Player, send a system message
+			if (target instanceof Player)
 			{
-				final PlayerInstance enemy = (PlayerInstance) target;
+				final Player enemy = (Player) target;
 				
 				// Check if shield is efficient
 				if (shld)
@@ -6016,7 +6014,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Abort the attack of the Creature and send Server->Client ActionFailed packet
 			abortAttack();
 			
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				
@@ -6037,7 +6035,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Abort the cast of the Creature and send Server->Client MagicSkillCanceld/ActionFailed packet.
 			abortCast();
 			
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				// Send a system message
 				sendPacket(new SystemMessage(SystemMessageId.YOUR_CASTING_HAS_BEEN_INTERRUPTED));
@@ -6050,7 +6048,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li>
+	 * <li>Player</li>
 	 */
 	protected void reduceArrowCount()
 	{
@@ -6063,12 +6061,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>If Creature or target is in a town area, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed</li>
 	 * <li>If target is confused, send a Server->Client packet ActionFailed</li>
-	 * <li>If Creature is a ArtefactInstance, send a Server->Client packet ActionFailed</li>
+	 * <li>If Creature is a Artefact, send a Server->Client packet ActionFailed</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to start attack and Notify AI with AI_INTENTION_ATTACK</li><br>
-	 * @param player The PlayerInstance to attack
+	 * @param player The Player to attack
 	 */
 	@Override
-	public void onForcedAttack(PlayerInstance player)
+	public void onForcedAttack(Player player)
 	{
 		if (!(player.getTarget() instanceof Creature))
 		{
@@ -6087,19 +6085,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (player.isInOlympiadMode() && (player.getTarget() != null) && (player.getTarget() instanceof Playable))
 		{
-			PlayerInstance target;
+			Player target;
 			if (player.getTarget() instanceof Summon)
 			{
 				target = ((Summon) player.getTarget()).getOwner();
 			}
 			else
 			{
-				target = (PlayerInstance) player.getTarget();
+				target = (Player) player.getTarget();
 			}
 			
 			if (target.isInOlympiadMode() && !player.isOlympiadStart() && (player.getOlympiadGameId() == target.getOlympiadGameId()))
 			{
-				// if PlayerInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
+				// if Player is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -6135,7 +6133,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param attacker the attacker
 	 * @return true, if is inside peace zone
 	 */
-	public boolean isInsidePeaceZone(PlayerInstance attacker)
+	public boolean isInsidePeaceZone(Player attacker)
 	{
 		return isInsidePeaceZone(attacker, this);
 	}
@@ -6153,9 +6151,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return false;
 		}
 		
-		if ((target instanceof NpcInstance) && Config.DISABLE_ATTACK_NPC_TYPE)
+		if ((target instanceof Npc) && Config.DISABLE_ATTACK_NPC_TYPE)
 		{
-			final String mobtype = ((NpcInstance) target).getTemplate().getType();
+			final String mobtype = ((Npc) target).getTemplate().getType();
 			if (Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 			{
 				return false;
@@ -6163,18 +6161,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Attack Monster on Peace Zone like L2OFF.
-		if ((target instanceof MonsterInstance) || ((attacker instanceof MonsterInstance) && Config.ALT_MOB_AGRO_IN_PEACEZONE))
+		if ((target instanceof Monster) || ((attacker instanceof Monster) && Config.ALT_MOB_AGRO_IN_PEACEZONE))
 		{
 			return false;
 		}
 		
 		// Attack Guard on Peace Zone like L2OFF.
-		if ((target instanceof GuardInstance) || (attacker instanceof GuardInstance))
+		if ((target instanceof Guard) || (attacker instanceof Guard))
 		{
 			return false;
 		}
 		// Attack NPC on Peace Zone like L2OFF.
-		if ((target instanceof NpcInstance) || (attacker instanceof NpcInstance))
+		if ((target instanceof Npc) || (attacker instanceof Npc))
 		{
 			return false;
 		}
@@ -6182,7 +6180,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (Config.ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE)
 		{
 			// allows red to be attacked and red to attack flagged players
-			if ((target instanceof PlayerInstance) && (((PlayerInstance) target).getKarma() > 0))
+			if ((target instanceof Player) && (((Player) target).getKarma() > 0))
 			{
 				return false;
 			}
@@ -6192,9 +6190,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return false;
 			}
 			
-			if ((attacker instanceof PlayerInstance) && (((PlayerInstance) attacker).getKarma() > 0))
+			if ((attacker instanceof Player) && (((Player) attacker).getKarma() > 0))
 			{
-				if ((target instanceof PlayerInstance) && (((PlayerInstance) target).getPvpFlag() > 0))
+				if ((target instanceof Player) && (((Player) target).getPvpFlag() > 0))
 				{
 					return false;
 				}
@@ -6207,7 +6205,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if ((attacker instanceof Summon) && (((Summon) attacker).getOwner().getKarma() > 0))
 			{
-				if ((target instanceof PlayerInstance) && (((PlayerInstance) target).getPvpFlag() > 0))
+				if ((target instanceof Player) && (((Player) target).getPvpFlag() > 0))
 				{
 					return false;
 				}
@@ -6219,23 +6217,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		// Right now only PlayerInstance has up-to-date zone status...
-		PlayerInstance src = null;
-		PlayerInstance dst = null;
+		// Right now only Player has up-to-date zone status...
+		Player src = null;
+		Player dst = null;
 		if ((attacker instanceof Playable) && (target instanceof Playable))
 		{
-			if (attacker instanceof PlayerInstance)
+			if (attacker instanceof Player)
 			{
-				src = (PlayerInstance) attacker;
+				src = (Player) attacker;
 			}
 			else if (attacker instanceof Summon)
 			{
 				src = ((Summon) attacker).getOwner();
 			}
 			
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
-				dst = (PlayerInstance) target;
+				dst = (Player) target;
 			}
 			else if (target instanceof Summon)
 			{
@@ -6289,11 +6287,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		catch (Exception e)
 		{
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				LOGGER.warning("Player " + getName() + " at bad coords: (x: " + getX() + ", y: " + getY() + ", z: " + getZ() + ").");
-				((PlayerInstance) this).sendMessage("Error with your coordinates! Please reboot your game fully!");
-				((PlayerInstance) this).teleToLocation(80753, 145481, -3532); // Near Giran luxury shop
+				((Player) this).sendMessage("Error with your coordinates! Please reboot your game fully!");
+				((Player) this).teleToLocation(80753, 145481, -3532); // Near Giran luxury shop
 			}
 			else
 			{
@@ -6419,7 +6417,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><br>
+	 * <li>Player : Save update in the character_skills table of the database</li><br>
 	 * @param newSkill The Skill to add to the Creature
 	 * @return The Skill replaced or null if just added a new Skill
 	 */
@@ -6523,7 +6521,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance : Save update in the character_skills table of the database</li><br>
+	 * <li>Player : Save update in the character_skills table of the database</li><br>
 	 * @param skill The Skill to remove from the Creature
 	 * @return The Skill removed
 	 */
@@ -6814,9 +6812,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Manage the magic skill launching task (MP, HP, Item consummation...) and display the magic skill animation on client.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Send a Server->Client packet MagicSkillLaunched (to display magic skill animation) to all PlayerInstance of Creature _knownPlayers</li>
+	 * <li>Send a Server->Client packet MagicSkillLaunched (to display magic skill animation) to all Player of Creature _knownPlayers</li>
 	 * <li>Consumme MP, HP and Item if necessary</li>
-	 * <li>Send a Server->Client packet StatusUpdate with MP modification to the PlayerInstance</li>
+	 * <li>Send a Server->Client packet StatusUpdate with MP modification to the Player</li>
 	 * <li>Launch the magic skill in order to calculate its effects</li>
 	 * <li>If the skill type is PDAM, notify the AI of the target with AI_INTENTION_ATTACK</li>
 	 * <li>Notify the AI of the Creature with EVT_FINISH_CASTING</li><br>
@@ -6870,9 +6868,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					
 					if (skill.isOffensive())
 					{
-						if (this instanceof PlayerInstance)
+						if (this instanceof Player)
 						{
-							if (target.isInsidePeaceZone((PlayerInstance) this))
+							if (target.isInsidePeaceZone((Player) this))
 							{
 								continue;
 							}
@@ -6888,7 +6886,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (targetList.isEmpty() && (skill.getTargetType() != SkillTargetType.TARGET_AURA))
 			{
-				if (this instanceof PlayerInstance)
+				if (this instanceof Player)
 				{
 					for (int i = 0; i < skipped; i++)
 					{
@@ -6928,7 +6926,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Get the level of the skill
 		final int level = getSkillLevel(skill.getId());
 		
-		// Send a Server->Client packet MagicSkillLaunched to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
+		// Send a Server->Client packet MagicSkillLaunched to the Creature AND to all Player in the _KnownPlayers of the Creature
 		if (!skill.isPotion())
 		{
 			broadcastPacket(new MagicSkillLaunched(this, magicId, level, finalTargets));
@@ -7030,7 +7028,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						target.sendPacket(smsg);
 					}
 					
-					if ((this instanceof PlayerInstance) && (target instanceof Summon))
+					if ((this instanceof Player) && (target instanceof Summon))
 					{
 						((Summon) target).getOwner().sendPacket(new PetInfo((Summon) target));
 						sendPacket(new NpcInfo((Summon) target, this));
@@ -7052,7 +7050,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		final StatusUpdate su = new StatusUpdate(getObjectId());
 		boolean isSendStatus = false;
 		
-		// Consume MP of the Creature and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Consume MP of the Creature and Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		final double mpConsume = getStat().getMpConsume(skill);
 		if (mpConsume > 0)
 		{
@@ -7073,7 +7071,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			isSendStatus = true;
 		}
 		
-		// Consume HP if necessary and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Consume HP if necessary and Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (skill.getHpConsume() > 0)
 		{
 			double consumeHp;
@@ -7088,7 +7086,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			isSendStatus = true;
 		}
 		
-		// Send a Server->Client packet StatusUpdate with MP modification to the PlayerInstance
+		// Send a Server->Client packet StatusUpdate with MP modification to the Player
 		if (isSendStatus)
 		{
 			sendPacket(su);
@@ -7149,9 +7147,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				// Like L2OFF while use a skill and next intention == null the char stop auto attack
 				if (((getAI().getNextIntention() == null) && ((skill.getSkillType() == SkillType.PDAM) && (skill.getCastRange() < 400))) || (skill.getSkillType() == SkillType.BLOW) || (skill.getSkillType() == SkillType.DRAIN_SOUL) || (skill.getSkillType() == SkillType.SOW) || (skill.getSkillType() == SkillType.SPOIL))
 				{
-					if (this instanceof PlayerInstance)
+					if (this instanceof Player)
 					{
-						final PlayerInstance currPlayer = (PlayerInstance) this;
+						final Player currPlayer = (Player) this;
 						final SkillUseHolder skillUseHolder = currPlayer.getCurrentSkill();
 						// Like L2OFF if the skill is BLOW the player doesn't auto attack
 						// If on XML skill nextActionAttack = true the char auto attack
@@ -7172,9 +7170,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 				}
 				
-				if (this instanceof PlayerInstance)
+				if (this instanceof Player)
 				{
-					final PlayerInstance currPlayer = (PlayerInstance) this;
+					final Player currPlayer = (Player) this;
 					final SkillUseHolder skillUseHolder = currPlayer.getCurrentSkill();
 					if ((skillUseHolder != null) && !skillUseHolder.isCtrlPressed() && (skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
 					{
@@ -7205,9 +7203,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			notifyQuestEventSkillFinished(skill, _target);
 			
 			// If character is a player, then wipe their current cast state and check if a skill is queued. If there is a queued skill, launch it and wipe the queue.
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
-				final PlayerInstance currPlayer = (PlayerInstance) this;
+				final Player currPlayer = (Player) this;
 				final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 				currPlayer.setCurrentSkill(null, false, false);
 				if (queuedSkill != null)
@@ -7252,12 +7250,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	private void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
 	{
-		if ((this instanceof NpcInstance) && ((target instanceof PlayerInstance) || (target instanceof Summon)))
+		if ((this instanceof Npc) && ((target instanceof Player) || (target instanceof Summon)))
 		{
-			final PlayerInstance player = target instanceof PlayerInstance ? (PlayerInstance) target : ((Summon) target).getOwner();
+			final Player player = target instanceof Player ? (Player) target : ((Summon) target).getOwner();
 			for (Quest quest : ((NpcTemplate) _template).getEventQuests(EventType.ON_SPELL_FINISHED))
 			{
-				quest.notifySpellFinished(((NpcInstance) this), player, skill);
+				quest.notifySpellFinished(((Npc) this), player, skill);
 			}
 		}
 	}
@@ -7267,7 +7265,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance</li><br>
+	 * <li>Player</li><br>
 	 * @param itemConsumeId the item consume id
 	 * @param itemCount the item count
 	 */
@@ -7333,7 +7331,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (isPlayer())
 		{
-			final PlayerInstance activeChar = getActingPlayer();
+			final Player activeChar = getActingPlayer();
 			if (((skill.getSkillType() == SkillType.FISHING) || (skill.getSkillType() == SkillType.REELING) || (skill.getSkillType() == SkillType.PUMPING)) && !activeChar.isFishing() && ((activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getItemType() != WeaponType.ROD)))
 			{
 				if (skill.getSkillType() == SkillType.PUMPING)
@@ -7461,15 +7459,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 				}
 				
-				if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
+				if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof Player) || (this instanceof Summon))) // Check if option is True Or False.
 				{
 					boolean toBeCursed = false;
 					
 					// check on BossZone raid lvl
-					if (!(creature.getTarget() instanceof Playable) && !(creature.getTarget() instanceof SummonInstance))
+					if (!(creature.getTarget() instanceof Playable) && !(creature.getTarget() instanceof Servitor))
 					{
 						// this must work just on mobs/raids
-						if ((creature.isRaid() && (getLevel() > (creature.getLevel() + 8))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) creature.getTarget()).getLevel() + 8)))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) creature.getTarget()).getLevel() + 8)))))
+						if ((creature.isRaid() && (getLevel() > (creature.getLevel() + 8))) || (!(creature instanceof Player) && ((creature.getTarget() instanceof RaidBoss) && (getLevel() > (((RaidBoss) creature.getTarget()).getLevel() + 8)))) || (!(creature instanceof Player) && ((creature.getTarget() instanceof GrandBoss) && (getLevel() > (((GrandBoss) creature.getTarget()).getLevel() + 8)))))
 						{
 							toBeCursed = true;
 						}
@@ -7490,7 +7488,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								bossTemplate = NpcTable.getInstance().getTemplate(bossId);
 								if ((bossTemplate != null) && (getLevel() > (bossTemplate.getLevel() + 8)))
 								{
-									MonsterInstance bossInstance = null;
+									Monster bossInstance = null;
 									if (bossTemplate.getType().equals("RaidBoss"))
 									{
 										if (RaidBossSpawnManager.getInstance().getStatSet(bossId) != null)
@@ -7556,13 +7554,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								LOGGER.warning("Skill 4515 at level 1 is missing in DP.");
 							}
 							
-							if (creature instanceof MinionInstance)
+							if (creature instanceof Minion)
 							{
-								final MonsterInstance leader = ((MinionInstance) creature).getLeader();
+								final Monster leader = ((Minion) creature).getLeader();
 								leader.stopHating(this);
 								if (leader.hasMinions())
 								{
-									for (MinionInstance minion : leader.getSpawnedMinions())
+									for (Minion minion : leader.getSpawnedMinions())
 									{
 										if (leader.getMostHated() == null)
 										{
@@ -7584,10 +7582,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							else
 							{
 								((Attackable) creature).stopHating(this);
-								final Collection<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
+								final Collection<Minion> spawnedMinions = ((Monster) creature).getSpawnedMinions();
 								if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 								{
-									for (MinionInstance minion : spawnedMinions)
+									for (Minion minion : spawnedMinions)
 									{
 										if (((Attackable) creature).getMostHated() == null)
 										{
@@ -7611,10 +7609,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 				}
 				
-				PlayerInstance activeChar = null;
-				if (this instanceof PlayerInstance)
+				Player activeChar = null;
+				if (this instanceof Player)
 				{
-					activeChar = (PlayerInstance) this;
+					activeChar = (Player) this;
 				}
 				else if (this instanceof Summon)
 				{
@@ -7625,7 +7623,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					if (skill.isOffensive())
 					{
-						if ((creature instanceof PlayerInstance) || (creature instanceof Summon))
+						if ((creature instanceof Player) || (creature instanceof Summon))
 						{
 							// Signets are a special case, casted on target_self but don't harm self
 							if ((skill.getSkillType() != SkillType.SIGNET) && (skill.getSkillType() != SkillType.SIGNET_CASTTIME))
@@ -7658,10 +7656,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							}
 						}
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						// Casting non offensive skill on player with pvp flag set or with karma
-						if (!creature.equals(this) && ((((PlayerInstance) creature).getPvpFlag() > 0) || (((PlayerInstance) creature).getKarma() > 0)))
+						if (!creature.equals(this) && ((((Player) creature).getPvpFlag() > 0) || (((Player) creature).getKarma() > 0)))
 						{
 							activeChar.updatePvPStatus();
 						}
@@ -7672,14 +7670,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 				}
 			}
-			if (target instanceof MonsterInstance)
+			if (target instanceof Monster)
 			{
 				if (!skill.isOffensive() && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.SUMMON) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getSkillType() != SkillType.BEAST_FEED))
 				{
-					PlayerInstance activeChar = null;
-					if (this instanceof PlayerInstance)
+					Player activeChar = null;
+					if (this instanceof Player)
 					{
-						activeChar = (PlayerInstance) this;
+						activeChar = (Player) this;
 						activeChar.updatePvPStatus(activeChar);
 					}
 					else if (this instanceof Summon)
@@ -7739,14 +7737,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			Potions.deletePotionItem((Playable) this, skill.getId(), skill.getLevel());
 		}
 		
-		if ((this instanceof PlayerInstance) || (this instanceof Summon))
+		if ((this instanceof Player) || (this instanceof Summon))
 		{
-			final PlayerInstance caster = this instanceof PlayerInstance ? (PlayerInstance) this : ((Summon) this).getOwner();
+			final Player caster = this instanceof Player ? (Player) this : ((Summon) this).getOwner();
 			for (WorldObject target : targets)
 			{
-				if (target instanceof NpcInstance)
+				if (target instanceof Npc)
 				{
-					final NpcInstance npc = (NpcInstance) target;
+					final Npc npc = (Npc) target;
 					for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_SKILL_USE))
 					{
 						quest.notifySkillUse(npc, caster, skill);
@@ -7758,9 +7756,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				for (WorldObject spMob : caster.getKnownList().getKnownObjects().values())
 				{
-					if (spMob instanceof NpcInstance)
+					if (spMob instanceof Npc)
 					{
-						final NpcInstance npcMob = (NpcInstance) spMob;
+						final Npc npcMob = (Npc) spMob;
 						if (npcMob.isInsideRadius3D(caster, 1000) && npcMob.hasAI() && (npcMob.getAI().getIntention() == AI_INTENTION_ATTACK))
 						{
 							final WorldObject npcTarget = npcMob.getTarget();
@@ -7789,7 +7787,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param target the target
 	 * @param skill the skill
 	 */
-	public void seeSpell(PlayerInstance caster, WorldObject target, Skill skill)
+	public void seeSpell(Player caster, WorldObject target, Skill skill)
 	{
 		if (this instanceof Attackable)
 		{
@@ -8514,7 +8512,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void reduceCurrentHp(double amount, Creature attacker, boolean awake)
 	{
-		if (isNpc() && Config.INVUL_NPC_LIST.contains(((NpcInstance) this).getNpcId()))
+		if (isNpc() && Config.INVUL_NPC_LIST.contains(((Npc) this).getNpcId()))
 		{
 			return;
 		}
@@ -8817,9 +8815,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
-	 * <li>PlayerInstance
-	 * <li>SummonInstance
-	 * <li>PetInstance</li><br>
+	 * <li>Player
+	 * <li>Summon
+	 * <li>Pet</li><br>
 	 * @param target the target
 	 * @param damage the damage
 	 * @param mcrit the mcrit
@@ -8972,10 +8970,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public boolean checkBss()
 	{
 		boolean bss = false;
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		if (weaponInst != null)
 		{
-			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+			if (weaponInst.getChargedSpiritshot() == Item.CHARGED_BLESSED_SPIRITSHOT)
 			{
 				bss = true;
 			}
@@ -8984,7 +8982,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			if (activeSummon.getChargedSpiritShot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+			if (activeSummon.getChargedSpiritShot() == Item.CHARGED_BLESSED_SPIRITSHOT)
 			{
 				bss = true;
 			}
@@ -8997,21 +8995,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public synchronized void removeBss()
 	{
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		if (weaponInst != null)
 		{
-			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+			if (weaponInst.getChargedSpiritshot() == Item.CHARGED_BLESSED_SPIRITSHOT)
 			{
-				weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_NONE);
+				weaponInst.setChargedSpiritshot(Item.CHARGED_NONE);
 			}
 		}
 		// If there is no weapon equipped, check for an active summon.
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			if (activeSummon.getChargedSpiritShot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+			if (activeSummon.getChargedSpiritShot() == Item.CHARGED_BLESSED_SPIRITSHOT)
 			{
-				activeSummon.setChargedSpiritShot(ItemInstance.CHARGED_NONE);
+				activeSummon.setChargedSpiritShot(Item.CHARGED_NONE);
 			}
 		}
 		reloadShots(true);
@@ -9024,10 +9022,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public boolean checkSps()
 	{
 		boolean ss = false;
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		if (weaponInst != null)
 		{
-			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_SPIRITSHOT)
+			if (weaponInst.getChargedSpiritshot() == Item.CHARGED_SPIRITSHOT)
 			{
 				ss = true;
 			}
@@ -9036,7 +9034,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			if (activeSummon.getChargedSpiritShot() == ItemInstance.CHARGED_SPIRITSHOT)
+			if (activeSummon.getChargedSpiritShot() == Item.CHARGED_SPIRITSHOT)
 			{
 				ss = true;
 			}
@@ -9049,21 +9047,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public synchronized void removeSps()
 	{
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		if (weaponInst != null)
 		{
-			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_SPIRITSHOT)
+			if (weaponInst.getChargedSpiritshot() == Item.CHARGED_SPIRITSHOT)
 			{
-				weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_NONE);
+				weaponInst.setChargedSpiritshot(Item.CHARGED_NONE);
 			}
 		}
 		// If there is no weapon equipped, check for an active summon.
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			if (activeSummon.getChargedSpiritShot() == ItemInstance.CHARGED_SPIRITSHOT)
+			if (activeSummon.getChargedSpiritShot() == Item.CHARGED_SPIRITSHOT)
 			{
-				activeSummon.setChargedSpiritShot(ItemInstance.CHARGED_NONE);
+				activeSummon.setChargedSpiritShot(Item.CHARGED_NONE);
 			}
 		}
 		reloadShots(true);
@@ -9076,10 +9074,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public boolean checkSs()
 	{
 		boolean ss = false;
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		if (weaponInst != null)
 		{
-			if (weaponInst.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT)
+			if (weaponInst.getChargedSoulshot() == Item.CHARGED_SOULSHOT)
 			{
 				ss = true;
 			}
@@ -9088,7 +9086,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			if (activeSummon.getChargedSoulShot() == ItemInstance.CHARGED_SOULSHOT)
+			if (activeSummon.getChargedSoulShot() == Item.CHARGED_SOULSHOT)
 			{
 				ss = true;
 			}
@@ -9101,21 +9099,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void removeSs()
 	{
-		final ItemInstance weaponInst = getActiveWeaponInstance();
+		final Item weaponInst = getActiveWeaponInstance();
 		if (weaponInst != null)
 		{
-			if (weaponInst.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT)
+			if (weaponInst.getChargedSoulshot() == Item.CHARGED_SOULSHOT)
 			{
-				weaponInst.setChargedSoulshot(ItemInstance.CHARGED_NONE);
+				weaponInst.setChargedSoulshot(Item.CHARGED_NONE);
 			}
 		}
 		// If there is no weapon equipped, check for an active summon.
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			if (activeSummon.getChargedSoulShot() == ItemInstance.CHARGED_SOULSHOT)
+			if (activeSummon.getChargedSoulShot() == Item.CHARGED_SOULSHOT)
 			{
-				activeSummon.setChargedSoulShot(ItemInstance.CHARGED_NONE);
+				activeSummon.setChargedSoulShot(Item.CHARGED_NONE);
 			}
 		}
 		reloadShots(false);
@@ -9180,14 +9178,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		// Set the target of the PlayerInstance player
+		// Set the target of the Player player
 		setTarget(trasformedNpc);
 		
-		// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
+		// Send a Server->Client packet MyTargetSelected to the Player player
 		// The player.getLevel() - getLevel() permit to display the correct color in the select window
 		sendPacket(new MyTargetSelected(trasformedNpc.getObjectId(), getLevel() - trasformedNpc.getLevel()));
 		
-		// Send a Server->Client packet StatusUpdate of the NpcInstance to the PlayerInstance to update its HP bar
+		// Send a Server->Client packet StatusUpdate of the Npc to the Player to update its HP bar
 		final StatusUpdate su = new StatusUpdate(trasformedNpc.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_HP, (int) trasformedNpc.getCurrentHp());
 		su.addAttribute(StatusUpdate.MAX_HP, trasformedNpc.getMaxHp());
@@ -9245,9 +9243,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	public synchronized void reloadShots(boolean isMagic)
 	{
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
-			((PlayerInstance) this).rechargeAutoSoulShot(!isMagic, isMagic, false);
+			((Player) this).rechargeAutoSoulShot(!isMagic, isMagic, false);
 		}
 		else if (this instanceof Summon)
 		{

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * Written by Berezkin Nikolay, on 04.05.2021
@@ -97,7 +97,7 @@ public class CollectionData implements IXmlReader
 								final int itemId = parseInteger(attrs, "id");
 								final long itemCount = parseLong(attrs, "count", 1L);
 								final int itemEnchantLevel = parseInteger(attrs, "enchant_level", 0);
-								final Item item = ItemTable.getInstance().getTemplate(itemId);
+								final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 								if (item == null)
 								{
 									LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + itemId + " collection item: " + id);

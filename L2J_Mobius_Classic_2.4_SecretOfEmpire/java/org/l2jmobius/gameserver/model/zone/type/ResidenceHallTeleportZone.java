@@ -21,7 +21,7 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Teleport residence zone for clan hall sieges
@@ -78,7 +78,7 @@ public class ResidenceHallTeleportZone extends ResidenceTeleportZone
 				throw new NullPointerException();
 			}
 			
-			for (PlayerInstance pc : getPlayersInside())
+			for (Player pc : getPlayersInside())
 			{
 				if (pc != null)
 				{

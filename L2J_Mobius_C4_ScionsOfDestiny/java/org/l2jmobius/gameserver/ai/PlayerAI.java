@@ -29,9 +29,9 @@ import java.util.Stack;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Creature.AIAccessor;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 
 public class PlayerAI extends CreatureAI
 {
@@ -250,7 +250,7 @@ public class PlayerAI extends CreatureAI
 		}
 		
 		setIntention(AI_INTENTION_IDLE);
-		((PlayerInstance.AIAccessor) _accessor).doPickupItem(target);
+		((Player.AIAccessor) _accessor).doPickupItem(target);
 	}
 	
 	private void thinkInteract()
@@ -271,9 +271,9 @@ public class PlayerAI extends CreatureAI
 			return;
 		}
 		
-		if (!(target instanceof StaticObjectInstance))
+		if (!(target instanceof StaticObject))
 		{
-			((PlayerInstance.AIAccessor) _accessor).doInteract((Creature) target);
+			((Player.AIAccessor) _accessor).doInteract((Creature) target);
 		}
 		
 		setIntention(AI_INTENTION_IDLE);

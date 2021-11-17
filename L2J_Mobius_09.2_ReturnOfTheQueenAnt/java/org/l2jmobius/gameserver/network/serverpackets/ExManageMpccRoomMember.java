@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ExManagePartyRoomMemberType;
 import org.l2jmobius.gameserver.enums.MatchingMemberType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExManageMpccRoomMember implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final MatchingMemberType _memberType;
 	private final ExManagePartyRoomMemberType _type;
 	
-	public ExManageMpccRoomMember(PlayerInstance player, CommandChannelMatchingRoom room, ExManagePartyRoomMemberType mode)
+	public ExManageMpccRoomMember(Player player, CommandChannelMatchingRoom room, ExManagePartyRoomMemberType mode)
 	{
 		_player = player;
 		_memberType = room.getMemberType(player);

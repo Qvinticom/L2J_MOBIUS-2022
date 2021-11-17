@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.network.clientpackets.appearance;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -51,7 +51,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem implements IClient
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -65,9 +65,9 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem implements IClient
 		}
 		
 		final PlayerInventory inventory = player.getInventory();
-		final ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
-		final ItemInstance extractItem = inventory.getItemByObjectId(_extracItemObjId);
-		ItemInstance stone = request.getAppearanceStone();
+		final Item targetItem = inventory.getItemByObjectId(_targetItemObjId);
+		final Item extractItem = inventory.getItemByObjectId(_extracItemObjId);
+		Item stone = request.getAppearanceStone();
 		if ((targetItem == null) || (extractItem == null) || (stone == null))
 		{
 			player.removeRequest(ShapeShiftingItemRequest.class);
@@ -133,7 +133,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem implements IClient
 			return;
 		}
 		
-		if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != Item.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != Item.SLOT_CHEST)))
+		if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_CHEST)))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 			client.sendPacket(ExPutShapeShiftingExtractionItemResult.FAILED);

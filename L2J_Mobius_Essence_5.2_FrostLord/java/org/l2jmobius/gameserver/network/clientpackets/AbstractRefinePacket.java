@@ -21,12 +21,12 @@ import java.util.Arrays;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.options.VariationFee;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param fee
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance mineralItem, ItemInstance feeItem, VariationFee fee)
+	protected static boolean isValid(Player player, Item item, Item mineralItem, Item feeItem, VariationFee fee)
 	{
 		if (fee == null)
 		{
@@ -89,7 +89,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param mineralItem
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance mineralItem)
+	protected static boolean isValid(Player player, Item item, Item mineralItem)
 	{
 		if (!isValid(player, item))
 		{
@@ -116,7 +116,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param item
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player, ItemInstance item)
+	protected static boolean isValid(Player player, Item item)
 	{
 		if (!isValid(player))
 		{
@@ -191,7 +191,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param player
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player)
+	protected static boolean isValid(Player player)
 	{
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{

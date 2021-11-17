@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -49,7 +49,7 @@ public class FlowerBud extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("spawn") && npc.isDead())
 		{
@@ -60,7 +60,7 @@ public class FlowerBud extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		startQuestTimer("spawn", 3000, npc, killer);
 		return super.onKill(npc, killer, isSummon);

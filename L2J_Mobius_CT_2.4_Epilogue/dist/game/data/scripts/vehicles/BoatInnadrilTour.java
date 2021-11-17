@@ -23,7 +23,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -74,7 +74,7 @@ public class BoatInnadrilTour implements Runnable
 	
 	private static final VehiclePathPoint DOCK = TOUR[TOUR.length - 1];
 	
-	private final BoatInstance _boat;
+	private final Boat _boat;
 	private int _cycle = 0;
 	
 	private final CreatureSay ARRIVED_AT_INNADRIL;
@@ -91,7 +91,7 @@ public class BoatInnadrilTour implements Runnable
 	
 	private final PlaySound INNADRIL_SOUND;
 	
-	public BoatInnadrilTour(BoatInstance boat)
+	public BoatInnadrilTour(Boat boat)
 	{
 		_boat = boat;
 		
@@ -193,7 +193,7 @@ public class BoatInnadrilTour implements Runnable
 	
 	public static void main(String[] args)
 	{
-		final BoatInstance boat = BoatManager.getInstance().getNewBoat(4, 111264, 226240, -3610, 32768);
+		final Boat boat = BoatManager.getInstance().getNewBoat(4, 111264, 226240, -3610, 32768);
 		if (boat != null)
 		{
 			boat.registerEngine(new BoatInnadrilTour(boat));

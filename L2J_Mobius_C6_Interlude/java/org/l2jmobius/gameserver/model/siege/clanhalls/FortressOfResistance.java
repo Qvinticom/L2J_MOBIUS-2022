@@ -31,10 +31,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -176,14 +176,14 @@ public class FortressOfResistance
 	
 	public void MessengerSpawn()
 	{
-		if (!ClanHallManager.getInstance().isFree(21))
+		if (!ClanHallTable.getInstance().isFree(21))
 		{
-			ClanHallManager.getInstance().setFree(21);
+			ClanHallTable.getInstance().setFree(21);
 		}
 		
 		Announce("Capture registration of Partisan Hideout has begun!");
 		Announce("Now its open for 1 hours!");
-		NpcInstance result = null;
+		Npc result = null;
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
@@ -220,7 +220,7 @@ public class FortressOfResistance
 			_clansDamageInfo.clear();
 		}
 		
-		NpcInstance result = null;
+		Npc result = null;
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(BOSS_ID);
@@ -245,9 +245,9 @@ public class FortressOfResistance
 	
 	protected class DeSpawnTimer implements Runnable
 	{
-		NpcInstance _npc = null;
+		Npc _npc = null;
 		
-		public DeSpawnTimer(NpcInstance npc)
+		public DeSpawnTimer(Npc npc)
 		{
 			_npc = npc;
 		}
@@ -259,9 +259,9 @@ public class FortressOfResistance
 		}
 	}
 	
-	public boolean Conditions(PlayerInstance player)
+	public boolean Conditions(Player player)
 	{
-		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 2);
+		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallTable.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 2);
 	}
 	
 	protected class AnnounceInfo implements Runnable
@@ -299,7 +299,7 @@ public class FortressOfResistance
 		}
 		if (clanIdMaxDamage != null)
 		{
-			ClanHallManager.getInstance().setOwner(21, clanIdMaxDamage);
+			ClanHallTable.getInstance().setOwner(21, clanIdMaxDamage);
 			clanIdMaxDamage.setReputationScore(clanIdMaxDamage.getReputationScore() + 600, true);
 			update();
 			

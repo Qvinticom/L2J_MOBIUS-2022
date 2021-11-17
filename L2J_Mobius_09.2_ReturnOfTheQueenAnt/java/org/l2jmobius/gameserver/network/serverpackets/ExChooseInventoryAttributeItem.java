@@ -22,8 +22,8 @@ import java.util.Set;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
 import org.l2jmobius.gameserver.enums.AttributeType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -37,7 +37,7 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 	private final int _level;
 	private final Set<Integer> _items = new HashSet<>();
 	
-	public ExChooseInventoryAttributeItem(PlayerInstance player, ItemInstance stone)
+	public ExChooseInventoryAttributeItem(Player player, Item stone)
 	{
 		_itemId = stone.getDisplayId();
 		_count = stone.getCount();
@@ -49,7 +49,7 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 		_level = ElementalAttributeData.getInstance().getMaxElementLevel(_itemId);
 		
 		// Register only items that can be put an attribute stone/crystal
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (ElementalAttributeData.getInstance().isElementableWithStone(item, stone.getId()))
 			{

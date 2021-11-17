@@ -136,7 +136,7 @@ import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingSkill;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import org.l2jmobius.gameserver.model.conditions.ConditionWithSkill;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -267,9 +267,9 @@ public abstract class DocumentBase
 		
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, functionName, order, stat, value);
-		if (template instanceof Item)
+		if (template instanceof ItemTemplate)
 		{
-			((Item) template).addFunctionTemplate(ft);
+			((ItemTemplate) template).addFunctionTemplate(ft);
 		}
 		else
 		{

@@ -20,10 +20,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -56,7 +56,7 @@ public class RequestDropItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || player.isDead())
 		{
 			return;
@@ -81,7 +81,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop"))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
@@ -185,7 +185,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			}
 		}
 		
-		if ((Item.TYPE2_QUEST == item.getItem().getType2()) && !player.isGM())
+		if ((ItemTemplate.TYPE2_QUEST == item.getItem().getType2()) && !player.isGM())
 		{
 			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
 			return;
@@ -206,7 +206,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
+			for (Item element : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
 			{
 				player.checkSSMatch(null, element);
 				iu.addModifiedItem(element);
@@ -217,7 +217,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			player.sendPacket(new ItemList(player, true));
 		}
 		
-		final ItemInstance dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
+		final Item dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
 		if ((dropedItem != null) && (dropedItem.getItemId() == 57) && (dropedItem.getCount() >= 1000000) && (Config.RATE_DROP_ADENA <= 200))
 		{
 			final String msg = "Character (" + player.getName() + ") has dropped (" + dropedItem.getCount() + ")adena at (" + _x + "," + _y + "," + _z + ")";

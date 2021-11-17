@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -49,7 +49,7 @@ public class FriendsBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, PlayerInstance activeChar)
+	public void parseCmd(String command, Player activeChar)
 	{
 		if (command.startsWith("_friendlist"))
 		{
@@ -93,7 +93,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				
 				for (int friendId : activeChar.getFriendList())
 				{
-					final PlayerInstance player = World.getInstance().getPlayer(friendId);
+					final Player player = World.getInstance().getPlayer(friendId);
 					if (player != null)
 					{
 						player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
@@ -128,7 +128,7 @@ public class FriendsBBSManager extends BaseBBSManager
 						statement.close();
 						
 						final String name = CharNameTable.getInstance().getPlayerName(friendId);
-						final PlayerInstance player = World.getInstance().getPlayer(friendId);
+						final Player player = World.getInstance().getPlayer(friendId);
 						if (player != null)
 						{
 							player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
@@ -208,7 +208,7 @@ public class FriendsBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance activeChar)
+	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player activeChar)
 	{
 		if (ar1.equalsIgnoreCase("mail"))
 		{
@@ -221,7 +221,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void showFriendsList(PlayerInstance activeChar, boolean delMsg)
+	private void showFriendsList(Player activeChar, boolean delMsg)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "friend/friend-list.htm");
 		if (content == null)
@@ -248,7 +248,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				continue;
 			}
 			
-			final PlayerInstance friend = World.getInstance().getPlayer(id);
+			final Player friend = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _friend;select;", id, "\">[Select]</a>&nbsp;", friendName, " ", (((friend != null) && friend.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%friendslist%", sb.toString());
@@ -265,7 +265,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				continue;
 			}
 			
-			final PlayerInstance friend = World.getInstance().getPlayer(id);
+			final Player friend = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _friend;deselect;", id, "\">[Deselect]</a>&nbsp;", friendName, " ", (((friend != null) && friend.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%selectedFriendsList%", sb.toString());
@@ -275,7 +275,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private void showBlockList(PlayerInstance activeChar, boolean delMsg)
+	private void showBlockList(Player activeChar, boolean delMsg)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "friend/friend-blocklist.htm");
 		if (content == null)
@@ -302,7 +302,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				continue;
 			}
 			
-			final PlayerInstance block = World.getInstance().getPlayer(id);
+			final Player block = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _block;select;", id, "\">[Select]</a>&nbsp;", blockName, " ", (((block != null) && block.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%blocklist%", sb.toString());
@@ -319,7 +319,7 @@ public class FriendsBBSManager extends BaseBBSManager
 				continue;
 			}
 			
-			final PlayerInstance block = World.getInstance().getPlayer(id);
+			final Player block = World.getInstance().getPlayer(id);
 			StringUtil.append(sb, "<a action=\"bypass _block;deselect;", id, "\">[Deselect]</a>&nbsp;", blockName, " ", (((block != null) && block.isOnline()) ? "(on)" : "(off)"), "<br1>");
 		}
 		content = content.replace("%selectedBlocksList%", sb.toString());
@@ -329,7 +329,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	public static void showMailWrite(PlayerInstance activeChar)
+	public static void showMailWrite(Player activeChar)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "friend/friend-mail.htm");
 		if (content == null)

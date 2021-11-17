@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
 import org.l2jmobius.gameserver.model.Mentee;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -26,16 +26,16 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerMenteeRemove implements IBaseEvent
 {
-	private final PlayerInstance _mentor;
+	private final Player _mentor;
 	private final Mentee _mentee;
 	
-	public OnPlayerMenteeRemove(PlayerInstance mentor, Mentee mentee)
+	public OnPlayerMenteeRemove(Player mentor, Mentee mentee)
 	{
 		_mentor = mentor;
 		_mentee = mentee;
 	}
 	
-	public PlayerInstance getMentor()
+	public Player getMentor()
 	{
 		return _mentor;
 	}

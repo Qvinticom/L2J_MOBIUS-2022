@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -42,9 +42,9 @@ public class Recall implements ISkillHandler
 	{
 		try
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				final PlayerInstance instance = (PlayerInstance) creature;
+				final Player instance = (Player) creature;
 				if (instance.isInOlympiadMode())
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH));
@@ -54,7 +54,7 @@ public class Recall implements ISkillHandler
 				// Checks summoner not in siege zone.
 				if (creature.isInsideZone(ZoneId.SIEGE))
 				{
-					((PlayerInstance) creature).sendMessage("You cannot summon in siege zone.");
+					((Player) creature).sendMessage("You cannot summon in siege zone.");
 					return;
 				}
 				
@@ -79,9 +79,9 @@ public class Recall implements ISkillHandler
 				}
 				
 				final Creature target = (Creature) target1;
-				if (target instanceof PlayerInstance)
+				if (target instanceof Player)
 				{
-					final PlayerInstance targetChar = (PlayerInstance) target;
+					final Player targetChar = (Player) target;
 					if (targetChar.isFestivalParticipant())
 					{
 						targetChar.sendPacket(SystemMessage.sendString("You can't use escape skill in a festival."));

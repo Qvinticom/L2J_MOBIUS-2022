@@ -19,11 +19,11 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -50,7 +50,7 @@ public class RebalanceHP extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effector.isPlayer())
 		{
@@ -62,7 +62,7 @@ public class RebalanceHP extends AbstractEffect
 		final Party party = effector.getParty();
 		if (party != null)
 		{
-			for (PlayerInstance member : party.getMembers())
+			for (Player member : party.getMembers())
 			{
 				if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 				{
@@ -88,7 +88,7 @@ public class RebalanceHP extends AbstractEffect
 			}
 			
 			final double percentHP = currentHPs / fullHP;
-			for (PlayerInstance member : party.getMembers())
+			for (Player member : party.getMembers())
 			{
 				if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 				{

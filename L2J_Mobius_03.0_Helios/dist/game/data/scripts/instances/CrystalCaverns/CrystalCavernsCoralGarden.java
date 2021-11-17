@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -64,7 +64,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -80,7 +80,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 				}
 				case "LOOP_TIMER":
 				{
-					final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
+					final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
 					if ((plr != null) && (npc.calculateDistance3D(plr) > PLAYER_MAX_DISTANCE) && npcVars.getBoolean("NPC_FOLLOWING", true))
 					{
 						WalkingManager.getInstance().cancelMoving(npc);
@@ -114,7 +114,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -124,7 +124,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceEnter(PlayerInstance player, Instance instance)
+	public void onInstanceEnter(Player player, Instance instance)
 	{
 		final int startTime = (int) (instance.getElapsedTime() / 1000);
 		final int endTime = (int) (instance.getRemainingTime() / 1000);
@@ -132,13 +132,13 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceLeave(PlayerInstance player, Instance instance)
+	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, true, true, 0, 0, NpcStringId.ELAPSED_TIME));
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && npc.isScriptValue(0))
@@ -195,7 +195,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -216,7 +216,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))

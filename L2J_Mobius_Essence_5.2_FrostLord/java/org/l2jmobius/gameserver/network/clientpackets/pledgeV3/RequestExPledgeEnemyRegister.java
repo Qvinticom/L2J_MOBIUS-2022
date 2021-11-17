@@ -21,7 +21,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.UserInfoType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
@@ -46,7 +46,7 @@ public class RequestExPledgeEnemyRegister implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -123,14 +123,14 @@ public class RequestExPledgeEnemyRegister implements IClientIncomingPacket
 		{
 			if ((member != null) && member.isOnline())
 			{
-				member.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN);
+				member.getPlayer().broadcastUserInfo(UserInfoType.CLAN);
 			}
 		}
 		for (ClanMember member : clanDeclaredWar.getMembers())
 		{
 			if ((member != null) && member.isOnline())
 			{
-				member.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN);
+				member.getPlayer().broadcastUserInfo(UserInfoType.CLAN);
 			}
 		}
 	}

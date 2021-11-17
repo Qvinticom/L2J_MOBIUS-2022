@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangeTimeToStart;
 import org.l2jmobius.gameserver.network.serverpackets.ExCubeGameRequestReady;
@@ -51,7 +51,7 @@ public class HandysBlockCheckerEvent extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if ((npc == null) || (player == null))
 		{

@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanEntryStatus;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -51,7 +51,7 @@ public class RequestPledgeWaitingApply implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (player.getClan() != null))
 		{
 			return;
@@ -68,7 +68,7 @@ public class RequestPledgeWaitingApply implements IClientIncomingPacket
 		{
 			client.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
 			
-			final PlayerInstance clanLeader = World.getInstance().getPlayer(clan.getLeaderId());
+			final Player clanLeader = World.getInstance().getPlayer(clan.getLeaderId());
 			if (clanLeader != null)
 			{
 				clanLeader.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);

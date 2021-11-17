@@ -17,7 +17,7 @@
 package quests.Q10836_DisappearedClanMember;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -59,7 +59,7 @@ public class Q10836_DisappearedClanMember extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -97,7 +97,7 @@ public class Q10836_DisappearedClanMember extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -137,7 +137,7 @@ public class Q10836_DisappearedClanMember extends Quest
 	@Id(BLACKBIRD_REPORT_SHERRY)
 	public void onItemAdd(OnPlayerItemAdd event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.isCond(1)) && (hasQuestItems(player, BLACKBIRD_REPORT_GLENKINCHIE)) && (hasQuestItems(player, BLACKBIRD_REPORT_HURAK)) && (hasQuestItems(player, BLACKBIRD_REPORT_LAFFIAN)) && (hasQuestItems(player, BLACKBIRD_REPORT_SHERRY)))
 		{

@@ -18,7 +18,7 @@ package quests.Q10577_TemperARustingBlade;
 
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
@@ -63,7 +63,7 @@ public class Q10577_TemperARustingBlade extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -117,7 +117,7 @@ public class Q10577_TemperARustingBlade extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -155,7 +155,7 @@ public class Q10577_TemperARustingBlade extends Quest
 	
 	public void OnPlayerAugment(OnPlayerAugment event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((player == null) || (event.getItem().getId() != AUGMENTATION_PRACTICE_STORMBRINGER))
 		{
 			return;

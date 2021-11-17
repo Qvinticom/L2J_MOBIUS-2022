@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,13 +27,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExDuelUpdateUserInfo implements IClientOutgoingPacket
 {
 	/** The _active char. */
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/**
 	 * Instantiates a new ex duel update user info.
 	 * @param player the cha
 	 */
-	public ExDuelUpdateUserInfo(PlayerInstance player)
+	public ExDuelUpdateUserInfo(Player player)
 	{
 		_player = player;
 	}

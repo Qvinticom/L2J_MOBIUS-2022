@@ -19,14 +19,14 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -48,7 +48,7 @@ public class AdminClan implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -56,7 +56,7 @@ public class AdminClan implements IAdminCommandHandler
 		{
 			case "admin_clan_info":
 			{
-				final PlayerInstance player = getPlayer(activeChar, st);
+				final Player player = getPlayer(activeChar, st);
 				if (player == null)
 				{
 					break;
@@ -75,7 +75,7 @@ public class AdminClan implements IAdminCommandHandler
 				html.replace("%clan_leader%", clan.getLeaderName());
 				html.replace("%clan_level%", String.valueOf(clan.getLevel()));
 				html.replace("%clan_has_castle%", clan.getCastleId() > 0 ? CastleManager.getInstance().getCastleById(clan.getCastleId()).getName() : "No");
-				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
+				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallTable.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
 				html.replace("%clan_has_fortress%", clan.getFortId() > 0 ? FortManager.getInstance().getFortById(clan.getFortId()).getName() : "No");
 				html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
 				html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
@@ -87,7 +87,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			case "admin_clan_changeleader":
 			{
-				final PlayerInstance player = getPlayer(activeChar, st);
+				final Player player = getPlayer(activeChar, st);
 				if (player == null)
 				{
 					break;
@@ -170,10 +170,10 @@ public class AdminClan implements IAdminCommandHandler
 	 * @param st
 	 * @return
 	 */
-	private PlayerInstance getPlayer(PlayerInstance activeChar, StringTokenizer st)
+	private Player getPlayer(Player activeChar, StringTokenizer st)
 	{
 		String val;
-		PlayerInstance player = null;
+		Player player = null;
 		if (st.hasMoreTokens())
 		{
 			val = st.nextToken();

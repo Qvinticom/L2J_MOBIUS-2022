@@ -19,7 +19,7 @@ package handlers.targethandlers;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,7 +40,7 @@ public class DoorTreasure implements ITargetTypeHandler
 	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final WorldObject target = creature.getTarget();
-		if ((target != null) && (target.isDoor() || (target instanceof ChestInstance)))
+		if ((target != null) && (target.isDoor() || (target instanceof Chest)))
 		{
 			return target;
 		}

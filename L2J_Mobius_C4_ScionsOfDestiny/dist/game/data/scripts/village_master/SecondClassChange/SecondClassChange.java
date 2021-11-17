@@ -21,8 +21,8 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
@@ -126,7 +126,7 @@ public class SecondClassChange extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -180,7 +180,7 @@ public class SecondClassChange extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -469,7 +469,7 @@ public class SecondClassChange extends Quest
 	 * @param player : The player to make checks on.
 	 * @return a String corresponding to html directory.
 	 */
-	private static String getClassHtml(PlayerInstance player)
+	private static String getClassHtml(Player player)
 	{
 		String change = "";
 		

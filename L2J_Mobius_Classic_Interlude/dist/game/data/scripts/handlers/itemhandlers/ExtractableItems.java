@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.ExtractableProduct;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ExtractableItems implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -51,7 +51,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		final EtcItem etcitem = (EtcItem) item.getItem();
 		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
@@ -72,8 +72,8 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final Map<ItemInstance, Long> extractedItems = new HashMap<>();
-		final List<ItemInstance> enchantedItems = new ArrayList<>();
+		final Map<Item, Long> extractedItems = new HashMap<>();
+		final List<Item> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
 		{
 			while (extractedItems.size() < etcitem.getExtractableCountMin())
@@ -97,7 +97,7 @@ public class ExtractableItems implements IItemHandler
 						
 						// Do not extract the same item.
 						boolean alreadyExtracted = false;
-						for (ItemInstance i : extractedItems.keySet())
+						for (Item i : extractedItems.keySet())
 						{
 							if (i.getItem().getId() == expi.getId())
 							{
@@ -112,7 +112,7 @@ public class ExtractableItems implements IItemHandler
 						
 						if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 						{
-							final ItemInstance newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
+							final Item newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
 							if (expi.getMaxEnchant() > 0)
 							{
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -124,7 +124,7 @@ public class ExtractableItems implements IItemHandler
 						{
 							while (createItemAmount > 0)
 							{
-								final ItemInstance newItem = player.addItem("Extract", expi.getId(), 1, player, false);
+								final Item newItem = player.addItem("Extract", expi.getId(), 1, player, false);
 								if (expi.getMaxEnchant() > 0)
 								{
 									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -159,7 +159,7 @@ public class ExtractableItems implements IItemHandler
 					
 					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
-						final ItemInstance newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
+						final Item newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
 						if (expi.getMaxEnchant() > 0)
 						{
 							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -171,7 +171,7 @@ public class ExtractableItems implements IItemHandler
 					{
 						while (createItemAmount > 0)
 						{
-							final ItemInstance newItem = player.addItem("Extract", expi.getId(), 1, player, false);
+							final Item newItem = player.addItem("Extract", expi.getId(), 1, player, false);
 							if (expi.getMaxEnchant() > 0)
 							{
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -192,14 +192,14 @@ public class ExtractableItems implements IItemHandler
 		if (!enchantedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (ItemInstance i : enchantedItems)
+			for (Item i : enchantedItems)
 			{
 				playerIU.addModifiedItem(i);
 			}
 			player.sendPacket(playerIU);
 		}
 		
-		for (Entry<ItemInstance, Long> entry : extractedItems.entrySet())
+		for (Entry<Item, Long> entry : extractedItems.entrySet())
 		{
 			sendMessage(player, entry.getKey(), entry.getValue().longValue());
 		}
@@ -207,7 +207,7 @@ public class ExtractableItems implements IItemHandler
 		return true;
 	}
 	
-	private void addItem(Map<ItemInstance, Long> extractedItems, ItemInstance newItem, long count)
+	private void addItem(Map<Item, Long> extractedItems, Item newItem, long count)
 	{
 		// Max equipable item grade configuration.
 		final int itemCrystalLevel = newItem.getItem().getCrystalType().getLevel();
@@ -226,7 +226,7 @@ public class ExtractableItems implements IItemHandler
 		}
 	}
 	
-	private void sendMessage(PlayerInstance player, ItemInstance item, long count)
+	private void sendMessage(Player player, Item item, long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

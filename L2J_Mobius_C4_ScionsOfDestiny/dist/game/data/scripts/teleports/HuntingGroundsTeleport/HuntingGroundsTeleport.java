@@ -16,8 +16,8 @@
  */
 package teleports.HuntingGroundsTeleport;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.util.Util;
@@ -74,7 +74,7 @@ public class HuntingGroundsTeleport extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player);
 		if (playerCabal == SevenSigns.CABAL_NULL)

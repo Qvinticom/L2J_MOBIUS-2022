@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -37,7 +37,7 @@ public class AdminMassControl implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_mass"))
 		{
@@ -49,7 +49,7 @@ public class AdminMassControl implements IAdminCommandHandler
 				if (st.nextToken().equalsIgnoreCase("kill"))
 				{
 					int counter = 0;
-					for (PlayerInstance player : World.getInstance().getAllPlayers())
+					for (Player player : World.getInstance().getAllPlayers())
 					{
 						if (!player.isGM())
 						{
@@ -63,7 +63,7 @@ public class AdminMassControl implements IAdminCommandHandler
 				else if (st.nextToken().equalsIgnoreCase("ress"))
 				{
 					int counter = 0;
-					for (PlayerInstance player : World.getInstance().getAllPlayers())
+					for (Player player : World.getInstance().getAllPlayers())
 					{
 						if (!player.isGM() && player.isDead())
 						{

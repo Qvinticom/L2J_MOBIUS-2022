@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -90,7 +90,7 @@ public class SoulBlow extends AbstractEffect
 		
 		if (creature.isPlayer())
 		{
-			final PlayerInstance activePlayer = creature.getActingPlayer();
+			final Player activePlayer = creature.getActingPlayer();
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		// Check if damage should be reflected

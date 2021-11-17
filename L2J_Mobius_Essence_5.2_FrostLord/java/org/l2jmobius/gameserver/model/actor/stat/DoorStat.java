@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 
 /**
  * @author malyelfik
@@ -25,15 +25,15 @@ public class DoorStat extends CreatureStat
 {
 	private int _upgradeHpRatio = 1;
 	
-	public DoorStat(DoorInstance activeChar)
+	public DoorStat(Door activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public DoorInstance getActiveChar()
+	public Door getActiveChar()
 	{
-		return (DoorInstance) super.getActiveChar();
+		return (Door) super.getActiveChar();
 	}
 	
 	@Override

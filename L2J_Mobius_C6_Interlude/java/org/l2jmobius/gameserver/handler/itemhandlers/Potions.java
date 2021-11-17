@@ -32,10 +32,10 @@ import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Effect.EffectType;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -90,11 +90,11 @@ public class Potions implements IItemHandler
 	/** Task for Herbs */
 	private class HerbTask implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		private final int _magicId;
 		private final int _level;
 		
-		HerbTask(PlayerInstance activeChar, int magicId, int level)
+		HerbTask(Player activeChar, int magicId, int level)
 		{
 			_player = activeChar;
 			_magicId = magicId;
@@ -197,12 +197,12 @@ public class Potions implements IItemHandler
 	};
 	
 	@Override
-	public synchronized void useItem(Playable playable, ItemInstance item)
+	public synchronized void useItem(Playable playable, Item item)
 	{
-		if (playable instanceof PlayerInstance)
+		if (playable instanceof Player)
 		{
-			PlayerInstance activeChar;
-			activeChar = (PlayerInstance) playable;
+			Player activeChar;
+			activeChar = (Player) playable;
 			if (activeChar.isInOlympiadMode())
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);
@@ -649,10 +649,10 @@ public class Potions implements IItemHandler
 				}
 			}
 		}
-		else if (playable instanceof PetInstance)
+		else if (playable instanceof Pet)
 		{
-			PetInstance activeChar;
-			activeChar = ((PetInstance) playable);
+			Pet activeChar;
+			activeChar = ((Pet) playable);
 			final int itemId = item.getItemId();
 			switch (itemId)
 			{
@@ -733,9 +733,9 @@ public class Potions implements IItemHandler
 	
 	public boolean usePotion(Playable player, int magicId, int level)
 	{
-		if (player instanceof PlayerInstance)
+		if (player instanceof Player)
 		{
-			final PlayerInstance activeChar = player.getActingPlayer();
+			final Player activeChar = player.getActingPlayer();
 			if (activeChar.isCastingNow() && (magicId > 2277) && (magicId < 2285))
 			{
 				_herbstask += 100;
@@ -790,9 +790,9 @@ public class Potions implements IItemHandler
 				}
 			}
 		}
-		else if (player instanceof PetInstance)
+		else if (player instanceof Pet)
 		{
-			final PetInstance activeChar = (PetInstance) player;
+			final Pet activeChar = (Pet) player;
 			final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 			if (skill != null)
 			{
@@ -827,7 +827,7 @@ public class Potions implements IItemHandler
 	
 	public static void deletePotionItem(Playable playable, Integer skillId, Integer skillLevel)
 	{
-		if (!(playable instanceof PlayerInstance) && !(playable instanceof Summon))
+		if (!(playable instanceof Player) && !(playable instanceof Summon))
 		{
 			return;
 		}
@@ -842,12 +842,12 @@ public class Potions implements IItemHandler
 					continue;
 				}
 				
-				if (playable instanceof PlayerInstance)
+				if (playable instanceof Player)
 				{
-					final PlayerInstance activeChar = (PlayerInstance) playable;
+					final Player activeChar = (Player) playable;
 					if (activeChar.getInventory().getInventoryItemCount(potion, 0) > 0)
 					{
-						final ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
+						final Item item = activeChar.getInventory().getItemByItemId(potion);
 						activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					}
 				}
@@ -856,7 +856,7 @@ public class Potions implements IItemHandler
 					final Summon activeChar = (Summon) playable;
 					if (activeChar.getInventory().getInventoryItemCount(potion, 0) > 0)
 					{
-						final ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
+						final Item item = activeChar.getInventory().getItemByItemId(potion);
 						activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					}
 				}

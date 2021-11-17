@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -70,7 +70,7 @@ public class PlayableStat extends CreatureStat
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
 		}
 		
 		int level = minimumLevel; // minimum level
@@ -92,7 +92,7 @@ public class PlayableStat extends CreatureStat
 		int newLevel = getLevel();
 		if ((newLevel > oldLevel) && getActiveChar().isPlayer())
 		{
-			final PlayerInstance player = getActiveChar().getActingPlayer();
+			final Player player = getActiveChar().getActingPlayer();
 			if (SkillTreeData.getInstance().hasAvailableSkills(player, player.getClassId()))
 			{
 				getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
@@ -130,7 +130,7 @@ public class PlayableStat extends CreatureStat
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
 		}
 		int level = minimumLevel;
 		for (int tmp = level; tmp <= getMaxLevel(); tmp++)
@@ -191,7 +191,7 @@ public class PlayableStat extends CreatureStat
 		
 		if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL)
 		{
-			((PlayerInstance) getActiveChar()).checkPlayerSkills();
+			((Player) getActiveChar()).checkPlayerSkills();
 		}
 		
 		if (!levelIncreased)
@@ -271,7 +271,7 @@ public class PlayableStat extends CreatureStat
 		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
 	}
 	
-	private void addReputationToClanBasedOnLevel(PlayerInstance player, int leveledUpCount)
+	private void addReputationToClanBasedOnLevel(Player player, int leveledUpCount)
 	{
 		Clan clan = player.getClan();
 		if (clan == null)
@@ -361,7 +361,7 @@ public class PlayableStat extends CreatureStat
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION);
 				sm.addInt(reputation);
-				member.getPlayerInstance().sendPacket(sm);
+				member.getPlayer().sendPacket(sm);
 			}
 		}
 	}

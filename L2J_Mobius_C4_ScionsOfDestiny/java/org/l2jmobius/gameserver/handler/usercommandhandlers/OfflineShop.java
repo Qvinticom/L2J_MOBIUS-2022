@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class OfflineShop implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, PlayerInstance player)
+	public synchronized boolean useUserCommand(int id, Player player)
 	{
 		if (player == null)
 		{

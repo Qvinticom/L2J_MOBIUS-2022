@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -63,7 +63,7 @@ public class Q00454_CompletelyLost extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -80,7 +80,7 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "CHECK_TIMER":
 			{
-				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = npc.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					final double dist = Util.calculateDistance(npc, leader, false, false);
@@ -112,7 +112,7 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "TIME_LIMIT1":
 			{
-				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = npc.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					startQuestTimer("TIME_LIMIT2", 150000, npc, null);
@@ -122,7 +122,7 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "TIME_LIMIT2":
 			{
-				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = npc.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					startQuestTimer("TIME_LIMIT3", 150000, npc, null);
@@ -132,7 +132,7 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "TIME_LIMIT3":
 			{
-				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = npc.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					startQuestTimer("TIME_LIMIT4", 150000, npc, null);
@@ -142,7 +142,7 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "TIME_LIMIT4":
 			{
-				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = npc.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					startQuestTimer("TIME_LIMIT5", 150000, npc, null);
@@ -152,7 +152,7 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "TIME_LIMIT5":
 			{
-				final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = npc.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					whisper(npc, leader, NpcStringId.UGH_I_M_SORRY_IT_LOOKS_LIKE_THIS_IS_IT_FOR_ME_I_WANTED_TO_LIVE_AND_SEE_MY_FAMILY);
@@ -201,7 +201,7 @@ public class Q00454_CompletelyLost extends Quest
 					}
 					else
 					{
-						final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+						final Player leader = npc.getVariables().getObject("leader", Player.class);
 						if (leader.isInParty() && leader.getParty().containsPlayer(player))
 						{
 							qs.startQuest();
@@ -222,7 +222,7 @@ public class Q00454_CompletelyLost extends Quest
 			{
 				if (qs.isMemoState(1))
 				{
-					final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+					final Player leader = npc.getVariables().getObject("leader", Player.class);
 					if (leader != null)
 					{
 						if (leader.isInParty())
@@ -246,10 +246,10 @@ public class Q00454_CompletelyLost extends Quest
 					qs.setMemoState(2);
 					htmltext = "32738-06.html";
 					npc.sendScriptEvent("SCE_A_SEED_ESCORT_QUEST_START", npc, null);
-					final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+					final Player leader = npc.getVariables().getObject("leader", Player.class);
 					if ((leader != null) && leader.isInParty())
 					{
-						for (PlayerInstance member : leader.getParty().getMembers())
+						for (Player member : leader.getParty().getMembers())
 						{
 							if (member != null)
 							{
@@ -284,7 +284,7 @@ public class Q00454_CompletelyLost extends Quest
 		{
 			case "SCE_A_SEED_ESCORT_QUEST_START":
 			{
-				final PlayerInstance leader = receiver.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = receiver.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					receiver.setTarget(leader);
@@ -299,12 +299,12 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "SCE_A_SEED_ESCORT_QUEST_SUCCESS":
 			{
-				final PlayerInstance leader = receiver.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = receiver.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					if (leader.isInParty())
 					{
-						for (PlayerInstance member : leader.getParty().getMembers())
+						for (Player member : leader.getParty().getMembers())
 						{
 							if (member != null)
 							{
@@ -336,12 +336,12 @@ public class Q00454_CompletelyLost extends Quest
 			}
 			case "SCE_A_SEED_ESCORT_QUEST_FAILURE":
 			{
-				final PlayerInstance leader = receiver.getVariables().getObject("leader", PlayerInstance.class);
+				final Player leader = receiver.getVariables().getObject("leader", Player.class);
 				if (leader != null)
 				{
 					if (leader.isInParty())
 					{
-						for (PlayerInstance member : leader.getParty().getMembers())
+						for (Player member : leader.getParty().getMembers())
 						{
 							if (member != null)
 							{
@@ -408,7 +408,7 @@ public class Q00454_CompletelyLost extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -439,7 +439,7 @@ public class Q00454_CompletelyLost extends Quest
 					}
 					else
 					{
-						final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
+						final Player leader = npc.getVariables().getObject("leader", Player.class);
 						if (leader.isInParty() && leader.getParty().containsPlayer(player))
 						{
 							htmltext = getHtm(player, "32738-01a.htm");
@@ -761,7 +761,7 @@ public class Q00454_CompletelyLost extends Quest
 	 * @param player the player
 	 * @param stringId the NPC String
 	 */
-	private void whisper(Npc npc, PlayerInstance player, NpcStringId stringId)
+	private void whisper(Npc npc, Player player, NpcStringId stringId)
 	{
 		player.sendPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), stringId));
 	}

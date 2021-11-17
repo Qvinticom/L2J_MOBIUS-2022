@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -58,7 +58,7 @@ public class Hardin extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = getHtmlMessage(player);
 		if (htmltext != null)
@@ -180,13 +180,13 @@ public class Hardin extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final String htmltext = getHtmlMessage(player);
 		return htmltext == null ? "33870-01.html" : htmltext;
 	}
 	
-	private String getHtmlMessage(PlayerInstance player)
+	private String getHtmlMessage(Player player)
 	{
 		if (player.getRace() == Race.ERTHEIA)
 		{

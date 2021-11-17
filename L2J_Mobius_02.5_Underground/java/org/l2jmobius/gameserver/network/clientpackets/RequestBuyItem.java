@@ -27,8 +27,8 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -76,7 +76,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -102,15 +102,15 @@ public class RequestBuyItem implements IClientIncomingPacket
 		}
 		
 		final WorldObject target = player.getTarget();
-		MerchantInstance merchant = null;
+		Merchant merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if (!(target instanceof MerchantInstance) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceWorld() != target.getInstanceWorld()))
+			if (!(target instanceof Merchant) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceWorld() != target.getInstanceWorld()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			merchant = (MerchantInstance) target; // FIXME: Doesn't work for GMs.
+			merchant = (Merchant) target; // FIXME: Doesn't work for GMs.
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))

@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.handler.ChatHandler;
 import org.l2jmobius.gameserver.handler.IChatHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChat;
 import org.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -100,7 +100,7 @@ public class Say2 implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -230,7 +230,7 @@ public class Say2 implements IClientIncomingPacket
 		_text = filteredText;
 	}
 	
-	private boolean parseAndPublishItem(PlayerInstance owner)
+	private boolean parseAndPublishItem(Player owner)
 	{
 		int pos1 = -1;
 		while ((pos1 = _text.indexOf(8, pos1)) > -1)
@@ -248,14 +248,14 @@ public class Say2 implements IClientIncomingPacket
 			}
 			final int id = Integer.parseInt(result.toString());
 			final WorldObject item = World.getInstance().findObject(id);
-			if (item instanceof ItemInstance)
+			if (item instanceof Item)
 			{
 				if (owner.getInventory().getItemByObjectId(id) == null)
 				{
 					LOGGER.info(owner.getClient() + " trying publish item which doesnt own! ID:" + id);
 					return false;
 				}
-				((ItemInstance) item).publish();
+				((Item) item).publish();
 			}
 			else
 			{

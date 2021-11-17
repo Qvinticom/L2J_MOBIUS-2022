@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.communitybbs.Manager.PostBBSManager;
 import org.l2jmobius.gameserver.communitybbs.Manager.RegionBBSManager;
 import org.l2jmobius.gameserver.communitybbs.Manager.TopBBSManager;
 import org.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -49,7 +49,7 @@ public class CommunityBoard
 	
 	public void handleCommands(GameClient client, String command)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -105,7 +105,7 @@ public class CommunityBoard
 	
 	public void handleWriteCommands(GameClient client, String url, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -153,7 +153,7 @@ public class CommunityBoard
 	 * @param title the title
 	 * @param bypass the bypass
 	 */
-	public void addBypass(PlayerInstance player, String title, String bypass)
+	public void addBypass(Player player, String title, String bypass)
 	{
 		_bypasses.put(player.getObjectId(), title + "&" + bypass);
 	}
@@ -163,7 +163,7 @@ public class CommunityBoard
 	 * @param player the player
 	 * @return the last bypass used
 	 */
-	public String removeBypass(PlayerInstance player)
+	public String removeBypass(Player player)
 	{
 		return _bypasses.remove(player.getObjectId());
 	}

@@ -26,8 +26,8 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -58,7 +58,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("HARNAK_SPAWN"))
 		{
@@ -190,7 +190,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 					case 7:
 					{
 						currentInfo.reset();
-						for (PlayerInstance player : _zone.getPlayersInside())
+						for (Player player : _zone.getPlayersInside())
 						{
 							if (player != null)
 							{
@@ -216,7 +216,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		for (Entry<ZoneType, zoneInfo> currentZone : _roomInfo.entrySet())
 		{
@@ -237,7 +237,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 						calcDamage = 10;
 					}
 					currentInfo.setMonitorizedDamage(calcDamage);
-					for (PlayerInstance player : currentZone.getKey().getPlayersInside())
+					for (Player player : currentZone.getKey().getPlayersInside())
 					{
 						if (player != null)
 						{
@@ -254,7 +254,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 					ThreadPool.schedule(new changeZoneStage(currentZone.getKey()), 1000);
 				}
 				currentInfo.setCurrentPoint(calcPoints);
-				for (PlayerInstance player : currentZone.getKey().getPlayersInside())
+				for (Player player : currentZone.getKey().getPlayersInside())
 				{
 					if (player != null)
 					{
@@ -266,7 +266,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		
 		if (npc.getDisplayEffect() > 0)
 		{
-			final MonsterInstance copy = (MonsterInstance) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
+			final Monster copy = (Monster) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
 			copy.setTarget(killer);
 			copy.addDamageHate(killer, 500, 99999);
 			copy.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, killer);

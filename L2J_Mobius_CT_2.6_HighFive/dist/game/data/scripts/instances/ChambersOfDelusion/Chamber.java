@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -116,7 +116,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(PlayerInstance player)
+	protected boolean checkConditions(Player player)
 	{
 		final Party party = player.getParty();
 		if (party == null)
@@ -131,7 +131,7 @@ public abstract class Chamber extends AbstractInstance
 			return false;
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 80)
 			{
@@ -181,7 +181,7 @@ public abstract class Chamber extends AbstractInstance
 			final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 			// set instance reenter time for all allowed players
-			for (PlayerInstance player : world.getAllowed())
+			for (Player player : world.getAllowed())
 			{
 				if ((player != null) && player.isOnline())
 				{
@@ -230,7 +230,7 @@ public abstract class Chamber extends AbstractInstance
 			}
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (world.getInstanceId() == partyMember.getInstanceId())
 			{
@@ -269,7 +269,7 @@ public abstract class Chamber extends AbstractInstance
 			return;
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (hasQuestItems(partyMember, DELUSION_MARK))
 			{
@@ -300,7 +300,7 @@ public abstract class Chamber extends AbstractInstance
 			return;
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (world.getInstanceId() == partyMember.getInstanceId())
 			{
@@ -310,7 +310,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -324,7 +324,7 @@ public abstract class Chamber extends AbstractInstance
 		}
 	}
 	
-	protected void exitInstance(PlayerInstance player)
+	protected void exitInstance(Player player)
 	{
 		if ((player == null) || !player.isOnline() || (player.getInstanceId() == 0))
 		{
@@ -361,7 +361,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = "";
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
@@ -409,7 +409,7 @@ public abstract class Chamber extends AbstractInstance
 						stopRoomChangeTask(world);
 						stopBanishTask(world);
 						
-						for (PlayerInstance partyMember : player.getParty().getMembers())
+						for (Player partyMember : player.getParty().getMembers())
 						{
 							exitInstance(partyMember);
 						}
@@ -433,7 +433,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet, Skill skill)
 	{
 		if (!npc.isBusy() && (npc.getCurrentHp() < (npc.getMaxHp() / 10)))
 		{
@@ -491,7 +491,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -519,7 +519,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if ((npc.getId() == BOX) && ((skill.getId() == 5376) || (skill.getId() == 5758)) && !npc.isDead())
 		{
@@ -529,7 +529,7 @@ public abstract class Chamber extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		getQuestState(player, true);
@@ -601,7 +601,7 @@ public abstract class Chamber extends AbstractInstance
 			{
 				for (int objId : inst.getPlayers())
 				{
-					final PlayerInstance pl = World.getInstance().getPlayer(objId);
+					final Player pl = World.getInstance().getPlayer(objId);
 					if ((pl != null) && pl.isOnline())
 					{
 						final Party party = _world.getParameters().getObject("PartyInside", Party.class);

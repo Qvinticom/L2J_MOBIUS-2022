@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.fishing;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -52,10 +52,10 @@ public class ExFishingEnd implements IClientOutgoingPacket
 		ERROR;
 	}
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final FishingEndReason _reason;
 	
-	public ExFishingEnd(PlayerInstance player, FishingEndReason reason)
+	public ExFishingEnd(Player player, FishingEndReason reason)
 	{
 		_player = player;
 		_reason = reason;

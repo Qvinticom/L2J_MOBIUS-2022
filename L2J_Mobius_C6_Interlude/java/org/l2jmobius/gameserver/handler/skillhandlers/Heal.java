@@ -25,11 +25,11 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -47,10 +47,10 @@ public class Heal implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		PlayerInstance player = null;
-		if (creature instanceof PlayerInstance)
+		Player player = null;
+		if (creature instanceof Player)
 		{
-			player = (PlayerInstance) creature;
+			player = (Player) creature;
 		}
 		
 		final boolean bss = creature.checkBss();
@@ -85,13 +85,13 @@ public class Heal implements ISkillHandler
 			}
 			
 			// We should not heal walls and door.
-			if (target instanceof DoorInstance)
+			if (target instanceof Door)
 			{
 				continue;
 			}
 			
 			// We should not heal siege flags.
-			if ((target instanceof NpcInstance) && (((NpcInstance) target).getNpcId() == 35062))
+			if ((target instanceof Npc) && (((Npc) target).getNpcId() == 35062))
 			{
 				creature.getActingPlayer().sendMessage("You cannot heal siege flags!");
 				continue;
@@ -100,7 +100,7 @@ public class Heal implements ISkillHandler
 			// Player holding a cursed weapon can't be healed and can't heal.
 			if (target != creature)
 			{
-				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
+				if ((target instanceof Player) && ((Player) target).isCursedWeaponEquiped())
 				{
 					continue;
 				}
@@ -111,7 +111,7 @@ public class Heal implements ISkillHandler
 			}
 			
 			// Fixed about Infinity Rod skill on Raid Boss and BigBoss.
-			if ((skill.getId() == 3598) && ((target instanceof RaidBossInstance) || (target instanceof GrandBossInstance)))
+			if ((skill.getId() == 3598) && ((target instanceof RaidBoss) || (target instanceof GrandBoss)))
 			{
 				continue;
 			}
@@ -145,13 +145,13 @@ public class Heal implements ISkillHandler
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 			
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
 				if (skill.getId() == 4051)
 				{
 					target.sendPacket(new SystemMessage(SystemMessageId.REJUVENATING_HP));
 				}
-				else if ((creature instanceof PlayerInstance) && (creature != target))
+				else if ((creature instanceof Player) && (creature != target))
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_S1);
 					sm.addString(creature.getName());

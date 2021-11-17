@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -54,7 +54,7 @@ public class ExPledgeContributionRank implements IClientOutgoingPacket
 		{
 			if (member.isOnline())
 			{
-				final PlayerInstance player = member.getPlayerInstance();
+				final Player player = member.getPlayer();
 				packet.writeD(order++); // Order?
 				packet.writeS(String.format("%1$-" + 24 + "s", player.getName()));
 				packet.writeD(player.getPledgeType());

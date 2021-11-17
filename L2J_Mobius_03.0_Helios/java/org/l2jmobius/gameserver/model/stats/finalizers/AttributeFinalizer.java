@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
@@ -50,7 +50,7 @@ public class AttributeFinalizer implements IStatFunction
 		{
 			if (_isWeapon)
 			{
-				final ItemInstance weapon = creature.getActiveWeaponInstance();
+				final Item weapon = creature.getActiveWeaponInstance();
 				if (weapon != null)
 				{
 					final AttributeHolder weaponInstanceHolder = weapon.getAttribute(_type);
@@ -71,7 +71,7 @@ public class AttributeFinalizer implements IStatFunction
 				final Inventory inventory = creature.getInventory();
 				if (inventory != null)
 				{
-					for (ItemInstance item : inventory.getPaperdollItems(ItemInstance::isArmor))
+					for (Item item : inventory.getPaperdollItems(Item::isArmor))
 					{
 						final AttributeHolder weaponInstanceHolder = item.getAttribute(_type);
 						if (weaponInstanceHolder != null)

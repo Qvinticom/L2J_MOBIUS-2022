@@ -22,11 +22,11 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -197,7 +197,7 @@ public class SystemMessage implements IClientOutgoingPacket
 		return this;
 	}
 	
-	public SystemMessage addPcName(PlayerInstance pc)
+	public SystemMessage addPcName(Player pc)
 	{
 		return addString(pc.getAppearance().getVisibleName());
 	}
@@ -238,19 +238,19 @@ public class SystemMessage implements IClientOutgoingPacket
 		return this;
 	}
 	
-	public SystemMessage addItemName(ItemInstance item)
+	public SystemMessage addItemName(Item item)
 	{
 		return addItemName(item.getId());
 	}
 	
-	public SystemMessage addItemName(Item item)
+	public SystemMessage addItemName(ItemTemplate item)
 	{
 		return addItemName(item.getId());
 	}
 	
 	public SystemMessage addItemName(int id)
 	{
-		final Item item = ItemTable.getInstance().getTemplate(id);
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
 		if (item.getDisplayId() != id)
 		{
 			return addString(item.getName());

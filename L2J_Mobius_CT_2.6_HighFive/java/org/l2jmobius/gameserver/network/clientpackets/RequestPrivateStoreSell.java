@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -70,7 +70,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -88,13 +88,13 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance object = World.getInstance().getPlayer(_storePlayerId);
+		final Player object = World.getInstance().getPlayer(_storePlayerId);
 		if (object == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance storePlayer = object;
+		final Player storePlayer = object;
 		if (!player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
 		{
 			return;

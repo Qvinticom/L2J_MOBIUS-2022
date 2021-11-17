@@ -18,7 +18,7 @@ package ai.areas.Rune.Roiental;
 
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 import ai.AbstractNpcAI;
@@ -48,7 +48,7 @@ public class Roiental extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (event.equals("enterGoldberg"))
@@ -112,10 +112,10 @@ public class Roiental extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
-		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+		final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
 		if ((instance != null) && ((instance.getTemplateId() == TOH_GB_TEMPLATE_ID)))
 		{
 			htmltext = "Roiental-02a.html";

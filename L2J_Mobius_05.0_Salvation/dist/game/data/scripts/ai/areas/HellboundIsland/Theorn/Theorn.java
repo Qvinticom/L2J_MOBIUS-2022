@@ -19,7 +19,7 @@ package ai.areas.HellboundIsland.Theorn;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -60,7 +60,7 @@ public class Theorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -181,7 +181,7 @@ public class Theorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (player.getEffectList().getBuffInfoBySkillId(REWARD_BUFF_X2) != null)
 		{
@@ -206,7 +206,7 @@ public class Theorn extends AbstractNpcAI
 		return "33897.html";
 	}
 	
-	private String tryLuck(Npc npc, PlayerInstance player, Skill skill, boolean isLight)
+	private String tryLuck(Npc npc, Player player, Skill skill, boolean isLight)
 	{
 		if ((player.getSp() < 500000) || (player.getAdena() < 100000))
 		{

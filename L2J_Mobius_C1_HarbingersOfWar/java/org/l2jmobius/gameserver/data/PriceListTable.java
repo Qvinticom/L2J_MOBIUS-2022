@@ -24,7 +24,7 @@ import java.io.LineNumberReader;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.templates.ItemTemplate;
 
 public class PriceListTable
 {
@@ -64,7 +64,7 @@ public class PriceListTable
 					final StringTokenizer st = new StringTokenizer(line, ";");
 					final int itemId = Integer.parseInt(st.nextToken().toString());
 					final int price = Integer.parseInt(st.nextToken().toString());
-					final Item temp = ItemTable.getInstance().getTemplate(itemId);
+					final ItemTemplate temp = ItemTable.getInstance().getTemplate(itemId);
 					temp.setItemId(itemId);
 					temp.setReferencePrice(price);
 					++i;

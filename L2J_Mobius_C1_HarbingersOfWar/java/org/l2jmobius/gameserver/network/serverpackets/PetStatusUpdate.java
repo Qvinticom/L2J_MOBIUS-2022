@@ -17,13 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 
 public class PetStatusUpdate extends ServerBasePacket
 {
-	private final PetInstance _pet;
+	private final Pet _pet;
 	
-	public PetStatusUpdate(PetInstance pet)
+	public PetStatusUpdate(Pet pet)
 	{
 		_pet = pet;
 	}

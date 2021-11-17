@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 
 /**
@@ -199,7 +199,7 @@ public class OlympiadGameManager implements Runnable
 		return _tasks.length;
 	}
 	
-	public void notifyCompetitorDamage(PlayerInstance player, int damage)
+	public void notifyCompetitorDamage(Player player, int damage)
 	{
 		if (player == null)
 		{

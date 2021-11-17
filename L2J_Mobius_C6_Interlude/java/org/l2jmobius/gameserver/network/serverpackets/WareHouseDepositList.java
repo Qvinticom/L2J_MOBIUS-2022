@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -35,18 +35,18 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 4; // not sure
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _playerAdena;
-	private final List<ItemInstance> _items;
+	private final List<Item> _items;
 	private final int _whType;
 	
-	public WareHouseDepositList(PlayerInstance player, int type)
+	public WareHouseDepositList(Player player, int type)
 	{
 		_player = player;
 		_whType = type;
 		_playerAdena = _player.getAdena();
 		_items = new ArrayList<>();
-		for (ItemInstance temp : _player.getInventory().getAvailableItems(true))
+		for (Item temp : _player.getInventory().getAvailableItems(true))
 		{
 			_items.add(temp);
 		}
@@ -54,7 +54,7 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 		// augmented and shadow items can be stored in private wh
 		if (_whType == PRIVATE)
 		{
-			for (ItemInstance temp : player.getInventory().getItems())
+			for (Item temp : player.getInventory().getItems())
 			{
 				if ((temp != null) && !temp.isEquipped() && (temp.isShadowItem() || temp.isAugmented()))
 				{
@@ -75,7 +75,7 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 		packet.writeD(_playerAdena);
 		packet.writeH(_items.size());
 		
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			packet.writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
 			packet.writeD(item.getObjectId()); // unconfirmed, works

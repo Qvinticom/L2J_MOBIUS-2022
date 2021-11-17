@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -41,7 +41,7 @@ public class AdminShop implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_buy"))
 		{
@@ -67,7 +67,7 @@ public class AdminShop implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleBuyRequest(PlayerInstance activeChar, String command)
+	private void handleBuyRequest(Player activeChar, String command)
 	{
 		int val = -1;
 		

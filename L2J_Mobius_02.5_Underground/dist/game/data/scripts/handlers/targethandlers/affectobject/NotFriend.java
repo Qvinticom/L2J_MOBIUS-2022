@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -44,8 +44,8 @@ public class NotFriend implements IAffectObjectHandler
 			return false;
 		}
 		
-		final PlayerInstance player = creature.getActingPlayer();
-		final PlayerInstance targetPlayer = target.getActingPlayer();
+		final Player player = creature.getActingPlayer();
+		final Player targetPlayer = target.getActingPlayer();
 		
 		if ((player != null) && (targetPlayer != null))
 		{

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.FakePlayerChatHolder;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -78,17 +78,17 @@ public class FakePlayerChatManager implements IXmlReader
 		}));
 	}
 	
-	public void manageChat(PlayerInstance player, String fpcName, String message)
+	public void manageChat(Player player, String fpcName, String message)
 	{
 		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
 	}
 	
-	public void manageChat(PlayerInstance player, String fpcName, String message, int minDelay, int maxDelay)
+	public void manageChat(Player player, String fpcName, String message, int minDelay, int maxDelay)
 	{
 		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
 	}
 	
-	private void manageResponce(PlayerInstance player, String fpcName, String message)
+	private void manageResponce(Player player, String fpcName, String message)
 	{
 		if (player == null)
 		{
@@ -171,7 +171,7 @@ public class FakePlayerChatManager implements IXmlReader
 		}
 	}
 	
-	public void sendChat(PlayerInstance player, String fpcName, String message)
+	public void sendChat(Player player, String fpcName, String message)
 	{
 		final Spawn spawn = SpawnTable.getInstance().getAnySpawn(FakePlayerData.getInstance().getNpcIdByName(fpcName));
 		if (spawn != null)

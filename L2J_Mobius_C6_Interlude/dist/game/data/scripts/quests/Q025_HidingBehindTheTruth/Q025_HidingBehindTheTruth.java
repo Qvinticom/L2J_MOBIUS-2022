@@ -19,8 +19,8 @@ package quests.Q025_HidingBehindTheTruth;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -62,7 +62,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
@@ -120,7 +120,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 				if (qs.getInt("step") == 0)
 				{
 					qs.set("step", "1");
-					final NpcInstance triol = qs.addSpawn(TRIOL, 59712, -47568, -2712, 300000);
+					final Npc triol = qs.addSpawn(TRIOL, 59712, -47568, -2712, 300000);
 					triol.broadcastPacket(new CreatureSay(triol.getObjectId(), ChatType.GENERAL, triol.getName(), "That box was sealed by my master. Don't touch it!"));
 					triol.setRunning();
 					((Attackable) triol).addDamageHate(player, 0, 999);
@@ -217,7 +217,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState qs = player.getQuestState(getName());
@@ -424,7 +424,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)

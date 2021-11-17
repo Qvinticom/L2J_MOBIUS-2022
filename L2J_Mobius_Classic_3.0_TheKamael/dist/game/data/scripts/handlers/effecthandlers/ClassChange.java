@@ -22,9 +22,9 @@ import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -56,7 +56,7 @@ public class ClassChange extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayer())
 		{
@@ -66,7 +66,7 @@ public class ClassChange extends AbstractEffect
 		// Executing later otherwise interrupted exception during storeCharBase.
 		ThreadPool.schedule(() ->
 		{
-			final PlayerInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			if (player.isTransformed() || player.isSubclassLocked() || player.isAffectedBySkill(IDENTITY_CRISIS_SKILL_ID))
 			{
 				player.sendMessage("You cannot switch your class right now!");
@@ -101,7 +101,7 @@ public class ClassChange extends AbstractEffect
 			{
 				// Delete party window for other party members
 				player.getParty().broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
-				for (PlayerInstance member : player.getParty().getMembers())
+				for (Player member : player.getParty().getMembers())
 				{
 					// And re-add
 					if (member != player)
@@ -138,7 +138,7 @@ public class ClassChange extends AbstractEffect
 				}
 				else
 				{
-					final ItemInstance knownItem = player.getInventory().getItemByObjectId(shortcut.getId());
+					final Item knownItem = player.getInventory().getItemByObjectId(shortcut.getId());
 					if (knownItem != null)
 					{
 						if (knownItem.isPotion())

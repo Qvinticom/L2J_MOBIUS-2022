@@ -19,7 +19,7 @@ package ai.others.BlackMarketeerOfMammon;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -42,7 +42,7 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		if (event.equals("31092-01.html") || event.equals("31092-05.html"))

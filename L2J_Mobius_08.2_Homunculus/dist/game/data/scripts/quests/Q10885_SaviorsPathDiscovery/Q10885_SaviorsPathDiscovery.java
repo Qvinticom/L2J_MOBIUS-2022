@@ -18,7 +18,7 @@ package quests.Q10885_SaviorsPathDiscovery;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -62,7 +62,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -114,7 +114,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -171,7 +171,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((event.getMarkId() == getId()) && canStartQuest(player))
 		{
 			final String html = getHtm(player, "Message.html");
@@ -198,7 +198,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
@@ -212,7 +212,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -227,7 +227,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	}
 	
 	@Override
-	public void onQuestAborted(PlayerInstance player)
+	public void onQuestAborted(Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		qs.startQuest();

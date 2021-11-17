@@ -24,11 +24,11 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ManorManager;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -78,19 +78,19 @@ public class RequestProcureCropList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		WorldObject target = player.getTarget();
-		if (!(target instanceof ManorManagerInstance))
+		if (!(target instanceof ManorManager))
 		{
 			target = player.getLastFolkNPC();
 		}
 		
-		if (!player.isGM() && ((target == null) || !(target instanceof ManorManagerInstance) || !player.isInsideRadius2D(target, NpcInstance.INTERACTION_DISTANCE)))
+		if (!player.isGM() && ((target == null) || !(target instanceof ManorManager) || !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)))
 		{
 			return;
 		}
@@ -101,7 +101,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			return;
 		}
 		
-		final ManorManagerInstance manorManager = (ManorManagerInstance) target;
+		final ManorManager manorManager = (ManorManager) target;
 		final int currentManorId = manorManager.getCastle().getCastleId();
 		
 		// Calculate summary values
@@ -133,7 +133,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			{
 				final CropProcure crop = CastleManager.getInstance().getCastleById(manorId).getCrop(itemId, CastleManorManager.PERIOD_CURRENT);
 				final int rewardItemId = ManorSeedData.getInstance().getRewardItem(itemId, crop.getReward());
-				final Item template = ItemTable.getInstance().getTemplate(rewardItemId);
+				final ItemTemplate template = ItemTable.getInstance().getTemplate(rewardItemId);
 				weight += count * template.getWeight();
 				if (!template.isStackable())
 				{
@@ -236,12 +236,12 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			}
 			
 			// Add item to Inventory and adjust update packet
-			ItemInstance itemDel = null;
-			ItemInstance itemAdd = null;
+			Item itemDel = null;
+			Item itemAdd = null;
 			if (player.getInventory().getItemByObjectId(objId) != null)
 			{
 				// check if player have correct items count
-				final ItemInstance item = player.getInventory().getItemByObjectId(objId);
+				final Item item = player.getInventory().getItemByObjectId(objId);
 				if (item.getCount() < count)
 				{
 					continue;

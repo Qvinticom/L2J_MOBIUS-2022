@@ -20,15 +20,15 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class EffectSignetAntiSummon extends Effect
 {
-	private EffectPointInstance _actor;
+	private EffectPoint _actor;
 	
 	public EffectSignetAntiSummon(Env env, EffectTemplate template)
 	{
@@ -44,7 +44,7 @@ public class EffectSignetAntiSummon extends Effect
 	@Override
 	public void onStart()
 	{
-		_actor = (EffectPointInstance) getEffected();
+		_actor = (EffectPoint) getEffected();
 	}
 	
 	@Override
@@ -64,7 +64,7 @@ public class EffectSignetAntiSummon extends Effect
 			
 			if (creature instanceof Playable)
 			{
-				final PlayerInstance owner = (PlayerInstance) creature;
+				final Player owner = (Player) creature;
 				if (owner.getPet() != null)
 				{
 					if (mpConsume > getEffector().getStatus().getCurrentMp())

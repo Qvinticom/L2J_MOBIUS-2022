@@ -18,7 +18,7 @@ package events.HuntForSanta;
 
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -55,7 +55,7 @@ public class HuntForSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -114,23 +114,23 @@ public class HuntForSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34008.htm";
 	}
 	
-	private String applyBuff(Npc npc, PlayerInstance player, Skill skill)
+	private String applyBuff(Npc npc, Player player, Skill skill)
 	{
 		removeBuffs(player);
 		SkillCaster.triggerCast(npc, player, skill);
 		return "34008-2.htm";
 	}
 	
-	private String applyAllBuffs(Npc npc, PlayerInstance player)
+	private String applyAllBuffs(Npc npc, Player player)
 	{
 		if ((player.getParty() != null) && (player.getParty().getLeader() == player) && ((player.getParty().getMemberCount() > 6) || (player.getParty().getRaceCount() > 2)))
 		{
-			for (PlayerInstance member : player.getParty().getMembers())
+			for (Player member : player.getParty().getMembers())
 			{
 				if (Util.calculateDistance(npc, member, false, false) < 500)
 				{
@@ -149,7 +149,7 @@ public class HuntForSanta extends LongTimeEvent
 		return "34008-4.htm";
 	}
 	
-	private void removeBuffs(PlayerInstance player)
+	private void removeBuffs(Player player)
 	{
 		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF_STOCKING.getSkill());
 		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF_TREE.getSkill());
@@ -163,7 +163,7 @@ public class HuntForSanta extends LongTimeEvent
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final BuffInfo buffStocking = player.getEffectList().getBuffInfoBySkillId(BUFF_STOCKING.getSkillId());
 		final BuffInfo buffTree = player.getEffectList().getBuffInfoBySkillId(BUFF_TREE.getSkillId());
 		final BuffInfo buffSnowman = player.getEffectList().getBuffInfoBySkillId(BUFF_SNOWMAN.getSkillId());

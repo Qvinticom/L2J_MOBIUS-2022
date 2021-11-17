@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -51,7 +51,7 @@ public class ChangeHairColor extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final Player player = info.getEffector().getActingPlayer();
 		player.getAppearance().setHairColor(_value);
 		player.broadcastUserInfo();
 	}

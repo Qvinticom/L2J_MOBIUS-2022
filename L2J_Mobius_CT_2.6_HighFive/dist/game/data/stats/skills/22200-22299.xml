@@ -752,7 +752,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="109">
-			<target npcType="ChestInstance" />
+			<target npcType="Chest" />
 		</cond>
 		<for>
 			<effect name="OpenChest" />

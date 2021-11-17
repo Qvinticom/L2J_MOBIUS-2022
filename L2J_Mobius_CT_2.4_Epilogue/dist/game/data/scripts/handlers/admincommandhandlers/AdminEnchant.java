@@ -21,9 +21,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -57,7 +57,7 @@ public class AdminEnchant implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_enchant"))
 		{
@@ -168,7 +168,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void setEnchant(PlayerInstance activeChar, int ench, int armorType)
+	private void setEnchant(Player activeChar, int ench, int armorType)
 	{
 		// get the target
 		WorldObject target = activeChar.getTarget();
@@ -176,10 +176,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		{
 			target = activeChar;
 		}
-		PlayerInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -189,10 +189,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
-		ItemInstance itemInstance = null;
+		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		final ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		final Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -219,7 +219,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "enchant.htm");
 	}

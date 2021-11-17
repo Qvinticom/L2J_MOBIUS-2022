@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureHpChange;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -60,7 +60,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates.<br>
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates.<br>
 	 * Players who must be informed are players that target this Creature.<br>
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
 	 * <br>
@@ -85,7 +85,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates.<br>
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates.<br>
 	 * Players who must be informed are players that target this Creature.<br>
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.<br>
 	 * <br>
@@ -105,7 +105,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates.<br>
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates.<br>
 	 * Players who must be informed are players that target this Creature.<br>
 	 * When a RegenTask is in progress sever just need to go through this list to send Server->Client packet StatusUpdate.
 	 * @return The list of Creature to inform or null if empty
@@ -155,7 +155,7 @@ public class CreatureStatus
 		
 		if (attacker != null)
 		{
-			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final Player attackerPlayer = attacker.getActingPlayer();
 			if ((attackerPlayer != null) && attackerPlayer.isGM() && !attackerPlayer.getAccessLevel().canGiveDamage())
 			{
 				return;
@@ -307,7 +307,7 @@ public class CreatureStatus
 		
 		final boolean hpWasChanged = oldHp != _currentHp;
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (hpWasChanged)
 		{
 			if (broadcastPacket)
@@ -384,7 +384,7 @@ public class CreatureStatus
 		
 		final boolean mpWasChanged = currentMp != _currentMp;
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (mpWasChanged && broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();

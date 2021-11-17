@@ -17,8 +17,8 @@
 package ai.others;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -39,7 +39,7 @@ public class ScarletStakatoNoble extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (Rnd.get(100) < 20)
 		{

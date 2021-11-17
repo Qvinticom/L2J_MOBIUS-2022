@@ -17,11 +17,11 @@
 package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 
 public class SiegeFlagStatus extends NpcStatus
 {
-	public SiegeFlagStatus(SiegeFlagInstance activeChar)
+	public SiegeFlagStatus(SiegeFlag activeChar)
 	{
 		super(activeChar);
 	}
@@ -43,8 +43,8 @@ public class SiegeFlagStatus extends NpcStatus
 	}
 	
 	@Override
-	public SiegeFlagInstance getActiveChar()
+	public SiegeFlag getActiveChar()
 	{
-		return (SiegeFlagInstance) super.getActiveChar();
+		return (SiegeFlag) super.getActiveChar();
 	}
 }

@@ -20,9 +20,9 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -61,11 +61,11 @@ public class Chests extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public String onSkillUse(Npc npc, Player caster, Skill skill)
 	{
 		// if this has already been interacted, no further ai decisions are needed
 		// if it's the first interaction, check if this is a box or mimic
-		final ChestInstance chest = (ChestInstance) npc;
+		final Chest chest = (Chest) npc;
 		if (!chest.isInteracted())
 		{
 			chest.setInteracted();
@@ -108,9 +108,9 @@ public class Chests extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
-		final ChestInstance chest = (ChestInstance) npc;
+		final Chest chest = (Chest) npc;
 		if (!chest.isInteracted())
 		{
 			chest.setInteracted();

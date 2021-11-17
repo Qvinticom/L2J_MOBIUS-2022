@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author GodKratos
@@ -36,7 +36,7 @@ class OlympiadStadium
 	private static DoorData _doorTable;
 	private final int[] _coords = new int[3];
 	private final int[] _doors = new int[2];
-	private final List<PlayerInstance> _spectators;
+	private final List<Player> _spectators;
 	
 	public boolean isFreeToUse()
 	{
@@ -101,19 +101,19 @@ class OlympiadStadium
 		}
 	}
 	
-	protected void addSpectator(int id, PlayerInstance spec, boolean storeCoords)
+	protected void addSpectator(int id, Player spec, boolean storeCoords)
 	{
 		final Location loc = new Location(getCoordinates()[0] + 1200, getCoordinates()[1], getCoordinates()[2]);
 		spec.enterOlympiadObserverMode(loc, id, storeCoords);
 		_spectators.add(spec);
 	}
 	
-	protected List<PlayerInstance> getSpectators()
+	protected List<Player> getSpectators()
 	{
 		return _spectators;
 	}
 	
-	protected void removeSpectator(PlayerInstance spec)
+	protected void removeSpectator(Player spec)
 	{
 		if ((_spectators != null) && _spectators.contains(spec))
 		{

@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -38,14 +38,14 @@ public class AdminTargetSay implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_targetsay"))
 		{
 			try
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj instanceof StaticObjectInstance) || !obj.isCreature())
+				if ((obj instanceof StaticObject) || !obj.isCreature())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;

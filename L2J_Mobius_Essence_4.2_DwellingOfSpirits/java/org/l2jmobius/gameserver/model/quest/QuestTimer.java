@@ -20,18 +20,18 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class QuestTimer
 {
 	protected final String _name;
 	protected final Quest _quest;
 	protected final Npc _npc;
-	protected final PlayerInstance _player;
+	protected final Player _player;
 	protected final boolean _isRepeating;
 	protected ScheduledFuture<?> _scheduler;
 	
-	public QuestTimer(Quest quest, String name, long time, Npc npc, PlayerInstance player, boolean repeating)
+	public QuestTimer(Quest quest, String name, long time, Npc npc, Player player, boolean repeating)
 	{
 		_quest = quest;
 		_name = name;
@@ -92,7 +92,7 @@ public class QuestTimer
 	 * @param player : Player instance attached to the desired timer (null if no player attached)
 	 * @return boolean
 	 */
-	public boolean equals(Quest quest, String name, Npc npc, PlayerInstance player)
+	public boolean equals(Quest quest, String name, Npc npc, Player player)
 	{
 		if ((quest == null) || (quest != _quest))
 		{
@@ -127,7 +127,7 @@ public class QuestTimer
 		return _npc;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

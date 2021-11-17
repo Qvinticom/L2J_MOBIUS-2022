@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
@@ -197,7 +197,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.contains("enterInstance"))
 		{
@@ -280,7 +280,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -297,7 +297,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -334,7 +334,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 						captive.broadcastInfo();
 					}
 				}
-				for (PlayerInstance member : world.getPlayers())
+				for (Player member : world.getPlayers())
 				{
 					giveItems(member, world.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}
@@ -346,7 +346,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (getRandom(10) < 1)
 		{

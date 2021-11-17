@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.SSQStatus;
 
 /**
@@ -35,16 +35,16 @@ public class SevenSignsRecord implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		PlayerInstance player;
-		if (playable instanceof PlayerInstance)
+		Player player;
+		if (playable instanceof Player)
 		{
-			player = (PlayerInstance) playable;
+			player = (Player) playable;
 		}
-		else if (playable instanceof PetInstance)
+		else if (playable instanceof Pet)
 		{
-			player = ((PetInstance) playable).getOwner();
+			player = ((Pet) playable).getOwner();
 		}
 		else
 		{

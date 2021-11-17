@@ -19,7 +19,7 @@ package quests.Q00129_PailakaDevilsLegacy;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -68,7 +68,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -116,7 +116,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((npc.getId() != ADVENTURER2) || (qs == null) || !qs.isCompleted())
@@ -127,7 +127,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -233,7 +233,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 				}
 				else
 				{
-					final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
+					final Instance inst = InstanceManager.getInstance().getPlayer(player, true);
 					if (inst != null)
 					{
 						inst.finishInstance();
@@ -252,7 +252,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted())

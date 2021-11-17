@@ -19,8 +19,8 @@ package ai.bosses;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -49,13 +49,13 @@ public class DrChaos extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
 			case "1":
 			{
-				final NpcInstance strangeMachine = findTemplate(STRANGE_MACHINE);
+				final Npc strangeMachine = findTemplate(STRANGE_MACHINE);
 				if (strangeMachine != null)
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, strangeMachine);
@@ -99,7 +99,7 @@ public class DrChaos extends Quest
 				npc.teleToLocation(-113091, -243942, -15536);
 				if (_golemSpawned == 0)
 				{
-					final NpcInstance golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);
+					final Npc golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);
 					_golemSpawned = 1;
 					startQuestTimer("6", 1000, golem, player);
 					player.sendPacket(new PlaySound(1, "Rm03_A"));
@@ -116,7 +116,7 @@ public class DrChaos extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		player.setTarget(null);
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96323, -110914, -3328));
@@ -124,9 +124,9 @@ public class DrChaos extends Quest
 		return null;
 	}
 	
-	private NpcInstance findTemplate(int npcId)
+	private Npc findTemplate(int npcId)
 	{
-		NpcInstance npcInstance = null;
+		Npc npcInstance = null;
 		for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
 		{
 			if ((spawn != null) && (spawn.getNpcId() == npcId))

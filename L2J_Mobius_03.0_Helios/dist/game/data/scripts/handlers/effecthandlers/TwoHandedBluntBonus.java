@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 public class TwoHandedBluntBonus extends AbstractEffect
 {
 	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.BLUNT.mask());
-	private static final Condition _slotCondition = new ConditionUsingSlotType(Item.SLOT_LR_HAND);
+	private static final Condition _slotCondition = new ConditionUsingSlotType(ItemTemplate.SLOT_LR_HAND);
 	
 	private final double _pAtkAmount;
 	private final StatModifierType _pAtkMode;

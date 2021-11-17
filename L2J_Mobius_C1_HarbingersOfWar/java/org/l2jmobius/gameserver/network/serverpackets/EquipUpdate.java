@@ -17,15 +17,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.templates.ItemTemplate;
 
 public class EquipUpdate extends ServerBasePacket
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	private final int _change;
 	
-	public EquipUpdate(ItemInstance item, int change)
+	public EquipUpdate(Item item, int change)
 	{
 		_item = item;
 		_change = change;
@@ -40,72 +40,72 @@ public class EquipUpdate extends ServerBasePacket
 		writeD(_item.getObjectId());
 		switch (_item.getItem().getBodyPart())
 		{
-			case Item.SLOT_L_EAR:
+			case ItemTemplate.SLOT_L_EAR:
 			{
 				bodypart = 1;
 				break;
 			}
-			case Item.SLOT_R_EAR:
+			case ItemTemplate.SLOT_R_EAR:
 			{
 				bodypart = 2;
 				break;
 			}
-			case Item.SLOT_NECK:
+			case ItemTemplate.SLOT_NECK:
 			{
 				bodypart = 3;
 				break;
 			}
-			case Item.SLOT_R_FINGER:
+			case ItemTemplate.SLOT_R_FINGER:
 			{
 				bodypart = 4;
 				break;
 			}
-			case Item.SLOT_L_FINGER:
+			case ItemTemplate.SLOT_L_FINGER:
 			{
 				bodypart = 5;
 				break;
 			}
-			case Item.SLOT_HEAD:
+			case ItemTemplate.SLOT_HEAD:
 			{
 				bodypart = 6;
 				break;
 			}
-			case Item.SLOT_R_HAND:
+			case ItemTemplate.SLOT_R_HAND:
 			{
 				bodypart = 7;
 				break;
 			}
-			case Item.SLOT_L_HAND:
+			case ItemTemplate.SLOT_L_HAND:
 			{
 				bodypart = 8;
 				break;
 			}
-			case Item.SLOT_GLOVES:
+			case ItemTemplate.SLOT_GLOVES:
 			{
 				bodypart = 9;
 				break;
 			}
-			case Item.SLOT_CHEST:
+			case ItemTemplate.SLOT_CHEST:
 			{
 				bodypart = 10;
 				break;
 			}
-			case Item.SLOT_LEGS:
+			case ItemTemplate.SLOT_LEGS:
 			{
 				bodypart = 11;
 				break;
 			}
-			case Item.SLOT_FEET:
+			case ItemTemplate.SLOT_FEET:
 			{
 				bodypart = 12;
 				break;
 			}
-			case Item.SLOT_BACK:
+			case ItemTemplate.SLOT_BACK:
 			{
 				bodypart = 13;
 				break;
 			}
-			case Item.SLOT_LR_HAND:
+			case ItemTemplate.SLOT_LR_HAND:
 			{
 				bodypart = 14;
 			}

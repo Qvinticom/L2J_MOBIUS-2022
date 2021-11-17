@@ -19,7 +19,7 @@ package ai.others.Dorian;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -48,7 +48,7 @@ public class Dorian extends AbstractNpcAI
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance pl = creature.getActingPlayer();
+			final Player pl = creature.getActingPlayer();
 			final QuestState qs = pl.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
 			if ((qs != null) && qs.isCond(3))
 			{

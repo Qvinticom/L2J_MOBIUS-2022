@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class EnchantSkillLearn
 {
@@ -104,7 +104,7 @@ public class EnchantSkillLearn
 		return exp;
 	}
 	
-	public byte getRate(PlayerInstance ply)
+	public byte getRate(Player ply)
 	{
 		byte result;
 		switch (ply.getLevel())

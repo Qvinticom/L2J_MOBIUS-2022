@@ -26,11 +26,11 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.model.holders.UniqueItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
@@ -76,7 +76,7 @@ public class RequestSellItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -102,7 +102,7 @@ public class RequestSellItem implements IClientIncomingPacket
 		}
 		
 		final WorldObject target = player.getTarget();
-		MerchantInstance merchant = null;
+		Merchant merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
 			if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
@@ -110,9 +110,9 @@ public class RequestSellItem implements IClientIncomingPacket
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			if (target instanceof MerchantInstance)
+			if (target instanceof Merchant)
 			{
-				merchant = (MerchantInstance) target;
+				merchant = (Merchant) target;
 			}
 			else
 			{
@@ -144,7 +144,7 @@ public class RequestSellItem implements IClientIncomingPacket
 		// Proceed the sell
 		for (UniqueItemHolder i : _items)
 		{
-			final ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
+			final Item item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
 			if ((item == null) || (!item.isSellable()))
 			{
 				continue;

@@ -24,7 +24,7 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -132,7 +132,7 @@ public class Q00663_SeductiveWhispers extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -215,7 +215,7 @@ public class Q00663_SeductiveWhispers extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
@@ -723,9 +723,9 @@ public class Q00663_SeductiveWhispers extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final List<PlayerInstance> players = new LinkedList<>();
+		final List<Player> players = new LinkedList<>();
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && (qs.getMemoState() >= 1) && (qs.getMemoState() <= 4))
 		{
@@ -735,7 +735,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		
 		if (killer.isInParty())
 		{
-			for (PlayerInstance partyMember : killer.getParty().getMembers())
+			for (Player partyMember : killer.getParty().getMembers())
 			{
 				final QuestState partyMemberQuestState = getQuestState(partyMember, false);
 				if ((partyMemberQuestState != null) && partyMemberQuestState.isStarted() && (partyMemberQuestState.getMemoState() >= 1) && (partyMemberQuestState.getMemoState() <= 4))
@@ -747,7 +747,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		
 		if (!players.isEmpty())
 		{
-			final PlayerInstance rewardedPlayer = players.get(getRandom(players.size()));
+			final Player rewardedPlayer = players.get(getRandom(players.size()));
 			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, rewardedPlayer, false))
 			{
 				final int rnd = getRandom(1000);
@@ -772,7 +772,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private String getHtml(PlayerInstance player, String htmlName, int card1pic, int card2pic, int winCount, int card1)
+	private String getHtml(Player player, String htmlName, int card1pic, int card2pic, int winCount, int card1)
 	{
 		String html = getHtm(player, htmlName);
 		html = html.replace("<?card1pic?>", Integer.toString(card1pic));

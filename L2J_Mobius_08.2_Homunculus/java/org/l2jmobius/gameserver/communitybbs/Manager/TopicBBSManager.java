@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.communitybbs.BB.Post;
 import org.l2jmobius.gameserver.communitybbs.BB.Topic;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class TopicBBSManager extends BaseBBSManager
 {
@@ -75,7 +75,7 @@ public class TopicBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player)
+	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player player)
 	{
 		if (ar1.equals("crea"))
 		{
@@ -129,7 +129,7 @@ public class TopicBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parsecmd(String command, PlayerInstance player)
+	public void parsecmd(String command, Player player)
 	{
 		if (command.equals("_bbsmemo"))
 		{
@@ -191,7 +191,7 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void showNewTopic(Forum forum, PlayerInstance player, int idf)
+	private void showNewTopic(Forum forum, Player player, int idf)
 	{
 		if (forum == null)
 		{
@@ -207,14 +207,14 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void showMemoNewTopics(Forum forum, PlayerInstance player)
+	private void showMemoNewTopics(Forum forum, Player player)
 	{
 		final String html = "<html><body><br><br><table border=0 width=610><tr><td width=10></td><td width=600 align=left><a action=\"bypass _bbshome\">HOME</a>&nbsp;>&nbsp;<a action=\"bypass _bbsmemo\">Memo Form</a></td></tr></table><img src=\"L2UI.squareblank\" width=\"1\" height=\"10\"><center><table border=0 cellspacing=0 cellpadding=0><tr><td width=610><img src=\"sek.cbui355\" width=\"610\" height=\"1\"><br1><img src=\"sek.cbui355\" width=\"610\" height=\"1\"></td></tr></table><table fixwidth=610 border=0 cellspacing=0 cellpadding=0><tr><td><img src=\"l2ui.mini_logo\" width=5 height=20></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=1></td><td align=center FIXWIDTH=60 height=29>&$413;</td><td FIXWIDTH=540><edit var = \"Title\" width=540 height=13></td><td><img src=\"l2ui.mini_logo\" width=5 height=1></td></tr></table><table fixwidth=610 border=0 cellspacing=0 cellpadding=0><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=1></td><td align=center FIXWIDTH=60 height=29 valign=top>&$427;</td><td align=center FIXWIDTH=540><MultiEdit var =\"Content\" width=535 height=313></td><td><img src=\"l2ui.mini_logo\" width=5 height=1></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr></table><table fixwidth=610 border=0 cellspacing=0 cellpadding=0><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=1></td><td align=center FIXWIDTH=60 height=29>&nbsp;</td><td align=center FIXWIDTH=70><button value=\"&$140;\" action=\"Write Topic crea " + forum.getID() + " Title Content Title\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td><td align=center FIXWIDTH=70><button value = \"&$141;\" action=\"bypass _bbsmemo\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"> </td><td align=center FIXWIDTH=400>&nbsp;</td><td><img src=\"l2ui.mini_logo\" width=5 height=1></td></tr></table></center></body></html>";
 		send1001(html, player);
 		send1002(player);
 	}
 	
-	private void showTopics(Forum forum, PlayerInstance player, int index, int idf)
+	private void showTopics(Forum forum, Player player, int index, int idf)
 	{
 		if (forum == null)
 		{
@@ -230,7 +230,7 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void showMemoTopics(Forum forum, PlayerInstance player, int index)
+	private void showMemoTopics(Forum forum, Player player, int index)
 	{
 		forum.vload();
 		final StringBuilder html = new StringBuilder(2000);

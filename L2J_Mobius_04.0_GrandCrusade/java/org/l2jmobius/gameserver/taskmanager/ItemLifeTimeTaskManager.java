@@ -22,14 +22,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Mobius
  */
 public class ItemLifeTimeTaskManager implements Runnable
 {
-	private static final Map<ItemInstance, Long> ITEMS = new ConcurrentHashMap<>();
+	private static final Map<Item, Long> ITEMS = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
 	protected ItemLifeTimeTaskManager()
@@ -47,11 +47,11 @@ public class ItemLifeTimeTaskManager implements Runnable
 		_working = true;
 		
 		final long currentTime = Chronos.currentTimeMillis();
-		for (Entry<ItemInstance, Long> entry : ITEMS.entrySet())
+		for (Entry<Item, Long> entry : ITEMS.entrySet())
 		{
 			if (currentTime > entry.getValue().longValue())
 			{
-				final ItemInstance item = entry.getKey();
+				final Item item = entry.getKey();
 				ITEMS.remove(item);
 				item.endOfLife();
 			}
@@ -60,7 +60,7 @@ public class ItemLifeTimeTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(ItemInstance item, long endTime)
+	public void add(Item item, long endTime)
 	{
 		if (!ITEMS.containsKey(item))
 		{
@@ -68,7 +68,7 @@ public class ItemLifeTimeTaskManager implements Runnable
 		}
 	}
 	
-	public void remove(ItemInstance item)
+	public void remove(Item item)
 	{
 		ITEMS.remove(item);
 	}

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -37,7 +37,7 @@ public class AdminZone implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -84,7 +84,7 @@ public class AdminZone implements IAdminCommandHandler
 		return true;
 	}
 	
-	private static void showHtml(PlayerInstance activeChar)
+	private static void showHtml(Player activeChar)
 	{
 		final int x = activeChar.getX();
 		final int y = activeChar.getY();

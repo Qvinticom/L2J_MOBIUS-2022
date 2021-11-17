@@ -49,9 +49,9 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.Ids;
@@ -115,8 +115,8 @@ import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -364,7 +364,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link Attackable} dies from a {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link Attackable} dies from a {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -377,7 +377,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} for first time.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} for first time.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -395,7 +395,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} for first time.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} for first time.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -415,7 +415,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc}.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc}.
 	 * @param npcIds
 	 * @return
 	 */
@@ -432,7 +432,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc}.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc}.
 	 * @param npcIds
 	 * @return
 	 */
@@ -475,7 +475,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} and must receive quest state.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} and must receive quest state.
 	 * @param npcIds
 	 * @return
 	 */
@@ -492,7 +492,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} and must receive quest state.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} and must receive quest state.
 	 * @param npcIds
 	 * @return
 	 */
@@ -907,7 +907,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} enters in {@link Attackable}'s aggressive range.
+	 * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -918,7 +918,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} enters in {@link Attackable}'s aggressive range.
+	 * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -931,7 +931,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} learn's a {@link Skill}.
+	 * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -942,7 +942,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} learn's a {@link Skill}.
+	 * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -955,7 +955,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -966,7 +966,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -979,7 +979,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk with a servitor or a pet
+	 * Provides instant callback operation when {@link Player} talk with a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -990,7 +990,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk with a servitor or a pet
+	 * Provides instant callback operation when {@link Player} talk with a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1003,7 +1003,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @return
 	 */
@@ -1015,7 +1015,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @return
 	 */
@@ -1075,7 +1075,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.TrapInstance} acts.
+	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.Trap} acts.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1086,7 +1086,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.TrapInstance} acts.
+	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.Trap} acts.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1099,7 +1099,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link Item} receives an event from {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1110,7 +1110,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link Item} receives an event from {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1123,7 +1123,7 @@ public abstract class AbstractScript extends ManagedScript
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Item}.
+	 * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1134,7 +1134,7 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Item}.
+	 * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1424,7 +1424,7 @@ public abstract class AbstractScript extends ManagedScript
 					}
 					case ITEM:
 					{
-						final Item template = ItemTable.getInstance().getTemplate(id);
+						final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 						if (template != null)
 						{
 							listeners.add(template.addListener(action.apply(template)));
@@ -1536,7 +1536,7 @@ public abstract class AbstractScript extends ManagedScript
 					}
 					case ITEM:
 					{
-						final Item template = ItemTable.getInstance().getTemplate(id);
+						final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 						if (template != null)
 						{
 							listeners.add(template.addListener(action.apply(template)));
@@ -1630,7 +1630,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param text the message to display
 	 * @param time the duration of the message in milliseconds
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, String text, int time)
+	public static void showOnScreenMsg(Player player, String text, int time)
 	{
 		player.sendPacket(new ExShowScreenMessage(text, time));
 	}
@@ -1643,7 +1643,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param time the duration of the message in milliseconds
 	 * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, NpcStringId npcString, int position, int time, String... params)
+	public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params)
 	{
 		player.sendPacket(new ExShowScreenMessage(npcString, position, time, params));
 	}
@@ -1656,7 +1656,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param time the duration of the message in milliseconds
 	 * @param params values of parameters to replace in the system message (like S1, C1 etc.)
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, SystemMessageId systemMsg, int position, int time, String... params)
+	public static void showOnScreenMsg(Player player, SystemMessageId systemMsg, int position, int time, String... params)
 	{
 		player.sendPacket(new ExShowScreenMessage(systemMsg, position, time, params));
 	}
@@ -1928,10 +1928,10 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param instanceId
 	 * @return
 	 */
-	public TrapInstance addTrap(int trapId, int x, int y, int z, int heading, int instanceId)
+	public Trap addTrap(int trapId, int x, int y, int z, int heading, int instanceId)
 	{
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
-		final TrapInstance trap = new TrapInstance(npcTemplate, instanceId, -1);
+		final Trap trap = new Trap(npcTemplate, instanceId, -1);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
 		trap.setInvul(true);
@@ -1945,7 +1945,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param minionId
 	 * @return
 	 */
-	public Npc addMinion(MonsterInstance master, int minionId)
+	public Npc addMinion(Monster master, int minionId)
 	{
 		return MinionList.spawnMinion(master, minionId);
 	}
@@ -1956,7 +1956,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId the ID of the item whose amount to get
 	 * @return the amount of the specified item in player's inventory
 	 */
-	public static long getQuestItemsCount(PlayerInstance player, int itemId)
+	public static long getQuestItemsCount(Player player, int itemId)
 	{
 		return player.getInventory().getInventoryItemCount(itemId, -1);
 	}
@@ -1967,10 +1967,10 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemIds a list of IDs of items whose amount to get
 	 * @return the summary amount of all listed items in player's inventory
 	 */
-	public long getQuestItemsCount(PlayerInstance player, int... itemIds)
+	public long getQuestItemsCount(Player player, int... itemIds)
 	{
 		long count = 0;
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (item == null)
 			{
@@ -1998,7 +1998,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param item the {@link ItemHolder} object containing the ID and count of the item to check
 	 * @return {@code true} if the player has the required count of the item
 	 */
-	protected static boolean hasItem(PlayerInstance player, ItemHolder item)
+	protected static boolean hasItem(Player player, ItemHolder item)
 	{
 		return hasItem(player, item, true);
 	}
@@ -2011,7 +2011,7 @@ public abstract class AbstractScript extends ManagedScript
 	 *            otherwise check only if the player has the item at all
 	 * @return {@code true} if the player has the item
 	 */
-	protected static boolean hasItem(PlayerInstance player, ItemHolder item, boolean checkCount)
+	protected static boolean hasItem(Player player, ItemHolder item, boolean checkCount)
 	{
 		if (item == null)
 		{
@@ -2032,7 +2032,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemList a list of {@link ItemHolder} objects containing the IDs of the items to check
 	 * @return {@code true} if the player has all the items from the list
 	 */
-	protected static boolean hasAllItems(PlayerInstance player, boolean checkCount, ItemHolder... itemList)
+	protected static boolean hasAllItems(Player player, boolean checkCount, ItemHolder... itemList)
 	{
 		if ((itemList == null) || (itemList.length == 0))
 		{
@@ -2054,7 +2054,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId the ID of the item to check for
 	 * @return {@code true} if the item exists in player's inventory, {@code false} otherwise
 	 */
-	public static boolean hasQuestItems(PlayerInstance player, int itemId)
+	public static boolean hasQuestItems(Player player, int itemId)
 	{
 		return player.getInventory().getItemByItemId(itemId) != null;
 	}
@@ -2065,7 +2065,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemIds a list of item IDs to check for
 	 * @return {@code true} if all items exist in player's inventory, {@code false} otherwise
 	 */
-	public static boolean hasQuestItems(PlayerInstance player, int... itemIds)
+	public static boolean hasQuestItems(Player player, int... itemIds)
 	{
 		if ((itemIds == null) || (itemIds.length == 0))
 		{
@@ -2088,7 +2088,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemIds a list of item IDs to check for
 	 * @return {@code true} if at least one items exist in player's inventory, {@code false} otherwise
 	 */
-	public boolean hasAtLeastOneQuestItem(PlayerInstance player, int... itemIds)
+	public boolean hasAtLeastOneQuestItem(Player player, int... itemIds)
 	{
 		final PlayerInventory inv = player.getInventory();
 		for (int itemId : itemIds)
@@ -2108,7 +2108,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemIds a list of item IDs to check for
 	 * @return {@code true} if player owns at least one items, {@code false} otherwise.
 	 */
-	public boolean ownsAtLeastOneItem(PlayerInstance player, int... itemIds)
+	public boolean ownsAtLeastOneItem(Player player, int... itemIds)
 	{
 		// Inventory.
 		final PlayerInventory inventory = player.getInventory();
@@ -2180,9 +2180,9 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId the ID of the item whose enchantment level to get
 	 * @return the enchantment level of the item or 0 if the item was not found
 	 */
-	public static int getEnchantLevel(PlayerInstance player, int itemId)
+	public static int getEnchantLevel(Player player, int itemId)
 	{
-		final ItemInstance enchantedItem = player.getInventory().getItemByItemId(itemId);
+		final Item enchantedItem = player.getInventory().getItemByItemId(itemId);
 		if (enchantedItem == null)
 		{
 			return 0;
@@ -2196,7 +2196,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param count the amount of Adena to give
 	 * @param applyRates if {@code true} quest rates will be applied to the amount
 	 */
-	public static void giveAdena(PlayerInstance player, long count, boolean applyRates)
+	public static void giveAdena(Player player, long count, boolean applyRates)
 	{
 		if (applyRates)
 		{
@@ -2213,7 +2213,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param player the player to whom to give the item
 	 * @param holder
 	 */
-	public static void rewardItems(PlayerInstance player, ItemHolder holder)
+	public static void rewardItems(Player player, ItemHolder holder)
 	{
 		rewardItems(player, holder.getId(), holder.getCount());
 	}
@@ -2224,14 +2224,14 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId the ID of the item to give
 	 * @param countValue the amount of items to give
 	 */
-	public static void rewardItems(PlayerInstance player, int itemId, long countValue)
+	public static void rewardItems(Player player, int itemId, long countValue)
 	{
 		if (countValue <= 0)
 		{
 			return;
 		}
 		
-		final Item item = ItemTable.getInstance().getTemplate(itemId);
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 		if (item == null)
 		{
 			return;
@@ -2290,7 +2290,7 @@ public abstract class AbstractScript extends ManagedScript
 		}
 		
 		// Add items to player's inventory
-		final ItemInstance itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
 		if (itemInstance == null)
 		{
 			return;
@@ -2305,7 +2305,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param item the item obtain by the player
 	 * @param count the item count
 	 */
-	private static void sendItemGetMessage(PlayerInstance player, ItemInstance item, long count)
+	private static void sendItemGetMessage(Player player, Item item, long count)
 	{
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
@@ -2343,7 +2343,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId
 	 * @param count
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count)
+	public static void giveItems(Player player, int itemId, long count)
 	{
 		giveItems(player, itemId, count, 0);
 	}
@@ -2353,7 +2353,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param player
 	 * @param holder
 	 */
-	protected static void giveItems(PlayerInstance player, ItemHolder holder)
+	protected static void giveItems(Player player, ItemHolder holder)
 	{
 		giveItems(player, holder.getId(), holder.getCount());
 	}
@@ -2364,7 +2364,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param count
 	 * @param enchantlevel
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count, int enchantlevel)
+	public static void giveItems(Player player, int itemId, long count, int enchantlevel)
 	{
 		if (count <= 0)
 		{
@@ -2372,7 +2372,7 @@ public abstract class AbstractScript extends ManagedScript
 		}
 		
 		// Add items to player's inventory
-		final ItemInstance item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
 		if (item == null)
 		{
 			return;
@@ -2394,7 +2394,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param attributeId
 	 * @param attributeLevel
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count, byte attributeId, int attributeLevel)
+	public static void giveItems(Player player, int itemId, long count, byte attributeId, int attributeLevel)
 	{
 		if (count <= 0)
 		{
@@ -2402,7 +2402,7 @@ public abstract class AbstractScript extends ManagedScript
 		}
 		
 		// Add items to player's inventory
-		final ItemInstance item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
 		if (item == null)
 		{
 			return;
@@ -2436,7 +2436,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(PlayerInstance player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
 	{
 		return giveItemRandomly(player, null, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
 	}
@@ -2453,7 +2453,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(PlayerInstance player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
 	{
 		return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
 	}
@@ -2471,7 +2471,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(PlayerInstance player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
 	{
 		final long currentCount = getQuestItemsCount(player, itemId);
 		if ((limit > 0) && (currentCount >= limit))
@@ -2543,9 +2543,9 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param amount the amount to take
 	 * @return {@code true} if any items were taken, {@code false} otherwise
 	 */
-	public static boolean takeItems(PlayerInstance player, int itemId, long amount)
+	public static boolean takeItems(Player player, int itemId, long amount)
 	{
-		final Collection<ItemInstance> items = player.getInventory().getAllItemsByItemId(itemId);
+		final Collection<Item> items = player.getInventory().getAllItemsByItemId(itemId);
 		if (amount < 0)
 		{
 			items.forEach(i -> takeItem(player, i, i.getCount()));
@@ -2553,7 +2553,7 @@ public abstract class AbstractScript extends ManagedScript
 		else
 		{
 			long currentCount = 0;
-			for (ItemInstance i : items)
+			for (Item i : items)
 			{
 				long toDelete = i.getCount();
 				if ((currentCount + toDelete) > amount)
@@ -2570,12 +2570,12 @@ public abstract class AbstractScript extends ManagedScript
 		return true;
 	}
 	
-	private static boolean takeItem(PlayerInstance player, ItemInstance item, long toDelete)
+	private static boolean takeItem(Player player, Item item, long toDelete)
 	{
 		if (item.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
+			for (Item itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
 			{
 				iu.addModifiedItem(itm);
 			}
@@ -2591,7 +2591,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
 	 * @return {@code true} if the item was taken, {@code false} otherwise
 	 */
-	protected static boolean takeItem(PlayerInstance player, ItemHolder holder)
+	protected static boolean takeItem(Player player, ItemHolder holder)
 	{
 		return (holder != null) && takeItems(player, holder.getId(), holder.getCount());
 	}
@@ -2602,7 +2602,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemList the list of {@link ItemHolder} objects containing the IDs and counts of the items to take
 	 * @return {@code true} if all items were taken, {@code false} otherwise
 	 */
-	protected static boolean takeAllItems(PlayerInstance player, ItemHolder... itemList)
+	protected static boolean takeAllItems(Player player, ItemHolder... itemList)
 	{
 		if ((itemList == null) || (itemList.length == 0))
 		{
@@ -2631,7 +2631,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemIds a list or an array of IDs of the items to take
 	 * @return {@code true} if all items were taken, {@code false} otherwise
 	 */
-	public static boolean takeItems(PlayerInstance player, int amount, int... itemIds)
+	public static boolean takeItems(Player player, int amount, int... itemIds)
 	{
 		boolean check = true;
 		if (itemIds != null)
@@ -2649,7 +2649,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param player the player whom to send the packet
 	 * @param sound the name of the sound to play
 	 */
-	public static void playSound(PlayerInstance player, String sound)
+	public static void playSound(Player player, String sound)
 	{
 		player.sendPacket(QuestSound.getSound(sound));
 	}
@@ -2659,7 +2659,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param player the player whom to send the packet
 	 * @param sound the {@link QuestSound} object of the sound to play
 	 */
-	public static void playSound(PlayerInstance player, QuestSound sound)
+	public static void playSound(Player player, QuestSound sound)
 	{
 		player.sendPacket(sound.getPacket());
 	}
@@ -2670,7 +2670,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param exp the amount of EXP to give to the player
 	 * @param sp the amount of SP to give to the player
 	 */
-	public static void addExpAndSp(PlayerInstance player, long exp, int sp)
+	public static void addExpAndSp(Player player, long exp, int sp)
 	{
 		player.addExpAndSp((long) player.calcStat(Stat.EXPSP_RATE, exp * Config.RATE_QUEST_REWARD_XP, null, null), (int) player.calcStat(Stat.EXPSP_RATE, sp * Config.RATE_QUEST_REWARD_SP, null, null));
 	}
@@ -2755,7 +2755,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param slot the location in the player's inventory to check
 	 * @return the ID of the item equipped in the specified inventory slot or 0 if the slot is empty or item is {@code null}.
 	 */
-	public static int getItemEquipped(PlayerInstance player, int slot)
+	public static int getItemEquipped(Player player, int slot)
 	{
 		return player.getInventory().getPaperdollItemId(slot);
 	}
@@ -2773,11 +2773,11 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param player the player on which the procedure will be executed
 	 * @param npc the related NPC
 	 * @param isSummon {@code true} if the event that called this method was originated by the player's summon, {@code false} otherwise
-	 * @param includeParty if {@code true}, #actionForEachPlayer(PlayerInstance, Npc, boolean) will be called with the player's party members
-	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(PlayerInstance, Npc, boolean)} will be called with the player's command channel members
-	 * @see #actionForEachPlayer(PlayerInstance, Npc, boolean)
+	 * @param includeParty if {@code true}, #actionForEachPlayer(Player, Npc, boolean) will be called with the player's party members
+	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(Player, Npc, boolean)} will be called with the player's command channel members
+	 * @see #actionForEachPlayer(Player, Npc, boolean)
 	 */
-	public void executeForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
+	public void executeForEachPlayer(Player player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
 	{
 		if ((includeParty || includeCommandChannel) && player.isInParty())
 		{
@@ -2805,12 +2805,12 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
-	 * Overridable method called from {@link #executeForEachPlayer(PlayerInstance, Npc, boolean, boolean, boolean)}
+	 * Overridable method called from {@link #executeForEachPlayer(Player, Npc, boolean, boolean, boolean)}
 	 * @param player the player on which the action will be run
 	 * @param npc the NPC related to this action
 	 * @param isSummon {@code true} if the event that called this method was originated by the player's summon
 	 */
-	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	public void actionForEachPlayer(Player player, Npc npc, boolean isSummon)
 	{
 		// To be overridden in quest scripts.
 	}
@@ -2821,7 +2821,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param loc the {@link Location} object containing the destination coordinates
 	 * @param instanceId the ID of the instance to teleport the player to (0 to teleport out of an instance)
 	 */
-	public void teleportPlayer(PlayerInstance player, Location loc, int instanceId)
+	public void teleportPlayer(Player player, Location loc, int instanceId)
 	{
 		teleportPlayer(player, loc, instanceId, true);
 	}
@@ -2833,7 +2833,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param instanceId the ID of the instance to teleport the player to (0 to teleport out of an instance)
 	 * @param allowRandomOffset if {@code true}, will randomize the teleport coordinates by +/-Config.MAX_OFFSET_ON_TELEPORT
 	 */
-	public void teleportPlayer(PlayerInstance player, Location loc, int instanceId, boolean allowRandomOffset)
+	public void teleportPlayer(Player player, Location loc, int instanceId, boolean allowRandomOffset)
 	{
 		player.teleToLocation(loc, instanceId, allowRandomOffset ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
@@ -2943,7 +2943,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param isWide
 	 * @param relAngle
 	 */
-	public static void specialCamera(PlayerInstance player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle)
+	public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle)
 	{
 		player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle));
 	}
@@ -2962,7 +2962,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param isWide
 	 * @param relAngle
 	 */
-	public static void specialCameraEx(PlayerInstance player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle)
+	public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle)
 	{
 		player.sendPacket(new SpecialCamera(creature, player, force, angle1, angle2, time, duration, relYaw, relPitch, isWide, relAngle));
 	}
@@ -2983,7 +2983,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param relAngle
 	 * @param unk
 	 */
-	public static void specialCamera3(PlayerInstance player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
+	public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
 	{
 		player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
 	}
@@ -2994,7 +2994,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param y
 	 * @param z
 	 */
-	public static void addRadar(PlayerInstance player, int x, int y, int z)
+	public static void addRadar(Player player, int x, int y, int z)
 	{
 		player.getRadar().addMarker(x, y, z);
 	}
@@ -3005,7 +3005,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param y
 	 * @param z
 	 */
-	public void removeRadar(PlayerInstance player, int x, int y, int z)
+	public void removeRadar(Player player, int x, int y, int z)
 	{
 		player.getRadar().removeMarker(x, y, z);
 	}
@@ -3013,43 +3013,43 @@ public abstract class AbstractScript extends ManagedScript
 	/**
 	 * @param player
 	 */
-	public void clearRadar(PlayerInstance player)
+	public void clearRadar(Player player)
 	{
 		player.getRadar().removeAllMarkers();
 	}
 	
 	/**
-	 * Play scene for PlayerInstance.
+	 * Play scene for Player.
 	 * @param player the player
 	 * @param movie the movie
 	 */
-	public void playMovie(PlayerInstance player, Movie movie)
+	public void playMovie(Player player, Movie movie)
 	{
 		new MovieHolder(Arrays.asList(player), movie);
 	}
 	
 	/**
-	 * Play scene for all PlayerInstance inside list.
-	 * @param players list with PlayerInstance
+	 * Play scene for all Player inside list.
+	 * @param players list with Player
 	 * @param movie the movie
 	 */
-	public void playMovie(Collection<PlayerInstance> players, Movie movie)
+	public void playMovie(Collection<Player> players, Movie movie)
 	{
 		new MovieHolder(players, movie);
 	}
 	
 	/**
-	 * Play scene for all PlayerInstance inside set.
-	 * @param players set with PlayerInstance
+	 * Play scene for all Player inside set.
+	 * @param players set with Player
 	 * @param movie the movie
 	 */
-	public void playMovie(Set<PlayerInstance> players, Movie movie)
+	public void playMovie(Set<Player> players, Movie movie)
 	{
 		new MovieHolder(new ArrayList<>(players), movie);
 	}
 	
 	/**
-	 * Play scene for all PlayerInstance inside instance.
+	 * Play scene for all Player inside instance.
 	 * @param world InstanceWorld object
 	 * @param movie the movie
 	 */
@@ -3057,7 +3057,7 @@ public abstract class AbstractScript extends ManagedScript
 	{
 		if (world != null)
 		{
-			for (PlayerInstance player : world.getAllowed())
+			for (Player player : world.getAllowed())
 			{
 				if ((player != null) && (player.getInstanceId() == world.getInstanceId()))
 				{

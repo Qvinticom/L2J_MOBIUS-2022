@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreMsgSell implements IClientOutgoingPacket
@@ -25,7 +25,7 @@ public class PrivateStoreMsgSell implements IClientOutgoingPacket
 	private final int _objId;
 	private String _storeMsg;
 	
-	public PrivateStoreMsgSell(PlayerInstance player)
+	public PrivateStoreMsgSell(Player player)
 	{
 		_objId = player.getObjectId();
 		if ((player.getSellList() != null) || player.isSellingBuffs())

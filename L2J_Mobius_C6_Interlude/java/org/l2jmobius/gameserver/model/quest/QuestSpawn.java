@@ -22,7 +22,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
@@ -35,9 +35,9 @@ public class QuestSpawn
 	
 	private class DeSpawnScheduleTimerTask implements Runnable
 	{
-		NpcInstance _npc = null;
+		Npc _npc = null;
 		
-		public DeSpawnScheduleTimerTask(NpcInstance npc)
+		public DeSpawnScheduleTimerTask(Npc npc)
 		{
 			_npc = npc;
 		}
@@ -55,7 +55,7 @@ public class QuestSpawn
 	 * @param creature
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId, Creature creature)
+	public Npc addSpawn(int npcId, Creature creature)
 	{
 		return addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), false, 0);
 	}
@@ -71,9 +71,9 @@ public class QuestSpawn
 	 * @param despawnDelay
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId, int xValue, int yValue, int zValue, int heading, boolean randomOffset, int despawnDelay)
+	public Npc addSpawn(int npcId, int xValue, int yValue, int zValue, int heading, boolean randomOffset, int despawnDelay)
 	{
-		NpcInstance result = null;
+		Npc result = null;
 		
 		try
 		{

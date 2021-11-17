@@ -18,7 +18,7 @@ package events.MasterOfEnchanting;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -69,7 +69,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		if (event.equalsIgnoreCase("buy_staff"))
@@ -302,7 +302,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}

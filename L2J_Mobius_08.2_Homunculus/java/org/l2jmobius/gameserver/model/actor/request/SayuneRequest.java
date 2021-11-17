@@ -25,7 +25,7 @@ import java.util.Objects;
 import org.l2jmobius.gameserver.data.xml.SayuneData;
 import org.l2jmobius.gameserver.enums.SayuneType;
 import org.l2jmobius.gameserver.model.SayuneEntry;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
 import org.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -39,7 +39,7 @@ public class SayuneRequest extends AbstractRequest
 	private boolean _isSelecting;
 	private final Deque<SayuneEntry> _possibleEntries = new LinkedList<>();
 	
-	public SayuneRequest(PlayerInstance player, int mapId)
+	public SayuneRequest(Player player, int mapId)
 	{
 		super(player);
 		_mapId = mapId;
@@ -76,7 +76,7 @@ public class SayuneRequest extends AbstractRequest
 		return _possibleEntries.removeFirst();
 	}
 	
-	public synchronized void move(PlayerInstance player, int pos)
+	public synchronized void move(Player player, int pos)
 	{
 		final SayuneEntry map = SayuneData.getInstance().getMap(_mapId);
 		if ((map == null) || map.getInnerEntries().isEmpty())

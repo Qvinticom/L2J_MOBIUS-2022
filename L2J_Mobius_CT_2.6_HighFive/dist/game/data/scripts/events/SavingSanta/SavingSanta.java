@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -171,7 +171,7 @@ public class SavingSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (_isWaitingForPlayerSkill && (skill.getId() > 21013) && (skill.getId() < 21017))
 		{
@@ -182,7 +182,7 @@ public class SavingSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		// Turkey's Choice
 		// Level 1: Scissors
@@ -191,7 +191,7 @@ public class SavingSanta extends LongTimeEvent
 		if (skill.getId() == 6100)
 		{
 			_isWaitingForPlayerSkill = false;
-			for (PlayerInstance pl : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 600))
+			for (Player pl : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 600))
 			{
 				// Level 1: Scissors
 				// Level 2: Rock
@@ -298,7 +298,7 @@ public class SavingSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (!isEventPeriod())
 		{
@@ -319,8 +319,8 @@ public class SavingSanta extends LongTimeEvent
 			if (_isSantaFree)
 			{
 				startQuestTimer("SantaSpawn", 120000, null, null);
-				// for (PlayerInstance pl : L2World.getInstance().getAllPlayers().values())
-				for (PlayerInstance pl : World.getInstance().getPlayers())
+				// for (Player pl : L2World.getInstance().getAllPlayers().values())
+				for (Player pl : World.getInstance().getPlayers())
 				{
 					if ((pl != null) && pl.isOnline() && (pl.getLevel() >= 20) && pl.isInCombat() && !pl.isInsideZone(ZoneId.PEACE) && !pl.isFlyingMounted())
 					{
@@ -442,7 +442,7 @@ public class SavingSanta extends LongTimeEvent
 			final long currentTime = Chronos.currentTimeMillis();
 			for (Npc santaHelper1 : _santaHelpers)
 			{
-				for (PlayerInstance plb : World.getInstance().getVisibleObjects(santaHelper1, PlayerInstance.class))
+				for (Player plb : World.getInstance().getVisibleObjects(santaHelper1, Player.class))
 				{
 					if ((plb.getLevel() >= 20) && !plb.isFlyingMounted())
 					{
@@ -465,7 +465,7 @@ public class SavingSanta extends LongTimeEvent
 						}
 						for (Npc santaHelper : _santaHelpers)
 						{
-							for (PlayerInstance playerx : World.getInstance().getVisibleObjects(santaHelper, PlayerInstance.class))
+							for (Player playerx : World.getInstance().getVisibleObjects(santaHelper, Player.class))
 							{
 								if (playerx.getClassId().isMage())
 								{
@@ -504,7 +504,7 @@ public class SavingSanta extends LongTimeEvent
 			startQuestTimer("SpecialTreeHeal", 9000, null, null);
 			for (Npc tree : _specialTrees)
 			{
-				for (PlayerInstance playerr : World.getInstance().getVisibleObjects(tree, PlayerInstance.class))
+				for (Player playerr : World.getInstance().getVisibleObjects(tree, Player.class))
 				{
 					final int xxMin = tree.getX() - 60;
 					final int yyMin = tree.getY() - 60;
@@ -730,7 +730,7 @@ public class SavingSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		switch (npc.getId())
 		{
@@ -767,7 +767,7 @@ public class SavingSanta extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		// FIXME: Increase Thomas D. Turkey aggro rage.
 		if (npc.getId() == THOMAS_D_TURKEY_ID)

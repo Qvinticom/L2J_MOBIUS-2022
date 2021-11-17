@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.enums.LampMode;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.GreaterMagicLampHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMagicLampGameInfoUI implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final byte _mode;
 	private final int _count;
 	
-	public ExMagicLampGameInfoUI(PlayerInstance player, byte mode, int count)
+	public ExMagicLampGameInfoUI(Player player, byte mode, int count)
 	{
 		_player = player;
 		_mode = mode;

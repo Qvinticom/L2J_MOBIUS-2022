@@ -17,14 +17,14 @@
 package quests.Q10462_TemperARustingBlade;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -56,7 +56,7 @@ public class Q10462_TemperARustingBlade extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -95,7 +95,7 @@ public class Q10462_TemperARustingBlade extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -132,9 +132,9 @@ public class Q10462_TemperARustingBlade extends Quest
 	@Id(PRACTICE_WEAPON)
 	public void onItemAugment(OnPlayerAugment event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		final ItemInstance item = qs.getPlayer().getInventory().getItemByItemId(PRACTICE_WEAPON);
+		final Item item = qs.getPlayer().getInventory().getItemByItemId(PRACTICE_WEAPON);
 		if ((item != null) && qs.isCond(1) && item.isAugmented())
 		{
 			qs.setCond(2, true);

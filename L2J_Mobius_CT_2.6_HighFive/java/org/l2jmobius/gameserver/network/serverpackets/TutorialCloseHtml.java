@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -34,7 +34,7 @@ public class TutorialCloseHtml implements IClientOutgoingPacket
 	}
 	
 	@Override
-	public void runImpl(PlayerInstance player)
+	public void runImpl(Player player)
 	{
 		player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 	}

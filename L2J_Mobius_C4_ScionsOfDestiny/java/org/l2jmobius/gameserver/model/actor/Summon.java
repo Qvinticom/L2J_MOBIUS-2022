@@ -31,16 +31,15 @@ import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.actor.knownlist.SummonKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import org.l2jmobius.gameserver.model.actor.status.SummonStatus;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -55,7 +54,7 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 public abstract class Summon extends Playable
 {
 	protected int _pkKills;
-	private PlayerInstance _owner;
+	private Player _owner;
 	private int _attackRange = 36; // Melee range
 	boolean _follow = true;
 	private boolean _previousFollowStatus = true;
@@ -84,7 +83,7 @@ public abstract class Summon extends Playable
 		}
 	}
 	
-	public Summon(int objectId, NpcTemplate template, PlayerInstance owner)
+	public Summon(int objectId, NpcTemplate template, Player owner)
 	{
 		super(objectId, template);
 		getKnownList(); // init knownlist
@@ -160,7 +159,7 @@ public abstract class Summon extends Playable
 	@Override
 	public void updateAbnormalEffect()
 	{
-		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (player != null)
 			{
@@ -178,7 +177,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public void onAction(PlayerInstance player)
+	public void onAction(Player player)
 	{
 		if ((player == _owner) && (player.getTarget() == this))
 		{
@@ -264,7 +263,7 @@ public abstract class Summon extends Playable
 		return _owner != null ? _owner.getPvpFlag() : 0;
 	}
 	
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}
@@ -287,7 +286,7 @@ public abstract class Summon extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
 		}
-		if (!target.canBeAttacked() && !(this instanceof SiegeSummonInstance))
+		if (!target.canBeAttacked() && !(this instanceof SiegeSummon))
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
@@ -390,7 +389,7 @@ public abstract class Summon extends Playable
 		}
 	}
 	
-	public void deleteMe(PlayerInstance owner)
+	public void deleteMe(Player owner)
 	{
 		getAI().stopFollow();
 		owner.sendPacket(new PetDelete(getObjectId(), 2));
@@ -402,7 +401,7 @@ public abstract class Summon extends Playable
 		owner.setPet(null);
 	}
 	
-	public synchronized void unSummon(PlayerInstance owner)
+	public synchronized void unSummon(Player owner)
 	{
 		if (isSpawned() && !isDead())
 		{
@@ -504,7 +503,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public ItemInstance getActiveWeaponInstance()
+	public Item getActiveWeaponInstance()
 	{
 		return null;
 	}
@@ -516,7 +515,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public ItemInstance getSecondaryWeaponInstance()
+	public Item getSecondaryWeaponInstance()
 	{
 		return null;
 	}
@@ -528,7 +527,7 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Return the Party object of its PlayerInstance owner or null.
+	 * Return the Party object of its Player owner or null.
 	 */
 	@Override
 	public Party getParty()
@@ -684,15 +683,15 @@ public abstract class Summon extends Playable
 			
 			if ((_owner != null) && _owner.isInOlympiadMode() && !_owner.isOlympiadStart())
 			{
-				// if PlayerInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
+				// if Player is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
 			// Check if the target is attackable
-			if (target instanceof DoorInstance)
+			if (target instanceof Door)
 			{
-				if (!((DoorInstance) target).isAttackable(_owner))
+				if (!((Door) target).isAttackable(_owner))
 				{
 					return;
 				}
@@ -738,7 +737,7 @@ public abstract class Summon extends Playable
 		}
 	}
 	
-	public void setOwner(PlayerInstance newOwner)
+	public void setOwner(Player newOwner)
 	{
 		_owner = newOwner;
 	}
@@ -825,7 +824,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public PlayerInstance getActingPlayer()
+	public Player getActingPlayer()
 	{
 		return _owner;
 	}

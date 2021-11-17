@@ -23,7 +23,7 @@ import java.sql.SQLException;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ClanMember
 {
@@ -34,7 +34,7 @@ public class ClanMember
 	private int _powerGrade;
 	private int _level;
 	private int _classId;
-	private PlayerInstance _player;
+	private Player _player;
 	private int _pledgeType;
 	private int _apprentice;
 	private int _sponsor;
@@ -57,7 +57,7 @@ public class ClanMember
 		_sponsor = 0;
 	}
 	
-	public ClanMember(PlayerInstance player)
+	public ClanMember(Player player)
 	{
 		if (player.getClan() == null)
 		{
@@ -77,11 +77,11 @@ public class ClanMember
 		_sponsor = 0;
 	}
 	
-	public void setPlayerInstance(PlayerInstance player)
+	public void setPlayer(Player player)
 	{
 		if ((player == null) && (_player != null))
 		{
-			final PlayerInstance localPlayer = _player;
+			final Player localPlayer = _player;
 			
 			// this is here to keep the data when the player logs off
 			_name = localPlayer.getName();
@@ -117,7 +117,7 @@ public class ClanMember
 		_player = player;
 	}
 	
-	public PlayerInstance getPlayerInstance()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -326,7 +326,7 @@ public class ClanMember
 		return _clan;
 	}
 	
-	public int calculatePledgeClass(PlayerInstance player)
+	public int calculatePledgeClass(Player player)
 	{
 		int pledgeClass = 0;
 		if (player == null)

@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -53,7 +53,7 @@ public class DayNightSpawnManager
 	
 	private final List<Spawn> _dayCreatures = new ArrayList<>();
 	private final List<Spawn> _nightCreatures = new ArrayList<>();
-	private final Map<Spawn, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
+	private final Map<Spawn, RaidBoss> _bosses = new ConcurrentHashMap<>();
 	
 	protected DayNightSpawnManager()
 	{
@@ -90,8 +90,8 @@ public class DayNightSpawnManager
 	 * Manage Spawn/Respawn
 	 * @param unSpawnCreatures List with spawns must be unspawned
 	 * @param spawnCreatures List with spawns must be spawned
-	 * @param unspawnLogInfo String for log info for unspawned NpcInstance
-	 * @param spawnLogInfo String for log info for spawned NpcInstance
+	 * @param unspawnLogInfo String for log info for unspawned Npc
+	 * @param spawnLogInfo String for log info for spawned Npc
 	 */
 	private void spawnCreatures(List<Spawn> unSpawnCreatures, List<Spawn> spawnCreatures, String unspawnLogInfo, String spawnLogInfo)
 	{
@@ -108,7 +108,7 @@ public class DayNightSpawnManager
 					}
 					
 					spawn.stopRespawn();
-					final NpcInstance last = spawn.getLastSpawn();
+					final Npc last = spawn.getLastSpawn();
 					if (last != null)
 					{
 						last.deleteMe();
@@ -199,7 +199,7 @@ public class DayNightSpawnManager
 	{
 		try
 		{
-			RaidBossInstance boss;
+			RaidBoss boss;
 			
 			if (_bosses.isEmpty() && (mode == 1))
 			{
@@ -210,13 +210,13 @@ public class DayNightSpawnManager
 				return;
 			}
 			
-			for (Entry<Spawn, RaidBossInstance> entry : _bosses.entrySet())
+			for (Entry<Spawn, RaidBoss> entry : _bosses.entrySet())
 			{
 				boss = entry.getValue();
 				if ((boss == null) && (mode == 1))
 				{
 					final Spawn spawn = entry.getKey();
-					boss = (RaidBossInstance) spawn.doSpawn();
+					boss = (RaidBoss) spawn.doSpawn();
 					RaidBossSpawnManager.getInstance().notifySpawnNightBoss(boss);
 					_bosses.put(spawn, boss);
 					continue;
@@ -240,7 +240,7 @@ public class DayNightSpawnManager
 		}
 	}
 	
-	private void handleHellman(RaidBossInstance boss, int mode)
+	private void handleHellman(RaidBoss boss, int mode)
 	{
 		switch (mode)
 		{
@@ -271,8 +271,8 @@ public class DayNightSpawnManager
 		}
 		
 		final SystemMessageId msg = (mode == 1 ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
-		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
-		for (PlayerInstance onlinePlayer : pls)
+		final Collection<Player> pls = World.getInstance().getAllPlayers();
+		for (Player onlinePlayer : pls)
 		{
 			if ((onlinePlayer.getRace().ordinal() == 2) && (onlinePlayer.getSkillLevel(294) > 0))
 			{
@@ -283,7 +283,7 @@ public class DayNightSpawnManager
 		}
 	}
 	
-	public RaidBossInstance handleBoss(Spawn spawnDat)
+	public RaidBoss handleBoss(Spawn spawnDat)
 	{
 		if (_bosses.containsKey(spawnDat))
 		{
@@ -292,7 +292,7 @@ public class DayNightSpawnManager
 		
 		if (GameTimeTaskManager.getInstance().isNight())
 		{
-			final RaidBossInstance raidboss = (RaidBossInstance) spawnDat.doSpawn();
+			final RaidBoss raidboss = (RaidBoss) spawnDat.doSpawn();
 			_bosses.put(spawnDat, raidboss);
 			
 			return raidboss;

@@ -28,15 +28,15 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
+import org.l2jmobius.gameserver.network.serverpackets.StaticObjectInfo;
 
 /**
- * This class loads, stores and spawns {@link StaticObject}s.
+ * This class loads, stores and spawns {@link StaticObjectInfo}s.
  */
 public class StaticObjectData implements IXmlReader
 {
-	private final Map<Integer, StaticObjectInstance> _objects = new HashMap<>();
+	private final Map<Integer, StaticObject> _objects = new HashMap<>();
 	
 	protected StaticObjectData()
 	{
@@ -74,7 +74,7 @@ public class StaticObjectData implements IXmlReader
 			}
 			
 			// Create and spawn the StaticObject instance.
-			final StaticObjectInstance obj = new StaticObjectInstance(IdManager.getInstance().getNextId());
+			final StaticObject obj = new StaticObject(IdManager.getInstance().getNextId());
 			obj.setType(set.getInt("type"));
 			obj.setStaticObjectId(set.getInt("id"));
 			obj.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));
@@ -86,7 +86,7 @@ public class StaticObjectData implements IXmlReader
 		}
 	}
 	
-	public Collection<StaticObjectInstance> getStaticObjects()
+	public Collection<StaticObject> getStaticObjects()
 	{
 		return _objects.values();
 	}

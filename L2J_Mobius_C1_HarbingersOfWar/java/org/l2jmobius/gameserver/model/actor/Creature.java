@@ -27,8 +27,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Npc;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
@@ -400,11 +399,11 @@ public abstract class Creature extends WorldObject
 		for (Creature element : list)
 		{
 			final Creature temp = element;
-			if (!(temp instanceof PlayerInstance))
+			if (!(temp instanceof Player))
 			{
 				continue;
 			}
-			final PlayerInstance player = (PlayerInstance) temp;
+			final Player player = (Player) temp;
 			try
 			{
 				player.sendPacket(su);
@@ -996,9 +995,9 @@ public abstract class Creature extends WorldObject
 		return distance;
 	}
 	
-	public Collection<PlayerInstance> broadcastPacket(ServerBasePacket mov)
+	public Collection<Player> broadcastPacket(ServerBasePacket mov)
 	{
-		final Set<PlayerInstance> nearby = getKnownPlayers();
+		final Set<Player> nearby = getKnownPlayers();
 		for (Creature player : nearby)
 		{
 			player.sendPacket(mov);
@@ -1126,9 +1125,9 @@ public abstract class Creature extends WorldObject
 					if (pDef == 0)
 					{
 						pDef = 300;
-						if (target instanceof NpcInstance)
+						if (target instanceof Npc)
 						{
-							_log.warning("target has bogus stats. check npc2.csv: id " + ((NpcInstance) target).getNpcTemplate().getNpcId());
+							_log.warning("target has bogus stats. check npc2.csv: id " + ((Npc) target).getNpcTemplate().getNpcId());
 						}
 						else
 						{
@@ -1290,7 +1289,7 @@ public abstract class Creature extends WorldObject
 	}
 	
 	@Override
-	public void onForcedAttack(PlayerInstance player)
+	public void onForcedAttack(Player player)
 	{
 		player.startAttack(this);
 	}

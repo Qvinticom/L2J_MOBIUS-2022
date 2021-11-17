@@ -17,7 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -45,7 +45,7 @@ public class TeleportWithEffect extends AbstractNpcAI
 			return;
 		}
 		
-		final PlayerInstance player = event.getCaster().getActingPlayer();
+		final Player player = event.getCaster().getActingPlayer();
 		if (player == null)
 		{
 			return;

@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.MatchingRoomType;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExMPCCPartymasterList;
@@ -42,7 +42,7 @@ public class RequestExMpccPartymasterList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -51,7 +51,7 @@ public class RequestExMpccPartymasterList implements IClientIncomingPacket
 		final MatchingRoom room = player.getMatchingRoom();
 		if ((room != null) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
 		{
-			final Set<String> leadersName = room.getMembers().stream().map(PlayerInstance::getParty).filter(Objects::nonNull).map(Party::getLeader).map(PlayerInstance::getName).collect(Collectors.toSet());
+			final Set<String> leadersName = room.getMembers().stream().map(Player::getParty).filter(Objects::nonNull).map(Party::getLeader).map(Player::getName).collect(Collectors.toSet());
 			player.sendPacket(new ExMPCCPartymasterList(leadersName));
 		}
 	}

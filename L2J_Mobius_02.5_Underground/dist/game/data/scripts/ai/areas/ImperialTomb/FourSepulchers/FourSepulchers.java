@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -219,7 +219,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		
@@ -355,7 +355,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (npc == null)
 		{
@@ -408,7 +408,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -444,7 +444,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 				
 				if ((killer.getParty() != null) && (sepulcherId > 0))
 				{
-					for (PlayerInstance mem : killer.getParty().getMembers())
+					for (Player mem : killer.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(1500, killer, mem, true))
 						{
@@ -476,7 +476,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void tryEnter(Npc npc, PlayerInstance player)
+	private void tryEnter(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (!ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getPlayersInside().isEmpty())
@@ -495,7 +495,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 			return;
 		}
 		
-		for (PlayerInstance mem : player.getParty().getMembers())
+		for (Player mem : player.getParty().getMembers())
 		{
 			final QuestState qs = mem.getQuestState(Q00620_FourGoblets.class.getSimpleName());
 			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
@@ -558,15 +558,15 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		}
 		
 		// Teleport players inside
-		final List<PlayerInstance> members = new ArrayList<>();
-		for (PlayerInstance mem : player.getParty().getMembers())
+		final List<Player> members = new ArrayList<>();
+		for (Player mem : player.getParty().getMembers())
 		{
 			if (Util.checkIfInRange(700, player, mem, true))
 			{
 				members.add(mem);
 			}
 		}
-		for (PlayerInstance mem : members)
+		for (Player mem : members)
 		{
 			mem.teleToLocation(START_HALL_SPAWNS.get(npcId), 80);
 			takeItems(mem, ENTRANCE_PASS, 1);
@@ -589,7 +589,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000, npc, player, false);
 	}
 	
-	private void spawnNextWave(PlayerInstance player)
+	private void spawnNextWave(Player player)
 	{
 		final int sepulcherId = getSepulcherId(player);
 		final int currentWave = STORED_PROGRESS.get(sepulcherId);
@@ -620,7 +620,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		}
 	}
 	
-	private void spawnMysteriousChest(PlayerInstance player)
+	private void spawnMysteriousChest(Player player)
 	{
 		final int sepulcherId = getSepulcherId(player);
 		final int currentWave = STORED_PROGRESS.get(sepulcherId);
@@ -634,12 +634,12 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		}
 	}
 	
-	private void spawnKeyChest(PlayerInstance player, Location loc)
+	private void spawnKeyChest(Player player, Location loc)
 	{
 		addSpawn(KEY_CHEST, loc != null ? loc : player);
 	}
 	
-	private int getSepulcherId(PlayerInstance player)
+	private int getSepulcherId(Player player)
 	{
 		if (ZoneManager.getInstance().getZoneById(CONQUEROR_ZONE).getPlayersInside().contains(player))
 		{
@@ -660,7 +660,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		return 0;
 	}
 	
-	private void showHtmlFile(PlayerInstance player, String file, Npc npc, PlayerInstance member)
+	private void showHtmlFile(Player player, String file, Npc npc, Player member)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(player, "data/scripts/ai/areas/ImperialTomb/FourSepulchers/" + file);

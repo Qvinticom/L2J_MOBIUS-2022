@@ -23,12 +23,12 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.ChatHandler;
 import org.l2jmobius.gameserver.handler.IChatHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChat;
 import org.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -99,7 +99,7 @@ public class Say2 implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -236,7 +236,7 @@ public class Say2 implements IClientIncomingPacket
 		_text = filteredText;
 	}
 	
-	private boolean parseAndPublishItem(GameClient client, PlayerInstance owner)
+	private boolean parseAndPublishItem(GameClient client, Player owner)
 	{
 		int pos1 = -1;
 		while ((pos1 = _text.indexOf(8, pos1)) > -1)
@@ -253,7 +253,7 @@ public class Say2 implements IClientIncomingPacket
 				result.append(_text.charAt(pos++));
 			}
 			final int id = Integer.parseInt(result.toString());
-			final ItemInstance item = owner.getInventory().getItemByObjectId(id);
+			final Item item = owner.getInventory().getItemByObjectId(id);
 			if (item == null)
 			{
 				LOGGER.info(client + " trying publish item which doesnt own! ID:" + id);

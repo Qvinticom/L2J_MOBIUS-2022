@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -49,7 +49,7 @@ public class TakeFortStart extends AbstractEffect
 	{
 		if (info.getEffector().isPlayer())
 		{
-			final PlayerInstance player = info.getEffector().getActingPlayer();
+			final Player player = info.getEffector().getActingPlayer();
 			final Fort fort = FortManager.getInstance().getFort(player);
 			final Clan clan = player.getClan();
 			if ((fort != null) && (clan != null))

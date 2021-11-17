@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public class RecoGiveTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public RecoGiveTask(PlayerInstance player)
+	public RecoGiveTask(Player player)
 	{
 		_player = player;
 	}

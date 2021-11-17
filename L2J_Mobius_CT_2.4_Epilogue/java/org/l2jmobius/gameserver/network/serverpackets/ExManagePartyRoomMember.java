@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExManagePartyRoomMember implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExManagePartyRoomMember(PlayerInstance player, PartyMatchRoom room, int mode)
+	public ExManagePartyRoomMember(Player player, PartyMatchRoom room, int mode)
 	{
 		_player = player;
 		_room = room;

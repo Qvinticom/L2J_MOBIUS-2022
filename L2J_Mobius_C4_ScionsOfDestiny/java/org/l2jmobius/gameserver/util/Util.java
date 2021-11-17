@@ -27,8 +27,8 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * General Utility functions related to game server.
@@ -54,7 +54,7 @@ public class Util
 		':'
 	};
 	
-	public static void handleIllegalPlayerAction(PlayerInstance actor, String message, int punishment)
+	public static void handleIllegalPlayerAction(Player actor, String message, int punishment)
 	{
 		ThreadPool.schedule(new IllegalPlayerAction(actor, message, punishment), 5000);
 	}
@@ -359,7 +359,7 @@ public class Util
 		return angle;
 	}
 	
-	public static int calcCameraAngle(NpcInstance target)
+	public static int calcCameraAngle(Npc target)
 	{
 		return calcCameraAngle(target.getHeading());
 	}

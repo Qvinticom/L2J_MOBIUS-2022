@@ -36,7 +36,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.zone.type.DerbyTrackZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -89,7 +89,7 @@ public class MonsterRace
 	protected MonRaceInfo _packet;
 	
 	private Constructor<?> _constructor;
-	private final NpcInstance[] _monsters = new NpcInstance[8];
+	private final Npc[] _monsters = new Npc[8];
 	private int[][] _speeds = new int[8][20];
 	private final int[] _first = new int[2];
 	private final int[] _second = new int[2];
@@ -326,9 +326,9 @@ public class MonsterRace
 			try
 			{
 				final NpcTemplate template = NpcTable.getInstance().getTemplate(_npcTemplates.get(i));
-				_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
+				_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.getType()).getConstructors()[0];
 				final int objectId = IdManager.getInstance().getNextId();
-				_monsters[i] = (NpcInstance) _constructor.newInstance(objectId, template);
+				_monsters[i] = (Npc) _constructor.newInstance(objectId, template);
 			}
 			catch (Exception e)
 			{
@@ -531,7 +531,7 @@ public class MonsterRace
 		}
 	}
 	
-	public NpcInstance[] getMonsters()
+	public Npc[] getMonsters()
 	{
 		return _monsters;
 	}

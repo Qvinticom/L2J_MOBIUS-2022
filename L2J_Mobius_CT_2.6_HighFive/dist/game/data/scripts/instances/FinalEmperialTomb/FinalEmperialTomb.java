@@ -46,8 +46,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -431,7 +431,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	protected boolean checkConditions(PlayerInstance player)
+	protected boolean checkConditions(Player player)
 	{
 		if (DEBUG || player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
@@ -468,7 +468,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
 			return false;
 		}
-		for (PlayerInstance channelMember : channel.getMembers())
+		for (Player channelMember : channel.getMembers())
 		{
 			if (channelMember.getLevel() < 80)
 			{
@@ -491,7 +491,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -508,7 +508,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 			}
 			else
 			{
-				for (PlayerInstance channelMember : player.getParty().getCommandChannel().getMembers())
+				for (Player channelMember : player.getParty().getCommandChannel().getMembers())
 				{
 					if (player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1) > 0)
 					{
@@ -725,7 +725,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				{
 					break;
 				}
-				final MonsterInstance demon = (MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.getInstanceId());
+				final Monster demon = (Monster) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.getInstanceId());
 				demons.add(demon);
 			}
 			_world.setParameter("demons", demons);
@@ -821,7 +821,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 						final List<Creature> targetList = new ArrayList<>();
 						if (skill.hasEffectType(EffectType.STUN) || skill.isDebuff())
 						{
-							for (PlayerInstance player : _world.getAllowed())
+							for (Player player : _world.getAllowed())
 							{
 								if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 								{
@@ -1279,7 +1279,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 		
 		private void stopPc()
 		{
-			for (PlayerInstance player : _world.getAllowed())
+			for (Player player : _world.getAllowed())
 			{
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
@@ -1296,7 +1296,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 		
 		private void startPc()
 		{
-			for (PlayerInstance player : _world.getAllowed())
+			for (Player player : _world.getAllowed())
 			{
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
@@ -1308,7 +1308,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 		
 		private void sendPacketX(IClientOutgoingPacket packet1, IClientOutgoingPacket packet2, int x)
 		{
-			for (PlayerInstance player : _world.getAllowed())
+			for (Player player : _world.getAllowed())
 			{
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
@@ -1383,10 +1383,10 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 		
 		private void addAggroToMobs()
 		{
-			PlayerInstance target = _world.getAllowed().stream().findAny().get();
+			Player target = _world.getAllowed().stream().findAny().get();
 			if ((target == null) || (target.getInstanceId() != _world.getInstanceId()) || target.isDead() || target.isFakeDeath())
 			{
-				for (PlayerInstance plr : _world.getAllowed())
+				for (Player plr : _world.getAllowed())
 				{
 					if ((plr != null) && (plr.getInstanceId() == _world.getInstanceId()) && !plr.isDead() && !plr.isFakeDeath())
 					{
@@ -1401,7 +1401,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				mob.setRunning();
 				if (target != null)
 				{
-					((MonsterInstance) mob).addDamageHate(target, 0, 500);
+					((Monster) mob).addDamageHate(target, 0, 500);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 				else
@@ -1414,7 +1414,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	
 	protected void broadCastPacket(InstanceWorld world, IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
@@ -1424,7 +1424,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1442,7 +1442,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if ((world != null) && (skill != null))
@@ -1463,7 +1463,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (skill.isSuicideAttack())
 		{
@@ -1473,7 +1473,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1532,7 +1532,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		getQuestState(player, true);
 		if (npc.getId() == GUIDE)

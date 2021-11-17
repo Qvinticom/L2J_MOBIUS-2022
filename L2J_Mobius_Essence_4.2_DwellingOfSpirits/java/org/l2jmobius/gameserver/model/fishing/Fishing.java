@@ -28,12 +28,12 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -59,12 +59,12 @@ public class Fishing
 	protected static final Logger LOGGER = Logger.getLogger(Fishing.class.getName());
 	private ILocational _baitLocation = new Location(0, 0, 0);
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	private ScheduledFuture<?> _reelInTask;
 	private ScheduledFuture<?> _startFishingTask;
 	private boolean _isFishing = false;
 	
-	public Fishing(PlayerInstance player)
+	public Fishing(Player player)
 	{
 		_player = player;
 	}
@@ -91,7 +91,7 @@ public class Fishing
 	
 	private FishingBait getCurrentBaitData()
 	{
-		final ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final Item bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		return bait != null ? FishingData.getInstance().getBaitData(bait.getId()) : null;
 	}
 	
@@ -180,7 +180,7 @@ public class Fishing
 			return;
 		}
 		
-		final ItemInstance rod = _player.getActiveWeaponInstance();
+		final Item rod = _player.getActiveWeaponInstance();
 		if ((rod == null) || (rod.getItemType() != WeaponType.FISHINGROD))
 		{
 			_player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_FISHING_ROD_EQUIPPED);
@@ -298,7 +298,7 @@ public class Fishing
 		FishingEndReason reason = reasonValue;
 		try
 		{
-			final ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+			final Item bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 			if (consumeBait && ((bait == null) || !_player.getInventory().updateItemCount(null, bait, -1, _player, null)))
 			{
 				reason = FishingEndReason.LOSE; // no bait - no reward
@@ -430,7 +430,7 @@ public class Fishing
 	 * @param waterZone the water zone
 	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
 	 */
-	private static int computeBaitZ(PlayerInstance player, int baitX, int baitY, FishingZone fishingZone, WaterZone waterZone)
+	private static int computeBaitZ(Player player, int baitX, int baitY, FishingZone fishingZone, WaterZone waterZone)
 	{
 		if ((fishingZone == null))
 		{

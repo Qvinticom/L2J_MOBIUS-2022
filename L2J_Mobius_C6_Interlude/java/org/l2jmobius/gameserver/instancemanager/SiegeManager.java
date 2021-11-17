@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Siege;
@@ -73,7 +73,7 @@ public class SiegeManager
 		load();
 	}
 	
-	public void addSiegeSkills(PlayerInstance character)
+	public void addSiegeSkills(Player character)
 	{
 		character.addSkill(SkillTable.getInstance().getSkill(246, 1), false);
 		character.addSkill(SkillTable.getInstance().getSkill(247, 1), false);
@@ -87,12 +87,12 @@ public class SiegeManager
 	 */
 	public boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
@@ -175,7 +175,7 @@ public class SiegeManager
 		return register;
 	}
 	
-	public void removeSiegeSkills(PlayerInstance character)
+	public void removeSiegeSkills(Player character)
 	{
 		character.removeSkill(SkillTable.getInstance().getSkill(246, 1));
 		character.removeSkill(SkillTable.getInstance().getSkill(247, 1));

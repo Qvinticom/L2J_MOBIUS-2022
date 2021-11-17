@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -36,7 +36,7 @@ public class MoveToLocationInVehicle implements IClientOutgoingPacket
 	 * @param destination
 	 * @param origin
 	 */
-	public MoveToLocationInVehicle(PlayerInstance player, Location destination, Location origin)
+	public MoveToLocationInVehicle(Player player, Location destination, Location origin)
 	{
 		_objectId = player.getObjectId();
 		_boatId = player.getBoat().getObjectId();

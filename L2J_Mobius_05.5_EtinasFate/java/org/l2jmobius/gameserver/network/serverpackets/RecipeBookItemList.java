@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,7 +29,7 @@ public class RecipeBookItemList implements IClientOutgoingPacket
 	private final boolean _isDwarvenCraft;
 	private final int _maxMp;
 	
-	public RecipeBookItemList(PlayerInstance player, boolean isDwarvenCraft)
+	public RecipeBookItemList(Player player, boolean isDwarvenCraft)
 	{
 		_isDwarvenCraft = isDwarvenCraft;
 		_maxMp = player.getMaxMp();

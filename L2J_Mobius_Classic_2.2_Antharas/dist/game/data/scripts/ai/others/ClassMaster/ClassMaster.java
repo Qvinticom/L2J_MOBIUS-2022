@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -229,13 +229,13 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "test_server_helper001.html";
 	}
 	
 	@Override
-	public String onAdvEvent(String eventValue, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String eventValue, Npc npc, Player player)
 	{
 		if (!_isEnabled)
 		{
@@ -455,7 +455,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		return htmltext;
 	}
 	
-	private String getFirstOccupationChangeHtml(PlayerInstance player)
+	private String getFirstOccupationChangeHtml(Player player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
@@ -549,7 +549,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		return htmltext;
 	}
 	
-	private String getSecondOccupationChangeHtml(PlayerInstance player)
+	private String getSecondOccupationChangeHtml(Player player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
@@ -737,7 +737,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		return htmltext;
 	}
 	
-	private boolean changeToNextClass(PlayerInstance player)
+	private boolean changeToNextClass(Player player)
 	{
 		ClassId newClass = null;
 		if (player.getClassId() == ClassId.FEMALE_SOUL_HOUND)
@@ -844,7 +844,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		}
 	}
 	
-	private void showPopupWindow(PlayerInstance player)
+	private void showPopupWindow(Player player)
 	{
 		if (!_showPopupWindow)
 		{
@@ -866,7 +866,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (!_showPopupWindow || (event.getMarkId() != 2)) // mark id was 1001 - used 2 for quest text
 		{
 			return;
@@ -929,7 +929,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		showPopupWindow(event.getPlayer());
 	}
 	
-	private String getClassChangeOptions(PlayerInstance player, int selectedClassId)
+	private String getClassChangeOptions(Player player, int selectedClassId)
 	{
 		final StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < _classChangeData.size(); i++)
@@ -1016,7 +1016,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			return _appliedCategories != null ? _appliedCategories : Collections.emptyList();
 		}
 		
-		public boolean isInCategory(PlayerInstance player)
+		public boolean isInCategory(Player player)
 		{
 			if (_appliedCategories != null)
 			{
@@ -1072,7 +1072,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		}
 	}
 	
-	private boolean checkIfClassChangeHasOptions(PlayerInstance player)
+	private boolean checkIfClassChangeHasOptions(Player player)
 	{
 		boolean showOptions = false;
 		

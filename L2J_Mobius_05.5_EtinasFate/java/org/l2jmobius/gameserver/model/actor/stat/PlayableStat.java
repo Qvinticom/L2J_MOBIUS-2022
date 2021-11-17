@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
@@ -65,7 +65,7 @@ public class PlayableStat extends CreatureStat
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
 		}
 		
 		byte level = minimumLevel; // minimum level
@@ -86,7 +86,7 @@ public class PlayableStat extends CreatureStat
 		
 		if ((getLevel() > oldLevel) && getActiveChar().isPlayer())
 		{
-			final PlayerInstance player = getActiveChar().getActingPlayer();
+			final Player player = getActiveChar().getActingPlayer();
 			if (SkillTreeData.getInstance().hasAvailableSkills(player, player.getClassId()))
 			{
 				getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
@@ -114,7 +114,7 @@ public class PlayableStat extends CreatureStat
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
 		}
 		byte level = minimumLevel;
 		for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
@@ -175,7 +175,7 @@ public class PlayableStat extends CreatureStat
 		
 		if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL)
 		{
-			((PlayerInstance) getActiveChar()).checkPlayerSkills();
+			((Player) getActiveChar()).checkPlayerSkills();
 		}
 		
 		if (!levelIncreased)

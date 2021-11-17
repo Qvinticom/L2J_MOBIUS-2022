@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,14 +25,14 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerTakeHero implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public OnPlayerTakeHero(PlayerInstance player)
+	public OnPlayerTakeHero(Player player)
 	{
 		_player = player;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

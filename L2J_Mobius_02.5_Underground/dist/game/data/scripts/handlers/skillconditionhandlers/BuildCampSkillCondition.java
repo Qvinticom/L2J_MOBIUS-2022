@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
@@ -49,7 +49,7 @@ public class BuildCampSkillCondition implements ISkillCondition
 			return false;
 		}
 		
-		final PlayerInstance player = caster.getActingPlayer();
+		final Player player = caster.getActingPlayer();
 		boolean canCreateBase = true;
 		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
 		{

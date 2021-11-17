@@ -19,7 +19,7 @@ package handlers.communityboard;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Homepage board.
@@ -39,7 +39,7 @@ public class HomepageBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/homepage.html"), player);
 		return true;

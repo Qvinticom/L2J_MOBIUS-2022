@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -41,7 +41,7 @@ public class ConditionPlayerSouls extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getChargedSouls(_type) >= _souls);
 	}

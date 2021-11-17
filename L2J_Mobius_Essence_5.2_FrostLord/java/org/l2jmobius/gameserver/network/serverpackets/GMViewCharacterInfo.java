@@ -20,12 +20,12 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.VariationInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewCharacterInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _runSpd;
 	private final int _walkSpd;
 	private final int _swimRunSpd;
@@ -34,7 +34,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
 	
-	public GMViewCharacterInfo(PlayerInstance player)
+	public GMViewCharacterInfo(Player player)
 	{
 		_player = player;
 		_moveMultiplier = player.getMovementSpeedMultiplier();

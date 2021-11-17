@@ -21,7 +21,7 @@ import java.util.Calendar;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.SoIManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -46,7 +46,7 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
@@ -63,7 +63,7 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -110,7 +110,7 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 							}
 							else if ((player.getParty() != null) && (player.getParty().getLeaderObjectId() == player.getObjectId()))
 							{
-								for (PlayerInstance member : player.getParty().getMembers())
+								for (Player member : player.getParty().getMembers())
 								{
 									final QuestState qs1 = member.getQuestState(getName());
 									if (qs1 != null)
@@ -240,7 +240,7 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 		return htmltext;
 	}
 	
-	private void finishInstance(PlayerInstance player)
+	private void finishInstance(Player player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		final Calendar reenter = Calendar.getInstance();
@@ -254,7 +254,7 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 		final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 		sm.addInstanceName(TEMPLATE_ID);
 		
-		for (PlayerInstance plr : world.getAllowed())
+		for (Player plr : world.getAllowed())
 		{
 			if (plr != null)
 			{

@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class BuyListSeed implements IClientOutgoingPacket
 {
 	private final int _manorId;
-	private List<ItemInstance> _list = new ArrayList<>();
+	private List<Item> _list = new ArrayList<>();
 	private final int _money;
 	
 	public BuyListSeed(StoreTradeList list, int manorId, int currentMoney)
@@ -48,7 +48,7 @@ public class BuyListSeed implements IClientOutgoingPacket
 		packet.writeD(_money); // current money
 		packet.writeD(_manorId); // manor id
 		packet.writeH(_list.size()); // list length
-		for (ItemInstance item : _list)
+		for (Item item : _list)
 		{
 			packet.writeH(0x04); // item->type1
 			packet.writeD(0x00); // objectId

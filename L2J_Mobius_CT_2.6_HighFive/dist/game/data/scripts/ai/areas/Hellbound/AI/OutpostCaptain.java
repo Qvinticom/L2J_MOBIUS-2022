@@ -18,8 +18,8 @@ package ai.areas.Hellbound.AI;
 
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 
 import ai.AbstractNpcAI;
 import ai.areas.Hellbound.HellboundEngine;
@@ -46,9 +46,9 @@ public class OutpostCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final DoorInstance door = DoorData.getInstance().getDoor(20250001);
+		final Door door = DoorData.getInstance().getDoor(20250001);
 		if (door != null)
 		{
 			door.openMe();
@@ -75,7 +75,7 @@ public class OutpostCaptain extends AbstractNpcAI
 			}
 			else
 			{
-				final DoorInstance door = DoorData.getInstance().getDoor(20250001);
+				final Door door = DoorData.getInstance().getDoor(20250001);
 				if (door != null)
 				{
 					door.closeMe();

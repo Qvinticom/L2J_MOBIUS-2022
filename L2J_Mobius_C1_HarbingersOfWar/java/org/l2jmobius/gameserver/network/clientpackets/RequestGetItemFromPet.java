@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Inventory;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
@@ -38,7 +38,7 @@ public class RequestGetItemFromPet extends ClientBasePacket
 		final int noidea = readD();
 		final Inventory petInventory = client.getActiveChar().getPet().getInventory();
 		final Inventory playerInventory = client.getActiveChar().getInventory();
-		final ItemInstance petItem = petInventory.getItem(objectId);
+		final Item petItem = petInventory.getItem(objectId);
 		if (petItem == null)
 		{
 			_log.warning("item requested from pet, but its not there.");
@@ -56,7 +56,7 @@ public class RequestGetItemFromPet extends ClientBasePacket
 		else
 		{
 			final int total = petItem.getCount();
-			final ItemInstance newPlayerItem = petInventory.dropItem(objectId, total);
+			final Item newPlayerItem = petInventory.dropItem(objectId, total);
 			final PetInventoryUpdate petiu = new PetInventoryUpdate();
 			petiu.addModifiedItem(petItem);
 			playerInventory.addItem(newPlayerItem);

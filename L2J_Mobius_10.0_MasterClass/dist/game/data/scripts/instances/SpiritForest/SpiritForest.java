@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -47,7 +47,7 @@ public class SpiritForest extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.contains("enterInstance"))
 		{
@@ -67,8 +67,8 @@ public class SpiritForest extends AbstractInstance
 					return null;
 				}
 				
-				final List<PlayerInstance> members = party.getMembers();
-				for (PlayerInstance member : members)
+				final List<Player> members = party.getMembers();
+				for (Player member : members)
 				{
 					if (!member.isInsideRadius3D(npc, 1000))
 					{
@@ -77,7 +77,7 @@ public class SpiritForest extends AbstractInstance
 					}
 				}
 				
-				for (PlayerInstance member : members)
+				for (Player member : members)
 				{
 					enterInstance(member, npc, templateId);
 				}
@@ -95,14 +95,14 @@ public class SpiritForest extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		player.sendPacket(new ExSendUIEvent(player, false, false, Math.min(3600000, (int) (instance.getRemainingTime() / 1000)), 0, NpcStringId.TIME_LEFT));
 	}
 	
 	@Override
-	public void onInstanceLeave(PlayerInstance player, Instance instance)
+	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, true, false, 3600, 0, NpcStringId.TIME_LEFT));
 	}

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -30,7 +30,7 @@ public class EffectCharge extends Effect
 	{
 		super(env, template);
 		numCharges = 1;
-		if (env.target instanceof PlayerInstance)
+		if (env.target instanceof Player)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 			sm.addNumber(numCharges);

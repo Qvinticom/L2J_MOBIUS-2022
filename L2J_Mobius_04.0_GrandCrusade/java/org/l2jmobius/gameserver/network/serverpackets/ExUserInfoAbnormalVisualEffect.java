@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExUserInfoAbnormalVisualEffect implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExUserInfoAbnormalVisualEffect(PlayerInstance player)
+	public ExUserInfoAbnormalVisualEffect(Player player)
 	{
 		_player = player;
 	}

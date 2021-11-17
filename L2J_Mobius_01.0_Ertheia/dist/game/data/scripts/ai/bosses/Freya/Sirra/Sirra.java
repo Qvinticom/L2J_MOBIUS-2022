@@ -17,7 +17,7 @@
 package ai.bosses.Freya.Sirra;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 import ai.AbstractNpcAI;
@@ -40,7 +40,7 @@ public class Sirra extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)

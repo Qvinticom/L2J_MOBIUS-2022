@@ -1088,7 +1088,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18824" level="1" type="Npc" name="Merchant of Mammon A">
+	<npc id="18824" level="1" type="Folk" name="Merchant of Mammon A">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1122,7 +1122,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="18825" level="1" type="Npc" name="Merchant of Mammon B">
+	<npc id="18825" level="1" type="Folk" name="Merchant of Mammon B">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1156,7 +1156,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="18826" level="80" type="Npc" name="Shilen's Evil Thoughts For Presentation">
+	<npc id="18826" level="80" type="Folk" name="Shilen's Evil Thoughts For Presentation">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1190,7 +1190,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18827" level="80" type="Npc" name="Priest Cain for Presentation">
+	<npc id="18827" level="80" type="Folk" name="Priest Cain for Presentation">
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1224,7 +1224,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18828" level="80" type="Npc" name="High Priest of Dawn">
+	<npc id="18828" level="80" type="Folk" name="High Priest of Dawn">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1258,7 +1258,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18829" level="80" type="Npc" name="Shilen's Evil Thoughts Leader For Presentation">
+	<npc id="18829" level="80" type="Folk" name="Shilen's Evil Thoughts Leader For Presentation">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1292,7 +1292,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18830" level="1" type="Npc" name="ssq For Presentation Camera Dummy 1">
+	<npc id="18830" level="1" type="Folk" name="ssq For Presentation Camera Dummy 1">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1326,7 +1326,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18831" level="1" type="Npc" name="ssq For Presentation Camera Dummy 2">
+	<npc id="18831" level="1" type="Folk" name="ssq For Presentation Camera Dummy 2">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1360,7 +1360,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18832" level="1" type="Npc" name="ssq For Presentation Camera Dummy 3">
+	<npc id="18832" level="1" type="Folk" name="ssq For Presentation Camera Dummy 3">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1394,7 +1394,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18833" level="1" type="Npc" name="Emperor's Seal Device">
+	<npc id="18833" level="1" type="Folk" name="Emperor's Seal Device">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1506,7 +1506,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18836" level="82" type="Npc" name="Varangka's Guardian">
+	<npc id="18836" level="82" type="Folk" name="Varangka's Guardian">
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
 			<skill name="DeBuff" id="6168" level="9" /> <!-- Shock -->
@@ -1554,7 +1554,7 @@
 			<height normal="39.5" grown="69" />
 		</collision>
 	</npc>
-	<npc id="18837" level="1" type="Npc">
+	<npc id="18837" level="1" type="Folk">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6235" level="1" /> <!-- Blessed Focus -->

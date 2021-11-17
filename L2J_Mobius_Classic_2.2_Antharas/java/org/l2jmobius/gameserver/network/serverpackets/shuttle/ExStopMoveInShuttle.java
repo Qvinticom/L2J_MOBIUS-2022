@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -32,7 +32,7 @@ public class ExStopMoveInShuttle implements IClientOutgoingPacket
 	private final Location _pos;
 	private final int _heading;
 	
-	public ExStopMoveInShuttle(PlayerInstance player, int boatId)
+	public ExStopMoveInShuttle(Player player, int boatId)
 	{
 		_objectId = player.getObjectId();
 		_boatId = boatId;

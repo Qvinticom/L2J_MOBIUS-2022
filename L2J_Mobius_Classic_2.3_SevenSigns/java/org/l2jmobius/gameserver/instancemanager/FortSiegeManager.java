@@ -36,9 +36,9 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.CombatFlag;
 import org.l2jmobius.gameserver.model.FortSiegeSpawn;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -67,7 +67,7 @@ public class FortSiegeManager
 		load();
 	}
 	
-	public void addSiegeSkills(PlayerInstance character)
+	public void addSiegeSkills(Player character)
 	{
 		character.addSkill(CommonSkill.SEAL_OF_RULER.getSkill(), false);
 		character.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
@@ -106,7 +106,7 @@ public class FortSiegeManager
 		return register;
 	}
 	
-	public void removeSiegeSkills(PlayerInstance character)
+	public void removeSiegeSkills(Player character)
 	{
 		character.removeSkill(CommonSkill.SEAL_OF_RULER.getSkill());
 		character.removeSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill());
@@ -274,7 +274,7 @@ public class FortSiegeManager
 		return (itemId == 9819);
 	}
 	
-	public boolean activateCombatFlag(PlayerInstance player, ItemInstance item)
+	public boolean activateCombatFlag(Player player, Item item)
 	{
 		if (!checkIfCanPickup(player))
 		{
@@ -293,7 +293,7 @@ public class FortSiegeManager
 		return true;
 	}
 	
-	public boolean checkIfCanPickup(PlayerInstance player)
+	public boolean checkIfCanPickup(Player player)
 	{
 		if (player.isCombatFlagEquipped())
 		{
@@ -319,7 +319,7 @@ public class FortSiegeManager
 		return true;
 	}
 	
-	public void dropCombatFlag(PlayerInstance player, int fortId)
+	public void dropCombatFlag(Player player, int fortId)
 	{
 		final Fort fort = FortManager.getInstance().getFortById(fortId);
 		final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());

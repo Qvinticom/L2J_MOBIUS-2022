@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -33,10 +33,10 @@ public class RequestUnEquipItem extends ClientBasePacket
 	{
 		super(decrypt);
 		final int slot = readD();
-		final PlayerInstance activeChar = client.getActiveChar();
-		final Collection<ItemInstance> unequipped = activeChar.getInventory().unEquipItemInBodySlot(slot);
+		final Player activeChar = client.getActiveChar();
+		final Collection<Item> unequipped = activeChar.getInventory().unEquipItemInBodySlot(slot);
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (ItemInstance itm : unequipped)
+		for (Item itm : unequipped)
 		{
 			iu.addModifiedItem(itm);
 		}

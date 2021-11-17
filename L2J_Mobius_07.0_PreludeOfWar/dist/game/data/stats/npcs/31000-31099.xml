@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="31001" level="70" type="Npc" name="Claudia Athebaldt">
+	<npc id="31001" level="70" type="Folk" name="Claudia Athebaldt">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -41,7 +41,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31002" level="70" type="Npc" name="Reorin" title="Maestro">
+	<npc id="31002" level="70" type="Folk" name="Reorin" title="Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -995,7 +995,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="31027" level="70" type="Npc" name="Coffer of the Dead">
+	<npc id="31027" level="70" type="Folk" name="Coffer of the Dead">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1037,7 +1037,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31028" level="70" type="Npc" name="Chest of Kernon">
+	<npc id="31028" level="70" type="Folk" name="Chest of Kernon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1079,7 +1079,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31029" level="70" type="Npc" name="Chest of Golkonda">
+	<npc id="31029" level="70" type="Folk" name="Chest of Golkonda">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1121,7 +1121,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31030" level="70" type="Npc" name="Hallate's Chest">
+	<npc id="31030" level="70" type="Folk" name="Hallate's Chest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1163,7 +1163,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="31031" level="70" type="Observation" name="Broadcasting Tower">
+	<npc id="31031" level="70" type="BroadcastingTower" name="Broadcasting Tower">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1421,7 +1421,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="31042" level="70" type="Npc" name="Kantabilon" title="Melody Maestro">
+	<npc id="31042" level="70" type="Folk" name="Kantabilon" title="Melody Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1462,7 +1462,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="31043" level="70" type="Npc" name="Octavia" title="Melody Maestro">
+	<npc id="31043" level="70" type="Folk" name="Octavia" title="Melody Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1585,7 +1585,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="31046" level="70" type="Npc" name="Marsden" title="Symbol Maker">
+	<npc id="31046" level="70" type="Folk" name="Marsden" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1626,7 +1626,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31047" level="70" type="Npc" name="Kell" title="Symbol Maker">
+	<npc id="31047" level="70" type="Folk" name="Kell" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1667,7 +1667,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31048" level="70" type="Npc" name="McDermott" title="Symbol Maker">
+	<npc id="31048" level="70" type="Folk" name="McDermott" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1708,7 +1708,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31049" level="70" type="Npc" name="Pepper" title="Symbol Maker">
+	<npc id="31049" level="70" type="Folk" name="Pepper" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1749,7 +1749,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31050" level="70" type="Npc" name="Thora" title="Symbol Maker">
+	<npc id="31050" level="70" type="Folk" name="Thora" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1790,7 +1790,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31051" level="70" type="Npc" name="Keach" title="Symbol Maker">
+	<npc id="31051" level="70" type="Folk" name="Keach" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1831,7 +1831,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31052" level="70" type="Npc" name="Heid" title="Symbol Maker">
+	<npc id="31052" level="70" type="Folk" name="Heid" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1872,7 +1872,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31053" level="70" type="Npc" name="Kidder" title="Symbol Maker">
+	<npc id="31053" level="70" type="Folk" name="Kidder" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1986,7 +1986,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31074" level="70" type="Npc" name="Corpse of Hutaku">
+	<npc id="31074" level="70" type="Folk" name="Corpse of Hutaku">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2027,7 +2027,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31075" level="70" type="Npc" name="Sales Cat of Ivory Tower">
+	<npc id="31075" level="70" type="Folk" name="Sales Cat of Ivory Tower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2069,7 +2069,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31076" level="70" type="Npc" name="Newbie Helper">
+	<npc id="31076" level="70" type="Folk" name="Newbie Helper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2110,7 +2110,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="31077" level="70" type="Npc" name="Newbie Helper">
+	<npc id="31077" level="70" type="Folk" name="Newbie Helper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2151,7 +2151,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="31078" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31078" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2194,7 +2194,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31079" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31079" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2237,7 +2237,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31080" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31080" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2280,7 +2280,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31081" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31081" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2323,7 +2323,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31082" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31082" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2366,7 +2366,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31083" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31083" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2409,7 +2409,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31084" level="70" type="Npc" name="Priest of Dawn">
+	<npc id="31084" level="70" type="Folk" name="Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2452,7 +2452,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="31085" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31085" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2495,7 +2495,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31086" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31086" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2538,7 +2538,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31087" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31087" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2581,7 +2581,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31088" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31088" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2624,7 +2624,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31089" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31089" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2667,7 +2667,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31090" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31090" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2710,7 +2710,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31091" level="70" type="Npc" name="Priestess of Dusk">
+	<npc id="31091" level="70" type="Folk" name="Priestess of Dusk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2754,7 +2754,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="31092" level="70" type="Npc" name="Black Marketeer of Mammon">
+	<npc id="31092" level="70" type="Folk" name="Black Marketeer of Mammon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2795,7 +2795,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31093" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31093" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="PosX1" value="-81080" />
@@ -2841,7 +2841,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31094" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31094" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="PosX1" value="-83187" />
@@ -2888,7 +2888,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31095" level="70" type="Npc" name="Gatekeeper Ziggurat">
+	<npc id="31095" level="70" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Role" value="0" />
@@ -2933,7 +2933,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31096" level="70" type="Npc" name="Gatekeeper Ziggurat">
+	<npc id="31096" level="70" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Role" value="0" />
@@ -2978,7 +2978,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31097" level="70" type="Npc" name="Gatekeeper Ziggurat">
+	<npc id="31097" level="70" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Role" value="0" />
@@ -3023,7 +3023,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31098" level="70" type="Npc" name="Gatekeeper Ziggurat">
+	<npc id="31098" level="70" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Role" value="0" />
@@ -3068,7 +3068,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31099" level="70" type="Npc" name="Gatekeeper Ziggurat">
+	<npc id="31099" level="70" type="Folk" name="Gatekeeper Ziggurat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Role" value="0" />

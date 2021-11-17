@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 
 import ai.AbstractNpcAI;
@@ -47,7 +47,7 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int belethStatus = GrandBossManager.getInstance().getBossStatus(BELETH);
 		if (belethStatus == 3)
@@ -77,7 +77,7 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 					continue;
 				}
 				
-				for (PlayerInstance pl : party.getMembers())
+				for (Player pl : party.getMembers())
 				{
 					if (pl.isInsideRadius3D(npc.getX(), npc.getY(), npc.getZ(), 3000))
 					{

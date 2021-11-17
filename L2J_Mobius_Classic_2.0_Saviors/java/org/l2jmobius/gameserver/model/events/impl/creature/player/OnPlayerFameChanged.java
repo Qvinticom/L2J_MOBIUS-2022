@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerFameChanged implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _oldFame;
 	private final int _newFame;
 	
-	public OnPlayerFameChanged(PlayerInstance player, int oldFame, int newFame)
+	public OnPlayerFameChanged(Player player, int oldFame, int newFame)
 	{
 		_player = player;
 		_oldFame = oldFame;
 		_newFame = newFame;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

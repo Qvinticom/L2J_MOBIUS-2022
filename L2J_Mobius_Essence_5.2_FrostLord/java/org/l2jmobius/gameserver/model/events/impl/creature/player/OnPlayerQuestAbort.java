@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,16 +25,16 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerQuestAbort implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _questId;
 	
-	public OnPlayerQuestAbort(PlayerInstance player, int questId)
+	public OnPlayerQuestAbort(Player player, int questId)
 	{
 		_player = player;
 		_questId = questId;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 
 public abstract class BaseBBSManager
@@ -30,17 +30,17 @@ public abstract class BaseBBSManager
 	
 	protected static final String CB_PATH = "data/html/CommunityBoard/";
 	
-	public void parseCmd(String command, PlayerInstance player)
+	public void parseCmd(String command, Player player)
 	{
 		separateAndSend("<html><body><br><br><center>The command: " + command + " isn't implemented.</center></body></html>", player);
 	}
 	
-	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player)
+	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player player)
 	{
 		separateAndSend("<html><body><br><br><center>The command: " + ar1 + " isn't implemented.</center></body></html>", player);
 	}
 	
-	public static void separateAndSend(String html, PlayerInstance acha)
+	public static void separateAndSend(String html, Player acha)
 	{
 		if ((html == null) || (acha == null))
 		{
@@ -67,7 +67,7 @@ public abstract class BaseBBSManager
 		}
 	}
 	
-	protected static void send1001(String html, PlayerInstance acha)
+	protected static void send1001(String html, Player acha)
 	{
 		if (html.length() < 8180)
 		{
@@ -75,12 +75,12 @@ public abstract class BaseBBSManager
 		}
 	}
 	
-	protected static void send1002(PlayerInstance acha)
+	protected static void send1002(Player acha)
 	{
 		send1002(acha, " ", " ", "0");
 	}
 	
-	protected static void send1002(PlayerInstance player, String string, String string2, String string3)
+	protected static void send1002(Player player, String string, String string2, String string3)
 	{
 		final List<String> arg = new ArrayList<>();
 		arg.add("0");
@@ -108,7 +108,7 @@ public abstract class BaseBBSManager
 	 * @param file : the file to load.
 	 * @param player : the requester.
 	 */
-	protected void loadStaticHtm(String file, PlayerInstance player)
+	protected void loadStaticHtm(String file, Player player)
 	{
 		separateAndSend(HtmCache.getInstance().getHtm(CB_PATH + getFolder() + file), player);
 	}

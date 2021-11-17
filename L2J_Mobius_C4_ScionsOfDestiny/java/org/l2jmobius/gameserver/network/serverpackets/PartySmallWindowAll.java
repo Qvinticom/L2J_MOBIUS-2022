@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,11 +28,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class PartySmallWindowAll implements IClientOutgoingPacket
 {
 	private final Party _party;
-	private final PlayerInstance _exclude;
+	private final Player _exclude;
 	private final int _dist;
 	private final int _leaderObjId;
 	
-	public PartySmallWindowAll(PlayerInstance exclude, Party party)
+	public PartySmallWindowAll(Player exclude, Party party)
 	{
 		_exclude = exclude;
 		_party = party;
@@ -49,7 +49,7 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 		packet.writeD(_dist);
 		packet.writeD(_party.getMemberCount() - 1);
 		
-		for (PlayerInstance member : _party.getPartyMembers())
+		for (Player member : _party.getPartyMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{

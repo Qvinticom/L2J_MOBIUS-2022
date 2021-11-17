@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -47,7 +47,7 @@ public class Lailly extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -64,7 +64,7 @@ public class Lailly extends AbstractNpcAI
 			}
 			case "okay":
 			{
-				final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+				final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
 				if ((instance != null) && (instance.getEndTime() > Chronos.currentTimeMillis()))
 				{
 					switch (instance.getTemplateId())
@@ -94,7 +94,7 @@ public class Lailly extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34181.html";
 	}

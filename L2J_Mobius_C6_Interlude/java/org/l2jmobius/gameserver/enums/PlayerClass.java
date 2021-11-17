@@ -28,7 +28,7 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author luisantonioa
@@ -219,7 +219,7 @@ public enum PlayerClass
 		_type = pType;
 	}
 	
-	public Set<PlayerClass> getAvailableSubclasses(PlayerInstance player)
+	public Set<PlayerClass> getAvailableSubclasses(Player player)
 	{
 		Set<PlayerClass> subclasses = null;
 		

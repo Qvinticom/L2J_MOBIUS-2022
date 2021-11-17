@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
+import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad.COMP_TYPE;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -76,9 +76,9 @@ class OlympiadGame
 	public int _damageP1 = 0;
 	public int _damageP2 = 0;
 	
-	public PlayerInstance _playerOne;
-	public PlayerInstance _playerTwo;
-	protected List<PlayerInstance> _players;
+	public Player _playerOne;
+	public Player _playerTwo;
+	protected List<Player> _players;
 	private final int[] _stadiumPort;
 	private int x1;
 	private int y1;
@@ -88,7 +88,7 @@ class OlympiadGame
 	private int z2;
 	public int _stadiumID;
 	
-	protected OlympiadGame(int id, COMP_TYPE type, List<PlayerInstance> list)
+	protected OlympiadGame(int id, COMP_TYPE type, List<Player> list)
 	{
 		_aborted = false;
 		_gamestarted = false;
@@ -141,7 +141,7 @@ class OlympiadGame
 		_playerTwoSkills.clear();
 	}
 	
-	protected void handleDisconnect(PlayerInstance player)
+	protected void handleDisconnect(Player player)
 	{
 		if (_gamestarted)
 		{
@@ -172,7 +172,7 @@ class OlympiadGame
 			return;
 		}
 		
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -233,7 +233,7 @@ class OlympiadGame
 					final Summon summon = player.getPet();
 					summon.stopAllEffects();
 					
-					if (summon instanceof PetInstance)
+					if (summon instanceof Pet)
 					{
 						summon.unSummon(player);
 					}
@@ -242,7 +242,7 @@ class OlympiadGame
 				// Remove Tamed Beast
 				if (player.getTrainedBeast() != null)
 				{
-					final TamedBeastInstance traindebeast = player.getTrainedBeast();
+					final TamedBeast traindebeast = player.getTrainedBeast();
 					traindebeast.stopAllEffects();
 					
 					traindebeast.doDespawn();
@@ -252,7 +252,7 @@ class OlympiadGame
 				{
 					if (player.getCubics() != null)
 					{
-						for (CubicInstance cubic : player.getCubics().values())
+						for (Cubic cubic : player.getCubics().values())
 						{
 							cubic.stopAction();
 							player.delCubic(cubic.getId());
@@ -263,7 +263,7 @@ class OlympiadGame
 				else if (player.getCubics() != null)
 				{
 					boolean removed = false;
-					for (CubicInstance cubic : player.getCubics().values())
+					for (Cubic cubic : player.getCubics().values())
 					{
 						if (cubic.givenByOther())
 						{
@@ -298,8 +298,8 @@ class OlympiadGame
 				// Discharge any active shots
 				if (player.getActiveWeaponInstance() != null)
 				{
-					player.getActiveWeaponInstance().setChargedSoulshot(ItemInstance.CHARGED_NONE);
-					player.getActiveWeaponInstance().setChargedSpiritshot(ItemInstance.CHARGED_NONE);
+					player.getActiveWeaponInstance().setChargedSoulshot(Item.CHARGED_NONE);
+					player.getActiveWeaponInstance().setChargedSpiritshot(Item.CHARGED_NONE);
 				}
 				
 				// Skill recharge is a Gracia Final feature, but we have it configurable ;)
@@ -381,7 +381,7 @@ class OlympiadGame
 			if (_playerOne.getPet() != null)
 			{
 				final Summon summon = _playerOne.getPet();
-				if (summon instanceof SummonInstance)
+				if (summon instanceof Servitor)
 				{
 					summon.teleToLocation(_stadiumPort[0] + 900, _stadiumPort[1], _stadiumPort[2]);
 				}
@@ -391,7 +391,7 @@ class OlympiadGame
 			if (_playerTwo.getPet() != null)
 			{
 				final Summon summon = _playerTwo.getPet();
-				if (summon instanceof SummonInstance)
+				if (summon instanceof Servitor)
 				{
 					summon.teleToLocation(_stadiumPort[0] - 900, _stadiumPort[1], _stadiumPort[2]);
 				}
@@ -417,7 +417,7 @@ class OlympiadGame
 	
 	protected void additions()
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -476,7 +476,7 @@ class OlympiadGame
 		
 		sm.addNumber(nsecond);
 		
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -504,7 +504,7 @@ class OlympiadGame
 	
 	protected void PlayersStatusBack()
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -787,7 +787,7 @@ class OlympiadGame
 			
 			try
 			{
-				final ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, gpReward, _playerOne, null);
+				final Item item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, gpReward, _playerOne, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerOne.sendPacket(iu);
@@ -820,7 +820,7 @@ class OlympiadGame
 			
 			try
 			{
-				final ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, gpReward, _playerTwo, null);
+				final Item item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, gpReward, _playerTwo, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerTwo.sendPacket(iu);
@@ -896,7 +896,7 @@ class OlympiadGame
 		}
 		
 		broadcastMessage(new SystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT), true);
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -912,7 +912,7 @@ class OlympiadGame
 		return !_aborted;
 	}
 	
-	protected void addDamage(PlayerInstance player, int damage)
+	protected void addDamage(Player player, int damage)
 	{
 		if ((_playerOne == null) || (_playerTwo == null))
 		{
@@ -942,9 +942,9 @@ class OlympiadGame
 		return msg;
 	}
 	
-	protected PlayerInstance[] getPlayers()
+	protected Player[] getPlayers()
 	{
-		final PlayerInstance[] players = new PlayerInstance[2];
+		final Player[] players = new Player[2];
 		if ((_playerOne == null) || (_playerTwo == null))
 		{
 			return null;
@@ -969,7 +969,7 @@ class OlympiadGame
 		
 		if (toAll && (OlympiadManager.STADIUMS[_stadiumID].getSpectators() != null))
 		{
-			for (PlayerInstance spec : OlympiadManager.STADIUMS[_stadiumID].getSpectators())
+			for (Player spec : OlympiadManager.STADIUMS[_stadiumID].getSpectators())
 			{
 				if (spec != null)
 				{
@@ -999,7 +999,7 @@ class OlympiadGame
 		}
 	}
 	
-	public void sendPlayersStatus(PlayerInstance spec)
+	public void sendPlayersStatus(Player spec)
 	{
 		spec.sendPacket(new ExOlympiadUserInfo(_playerOne, 1));
 		spec.sendPacket(new ExOlympiadUserInfo(_playerTwo, 2));
@@ -1035,7 +1035,7 @@ class OlympiadGameTask implements Runnable
 		_game = game;
 	}
 	
-	protected boolean checkObserverStatusBug(PlayerInstance player)
+	protected boolean checkObserverStatusBug(Player player)
 	{
 		if ((player != null) && player.inObserverMode())
 		{
@@ -1045,7 +1045,7 @@ class OlympiadGameTask implements Runnable
 		return false;
 	}
 	
-	protected void removeObserverModeBug(PlayerInstance player)
+	protected void removeObserverModeBug(Player player)
 	{
 		if ((player == null) || !player.inObserverMode())
 		{
@@ -1092,12 +1092,12 @@ class OlympiadGameTask implements Runnable
 		for (int i = 0; i < 2; i++)
 		{
 			boolean defaulted = false;
-			final PlayerInstance player = _game._players.get(i);
+			final Player player = _game._players.get(i);
 			if (player != null)
 			{
 				player.setOlympiadGameId(_game._stadiumID);
 			}
-			final PlayerInstance otherPlayer = _game._players.get(i ^ 1);
+			final Player otherPlayer = _game._players.get(i ^ 1);
 			SystemMessage sm = null;
 			if ((player == null) || !player.isOnline())
 			{
@@ -1183,7 +1183,7 @@ class OlympiadGameTask implements Runnable
 			
 			if (OlympiadManager.STADIUMS[_game._stadiumID].getSpectators() != null)
 			{
-				for (PlayerInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
+				for (Player spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
 				{
 					spec.leaveOlympiadObserverMode(true);
 				}
@@ -1291,7 +1291,7 @@ class OlympiadGameTask implements Runnable
 		_game._playerTwo.sendPacket(new ExOlympiadUserInfo(_game._playerOne, 1));
 		if (OlympiadManager.STADIUMS[_game._stadiumID].getSpectators() != null)
 		{
-			for (PlayerInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
+			for (Player spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
 			{
 				_game.sendPlayersStatus(spec);
 			}

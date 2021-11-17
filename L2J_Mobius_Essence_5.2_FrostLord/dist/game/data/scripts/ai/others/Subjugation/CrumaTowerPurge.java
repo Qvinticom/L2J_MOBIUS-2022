@@ -20,7 +20,7 @@ import java.util.Calendar;
 
 import org.l2jmobius.gameserver.data.xml.SubjugationData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PurgePlayerHolder;
 import org.l2jmobius.gameserver.model.holders.SubjugationHolder;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationSidebar;
@@ -42,7 +42,7 @@ public class CrumaTowerPurge extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (killer.getVitalityPoints() > 0)
 		{
@@ -67,7 +67,7 @@ public class CrumaTowerPurge extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void checkPurgeComplete(PlayerInstance player)
+	private void checkPurgeComplete(Player player)
 	{
 		final int points = player.getPurgePoints().get(CATEGORY).getPoints();
 		final int keys = player.getPurgePoints().get(CATEGORY).getKeys();

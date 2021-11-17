@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -33,13 +33,13 @@ public class AdminHwid implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer() || (activeChar.getTarget().getActingPlayer().getClient() == null) || (activeChar.getTarget().getActingPlayer().getClient().getHardwareInfo() == null))
 		{
 			return true;
 		}
-		final PlayerInstance target = activeChar.getTarget().getActingPlayer();
+		final Player target = activeChar.getTarget().getActingPlayer();
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/charhwinfo.htm"));
 		html.replace("%name%", target.getName());

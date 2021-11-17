@@ -22,8 +22,8 @@ import java.util.Map;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -74,7 +74,7 @@ public class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -109,7 +109,7 @@ public class Cannon extends AbstractNpcAI
 			}
 			case "LIGHT_CHECK":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 1000, monster ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 1000, monster ->
 				{
 					final int monsterId = monster.getId();
 					if (TRANSFORM_DATA.containsKey(monsterId))
@@ -144,7 +144,7 @@ public class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getVariables().getBoolean("DROP_MEMORY_FRAGMENT", false))
 		{
@@ -166,7 +166,7 @@ public class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (skill.getId() == PRESENT_SKILL.getSkillId())
 		{
@@ -180,7 +180,7 @@ public class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "cannon.html";
 	}

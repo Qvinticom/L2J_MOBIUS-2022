@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -46,7 +46,7 @@ public class CrystalGradeModify extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final PlayerInstance player = info.getEffected().getActingPlayer();
+		final Player player = info.getEffected().getActingPlayer();
 		if (player != null)
 		{
 			player.setExpertisePenaltyBonus(0);

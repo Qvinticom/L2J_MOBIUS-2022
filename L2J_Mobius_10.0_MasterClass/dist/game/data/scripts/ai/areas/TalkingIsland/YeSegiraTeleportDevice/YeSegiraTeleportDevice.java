@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -84,7 +84,7 @@ public class YeSegiraTeleportDevice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (LOCATIONS.containsKey(event))
 		{
@@ -114,7 +114,7 @@ public class YeSegiraTeleportDevice extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerCreate(OnPlayerCreate event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player.getRace() != Race.ERTHEIA)
 		{
 			player.getVariables().set(MOVIE_VAR, true);

@@ -23,8 +23,8 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class ValidatePosition extends ClientBasePacket
@@ -41,7 +41,7 @@ public class ValidatePosition extends ClientBasePacket
 		final int heading = readD();
 		@SuppressWarnings("unused")
 		final int data = readD();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (activeChar != null)
 		{
 			activeChar.setZ(z);
@@ -66,9 +66,9 @@ public class ValidatePosition extends ClientBasePacket
 					for (i = 0; i < toBeDeleted.size(); ++i)
 					{
 						activeChar.removeKnownObject(toBeDeleted.get(i));
-						if (toBeDeleted.get(i) instanceof MonsterInstance)
+						if (toBeDeleted.get(i) instanceof Monster)
 						{
-							((MonsterInstance) toBeDeleted.get(i)).removeKnownObject(activeChar);
+							((Monster) toBeDeleted.get(i)).removeKnownObject(activeChar);
 							continue;
 						}
 						toBeDeleted.get(i).removeKnownObject(activeChar);

@@ -17,17 +17,17 @@
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author UnAfraid
  */
 public class TeleportTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Location _loc;
 	
-	public TeleportTask(PlayerInstance player, Location loc)
+	public TeleportTask(Player player, Location loc)
 	{
 		_player = player;
 		_loc = loc;

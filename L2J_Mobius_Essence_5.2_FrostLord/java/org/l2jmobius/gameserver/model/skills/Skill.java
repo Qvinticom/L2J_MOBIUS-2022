@@ -48,13 +48,13 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.cubic.CubicInstance;
+import org.l2jmobius.gameserver.model.cubic.Cubic;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.AttachSkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -1251,7 +1251,7 @@ public class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, ItemInstance)}.<br>
+	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
 	 * Simplify the calls.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
@@ -1262,19 +1262,19 @@ public class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, ItemInstance)}.<br>
+	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
 	 * Simplify the calls.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
 	 * @param item
 	 */
-	public void applyEffects(Creature effector, Creature effected, ItemInstance item)
+	public void applyEffects(Creature effector, Creature effected, Item item)
 	{
 		applyEffects(effector, effected, false, false, true, 0, item);
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, ItemInstance)}.<br>
+	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
 	 * Simplify the calls, allowing abnormal time time customization.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
@@ -1296,7 +1296,7 @@ public class Skill implements IIdentifiable
 	 * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
 	 * @param item
 	 */
-	public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime, ItemInstance item)
+	public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime, Item item)
 	{
 		// null targets cannot receive any effects.
 		if (effected == null)
@@ -1424,7 +1424,7 @@ public class Skill implements IIdentifiable
 	 * @param item
 	 * @param targets the targets
 	 */
-	public void activateSkill(Creature caster, ItemInstance item, WorldObject... targets)
+	public void activateSkill(Creature caster, Item item, WorldObject... targets)
 	{
 		activateSkill(caster, null, item, targets);
 	}
@@ -1434,7 +1434,7 @@ public class Skill implements IIdentifiable
 	 * @param cubic the cubic
 	 * @param targets the targets
 	 */
-	public void activateSkill(CubicInstance cubic, WorldObject... targets)
+	public void activateSkill(Cubic cubic, WorldObject... targets)
 	{
 		activateSkill(cubic.getOwner(), cubic, null, targets);
 	}
@@ -1446,7 +1446,7 @@ public class Skill implements IIdentifiable
 	 * @param item
 	 * @param targets the targets
 	 */
-	public void activateSkill(Creature caster, CubicInstance cubic, ItemInstance item, WorldObject... targets)
+	public void activateSkill(Creature caster, Cubic cubic, Item item, WorldObject... targets)
 	{
 		for (WorldObject targetObject : targets)
 		{

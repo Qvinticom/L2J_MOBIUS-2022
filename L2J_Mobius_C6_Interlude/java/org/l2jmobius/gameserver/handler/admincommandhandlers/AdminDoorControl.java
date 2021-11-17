@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -53,7 +53,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final DoorData doorTable = DoorData.getInstance();
 		WorldObject target2 = null;
@@ -86,9 +86,9 @@ public class AdminDoorControl implements IAdminCommandHandler
 		else if (command.equals("admin_close"))
 		{
 			target2 = activeChar.getTarget();
-			if (target2 instanceof DoorInstance)
+			if (target2 instanceof Door)
 			{
-				((DoorInstance) target2).closeMe();
+				((Door) target2).closeMe();
 			}
 			else
 			{
@@ -124,9 +124,9 @@ public class AdminDoorControl implements IAdminCommandHandler
 		else if (command.equals("admin_open"))
 		{
 			target2 = activeChar.getTarget();
-			if (target2 instanceof DoorInstance)
+			if (target2 instanceof Door)
 			{
-				((DoorInstance) target2).openMe();
+				((Door) target2).openMe();
 			}
 			else
 			{
@@ -139,14 +139,14 @@ public class AdminDoorControl implements IAdminCommandHandler
 		{
 			try
 			{
-				for (DoorInstance door : doorTable.getDoors())
+				for (Door door : doorTable.getDoors())
 				{
 					door.closeMe();
 				}
 				
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					for (DoorInstance door : castle.getDoors())
+					for (Door door : castle.getDoors())
 					{
 						door.closeMe();
 					}
@@ -163,14 +163,14 @@ public class AdminDoorControl implements IAdminCommandHandler
 			// set limits on the PH door to do a cycle of opening doors.
 			try
 			{
-				for (DoorInstance door : doorTable.getDoors())
+				for (Door door : doorTable.getDoors())
 				{
 					door.openMe();
 				}
 				
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					for (DoorInstance door : castle.getDoors())
+					for (Door door : castle.getDoors())
 					{
 						door.openMe();
 					}

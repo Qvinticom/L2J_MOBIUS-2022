@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 
@@ -35,11 +35,11 @@ public class RequestExCancelEnchantItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player != null)
 		{
 			player.sendPacket(new EnchantResult(2, 0, 0));
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 		}
 	}
 }

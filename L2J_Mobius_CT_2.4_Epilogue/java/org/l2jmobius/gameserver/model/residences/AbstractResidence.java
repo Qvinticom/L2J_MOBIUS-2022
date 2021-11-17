@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
@@ -88,7 +88,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		return _residentialSkills;
 	}
 	
-	public void giveResidentialSkills(PlayerInstance player)
+	public void giveResidentialSkills(Player player)
 	{
 		if (!_residentialSkills.isEmpty())
 		{
@@ -99,7 +99,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		}
 	}
 	
-	public void removeResidentialSkills(PlayerInstance player)
+	public void removeResidentialSkills(Player player)
 	{
 		if (!_residentialSkills.isEmpty())
 		{

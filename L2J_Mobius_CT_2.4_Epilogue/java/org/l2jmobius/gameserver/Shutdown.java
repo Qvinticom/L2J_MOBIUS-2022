@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
@@ -269,7 +269,7 @@ public class Shutdown extends Thread
 	 * @param seconds seconds until shutdown
 	 * @param restart true if the server will restart after shutdown
 	 */
-	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
+	public void startShutdown(Player player, int seconds, boolean restart)
 	{
 		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 		
@@ -331,7 +331,7 @@ public class Shutdown extends Thread
 	 * This function aborts a running countdown.
 	 * @param player GM who issued the abort command
 	 */
-	public void abort(PlayerInstance player)
+	public void abort(Player player)
 	{
 		LOGGER.warning("GM: " + (player != null ? player.getName() + "(" + player.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		if (_counterInstance != null)
@@ -538,7 +538,7 @@ public class Shutdown extends Thread
 	 */
 	private void disconnectAllCharacters()
 	{
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
 		}

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -30,7 +30,7 @@ public class ExHomunculusHPSPVP implements IClientOutgoingPacket
 	private final long _sp;
 	private final int _vp;
 	
-	public ExHomunculusHPSPVP(PlayerInstance player)
+	public ExHomunculusHPSPVP(Player player)
 	{
 		_hp = (int) player.getCurrentHp();
 		_sp = player.getSp();

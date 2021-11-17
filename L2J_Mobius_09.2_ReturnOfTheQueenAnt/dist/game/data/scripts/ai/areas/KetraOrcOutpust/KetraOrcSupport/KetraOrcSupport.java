@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -95,7 +95,7 @@ public class KetraOrcSupport extends AbstractNpcAI
 		addStartNpc(KURFA, JAFF);
 	}
 	
-	private int getAllianceLevel(PlayerInstance player)
+	private int getAllianceLevel(Player player)
 	{
 		for (int i = 0; i < KETRA_MARKS.length; i++)
 		{
@@ -108,7 +108,7 @@ public class KetraOrcSupport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (Util.isDigit(event) && BUFF.containsKey(Integer.parseInt(event)))
@@ -142,7 +142,7 @@ public class KetraOrcSupport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final int AllianceLevel = getAllianceLevel(player);

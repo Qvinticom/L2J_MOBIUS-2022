@@ -20,8 +20,8 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.util.Util;
@@ -54,7 +54,7 @@ public class NpcBufferAI implements Runnable
 		}
 		
 		final Skill skill = _skillData.getSkill();
-		final PlayerInstance player = _npc.getSummoner().getActingPlayer();
+		final Player player = _npc.getSummoner().getActingPlayer();
 		
 		switch (_skillData.getAffectScope())
 		{
@@ -62,7 +62,7 @@ public class NpcBufferAI implements Runnable
 			{
 				if (player.isInParty())
 				{
-					for (PlayerInstance member : player.getParty().getMembers())
+					for (Player member : player.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(skill.getAffectRange(), _npc, member, true) && !member.isDead())
 						{
@@ -120,11 +120,11 @@ public class NpcBufferAI implements Runnable
 	 * @param target the target
 	 * @return {@code true} if target can be affected by positive effect, {@code false} otherwise
 	 */
-	private boolean isFriendly(PlayerInstance player, Creature target)
+	private boolean isFriendly(Player player, Creature target)
 	{
 		if (target.isPlayable())
 		{
-			final PlayerInstance targetPlayer = target.getActingPlayer();
+			final Player targetPlayer = target.getActingPlayer();
 			if (player == targetPlayer)
 			{
 				return true;
@@ -164,16 +164,16 @@ public class NpcBufferAI implements Runnable
 	 * @param target the target
 	 * @return {@code true} if target can be affected by negative effect, {@code false} otherwise
 	 */
-	private boolean isEnemy(PlayerInstance player, Creature target)
+	private boolean isEnemy(Player player, Creature target)
 	{
 		if (isFriendly(player, target))
 		{
 			return false;
 		}
 		
-		if (target instanceof TamedBeastInstance)
+		if (target instanceof TamedBeast)
 		{
-			return isEnemy(player, ((TamedBeastInstance) target).getOwner());
+			return isEnemy(player, ((TamedBeast) target).getOwner());
 		}
 		
 		if (target.isMonster())
@@ -183,7 +183,7 @@ public class NpcBufferAI implements Runnable
 		
 		if (target.isPlayable())
 		{
-			final PlayerInstance targetPlayer = target.getActingPlayer();
+			final Player targetPlayer = target.getActingPlayer();
 			if (!isFriendly(player, targetPlayer))
 			{
 				if (targetPlayer.getPvpFlag() != 0)

@@ -28,8 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -47,12 +46,12 @@ public class SiegeFlag implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
@@ -80,7 +79,7 @@ public class SiegeFlag implements ISkillHandler
 		try
 		{
 			// Spawn a new flag.
-			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
+			final org.l2jmobius.gameserver.model.actor.instance.SiegeFlag flag = new org.l2jmobius.gameserver.model.actor.instance.SiegeFlag(player, IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
 			if (skill.isAdvancedFlag())
 			{
 				flag.setAdvanceFlag(true);
@@ -130,12 +129,12 @@ public class SiegeFlag implements ISkillHandler
 	
 	public static boolean checkIfOkToPlaceFlag(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		String message = "";
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -175,12 +174,12 @@ public class SiegeFlag implements ISkillHandler
 	
 	public static boolean checkIfOkToPlaceFlag(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		String message = "";
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{

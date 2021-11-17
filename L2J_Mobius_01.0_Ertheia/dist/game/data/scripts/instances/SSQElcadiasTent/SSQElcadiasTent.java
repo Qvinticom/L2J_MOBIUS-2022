@@ -17,7 +17,7 @@
 package instances.SSQElcadiasTent;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import instances.AbstractInstance;
@@ -47,7 +47,7 @@ public class SSQElcadiasTent extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		if (npc.getId() == GRUFF_LOOKING_MAN)
 		{

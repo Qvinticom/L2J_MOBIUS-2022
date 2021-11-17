@@ -17,7 +17,7 @@
 package ai.others.FameManager;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -50,7 +50,7 @@ public class FameManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -115,7 +115,7 @@ public class FameManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return ((player.getFame() > 0) && (player.getLevel() >= MIN_LEVEL) && (player.getClassId().level() >= CLASS_LEVEL)) ? npc.getId() + ".html" : npc.getId() + "-01.html";
 	}

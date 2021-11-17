@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.util.Util;
@@ -50,7 +50,7 @@ public class RegionBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		if (command.equals("_bbsloc"))
 		{
@@ -92,7 +92,7 @@ public class RegionBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean writeCommunityBoardCommand(PlayerInstance player, String arg1, String arg2, String arg3, String arg4, String arg5)
+	public boolean writeCommunityBoardCommand(Player player, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		// TODO: Implement.
 		return false;

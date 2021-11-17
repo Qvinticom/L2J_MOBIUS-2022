@@ -19,7 +19,7 @@ package handlers.punishmenthandlers;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.network.Disconnection;
@@ -40,7 +40,7 @@ public class BanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final PlayerInstance player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					applyToPlayer(player);
@@ -53,7 +53,7 @@ public class BanHandler implements IPunishmentHandler
 				final GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
-					final PlayerInstance player = client.getPlayer();
+					final Player player = client.getPlayer();
 					if (player != null)
 					{
 						applyToPlayer(player);
@@ -68,7 +68,7 @@ public class BanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -80,7 +80,7 @@ public class BanHandler implements IPunishmentHandler
 			case HWID:
 			{
 				final String hwid = String.valueOf(task.getKey());
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					final GameClient client = player.getClient();
 					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
@@ -103,7 +103,7 @@ public class BanHandler implements IPunishmentHandler
 	 * Applies all punishment effects from the player.
 	 * @param player
 	 */
-	private void applyToPlayer(PlayerInstance player)
+	private void applyToPlayer(Player player)
 	{
 		Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 	}

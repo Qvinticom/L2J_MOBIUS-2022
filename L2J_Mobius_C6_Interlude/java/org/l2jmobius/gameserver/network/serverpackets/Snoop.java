@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,12 +26,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class Snoop implements IClientOutgoingPacket
 {
-	private final PlayerInstance _snooped;
+	private final Player _snooped;
 	private final ChatType _type;
 	private final String _speaker;
 	private final String _msg;
 	
-	public Snoop(PlayerInstance snooped, ChatType _chatType, String speaker, String msg)
+	public Snoop(Player snooped, ChatType _chatType, String speaker, String msg)
 	{
 		_snooped = snooped;
 		_type = _chatType;

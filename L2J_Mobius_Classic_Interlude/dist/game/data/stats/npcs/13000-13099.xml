@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="13001" level="70" type="Npc" name="Heart of Warding">
+	<npc id="13001" level="70" type="Folk" name="Heart of Warding">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
@@ -170,7 +170,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13006" level="70" type="Npc" name="Holiday Tree">
+	<npc id="13006" level="70" type="Folk" name="Holiday Tree">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -208,7 +208,7 @@
 			<height normal="0.01" />
 		</collision>
 	</npc>
-	<npc id="13007" level="70" type="Npc" name="Special Holiday Tree">
+	<npc id="13007" level="70" type="Folk" name="Special Holiday Tree">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -247,7 +247,7 @@
 			<height normal="0.01" />
 		</collision>
 	</npc>
-	<npc id="13014" level="85" type="Npc" name="">
+	<npc id="13014" level="85" type="Folk" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -291,7 +291,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="13015" level="85" type="Npc">
+	<npc id="13015" level="85" type="Folk">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1206,7 +1206,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="13037" level="28" type="Npc" name="Trap">
+	<npc id="13037" level="28" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1248,7 +1248,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13038" level="36" type="Npc" name="Trap">
+	<npc id="13038" level="36" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1290,7 +1290,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13039" level="43" type="Npc" name="Trap">
+	<npc id="13039" level="43" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1332,7 +1332,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13040" level="49" type="Npc" name="Trap">
+	<npc id="13040" level="49" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1374,7 +1374,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13041" level="55" type="Npc" name="Trap">
+	<npc id="13041" level="55" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1416,7 +1416,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13042" level="60" type="Npc" name="Trap">
+	<npc id="13042" level="60" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1458,7 +1458,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13043" level="64" type="Npc" name="Trap">
+	<npc id="13043" level="64" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1500,7 +1500,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13044" level="68" type="Npc" name="Trap">
+	<npc id="13044" level="68" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1542,7 +1542,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13045" level="72" type="Npc" name="Trap">
+	<npc id="13045" level="72" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -1584,7 +1584,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13046" level="49" type="Npc" name="Trap">
+	<npc id="13046" level="49" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1626,7 +1626,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13047" level="55" type="Npc" name="Trap">
+	<npc id="13047" level="55" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1668,7 +1668,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13048" level="60" type="Npc" name="Trap">
+	<npc id="13048" level="60" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1710,7 +1710,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13049" level="64" type="Npc" name="Trap">
+	<npc id="13049" level="64" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1752,7 +1752,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13050" level="68" type="Npc" name="Trap">
+	<npc id="13050" level="68" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1794,7 +1794,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13051" level="72" type="Npc" name="Trap">
+	<npc id="13051" level="72" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1836,7 +1836,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13052" level="55" type="Npc" name="Trap">
+	<npc id="13052" level="55" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1878,7 +1878,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13053" level="60" type="Npc" name="Trap">
+	<npc id="13053" level="60" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1920,7 +1920,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13054" level="64" type="Npc" name="Trap">
+	<npc id="13054" level="64" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -1962,7 +1962,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13055" level="68" type="Npc" name="Trap">
+	<npc id="13055" level="68" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2004,7 +2004,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13056" level="72" type="Npc" name="Trap">
+	<npc id="13056" level="72" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2046,7 +2046,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13057" level="40" type="Npc" name="Trap">
+	<npc id="13057" level="40" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2088,7 +2088,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13058" level="46" type="Npc" name="Trap">
+	<npc id="13058" level="46" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2130,7 +2130,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13059" level="52" type="Npc" name="Trap">
+	<npc id="13059" level="52" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2172,7 +2172,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13060" level="58" type="Npc" name="Trap">
+	<npc id="13060" level="58" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2214,7 +2214,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13061" level="62" type="Npc" name="Trap">
+	<npc id="13061" level="62" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2256,7 +2256,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13062" level="66" type="Npc" name="Trap">
+	<npc id="13062" level="66" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2298,7 +2298,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13063" level="70" type="Npc" name="Trap">
+	<npc id="13063" level="70" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2340,7 +2340,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13064" level="74" type="Npc" name="Trap">
+	<npc id="13064" level="74" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
@@ -2382,7 +2382,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13065" level="52" type="Npc" name="Trap">
+	<npc id="13065" level="52" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2424,7 +2424,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13066" level="58" type="Npc" name="Trap">
+	<npc id="13066" level="58" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2466,7 +2466,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13067" level="62" type="Npc" name="Trap">
+	<npc id="13067" level="62" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2508,7 +2508,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13068" level="66" type="Npc" name="Trap">
+	<npc id="13068" level="66" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2550,7 +2550,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13069" level="70" type="Npc" name="Trap">
+	<npc id="13069" level="70" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2592,7 +2592,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13070" level="74" type="Npc" name="Trap">
+	<npc id="13070" level="74" type="Folk" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
@@ -2874,7 +2874,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13077" level="55" type="Npc" name="Onyx Beast">
+	<npc id="13077" level="55" type="Folk" name="Onyx Beast">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2912,7 +2912,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="13078" level="55" type="Npc" name="Doom Wraith">
+	<npc id="13078" level="55" type="Folk" name="Doom Wraith">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2950,7 +2950,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13079" level="55" type="Npc" name="Grail Apostle">
+	<npc id="13079" level="55" type="Folk" name="Grail Apostle">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -2988,7 +2988,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13080" level="55" type="Npc" name="Grail Apostle">
+	<npc id="13080" level="55" type="Folk" name="Grail Apostle">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -3026,7 +3026,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="13081" level="55" type="Npc" name="Unicorn">
+	<npc id="13081" level="55" type="Folk" name="Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -3064,7 +3064,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="13082" level="55" type="Npc" name="Lilim Knight">
+	<npc id="13082" level="55" type="Folk" name="Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3102,7 +3102,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="13083" level="55" type="Npc" name="Golem Guardian">
+	<npc id="13083" level="55" type="Folk" name="Golem Guardian">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3140,7 +3140,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13084" level="55" type="Npc" name="Inferno Drake">
+	<npc id="13084" level="55" type="Folk" name="Inferno Drake">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -3178,7 +3178,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13085" level="55" type="Npc" name="Dragon Bomber">
+	<npc id="13085" level="55" type="Folk" name="Dragon Bomber">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -3215,7 +3215,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13086" level="55" type="Npc" name="Zariche">
+	<npc id="13086" level="55" type="Folk" name="Zariche">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3254,7 +3254,7 @@
 			<height normal="31.5725" />
 		</collision>
 	</npc>
-	<npc id="13087" level="55" type="Npc" name="Akamanah">
+	<npc id="13087" level="55" type="Folk" name="Akamanah">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3293,7 +3293,7 @@
 			<height normal="32.7295" />
 		</collision>
 	</npc>
-	<npc id="13088" level="55" type="Npc" name="Final Form">
+	<npc id="13088" level="55" type="Folk" name="Final Form">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3331,7 +3331,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="13089" level="55" type="Npc" name="Final Form">
+	<npc id="13089" level="55" type="Folk" name="Final Form">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3369,7 +3369,7 @@
 			<height normal="32.7615" />
 		</collision>
 	</npc>
-	<npc id="13090" level="55" type="Npc" name="Native">
+	<npc id="13090" level="55" type="Folk" name="Native">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -3406,7 +3406,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13091" level="55" type="Npc" name="Yeti">
+	<npc id="13091" level="55" type="Folk" name="Yeti">
 		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -3444,7 +3444,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="13092" level="55" type="Npc" name="Buffalo">
+	<npc id="13092" level="55" type="Folk" name="Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3482,7 +3482,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="13093" level="55" type="Npc" name="Pig">
+	<npc id="13093" level="55" type="Folk" name="Pig">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3519,7 +3519,7 @@
 			<height normal="18.3" />
 		</collision>
 	</npc>
-	<npc id="13094" level="55" type="Npc" name="Zombie">
+	<npc id="13094" level="55" type="Folk" name="Zombie">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3557,7 +3557,7 @@
 			<height normal="24.6" />
 		</collision>
 	</npc>
-	<npc id="13095" level="55" type="Npc" name="Pixy">
+	<npc id="13095" level="55" type="Folk" name="Pixy">
 		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
@@ -3595,7 +3595,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13096" level="55" type="Npc" name="Rabbit">
+	<npc id="13096" level="55" type="Folk" name="Rabbit">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3670,7 +3670,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="13098" level="80" type="Npc" name="Event Treasure Chest">
+	<npc id="13098" level="80" type="Folk" name="Event Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3708,7 +3708,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="13099" level="55" type="Npc" name="Zaken">
+	<npc id="13099" level="55" type="Folk" name="Zaken">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>

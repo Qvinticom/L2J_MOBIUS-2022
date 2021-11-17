@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.tasks.attackable;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -27,10 +27,10 @@ public class OnKillNotifyTask implements Runnable
 {
 	private final Attackable _attackable;
 	private final Quest _quest;
-	private final PlayerInstance _killer;
+	private final Player _killer;
 	private final boolean _isSummon;
 	
-	public OnKillNotifyTask(Attackable attackable, Quest quest, PlayerInstance killer, boolean isSummon)
+	public OnKillNotifyTask(Attackable attackable, Quest quest, Player killer, boolean isSummon)
 	{
 		_attackable = attackable;
 		_quest = quest;

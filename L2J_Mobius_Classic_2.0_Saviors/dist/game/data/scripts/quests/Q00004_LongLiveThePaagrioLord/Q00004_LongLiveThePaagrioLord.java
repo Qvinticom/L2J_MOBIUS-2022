@@ -19,7 +19,7 @@ package quests.Q00004_LongLiveThePaagrioLord;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -62,7 +62,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -92,7 +92,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -165,7 +165,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		return htmltext;
 	}
 	
-	private static String giveItem(PlayerInstance player, QuestState qs, int npcId, int itemId, int... items)
+	private static String giveItem(Player player, QuestState qs, int npcId, int itemId, int... items)
 	{
 		if (!qs.isStarted())
 		{

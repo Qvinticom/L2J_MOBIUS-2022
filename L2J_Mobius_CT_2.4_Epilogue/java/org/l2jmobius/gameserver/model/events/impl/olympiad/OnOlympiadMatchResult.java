@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.olympiad;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
@@ -26,23 +26,23 @@ import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
  */
 public class OnOlympiadMatchResult implements IBaseEvent
 {
-	private final PlayerInstance _winner;
-	private final PlayerInstance _loser;
+	private final Player _winner;
+	private final Player _loser;
 	private final CompetitionType _type;
 	
-	public OnOlympiadMatchResult(PlayerInstance winner, PlayerInstance looser, CompetitionType type)
+	public OnOlympiadMatchResult(Player winner, Player looser, CompetitionType type)
 	{
 		_winner = winner;
 		_loser = looser;
 		_type = type;
 	}
 	
-	public PlayerInstance getWinner()
+	public Player getWinner()
 	{
 		return _winner;
 	}
 	
-	public PlayerInstance getLoser()
+	public Player getLoser()
 	{
 		return _loser;
 	}

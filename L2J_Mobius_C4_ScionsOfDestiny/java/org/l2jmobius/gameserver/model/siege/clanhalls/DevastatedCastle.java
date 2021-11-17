@@ -33,10 +33,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -62,8 +62,8 @@ public class DevastatedCastle
 	private ScheduledFuture<?> _mikhail;
 	private ScheduledFuture<?> _monsterdespawn;
 	
-	private NpcInstance _minion1 = null;
-	private NpcInstance _minion2 = null;
+	private Npc _minion1 = null;
+	private Npc _minion2 = null;
 	
 	private final List<MonsterLocation> _monsters = new ArrayList<>();
 	private List<Spawn> _spawns = new ArrayList<>();
@@ -191,14 +191,14 @@ public class DevastatedCastle
 	
 	public void MessengerSpawn()
 	{
-		if (!ClanHallManager.getInstance().isFree(34))
+		if (!ClanHallTable.getInstance().isFree(34))
 		{
-			ClanHallManager.getInstance().setFree(34);
+			ClanHallTable.getInstance().setFree(34);
 		}
 		
 		Announce("Siege registration of Devastated castle has begun!");
 		Announce("Now its open for 2 hours!");
-		NpcInstance result = null;
+		Npc result = null;
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
@@ -253,11 +253,11 @@ public class DevastatedCastle
 	
 	public void Siege()
 	{
-		NpcInstance result = null;
+		Npc result = null;
 		NpcTemplate template = null;
 		Spawn spawn = null;
 		
-		final ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+		final ClanHall ch = ClanHallTable.getInstance().getClanHallById(34);
 		ch.banishForeigners();
 		ch.spawnDoor();
 		
@@ -744,9 +744,9 @@ public class DevastatedCastle
 	
 	protected class DeSpawnTimer implements Runnable
 	{
-		NpcInstance _npc = null;
+		Npc _npc = null;
 		
-		public DeSpawnTimer(NpcInstance npc)
+		public DeSpawnTimer(Npc npc)
 		{
 			_npc = npc;
 		}
@@ -759,7 +759,7 @@ public class DevastatedCastle
 				Announce("Siege of Devastated castle is over.");
 				Announce("Nobody won! ClanHall belong to NPC until next siege.");
 				
-				final ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+				final ClanHall ch = ClanHallTable.getInstance().getClanHallById(34);
 				ch.banishForeigners();
 				ch.spawnDoor();
 			}
@@ -767,9 +767,9 @@ public class DevastatedCastle
 		}
 	}
 	
-	public boolean Conditions(PlayerInstance player)
+	public boolean Conditions(Player player)
 	{
-		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3);
+		return (player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallTable.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3);
 	}
 	
 	public boolean isInProgress()
@@ -796,7 +796,7 @@ public class DevastatedCastle
 		}
 		if (clanIdMaxDamage != null)
 		{
-			ClanHallManager.getInstance().setOwner(34, clanIdMaxDamage);
+			ClanHallTable.getInstance().setOwner(34, clanIdMaxDamage);
 			clanIdMaxDamage.setReputationScore(clanIdMaxDamage.getReputationScore() + 600, true);
 			update();
 			
@@ -817,7 +817,7 @@ public class DevastatedCastle
 		_mikhail.cancel(true);
 		_monsterdespawn.cancel(true);
 		
-		final ClanHall ch = ClanHallManager.getInstance().getClanHallById(34);
+		final ClanHall ch = ClanHallTable.getInstance().getClanHallById(34);
 		ch.banishForeigners();
 		ch.spawnDoor();
 	}

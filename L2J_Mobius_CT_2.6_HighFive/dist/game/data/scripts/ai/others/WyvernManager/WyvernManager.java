@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
@@ -104,7 +104,7 @@ public class WyvernManager extends AbstractNpcAI
 		addFirstTalkId(MANAGERS.keySet());
 	}
 	
-	private String mountWyvern(Npc npc, PlayerInstance player)
+	private String mountWyvern(Npc npc, Player player)
 	{
 		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LEVEL) && CommonUtil.contains(STRIDERS, player.getMountNpcId()))
 		{
@@ -120,7 +120,7 @@ public class WyvernManager extends AbstractNpcAI
 		return replacePart(player, "wyvernmanager-05.html");
 	}
 	
-	private boolean isOwnerClan(Npc npc, PlayerInstance player)
+	private boolean isOwnerClan(Npc npc, Player player)
 	{
 		if (!player.isClanLeader())
 		{
@@ -210,18 +210,18 @@ public class WyvernManager extends AbstractNpcAI
 		}
 	}
 	
-	private String replaceAll(Npc npc, PlayerInstance player)
+	private String replaceAll(Npc npc, Player player)
 	{
 		return replacePart(player, "wyvernmanager-01.html").replace("%residence_name%", getResidenceName(npc));
 	}
 	
-	private String replacePart(PlayerInstance player, String htmlFile)
+	private String replacePart(Player player, String htmlFile)
 	{
 		return getHtm(player, htmlFile).replace("%wyvern_fee%", String.valueOf(WYVERN_FEE)).replace("%strider_level%", String.valueOf(STRIDER_LEVEL));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -286,7 +286,7 @@ public class WyvernManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (!isOwnerClan(npc, player))

@@ -23,13 +23,13 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.multisell.MultiSellEntry;
 import org.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import org.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
@@ -68,7 +68,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -86,10 +86,10 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		final NpcInstance merchant = player.getTarget() instanceof NpcInstance ? (NpcInstance) player.getTarget() : null;
+		final Npc merchant = player.getTarget() instanceof Npc ? (Npc) player.getTarget() : null;
 		
 		// Possible fix to Multisell Radius
-		if ((merchant == null) || !player.isInsideRadius2D(merchant, NpcInstance.INTERACTION_DISTANCE))
+		if ((merchant == null) || !player.isInsideRadius2D(merchant, Npc.INTERACTION_DISTANCE))
 		{
 			player.setMultiSellId(-1);
 			return;
@@ -123,14 +123,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 		}
 	}
 	
-	private void doExchange(PlayerInstance player, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantment)
+	private void doExchange(Player player, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantment)
 	{
 		final PlayerInventory inv = player.getInventory();
 		boolean maintainItemFound = false;
 		
 		// given the template entry and information about maintaining enchantment and applying taxes re-create the instance of
 		// the entry that will be used for this exchange i.e. change the enchantment level of select ingredient/products and adena amount appropriately.
-		final NpcInstance merchant = player.getTarget() instanceof NpcInstance ? (NpcInstance) player.getTarget() : null;
+		final Npc merchant = player.getTarget() instanceof Npc ? (Npc) player.getTarget() : null;
 		final MultiSellEntry entry = prepareEntry(merchant, templateEntry, applyTaxes, maintainEnchantment, enchantment);
 		
 		// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
@@ -252,7 +252,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						return;
 					}
 				}
-				ItemInstance itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
+				Item itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
 				
 				// this is a cheat, transaction will be aborted and if any items already tanken will not be returned back to inventory!
 				if (itemToTake == null)
@@ -302,10 +302,10 @@ public class MultiSellChoose implements IClientIncomingPacket
 					else if (maintainEnchantment) // a) if enchantment is maintained, then get a list of items that exactly match this enchantment
 					{
 						// loop through this list and remove (one by one) each item until the required amount is taken.
-						final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
+						final List<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
 						for (int i = 0; i < (e.getItemCount() * _amount); i++)
 						{
-							final ItemInstance item = inventoryContents.get(i);
+							final Item item = inventoryContents.get(i);
 							if (!player.destroyItem("Multisell", item.getObjectId(), 1, player.getTarget(), true))
 							{
 								return;
@@ -328,13 +328,13 @@ public class MultiSellChoose implements IClientIncomingPacket
 						// choice 1. Small number of items exchanged. No sorting.
 						for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 						{
-							final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId());
+							final List<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId());
 							itemToTake = inventoryContents.get(0);
 							// get item with the LOWEST enchantment level from the inventory...
 							// +0 is lowest by default...
 							if (itemToTake.getEnchantLevel() > 0)
 							{
-								for (ItemInstance inventoryContent : inventoryContents)
+								for (Item inventoryContent : inventoryContents)
 								{
 									if (inventoryContent.getEnchantLevel() < itemToTake.getEnchantLevel())
 									{
@@ -378,7 +378,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			}
 			else
 			{
-				ItemInstance product = null;
+				Item product = null;
 				for (int i = 0; i < (e.getItemCount() * _amount); i++)
 				{
 					product = inv.addItem("Multisell[" + _listId + "]", e.getItemId(), 1, player, player.getTarget());
@@ -437,7 +437,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	// example: If the template has an item worth 120aa, and the tax is 10%,
 	// then from 120aa, take 5/6 so that is 100aa, apply the 10% tax in adena (10a)
 	// so the final price will be 120aa and 10a!
-	private MultiSellEntry prepareEntry(NpcInstance merchant, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantLevel)
+	private MultiSellEntry prepareEntry(Npc merchant, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantLevel)
 	{
 		final MultiSellEntry newEntry = new MultiSellEntry();
 		newEntry.setEntryId(templateEntry.getEntryId());
@@ -467,7 +467,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			// If it is an armor/weapon, modify the enchantment level appropriately, if necessary
 			else if (maintainEnchantment)
 			{
-				final Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -494,7 +494,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			{
 				// If it is an armor/weapon, modify the enchantment level appropriately
 				// (note, if maintain enchantment is "false" this modification will result to a +0)
-				final Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					if ((level == 0) && maintainEnchantment)

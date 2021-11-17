@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.handler.IActionHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcFirstTalk;
@@ -38,33 +38,33 @@ public class NpcAction implements IActionHandler
 	 * Manage actions when a player click on the Npc.<br>
 	 * <br>
 	 * <b><u>Actions on first click on the Npc (Select it)</u>:</b><br>
-	 * <li>Set the Npc as target of the PlayerInstance player (if necessary)</li>
-	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
-	 * <li>If Npc is autoAttackable, send a Server->Client packet StatusUpdate to the PlayerInstance in order to update Npc HP bar</li>
+	 * <li>Set the Npc as target of the Player player (if necessary)</li>
+	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
+	 * <li>If Npc is autoAttackable, send a Server->Client packet StatusUpdate to the Player in order to update Npc HP bar</li>
 	 * <li>Send a Server->Client packet ValidateLocation to correct the Npc position and heading on the client</li><br>
 	 * <br>
 	 * <b><u>Actions on second click on the Npc (Attack it/Intercat with it)</u>:</b><br>
-	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
-	 * <li>If Npc is autoAttackable, notify the PlayerInstance AI with AI_INTENTION_ATTACK (after a height verification)</li>
-	 * <li>If Npc is NOT autoAttackable, notify the PlayerInstance AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><br>
+	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
+	 * <li>If Npc is autoAttackable, notify the Player AI with AI_INTENTION_ATTACK (after a height verification)</li>
+	 * <li>If Npc is NOT autoAttackable, notify the Player AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><br>
 	 * <font color=#FF0000><b><u>Caution</u>: Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Client packet : Action, AttackRequest</li><br>
-	 * @param player The PlayerInstance that start an action on the Npc
+	 * @param player The Player that start an action on the Npc
 	 */
 	@Override
-	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		if (!((Npc) target).canTarget(player))
 		{
 			return false;
 		}
 		player.setLastFolkNPC((Npc) target);
-		// Check if the PlayerInstance already target the Npc
+		// Check if the Player already target the Npc
 		if (target != player.getTarget())
 		{
-			// Set the target of the PlayerInstance player
+			// Set the target of the Player player
 			player.setTarget(target);
 			// Check if the player is attackable (without a forced attack)
 			if (target.isAutoAttackable(player))
@@ -80,21 +80,21 @@ public class NpcAction implements IActionHandler
 				// Check if target is in LoS
 				if (GeoEngine.getInstance().canSeeTarget(player, target))
 				{
-					// Set the PlayerInstance Intention to AI_INTENTION_ATTACK
+					// Set the Player Intention to AI_INTENTION_ATTACK
 					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 				else
 				{
-					// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+					// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 			}
 			else if (!target.isAutoAttackable(player))
 			{
-				// Calculate the distance between the PlayerInstance and the Npc
+				// Calculate the distance between the Player and the Npc
 				if (!((Npc) target).canInteract(player))
 				{
-					// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
+					// Notify the Player AI with AI_INTENTION_INTERACT
 					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
 				else

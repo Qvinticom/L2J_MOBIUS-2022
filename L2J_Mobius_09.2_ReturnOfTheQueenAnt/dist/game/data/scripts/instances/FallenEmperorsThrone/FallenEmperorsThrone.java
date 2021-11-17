@@ -18,7 +18,7 @@ package instances.FallenEmperorsThrone;
 
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -72,13 +72,13 @@ public class FallenEmperorsThrone extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance world, PlayerInstance player)
+	public void onInstanceCreated(Instance world, Player player)
 	{
 		world.setStatus(0);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -156,7 +156,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 					int count = world.getPlayersCount();
 					if (count > 0)
 					{
-						final PlayerInstance randomPlayer = world.getPlayers().stream().findAny().get();
+						final Player randomPlayer = world.getPlayers().stream().findAny().get();
 						final Npc leopold = world.getNpc(LEOPOLD);
 						if (leopold != null)
 						{
@@ -199,7 +199,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 					int count = world.getPlayersCount();
 					if (count > 0)
 					{
-						final PlayerInstance randomPlayer = world.getPlayers().stream().findAny().get();
+						final Player randomPlayer = world.getPlayers().stream().findAny().get();
 						final Npc blueLightning = world.getNpc(HELIOS_BLUE_LIGHTNING);
 						if (blueLightning != null)
 						{
@@ -219,7 +219,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 					int count = world.getPlayersCount();
 					if (count > 0)
 					{
-						final PlayerInstance randomPlayer = world.getPlayers().stream().findAny().get();
+						final Player randomPlayer = world.getPlayers().stream().findAny().get();
 						final Npc redLightning = world.getNpc(HELIOS_RED_LIGHTNING);
 						if (redLightning != null)
 						{
@@ -248,7 +248,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = attacker.getInstanceWorld();
 		if (isInInstance(world))
@@ -312,7 +312,7 @@ public class FallenEmperorsThrone extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (isInInstance(world))

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author UnAfraid
@@ -68,7 +68,7 @@ public class EnchantScrollGroup
 	 * @param item
 	 * @return {@link EnchantRateItem}, {@code NULL} in case non of rate items can be used with.
 	 */
-	public EnchantRateItem getRateGroup(Item item)
+	public EnchantRateItem getRateGroup(ItemTemplate item)
 	{
 		for (EnchantRateItem group : getRateGroups())
 		{

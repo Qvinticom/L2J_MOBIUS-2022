@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.stats.functions;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -41,7 +41,7 @@ public class FuncEnchant extends AbstractFunction
 			return value;
 		}
 		
-		final ItemInstance item = (ItemInstance) getFuncOwner();
+		final Item item = (Item) getFuncOwner();
 		int enchant = item.getEnchantLevel();
 		if (enchant <= 0)
 		{
@@ -112,7 +112,7 @@ public class FuncEnchant extends AbstractFunction
 			{
 				case S:
 				{
-					if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+					if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND)
 					{
 						if (type == WeaponType.BOW)
 						{
@@ -143,7 +143,7 @@ public class FuncEnchant extends AbstractFunction
 				}
 				case A:
 				{
-					if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+					if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND)
 					{
 						if (type == WeaponType.BOW)
 						{
@@ -175,7 +175,7 @@ public class FuncEnchant extends AbstractFunction
 				case B:
 				case C:
 				{
-					if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
+					if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND)
 					{
 						if (type == WeaponType.BOW)
 						{

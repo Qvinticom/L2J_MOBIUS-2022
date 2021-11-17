@@ -18,12 +18,11 @@ package org.l2jmobius.gameserver.model.actor;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * This class is a super-class for ControlTowerInstance and FlameTowerInstance.
+ * This class is a super-class for ControlTower and FlameTower.
  * @author Zoey76
  */
 public abstract class Tower extends Npc
@@ -45,11 +44,11 @@ public abstract class Tower extends Npc
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		// Attackable during siege by attacker only
-		return (attacker != null) && attacker.isPlayer() && (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(((PlayerInstance) attacker).getClan());
+		return (attacker != null) && attacker.isPlayer() && (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(((Player) attacker).getClan());
 	}
 	
 	@Override
-	public void onAction(PlayerInstance player, boolean interact)
+	public void onAction(Player player, boolean interact)
 	{
 		if (!canTarget(player))
 		{
@@ -58,20 +57,20 @@ public abstract class Tower extends Npc
 		
 		if (this != player.getTarget())
 		{
-			// Set the target of the PlayerInstance player
+			// Set the target of the Player player
 			player.setTarget(this);
 		}
 		else if (interact && isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100) && GeoEngine.getInstance().canSeeTarget(player, this))
 		{
-			// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
+			// Notify the Player AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}
-		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	@Override
-	public void onForcedAttack(PlayerInstance player)
+	public void onForcedAttack(Player player)
 	{
 		onAction(player);
 	}

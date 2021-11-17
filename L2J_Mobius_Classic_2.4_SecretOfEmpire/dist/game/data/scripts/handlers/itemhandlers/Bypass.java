@@ -19,8 +19,8 @@ package handlers.itemhandlers;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 public class Bypass implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
 			return false;
 		}
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		final int itemId = item.getId();
 		final String filename = "data/html/item/" + itemId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(player, filename);

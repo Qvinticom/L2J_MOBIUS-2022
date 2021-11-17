@@ -17,23 +17,23 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class SummonRequestHolder
 {
-	private final PlayerInstance _summoner;
+	private final Player _summoner;
 	private final Location _location;
 	
-	public SummonRequestHolder(PlayerInstance summoner)
+	public SummonRequestHolder(Player summoner)
 	{
 		_summoner = summoner;
 		_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
 	}
 	
-	public PlayerInstance getSummoner()
+	public Player getSummoner()
 	{
 		return _summoner;
 	}

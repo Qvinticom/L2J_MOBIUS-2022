@@ -22,7 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class ExReplyReceivedPost extends AbstractItemPacket
 {
 	private final Message _msg;
-	private Collection<ItemInstance> _items = null;
+	private Collection<Item> _items = null;
 	
 	public ExReplyReceivedPost(Message msg)
 	{
@@ -83,7 +83,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 		if ((_items != null) && !_items.isEmpty())
 		{
 			packet.writeD(_items.size());
-			for (ItemInstance item : _items)
+			for (Item item : _items)
 			{
 				writeItem(packet, item);
 				packet.writeD(item.getObjectId());

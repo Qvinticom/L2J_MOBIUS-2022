@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.util;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 /**
@@ -36,7 +36,7 @@ public class BuilderUtil
 	 * @param player
 	 * @param message
 	 */
-	public static void sendSysMessage(PlayerInstance player, String message)
+	public static void sendSysMessage(Player player, String message)
 	{
 		if (Config.GM_STARTUP_BUILDER_HIDE)
 		{
@@ -53,7 +53,7 @@ public class BuilderUtil
 	 * @param player
 	 * @param message
 	 */
-	public static void sendHtmlMessage(PlayerInstance player, String message)
+	public static void sendHtmlMessage(Player player, String message)
 	{
 		player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "HTML", message));
 	}
@@ -64,7 +64,7 @@ public class BuilderUtil
 	 * @param hide
 	 * @return {@code true} if hide state was changed, otherwise {@code false}
 	 */
-	public static boolean setHiding(PlayerInstance player, boolean hide)
+	public static boolean setHiding(Player player, boolean hide)
 	{
 		player.setInRefusalMode(hide);
 		player.setInvul(hide);

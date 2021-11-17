@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,8 +28,8 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExCubeGameTeamList implements IClientOutgoingPacket
 {
 	// Players Lists
-	private final List<PlayerInstance> _bluePlayers;
-	private final List<PlayerInstance> _redPlayers;
+	private final List<Player> _bluePlayers;
+	private final List<Player> _redPlayers;
 	
 	// Common Values
 	private final int _roomNumber;
@@ -40,7 +40,7 @@ public class ExCubeGameTeamList implements IClientOutgoingPacket
 	 * @param bluePlayers Blue Players List
 	 * @param roomNumber Arena/Room ID
 	 */
-	public ExCubeGameTeamList(List<PlayerInstance> redPlayers, List<PlayerInstance> bluePlayers, int roomNumber)
+	public ExCubeGameTeamList(List<Player> redPlayers, List<Player> bluePlayers, int roomNumber)
 	{
 		_redPlayers = redPlayers;
 		_bluePlayers = bluePlayers;
@@ -58,13 +58,13 @@ public class ExCubeGameTeamList implements IClientOutgoingPacket
 		packet.writeD(0xffffffff);
 		
 		packet.writeD(_bluePlayers.size());
-		for (PlayerInstance player : _bluePlayers)
+		for (Player player : _bluePlayers)
 		{
 			packet.writeD(player.getObjectId());
 			packet.writeS(player.getName());
 		}
 		packet.writeD(_redPlayers.size());
-		for (PlayerInstance player : _redPlayers)
+		for (Player player : _redPlayers)
 		{
 			packet.writeD(player.getObjectId());
 			packet.writeS(player.getName());

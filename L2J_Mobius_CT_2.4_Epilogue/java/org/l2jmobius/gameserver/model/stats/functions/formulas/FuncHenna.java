@@ -20,7 +20,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
@@ -53,7 +53,7 @@ public class FuncHenna extends AbstractFunction
 		// Should not apply henna bonus to summons.
 		if (effector.isPlayer())
 		{
-			final PlayerInstance pc = effector.getActingPlayer();
+			final Player pc = effector.getActingPlayer();
 			switch (getStat())
 			{
 				case STAT_STR:

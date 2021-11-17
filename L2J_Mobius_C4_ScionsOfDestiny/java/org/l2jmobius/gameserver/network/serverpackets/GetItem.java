@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,10 +26,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GetItem implements IClientOutgoingPacket
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	private final int _playerId;
 	
-	public GetItem(ItemInstance item, int playerId)
+	public GetItem(Item item, int playerId)
 	{
 		_item = item;
 		_playerId = playerId;

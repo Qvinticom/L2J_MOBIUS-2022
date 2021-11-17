@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
@@ -46,7 +46,7 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -61,15 +61,15 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 		request.setEnchantingItem(_enchantObjectId);
 		request.setEnchantingScroll(_scrollObjectId);
 		
-		final ItemInstance item = request.getEnchantingItem();
-		final ItemInstance scroll = request.getEnchantingScroll();
+		final Item item = request.getEnchantingItem();
+		final Item scroll = request.getEnchantingScroll();
 		if ((item == null) || (scroll == null))
 		{
 			// message may be custom
 			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 			player.sendPacket(new ExPutEnchantScrollItemResult(0));
-			request.setEnchantingItem(PlayerInstance.ID_NONE);
-			request.setEnchantingScroll(PlayerInstance.ID_NONE);
+			request.setEnchantingItem(Player.ID_NONE);
+			request.setEnchantingScroll(Player.ID_NONE);
 			return;
 		}
 		
@@ -79,7 +79,7 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 			// message may be custom
 			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 			player.sendPacket(new ExPutEnchantScrollItemResult(0));
-			request.setEnchantingScroll(PlayerInstance.ID_NONE);
+			request.setEnchantingScroll(Player.ID_NONE);
 			return;
 		}
 		

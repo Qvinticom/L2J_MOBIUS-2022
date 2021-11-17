@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author Nik
@@ -36,7 +36,7 @@ public class MultisellEntryHolder
 	{
 		_ingredients = Collections.unmodifiableList(ingredients);
 		_products = Collections.unmodifiableList(products);
-		_stackable = products.stream().map(i -> ItemTable.getInstance().getTemplate(i.getId())).filter(Objects::nonNull).allMatch(Item::isStackable);
+		_stackable = products.stream().map(i -> ItemTable.getInstance().getTemplate(i.getId())).filter(Objects::nonNull).allMatch(ItemTemplate::isStackable);
 	}
 	
 	public List<ItemChanceHolder> getIngredients()

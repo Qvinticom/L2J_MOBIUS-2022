@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -247,7 +247,7 @@ public class Clan
 		// refresh oldleader and new leader info
 		if (oldLeader != null)
 		{
-			final PlayerInstance exLeader = oldLeader.getPlayerInstance();
+			final Player exLeader = oldLeader.getPlayer();
 			exLeader.setClan(this);
 			exLeader.setPledgeClass(exLeader.getClan().getClanMember(exLeader.getObjectId()).calculatePledgeClass(exLeader));
 			exLeader.setClanPrivileges(CP_NOTHING);
@@ -259,9 +259,9 @@ public class Clan
 		
 		updateClanInDB();
 		
-		if (member.getPlayerInstance() != null)
+		if (member.getPlayer() != null)
 		{
-			final PlayerInstance newLeader = member.getPlayerInstance();
+			final Player newLeader = member.getPlayer();
 			newLeader.setClan(this);
 			newLeader.setPledgeClass(member.calculatePledgeClass(newLeader));
 			newLeader.setClanPrivileges(CP_ALL);
@@ -271,12 +271,12 @@ public class Clan
 		
 		broadcastClanStatus();
 		
-		CrownManager.getInstance().checkCrowns(member.getPlayerInstance());
+		CrownManager.getInstance().checkCrowns(member.getPlayer());
 		
 		return true;
 	}
 	
-	public void setNewLeader(ClanMember member, PlayerInstance player)
+	public void setNewLeader(ClanMember member, Player player)
 	{
 		if (player.isRiding() || player.isFlying())
 		{
@@ -304,7 +304,7 @@ public class Clan
 			sm.addString(member.getName());
 			broadcastToOnlineMembers(sm);
 			
-			transferCwhToNewLeader(member.getPlayerInstance().getObjectId(), player.getObjectId());
+			transferCwhToNewLeader(member.getPlayer().getObjectId(), player.getObjectId());
 		}
 	}
 	
@@ -360,13 +360,13 @@ public class Clan
 		_members.put(member.getName(), member);
 	}
 	
-	public void addClanMember(PlayerInstance player)
+	public void addClanMember(Player player)
 	{
 		final ClanMember member = new ClanMember(this, player.getName(), player.getLevel(), player.getClassId().getId(), player.getObjectId(), player.getPledgeType(), player.getPowerGrade(), player.getTitle());
 		
 		// store in memory
 		addClanMember(member);
-		member.setPlayerInstance(player);
+		member.setPlayer(player);
 		player.setClan(this);
 		player.setPledgeClass(member.calculatePledgeClass(player));
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
@@ -374,7 +374,7 @@ public class Clan
 		player.rewardSkills();
 	}
 	
-	public void updateClanMember(PlayerInstance player)
+	public void updateClanMember(Player player)
 	{
 		final ClanMember member = new ClanMember(player);
 		addClanMember(member);
@@ -419,9 +419,9 @@ public class Clan
 			final ClanMember apprentice = getClanMember(exMember.getApprentice());
 			if (apprentice != null)
 			{
-				if (apprentice.getPlayerInstance() != null)
+				if (apprentice.getPlayer() != null)
 				{
-					apprentice.getPlayerInstance().setSponsor(0);
+					apprentice.getPlayer().setSponsor(0);
 				}
 				else
 				{
@@ -437,9 +437,9 @@ public class Clan
 			final ClanMember sponsor = getClanMember(exMember.getSponsor());
 			if (sponsor != null)
 			{
-				if (sponsor.getPlayerInstance() != null)
+				if (sponsor.getPlayer() != null)
 				{
-					sponsor.getPlayerInstance().setApprentice(0);
+					sponsor.getPlayer().setApprentice(0);
 				}
 				else
 				{
@@ -458,7 +458,7 @@ public class Clan
 		
 		if (exMember.isOnline())
 		{
-			final PlayerInstance player = exMember.getPlayerInstance();
+			final Player player = exMember.getPlayer();
 			player.setTitle("");
 			player.setApprentice(0);
 			player.setSponsor(0);
@@ -590,16 +590,16 @@ public class Clan
 		return limit;
 	}
 	
-	public List<PlayerInstance> getOnlineMembers()
+	public List<Player> getOnlineMembers()
 	{
-		final List<PlayerInstance> result = new ArrayList<>();
+		final List<Player> result = new ArrayList<>();
 		for (ClanMember temp : _members.values())
 		{
 			try
 			{
 				if (temp.isOnline())
 				{
-					result.add(temp.getPlayerInstance());
+					result.add(temp.getPlayer());
 				}
 			}
 			catch (NullPointerException e)
@@ -1087,10 +1087,10 @@ public class Clan
 			{
 				try
 				{
-					if (temp.isOnline() && (newSkill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()))
+					if (temp.isOnline() && (newSkill.getMinPledgeClass() <= temp.getPlayer().getPledgeClass()))
 					{
-						temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-						temp.getPlayerInstance().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
+						temp.getPlayer().addSkill(newSkill, false); // Skill is not saved to player DB
+						temp.getPlayer().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
 					}
 				}
 				catch (NullPointerException e)
@@ -1111,9 +1111,9 @@ public class Clan
 			{
 				try
 				{
-					if (temp.isOnline() && (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()))
+					if (temp.isOnline() && (skill.getMinPledgeClass() <= temp.getPlayer().getPledgeClass()))
 					{
-						temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
+						temp.getPlayer().addSkill(skill, false); // Skill is not saved to player DB
 					}
 				}
 				catch (NullPointerException e)
@@ -1124,7 +1124,7 @@ public class Clan
 		}
 	}
 	
-	public void addSkillEffects(PlayerInstance cm)
+	public void addSkillEffects(Player cm)
 	{
 		if (cm == null)
 		{
@@ -1164,7 +1164,7 @@ public class Clan
 			{
 				if (member.isOnline())
 				{
-					member.getPlayerInstance().sendPacket(packet);
+					member.getPlayer().sendPacket(packet);
 				}
 			}
 			catch (NullPointerException e)
@@ -1174,15 +1174,15 @@ public class Clan
 		}
 	}
 	
-	public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, PlayerInstance player)
+	public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, Player player)
 	{
 		for (ClanMember member : _members.values())
 		{
 			try
 			{
-				if (member.isOnline() && (member.getPlayerInstance() != player))
+				if (member.isOnline() && (member.getPlayer() != player))
 				{
-					member.getPlayerInstance().sendPacket(packet);
+					member.getPlayer().sendPacket(packet);
 				}
 			}
 			catch (NullPointerException e)
@@ -1268,7 +1268,7 @@ public class Clan
 	
 	public void broadcastClanStatus()
 	{
-		for (PlayerInstance member : getOnlineMembers())
+		for (Player member : getOnlineMembers())
 		{
 			member.sendPacket(new PledgeShowMemberListDeleteAll());
 			member.sendPacket(new PledgeShowMemberListAll(this, member));
@@ -1433,7 +1433,7 @@ public class Clan
 		return _subPledges.values();
 	}
 	
-	public SubPledge createSubPledge(PlayerInstance player, int pledgeTypeValue, String leaderName, String subPledgeName)
+	public SubPledge createSubPledge(Player player, int pledgeTypeValue, String leaderName, String subPledgeName)
 	{
 		SubPledge subPledge = null;
 		int pledgeType = getAvailablePledgeTypes(pledgeTypeValue);
@@ -1626,10 +1626,10 @@ public class Clan
 			
 			for (ClanMember cm : getMembers())
 			{
-				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayerInstance() != null))
+				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayer() != null))
 				{
-					cm.getPlayerInstance().setClanPrivileges(privs);
-					cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
+					cm.getPlayer().setClanPrivileges(privs);
+					cm.getPlayer().sendPacket(new UserInfo(cm.getPlayer()));
 				}
 			}
 			broadcastClanStatus();
@@ -1686,11 +1686,11 @@ public class Clan
 			final Collection<Skill> skills = getAllSkills();
 			for (ClanMember member : _members.values())
 			{
-				if (member.isOnline() && (member.getPlayerInstance() != null))
+				if (member.isOnline() && (member.getPlayer() != null))
 				{
 					for (Skill sk : skills)
 					{
-						member.getPlayerInstance().removeSkill(sk, false);
+						member.getPlayer().removeSkill(sk, false);
 					}
 				}
 			}
@@ -1701,13 +1701,13 @@ public class Clan
 			final Collection<Skill> skills = getAllSkills();
 			for (ClanMember member : _members.values())
 			{
-				if (member.isOnline() && (member.getPlayerInstance() != null))
+				if (member.isOnline() && (member.getPlayer() != null))
 				{
 					for (Skill sk : skills)
 					{
-						if (sk.getMinPledgeClass() <= member.getPlayerInstance().getPledgeClass())
+						if (sk.getMinPledgeClass() <= member.getPlayer().getPledgeClass())
 						{
-							member.getPlayerInstance().addSkill(sk, false);
+							member.getPlayer().addSkill(sk, false);
 						}
 					}
 				}
@@ -1777,7 +1777,7 @@ public class Clan
 	 * @param pledgeType
 	 * @return
 	 */
-	public boolean checkClanJoinCondition(PlayerInstance player, PlayerInstance target, int pledgeType)
+	public boolean checkClanJoinCondition(Player player, Player target, int pledgeType)
 	{
 		if (player == null)
 		{
@@ -1859,7 +1859,7 @@ public class Clan
 	 * @param target
 	 * @return
 	 */
-	public boolean checkAllyJoinCondition(PlayerInstance player, PlayerInstance target)
+	public boolean checkAllyJoinCondition(Player player, Player target)
 	{
 		if (player == null)
 		{
@@ -1998,7 +1998,7 @@ public class Clan
 		_dissolvingExpiryTime = time;
 	}
 	
-	public void createAlly(PlayerInstance player, String allyName)
+	public void createAlly(Player player, String allyName)
 	{
 		if (null == player)
 		{
@@ -2076,7 +2076,7 @@ public class Clan
 		player.sendMessage("Alliance " + allyName + " has been created.");
 	}
 	
-	public void dissolveAlly(PlayerInstance player)
+	public void dissolveAlly(Player player)
 	{
 		if (_allyId == 0)
 		{
@@ -2120,7 +2120,7 @@ public class Clan
 		player.deathPenalty(false);
 	}
 	
-	public void levelUpClan(PlayerInstance player)
+	public void levelUpClan(Player player)
 	{
 		if (!player.isClanLeader())
 		{
@@ -2291,7 +2291,7 @@ public class Clan
 		
 		if (_leader.isOnline())
 		{
-			final PlayerInstance leader = _leader.getPlayerInstance();
+			final Player leader = _leader.getPlayer();
 			if (3 < level)
 			{
 				SiegeManager.getInstance().addSiegeSkills(leader);
@@ -2337,7 +2337,7 @@ public class Clan
 			LOGGER.warning("Could not update crest for clan " + _name + " [" + _clanId + "] : " + e.getMessage());
 		}
 		
-		for (PlayerInstance member : getOnlineMembers())
+		for (Player member : getOnlineMembers())
 		{
 			member.broadcastUserInfo();
 		}
@@ -2377,7 +2377,7 @@ public class Clan
 		if (onlyThisClan)
 		{
 			setAllyCrestId(crestId);
-			for (PlayerInstance member : getOnlineMembers())
+			for (Player member : getOnlineMembers())
 			{
 				member.broadcastUserInfo();
 			}
@@ -2389,7 +2389,7 @@ public class Clan
 				if (clan.getAllyId() == getAllyId())
 				{
 					clan.setAllyCrestId(crestId);
-					for (PlayerInstance member : clan.getOnlineMembers())
+					for (Player member : clan.getOnlineMembers())
 					{
 						member.broadcastUserInfo();
 					}
@@ -2423,7 +2423,7 @@ public class Clan
 			LOGGER.warning("Could not update large crest for clan " + _name + " [" + _clanId + "] : " + e.getMessage());
 		}
 		
-		for (PlayerInstance member : getOnlineMembers())
+		for (Player member : getOnlineMembers())
 		{
 			member.broadcastUserInfo();
 		}

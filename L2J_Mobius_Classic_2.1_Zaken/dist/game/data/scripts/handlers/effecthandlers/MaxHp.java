@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
@@ -38,7 +38,7 @@ public class MaxHp extends AbstractStatEffect
 	}
 	
 	@Override
-	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (_heal)
 		{

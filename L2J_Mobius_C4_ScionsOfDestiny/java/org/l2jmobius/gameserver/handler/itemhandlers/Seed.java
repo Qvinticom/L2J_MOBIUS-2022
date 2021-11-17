@@ -23,14 +23,14 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -302,9 +302,9 @@ public class Seed implements IItemHandler
 	private int _seedId;
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
@@ -314,23 +314,23 @@ public class Seed implements IItemHandler
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		final WorldObject target = player.getTarget();
-		if (!(target instanceof NpcInstance))
+		if (!(target instanceof Npc))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!(target instanceof MonsterInstance) || (target instanceof ChestInstance) || (target instanceof GrandBossInstance) || (target instanceof RaidBossInstance))
+		if (!(target instanceof Monster) || (target instanceof Chest) || (target instanceof GrandBoss) || (target instanceof RaidBoss))
 		{
 			player.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final MonsterInstance monster = (MonsterInstance) target;
+		final Monster monster = (Monster) target;
 		if (monster.isDead())
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);

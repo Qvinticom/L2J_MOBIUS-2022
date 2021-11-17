@@ -17,7 +17,7 @@
 package ai.areas.FrozenLabyrinth;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 import ai.AbstractNpcAI;
@@ -40,7 +40,7 @@ public class FrozenLabyrinth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.isScriptValue(0) && (skill != null) && !skill.isMagic())
 		{

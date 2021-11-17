@@ -20,10 +20,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -49,16 +49,16 @@ public class Feed extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isPet())
 		{
-			final PetInstance pet = (PetInstance) effected;
+			final Pet pet = (Pet) effected;
 			pet.setCurrentFed(pet.getCurrentFed() + (_normal * Config.PET_FOOD_RATE));
 		}
 		else if (effected.isPlayer())
 		{
-			final PlayerInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			if (player.getMountType() == MountType.WYVERN)
 			{
 				player.setCurrentFeed(player.getCurrentFeed() + _wyvern);

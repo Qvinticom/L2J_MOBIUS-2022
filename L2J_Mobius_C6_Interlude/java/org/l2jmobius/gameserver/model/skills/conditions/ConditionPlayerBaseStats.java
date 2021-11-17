@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -38,11 +38,11 @@ public class ConditionPlayerBaseStats extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		if (!(env.player instanceof PlayerInstance))
+		if (!(env.player instanceof Player))
 		{
 			return false;
 		}
-		final PlayerInstance player = (PlayerInstance) env.player;
+		final Player player = (Player) env.player;
 		switch (_stat)
 		{
 			case Int:

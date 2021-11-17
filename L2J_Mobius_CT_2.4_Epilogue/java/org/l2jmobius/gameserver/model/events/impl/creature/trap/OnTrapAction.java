@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.events.impl.creature.trap;
 
 import org.l2jmobius.gameserver.enums.TrapAction;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,18 +27,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnTrapAction implements IBaseEvent
 {
-	private final TrapInstance _trap;
+	private final Trap _trap;
 	private final Creature _trigger;
 	private final TrapAction _action;
 	
-	public OnTrapAction(TrapInstance trap, Creature trigger, TrapAction action)
+	public OnTrapAction(Trap trap, Creature trigger, TrapAction action)
 	{
 		_trap = trap;
 		_trigger = trigger;
 		_action = action;
 	}
 	
-	public TrapInstance getTrap()
+	public Trap getTrap()
 	{
 		return _trap;
 	}

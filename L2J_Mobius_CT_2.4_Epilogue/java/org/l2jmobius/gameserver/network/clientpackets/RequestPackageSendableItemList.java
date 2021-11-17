@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
@@ -41,7 +41,7 @@ public class RequestPackageSendableItemList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final Collection<ItemInstance> items = client.getPlayer().getInventory().getAvailableItems(true, true, true);
+		final Collection<Item> items = client.getPlayer().getInventory().getAvailableItems(true, true, true);
 		client.sendPacket(new PackageSendableList(items, _objectID, client.getPlayer().getAdena()));
 	}
 }

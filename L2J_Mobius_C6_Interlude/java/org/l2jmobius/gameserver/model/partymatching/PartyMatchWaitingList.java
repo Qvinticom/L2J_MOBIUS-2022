@@ -19,21 +19,21 @@ package org.l2jmobius.gameserver.model.partymatching;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Gnacik
  */
 public class PartyMatchWaitingList
 {
-	private final List<PlayerInstance> _members;
+	private final List<Player> _members;
 	
 	protected PartyMatchWaitingList()
 	{
 		_members = new ArrayList<>();
 	}
 	
-	public void addPlayer(PlayerInstance player)
+	public void addPlayer(Player player)
 	{
 		if (!_members.contains(player))
 		{
@@ -41,7 +41,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public void removePlayer(PlayerInstance player)
+	public void removePlayer(Player player)
 	{
 		if (_members.contains(player))
 		{
@@ -49,7 +49,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public List<PlayerInstance> getPlayers()
+	public List<Player> getPlayers()
 	{
 		return _members;
 	}

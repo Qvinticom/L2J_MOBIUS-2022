@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -31,10 +31,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GMHennaInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final List<Henna> _hennas = new ArrayList<>();
 	
-	public GMHennaInfo(PlayerInstance player)
+	public GMHennaInfo(Player player)
 	{
 		_player = player;
 		for (int i = 1; i < 4; i++)

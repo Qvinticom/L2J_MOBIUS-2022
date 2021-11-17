@@ -23,8 +23,8 @@ import java.util.regex.Pattern;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler.AutoSpawnInstance;
@@ -49,7 +49,7 @@ public class AdminMammon implements IAdminCommandHandler
 	
 	@Override
 	@SuppressWarnings("deprecation")
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int npcId = 0;
 		int teleportIndex = -1;
@@ -78,10 +78,10 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				final Queue<NpcInstance> blackInst = blackSpawnInst.getNPCInstanceList();
+				final Queue<Npc> blackInst = blackSpawnInst.getNpcList();
 				if (!blackInst.isEmpty())
 				{
-					final NpcInstance npc = blackInst.stream().findFirst().get();
+					final Npc npc = blackInst.stream().findFirst().get();
 					final int x1 = npc.getX();
 					final int y1 = npc.getY();
 					final int z1 = npc.getZ();
@@ -99,10 +99,10 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				final Queue<NpcInstance> merchInst = merchSpawnInst.getNPCInstanceList();
+				final Queue<Npc> merchInst = merchSpawnInst.getNpcList();
 				if (!merchInst.isEmpty())
 				{
-					final NpcInstance npc = merchInst.stream().findFirst().get();
+					final Npc npc = merchInst.stream().findFirst().get();
 					final int x2 = npc.getX();
 					final int y2 = npc.getY();
 					final int z2 = npc.getZ();
@@ -176,7 +176,7 @@ public class AdminMammon implements IAdminCommandHandler
 				activeChar.sendPacket(SystemMessage.sendString("Command format is //list_spawns <npcId|npc_name> [tele_index]"));
 			}
 			
-			SpawnTable.getInstance().findNPCInstances(activeChar, npcId, teleportIndex);
+			SpawnTable.getInstance().findNpcs(activeChar, npcId, teleportIndex);
 		}
 		
 		// Used for testing SystemMessage IDs - Use //msg <ID>

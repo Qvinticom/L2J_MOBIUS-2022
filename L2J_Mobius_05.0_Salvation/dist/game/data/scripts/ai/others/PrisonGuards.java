@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -53,7 +53,7 @@ public class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("CLEAR_STATUS"))
 		{
@@ -71,7 +71,7 @@ public class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		if (npc.getId() == GUARD_HEAD)
 		{
@@ -101,7 +101,7 @@ public class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!caster.isAffectedBySkill(TIMER))
 		{
@@ -112,7 +112,7 @@ public class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if ((skill == SILENCE.getSkill()) || (skill == STONE.getSkill()))
 		{
@@ -123,7 +123,7 @@ public class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
+	public boolean onNpcHate(Attackable mob, Player player, boolean isSummon)
 	{
 		return player.isAffectedBySkill(TIMER);
 	}

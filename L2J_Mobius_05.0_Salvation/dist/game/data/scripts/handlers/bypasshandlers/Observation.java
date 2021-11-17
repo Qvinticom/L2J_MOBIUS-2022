@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ObservationInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.BroadcastingTower;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -87,9 +87,9 @@ public class Observation implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!(target instanceof ObservationInstance))
+		if (!(target instanceof BroadcastingTower))
 		{
 			return false;
 		}
@@ -153,7 +153,7 @@ public class Observation implements IBypassHandler
 		return false;
 	}
 	
-	private void doObserve(PlayerInstance player, Npc npc, Location pos, long cost)
+	private void doObserve(Player player, Npc npc, Location pos, long cost)
 	{
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{

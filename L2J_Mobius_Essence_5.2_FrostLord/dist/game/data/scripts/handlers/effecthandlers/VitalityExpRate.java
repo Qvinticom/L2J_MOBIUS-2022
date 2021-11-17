@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
@@ -40,7 +40,7 @@ public class VitalityExpRate extends AbstractStatPercentEffect
 		effected.getStat().mergeMul(Stat.VITALITY_EXP_RATE, (_amount / 100) + 1);
 		effected.getStat().mergeAdd(Stat.VITALITY_SKILLS, 1);
 
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player == null)
 		{
 			return;

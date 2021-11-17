@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,14 +39,14 @@ public class JailZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.setInsideZone(ZoneId.JAIL, true);
 			creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
 			if (Config.JAIL_IS_PVP)
 			{
 				creature.setInsideZone(ZoneId.PVP, true);
-				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+				((Player) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 			}
 			else
 			{
@@ -58,24 +58,24 @@ public class JailZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.setInsideZone(ZoneId.JAIL, false);
 			creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 			if (Config.JAIL_IS_PVP)
 			{
 				creature.setInsideZone(ZoneId.PVP, false);
-				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+				((Player) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 			}
 			else
 			{
 				creature.setInsideZone(ZoneId.PEACE, false);
 			}
-			if (((PlayerInstance) creature).isInJail())
+			if (((Player) creature).isInJail())
 			{
 				// when a player wants to exit jail even if he is still jailed, teleport him back to jail
 				ThreadPool.schedule(new BackToJail(creature), 2000);
-				((PlayerInstance) creature).sendMessage("You can't cheat your way out of here. You must wait until your jail time is over.");
+				((Player) creature).sendMessage("You can't cheat your way out of here. You must wait until your jail time is over.");
 			}
 		}
 	}
@@ -92,11 +92,11 @@ public class JailZone extends ZoneType
 	
 	static class BackToJail implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		
 		BackToJail(Creature creature)
 		{
-			_player = (PlayerInstance) creature;
+			_player = (Player) creature;
 		}
 		
 		@Override

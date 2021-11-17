@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.ai;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
  */
 public class BoatAI extends VehicleAI
 {
-	public BoatAI(BoatInstance boat)
+	public BoatAI(Boat boat)
 	{
 		super(boat);
 	}
@@ -66,7 +66,7 @@ public class BoatAI extends VehicleAI
 	}
 	
 	@Override
-	public void describeStateToPlayer(PlayerInstance player)
+	public void describeStateToPlayer(Player player)
 	{
 		if (_clientMoving)
 		{
@@ -75,8 +75,8 @@ public class BoatAI extends VehicleAI
 	}
 	
 	@Override
-	public BoatInstance getActor()
+	public Boat getActor()
 	{
-		return (BoatInstance) _actor;
+		return (Boat) _actor;
 	}
 }

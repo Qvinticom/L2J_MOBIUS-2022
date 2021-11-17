@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -32,18 +32,18 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExCollectionInfo implements IClientOutgoingPacket
 {
-	final PlayerInstance _playerInstance;
+	final Player _Player;
 	final List<PlayerCollectionData> _categoryList;
 	final Set<Integer> _collections;
 	final List<Integer> _favoriteList;
 	final int _category;
 	
-	public ExCollectionInfo(PlayerInstance playerInstance, int category)
+	public ExCollectionInfo(Player Player, int category)
 	{
-		_playerInstance = playerInstance;
-		_categoryList = playerInstance.getCollections().stream().filter(it -> CollectionData.getInstance().getCollection(it.getCollectionId()).getCategory() == category).collect(Collectors.toList());
+		_Player = Player;
+		_categoryList = Player.getCollections().stream().filter(it -> CollectionData.getInstance().getCollection(it.getCollectionId()).getCategory() == category).collect(Collectors.toList());
 		_collections = _categoryList.stream().map(PlayerCollectionData::getCollectionId).collect(Collectors.toSet());
-		_favoriteList = playerInstance.getCollectionFavorites();
+		_favoriteList = Player.getCollectionFavorites();
 		_category = category;
 	}
 	

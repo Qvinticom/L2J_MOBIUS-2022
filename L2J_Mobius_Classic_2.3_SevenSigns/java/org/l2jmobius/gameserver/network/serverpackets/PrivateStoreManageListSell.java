@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreManageListSell extends AbstractItemPacket
@@ -32,7 +32,7 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 	private final Collection<TradeItem> _itemList;
 	private final Collection<TradeItem> _sellList;
 	
-	public PrivateStoreManageListSell(int sendType, PlayerInstance player, boolean isPackageSale)
+	public PrivateStoreManageListSell(int sendType, Player player, boolean isPackageSale)
 	{
 		_sendType = sendType;
 		_objId = player.getObjectId();

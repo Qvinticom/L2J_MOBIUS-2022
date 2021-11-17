@@ -40,9 +40,9 @@ import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -109,8 +109,8 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		227
 	};
 	// Misc
-	private static final Set<PlayerInstance> REGISTERED_PLAYERS = ConcurrentHashMap.newKeySet();
-	private static final Set<PlayerInstance> PARTICIPANT_PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> REGISTERED_PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> PARTICIPANT_PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final String COC_DEFEATED_VAR = "COC_DEFEATED";
 	private static final int MIN_PLAYERS = 2;
 	private static final int MAX_PLAYERS = 18;
@@ -171,7 +171,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		}
 		
 		// Update data for online players.
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
 			player.getVariables().storeMe();
@@ -205,7 +205,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		_registrationOpen = true;
 		
 		// Message all players.
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			if (player.isOnline())
 			{
@@ -226,7 +226,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		{
 			_registrationOpen = false;
 			
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if (player.isOnline())
 				{
@@ -253,8 +253,8 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	private void prepareForFight()
 	{
 		PARTICIPANT_PLAYERS.clear();
-		final List<PlayerInstance> players = REGISTERED_PLAYERS.stream().sorted(Comparator.comparingInt(PlayerInstance::getLevel)).collect(Collectors.toList());
-		for (PlayerInstance player : players)
+		final List<Player> players = REGISTERED_PLAYERS.stream().sorted(Comparator.comparingInt(Player::getLevel)).collect(Collectors.toList());
+		for (Player player : players)
 		{
 			if (player.isOnline() && canRegister(player, true))
 			{
@@ -280,7 +280,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		int index = 0;
 		int position = 1;
 		final int templateId = getRandomEntry(TEMPLATES);
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			if (player.inObserverMode())
 			{
@@ -447,7 +447,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	
 	public void startFight()
 	{
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			if (player != null)
 			{
@@ -468,7 +468,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -540,7 +540,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 					
 					// Delete target player
 					final DeleteObject deleteObject = new DeleteObject(player);
-					for (PlayerInstance member : PARTICIPANT_PLAYERS)
+					for (Player member : PARTICIPANT_PLAYERS)
 					{
 						if (member.getObjectId() != player.getObjectId())
 						{
@@ -562,7 +562,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -571,7 +571,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				final int time = params.getInt("time", 0);
 				final SystemMessage countdown = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_ARENA_IN_S1_SEC);
 				countdown.addByte(time);
-				for (PlayerInstance member : REGISTERED_PLAYERS)
+				for (Player member : REGISTERED_PLAYERS)
 				{
 					member.sendPacket(countdown);
 				}
@@ -601,7 +601,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				{
 					while (time == -1)
 					{
-						final PlayerInstance random = PARTICIPANT_PLAYERS.stream().findAny().get();
+						final Player random = PARTICIPANT_PLAYERS.stream().findAny().get();
 						if ((random != null) && random.isInInstance())
 						{
 							time = (int) (random.getInstanceWorld().getRemainingTime() / 1000);
@@ -610,14 +610,14 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				}
 				
 				broadcastPacket(new ExCuriousHouseRemainTime(time));
-				for (PlayerInstance member : PARTICIPANT_PLAYERS)
+				for (Player member : PARTICIPANT_PLAYERS)
 				{
 					broadcastPacket(new ExCuriousHouseMemberUpdate(member));
 				}
 				
 				// Validate winner
 				int count = 0;
-				for (PlayerInstance member : PARTICIPANT_PLAYERS)
+				for (Player member : PARTICIPANT_PLAYERS)
 				{
 					if (!member.getVariables().getBoolean(COC_DEFEATED_VAR))
 					{
@@ -708,8 +708,8 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	
 	public void stopFight()
 	{
-		final List<PlayerInstance> winners = getWinners();
-		final List<PlayerInstance> memberList = new ArrayList<>(PARTICIPANT_PLAYERS.size());
+		final List<Player> winners = getWinners();
+		final List<Player> memberList = new ArrayList<>(PARTICIPANT_PLAYERS.size());
 		SystemMessage msg = null;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
@@ -717,7 +717,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		}
 		else
 		{
-			final PlayerInstance winner = winners.get(0);
+			final Player winner = winners.get(0);
 			if (winner != null)
 			{
 				msg = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
@@ -816,7 +816,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		{
 			while (time == -1)
 			{
-				final PlayerInstance random = PARTICIPANT_PLAYERS.stream().findAny().get();
+				final Player random = PARTICIPANT_PLAYERS.stream().findAny().get();
 				if ((random != null) && random.isInInstance())
 				{
 					time = (int) (random.getInstanceWorld().getRemainingTime() / 1000);
@@ -824,7 +824,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			}
 		}
 		
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			if (player != null)
 			{
@@ -850,7 +850,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	private void teleportPlayersOut()
 	{
 		Instance instance = null;
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			if (player == null)
 			{
@@ -915,10 +915,10 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		ThreadPool.schedule(this::startEvent, 60000); // 60000 = 1 minute
 	}
 	
-	public List<PlayerInstance> getWinners()
+	public List<Player> getWinners()
 	{
 		int topScore = -1;
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			final int score = player.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_SCORE, 0);
 			if (score > topScore)
@@ -927,8 +927,8 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			}
 		}
 		
-		final List<PlayerInstance> winners = new ArrayList<>();
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		final List<Player> winners = new ArrayList<>();
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			final int score = player.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_SCORE, 0);
 			if (score == topScore)
@@ -939,17 +939,17 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		return winners;
 	}
 	
-	private void addLogoutListener(PlayerInstance player)
+	private void addLogoutListener(Player player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> onPlayerLogout(event), this));
 	}
 	
-	private void addDeathListener(PlayerInstance player)
+	private void addDeathListener(Player player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_CREATURE_DEATH, (OnCreatureDeath event) -> onPlayerDeath(event), this));
 	}
 	
-	private void removeListeners(PlayerInstance player)
+	private void removeListeners(Player player)
 	{
 		for (AbstractEventListener listener : player.getListeners(EventType.ON_PLAYER_LOGOUT))
 		{
@@ -970,7 +970,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	private void onPlayerLogout(OnPlayerLogout event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player != null)
 		{
 			REGISTERED_PLAYERS.remove(player);
@@ -991,8 +991,8 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	{
 		if (event.getAttacker().isPlayer() && event.getTarget().isPlayer())
 		{
-			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
-			final PlayerInstance targetPlayer = event.getTarget().getActingPlayer();
+			final Player attackerPlayer = event.getAttacker().getActingPlayer();
+			final Player targetPlayer = event.getTarget().getActingPlayer();
 			if (PARTICIPANT_PLAYERS.contains(attackerPlayer) && PARTICIPANT_PLAYERS.contains(targetPlayer))
 			{
 				attackerPlayer.getVariables().increaseInt(PlayerVariables.CEREMONY_OF_CHAOS_SCORE, 1);
@@ -1002,7 +1002,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				
 				// Delete target player
 				final DeleteObject deleteObject = new DeleteObject(targetPlayer);
-				for (PlayerInstance member : PARTICIPANT_PLAYERS)
+				for (Player member : PARTICIPANT_PLAYERS)
 				{
 					if (member.getObjectId() != targetPlayer.getObjectId())
 					{
@@ -1019,7 +1019,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		}
 	}
 	
-	private boolean canRegister(PlayerInstance player, boolean sendMessage)
+	private boolean canRegister(Player player, boolean sendMessage)
 	{
 		boolean canRegister = true;
 		
@@ -1111,7 +1111,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	
 	private void broadcastPacket(IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : PARTICIPANT_PLAYERS)
+		for (Player player : PARTICIPANT_PLAYERS)
 		{
 			packet.sendTo(player);
 		}

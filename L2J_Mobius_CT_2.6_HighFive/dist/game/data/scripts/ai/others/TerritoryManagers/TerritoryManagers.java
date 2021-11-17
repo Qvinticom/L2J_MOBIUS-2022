@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -73,7 +73,7 @@ public class TerritoryManagers extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if ((player.getClassId().level() < 2) || (player.getLevel() < 40))
 		{
@@ -84,7 +84,7 @@ public class TerritoryManagers extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final int npcId = npc.getId();
@@ -262,7 +262,7 @@ public class TerritoryManagers extends AbstractNpcAI
 	 * @param questId the quest Id of the quest that will be processed
 	 * @param itemIds the item Ids should be deleted
 	 */
-	private void processNoblesseQuest(PlayerInstance player, int questId, int[] itemIds)
+	private void processNoblesseQuest(Player player, int questId, int[] itemIds)
 	{
 		final Quest q = QuestManager.getInstance().getQuest(questId);
 		if (q == null)
@@ -299,9 +299,9 @@ public class TerritoryManagers extends AbstractNpcAI
 	 * @param event the event leading to this deletion
 	 * @param npc the npc referencing this deletion
 	 */
-	private void deleteIfExist(PlayerInstance player, int itemId, String event, Npc npc)
+	private void deleteIfExist(Player player, int itemId, String event, Npc npc)
 	{
-		final ItemInstance item = player.getInventory().getItemByItemId(itemId);
+		final Item item = player.getInventory().getItemByItemId(itemId);
 		if (item != null)
 		{
 			player.destroyItem(event, item, npc, true);

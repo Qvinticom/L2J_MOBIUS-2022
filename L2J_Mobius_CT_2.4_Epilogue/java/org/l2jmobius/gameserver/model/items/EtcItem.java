@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 /**
  * This class is dedicated to the management of EtcItem.
  */
-public class EtcItem extends Item
+public class EtcItem extends ItemTemplate
 {
 	private String _handler;
 	private EtcItemType _type;
@@ -62,16 +62,16 @@ public class EtcItem extends Item
 			}
 		}
 		
-		_type1 = Item.TYPE1_ITEM_QUESTITEM_ADENA;
-		_type2 = Item.TYPE2_OTHER; // default is other
+		_type1 = ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA;
+		_type2 = ItemTemplate.TYPE2_OTHER; // default is other
 		
 		if (isQuestItem())
 		{
-			_type2 = Item.TYPE2_QUEST;
+			_type2 = ItemTemplate.TYPE2_QUEST;
 		}
 		else if ((getId() == Inventory.ADENA_ID) || (getId() == Inventory.ANCIENT_ADENA_ID))
 		{
-			_type2 = Item.TYPE2_MONEY;
+			_type2 = ItemTemplate.TYPE2_MONEY;
 		}
 		
 		_handler = set.getString("handler", null); // ! null !

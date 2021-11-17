@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IChatHandler;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -37,7 +37,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, PlayerInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, Player activeChar, String target, String text)
 	{
 		final MatchingRoom room = activeChar.getMatchingRoom();
 		if (room != null)
@@ -54,7 +54,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar, type, activeChar.getName(), text);
-			for (PlayerInstance _member : room.getMembers())
+			for (Player _member : room.getMembers())
 			{
 				if (Config.FACTION_SYSTEM_ENABLED)
 				{

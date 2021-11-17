@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -65,7 +65,7 @@ public class SSQLibraryOfSages extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -106,14 +106,14 @@ public class SSQLibraryOfSages extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		enterInstance(talker, TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -123,7 +123,7 @@ public class SSQLibraryOfSages extends AbstractInstance
 		spawnElcadia(player, world);
 	}
 	
-	private void spawnElcadia(PlayerInstance player, InstanceWorld world)
+	private void spawnElcadia(Player player, InstanceWorld world)
 	{
 		final Npc elcadia = world.getParameters().getObject("elcadia", Npc.class);
 		if (elcadia != null)

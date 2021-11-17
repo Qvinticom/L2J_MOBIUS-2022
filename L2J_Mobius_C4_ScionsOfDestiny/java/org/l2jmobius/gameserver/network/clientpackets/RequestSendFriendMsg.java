@@ -22,7 +22,7 @@ import java.util.logging.LogRecord;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendRecvMsg;
@@ -48,13 +48,13 @@ public class RequestSendFriendMsg implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance targetPlayer = World.getInstance().getPlayer(_reciever);
+		final Player targetPlayer = World.getInstance().getPlayer(_reciever);
 		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(player.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);

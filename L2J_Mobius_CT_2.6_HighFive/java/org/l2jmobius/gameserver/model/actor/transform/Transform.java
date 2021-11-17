@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -110,7 +110,7 @@ public class Transform implements IIdentifiable
 		return _title;
 	}
 	
-	public TransformTemplate getTemplate(PlayerInstance player)
+	public TransformTemplate getTemplate(Player player)
 	{
 		return player != null ? (player.getAppearance().isFemale() ? _femaleTemplate : _maleTemplate) : null;
 	}
@@ -183,25 +183,25 @@ public class Transform implements IIdentifiable
 		return _type == TransformType.PURE_STAT;
 	}
 	
-	public float getCollisionHeight(PlayerInstance player)
+	public float getCollisionHeight(Player player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getCollisionHeight() : player.getCollisionHeight();
 	}
 	
-	public float getCollisionRadius(PlayerInstance player)
+	public float getCollisionRadius(Player player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getCollisionRadius() : player.getCollisionRadius();
 	}
 	
-	public int getBaseAttackRange(PlayerInstance player)
+	public int getBaseAttackRange(Player player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getBaseAttackRange() : player.getTemplate().getBaseAttackRange();
 	}
 	
-	public void onTransform(PlayerInstance player)
+	public void onTransform(Player player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		if (template == null)
@@ -269,7 +269,7 @@ public class Transform implements IIdentifiable
 		}
 	}
 	
-	public void onUntransform(PlayerInstance player)
+	public void onUntransform(Player player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		if (template == null)
@@ -330,7 +330,7 @@ public class Transform implements IIdentifiable
 		player.sendPacket(ExBasicActionList.STATIC_PACKET);
 	}
 	
-	public void onLevelUp(PlayerInstance player)
+	public void onLevelUp(Player player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		// Add skills depending on level.
@@ -347,7 +347,7 @@ public class Transform implements IIdentifiable
 		}
 	}
 	
-	public double getStat(PlayerInstance player, Stat stat)
+	public double getStat(Player player, Stat stat)
 	{
 		double val = 0;
 		final TransformTemplate template = getTemplate(player);
@@ -368,7 +368,7 @@ public class Transform implements IIdentifiable
 	 * @param slot
 	 * @return
 	 */
-	public int getBaseDefBySlot(PlayerInstance player, int slot)
+	public int getBaseDefBySlot(Player player, int slot)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getDefense(slot) : player.getTemplate().getBaseDefBySlot(slot);
@@ -378,7 +378,7 @@ public class Transform implements IIdentifiable
 	 * @param player
 	 * @return
 	 */
-	public double getLevelMod(PlayerInstance player)
+	public double getLevelMod(Player player)
 	{
 		double val = -1;
 		final TransformTemplate template = getTemplate(player);

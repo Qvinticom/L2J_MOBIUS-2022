@@ -28,10 +28,10 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.AutoChatHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
@@ -43,7 +43,7 @@ public class MercTicketManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
 	
-	private final List<ItemInstance> _droppedTickets = new ArrayList<>();
+	private final List<Item> _droppedTickets = new ArrayList<>();
 	
 	public static final MercTicketManager getInstance()
 	{
@@ -713,8 +713,8 @@ public class MercTicketManager
 						{
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
-							final ItemInstance dropticket = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
-							dropticket.setLocation(ItemInstance.ItemLocation.VOID);
+							final Item dropticket = new Item(IdManager.getInstance().getNextId(), itemId);
+							dropticket.setLocation(Item.ItemLocation.VOID);
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
 							World.getInstance().storeObject(dropticket);
@@ -759,8 +759,8 @@ public class MercTicketManager
 		}
 		
 		int count = 0;
-		ItemInstance ticket;
-		for (ItemInstance _droppedTicket : _droppedTickets)
+		Item ticket;
+		for (Item _droppedTicket : _droppedTickets)
 		{
 			ticket = _droppedTicket;
 			if ((ticket != null) && (ticket.getItemId() == itemId))
@@ -792,8 +792,8 @@ public class MercTicketManager
 		}
 		
 		int count = 0;
-		ItemInstance ticket;
-		for (ItemInstance _droppedTicket : _droppedTickets)
+		Item ticket;
+		for (Item _droppedTicket : _droppedTickets)
 		{
 			ticket = _droppedTicket;
 			if ((ticket != null) && (getTicketCastleId(ticket.getItemId()) == castleId))
@@ -813,7 +813,7 @@ public class MercTicketManager
 	 * @param messages
 	 * @return
 	 */
-	public int addTicket(int itemId, PlayerInstance player, String[] messages)
+	public int addTicket(int itemId, Player player, String[] messages)
 	{
 		final int x = player.getX();
 		final int y = player.getY();
@@ -836,8 +836,8 @@ public class MercTicketManager
 				castle.getSiege().getSiegeGuardManager().hireMerc(x, y, z, heading, NPC_IDS[i]);
 				
 				// create the ticket in the gameworld
-				final ItemInstance dropticket = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
-				dropticket.setLocation(ItemInstance.ItemLocation.INVENTORY);
+				final Item dropticket = new Item(IdManager.getInstance().getNextId(), itemId);
+				dropticket.setLocation(Item.ItemLocation.INVENTORY);
 				dropticket.dropMe(null, x, y, z);
 				dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
 				World.getInstance().storeObject(dropticket); // add to the world
@@ -855,7 +855,7 @@ public class MercTicketManager
 		final NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
 		if (template != null)
 		{
-			final SiegeGuardInstance npc = new SiegeGuardInstance(IdManager.getInstance().getNextId(), template);
+			final SiegeGuard npc = new SiegeGuard(IdManager.getInstance().getNextId(), template);
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			npc.setDecayed(false);
 			npc.spawnMe(x, y, (z + 20));
@@ -880,7 +880,7 @@ public class MercTicketManager
 		int i = 0;
 		while (i < _droppedTickets.size())
 		{
-			final ItemInstance item = _droppedTickets.get(i);
+			final Item item = _droppedTickets.get(i);
 			if ((item != null) && (getTicketCastleId(item.getItemId()) == castleId))
 			{
 				item.decayMe();
@@ -900,7 +900,7 @@ public class MercTicketManager
 	 * remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example)
 	 * @param item
 	 */
-	public void removeTicket(ItemInstance item)
+	public void removeTicket(Item item)
 	{
 		final int itemId = item.getItemId();
 		int npcId = -1;
@@ -929,7 +929,7 @@ public class MercTicketManager
 		return ITEM_IDS;
 	}
 	
-	public List<ItemInstance> getDroppedTickets()
+	public List<Item> getDroppedTickets()
 	{
 		return _droppedTickets;
 	}

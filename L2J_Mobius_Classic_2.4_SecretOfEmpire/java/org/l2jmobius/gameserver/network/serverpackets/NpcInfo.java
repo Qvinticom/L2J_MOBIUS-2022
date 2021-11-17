@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.enums.NpcInfoType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -307,7 +307,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		
 		if (containsMask(NpcInfoType.ATTACKABLE))
 		{
-			packet.writeC(_npc.isAttackable() && !(_npc instanceof GuardInstance) ? 0x01 : 0x00);
+			packet.writeC(_npc.isAttackable() && !(_npc instanceof Guard) ? 0x01 : 0x00);
 		}
 		if (containsMask(NpcInfoType.RELATIONS))
 		{

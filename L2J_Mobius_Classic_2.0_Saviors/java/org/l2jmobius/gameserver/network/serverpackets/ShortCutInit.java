@@ -20,14 +20,14 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Shortcut;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ShortCutInit implements IClientOutgoingPacket
 {
 	private Collection<Shortcut> _shortCuts;
 	
-	public ShortCutInit(PlayerInstance player)
+	public ShortCutInit(Player player)
 	{
 		if (player == null)
 		{

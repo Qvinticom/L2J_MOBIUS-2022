@@ -33,7 +33,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.AdminCommandAccessRight;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -46,7 +46,7 @@ public class AdminData implements IXmlReader
 {
 	private final Map<Integer, AccessLevel> _accessLevels = new HashMap<>();
 	private final Map<String, AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
-	private final Map<PlayerInstance, Boolean> _gmList = new ConcurrentHashMap<>();
+	private final Map<Player, Boolean> _gmList = new ConcurrentHashMap<>();
 	private int _highestLevel = 0;
 	
 	protected AdminData()
@@ -195,10 +195,10 @@ public class AdminData implements IXmlReader
 	 * @param includeHidden the include hidden
 	 * @return the all GMs
 	 */
-	public List<PlayerInstance> getAllGms(boolean includeHidden)
+	public List<Player> getAllGms(boolean includeHidden)
 	{
-		final List<PlayerInstance> tmpGmList = new ArrayList<>();
-		for (Entry<PlayerInstance, Boolean> entry : _gmList.entrySet())
+		final List<Player> tmpGmList = new ArrayList<>();
+		for (Entry<Player, Boolean> entry : _gmList.entrySet())
 		{
 			if (includeHidden || !entry.getValue())
 			{
@@ -216,7 +216,7 @@ public class AdminData implements IXmlReader
 	public List<String> getAllGmNames(boolean includeHidden)
 	{
 		final List<String> tmpGmList = new ArrayList<>();
-		for (Entry<PlayerInstance, Boolean> entry : _gmList.entrySet())
+		for (Entry<Player, Boolean> entry : _gmList.entrySet())
 		{
 			if (!entry.getValue())
 			{
@@ -231,11 +231,11 @@ public class AdminData implements IXmlReader
 	}
 	
 	/**
-	 * Add a PlayerInstance player to the Set _gmList.
+	 * Add a Player player to the Set _gmList.
 	 * @param player the player
 	 * @param hidden the hidden
 	 */
-	public void addGm(PlayerInstance player, boolean hidden)
+	public void addGm(Player player, boolean hidden)
 	{
 		_gmList.put(player, hidden);
 	}
@@ -244,7 +244,7 @@ public class AdminData implements IXmlReader
 	 * Delete a GM.
 	 * @param player the player
 	 */
-	public void deleteGm(PlayerInstance player)
+	public void deleteGm(Player player)
 	{
 		_gmList.remove(player);
 	}
@@ -256,7 +256,7 @@ public class AdminData implements IXmlReader
 	 */
 	public boolean isGmOnline(boolean includeHidden)
 	{
-		for (Entry<PlayerInstance, Boolean> entry : _gmList.entrySet())
+		for (Entry<Player, Boolean> entry : _gmList.entrySet())
 		{
 			if (includeHidden || !entry.getValue())
 			{
@@ -270,7 +270,7 @@ public class AdminData implements IXmlReader
 	 * Send list to player.
 	 * @param player the player
 	 */
-	public void sendListToPlayer(PlayerInstance player)
+	public void sendListToPlayer(Player player)
 	{
 		if (isGmOnline(player.isGM()))
 		{
@@ -295,7 +295,7 @@ public class AdminData implements IXmlReader
 	 */
 	public void broadcastToGMs(IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance gm : getAllGms(true))
+		for (Player gm : getAllGms(true))
 		{
 			gm.sendPacket(packet);
 		}
@@ -307,7 +307,7 @@ public class AdminData implements IXmlReader
 	 */
 	public void broadcastMessageToGMs(String message)
 	{
-		for (PlayerInstance gm : getAllGms(true))
+		for (Player gm : getAllGms(true))
 		{
 			gm.sendMessage(message);
 		}

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
@@ -33,7 +33,7 @@ public class RequestRecipeShopManagePrev implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (player.getTarget() == null))
 		{
 			return;
@@ -46,11 +46,11 @@ public class RequestRecipeShopManagePrev implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!(player.getTarget() instanceof PlayerInstance))
+		if (!(player.getTarget() instanceof Player))
 		{
 			return;
 		}
 		
-		player.sendPacket(new RecipeShopSellList(player, (PlayerInstance) player.getTarget()));
+		player.sendPacket(new RecipeShopSellList(player, (Player) player.getTarget()));
 	}
 }

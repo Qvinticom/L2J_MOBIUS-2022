@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class HennaItemDrawInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Henna _henna;
 	
-	public HennaItemDrawInfo(Henna henna, PlayerInstance player)
+	public HennaItemDrawInfo(Henna henna, Player player)
 	{
 		_henna = henna;
 		_player = player;

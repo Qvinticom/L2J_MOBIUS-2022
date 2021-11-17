@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.Couple;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author evill33t
@@ -73,7 +73,7 @@ public class CoupleManager
 		return index >= 0 ? _couples.get(index) : null;
 	}
 	
-	public void createCouple(PlayerInstance player1, PlayerInstance player2)
+	public void createCouple(Player player1, Player player2)
 	{
 		if ((player1 == null) || (player2 == null) || (player1.getPartnerId() != 0) || (player2.getPartnerId() != 0))
 		{
@@ -98,8 +98,8 @@ public class CoupleManager
 		{
 			return;
 		}
-		final PlayerInstance player1 = World.getInstance().getPlayer(couple.getPlayer1Id());
-		final PlayerInstance player2 = World.getInstance().getPlayer(couple.getPlayer2Id());
+		final Player player1 = World.getInstance().getPlayer(couple.getPlayer1Id());
+		final Player player2 = World.getInstance().getPlayer(couple.getPlayer2Id());
 		if (player1 != null)
 		{
 			player1.setPartnerId(0);

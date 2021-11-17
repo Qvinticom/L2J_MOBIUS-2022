@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 
@@ -29,7 +29,7 @@ public class CharacterSelected extends ClientBasePacket
 	{
 		super(decrypt);
 		final int charSlot = readD();
-		final PlayerInstance cha = client.loadCharFromDisk(charSlot);
+		final Player cha = client.loadCharFromDisk(charSlot);
 		cha.setMoveType(1);
 		cha.setWaitType(1);
 		client.getConnection().sendPacket(new CharSelected(cha, client.getSessionId()));

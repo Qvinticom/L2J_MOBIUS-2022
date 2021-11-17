@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class TradeStart implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
-	private final List<ItemInstance> _itemList;
+	private final Player _player;
+	private final List<Item> _itemList;
 	
-	public TradeStart(PlayerInstance player)
+	public TradeStart(Player player)
 	{
 		_player = player;
 		_itemList = _player.getInventory().getAvailableItems(true);
@@ -50,7 +50,7 @@ public class TradeStart implements IClientOutgoingPacket
 		packet.writeD(_player.getActiveTradeList().getPartner().getObjectId());
 		// writeD((_activeChar != null || _activeChar.getTransactionRequester() != null)? _activeChar.getTransactionRequester().getObjectId() : 0);
 		packet.writeH(_itemList.size());
-		for (ItemInstance item : _itemList)// int i = 0; i < count; i++)
+		for (Item item : _itemList)// int i = 0; i < count; i++)
 		{
 			packet.writeH(item.getItem().getType1()); // item type1
 			packet.writeD(item.getObjectId());

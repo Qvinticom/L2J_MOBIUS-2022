@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.WarehouseItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
@@ -53,7 +53,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(PacketWriter packet, ItemInstance item)
+	protected void writeItem(PacketWriter packet, Item item)
 	{
 		writeItem(packet, new ItemInfo(item));
 	}

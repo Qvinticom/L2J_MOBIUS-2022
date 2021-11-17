@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerAbilityPointsChanged implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _newAbilityPoints;
 	private final int _oldAbilityPoints;
 	
-	public OnPlayerAbilityPointsChanged(PlayerInstance player, int newAbilityPoints, int oldAbilityPoints)
+	public OnPlayerAbilityPointsChanged(Player player, int newAbilityPoints, int oldAbilityPoints)
 	{
 		_player = player;
 		_newAbilityPoints = newAbilityPoints;
 		_oldAbilityPoints = oldAbilityPoints;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

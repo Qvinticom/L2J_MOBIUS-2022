@@ -29,10 +29,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
@@ -254,7 +254,7 @@ public class CastleManager
 			return;
 		}
 		
-		final PlayerInstance player = member.getPlayerInstance();
+		final Player player = member.getPlayer();
 		final int circletId = getCircletByCastleId(castleId);
 		if (circletId != 0)
 		{
@@ -263,7 +263,7 @@ public class CastleManager
 			{
 				try
 				{
-					final ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+					final Item circlet = player.getInventory().getItemByItemId(circletId);
 					if (circlet != null)
 					{
 						if (circlet.isEquipped())

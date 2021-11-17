@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectTaskInfo;
 import org.l2jmobius.gameserver.model.effects.EffectTickTask;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -67,7 +67,7 @@ public class BuffInfo
 	/** If {@code true} then this effect is in use (or has been stop because an Herb took place). */
 	private volatile boolean _isInUse = true;
 	private final boolean _hideStartMessage;
-	private final ItemInstance _item;
+	private final Item _item;
 	private final Options _option;
 	
 	/**
@@ -79,7 +79,7 @@ public class BuffInfo
 	 * @param item
 	 * @param option
 	 */
-	public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, ItemInstance item, Options option)
+	public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, Item item, Options option)
 	{
 		_effectorObjectId = (effector != null) ? effector.getObjectId() : 0;
 		_effector = effector;
@@ -180,7 +180,7 @@ public class BuffInfo
 	/**
 	 * @return the item that triggered this skill
 	 */
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

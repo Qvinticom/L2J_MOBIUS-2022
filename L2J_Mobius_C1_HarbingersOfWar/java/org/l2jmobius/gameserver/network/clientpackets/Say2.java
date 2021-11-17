@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -46,12 +46,12 @@ public class Say2 extends ClientBasePacket
 		{
 			target = readS();
 		}
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		// Connection con = client.getConnection();
 		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		if (type == 2)
 		{
-			final PlayerInstance receiver = World.getInstance().getPlayer(target);
+			final Player receiver = World.getInstance().getPlayer(target);
 			if (receiver != null)
 			{
 				receiver.sendPacket(cs);
@@ -66,14 +66,14 @@ public class Say2 extends ClientBasePacket
 		}
 		else if ((type == 1) || (type == 8))
 		{
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(cs);
 			}
 		}
 		else if (type == 0)
 		{
-			for (PlayerInstance player : activeChar.getKnownPlayers())
+			for (Player player : activeChar.getKnownPlayers())
 			{
 				player.sendPacket(cs);
 			}

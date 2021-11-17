@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
@@ -62,7 +62,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	private static final String FONT_RED2 = "</font>";
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		if (command.startsWith("admin_buff"))
@@ -112,7 +112,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
-				final PlayerInstance player = World.getInstance().getPlayer(playername);
+				final Player player = World.getInstance().getPlayer(playername);
 				if (player != null)
 				{
 					int page = 0;
@@ -197,7 +197,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			try
 			{
 				final int radius = Integer.parseInt(val);
-				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, Creature::stopAllEffects);
+				World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, Creature::stopAllEffects);
 				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
 			}
@@ -212,7 +212,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			
-			PlayerInstance player = null;
+			Player player = null;
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
@@ -274,7 +274,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	 * @param gmchar the player to switch the Game Master skills.
 	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
 	 */
-	private void switchSkills(PlayerInstance gmchar, boolean toAuraSkills)
+	private void switchSkills(Player gmchar, boolean toAuraSkills)
 	{
 		final Collection<Skill> skills = toAuraSkills ? SkillTreeData.getInstance().getGMSkillTree() : SkillTreeData.getInstance().getGMAuraSkillTree();
 		for (Skill skill : skills)
@@ -290,7 +290,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showBuffs(PlayerInstance activeChar, Creature target, int page, boolean passive)
+	private void showBuffs(Player activeChar, Creature target, int page, boolean passive)
 	{
 		final List<BuffInfo> effects = new ArrayList<>();
 		if (!passive)
@@ -349,7 +349,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void removeBuff(PlayerInstance activeChar, int objId, int skillId)
+	private void removeBuff(Player activeChar, int objId, int skillId)
 	{
 		Creature target = null;
 		try
@@ -377,7 +377,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void removeAllBuffs(PlayerInstance activeChar, int objId)
+	private void removeAllBuffs(Player activeChar, int objId)
 	{
 		Creature target = null;
 		try
@@ -401,7 +401,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void viewBlockedEffects(PlayerInstance activeChar, int objId)
+	private void viewBlockedEffects(Player activeChar, int objId)
 	{
 		Creature target = null;
 		try

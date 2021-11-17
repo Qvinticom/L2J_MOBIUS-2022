@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -82,7 +82,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ("DESPAWN_5".equals(event))
 		{
@@ -95,7 +95,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 		else if ("DESPAWN_70".equals(event))
 		{
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+			final Player c0 = npc.getVariables().getObject("player0", Player.class);
 			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
 				npc0.getVariables().set("SPAWNED", false);
@@ -292,7 +292,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -310,7 +310,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 				}
 				case GUARDIAN_ANGEL:
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (killer == c0)
 					{
@@ -338,7 +338,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int memoState = qs.getMemoState();
@@ -732,7 +732,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 		}
 		else if (npc.getId() == GUARDIAN_ANGEL)
 		{
-			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+			final Player c0 = npc.getVariables().getObject("player0", Player.class);
 			startQuestTimer("DESPAWN_70", 70000, npc, null);
 			if (c0 != null)
 			{

@@ -68,13 +68,13 @@ import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -327,7 +327,7 @@ public class GameStatusThread extends Thread
 						final StringTokenizer st = new StringTokenizer(val);
 						final String name = st.nextToken();
 						final String message = val.substring(name.length() + 1);
-						final PlayerInstance reciever = World.getInstance().getPlayer(name);
+						final Player reciever = World.getInstance().getPlayer(name);
 						final CreatureSay cs = new CreatureSay(0, ChatType.WHISPER, "Telnet Priv", message);
 						if (reciever != null)
 						{
@@ -379,7 +379,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						usrCommand = usrCommand.substring(5);
-						final PlayerInstance player = World.getInstance().getPlayer(usrCommand);
+						final Player player = World.getInstance().getPlayer(usrCommand);
 						if (player != null)
 						{
 							player.sendMessage("You are kicked by gm");
@@ -443,12 +443,12 @@ public class GameStatusThread extends Thread
 					
 					try
 					{
-						final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
+						final Player player = World.getInstance().getPlayer(st.nextToken());
 						final int itemId = Integer.parseInt(st.nextToken());
 						final int amount = Integer.parseInt(st.nextToken());
 						if (player != null)
 						{
-							final ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
+							final Item item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addItem(item);
 							player.sendPacket(iu);
@@ -476,7 +476,7 @@ public class GameStatusThread extends Thread
 					
 					try
 					{
-						final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
+						final Player player = World.getInstance().getPlayer(st.nextToken());
 						itemType = Integer.parseInt(st.nextToken());
 						enchant = Integer.parseInt(st.nextToken());
 						
@@ -589,7 +589,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final String playerName = st.nextToken();
-						final PlayerInstance playerObj = World.getInstance().getPlayer(playerName);
+						final Player playerObj = World.getInstance().getPlayer(playerName);
 						int delay = 0;
 						try
 						{
@@ -598,10 +598,10 @@ public class GameStatusThread extends Thread
 						catch (NumberFormatException | NoSuchElementException nfe)
 						{
 						}
-						// PlayerInstance playerObj = World.getInstance().getPlayer(player);
+						// Player playerObj = World.getInstance().getPlayer(player);
 						if (playerObj != null)
 						{
-							playerObj.setPunishLevel(PlayerInstance.PunishLevel.JAIL, delay);
+							playerObj.setPunishLevel(Player.PunishLevel.JAIL, delay);
 							_print.println("Character " + playerObj.getName() + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
 						}
 						else
@@ -623,10 +623,10 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final String playerName = st.nextToken();
-						final PlayerInstance playerObj = World.getInstance().getPlayer(playerName);
+						final Player playerObj = World.getInstance().getPlayer(playerName);
 						if (playerObj != null)
 						{
-							playerObj.setPunishLevel(PlayerInstance.PunishLevel.NONE, 0);
+							playerObj.setPunishLevel(Player.PunishLevel.NONE, 0);
 							_print.println("Character " + playerObj.getName() + " removed from jail");
 						}
 						else
@@ -780,10 +780,10 @@ public class GameStatusThread extends Thread
 						// name;type;x;y;itemId:enchant:price...
 						if (type.equals("privatestore"))
 						{
-							final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
+							final Collection<Player> pls = World.getInstance().getAllPlayers();
 							// synchronized (World.getInstance().getAllPlayers())
 							{
-								for (PlayerInstance player : pls)
+								for (Player player : pls)
 								{
 									if (player.getPrivateStoreType() == 0)
 									{
@@ -840,14 +840,14 @@ public class GameStatusThread extends Thread
 		}
 	}
 	
-	private boolean setEnchant(PlayerInstance player, int ench, int armorType)
+	private boolean setEnchant(Player player, int ench, int armorType)
 	{
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
-		ItemInstance itemInstance = null;
+		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -896,7 +896,7 @@ public class GameStatusThread extends Thread
 			statement.setInt(1, -114356);
 			statement.setInt(2, -249645);
 			statement.setInt(3, -2984);
-			statement.setInt(4, PlayerInstance.PunishLevel.JAIL.value());
+			statement.setInt(4, Player.PunishLevel.JAIL.value());
 			statement.setLong(5, delay * 60000);
 			statement.setString(6, name);
 			statement.execute();
@@ -1004,9 +1004,9 @@ public class GameStatusThread extends Thread
 			{
 				aiCount++;
 			}
-			if (obj instanceof ItemInstance)
+			if (obj instanceof Item)
 			{
-				if (((ItemInstance) obj).getItemLocation() == ItemInstance.ItemLocation.VOID)
+				if (((Item) obj).getItemLocation() == Item.ItemLocation.VOID)
 				{
 					itemVoidCount++;
 				}
@@ -1015,23 +1015,23 @@ public class GameStatusThread extends Thread
 					itemCount++;
 				}
 			}
-			else if (obj instanceof MonsterInstance)
+			else if (obj instanceof Monster)
 			{
 				monsterCount++;
-				if (((MonsterInstance) obj).hasMinions())
+				if (((Monster) obj).hasMinions())
 				{
-					minionCount += ((MonsterInstance) obj).getSpawnedMinions().size(); /* .countSpawnedMinions(); */
-					// minionsGroupCount += ((MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
+					minionCount += ((Monster) obj).getSpawnedMinions().size(); /* .countSpawnedMinions(); */
+					// minionsGroupCount += ((Monster) obj).getMinionList().lazyCountSpawnedMinionsGroups();
 				}
 			}
-			else if (obj instanceof NpcInstance)
+			else if (obj instanceof Npc)
 			{
 				npcCount++;
 			}
-			else if (obj instanceof PlayerInstance)
+			else if (obj instanceof Player)
 			{
 				pcCount++;
-				if ((((PlayerInstance) obj).getClient() != null) && ((PlayerInstance) obj).getClient().isDetached())
+				if ((((Player) obj).getClient() != null) && ((Player) obj).getClient().isDetached())
 				{
 					detachedCount++;
 				}
@@ -1040,7 +1040,7 @@ public class GameStatusThread extends Thread
 			{
 				summonCount++;
 			}
-			else if (obj instanceof DoorInstance)
+			else if (obj instanceof Door)
 			{
 				doorCount++;
 			}

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -59,7 +59,7 @@ public class OpenDoor extends AbstractEffect
 		}
 		
 		final Creature effector = info.getEffector();
-		DoorInstance door = (DoorInstance) info.getEffected();
+		Door door = (Door) info.getEffected();
 		// Check if door in the different instance
 		if (effector.getInstanceId() != door.getInstanceId())
 		{
@@ -70,7 +70,7 @@ public class OpenDoor extends AbstractEffect
 				// Instance not found
 				return;
 			}
-			final DoorInstance instanceDoor = inst.getDoor(door.getId());
+			final Door instanceDoor = inst.getDoor(door.getId());
 			if (instanceDoor != null)
 			{
 				// Door found

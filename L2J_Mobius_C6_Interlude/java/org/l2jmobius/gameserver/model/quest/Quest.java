@@ -42,8 +42,8 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -202,7 +202,7 @@ public class Quest extends ManagedScript
 	 * @param player
 	 * @return QuestState : QuestState created
 	 */
-	public QuestState newQuestState(PlayerInstance player)
+	public QuestState newQuestState(Player player)
 	{
 		final QuestState qs = new QuestState(this, player, _initialState);
 		createQuestInDb(qs);
@@ -249,7 +249,7 @@ public class Quest extends ManagedScript
 	 * @param player : The player instance to check.
 	 * @return true if the given player got an online clan member sponsor in a 1500 radius range.
 	 */
-	public static boolean getSponsor(PlayerInstance player)
+	public static boolean getSponsor(Player player)
 	{
 		// Player hasn't a sponsor.
 		final int sponsorId = player.getSponsor();
@@ -270,7 +270,7 @@ public class Quest extends ManagedScript
 		if ((member != null) && member.isOnline())
 		{
 			// The sponsor is online, retrieve player instance and check distance.
-			final PlayerInstance sponsor = member.getPlayerInstance();
+			final Player sponsor = member.getPlayer();
 			if ((sponsor != null) && player.isInsideRadius3D(sponsor, Config.ALT_PARTY_RANGE))
 			{
 				return true;
@@ -284,7 +284,7 @@ public class Quest extends ManagedScript
 	 * @param player : The player instance to check.
 	 * @return the apprentice of the given player. He must be online, and in a 1500 radius range.
 	 */
-	public static PlayerInstance getApprentice(PlayerInstance player)
+	public static Player getApprentice(Player player)
 	{
 		// Player hasn't an apprentice.
 		final int apprenticeId = player.getApprentice();
@@ -305,7 +305,7 @@ public class Quest extends ManagedScript
 		if ((member != null) && member.isOnline())
 		{
 			// The apprentice is online, retrieve player instance and check distance.
-			final PlayerInstance academic = member.getPlayerInstance();
+			final Player academic = member.getPlayer();
 			if ((academic != null) && player.isInsideRadius3D(academic, Config.ALT_PARTY_RANGE))
 			{
 				return academic;
@@ -317,13 +317,13 @@ public class Quest extends ManagedScript
 	
 	/**
 	 * Add a timer to the quest (if it doesn't exist already) and start it.
-	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, NpcInstance, PlayerInstance)})
+	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, Npc, Player)})
 	 * @param time time in ms for when to fire the timer
 	 * @param npc the NPC associated with this timer (can be null)
 	 * @param player the player associated with this timer (can be null)
-	 * @see #startQuestTimer(String, long, NpcInstance, PlayerInstance, boolean)
+	 * @see #startQuestTimer(String, long, Npc, Player, boolean)
 	 */
-	public void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player)
+	public void startQuestTimer(String name, long time, Npc npc, Player player)
 	{
 		startQuestTimer(name, time, npc, player, false);
 	}
@@ -339,14 +339,14 @@ public class Quest extends ManagedScript
 	
 	/**
 	 * Add a timer to the quest (if it doesn't exist already) and start it.
-	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, NpcInstance, PlayerInstance)})
+	 * @param name the name of the timer (also passed back as "event" in {@link #onAdvEvent(String, Npc, Player)})
 	 * @param time time in ms for when to fire the timer
 	 * @param npc the NPC associated with this timer (can be null)
 	 * @param player the player associated with this timer (can be null)
 	 * @param repeating indicates whether the timer is repeatable or one-time.<br>
 	 *            If {@code true}, the task is repeated every {@code time} milliseconds until explicitly stopped.
 	 */
-	public void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player, boolean repeating)
+	public void startQuestTimer(String name, long time, Npc npc, Player player, boolean repeating)
 	{
 		if (name == null)
 		{
@@ -375,7 +375,7 @@ public class Quest extends ManagedScript
 	 * @param player the player associated with the quest timer to get
 	 * @return the quest timer that matches the specified parameters or {@code null} if nothing was found
 	 */
-	public QuestTimer getQuestTimer(String name, NpcInstance npc, PlayerInstance player)
+	public QuestTimer getQuestTimer(String name, Npc npc, Player player)
 	{
 		if (name == null)
 		{
@@ -433,7 +433,7 @@ public class Quest extends ManagedScript
 	 * @param npc the NPC associated with the quest timer to cancel
 	 * @param player the player associated with the quest timer to cancel
 	 */
-	public void cancelQuestTimer(String name, NpcInstance npc, PlayerInstance player)
+	public void cancelQuestTimer(String name, Npc npc, Player player)
 	{
 		if (name == null)
 		{
@@ -476,7 +476,7 @@ public class Quest extends ManagedScript
 	
 	// These are methods to call within the core to call the quest events.
 	
-	public boolean notifyAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public boolean notifyAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		String res = null;
 		try
@@ -504,7 +504,7 @@ public class Quest extends ManagedScript
 		return showResult(qs.getPlayer(), res);
 	}
 	
-	public boolean notifyEvent(String event, NpcInstance npc, PlayerInstance player)
+	public boolean notifyEvent(String event, Npc npc, Player player)
 	{
 		String res = null;
 		try
@@ -518,7 +518,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public boolean notifyKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public boolean notifyKill(Npc npc, Player killer, boolean isPet)
 	{
 		String res = null;
 		try
@@ -532,7 +532,7 @@ public class Quest extends ManagedScript
 		return showResult(killer, res);
 	}
 	
-	public boolean notifyTalk(NpcInstance npc, QuestState qs)
+	public boolean notifyTalk(Npc npc, QuestState qs)
 	{
 		String res = null;
 		try
@@ -550,7 +550,7 @@ public class Quest extends ManagedScript
 	}
 	
 	// override the default NPC dialogs when a quest defines this for the given NPC
-	public boolean notifyFirstTalk(NpcInstance npc, PlayerInstance player)
+	public boolean notifyFirstTalk(Npc npc, Player player)
 	{
 		String res = null;
 		try
@@ -575,7 +575,7 @@ public class Quest extends ManagedScript
 		return true;
 	}
 	
-	public boolean notifySkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public boolean notifySkillUse(Npc npc, Player caster, Skill skill)
 	{
 		String res = null;
 		try
@@ -589,7 +589,7 @@ public class Quest extends ManagedScript
 		return showResult(caster, res);
 	}
 	
-	public boolean notifySpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
+	public boolean notifySpellFinished(Npc npc, Player player, Skill skill)
 	{
 		String res = null;
 		try
@@ -603,7 +603,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public boolean notifyFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
+	public boolean notifyFactionCall(Npc npc, Npc caller, Player attacker, boolean isPet)
 	{
 		String res = null;
 		try
@@ -617,7 +617,7 @@ public class Quest extends ManagedScript
 		return showResult(attacker, res);
 	}
 	
-	public boolean notifyAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public boolean notifyAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		String res = null;
 		try
@@ -631,7 +631,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public boolean notifySpawn(NpcInstance npc)
+	public boolean notifySpawn(Npc npc)
 	{
 		String res = null;
 		try
@@ -646,21 +646,21 @@ public class Quest extends ManagedScript
 	}
 	
 	// these are methods that java calls to invoke scripts
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		return null;
 	}
 	
 	public String onDeath(Creature killer, Creature victim, QuestState qs)
 	{
-		if (killer instanceof NpcInstance)
+		if (killer instanceof Npc)
 		{
-			return onAdvEvent("", (NpcInstance) killer, qs.getPlayer());
+			return onAdvEvent("", (Npc) killer, qs.getPlayer());
 		}
 		return onAdvEvent("", null, qs.getPlayer());
 	}
 	
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (player == null)
 		{
@@ -678,7 +678,7 @@ public class Quest extends ManagedScript
 		return null;
 	}
 	
-	public void sendDlgMessage(String text, PlayerInstance player)
+	public void sendDlgMessage(String text, Player player)
 	{
 		player.dialog = this;
 		final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1.getId());
@@ -686,7 +686,7 @@ public class Quest extends ManagedScript
 		player.sendPacket(dlg);
 	}
 	
-	public void onDlgAnswer(PlayerInstance player)
+	public void onDlgAnswer(Player player)
 	{
 	}
 	
@@ -695,42 +695,42 @@ public class Quest extends ManagedScript
 		return null;
 	}
 	
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onTalk(NpcInstance npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		return null;
 	}
 	
-	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return null;
 	}
 	
-	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public String onSkillUse(Npc npc, Player caster, Skill skill)
 	{
 		return null;
 	}
 	
-	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		return null;
 	}
 	
-	public String onFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
+	public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onSpawn(NpcInstance npc)
+	public String onSpawn(Npc npc)
 	{
 		return null;
 	}
@@ -774,9 +774,9 @@ public class Quest extends ManagedScript
 			return true;
 		}
 		
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) object;
+			final Player player = (Player) object;
 			if (res.endsWith(".htm"))
 			{
 				showHtmlFile(player, res);
@@ -1007,12 +1007,12 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add quests to the PlayerInstance of the player.<br>
+	 * Add quests to the Player of the player.<br>
 	 * <u><i>Action : </u></i><br>
-	 * Add state of quests, drops and variables for quests in the HashMap _quest of PlayerInstance
+	 * Add state of quests, drops and variables for quests in the HashMap _quest of Player
 	 * @param player : Player who is entering the world
 	 */
-	public static void playerEnter(PlayerInstance player)
+	public static void playerEnter(Player player)
 	{
 		if (Config.ALT_DEV_NO_QUESTS)
 		{
@@ -1245,7 +1245,7 @@ public class Quest extends ManagedScript
 	 * @param cond : an integer specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return QuestState : The QuestState of that player.
 	 */
-	public QuestState checkPlayerCondition(PlayerInstance player, NpcInstance npc, int cond)
+	public QuestState checkPlayerCondition(Player player, Npc npc, int cond)
 	{
 		// No valid player or npc instance is passed, there is nothing to check.
 		if ((player == null) || (npc == null))
@@ -1282,7 +1282,7 @@ public class Quest extends ManagedScript
 	 * @param state : the state in which the party member's QuestState must be in order to be considered.
 	 * @return QuestState : The QuestState of that player.
 	 */
-	public QuestState checkPlayerState(PlayerInstance player, NpcInstance npc, byte state)
+	public QuestState checkPlayerState(Player player, Npc npc, byte state)
 	{
 		// No valid player or npc instance is passed, there is nothing to check.
 		if ((player == null) || (npc == null))
@@ -1312,9 +1312,9 @@ public class Quest extends ManagedScript
 		return qs;
 	}
 	
-	// returns a random party member's PlayerInstance for the passed player's party
+	// returns a random party member's Player for the passed player's party
 	// returns the passed player if he has no party.
-	public PlayerInstance getRandomPartyMember(PlayerInstance player)
+	public Player getRandomPartyMember(Player player)
 	{
 		// NPE prevention. If the player is null, there is nothing to return
 		if (player == null)
@@ -1335,9 +1335,9 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player the instance of a player whose party is to be searched
 	 * @param value the value of the "cond" variable that must be matched
-	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match.
+	 * @return Player: Player for a random party member that matches the specified condition, or null if no match.
 	 */
-	public PlayerInstance getRandomPartyMember(PlayerInstance player, String value)
+	public Player getRandomPartyMember(Player player, String value)
 	{
 		return getRandomPartyMember(player, "cond", value);
 	}
@@ -1350,7 +1350,7 @@ public class Quest extends ManagedScript
 	 * @return List<Player> : List of party members that matches the specified condition, empty list if none matches. If the var is null, empty list is returned (i.e. no condition is applied). The party member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance
 	 *         condition is ignored.
 	 */
-	public List<PlayerInstance> getPartyMembers(PlayerInstance player, NpcInstance npc, int cond)
+	public List<Player> getPartyMembers(Player player, Npc npc, int cond)
 	{
 		if (player == null)
 		{
@@ -1363,8 +1363,8 @@ public class Quest extends ManagedScript
 			return (checkPlayerCondition(player, npc, cond) != null) ? Arrays.asList(player) : Collections.emptyList();
 		}
 		
-		final List<PlayerInstance> result = new ArrayList<>();
-		for (PlayerInstance member : party.getPartyMembers())
+		final List<Player> result = new ArrayList<>();
+		for (Player member : party.getPartyMembers())
 		{
 			if (checkPlayerCondition(member, npc, cond) != null)
 			{
@@ -1382,7 +1382,7 @@ public class Quest extends ManagedScript
 	 * @param cond : an integer specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return Player : Player for a random party member that matches the specified condition, or null if no match. If the cond is null, null is returned (i.e. no condition is applied). The party member must be within 1500 distance from the npc. If npc is null, distance condition is ignored.
 	 */
-	public PlayerInstance getRandomPartyMember(PlayerInstance player, NpcInstance npc, int cond)
+	public Player getRandomPartyMember(Player player, Npc npc, int cond)
 	{
 		// No valid player instance is passed, there is nothing to check.
 		if (player == null)
@@ -1391,7 +1391,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		final List<PlayerInstance> members = getPartyMembers(player, npc, cond);
+		final List<Player> members = getPartyMembers(player, npc, cond);
 		if (members.isEmpty())
 		{
 			final QuestState qs = player.getQuestState(getName());
@@ -1409,10 +1409,10 @@ public class Quest extends ManagedScript
 	 * @param player the instance of a player whose party is to be searched
 	 * @param variable a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value
-	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
+	 * @return Player: Player for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
 	 *         player, or if no target exists, 1500 distance from the player itself.
 	 */
-	public PlayerInstance getRandomPartyMember(PlayerInstance player, String variable, String value)
+	public Player getRandomPartyMember(Player player, String variable, String value)
 	{
 		// if no valid player instance is passed, there is nothing to check...
 		if (player == null)
@@ -1445,7 +1445,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// if the player is in a party, gather a list of all matching party members (possibly including this player)
-		final List<PlayerInstance> candidates = new ArrayList<>();
+		final List<Player> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
 		WorldObject target = player.getTarget();
@@ -1454,7 +1454,7 @@ public class Quest extends ManagedScript
 			target = player;
 		}
 		
-		for (PlayerInstance partyMember : party.getPartyMembers())
+		for (Player partyMember : party.getPartyMembers())
 		{
 			final QuestState qs = partyMember.getQuestState(getName());
 			if (qs != null)
@@ -1484,7 +1484,7 @@ public class Quest extends ManagedScript
 	 * @param state : the state in which the party member's QuestState must be in order to be considered.
 	 * @return List<Player> : List of party members that matches the specified quest state, empty list if none matches. The party member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance condition is ignored.
 	 */
-	public List<PlayerInstance> getPartyMembersState(PlayerInstance player, NpcInstance npc, byte state)
+	public List<Player> getPartyMembersState(Player player, Npc npc, byte state)
 	{
 		if (player == null)
 		{
@@ -1497,8 +1497,8 @@ public class Quest extends ManagedScript
 			return (checkPlayerState(player, npc, state) != null) ? Arrays.asList(player) : Collections.emptyList();
 		}
 		
-		final List<PlayerInstance> result = new ArrayList<>();
-		for (PlayerInstance member : party.getPartyMembers())
+		final List<Player> result = new ArrayList<>();
+		for (Player member : party.getPartyMembers())
 		{
 			if (checkPlayerState(member, npc, state) != null)
 			{
@@ -1516,7 +1516,7 @@ public class Quest extends ManagedScript
 	 * @param state : the state in which the party member's QuestState must be in order to be considered.
 	 * @return Player: Player for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied).
 	 */
-	public PlayerInstance getRandomPartyMemberState(PlayerInstance player, NpcInstance npc, byte state)
+	public Player getRandomPartyMemberState(Player player, Npc npc, byte state)
 	{
 		// No valid player instance is passed, there is nothing to check.
 		if (player == null)
@@ -1525,7 +1525,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		final List<PlayerInstance> members = getPartyMembersState(player, npc, state);
+		final List<Player> members = getPartyMembersState(player, npc, state);
 		if (members.isEmpty())
 		{
 			return null;
@@ -1537,9 +1537,9 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player the instance of a player whose party is to be searched
 	 * @param state the state in which the party member's queststate must be in order to be considered.
-	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied).
+	 * @return Player: Player for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied).
 	 */
-	public PlayerInstance getRandomPartyMemberState(PlayerInstance player, byte state)
+	public Player getRandomPartyMemberState(Player player, byte state)
 	{
 		// if no valid player instance is passed, there is nothing to check...
 		if (player == null)
@@ -1563,7 +1563,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// if the player is in a party, gather a list of all matching party members (possibly including this player)
-		final List<PlayerInstance> candidates = new ArrayList<>();
+		final List<Player> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
 		WorldObject target = player.getTarget();
@@ -1572,7 +1572,7 @@ public class Quest extends ManagedScript
 			target = player;
 		}
 		
-		for (PlayerInstance partyMember : party.getPartyMembers())
+		for (Player partyMember : party.getPartyMembers())
 		{
 			temp = partyMember.getQuestState(getName());
 			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE))
@@ -1597,7 +1597,7 @@ public class Quest extends ManagedScript
 	 * @param fileName
 	 * @return String : message sent to client
 	 */
-	public String showHtmlFile(PlayerInstance player, String fileName)
+	public String showHtmlFile(Player player, String fileName)
 	{
 		// Create handler to file linked to the quest
 		final String directory = _descr.toLowerCase();
@@ -1643,22 +1643,22 @@ public class Quest extends ManagedScript
 	// =========================================================
 	// QUEST SPAWNS
 	// =========================================================
-	public NpcInstance addSpawn(int npcId, Creature creature)
+	public Npc addSpawn(int npcId, Creature creature)
 	{
 		return QuestSpawn.getInstance().addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), false, 0);
 	}
 	
-	public NpcInstance addSpawn(int npcId, Location loc, boolean randomOffset, int despawnDelay)
+	public Npc addSpawn(int npcId, Location loc, boolean randomOffset, int despawnDelay)
 	{
 		return QuestSpawn.getInstance().addSpawn(npcId, loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), randomOffset, despawnDelay);
 	}
 	
-	public NpcInstance addSpawn(int npcId, Creature creature, boolean randomOffset, int despawnDelay)
+	public Npc addSpawn(int npcId, Creature creature, boolean randomOffset, int despawnDelay)
 	{
 		return QuestSpawn.getInstance().addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), randomOffset, despawnDelay);
 	}
 	
-	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
 		return QuestSpawn.getInstance().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
 	}
@@ -1749,7 +1749,7 @@ public class Quest extends ManagedScript
 	 * @param isPet
 	 * @return
 	 */
-	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggro(Npc npc, Player player, boolean isPet)
 	{
 		return null;
 	}
@@ -1760,7 +1760,7 @@ public class Quest extends ManagedScript
 		return ScriptEngineManager.getInstance().getCurrentLoadingScript();
 	}
 	
-	public QuestState getClanLeaderQuestState(PlayerInstance player, NpcInstance npc)
+	public QuestState getClanLeaderQuestState(Player player, Npc npc)
 	{
 		// If player is the leader, retrieves directly the qS and bypass others checks
 		if (player.isClanLeader() && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
@@ -1776,7 +1776,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Verify if the leader is online
-		final PlayerInstance leader = clan.getLeader().getPlayerInstance();
+		final Player leader = clan.getLeader().getPlayer();
 		if (leader == null)
 		{
 			return null;
@@ -1843,12 +1843,12 @@ public class Quest extends ManagedScript
 	 * Sets the current quest to clan offline's members
 	 * @param player the current player (should be clan leader)
 	 */
-	public void setQuestToClanMembers(PlayerInstance player)
+	public void setQuestToClanMembers(Player player)
 	{
 		if (player.isClanLeader())
 		{
 			// Setting it for online members...
-			for (PlayerInstance onlineMember : player.getClan().getOnlineMembers())
+			for (Player onlineMember : player.getClan().getOnlineMembers())
 			{
 				if (!onlineMember.isClanLeader())
 				{
@@ -1865,12 +1865,12 @@ public class Quest extends ManagedScript
 	 * Finish the current quest to a clan's members
 	 * @param player clan's leader
 	 */
-	public void finishQuestToClan(PlayerInstance player)
+	public void finishQuestToClan(Player player)
 	{
 		if (player.isClanLeader())
 		{
 			// Deleting it for online members...
-			for (PlayerInstance onlineMember : player.getClan().getOnlineMembers())
+			for (Player onlineMember : player.getClan().getOnlineMembers())
 			{
 				if (!onlineMember.isClanLeader())
 				{

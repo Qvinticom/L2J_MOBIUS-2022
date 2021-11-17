@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -43,7 +43,7 @@ public class Anais extends AbstractNpcAI
 	private static SkillHolder DIVINE_NOVA = new SkillHolder(6326, 1);
 	// Instances
 	List<Npc> _divineBurners = new ArrayList<>(4);
-	private PlayerInstance _nextTarget = null;
+	private Player _nextTarget = null;
 	private Npc _current = null;
 	private int _pot = 0;
 	
@@ -74,7 +74,7 @@ public class Anais extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -87,7 +87,7 @@ public class Anais extends AbstractNpcAI
 				if ((_current != null) || (_pot < 4))
 				{
 					final WorldObject target = npc.getTarget();
-					_nextTarget = (target != null) && target.isPlayer() ? (PlayerInstance) target : null;
+					_nextTarget = (target != null) && target.isPlayer() ? (Player) target : null;
 					final Npc b = _divineBurners.get(_pot);
 					_pot += 1;
 					b.setDisplayEffect(1);
@@ -137,7 +137,7 @@ public class Anais extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (_pot == 0)
 		{
@@ -166,7 +166,7 @@ public class Anais extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.doCast(DIVINE_NOVA.getSkill());
 		cancelQuestTimer("GUARD_ATTACK", npc, _nextTarget);

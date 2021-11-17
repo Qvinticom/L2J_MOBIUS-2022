@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 
 public class SiegeGuardKnownList extends AttackableKnownList
 {
-	public SiegeGuardKnownList(SiegeGuardInstance activeChar)
+	public SiegeGuardKnownList(SiegeGuard activeChar)
 	{
 		super(activeChar);
 	}
@@ -52,10 +52,10 @@ public class SiegeGuardKnownList extends AttackableKnownList
 		// Check if siege is in progress
 		if ((getActiveChar().getCastle() != null) && getActiveChar().getCastle().getSiege().isInProgress())
 		{
-			PlayerInstance player = null;
-			if (object instanceof PlayerInstance)
+			Player player = null;
+			if (object instanceof Player)
 			{
-				player = (PlayerInstance) object;
+				player = (Player) object;
 			}
 			else if (object instanceof Summon)
 			{
@@ -73,8 +73,8 @@ public class SiegeGuardKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public SiegeGuardInstance getActiveChar()
+	public SiegeGuard getActiveChar()
 	{
-		return (SiegeGuardInstance) super.getActiveChar();
+		return (SiegeGuard) super.getActiveChar();
 	}
 }

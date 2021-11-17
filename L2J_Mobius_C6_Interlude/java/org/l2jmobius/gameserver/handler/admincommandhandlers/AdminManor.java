@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -46,7 +46,7 @@ public class AdminManor implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command);
@@ -134,7 +134,7 @@ public class AdminManor implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");

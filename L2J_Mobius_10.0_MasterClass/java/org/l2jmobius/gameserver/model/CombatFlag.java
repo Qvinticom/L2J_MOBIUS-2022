@@ -18,18 +18,18 @@ package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class CombatFlag
 {
-	private PlayerInstance _player = null;
+	private Player _player = null;
 	private int _playerId = 0;
-	private ItemInstance _item = null;
-	private ItemInstance _itemInstance;
+	private Item _item = null;
+	private Item _itemInstance;
 	private final Location _location;
 	private final int _itemId;
 	@SuppressWarnings("unused")
@@ -61,7 +61,7 @@ public class CombatFlag
 		}
 	}
 	
-	public boolean activate(PlayerInstance player, ItemInstance item)
+	public boolean activate(Player player, Item item)
 	{
 		if (player.isMounted())
 		{
@@ -116,7 +116,7 @@ public class CombatFlag
 		return _playerId;
 	}
 	
-	public ItemInstance getCombatFlagInstance()
+	public Item getCombatFlagInstance()
 	{
 		return _itemInstance;
 	}

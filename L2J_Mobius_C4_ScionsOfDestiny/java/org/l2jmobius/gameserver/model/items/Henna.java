@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.model.items;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
- * A datatype used to retain Henna infos. Hennas are called "dye" ingame, and enhance {@link PlayerInstance} stats for a fee.<br>
+ * A datatype used to retain Henna infos. Hennas are called "dye" ingame, and enhance {@link Player} stats for a fee.<br>
  * You can draw up to 3 hennas (depending about your current class rank), but accumulated boni for a stat can't be higher than +5. There is no limit in reduction.
  */
 public class Henna
@@ -102,11 +102,11 @@ public class Henna
 	}
 	
 	/**
-	 * Seek if this {@link Henna} can be used by a {@link PlayerInstance}, based on his classId.
+	 * Seek if this {@link Henna} can be used by a {@link Player}, based on his classId.
 	 * @param player : The Player to check.
 	 * @return true if this Henna owns the Player classId.
 	 */
-	public boolean canBeUsedBy(PlayerInstance player)
+	public boolean canBeUsedBy(Player player)
 	{
 		return CommonUtil.contains(_classes, player.getClassId().getId());
 	}

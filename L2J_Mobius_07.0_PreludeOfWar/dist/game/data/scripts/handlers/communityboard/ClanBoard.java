@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.Util;
@@ -47,7 +47,7 @@ public class ClanBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		if (command.equals("_bbsclan"))
 		{
@@ -131,7 +131,7 @@ public class ClanBoard implements IWriteBoardHandler
 		return true;
 	}
 	
-	private void clanNotice(PlayerInstance player, int clanId)
+	private void clanNotice(Player player, int clanId)
 	{
 		final Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
@@ -176,7 +176,7 @@ public class ClanBoard implements IWriteBoardHandler
 		}
 	}
 	
-	private void clanList(PlayerInstance player, int indexValue)
+	private void clanList(Player player, int indexValue)
 	{
 		int index = indexValue;
 		if (index < 1)
@@ -263,12 +263,12 @@ public class ClanBoard implements IWriteBoardHandler
 		CommunityBoardHandler.separateAndSend(html.toString(), player);
 	}
 	
-	private void clanHome(PlayerInstance player)
+	private void clanHome(Player player)
 	{
 		clanHome(player, player.getClan().getId());
 	}
 	
-	private void clanHome(PlayerInstance player, int clanId)
+	private void clanHome(Player player, int clanId)
 	{
 		final Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
@@ -295,7 +295,7 @@ public class ClanBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean writeCommunityBoardCommand(PlayerInstance player, String arg1, String arg2, String arg3, String arg4, String arg5)
+	public boolean writeCommunityBoardCommand(Player player, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		// the only Write bypass that comes to this handler is "Write Notice Set _ Content Content Content";
 		// arg1 = Set, arg2 = _

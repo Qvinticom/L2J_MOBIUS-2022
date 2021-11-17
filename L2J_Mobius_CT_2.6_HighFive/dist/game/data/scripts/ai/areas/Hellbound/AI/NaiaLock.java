@@ -17,8 +17,8 @@
 package ai.areas.Hellbound.AI;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 import ai.AbstractNpcAI;
 
@@ -38,9 +38,9 @@ public class NaiaLock extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		((MonsterInstance) npc).getMinionList().onMasterDie(true);
+		((Monster) npc).getMinionList().onMasterDie(true);
 		return super.onKill(npc, killer, isSummon);
 	}
 }

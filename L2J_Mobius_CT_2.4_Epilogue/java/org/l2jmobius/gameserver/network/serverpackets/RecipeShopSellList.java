@@ -18,15 +18,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ManufactureItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopSellList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _buyer;
-	private final PlayerInstance _manufacturer;
+	private final Player _buyer;
+	private final Player _manufacturer;
 	
-	public RecipeShopSellList(PlayerInstance buyer, PlayerInstance manufacturer)
+	public RecipeShopSellList(Player buyer, Player manufacturer)
 	{
 		_buyer = buyer;
 		_manufacturer = manufacturer;

@@ -22,14 +22,14 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Elementals;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class UserInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private int _relation;
 	private int _airShipHelm;
 	
@@ -41,7 +41,7 @@ public class UserInfo implements IClientOutgoingPacket
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
 	
-	public UserInfo(PlayerInstance player)
+	public UserInfo(Player player)
 	{
 		_player = player;
 		

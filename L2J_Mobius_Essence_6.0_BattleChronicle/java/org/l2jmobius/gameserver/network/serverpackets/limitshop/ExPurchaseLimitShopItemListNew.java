@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.LimitShopClanData;
 import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -36,10 +36,10 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 {
 	private final int _shopType; // 3 Lcoin Store, 4 Special Craft, 100 Clan Shop
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Collection<LimitShopProductHolder> _products;
 	
-	public ExPurchaseLimitShopItemListNew(int shopType, PlayerInstance player)
+	public ExPurchaseLimitShopItemListNew(int shopType, Player player)
 	{
 		_shopType = shopType;
 		_player = player;

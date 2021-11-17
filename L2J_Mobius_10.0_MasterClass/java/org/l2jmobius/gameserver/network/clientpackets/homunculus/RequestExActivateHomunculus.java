@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -44,7 +44,7 @@ public class RequestExActivateHomunculus implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance activeChar = client.getPlayer();
+		final Player activeChar = client.getPlayer();
 		if (activeChar == null)
 		{
 			return;

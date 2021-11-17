@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class Craft implements ISkillHandler
@@ -37,12 +37,12 @@ public class Craft implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		if (!player.getClient().getFloodProtectors().canManufacture())
 		{
 			player.sendMessage("You cannot craft so fast!");

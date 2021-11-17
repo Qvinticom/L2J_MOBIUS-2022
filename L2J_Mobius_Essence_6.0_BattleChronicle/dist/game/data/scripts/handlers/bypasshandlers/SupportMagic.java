@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -78,7 +78,7 @@ public class SupportMagic implements IBypassHandler
 	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!target.isNpc() || player.isCursedWeaponEquipped())
 		{
@@ -96,7 +96,7 @@ public class SupportMagic implements IBypassHandler
 		return true;
 	}
 	
-	private void makeSupportMagic(PlayerInstance player, Npc npc, boolean isSummon)
+	private void makeSupportMagic(Player player, Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
 		if (isSummon && !player.hasServitors())

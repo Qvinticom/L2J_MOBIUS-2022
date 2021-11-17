@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,8 +35,8 @@ public class RequestJoinParty extends ClientBasePacket
 		super(decrypt);
 		final int id = readD();
 		final int itemDistribution = readD();
-		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(id);
-		final PlayerInstance requestor = client.getActiveChar();
+		final Player target = (Player) World.getInstance().findObject(id);
+		final Player requestor = client.getActiveChar();
 		if (requestor.isTransactionInProgress())
 		{
 			requestor.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_REPLY));
@@ -59,7 +59,7 @@ public class RequestJoinParty extends ClientBasePacket
 		}
 	}
 	
-	private void addTargetToParty(ClientThread client, int itemDistribution, PlayerInstance target, PlayerInstance requestor)
+	private void addTargetToParty(ClientThread client, int itemDistribution, Player target, Player requestor)
 	{
 		if (requestor.getParty().getMemberCount() >= 9)
 		{
@@ -94,7 +94,7 @@ public class RequestJoinParty extends ClientBasePacket
 		}
 	}
 	
-	private void createNewParty(ClientThread client, int itemDistribution, PlayerInstance target, PlayerInstance requestor)
+	private void createNewParty(ClientThread client, int itemDistribution, Player target, Player requestor)
 	{
 		if (target.getKnownPlayers().contains(requestor))
 		{

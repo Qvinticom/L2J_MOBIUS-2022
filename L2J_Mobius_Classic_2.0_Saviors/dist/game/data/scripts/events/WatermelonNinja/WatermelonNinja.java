@@ -23,8 +23,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -511,7 +511,7 @@ public class WatermelonNinja extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (LARGE_SQUASH_LIST.contains(npc.getId()))
 		{
@@ -531,7 +531,7 @@ public class WatermelonNinja extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()) && (skill.getId() == NECTAR_SKILL))
 		{
@@ -553,7 +553,7 @@ public class WatermelonNinja extends LongTimeEvent
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()))
 		{
@@ -563,12 +563,12 @@ public class WatermelonNinja extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
-	private void dropItem(Npc mob, PlayerInstance player)
+	private void dropItem(Npc mob, Player player)
 	{
 		final int npcId = mob.getId();
 		final int chance = Rnd.get(100);
@@ -576,7 +576,7 @@ public class WatermelonNinja extends LongTimeEvent
 		{
 			if ((npcId == drop[0]) && (chance < drop[2]))
 			{
-				((MonsterInstance) mob).dropItem(player, drop[1], 1);
+				((Monster) mob).dropItem(player, drop[1], 1);
 				continue;
 			}
 			if (npcId < drop[0])

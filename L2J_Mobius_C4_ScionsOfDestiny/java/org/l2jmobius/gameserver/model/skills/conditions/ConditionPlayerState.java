@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skills.conditions;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -51,9 +51,9 @@ public class ConditionPlayerState extends Condition
 		{
 			case RESTING:
 			{
-				if (env.player instanceof PlayerInstance)
+				if (env.player instanceof Player)
 				{
-					return ((PlayerInstance) env.player).isSitting() == _required;
+					return ((Player) env.player).isSitting() == _required;
 				}
 				return !_required;
 			}

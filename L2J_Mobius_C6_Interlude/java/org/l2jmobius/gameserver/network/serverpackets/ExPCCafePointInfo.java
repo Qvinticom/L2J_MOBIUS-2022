@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExPCCafePointInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _addPoint;
 	private int _periodType;
 	private final int _remainTime;
@@ -39,7 +39,7 @@ public class ExPCCafePointInfo implements IClientOutgoingPacket
 	 * @param hour the hour
 	 * @param value the double
 	 */
-	public ExPCCafePointInfo(PlayerInstance user, int modify, boolean add, int hour, boolean value)
+	public ExPCCafePointInfo(Player user, int modify, boolean add, int hour, boolean value)
 	{
 		_player = user;
 		_addPoint = modify;

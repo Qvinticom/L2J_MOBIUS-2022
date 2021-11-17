@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -74,7 +74,7 @@ public class Q10331_StartOfFate extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -361,7 +361,7 @@ public class Q10331_StartOfFate extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -775,7 +775,7 @@ public class Q10331_StartOfFate extends Quest
 	{
 		if (event.getMarkId() == getId())
 		{
-			final PlayerInstance player = event.getPlayer();
+			final Player player = event.getPlayer();
 			final String filename = "popup-" + player.getRace().toString().toLowerCase() + ".htm";
 			player.sendPacket(new TutorialShowHtml(getHtm(player, filename)));
 		}
@@ -790,7 +790,7 @@ public class Q10331_StartOfFate extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
@@ -809,7 +809,7 @@ public class Q10331_StartOfFate extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && (player.getRace() != Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{

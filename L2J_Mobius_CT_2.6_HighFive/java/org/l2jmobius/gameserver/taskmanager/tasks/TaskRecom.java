@@ -22,7 +22,7 @@ import java.sql.PreparedStatement;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
@@ -68,7 +68,7 @@ public class TaskRecom extends Task
 		// Refresh reco bonus for online players
 		if (Config.NEVIT_ENABLED)
 		{
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if (player != null)
 				{

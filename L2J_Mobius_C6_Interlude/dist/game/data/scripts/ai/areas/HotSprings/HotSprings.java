@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -54,7 +54,7 @@ public class HotSprings extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (Rnd.get(100) < DISEASE_CHANCE)
 		{
@@ -88,7 +88,7 @@ public class HotSprings extends Quest
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private void tryToInfect(NpcInstance npc, Creature creature, int diseaseId)
+	private void tryToInfect(Npc npc, Creature creature, int diseaseId)
 	{
 		final Effect info = creature.getFirstEffect(diseaseId);
 		final int skillLevel = (info == null) ? 1 : (info.getSkill().getLevel() < 10) ? info.getSkill().getLevel() + 1 : 10;

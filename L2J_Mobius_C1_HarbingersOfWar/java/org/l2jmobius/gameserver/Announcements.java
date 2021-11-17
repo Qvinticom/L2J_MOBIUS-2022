@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -67,7 +67,7 @@ public class Announcements
 		}
 	}
 	
-	public void showAnnouncements(PlayerInstance activeChar)
+	public void showAnnouncements(Player activeChar)
 	{
 		for (int i = 0; i < _announcements.size(); ++i)
 		{
@@ -75,7 +75,7 @@ public class Announcements
 		}
 	}
 	
-	public void listAnnouncements(PlayerInstance activeChar)
+	public void listAnnouncements(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><title>Announcements:</title>");

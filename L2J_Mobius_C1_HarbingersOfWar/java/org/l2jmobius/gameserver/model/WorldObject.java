@@ -21,7 +21,7 @@ import java.io.Serializable;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -32,7 +32,7 @@ public class WorldObject implements Serializable
 	private int _y;
 	private int _z;
 	protected final Set<WorldObject> _knownObjects = ConcurrentHashMap.newKeySet();
-	private final Set<PlayerInstance> _knownPlayers = ConcurrentHashMap.newKeySet();
+	private final Set<Player> _knownPlayers = ConcurrentHashMap.newKeySet();
 	
 	public int getObjectId()
 	{
@@ -118,7 +118,7 @@ public class WorldObject implements Serializable
 		return calculateDistance3D(obj.getX(), obj.getY(), obj.getZ());
 	}
 	
-	public void onAction(PlayerInstance player)
+	public void onAction(Player player)
 	{
 		player.sendPacket(new ActionFailed());
 	}
@@ -128,7 +128,7 @@ public class WorldObject implements Serializable
 		client.getActiveChar().sendPacket(new ActionFailed());
 	}
 	
-	public void onForcedAttack(PlayerInstance player)
+	public void onForcedAttack(Player player)
 	{
 		player.sendPacket(new ActionFailed());
 	}
@@ -141,16 +141,16 @@ public class WorldObject implements Serializable
 	public void addKnownObject(WorldObject object)
 	{
 		_knownObjects.add(object);
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			_knownPlayers.add((PlayerInstance) object);
+			_knownPlayers.add((Player) object);
 		}
 	}
 	
 	public void removeKnownObject(WorldObject object)
 	{
 		_knownObjects.remove(object);
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
 			_knownPlayers.remove(object);
 		}
@@ -165,12 +165,12 @@ public class WorldObject implements Serializable
 		}
 	}
 	
-	public Set<PlayerInstance> getKnownPlayers()
+	public Set<Player> getKnownPlayers()
 	{
 		return _knownPlayers;
 	}
 	
-	public PlayerInstance getActingPlayer()
+	public Player getActingPlayer()
 	{
 		return null;
 	}
@@ -194,8 +194,8 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Verify if object is instance of DoorInstance.
-	 * @return {@code true} if object is instance of DoorInstance, {@code false} otherwise
+	 * Verify if object is instance of Door.
+	 * @return {@code true} if object is instance of Door, {@code false} otherwise
 	 */
 	public boolean isDoor()
 	{
@@ -203,8 +203,8 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Verify if object is instance of ItemInstance.
-	 * @return {@code true} if object is instance of ItemInstance, {@code false} otherwise
+	 * Verify if object is instance of Item.
+	 * @return {@code true} if object is instance of Item, {@code false} otherwise
 	 */
 	public boolean isItem()
 	{
@@ -212,8 +212,8 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Verify if object is instance of MonsterInstance.
-	 * @return {@code true} if object is instance of MonsterInstance, {@code false} otherwise
+	 * Verify if object is instance of Monster.
+	 * @return {@code true} if object is instance of Monster, {@code false} otherwise
 	 */
 	public boolean isMonster()
 	{
@@ -230,8 +230,8 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Verify if object is instance of PetInstance.
-	 * @return {@code true} if object is instance of PetInstance, {@code false} otherwise
+	 * Verify if object is instance of Pet.
+	 * @return {@code true} if object is instance of Pet, {@code false} otherwise
 	 */
 	public boolean isPet()
 	{
@@ -239,8 +239,8 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Verify if object is instance of PlayerInstance.
-	 * @return {@code true} if object is instance of PlayerInstance, {@code false} otherwise
+	 * Verify if object is instance of Player.
+	 * @return {@code true} if object is instance of Player, {@code false} otherwise
 	 */
 	public boolean isPlayer()
 	{

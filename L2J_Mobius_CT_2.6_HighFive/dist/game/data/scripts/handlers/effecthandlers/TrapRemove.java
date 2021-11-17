@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.enums.TrapAction;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -67,7 +67,7 @@ public class TrapRemove extends AbstractEffect
 			return;
 		}
 		
-		final TrapInstance trap = (TrapInstance) target;
+		final Trap trap = (Trap) target;
 		if (!trap.canBeSeen(info.getEffector()))
 		{
 			if (info.getEffector().isPlayer())

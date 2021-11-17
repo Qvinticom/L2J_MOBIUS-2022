@@ -21,10 +21,10 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -68,7 +68,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -81,13 +81,13 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		}
 		
 		final WorldObject object = World.getInstance().findObject(_storePlayerId);
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance storePlayer = (PlayerInstance) object;
-		if (((storePlayer.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_SELL) && (storePlayer.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_PACKAGE_SELL)))
+		final Player storePlayer = (Player) object;
+		if (((storePlayer.getPrivateStoreType() != Player.STORE_PRIVATE_SELL) && (storePlayer.getPrivateStoreType() != Player.STORE_PRIVATE_PACKAGE_SELL)))
 		{
 			return;
 		}
@@ -138,7 +138,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 				return;
 			}
 			
-			final ItemInstance iEnchant = storePlayer.getInventory().getItemByObjectId(ir.getObjectId());
+			final Item iEnchant = storePlayer.getInventory().getItemByObjectId(ir.getObjectId());
 			int enchant = 0;
 			if (iEnchant == null)
 			{
@@ -177,7 +177,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((storePlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL) && (storeList.getItemCount() > _count))
+		if ((storePlayer.getPrivateStoreType() == Player.STORE_PRIVATE_PACKAGE_SELL) && (storeList.getItemCount() > _count))
 		{
 			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
 			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
@@ -195,7 +195,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		
 		if (storeList.getItemCount() == 0)
 		{
-			storePlayer.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+			storePlayer.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 			storePlayer.broadcastUserInfo();
 		}
 	}

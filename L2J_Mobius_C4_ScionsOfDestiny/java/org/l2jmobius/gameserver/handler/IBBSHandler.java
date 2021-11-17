@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Azagthtot
@@ -30,8 +30,8 @@ public interface IBBSHandler
 	
 	/**
 	 * @param command as String - _bbs
-	 * @param player as PlayerInstance - Alt+B
+	 * @param player as Player - Alt+B
 	 * @param params as String -
 	 */
-	void handleCommand(String command, PlayerInstance player, String params);
+	void handleCommand(String command, Player player, String params);
 }

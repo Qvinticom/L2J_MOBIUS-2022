@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -66,7 +66,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -395,7 +395,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(10) && (qs.getInt("spawned") == 1))
@@ -416,8 +416,8 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			final QuestState qs = getQuestState(creature.getActingPlayer(), false);
 			if ((qs != null) && qs.isCond(17))
 			{
-				takeItems((PlayerInstance) creature, DETCTOR, 1);
-				giveItems((PlayerInstance) creature, DETCTOR2, 1);
+				takeItems((Player) creature, DETCTOR, 1);
+				giveItems((Player) creature, DETCTOR2, 1);
 				qs.setCond(18, true);
 				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}
@@ -426,7 +426,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -51,7 +51,7 @@ public class ExElementalSpiritEvolution implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -76,7 +76,7 @@ public class ExElementalSpiritEvolution implements IClientIncomingPacket
 		client.sendPacket(new ElementalSpiritEvolution(player, _type, canEvolve));
 	}
 	
-	private boolean checkConditions(PlayerInstance player, ElementalSpirit spirit)
+	private boolean checkConditions(Player player, ElementalSpirit spirit)
 	{
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
@@ -101,7 +101,7 @@ public class ExElementalSpiritEvolution implements IClientIncomingPacket
 		return true;
 	}
 	
-	private boolean consumeEvolveItems(PlayerInstance player, ElementalSpirit spirit)
+	private boolean consumeEvolveItems(Player player, ElementalSpirit spirit)
 	{
 		final PlayerInventory inventory = player.getInventory();
 		try

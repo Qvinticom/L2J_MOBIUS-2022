@@ -20,8 +20,8 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAdd;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
@@ -34,11 +34,11 @@ import org.l2jmobius.util.Rnd;
 
 public class Party
 {
-	private final List<PlayerInstance> _members = new ArrayList<>();
+	private final List<Player> _members = new ArrayList<>();
 	private boolean _randomLoot = false;
 	private int _partyLvl = 0;
 	
-	public Party(PlayerInstance leader, boolean randomLoot)
+	public Party(Player leader, boolean randomLoot)
 	{
 		_randomLoot = randomLoot;
 		_members.add(leader);
@@ -50,32 +50,32 @@ public class Party
 		return _members.size();
 	}
 	
-	public List<PlayerInstance> getPartyMembers()
+	public List<Player> getPartyMembers()
 	{
 		return _members;
 	}
 	
-	private PlayerInstance getRandomMember()
+	private Player getRandomMember()
 	{
 		return _members.get(Rnd.get(_members.size()));
 	}
 	
-	public boolean isLeader(PlayerInstance player)
+	public boolean isLeader(Player player)
 	{
 		return _members.get(0).equals(player);
 	}
 	
 	public void broadcastToPartyMembers(ServerBasePacket msg)
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			member.sendPacket(msg);
 		}
 	}
 	
-	public void broadcastToPartyMembers(PlayerInstance player, ServerBasePacket msg)
+	public void broadcastToPartyMembers(Player player, ServerBasePacket msg)
 	{
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			if (member.equals(player))
 			{
@@ -85,7 +85,7 @@ public class Party
 		}
 	}
 	
-	public void addPartyMember(PlayerInstance player)
+	public void addPartyMember(Player player)
 	{
 		final PartySmallWindowAll window = new PartySmallWindowAll();
 		window.setPartyList(_members);
@@ -101,7 +101,7 @@ public class Party
 		_partyLvl += player.getLevel() * player.getLevel();
 	}
 	
-	public void removePartyMember(PlayerInstance player)
+	public void removePartyMember(Player player)
 	{
 		if (_members.contains(player))
 		{
@@ -122,11 +122,11 @@ public class Party
 		}
 	}
 	
-	private PlayerInstance getPlayerByName(String name)
+	private Player getPlayerByName(String name)
 	{
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			final PlayerInstance temp = _members.get(i);
+			final Player temp = _members.get(i);
 			if (!temp.getName().equals(name))
 			{
 				continue;
@@ -136,7 +136,7 @@ public class Party
 		return null;
 	}
 	
-	public void oustPartyMember(PlayerInstance player)
+	public void oustPartyMember(Player player)
 	{
 		if (_members.contains(player))
 		{
@@ -153,7 +153,7 @@ public class Party
 	
 	public void oustPartyMember(String name)
 	{
-		final PlayerInstance player = getPlayerByName(name);
+		final Player player = getPlayerByName(name);
 		if (player != null)
 		{
 			if (isLeader(player))
@@ -170,7 +170,7 @@ public class Party
 	private void dissolveParty()
 	{
 		final SystemMessage msg = new SystemMessage(SystemMessage.PARTY_DISPERSED);
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			member.sendPacket(msg);
 			member.sendPacket(new PartySmallWindowDeleteAll());
@@ -178,10 +178,10 @@ public class Party
 		}
 	}
 	
-	public void distributeItem(PlayerInstance player, ItemInstance item)
+	public void distributeItem(Player player, Item item)
 	{
 		SystemMessage smsg;
-		PlayerInstance target = null;
+		Player target = null;
 		target = _randomLoot ? getRandomMember() : player;
 		if (item.getCount() == 1)
 		{
@@ -205,7 +205,7 @@ public class Party
 			smsg.addItemName(item.getItemId());
 			this.broadcastToPartyMembers(target, smsg);
 		}
-		final ItemInstance item2 = target.getInventory().addItem(item);
+		final Item item2 = target.getInventory().addItem(item);
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (item2.getLastChange() == 1)
 		{
@@ -219,15 +219,15 @@ public class Party
 		target.sendPacket(new UserInfo(target));
 	}
 	
-	public void distributeAdena(ItemInstance adena)
+	public void distributeAdena(Item adena)
 	{
 		adena.setCount(adena.getCount() / _members.size());
 		final SystemMessage smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_ADENA);
 		smsg.addNumber(adena.getCount());
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			final PlayerInstance member = _members.get(i);
-			final ItemInstance item2 = member.getInventory().addItem(adena);
+			final Player member = _members.get(i);
+			final Item item2 = member.getInventory().addItem(adena);
 			final InventoryUpdate iu = new InventoryUpdate();
 			if (item2.getLastChange() == 1)
 			{
@@ -249,7 +249,7 @@ public class Party
 		final double spTotal = mul * spReward;
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			final PlayerInstance player = _members.get(i);
+			final Player player = _members.get(i);
 			mul = ((double) player.getLevel() * (double) player.getLevel()) / _partyLvl;
 			final int xp = (int) (mul * xpTotal);
 			final int sp = (int) (mul * spTotal);

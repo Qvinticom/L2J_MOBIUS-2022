@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.model.Clan;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
@@ -34,7 +34,7 @@ public class RequestPledgeInfo extends ClientBasePacket
 	{
 		super(rawPacket);
 		final int clanId = readD();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)
 		{

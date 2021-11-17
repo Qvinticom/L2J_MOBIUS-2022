@@ -17,8 +17,8 @@
 package ai.others;
 
 import org.l2jmobius.gameserver.data.SkillTable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -39,7 +39,7 @@ public class AncientEgg extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		attacker.setTarget(attacker);
 		attacker.doCast(SkillTable.getInstance().getSkill(SIGNAL, 1));

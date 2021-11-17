@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
@@ -39,7 +39,7 @@ public class ChangeWaitType2 implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -57,9 +57,9 @@ public class ChangeWaitType2 implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
+		if ((target != null) && !player.isSitting() && (target instanceof StaticObject) && (((StaticObject) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObject.INTERACTION_DISTANCE))
 		{
-			final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
+			final ChairSit cs = new ChairSit(player, ((StaticObject) target).getStaticObjectId());
 			player.sendPacket(cs);
 			player.sitDown();
 			player.broadcastPacket(cs);

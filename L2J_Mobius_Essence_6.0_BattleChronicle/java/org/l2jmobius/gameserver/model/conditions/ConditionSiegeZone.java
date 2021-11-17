@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.conditions;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -55,7 +55,7 @@ public class ConditionSiegeZone extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		final Creature target = _self ? effector : effected;
 		final Castle castle = CastleManager.getInstance().getCastle(target);
@@ -85,7 +85,7 @@ public class ConditionSiegeZone extends Condition
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		if (((castle == null) || (castle.getResidenceId() <= 0)))
 		{
 			if ((value & COND_NOT_ZONE) != 0)
@@ -130,7 +130,7 @@ public class ConditionSiegeZone extends Condition
 			return false;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		if (((fort == null) || (fort.getResidenceId() <= 0)))
 		{
 			if ((value & COND_NOT_ZONE) != 0)

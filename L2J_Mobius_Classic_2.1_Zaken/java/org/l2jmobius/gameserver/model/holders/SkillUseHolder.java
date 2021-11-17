@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -24,11 +24,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class SkillUseHolder extends SkillHolder
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	private final boolean _ctrlPressed;
 	private final boolean _shiftPressed;
 	
-	public SkillUseHolder(Skill skill, ItemInstance item, boolean ctrlPressed, boolean shiftPressed)
+	public SkillUseHolder(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed)
 	{
 		super(skill);
 		_item = item;
@@ -36,7 +36,7 @@ public class SkillUseHolder extends SkillHolder
 		_shiftPressed = shiftPressed;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

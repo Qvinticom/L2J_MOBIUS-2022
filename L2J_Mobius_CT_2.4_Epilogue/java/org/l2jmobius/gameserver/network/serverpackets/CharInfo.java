@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.model.actor.Decoy;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Decoy;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Clan _clan;
 	private int _objId;
 	private int _x;
@@ -78,7 +78,7 @@ public class CharInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_BELT
 	};
 	
-	public CharInfo(PlayerInstance player, boolean gmSeeInvis)
+	public CharInfo(Player player, boolean gmSeeInvis)
 	{
 		_player = player;
 		_objId = player.getObjectId();

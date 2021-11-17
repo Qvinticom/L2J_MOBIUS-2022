@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -34,12 +34,12 @@ public class MoveToLocationInVehicle implements IClientOutgoingPacket
 	
 	public MoveToLocationInVehicle(Creature actor, Location destination, Location origin)
 	{
-		if (!(actor instanceof PlayerInstance))
+		if (!(actor instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) actor;
+		final Player player = (Player) actor;
 		if (player.getBoat() == null)
 		{
 			return;

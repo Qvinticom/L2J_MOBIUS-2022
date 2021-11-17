@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,9 +33,9 @@ public class ExPVPMatchCCRecord implements IClientOutgoingPacket
 	public static final int FINISH = 2;
 	
 	private final int _state;
-	private final Map<PlayerInstance, Integer> _players;
+	private final Map<Player, Integer> _players;
 	
-	public ExPVPMatchCCRecord(int state, Map<PlayerInstance, Integer> players)
+	public ExPVPMatchCCRecord(int state, Map<Player, Integer> players)
 	{
 		_state = state;
 		_players = players;
@@ -48,7 +48,7 @@ public class ExPVPMatchCCRecord implements IClientOutgoingPacket
 		packet.writeD(_state); // 0 - initialize, 1 - update, 2 - finish
 		packet.writeD(Math.min(_players.size(), 25));
 		int counter = 0;
-		for (Entry<PlayerInstance, Integer> entry : _players.entrySet())
+		for (Entry<Player, Integer> entry : _players.entrySet())
 		{
 			counter++;
 			if (counter > 25)

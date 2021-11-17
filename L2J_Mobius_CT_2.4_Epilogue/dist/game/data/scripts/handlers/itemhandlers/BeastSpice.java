@@ -20,16 +20,16 @@ import java.util.logging.Level;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.FeedableBeastInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class BeastSpice implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -37,7 +37,7 @@ public class BeastSpice implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance activeChar = playable.getActingPlayer();
+		final Player activeChar = playable.getActingPlayer();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		if (skills == null)
 		{
@@ -45,7 +45,7 @@ public class BeastSpice implements IItemHandler
 			return false;
 		}
 		
-		if (!(activeChar.getTarget() instanceof FeedableBeastInstance))
+		if (!(activeChar.getTarget() instanceof FeedableBeast))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PurgePlayerHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationSidebar;
@@ -147,7 +147,7 @@ public class PurgeRankingManager
 							LOGGER.log(Level.SEVERE, "Failed to delete character subjugation info " + charId, e);
 						}
 						
-						final PlayerInstance onlinePlayer = World.getInstance().getPlayer(charId);
+						final Player onlinePlayer = World.getInstance().getPlayer(charId);
 						if (onlinePlayer != null)
 						{
 							onlinePlayer.getPurgePoints().clear();

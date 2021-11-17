@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
@@ -31,15 +31,15 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	@SuppressWarnings("unused")
 	private final int _page;
 	private final int _minLevel;
 	private final int _maxLevel;
 	private final int _mode;
-	private final List<PlayerInstance> _members;
+	private final List<Player> _members;
 	
-	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minLevel, int maxLevel, int mode)
+	public ExListPartyMatchingWaitingRoom(Player player, int page, int minLevel, int maxLevel, int mode)
 	{
 		_player = player;
 		_page = page;
@@ -67,7 +67,7 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			}
 		}
 		
-		for (PlayerInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
+		for (Player cha : PartyMatchWaitingList.getInstance().getPlayers())
 		{
 			// Don't add yourself in the list
 			if ((cha == null) || (cha == _player))

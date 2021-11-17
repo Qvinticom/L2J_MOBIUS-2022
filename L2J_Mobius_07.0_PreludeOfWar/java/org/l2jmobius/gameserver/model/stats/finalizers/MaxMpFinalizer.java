@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -40,12 +40,12 @@ public class MaxMpFinalizer implements IStatFunction
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 		if (creature.isPet())
 		{
-			final PetInstance pet = (PetInstance) creature;
+			final Pet pet = (Pet) creature;
 			baseValue = pet.getPetLevelData().getPetMaxMP();
 		}
 		else if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player != null)
 			{
 				baseValue = player.getTemplate().getBaseMpMax(player.getLevel());
@@ -69,7 +69,7 @@ public class MaxMpFinalizer implements IStatFunction
 		if (inv != null)
 		{
 			// Add maxMP bonus from items
-			for (ItemInstance item : inv.getPaperdollItems())
+			for (Item item : inv.getPaperdollItems())
 			{
 				addItem += item.getItem().getStats(stat, 0);
 			}

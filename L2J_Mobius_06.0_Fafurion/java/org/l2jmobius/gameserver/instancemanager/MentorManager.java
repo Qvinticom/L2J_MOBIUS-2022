@@ -32,7 +32,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
@@ -69,7 +69,7 @@ public class MentorManager
 	}
 	
 	/**
-	 * Removes mentee for current PlayerInstance
+	 * Removes mentee for current Player
 	 * @param mentorId
 	 * @param menteeId
 	 */
@@ -126,7 +126,7 @@ public class MentorManager
 		return _menteeData;
 	}
 	
-	public void cancelAllMentoringBuffs(PlayerInstance player)
+	public void cancelAllMentoringBuffs(Player player)
 	{
 		if (player == null)
 		{
@@ -144,14 +144,14 @@ public class MentorManager
 	
 	public void setPenalty(int mentorId, long penalty)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(mentorId);
+		final Player player = World.getInstance().getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
 		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(Chronos.currentTimeMillis() + penalty));
 	}
 	
 	public long getMentorPenalty(int mentorId)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(mentorId);
+		final Player player = World.getInstance().getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
 		return vars.getLong("Mentor-Penalty-" + mentorId, 0);
 	}

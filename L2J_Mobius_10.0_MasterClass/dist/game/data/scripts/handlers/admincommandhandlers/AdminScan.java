@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
 import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
@@ -53,7 +53,7 @@ public class AdminScan implements IAdminCommandHandler
 	private static final int DEFAULT_RADIUS = 1000;
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -121,7 +121,7 @@ public class AdminScan implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void processBypass(PlayerInstance activeChar, BypassParser parser)
+	private void processBypass(Player activeChar, BypassParser parser)
 	{
 		final int id = parser.getInt("id", 0);
 		final String name = parser.getString("name", null);
@@ -166,7 +166,7 @@ public class AdminScan implements IAdminCommandHandler
 		return builder;
 	}
 	
-	private void sendNpcList(PlayerInstance activeChar, int radius, int page, Predicate<Npc> condition, BypassParser parser)
+	private void sendNpcList(Player activeChar, int radius, int page, Predicate<Npc> condition, BypassParser parser)
 	{
 		final BypassBuilder bypassParser = createBypassBuilder(parser, "bypass -h admin_scan");
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);

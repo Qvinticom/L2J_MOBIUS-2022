@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.pledgebonus;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ClanRewardType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
@@ -44,7 +44,7 @@ public class RequestPledgeBonusReward implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null))
 		{
 			return;

@@ -20,10 +20,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.BlessingItemRequest;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -55,13 +55,13 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance targetInstance = player.getInventory().getItemByObjectId(_itemObjId);
+		final Item targetInstance = player.getInventory().getItemByObjectId(_itemObjId);
 		if (targetInstance == null)
 		{
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
@@ -89,7 +89,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjId);
+		final Item item = player.getInventory().getItemByObjectId(_itemObjId);
 		if (item == null)
 		{
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
@@ -104,7 +104,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance targetScroll = player.getInventory().getItemByItemId(request.getBlessScrollId());
+		final Item targetScroll = player.getInventory().getItemByItemId(request.getBlessScrollId());
 		if (targetScroll == null)
 		{
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
@@ -122,7 +122,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		
 		if (Rnd.get(100) < Config.BLESSING_CHANCE) // Success
 		{
-			final Item it = item.getItem();
+			final ItemTemplate it = item.getItem();
 			// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 			item.setBlessed(true);
 			item.updateDatabase();

@@ -16,18 +16,18 @@
  */
 package org.l2jmobius.gameserver.model.actor.status;
 
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 
 public class DoorStatus extends CreatureStatus
 {
-	public DoorStatus(DoorInstance activeChar)
+	public DoorStatus(Door activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public DoorInstance getActiveChar()
+	public Door getActiveChar()
 	{
-		return (DoorInstance) super.getActiveChar();
+		return (Door) super.getActiveChar();
 	}
 }

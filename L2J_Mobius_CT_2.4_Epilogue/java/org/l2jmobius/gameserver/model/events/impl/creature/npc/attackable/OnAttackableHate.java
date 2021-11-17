@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 public class OnAttackableHate implements IBaseEvent
 {
 	private final Attackable _npc;
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final boolean _isSummon;
 	
-	public OnAttackableHate(Attackable npc, PlayerInstance player, boolean isSummon)
+	public OnAttackableHate(Attackable npc, Player player, boolean isSummon)
 	{
 		_npc = npc;
 		_player = player;
@@ -42,7 +42,7 @@ public class OnAttackableHate implements IBaseEvent
 		return _npc;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

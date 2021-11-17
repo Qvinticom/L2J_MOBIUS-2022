@@ -22,7 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.RecipeList;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,11 +30,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class RecipeShopManageList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _seller;
+	private final Player _seller;
 	private final boolean _isDwarven;
 	private Collection<RecipeList> _recipes;
 	
-	public RecipeShopManageList(PlayerInstance seller, boolean isDwarven)
+	public RecipeShopManageList(Player seller, boolean isDwarven)
 	{
 		_seller = seller;
 		_isDwarven = isDwarven;

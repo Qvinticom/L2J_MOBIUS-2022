@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -66,7 +66,7 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -112,7 +112,7 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -145,13 +145,13 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "33993.html";
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -166,7 +166,7 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, true);
 		if ((qs != null) && (qs.getCond() > 0))
@@ -187,7 +187,7 @@ public class Q10791_TheManOfMystery extends Quest
 					if (kills >= 5)
 					{
 						final Npc monster = addSpawn(NEEDLE_STAKATO_CAPTAIN, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000, false);
-						final FriendlyNpcInstance kain = (FriendlyNpcInstance) addSpawn(KAIN_VAN_HALTER, killer.getX() + getRandom(-100, 100), killer.getY() + getRandom(-100, 100), killer.getZ(), 0, true, 300000, false);
+						final FriendlyNpc kain = (FriendlyNpc) addSpawn(KAIN_VAN_HALTER, killer.getX() + getRandom(-100, 100), killer.getY() + getRandom(-100, 100), killer.getZ(), 0, true, 300000, false);
 						kain.setRunning();
 						kain.setInvul(true);
 						kain.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack

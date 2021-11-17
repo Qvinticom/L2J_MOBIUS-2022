@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.util.Util;
 
 public class WorldObjectKnownList
@@ -149,7 +149,7 @@ public class WorldObjectKnownList
 				}
 				
 				// Try to add object to active object's known objects
-				// Creature only needs to see visible PlayerInstance and PlayableInstance, when moving. Other creatures are currently only known from initial spawn area.
+				// Creature only needs to see visible Player and PlayableInstance, when moving. Other creatures are currently only known from initial spawn area.
 				// Possibly look into getDistanceToForgetObject values before modifying this approach...
 				addKnownObject(object);
 			}
@@ -170,16 +170,16 @@ public class WorldObjectKnownList
 			// Remove all too far objects
 			if (!object.isSpawned() || !Util.checkIfInRange(getDistanceToForgetObject(object), _activeObject, object, true))
 			{
-				if ((object instanceof BoatInstance) && (_activeObject instanceof PlayerInstance))
+				if ((object instanceof Boat) && (_activeObject instanceof Player))
 				{
-					if (((BoatInstance) object).getVehicleDeparture() == null)
+					if (((Boat) object).getVehicleDeparture() == null)
 					{
 						continue;
 					}
 					
-					if (((PlayerInstance) _activeObject).isInBoat())
+					if (((Player) _activeObject).isInBoat())
 					{
-						if (((PlayerInstance) _activeObject).getBoat() != object)
+						if (((Player) _activeObject).getBoat() != object)
 						{
 							removeKnownObject(object);
 						}

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
 import org.l2jmobius.gameserver.enums.QuestType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -26,18 +26,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerQuestComplete implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _questId;
 	private final QuestType _questType;
 	
-	public OnPlayerQuestComplete(PlayerInstance player, int questId, QuestType questType)
+	public OnPlayerQuestComplete(Player player, int questId, QuestType questType)
 	{
 		_player = player;
 		_questId = questId;
 		_questType = questType;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

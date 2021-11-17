@@ -20,13 +20,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PartySmallWindowAll extends ServerBasePacket
 {
-	private List<PlayerInstance> _partyMembers = new ArrayList<>();
+	private List<Player> _partyMembers = new ArrayList<>();
 	
-	public void setPartyList(List<PlayerInstance> party)
+	public void setPartyList(List<Player> party)
 	{
 		_partyMembers = party;
 	}
@@ -38,7 +38,7 @@ public class PartySmallWindowAll extends ServerBasePacket
 		writeD(_partyMembers.size());
 		for (int i = 0; i < _partyMembers.size(); ++i)
 		{
-			final PlayerInstance member = _partyMembers.get(i);
+			final Player member = _partyMembers.get(i);
 			writeD(member.getObjectId());
 			writeS(member.getName());
 			writeD((int) member.getCurrentHp());

@@ -17,14 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ShowBoard extends ServerBasePacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final String _htmlCode;
 	
-	public ShowBoard(PlayerInstance player, String htmlCode)
+	public ShowBoard(Player player, String htmlCode)
 	{
 		_player = player;
 		_htmlCode = htmlCode;

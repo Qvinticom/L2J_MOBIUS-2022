@@ -20,9 +20,9 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.GourdInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Gourd;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class Nectar implements IItemHandler
@@ -33,21 +33,21 @@ public class Nectar implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
-		if (!(player.getTarget() instanceof GourdInstance))
+		final Player player = (Player) playable;
+		if (!(player.getTarget() instanceof Gourd))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			return;
 		}
 		
-		if (!player.getName().equalsIgnoreCase(((GourdInstance) player.getTarget()).getOwner()))
+		if (!player.getName().equalsIgnoreCase(((Gourd) player.getTarget()).getOwner()))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			return;

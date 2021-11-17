@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.JoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -28,8 +28,8 @@ public class RequestAnswerJoinParty extends ClientBasePacket
 	{
 		super(decrypt);
 		final int response = readD();
-		final PlayerInstance player = client.getActiveChar();
-		final PlayerInstance requestor = player.getTransactionRequester();
+		final Player player = client.getActiveChar();
+		final Player requestor = player.getTransactionRequester();
 		requestor.sendPacket(new JoinParty(response));
 		if (response == 1)
 		{

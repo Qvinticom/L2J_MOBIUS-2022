@@ -21,8 +21,8 @@ import java.util.Set;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.NpcInfoType;
 import org.l2jmobius.gameserver.enums.Team;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AbstractMaskPacket;
 public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 {
 	private final Summon _summon;
-	private final PlayerInstance _attacker;
+	private final Player _attacker;
 	private final int _value;
 	private final byte[] _masks = new byte[]
 	{
@@ -57,7 +57,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 	private final String _title;
 	private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	
-	public ExPetInfo(Summon summon, PlayerInstance attacker, int value)
+	public ExPetInfo(Summon summon, Player attacker, int value)
 	{
 		_summon = summon;
 		_attacker = attacker;

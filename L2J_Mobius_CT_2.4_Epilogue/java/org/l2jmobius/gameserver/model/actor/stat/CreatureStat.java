@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Calculator;
 import org.l2jmobius.gameserver.model.stats.MoveType;
@@ -634,7 +634,7 @@ public class CreatureStat
 	
 	public byte getAttackElement()
 	{
-		final ItemInstance weaponInstance = _creature.getActiveWeaponInstance();
+		final Item weaponInstance = _creature.getActiveWeaponInstance();
 		// 1st order - weapon element
 		if ((weaponInstance != null) && (weaponInstance.getAttackElementType() >= 0))
 		{

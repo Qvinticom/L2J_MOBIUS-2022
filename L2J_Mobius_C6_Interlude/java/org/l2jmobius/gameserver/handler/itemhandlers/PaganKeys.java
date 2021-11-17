@@ -20,9 +20,9 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -42,23 +42,23 @@ public class PaganKeys implements IItemHandler
 	public static final int INTERACTION_DISTANCE = 100;
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
 		final int itemId = item.getItemId();
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		final WorldObject target = player.getTarget();
-		if (!(target instanceof DoorInstance))
+		if (!(target instanceof Door))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		final DoorInstance door = (DoorInstance) target;
+		final Door door = (Door) target;
 		if (!player.isInsideRadius2D(door, INTERACTION_DISTANCE))
 		{
 			player.sendMessage("Too far.");

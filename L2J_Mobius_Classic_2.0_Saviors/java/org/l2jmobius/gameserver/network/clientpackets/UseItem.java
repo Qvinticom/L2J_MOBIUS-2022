@@ -34,12 +34,12 @@ import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -65,7 +65,7 @@ public class UseItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,7 +95,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			// GM can use other player item
@@ -205,9 +205,9 @@ public class UseItem implements IClientIncomingPacket
 			
 			switch (item.getItem().getBodyPart())
 			{
-				case Item.SLOT_LR_HAND:
-				case Item.SLOT_L_HAND:
-				case Item.SLOT_R_HAND:
+				case ItemTemplate.SLOT_LR_HAND:
+				case ItemTemplate.SLOT_L_HAND:
+				case ItemTemplate.SLOT_R_HAND:
 				{
 					// Prevent players to equip weapon while wearing combat flag
 					if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819))
@@ -229,7 +229,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 					break;
 				}
-				case Item.SLOT_DECO:
+				case ItemTemplate.SLOT_DECO:
 				{
 					if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 					{
@@ -238,7 +238,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 					break;
 				}
-				case Item.SLOT_BROOCH_JEWEL:
+				case ItemTemplate.SLOT_BROOCH_JEWEL:
 				{
 					if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0))
 					{
@@ -290,7 +290,7 @@ public class UseItem implements IClientIncomingPacket
 		}
 	}
 	
-	private void reuseData(PlayerInstance player, ItemInstance item, long remainingTime)
+	private void reuseData(Player player, Item item, long remainingTime)
 	{
 		final int hours = (int) (remainingTime / 3600000);
 		final int minutes = (int) (remainingTime % 3600000) / 60000;
@@ -318,7 +318,7 @@ public class UseItem implements IClientIncomingPacket
 		player.sendPacket(sm);
 	}
 	
-	private void sendSharedGroupUpdate(PlayerInstance player, int group, long remaining, int reuse)
+	private void sendSharedGroupUpdate(Player player, int group, long remaining, int reuse)
 	{
 		if (group > 0)
 		{

@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -40,7 +40,7 @@ class NpcBufferAI implements Runnable
 		_skillData = skill;
 	}
 	
-	private Skill getSkill(PlayerInstance player)
+	private Skill getSkill(Player player)
 	{
 		if (_skillData.getScaleToLevel() < 1)
 		{
@@ -80,7 +80,7 @@ class NpcBufferAI implements Runnable
 			return;
 		}
 		
-		final PlayerInstance player = _npc.getSummoner().getActingPlayer();
+		final Player player = _npc.getSummoner().getActingPlayer();
 		final Skill skill = getSkill(player);
 		if (skill == null)
 		{

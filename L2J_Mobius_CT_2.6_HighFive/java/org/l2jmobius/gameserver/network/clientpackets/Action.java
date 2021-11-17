@@ -21,7 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -59,8 +59,8 @@ public class Action implements IClientIncomingPacket
 			return;
 		}
 		
-		// Get the current PlayerInstance of the player
-		final PlayerInstance player = client.getPlayer();
+		// Get the current Player of the player
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;

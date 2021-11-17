@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 
@@ -26,7 +26,7 @@ public class RequestTargetCanceld extends ClientBasePacket
 	public RequestTargetCanceld(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (activeChar.getTarget() != null)
 		{
 			activeChar.sendPacket(new TargetUnselected(activeChar));

@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -83,11 +83,11 @@ public class Q00236_SeedsOfChaos extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ("KATENAR_120".equals(event))
 		{
-			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+			final Player c0 = npc.getVariables().getObject("player0", Player.class);
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
@@ -113,7 +113,7 @@ public class Q00236_SeedsOfChaos extends Quest
 		}
 		else if ("KATENAR_A_120".equals(event))
 		{
-			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+			final Player c0 = npc.getVariables().getObject("player0", Player.class);
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
@@ -128,7 +128,7 @@ public class Q00236_SeedsOfChaos extends Quest
 		}
 		else if ("KATENAR_B_120".equals(event))
 		{
-			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+			final Player c0 = npc.getVariables().getObject("player0", Player.class);
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
@@ -358,7 +358,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(20))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					if (c0 != null)
 					{
 						qs.setMemoState(21);
@@ -480,7 +480,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(3) && (qs.getMemoStateEx(1) == 2))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					if (c0 != null)
 					{
 						qs.setMemoState(7);
@@ -495,7 +495,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(22))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					if (c0 != null)
 					{
 						takeItems(player, SHINING_MEDALLION, -1);
@@ -510,7 +510,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(20) && (qs.getMemoStateEx(1) == 0))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (player == c0)
 					{
@@ -528,7 +528,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(21))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (player == c0)
 					{
@@ -544,7 +544,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			}
 			case "KEITNAR_A_DESPAWN":
 			{
-				final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+				final Player c0 = npc.getVariables().getObject("player0", Player.class);
 				final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 				if (player == c0)
 				{
@@ -561,7 +561,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(11) && hasQuestItems(player, BLOOD_JEWEL))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (player == c0)
 					{
@@ -579,7 +579,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				if (qs.isMemoState(30))
 				{
-					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Player c0 = npc.getVariables().getObject("player0", Player.class);
 					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (player == c0)
 					{
@@ -649,7 +649,7 @@ public class Q00236_SeedsOfChaos extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -706,7 +706,7 @@ public class Q00236_SeedsOfChaos extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -876,7 +876,7 @@ public class Q00236_SeedsOfChaos extends Quest
 					{
 						case 6:
 						{
-							final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+							final Player c0 = npc.getVariables().getObject("player0", Player.class);
 							final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 							npc0.getVariables().set("SPAWNED", false);
 							if (player == c0)
@@ -906,7 +906,7 @@ public class Q00236_SeedsOfChaos extends Quest
 					{
 						case 20:
 						{
-							final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+							final Player c0 = npc.getVariables().getObject("player0", Player.class);
 							final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 							npc0.getVariables().set("SPAWNED", false);
 							if (player == c0)
@@ -1031,7 +1031,7 @@ public class Q00236_SeedsOfChaos extends Quest
 						{
 							if (qs.getMemoStateEx(1) == 2)
 							{
-								final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+								final Player c0 = npc.getVariables().getObject("player0", Player.class);
 								final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 								npc0.getVariables().set("SPAWNED", false);
 								if (player == c0)
@@ -1064,7 +1064,7 @@ public class Q00236_SeedsOfChaos extends Quest
 						{
 							if (hasQuestItems(player, BLOOD_JEWEL))
 							{
-								final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+								final Player c0 = npc.getVariables().getObject("player0", Player.class);
 								final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 								npc0.getVariables().set("SPAWNED", false);
 								if (player == c0)
@@ -1096,7 +1096,7 @@ public class Q00236_SeedsOfChaos extends Quest
 					{
 						case 22:
 						{
-							final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+							final Player c0 = npc.getVariables().getObject("player0", Player.class);
 							final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 							npc0.getVariables().set("SPAWNED", false);
 							if (player == c0)
@@ -1136,7 +1136,7 @@ public class Q00236_SeedsOfChaos extends Quest
 		{
 			case KATENAR:
 			{
-				final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+				final Player c0 = npc.getVariables().getObject("player0", Player.class);
 				startQuestTimer("KATENAR_120", 120000, npc, null);
 				if (c0 != null)
 				{
@@ -1152,7 +1152,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			}
 			case KATENAR_A:
 			{
-				final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+				final Player c0 = npc.getVariables().getObject("player0", Player.class);
 				startQuestTimer("KATENAR_A_120", 120000, npc, null);
 				if (c0 != null)
 				{
@@ -1162,7 +1162,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			}
 			case KATENAR_B:
 			{
-				final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+				final Player c0 = npc.getVariables().getObject("player0", Player.class);
 				startQuestTimer("KATENAR_B_120", 120000, npc, null);
 				if (c0 != null)
 				{
@@ -1172,7 +1172,7 @@ public class Q00236_SeedsOfChaos extends Quest
 			}
 			case HARKILGAMED_A:
 			{
-				final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+				final Player c0 = npc.getVariables().getObject("player0", Player.class);
 				startQuestTimer("HARKILGAMED_A_120", 120000, npc, null);
 				if (c0 != null)
 				{

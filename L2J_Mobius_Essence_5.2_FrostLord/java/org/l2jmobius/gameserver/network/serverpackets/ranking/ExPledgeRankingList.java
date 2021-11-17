@@ -27,7 +27,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -36,12 +36,12 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPledgeRankingList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _category;
 	private final Map<Integer, StatSet> _rankingClanList;
 	private final Map<Integer, StatSet> _snapshotClanList;
 	
-	public ExPledgeRankingList(PlayerInstance player, int category)
+	public ExPledgeRankingList(Player player, int category)
 	{
 		_player = player;
 		_category = category;

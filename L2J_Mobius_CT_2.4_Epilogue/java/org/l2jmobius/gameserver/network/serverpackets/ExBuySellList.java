@@ -22,11 +22,11 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -38,11 +38,11 @@ public class ExBuySellList implements IClientOutgoingPacket
 	private final List<Product> _buyList = new ArrayList<>();
 	private final long _money;
 	private double _taxRate = 0;
-	private Collection<ItemInstance> _sellList = null;
-	private Collection<ItemInstance> _refundList = null;
+	private Collection<Item> _sellList = null;
+	private Collection<Item> _refundList = null;
 	private final boolean _done;
 	
-	public ExBuySellList(PlayerInstance player, BuyListHolder list, boolean done)
+	public ExBuySellList(Player player, BuyListHolder list, boolean done)
 	{
 		_money = player.getAdena();
 		_buyListId = list.getListId();
@@ -62,7 +62,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 		_done = done;
 	}
 	
-	public ExBuySellList(PlayerInstance player, BuyListHolder list, double taxRate, boolean done)
+	public ExBuySellList(Player player, BuyListHolder list, double taxRate, boolean done)
 	{
 		_money = player.getAdena();
 		_taxRate = taxRate;
@@ -99,7 +99,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 			packet.writeQ(item.getCount() < 0 ? 0 : item.getCount());
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(0x00); // ?
-			if (item.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
+			if (item.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 			{
 				packet.writeD(item.getItem().getBodyPart());
 				packet.writeH(0x00); // item enchant level
@@ -136,7 +136,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 		if ((_sellList != null) && !_sellList.isEmpty())
 		{
 			packet.writeH(_sellList.size());
-			for (ItemInstance item : _sellList)
+			for (Item item : _sellList)
 			{
 				packet.writeH(item.getItem().getType1());
 				packet.writeD(item.getObjectId());
@@ -171,7 +171,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 		{
 			packet.writeH(_refundList.size());
 			int idx = 0;
-			for (ItemInstance item : _refundList)
+			for (Item item : _refundList)
 			{
 				packet.writeD(idx++);
 				packet.writeD(item.getId());

@@ -16,19 +16,19 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShip;
 
 public class ControllableAirShipStat extends VehicleStat
 {
-	public ControllableAirShipStat(ControllableAirShipInstance activeChar)
+	public ControllableAirShipStat(ControllableAirShip activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public ControllableAirShipInstance getActiveChar()
+	public ControllableAirShip getActiveChar()
 	{
-		return (ControllableAirShipInstance) super.getActiveChar();
+		return (ControllableAirShip) super.getActiveChar();
 	}
 	
 	@Override

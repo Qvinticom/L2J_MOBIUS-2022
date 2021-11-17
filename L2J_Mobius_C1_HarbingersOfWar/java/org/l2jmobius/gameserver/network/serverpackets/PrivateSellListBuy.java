@@ -21,14 +21,14 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class PrivateSellListBuy extends ServerBasePacket
 {
-	private final PlayerInstance _buyer;
+	private final Player _buyer;
 	
-	public PrivateSellListBuy(PlayerInstance buyer)
+	public PrivateSellListBuy(Player buyer)
 	{
 		_buyer = buyer;
 	}
@@ -41,7 +41,7 @@ public class PrivateSellListBuy extends ServerBasePacket
 		writeD(_buyer.getAdena());
 		final TradeList list = new TradeList(0);
 		final List<TradeItem> buyList = _buyer.getBuyList();
-		for (ItemInstance item : _buyer.getInventory().getItems())
+		for (Item item : _buyer.getInventory().getItems())
 		{
 			if (item.isEquipped() || (item.getItem().getType2() == 3) || ((item.getItem().getType2() == 4) && (item.getItem().getType1() == 4)) || ((item.getItem().getType2() == 1) && (item.getItem().getType1() == 1)))
 			{
@@ -51,7 +51,7 @@ public class PrivateSellListBuy extends ServerBasePacket
 		}
 		int count = list.getItems().size();
 		writeD(count);
-		for (ItemInstance item : list.getItems())
+		for (Item item : list.getItems())
 		{
 			writeD(item.getItemId());
 			writeH(0);

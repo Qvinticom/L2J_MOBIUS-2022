@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -136,7 +136,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		final List<Npc> candles = new ArrayList<>();
 		final int zakenRoom = getRandom(1, 15);
@@ -158,7 +158,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceEnter(PlayerInstance player, Instance instance)
+	public void onInstanceEnter(Player player, Instance instance)
 	{
 		final int startTime = (int) (instance.getElapsedTime() / 1000);
 		final int endTime = (int) (instance.getRemainingTime() / 1000);
@@ -166,13 +166,13 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceLeave(PlayerInstance player, Instance instance)
+	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, true, true, 0, 0, NpcStringId.ELAPSED_TIME));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enter60"))
 		{
@@ -258,7 +258,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -266,7 +266,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 			if (npc.getId() == ZAKEN_83)
 			{
 				final long time = world.getElapsedTime();
-				for (PlayerInstance playersInside : world.getPlayersInsideRadius(npc, Config.ALT_PARTY_RANGE))
+				for (Player playersInside : world.getPlayersInsideRadius(npc, Config.ALT_PARTY_RANGE))
 				{
 					for (int[] reward : VORPAL_JEWELS)
 					{
@@ -287,7 +287,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && npc.isScriptValue(0))
@@ -333,7 +333,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		return 0;
 	}
 	
-	private Npc spawnNpc(int npcId, int roomId, PlayerInstance player, Instance world)
+	private Npc spawnNpc(int npcId, int roomId, Player player, Instance world)
 	{
 		if ((player != null) && (npcId != ZAKEN_60) && (npcId != ZAKEN_83))
 		{

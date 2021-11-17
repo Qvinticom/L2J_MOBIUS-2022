@@ -27,11 +27,11 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
@@ -74,9 +74,9 @@ public class SkillSummon extends Skill
 	
 	public boolean checkCondition(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			if (_isCubic)
 			{
 				if (getTargetType() != Skill.SkillTargetType.TARGET_SELF)
@@ -110,12 +110,12 @@ public class SkillSummon extends Skill
 	@Override
 	public void useSkill(Creature caster, List<Creature> targets)
 	{
-		if (caster.isAlikeDead() || !(caster instanceof PlayerInstance))
+		if (caster.isAlikeDead() || !(caster instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance activeChar = (PlayerInstance) caster;
+		final Player activeChar = (Player) caster;
 		
 		// Skill 2046 only used for animation
 		if (getId() == 2046)
@@ -147,11 +147,11 @@ public class SkillSummon extends Skill
 			{
 				for (WorldObject obj : targets)
 				{
-					if (!(obj instanceof PlayerInstance))
+					if (!(obj instanceof Player))
 					{
 						continue;
 					}
-					final PlayerInstance player = ((PlayerInstance) obj);
+					final Player player = ((Player) obj);
 					final int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
 					if ((mastery == 0) && !player.getCubics().isEmpty())
 					{
@@ -161,7 +161,7 @@ public class SkillSummon extends Skill
 					// TODO: Should remove first cubic summoned and replace with new cubic
 					if (player.getCubics().containsKey(_npcId))
 					{
-						final CubicInstance cubic = player.getCubic(_npcId);
+						final Cubic cubic = player.getCubic(_npcId);
 						cubic.stopAction();
 						cubic.cancelDisappear();
 						player.delCubic(_npcId);
@@ -179,7 +179,7 @@ public class SkillSummon extends Skill
 			final int mastery = activeChar.getSkillLevel(SKILL_CUBIC_MASTERY);
 			if (activeChar.getCubics().containsKey(_npcId))
 			{
-				final CubicInstance cubic = activeChar.getCubic(_npcId);
+				final Cubic cubic = activeChar.getCubic(_npcId);
 				cubic.stopAction();
 				cubic.cancelDisappear();
 				activeChar.delCubic(_npcId);
@@ -199,7 +199,7 @@ public class SkillSummon extends Skill
 			return;
 		}
 		
-		SummonInstance summon;
+		Servitor summon;
 		final NpcTemplate summonTemplate = NpcTable.getInstance().getTemplate(_npcId);
 		if (summonTemplate == null)
 		{
@@ -208,11 +208,11 @@ public class SkillSummon extends Skill
 		}
 		if (summonTemplate.getType().equalsIgnoreCase("SiegeSummon"))
 		{
-			summon = new SiegeSummonInstance(IdManager.getInstance().getNextId(), summonTemplate, activeChar, this);
+			summon = new SiegeSummon(IdManager.getInstance().getNextId(), summonTemplate, activeChar, this);
 		}
 		else
 		{
-			summon = new SummonInstance(IdManager.getInstance().getNextId(), summonTemplate, activeChar, this);
+			summon = new Servitor(IdManager.getInstance().getNextId(), summonTemplate, activeChar, this);
 		}
 		
 		summon.setName(summonTemplate.getName());
@@ -239,10 +239,10 @@ public class SkillSummon extends Skill
 		if (getTargetType() == SkillTargetType.TARGET_CORPSE_MOB)
 		{
 			final Creature target = targets.get(0);
-			if (target.isDead() && (target instanceof NpcInstance))
+			if (target.isDead() && (target instanceof Npc))
 			{
 				summon.spawnMe(target.getX(), target.getY(), target.getZ() + 5);
-				((NpcInstance) target).endDecayTask();
+				((Npc) target).endDecayTask();
 			}
 		}
 		else

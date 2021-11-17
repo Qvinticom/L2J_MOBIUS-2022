@@ -18,7 +18,7 @@ package ai.others.Katenar;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -45,7 +45,7 @@ public class Katenar extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 		final String htmltext = null;
@@ -79,7 +79,7 @@ public class Katenar extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance talker)
+	public String onFirstTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = talker.getQuestState(Q00065_CertifiedSoulBreaker.class.getSimpleName());
 		String htmltext = getNoQuestMsg(talker);
@@ -90,7 +90,7 @@ public class Katenar extends AbstractNpcAI
 		}
 		else if (memoState == 13)
 		{
-			final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);
+			final Player player = npc.getVariables().getObject("player0", Player.class);
 			if (player == talker)
 			{
 				qs.setMemoState(14);
@@ -119,7 +119,7 @@ public class Katenar extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("CREATED_50", 50000, npc, null);
-		final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);
+		final Player player = npc.getVariables().getObject("player0", Player.class);
 		if (player != null)
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_AM_LATE);

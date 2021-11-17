@@ -17,8 +17,8 @@
 package quests.Q161_FruitOfTheMotherTree;
 
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -41,7 +41,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -60,7 +60,7 @@ public class Q161_FruitOfTheMotherTree extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();

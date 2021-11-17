@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -40,14 +40,14 @@ public class MysteryPotion implements IItemHandler
 	private static final int EFFECT_DURATION = 1200000; // 20 mins
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		
 		// Use a summon skill effect for fun ;)
 		final MagicSkillUse msu = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);
@@ -79,12 +79,12 @@ public class MysteryPotion implements IItemHandler
 		{
 			try
 			{
-				if (!(_playable instanceof PlayerInstance))
+				if (!(_playable instanceof Player))
 				{
 					return;
 				}
 				
-				((PlayerInstance) _playable).stopAbnormalEffect(BIGHEAD_EFFECT);
+				((Player) _playable).stopAbnormalEffect(BIGHEAD_EFFECT);
 			}
 			catch (Throwable t)
 			{

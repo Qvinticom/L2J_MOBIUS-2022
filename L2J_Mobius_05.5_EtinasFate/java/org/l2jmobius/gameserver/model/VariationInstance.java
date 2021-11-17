@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.data.xml.OptionData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.options.Options;
 
 /**
@@ -68,13 +68,13 @@ public class VariationInstance
 		return _option2.getId();
 	}
 	
-	public void applyBonus(PlayerInstance player)
+	public void applyBonus(Player player)
 	{
 		_option1.apply(player);
 		_option2.apply(player);
 	}
 	
-	public void removeBonus(PlayerInstance player)
+	public void removeBonus(Player player)
 	{
 		_option1.remove(player);
 		_option2.remove(player);

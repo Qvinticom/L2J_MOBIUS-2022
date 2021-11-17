@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -106,7 +106,7 @@ public class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -120,7 +120,7 @@ public class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -196,7 +196,7 @@ public class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && (npc.getId() == BALOK))
@@ -218,7 +218,7 @@ public class BalokWarzone extends AbstractInstance
 					INVINCIBILITY_ACTIVATION.getSkill().applyEffects(npc, npc);
 					npc.setScriptValue(1);
 				}
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, instPlayer ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 300, instPlayer ->
 				{
 					if ((instPlayer == null) || (Rnd.get(100) > 2))
 					{
@@ -242,7 +242,7 @@ public class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && (world != null) && (skill.getId() == DARKNESS_DRAIN.getSkillId()) && !_currentMinion.isDead())
@@ -253,7 +253,7 @@ public class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (npc == _balok)
@@ -305,7 +305,7 @@ public class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && caster.isBehind(npc))
 		{

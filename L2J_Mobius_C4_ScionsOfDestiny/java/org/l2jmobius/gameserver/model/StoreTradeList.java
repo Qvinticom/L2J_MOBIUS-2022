@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @version $Revision: 1.4.2.1.2.5 $ $Date: 2005/03/27 15:29:33 $
@@ -31,7 +31,7 @@ public class StoreTradeList
 {
 	private static final Logger LOGGER = Logger.getLogger(StoreTradeList.class.getName());
 	
-	private final List<ItemInstance> _items;
+	private final List<Item> _items;
 	private final int _listId;
 	private boolean _confirmed;
 	private boolean _gm;
@@ -64,7 +64,7 @@ public class StoreTradeList
 		return _npcId;
 	}
 	
-	public void addItem(ItemInstance item)
+	public void addItem(Item item)
 	{
 		_items.add(item);
 	}
@@ -72,7 +72,7 @@ public class StoreTradeList
 	public void replaceItem(int itemID, int priceValue)
 	{
 		int price = priceValue;
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getItemId() == itemID)
 			{
@@ -88,7 +88,7 @@ public class StoreTradeList
 	
 	public synchronized boolean decreaseCount(int itemID, int count)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getItemId() == itemID)
 			{
@@ -104,7 +104,7 @@ public class StoreTradeList
 	
 	public void restoreCount(int time)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getCountDecrease() && (item.getTime() == time))
 			{
@@ -117,7 +117,7 @@ public class StoreTradeList
 	{
 		for (int i = 0; i < _items.size(); i++)
 		{
-			final ItemInstance item = _items.get(i);
+			final Item item = _items.get(i);
 			if (item.getItemId() == itemId)
 			{
 				_items.remove(item);
@@ -156,19 +156,19 @@ public class StoreTradeList
 	/**
 	 * @return Returns the items.
 	 */
-	public List<ItemInstance> getItems()
+	public List<Item> getItems()
 	{
 		return _items;
 	}
 	
-	public List<ItemInstance> getItems(int start, int end)
+	public List<Item> getItems(int start, int end)
 	{
 		return _items.subList(start, end);
 	}
 	
 	public int getPriceForItemId(int itemId)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getItemId() == itemId)
 			{
@@ -180,7 +180,7 @@ public class StoreTradeList
 	
 	public boolean countDecrease(int itemId)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getItemId() == itemId)
 			{
@@ -192,7 +192,7 @@ public class StoreTradeList
 	
 	public boolean containsItemId(int itemId)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getItemId() == itemId)
 			{
@@ -202,9 +202,9 @@ public class StoreTradeList
 		return false;
 	}
 	
-	public ItemInstance getItem(int objectId)
+	public Item getItem(int objectId)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getObjectId() == objectId)
 			{
@@ -226,7 +226,7 @@ public class StoreTradeList
 	
 	public void removeItem(int objId, int count)
 	{
-		ItemInstance temp;
+		Item temp;
 		for (int y = 0; y < _items.size(); y++)
 		{
 			temp = _items.get(y);
@@ -244,8 +244,8 @@ public class StoreTradeList
 	public boolean contains(int objId)
 	{
 		boolean bool = false;
-		ItemInstance temp;
-		for (ItemInstance _item : _items)
+		Item temp;
+		for (Item _item : _items)
 		{
 			temp = _item;
 			if (temp.getObjectId() == objId)
@@ -257,12 +257,12 @@ public class StoreTradeList
 		return bool;
 	}
 	
-	public void updateBuyList(PlayerInstance player, List<TradeItem> list)
+	public void updateBuyList(Player player, List<TradeItem> list)
 	{
 		TradeItem temp;
 		int count;
 		final Inventory playersInv = player.getInventory();
-		ItemInstance temp2;
+		Item temp2;
 		count = 0;
 		
 		while (count != list.size())
@@ -283,11 +283,11 @@ public class StoreTradeList
 		}
 	}
 	
-	public void updateSellList(PlayerInstance player, List<TradeItem> list)
+	public void updateSellList(Player player, List<TradeItem> list)
 	{
 		final Inventory playersInv = player.getInventory();
 		TradeItem temp;
-		ItemInstance temp2;
+		Item temp2;
 		int count = 0;
 		while (count != list.size())
 		{

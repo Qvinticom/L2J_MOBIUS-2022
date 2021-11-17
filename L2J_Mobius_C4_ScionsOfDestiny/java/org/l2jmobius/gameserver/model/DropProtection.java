@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 
 /**
  * @author DrHouse
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class DropProtection implements Runnable
 {
 	private volatile boolean _isProtected = false;
-	private PlayerInstance _owner = null;
+	private Player _owner = null;
 	private ScheduledFuture<?> _task = null;
 	
 	private static final long PROTECTED_MILLIS_TIME = 15000;
@@ -46,12 +46,12 @@ public class DropProtection implements Runnable
 		return _isProtected;
 	}
 	
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}
 	
-	public synchronized boolean tryPickUp(PlayerInstance actor)
+	public synchronized boolean tryPickUp(Player actor)
 	{
 		if (!_isProtected)
 		{
@@ -76,7 +76,7 @@ public class DropProtection implements Runnable
 		return false;
 	}
 	
-	public boolean tryPickUp(PetInstance pet)
+	public boolean tryPickUp(Pet pet)
 	{
 		return tryPickUp(pet.getOwner());
 	}
@@ -93,7 +93,7 @@ public class DropProtection implements Runnable
 		_task = null;
 	}
 	
-	public synchronized void protect(PlayerInstance player)
+	public synchronized void protect(Player player)
 	{
 		unprotect();
 		

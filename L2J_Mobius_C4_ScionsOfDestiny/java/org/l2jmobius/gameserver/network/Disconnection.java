@@ -16,16 +16,16 @@
  */
 package org.l2jmobius.gameserver.network;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Nick
  */
 public class Disconnection implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public Disconnection(PlayerInstance player)
+	public Disconnection(Player player)
 	{
 		_player = player;
 	}

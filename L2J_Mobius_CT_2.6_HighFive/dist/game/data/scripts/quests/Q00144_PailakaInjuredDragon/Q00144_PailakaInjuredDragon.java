@@ -33,9 +33,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -212,7 +212,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -435,13 +435,13 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".html";
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		
@@ -519,7 +519,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || (qs.getState() != State.STARTED))
@@ -673,7 +673,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	// Spawns Mage Type silenos behind the one that was killed. Aggro against the player that kill the mob.
-	private void spawnMageBehind(Npc npc, PlayerInstance player, int mageId)
+	private void spawnMageBehind(Npc npc, Player player, int mageId)
 	{
 		final double rads = Math.toRadians(Util.convertHeadingToDegree(npc.getSpawn().getHeading()) + 180);
 		final int mageX = (int) (npc.getX() + (150 * Math.cos(rads)));
@@ -861,7 +861,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				// Every monster on pailaka should be Aggresive and Active, with the same clan, also wall mobs cannot move, they all use magic from far, and if you get in combat range they hit.
 				if (mobId == npc.getId())
 				{
-					final MonsterInstance monster = (MonsterInstance) npc;
+					final Monster monster = (Monster) npc;
 					monster.setImmobilized(true);
 					break;
 				}
@@ -873,7 +873,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (creature.isPlayer() && !creature.isDead() && !creature.isTeleporting() && ((PlayerInstance) creature).isOnline())
+		if (creature.isPlayer() && !creature.isDead() && !creature.isTeleporting() && ((Player) creature).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(creature);
 			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
@@ -897,20 +897,20 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		return super.onEnterZone(creature, zone);
 	}
 	
-	private void dropHerb(Npc mob, PlayerInstance player, int[][] drop)
+	private void dropHerb(Npc mob, Player player, int[][] drop)
 	{
 		final int chance = Rnd.get(100);
 		for (int[] element : drop)
 		{
 			if (chance < element[2])
 			{
-				((MonsterInstance) mob).dropItem(player, element[0], element[1]);
+				((Monster) mob).dropItem(player, element[0], element[1]);
 				return;
 			}
 		}
 	}
 	
-	private void dropItem(Npc mob, PlayerInstance player)
+	private void dropItem(Npc mob, Player player)
 	{
 		// To make random drops, we shuffle the droplist every time its used.
 		Collections.shuffle(DROPLIST);
@@ -918,27 +918,27 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		{
 			if (Rnd.get(100) < drop.getChance())
 			{
-				((MonsterInstance) mob).dropItem(player, drop.getId(), Rnd.get(1, 6));
+				((Monster) mob).dropItem(player, drop.getId(), Rnd.get(1, 6));
 				return;
 			}
 		}
 	}
 	
-	private void giveBuff(Npc npc, PlayerInstance player, int skillId, int level)
+	private void giveBuff(Npc npc, Player player, int skillId, int level)
 	{
 		buff_counter--;
 		npc.setTarget(player);
 		npc.doCast(SkillData.getInstance().getSkill(skillId, level));
 	}
 	
-	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(Player player, int[] coords, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2], true);
 	}
 	
-	private synchronized void enterInstance(PlayerInstance player)
+	private synchronized void enterInstance(Player player)
 	{
 		// Check for existing instances for this player.
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -971,7 +971,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	// Checks if the summon or pet that the player has can be used.
-	private void checkMaxSummonLevel(PlayerInstance player)
+	private void checkMaxSummonLevel(Player player)
 	{
 		final Summon pet = player.getSummon();
 		if ((pet != null) && pet.isPet())

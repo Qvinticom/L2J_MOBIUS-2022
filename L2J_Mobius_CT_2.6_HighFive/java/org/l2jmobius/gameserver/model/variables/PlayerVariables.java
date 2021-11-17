@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author UnAfraid
@@ -142,7 +142,7 @@ public class PlayerVariables extends AbstractVariables
 		return true;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return World.getInstance().getPlayer(_objectId);
 	}

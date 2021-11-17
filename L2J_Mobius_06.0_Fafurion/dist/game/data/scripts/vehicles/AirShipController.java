@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShip;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -104,7 +104,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	protected Movie _movie = null;
 	
 	private boolean _isBusy = false;
-	ControllableAirShipInstance _dockedShip = null;
+	ControllableAirShip _dockedShip = null;
 	private final Runnable _decayTask = new DecayTask();
 	
 	private final Runnable _departTask = new DepartTask();
@@ -120,7 +120,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	private static final SystemMessage SM_NEED_MORE = new SystemMessage(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_YOU_DON_T_HAVE_ENOUGH_S1).addItemName(STARSTONE);
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ("summon".equalsIgnoreCase(event))
 		{
@@ -160,7 +160,7 @@ public abstract class AirShipController extends AbstractNpcAI
 			}
 			
 			_isBusy = true;
-			final AirShipInstance ship = AirShipManager.getInstance().getNewAirShip(_shipSpawnX, _shipSpawnY, _shipSpawnZ, _shipHeading, ownerId);
+			final AirShip ship = AirShipManager.getInstance().getNewAirShip(_shipSpawnX, _shipSpawnY, _shipSpawnZ, _shipHeading, ownerId);
 			if (ship != null)
 			{
 				if (_arrivalPath != null)
@@ -284,9 +284,9 @@ public abstract class AirShipController extends AbstractNpcAI
 	@Override
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if ((creature instanceof ControllableAirShipInstance) && (_dockedShip == null))
+		if ((creature instanceof ControllableAirShip) && (_dockedShip == null))
 		{
-			_dockedShip = (ControllableAirShipInstance) creature;
+			_dockedShip = (ControllableAirShip) creature;
 			_dockedShip.setInDock(_dockZone);
 			_dockedShip.setOustLoc(_oustLoc);
 			
@@ -311,7 +311,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	@Override
 	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if ((creature instanceof ControllableAirShipInstance) && creature.equals(_dockedShip))
+		if ((creature instanceof ControllableAirShip) && creature.equals(_dockedShip))
 		{
 			if (_departSchedule != null)
 			{
@@ -327,7 +327,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -228,7 +228,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(PlayerInstance player)
+	protected boolean checkConditions(Player player)
 	{
 		final Party party = player.getParty();
 		if (party == null)
@@ -246,7 +246,7 @@ public class DarkCloudMansion extends AbstractInstance
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
 			return false;
 		}
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 78)
 			{
@@ -267,7 +267,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -275,7 +275,7 @@ public class DarkCloudMansion extends AbstractInstance
 			final Party party = player.getParty();
 			if (party != null)
 			{
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (partyMember.getQuestState(getName()) == null)
 					{
@@ -740,7 +740,7 @@ public class DarkCloudMansion extends AbstractInstance
 		world.getParameters().remove("FifthRoom");
 	}
 	
-	protected void checkBelethSample(InstanceWorld world, Npc npc, PlayerInstance player)
+	protected void checkBelethSample(InstanceWorld world, Npc npc, Player player)
 	{
 		final DMCRoom fifthRoom = world.getParameters().getObject("FifthRoom", DMCRoom.class);
 		for (DMCNpc mob : fifthRoom.npcList)
@@ -868,7 +868,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (npc == null)
 		{
@@ -930,7 +930,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1008,7 +1008,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1033,7 +1033,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1071,7 +1071,7 @@ public class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (npcId == YIYEN)

@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
@@ -87,7 +87,7 @@ public class SendMessageLocalisationData implements IXmlReader
 		}));
 	}
 	
-	public static String getLocalisation(PlayerInstance player, String message)
+	public static String getLocalisation(Player player, String message)
 	{
 		if (Config.MULTILANG_ENABLE)
 		{

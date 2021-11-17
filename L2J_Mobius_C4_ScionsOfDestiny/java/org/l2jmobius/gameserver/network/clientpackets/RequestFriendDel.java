@@ -23,7 +23,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
@@ -43,7 +43,7 @@ public class RequestFriendDel implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -72,7 +72,7 @@ public class RequestFriendDel implements IClientIncomingPacket
 			player.getFriendList().remove(Integer.valueOf(id));
 			player.sendPacket(new FriendList(player)); // update friendList *heavy method*
 			
-			final PlayerInstance target = World.getInstance().getPlayer(_name);
+			final Player target = World.getInstance().getPlayer(_name);
 			if (target != null)
 			{
 				target.getFriendList().remove(Integer.valueOf(player.getObjectId()));

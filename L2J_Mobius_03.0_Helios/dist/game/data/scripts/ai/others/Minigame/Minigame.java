@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
@@ -68,7 +68,7 @@ public class Minigame extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final MinigameRoom room = getRoomByManager(npc);
 		switch (event)
@@ -197,7 +197,7 @@ public class Minigame extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance talker)
+	public String onFirstTalk(Npc npc, Player talker)
 	{
 		String htmltext = null;
 		final MinigameRoom room = getRoomByManager(npc);
@@ -255,7 +255,7 @@ public class Minigame extends AbstractNpcAI
 	
 	public void onSkillUse(OnCreatureSkillFinishCast event)
 	{
-		final MinigameRoom room = getRoomByParticipant((PlayerInstance) event.getCaster());
+		final MinigameRoom room = getRoomByParticipant((Player) event.getCaster());
 		final boolean miniGameStarted = room.getStarted();
 		if (miniGameStarted && (event.getSkill().getId() == SKILL_TORCH_LIGHT))
 		{
@@ -349,10 +349,10 @@ public class Minigame extends AbstractNpcAI
 	
 	/**
 	 * Retrieve a MinigameRoom by participant
-	 * @param participant the PlayerInstance participating
+	 * @param participant the Player participating
 	 * @return MinigameRoom
 	 */
-	private MinigameRoom getRoomByParticipant(PlayerInstance participant)
+	private MinigameRoom getRoomByParticipant(Player participant)
 	{
 		for (MinigameRoom room : _rooms)
 		{
@@ -372,7 +372,7 @@ public class Minigame extends AbstractNpcAI
 	{
 		private final Npc[] _burners;
 		private final Npc _manager;
-		private PlayerInstance _participant;
+		private Player _participant;
 		private boolean _started;
 		private int _attemptNumber;
 		private int _currentPot;
@@ -438,18 +438,18 @@ public class Minigame extends AbstractNpcAI
 		
 		/**
 		 * Retrieve the current game participant
-		 * @return The PlayerInstance who is participating
+		 * @return The Player who is participating
 		 */
-		public PlayerInstance getParticipant()
+		public Player getParticipant()
 		{
 			return _participant;
 		}
 		
 		/**
 		 * Set the current participant
-		 * @param participant The PlayerInstance participating
+		 * @param participant The Player participating
 		 */
-		public void setParticipant(PlayerInstance participant)
+		public void setParticipant(Player participant)
 		{
 			_participant = participant;
 		}

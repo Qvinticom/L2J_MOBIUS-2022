@@ -21,7 +21,7 @@ import java.util.Collection;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -48,7 +48,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		_isSubPledge = isSubPledge;
 	}
 	
-	public static void sendAllTo(PlayerInstance player)
+	public static void sendAllTo(Player player)
 	{
 		final Clan clan = player.getClan();
 		if (clan != null)
@@ -99,7 +99,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());
 			packet.writeD(m.getClassId());
-			final PlayerInstance player = m.getPlayerInstance();
+			final Player player = m.getPlayer();
 			if (player != null)
 			{
 				packet.writeD(player.getAppearance().isFemale() ? 1 : 0); // no visible effect

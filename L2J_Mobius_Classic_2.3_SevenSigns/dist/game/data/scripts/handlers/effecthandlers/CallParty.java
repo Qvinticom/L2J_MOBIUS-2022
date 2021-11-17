@@ -19,9 +19,9 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -41,7 +41,7 @@ public class CallParty extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final Party party = effector.getParty();
 		if (party == null)
@@ -49,7 +49,7 @@ public class CallParty extends AbstractEffect
 			return;
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (CallPc.checkSummonTargetStatus(partyMember, effector.getActingPlayer()) && (effector != partyMember))
 			{

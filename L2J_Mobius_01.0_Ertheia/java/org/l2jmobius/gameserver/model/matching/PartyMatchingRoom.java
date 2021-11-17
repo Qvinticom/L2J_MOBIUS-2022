@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
@@ -35,13 +35,13 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class PartyMatchingRoom extends MatchingRoom
 {
-	public PartyMatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance leader)
+	public PartyMatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, Player leader)
 	{
 		super(title, loot, minLevel, maxLevel, maxmem, leader);
 	}
 	
 	@Override
-	protected void onRoomCreation(PlayerInstance player)
+	protected void onRoomCreation(Player player)
 	{
 		player.broadcastUserInfo(UserInfoType.CLAN);
 		player.sendPacket(new ListPartyWaiting(PartyMatchingRoomLevelType.ALL, -1, 1, player.getLevel()));
@@ -49,16 +49,16 @@ public class PartyMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	protected void notifyInvalidCondition(PlayerInstance player)
+	protected void notifyInvalidCondition(Player player)
 	{
 		player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
 	}
 	
 	@Override
-	protected void notifyNewMember(PlayerInstance player)
+	protected void notifyNewMember(Player player)
 	{
 		// Update other players
-		for (PlayerInstance member : getMembers())
+		for (Player member : getMembers())
 		{
 			if (member != player)
 			{
@@ -69,7 +69,7 @@ public class PartyMatchingRoom extends MatchingRoom
 		// Send SystemMessage to other players
 		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
 		sm.addPcName(player);
-		for (PlayerInstance member : getMembers())
+		for (Player member : getMembers())
 		{
 			if (member != player)
 			{
@@ -83,7 +83,7 @@ public class PartyMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	protected void notifyRemovedMember(PlayerInstance player, boolean kicked, boolean leaderChanged)
+	protected void notifyRemovedMember(Player player, boolean kicked, boolean leaderChanged)
 	{
 		final SystemMessage sm = new SystemMessage(kicked ? SystemMessageId.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM : SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
 		sm.addPcName(player);
@@ -124,7 +124,7 @@ public class PartyMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	public MatchingMemberType getMemberType(PlayerInstance player)
+	public MatchingMemberType getMemberType(Player player)
 	{
 		if (isLeader(player))
 		{

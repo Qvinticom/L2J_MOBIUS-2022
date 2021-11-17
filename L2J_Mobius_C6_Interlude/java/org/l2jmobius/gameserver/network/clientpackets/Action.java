@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -55,8 +55,8 @@ public class Action implements IClientIncomingPacket
 			return;
 		}
 		
-		// Get the current PlayerInstance of the player
-		final PlayerInstance player = client.getPlayer();
+		// Get the current Player of the player
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,7 +95,7 @@ public class Action implements IClientIncomingPacket
 		}
 		
 		// Only GMs can directly interact with invisible characters
-		if ((obj instanceof PlayerInstance) && (((PlayerInstance) obj).getAppearance().isInvisible()) && !player.isGM())
+		if ((obj instanceof Player) && (((Player) obj).getAppearance().isInvisible()) && !player.isGM())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

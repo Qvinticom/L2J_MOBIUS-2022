@@ -20,25 +20,25 @@ import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author UnAfraid
  */
 public abstract class AbstractRequest
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private volatile long _timestamp = 0;
 	private volatile boolean _isProcessing;
 	private ScheduledFuture<?> _timeOutTask;
 	
-	public AbstractRequest(PlayerInstance player)
+	public AbstractRequest(Player player)
 	{
 		Objects.requireNonNull(player);
 		_player = player;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

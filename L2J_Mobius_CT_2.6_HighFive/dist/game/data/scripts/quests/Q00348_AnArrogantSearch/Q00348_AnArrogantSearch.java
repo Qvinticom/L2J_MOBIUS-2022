@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -118,7 +118,7 @@ public class Q00348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (npc.getId())
 		{
@@ -324,7 +324,7 @@ public class Q00348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -450,7 +450,7 @@ public class Q00348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
 		if ((qs != null) && npc.isInsideRadius3D(player, Config.ALT_PARTY_RANGE))
@@ -611,7 +611,7 @@ public class Q00348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -1417,7 +1417,7 @@ public class Q00348_AnArrogantSearch extends Quest
 		return htmltext;
 	}
 	
-	private void getReward(PlayerInstance player)
+	private void getReward(Player player)
 	{
 		final ClassId playerClassId = player.getClassId();
 		final int playerLevel = player.getLevel();

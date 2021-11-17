@@ -43,15 +43,15 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.EventMonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.EventMonster;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.util.DocumentItem;
 import org.l2jmobius.gameserver.util.GMAudit;
 
@@ -63,7 +63,7 @@ public class ItemTable
 	private static final Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	private static final Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
-	private Item[] _allTemplates;
+	private ItemTemplate[] _allTemplates;
 	private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
 	private final Map<Integer, Armor> _armors = new HashMap<>();
 	private final Map<Integer, Weapon> _weapons = new HashMap<>();
@@ -72,44 +72,44 @@ public class ItemTable
 	public static final Map<String, Integer> SLOTS = new HashMap<>();
 	static
 	{
-		SLOTS.put("shirt", Item.SLOT_UNDERWEAR);
-		SLOTS.put("lbracelet", Item.SLOT_L_BRACELET);
-		SLOTS.put("rbracelet", Item.SLOT_R_BRACELET);
-		SLOTS.put("talisman", Item.SLOT_DECO);
-		SLOTS.put("chest", Item.SLOT_CHEST);
-		SLOTS.put("fullarmor", Item.SLOT_FULL_ARMOR);
-		SLOTS.put("head", Item.SLOT_HEAD);
-		SLOTS.put("hair", Item.SLOT_HAIR);
-		SLOTS.put("hairall", Item.SLOT_HAIRALL);
-		SLOTS.put("underwear", Item.SLOT_UNDERWEAR);
-		SLOTS.put("back", Item.SLOT_BACK);
-		SLOTS.put("neck", Item.SLOT_NECK);
-		SLOTS.put("legs", Item.SLOT_LEGS);
-		SLOTS.put("feet", Item.SLOT_FEET);
-		SLOTS.put("gloves", Item.SLOT_GLOVES);
-		SLOTS.put("chest,legs", Item.SLOT_CHEST | Item.SLOT_LEGS);
-		SLOTS.put("belt", Item.SLOT_BELT);
-		SLOTS.put("rhand", Item.SLOT_R_HAND);
-		SLOTS.put("lhand", Item.SLOT_L_HAND);
-		SLOTS.put("lrhand", Item.SLOT_LR_HAND);
-		SLOTS.put("rear;lear", Item.SLOT_R_EAR | Item.SLOT_L_EAR);
-		SLOTS.put("rfinger;lfinger", Item.SLOT_R_FINGER | Item.SLOT_L_FINGER);
-		SLOTS.put("wolf", Item.SLOT_WOLF);
-		SLOTS.put("greatwolf", Item.SLOT_GREATWOLF);
-		SLOTS.put("hatchling", Item.SLOT_HATCHLING);
-		SLOTS.put("strider", Item.SLOT_STRIDER);
-		SLOTS.put("babypet", Item.SLOT_BABYPET);
-		SLOTS.put("brooch", Item.SLOT_BROOCH);
-		SLOTS.put("brooch_jewel", Item.SLOT_BROOCH_JEWEL);
-		SLOTS.put("none", Item.SLOT_NONE);
+		SLOTS.put("shirt", ItemTemplate.SLOT_UNDERWEAR);
+		SLOTS.put("lbracelet", ItemTemplate.SLOT_L_BRACELET);
+		SLOTS.put("rbracelet", ItemTemplate.SLOT_R_BRACELET);
+		SLOTS.put("talisman", ItemTemplate.SLOT_DECO);
+		SLOTS.put("chest", ItemTemplate.SLOT_CHEST);
+		SLOTS.put("fullarmor", ItemTemplate.SLOT_FULL_ARMOR);
+		SLOTS.put("head", ItemTemplate.SLOT_HEAD);
+		SLOTS.put("hair", ItemTemplate.SLOT_HAIR);
+		SLOTS.put("hairall", ItemTemplate.SLOT_HAIRALL);
+		SLOTS.put("underwear", ItemTemplate.SLOT_UNDERWEAR);
+		SLOTS.put("back", ItemTemplate.SLOT_BACK);
+		SLOTS.put("neck", ItemTemplate.SLOT_NECK);
+		SLOTS.put("legs", ItemTemplate.SLOT_LEGS);
+		SLOTS.put("feet", ItemTemplate.SLOT_FEET);
+		SLOTS.put("gloves", ItemTemplate.SLOT_GLOVES);
+		SLOTS.put("chest,legs", ItemTemplate.SLOT_CHEST | ItemTemplate.SLOT_LEGS);
+		SLOTS.put("belt", ItemTemplate.SLOT_BELT);
+		SLOTS.put("rhand", ItemTemplate.SLOT_R_HAND);
+		SLOTS.put("lhand", ItemTemplate.SLOT_L_HAND);
+		SLOTS.put("lrhand", ItemTemplate.SLOT_LR_HAND);
+		SLOTS.put("rear;lear", ItemTemplate.SLOT_R_EAR | ItemTemplate.SLOT_L_EAR);
+		SLOTS.put("rfinger;lfinger", ItemTemplate.SLOT_R_FINGER | ItemTemplate.SLOT_L_FINGER);
+		SLOTS.put("wolf", ItemTemplate.SLOT_WOLF);
+		SLOTS.put("greatwolf", ItemTemplate.SLOT_GREATWOLF);
+		SLOTS.put("hatchling", ItemTemplate.SLOT_HATCHLING);
+		SLOTS.put("strider", ItemTemplate.SLOT_STRIDER);
+		SLOTS.put("babypet", ItemTemplate.SLOT_BABYPET);
+		SLOTS.put("brooch", ItemTemplate.SLOT_BROOCH);
+		SLOTS.put("brooch_jewel", ItemTemplate.SLOT_BROOCH_JEWEL);
+		SLOTS.put("none", ItemTemplate.SLOT_NONE);
 		
 		// retail compatibility
-		SLOTS.put("onepiece", Item.SLOT_FULL_ARMOR);
-		SLOTS.put("hair2", Item.SLOT_HAIR2);
-		SLOTS.put("dhair", Item.SLOT_HAIRALL);
-		SLOTS.put("alldress", Item.SLOT_ALLDRESS);
-		SLOTS.put("deco1", Item.SLOT_DECO);
-		SLOTS.put("waist", Item.SLOT_BELT);
+		SLOTS.put("onepiece", ItemTemplate.SLOT_FULL_ARMOR);
+		SLOTS.put("hair2", ItemTemplate.SLOT_HAIR2);
+		SLOTS.put("dhair", ItemTemplate.SLOT_HAIRALL);
+		SLOTS.put("alldress", ItemTemplate.SLOT_ALLDRESS);
+		SLOTS.put("deco1", ItemTemplate.SLOT_DECO);
+		SLOTS.put("waist", ItemTemplate.SLOT_BELT);
 	}
 	
 	protected ItemTable()
@@ -138,9 +138,9 @@ public class ItemTable
 		}
 	}
 	
-	private Collection<Item> loadItems()
+	private Collection<ItemTemplate> loadItems()
 	{
-		final Collection<Item> list = ConcurrentHashMap.newKeySet();
+		final Collection<ItemTemplate> list = ConcurrentHashMap.newKeySet();
 		if (Config.THREADS_FOR_LOADING)
 		{
 			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
@@ -182,7 +182,7 @@ public class ItemTable
 		_armors.clear();
 		_etcItems.clear();
 		_weapons.clear();
-		for (Item item : loadItems())
+		for (ItemTemplate item : loadItems())
 		{
 			if (highest < item.getId())
 			{
@@ -216,7 +216,7 @@ public class ItemTable
 	{
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
 		LOGGER.info(getClass().getSimpleName() + ": Highest item id used: " + size);
-		_allTemplates = new Item[size + 1];
+		_allTemplates = new ItemTemplate[size + 1];
 		
 		// Insert armor item in Fast Look Up Table
 		for (Armor item : _armors.values())
@@ -242,7 +242,7 @@ public class ItemTable
 	 * @param id : int designating the item
 	 * @return Item
 	 */
-	public Item getTemplate(int id)
+	public ItemTemplate getTemplate(int id)
 	{
 		if ((id >= _allTemplates.length) || (id < 0))
 		{
@@ -252,21 +252,21 @@ public class ItemTable
 	}
 	
 	/**
-	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity. <b><u>Actions</u>:</b>
-	 * <li>Create and Init the ItemInstance corresponding to the Item Identifier and quantity</li>
-	 * <li>Add the ItemInstance object to _allObjects of L2world</li>
+	 * Create the Item corresponding to the Item Identifier and quantitiy add logs the activity. <b><u>Actions</u>:</b>
+	 * <li>Create and Init the Item corresponding to the Item Identifier and quantity</li>
+	 * <li>Add the Item object to _allObjects of L2world</li>
 	 * <li>Logs Item creation according to log settings</li><br>
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be created
 	 * @param count : int Quantity of items to be created for stackable items
 	 * @param actor : Creature requesting the item creation
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-	 * @return ItemInstance corresponding to the new item
+	 * @return Item corresponding to the new item
 	 */
-	public ItemInstance createItem(String process, int itemId, long count, Creature actor, Object reference)
+	public Item createItem(String process, int itemId, long count, Creature actor, Object reference)
 	{
-		// Create and Init the ItemInstance corresponding to the Item Identifier
-		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
+		// Create and Init the Item corresponding to the Item Identifier
+		final Item item = new Item(IdManager.getInstance().getNextId(), itemId);
 		if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId))
 		{
 			ScheduledFuture<?> itemLootShedule;
@@ -281,7 +281,7 @@ public class ItemTable
 					item.setItemLootShedule(itemLootShedule);
 				}
 			}
-			else if (!Config.AUTO_LOOT || ((reference instanceof EventMonsterInstance) && ((EventMonsterInstance) reference).eventDropOnGround()))
+			else if (!Config.AUTO_LOOT || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround()))
 			{
 				item.setOwnerId(actor.getObjectId());
 				itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
@@ -289,7 +289,7 @@ public class ItemTable
 			}
 		}
 		
-		// Add the ItemInstance object to _allObjects of L2world
+		// Add the Item object to _allObjects of L2world
 		World.getInstance().addObject(item);
 		
 		// Set Item parameters
@@ -354,18 +354,18 @@ public class ItemTable
 		return item;
 	}
 	
-	public ItemInstance createItem(String process, int itemId, int count, PlayerInstance actor)
+	public Item createItem(String process, int itemId, int count, Player actor)
 	{
 		return createItem(process, itemId, count, actor, null);
 	}
 	
 	/**
-	 * Destroys the ItemInstance.<br>
+	 * Destroys the Item.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
-	 * <li>Sets ItemInstance parameters to be unusable</li>
-	 * <li>Removes the ItemInstance object to _allObjects of L2world</li>
+	 * <li>Sets Item parameters to be unusable</li>
+	 * <li>Removes the Item object to _allObjects of L2world</li>
 	 * <li>Logs Item deletion according to log settings</li>
 	 * </ul>
 	 * @param process a string identifier of process triggering this action.
@@ -373,7 +373,7 @@ public class ItemTable
 	 * @param actor the player requesting the item destroy.
 	 * @param reference the object referencing current action like NPC selling item or previous item in transformation.
 	 */
-	public void destroyItem(String process, ItemInstance item, PlayerInstance actor, Object reference)
+	public void destroyItem(String process, Item item, Player actor, Object reference)
 	{
 		synchronized (item)
 		{
@@ -381,7 +381,7 @@ public class ItemTable
 			item.setCount(0);
 			item.setOwnerId(0);
 			item.setItemLocation(ItemLocation.VOID);
-			item.setLastChange(ItemInstance.REMOVED);
+			item.setLastChange(Item.REMOVED);
 			
 			World.getInstance().removeObject(item);
 			IdManager.getInstance().releaseId(item.getObjectId());
@@ -493,7 +493,7 @@ public class ItemTable
 		return _etcItems.values();
 	}
 	
-	public Item[] getAllItems()
+	public ItemTemplate[] getAllItems()
 	{
 		return _allTemplates;
 	}
@@ -505,9 +505,9 @@ public class ItemTable
 	
 	protected static class ResetOwner implements Runnable
 	{
-		ItemInstance _item;
+		Item _item;
 		
-		public ResetOwner(ItemInstance item)
+		public ResetOwner(Item item)
 		{
 			_item = item;
 		}

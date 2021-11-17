@@ -21,7 +21,7 @@ import java.time.Duration;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -49,7 +49,7 @@ public class Tiron extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		addSpawn(CHARGED_CRYSTAL, 149217, 143818, -12206, 49151, false, 0, true, killer.getInstanceId());
 		ThreadPool.schedule(() -> addSpawn(TIRON, getRandomEntry(SPAWNS)), RESPAWN_DELAY.toMillis());

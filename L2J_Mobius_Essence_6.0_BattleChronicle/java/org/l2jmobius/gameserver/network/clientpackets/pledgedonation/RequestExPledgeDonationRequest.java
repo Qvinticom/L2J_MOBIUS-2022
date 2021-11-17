@@ -21,7 +21,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
@@ -47,7 +47,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -121,7 +121,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 		player.sendPacket(new ExPledgeDonationRequest(true, _type, player.getClanDonationPoints()));
 	}
 	
-	private void criticalSuccess(PlayerInstance player, Clan clan, int type)
+	private void criticalSuccess(Player player, Clan clan, int type)
 	{
 		if (type == 1)
 		{

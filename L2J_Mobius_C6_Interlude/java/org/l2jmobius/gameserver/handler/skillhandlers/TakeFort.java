@@ -21,8 +21,8 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
  */
 /*
  * public class TakeFort implements ISkillHandler { //private static final Logger LOGGER = Logger.getLogger(TakeFort.class); //private static final SkillType[] SKILL_TYPES = { SkillType.TAKEFORT }; public void useSkill(Creature creature, @SuppressWarnings("unused") Skill
- * skill, @SuppressWarnings("unused") WorldObject[] targets) { if (activeChar == null || !(activeChar instanceof PlayerInstance)) return; PlayerInstance player = (PlayerInstance)activeChar; if (player.getClan() == null ) return; Fort fort = FortManager.getInstance().getFort(player); if (fort == null
- * || !checkIfOkToCastFlagDisplay(player, fort, true)) return; try { // if(targets[0] instanceof ArtefactInstance) fort.EndOfSiege(player.getClan()); } catch(Exception e) {} } //public SkillType[] getSkillITypes() //{ //return SKILL_TYPES; //}
+ * skill, @SuppressWarnings("unused") WorldObject[] targets) { if (activeChar == null || !(activeChar instanceof Player)) return; Player player = (Player)activeChar; if (player.getClan() == null ) return; Fort fort = FortManager.getInstance().getFort(player); if (fort == null
+ * || !checkIfOkToCastFlagDisplay(player, fort, true)) return; try { // if(targets[0] instanceof Artefact) fort.EndOfSiege(player.getClan()); } catch(Exception e) {} } //public SkillType[] getSkillITypes() //{ //return SKILL_TYPES; //}
  */
 /**
  * Return true if character clan place a flag<br>
@@ -31,8 +31,8 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
  */
 /*
  * public static boolean checkIfOkToCastFlagDisplay(Creature creature, boolean isCheckOnly) { return checkIfOkToCastFlagDisplay(activeChar, FortManager.getInstance().getFort(activeChar), isCheckOnly); } public static boolean checkIfOkToCastFlagDisplay(Creature creature, Fort fort, boolean
- * isCheckOnly) { if (activeChar == null || !(activeChar instanceof PlayerInstance)) return false; SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2ss); PlayerInstance player = (PlayerInstance)activeChar; if (fort == null || fort.getFortId() <= 0)
- * sm.addString("You must be on fort ground to use this skill"); else if (player.getTarget() == null && !(player.getTarget() instanceof ArtefactInstance)) sm.addString("You can only use this skill on an flagpole"); else if (!fort.getSiege().isInProgress())
+ * isCheckOnly) { if (activeChar == null || !(activeChar instanceof Player)) return false; SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2ss); Player player = (Player)activeChar; if (fort == null || fort.getFortId() <= 0)
+ * sm.addString("You must be on fort ground to use this skill"); else if (player.getTarget() == null && !(player.getTarget() instanceof Artefact)) sm.addString("You can only use this skill on an flagpole"); else if (!fort.getSiege().isInProgress())
  * sm.addString("You can only use this skill during a siege."); else if (!Util.checkIfInRange(200, player, player.getTarget(), true)) sm.addString("You are not in range of the flagpole."); else if (fort.getSiege().getAttackerClan(player.getClan()) == null)
  * sm.addString("You must be an attacker to use this skill"); else { if (!isCheckOnly) fort.getSiege().announceToPlayer("Clan " + player.getClan().getName() + " has begun to raise flag.", true); return true; } if (!isCheckOnly) { player.sendPacket(sm); } return false; } }
  */

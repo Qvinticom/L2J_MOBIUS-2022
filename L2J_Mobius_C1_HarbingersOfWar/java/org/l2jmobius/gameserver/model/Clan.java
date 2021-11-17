@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
 
 public class Clan
@@ -83,7 +83,7 @@ public class Clan
 		_members.put(member.getName(), member);
 	}
 	
-	public void addClanMember(PlayerInstance player)
+	public void addClanMember(Player player)
 	{
 		final ClanMember member = new ClanMember(player);
 		this.addClanMember(member);
@@ -104,16 +104,16 @@ public class Clan
 		return _members.values();
 	}
 	
-	public Collection<PlayerInstance> getOnlineMembers(String exclude)
+	public Collection<Player> getOnlineMembers(String exclude)
 	{
-		final List<PlayerInstance> result = new ArrayList<>();
+		final List<Player> result = new ArrayList<>();
 		for (ClanMember member : _members.values())
 		{
 			if (!member.isOnline() || member.getName().equals(exclude))
 			{
 				continue;
 			}
-			result.add(member.getPlayerInstance());
+			result.add(member.getPlayer());
 		}
 		return result;
 	}
@@ -249,7 +249,7 @@ public class Clan
 			{
 				continue;
 			}
-			member.getPlayerInstance().sendPacket(packet);
+			member.getPlayer().sendPacket(packet);
 		}
 	}
 	

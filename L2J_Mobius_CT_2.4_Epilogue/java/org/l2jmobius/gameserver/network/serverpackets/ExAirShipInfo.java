@@ -17,13 +17,13 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExAirShipInfo implements IClientOutgoingPacket
 {
 	// store some parameters, because they can be changed during broadcast
-	private final AirShipInstance _ship;
+	private final AirShip _ship;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -33,7 +33,7 @@ public class ExAirShipInfo implements IClientOutgoingPacket
 	private final int _captain;
 	private final int _helm;
 	
-	public ExAirShipInfo(AirShipInstance ship)
+	public ExAirShipInfo(AirShip ship)
 	{
 		_ship = ship;
 		_x = ship.getX();

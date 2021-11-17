@@ -20,12 +20,12 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 public class MonsterKnownList extends AttackableKnownList
 {
-	public MonsterKnownList(MonsterInstance activeChar)
+	public MonsterKnownList(Monster activeChar)
 	{
 		super(activeChar);
 	}
@@ -44,8 +44,8 @@ public class MonsterKnownList extends AttackableKnownList
 			return false;
 		}
 		
-		// Set the MonsterInstance Intention to AI_INTENTION_ACTIVE if the state was AI_INTENTION_IDLE
-		if ((object instanceof PlayerInstance) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		// Set the Monster Intention to AI_INTENTION_ACTIVE if the state was AI_INTENTION_IDLE
+		if ((object instanceof Player) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
 			getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 		}
@@ -68,13 +68,13 @@ public class MonsterKnownList extends AttackableKnownList
 		
 		if (getActiveChar().hasAI())
 		{
-			// Notify the MonsterInstance AI with EVT_FORGET_OBJECT
+			// Notify the Monster AI with EVT_FORGET_OBJECT
 			getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
 		}
 		
 		if (getActiveChar().isSpawned() && getKnownPlayers().isEmpty())
 		{
-			// Clear the _aggroList of the MonsterInstance
+			// Clear the _aggroList of the Monster
 			getActiveChar().clearAggroList();
 		}
 		
@@ -82,8 +82,8 @@ public class MonsterKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public MonsterInstance getActiveChar()
+	public Monster getActiveChar()
 	{
-		return (MonsterInstance) super.getActiveChar();
+		return (Monster) super.getActiveChar();
 	}
 }

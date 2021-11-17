@@ -47,10 +47,10 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.clanhalls.ClanHallSiegeEngine;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegeStatus;
@@ -109,7 +109,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 					if ((clan != null) && (_acceptedClans.size() < 4))
 					{
 						_acceptedClans.add(clan);
-						final PlayerInstance leader = clan.getLeader().getPlayerInstance();
+						final Player leader = clan.getLeader().getPlayer();
 						if (leader != null)
 						{
 							leader.sendMessage("Your clan has been accepted to join the RainBow Srpings Chateau siege!");
@@ -300,7 +300,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String html = "";
 		final int npcId = npc.getId();
@@ -353,7 +353,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String html = event;
 		final Clan clan = player.getClan();
@@ -387,7 +387,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 						}
 						else
 						{
-							final ItemInstance warDecrees = player.getInventory().getItemByItemId(WAR_DECREES);
+							final Item warDecrees = player.getInventory().getItemByItemId(WAR_DECREES);
 							if (warDecrees == null)
 							{
 								html = "messenger_yetti008.htm";
@@ -474,7 +474,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 					{
 						final int clanId = player.getClanId();
 						boolean nonClanMemberInParty = false;
-						for (PlayerInstance member : party.getMembers())
+						for (Player member : party.getMembers())
 						{
 							if (member.getClanId() != clanId)
 							{
@@ -597,7 +597,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (!_rainbow.isInSiege())
 		{
@@ -632,7 +632,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onItemUse(Item item, PlayerInstance player)
+	public String onItemUse(ItemTemplate item, Player player)
 	{
 		if (!_rainbow.isInSiege())
 		{
@@ -659,7 +659,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		
 		// Nectar must spawn the enraged yeti. Dunno if it makes any other thing
 		// Also, the items must execute:
-		// - Reduce gourd hpb ( reduceGourdHp(int, PlayerInstance) )
+		// - Reduce gourd hpb ( reduceGourdHp(int, Player) )
 		// - Cast debuffs on enemy clans ( castDebuffsOnEnemies(int) )
 		// - Change arena gourds ( moveGourds() )
 		// - Increase gourd hp ( increaseGourdHp(int) )
@@ -685,14 +685,14 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		return null;
 	}
 	
-	private void portToArena(PlayerInstance leader, int arena)
+	private void portToArena(Player leader, int arena)
 	{
 		if ((arena < 0) || (arena > 3))
 		{
 			LOGGER.warning("RainbowSptringChateau siege: Wrong arena id passed: " + arena);
 			return;
 		}
-		for (PlayerInstance pc : leader.getParty().getMembers())
+		for (Player pc : leader.getParty().getMembers())
 		{
 			if (pc != null)
 			{
@@ -751,7 +751,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	private void reduceGourdHp(int index, PlayerInstance player)
+	private void reduceGourdHp(int index, Player player)
 	{
 		final Spawn gourd = _gourds[index];
 		gourd.getLastSpawn().reduceCurrentHp(1000, player, null);

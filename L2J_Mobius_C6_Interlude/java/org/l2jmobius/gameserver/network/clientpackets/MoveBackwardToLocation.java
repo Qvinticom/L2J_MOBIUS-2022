@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -61,7 +61,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			// Ignore for now
 			if (Config.L2WALKER_PROTECTION)
 			{
-				final PlayerInstance player = client.getPlayer();
+				final Player player = client.getPlayer();
 				player.sendPacket(SystemMessageId.A_HACKING_TOOL_HAS_BEEN_DISCOVERED_PLEASE_TRY_PLAYING_AGAIN_AFTER_CLOSING_UNNECESSARY_PROGRAMS);
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
 			}
@@ -73,7 +73,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;

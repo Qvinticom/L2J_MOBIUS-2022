@@ -19,21 +19,21 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class ItemList extends ServerBasePacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	private final boolean _showWindow;
 	
-	public ItemList(PlayerInstance cha, boolean showWindow)
+	public ItemList(Player cha, boolean showWindow)
 	{
 		_items = cha.getInventory().getItems();
 		_showWindow = showWindow;
 	}
 	
-	public ItemList(Collection<ItemInstance> items, boolean showWindow)
+	public ItemList(Collection<Item> items, boolean showWindow)
 	{
 		_items = items;
 		_showWindow = showWindow;
@@ -52,7 +52,7 @@ public class ItemList extends ServerBasePacket
 			writeH(0);
 		}
 		writeH(_items.size());
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -44,13 +44,13 @@ public class ConditionItem extends Condition
 	}
 	
 	@Override
-	protected boolean test(PlayerInstance player, Npc npc)
+	protected boolean test(Player player, Npc npc)
 	{
 		return player.getInventory().getInventoryItemCount(_itemId, -1) >= _count;
 	}
 	
 	@Override
-	protected void onSuccess(PlayerInstance player)
+	protected void onSuccess(Player player)
 	{
 		if (_take)
 		{

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -30,10 +30,10 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class SSQStatus implements IClientOutgoingPacket
 {
-	private final PlayerInstance _activevChar;
+	private final Player _activevChar;
 	private final int _page;
 	
-	public SSQStatus(PlayerInstance player, int recordPage)
+	public SSQStatus(Player player, int recordPage)
 	{
 		_activevChar = player;
 		_page = recordPage;

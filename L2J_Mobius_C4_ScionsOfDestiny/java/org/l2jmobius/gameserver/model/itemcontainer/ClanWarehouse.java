@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.itemcontainer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
 
 public class ClanWarehouse extends Warehouse
 {
@@ -37,9 +37,9 @@ public class ClanWarehouse extends Warehouse
 	}
 	
 	@Override
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
-		return _clan.getLeader().getPlayerInstance();
+		return _clan.getLeader().getPlayer();
 	}
 	
 	@Override

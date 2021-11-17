@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -37,7 +37,7 @@ public class SkillCharge extends Skill
 	@Override
 	public boolean checkCondition(Creature creature, WorldObject target, boolean itemOrWeapon)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			final EffectCharge e = (EffectCharge) creature.getFirstEffect(this);
 			if ((e != null) && (e.numCharges >= getNumCharges()))
@@ -62,9 +62,9 @@ public class SkillCharge extends Skill
 		
 		// get the effect
 		EffectCharge effect = null;
-		if (caster instanceof PlayerInstance)
+		if (caster instanceof Player)
 		{
-			effect = ((PlayerInstance) caster).getChargeEffect();
+			effect = ((Player) caster).getChargeEffect();
 		}
 		else
 		{
@@ -76,7 +76,7 @@ public class SkillCharge extends Skill
 			if (effect.numCharges < getNumCharges())
 			{
 				effect.numCharges++;
-				if (caster instanceof PlayerInstance)
+				if (caster instanceof Player)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 					sm.addNumber(effect.numCharges);

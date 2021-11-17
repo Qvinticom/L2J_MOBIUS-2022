@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -32,10 +32,10 @@ public class RequestGiveNickName extends ClientBasePacket
 		final String target = readS();
 		final String title = readS();
 		// Connection con = client.getConnection();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (activeChar.isClanLeader())
 		{
-			PlayerInstance member;
+			Player member;
 			if (activeChar.getClan().getLevel() < 3)
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_LEVEL_3_NEEDED_TO_ENDOVE_TITLE));

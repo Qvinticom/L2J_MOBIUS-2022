@@ -30,10 +30,10 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.SeedProduction;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -77,7 +77,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -108,7 +108,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		}
 		
 		final Npc manager = player.getLastFolkNPC();
-		if (!(manager instanceof MerchantInstance) || !manager.canInteract(player) || (manager.getTemplate().getParameters().getInt("manor_id", -1) != _manorId))
+		if (!(manager instanceof Merchant) || !manager.canInteract(player) || (manager.getTemplate().getParameters().getInt("manor_id", -1) != _manorId))
 		{
 			client.sendActionFailed();
 			return;
@@ -138,7 +138,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			}
 			
 			// Calculate weight
-			final Item template = ItemTable.getInstance().getTemplate(ih.getId());
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(ih.getId());
 			totalWeight += ih.getCount() * template.getWeight();
 			
 			// Calculate slots

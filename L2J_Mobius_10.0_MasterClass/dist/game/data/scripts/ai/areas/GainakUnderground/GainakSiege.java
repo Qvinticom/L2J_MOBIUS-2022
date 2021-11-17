@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -88,7 +88,7 @@ public class GainakSiege extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("GAINAK_WAR"))
 		{
@@ -134,7 +134,7 @@ public class GainakSiege extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final SiegeZone zone = ZoneManager.getInstance().getZone(npc, SiegeZone.class);
 		if ((zone != null) && (zone.getId() == 60019) && zone.isActive())
@@ -166,7 +166,7 @@ public class GainakSiege extends AbstractNpcAI
 	{
 		if (_isInSiege && GAINAK_SIEGE_ZONE.getCharactersInside().contains(event.getTarget()) && event.getAttacker().isPlayer() && event.getTarget().isPlayer())
 		{
-			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
+			final Player attackerPlayer = event.getAttacker().getActingPlayer();
 			attackerPlayer.setPvpKills(attackerPlayer.getPvpKills() + 1);
 			attackerPlayer.sendPacket(new UserInfo(attackerPlayer));
 		}

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -41,7 +41,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String comm = st.nextToken();
@@ -56,7 +56,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					PlayerInstance player = null;
+					Player player = null;
 					final String playername = st.nextToken();
 					player = World.getInstance().getPlayer(playername);
 					if (player != null)
@@ -67,9 +67,9 @@ public class AdminBuffs implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online");
 					return false;
 				}
-				else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof PlayerInstance))
+				else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof Player))
 				{
-					showBuffs((PlayerInstance) activeChar.getTarget(), activeChar);
+					showBuffs((Player) activeChar.getTarget(), activeChar);
 					return true;
 				}
 				else
@@ -146,7 +146,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					{
 						for (Creature knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 						{
-							if ((knownChar instanceof PlayerInstance) && !knownChar.equals(activeChar))
+							if ((knownChar instanceof Player) && !knownChar.equals(activeChar))
 							{
 								knownChar.stopAllEffects();
 							}
@@ -171,7 +171,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public void showBuffs(PlayerInstance player, PlayerInstance activeChar)
+	public void showBuffs(Player player, Player activeChar)
 	{
 		final StringBuilder html = new StringBuilder();
 		html.append("<html><center><font color=\"LEVEL\">Effects of " + player.getName() + "</font><center><br>");
@@ -197,9 +197,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		activeChar.sendPacket(ms);
 	}
 	
-	private void removeBuff(PlayerInstance remover, String playername, int SkillId)
+	private void removeBuff(Player remover, String playername, int SkillId)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(playername);
+		final Player player = World.getInstance().getPlayer(playername);
 		if ((player != null) && (SkillId > 0))
 		{
 			final Effect[] effects = player.getAllEffects().toArray(new Effect[0]);
@@ -215,9 +215,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void removeAllBuffs(PlayerInstance remover, String playername)
+	private void removeAllBuffs(Player remover, String playername)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(playername);
+		final Player player = World.getInstance().getPlayer(playername);
 		if (player != null)
 		{
 			player.stopAllEffects();

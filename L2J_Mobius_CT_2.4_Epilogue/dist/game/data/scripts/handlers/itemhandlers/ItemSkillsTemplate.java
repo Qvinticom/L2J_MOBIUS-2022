@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ItemSkillsTemplate implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer() && !playable.isPet())
 		{
@@ -145,7 +145,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * @param hasConsumeSkill
 	 * @return {@code true} check if item use consume item, {@code false} otherwise
 	 */
-	private boolean checkConsume(ItemInstance item, boolean hasConsumeSkill)
+	private boolean checkConsume(Item item, boolean hasConsumeSkill)
 	{
 		switch (item.getItem().getDefaultAction())
 		{
@@ -167,7 +167,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * @param item the item being used
 	 * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
 	 */
-	private boolean checkReuse(Playable playable, Skill skill, ItemInstance item)
+	private boolean checkReuse(Playable playable, Skill skill, Item item)
 	{
 		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;

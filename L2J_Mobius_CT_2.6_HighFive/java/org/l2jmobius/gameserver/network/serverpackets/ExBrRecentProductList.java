@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -37,7 +37,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 {
 	private final List<PrimeShopProductHolder> _itemList = new ArrayList<>();
 	
-	public ExBrRecentProductList(PlayerInstance player)
+	public ExBrRecentProductList(Player player)
 	{
 		final int playerObj = player.getObjectId();
 		

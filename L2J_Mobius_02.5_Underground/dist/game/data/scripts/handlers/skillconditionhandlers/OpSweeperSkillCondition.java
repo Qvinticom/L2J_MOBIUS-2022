@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public class OpSweeperSkillCondition implements ISkillCondition
 		boolean canSweep = false;
 		if (caster.getActingPlayer() != null)
 		{
-			final PlayerInstance sweeper = caster.getActingPlayer();
+			final Player sweeper = caster.getActingPlayer();
 			if (skill != null)
 			{
 				for (WorldObject wo : skill.getTargetsAffected(sweeper, target))

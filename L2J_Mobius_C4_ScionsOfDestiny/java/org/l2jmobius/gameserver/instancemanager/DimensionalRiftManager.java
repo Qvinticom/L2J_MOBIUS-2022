@@ -41,10 +41,10 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.DimensionalRift;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
@@ -278,13 +278,13 @@ public class DimensionalRiftManager
 		return _rooms.get((byte) 0).get((byte) 0).checkIfInZone(x, y, z);
 	}
 	
-	public void teleportToWaitingRoom(PlayerInstance player)
+	public void teleportToWaitingRoom(Player player)
 	{
 		final int[] coords = getRoom((byte) 0, (byte) 0).getTeleportCoords();
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	public void start(PlayerInstance player, byte type, NpcInstance npc)
+	public void start(Player player, byte type, Npc npc)
 	{
 		boolean canPass = true;
 		if (!player.isInParty())
@@ -321,7 +321,7 @@ public class DimensionalRiftManager
 			return;
 		}
 		
-		for (PlayerInstance p : player.getParty().getPartyMembers())
+		for (Player p : player.getParty().getPartyMembers())
 		{
 			if (!checkIfInPeaceZone(p.getX(), p.getY(), p.getZ()))
 			{
@@ -335,8 +335,8 @@ public class DimensionalRiftManager
 			return;
 		}
 		
-		ItemInstance i;
-		for (PlayerInstance p : player.getParty().getPartyMembers())
+		Item i;
+		for (Player p : player.getParty().getPartyMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 			if (i == null)
@@ -361,7 +361,7 @@ public class DimensionalRiftManager
 			return;
 		}
 		
-		for (PlayerInstance p : player.getParty().getPartyMembers())
+		for (Player p : player.getParty().getPartyMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 			p.destroyItem("RiftEntrance", i.getObjectId(), getNeededItems(type), null, false);
@@ -417,7 +417,7 @@ public class DimensionalRiftManager
 		private final Shape _s;
 		private final boolean _isBossRoom;
 		private final List<Spawn> _roomSpawns;
-		protected final List<NpcInstance> _roomMobs;
+		protected final List<Npc> _roomMobs;
 		private boolean _isUsed = false;
 		
 		public DimensionalRiftRoom(byte type, byte room, int xMin, int xMax, int yMin, int yMax, int zMin, int zMax, int xT, int yT, int zT, boolean isBossRoom)
@@ -555,7 +555,7 @@ public class DimensionalRiftManager
 		}
 	}
 	
-	public void showHtmlFile(PlayerInstance player, String file, NpcInstance npc)
+	public void showHtmlFile(Player player, String file, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(file);
@@ -563,7 +563,7 @@ public class DimensionalRiftManager
 		player.sendPacket(html);
 	}
 	
-	public void handleCheat(PlayerInstance player, NpcInstance npc)
+	public void handleCheat(Player player, Npc npc)
 	{
 		showHtmlFile(player, "data/html/seven_signs/rift/Cheater.htm", npc);
 		if (!player.isGM())

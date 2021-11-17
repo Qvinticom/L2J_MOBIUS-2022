@@ -31,8 +31,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Decoy;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -61,7 +61,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -83,14 +83,14 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		getSkillAI(npc);
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		startQuestTimer("random_Target", 5000, npc, null, true);
 		startQuestTimer("attack", 500, npc, null, true);
@@ -98,7 +98,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		cancelQuestTimers("attack");
 		cancelQuestTimers("random_Target");
@@ -213,7 +213,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		final List<Creature> result = new ArrayList<>();
 		for (WorldObject obj : World.getInstance().getVisibleObjects(npc, WorldObject.class))
 		{
-			if (obj.isPlayable() || (obj instanceof DecoyInstance))
+			if (obj.isPlayable() || (obj instanceof Decoy))
 			{
 				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 				{
@@ -225,7 +225,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 					continue;
 				}
 			}
-			if (obj.isPlayable() || (obj instanceof DecoyInstance))
+			if (obj.isPlayable() || (obj instanceof Decoy))
 			{
 				int skillRange = 150;
 				if (skill != null)

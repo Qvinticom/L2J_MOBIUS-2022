@@ -23,14 +23,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class PlayerAutoSaveTaskManager implements Runnable
 {
-	private static final Map<PlayerInstance, Long> PLAYER_TIMES = new ConcurrentHashMap<>();
+	private static final Map<Player, Long> PLAYER_TIMES = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
 	protected PlayerAutoSaveTaskManager()
@@ -48,11 +48,11 @@ public class PlayerAutoSaveTaskManager implements Runnable
 		_working = true;
 		
 		final long time = Chronos.currentTimeMillis();
-		SEARCH: for (Entry<PlayerInstance, Long> entry : PLAYER_TIMES.entrySet())
+		SEARCH: for (Entry<Player, Long> entry : PLAYER_TIMES.entrySet())
 		{
 			if (time > entry.getValue().longValue())
 			{
-				final PlayerInstance player = entry.getKey();
+				final Player player = entry.getKey();
 				if ((player != null) && player.isOnline())
 				{
 					player.autoSave();
@@ -65,12 +65,12 @@ public class PlayerAutoSaveTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(PlayerInstance player)
+	public void add(Player player)
 	{
 		PLAYER_TIMES.put(player, Chronos.currentTimeMillis() + Config.CHAR_DATA_STORE_INTERVAL);
 	}
 	
-	public void remove(PlayerInstance player)
+	public void remove(Player player)
 	{
 		PLAYER_TIMES.remove(player);
 	}

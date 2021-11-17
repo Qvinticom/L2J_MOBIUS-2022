@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -166,7 +166,7 @@ public class NornilsGarden extends AbstractInstance
 	};
 	// @formatter:on
 	
-	private void dropHerb(Npc mob, PlayerInstance player, int[][] drop)
+	private void dropHerb(Npc mob, Player player, int[][] drop)
 	{
 		final int chance = getRandom(100);
 		for (int[] element : drop)
@@ -217,7 +217,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public void teleportPlayer(PlayerInstance player, Location loc, int instanceId)
+	public void teleportPlayer(Player player, Location loc, int instanceId)
 	{
 		giveBuffs(player);
 		if (player.hasSummon())
@@ -227,7 +227,7 @@ public class NornilsGarden extends AbstractInstance
 		super.teleportPlayer(player, loc, instanceId);
 	}
 	
-	private void exitInstance(PlayerInstance player)
+	private void exitInstance(Player player)
 	{
 		final InstanceWorld inst = InstanceManager.getInstance().getWorld(player);
 		if (inst instanceof NornilsWorld)
@@ -238,7 +238,7 @@ public class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private final synchronized String enterInstance(Npc npc, PlayerInstance player)
+	private final synchronized String enterInstance(Npc npc, Player player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -282,7 +282,7 @@ public class NornilsGarden extends AbstractInstance
 		final int instanceId = newWorld.getInstanceId();
 		LOGGER.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
 		newWorld.first_npc = addSpawn(18362, -109702, 74696, -12528, 49568, false, 0, false, newWorld.getInstanceId());
-		final DoorInstance door = instance.getDoor(16200010);
+		final Door door = instance.getDoor(16200010);
 		if (door != null)
 		{
 			door.setTargetable(false);
@@ -293,7 +293,7 @@ public class NornilsGarden extends AbstractInstance
 		final Party party = player.getParty();
 		if (party != null)
 		{
-			for (PlayerInstance partyMember : party.getMembers())
+			for (Player partyMember : party.getMembers())
 			{
 				newWorld.addAllowed(partyMember);
 				teleportPlayer(partyMember, SPAWN_PPL, instanceId);
@@ -370,7 +370,7 @@ public class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	public void openDoor(QuestState st, PlayerInstance player, int doorId)
+	public void openDoor(QuestState st, Player player, int doorId)
 	{
 		st.unset("correct");
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
@@ -380,7 +380,7 @@ public class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private static String checkConditions(Npc npc, PlayerInstance player)
+	private static String checkConditions(Npc npc, Player player)
 	{
 		final Party party = player.getParty();
 		// player must be in party
@@ -397,7 +397,7 @@ public class NornilsGarden extends AbstractInstance
 		}
 		boolean kamael = false;
 		// for each party member
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			// player level must be in range
 			if (partyMember.getLevel() > INSTANCE_LEVEL_MAX)
@@ -455,7 +455,7 @@ public class NornilsGarden extends AbstractInstance
 	@Override
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (creature.isPlayer() && !creature.isDead() && !creature.isTeleporting() && ((PlayerInstance) creature).isOnline())
+		if (creature.isPlayer() && !creature.isDead() && !creature.isTeleporting() && ((Player) creature).isOnline())
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(creature);
 			if (tmpworld instanceof NornilsWorld)
@@ -481,7 +481,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = getQuestState(player, false);
@@ -550,7 +550,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (CommonUtil.contains(FINAL_GATES, npc.getId()))
 		{
@@ -565,14 +565,14 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		getQuestState(player, true);
 		return npc.getId() + ".html";
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getId() == HERB_JAR) && !npc.isDead())
 		{
@@ -588,7 +588,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -622,7 +622,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		// Managed by script.
 	}

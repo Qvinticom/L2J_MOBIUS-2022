@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -54,7 +54,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -77,7 +77,7 @@ public class Lindvior extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 4000, pl ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 4000, pl ->
 					{
 						if ((pl.getZ() >= 1100) && (pl.getZ() <= 3100))
 						{

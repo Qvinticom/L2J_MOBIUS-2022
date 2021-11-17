@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -33,10 +33,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class AcquireSkillList implements IClientOutgoingPacket
 {
-	private PlayerInstance _player;
+	private Player _player;
 	private Collection<SkillLearn> _learnable;
 	
-	public AcquireSkillList(PlayerInstance player)
+	public AcquireSkillList(Player player)
 	{
 		if (!player.isSubclassLocked()) // Changing class.
 		{

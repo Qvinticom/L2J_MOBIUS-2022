@@ -23,7 +23,7 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -41,7 +41,7 @@ public class PartyMemberPosition implements IClientOutgoingPacket
 	public void reuse(Party party)
 	{
 		_locations.clear();
-		for (PlayerInstance member : party.getPartyMembers())
+		for (Player member : party.getPartyMembers())
 		{
 			if (member == null)
 			{

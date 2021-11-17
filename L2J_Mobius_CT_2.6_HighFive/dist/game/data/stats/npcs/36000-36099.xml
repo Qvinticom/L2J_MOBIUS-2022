@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="36000" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="36000" level="80" type="Folk" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -88,7 +88,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36001" level="75" type="Npc" name="Mercenary Private">
+	<npc id="36001" level="75" type="Folk" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -137,7 +137,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36002" level="20" type="Npc" name="Flagpole">
+	<npc id="36002" level="20" type="Folk" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -216,7 +216,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36004" level="75" type="Npc" name="Suspicious Merchant" title="Archaic Fortress">
+	<npc id="36004" level="75" type="Folk" name="Suspicious Merchant" title="Archaic Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -256,7 +256,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36005" level="75" type="Npc" name="Guard Captain" title="Archaic Fortress">
+	<npc id="36005" level="75" type="Folk" name="Guard Captain" title="Archaic Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -303,7 +303,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36006" level="75" type="Npc" name="Archer Captain" title="Archaic Fortress">
+	<npc id="36006" level="75" type="Folk" name="Archer Captain" title="Archaic Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -343,7 +343,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36007" level="75" type="Npc" name="Support Unit Captain" title="Archaic Fortress">
+	<npc id="36007" level="75" type="Folk" name="Support Unit Captain" title="Archaic Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -383,7 +383,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36008" level="75" type="Npc" name="Engineering Manager" title="Archaic Fortress">
+	<npc id="36008" level="75" type="Folk" name="Engineering Manager" title="Archaic Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -482,7 +482,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36010" level="80" type="Npc" name="Supply Box">
+	<npc id="36010" level="80" type="Folk" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -519,7 +519,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36011" level="75" type="Npc" name="Detention Camp Warden" title="Archaic Fortress">
+	<npc id="36011" level="75" type="Folk" name="Detention Camp Warden" title="Archaic Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1012,7 +1012,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36020" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36020" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1690,7 +1690,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36031" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="36031" level="80" type="Folk" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1778,7 +1778,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36032" level="75" type="Npc" name="Mercenary Private">
+	<npc id="36032" level="75" type="Folk" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1827,7 +1827,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36033" level="20" type="Npc" name="Flagpole">
+	<npc id="36033" level="20" type="Folk" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1905,7 +1905,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36035" level="75" type="Npc" name="Suspicious Merchant" title="Floran Fortress">
+	<npc id="36035" level="75" type="Folk" name="Suspicious Merchant" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1945,7 +1945,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36036" level="75" type="Npc" name="Guard Captain" title="Floran Fortress">
+	<npc id="36036" level="75" type="Folk" name="Guard Captain" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1992,7 +1992,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36037" level="75" type="Npc" name="Archer Captain" title="Floran Fortress">
+	<npc id="36037" level="75" type="Folk" name="Archer Captain" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2032,7 +2032,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36038" level="75" type="Npc" name="General" title="Floran Fortress">
+	<npc id="36038" level="75" type="Folk" name="General" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2073,7 +2073,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36039" level="75" type="Npc" name="Support Unit Captain" title="Floran Fortress">
+	<npc id="36039" level="75" type="Folk" name="Support Unit Captain" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2113,7 +2113,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36040" level="75" type="Npc" name="Engineering Manager" title="Floran Fortress">
+	<npc id="36040" level="75" type="Folk" name="Engineering Manager" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2212,7 +2212,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36042" level="80" type="Npc" name="Supply Box">
+	<npc id="36042" level="80" type="Folk" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2249,7 +2249,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36043" level="75" type="Npc" name="Detention Camp Warden" title="Floran Fortress">
+	<npc id="36043" level="75" type="Folk" name="Detention Camp Warden" title="Floran Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2739,7 +2739,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36052" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="36052" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -2789,7 +2789,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36053" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="36053" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="broadcast_range" value="2000" />
@@ -2834,7 +2834,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36054" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="36054" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -2883,7 +2883,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36055" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36055" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3751,7 +3751,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36069" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="36069" level="80" type="Folk" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3839,7 +3839,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36070" level="75" type="Npc" name="Mercenary Private">
+	<npc id="36070" level="75" type="Folk" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3888,7 +3888,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36071" level="20" type="Npc" name="Flagpole">
+	<npc id="36071" level="20" type="Folk" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3966,7 +3966,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36073" level="75" type="Npc" name="Suspicious Merchant" title="Cloud Mountain">
+	<npc id="36073" level="75" type="Folk" name="Suspicious Merchant" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4006,7 +4006,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36074" level="75" type="Npc" name="Guard Captain" title="Cloud Mountain">
+	<npc id="36074" level="75" type="Folk" name="Guard Captain" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4053,7 +4053,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36075" level="75" type="Npc" name="Archer Captain" title="Cloud Mountain">
+	<npc id="36075" level="75" type="Folk" name="Archer Captain" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4093,7 +4093,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36076" level="75" type="Npc" name="General" title="Cloud Mountain">
+	<npc id="36076" level="75" type="Folk" name="General" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4134,7 +4134,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36077" level="75" type="Npc" name="Support Unit Captain" title="Cloud Mountain">
+	<npc id="36077" level="75" type="Folk" name="Support Unit Captain" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4174,7 +4174,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36078" level="75" type="Npc" name="Engineering Manager" title="Cloud Mountain">
+	<npc id="36078" level="75" type="Folk" name="Engineering Manager" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4273,7 +4273,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36080" level="80" type="Npc" name="Supply Box">
+	<npc id="36080" level="80" type="Folk" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4310,7 +4310,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36081" level="75" type="Npc" name="Detention Camp Warden" title="Cloud Mountain">
+	<npc id="36081" level="75" type="Folk" name="Detention Camp Warden" title="Cloud Mountain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4800,7 +4800,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36090" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="36090" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -4850,7 +4850,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36091" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="36091" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="broadcast_range" value="2000" />
@@ -4895,7 +4895,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36092" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="36092" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -4944,7 +4944,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36093" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36093" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>

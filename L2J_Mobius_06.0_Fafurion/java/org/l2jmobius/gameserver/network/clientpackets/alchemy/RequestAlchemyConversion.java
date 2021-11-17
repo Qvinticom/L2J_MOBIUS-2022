@@ -22,12 +22,12 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.AlchemyData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.alchemy.AlchemyCraftData;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -63,7 +63,7 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
 			return;
@@ -135,8 +135,8 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		}
 		
 		// Calculate success and failure count.
-		final Item successItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionSuccess().getId());
-		final Item failureItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionFailure().getId());
+		final ItemTemplate successItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionSuccess().getId());
+		final ItemTemplate failureItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionFailure().getId());
 		int totalWeight = 0;
 		int totalslots = (successItemTemplate.isStackable() ? 1 : 0) + (failureItemTemplate.isStackable() ? 1 : 0);
 		int successCount = 0;
@@ -182,20 +182,20 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		// Destroy ingredients.
 		for (ItemHolder ingredient : data.getIngredients())
 		{
-			final ItemInstance item = player.getInventory().getItemByItemId(ingredient.getId());
+			final Item item = player.getInventory().getItemByItemId(ingredient.getId());
 			ui.addItem(item);
 			player.getInventory().destroyItem("Alchemy", item, ingredient.getCount() * _craftTimes, player, null);
 		}
 		// Add success items.
 		if (successCount > 0)
 		{
-			final ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionSuccess().getId(), data.getProductionSuccess().getCount() * successCount, player, null);
+			final Item item = player.getInventory().addItem("Alchemy", data.getProductionSuccess().getId(), data.getProductionSuccess().getCount() * successCount, player, null);
 			ui.addItem(item);
 		}
 		// Add failed items.
 		if (failureCount > 0)
 		{
-			final ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionFailure().getId(), data.getProductionFailure().getCount() * failureCount, player, null);
+			final Item item = player.getInventory().addItem("Alchemy", data.getProductionFailure().getId(), data.getProductionFailure().getCount() * failureCount, player, null);
 			ui.addItem(item);
 		}
 		

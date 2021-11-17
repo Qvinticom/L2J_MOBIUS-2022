@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
@@ -49,13 +49,13 @@ public class CommunityBoardManager
 	
 	public void handleCommands(ClientThread client, String command)
 	{
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (command.startsWith("bbs_"))
 		{
 			final StringBuilder htmlCode = new StringBuilder("<html imgsrc=\"sek.cbui353\"><body><br><table border=0><tr><td FIXWIDTH=15></td><td align=center>Community Board<img src=\"sek.cbui355\" width=610 height=1></td></tr><tr><td FIXWIDTH=15></td><td>");
 			if (command.equals("bbs_default"))
 			{
-				final Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
+				final Collection<Player> players = World.getInstance().getAllPlayers();
 				htmlCode.append("<table border=0>");
 				final int t = GameTimeTaskManager.getInstance().getGameTime();
 				final int h = t / 60;
@@ -72,7 +72,7 @@ public class CommunityBoardManager
 				htmlCode.append("<tr><td><img src=\"sek.cbui355\" width=610 height=1><br></td></tr>");
 				htmlCode.append("<tr><td>" + players.size() + " Player(s) Online:</td></tr><tr><td><table border=0><tr>");
 				int n = 1;
-				for (PlayerInstance player : players)
+				for (Player player : players)
 				{
 					htmlCode.append("<td><a action=\"bypass bbs_player_info " + player.getName() + "\">" + player.getName() + "</a></td><td FIXWIDTH=15></td>");
 					if (n == 5)
@@ -143,7 +143,7 @@ public class CommunityBoardManager
 			else if (command.startsWith("bbs_player_info"))
 			{
 				final String name = command.substring(16);
-				final PlayerInstance player = World.getInstance().getPlayer(name);
+				final Player player = World.getInstance().getPlayer(name);
 				String sex = "Male";
 				if (player.getSex() == 1)
 				{
@@ -183,7 +183,7 @@ public class CommunityBoardManager
 					final StringTokenizer st = new StringTokenizer(val);
 					final String name = st.nextToken();
 					final String message = val.substring(name.length() + 1);
-					final PlayerInstance reciever = World.getInstance().getPlayer(name);
+					final Player reciever = World.getInstance().getPlayer(name);
 					final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), 2, activeChar.getName(), message);
 					reciever.sendPacket(cs);
 					activeChar.sendPacket(cs);

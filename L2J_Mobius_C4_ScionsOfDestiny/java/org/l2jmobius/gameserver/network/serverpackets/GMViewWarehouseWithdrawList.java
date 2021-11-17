@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	private final String _playerName;
 	private final int _money;
 	
-	public GMViewWarehouseWithdrawList(PlayerInstance player)
+	public GMViewWarehouseWithdrawList(Player player)
 	{
 		_items = player.getWarehouse().getItems();
 		_playerName = player.getName();
@@ -58,7 +58,7 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 		packet.writeD(_money);
 		packet.writeH(_items.size());
 		
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			packet.writeH(item.getItem().getType1());
 			
@@ -70,7 +70,7 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 			
 			switch (item.getItem().getType2())
 			{
-				case Item.TYPE2_WEAPON:
+				case ItemTemplate.TYPE2_WEAPON:
 				{
 					packet.writeD(item.getItem().getBodyPart());
 					packet.writeH(item.getEnchantLevel());
@@ -78,12 +78,12 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 					packet.writeH(((Weapon) item.getItem()).getSpiritShotCount());
 					break;
 				}
-				case Item.TYPE2_SHIELD_ARMOR:
-				case Item.TYPE2_ACCESSORY:
-				case Item.TYPE2_PET_WOLF:
-				case Item.TYPE2_PET_HATCHLING:
-				case Item.TYPE2_PET_STRIDER:
-				case Item.TYPE2_PET_BABY:
+				case ItemTemplate.TYPE2_SHIELD_ARMOR:
+				case ItemTemplate.TYPE2_ACCESSORY:
+				case ItemTemplate.TYPE2_PET_WOLF:
+				case ItemTemplate.TYPE2_PET_HATCHLING:
+				case ItemTemplate.TYPE2_PET_STRIDER:
+				case ItemTemplate.TYPE2_PET_BABY:
 				{
 					packet.writeD(item.getItem().getBodyPart());
 					packet.writeH(item.getEnchantLevel());

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class EnchantResult implements IClientOutgoingPacket
@@ -46,10 +46,10 @@ public class EnchantResult implements IClientOutgoingPacket
 	
 	public EnchantResult(int result, int crystal, int count)
 	{
-		this(result, crystal, count, 0, ItemInstance.DEFAULT_ENCHANT_OPTIONS);
+		this(result, crystal, count, 0, Item.DEFAULT_ENCHANT_OPTIONS);
 	}
 	
-	public EnchantResult(int result, ItemInstance item)
+	public EnchantResult(int result, Item item)
 	{
 		this(result, 0, 0, item.getEnchantLevel(), item.getEnchantOptions());
 	}

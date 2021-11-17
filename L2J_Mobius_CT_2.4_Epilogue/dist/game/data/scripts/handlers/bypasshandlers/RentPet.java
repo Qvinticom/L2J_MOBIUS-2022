@@ -22,8 +22,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 
@@ -35,9 +35,9 @@ public class RentPet implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!(target instanceof MerchantInstance))
+		if (!(target instanceof Merchant))
 		{
 			return false;
 		}
@@ -78,7 +78,7 @@ public class RentPet implements IBypassHandler
 		return false;
 	}
 	
-	public static void tryRentPet(PlayerInstance player, int petValue)
+	public static void tryRentPet(Player player, int petValue)
 	{
 		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
 		{

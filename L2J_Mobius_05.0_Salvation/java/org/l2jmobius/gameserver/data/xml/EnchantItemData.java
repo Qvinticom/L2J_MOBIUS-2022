@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * Loads item enchant data.
@@ -143,7 +143,7 @@ public class EnchantItemData implements IXmlReader
 	 * @param scroll the scroll
 	 * @return enchant template for scroll
 	 */
-	public EnchantScroll getEnchantScroll(ItemInstance scroll)
+	public EnchantScroll getEnchantScroll(Item scroll)
 	{
 		return _scrolls.get(scroll.getId());
 	}
@@ -153,7 +153,7 @@ public class EnchantItemData implements IXmlReader
 	 * @param item the item
 	 * @return enchant template for support item
 	 */
-	public EnchantSupportItem getSupportItem(ItemInstance item)
+	public EnchantSupportItem getSupportItem(Item item)
 	{
 		return _supports.get(item.getId());
 	}

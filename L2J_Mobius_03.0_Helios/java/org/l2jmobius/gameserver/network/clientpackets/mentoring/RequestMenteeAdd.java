@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.mentoring;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -42,13 +42,13 @@ public class RequestMenteeAdd implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance mentor = client.getPlayer();
+		final Player mentor = client.getPlayer();
 		if (mentor == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance mentee = World.getInstance().getPlayer(_target);
+		final Player mentee = World.getInstance().getPlayer(_target);
 		if (mentee == null)
 		{
 			return;

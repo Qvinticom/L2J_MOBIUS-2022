@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.FestivalGuideInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FestivalGuide;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -44,14 +44,14 @@ public class Festival implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!(target instanceof FestivalGuideInstance))
+		if (!(target instanceof FestivalGuide))
 		{
 			return false;
 		}
 		
-		final FestivalGuideInstance npc = (FestivalGuideInstance) target;
+		final FestivalGuide npc = (FestivalGuide) target;
 		try
 		{
 			final int val;
@@ -165,7 +165,7 @@ public class Festival implements IBypassHandler
 						npc.showChatWindow(player, 3, "b", false);
 						return true;
 					}
-					final ItemInstance bloodOfferings = player.getInventory().getItemByItemId(SevenSignsFestival.FESTIVAL_OFFERING_ID);
+					final Item bloodOfferings = player.getInventory().getItemByItemId(SevenSignsFestival.FESTIVAL_OFFERING_ID);
 					// Check if the player collected any blood offerings during the festival.
 					if (bloodOfferings == null)
 					{

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.residences.AuctionableHall;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -41,7 +41,7 @@ public class ClanHallZone extends ResidenceZone
 		{
 			setResidenceId(Integer.parseInt(value));
 			// Register self to the correct clan hall
-			final ClanHall hall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
+			final ClanHall hall = ClanHallTable.getInstance().getClanHallById(getResidenceId());
 			if (hall != null)
 			{
 				hall.setZone(this);
@@ -66,7 +66,7 @@ public class ClanHallZone extends ResidenceZone
 		}
 		// Set as in clan hall
 		creature.setInsideZone(ZoneId.CLAN_HALL, true);
-		final AuctionableHall clanHall = ClanHallManager.getInstance().getAuctionableHallById(getResidenceId());
+		final AuctionableHall clanHall = ClanHallTable.getInstance().getAuctionableHallById(getResidenceId());
 		if (clanHall == null)
 		{
 			return;

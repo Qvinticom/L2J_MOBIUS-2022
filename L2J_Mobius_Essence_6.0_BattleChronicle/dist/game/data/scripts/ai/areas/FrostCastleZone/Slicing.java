@@ -19,7 +19,7 @@ package ai.areas.FrostCastleZone;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 import ai.AbstractNpcAI;
@@ -69,7 +69,7 @@ public class Slicing extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		addSpawn(CHARGED_CRYSTAL, 146316, 141503, -11854, 49151, false, 0, true, killer.getInstanceId());
 		return super.onKill(npc, killer, isSummon);

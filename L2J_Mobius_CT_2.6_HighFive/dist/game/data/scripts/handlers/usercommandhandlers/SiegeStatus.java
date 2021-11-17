@@ -18,7 +18,7 @@ package handlers.usercommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.zone.type.SiegeZone;
@@ -39,7 +39,7 @@ public class SiegeStatus implements IUserCommandHandler
 	private static final String OUTSIDE_SIEGE_ZONE = "No Castle Siege Area";
 	
 	@Override
-	public boolean useUserCommand(int id, PlayerInstance player)
+	public boolean useUserCommand(int id, Player player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
@@ -67,7 +67,7 @@ public class SiegeStatus implements IUserCommandHandler
 			
 			final SiegeZone siegeZone = siege.getCastle().getZone();
 			final StringBuilder sb = new StringBuilder();
-			for (PlayerInstance member : clan.getOnlineMembers(0))
+			for (Player member : clan.getOnlineMembers(0))
 			{
 				sb.append("<tr><td width=170>");
 				sb.append(member.getName());

@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.BabyPetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.BabyPet;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -45,23 +45,23 @@ public class BeastSpiritShot implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
 		if (playable == null)
 		{
 			return;
 		}
 		
-		PlayerInstance activeOwner = null;
+		Player activeOwner = null;
 		if (playable instanceof Summon)
 		{
 			activeOwner = ((Summon) playable).getOwner();
 			activeOwner.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return;
 		}
-		else if (playable instanceof PlayerInstance)
+		else if (playable instanceof Player)
 		{
-			activeOwner = (PlayerInstance) playable;
+			activeOwner = (Player) playable;
 		}
 		
 		if (activeOwner == null)
@@ -85,19 +85,19 @@ public class BeastSpiritShot implements IItemHandler
 		final int itemId = item.getItemId();
 		final boolean isBlessed = itemId == 6647;
 		int shotConsumption = 1;
-		ItemInstance weaponInst = null;
+		Item weaponInst = null;
 		Weapon weaponItem = null;
-		if ((activePet instanceof PetInstance) && !(activePet instanceof BabyPetInstance))
+		if ((activePet instanceof Pet) && !(activePet instanceof BabyPet))
 		{
-			weaponInst = ((PetInstance) activePet).getActiveWeaponInstance();
-			weaponItem = ((PetInstance) activePet).getActiveWeaponItem();
+			weaponInst = ((Pet) activePet).getActiveWeaponInstance();
+			weaponItem = ((Pet) activePet).getActiveWeaponItem();
 			if (weaponInst == null)
 			{
 				activeOwner.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
 				return;
 			}
 			
-			if (weaponInst.getChargedSpiritshot() != ItemInstance.CHARGED_NONE)
+			if (weaponInst.getChargedSpiritshot() != Item.CHARGED_NONE)
 			{
 				// SpiritShots are already active.
 				return;
@@ -120,27 +120,27 @@ public class BeastSpiritShot implements IItemHandler
 			
 			if (isBlessed)
 			{
-				weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
+				weaponInst.setChargedSpiritshot(Item.CHARGED_BLESSED_SPIRITSHOT);
 			}
 			else
 			{
-				weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_SPIRITSHOT);
+				weaponInst.setChargedSpiritshot(Item.CHARGED_SPIRITSHOT);
 			}
 		}
 		else
 		{
-			if (activePet.getChargedSpiritShot() != ItemInstance.CHARGED_NONE)
+			if (activePet.getChargedSpiritShot() != Item.CHARGED_NONE)
 			{
 				return;
 			}
 			
 			if (isBlessed)
 			{
-				activePet.setChargedSpiritShot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
+				activePet.setChargedSpiritShot(Item.CHARGED_BLESSED_SPIRITSHOT);
 			}
 			else
 			{
-				activePet.setChargedSpiritShot(ItemInstance.CHARGED_SPIRITSHOT);
+				activePet.setChargedSpiritShot(Item.CHARGED_SPIRITSHOT);
 			}
 		}
 		

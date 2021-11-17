@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
-import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleDataHolder;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleEngine;
@@ -45,7 +45,7 @@ public class ShuttleData implements IXmlReader
 	private static final Logger LOGGER = Logger.getLogger(ShuttleData.class.getName());
 	
 	private final Map<Integer, ShuttleDataHolder> _shuttles = new HashMap<>();
-	private final Map<Integer, ShuttleInstance> _shuttleInstances = new HashMap<>();
+	private final Map<Integer, Shuttle> _shuttleInstances = new HashMap<>();
 	
 	protected ShuttleData()
 	{
@@ -57,7 +57,7 @@ public class ShuttleData implements IXmlReader
 	{
 		if (!_shuttleInstances.isEmpty())
 		{
-			for (ShuttleInstance shuttle : _shuttleInstances.values())
+			for (Shuttle shuttle : _shuttleInstances.values())
 			{
 				shuttle.deleteMe();
 			}
@@ -163,7 +163,7 @@ public class ShuttleData implements IXmlReader
 	{
 		for (ShuttleDataHolder data : _shuttles.values())
 		{
-			final ShuttleInstance shuttle = new ShuttleInstance(new CreatureTemplate(new StatSet()));
+			final Shuttle shuttle = new Shuttle(new CreatureTemplate(new StatSet()));
 			shuttle.setData(data);
 			shuttle.setHeading(data.getLocation().getHeading());
 			shuttle.setLocationInvisible(data.getLocation());
@@ -176,9 +176,9 @@ public class ShuttleData implements IXmlReader
 		}
 	}
 	
-	public ShuttleInstance getShuttle(int id)
+	public Shuttle getShuttle(int id)
 	{
-		for (ShuttleInstance shuttle : _shuttleInstances.values())
+		for (Shuttle shuttle : _shuttleInstances.values())
 		{
 			if ((shuttle.getObjectId() == id) || (shuttle.getId() == id))
 			{

@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,10 +26,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExItemAnnounce implements IClientOutgoingPacket
 {
-	private final ItemInstance _item;
-	private final PlayerInstance _player;
+	private final Item _item;
+	private final Player _player;
 	
-	public ExItemAnnounce(ItemInstance item, PlayerInstance player)
+	public ExItemAnnounce(Item item, Player player)
 	{
 		_item = item;
 		_player = player;

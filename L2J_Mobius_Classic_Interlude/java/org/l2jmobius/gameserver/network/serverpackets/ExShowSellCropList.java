@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.CropProcure;
 import org.l2jmobius.gameserver.model.Seed;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExShowSellCropList implements IClientOutgoingPacket
 {
 	private final int _manorId;
-	private final Map<Integer, ItemInstance> _cropsItems = new HashMap<>();
+	private final Map<Integer, Item> _cropsItems = new HashMap<>();
 	private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
 	
 	public ExShowSellCropList(PlayerInventory inventory, int manorId)
@@ -41,7 +41,7 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 		_manorId = manorId;
 		for (int cropId : CastleManorManager.getInstance().getCropIds())
 		{
-			final ItemInstance item = inventory.getItemByItemId(cropId);
+			final Item item = inventory.getItemByItemId(cropId);
 			if (item != null)
 			{
 				_cropsItems.put(cropId, item);
@@ -64,7 +64,7 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_cropsItems.size()); // size
-		for (ItemInstance item : _cropsItems.values())
+		for (Item item : _cropsItems.values())
 		{
 			final Seed seed = CastleManorManager.getInstance().getSeedByCrop(item.getId());
 			packet.writeD(item.getObjectId()); // Object id

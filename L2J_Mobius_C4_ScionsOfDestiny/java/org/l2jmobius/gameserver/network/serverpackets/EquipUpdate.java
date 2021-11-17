@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class EquipUpdate implements IClientOutgoingPacket
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	private final int _change;
 	
-	public EquipUpdate(ItemInstance item, int change)
+	public EquipUpdate(Item item, int change)
 	{
 		_item = item;
 		_change = change;
@@ -46,77 +46,77 @@ public class EquipUpdate implements IClientOutgoingPacket
 		packet.writeD(_item.getObjectId());
 		switch (_item.getItem().getBodyPart())
 		{
-			case Item.SLOT_L_EAR:
+			case ItemTemplate.SLOT_L_EAR:
 			{
 				bodypart = 0x01;
 				break;
 			}
-			case Item.SLOT_R_EAR:
+			case ItemTemplate.SLOT_R_EAR:
 			{
 				bodypart = 0x02;
 				break;
 			}
-			case Item.SLOT_NECK:
+			case ItemTemplate.SLOT_NECK:
 			{
 				bodypart = 0x03;
 				break;
 			}
-			case Item.SLOT_R_FINGER:
+			case ItemTemplate.SLOT_R_FINGER:
 			{
 				bodypart = 0x04;
 				break;
 			}
-			case Item.SLOT_L_FINGER:
+			case ItemTemplate.SLOT_L_FINGER:
 			{
 				bodypart = 0x05;
 				break;
 			}
-			case Item.SLOT_HEAD:
+			case ItemTemplate.SLOT_HEAD:
 			{
 				bodypart = 0x06;
 				break;
 			}
-			case Item.SLOT_R_HAND:
+			case ItemTemplate.SLOT_R_HAND:
 			{
 				bodypart = 0x07;
 				break;
 			}
-			case Item.SLOT_L_HAND:
+			case ItemTemplate.SLOT_L_HAND:
 			{
 				bodypart = 0x08;
 				break;
 			}
-			case Item.SLOT_GLOVES:
+			case ItemTemplate.SLOT_GLOVES:
 			{
 				bodypart = 0x09;
 				break;
 			}
-			case Item.SLOT_CHEST:
+			case ItemTemplate.SLOT_CHEST:
 			{
 				bodypart = 0x0a;
 				break;
 			}
-			case Item.SLOT_LEGS:
+			case ItemTemplate.SLOT_LEGS:
 			{
 				bodypart = 0x0b;
 				break;
 			}
-			case Item.SLOT_FEET:
+			case ItemTemplate.SLOT_FEET:
 			{
 				bodypart = 0x0c;
 				break;
 			}
-			case Item.SLOT_BACK:
+			case ItemTemplate.SLOT_BACK:
 			{
 				bodypart = 0x0d;
 				break;
 			}
-			case Item.SLOT_LR_HAND:
+			case ItemTemplate.SLOT_LR_HAND:
 			{
 				bodypart = 0x0e;
 				break;
 			}
-			case Item.SLOT_HAIR:
+			case ItemTemplate.SLOT_HAIR:
 			{
 				bodypart = 0x0f;
 				break;

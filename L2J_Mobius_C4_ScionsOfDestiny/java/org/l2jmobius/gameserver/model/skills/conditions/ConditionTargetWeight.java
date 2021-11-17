@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
@@ -45,7 +45,7 @@ public class ConditionTargetWeight extends Condition
 		final Creature targetObj = env.getTarget();
 		if ((targetObj != null) && targetObj.isPlayer())
 		{
-			final PlayerInstance target = targetObj.getActingPlayer();
+			final Player target = targetObj.getActingPlayer();
 			if (!target.getDietMode() && (target.getMaxLoad() > 0))
 			{
 				final int weightproc = (int) (((target.getCurrentLoad() - target.calcStat(Stat.WEIGHT_PENALTY, 1, target, null)) * 100) / target.getMaxLoad());

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,7 +32,7 @@ public class ExVoteSystemInfo implements IClientOutgoingPacket
 	private final int _bonusVal;
 	private final int _bonusType;
 	
-	public ExVoteSystemInfo(PlayerInstance player)
+	public ExVoteSystemInfo(Player player)
 	{
 		_recomLeft = player.getRecomLeft();
 		_recomHave = player.getRecomHave();

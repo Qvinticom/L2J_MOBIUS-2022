@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
@@ -79,7 +79,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -109,7 +109,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			switch (stage)
 			{
 				case 1:
@@ -202,7 +202,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 		{
 			case 1:
 			{
-				for (PlayerInstance pl : HELLBOUND_ZONE.getPlayersInside())
+				for (Player pl : HELLBOUND_ZONE.getPlayersInside())
 				{
 					pl.sendPacket(new OnEventTrigger(19250032, true));
 					pl.sendPacket(new OnEventTrigger(19250014, true));
@@ -237,7 +237,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 			}
 			case 2:
 			{
-				for (PlayerInstance pl : HELLBOUND_ZONE.getPlayersInside())
+				for (Player pl : HELLBOUND_ZONE.getPlayersInside())
 				{
 					pl.sendPacket(new OnEventTrigger(19250034, true));
 					pl.sendPacket(new OnEventTrigger(19250016, true));
@@ -274,7 +274,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 			}
 			case 3:
 			{
-				for (PlayerInstance pl : HELLBOUND_ZONE.getPlayersInside())
+				for (Player pl : HELLBOUND_ZONE.getPlayersInside())
 				{
 					pl.sendPacket(new OnEventTrigger(19250036, true));
 					pl.sendPacket(new OnEventTrigger(19250018, true));
@@ -311,7 +311,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		kills++;
 		return super.onKill(npc, killer, isSummon);

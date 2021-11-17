@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
@@ -44,7 +44,7 @@ public class AdminGmSpeed implements IAdminCommandHandler
 	private static final Set<Stat> SPEED_STATS = EnumSet.of(Stat.RUN_SPEED, Stat.WALK_SPEED, Stat.SWIM_RUN_SPEED, Stat.SWIM_WALK_SPEED, Stat.FLY_RUN_SPEED, Stat.FLY_WALK_SPEED);
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance player)
+	public boolean useAdminCommand(String command, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -98,7 +98,7 @@ public class AdminGmSpeed implements IAdminCommandHandler
 			targetCharacter.getStat().recalculateStats(false);
 			if (targetCharacter.isPlayer())
 			{
-				((PlayerInstance) targetCharacter).broadcastUserInfo();
+				((Player) targetCharacter).broadcastUserInfo();
 			}
 			else
 			{

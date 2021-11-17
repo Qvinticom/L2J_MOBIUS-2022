@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,19 +40,19 @@ public class RequestJoinPledge implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!(World.getInstance().findObject(_target) instanceof PlayerInstance))
+		if (!(World.getInstance().findObject(_target) instanceof Player))
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return;
 		}
 		
-		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_target);
+		final Player target = (Player) World.getInstance().findObject(_target);
 		final Clan clan = player.getClan();
 		if (!clan.checkClanJoinCondition(player, target, _pledgeType))
 		{

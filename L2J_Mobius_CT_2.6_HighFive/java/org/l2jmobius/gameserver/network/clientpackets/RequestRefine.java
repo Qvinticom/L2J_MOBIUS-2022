@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.AugmentationData;
 import org.l2jmobius.gameserver.model.Augmentation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
@@ -51,22 +51,22 @@ public class RequestRefine extends AbstractRefinePacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
-		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
+		final Item targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
 			return;
 		}
-		final ItemInstance refinerItem = player.getInventory().getItemByObjectId(_refinerItemObjId);
+		final Item refinerItem = player.getInventory().getItemByObjectId(_refinerItemObjId);
 		if (refinerItem == null)
 		{
 			return;
 		}
-		final ItemInstance gemStoneItem = player.getInventory().getItemByObjectId(_gemStoneItemObjId);
+		final Item gemStoneItem = player.getInventory().getItemByObjectId(_gemStoneItemObjId);
 		if (gemStoneItem == null)
 		{
 			return;
@@ -98,7 +98,7 @@ public class RequestRefine extends AbstractRefinePacket
 		if (targetItem.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
+			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
 			{
 				iu.addModifiedItem(itm);
 			}

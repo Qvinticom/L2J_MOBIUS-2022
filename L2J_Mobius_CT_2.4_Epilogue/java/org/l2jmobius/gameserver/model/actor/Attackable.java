@@ -51,10 +51,9 @@ import org.l2jmobius.gameserver.model.DamageDoneInfo;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Seed;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.status.AttackableStatus;
 import org.l2jmobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -64,8 +63,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAtta
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableKill;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -264,10 +263,10 @@ public class Attackable extends Npc
 			addDamage(attacker, (int) damage, skill);
 		}
 		
-		// If this Attackable is a MonsterInstance and it has spawned minions, call its minions to battle
+		// If this Attackable is a Monster and it has spawned minions, call its minions to battle
 		if (isMonster())
 		{
-			MonsterInstance master = (MonsterInstance) this;
+			Monster master = (Monster) this;
 			
 			if (master.hasMinions())
 			{
@@ -297,16 +296,16 @@ public class Attackable extends Npc
 	/**
 	 * Kill the Attackable (the corpse disappeared after 7 seconds), distribute rewards (EXP, SP, Drops...) and notify Quest Engine.<br>
 	 * Actions:<br>
-	 * Distribute Exp and SP rewards to PlayerInstance (including Summon owner) that hit the Attackable and to their Party members<br>
+	 * Distribute Exp and SP rewards to Player (including Summon owner) that hit the Attackable and to their Party members<br>
 	 * Notify the Quest Engine of the Attackable death if necessary.<br>
-	 * Kill the NpcInstance (the corpse disappeared after 7 seconds)<br>
-	 * Caution: This method DOESN'T GIVE rewards to PetInstance.
+	 * Kill the Npc (the corpse disappeared after 7 seconds)<br>
+	 * Caution: This method DOESN'T GIVE rewards to Pet.
 	 * @param killer The Creature that has killed the Attackable
 	 */
 	@Override
 	public boolean doDie(Creature killer)
 	{
-		// Kill the NpcInstance (the corpse disappeared after 7 seconds)
+		// Kill the Npc (the corpse disappeared after 7 seconds)
 		if (!super.doDie(killer))
 		{
 			return false;
@@ -321,7 +320,7 @@ public class Attackable extends Npc
 		// Notify to minions if there are.
 		if (isMonster())
 		{
-			final MonsterInstance mob = (MonsterInstance) this;
+			final Monster mob = (Monster) this;
 			if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
 			{
 				final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
@@ -350,12 +349,12 @@ public class Attackable extends Npc
 	}
 	
 	/**
-	 * Distribute Exp and SP rewards to PlayerInstance (including Summon owner) that hit the Attackable and to their Party members.<br>
+	 * Distribute Exp and SP rewards to Player (including Summon owner) that hit the Attackable and to their Party members.<br>
 	 * Actions:<br>
-	 * Get the PlayerInstance owner of the ServitorInstance (if necessary) and Party in progress.<br>
+	 * Get the Player owner of the Servitor (if necessary) and Party in progress.<br>
 	 * Calculate the Experience and SP rewards in function of the level difference.<br>
-	 * Add Exp and SP rewards to PlayerInstance (including Summon penalty) and to Party members in the known area of the last attacker.<br>
-	 * Caution : This method DOESN'T GIVE rewards to PetInstance.
+	 * Add Exp and SP rewards to Player (including Summon penalty) and to Party members in the known area of the last attacker.<br>
+	 * Caution : This method DOESN'T GIVE rewards to Pet.
 	 * @param lastAttacker The Creature that has killed the Attackable
 	 */
 	@Override
@@ -369,9 +368,9 @@ public class Attackable extends Npc
 			}
 			
 			// NOTE: Concurrent-safe map is used because while iterating to verify all conditions sometimes an entry must be removed.
-			final Map<PlayerInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
+			final Map<Player, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
 			
-			PlayerInstance maxDealer = null;
+			Player maxDealer = null;
 			long maxDamage = 0;
 			long totalDamage = 0;
 			
@@ -385,7 +384,7 @@ public class Attackable extends Npc
 				}
 				
 				// Get the Creature corresponding to this attacker
-				final PlayerInstance attacker = info.getAttacker().getActingPlayer();
+				final Player attacker = info.getAttacker().getActingPlayer();
 				if (attacker == null)
 				{
 					continue;
@@ -445,8 +444,8 @@ public class Attackable extends Npc
 				}
 				
 				final PartyContainer container = partyContainerStream.orElse(new PartyContainer(party, 0L));
-				final List<PlayerInstance> members = party.getMembers();
-				for (PlayerInstance e : members)
+				final List<Player> members = party.getMembers();
+				for (Player e : members)
 				{
 					final AggroInfo memberAggro = _aggroList.get(e);
 					if (memberAggro == null)
@@ -474,7 +473,7 @@ public class Attackable extends Npc
 			// Manage Base, Quests and Sweep drops of the Attackable
 			if ((mostDamageParty != null) && (mostDamageParty.damage > maxDamage))
 			{
-				PlayerInstance leader = mostDamageParty.party.getLeader();
+				Player leader = mostDamageParty.party.getLeader();
 				doItemDrop(leader);
 				EventDropManager.getInstance().doEventDrop(leader, this);
 			}
@@ -499,7 +498,7 @@ public class Attackable extends Npc
 					}
 					
 					// Attacker to be rewarded
-					final PlayerInstance attacker = reward.getAttacker();
+					final Player attacker = reward.getAttacker();
 					
 					// Total amount of damage done
 					final long damage = reward.getDamage();
@@ -509,7 +508,7 @@ public class Attackable extends Npc
 					
 					// Penalty applied to the attacker's XP
 					// If this attacker have servitor, get Exp Penalty applied for the servitor.
-					final float penalty = attacker.hasServitor() ? ((ServitorInstance) attacker.getSummon()).getExpMultiplier() : 1;
+					final float penalty = attacker.hasServitor() ? ((Servitor) attacker.getSummon()).getExpMultiplier() : 1;
 					
 					// If there's NO party in progress
 					if (attackerParty == null)
@@ -541,7 +540,7 @@ public class Attackable extends Npc
 								exp += calculateOverhitExp(exp);
 							}
 							
-							// Distribute the Exp and SP between the PlayerInstance and its Summon
+							// Distribute the Exp and SP between the Player and its Summon
 							if (!attacker.isDead())
 							{
 								final long addexp = Math.round(attacker.calcStat(Stat.EXPSP_RATE, exp, null, null));
@@ -563,25 +562,25 @@ public class Attackable extends Npc
 						int partyLvl = 0;
 						
 						// Get all Creature that can be rewarded in the party
-						final List<PlayerInstance> rewardedMembers = new ArrayList<>();
-						// Go through all PlayerInstance in the party
-						final List<PlayerInstance> groupMembers = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getMembers() : attackerParty.getMembers();
-						for (PlayerInstance partyPlayer : groupMembers)
+						final List<Player> rewardedMembers = new ArrayList<>();
+						// Go through all Player in the party
+						final List<Player> groupMembers = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getMembers() : attackerParty.getMembers();
+						for (Player partyPlayer : groupMembers)
 						{
 							if ((partyPlayer == null) || partyPlayer.isDead())
 							{
 								continue;
 							}
 							
-							// Get the RewardInfo of this PlayerInstance from Attackable rewards
+							// Get the RewardInfo of this Player from Attackable rewards
 							final DamageDoneInfo reward2 = rewards.get(partyPlayer);
 							
-							// If the PlayerInstance is in the Attackable rewards add its damages to party damages
+							// If the Player is in the Attackable rewards add its damages to party damages
 							if (reward2 != null)
 							{
 								if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true))
 								{
-									partyDmg += reward2.getDamage(); // Add PlayerInstance damages to party damages
+									partyDmg += reward2.getDamage(); // Add Player damages to party damages
 									rewardedMembers.add(partyPlayer);
 									
 									if (partyPlayer.getLevel() > partyLvl)
@@ -596,11 +595,11 @@ public class Attackable extends Npc
 										}
 									}
 								}
-								rewards.remove(partyPlayer); // Remove the PlayerInstance from the Attackable rewards
+								rewards.remove(partyPlayer); // Remove the Player from the Attackable rewards
 							}
 							else
 							{
-								// Add PlayerInstance of the party (that have attacked or not) to members that can be rewarded
+								// Add Player of the party (that have attacked or not) to members that can be rewarded
 								// and in range of the monster.
 								if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true))
 								{
@@ -649,7 +648,7 @@ public class Attackable extends Npc
 							exp += calculateOverhitExp(exp);
 						}
 						
-						// Distribute Experience and SP rewards to PlayerInstance Party members in the known area of the last attacker
+						// Distribute Experience and SP rewards to Player Party members in the known area of the last attacker
 						if (partyDmg > 0)
 						{
 							attackerParty.distributeXpAndSp(exp, sp, rewardedMembers, partyLvl, partyDmg, this);
@@ -722,7 +721,7 @@ public class Attackable extends Npc
 				getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
 				addDamageHate(attacker, damage, (damage * 100) / (getLevel() + 7));
 				
-				final PlayerInstance player = attacker.getActingPlayer();
+				final Player player = attacker.getActingPlayer();
 				if (player != null)
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(player, this, damage, skill, attacker.isSummon()), this);
@@ -762,7 +761,7 @@ public class Attackable extends Npc
 		// making this hack because not possible to determine if damage made by trap
 		// so just check for triggered trap here
 		int aggro = aggroValue;
-		final PlayerInstance targetPlayer = attacker.getActingPlayer();
+		final Player targetPlayer = attacker.getActingPlayer();
 		if ((targetPlayer == null) || (targetPlayer.getTrap() == null) || !targetPlayer.getTrap().isTriggered())
 		{
 			ai.addHate(aggro);
@@ -986,7 +985,7 @@ public class Attackable extends Npc
 		
 		if (ai.getAttacker().isPlayer())
 		{
-			final PlayerInstance act = (PlayerInstance) ai.getAttacker();
+			final Player act = (Player) ai.getAttacker();
 			if (act.isInvisible() || act.isInvul() || act.isSpawnProtected())
 			{
 				// Remove Object Should Use This Method and Can be Blocked While Interacting
@@ -1025,9 +1024,9 @@ public class Attackable extends Npc
 	 * Get all possible drops of this Attackable from NpcTemplate and add it Quest drops.<br>
 	 * For each possible drops (base + quests), calculate which one must be dropped (random).<br>
 	 * Get each Item quantity dropped (random).<br>
-	 * Create this or these ItemInstance corresponding to each Item Identifier dropped.<br>
-	 * If the autoLoot mode is actif and if the Creature that has killed the Attackable is a PlayerInstance, Give the item(s) to the PlayerInstance that has killed the Attackable.<br>
-	 * If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a PlayerInstance, add this or these item(s) in the world as a visible object at the position where mob was last.
+	 * Create this or these Item corresponding to each Item Identifier dropped.<br>
+	 * If the autoLoot mode is actif and if the Creature that has killed the Attackable is a Player, Give the item(s) to the Player that has killed the Attackable.<br>
+	 * If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last.
 	 * @param npcTemplate
 	 * @param mainDamageDealer
 	 */
@@ -1038,9 +1037,9 @@ public class Attackable extends Npc
 			return;
 		}
 		
-		final PlayerInstance player = mainDamageDealer.getActingPlayer();
+		final Player player = mainDamageDealer.getActingPlayer();
 		
-		// Don't drop anything if the last attacker or owner isn't PlayerInstance
+		// Don't drop anything if the last attacker or owner isn't Player
 		if (player == null)
 		{
 			// unless its a fake player and they can drop items
@@ -1051,7 +1050,7 @@ public class Attackable extends Npc
 				{
 					for (ItemHolder drop : deathItems)
 					{
-						final Item item = ItemTable.getInstance().getTemplate(drop.getId());
+						final ItemTemplate item = ItemTable.getInstance().getTemplate(drop.getId());
 						// Check if the autoLoot mode is active
 						if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))))
 						{
@@ -1067,7 +1066,7 @@ public class Attackable extends Npc
 						}
 						else
 						{
-							final ItemInstance droppedItem = dropItem(mainDamageDealer, drop); // drop the item on the ground
+							final Item droppedItem = dropItem(mainDamageDealer, drop); // drop the item on the ground
 							if (Config.FAKE_PLAYER_CAN_PICKUP)
 							{
 								mainDamageDealer.getFakePlayerDrops().add(droppedItem);
@@ -1092,11 +1091,11 @@ public class Attackable extends Npc
 		{
 			for (ItemHolder drop : deathItems)
 			{
-				final Item item = ItemTable.getInstance().getTemplate(drop.getId());
+				final ItemTemplate item = ItemTable.getInstance().getTemplate(drop.getId());
 				// Check if the autoLoot mode is active
 				if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS))
 				{
-					player.doAutoLoot(this, drop); // Give the item(s) to the PlayerInstance that has killed the Attackable
+					player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
 				}
 				else
 				{
@@ -1120,7 +1119,7 @@ public class Attackable extends Npc
 	/**
 	 * @return the active weapon of this Attackable (= null).
 	 */
-	public ItemInstance getActiveWeapon()
+	public Item getActiveWeapon()
 	{
 		return null;
 	}
@@ -1160,10 +1159,10 @@ public class Attackable extends Npc
 	/**
 	 * @return a copy of dummy items for the spoil loot.
 	 */
-	public List<Item> getSpoilLootItems()
+	public List<ItemTemplate> getSpoilLootItems()
 	{
 		final Collection<ItemHolder> sweepItems = _sweepItems.get();
-		final List<Item> lootItems = new LinkedList<>();
+		final List<ItemTemplate> lootItems = new LinkedList<>();
 		if (sweepItems != null)
 		{
 			for (ItemHolder item : sweepItems)
@@ -1175,7 +1174,7 @@ public class Attackable extends Npc
 	}
 	
 	/**
-	 * @return table containing all ItemInstance that can be spoiled.
+	 * @return table containing all Item that can be spoiled.
 	 */
 	public Collection<ItemHolder> takeSweep()
 	{
@@ -1183,7 +1182,7 @@ public class Attackable extends Npc
 	}
 	
 	/**
-	 * @return table containing all ItemInstance that can be harvested.
+	 * @return table containing all Item that can be harvested.
 	 */
 	public ItemHolder takeHarvest()
 	{
@@ -1197,7 +1196,7 @@ public class Attackable extends Npc
 	 * @param sendMessage if {@code true} will send a message of corpse too old
 	 * @return {@code true} if the corpse is too old
 	 */
-	public boolean isOldCorpse(PlayerInstance attacker, int remainingTime, boolean sendMessage)
+	public boolean isOldCorpse(Player attacker, int remainingTime, boolean sendMessage)
 	{
 		if (!isDead() || (DecayTaskManager.getInstance().getRemainingTime(this) >= remainingTime))
 		{
@@ -1215,7 +1214,7 @@ public class Attackable extends Npc
 	 * @param sendMessage sendMessage if {@code true} will send a message of sweep not allowed.
 	 * @return {@code true} if is the spoiler or is in the spoiler party.
 	 */
-	public boolean checkSpoilOwner(PlayerInstance sweeper, boolean sendMessage)
+	public boolean checkSpoilOwner(Player sweeper, boolean sendMessage)
 	{
 		if ((sweeper.getObjectId() == _spoilerObjectId) || sweeper.isInLooterParty(_spoilerObjectId))
 		{
@@ -1307,7 +1306,7 @@ public class Attackable extends Npc
 	 * Adds an attacker that successfully absorbed the soul of this Attackable into the _absorbersList.
 	 * @param attacker
 	 */
-	public void addAbsorber(PlayerInstance attacker)
+	public void addAbsorber(Player attacker)
 	{
 		// If we have no _absorbersList initiated, do it
 		final AbsorberInfo ai = _absorbersList.get(attacker.getObjectId());
@@ -1338,9 +1337,9 @@ public class Attackable extends Npc
 	}
 	
 	/**
-	 * Calculate the Experience and SP to distribute to attacker (PlayerInstance, ServitorInstance or Party) of the Attackable.
+	 * Calculate the Experience and SP to distribute to attacker (Player, Servitor or Party) of the Attackable.
 	 * @param charLevel The killer level
-	 * @param damage The damages given by the attacker (PlayerInstance, ServitorInstance or Party)
+	 * @param damage The damages given by the attacker (Player, Servitor or Party)
 	 * @param totalDamage The total damage done
 	 * @return
 	 */
@@ -1527,7 +1526,7 @@ public class Attackable extends Npc
 	 * Sets state of the mob to seeded. Parameters needed to be set before.
 	 * @param seeder
 	 */
-	public void setSeeded(PlayerInstance seeder)
+	public void setSeeded(Player seeder)
 	{
 		if ((_seed == null) || (_seederObjId != seeder.getObjectId()))
 		{
@@ -1597,7 +1596,7 @@ public class Attackable extends Npc
 	 * @param seed - instance {@link Seed} of used seed
 	 * @param seeder - player who sows the seed
 	 */
-	public void setSeeded(Seed seed, PlayerInstance seeder)
+	public void setSeeded(Seed seed, Player seeder)
 	{
 		if (_seeded)
 		{
@@ -1639,11 +1638,11 @@ public class Attackable extends Npc
 	/**
 	 * Check if the server allows Random Animation.
 	 */
-	// This is located here because Monster and FriendlyMob both extend this class. The other non-pc instances extend either NpcInstance or MonsterInstance.
+	// This is located here because Monster and FriendlyMob both extend this class. The other non-pc instances extend either Npc or Monster.
 	@Override
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_MONSTER_ANIMATION > 0) && isRandomAnimationEnabled() && !(this instanceof GrandBossInstance));
+		return ((Config.MAX_MONSTER_ANIMATION > 0) && isRandomAnimationEnabled() && !(this instanceof GrandBoss));
 	}
 	
 	public void setCommandChannelTimer(CommandChannelTimer commandChannelTimer)

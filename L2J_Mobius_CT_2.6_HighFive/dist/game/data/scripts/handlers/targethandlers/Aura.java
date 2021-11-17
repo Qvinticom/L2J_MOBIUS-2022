@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -46,7 +46,7 @@ public class Aura implements ITargetTypeHandler
 				// Stealth door targeting.
 				if (obj.isDoor())
 				{
-					final DoorInstance door = (DoorInstance) obj;
+					final Door door = (Door) obj;
 					if (!door.getTemplate().isStealth())
 					{
 						continue;

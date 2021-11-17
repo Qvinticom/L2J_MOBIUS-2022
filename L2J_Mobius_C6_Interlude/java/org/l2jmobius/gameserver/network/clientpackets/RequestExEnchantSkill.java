@@ -25,10 +25,10 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
@@ -58,20 +58,20 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final FolkInstance trainer = player.getLastFolkNPC();
+		final Folk trainer = player.getLastFolkNPC();
 		if (trainer == null)
 		{
 			return;
 		}
 		
 		final int npcid = trainer.getNpcId();
-		if (!player.isInsideRadius2D(trainer, NpcInstance.INTERACTION_DISTANCE) && !player.isGM())
+		if (!player.isInsideRadius2D(trainer, Npc.INTERACTION_DISTANCE) && !player.isGM())
 		{
 			return;
 		}
@@ -129,7 +129,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 				if (Config.ES_SP_BOOK_NEEDED && ((_skillLevel == 101) || (_skillLevel == 141))) // only first level requires book
 				{
 					final int spbId = 6622;
-					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
+					final Item spb = player.getInventory().getItemByItemId(spbId);
 					if (spb == null)// Haven't spellbook
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 public class EffectGrow extends Effect
@@ -37,9 +37,9 @@ public class EffectGrow extends Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof NpcInstance)
+		if (getEffected() instanceof Npc)
 		{
-			final NpcInstance npc = (NpcInstance) getEffected();
+			final Npc npc = (Npc) getEffected();
 			npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
 			npc.setCollisionRadius((int) (npc.getCollisionRadius() * 1.19));
 			getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_GROW);
@@ -49,9 +49,9 @@ public class EffectGrow extends Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getEffected() instanceof NpcInstance)
+		if (getEffected() instanceof Npc)
 		{
-			final NpcInstance npc = (NpcInstance) getEffected();
+			final Npc npc = (Npc) getEffected();
 			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
 			npc.setCollisionRadius(npc.getTemplate().getCollisionRadius());
 			
@@ -63,9 +63,9 @@ public class EffectGrow extends Effect
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof NpcInstance)
+		if (getEffected() instanceof Npc)
 		{
-			final NpcInstance npc = (NpcInstance) getEffected();
+			final Npc npc = (Npc) getEffected();
 			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
 			npc.setCollisionRadius(npc.getTemplate().getCollisionRadius());
 			

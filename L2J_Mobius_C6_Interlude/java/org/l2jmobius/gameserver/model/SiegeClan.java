@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 
 public class SiegeClan
 {
 	private int _clanId = 0;
-	private List<NpcInstance> _flag = new ArrayList<>();
+	private List<Npc> _flag = new ArrayList<>();
 	private int _numFlagsAdded = 0;
 	private SiegeClanType _type;
 	
@@ -47,13 +47,13 @@ public class SiegeClan
 		return _numFlagsAdded;
 	}
 	
-	public void addFlag(NpcInstance flag)
+	public void addFlag(Npc flag)
 	{
 		_numFlagsAdded++;
 		getFlag().add(flag);
 	}
 	
-	public boolean removeFlag(NpcInstance flag)
+	public boolean removeFlag(Npc flag)
 	{
 		if (flag == null)
 		{
@@ -99,7 +99,7 @@ public class SiegeClan
 	
 	public void removeFlags()
 	{
-		for (NpcInstance flag : getFlag())
+		for (Npc flag : getFlag())
 		{
 			removeFlag(flag);
 		}
@@ -110,7 +110,7 @@ public class SiegeClan
 		return _clanId;
 	}
 	
-	public List<NpcInstance> getFlag()
+	public List<Npc> getFlag()
 	{
 		if (_flag == null)
 		{

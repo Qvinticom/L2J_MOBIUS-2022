@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.teleports;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -32,7 +32,7 @@ public class ExTeleportFavoritesList implements IClientOutgoingPacket
 	private final List<Integer> _teleports;
 	private final boolean _enable;
 	
-	public ExTeleportFavoritesList(PlayerInstance player, boolean enable)
+	public ExTeleportFavoritesList(Player player, boolean enable)
 	{
 		_teleports = player.getVariables().getIntegerList(PlayerVariables.FAVORITE_TELEPORTS);
 		_enable = enable;

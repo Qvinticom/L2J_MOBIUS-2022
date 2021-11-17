@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35900" level="75" type="Npc" name="Support Unit Captain" title="White Sands Fortress">
+	<npc id="35900" level="75" type="Folk" name="Support Unit Captain" title="White Sands Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -39,7 +39,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35901" level="75" type="Npc" name="Engineering Manager" title="White Sands Fortress">
+	<npc id="35901" level="75" type="Folk" name="Engineering Manager" title="White Sands Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -136,7 +136,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="35903" level="80" type="Npc" name="Supply Box">
+	<npc id="35903" level="80" type="Folk" name="Supply Box">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -172,7 +172,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="35904" level="75" type="Npc" name="Detention Camp Warden" title="White Sands Fortress">
+	<npc id="35904" level="75" type="Folk" name="Detention Camp Warden" title="White Sands Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -656,7 +656,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35913" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35913" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1323,7 +1323,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="35924" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="35924" level="80" type="Folk" name="Mercenary Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1410,7 +1410,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35925" level="75" type="Npc" name="Mercenary Private">
+	<npc id="35925" level="75" type="Folk" name="Mercenary Private">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1458,7 +1458,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35926" level="20" type="Npc" name="Flagpole">
+	<npc id="35926" level="20" type="Folk" name="Flagpole">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1535,7 +1535,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35928" level="75" type="Npc" name="Suspicious Merchant" title="Borderland Fortress">
+	<npc id="35928" level="75" type="Folk" name="Suspicious Merchant" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1574,7 +1574,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35929" level="75" type="Npc" name="Guard Captain" title="Borderland Fortress">
+	<npc id="35929" level="75" type="Folk" name="Guard Captain" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1620,7 +1620,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="35930" level="75" type="Npc" name="Archer Captain" title="Borderland Fortress">
+	<npc id="35930" level="75" type="Folk" name="Archer Captain" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1659,7 +1659,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35931" level="75" type="Npc" name="General" title="Borderland Fortress">
+	<npc id="35931" level="75" type="Folk" name="General" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1699,7 +1699,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="35932" level="75" type="Npc" name="Support Unit Captain" title="Borderland Fortress">
+	<npc id="35932" level="75" type="Folk" name="Support Unit Captain" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1738,7 +1738,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35933" level="75" type="Npc" name="Engineering Manager" title="Borderland Fortress">
+	<npc id="35933" level="75" type="Folk" name="Engineering Manager" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -1835,7 +1835,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="35935" level="80" type="Npc" name="Supply Box">
+	<npc id="35935" level="80" type="Folk" name="Supply Box">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1871,7 +1871,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="35936" level="75" type="Npc" name="Detention Camp Warden" title="Borderland Fortress">
+	<npc id="35936" level="75" type="Folk" name="Detention Camp Warden" title="Borderland Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2355,7 +2355,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35945" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="35945" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="109" />
@@ -2404,7 +2404,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="35946" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="35946" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -2448,7 +2448,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="35947" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="35947" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="109" />
@@ -2496,7 +2496,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="35948" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35948" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3350,7 +3350,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="35962" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="35962" level="80" type="Folk" name="Mercenary Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3437,7 +3437,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="35963" level="75" type="Npc" name="Mercenary Private">
+	<npc id="35963" level="75" type="Folk" name="Mercenary Private">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3485,7 +3485,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35964" level="20" type="Npc" name="Flagpole">
+	<npc id="35964" level="20" type="Folk" name="Flagpole">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3562,7 +3562,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35966" level="75" type="Npc" name="Suspicious Merchant" title="Swamp Fortress">
+	<npc id="35966" level="75" type="Folk" name="Suspicious Merchant" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3601,7 +3601,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35967" level="75" type="Npc" name="Guard Captain" title="Swamp Fortress">
+	<npc id="35967" level="75" type="Folk" name="Guard Captain" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3647,7 +3647,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="35968" level="75" type="Npc" name="Archer Captain" title="Swamp Fortress">
+	<npc id="35968" level="75" type="Folk" name="Archer Captain" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -3686,7 +3686,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35969" level="75" type="Npc" name="General" title="Swamp Fortress">
+	<npc id="35969" level="75" type="Folk" name="General" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3726,7 +3726,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="35970" level="75" type="Npc" name="Support Unit Captain" title="Swamp Fortress">
+	<npc id="35970" level="75" type="Folk" name="Support Unit Captain" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3765,7 +3765,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35971" level="75" type="Npc" name="Engineering Manager" title="Swamp Fortress">
+	<npc id="35971" level="75" type="Folk" name="Engineering Manager" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -3862,7 +3862,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="35973" level="80" type="Npc" name="Supply Box">
+	<npc id="35973" level="80" type="Folk" name="Supply Box">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3898,7 +3898,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="35974" level="75" type="Npc" name="Detention Camp Warden" title="Swamp Fortress">
+	<npc id="35974" level="75" type="Folk" name="Detention Camp Warden" title="Swamp Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4382,7 +4382,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35983" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="35983" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="110" />
@@ -4431,7 +4431,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="35984" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="35984" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -4475,7 +4475,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="35985" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="35985" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="110" />
@@ -4523,7 +4523,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="35986" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35986" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

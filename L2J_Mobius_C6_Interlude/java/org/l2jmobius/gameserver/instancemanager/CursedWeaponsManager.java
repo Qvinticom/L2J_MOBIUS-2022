@@ -40,14 +40,14 @@ import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Commander;
+import org.l2jmobius.gameserver.model.actor.instance.FestivalMonster;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RiftInvader;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -273,9 +273,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public synchronized void checkDrop(Attackable attackable, PlayerInstance player)
+	public synchronized void checkDrop(Attackable attackable, Player player)
 	{
-		if ((attackable instanceof SiegeGuardInstance) || (attackable instanceof RiftInvaderInstance) || (attackable instanceof FestivalMonsterInstance) || (attackable instanceof GrandBossInstance) || (attackable instanceof FortSiegeGuardInstance) || (attackable instanceof CommanderInstance))
+		if ((attackable instanceof SiegeGuard) || (attackable instanceof RiftInvader) || (attackable instanceof FestivalMonster) || (attackable instanceof GrandBoss) || (attackable instanceof FortSiegeGuard) || (attackable instanceof Commander))
 		{
 			return;
 		}
@@ -299,7 +299,7 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public void activate(PlayerInstance player, ItemInstance item)
+	public void activate(Player player, Item item)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(item.getItemId());
 		if (player.isCursedWeaponEquiped()) // cannot own 2 cursed swords
@@ -342,7 +342,7 @@ public class CursedWeaponsManager
 	
 	public static void announce(SystemMessage sm)
 	{
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			if (player == null)
 			{
@@ -353,7 +353,7 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public void checkPlayer(PlayerInstance player)
+	public void checkPlayer(Player player)
 	{
 		if (player == null)
 		{

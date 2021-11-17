@@ -25,14 +25,13 @@ import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.OlympiadManagerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.OlympiadManager;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ExHeroList;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -71,9 +70,9 @@ public class OlympiadManagerLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!(target instanceof OlympiadManagerInstance))
+		if (!(target instanceof OlympiadManager))
 		{
 			return false;
 		}
@@ -84,7 +83,7 @@ public class OlympiadManagerLink implements IBypassHandler
 			{
 				final int val = Integer.parseInt(command.substring(13, 14));
 				final String suffix = command.substring(14);
-				((OlympiadManagerInstance) target).showChatWindow(player, val, suffix);
+				((OlympiadManager) target).showChatWindow(player, val, suffix);
 			}
 			else if (command.toLowerCase().startsWith("olympiadnoble"))
 			{
@@ -115,13 +114,13 @@ public class OlympiadManagerLink implements IBypassHandler
 				{
 					case 0: // H5 match selection
 					{
-						if (!OlympiadManager.getInstance().isRegistered(player))
+						if (!org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().isRegistered(player))
 						{
 							html.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "noble_desc2a.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
 							html.replace("%olympiad_period%", String.valueOf(Olympiad.getInstance().getPeriod()));
 							html.replace("%olympiad_cycle%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
-							html.replace("%olympiad_opponent%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
+							html.replace("%olympiad_opponent%", String.valueOf(org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().getCountOpponents()));
 							player.sendPacket(html);
 						}
 						else
@@ -134,14 +133,14 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					case 1: // unregister
 					{
-						OlympiadManager.getInstance().unRegisterNoble(player);
+						org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().unRegisterNoble(player);
 						break;
 					}
 					case 2: // show waiting list | TODO: cleanup (not used anymore)
 					{
-						final int nonClassed = OlympiadManager.getInstance().getRegisteredNonClassBased().size();
-						final int teams = OlympiadManager.getInstance().getRegisteredTeamsBased().size();
-						final Collection<List<Integer>> allClassed = OlympiadManager.getInstance().getRegisteredClassBased().values();
+						final int nonClassed = org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().getRegisteredNonClassBased().size();
+						final int teams = org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().getRegisteredTeamsBased().size();
+						final Collection<List<Integer>> allClassed = org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().getRegisteredClassBased().values();
 						int classed = 0;
 						if (!allClassed.isEmpty())
 						{
@@ -181,12 +180,12 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					case 4: // register non classed
 					{
-						OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
+						org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
 						break;
 					}
 					case 5: // register classed
 					{
-						OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
+						org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
 						break;
 					}
 					case 6: // request tokens reward
@@ -236,7 +235,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					case 11: // register team
 					{
-						OlympiadManager.getInstance().registerNoble(player, CompetitionType.TEAMS);
+						org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().registerNoble(player, CompetitionType.TEAMS);
 						break;
 					}
 					default:

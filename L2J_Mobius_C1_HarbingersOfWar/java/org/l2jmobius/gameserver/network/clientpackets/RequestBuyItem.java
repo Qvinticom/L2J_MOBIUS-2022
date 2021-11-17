@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.TradeController;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -40,29 +40,29 @@ public class RequestBuyItem extends ClientBasePacket
 		super(decrypt);
 		final int listId = readD();
 		final int count = readD();
-		final ItemInstance[] items = new ItemInstance[count];
+		final Item[] items = new Item[count];
 		for (int i = 0; i < count; ++i)
 		{
 			final int itemId = readD();
 			final int cnt = readD();
-			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
+			final Item inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(cnt);
 			items[i] = inst;
 		}
 		
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		
 		// Prevent buying items far from merchant.
 		if (!player.isGM())
 		{
-			if (!(player.getTarget() instanceof MerchantInstance))
+			if (!(player.getTarget() instanceof Merchant))
 			{
 				return;
 			}
 			boolean found = false;
 			for (WorldObject object : player.getKnownObjects())
 			{
-				if ((object instanceof MerchantInstance) && (player.calculateDistance2D(object) < 250))
+				if ((object instanceof Merchant) && (player.calculateDistance2D(object) < 250))
 				{
 					found = true;
 					break;
@@ -77,7 +77,7 @@ public class RequestBuyItem extends ClientBasePacket
 		double neededMoney = 0;
 		final long currentMoney = player.getAdena();
 		final TradeList list = TradeController.getInstance().getBuyList(listId);
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
 			final double itemCount = item.getCount();
 			final int id = item.getItemId();
@@ -99,7 +99,7 @@ public class RequestBuyItem extends ClientBasePacket
 		sma.addNumber((int) neededMoney);
 		player.sendPacket(sma);
 		
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
 			player.getInventory().addItem(item);
 			if (item.getCount() > 1)

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,7 +39,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -76,7 +76,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		// LOGGER.info("RequestStopPledgeWar: By leader or authorized player: " + playerClan.getLeaderName() + " of clan: "
 		// + playerClan.getName() + " to clan: " + _pledgeName);
 		
-		// PlayerInstance leader = World.getInstance().getPlayer(clan.getLeaderName());
+		// Player leader = World.getInstance().getPlayer(clan.getLeaderName());
 		// if(leader != null && leader.isOnline() == 0)
 		// {
 		// player.sendMessage("Clan leader isn't online.");
@@ -92,7 +92,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		// return;
 		// }
 		ClanTable.getInstance().deleteClanWars(playerClan.getClanId(), clan.getClanId());
-		for (PlayerInstance cha : World.getInstance().getAllPlayers())
+		for (Player cha : World.getInstance().getAllPlayers())
 		{
 			if ((cha.getClan() == player.getClan()) || (cha.getClan() == clan))
 			{

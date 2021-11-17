@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmCancelItem;
@@ -43,8 +43,8 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemId);
+		final Player player = client.getPlayer();
+		final Item item = (Item) World.getInstance().findObject(_itemId);
 		if ((player == null) || (item == null))
 		{
 			return;
@@ -59,7 +59,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 		int price = 0;
 		switch (item.getItem().getItemGrade())
 		{
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				if (item.getCrystalCount() < 1720)
 				{
@@ -75,7 +75,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				if (item.getCrystalCount() < 1746)
 				{
@@ -87,7 +87,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				if (item.getCrystalCount() < 2160)
 				{
@@ -103,7 +103,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				price = 480000;
 				break;

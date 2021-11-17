@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -138,7 +138,7 @@ public class DailyTaskManager
 		}
 		
 		int vitality = PlayerStat.MAX_VITALITY_POINTS / 4;
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			final int VP = player.getVitalityPoints();
 			player.setVitalityPoints(VP + vitality, false);
@@ -179,7 +179,7 @@ public class DailyTaskManager
 			return;
 		}
 		
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
 			for (SubClassHolder subclass : player.getSubClasses().values())
@@ -330,7 +330,7 @@ public class DailyTaskManager
 		
 		// Checks the tier expiration for online players
 		// offline players get handled on next time they log in.
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			if (player.getVipTier() > 0)
 			{
@@ -433,7 +433,7 @@ public class DailyTaskManager
 			}
 			
 			// Update data for online players.
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				player.getAccountVariables().remove("ATTENDANCE_DATE");
 				player.getAccountVariables().storeMe();
@@ -458,7 +458,7 @@ public class DailyTaskManager
 			}
 			
 			// Update data for online players.
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
 				player.getVariables().storeMe();

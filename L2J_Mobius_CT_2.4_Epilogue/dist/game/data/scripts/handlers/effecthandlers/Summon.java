@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -70,9 +70,9 @@ public class Summon extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final Player player = info.getEffector().getActingPlayer();
 		final NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
-		final ServitorInstance summon = new ServitorInstance(template, player);
+		final Servitor summon = new Servitor(template, player);
 		final int consumeItemInterval = (_consumeItemInterval > 0 ? _consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
 		summon.setName(template.getName());
 		summon.setTitle(info.getEffector().getName());

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureHpChange;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
@@ -45,7 +45,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		// Augmentation option
 		if (skill == null)

@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.enums.CreatureState;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
@@ -28,7 +28,7 @@ public class RequestSocialAction extends ClientBasePacket
 	{
 		super(decrypt);
 		final int actionId = readD();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null) && (activeChar.getCurrentState() == CreatureState.IDLE))
 		{
 			final SocialAction atk = new SocialAction(client.getActiveChar().getObjectId(), actionId);

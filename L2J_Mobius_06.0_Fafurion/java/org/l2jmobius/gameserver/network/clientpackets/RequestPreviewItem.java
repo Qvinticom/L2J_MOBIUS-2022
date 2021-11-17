@@ -27,13 +27,13 @@ import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -57,9 +57,9 @@ public class RequestPreviewItem implements IClientIncomingPacket
 	
 	private class RemoveWearItemsTask implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		
-		protected RemoveWearItemsTask(PlayerInstance player)
+		protected RemoveWearItemsTask(Player player)
 		{
 			_player = player;
 		}
@@ -114,7 +114,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		}
 		
 		// Get the current player and return if null
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -135,7 +135,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		// Check current target of the player and the INTERACTION_DISTANCE
 		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null) // No target (i.e. GM Shop)
-			|| !(target instanceof MerchantInstance) // Target not a merchant
+			|| !(target instanceof Merchant) // Target not a merchant
 			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE) // Distance is too far
 		))
 		{
@@ -149,7 +149,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		}
 		
 		// Get the current merchant targeted by the player
-		final MerchantInstance merchant = (target instanceof MerchantInstance) ? (MerchantInstance) target : null;
+		final Merchant merchant = (target instanceof Merchant) ? (Merchant) target : null;
 		if (merchant == null)
 		{
 			LOGGER.warning("Null merchant!");
@@ -175,7 +175,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 				return;
 			}
 			
-			final Item template = product.getItem();
+			final ItemTemplate template = product.getItem();
 			if (template == null)
 			{
 				continue;

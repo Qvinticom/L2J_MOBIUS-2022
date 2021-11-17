@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.items.enchant;
 
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author UnAfraid
@@ -72,7 +72,7 @@ public class EnchantRateItem
 	 * @param item
 	 * @return {@code true} if item can be used with this rate group, {@code false} otherwise.
 	 */
-	public boolean validate(Item item)
+	public boolean validate(ItemTemplate item)
 	{
 		if ((_itemId != 0) && (_itemId != item.getId()))
 		{

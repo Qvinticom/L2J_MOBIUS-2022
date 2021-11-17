@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
@@ -47,13 +47,13 @@ public class AdminPledge implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
+		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -166,7 +166,7 @@ public class AdminPledge implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "game_menu.htm");
 	}

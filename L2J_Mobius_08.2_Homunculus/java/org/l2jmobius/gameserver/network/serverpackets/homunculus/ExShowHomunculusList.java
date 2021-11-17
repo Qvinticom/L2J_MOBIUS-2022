@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExShowHomunculusList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExShowHomunculusList(PlayerInstance player)
+	public ExShowHomunculusList(Player player)
 	{
 		_player = player;
 	}

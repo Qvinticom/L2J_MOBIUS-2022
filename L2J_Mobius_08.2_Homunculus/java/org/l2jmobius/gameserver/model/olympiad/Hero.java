@@ -43,13 +43,13 @@ import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTakeHero;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -423,7 +423,7 @@ public class Hero
 		HERO_MESSAGE.clear();
 	}
 	
-	public void showHeroDiary(PlayerInstance player, int heroclass, int charid, int page)
+	public void showHeroDiary(Player player, int heroclass, int charid, int page)
 	{
 		final int perpage = 10;
 		final List<StatSet> mainList = HERO_DIARY.get(charid);
@@ -505,7 +505,7 @@ public class Hero
 		}
 	}
 	
-	public void showHeroFights(PlayerInstance player, int heroclass, int charid, int page)
+	public void showHeroFights(Player player, int heroclass, int charid, int page)
 	{
 		final int perpage = 20;
 		int win = 0;
@@ -601,7 +601,7 @@ public class Hero
 		
 		for (Integer objectId : HEROES.keySet())
 		{
-			final PlayerInstance player = World.getInstance().getPlayer(objectId);
+			final Player player = World.getInstance().getPlayer(objectId);
 			if (player == null)
 			{
 				continue;
@@ -611,7 +611,7 @@ public class Hero
 			
 			for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
 			{
-				final ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
+				final Item equippedItem = player.getInventory().getPaperdollItem(i);
 				if ((equippedItem != null) && equippedItem.isHeroItem())
 				{
 					player.getInventory().unEquipItemInSlot(i);
@@ -619,7 +619,7 @@ public class Hero
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
+			for (Item item : player.getInventory().getAvailableItems(false, false, false))
 			{
 				if ((item != null) && item.isHeroItem())
 				{
@@ -842,7 +842,7 @@ public class Hero
 	 * @param player the player instance
 	 * @param message String to set
 	 */
-	public void setHeroMessage(PlayerInstance player, String message)
+	public void setHeroMessage(Player player, String message)
 	{
 		HERO_MESSAGE.put(player.getObjectId(), message);
 	}
@@ -917,7 +917,7 @@ public class Hero
 	 * Claims the hero status for the given player.
 	 * @param player the player to become hero
 	 */
-	public void claimHero(PlayerInstance player)
+	public void claimHero(Player player)
 	{
 		StatSet hero = HEROES.get(player.getObjectId());
 		if (hero == null)

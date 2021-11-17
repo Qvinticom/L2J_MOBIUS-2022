@@ -21,9 +21,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.SubClass;
-import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ public class PlayerStat extends PlayableStat
 	private int _oldMaxMp; // stats watch
 	private int _oldMaxCp; // stats watch
 	
-	public PlayerStat(PlayerInstance player)
+	public PlayerStat(Player player)
 	{
 		super(player);
 	}
@@ -49,7 +49,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public boolean addExp(long value)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		
 		// Disable exp gain.
 		if (!player.getAccessLevel().canGainExp() || (Config.ENABLE_EXP_GAIN_COMMANDS && !getActiveChar().isExpGainEnabled()))
@@ -77,15 +77,15 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	/**
-	 * Add Experience and SP rewards to the PlayerInstance, remove its Karma (if necessary) and Launch increase level task.<br>
+	 * Add Experience and SP rewards to the Player, remove its Karma (if necessary) and Launch increase level task.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Remove Karma when the player kills MonsterInstance</li>
-	 * <li>Send a Server->Client packet StatusUpdate to the PlayerInstance</li>
-	 * <li>Send a Server->Client System Message to the PlayerInstance</li>
-	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet SocialAction (broadcast)</li>
-	 * <li>If the PlayerInstance increases it's level, manage the increase level task (Max MP, Max MP, Recommendation, Expertise and beginner skills...)</li>
-	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet UserInfo to the PlayerInstance</li><br>
+	 * <li>Remove Karma when the player kills Monster</li>
+	 * <li>Send a Server->Client packet StatusUpdate to the Player</li>
+	 * <li>Send a Server->Client System Message to the Player</li>
+	 * <li>If the Player increases it's level, send a Server->Client packet SocialAction (broadcast)</li>
+	 * <li>If the Player increases it's level, manage the increase level task (Max MP, Max MP, Recommendation, Expertise and beginner skills...)</li>
+	 * <li>If the Player increases it's level, send a Server->Client packet UserInfo to the Player</li><br>
 	 * @param addToExpValue The Experience value to add
 	 * @param addToSpValue The SP value to add
 	 */
@@ -95,7 +95,7 @@ public class PlayerStat extends PlayableStat
 		float ratioTakenByPet = 0;
 		
 		// Disable exp gain.
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (!player.getAccessLevel().canGainExp() || (Config.ENABLE_EXP_GAIN_COMMANDS && !getActiveChar().isExpGainEnabled()))
 		{
 			return false;
@@ -105,9 +105,9 @@ public class PlayerStat extends PlayableStat
 		int addToSp = addToSpValue;
 		
 		// if this player has a pet that takes from the owner's Exp, give the pet Exp now
-		if (player.getPet() instanceof PetInstance)
+		if (player.getPet() instanceof Pet)
 		{
-			final PetInstance pet = (PetInstance) player.getPet();
+			final Pet pet = (Pet) player.getPet();
 			ratioTakenByPet = pet.getPetData().getOwnerExpTaken();
 			
 			// only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio
@@ -132,7 +132,7 @@ public class PlayerStat extends PlayableStat
 			return false;
 		}
 		
-		// Send a Server->Client System Message to the PlayerInstance
+		// Send a Server->Client System Message to the Player
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_EXPERIENCE_AND_S2_SP);
 		sm.addNumber((int) addToExp);
 		sm.addNumber(addToSp);
@@ -149,7 +149,7 @@ public class PlayerStat extends PlayableStat
 			return false;
 		}
 		
-		// Send a Server->Client System Message to the PlayerInstance
+		// Send a Server->Client System Message to the Player
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_EXPERIENCE_HAS_DECREASED_BY_S1);
 		sm.addNumber((int) addToExp);
 		getActiveChar().sendPacket(sm);
@@ -172,21 +172,21 @@ public class PlayerStat extends PlayableStat
 		final boolean levelIncreased = super.addLevel(value);
 		if (Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS)
 		{
-			final ClassMasterInstance masterInstance = ClassMasterInstance.getInstance();
+			final ClassMaster masterInstance = ClassMaster.getInstance();
 			if (masterInstance != null)
 			{
 				final int curLevel = getActiveChar().getClassId().level();
 				if ((getLevel() >= 20) && (curLevel == 0) && Config.ALLOW_CLASS_MASTERS_FIRST_CLASS)
 				{
-					ClassMasterInstance.getInstance().onAction(getActiveChar());
+					ClassMaster.getInstance().onAction(getActiveChar());
 				}
 				else if ((getLevel() >= 40) && (curLevel == 1) && Config.ALLOW_CLASS_MASTERS_SECOND_CLASS)
 				{
-					ClassMasterInstance.getInstance().onAction(getActiveChar());
+					ClassMaster.getInstance().onAction(getActiveChar());
 				}
 				else if ((getLevel() >= 76) && (curLevel == 2) && Config.ALLOW_CLASS_MASTERS_THIRD_CLASS)
 				{
-					ClassMasterInstance.getInstance().onAction(getActiveChar());
+					ClassMaster.getInstance().onAction(getActiveChar());
 				}
 			}
 			else
@@ -232,11 +232,11 @@ public class PlayerStat extends PlayableStat
 		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
 		getActiveChar().sendPacket(su);
 		
-		// Update the overloaded status of the PlayerInstance
+		// Update the overloaded status of the Player
 		getActiveChar().refreshOverloaded();
-		// Update the expertise status of the PlayerInstance
+		// Update the expertise status of the Player
 		getActiveChar().refreshExpertisePenalty();
-		// Send a Server->Client packet UserInfo to the PlayerInstance
+		// Send a Server->Client packet UserInfo to the Player
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		// getActiveChar().setLocked(false);
 		return levelIncreased;
@@ -263,15 +263,15 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
-		return (PlayerInstance) super.getActiveChar();
+		return (Player) super.getActiveChar();
 	}
 	
 	@Override
 	public long getExp()
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if ((player != null) && player.isSubClassActive())
 		{
 			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
@@ -286,7 +286,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void setExp(long value)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (player.isSubClassActive())
 		{
 			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
@@ -306,7 +306,7 @@ public class PlayerStat extends PlayableStat
 	{
 		try
 		{
-			final PlayerInstance player = getActiveChar();
+			final Player player = getActiveChar();
 			if (player.isSubClassActive())
 			{
 				final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
@@ -332,7 +332,7 @@ public class PlayerStat extends PlayableStat
 			level = ExperienceData.getInstance().getMaxLevel() - 1;
 		}
 		
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (player.isSubClassActive())
 		{
 			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
@@ -355,7 +355,7 @@ public class PlayerStat extends PlayableStat
 		{
 			_oldMaxCp = val;
 			
-			final PlayerInstance player = getActiveChar();
+			final Player player = getActiveChar();
 			if (player.getStatus().getCurrentCp() != val)
 			{
 				player.getStatus().setCurrentCp(getActiveChar().getStatus().getCurrentCp());
@@ -367,13 +367,13 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public int getMaxHp()
 	{
-		// Get the Max HP (base+modifier) of the PlayerInstance
+		// Get the Max HP (base+modifier) of the Player
 		final int val = super.getMaxHp();
 		if (val != _oldMaxHp)
 		{
 			_oldMaxHp = val;
 			
-			final PlayerInstance player = getActiveChar();
+			final Player player = getActiveChar();
 			
 			// Launch a regen task if the new Max HP is higher than the old one
 			if (player.getStatus().getCurrentHp() != val)
@@ -387,13 +387,13 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public int getMaxMp()
 	{
-		// Get the Max MP (base+modifier) of the PlayerInstance
+		// Get the Max MP (base+modifier) of the Player
 		final int val = super.getMaxMp();
 		if (val != _oldMaxMp)
 		{
 			_oldMaxMp = val;
 			
-			final PlayerInstance player = getActiveChar();
+			final Player player = getActiveChar();
 			
 			// Launch a regen task if the new Max MP is higher than the old one
 			if (player.getStatus().getCurrentMp() != val)
@@ -407,7 +407,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public int getSp()
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (player.isSubClassActive())
 		{
 			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
@@ -422,7 +422,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void setSp(int value)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (player.isSubClassActive())
 		{
 			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());

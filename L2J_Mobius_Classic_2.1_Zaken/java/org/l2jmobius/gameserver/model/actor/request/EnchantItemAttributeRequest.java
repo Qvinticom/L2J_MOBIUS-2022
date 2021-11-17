@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.request;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
@@ -27,13 +27,13 @@ public class EnchantItemAttributeRequest extends AbstractRequest
 	private volatile int _enchantingItemObjectId;
 	private volatile int _enchantingStoneObjectId;
 	
-	public EnchantItemAttributeRequest(PlayerInstance player, int enchantingStoneObjectId)
+	public EnchantItemAttributeRequest(Player player, int enchantingStoneObjectId)
 	{
 		super(player);
 		_enchantingStoneObjectId = enchantingStoneObjectId;
 	}
 	
-	public ItemInstance getEnchantingItem()
+	public Item getEnchantingItem()
 	{
 		return getActiveChar().getInventory().getItemByObjectId(_enchantingItemObjectId);
 	}
@@ -43,7 +43,7 @@ public class EnchantItemAttributeRequest extends AbstractRequest
 		_enchantingItemObjectId = objectId;
 	}
 	
-	public ItemInstance getEnchantingStone()
+	public Item getEnchantingStone()
 	{
 		return getActiveChar().getInventory().getItemByObjectId(_enchantingStoneObjectId);
 	}

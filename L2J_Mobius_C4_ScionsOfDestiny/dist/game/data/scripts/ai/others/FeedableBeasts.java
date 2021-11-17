@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -340,7 +340,7 @@ public class FeedableBeasts extends Quest
 		GROWTH_CAPABLE_MONSTERS.put(21505, temp);
 	}
 	
-	private void spawnNext(NpcInstance npc, int growthLevel, PlayerInstance player, int food)
+	private void spawnNext(Npc npc, int growthLevel, Player player, int food)
 	{
 		final int npcId = npc.getNpcId();
 		int nextNpcId = 0;
@@ -404,7 +404,7 @@ public class FeedableBeasts extends Quest
 			}
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
-			final TamedBeastInstance nextNpc = new TamedBeastInstance(IdManager.getInstance().getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
+			final TamedBeast nextNpc = new TamedBeast(IdManager.getInstance().getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
 			
 			// If player has Q020 going, give quest item
@@ -442,7 +442,7 @@ public class FeedableBeasts extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null) && MAD_COW_POLYMORPH.containsKey(npc.getNpcId()))
 		{
@@ -470,7 +470,7 @@ public class FeedableBeasts extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public String onSkillUse(Npc npc, Player caster, Skill skill)
 	{
 		// Gather some values on local variables
 		final int npcId = npc.getNpcId();
@@ -545,7 +545,7 @@ public class FeedableBeasts extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		// Remove the feedinfo of the mob that got killed, if any
 		FEED_INFO.remove(npc.getObjectId());

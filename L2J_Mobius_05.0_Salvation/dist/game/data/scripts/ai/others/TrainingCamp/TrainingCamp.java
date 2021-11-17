@@ -23,7 +23,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -59,7 +59,7 @@ public class TrainingCamp extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (!Config.TRAINING_CAMP_ENABLE || !checkConditions(player))
@@ -220,12 +220,12 @@ public class TrainingCamp extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "4378.htm";
 	}
 	
-	private boolean checkConditions(PlayerInstance player)
+	private boolean checkConditions(Player player)
 	{
 		if (player.getLevel() <= Config.TRAINING_CAMP_MIN_LEVEL)
 		{
@@ -296,7 +296,7 @@ public class TrainingCamp extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final TrainingHolder holder = player.getTraingCampInfo();
 		if (holder == null)
 		{
@@ -332,7 +332,7 @@ public class TrainingCamp extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLogout(OnPlayerLogout event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final TrainingHolder holder = player.getTraingCampInfo();
 		if (holder == null)
 		{

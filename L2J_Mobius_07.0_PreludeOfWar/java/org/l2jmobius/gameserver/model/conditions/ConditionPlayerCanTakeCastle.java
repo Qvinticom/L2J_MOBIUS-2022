@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,14 +40,14 @@ public class ConditionPlayerCanTakeCastle extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
 			return !_value;
 		}
 		
-		final PlayerInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		boolean canTakeCastle = true;
 		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || !player.isClanLeader())
 		{

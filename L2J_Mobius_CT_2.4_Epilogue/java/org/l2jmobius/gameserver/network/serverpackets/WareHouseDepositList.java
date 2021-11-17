@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class WareHouseDepositList implements IClientOutgoingPacket
@@ -31,7 +31,7 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
 	private final long _playerAdena;
-	private final List<ItemInstance> _items = new ArrayList<>();
+	private final List<Item> _items = new ArrayList<>();
 	/**
 	 * <ul>
 	 * <li>0x01-Private Warehouse</li>
@@ -42,13 +42,13 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 	 */
 	private final int _whType;
 	
-	public WareHouseDepositList(PlayerInstance player, int type)
+	public WareHouseDepositList(Player player, int type)
 	{
 		_whType = type;
 		_playerAdena = player.getAdena();
 		
 		final boolean isPrivate = _whType == PRIVATE;
-		for (ItemInstance temp : player.getInventory().getAvailableItems(true, isPrivate, false))
+		for (Item temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{
 			if ((temp != null) && temp.isDepositable(isPrivate))
 			{
@@ -65,7 +65,7 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 		packet.writeQ(_playerAdena);
 		packet.writeH(_items.size());
 		
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());

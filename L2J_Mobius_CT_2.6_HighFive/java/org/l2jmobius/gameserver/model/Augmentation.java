@@ -22,7 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.OptionData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.options.Options;
 
 /**
@@ -66,7 +66,7 @@ public class Augmentation
 			}
 		}
 		
-		public void applyBonus(PlayerInstance player)
+		public void applyBonus(Player player)
 		{
 			// make sure the bonuses are not applied twice..
 			if (_active)
@@ -82,7 +82,7 @@ public class Augmentation
 			_active = true;
 		}
 		
-		public void removeBonus(PlayerInstance player)
+		public void removeBonus(Player player)
 		{
 			// make sure the bonuses are not removed twice
 			if (!_active)
@@ -112,7 +112,7 @@ public class Augmentation
 	 * Applies the bonuses to the player.
 	 * @param player
 	 */
-	public void applyBonus(PlayerInstance player)
+	public void applyBonus(Player player)
 	{
 		_bonus.applyBonus(player);
 	}
@@ -121,7 +121,7 @@ public class Augmentation
 	 * Removes the augmentation bonuses from the player.
 	 * @param player
 	 */
-	public void removeBonus(PlayerInstance player)
+	public void removeBonus(Player player)
 	{
 		_bonus.removeBonus(player);
 	}

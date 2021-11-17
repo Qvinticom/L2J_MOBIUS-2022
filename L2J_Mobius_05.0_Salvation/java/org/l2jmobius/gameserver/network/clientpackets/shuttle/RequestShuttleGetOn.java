@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.clientpackets.shuttle;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
@@ -45,14 +45,14 @@ public class RequestShuttleGetOn implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		// TODO: better way?
-		for (ShuttleInstance shuttle : World.getInstance().getVisibleObjects(player, ShuttleInstance.class))
+		for (Shuttle shuttle : World.getInstance().getVisibleObjects(player, Shuttle.class))
 		{
 			if (shuttle.calculateDistance3D(player) < 1000)
 			{

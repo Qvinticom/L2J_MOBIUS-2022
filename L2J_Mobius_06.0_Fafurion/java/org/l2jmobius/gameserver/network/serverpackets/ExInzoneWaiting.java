@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -36,9 +36,9 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 	private final Map<Integer, Long> _instanceTimes;
 	private final boolean _hide;
 	
-	public ExInzoneWaiting(PlayerInstance player, boolean hide)
+	public ExInzoneWaiting(Player player, boolean hide)
 	{
-		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+		final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
 		_currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
 		_instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
 		_hide = hide;

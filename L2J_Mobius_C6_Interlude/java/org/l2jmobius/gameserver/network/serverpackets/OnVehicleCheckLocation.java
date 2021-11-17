@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class OnVehicleCheckLocation implements IClientOutgoingPacket
 {
-	private final BoatInstance _boat;
+	private final Boat _boat;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -36,7 +36,7 @@ public class OnVehicleCheckLocation implements IClientOutgoingPacket
 	 * @param y
 	 * @param z
 	 */
-	public OnVehicleCheckLocation(BoatInstance instance, int x, int y, int z)
+	public OnVehicleCheckLocation(Boat instance, int x, int y, int z)
 	{
 		_boat = instance;
 		_x = x;

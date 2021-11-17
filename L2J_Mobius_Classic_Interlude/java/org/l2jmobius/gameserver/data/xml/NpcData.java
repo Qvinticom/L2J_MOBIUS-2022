@@ -47,7 +47,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -449,7 +449,7 @@ public class NpcData implements IXmlReader
 												if ("item".equalsIgnoreCase(dropNode.getNodeName()))
 												{
 													final DropHolder dropItem = new DropHolder(dropType, parseInteger(dropAttrs, "id"), parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance"));
-													final Item item = ItemTable.getInstance().getTemplate(parseInteger(dropAttrs, "id"));
+													final ItemTemplate item = ItemTable.getInstance().getTemplate(parseInteger(dropAttrs, "id"));
 													if (item == null)
 													{
 														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(dropAttrs, "id") + ".");

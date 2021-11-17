@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class TitleUpdate implements IClientOutgoingPacket
@@ -25,7 +25,7 @@ public class TitleUpdate implements IClientOutgoingPacket
 	private final String _title;
 	private final int _objectId;
 	
-	public TitleUpdate(PlayerInstance player)
+	public TitleUpdate(Player player)
 	{
 		_objectId = player.getObjectId();
 		_title = player.getTitle();

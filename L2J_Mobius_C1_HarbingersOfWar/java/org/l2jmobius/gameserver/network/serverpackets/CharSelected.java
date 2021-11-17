@@ -18,14 +18,14 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.GameTimeTaskManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class CharSelected extends ServerBasePacket
 {
-	private final PlayerInstance _cha;
+	private final Player _cha;
 	private final int _sessionId;
 	
-	public CharSelected(PlayerInstance cha, int sessionId)
+	public CharSelected(Player cha, int sessionId)
 	{
 		_cha = cha;
 		_sessionId = sessionId;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -58,7 +58,7 @@ public class Heal extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked())
 		{
@@ -96,7 +96,7 @@ public class Heal extends AbstractEffect
 		{
 			// no static bonus
 			// grade dynamic bonus
-			final ItemInstance weaponInst = effector.getActiveWeaponInstance();
+			final Item weaponInst = effector.getActiveWeaponInstance();
 			if (weaponInst != null)
 			{
 				mAtkMul = weaponInst.getItem().getCrystalType() == CrystalType.S84 ? 4 : weaponInst.getItem().getCrystalType() == CrystalType.S80 ? 2 : 1;

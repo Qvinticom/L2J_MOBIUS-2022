@@ -32,10 +32,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
@@ -181,7 +181,7 @@ public class Hero
 		LOGGER.info("Hero System: Loaded " + COMPLETE_HEROES.size() + " all time Heroes.");
 	}
 	
-	public void putHero(PlayerInstance player, boolean isComplete)
+	public void putHero(Player player, boolean isComplete)
 	{
 		try
 		{
@@ -201,7 +201,7 @@ public class Hero
 		}
 	}
 	
-	public void deleteHero(PlayerInstance player, boolean isComplete)
+	public void deleteHero(Player player, boolean isComplete)
 	{
 		final int objId = player.getObjectId();
 		if (HEROES.containsKey(objId))
@@ -222,14 +222,14 @@ public class Hero
 	public synchronized void computeNewHeroes(List<StatSet> newHeroes)
 	{
 		updateHeroes(true);
-		List<ItemInstance> items;
+		List<Item> items;
 		InventoryUpdate iu;
 		if (HEROES.size() != 0)
 		{
 			for (StatSet hero : HEROES.values())
 			{
 				final String name = hero.getString(Olympiad.CHAR_NAME);
-				final PlayerInstance player = World.getInstance().getPlayer(name);
+				final Player player = World.getInstance().getPlayer(name);
 				if (player == null)
 				{
 					continue;
@@ -237,42 +237,42 @@ public class Hero
 				try
 				{
 					player.setHero(false);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_LR_HAND);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_LR_HAND);
 					iu = new InventoryUpdate();
-					for (ItemInstance item : items)
+					for (Item item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_R_HAND);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_R_HAND);
 					iu = new InventoryUpdate();
-					for (ItemInstance item : items)
+					for (Item item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_HAIR);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_HAIR);
 					iu = new InventoryUpdate();
-					for (ItemInstance item : items)
+					for (Item item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_FACE);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_FACE);
 					iu = new InventoryUpdate();
-					for (ItemInstance item : items)
+					for (Item item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_DHAIR);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_DHAIR);
 					iu = new InventoryUpdate();
-					for (ItemInstance item : items)
+					for (Item item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					for (ItemInstance item : player.getInventory().getAvailableItems(false))
+					for (Item item : player.getInventory().getAvailableItems(false))
 					{
 						if (item == null)
 						{
@@ -332,7 +332,7 @@ public class Hero
 		for (StatSet hero : HEROES.values())
 		{
 			final String name = hero.getString(Olympiad.CHAR_NAME);
-			final PlayerInstance player = World.getInstance().getPlayer(name);
+			final Player player = World.getInstance().getPlayer(name);
 			if (player != null)
 			{
 				player.setHero(true);

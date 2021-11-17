@@ -19,7 +19,7 @@ package ai.others;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -146,7 +146,7 @@ public class VarkaKetra extends AbstractNpcAI
 	}
 	
 	@Override
-	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	public void actionForEachPlayer(Player player, Npc npc, boolean isSummon)
 	{
 		if (Util.checkIfInRange(1500, player, npc, false))
 		{
@@ -163,7 +163,7 @@ public class VarkaKetra extends AbstractNpcAI
 		}
 	}
 	
-	private final void decreaseAlliance(PlayerInstance player, int[] marks)
+	private final void decreaseAlliance(Player player, int[] marks)
 	{
 		for (int i = 0; i < marks.length; i++)
 		{
@@ -179,7 +179,7 @@ public class VarkaKetra extends AbstractNpcAI
 		}
 	}
 	
-	private final void exitQuests(PlayerInstance player, String[] quests)
+	private final void exitQuests(Player player, String[] quests)
 	{
 		for (String quest : quests)
 		{
@@ -192,14 +192,14 @@ public class VarkaKetra extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
+	public boolean onNpcHate(Attackable mob, Player player, boolean isSummon)
 	{
 		if (CommonUtil.contains(KETRA, mob.getId()))
 		{

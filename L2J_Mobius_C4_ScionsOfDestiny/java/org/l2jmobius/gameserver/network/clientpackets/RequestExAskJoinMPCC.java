@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAskJoinMPCC;
@@ -44,13 +44,13 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final Player target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			return;
@@ -120,7 +120,7 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 		}
 	}
 	
-	private void askJoinMPCC(PlayerInstance requestor, PlayerInstance target)
+	private void askJoinMPCC(Player requestor, Player target)
 	{
 		boolean hasRight = false;
 		if ((requestor.getClan() != null) && (requestor.getClan().getLeaderId() == requestor.getObjectId()) && (requestor.getClan().getLevel() >= 5)) // Clanleader of level5 Clan or higher
@@ -150,7 +150,7 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance targetLeader = target.getParty().getLeader();
+		final Player targetLeader = target.getParty().getLeader();
 		if (!targetLeader.isProcessingRequest())
 		{
 			requestor.onTransactionRequest(targetLeader);

@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.util.MinionList;
 
 import ai.AbstractNpcAI;
@@ -66,7 +66,7 @@ public class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("check_minions"))
 		{
@@ -74,7 +74,7 @@ public class Epidos extends AbstractNpcAI
 			{
 				final int hpDecreasePercent = (int) (((_lastHp.get(npc.getObjectId()) - npc.getCurrentHp()) * 100) / npc.getMaxHp());
 				int minionsCount = 0;
-				final int spawnedMinions = ((MonsterInstance) npc).getMinionList().countSpawnedMinions();
+				final int spawnedMinions = ((Monster) npc).getMinionList().countSpawnedMinions();
 				
 				if ((hpDecreasePercent > 5) && (hpDecreasePercent <= 15) && (spawnedMinions <= 9))
 				{
@@ -91,7 +91,7 @@ public class Epidos extends AbstractNpcAI
 				
 				for (int i = 0; i < minionsCount; i++)
 				{
-					MinionList.spawnMinion((MonsterInstance) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getId())]);
+					MinionList.spawnMinion((Monster) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getId())]);
 				}
 				
 				_lastHp.put(npc.getObjectId(), npc.getCurrentHp());
@@ -114,7 +114,7 @@ public class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.isInsideRadius3D(-45474, 247450, -13994, 2000))
 		{

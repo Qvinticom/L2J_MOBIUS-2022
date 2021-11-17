@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -46,7 +46,7 @@ public class Party implements IAffectScopeHandler
 		
 		if (target.isPlayable())
 		{
-			final PlayerInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			final org.l2jmobius.gameserver.model.Party party = player.getParty();
 			
 			// Create the target filter.
@@ -64,7 +64,7 @@ public class Party implements IAffectScopeHandler
 					return false;
 				}
 				
-				final PlayerInstance p = plbl.getActingPlayer();
+				final Player p = plbl.getActingPlayer();
 				if ((p == null) || p.isDead())
 				{
 					return false;

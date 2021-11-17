@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -42,7 +42,7 @@ public class CorpseClan implements ITargetTypeHandler
 		final List<WorldObject> targetList = new ArrayList<>();
 		if (creature.isPlayable())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player == null)
 			{
 				return EMPTY_TARGET_LIST;
@@ -63,7 +63,7 @@ public class CorpseClan implements ITargetTypeHandler
 				final int maxTargets = skill.getAffectLimit();
 				for (ClanMember member : clan.getMembers())
 				{
-					final PlayerInstance obj = member.getPlayerInstance();
+					final Player obj = member.getPlayer();
 					if ((obj == null) || (obj == player))
 					{
 						continue;

@@ -16,8 +16,8 @@
  */
 package teleports.ElrokiTeleporters;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 public class ElrokiTeleporters extends Quest
@@ -31,7 +31,7 @@ public class ElrokiTeleporters extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getNpcId() == 32111)
 		{

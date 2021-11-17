@@ -19,8 +19,8 @@ package ai.areas.Hellbound.AI.NPC.Natives;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -60,7 +60,7 @@ public class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		final int hellboundLevel = HellboundEngine.getInstance().getLevel();
@@ -97,7 +97,7 @@ public class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (npc.getId() == TRAITOR)
@@ -112,7 +112,7 @@ public class Natives extends AbstractNpcAI
 					
 					for (int doorId : DOORS)
 					{
-						final DoorInstance door = DoorData.getInstance().getDoor(doorId);
+						final Door door = DoorData.getInstance().getDoor(doorId);
 						if (door != null)
 						{
 							door.openMe();
@@ -135,7 +135,7 @@ public class Natives extends AbstractNpcAI
 			{
 				for (int doorId : DOORS)
 				{
-					final DoorInstance door = DoorData.getInstance().getDoor(doorId);
+					final Door door = DoorData.getInstance().getDoor(doorId);
 					if (door != null)
 					{
 						door.closeMe();

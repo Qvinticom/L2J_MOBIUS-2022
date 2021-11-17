@@ -18,7 +18,7 @@ package ai.others;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -45,21 +45,21 @@ public class AltarOfEvil extends AbstractNpcAI
 	}
 	
 	@Override
-	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
+	public boolean onNpcHate(Attackable mob, Player player, boolean isSummon)
 	{
 		teleportPlayer(mob, player);
 		return super.onNpcHate(mob, player, isSummon);
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		teleportPlayer(npc, attacker);
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (skill.getId() == SKILL.getSkillId())
 		{
@@ -69,7 +69,7 @@ public class AltarOfEvil extends AbstractNpcAI
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	private void teleportPlayer(Npc npc, PlayerInstance player)
+	private void teleportPlayer(Npc npc, Player player)
 	{
 		if (npc.isScriptValue(0) && (npc.calculateDistance3D(player) > 200))
 		{

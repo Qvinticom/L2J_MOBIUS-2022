@@ -19,8 +19,8 @@ package ai;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.MinionHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
@@ -41,7 +41,7 @@ public abstract class AbstractNpcAI extends Quest
 	 * Simple on first talk event handler.
 	 */
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".html";
 	}
@@ -74,7 +74,7 @@ public abstract class AbstractNpcAI extends Quest
 	{
 		for (MinionHolder is : npc.getParameters().getMinionList(spawnName))
 		{
-			addMinion((MonsterInstance) npc, is.getId());
+			addMinion((Monster) npc, is.getId());
 		}
 	}
 }

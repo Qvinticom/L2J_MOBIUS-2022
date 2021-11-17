@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.zone.type.ResidenceZone;
@@ -95,7 +95,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		_zone = zone;
 	}
 	
-	public void giveResidentialSkills(PlayerInstance player)
+	public void giveResidentialSkills(Player player)
 	{
 		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
 		{
@@ -111,7 +111,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		}
 	}
 	
-	public void removeResidentialSkills(PlayerInstance player)
+	public void removeResidentialSkills(Player player)
 	{
 		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
 		{

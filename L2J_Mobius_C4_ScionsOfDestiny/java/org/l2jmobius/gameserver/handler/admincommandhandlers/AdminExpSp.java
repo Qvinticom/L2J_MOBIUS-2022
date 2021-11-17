@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -42,7 +42,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_add_exp_sp"))
 		{
@@ -88,13 +88,13 @@ public class AdminExpSp implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void addExpSp(PlayerInstance activeChar)
+	private void addExpSp(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -112,13 +112,13 @@ public class AdminExpSp implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private boolean adminAddExpSp(PlayerInstance activeChar, String expSp)
+	private boolean adminAddExpSp(Player activeChar, String expSp)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -159,13 +159,13 @@ public class AdminExpSp implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean adminRemoveExpSP(PlayerInstance activeChar, String expSp)
+	private boolean adminRemoveExpSP(Player activeChar, String expSp)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{

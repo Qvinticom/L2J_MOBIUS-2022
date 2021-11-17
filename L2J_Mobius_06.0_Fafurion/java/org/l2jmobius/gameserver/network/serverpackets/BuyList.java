@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -32,7 +32,7 @@ public class BuyList extends AbstractItemPacket
 	private final int _inventorySlots;
 	private final double _castleTaxRate;
 	
-	public BuyList(ProductList list, PlayerInstance player, double castleTaxRate)
+	public BuyList(ProductList list, Player player, double castleTaxRate)
 	{
 		_listId = list.getListId();
 		_list = list.getProducts();

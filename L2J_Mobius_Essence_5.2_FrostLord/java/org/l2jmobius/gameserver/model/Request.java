@@ -17,26 +17,26 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class manages requests (transactions) between two PlayerInstance.
+ * This class manages requests (transactions) between two Player.
  * @author kriau
  */
 public class Request
 {
 	private static final int REQUEST_TIMEOUT = 15; // in secs
 	
-	protected PlayerInstance _player;
-	protected PlayerInstance _partner;
+	protected Player _player;
+	protected Player _partner;
 	protected boolean _isRequestor;
 	protected boolean _isAnswerer;
 	protected IClientIncomingPacket _requestPacket;
 	
-	public Request(PlayerInstance player)
+	public Request(Player player)
 	{
 		_player = player;
 	}
@@ -50,18 +50,18 @@ public class Request
 	}
 	
 	/**
-	 * Set the PlayerInstance member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
+	 * Set the Player member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
 	 * @param partner
 	 */
-	private synchronized void setPartner(PlayerInstance partner)
+	private synchronized void setPartner(Player partner)
 	{
 		_partner = partner;
 	}
 	
 	/**
-	 * @return the PlayerInstance member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
+	 * @return the Player member of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
 	 */
-	public PlayerInstance getPartner()
+	public Player getPartner()
 	{
 		return _partner;
 	}
@@ -90,7 +90,7 @@ public class Request
 	 * @param packet
 	 * @return
 	 */
-	public synchronized boolean setRequest(PlayerInstance partner, IClientIncomingPacket packet)
+	public synchronized boolean setRequest(Player partner, IClientIncomingPacket packet)
 	{
 		if (partner == null)
 		{

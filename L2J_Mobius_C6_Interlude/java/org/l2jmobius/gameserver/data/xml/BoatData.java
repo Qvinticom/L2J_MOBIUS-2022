@@ -31,7 +31,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.holders.BoatPathHolder.BoatPoint;
 
@@ -42,7 +42,7 @@ public class BoatData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BoatData.class.getName());
 	
-	private final Map<Integer, BoatInstance> _boats = new HashMap<>();
+	private final Map<Integer, Boat> _boats = new HashMap<>();
 	
 	protected BoatData()
 	{
@@ -122,7 +122,7 @@ public class BoatData implements IXmlReader
 					npcDat.set("baseMDef", 100);
 					
 					final CreatureTemplate template = new CreatureTemplate(npcDat);
-					final BoatInstance boat = new BoatInstance(IdManager.getInstance().getNextId(), template);
+					final Boat boat = new Boat(IdManager.getInstance().getNextId(), template);
 					boat.getPosition().setHeading(set.getInt("heading"));
 					boat.setXYZ(set.getInt("spawnX"), set.getInt("spawnY"), set.getInt("spawnZ"));
 					boat.setPathA(set.getInt("pathIdA"), set.getInt("ticketA"), set.getInt("xTeleNoTicketA"), set.getInt("yTeleNoTicketA"), set.getInt("zTeleNoTicketA"), set.getString("announcerA"), set.getString("message10A"), set.getString("message5A"), set.getString("message1A"), set.getString("message0A"), set.getString("messageBeginA"), paths.get(set.getInt("pathIdA")));
@@ -170,7 +170,7 @@ public class BoatData implements IXmlReader
 		}
 	}
 	
-	public BoatInstance getBoat(int boatId)
+	public Boat getBoat(int boatId)
 	{
 		return _boats.get(boatId);
 	}

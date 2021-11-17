@@ -20,7 +20,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 
@@ -45,7 +45,7 @@ public class PartyMatchRoomList
 	
 	public void deleteRoom(int id)
 	{
-		for (PlayerInstance _member : getRoom(id).getPartyMembers())
+		for (Player _member : getRoom(id).getPartyMembers())
 		{
 			if (_member == null)
 			{
@@ -81,11 +81,11 @@ public class PartyMatchRoomList
 		return _maxid;
 	}
 	
-	public PartyMatchRoom getPlayerRoom(PlayerInstance player)
+	public PartyMatchRoom getPlayerRoom(Player player)
 	{
 		for (PartyMatchRoom _room : _rooms.values())
 		{
-			for (PlayerInstance member : _room.getPartyMembers())
+			for (Player member : _room.getPartyMembers())
 			{
 				if (member.equals(player))
 				{
@@ -96,11 +96,11 @@ public class PartyMatchRoomList
 		return null;
 	}
 	
-	public int getPlayerRoomId(PlayerInstance player)
+	public int getPlayerRoomId(Player player)
 	{
 		for (PartyMatchRoom _room : _rooms.values())
 		{
-			for (PlayerInstance member : _room.getPartyMembers())
+			for (Player member : _room.getPartyMembers())
 			{
 				if (member.equals(player))
 				{

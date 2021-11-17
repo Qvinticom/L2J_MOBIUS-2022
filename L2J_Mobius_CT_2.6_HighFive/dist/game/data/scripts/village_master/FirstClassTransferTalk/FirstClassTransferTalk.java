@@ -21,9 +21,9 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.VillageMasterFighterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.VillageMasterPriestInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.VillageMasterFighter;
+import org.l2jmobius.gameserver.model.actor.instance.VillageMasterPriest;
 
 import ai.AbstractNpcAI;
 
@@ -62,13 +62,13 @@ public class FirstClassTransferTalk extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		return event;
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = npc.getId() + "_";
 		if (MASTERS.get(npc.getId()) != player.getRace())
@@ -85,7 +85,7 @@ public class FirstClassTransferTalk extends AbstractNpcAI
 				{
 					if (player.isMageClass())
 					{
-						if (npc instanceof VillageMasterPriestInstance)
+						if (npc instanceof VillageMasterPriest)
 						{
 							htmltext += "mystic.html";
 						}
@@ -94,7 +94,7 @@ public class FirstClassTransferTalk extends AbstractNpcAI
 							htmltext += "no.html";
 						}
 					}
-					else if (npc instanceof VillageMasterFighterInstance)
+					else if (npc instanceof VillageMasterFighter)
 					{
 						htmltext += "fighter.html";
 					}

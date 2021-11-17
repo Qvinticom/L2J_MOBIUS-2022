@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -28,9 +28,9 @@ public class ExCollectionRegister implements IClientOutgoingPacket
 {
 	private final int _collectionId;
 	private final int _index;
-	private final ItemInstance _item;
+	private final Item _item;
 	
-	public ExCollectionRegister(int collectionId, int index, ItemInstance item)
+	public ExCollectionRegister(int collectionId, int index, Item item)
 	{
 		_collectionId = collectionId;
 		_index = index;

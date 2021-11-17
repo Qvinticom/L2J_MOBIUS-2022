@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author Mobius
@@ -30,7 +30,7 @@ public class ClanShopProductHolder
 	private final long _adena;
 	private final int _fame;
 	
-	public ClanShopProductHolder(int clanLevel, Item item, int count, long adena, int fame)
+	public ClanShopProductHolder(int clanLevel, ItemTemplate item, int count, long adena, int fame)
 	{
 		_clanLevel = clanLevel;
 		_item = new TradeItem(item, 0, 0);

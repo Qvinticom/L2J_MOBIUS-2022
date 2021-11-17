@@ -43,10 +43,10 @@ import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Artefact;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -280,8 +280,8 @@ public class Siege
 	private final Collection<SiegeClan> _defenderWaitingClans = ConcurrentHashMap.newKeySet();
 	
 	private int _defenderRespawnDelayPenalty;
-	private List<ArtefactInstance> _artifacts = new ArrayList<>();
-	private List<ControlTowerInstance> _controlTowers = new ArrayList<>();
+	private List<Artefact> _artifacts = new ArrayList<>();
+	private List<ControlTower> _controlTowers = new ArrayList<>();
 	private final Castle[] _castle;
 	boolean _isInProgress = false;
 	private boolean _isNormalSide = true; // true = Atk is Atk, false = Atk is Def
@@ -310,7 +310,7 @@ public class Siege
 		{
 			announceToPlayer("The siege of " + getCastle().getName() + " has finished!", false);
 			final PlaySound sound = new PlaySound("systemmsg_e.18");
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(sound);
 			}
@@ -591,7 +591,7 @@ public class Siege
 			ThreadPool.schedule(new ScheduleEndSiegeTask(getCastle()), 1000);
 			announceToPlayer("The siege of " + getCastle().getName() + " has started!", false);
 			final PlaySound sound = new PlaySound("systemmsg_e.17");
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(sound);
 			}
@@ -614,7 +614,7 @@ public class Siege
 		}
 		
 		// Get all players
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			player.sendMessage(message);
 		}
@@ -630,7 +630,7 @@ public class Siege
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance member : clan.getOnlineMembers())
+			for (Player member : clan.getOnlineMembers())
 			{
 				if (clear)
 				{
@@ -642,7 +642,7 @@ public class Siege
 				}
 				
 				member.sendPacket(new UserInfo(member));
-				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
+				for (Player player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
 				}
@@ -651,7 +651,7 @@ public class Siege
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance member : clan.getOnlineMembers())
+			for (Player member : clan.getOnlineMembers())
 			{
 				if (clear)
 				{
@@ -663,7 +663,7 @@ public class Siege
 				}
 				
 				member.sendPacket(new UserInfo(member));
-				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
+				for (Player player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
 				}
@@ -789,17 +789,17 @@ public class Siege
 	}
 	
 	/**
-	 * Return list of PlayerInstance registered as attacker in the zone.
+	 * Return list of Player registered as attacker in the zone.
 	 * @return the attackers in zone
 	 */
-	public List<PlayerInstance> getAttackersInZone()
+	public List<Player> getAttackersInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		Clan clan;
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance player : clan.getOnlineMembers())
+			for (Player player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -811,12 +811,12 @@ public class Siege
 	}
 	
 	/**
-	 * Return list of PlayerInstance registered as defender but not owner in the zone.
+	 * Return list of Player registered as defender but not owner in the zone.
 	 * @return the defenders but not owners in zone
 	 */
-	public List<PlayerInstance> getDefendersButNotOwnersInZone()
+	public List<Player> getDefendersButNotOwnersInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		Clan clan;
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
@@ -826,7 +826,7 @@ public class Siege
 				continue;
 			}
 			
-			for (PlayerInstance player : clan.getOnlineMembers())
+			for (Player player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -839,21 +839,21 @@ public class Siege
 	}
 	
 	/**
-	 * Return list of PlayerInstance in the zone.
+	 * Return list of Player in the zone.
 	 * @return the players in zone
 	 */
-	public List<PlayerInstance> getPlayersInZone()
+	public List<Player> getPlayersInZone()
 	{
 		return getCastle().getZone().getAllPlayers();
 	}
 	
 	/**
-	 * Return list of PlayerInstance owning the castle in the zone.
+	 * Return list of Player owning the castle in the zone.
 	 * @return the owners in zone
 	 */
-	public List<PlayerInstance> getOwnersInZone()
+	public List<Player> getOwnersInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		Clan clan;
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
@@ -863,7 +863,7 @@ public class Siege
 				continue;
 			}
 			
-			for (PlayerInstance player : clan.getOnlineMembers())
+			for (Player player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -876,13 +876,13 @@ public class Siege
 	}
 	
 	/**
-	 * Return list of PlayerInstance not registered as attacker or defender in the zone.
+	 * Return list of Player not registered as attacker or defender in the zone.
 	 * @return the spectators in zone
 	 */
-	public List<PlayerInstance> getSpectatorsInZone()
+	public List<Player> getSpectatorsInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		final List<Player> players = new ArrayList<>();
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			// quick check from player states, which don't include siege number however
 			if (!player.isInsideZone(ZoneId.SIEGE) || (player.getSiegeState() != 0))
@@ -903,7 +903,7 @@ public class Siege
 	 * Control Tower was skilled.
 	 * @param ct the ct
 	 */
-	public void killedCT(NpcInstance ct)
+	public void killedCT(Npc ct)
 	{
 		// Add respawn penalty to defenders for each control tower lose
 		_defenderRespawnDelayPenalty += SiegeManager.getInstance().getControlTowerLosePenalty();
@@ -928,7 +928,7 @@ public class Siege
 	 * Remove the flag that was killed.
 	 * @param flag the flag
 	 */
-	public void killedFlag(NpcInstance flag)
+	public void killedFlag(Npc flag)
 	{
 		if (flag == null)
 		{
@@ -948,16 +948,16 @@ public class Siege
 	 * Display list of registered clans.
 	 * @param player the player
 	 */
-	public void listRegisterClan(PlayerInstance player)
+	public void listRegisterClan(Player player)
 	{
 		player.sendPacket(new SiegeInfo(getCastle(), player));
 	}
 	
 	/**
 	 * Register clan as attacker.
-	 * @param player The PlayerInstance of the player trying to register
+	 * @param player The Player of the player trying to register
 	 */
-	public void registerAttacker(PlayerInstance player)
+	public void registerAttacker(Player player)
 	{
 		registerAttacker(player, false);
 	}
@@ -967,7 +967,7 @@ public class Siege
 	 * @param player the player
 	 * @param force the force
 	 */
-	public void registerAttacker(PlayerInstance player, boolean force)
+	public void registerAttacker(Player player, boolean force)
 	{
 		if (player.getClan() == null)
 		{
@@ -994,9 +994,9 @@ public class Siege
 	
 	/**
 	 * Register clan as defender.
-	 * @param player The PlayerInstance of the player trying to register
+	 * @param player The Player of the player trying to register
 	 */
-	public void registerDefender(PlayerInstance player)
+	public void registerDefender(Player player)
 	{
 		registerDefender(player, false);
 	}
@@ -1006,7 +1006,7 @@ public class Siege
 	 * @param player the player
 	 * @param force the force
 	 */
-	public void registerDefender(PlayerInstance player, boolean force)
+	public void registerDefender(Player player, boolean force)
 	{
 		if (getCastle().getOwnerId() <= 0)
 		{
@@ -1061,9 +1061,9 @@ public class Siege
 	
 	/**
 	 * Remove clan from siege.
-	 * @param player The PlayerInstance of player/clan being removed
+	 * @param player The Player of player/clan being removed
 	 */
-	public void removeSiegeClan(PlayerInstance player)
+	public void removeSiegeClan(Player player)
 	{
 		removeSiegeClan(player.getClan());
 	}
@@ -1094,7 +1094,7 @@ public class Siege
 	 */
 	public void teleportPlayer(TeleportWhoType teleportWho, TeleportWhereType teleportWhere)
 	{
-		List<PlayerInstance> players;
+		List<Player> players;
 		switch (teleportWho)
 		{
 			case Owner:
@@ -1123,7 +1123,7 @@ public class Siege
 			}
 		}
 		
-		for (PlayerInstance player : players)
+		for (Player player : players)
 		{
 			if (player.isGM() || player.isInJail())
 			{
@@ -1179,10 +1179,10 @@ public class Siege
 	
 	/**
 	 * Return true if the player can register.
-	 * @param player The PlayerInstance of the player trying to register
+	 * @param player The Player of the player trying to register
 	 * @return true, if successful
 	 */
-	private boolean checkIfCanRegister(PlayerInstance player)
+	private boolean checkIfCanRegister(Player player)
 	{
 		if (_isRegistrationOver)
 		{
@@ -1338,7 +1338,7 @@ public class Siege
 		if (_artifacts != null)
 		{
 			// Remove all instance of artifact for this castle
-			for (ArtefactInstance art : _artifacts)
+			for (Artefact art : _artifacts)
 			{
 				if (art != null)
 				{
@@ -1355,7 +1355,7 @@ public class Siege
 		if (_controlTowers != null)
 		{
 			// Remove all instance of control tower for this castle
-			for (ControlTowerInstance ct : _controlTowers)
+			for (ControlTower ct : _controlTowers)
 			{
 				if (ct != null)
 				{
@@ -1521,8 +1521,8 @@ public class Siege
 		
 		for (SiegeSpawn _sp : SiegeManager.getInstance().getArtefactSpawnList(id))
 		{
-			ArtefactInstance art;
-			art = new ArtefactInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			Artefact art;
+			art = new Artefact(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			art.setCurrentHpMp(art.getMaxHp(), art.getMaxMp());
 			art.setHeading(_sp.getLocation().getHeading());
 			art.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
@@ -1544,11 +1544,11 @@ public class Siege
 		
 		for (SiegeSpawn _sp : SiegeManager.getInstance().getControlTowerSpawnList(id))
 		{
-			ControlTowerInstance ct;
+			ControlTower ct;
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
 			template.getStatSet().set("baseHpMax", _sp.getHp());
-			ct = new ControlTowerInstance(IdManager.getInstance().getNextId(), template);
+			ct = new ControlTower(IdManager.getInstance().getNextId(), template);
 			ct.setCurrentHpMp(ct.getMaxHp(), ct.getMaxMp());
 			ct.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 20);
 			_controlTowerCount++;
@@ -1568,7 +1568,7 @@ public class Siege
 		// When CT dies, so do all the guards that it controls
 		if (!getSiegeGuardManager().getSiegeGuardSpawn().isEmpty() && !_controlTowers.isEmpty())
 		{
-			ControlTowerInstance closestCt;
+			ControlTower closestCt;
 			double distance;
 			double x;
 			double y;
@@ -1583,7 +1583,7 @@ public class Siege
 				
 				closestCt = null;
 				distanceClosest = 0;
-				for (ControlTowerInstance ct : _controlTowers)
+				for (ControlTower ct : _controlTowers)
 				{
 					if (ct == null)
 					{
@@ -1800,7 +1800,7 @@ public class Siege
 	 * @param clan the clan
 	 * @return the flag
 	 */
-	public List<NpcInstance> getFlag(Clan clan)
+	public List<Npc> getFlag(Clan clan)
 	{
 		if (clan != null)
 		{

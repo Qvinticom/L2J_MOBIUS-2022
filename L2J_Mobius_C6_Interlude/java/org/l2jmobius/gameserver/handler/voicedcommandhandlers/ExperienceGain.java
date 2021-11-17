@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * This class allows user to turn XP-gain off and on.
@@ -32,7 +32,7 @@ public class ExperienceGain implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (command.equalsIgnoreCase("xpoff"))
 		{

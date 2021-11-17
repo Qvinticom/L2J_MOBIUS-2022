@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -36,7 +36,7 @@ public class CommandChannel implements ITargetTypeHandler
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
 		final List<Creature> targetList = new ArrayList<>();
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (player == null)
 		{
 			return EMPTY_TARGET_LIST;
@@ -60,8 +60,8 @@ public class CommandChannel implements ITargetTypeHandler
 		
 		// Get all visible objects in a spherical area near the Creature
 		final int maxTargets = skill.getAffectLimit();
-		final List<PlayerInstance> members = hasChannel ? party.getCommandChannel().getMembers() : party.getMembers();
-		for (PlayerInstance member : members)
+		final List<Player> members = hasChannel ? party.getCommandChannel().getMembers() : party.getMembers();
+		for (Player member : members)
 		{
 			if (creature == member)
 			{

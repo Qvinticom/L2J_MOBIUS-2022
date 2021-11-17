@@ -19,7 +19,7 @@ package ai.areas.EnchantedValley.Celestiel;
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
@@ -50,7 +50,7 @@ public class Celestiel extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -92,7 +92,7 @@ public class Celestiel extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		player.sendPacket(new PlaySound(3, CELESTIEL_VOICE[getRandom(2)], 0, 0, 0, 0, 0));
 		return "34234.html";

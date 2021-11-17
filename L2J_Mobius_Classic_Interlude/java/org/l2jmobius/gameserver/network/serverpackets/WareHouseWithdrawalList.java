@@ -21,8 +21,8 @@ import java.util.Collection;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class WareHouseWithdrawalList extends AbstractItemPacket
@@ -31,10 +31,10 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
-	private PlayerInstance _player;
+	private Player _player;
 	private long _playerAdena;
 	private final int _invSize;
-	private Collection<ItemInstance> _items;
+	private Collection<Item> _items;
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
 	 * <ul>
@@ -46,7 +46,7 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 	 */
 	private int _whType;
 	
-	public WareHouseWithdrawalList(PlayerInstance player, int type)
+	public WareHouseWithdrawalList(Player player, int type)
 	{
 		_player = player;
 		_whType = type;
@@ -59,7 +59,7 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 		}
 		
 		_items = _player.getActiveWarehouse().getItems();
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.isStackable())
 			{
@@ -82,7 +82,7 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 			packet.writeD(itemId);
 		}
 		packet.writeD(_invSize);
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeItem(packet, item);
 			packet.writeD(item.getObjectId());

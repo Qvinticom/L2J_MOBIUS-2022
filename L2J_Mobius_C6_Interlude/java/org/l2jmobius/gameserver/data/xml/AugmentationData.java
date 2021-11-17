@@ -35,7 +35,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
@@ -273,7 +273,7 @@ public class AugmentationData
 	 * @param lifeStoneGrade
 	 * @return Augmentation
 	 */
-	public Augmentation generateRandomAugmentation(ItemInstance item, int lifeStoneLevel, int lifeStoneGrade)
+	public Augmentation generateRandomAugmentation(Item item, int lifeStoneLevel, int lifeStoneGrade)
 	{
 		// Note: stat12 stands for stat 1 AND 2 (same for stat34 ;p ) this is because a value can contain up to 2 stat modifications (there are two short values packed in one integer value, meaning 4 stat modifications at max) for more info take a look at getAugStatsById(...)
 		// Note: lifeStoneGrade: (0 means low grade, 3 top grade)

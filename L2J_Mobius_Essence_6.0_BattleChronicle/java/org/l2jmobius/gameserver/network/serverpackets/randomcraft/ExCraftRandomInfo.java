@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.randomcraft;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.RandomCraftRewardItemHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExCraftRandomInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExCraftRandomInfo(PlayerInstance player)
+	public ExCraftRandomInfo(Player player)
 	{
 		_player = player;
 	}

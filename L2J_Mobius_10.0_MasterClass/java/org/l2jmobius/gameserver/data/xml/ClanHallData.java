@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.ClanHallType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -63,7 +63,7 @@ public class ClanHallData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		final List<DoorInstance> doors = new ArrayList<>();
+		final List<Door> doors = new ArrayList<>();
 		final List<Integer> npcs = new ArrayList<>();
 		final List<ClanHallTeleportHolder> teleports = new ArrayList<>();
 		final StatSet params = new StatSet();
@@ -113,7 +113,7 @@ public class ClanHallData implements IXmlReader
 										{
 											final NamedNodeMap np = npcNode.getAttributes();
 											final int doorId = parseInteger(np, "id");
-											final DoorInstance door = DoorData.getInstance().getDoor(doorId);
+											final Door door = DoorData.getInstance().getDoor(doorId);
 											if (door != null)
 											{
 												doors.add(door);
@@ -199,10 +199,10 @@ public class ClanHallData implements IXmlReader
 	
 	public ClanHall getClanHallByDoorId(int doorId)
 	{
-		final DoorInstance door = DoorData.getInstance().getDoor(doorId);
+		final Door door = DoorData.getInstance().getDoor(doorId);
 		for (ClanHall ch : _clanHalls.values())
 		{
-			final List<DoorInstance> doors = ch.getDoors();
+			final List<Door> doors = ch.getDoors();
 			if ((doors != null) && doors.contains(door))
 			{
 				return ch;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -43,7 +43,7 @@ public class AdminGmSpeed implements IAdminCommandHandler
 	private static final int SUPER_HASTE_ID = 7029;
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance player)
+	public boolean useAdminCommand(String command, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -99,11 +99,11 @@ public class AdminGmSpeed implements IAdminCommandHandler
 				return false;
 			}
 			
-			final PlayerInstance targetCharacter;
+			final Player targetCharacter;
 			final WorldObject target = player.getTarget();
 			if ((target != null) && target.isPlayer())
 			{
-				targetCharacter = (PlayerInstance) target;
+				targetCharacter = (Player) target;
 			}
 			else
 			{

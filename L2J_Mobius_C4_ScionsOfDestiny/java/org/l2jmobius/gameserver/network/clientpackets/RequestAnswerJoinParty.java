@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -43,13 +43,13 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance requestor = player.getActiveRequester();
+		final Player requestor = player.getActiveRequester();
 		if (requestor == null)
 		{
 			return;
@@ -76,7 +76,7 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 					if (room != null)
 					{
 						final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
-						for (PlayerInstance member : room.getPartyMembers())
+						for (Player member : room.getPartyMembers())
 						{
 							if (member != null)
 							{
@@ -96,7 +96,7 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 					{
 						room.addMember(player);
 						final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
-						for (PlayerInstance member : room.getPartyMembers())
+						for (Player member : room.getPartyMembers())
 						{
 							if (member != null)
 							{

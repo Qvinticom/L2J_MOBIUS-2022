@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -67,7 +67,7 @@ public class SeaOfSpores extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.7)) && !npc.isCastingNow())
 		{
@@ -84,7 +84,7 @@ public class SeaOfSpores extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (CommonUtil.contains(SOLO_MOBS, npc.getId()) && (getRandom(1000) < 2))
 		{
@@ -96,7 +96,7 @@ public class SeaOfSpores extends AbstractNpcAI
 		}
 		else if (npc.getId() == ARIMA)
 		{
-			List<PlayerInstance> members = new ArrayList<>();
+			List<Player> members = new ArrayList<>();
 			if (killer.getParty() != null)
 			{
 				members = killer.getParty().getMembers();
@@ -105,7 +105,7 @@ public class SeaOfSpores extends AbstractNpcAI
 			{
 				members.add(killer);
 			}
-			for (PlayerInstance member : members)
+			for (Player member : members)
 			{
 				member.doCast(REFINED_ENERGY.getSkill());
 			}
@@ -117,7 +117,7 @@ public class SeaOfSpores extends AbstractNpcAI
 		}
 		else if (npc.getId() == ARIMUS)
 		{
-			List<PlayerInstance> members = new ArrayList<>();
+			List<Player> members = new ArrayList<>();
 			if (killer.getParty() != null)
 			{
 				members = killer.getParty().getMembers();
@@ -126,7 +126,7 @@ public class SeaOfSpores extends AbstractNpcAI
 			{
 				members.add(killer);
 			}
-			for (PlayerInstance member : members)
+			for (Player member : members)
 			{
 				member.doCast(REFINED_ENERGY.getSkill());
 			}

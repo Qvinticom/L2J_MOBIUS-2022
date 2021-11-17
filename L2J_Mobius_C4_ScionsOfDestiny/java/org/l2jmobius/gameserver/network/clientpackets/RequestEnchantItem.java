@@ -21,9 +21,9 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -117,7 +117,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (_objectId == 0))
 		{
 			return;
@@ -150,8 +150,8 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		ItemInstance scroll = player.getActiveEnchantItem();
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
+		Item scroll = player.getActiveEnchantItem();
 		player.setActiveEnchantItem(null);
 		
 		if ((item == null) || (scroll == null))
@@ -195,7 +195,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		/** pretty code ;D */
 		switch (item.getItem().getCrystalType())
 		{
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				crystalId = 1461;
 				switch (scroll.getItemId())
@@ -204,7 +204,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 731:
 					case 6569:
 					{
-						if (itemType2 == Item.TYPE2_WEAPON)
+						if (itemType2 == ItemTemplate.TYPE2_WEAPON)
 						{
 							enchantItem = true;
 						}
@@ -214,7 +214,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 732:
 					case 6570:
 					{
-						if ((itemType2 == Item.TYPE2_SHIELD_ARMOR) || (itemType2 == Item.TYPE2_ACCESSORY))
+						if ((itemType2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (itemType2 == ItemTemplate.TYPE2_ACCESSORY))
 						{
 							enchantItem = true;
 						}
@@ -223,7 +223,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				crystalId = 1460;
 				switch (scroll.getItemId())
@@ -232,7 +232,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 949:
 					case 6571:
 					{
-						if (itemType2 == Item.TYPE2_WEAPON)
+						if (itemType2 == ItemTemplate.TYPE2_WEAPON)
 						{
 							enchantItem = true;
 						}
@@ -242,7 +242,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 950:
 					case 6572:
 					{
-						if ((itemType2 == Item.TYPE2_SHIELD_ARMOR) || (itemType2 == Item.TYPE2_ACCESSORY))
+						if ((itemType2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (itemType2 == ItemTemplate.TYPE2_ACCESSORY))
 						{
 							enchantItem = true;
 						}
@@ -251,7 +251,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				crystalId = 1459;
 				switch (scroll.getItemId())
@@ -260,7 +260,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 953:
 					case 6573:
 					{
-						if (itemType2 == Item.TYPE2_WEAPON)
+						if (itemType2 == ItemTemplate.TYPE2_WEAPON)
 						{
 							enchantItem = true;
 						}
@@ -270,7 +270,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 954:
 					case 6574:
 					{
-						if ((itemType2 == Item.TYPE2_SHIELD_ARMOR) || (itemType2 == Item.TYPE2_ACCESSORY))
+						if ((itemType2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (itemType2 == ItemTemplate.TYPE2_ACCESSORY))
 						{
 							enchantItem = true;
 						}
@@ -279,7 +279,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_D:
+			case ItemTemplate.CRYSTAL_D:
 			{
 				crystalId = 1458;
 				switch (scroll.getItemId())
@@ -288,7 +288,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 957:
 					case 6575:
 					{
-						if (itemType2 == Item.TYPE2_WEAPON)
+						if (itemType2 == ItemTemplate.TYPE2_WEAPON)
 						{
 							enchantItem = true;
 						}
@@ -298,7 +298,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 958:
 					case 6576:
 					{
-						if ((itemType2 == Item.TYPE2_SHIELD_ARMOR) || (itemType2 == Item.TYPE2_ACCESSORY))
+						if ((itemType2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (itemType2 == ItemTemplate.TYPE2_ACCESSORY))
 						{
 							enchantItem = true;
 						}
@@ -307,7 +307,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				crystalId = 1462;
 				switch (scroll.getItemId())
@@ -316,7 +316,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 961:
 					case 6577:
 					{
-						if (itemType2 == Item.TYPE2_WEAPON)
+						if (itemType2 == ItemTemplate.TYPE2_WEAPON)
 						{
 							enchantItem = true;
 						}
@@ -326,7 +326,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					case 962:
 					case 6578:
 					{
-						if ((itemType2 == Item.TYPE2_SHIELD_ARMOR) || (itemType2 == Item.TYPE2_ACCESSORY))
+						if ((itemType2 == ItemTemplate.TYPE2_SHIELD_ARMOR) || (itemType2 == ItemTemplate.TYPE2_ACCESSORY))
 						{
 							enchantItem = true;
 						}
@@ -366,7 +366,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		int chance = 0;
 		int maxEnchantLevel = 0;
 		int minEnchantLevel = 0;
-		if (item.getItem().getType2() == Item.TYPE2_WEAPON)
+		if (item.getItem().getType2() == ItemTemplate.TYPE2_WEAPON)
 		{
 			if (blessedScroll)
 			{
@@ -432,7 +432,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 			}
 		}
-		else if (item.getItem().getType2() == Item.TYPE2_SHIELD_ARMOR)
+		else if (item.getItem().getType2() == ItemTemplate.TYPE2_SHIELD_ARMOR)
 		{
 			if (blessedScroll)
 			{
@@ -493,7 +493,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 			}
 		}
-		else if (item.getItem().getType2() == Item.TYPE2_ACCESSORY)
+		else if (item.getItem().getType2() == ItemTemplate.TYPE2_ACCESSORY)
 		{
 			if (blessedScroll)
 			{
@@ -577,7 +577,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX) || ((item.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX_FULL)))
+		if ((item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX) || ((item.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX_FULL)))
 		{
 			chance = 100;
 		}
@@ -598,7 +598,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					return;
 				}
 				
-				if ((item.getItemLocation() != ItemInstance.ItemLocation.INVENTORY) && (item.getItemLocation() != ItemInstance.ItemLocation.PAPERDOLL))
+				if ((item.getItemLocation() != Item.ItemLocation.INVENTORY) && (item.getItemLocation() != Item.ItemLocation.PAPERDOLL))
 				{
 					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 					return;
@@ -666,7 +666,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					if (item.isEquipped())
 					{
 						final InventoryUpdate iu = new InventoryUpdate();
-						for (ItemInstance element : player.getInventory().unEquipItemInSlotAndRecord(item.getEquipSlot()))
+						for (Item element : player.getInventory().unEquipItemInSlotAndRecord(item.getEquipSlot()))
 						{
 							iu.addModifiedItem(element);
 						}
@@ -680,13 +680,13 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						count = 1;
 					}
 					
-					final ItemInstance destroyItem = player.getInventory().destroyItem("Enchant", item, player, null);
+					final Item destroyItem = player.getInventory().destroyItem("Enchant", item, player, null);
 					if (destroyItem == null)
 					{
 						return;
 					}
 					
-					final ItemInstance crystals = player.getInventory().addItem("Enchant", crystalId, count, player, destroyItem);
+					final Item crystals = player.getInventory().addItem("Enchant", crystalId, count, player, destroyItem);
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 					sm.addItemName(crystals.getItemId());
 					sm.addNumber(count);

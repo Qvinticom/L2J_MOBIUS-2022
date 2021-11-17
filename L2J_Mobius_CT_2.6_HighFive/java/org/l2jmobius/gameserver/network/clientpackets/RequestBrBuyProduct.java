@@ -25,9 +25,9 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrBuyProduct;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrGamePoint;
@@ -52,7 +52,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -84,7 +84,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 			return;
 		}
 		
-		final Item item = ItemTable.getInstance().getTemplate(product.getItemId());
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(product.getItemId());
 		if (item == null)
 		{
 			player.sendPacket(new ExBrBuyProduct(ExBrBuyProduct.RESULT_WRONG_PRODUCT));

@@ -19,8 +19,8 @@ package handlers.itemhandlers;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import quests.Q10589_WhereFatesIntersect.Q10589_WhereFatesIntersect;
@@ -70,9 +70,9 @@ public class TeleportCube implements IItemHandler
 	private static final Location QS6_TELEPORT1 = new Location(111257, 221071, -3550);
 	
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		if (player == null)
 		{
 			return false;

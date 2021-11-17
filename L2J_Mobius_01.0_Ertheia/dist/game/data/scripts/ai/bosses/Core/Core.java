@@ -31,8 +31,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
@@ -99,7 +99,7 @@ public class Core extends AbstractNpcAI
 			else
 			{
 				// The time has already expired while the server was offline. Immediately spawn Core.
-				final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+				final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
 				spawnBoss(core);
 			}
@@ -117,7 +117,7 @@ public class Core extends AbstractNpcAI
 			final int heading = info.getInt("heading");
 			final double hp = info.getDouble("currentHP");
 			final double mp = info.getDouble("currentMP");
-			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBoss core = (GrandBoss) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
 			core.setCurrentHpMp(hp, mp);
 			spawnBoss(core);
 		}
@@ -129,7 +129,7 @@ public class Core extends AbstractNpcAI
 		GlobalVariablesManager.getInstance().set("Core_Attacked", _firstAttacked);
 	}
 	
-	public void spawnBoss(GrandBossInstance npc)
+	public void spawnBoss(GrandBoss npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -146,11 +146,11 @@ public class Core extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("core_unlock"))
 		{
-			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+			final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
 			spawnBoss(core);
 		}
@@ -169,7 +169,7 @@ public class Core extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.getId() == CORE)
 		{
@@ -191,7 +191,7 @@ public class Core extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == CORE)
 		{

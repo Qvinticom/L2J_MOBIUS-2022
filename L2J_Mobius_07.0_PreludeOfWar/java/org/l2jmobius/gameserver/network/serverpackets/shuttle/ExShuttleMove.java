@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -26,12 +26,12 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExShuttleMove implements IClientOutgoingPacket
 {
-	private final ShuttleInstance _shuttle;
+	private final Shuttle _shuttle;
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	
-	public ExShuttleMove(ShuttleInstance shuttle, int x, int y, int z)
+	public ExShuttleMove(Shuttle shuttle, int x, int y, int z)
 	{
 		_shuttle = shuttle;
 		_x = x;

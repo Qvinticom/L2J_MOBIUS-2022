@@ -21,7 +21,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.gameserver.model.ItemInfo;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author NosBit, Ren
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 public class CommissionItem
 {
 	private final long _commissionId;
-	private final ItemInstance _itemInstance;
+	private final Item _itemInstance;
 	private final ItemInfo _itemInfo;
 	private final long _pricePerUnit;
 	private final Instant _startTime;
@@ -37,7 +37,7 @@ public class CommissionItem
 	private final byte _discountInPercentage;
 	private ScheduledFuture<?> _saleEndTask;
 	
-	public CommissionItem(long commissionId, ItemInstance itemInstance, long pricePerUnit, Instant startTime, byte durationInDays, byte discountInPercentage)
+	public CommissionItem(long commissionId, Item itemInstance, long pricePerUnit, Instant startTime, byte durationInDays, byte discountInPercentage)
 	{
 		_commissionId = commissionId;
 		_itemInstance = itemInstance;
@@ -61,7 +61,7 @@ public class CommissionItem
 	 * Gets the item instance.
 	 * @return the item instance
 	 */
-	public ItemInstance getItemInstance()
+	public Item getItemInstance()
 	{
 		return _itemInstance;
 	}

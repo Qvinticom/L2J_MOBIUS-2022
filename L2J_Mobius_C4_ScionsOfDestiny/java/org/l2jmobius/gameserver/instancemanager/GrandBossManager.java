@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 
@@ -64,7 +64,7 @@ public class GrandBossManager
 	private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";
 	private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 	
-	protected static Map<Integer, GrandBossInstance> _bosses;
+	protected static Map<Integer, GrandBoss> _bosses;
 	protected static Map<Integer, StatSet> _storedInfo;
 	private Map<Integer, Integer> _bossStatus;
 	private Collection<BossZone> _zones;
@@ -229,7 +229,7 @@ public class GrandBossManager
 		updateDb(bossId, true);
 	}
 	
-	public void addBoss(GrandBossInstance boss)
+	public void addBoss(GrandBoss boss)
 	{
 		if (boss != null)
 		{
@@ -237,12 +237,12 @@ public class GrandBossManager
 		}
 	}
 	
-	public GrandBossInstance getBoss(int bossId)
+	public GrandBoss getBoss(int bossId)
 	{
 		return _bosses.get(bossId);
 	}
 	
-	public GrandBossInstance deleteBoss(int bossId)
+	public GrandBoss deleteBoss(int bossId)
 	{
 		return _bosses.remove(bossId);
 	}
@@ -270,7 +270,7 @@ public class GrandBossManager
 			for (Entry<Integer, StatSet> entry : _storedInfo.entrySet())
 			{
 				final int bossId = entry.getKey();
-				final GrandBossInstance boss = _bosses.get(bossId);
+				final GrandBoss boss = _bosses.get(bossId);
 				final StatSet info = entry.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -343,7 +343,7 @@ public class GrandBossManager
 			for (Entry<Integer, StatSet> entry : _storedInfo.entrySet())
 			{
 				final int bossId = entry.getKey();
-				final GrandBossInstance boss = _bosses.get(bossId);
+				final GrandBoss boss = _bosses.get(bossId);
 				final StatSet info = entry.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -388,7 +388,7 @@ public class GrandBossManager
 		PreparedStatement statement = null;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final GrandBossInstance boss = _bosses.get(bossId);
+			final GrandBoss boss = _bosses.get(bossId);
 			final StatSet info = _storedInfo.get(bossId);
 			if (statusOnly || (boss == null) || (info == null))
 			{

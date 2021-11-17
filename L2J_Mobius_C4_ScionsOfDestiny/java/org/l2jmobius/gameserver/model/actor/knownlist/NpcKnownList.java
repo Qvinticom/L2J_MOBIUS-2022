@@ -18,15 +18,15 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.CabaleBufferInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FestivalGuideInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.CabaleBuffer;
+import org.l2jmobius.gameserver.model.actor.instance.FestivalGuide;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 
 public class NpcKnownList extends CreatureKnownList
 {
-	public NpcKnownList(NpcInstance activeChar)
+	public NpcKnownList(Npc activeChar)
 	{
 		super(activeChar);
 	}
@@ -49,9 +49,9 @@ public class NpcKnownList extends CreatureKnownList
 	}
 	
 	@Override
-	public NpcInstance getActiveChar()
+	public Npc getActiveChar()
 	{
-		return (NpcInstance) super.getActiveChar();
+		return (Npc) super.getActiveChar();
 	}
 	
 	@Override
@@ -63,17 +63,17 @@ public class NpcKnownList extends CreatureKnownList
 	@Override
 	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if (object instanceof FestivalGuideInstance)
+		if (object instanceof FestivalGuide)
 		{
 			return 10000;
 		}
 		
-		if ((object instanceof FolkInstance) || !(object instanceof Creature))
+		if ((object instanceof Folk) || !(object instanceof Creature))
 		{
 			return 0;
 		}
 		
-		if (object instanceof CabaleBufferInstance)
+		if (object instanceof CabaleBuffer)
 		{
 			return 900;
 		}

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -38,12 +38,12 @@ public class EffectClanGate extends Effect
 	public void onStart()
 	{
 		getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_MAGIC_CIRCLE);
-		if (getEffected() instanceof PlayerInstance)
+		if (getEffected() instanceof Player)
 		{
-			final Clan clan = ((PlayerInstance) getEffected()).getClan();
+			final Clan clan = ((Player) getEffected()).getClan();
 			if (clan != null)
 			{
-				clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_THE_PORTAL_HAS_BEEN_CREATED), ((PlayerInstance) getEffected()));
+				clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_THE_PORTAL_HAS_BEEN_CREATED), ((Player) getEffected()));
 			}
 		}
 	}

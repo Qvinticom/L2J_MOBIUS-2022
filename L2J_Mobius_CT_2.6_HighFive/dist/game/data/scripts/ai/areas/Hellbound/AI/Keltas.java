@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -99,7 +99,7 @@ public class Keltas extends AbstractNpcAI
 		new Location(-28492, 250704, -3523)
 	};
 	// Misc
-	private MonsterInstance _spawnedKeltas = null;
+	private Monster _spawnedKeltas = null;
 	private final Set<Spawn> _spawnedMonsters = Collections.newSetFromMap(new ConcurrentHashMap<>());
 	
 	public Keltas()
@@ -112,7 +112,7 @@ public class Keltas extends AbstractNpcAI
 	{
 		for (Location loc : ENFORCER_SPAWN_POINTS)
 		{
-			final MonsterInstance minion = (MonsterInstance) addSpawn(ENFORCER, loc, false, 0, false);
+			final Monster minion = (Monster) addSpawn(ENFORCER, loc, false, 0, false);
 			final Spawn spawn = minion.getSpawn();
 			spawn.setRespawnDelay(60);
 			spawn.setAmount(1);
@@ -122,7 +122,7 @@ public class Keltas extends AbstractNpcAI
 		
 		for (Location loc : EXECUTIONER_SPAWN_POINTS)
 		{
-			final MonsterInstance minion = (MonsterInstance) addSpawn(EXECUTIONER, loc, false, 0, false);
+			final Monster minion = (Monster) addSpawn(EXECUTIONER, loc, false, 0, false);
 			final Spawn spawn = minion.getSpawn();
 			spawn.setRespawnDelay(80);
 			spawn.setAmount(1);
@@ -151,7 +151,7 @@ public class Keltas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("despawn"))
 		{
@@ -168,7 +168,7 @@ public class Keltas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		cancelQuestTimers("despawn");
 		despawnMinions();
@@ -178,7 +178,7 @@ public class Keltas extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		_spawnedKeltas = (MonsterInstance) npc;
+		_spawnedKeltas = (Monster) npc;
 		_spawnedKeltas.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.GUYS_SHOW_THEM_OUR_POWER);
 		spawnMinions();
 		startQuestTimer("despawn", 1800000, null, null);

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature;
 
 import org.l2jmobius.gameserver.model.ElementalSpirit;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 public class OnElementalSpiritUpgrade implements IBaseEvent
 {
 	private final ElementalSpirit _spirit;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public OnElementalSpiritUpgrade(PlayerInstance player, ElementalSpirit spirit)
+	public OnElementalSpiritUpgrade(Player player, ElementalSpirit spirit)
 	{
 		_player = player;
 		_spirit = spirit;
@@ -40,7 +40,7 @@ public class OnElementalSpiritUpgrade implements IBaseEvent
 		return _spirit;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

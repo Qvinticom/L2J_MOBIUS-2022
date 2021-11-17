@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -56,7 +56,7 @@ public class Q10286_ReunionWithSirra extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -103,7 +103,7 @@ public class Q10286_ReunionWithSirra extends Quest
 				{
 					qs.unset("ex");
 					qs.setMemoState(2);
-					final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
+					final Instance world = InstanceManager.getInstance().getPlayer(player, true);
 					if (world != null)
 					{
 						world.finishInstance(0);
@@ -159,7 +159,7 @@ public class Q10286_ReunionWithSirra extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

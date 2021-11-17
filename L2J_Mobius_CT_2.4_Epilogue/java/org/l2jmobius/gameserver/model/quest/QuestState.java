@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
@@ -55,7 +55,7 @@ public class QuestState
 	private final String _questName;
 	
 	/** The "owner" of this QuestState object */
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/** The current state of the quest */
 	private byte _state;
@@ -77,7 +77,7 @@ public class QuestState
 	 * @param player the owner of this {@link QuestState} object
 	 * @param state the initial state of the quest
 	 */
-	public QuestState(Quest quest, PlayerInstance player, byte state)
+	public QuestState(Quest quest, Player player, byte state)
 	{
 		_questName = quest.getName();
 		_player = player;
@@ -102,9 +102,9 @@ public class QuestState
 	}
 	
 	/**
-	 * @return the {@link PlayerInstance} object of the owner of this QuestState
+	 * @return the {@link Player} object of the owner of this QuestState
 	 */
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -588,7 +588,7 @@ public class QuestState
 			return;
 		}
 		
-		((PlayerInstance) creature).addNotifyQuestOfDeath(this);
+		((Player) creature).addNotifyQuestOfDeath(this);
 	}
 	
 	/**

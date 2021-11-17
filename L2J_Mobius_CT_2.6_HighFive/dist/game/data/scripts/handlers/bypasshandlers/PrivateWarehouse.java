@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -41,7 +41,7 @@ public class PrivateWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -105,7 +105,7 @@ public class PrivateWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private void showWithdrawWindow(PlayerInstance player, WarehouseListType itemtype, byte sortorder)
+	private void showWithdrawWindow(Player player, WarehouseListType itemtype, byte sortorder)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());

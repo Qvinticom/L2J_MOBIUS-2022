@@ -24,8 +24,8 @@ import java.util.logging.LogRecord;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 public class DamageFormatter extends Formatter
@@ -59,7 +59,7 @@ public class DamageFormatter extends Formatter
 					
 					if (p instanceof Summon)
 					{
-						final PlayerInstance owner = ((Summon) p).getOwner();
+						final Player owner = ((Summon) p).getOwner();
 						if (owner != null)
 						{
 							StringUtil.append(output, " Owner:", owner.getName(), "(", String.valueOf(owner.getObjectId()), ")");

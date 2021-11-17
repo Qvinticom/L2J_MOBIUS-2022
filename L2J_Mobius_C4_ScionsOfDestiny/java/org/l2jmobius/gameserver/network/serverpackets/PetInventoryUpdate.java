@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ItemInfo;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -45,29 +45,29 @@ public class PetInventoryUpdate implements IClientOutgoingPacket
 		this(new ArrayList<ItemInfo>());
 	}
 	
-	public void addItem(ItemInstance item)
+	public void addItem(Item item)
 	{
 		_items.add(new ItemInfo(item));
 	}
 	
-	public void addNewItem(ItemInstance item)
+	public void addNewItem(Item item)
 	{
 		_items.add(new ItemInfo(item, 1));
 	}
 	
-	public void addModifiedItem(ItemInstance item)
+	public void addModifiedItem(Item item)
 	{
 		_items.add(new ItemInfo(item, 2));
 	}
 	
-	public void addRemovedItem(ItemInstance item)
+	public void addRemovedItem(Item item)
 	{
 		_items.add(new ItemInfo(item, 3));
 	}
 	
-	public void addItems(List<ItemInstance> items)
+	public void addItems(List<Item> items)
 	{
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
 			_items.add(new ItemInfo(item));
 		}

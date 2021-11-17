@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -140,7 +140,7 @@ public class CastleCourtMagician extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((player.getClan() == null) && (player.getClanId() != npc.getCastle().getOwnerId()))
 		{
@@ -354,7 +354,7 @@ public class CastleCourtMagician extends AbstractNpcAI
 			{
 				if (player.getClanId() == npc.getCastle().getOwnerId())
 				{
-					final PlayerInstance clanLeader = player.getClan().getLeader().getPlayerInstance();
+					final Player clanLeader = player.getClan().getLeader().getPlayer();
 					if ((clanLeader != null) && clanLeader.isAffectedBySkill(CLAN_GATE))
 					{
 						if (CallPc.checkSummonTargetStatus(player, clanLeader)) // TODO: Custom one, retail dont check it but for sure lets check same conditions like when summon player by skill.
@@ -387,12 +387,12 @@ public class CastleCourtMagician extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId())) ? "courtmagician.html" : "courtmagician-01.html";
 	}
 	
-	private void showClassSpecificMultisell(PlayerInstance player, Npc npc, int indexValue)
+	private void showClassSpecificMultisell(Player player, Npc npc, int indexValue)
 	{
 		int index = indexValue;
 		for (CategoryType ct : AWAKENED_CT)

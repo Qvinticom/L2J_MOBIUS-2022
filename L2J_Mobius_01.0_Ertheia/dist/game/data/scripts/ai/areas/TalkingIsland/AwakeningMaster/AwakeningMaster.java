@@ -29,14 +29,14 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChangeToAwakenedClass;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -97,7 +97,7 @@ public class AwakeningMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		if (qs == null)
@@ -203,7 +203,7 @@ public class AwakeningMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (player.getRace() == Race.ERTHEIA)
 		{
@@ -261,7 +261,7 @@ public class AwakeningMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerChangeToAwakenedClass(OnPlayerChangeToAwakenedClass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player.isSubClassActive() && !player.isDualClassActive())
 		{
 			return;
@@ -290,7 +290,7 @@ public class AwakeningMaster extends AbstractNpcAI
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
+		final Item item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
 		if (item == null)
 		{
 			return;

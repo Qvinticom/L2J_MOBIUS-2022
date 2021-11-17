@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -48,13 +48,13 @@ public class ConditionPlayerBaseStats extends Condition
 	 * @return true, if successful
 	 */
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		if (effector.getActingPlayer() == null)
 		{
 			return false;
 		}
-		final PlayerInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		switch (_stat)
 		{
 			case Int:

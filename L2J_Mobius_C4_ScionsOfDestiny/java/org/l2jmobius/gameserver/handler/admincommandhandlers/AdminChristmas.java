@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.ChristmasManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @version $Revision: 1.2.4.4 $ $Date: 2007/07/31 10:06:02 $
@@ -32,7 +32,7 @@ public class AdminChristmas implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_christmas_start"))
 		{
@@ -53,12 +53,12 @@ public class AdminChristmas implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void startChristmas(PlayerInstance activeChar)
+	private void startChristmas(Player activeChar)
 	{
 		ChristmasManager.getInstance().init(activeChar);
 	}
 	
-	private void endChristmas(PlayerInstance activeChar)
+	private void endChristmas(Player activeChar)
 	{
 		ChristmasManager.getInstance().end(activeChar);
 	}

@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -81,7 +81,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		
@@ -127,7 +127,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enter_instance"))
 		{
@@ -137,7 +137,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (skill == null)
 		{
@@ -147,12 +147,12 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (npc.isScriptValue(0) && (skill == SPOIL.getSkill()) && (caster.getTarget() == npc) && (npc.calculateDistance2D(caster) < 200))
 		{
 			final Npc toyron = npc.getInstanceWorld().getNpc(TOYRON);
-			((FriendlyNpcInstance) toyron).addDamageHate(npc, 0, 9999); // TODO: Find better way for attack
+			((FriendlyNpc) toyron).addDamageHate(npc, 0, 9999); // TODO: Find better way for attack
 			npc.reduceCurrentHp(1, toyron, null);
 			npc.setScriptValue(1);
 		}
@@ -160,7 +160,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		final Attackable toyron = (Attackable) instance.getNpc(TOYRON);
@@ -207,7 +207,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		String htmltext = null;
@@ -261,7 +261,7 @@ public class MuseumDungeon extends AbstractInstance
 		final Creature target = event.getTarget();
 		if (target.isNpc() && event.getAttacker().isPlayer())
 		{
-			final PlayerInstance player = event.getAttacker().getActingPlayer();
+			final Player player = event.getAttacker().getActingPlayer();
 			final Instance instance = player.getInstanceWorld();
 			if (isInInstance(instance))
 			{
@@ -274,7 +274,7 @@ public class MuseumDungeon extends AbstractInstance
 					}
 					
 					final Npc toyron = instance.getNpc(TOYRON);
-					((FriendlyNpcInstance) toyron).addDamageHate(target, 0, 9999); // TODO: Find better way for attack
+					((FriendlyNpc) toyron).addDamageHate(target, 0, 9999); // TODO: Find better way for attack
 					target.reduceCurrentHp(1, toyron, null);
 					((Npc) target).setScriptValue(1);
 					return new DamageReturn(false, true, false, target.getMaxHp() * DAMAGE_BY_SKILL);
@@ -294,7 +294,7 @@ public class MuseumDungeon extends AbstractInstance
 		if (isInInstance(instance))
 		{
 			final Attackable toyron = (Attackable) instance.getNpc(TOYRON);
-			final PlayerInstance player = instance.getFirstPlayer();
+			final Player player = instance.getFirstPlayer();
 			final QuestState qs = player.getQuestState(Q10542_SearchingForNewPower.class.getSimpleName());
 			if ((qs != null) && qs.isCond(4))
 			{

@@ -27,7 +27,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
 import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
@@ -70,7 +70,7 @@ public class AdminInstance implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -99,7 +99,7 @@ public class AdminInstance implements IAdminCommandHandler
 				if (template != null)
 				{
 					final String enterGroup = st.hasMoreTokens() ? st.nextToken() : "Alone";
-					final List<PlayerInstance> members = new ArrayList<>();
+					final List<Player> members = new ArrayList<>();
 					
 					switch (enterGroup)
 					{
@@ -147,7 +147,7 @@ public class AdminInstance implements IAdminCommandHandler
 					final Location loc = instance.getEnterLocation();
 					if (loc != null)
 					{
-						for (PlayerInstance players : members)
+						for (Player players : members)
 						{
 							instance.addAllowed(players);
 							players.teleToLocation(loc, instance);
@@ -197,7 +197,7 @@ public class AdminInstance implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void sendTemplateDetails(PlayerInstance player, int templateId)
+	private void sendTemplateDetails(Player player, int templateId)
 	{
 		if (InstanceManager.getInstance().getInstanceTemplate(templateId) != null)
 		{
@@ -241,7 +241,7 @@ public class AdminInstance implements IAdminCommandHandler
 		}
 	}
 	
-	private void sendTemplateList(PlayerInstance player, int page)
+	private void sendTemplateList(Player player, int page)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/instances_list.htm");
@@ -285,7 +285,7 @@ public class AdminInstance implements IAdminCommandHandler
 		player.sendPacket(html);
 	}
 	
-	private void processBypass(PlayerInstance player, BypassParser parser)
+	private void processBypass(Player player, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int templateId = parser.getInt("id", 0);

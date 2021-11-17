@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -42,7 +42,7 @@ public class TradeRequest implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -56,14 +56,14 @@ public class TradeRequest implements IClientIncomingPacket
 		}
 		
 		final WorldObject target = World.getInstance().findObject(_objectId);
-		if ((target == null) || !player.getKnownList().knowsObject(target) || !(target instanceof PlayerInstance) || (target.getObjectId() == player.getObjectId()))
+		if ((target == null) || !player.getKnownList().knowsObject(target) || !(target instanceof Player) || (target.getObjectId() == player.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final PlayerInstance partner = (PlayerInstance) target;
+		final Player partner = (Player) target;
 		if (partner.isInOlympiadMode() || player.isInOlympiadMode())
 		{
 			player.sendMessage("You or your target can't request trade in Olympiad mode.");

@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -143,7 +143,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -438,7 +438,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String applyBuffs(Npc npc, PlayerInstance player, Skill skill)
+	private String applyBuffs(Npc npc, Player player, Skill skill)
 	{
 		for (SkillHolder holder : GROUP_MELODY)
 		{
@@ -453,7 +453,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return null;
 	}
 	
-	private String applyBuffsGroup(Npc npc, PlayerInstance player)
+	private String applyBuffsGroup(Npc npc, Player player)
 	{
 		for (SkillHolder holder : GROUP_MELODY)
 		{
@@ -463,7 +463,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return null;
 	}
 	
-	private String tradeItem(PlayerInstance player, int itemId, int points)
+	private String tradeItem(Player player, int itemId, int points)
 	{
 		if (player.getPcCafePoints() >= 200000)
 		{
@@ -479,7 +479,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return player.getLevel() < 40 ? "adventurer_agent_town_77001.htm" : "adventurer_agent_town_77001e.htm";
 	}

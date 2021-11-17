@@ -20,7 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -31,9 +31,9 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 public class CubicHeal implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicHeal.class.getName());
-	private final CubicInstance _cubic;
+	private final Cubic _cubic;
 	
-	public CubicHeal(CubicInstance cubic)
+	public CubicHeal(Cubic cubic)
 	{
 		_cubic = cubic;
 	}
@@ -60,7 +60,7 @@ public class CubicHeal implements Runnable
 			Skill skill = null;
 			for (Skill s : _cubic.getSkills())
 			{
-				if (s.getId() == CubicInstance.SKILL_CUBIC_HEAL)
+				if (s.getId() == Cubic.SKILL_CUBIC_HEAL)
 				{
 					skill = s;
 					break;

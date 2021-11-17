@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
@@ -42,13 +42,13 @@ public class RequestJoinParty implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance requestor = client.getPlayer();
+		final Player requestor = client.getPlayer();
 		if (requestor == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final Player target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
@@ -107,7 +107,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		}
 	}
 	
-	private void addTargetToParty(PlayerInstance target, PlayerInstance requestor)
+	private void addTargetToParty(Player target, Player requestor)
 	{
 		// summary of ppl already in party and ppl that get invitation
 		if (requestor.getParty().getMemberCount() >= 9)
@@ -147,7 +147,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		}
 	}
 	
-	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
+	private void createNewParty(Player target, Player requestor)
 	{
 		SystemMessage msg;
 		if (!target.isProcessingRequest())

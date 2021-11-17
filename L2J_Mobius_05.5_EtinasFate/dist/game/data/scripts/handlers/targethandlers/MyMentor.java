@@ -44,7 +44,7 @@ public class MyMentor implements ITargetTypeHandler
 			final Mentee mentor = MentorManager.getInstance().getMentor(creature.getObjectId());
 			if (mentor != null)
 			{
-				return mentor.getPlayerInstance();
+				return mentor.getPlayer();
 			}
 		}
 		return null;

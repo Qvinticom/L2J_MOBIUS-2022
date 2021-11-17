@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -40,7 +40,7 @@ public class AdminPetition implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int petitionId = -1;
 		
@@ -108,7 +108,7 @@ public class AdminPetition implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					return false;
 				}
-				final PlayerInstance targetPlayer = (PlayerInstance) targetChar;
+				final Player targetPlayer = (Player) targetChar;
 				final String val = command.substring(15);
 				petitionId = PetitionManager.getInstance().submitPetition(targetPlayer, val, 9);
 				PetitionManager.getInstance().acceptPetition(activeChar, petitionId);

@@ -24,9 +24,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -176,10 +176,10 @@ public class AuctionableHall extends ClanHall
 					_paid = false;
 					if (_time > (_paidUntil + CH_RATE))
 					{
-						if (ClanHallManager.getInstance().loaded())
+						if (ClanHallTable.getInstance().loaded())
 						{
 							ClanHallAuctionManager.getInstance().initNPC(getId());
-							ClanHallManager.getInstance().setFree(getId());
+							ClanHallTable.getInstance().setFree(getId());
 							clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
 						}
 						else

@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.file.filter.HTMLFilter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -151,7 +151,7 @@ public class HtmCache
 		return content;
 	}
 	
-	public String getHtm(PlayerInstance player, String path)
+	public String getHtm(Player player, String path)
 	{
 		final String prefix = player != null ? player.getHtmlPrefix() : "";
 		String newPath = prefix + path;

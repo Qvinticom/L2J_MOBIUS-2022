@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 {
 	private final ClanMember _member;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public PledgeReceiveMemberInfo(ClanMember member, PlayerInstance player)
+	public PledgeReceiveMemberInfo(ClanMember member, Player player)
 	{
 		_member = member;
 		_player = player;

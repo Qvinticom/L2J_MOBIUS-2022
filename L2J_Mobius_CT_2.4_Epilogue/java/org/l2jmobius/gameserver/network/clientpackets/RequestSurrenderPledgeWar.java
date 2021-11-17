@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,7 +39,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -70,7 +70,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		player.sendPacket(msg);
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 		// Zoey76: TODO: Implement or cleanup.
-		// PlayerInstance leader = World.getInstance().getPlayer(clan.getLeaderName());
+		// Player leader = World.getInstance().getPlayer(clan.getLeaderName());
 		// if ((leader != null) && (leader.isOnline() == 0))
 		// {
 		// player.sendMessage("Clan leader isn't online.");

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -67,7 +67,7 @@ public class HealerTrainer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -168,7 +168,7 @@ public class HealerTrainer extends AbstractNpcAI
 	 * @param player the player to verify
 	 * @return {@code true} if the player has the item for the current class, {@code false} otherwise
 	 */
-	private static boolean hasTransferSkillItems(PlayerInstance player)
+	private static boolean hasTransferSkillItems(Player player)
 	{
 		int itemId;
 		switch (player.getClassId())

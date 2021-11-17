@@ -21,9 +21,9 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
@@ -58,7 +58,7 @@ public class GrandBossTeleporters extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(getName());
@@ -86,7 +86,7 @@ public class GrandBossTeleporters extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getNpcId();
 		String htmltext = null;
@@ -165,7 +165,7 @@ public class GrandBossTeleporters extends Quest
 						playerCount++;
 						if (status == 0)
 						{
-							final GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
+							final GrandBoss valakas = GrandBossManager.getInstance().getBoss(29028);
 							valakasAI().startQuestTimer("lock_entry_and_spawn_valakas", 60000 * Config.VALAKAS_WAIT_TIME, valakas, null);
 							GrandBossManager.getInstance().setBossStatus(29028, 1);
 						}

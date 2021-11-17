@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.items.Henna;
@@ -26,16 +26,16 @@ import org.l2jmobius.gameserver.model.items.Henna;
  */
 public class OnPlayerHennaAdd implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Henna _henna;
 	
-	public OnPlayerHennaAdd(PlayerInstance player, Henna henna)
+	public OnPlayerHennaAdd(Player player, Henna henna)
 	{
 		_player = player;
 		_henna = henna;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

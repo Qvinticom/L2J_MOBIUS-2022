@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.EventShrineManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.announce.EventAnnouncement;
 import org.l2jmobius.gameserver.model.holders.EventDropHolder;
 import org.l2jmobius.gameserver.script.DateRange;
@@ -399,7 +399,7 @@ public class LongTimeEvent extends Quest
 			for (int itemId : _destroyItemsOnEnd)
 			{
 				// Remove item from online players.
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if (player != null)
 					{

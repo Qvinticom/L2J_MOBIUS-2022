@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExStorageMaxCount implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _inventory;
 	private final int _warehouse;
 	private final int _freight;
@@ -36,7 +36,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 	private final int _receipeD;
 	private final int _recipe;
 	
-	public ExStorageMaxCount(PlayerInstance character)
+	public ExStorageMaxCount(Player character)
 	{
 		_player = character;
 		_inventory = _player.getInventoryLimit();

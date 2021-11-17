@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -81,7 +81,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final Instance world = npc.getInstanceWorld();
@@ -111,8 +111,8 @@ public class StoryOfFreya extends AbstractInstance
 					break;
 				}
 				final Party party = player.getParty();
-				final List<PlayerInstance> members = party.getMembers();
-				for (PlayerInstance member : members)
+				final List<Player> members = party.getMembers();
+				for (Player member : members)
 				{
 					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
@@ -130,7 +130,7 @@ public class StoryOfFreya extends AbstractInstance
 				if (party != null)
 				{
 					final Instance instance = player.getInstanceWorld();
-					for (PlayerInstance member : party.getMembers())
+					for (Player member : party.getMembers())
 					{
 						if (member != player)
 						{
@@ -149,8 +149,8 @@ public class StoryOfFreya extends AbstractInstance
 				if (player.isInParty())
 				{
 					final Party party = player.getParty();
-					final List<PlayerInstance> members = party.getMembers();
-					for (PlayerInstance member : members)
+					final List<Player> members = party.getMembers();
+					for (Player member : members)
 					{
 						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
@@ -183,8 +183,8 @@ public class StoryOfFreya extends AbstractInstance
 					if (player.isInParty())
 					{
 						final Party party = player.getParty();
-						final List<PlayerInstance> members = party.getMembers();
-						for (PlayerInstance member : members)
+						final List<Player> members = party.getMembers();
+						for (Player member : members)
 						{
 							if ((member == null) || (member.calculateDistance3D(npc) > 300))
 							{
@@ -228,8 +228,8 @@ public class StoryOfFreya extends AbstractInstance
 				if (player.isInParty())
 				{
 					final Party party = player.getParty();
-					final List<PlayerInstance> members = party.getMembers();
-					for (PlayerInstance member : members)
+					final List<Player> members = party.getMembers();
+					for (Player member : members)
 					{
 						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
@@ -254,7 +254,7 @@ public class StoryOfFreya extends AbstractInstance
 			}
 			case "startAttack":
 			{
-				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
+				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpc.class, 300))
 				{
 					if (nearby.getId() == KNIGHT)
 					{
@@ -276,7 +276,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -337,7 +337,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -373,8 +373,8 @@ public class StoryOfFreya extends AbstractInstance
 					if (player.isInParty())
 					{
 						final Party party = player.getParty();
-						final List<PlayerInstance> members = party.getMembers();
-						for (PlayerInstance member : members)
+						final List<Player> members = party.getMembers();
+						for (Player member : members)
 						{
 							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 							{
@@ -414,7 +414,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		String htmltext = null;
@@ -452,7 +452,7 @@ public class StoryOfFreya extends AbstractInstance
 		return htmltext;
 	}
 	
-	protected void QuestProgress(Npc npc, PlayerInstance player)
+	protected void QuestProgress(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q00835_PitiableMelisa.class.getSimpleName());
 		if ((qs != null) && qs.isStarted())

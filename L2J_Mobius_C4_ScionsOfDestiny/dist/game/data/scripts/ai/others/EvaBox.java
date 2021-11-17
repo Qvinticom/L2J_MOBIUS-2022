@@ -22,9 +22,9 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -58,13 +58,13 @@ public class EvaBox extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		for (Effect effect : killer.getAllEffects())
 		{
 			if (KISS_OF_EVA.contains(effect.getSkill().getId()))
 			{
-				final ItemInstance reward = ItemTable.getInstance().createItem("EvaBox", Rnd.get(REWARDS.length), 1, killer);
+				final Item reward = ItemTable.getInstance().createItem("EvaBox", Rnd.get(REWARDS.length), 1, killer);
 				reward.dropMe(npc, npc.getX(), npc.getY(), npc.getZ());
 				break;
 			}

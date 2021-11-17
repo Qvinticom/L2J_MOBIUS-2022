@@ -20,12 +20,12 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyMobInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyMob;
 
 public class FriendlyMobKnownList extends AttackableKnownList
 {
-	public FriendlyMobKnownList(FriendlyMobInstance activeChar)
+	public FriendlyMobKnownList(FriendlyMob activeChar)
 	{
 		super(activeChar);
 	}
@@ -44,7 +44,7 @@ public class FriendlyMobKnownList extends AttackableKnownList
 			return false;
 		}
 		
-		if ((object instanceof PlayerInstance) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		if ((object instanceof Player) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
 			getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 		}
@@ -88,8 +88,8 @@ public class FriendlyMobKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public FriendlyMobInstance getActiveChar()
+	public FriendlyMob getActiveChar()
 	{
-		return (FriendlyMobInstance) super.getActiveChar();
+		return (FriendlyMob) super.getActiveChar();
 	}
 }

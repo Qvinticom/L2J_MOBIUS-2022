@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -26,7 +26,7 @@ public class RequestPrivateStoreQuitBuy extends ClientBasePacket
 	public RequestPrivateStoreQuitBuy(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		player.setPrivateStoreType(0);
 		player.sendPacket(new UserInfo(player));
 		player.broadcastPacket(new UserInfo(player));

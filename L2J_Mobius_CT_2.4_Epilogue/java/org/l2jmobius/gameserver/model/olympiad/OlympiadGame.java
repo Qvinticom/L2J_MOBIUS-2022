@@ -39,12 +39,12 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -91,11 +91,11 @@ class OlympiadGame
 	public int _damageP1 = 0;
 	public int _damageP2 = 0;
 	
-	public PlayerInstance _playerOne;
-	public PlayerInstance _playerTwo;
+	public Player _playerOne;
+	public Player _playerTwo;
 	public Spawn _spawnOne;
 	public Spawn _spawnTwo;
-	protected List<PlayerInstance> _players;
+	protected List<Player> _players;
 	private final int[] _stadiumPort;
 	private int x1, y1, z1, x2, y2, z2;
 	public final int _stadiumID;
@@ -103,7 +103,7 @@ class OlympiadGame
 	private SystemMessage _sm2;
 	private SystemMessage _sm3;
 	
-	protected OlympiadGame(int id, CompetitionType type, List<PlayerInstance> list)
+	protected OlympiadGame(int id, CompetitionType type, List<Player> list)
 	{
 		_aborted = false;
 		_gamestarted = false;
@@ -159,7 +159,7 @@ class OlympiadGame
 		_playerTwoID = 0;
 	}
 	
-	protected void handleDisconnect(PlayerInstance player)
+	protected void handleDisconnect(Player player)
 	{
 		if (_gamestarted)
 		{
@@ -212,7 +212,7 @@ class OlympiadGame
 			return;
 		}
 		
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -292,7 +292,7 @@ class OlympiadGame
 				player.disableAutoShotsAll();
 				
 				// Discharge any active shots
-				final ItemInstance item = player.getActiveWeaponInstance();
+				final Item item = player.getActiveWeaponInstance();
 				if (item != null)
 				{
 					item.unChargeAllShots();
@@ -398,7 +398,7 @@ class OlympiadGame
 			return;
 		}
 		
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			try
 			{
@@ -439,7 +439,7 @@ class OlympiadGame
 	
 	protected void PlayersStatusBack()
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			if (player == null)
 			{
@@ -843,7 +843,7 @@ class OlympiadGame
 				// Save Fight Result
 				saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 1, _startTime, fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
 				
-				final ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerOne, null);
+				final Item item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerOne, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerOne.sendPacket(iu);
@@ -883,7 +883,7 @@ class OlympiadGame
 				// Save Fight Result
 				saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 2, _startTime, fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
 				
-				final ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerTwo, null);
+				final Item item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerTwo, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerTwo.sendPacket(iu);
@@ -990,7 +990,7 @@ class OlympiadGame
 		_gameIsStarted = true;
 		try
 		{
-			for (PlayerInstance player : _players)
+			for (Player player : _players)
 			{
 				player.setOlympiadStart(true);
 				player.updateEffectIcons();
@@ -1005,7 +1005,7 @@ class OlympiadGame
 		return true;
 	}
 	
-	protected void addDamage(PlayerInstance player, int damage)
+	protected void addDamage(Player player, int damage)
 	{
 		if ((_playerOne == null) || (_playerTwo == null))
 		{
@@ -1033,14 +1033,14 @@ class OlympiadGame
 		return _playerOneName + " / " + _playerTwoName;
 	}
 	
-	protected PlayerInstance[] getPlayers()
+	protected Player[] getPlayers()
 	{
 		if ((_players == null) || _players.isEmpty())
 		{
 			return null;
 		}
 		
-		final PlayerInstance[] players = new PlayerInstance[_players.size()];
+		final Player[] players = new Player[_players.size()];
 		_players.toArray(players);
 		
 		return players;
@@ -1048,7 +1048,7 @@ class OlympiadGame
 	
 	protected void broadcastMessage(SystemMessage sm, boolean toAll)
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			if (player != null)
 			{
@@ -1058,7 +1058,7 @@ class OlympiadGame
 		
 		if (toAll && (OlympiadManager.STADIUMS[_stadiumID].getSpectators() != null))
 		{
-			for (PlayerInstance spec : OlympiadManager.STADIUMS[_stadiumID].getSpectators())
+			for (Player spec : OlympiadManager.STADIUMS[_stadiumID].getSpectators())
 			{
 				if (spec != null)
 				{
@@ -1169,12 +1169,12 @@ class OlympiadGameTask implements Runnable
 		for (int i = 0; i < 2; i++)
 		{
 			boolean defaulted = false;
-			final PlayerInstance player = _game._players.get(i);
+			final Player player = _game._players.get(i);
 			if (player != null)
 			{
 				player.setOlympiadGameId(_game._stadiumID);
 			}
-			final PlayerInstance otherPlayer = _game._players.get(i ^ 1);
+			final Player otherPlayer = _game._players.get(i ^ 1);
 			SystemMessage sm = null;
 			
 			if (player == null)
@@ -1275,7 +1275,7 @@ class OlympiadGameTask implements Runnable
 			
 			if (OlympiadManager.STADIUMS[_game._stadiumID].getSpectators() != null)
 			{
-				for (PlayerInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
+				for (Player spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
 				{
 					if (spec != null)
 					{
@@ -1394,7 +1394,7 @@ class OlympiadGameTask implements Runnable
 		_game._playerTwo.sendPacket(new ExOlympiadUserInfo(_game._playerOne));
 		if (OlympiadManager.STADIUMS[_game._stadiumID].getSpectators() != null)
 		{
-			for (PlayerInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
+			for (Player spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
 			{
 				if (spec != null)
 				{

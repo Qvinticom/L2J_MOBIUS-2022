@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -146,7 +146,7 @@ public class RecipeHolder implements IIdentifiable
 	}
 	
 	/**
-	 * @return the table containing all RecipeStatInstance of the statUse parameter of the RecipeList.
+	 * @return the table containing all RecipeStatHolder of the statUse parameter of the RecipeList.
 	 */
 	public Map<StatusUpdateType, Double> getStatUse()
 	{
@@ -190,7 +190,7 @@ public class RecipeHolder implements IIdentifiable
 		return null;
 	}
 	
-	public boolean checkNecessaryStats(PlayerInstance player, PlayerInstance manufacturer, boolean sendMessage)
+	public boolean checkNecessaryStats(Player player, Player manufacturer, boolean sendMessage)
 	{
 		for (Entry<StatusUpdateType, Double> entry : _statUse.entrySet())
 		{
@@ -232,7 +232,7 @@ public class RecipeHolder implements IIdentifiable
 	 * @param sendMessage send system messages for item requirements if there is missing ingredient.
 	 * @return {@code true} if all necessary ingredients are met, {@code false} if there are missing ingredients.
 	 */
-	public boolean checkNecessaryIngredients(PlayerInstance player, boolean sendMessage)
+	public boolean checkNecessaryIngredients(Player player, boolean sendMessage)
 	{
 		for (ItemHolder ingredient : _materials)
 		{
@@ -261,7 +261,7 @@ public class RecipeHolder implements IIdentifiable
 	 * @param sendMessage send system messages of the process.
 	 * @return {@code ItemHolder} of the randomly created product (even if its failing craft), {@code null} if the item creation was not performed due to failed checks.
 	 */
-	public ItemHolder doCraft(PlayerInstance player, PlayerInstance manufacturer, boolean success, boolean craftingCritical, boolean sendMessage)
+	public ItemHolder doCraft(Player player, Player manufacturer, boolean success, boolean craftingCritical, boolean sendMessage)
 	{
 		if (!checkNecessaryStats(player, manufacturer, sendMessage))
 		{

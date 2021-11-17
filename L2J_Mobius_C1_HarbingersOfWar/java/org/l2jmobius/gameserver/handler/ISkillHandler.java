@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.handler;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public interface ISkillHandler
 {
-	public void useSkill(PlayerInstance var1, Skill var2, WorldObject var3);
+	public void useSkill(Player var1, Skill var2, WorldObject var3);
 	
 	public int[] getSkillIds();
 }

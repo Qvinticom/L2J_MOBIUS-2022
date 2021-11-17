@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -35,7 +35,7 @@ public class AdminNoble implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -45,9 +45,9 @@ public class AdminNoble implements IAdminCommandHandler
 		if (command.startsWith("admin_setnoble"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
-				final PlayerInstance targetPlayer = (PlayerInstance) target;
+				final Player targetPlayer = (Player) target;
 				final boolean newNoble = !targetPlayer.isNoble();
 				if (newNoble)
 				{

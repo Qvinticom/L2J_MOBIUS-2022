@@ -26,10 +26,10 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
@@ -250,7 +250,7 @@ abstract class AbstractAI implements Ctrl
 	@Override
 	public void notifyEvent(CtrlEvent evt, Object arg0, Object arg1)
 	{
-		if (!_actor.isSpawned() || !_actor.hasAI() || ((_actor instanceof PlayerInstance) && !((PlayerInstance) _actor).isOnline()) || ((_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isInOfflineMode()))
+		if (!_actor.isSpawned() || !_actor.hasAI() || ((_actor instanceof Player) && !((Player) _actor).isOnline()) || ((_actor instanceof Player) && ((Player) _actor).isInOfflineMode()))
 		{
 			return;
 		}
@@ -407,12 +407,12 @@ abstract class AbstractAI implements Ctrl
 	protected abstract void onEvtFinishCasting();
 	
 	/**
-	 * Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor.<br>
+	 * Cancel action client side by sending Server->Client packet ActionFailed to the Player actor.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	protected void clientActionFailed()
 	{
-		if (_actor instanceof PlayerInstance)
+		if (_actor instanceof Player)
 		{
 			_actor.sendPacket(ActionFailed.STATIC_PACKET);
 		}
@@ -483,7 +483,7 @@ abstract class AbstractAI implements Ctrl
 			// return;
 			// }
 			
-			// Send a Server->Client packet MoveToPawn/MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToPawn/MoveToLocation to the actor and all Player in its _knownPlayers
 			if (pawn instanceof Creature)
 			{
 				if (_actor.isOnGeodataPath())
@@ -530,7 +530,7 @@ abstract class AbstractAI implements Ctrl
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
 			_accessor.moveTo(x, y, z);
 			
-			// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToLocation to the actor and all Player in its _knownPlayers
 			_actor.broadcastMoveToLocation();
 		}
 		else
@@ -544,9 +544,9 @@ abstract class AbstractAI implements Ctrl
 		// Chek if actor can move
 		if (!_actor.isMovementDisabled())
 		{
-			// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToLocation to the actor and all Player in its _knownPlayers
 			// MoveToLocation msg = new MoveToLocation(_actor);
-			if (((PlayerInstance) _actor).getBoat() != null)
+			if (((Player) _actor).getBoat() != null)
 			{
 				_actor.broadcastPacket(new MoveToLocationInVehicle(_actor, destination, origin));
 			}
@@ -576,12 +576,12 @@ abstract class AbstractAI implements Ctrl
 		{
 			_clientMoving = false;
 			
-			// Send a Server->Client packet StopMove to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet StopMove to the actor and all Player in its _knownPlayers
 			_actor.broadcastPacket(new StopMove(_actor));
 			
 			if (pos != null)
 			{
-				// Send a Server->Client packet StopRotation to the actor and all PlayerInstance in its _knownPlayers
+				// Send a Server->Client packet StopRotation to the actor and all Player in its _knownPlayers
 				final StopRotation sr = new StopRotation(_actor, pos.getHeading(), 0);
 				_actor.sendPacket(sr);
 				_actor.broadcastPacket(sr);
@@ -608,7 +608,7 @@ abstract class AbstractAI implements Ctrl
 	 */
 	public void clientStartAutoAttack()
 	{
-		if ((((_actor instanceof NpcInstance) && !(_actor instanceof Attackable)) && !(_actor instanceof Playable)))
+		if ((((_actor instanceof Npc) && !(_actor instanceof Attackable)) && !(_actor instanceof Playable)))
 		{
 			return;
 		}
@@ -624,11 +624,11 @@ abstract class AbstractAI implements Ctrl
 		}
 		if (!_clientAutoAttacking)
 		{
-			if ((_actor instanceof PlayerInstance) && (((PlayerInstance) _actor).getPet() != null))
+			if ((_actor instanceof Player) && (((Player) _actor).getPet() != null))
 			{
-				((PlayerInstance) _actor).getPet().broadcastPacket(new AutoAttackStart(((PlayerInstance) _actor).getPet().getObjectId()));
+				((Player) _actor).getPet().broadcastPacket(new AutoAttackStart(((Player) _actor).getPet().getObjectId()));
 			}
-			// Send a Server->Client packet AutoAttackStart to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet AutoAttackStart to the actor and all Player in its _knownPlayers
 			_actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId()));
 			setAutoAttacking(true);
 		}
@@ -653,7 +653,7 @@ abstract class AbstractAI implements Ctrl
 		
 		final boolean isAutoAttacking = _clientAutoAttacking;
 		
-		if (_actor instanceof PlayerInstance)
+		if (_actor instanceof Player)
 		{
 			if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor) && isAutoAttacking)
 			{
@@ -673,7 +673,7 @@ abstract class AbstractAI implements Ctrl
 	 */
 	protected void clientNotifyDead()
 	{
-		// Send a Server->Client packet Die to the actor and all PlayerInstance in its _knownPlayers
+		// Send a Server->Client packet Die to the actor and all Player in its _knownPlayers
 		_actor.broadcastPacket(new Die(_actor));
 		
 		// Init AI
@@ -687,22 +687,22 @@ abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance player.<br>
+	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player player.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param player The PlayerIstance to notify with state of this Creature
 	 */
-	public void describeStateToPlayer(PlayerInstance player)
+	public void describeStateToPlayer(Player player)
 	{
 		if (_clientMoving)
 		{
 			if ((_clientMovingToPawnOffset != 0) && isFollowing())
 			{
-				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
+				// Send a Server->Client packet MoveToPawn to the actor and all Player in its _knownPlayers
 				player.sendPacket(new MoveToPawn(_actor, _followTarget, _clientMovingToPawnOffset));
 			}
 			else
 			{
-				// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+				// Send a Server->Client packet MoveToLocation to the actor and all Player in its _knownPlayers
 				player.sendPacket(new MoveToLocation(_actor));
 			}
 		}

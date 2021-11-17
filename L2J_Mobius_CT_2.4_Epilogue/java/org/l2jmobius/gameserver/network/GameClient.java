@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
@@ -69,7 +69,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	private Channel _channel;
 	private String _accountName;
 	private SessionKey _sessionId;
-	private PlayerInstance _player;
+	private Player _player;
 	private ClientHardwareInfoHolder _hardwareInfo;
 	private List<CharSelectInfoPackage> _charSlotMapping = null;
 	private volatile boolean _isDetached = false;
@@ -155,12 +155,12 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		return _addr;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public void setPlayer(PlayerInstance player)
+	public void setPlayer(Player player)
 	{
 		_player = player;
 	}
@@ -517,7 +517,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		}
 	}
 	
-	public PlayerInstance load(int characterSlot)
+	public Player load(int characterSlot)
 	{
 		final int objectId = getObjectIdForSlot(characterSlot);
 		if (objectId < 0)
@@ -525,7 +525,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return null;
 		}
 		
-		PlayerInstance player = World.getInstance().getPlayer(objectId);
+		Player player = World.getInstance().getPlayer(objectId);
 		if (player != null)
 		{
 			// exploit prevention, should not happens in normal way
@@ -547,7 +547,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return null;
 		}
 		
-		player = PlayerInstance.load(objectId);
+		player = Player.load(objectId);
 		if (player != null)
 		{
 			// prevent some values for each login

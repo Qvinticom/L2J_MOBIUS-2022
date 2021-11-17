@@ -28,14 +28,15 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.MapRegion;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
@@ -232,7 +233,7 @@ public class MapRegionManager implements IXmlReader
 		Location loc;
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			Castle castle = null;
 			Fort fort = null;
 			ClanHall clanhall = null;
@@ -241,7 +242,7 @@ public class MapRegionManager implements IXmlReader
 				// If teleport to clan hall
 				if (teleportWhere == TeleportWhereType.CLANHALL)
 				{
-					clanhall = ClanHallManager.getInstance().getAbstractHallByOwner(player.getClan());
+					clanhall = ClanHallTable.getInstance().getAbstractHallByOwner(player.getClan());
 					if (clanhall != null)
 					{
 						final ClanHallZone zone = clanhall.getZone();
@@ -311,8 +312,8 @@ public class MapRegionManager implements IXmlReader
 				{
 					castle = CastleManager.getInstance().getCastle(player);
 					fort = FortManager.getInstance().getFort(player);
-					clanhall = ClanHallManager.getInstance().getNearbyAbstractHall(creature.getX(), creature.getY(), 10000);
-					final SiegeFlagInstance twFlag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
+					clanhall = ClanHallTable.getInstance().getNearbyAbstractHall(creature.getX(), creature.getY(), 10000);
+					final SiegeFlag twFlag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
 					if (twFlag != null)
 					{
 						return twFlag.getLocation();
@@ -363,7 +364,7 @@ public class MapRegionManager implements IXmlReader
 					final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
 					if (zone != null)
 					{
-						return getRestartRegion(creature, zone.getRespawnPoint((PlayerInstance) creature)).getChaoticSpawnLoc();
+						return getRestartRegion(creature, zone.getRespawnPoint((Player) creature)).getChaoticSpawnLoc();
 					}
 					// Opposing race check.
 					if (getMapRegion(creature).getBannedRace().containsKey(creature.getRace()))
@@ -422,7 +423,7 @@ public class MapRegionManager implements IXmlReader
 			final RespawnZone zone = ZoneManager.getInstance().getZone(creature, RespawnZone.class);
 			if (zone != null)
 			{
-				return getRestartRegion(creature, zone.getRespawnPoint((PlayerInstance) creature)).getSpawnLoc();
+				return getRestartRegion(creature, zone.getRespawnPoint((Player) creature)).getSpawnLoc();
 			}
 			// Opposing race check.
 			if (getMapRegion(creature).getBannedRace().containsKey(creature.getRace()))
@@ -447,7 +448,7 @@ public class MapRegionManager implements IXmlReader
 	{
 		try
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			final MapRegion region = REGIONS.get(point);
 			if (region.getBannedRace().containsKey(player.getRace()))
 			{

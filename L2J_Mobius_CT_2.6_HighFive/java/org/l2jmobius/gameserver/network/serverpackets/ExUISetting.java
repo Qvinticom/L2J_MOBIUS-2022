@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ActionKey;
 import org.l2jmobius.gameserver.model.UIKeysSettings;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,7 +33,7 @@ public class ExUISetting implements IClientOutgoingPacket
 	private int buffsize;
 	private int categories;
 	
-	public ExUISetting(PlayerInstance player)
+	public ExUISetting(Player player)
 	{
 		_uiSettings = player.getUISettings();
 		calcSize();

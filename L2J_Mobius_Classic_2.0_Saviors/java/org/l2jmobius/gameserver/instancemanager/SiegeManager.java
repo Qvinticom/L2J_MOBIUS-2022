@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.TowerSpawn;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -62,7 +62,7 @@ public class SiegeManager
 		load();
 	}
 	
-	public void addSiegeSkills(PlayerInstance character)
+	public void addSiegeSkills(Player character)
 	{
 		for (Skill sk : SkillData.getInstance().getSiegeSkills(character.isNoble(), character.getClan().getCastleId() > 0))
 		{
@@ -108,7 +108,7 @@ public class SiegeManager
 		return register;
 	}
 	
-	public void removeSiegeSkills(PlayerInstance character)
+	public void removeSiegeSkills(Player character)
 	{
 		for (Skill sk : SkillData.getInstance().getSiegeSkills(character.isNoble(), character.getClan().getCastleId() > 0))
 		{

@@ -20,13 +20,13 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Commander;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -72,33 +72,33 @@ final class EffectFear extends Effect
 	public boolean onActionTime()
 	{
 		// Fear skills cannot be used l2pcinstance to l2pcinstance. Heroic Dread, Curse: Fear, Fear and Horror are the exceptions.
-		if ((getEffected() instanceof PlayerInstance) && (getEffector() instanceof PlayerInstance) && (getSkill().getId() != 1376) && (getSkill().getId() != 1169) && (getSkill().getId() != 65) && (getSkill().getId() != 1092))
+		if ((getEffected() instanceof Player) && (getEffector() instanceof Player) && (getSkill().getId() != 1376) && (getSkill().getId() != 1169) && (getSkill().getId() != 65) && (getSkill().getId() != 1092))
 		{
 			return false;
 		}
 		
-		if (getEffected() instanceof FolkInstance)
+		if (getEffected() instanceof Folk)
 		{
 			return false;
 		}
 		
-		if (getEffected() instanceof SiegeGuardInstance)
+		if (getEffected() instanceof SiegeGuard)
 		{
 			return false;
 		}
 		
 		// Fear skills cannot be used on Headquarters Flag.
-		if (getEffected() instanceof SiegeFlagInstance)
+		if (getEffected() instanceof SiegeFlag)
 		{
 			return false;
 		}
 		
-		if (getEffected() instanceof SiegeSummonInstance)
+		if (getEffected() instanceof SiegeSummon)
 		{
 			return false;
 		}
 		
-		if ((getEffected() instanceof FortSiegeGuardInstance) || (getEffected() instanceof CommanderInstance))
+		if ((getEffected() instanceof FortSiegeGuard) || (getEffected() instanceof Commander))
 		{
 			return false;
 		}

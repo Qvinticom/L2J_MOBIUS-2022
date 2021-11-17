@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -45,7 +45,7 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				for (ItemInstance item : caster.getInventory().getPaperdollItems())
+				for (Item item : caster.getInventory().getPaperdollItems())
 				{
 					if (item.getId() == _itemId)
 					{
@@ -58,7 +58,7 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					for (ItemInstance item : target.getActingPlayer().getInventory().getPaperdollItems())
+					for (Item item : target.getActingPlayer().getInventory().getPaperdollItems())
 					{
 						if (item.getId() == _itemId)
 						{
@@ -72,11 +72,11 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					for (ItemInstance item : caster.getInventory().getPaperdollItems())
+					for (Item item : caster.getInventory().getPaperdollItems())
 					{
 						if (item.getId() == _itemId)
 						{
-							for (ItemInstance i : target.getActingPlayer().getInventory().getPaperdollItems())
+							for (Item i : target.getActingPlayer().getInventory().getPaperdollItems())
 							{
 								if (i.getId() == _itemId)
 								{

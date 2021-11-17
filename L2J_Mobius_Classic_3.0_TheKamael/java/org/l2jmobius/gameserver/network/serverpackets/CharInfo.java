@@ -23,8 +23,8 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.VariationInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Decoy;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Clan _clan;
 	private int _objId;
 	private int _x;
@@ -72,7 +72,7 @@ public class CharInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_HAIR2
 	};
 	
-	public CharInfo(PlayerInstance player, boolean gmSeeInvis)
+	public CharInfo(Player player, boolean gmSeeInvis)
 	{
 		_player = player;
 		_objId = player.getObjectId();
@@ -106,7 +106,7 @@ public class CharInfo implements IClientOutgoingPacket
 		_gmSeeInvis = gmSeeInvis;
 	}
 	
-	public CharInfo(DecoyInstance decoy, boolean gmSeeInvis)
+	public CharInfo(Decoy decoy, boolean gmSeeInvis)
 	{
 		this(decoy.getActingPlayer(), gmSeeInvis); // init
 		_objId = decoy.getObjectId();

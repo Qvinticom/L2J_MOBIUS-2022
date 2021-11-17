@@ -35,8 +35,8 @@ import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroCmd;
 import org.l2jmobius.gameserver.model.Shortcut;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 /**
@@ -262,7 +262,7 @@ public class InitialShortcutData implements IXmlReader
 	 * Register all the available shortcuts for the given player.
 	 * @param player the player
 	 */
-	public void registerAllShortcuts(PlayerInstance player)
+	public void registerAllShortcuts(Player player)
 	{
 		if (player == null)
 		{
@@ -277,7 +277,7 @@ public class InitialShortcutData implements IXmlReader
 			{
 				case ITEM:
 				{
-					final ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
+					final Item item = player.getInventory().getItemByItemId(shortcutId);
 					if (item == null)
 					{
 						continue;
@@ -321,7 +321,7 @@ public class InitialShortcutData implements IXmlReader
 				{
 					case ITEM:
 					{
-						final ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
+						final Item item = player.getInventory().getItemByItemId(shortcutId);
 						if (item == null)
 						{
 							continue;

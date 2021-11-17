@@ -26,6 +26,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
@@ -33,7 +34,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
@@ -50,11 +50,11 @@ import org.l2jmobius.gameserver.model.Couple;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -139,7 +139,7 @@ public class EnterWorld implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("EnterWorld failed! player returned 'null'.");
@@ -161,11 +161,11 @@ public class EnterWorld implements IClientIncomingPacket
 		// Restore to instanced area if enabled
 		if (Config.RESTORE_PLAYER_INSTANCE)
 		{
-			player.setInstanceId(InstanceManager.getInstance().getPlayerInstance(player.getObjectId()));
+			player.setInstanceId(InstanceManager.getInstance().getPlayer(player.getObjectId()));
 		}
 		else
 		{
-			final int instanceId = InstanceManager.getInstance().getPlayerInstance(player.getObjectId());
+			final int instanceId = InstanceManager.getInstance().getPlayer(player.getObjectId());
 			if (instanceId > 0)
 			{
 				InstanceManager.getInstance().getInstance(instanceId).removePlayer(player.getObjectId());
@@ -248,7 +248,7 @@ public class EnterWorld implements IClientIncomingPacket
 			
 			notifySponsorOrApprentice(player);
 			
-			final AuctionableHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
+			final AuctionableHall clanHall = ClanHallTable.getInstance().getClanHallByOwner(player.getClan());
 			if (clanHall != null)
 			{
 				if (!clanHall.getPaid())
@@ -513,7 +513,7 @@ public class EnterWorld implements IClientIncomingPacket
 			client.sendPacket(new ExVoteSystemInfo(player));
 		}
 		client.sendPacket(new ExShowContactList(player));
-		for (ItemInstance i : player.getInventory().getItems())
+		for (Item i : player.getInventory().getItems())
 		{
 			if (i.isTimeLimitedItem())
 			{
@@ -525,7 +525,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		for (ItemInstance i : player.getWarehouse().getItems())
+		for (Item i : player.getWarehouse().getItems())
 		{
 			if (i.isTimeLimitedItem())
 			{
@@ -586,7 +586,7 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
 		}
 		
-		ClassMasterInstance.showQuestionMark(player);
+		ClassMaster.showQuestionMark(player);
 		
 		final int birthday = player.checkBirthDay();
 		if (birthday == 0)
@@ -685,7 +685,7 @@ public class EnterWorld implements IClientIncomingPacket
 				else if (Config.MAX_PLAYERS_PER_HWID > 0)
 				{
 					int count = 0;
-					for (PlayerInstance plr : World.getInstance().getPlayers())
+					for (Player plr : World.getInstance().getPlayers())
 					{
 						if (plr.isOnlineInt() == 1)
 						{
@@ -705,7 +705,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void engage(PlayerInstance player)
+	private void engage(Player player)
 	{
 		final int chaId = player.getObjectId();
 		for (Couple cl : CoupleManager.getInstance().getCouples())
@@ -731,12 +731,12 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void notifyPartner(PlayerInstance player)
+	private void notifyPartner(Player player)
 	{
 		final int objId = player.getPartnerId();
 		if (objId != 0)
 		{
-			final PlayerInstance partner = World.getInstance().getPlayer(objId);
+			final Player partner = World.getInstance().getPlayer(objId);
 			if (partner != null)
 			{
 				partner.sendMessage("Your Partner has logged in.");
@@ -747,12 +747,12 @@ public class EnterWorld implements IClientIncomingPacket
 	/**
 	 * @param player
 	 */
-	private void notifyClanMembers(PlayerInstance player)
+	private void notifyClanMembers(Player player)
 	{
 		final Clan clan = player.getClan();
 		if (clan != null)
 		{
-			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
+			clan.getClanMember(player.getObjectId()).setPlayer(player);
 			
 			final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
 			msg.addString(player.getName());
@@ -764,11 +764,11 @@ public class EnterWorld implements IClientIncomingPacket
 	/**
 	 * @param player
 	 */
-	private void notifySponsorOrApprentice(PlayerInstance player)
+	private void notifySponsorOrApprentice(Player player)
 	{
 		if (player.getSponsor() != 0)
 		{
-			final PlayerInstance sponsor = World.getInstance().getPlayer(player.getSponsor());
+			final Player sponsor = World.getInstance().getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
@@ -778,7 +778,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		else if (player.getApprentice() != 0)
 		{
-			final PlayerInstance apprentice = World.getInstance().getPlayer(player.getApprentice());
+			final Player apprentice = World.getInstance().getPlayer(player.getApprentice());
 			if (apprentice != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
@@ -788,7 +788,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	private void loadTutorial(PlayerInstance player)
+	private void loadTutorial(Player player)
 	{
 		final QuestState qs = player.getQuestState("Q00255_Tutorial");
 		if (qs != null)

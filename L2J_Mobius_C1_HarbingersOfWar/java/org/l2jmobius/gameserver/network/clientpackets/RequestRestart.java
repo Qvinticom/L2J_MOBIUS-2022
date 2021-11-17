@@ -17,7 +17,7 @@ lo * This file is part of the L2J Mobius project.
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
@@ -29,7 +29,7 @@ public class RequestRestart extends ClientBasePacket
 	{
 		super(decrypt);
 		
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		if (player != null)
 		{
 			if ((player.getPvpFlag() > 0) || player.isInCombat())

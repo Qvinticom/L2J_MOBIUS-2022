@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.enums;
 
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 
 /**
@@ -30,7 +30,7 @@ public enum CrystallizationType
 	ARMOR,
 	ACCESORY;
 	
-	public static CrystallizationType getByItem(Item item)
+	public static CrystallizationType getByItem(ItemTemplate item)
 	{
 		if (item instanceof Weapon)
 		{
@@ -42,14 +42,14 @@ public enum CrystallizationType
 		}
 		switch (item.getBodyPart())
 		{
-			case Item.SLOT_R_EAR:
-			case Item.SLOT_L_EAR:
-			case Item.SLOT_R_FINGER:
-			case Item.SLOT_L_FINGER:
-			case Item.SLOT_NECK:
-			case Item.SLOT_HAIR:
-			case Item.SLOT_HAIR2:
-			case Item.SLOT_HAIRALL:
+			case ItemTemplate.SLOT_R_EAR:
+			case ItemTemplate.SLOT_L_EAR:
+			case ItemTemplate.SLOT_R_FINGER:
+			case ItemTemplate.SLOT_L_FINGER:
+			case ItemTemplate.SLOT_NECK:
+			case ItemTemplate.SLOT_HAIR:
+			case ItemTemplate.SLOT_HAIR2:
+			case ItemTemplate.SLOT_HAIRALL:
 			{
 				return ACCESORY;
 			}

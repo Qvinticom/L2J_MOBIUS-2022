@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -50,7 +50,7 @@ public class Wedding implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
 		if (activeChar.isRegisteredOnEvent() || activeChar.isInOlympiadMode())
 		{
@@ -73,7 +73,7 @@ public class Wedding implements IVoicedCommandHandler
 		return false;
 	}
 	
-	public boolean Divorce(PlayerInstance activeChar)
+	public boolean Divorce(Player activeChar)
 	{
 		if (activeChar.getPartnerId() == 0)
 		{
@@ -94,8 +94,8 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You have broken up as a couple.");
 		}
 		
-		PlayerInstance partner;
-		partner = (PlayerInstance) World.getInstance().findObject(partnerId);
+		Player partner;
+		partner = (Player) World.getInstance().findObject(partnerId);
 		if (partner != null)
 		{
 			partner.setPartnerId(0);
@@ -119,7 +119,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean Engage(PlayerInstance activeChar)
+	public boolean Engage(Player activeChar)
 	{
 		// check target
 		if (activeChar.getTarget() == null)
@@ -129,13 +129,13 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		// check if target is a l2pcinstance
-		if (!(activeChar.getTarget() instanceof PlayerInstance))
+		if (!(activeChar.getTarget() instanceof Player))
 		{
 			activeChar.sendMessage("You can only ask another player to engage you.");
 			return false;
 		}
 		
-		final PlayerInstance ptarget = (PlayerInstance) activeChar.getTarget();
+		final Player ptarget = (Player) activeChar.getTarget();
 		
 		// check if player is already engaged
 		if (activeChar.getPartnerId() != 0)
@@ -218,7 +218,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean GoToLove(PlayerInstance activeChar)
+	public boolean GoToLove(Player activeChar)
 	{
 		if (!activeChar.isMarried())
 		{
@@ -246,8 +246,8 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		PlayerInstance partner;
-		partner = (PlayerInstance) World.getInstance().findObject(activeChar.getPartnerId());
+		Player partner;
+		partner = (Player) World.getInstance().findObject(activeChar.getPartnerId());
 		if (partner == null)
 		{
 			activeChar.sendMessage("Your partner is not online.");
@@ -366,13 +366,13 @@ public class Wedding implements IVoicedCommandHandler
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		private final int _partnerx;
 		private final int _partnery;
 		private final int _partnerz;
 		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(PlayerInstance activeChar, int x, int y, int z, boolean to7sDungeon)
+		EscapeFinalizer(Player activeChar, int x, int y, int z, boolean to7sDungeon)
 		{
 			_player = activeChar;
 			_partnerx = x;

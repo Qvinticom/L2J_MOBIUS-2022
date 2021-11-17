@@ -26,7 +26,7 @@ import java.util.function.Predicate;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.timers.IEventTimerCancel;
 import org.l2jmobius.gameserver.model.events.timers.IEventTimerEvent;
 import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
@@ -69,7 +69,7 @@ public class TimerExecutor<T>
 	 * @param eventTimer
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(T event, StatSet params, long time, Npc npc, PlayerInstance player, IEventTimerEvent<T> eventTimer)
+	public boolean addTimer(T event, StatSet params, long time, Npc npc, Player player, IEventTimerEvent<T> eventTimer)
 	{
 		return addTimer(new TimerHolder<>(event, params, time, npc, player, false, eventTimer, _cancelListener, this));
 	}
@@ -95,7 +95,7 @@ public class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(T event, StatSet params, long time, Npc npc, PlayerInstance player)
+	public boolean addTimer(T event, StatSet params, long time, Npc npc, Player player)
 	{
 		return addTimer(event, params, time, npc, player, _eventListener);
 	}
@@ -108,7 +108,7 @@ public class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(T event, long time, Npc npc, PlayerInstance player)
+	public boolean addTimer(T event, long time, Npc npc, Player player)
 	{
 		return addTimer(event, null, time, npc, player, _eventListener);
 	}
@@ -123,7 +123,7 @@ public class TimerExecutor<T>
 	 * @param eventTimer
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	private boolean addRepeatingTimer(T event, StatSet params, long time, Npc npc, PlayerInstance player, IEventTimerEvent<T> eventTimer)
+	private boolean addRepeatingTimer(T event, StatSet params, long time, Npc npc, Player player, IEventTimerEvent<T> eventTimer)
 	{
 		return addTimer(new TimerHolder<>(event, params, time, npc, player, true, eventTimer, _cancelListener, this));
 	}
@@ -136,7 +136,7 @@ public class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addRepeatingTimer(T event, long time, Npc npc, PlayerInstance player)
+	public boolean addRepeatingTimer(T event, long time, Npc npc, Player player)
 	{
 		return addRepeatingTimer(event, null, time, npc, player, _eventListener);
 	}
@@ -182,7 +182,7 @@ public class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if there is a timer with the given event npc and player parameters, {@code false} otherwise
 	 */
-	public boolean hasTimer(T event, Npc npc, PlayerInstance player)
+	public boolean hasTimer(T event, Npc npc, Player player)
 	{
 		final Set<TimerHolder<T>> timers = _timers.get(event);
 		if ((timers == null) || timers.isEmpty())
@@ -214,7 +214,7 @@ public class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer for the given event, npc, player were stopped, {@code false} otheriwse
 	 */
-	public boolean cancelTimer(T event, Npc npc, PlayerInstance player)
+	public boolean cancelTimer(T event, Npc npc, Player player)
 	{
 		final Set<TimerHolder<T>> timers = _timers.get(event);
 		if ((timers == null) || timers.isEmpty())

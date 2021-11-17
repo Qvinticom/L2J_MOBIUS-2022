@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -52,7 +52,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -63,7 +63,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 			return;
 		}
 		
-		final AirShipInstance ship = player.getAirShip();
+		final AirShip ship = player.getAirShip();
 		if (!ship.isCaptain(player))
 		{
 			return;

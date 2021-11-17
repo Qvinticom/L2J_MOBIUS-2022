@@ -21,23 +21,23 @@ import static org.l2jmobius.gameserver.data.xml.MultisellData.PAGE_SIZE;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.ItemInfo;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class MultiSellList extends AbstractItemPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private int _size;
 	private int _index;
 	private final PreparedMultisellListHolder _list;
 	private final boolean _finished;
 	
-	public MultiSellList(PlayerInstance player, PreparedMultisellListHolder list, int index)
+	public MultiSellList(Player player, PreparedMultisellListHolder list, int index)
 	{
 		_player = player;
 		_list = list;
@@ -78,7 +78,7 @@ public class MultiSellList extends AbstractItemPacket
 			{
 				SEARCH: for (ItemChanceHolder holder : entry.getIngredients())
 				{
-					final ItemInstance item = _player.getInventory().getItemByItemId(holder.getId());
+					final Item item = _player.getInventory().getItemByItemId(holder.getId());
 					if ((item != null) && item.isEquipable())
 					{
 						itemEnchantment = new ItemInfo(item);
@@ -102,7 +102,7 @@ public class MultiSellList extends AbstractItemPacket
 			
 			for (ItemChanceHolder product : entry.getProducts())
 			{
-				final Item template = ItemTable.getInstance().getTemplate(product.getId());
+				final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
 				final ItemInfo displayItemEnchantment = _list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass()) ? itemEnchantment : null;
 				if (template != null)
 				{
@@ -127,7 +127,7 @@ public class MultiSellList extends AbstractItemPacket
 			
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
-				final Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
+				final ItemTemplate template = ItemTable.getInstance().getTemplate(ingredient.getId());
 				final ItemInfo displayItemEnchantment = (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass()) ? itemEnchantment : null;
 				if (template != null)
 				{

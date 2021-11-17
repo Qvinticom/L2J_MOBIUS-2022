@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -27,12 +27,12 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExValidateLocationInShuttle implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _shipId;
 	private final int _heading;
 	private final Location _loc;
 	
-	public ExValidateLocationInShuttle(PlayerInstance player)
+	public ExValidateLocationInShuttle(Player player)
 	{
 		_player = player;
 		_shipId = _player.getShuttle().getObjectId();

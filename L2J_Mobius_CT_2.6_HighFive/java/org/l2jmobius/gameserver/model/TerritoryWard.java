@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TerritoryWard
 {
-	protected PlayerInstance _player = null;
+	protected Player _player = null;
 	public int playerId = 0;
-	private ItemInstance _item = null;
+	private Item _item = null;
 	private Npc _npc = null;
 	
 	private Location _location;
@@ -76,7 +76,7 @@ public class TerritoryWard
 		_npc = npc;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -115,7 +115,7 @@ public class TerritoryWard
 		}
 	}
 	
-	public boolean activate(PlayerInstance player, ItemInstance item)
+	public boolean activate(Player player, Item item)
 	{
 		if (player.isMounted())
 		{

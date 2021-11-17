@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -38,7 +38,7 @@ public class AdminSummon implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int id;
 		int count = 1;

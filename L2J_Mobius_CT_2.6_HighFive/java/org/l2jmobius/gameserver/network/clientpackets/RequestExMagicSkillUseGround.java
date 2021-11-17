@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -55,8 +55,8 @@ public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		// Get the current PlayerInstance of the player
-		final PlayerInstance player = client.getPlayer();
+		// Get the current Player of the player
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;

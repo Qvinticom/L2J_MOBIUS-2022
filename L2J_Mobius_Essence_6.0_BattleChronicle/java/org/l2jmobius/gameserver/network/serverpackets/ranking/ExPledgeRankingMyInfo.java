@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.ranking;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPledgeRankingMyInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExPledgeRankingMyInfo(PlayerInstance player)
+	public ExPledgeRankingMyInfo(Player player)
 	{
 		_player = player;
 	}

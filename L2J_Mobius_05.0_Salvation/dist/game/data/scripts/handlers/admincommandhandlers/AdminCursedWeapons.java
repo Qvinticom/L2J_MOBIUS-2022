@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -47,7 +47,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final CursedWeaponsManager cwm = CursedWeaponsManager.getInstance();
 		int id = 0;
@@ -65,7 +65,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "> " + cw.getName() + " (" + cw.getItemId() + ")");
 					if (cw.isActivated())
 					{
-						final PlayerInstance pl = cw.getPlayer();
+						final Player pl = cw.getPlayer();
 						BuilderUtil.sendSysMessage(activeChar, "  Player holding: " + (pl == null ? "null" : pl.getName()));
 						BuilderUtil.sendSysMessage(activeChar, "    Player Reputation: " + cw.getPlayerReputation());
 						BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
@@ -99,7 +99,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					
 					if (cw.isActivated())
 					{
-						final PlayerInstance pl = cw.getPlayer();
+						final Player pl = cw.getPlayer();
 						replyMSG.append("<tr><td>Weilder:</td><td>");
 						replyMSG.append(pl == null ? "null" : pl.getName());
 						replyMSG.append("</td></tr>");
@@ -204,7 +204,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					final WorldObject target = activeChar.getTarget();
 					if ((target != null) && target.isPlayer())
 					{
-						((PlayerInstance) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);
+						((Player) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);
 					}
 					else
 					{

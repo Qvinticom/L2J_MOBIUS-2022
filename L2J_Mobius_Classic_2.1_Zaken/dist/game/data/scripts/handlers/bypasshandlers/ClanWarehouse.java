@@ -22,10 +22,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.WarehouseInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Warehouse;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
@@ -40,7 +40,7 @@ public class ClanWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!Config.ALLOW_WAREHOUSE)
 		{
@@ -53,7 +53,7 @@ public class ClanWarehouse implements IBypassHandler
 		}
 		
 		final Npc npc = (Npc) target;
-		if (!(npc instanceof WarehouseInstance) && (npc.getClan() != null))
+		if (!(npc instanceof Warehouse) && (npc.getClan() != null))
 		{
 			return false;
 		}
@@ -94,7 +94,7 @@ public class ClanWarehouse implements IBypassHandler
 						return true;
 					}
 					
-					for (ItemInstance i : player.getActiveWarehouse().getItems())
+					for (Item i : player.getActiveWarehouse().getItems())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{

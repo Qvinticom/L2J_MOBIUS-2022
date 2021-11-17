@@ -22,12 +22,12 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
  */
 public class RequestPackageSend implements IClientIncomingPacket
 {
-	private final List<Item> _items = new ArrayList<>();
+	private final List<ItemHolder> _items = new ArrayList<>();
 	private int _objectID;
 	private int _count;
 	
@@ -60,7 +60,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		{
 			final int id = packet.readD(); // this is some id sent in PackageSendableList
 			final int count = packet.readD();
-			_items.add(new Item(id, count));
+			_items.add(new ItemHolder(id, count));
 		}
 		
 		return true;
@@ -74,7 +74,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -85,7 +85,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance target = PlayerInstance.load(_objectID);
+		final Player target = Player.load(_objectID);
 		if (player.getAccountChars().size() < 1)
 		{
 			return;
@@ -115,8 +115,8 @@ public class RequestPackageSend implements IClientIncomingPacket
 			return;
 		}
 		
-		final FolkInstance manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius2D(manager, NpcInstance.INTERACTION_DISTANCE)) && !player.isGM())
+		final Folk manager = player.getLastFolkNPC();
+		if (((manager == null) || !player.isInsideRadius2D(manager, Npc.INTERACTION_DISTANCE)) && !player.isGM())
 		{
 			return;
 		}
@@ -138,13 +138,13 @@ public class RequestPackageSend implements IClientIncomingPacket
 		final int fee = _count * Config.ALT_GAME_FREIGHT_PRICE;
 		int currentAdena = player.getAdena();
 		int slots = 0;
-		for (Item i : _items)
+		for (ItemHolder i : _items)
 		{
 			final int objectId = i.id;
 			final int count = i.count;
 			
 			// Check validity of requested item
-			final ItemInstance item = player.checkItemManipulation(objectId, count, "deposit");
+			final Item item = player.checkItemManipulation(objectId, count, "deposit");
 			
 			// Check if item is null
 			if (item == null)
@@ -192,7 +192,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		
 		// Proceed to the transfer
 		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (Item i : _items)
+		for (ItemHolder i : _items)
 		{
 			final int objectId = i.id;
 			final int count = i.count;
@@ -203,7 +203,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
+			final Item oldItem = player.getInventory().getItemByObjectId(objectId);
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -216,7 +216,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
+			final Item newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
@@ -254,12 +254,12 @@ public class RequestPackageSend implements IClientIncomingPacket
 		player.setActiveWarehouse(null);
 	}
 	
-	private class Item
+	private class ItemHolder
 	{
 		public int id;
 		public int count;
 		
-		public Item(int i, int c)
+		public ItemHolder(int i, int c)
 		{
 			id = i;
 			count = c;

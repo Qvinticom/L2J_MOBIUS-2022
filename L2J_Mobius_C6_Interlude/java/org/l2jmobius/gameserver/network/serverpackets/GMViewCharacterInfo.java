@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class GMViewCharacterInfo implements IClientOutgoingPacket
 {
 	/** The _active char. */
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/**
 	 * Instantiates a new GM view character info.
 	 * @param player the player
 	 */
-	public GMViewCharacterInfo(PlayerInstance player)
+	public GMViewCharacterInfo(Player player)
 	{
 		_player = player;
 	}

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
@@ -69,7 +69,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -86,7 +86,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 		
 		if ((player.getPrivateStoreType() == 0) && (player.getActiveRequester() == null) && !player.isDead())
 		{
-			final ItemInstance item = player.getInventory().getItemByItemId(_itemId);
+			final Item item = player.getInventory().getItemByItemId(_itemId);
 			if (item != null)
 			{
 				if (_type == 1)

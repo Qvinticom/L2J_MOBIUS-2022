@@ -20,35 +20,35 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class PetInventoryUpdate extends ServerBasePacket
 {
-	private final List<ItemInstance> _items;
+	private final List<Item> _items;
 	
 	public PetInventoryUpdate()
 	{
 		_items = new ArrayList<>();
 	}
 	
-	public PetInventoryUpdate(List<ItemInstance> items)
+	public PetInventoryUpdate(List<Item> items)
 	{
 		_items = items;
 	}
 	
-	public void addNewItem(ItemInstance item)
+	public void addNewItem(Item item)
 	{
 		item.setLastChange(1);
 		_items.add(item);
 	}
 	
-	public void addModifiedItem(ItemInstance item)
+	public void addModifiedItem(Item item)
 	{
 		item.setLastChange(2);
 		_items.add(item);
 	}
 	
-	public void addRemovedItem(ItemInstance item)
+	public void addRemovedItem(Item item)
 	{
 		item.setLastChange(3);
 		_items.add(item);
@@ -62,7 +62,7 @@ public class PetInventoryUpdate extends ServerBasePacket
 		writeH(count);
 		for (int i = 0; i < count; ++i)
 		{
-			final ItemInstance temp = _items.get(i);
+			final Item temp = _items.get(i);
 			writeH(temp.getLastChange());
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());

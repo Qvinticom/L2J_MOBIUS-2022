@@ -23,8 +23,8 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -47,7 +47,7 @@ public class OfflineTradeUtil
 	 * @param player the player to be check.
 	 * @return {@code true} if the player is allowed to remain as off-line shop.
 	 */
-	private static boolean offlineMode(PlayerInstance player)
+	private static boolean offlineMode(Player player)
 	{
 		if ((player == null) || player.isInOlympiadMode() || player.isRegisteredOnEvent() || player.isJailed() || (player.getVehicle() != null))
 		{
@@ -96,7 +96,7 @@ public class OfflineTradeUtil
 	 * @param player
 	 * @return {@code true} when player entered offline mode, otherwise {@code false}
 	 */
-	public static boolean enteredOfflineMode(PlayerInstance player)
+	public static boolean enteredOfflineMode(Player player)
 	{
 		if (!offlineMode(player))
 		{
@@ -116,7 +116,7 @@ public class OfflineTradeUtil
 		player.leaveParty();
 		OlympiadManager.getInstance().unRegisterNoble(player);
 		
-		// If the PlayerInstance has Pet, unsummon it
+		// If the Player has Pet, unsummon it
 		Summon pet = player.getPet();
 		if (pet != null)
 		{

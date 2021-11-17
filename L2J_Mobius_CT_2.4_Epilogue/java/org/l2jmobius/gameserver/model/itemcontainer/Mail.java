@@ -24,8 +24,8 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author DS
@@ -48,7 +48,7 @@ public class Mail extends ItemContainer
 	}
 	
 	@Override
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return null;
 	}
@@ -67,7 +67,7 @@ public class Mail extends ItemContainer
 	public void setNewMessageId(int messageId)
 	{
 		_messageId = messageId;
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item == null)
 			{
@@ -80,7 +80,7 @@ public class Mail extends ItemContainer
 	
 	public void returnToWh(ItemContainer wh)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item == null)
 			{
@@ -98,7 +98,7 @@ public class Mail extends ItemContainer
 	}
 	
 	@Override
-	protected void addItem(ItemInstance item)
+	protected void addItem(Item item)
 	{
 		super.addItem(item);
 		item.setItemLocation(getBaseLocation(), _messageId);
@@ -122,10 +122,10 @@ public class Mail extends ItemContainer
 			ps.setInt(3, _messageId);
 			try (ResultSet inv = ps.executeQuery())
 			{
-				ItemInstance item;
+				Item item;
 				while (inv.next())
 				{
-					item = ItemInstance.restoreFromDb(_ownerId, inv);
+					item = Item.restoreFromDb(_ownerId, inv);
 					if (item == null)
 					{
 						continue;

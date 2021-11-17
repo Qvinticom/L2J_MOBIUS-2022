@@ -18,7 +18,7 @@ package quests.Q00073_SagaOfTheDuelist;
 
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import quests.AbstractSagaQuest;
@@ -115,7 +115,7 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == TUNATUN)
 		{

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18600" level="86" type="Npc" name="Kratei's Steward">
+	<npc id="18600" level="86" type="Folk" name="Kratei's Steward">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -79,7 +79,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18601" level="70" type="Npc" name="Kratei's Watcher">
+	<npc id="18601" level="70" type="Folk" name="Kratei's Watcher">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -113,7 +113,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="18602" level="70" type="Npc" name="Kratei's Watcher">
+	<npc id="18602" level="70" type="Folk" name="Kratei's Watcher">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -147,7 +147,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="18603" level="73" type="Npc">
+	<npc id="18603" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -181,7 +181,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18604" level="73" type="Npc">
+	<npc id="18604" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -215,7 +215,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18605" level="73" type="Npc" name="">
+	<npc id="18605" level="73" type="Folk" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -249,7 +249,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18606" level="73" type="Npc">
+	<npc id="18606" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -917,7 +917,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18617" level="36" type="Npc">
+	<npc id="18617" level="36" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="726" sp="28" />
@@ -953,7 +953,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18618" level="36" type="Npc">
+	<npc id="18618" level="36" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="726" sp="28" />
@@ -989,7 +989,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18619" level="36" type="Npc">
+	<npc id="18619" level="36" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="726" sp="28" />
@@ -1062,7 +1062,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="18621" level="42" type="Npc">
+	<npc id="18621" level="42" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="988" sp="44" />
@@ -3406,7 +3406,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18661" level="75" type="Npc">
+	<npc id="18661" level="75" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="8086" sp="614" />
@@ -3441,7 +3441,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18662" level="73" type="Npc">
+	<npc id="18662" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="7660" sp="300" />
@@ -3476,7 +3476,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18663" level="73" type="Npc">
+	<npc id="18663" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3711,7 +3711,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="18669" level="73" type="Npc">
+	<npc id="18669" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3745,7 +3745,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18670" level="73" type="Npc">
+	<npc id="18670" level="73" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4022,7 +4022,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="18678" level="1" type="Npc" name="Energy Seed - Water">
+	<npc id="18678" level="1" type="Folk" name="Energy Seed - Water">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4061,7 +4061,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18679" level="1" type="Npc" name="Energy Seed - Fire">
+	<npc id="18679" level="1" type="Folk" name="Energy Seed - Fire">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4100,7 +4100,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18680" level="2" type="Npc" name="Energy Seed - Wind">
+	<npc id="18680" level="2" type="Folk" name="Energy Seed - Wind">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4139,7 +4139,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18681" level="2" type="Npc" name="Energy Seed - Earth">
+	<npc id="18681" level="2" type="Folk" name="Energy Seed - Earth">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4178,7 +4178,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18682" level="3" type="Npc" name="Energy Seed - Divinity">
+	<npc id="18682" level="3" type="Folk" name="Energy Seed - Divinity">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4217,7 +4217,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18683" level="3" type="Npc" name="Energy Seed - Darkness">
+	<npc id="18683" level="3" type="Folk" name="Energy Seed - Darkness">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4256,7 +4256,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18684" level="1" type="Npc" name="Red Star Stone">
+	<npc id="18684" level="1" type="Folk" name="Red Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4295,7 +4295,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="18685" level="1" type="Npc" name="Red Star Stone">
+	<npc id="18685" level="1" type="Folk" name="Red Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4334,7 +4334,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="18686" level="1" type="Npc" name="Red Star Stone">
+	<npc id="18686" level="1" type="Folk" name="Red Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4373,7 +4373,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18687" level="1" type="Npc" name="Blue Star Stone">
+	<npc id="18687" level="1" type="Folk" name="Blue Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4412,7 +4412,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="18688" level="1" type="Npc" name="Blue Star Stone">
+	<npc id="18688" level="1" type="Folk" name="Blue Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4451,7 +4451,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="18689" level="1" type="Npc" name="Blue Star Stone">
+	<npc id="18689" level="1" type="Folk" name="Blue Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4490,7 +4490,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18690" level="1" type="Npc" name="Green Star Stone">
+	<npc id="18690" level="1" type="Folk" name="Green Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4529,7 +4529,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="18691" level="1" type="Npc" name="Green Star Stone">
+	<npc id="18691" level="1" type="Folk" name="Green Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4568,7 +4568,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="18692" level="1" type="Npc" name="Green Star Stone">
+	<npc id="18692" level="1" type="Folk" name="Green Star Stone">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

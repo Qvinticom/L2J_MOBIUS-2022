@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,7 +29,7 @@ public class TradeUpdate extends AbstractItemPacket
 	private final TradeItem _item;
 	private final long _newCount;
 	
-	public TradeUpdate(PlayerInstance player, TradeItem item)
+	public TradeUpdate(Player player, TradeItem item)
 	{
 		_item = item;
 		_newCount = player.getInventory().getItemByObjectId(item.getObjectId()).getCount() - item.getCount();

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -40,7 +40,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final PlayerInstance player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					applyToPlayer(task, player);
@@ -53,7 +53,7 @@ public class ChatBanHandler implements IPunishmentHandler
 				final GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
-					final PlayerInstance player = client.getPlayer();
+					final Player player = client.getPlayer();
 					if (player != null)
 					{
 						applyToPlayer(task, player);
@@ -64,7 +64,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -76,7 +76,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case HWID:
 			{
 				final String hwid = String.valueOf(task.getKey());
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					final GameClient client = player.getClient();
 					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
@@ -97,7 +97,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final PlayerInstance player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					removeFromPlayer(player);
@@ -110,7 +110,7 @@ public class ChatBanHandler implements IPunishmentHandler
 				final GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
-					final PlayerInstance player = client.getPlayer();
+					final Player player = client.getPlayer();
 					if (player != null)
 					{
 						removeFromPlayer(player);
@@ -121,7 +121,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -133,7 +133,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case HWID:
 			{
 				final String hwid = String.valueOf(task.getKey());
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					final GameClient client = player.getClient();
 					if ((client != null) && client.getHardwareInfo().getMacAddress().equals(hwid))
@@ -151,7 +151,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 * @param task
 	 * @param player
 	 */
-	private void applyToPlayer(PunishmentTask task, PlayerInstance player)
+	private void applyToPlayer(PunishmentTask task, Player player)
 	{
 		final long delay = (task.getExpirationTime() - Chronos.currentTimeMillis()) / 1000;
 		if (delay > 0)
@@ -169,7 +169,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 * Removes any punishment effects from the player.
 	 * @param player
 	 */
-	private void removeFromPlayer(PlayerInstance player)
+	private void removeFromPlayer(Player player)
 	{
 		player.sendMessage("Your Chat ban has been lifted");
 		player.sendPacket(new EtcStatusUpdate(player));

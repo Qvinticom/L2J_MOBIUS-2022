@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.SeedDataHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * This class loads and stores manor seed information.
@@ -96,7 +96,7 @@ public class ManorSeedData implements IXmlReader
 	
 	public int getSeedBasicPrice(int seedId)
 	{
-		final Item seedItem = ItemTable.getInstance().getTemplate(seedId);
+		final ItemTemplate seedItem = ItemTable.getInstance().getTemplate(seedId);
 		if (seedItem != null)
 		{
 			return seedItem.getReferencePrice();
@@ -118,7 +118,7 @@ public class ManorSeedData implements IXmlReader
 	
 	public int getCropBasicPrice(int cropId)
 	{
-		final Item cropItem = ItemTable.getInstance().getTemplate(cropId);
+		final ItemTemplate cropItem = ItemTable.getInstance().getTemplate(cropId);
 		if (cropItem != null)
 		{
 			return cropItem.getReferencePrice();

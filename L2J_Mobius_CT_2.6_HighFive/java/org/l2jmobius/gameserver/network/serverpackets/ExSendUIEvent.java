@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -42,7 +42,7 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	 * @param endTime
 	 * @param text
 	 */
-	public ExSendUIEvent(PlayerInstance player, boolean hide, boolean countUp, int startTime, int endTime, String text)
+	public ExSendUIEvent(Player player, boolean hide, boolean countUp, int startTime, int endTime, String text)
 	{
 		this(player, hide, countUp, startTime, endTime, -1, text);
 	}
@@ -56,7 +56,7 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	 * @param npcString
 	 * @param params
 	 */
-	public ExSendUIEvent(PlayerInstance player, boolean hide, boolean countUp, int startTime, int endTime, NpcStringId npcString, String... params)
+	public ExSendUIEvent(Player player, boolean hide, boolean countUp, int startTime, int endTime, NpcStringId npcString, String... params)
 	{
 		this(player, hide, countUp, startTime, endTime, npcString.getId(), params);
 	}
@@ -70,7 +70,7 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	 * @param npcstringId
 	 * @param params
 	 */
-	public ExSendUIEvent(PlayerInstance player, boolean hide, boolean countUp, int startTime, int endTime, int npcstringId, String... params)
+	public ExSendUIEvent(Player player, boolean hide, boolean countUp, int startTime, int endTime, int npcstringId, String... params)
 	{
 		_objectId = player.getObjectId();
 		_type = hide;

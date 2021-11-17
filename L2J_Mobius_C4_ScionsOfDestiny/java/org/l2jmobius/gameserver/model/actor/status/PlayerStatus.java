@@ -17,11 +17,11 @@
 package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class PlayerStatus extends PlayableStatus
 {
-	public PlayerStatus(PlayerInstance player)
+	public PlayerStatus(Player player)
 	{
 		super(player);
 	}
@@ -48,7 +48,7 @@ public class PlayerStatus extends PlayableStatus
 			return;
 		}
 		
-		if (attacker instanceof PlayerInstance)
+		if (attacker instanceof Player)
 		{
 			if (getActiveChar().isDead() && !getActiveChar().isFakeDeath())
 			{
@@ -71,7 +71,7 @@ public class PlayerStatus extends PlayableStatus
 			final Summon summon = getActiveChar().getPet();
 			
 			// TODO correct range
-			if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, getActiveChar(), summon, true))
+			if ((summon instanceof Servitor) && Util.checkIfInRange(900, getActiveChar(), summon, true))
 			{
 				int tDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 				
@@ -110,7 +110,7 @@ public class PlayerStatus extends PlayableStatus
 		{
 			if (getActiveChar().getPrivateStoreType() != 0)
 			{
-				getActiveChar().setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+				getActiveChar().setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 				getActiveChar().broadcastUserInfo();
 			}
 			
@@ -124,11 +124,11 @@ public class PlayerStatus extends PlayableStatus
 		
 		if ((attacker != null) && (attacker != getActiveChar()) && (fullValue > 0))
 		{
-			// Send a System Message to the PlayerInstance
+			// Send a System Message to the Player
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_HIT_YOU_FOR_S2_DAMAGE);
-			if (attacker instanceof NpcInstance)
+			if (attacker instanceof Npc)
 			{
-				smsg.addString(((NpcInstance) attacker).getTemplate().getName());
+				smsg.addString(((Npc) attacker).getTemplate().getName());
 			}
 			else if (attacker instanceof Summon)
 			{
@@ -144,8 +144,8 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
-		return (PlayerInstance) super.getActiveChar();
+		return (Player) super.getActiveChar();
 	}
 }

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
@@ -34,14 +34,14 @@ public class Maps implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		final int itemId = item.getItemId();
 		if (itemId == 7063)
 		{

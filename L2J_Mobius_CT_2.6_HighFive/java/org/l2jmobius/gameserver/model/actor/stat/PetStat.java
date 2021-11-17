@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStat extends SummonStat
 {
-	public PetStat(PetInstance activeChar)
+	public PetStat(Pet activeChar)
 	{
 		super(activeChar);
 	}
@@ -85,7 +85,7 @@ public class PetStat extends SummonStat
 		{
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
 		}
-		// Send a Server->Client packet PetInfo to the PlayerInstance
+		// Send a Server->Client packet PetInfo to the Player
 		getActiveChar().updateAndBroadcastStatus(1);
 		
 		if (getActiveChar().getControlItem() != null)
@@ -114,9 +114,9 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public PetInstance getActiveChar()
+	public Pet getActiveChar()
 	{
-		return (PetInstance) super.getActiveChar();
+		return (Pet) super.getActiveChar();
 	}
 	
 	public int getFeedBattle()

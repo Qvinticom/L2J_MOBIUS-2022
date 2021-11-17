@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
 public class AntiFeedManager
@@ -70,7 +70,7 @@ public class AntiFeedManager
 			return false;
 		}
 		
-		final PlayerInstance targetPlayer = target.getActingPlayer();
+		final Player targetPlayer = target.getActingPlayer();
 		if (targetPlayer == null)
 		{
 			return false;
@@ -89,7 +89,7 @@ public class AntiFeedManager
 		
 		if (Config.ANTIFEED_DUALBOX && (attacker != null))
 		{
-			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final Player attackerPlayer = attacker.getActingPlayer();
 			if (attackerPlayer == null)
 			{
 				return false;
@@ -133,7 +133,7 @@ public class AntiFeedManager
 	 * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
 	 *         False if number of all simultaneous connections from player's IP address higher than max.
 	 */
-	public boolean tryAddPlayer(int eventId, PlayerInstance player, int max)
+	public boolean tryAddPlayer(int eventId, Player player, int max)
 	{
 		return tryAddClient(eventId, player.getClient(), max);
 	}
@@ -175,7 +175,7 @@ public class AntiFeedManager
 	 * @param player
 	 * @return true if success and false if any problem detected.
 	 */
-	public boolean removePlayer(int eventId, PlayerInstance player)
+	public boolean removePlayer(int eventId, Player player)
 	{
 		return removeClient(eventId, player.getClient());
 	}
@@ -242,7 +242,7 @@ public class AntiFeedManager
 	 * @param max
 	 * @return maximum number of allowed connections (whitelist + max)
 	 */
-	public int getLimit(PlayerInstance player, int max)
+	public int getLimit(Player player, int max)
 	{
 		return getLimit(player.getClient(), max);
 	}

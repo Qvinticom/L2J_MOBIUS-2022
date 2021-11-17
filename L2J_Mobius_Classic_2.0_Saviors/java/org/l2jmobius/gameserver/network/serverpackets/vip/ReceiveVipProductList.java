@@ -21,7 +21,7 @@ import java.util.Collection;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class ReceiveVipProductList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ReceiveVipProductList(PlayerInstance player)
+	public ReceiveVipProductList(Player player)
 	{
 		_player = player;
 	}

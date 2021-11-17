@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -53,7 +53,7 @@ public class RefuelAirship extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final AirShipInstance ship = info.getEffector().getActingPlayer().getAirShip();
+		final AirShip ship = info.getEffector().getActingPlayer().getAirShip();
 		ship.setFuel(ship.getFuel() + _value);
 		ship.updateAbnormalEffect();
 	}

@@ -32,7 +32,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Fence;
 
 /**
  * @author HoridoJoho / FBIagent
@@ -43,7 +43,7 @@ public class FenceData
 	
 	private static final int MAX_Z_DIFF = 100;
 	
-	private final Map<Integer, FenceInstance> _fences = new ConcurrentHashMap<>();
+	private final Map<Integer, Fence> _fences = new ConcurrentHashMap<>();
 	
 	protected FenceData()
 	{
@@ -110,31 +110,31 @@ public class FenceData
 		spawnFence(x, y, z, name, width, length, height, state);
 	}
 	
-	public FenceInstance spawnFence(int x, int y, int z, String name, int width, int length, int height, FenceState state)
+	public Fence spawnFence(int x, int y, int z, String name, int width, int length, int height, FenceState state)
 	{
-		final FenceInstance fence = new FenceInstance(x, y, name, width, length, height, state);
+		final Fence fence = new Fence(x, y, name, width, length, height, state);
 		fence.spawnMe(x, y, z);
 		addFence(fence);
 		
 		return fence;
 	}
 	
-	private void addFence(FenceInstance fence)
+	private void addFence(Fence fence)
 	{
 		_fences.put(fence.getObjectId(), fence);
 	}
 	
-	public void removeFence(FenceInstance fence)
+	public void removeFence(Fence fence)
 	{
 		_fences.remove(fence.getObjectId());
 	}
 	
-	public Map<Integer, FenceInstance> getFences()
+	public Map<Integer, Fence> getFences()
 	{
 		return _fences;
 	}
 	
-	public FenceInstance getFence(int objectId)
+	public Fence getFence(int objectId)
 	{
 		return _fences.get(objectId);
 	}
@@ -142,13 +142,13 @@ public class FenceData
 	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId)
 	{
 		final WorldRegion region = World.getInstance().getRegion(x, y);
-		final List<FenceInstance> fences = region != null ? region.getFences() : null;
+		final List<Fence> fences = region != null ? region.getFences() : null;
 		if ((fences == null) || fences.isEmpty())
 		{
 			return false;
 		}
 		
-		for (FenceInstance fence : fences)
+		for (Fence fence : fences)
 		{
 			// Check if fence is geodata enabled.
 			if (!fence.getState().isGeodataEnabled() || (fence.getInstanceId() != instanceId))

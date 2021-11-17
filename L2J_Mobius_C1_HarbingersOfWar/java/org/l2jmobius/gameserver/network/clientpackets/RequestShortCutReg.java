@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.ShortCut;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
@@ -32,7 +32,7 @@ public class RequestShortCutReg extends ClientBasePacket
 		final int id = readD();
 		final int unk = readD();
 		
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		switch (type)
 		{
 			case ShortCut.TYPE_ITEM:

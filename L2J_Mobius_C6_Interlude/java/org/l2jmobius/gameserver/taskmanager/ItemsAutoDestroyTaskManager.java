@@ -25,14 +25,14 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 public class ItemsAutoDestroyTaskManager implements Runnable
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroyTaskManager.class.getName());
 	
-	private final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet();
+	private final Set<Item> _items = ConcurrentHashMap.newKeySet();
 	
 	protected ItemsAutoDestroyTaskManager()
 	{
@@ -48,9 +48,9 @@ public class ItemsAutoDestroyTaskManager implements Runnable
 		}
 		
 		final long curtime = Chronos.currentTimeMillis();
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
-			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemInstance.ItemLocation.VOID))
+			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != Item.ItemLocation.VOID))
 			{
 				_items.remove(item);
 			}
@@ -82,7 +82,7 @@ public class ItemsAutoDestroyTaskManager implements Runnable
 		}
 	}
 	
-	public void addItem(ItemInstance item)
+	public void addItem(Item item)
 	{
 		item.setDropTime(Chronos.currentTimeMillis());
 		_items.add(item);

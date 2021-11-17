@@ -23,14 +23,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author -Nemesiss-
  */
 public class WarehouseCacheManager
 {
-	protected static final Map<PlayerInstance, Long> CACHED_WH = new ConcurrentHashMap<>();
+	protected static final Map<Player, Long> CACHED_WH = new ConcurrentHashMap<>();
 	protected static final long CACHE_TIME = Config.WAREHOUSE_CACHE_TIME * 60000;
 	
 	protected WarehouseCacheManager()
@@ -38,12 +38,12 @@ public class WarehouseCacheManager
 		ThreadPool.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
 	}
 	
-	public void addCacheTask(PlayerInstance pc)
+	public void addCacheTask(Player pc)
 	{
 		CACHED_WH.put(pc, Chronos.currentTimeMillis());
 	}
 	
-	public void remCacheTask(PlayerInstance pc)
+	public void remCacheTask(Player pc)
 	{
 		CACHED_WH.remove(pc);
 	}
@@ -58,11 +58,11 @@ public class WarehouseCacheManager
 		public void run()
 		{
 			final long cTime = Chronos.currentTimeMillis();
-			for (Entry<PlayerInstance, Long> entry : CACHED_WH.entrySet())
+			for (Entry<Player, Long> entry : CACHED_WH.entrySet())
 			{
 				if ((cTime - entry.getValue().longValue()) > CACHE_TIME)
 				{
-					final PlayerInstance player = entry.getKey();
+					final Player player = entry.getKey();
 					player.clearWarehouse();
 					CACHED_WH.remove(player);
 				}

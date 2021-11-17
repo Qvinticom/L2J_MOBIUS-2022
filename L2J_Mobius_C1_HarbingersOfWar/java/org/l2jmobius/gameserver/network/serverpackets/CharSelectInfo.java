@@ -27,8 +27,8 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.Inventory;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.templates.ItemTemplate;
 
 public class CharSelectInfo extends ServerBasePacket
 {
@@ -151,10 +151,10 @@ public class CharSelectInfo extends ServerBasePacket
 			while ((line = ((LineNumberReader) lnr).readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
-				final ItemInstance item = new ItemInstance();
+				final Item item = new Item();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
 				final int itemId = Integer.parseInt(st.nextToken());
-				final Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				final ItemTemplate itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));

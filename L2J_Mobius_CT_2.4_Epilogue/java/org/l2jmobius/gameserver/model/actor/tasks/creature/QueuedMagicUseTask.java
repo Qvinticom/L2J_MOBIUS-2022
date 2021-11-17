@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.creature;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class QueuedMagicUseTask implements Runnable
 {
-	private final PlayerInstance _currPlayer;
+	private final Player _currPlayer;
 	private final Skill _queuedSkill;
 	private final boolean _isCtrlPressed;
 	private final boolean _isShiftPressed;
 	
-	public QueuedMagicUseTask(PlayerInstance currPlayer, Skill queuedSkill, boolean isCtrlPressed, boolean isShiftPressed)
+	public QueuedMagicUseTask(Player currPlayer, Skill queuedSkill, boolean isCtrlPressed, boolean isShiftPressed)
 	{
 		_currPlayer = currPlayer;
 		_queuedSkill = queuedSkill;

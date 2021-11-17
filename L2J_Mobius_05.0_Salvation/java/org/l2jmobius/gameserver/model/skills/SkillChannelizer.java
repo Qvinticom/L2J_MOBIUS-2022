@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.util.Util;
@@ -202,7 +202,7 @@ public class SkillChannelizer implements Runnable
 						// Update PvP status
 						if (creature.isPlayable() && _channelizer.isPlayer())
 						{
-							((PlayerInstance) _channelizer).updatePvPStatus(creature);
+							((Player) _channelizer).updatePvPStatus(creature);
 						}
 						
 						// Be warned, this method has the possibility to call doDie->abortCast->stopChanneling method. Variable cache above try{} is used in this case to avoid NPEs.

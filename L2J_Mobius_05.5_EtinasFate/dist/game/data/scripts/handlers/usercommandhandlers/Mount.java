@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Mount user command.
@@ -31,7 +31,7 @@ public class Mount implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, PlayerInstance player)
+	public synchronized boolean useUserCommand(int id, Player player)
 	{
 		if (id != COMMAND_IDS[0])
 		{

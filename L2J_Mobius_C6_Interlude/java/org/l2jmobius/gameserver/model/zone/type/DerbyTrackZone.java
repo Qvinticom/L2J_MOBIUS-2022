@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
@@ -34,7 +34,7 @@ public class DerbyTrackZone extends PeaceZone
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.setInsideZone(ZoneId.MONSTER_TRACK, true);
 		}
@@ -44,7 +44,7 @@ public class DerbyTrackZone extends PeaceZone
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.setInsideZone(ZoneId.MONSTER_TRACK, false);
 		}

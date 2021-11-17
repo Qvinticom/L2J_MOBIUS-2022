@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.clientpackets.compound;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -46,7 +46,7 @@ public class RequestNewEnchantPushTwo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -73,8 +73,8 @@ public class RequestNewEnchantPushTwo implements IClientIncomingPacket
 		
 		// Make sure player owns this item.
 		request.setItemTwo(_objectId);
-		final ItemInstance itemOne = request.getItemOne();
-		final ItemInstance itemTwo = request.getItemTwo();
+		final Item itemOne = request.getItemOne();
+		final Item itemTwo = request.getItemTwo();
 		if ((itemOne == null) || (itemTwo == null))
 		{
 			client.sendPacket(ExEnchantTwoFail.STATIC_PACKET);

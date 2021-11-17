@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Attackable.RewardItem;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -45,18 +45,18 @@ public class Harvest implements ISkillHandler
 		SkillType.HARVEST
 	};
 	
-	private PlayerInstance _player;
-	private MonsterInstance _target;
+	private Player _player;
+	private Monster _target;
 	
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		_player = (PlayerInstance) creature;
+		_player = (Player) creature;
 		
 		final List<Creature> targetList = skill.getTargetList(creature);
 		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
@@ -67,12 +67,12 @@ public class Harvest implements ISkillHandler
 		
 		for (WorldObject aTargetList : targetList)
 		{
-			if (!(aTargetList instanceof MonsterInstance))
+			if (!(aTargetList instanceof Monster))
 			{
 				continue;
 			}
 			
-			_target = (MonsterInstance) aTargetList;
+			_target = (Monster) aTargetList;
 			if (_player != _target.getSeeder())
 			{
 				_player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST));
@@ -100,7 +100,7 @@ public class Harvest implements ISkillHandler
 							}
 							else
 							{
-								final ItemInstance item = _player.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _player, _target);
+								final Item item = _player.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _player, _target);
 								if (iu != null)
 								{
 									iu.addItem(item);

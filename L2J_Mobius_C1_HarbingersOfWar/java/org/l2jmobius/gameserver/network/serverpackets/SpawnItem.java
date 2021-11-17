@@ -17,13 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class SpawnItem extends ServerBasePacket
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	
-	public SpawnItem(ItemInstance item)
+	public SpawnItem(Item item)
 	{
 		_item = item;
 	}

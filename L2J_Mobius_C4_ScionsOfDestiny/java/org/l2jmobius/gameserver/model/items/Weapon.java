@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.skills.funcs.FuncTemplate;
  * This class is dedicated to the management of weapons.
  * @version $Revision: 1.4.2.3.2.5 $ $Date: 2005/04/02 15:57:51 $
  */
-public class Weapon extends Item
+public class Weapon extends ItemTemplate
 {
 	private final int _soulShotCount;
 	private final int _spiritShotCount;
@@ -78,7 +78,7 @@ public class Weapon extends Item
 	 * <li>_mpConsume</li><br>
 	 * @param type : ArmorType designating the type of armor
 	 * @param set : StatSet designating the set of couples (key,value) caracterizing the armor
-	 * @see Item constructor
+	 * @see ItemTemplate constructor
 	 */
 	public Weapon(WeaponType type, StatSet set)
 	{
@@ -289,12 +289,12 @@ public class Weapon extends Item
 	
 	/**
 	 * Returns array of Func objects containing the list of functions used by the weapon
-	 * @param instance : ItemInstance pointing out the weapon
+	 * @param instance : Item pointing out the weapon
 	 * @param creature : Creature pointing out the player
 	 * @return List<Func> : List of functions
 	 */
 	@Override
-	public List<Func> getStatFuncs(ItemInstance instance, Creature creature)
+	public List<Func> getStatFuncs(Item instance, Creature creature)
 	{
 		if (_funcTemplates == null)
 		{
@@ -422,11 +422,11 @@ public class Weapon extends Item
 				skill.useSkill(caster, targets);
 			}
 			
-			if ((caster instanceof PlayerInstance) && (target instanceof NpcInstance))
+			if ((caster instanceof Player) && (target instanceof Npc))
 			{
-				for (Quest quest : ((NpcInstance) target).getTemplate().getEventQuests(EventType.ON_SKILL_USE))
+				for (Quest quest : ((Npc) target).getTemplate().getEventQuests(EventType.ON_SKILL_USE))
 				{
-					quest.notifySkillUse((NpcInstance) target, (PlayerInstance) caster, skill);
+					quest.notifySkillUse((Npc) target, (Player) caster, skill);
 				}
 			}
 			

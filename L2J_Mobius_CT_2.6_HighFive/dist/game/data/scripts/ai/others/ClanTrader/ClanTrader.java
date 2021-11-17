@@ -18,7 +18,7 @@ package ai.others.ClanTrader;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -52,7 +52,7 @@ public class ClanTrader extends AbstractNpcAI
 		addFirstTalkId(CLAN_TRADER);
 	}
 	
-	private String giveReputation(Npc npc, PlayerInstance player, int count, int itemId, int itemCount)
+	private String giveReputation(Npc npc, Player player, int count, int itemId, int itemCount)
 	{
 		if (getQuestItemsCount(player, itemId) >= itemCount)
 		{
@@ -68,7 +68,7 @@ public class ClanTrader extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -106,7 +106,7 @@ public class ClanTrader extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
 		{

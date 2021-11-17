@@ -22,11 +22,11 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -59,7 +59,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -77,7 +77,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 					// Find the level of the flute.
 					for (int i = 3500; i < 3503; i++)
 					{
-						final ItemInstance item = player.getInventory().getItemByItemId(i);
+						final Item item = player.getInventory().getItemByItemId(i);
 						if ((item != null) && (item.getEnchantLevel() >= 55))
 						{
 							st.startQuest();
@@ -122,7 +122,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -149,7 +149,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 					// Find the level of the hatchling.
 					for (int i = 3500; i < 3503; i++)
 					{
-						final ItemInstance item = player.getInventory().getItemByItemId(i);
+						final Item item = player.getInventory().getItemByItemId(i);
 						if ((item != null) && (item.getEnchantLevel() >= 55))
 						{
 							return "30610-04.htm";
@@ -222,7 +222,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 							
 							for (int i = 3500; i < 3503; i++)
 							{
-								final ItemInstance item = player.getInventory().getItemByItemId(i);
+								final Item item = player.getInventory().getItemByItemId(i);
 								if ((item != null) && (item.getObjectId() == st.getInt("summonOid")))
 								{
 									st.takeItems(i, 1);
@@ -253,12 +253,12 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		// Minions scream no matter current quest state.
-		if (((MonsterInstance) npc).hasMinions())
+		if (((Monster) npc).hasMinions())
 		{
-			for (MonsterInstance ghost : ((MonsterInstance) npc).getSpawnedMinions())
+			for (Monster ghost : ((Monster) npc).getSpawnedMinions())
 			{
 				if (!ghost.isDead() && (Rnd.get(100) < 1))
 				{
@@ -307,7 +307,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final Creature originalKiller = isPet ? killer.getPet() : killer;
 		

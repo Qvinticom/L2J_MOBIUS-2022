@@ -24,9 +24,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -106,7 +106,7 @@ public class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -117,7 +117,7 @@ public class PailakaRuneCastle extends AbstractInstance
 				{
 					return null;
 				}
-				if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+				if (world.getAliveNpcs(Monster.class).isEmpty())
 				{
 					switch (world.getStatus())
 					{
@@ -130,7 +130,7 @@ public class PailakaRuneCastle extends AbstractInstance
 						}
 						case 3:
 						{
-							for (PlayerInstance member : world.getPlayers())
+							for (Player member : world.getPlayers())
 							{
 								final QuestState qs = member.getQuestState(world.getTemplateId() < 89 ? Q00727_HopeWithinTheDarkness.class.getSimpleName() : Q00726_LightWithinTheDarkness.class.getSimpleName());
 								if ((qs != null) && qs.isCond(1))
@@ -177,7 +177,7 @@ public class PailakaRuneCastle extends AbstractInstance
 						break;
 					}
 				}
-				final List<FriendlyNpcInstance> helpers = world.getAliveNpcs(FriendlyNpcInstance.class);
+				final List<FriendlyNpc> helpers = world.getAliveNpcs(FriendlyNpc.class);
 				if (!helpers.isEmpty())
 				{
 					for (Npc monster : monsters)
@@ -228,7 +228,7 @@ public class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -247,7 +247,7 @@ public class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (MANAGERS.containsKey(npcId))
@@ -258,7 +258,7 @@ public class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		// Put re-enter for instance
 		REENETER_HOLDER.put(instance.getTemplateId(), Chronos.currentTimeMillis() + REENTER);
@@ -267,9 +267,9 @@ public class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean validateConditions(List<PlayerInstance> group, Npc npc, InstanceTemplate template)
+	protected boolean validateConditions(List<Player> group, Npc npc, InstanceTemplate template)
 	{
-		final PlayerInstance groupLeader = group.get(0);
+		final Player groupLeader = group.get(0);
 		if (template.getId() < 89) // Castle
 		{
 			final Castle castle = npc.getCastle();

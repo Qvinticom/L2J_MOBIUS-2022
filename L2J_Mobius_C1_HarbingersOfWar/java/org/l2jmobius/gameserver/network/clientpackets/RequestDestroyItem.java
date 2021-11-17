@@ -18,8 +18,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -32,10 +32,10 @@ public class RequestDestroyItem extends ClientBasePacket
 	{
 		super(decrypt);
 		InventoryUpdate iu;
-		ItemInstance itemToRemove;
+		Item itemToRemove;
 		final int objectId = readD();
 		int count = readD();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (count == 0)
 		{
 			return;
@@ -47,7 +47,7 @@ public class RequestDestroyItem extends ClientBasePacket
 		if ((itemToRemove = activeChar.getInventory().getItem(objectId)).isEquipped())
 		{
 			iu = new InventoryUpdate();
-			for (ItemInstance element : activeChar.getInventory().unEquipItemOnPaperdoll(itemToRemove.getEquipSlot()))
+			for (Item element : activeChar.getInventory().unEquipItemOnPaperdoll(itemToRemove.getEquipSlot()))
 			{
 				iu.addModifiedItem(element);
 			}
@@ -57,7 +57,7 @@ public class RequestDestroyItem extends ClientBasePacket
 			activeChar.updateMDef();
 			activeChar.updateMAtk();
 		}
-		final ItemInstance removedItem = activeChar.getInventory().destroyItem(objectId, count);
+		final Item removedItem = activeChar.getInventory().destroyItem(objectId, count);
 		iu = new InventoryUpdate();
 		if (removedItem.getCount() == 0)
 		{

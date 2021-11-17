@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -47,7 +47,7 @@ public class DeadUnion implements IAffectScopeHandler
 		final int affectLimit = skill.getAffectLimit();
 		if (target.isPlayable())
 		{
-			final PlayerInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			final Party party = player.getParty();
 			final CommandChannel commandChannel = party != null ? party.getCommandChannel() : null;
 			
@@ -60,7 +60,7 @@ public class DeadUnion implements IAffectScopeHandler
 					return false;
 				}
 				
-				final PlayerInstance p = plbl.getActingPlayer();
+				final Player p = plbl.getActingPlayer();
 				if ((p == null) || !p.isDead())
 				{
 					return false;

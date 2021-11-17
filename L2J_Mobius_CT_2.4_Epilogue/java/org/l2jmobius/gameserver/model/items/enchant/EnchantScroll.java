@@ -24,8 +24,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 
@@ -105,7 +105,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	 * @return {@code true} if this scroll can be used with the specified support item and the item to be enchanted, {@code false} otherwise
 	 */
 	@Override
-	public boolean isValid(ItemInstance itemToEnchant, EnchantSupportItem supportItem)
+	public boolean isValid(Item itemToEnchant, EnchantSupportItem supportItem)
 	{
 		if ((_items != null) && !_items.contains(itemToEnchant.getId()))
 		{
@@ -149,7 +149,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	 * @param enchantItem
 	 * @return the chance of current scroll's group.
 	 */
-	public double getChance(PlayerInstance player, ItemInstance enchantItem)
+	public double getChance(Player player, Item enchantItem)
 	{
 		if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null)
 		{
@@ -172,7 +172,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	 * @param supportItem
 	 * @return the total chance for success rate of this scroll
 	 */
-	public EnchantResultType calculateSuccess(PlayerInstance player, ItemInstance enchantItem, EnchantSupportItem supportItem)
+	public EnchantResultType calculateSuccess(Player player, Item enchantItem, EnchantSupportItem supportItem)
 	{
 		if (!isValid(enchantItem, supportItem))
 		{

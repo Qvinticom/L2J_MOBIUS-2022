@@ -17,7 +17,7 @@
 package ai.bosses.Freya.Jinia;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -45,7 +45,7 @@ public class Jinia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		switch (event)
@@ -76,7 +76,7 @@ public class Jinia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 		if ((qs != null) && (player.getLevel() >= MIN_LEVEL))

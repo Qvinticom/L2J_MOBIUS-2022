@@ -40,8 +40,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import org.l2jmobius.gameserver.model.actor.status.SummonStatus;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -51,7 +50,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummon
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -80,7 +79,7 @@ import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 public abstract class Summon extends Playable
 {
-	private PlayerInstance _owner;
+	private Player _owner;
 	private int _attackRange = 36; // Melee range
 	private boolean _follow = true;
 	private boolean _previousFollowStatus = true;
@@ -96,7 +95,7 @@ public abstract class Summon extends Playable
 	};
 	// @formatter:on
 	
-	public Summon(NpcTemplate template, PlayerInstance owner)
+	public Summon(NpcTemplate template, Player owner)
 	{
 		super(template);
 		setInstanceType(InstanceType.Summon);
@@ -127,7 +126,7 @@ public abstract class Summon extends Playable
 		updateAndBroadcastStatus();
 		if (isPet())
 		{
-			final PetInstance pet = (PetInstance) this;
+			final Pet pet = (Pet) this;
 			final int specialSkillId = PetAcquireList.getInstance().getSpecialSkillByType(pet.getPetData().getType());
 			addSkill(SkillData.getInstance().getSkill(specialSkillId, pet.getEvolveLevel() + 1));
 		}
@@ -142,7 +141,7 @@ public abstract class Summon extends Playable
 			}
 			_owner.sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
 		}
-		World.getInstance().forEachVisibleObject(getOwner(), PlayerInstance.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
+		World.getInstance().forEachVisibleObject(getOwner(), Player.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
 		final Party party = _owner.getParty();
 		if (party != null)
 		{
@@ -213,7 +212,7 @@ public abstract class Summon extends Playable
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+		World.getInstance().forEachVisibleObject(this, Player.class, player ->
 		{
 			if (player == _owner)
 			{
@@ -279,7 +278,7 @@ public abstract class Summon extends Playable
 		return _owner != null ? _owner.getTeam() : Team.NONE;
 	}
 	
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}
@@ -388,7 +387,7 @@ public abstract class Summon extends Playable
 		updateAndBroadcastStatus();
 	}
 	
-	public void deleteMe(PlayerInstance owner)
+	public void deleteMe(Player owner)
 	{
 		super.deleteMe();
 		
@@ -421,7 +420,7 @@ public abstract class Summon extends Playable
 		CharSummonTable.getInstance().removeServitor(_owner, getObjectId());
 	}
 	
-	public void unSummon(PlayerInstance owner)
+	public void unSummon(Player owner)
 	{
 		if (isSpawned())
 		{
@@ -454,7 +453,7 @@ public abstract class Summon extends Playable
 			{
 				if (isPet())
 				{
-					getSkills().forEach((id, skill) -> ((PetInstance) this).storePetSkills(id, skill.getLevel()));
+					getSkills().forEach((id, skill) -> ((Pet) this).storePetSkills(id, skill.getLevel()));
 					owner.setPet(null);
 				}
 				else
@@ -554,7 +553,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public ItemInstance getActiveWeaponInstance()
+	public Item getActiveWeaponInstance()
 	{
 		return null;
 	}
@@ -566,7 +565,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public ItemInstance getSecondaryWeaponInstance()
+	public Item getSecondaryWeaponInstance()
 	{
 		return null;
 	}
@@ -587,7 +586,7 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Return the Party object of its PlayerInstance owner or null.
+	 * Return the Party object of its Player owner or null.
 	 */
 	@Override
 	public Party getParty()
@@ -625,7 +624,7 @@ public abstract class Summon extends Playable
 	 * @param dontMove used to prevent movement, if not in range
 	 */
 	@Override
-	public boolean useMagic(Skill skill, ItemInstance item, boolean forceUse, boolean dontMove)
+	public boolean useMagic(Skill skill, Item item, boolean forceUse, boolean dontMove)
 	{
 		// Null skill, dead summon or null owner are reasons to prevent casting.
 		if ((skill == null) || isDead() || (_owner == null))
@@ -658,7 +657,7 @@ public abstract class Summon extends Playable
 			if (currentTarget != null)
 			{
 				target = skill.getTarget(this, forceUse && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE) || !currentTarget.isInsideZone(ZoneId.NO_PVP)), dontMove, false);
-				final PlayerInstance currentTargetPlayer = currentTarget.getActingPlayer();
+				final Player currentTargetPlayer = currentTarget.getActingPlayer();
 				if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(_owner))
 				{
 					sendPacket(SystemMessageId.INVALID_TARGET);
@@ -704,12 +703,12 @@ public abstract class Summon extends Playable
 		// Check if all casting conditions are completed
 		if (!skill.checkCondition(this, target, true))
 		{
-			// Send a Server->Client packet ActionFailed to the PlayerInstance
+			// Send a Server->Client packet ActionFailed to the Player
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		// Check if this is bad magic skill and if PlayerInstance is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
+		// Check if this is bad magic skill and if Player is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
 		if (skill.isBad() && _owner.isInOlympiadMode() && !_owner.isOlympiadStart())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -742,7 +741,7 @@ public abstract class Summon extends Playable
 		}
 	}
 	
-	public void setOwner(PlayerInstance newOwner)
+	public void setOwner(Player newOwner)
 	{
 		_owner = newOwner;
 	}
@@ -770,7 +769,7 @@ public abstract class Summon extends Playable
 				}
 			}
 			
-			if (_owner.isInOlympiadMode() && target.isPlayer() && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
+			if (_owner.isInOlympiadMode() && target.isPlayer() && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
 			{
 				OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
 			}
@@ -814,10 +813,10 @@ public abstract class Summon extends Playable
 	{
 		if ((skill.getTarget(this, false, false, false) == null) && !_owner.getAccessLevel().allowPeaceAttack())
 		{
-			// Send a System Message to the PlayerInstance
+			// Send a System Message to the Player
 			_owner.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			
-			// Send a Server->Client packet ActionFailed to the PlayerInstance
+			// Send a Server->Client packet ActionFailed to the Player
 			_owner.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -832,7 +831,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public PlayerInstance getActingPlayer()
+	public Player getActingPlayer()
 	{
 		return _owner;
 	}
@@ -858,7 +857,7 @@ public abstract class Summon extends Playable
 	
 	public void broadcastNpcInfo(int value)
 	{
-		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+		World.getInstance().forEachVisibleObject(this, Player.class, player ->
 		{
 			if ((player == _owner))
 			{
@@ -885,7 +884,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public void sendInfo(PlayerInstance player)
+	public void sendInfo(Player player)
 	{
 		if (player == _owner)
 		{
@@ -1067,7 +1066,7 @@ public abstract class Summon extends Playable
 	@Override
 	public void rechargeShots(boolean physical, boolean magic, boolean fish)
 	{
-		ItemInstance item;
+		Item item;
 		IItemHandler handler;
 		if ((_owner.getAutoSoulShot() == null) || _owner.getAutoSoulShot().isEmpty())
 		{
@@ -1128,7 +1127,7 @@ public abstract class Summon extends Playable
 	
 	public void sendInventoryUpdate(IClientOutgoingPacket iu)
 	{
-		final PlayerInstance owner = _owner;
+		final Player owner = _owner;
 		if (owner != null)
 		{
 			owner.sendInventoryUpdate(iu);

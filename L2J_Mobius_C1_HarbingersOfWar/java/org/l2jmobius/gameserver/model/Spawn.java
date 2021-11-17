@@ -21,16 +21,16 @@ import java.lang.reflect.Constructor;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.IdManager;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Npc;
+import org.l2jmobius.gameserver.templates.NpcTemplate;
 import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public class Spawn
 {
 	private static Logger _log = Logger.getLogger(Spawn.class.getName());
-	private final Npc _template;
+	private final NpcTemplate _template;
 	private int _id;
 	private String _location;
 	protected int _scheduledCount;
@@ -46,11 +46,11 @@ public class Spawn
 	private int _respawnDelay;
 	private final Constructor<?> _constructor;
 	
-	public Spawn(Npc mobTemplate) throws ClassNotFoundException
+	public Spawn(NpcTemplate mobTemplate) throws ClassNotFoundException
 	{
 		_template = mobTemplate;
 		final String implementationName = _template.getType();
-		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + implementationName + "Instance").getConstructors()[0];
+		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + implementationName).getConstructors()[0];
 	}
 	
 	public int getAmount()
@@ -173,16 +173,16 @@ public class Spawn
 	
 	public void doSpawn()
 	{
-		NpcInstance mob = null;
+		Npc mob = null;
 		try
 		{
 			final Object[] parameters = new Object[]
 			{
 				_template
 			};
-			mob = (NpcInstance) _constructor.newInstance(parameters);
+			mob = (Npc) _constructor.newInstance(parameters);
 			mob.setObjectId(IdManager.getInstance().getNextId());
-			mob.setAutoAttackable(mob instanceof MonsterInstance);
+			mob.setAutoAttackable(mob instanceof Monster);
 			if (getRandomx() > 0)
 			{
 				final int random1 = Rnd.get(getRandomx());
@@ -248,7 +248,7 @@ public class Spawn
 	
 	class SpawnTask implements Runnable
 	{
-		NpcInstance _instance;
+		Npc _instance;
 		int _objId;
 		
 		public SpawnTask(int objid)

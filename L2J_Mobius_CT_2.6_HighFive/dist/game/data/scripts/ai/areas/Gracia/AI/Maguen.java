@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -81,7 +81,7 @@ public class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc == null) || (player == null))
 		{
@@ -170,7 +170,7 @@ public class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		final BuffInfo infoB = player.getEffectList().getBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
 		final BuffInfo infoC = player.getEffectList().getBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
@@ -258,9 +258,9 @@ public class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if (((skill == MACHINE.getSkill()) && (caster == npc.getVariables().getObject("SUMMON_PLAYER", PlayerInstance.class))) //
+		if (((skill == MACHINE.getSkill()) && (caster == npc.getVariables().getObject("SUMMON_PLAYER", Player.class))) //
 			&& ((npc.getVariables().getInt("NPC_EFFECT") != 0) && (npc.getVariables().getInt("BLOCKED_SKILLSEE") == 0)))
 		{
 			final BuffInfo info1 = caster.getEffectList().getBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
@@ -358,11 +358,11 @@ public class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (killer.isInParty())
 		{
-			final PlayerInstance partyMember = getRandomPartyMember(killer);
+			final Player partyMember = getRandomPartyMember(killer);
 			final int i0 = 10 + (10 * killer.getParty().getMemberCount());
 			if ((getRandom(1000) < i0) && (npc.calculateDistance3D(killer) < 2000) && (npc.calculateDistance3D(partyMember) < 2000))
 			{
@@ -372,7 +372,7 @@ public class Maguen extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void maguenPetChance(PlayerInstance player)
+	private void maguenPetChance(Player player)
 	{
 		final int chance1 = getRandom(10000);
 		final int chance2 = getRandom(20);

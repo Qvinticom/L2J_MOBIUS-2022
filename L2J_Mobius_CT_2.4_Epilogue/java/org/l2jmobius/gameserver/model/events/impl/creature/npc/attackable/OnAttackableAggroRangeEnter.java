@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 public class OnAttackableAggroRangeEnter implements IBaseEvent
 {
 	private final Npc _npc;
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final boolean _isSummon;
 	
-	public OnAttackableAggroRangeEnter(Npc npc, PlayerInstance attacker, boolean isSummon)
+	public OnAttackableAggroRangeEnter(Npc npc, Player attacker, boolean isSummon)
 	{
 		_npc = npc;
 		_player = attacker;
@@ -42,7 +42,7 @@ public class OnAttackableAggroRangeEnter implements IBaseEvent
 		return _npc;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

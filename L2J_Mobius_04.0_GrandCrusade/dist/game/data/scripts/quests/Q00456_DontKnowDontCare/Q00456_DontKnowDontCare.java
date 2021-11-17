@@ -32,8 +32,8 @@ import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -146,7 +146,7 @@ public class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final Set<Integer> allowedPlayers = allowedPlayerMap.get(npc.getObjectId());
@@ -179,7 +179,7 @@ public class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -230,7 +230,7 @@ public class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -266,7 +266,7 @@ public class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (!killer.isInParty() || !killer.getParty().isInCommandChannel())
 		{
@@ -289,7 +289,7 @@ public class Q00456_DontKnowDontCare extends Quest
 				continue;
 			}
 			
-			final PlayerInstance attacker = aggro.getAttacker().getActingPlayer();
+			final Player attacker = aggro.getAttacker().getActingPlayer();
 			if (attacker.isInParty() //
 				&& attacker.getParty().isInCommandChannel() //
 				&& attacker.getParty().getCommandChannel().equals(cc) // only players from the same cc are allowed
@@ -310,7 +310,7 @@ public class Q00456_DontKnowDontCare extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void rewardPlayer(PlayerInstance player, Npc npc)
+	private void rewardPlayer(Player player, Npc npc)
 	{
 		final int chance = getRandom(10000);
 		final int reward;
@@ -350,7 +350,7 @@ public class Q00456_DontKnowDontCare extends Quest
 		}
 		
 		giveItems(player, reward, count);
-		final Item item = ItemTable.getInstance().getTemplate(reward);
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(reward);
 		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_RECEIVED_A_S2_ITEM_AS_A_REWARD_FROM_THE_SEPARATED_SOUL, player.getName(), item.getName());
 	}
 }

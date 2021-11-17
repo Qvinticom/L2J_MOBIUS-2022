@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 
@@ -81,7 +81,7 @@ public class TownZone extends ZoneRespawn
 	{
 		// PVP possible during siege, now for siege participants only
 		// Could also check if this town is in siege, or if any siege is going on
-		if ((creature instanceof PlayerInstance) && (((PlayerInstance) creature).getSiegeState() != 0) && (Config.ZONE_TOWN == 1))
+		if ((creature instanceof Player) && (((Player) creature).getSiegeState() != 0) && (Config.ZONE_TOWN == 1))
 		{
 			return;
 		}

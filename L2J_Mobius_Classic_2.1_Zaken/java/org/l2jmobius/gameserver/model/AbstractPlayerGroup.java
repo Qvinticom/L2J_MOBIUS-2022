@@ -22,7 +22,7 @@ import java.util.function.Function;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -36,7 +36,7 @@ public abstract class AbstractPlayerGroup
 	/**
 	 * @return a list of all members of this group
 	 */
-	public abstract List<PlayerInstance> getMembers();
+	public abstract List<Player> getMembers();
 	
 	/**
 	 * @return a list of object IDs of the members of this group
@@ -55,20 +55,20 @@ public abstract class AbstractPlayerGroup
 	/**
 	 * @return the leader of this group
 	 */
-	public abstract PlayerInstance getLeader();
+	public abstract Player getLeader();
 	
 	/**
 	 * Change the leader of this group to the specified player.
 	 * @param leader the player to set as the new leader of this group
 	 */
-	public abstract void setLeader(PlayerInstance leader);
+	public abstract void setLeader(Player leader);
 	
 	/**
 	 * @return the leader's object ID
 	 */
 	public int getLeaderObjectId()
 	{
-		final PlayerInstance leader = getLeader();
+		final Player leader = getLeader();
 		if (leader == null)
 		{
 			return 0;
@@ -81,14 +81,14 @@ public abstract class AbstractPlayerGroup
 	 * @param player the player to check
 	 * @return {@code true} if the specified player is the leader of this group, {@code false} otherwise
 	 */
-	public boolean isLeader(PlayerInstance player)
+	public boolean isLeader(Player player)
 	{
 		if (player == null)
 		{
 			return false;
 		}
 		
-		final PlayerInstance leader = getLeader();
+		final Player leader = getLeader();
 		if (leader == null)
 		{
 			return false;
@@ -111,7 +111,7 @@ public abstract class AbstractPlayerGroup
 	public int getRaceCount()
 	{
 		final List<Race> partyRaces = new ArrayList<>();
-		for (PlayerInstance member : getMembers())
+		for (Player member : getMembers())
 		{
 			if (!partyRaces.contains(member.getRace()))
 			{
@@ -160,7 +160,7 @@ public abstract class AbstractPlayerGroup
 		broadcastPacket(new SystemMessage(text));
 	}
 	
-	public void broadcastCreatureSay(CreatureSay msg, PlayerInstance broadcaster)
+	public void broadcastCreatureSay(CreatureSay msg, Player broadcaster)
 	{
 		forEachMember(m ->
 		{
@@ -177,7 +177,7 @@ public abstract class AbstractPlayerGroup
 	 * @param player the player to check
 	 * @return {@code true} if this group contains the specified player, {@code false} otherwise
 	 */
-	public boolean containsPlayer(PlayerInstance player)
+	public boolean containsPlayer(Player player)
 	{
 		return getMembers().contains(player);
 	}
@@ -185,7 +185,7 @@ public abstract class AbstractPlayerGroup
 	/**
 	 * @return a random member of this group
 	 */
-	public PlayerInstance getRandomPlayer()
+	public Player getRandomPlayer()
 	{
 		return getMembers().get(Rnd.get(getMembers().size()));
 	}
@@ -196,9 +196,9 @@ public abstract class AbstractPlayerGroup
 	 *            If executing the procedure on a member returns {@code true}, the loop continues to the next member, otherwise it breaks the loop
 	 * @return {@code true} if the procedure executed correctly, {@code false} if the loop was broken prematurely
 	 */
-	public boolean forEachMember(Function<PlayerInstance, Boolean> procedure)
+	public boolean forEachMember(Function<Player, Boolean> procedure)
 	{
-		for (PlayerInstance player : getMembers())
+		for (Player player : getMembers())
 		{
 			if (!procedure.apply(player))
 			{

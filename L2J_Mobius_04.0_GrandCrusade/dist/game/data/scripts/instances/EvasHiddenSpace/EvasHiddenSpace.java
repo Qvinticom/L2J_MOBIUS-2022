@@ -17,7 +17,7 @@
 package instances.EvasHiddenSpace;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -45,7 +45,7 @@ public class EvasHiddenSpace extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState qs = player.getQuestState(Q10369_NoblesseSoulTesting.class.getSimpleName());
@@ -74,7 +74,7 @@ public class EvasHiddenSpace extends AbstractInstance
 		}
 		else if (event.equals("exitInstance"))
 		{
-			final Instance world = getPlayerInstance(player);
+			final Instance world = getPlayer(player);
 			if (world != null)
 			{
 				teleportPlayerOut(player, world);

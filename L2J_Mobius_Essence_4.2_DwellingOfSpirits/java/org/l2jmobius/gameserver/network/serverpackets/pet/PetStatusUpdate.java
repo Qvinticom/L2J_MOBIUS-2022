@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.serverpackets.pet;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -37,13 +37,13 @@ public class PetStatusUpdate implements IClientOutgoingPacket
 		_summon = summon;
 		if (_summon.isPet())
 		{
-			final PetInstance pet = (PetInstance) _summon;
+			final Pet pet = (Pet) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
 		else if (_summon.isServitor())
 		{
-			final ServitorInstance sum = (ServitorInstance) _summon;
+			final Servitor sum = (Servitor) _summon;
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
 		}

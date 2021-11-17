@@ -31,8 +31,8 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
@@ -43,7 +43,7 @@ public abstract class ClanHall
 	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
 	final int _clanHallId;
-	private List<DoorInstance> _doors;
+	private List<Door> _doors;
 	private final String _name;
 	private int _ownerId;
 	private final String _desc;
@@ -265,9 +265,9 @@ public abstract class ClanHall
 	}
 	
 	/**
-	 * @return all DoorInstance
+	 * @return all Door
 	 */
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		if (_doors == null)
 		{
@@ -280,13 +280,13 @@ public abstract class ClanHall
 	 * @param doorId
 	 * @return Door
 	 */
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
 			return null;
 		}
-		for (DoorInstance door : getDoors())
+		for (Door door : getDoors())
 		{
 			if (door.getId() == doorId)
 			{
@@ -371,7 +371,7 @@ public abstract class ClanHall
 	 * @param doorId
 	 * @param open
 	 */
-	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
+	public void openCloseDoor(Player player, int doorId, boolean open)
 	{
 		if ((player != null) && (player.getClanId() == _ownerId))
 		{
@@ -384,7 +384,7 @@ public abstract class ClanHall
 		openCloseDoor(getDoor(doorId), open);
 	}
 	
-	public void openCloseDoor(DoorInstance door, boolean open)
+	public void openCloseDoor(Door door, boolean open)
 	{
 		if (door != null)
 		{
@@ -399,7 +399,7 @@ public abstract class ClanHall
 		}
 	}
 	
-	public void openCloseDoors(PlayerInstance player, boolean open)
+	public void openCloseDoors(Player player, boolean open)
 	{
 		if ((player != null) && (player.getClanId() == _ownerId))
 		{
@@ -409,7 +409,7 @@ public abstract class ClanHall
 	
 	public void openCloseDoors(boolean open)
 	{
-		for (DoorInstance door : getDoors())
+		for (Door door : getDoors())
 		{
 			if (door != null)
 			{
@@ -479,7 +479,7 @@ public abstract class ClanHall
 		}
 	}
 	
-	public boolean updateFunctions(PlayerInstance player, int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(Player player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
 		if ((player == null) || ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)))
 		{

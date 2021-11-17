@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -41,14 +41,14 @@ public class ContactList
 {
 	private static final Logger LOGGER = Logger.getLogger(ContactList.class.getName());
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Set<String> _contacts = ConcurrentHashMap.newKeySet();
 	
 	private static final String QUERY_ADD = "INSERT INTO character_contacts (charId, contactId) VALUES (?, ?)";
 	private static final String QUERY_REMOVE = "DELETE FROM character_contacts WHERE charId = ? and contactId = ?";
 	private static final String QUERY_LOAD = "SELECT contactId FROM character_contacts WHERE charId = ?";
 	
-	public ContactList(PlayerInstance player)
+	public ContactList(Player player)
 	{
 		_player = player;
 		restore();

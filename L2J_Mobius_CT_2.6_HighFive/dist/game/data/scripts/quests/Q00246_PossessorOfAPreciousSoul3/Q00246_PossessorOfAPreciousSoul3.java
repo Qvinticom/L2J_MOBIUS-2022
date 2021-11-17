@@ -19,7 +19,7 @@ package quests.Q00246_PossessorOfAPreciousSoul3;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -72,7 +72,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -146,9 +146,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
-		final PlayerInstance partyMember;
+		final Player partyMember;
 		final QuestState st;
 		switch (npc.getId())
 		{
@@ -203,7 +203,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				QuestState pst;
 				if ((player.getParty() != null) && !player.getParty().getMembers().isEmpty())
 				{
-					for (PlayerInstance member : player.getParty().getMembers())
+					for (Player member : player.getParty().getMembers())
 					{
 						pst = getQuestState(member, false);
 						if ((pst != null) && pst.isCond(4) && !hasQuestItems(member, RAIN_SONG))
@@ -251,7 +251,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

@@ -20,7 +20,7 @@ import java.util.Calendar;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -47,13 +47,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class SiegeInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _residenceId;
 	private final int _ownerId;
 	private final long _siegeDate;
 	private final String _name;
 	
-	public SiegeInfo(Castle castle, PlayerInstance player)
+	public SiegeInfo(Castle castle, Player player)
 	{
 		_player = player;
 		_residenceId = castle.getCastleId();
@@ -62,7 +62,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 		_name = castle.getName();
 	}
 	
-	public SiegeInfo(Fort fort, PlayerInstance player)
+	public SiegeInfo(Fort fort, Player player)
 	{
 		_player = player;
 		_residenceId = fort.getFortId();

@@ -32,9 +32,9 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.spawn.SpawnListener;
@@ -118,12 +118,12 @@ public class AutoChatHandler implements SpawnListener
 	 * @param chatDelay (-1 = default delay)
 	 * @return AutoChatInstance chatInst
 	 */
-	public AutoChatInstance registerChat(NpcInstance npcInst, String[] chatTexts, long chatDelay)
+	public AutoChatInstance registerChat(Npc npcInst, String[] chatTexts, long chatDelay)
 	{
 		return registerChat(npcInst.getNpcId(), npcInst, chatTexts, chatDelay);
 	}
 	
-	private final AutoChatInstance registerChat(int npcId, NpcInstance npcInst, String[] chatTexts, long chatDelay)
+	private final AutoChatInstance registerChat(int npcId, Npc npcInst, String[] chatTexts, long chatDelay)
 	{
 		AutoChatInstance chatInst = null;
 		if (_registeredChats.containsKey(npcId))
@@ -213,7 +213,7 @@ public class AutoChatHandler implements SpawnListener
 	 * If an auto chat instance is set to be "global", all instances matching the registered NPC ID will be added to that chat instance.
 	 */
 	@Override
-	public void npcSpawned(NpcInstance npc)
+	public void npcSpawned(Npc npc)
 	{
 		synchronized (_registeredChats)
 		{
@@ -278,7 +278,7 @@ public class AutoChatHandler implements SpawnListener
 		 * @param npcInst
 		 * @return objectId
 		 */
-		public int addChatDefinition(NpcInstance npcInst)
+		public int addChatDefinition(Npc npcInst)
 		{
 			return addChatDefinition(npcInst, null, 0);
 		}
@@ -291,11 +291,11 @@ public class AutoChatHandler implements SpawnListener
 		 * @param chatDelay
 		 * @return objectId
 		 */
-		public int addChatDefinition(NpcInstance npcInst, String[] chatTexts, long chatDelay)
+		public int addChatDefinition(Npc npcInst, String[] chatTexts, long chatDelay)
 		{
 			final int objectId = npcInst.getObjectId();
 			final AutoChatDefinition chatDef = new AutoChatDefinition(this, npcInst, chatTexts, chatDelay);
-			if (npcInst instanceof SiegeGuardInstance)
+			if (npcInst instanceof SiegeGuard)
 			{
 				chatDef.setRandomChat(true);
 			}
@@ -386,11 +386,11 @@ public class AutoChatHandler implements SpawnListener
 		
 		/**
 		 * Returns a list of all NPC instances handled by this auto chat instance.
-		 * @return NpcInstance[] npcInsts
+		 * @return Npc[] npcInsts
 		 */
-		public List<NpcInstance> getNPCInstanceList()
+		public List<Npc> getNpcList()
 		{
-			final List<NpcInstance> npcInsts = new ArrayList<>();
+			final List<Npc> npcInsts = new ArrayList<>();
 			for (AutoChatDefinition chatDefinition : _chatDefinitions.values())
 			{
 				npcInsts.add(chatDefinition._npcInstance);
@@ -512,7 +512,7 @@ public class AutoChatHandler implements SpawnListener
 		private class AutoChatDefinition
 		{
 			protected int _chatIndex = 0;
-			protected NpcInstance _npcInstance;
+			protected Npc _npcInstance;
 			
 			protected AutoChatInstance _chatInstance;
 			
@@ -521,7 +521,7 @@ public class AutoChatHandler implements SpawnListener
 			private boolean _isActiveDefinition;
 			private boolean _randomChat;
 			
-			protected AutoChatDefinition(AutoChatInstance chatInst, NpcInstance npcInst, String[] chatTexts, long chatDelay)
+			protected AutoChatDefinition(AutoChatInstance chatInst, Npc npcInst, String[] chatTexts, long chatDelay)
 			{
 				_npcInstance = npcInst;
 				_chatInstance = chatInst;
@@ -651,23 +651,23 @@ public class AutoChatHandler implements SpawnListener
 				{
 					try
 					{
-						final NpcInstance chatNpc = chatDef._npcInstance;
-						final List<PlayerInstance> nearbyPlayers = new ArrayList<>();
-						final List<PlayerInstance> nearbyGMs = new ArrayList<>();
+						final Npc chatNpc = chatDef._npcInstance;
+						final List<Player> nearbyPlayers = new ArrayList<>();
+						final List<Player> nearbyGMs = new ArrayList<>();
 						for (Creature creature : chatNpc.getKnownList().getKnownCharactersInRadius(1500))
 						{
-							if (!(creature instanceof PlayerInstance))
+							if (!(creature instanceof Player))
 							{
 								continue;
 							}
 							
-							if (((PlayerInstance) creature).isGM())
+							if (((Player) creature).isGM())
 							{
-								nearbyGMs.add((PlayerInstance) creature);
+								nearbyGMs.add((Player) creature);
 							}
 							else
 							{
-								nearbyPlayers.add((PlayerInstance) creature);
+								nearbyPlayers.add((Player) creature);
 							}
 						}
 						
@@ -698,7 +698,7 @@ public class AutoChatHandler implements SpawnListener
 						if (!nearbyPlayers.isEmpty())
 						{
 							final int randomPlayerIndex = Rnd.get(nearbyPlayers.size());
-							final PlayerInstance randomPlayer = nearbyPlayers.get(randomPlayerIndex);
+							final Player randomPlayer = nearbyPlayers.get(randomPlayerIndex);
 							final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 							int losingCabal = SevenSigns.CABAL_NULL;
 							if (winningCabal == SevenSigns.CABAL_DAWN)
@@ -717,7 +717,7 @@ public class AutoChatHandler implements SpawnListener
 							
 							if (text.indexOf("%player_cabal_winner%") > -1)
 							{
-								for (PlayerInstance nearbyPlayer : nearbyPlayers)
+								for (Player nearbyPlayer : nearbyPlayers)
 								{
 									if (SevenSigns.getInstance().getPlayerCabal(nearbyPlayer) == winningCabal)
 									{
@@ -729,7 +729,7 @@ public class AutoChatHandler implements SpawnListener
 							
 							if (text.indexOf("%player_cabal_loser%") > -1)
 							{
-								for (PlayerInstance nearbyPlayer : nearbyPlayers)
+								for (Player nearbyPlayer : nearbyPlayers)
 								{
 									if (SevenSigns.getInstance().getPlayerCabal(nearbyPlayer) == losingCabal)
 									{
@@ -751,11 +751,11 @@ public class AutoChatHandler implements SpawnListener
 						}
 						
 						final CreatureSay cs = new CreatureSay(chatNpc.getObjectId(), ChatType.GENERAL, creatureName, text);
-						for (PlayerInstance nearbyPlayer : nearbyPlayers)
+						for (Player nearbyPlayer : nearbyPlayers)
 						{
 							nearbyPlayer.sendPacket(cs);
 						}
-						for (PlayerInstance nearbyGM : nearbyGMs)
+						for (Player nearbyGM : nearbyGMs)
 						{
 							nearbyGM.sendPacket(cs);
 						}

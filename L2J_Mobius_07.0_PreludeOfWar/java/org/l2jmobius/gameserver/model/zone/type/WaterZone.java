@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
@@ -41,7 +41,7 @@ public class WaterZone extends ZoneType
 		// TODO: update to only send speed status when that packet is known
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player.checkTransformed(transform -> !transform.canSwim()))
 			{
 				creature.stopTransformation(true);
@@ -53,7 +53,7 @@ public class WaterZone extends ZoneType
 		}
 		else if (creature.isNpc())
 		{
-			World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, player ->
+			World.getInstance().forEachVisibleObject(creature, Player.class, player ->
 			{
 				if (creature.isFakePlayer())
 				{
@@ -82,7 +82,7 @@ public class WaterZone extends ZoneType
 			// Mobius: Attempt to stop water task.
 			if (!creature.isInsideZone(ZoneId.WATER))
 			{
-				((PlayerInstance) creature).stopWaterTask();
+				((Player) creature).stopWaterTask();
 			}
 			if (!creature.isTeleporting())
 			{
@@ -91,7 +91,7 @@ public class WaterZone extends ZoneType
 		}
 		else if (creature.isNpc())
 		{
-			World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, player ->
+			World.getInstance().forEachVisibleObject(creature, Player.class, player ->
 			{
 				if (creature.isFakePlayer())
 				{

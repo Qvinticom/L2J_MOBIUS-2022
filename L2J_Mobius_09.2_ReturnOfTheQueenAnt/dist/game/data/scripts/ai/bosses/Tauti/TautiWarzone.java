@@ -21,8 +21,8 @@ import java.util.List;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
@@ -62,7 +62,7 @@ public class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -101,7 +101,7 @@ public class TautiWarzone extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				world.setStatus(4);
 				world.openCloseDoor(DOOR_2, true);
-				for (PlayerInstance member : world.getPlayers())
+				for (Player member : world.getPlayers())
 				{
 					member.teleToLocation(TAUTI_TELEPORT, world);
 					if (world.getAliveNpcs(TAUTI_EXTREME).isEmpty() && world.getAliveNpcs(TAUTI_EXTREME_AXE).isEmpty())
@@ -148,7 +148,7 @@ public class TautiWarzone extends AbstractInstance
 					world.setStatus(1);
 					world.spawnGroup("room1");
 					playMovie(world.getPlayers(), Movie.SC_TAUTI_OPENING);
-					for (PlayerInstance member : world.getPlayers())
+					for (Player member : world.getPlayers())
 					{
 						takeItems(member, KEY_OF_DARKNESS, -1);
 					}
@@ -156,7 +156,7 @@ public class TautiWarzone extends AbstractInstance
 				}
 				else if (world.isStatus(1))
 				{
-					if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
+					if (world.getAliveNpcs(Monster.class).isEmpty())
 					{
 						world.setStatus(2);
 						final List<Npc> monsters = world.spawnGroup("room2");
@@ -174,7 +174,7 @@ public class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = "";
 		switch (npc.getId())
@@ -206,7 +206,7 @@ public class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world.isStatus(5) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.15)))
@@ -227,7 +227,7 @@ public class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == ZAHAK)
 		{
@@ -244,7 +244,7 @@ public class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		if (player != null)
 		{

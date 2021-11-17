@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -82,7 +82,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,13 +95,13 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		}
 		
 		final WorldObject object = World.getInstance().findObject(_storePlayerId);
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance storePlayer = (PlayerInstance) object;
-		if (storePlayer.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_BUY)
+		final Player storePlayer = (Player) object;
+		if (storePlayer.getPrivateStoreType() != Player.STORE_PRIVATE_BUY)
 		{
 			return;
 		}
@@ -121,7 +121,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		
 		if (storeList.getItemCount() == 0)
 		{
-			storePlayer.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+			storePlayer.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 			storePlayer.broadcastUserInfo();
 			return;
 		}
@@ -139,7 +139,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				player.sendPacket(SystemMessage.sendString("You have not enough items to buy, canceling PrivateBuy"));
-				storePlayer.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+				storePlayer.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 				storePlayer.broadcastUserInfo();
 				return;
 			}
@@ -148,7 +148,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			storePlayer.sendMessage("You have not enough adena, canceling PrivateBuy.");
-			storePlayer.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+			storePlayer.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 			storePlayer.broadcastUserInfo();
 			return;
 		}
@@ -163,7 +163,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		
 		if (storeList.getItemCount() == 0)
 		{
-			storePlayer.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+			storePlayer.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 			storePlayer.broadcastUserInfo();
 		}
 	}

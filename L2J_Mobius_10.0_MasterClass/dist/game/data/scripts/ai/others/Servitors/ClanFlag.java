@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
@@ -51,7 +51,7 @@ public class ClanFlag extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -62,7 +62,7 @@ public class ClanFlag extends AbstractNpcAI
 					final Clan summonerClan = npc.getSummoner().getClan();
 					if (summonerClan != null)
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 2000, target ->
+						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 2000, target ->
 						{
 							if ((target != null) && !target.isDead() && GeoEngine.getInstance().canSeeTarget(npc, target))
 							{

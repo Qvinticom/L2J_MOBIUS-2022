@@ -17,8 +17,8 @@
 package quests.Q503_PursuitOfClanAmbition;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -103,7 +103,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -232,9 +232,9 @@ public class Q503_PursuitOfClanAmbition extends Quest
 			{
 				st.setCond(9);
 				npc.broadcastNpcSay("Blood and Honor");
-				final NpcInstance sister1 = addSpawn(KALIS, 160665, 21209, -3710, npc.getHeading(), false, 180000);
+				final Npc sister1 = addSpawn(KALIS, 160665, 21209, -3710, npc.getHeading(), false, 180000);
 				sister1.broadcastNpcSay("Ambition and Power");
-				final NpcInstance sister2 = addSpawn(ATHREA, 160665, 21291, -3710, npc.getHeading(), false, 180000);
+				final Npc sister2 = addSpawn(ATHREA, 160665, 21291, -3710, npc.getHeading(), false, 180000);
 				sister2.broadcastNpcSay("War and Death");
 				break;
 			}
@@ -259,7 +259,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -653,7 +653,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		QuestState st = null;
 		st = getClanLeaderQuestState(player, npc);
@@ -682,7 +682,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 					{
 						if (element[0] == IMPERIAL_GRAVEKEEPER)
 						{
-							final NpcInstance coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
+							final Npc coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
 							coffer.broadcastNpcSay("Curse of the gods on the one that defiles the property of the empire!");
 						}
 						else if ((element[0] == GRAVE_GUARD) && (st.getQuestItemsCount(IMP_KEYS) < 6) && (Rnd.get(50) < chance))
@@ -709,7 +709,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if ((npc.getMaxHp() / 2) > npc.getCurrentHp())
 		{

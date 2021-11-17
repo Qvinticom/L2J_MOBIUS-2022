@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.TimerExecutor;
 
 /**
@@ -36,14 +36,14 @@ public class TimerHolder<T> implements Runnable
 	private final StatSet _params;
 	private final long _time;
 	private final Npc _npc;
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final boolean _isRepeating;
 	private final IEventTimerEvent<T> _eventScript;
 	private final IEventTimerCancel<T> _cancelScript;
 	private final TimerExecutor<T> _postExecutor;
 	private final ScheduledFuture<?> _task;
 	
-	public TimerHolder(T event, StatSet params, long time, Npc npc, PlayerInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
+	public TimerHolder(T event, StatSet params, long time, Npc npc, Player player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
 	{
 		Objects.requireNonNull(event, getClass().getSimpleName() + ": \"event\" cannot be null!");
 		Objects.requireNonNull(eventScript, getClass().getSimpleName() + ": \"script\" cannot be null!");
@@ -97,7 +97,7 @@ public class TimerHolder<T> implements Runnable
 	/**
 	 * @return the player of this timer
 	 */
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -163,7 +163,7 @@ public class TimerHolder<T> implements Runnable
 	 * @param player
 	 * @return {@code true} if event, npc, player are equals to the ones stored in this TimerHolder, {@code false} otherwise
 	 */
-	public boolean isEqual(T event, Npc npc, PlayerInstance player)
+	public boolean isEqual(T event, Npc npc, Player player)
 	{
 		return _event.equals(event) && (_npc == npc) && (_player == player);
 	}

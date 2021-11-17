@@ -21,9 +21,9 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -160,7 +160,7 @@ public class NewbieHelper extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs1 = player.getQuestState(getName());
 		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
@@ -237,7 +237,7 @@ public class NewbieHelper extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = "";
 		QuestState qs1 = player.getQuestState(getName());
@@ -379,7 +379,7 @@ public class NewbieHelper extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final QuestState qs1 = player.getQuestState(getName());
 		final QuestState qs2 = player.getQuestState(Tutorial.class.getSimpleName());
@@ -398,7 +398,7 @@ public class NewbieHelper extends Quest
 		}
 		else if ((ex <= 2) && (qs1.getState() == State.STARTED) && (qs2.getInt("Gemstone") == 0) && (Rnd.get(100) < 50))
 		{
-			((MonsterInstance) npc).dropItem(player, BLUE_GEM, 1);
+			((Monster) npc).dropItem(player, BLUE_GEM, 1);
 			qs1.playSound("ItemSound.quest_tutorial");
 			qs1.set("step", "1");
 		}

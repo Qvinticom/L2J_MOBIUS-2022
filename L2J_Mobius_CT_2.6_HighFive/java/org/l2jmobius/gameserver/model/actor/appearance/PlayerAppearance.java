@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.gameserver.model.actor.appearance;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PlayerAppearance
 {
 	public static final int DEFAULT_TITLE_COLOR = 0xECF9A2;
 	
-	private PlayerInstance _owner;
+	private Player _owner;
 	
 	private byte _face;
 	
@@ -184,7 +184,7 @@ public class PlayerAppearance
 	/**
 	 * @param owner The owner to set.
 	 */
-	public void setOwner(PlayerInstance owner)
+	public void setOwner(Player owner)
 	{
 		_owner = owner;
 	}
@@ -192,7 +192,7 @@ public class PlayerAppearance
 	/**
 	 * @return Returns the owner.
 	 */
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}

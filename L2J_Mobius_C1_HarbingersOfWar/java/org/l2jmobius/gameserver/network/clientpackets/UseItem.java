@@ -22,8 +22,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -39,11 +39,11 @@ public class UseItem extends ClientBasePacket
 		super(decrypt);
 		final int objectId = readD();
 		
-		final PlayerInstance activeChar = client.getActiveChar();
-		final ItemInstance item = activeChar.getInventory().getItem(objectId);
+		final Player activeChar = client.getActiveChar();
+		final Item item = activeChar.getInventory().getItem(objectId);
 		if ((item != null) && item.isEquipable() && !activeChar.isInCombat())
 		{
-			final List<ItemInstance> items = activeChar.getInventory().equipItem(item);
+			final List<Item> items = activeChar.getInventory().equipItem(item);
 			if (item.getItem().getType2() == 0)
 			{
 				activeChar.updatePAtk();
@@ -77,7 +77,7 @@ public class UseItem extends ClientBasePacket
 				final int count = handler.useItem(activeChar, item);
 				if (count > 0)
 				{
-					final ItemInstance itemInstance = activeChar.getInventory().destroyItem(item.getObjectId(), count);
+					final Item itemInstance = activeChar.getInventory().destroyItem(item.getObjectId(), count);
 					final InventoryUpdate iu = new InventoryUpdate();
 					if (itemInstance.getCount() == 0)
 					{

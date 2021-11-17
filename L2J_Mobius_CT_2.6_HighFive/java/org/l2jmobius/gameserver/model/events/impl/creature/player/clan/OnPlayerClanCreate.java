@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player.clan;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
@@ -26,16 +26,16 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerClanCreate implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Clan _clan;
 	
-	public OnPlayerClanCreate(PlayerInstance player, Clan clan)
+	public OnPlayerClanCreate(Player player, Clan clan)
 	{
 		_player = player;
 		_clan = clan;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

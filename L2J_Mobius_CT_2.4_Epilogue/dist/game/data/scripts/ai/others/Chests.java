@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 import ai.AbstractNpcAI;
@@ -60,9 +60,9 @@ public class Chests extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if (npc instanceof ChestInstance)
+		if (npc instanceof Chest)
 		{
 			// this behavior is only run when the target of skill is the passed npc (chest)
 			// i.e. when the player is attempting to open the chest using a skill
@@ -79,7 +79,7 @@ public class Chests extends AbstractNpcAI
 			{
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			final ChestInstance chest = ((ChestInstance) npc);
+			final Chest chest = ((Chest) npc);
 			
 			// if this has already been interacted, no further ai decisions are needed
 			// if it's the first interaction, check if this is a box or mimic
@@ -122,11 +122,11 @@ public class Chests extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
-		if (npc instanceof ChestInstance)
+		if (npc instanceof Chest)
 		{
-			final ChestInstance chest = ((ChestInstance) npc);
+			final Chest chest = ((Chest) npc);
 			// if this was a mimic, set the target, start the skills and become agro
 			if (!chest.isInteracted())
 			{

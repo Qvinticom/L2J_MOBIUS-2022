@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -35,6 +35,6 @@ public class OpUnlockSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return (target != null) && (target.isDoor() || (target instanceof ChestInstance));
+		return (target != null) && (target.isDoor() || (target instanceof Chest));
 	}
 }

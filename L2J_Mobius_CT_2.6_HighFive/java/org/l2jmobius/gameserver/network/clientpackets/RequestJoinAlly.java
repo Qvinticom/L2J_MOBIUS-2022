@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,13 +42,13 @@ public class RequestJoinAlly implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance ob = World.getInstance().getPlayer(_id);
+		final Player ob = World.getInstance().getPlayer(_id);
 		if (ob == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
@@ -61,7 +61,7 @@ public class RequestJoinAlly implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance target = ob;
+		final Player target = ob;
 		final Clan clan = player.getClan();
 		if (!clan.checkAllyJoinCondition(player, target))
 		{

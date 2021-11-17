@@ -20,9 +20,9 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skills.handlers.SkillCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -38,16 +38,16 @@ public class EnergyStone implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		PlayerInstance player;
-		if (playable instanceof PlayerInstance)
+		Player player;
+		if (playable instanceof Player)
 		{
-			player = (PlayerInstance) playable;
+			player = (Player) playable;
 		}
-		else if (playable instanceof PetInstance)
+		else if (playable instanceof Pet)
 		{
-			player = ((PetInstance) playable).getOwner();
+			player = ((Pet) playable).getOwner();
 		}
 		else
 		{
@@ -112,7 +112,7 @@ public class EnergyStone implements IItemHandler
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 	}
 	
-	private SkillCharge getChargeSkill(PlayerInstance player)
+	private SkillCharge getChargeSkill(Player player)
 	{
 		for (Skill s : player.getAllSkills())
 		{

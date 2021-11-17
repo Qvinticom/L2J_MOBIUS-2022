@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ValidateLocationInVehicle implements IClientOutgoingPacket
@@ -28,7 +28,7 @@ public class ValidateLocationInVehicle implements IClientOutgoingPacket
 	private final int _heading;
 	private final Location _pos;
 	
-	public ValidateLocationInVehicle(PlayerInstance player)
+	public ValidateLocationInVehicle(Player player)
 	{
 		_objectId = player.getObjectId();
 		_boatObjId = player.getBoat().getObjectId();

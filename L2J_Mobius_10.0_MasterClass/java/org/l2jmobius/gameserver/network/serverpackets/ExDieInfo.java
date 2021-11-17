@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExDieInfo implements IClientOutgoingPacket
 {
-	private final Collection<ItemInstance> _droppedItems;
+	private final Collection<Item> _droppedItems;
 	private final Collection<DamageTakenHolder> _lastDamageTaken;
 	
-	public ExDieInfo(Collection<ItemInstance> droppedItems, Collection<DamageTakenHolder> lastDamageTaken)
+	public ExDieInfo(Collection<Item> droppedItems, Collection<DamageTakenHolder> lastDamageTaken)
 	{
 		_droppedItems = droppedItems;
 		_lastDamageTaken = lastDamageTaken;
@@ -43,7 +43,7 @@ public class ExDieInfo implements IClientOutgoingPacket
 		OutgoingPackets.EX_DIE_INFO.writeId(packet);
 		
 		packet.writeH(_droppedItems.size());
-		for (ItemInstance item : _droppedItems)
+		for (Item item : _droppedItems)
 		{
 			packet.writeD(item.getId());
 			packet.writeD(item.getEnchantLevel());

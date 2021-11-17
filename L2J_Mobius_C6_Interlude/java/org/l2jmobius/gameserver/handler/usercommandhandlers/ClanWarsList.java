@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,7 +41,7 @@ public class ClanWarsList implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, PlayerInstance player)
+	public boolean useUserCommand(int id, Player player)
 	{
 		if ((id != COMMAND_IDS[0]) && (id != COMMAND_IDS[1]) && (id != COMMAND_IDS[2]))
 		{

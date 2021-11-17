@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -57,7 +57,7 @@ public class Kekropus extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = null;
 		switch (event)
@@ -95,7 +95,7 @@ public class Kekropus extends AbstractNpcAI
 					}
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
@@ -110,7 +110,7 @@ public class Kekropus extends AbstractNpcAI
 						player.sendPacket(packet);
 						return null;
 					}
-					for (PlayerInstance member : members)
+					for (Player member : members)
 					{
 						if (member.getLevel() < Config.HELIOS_MIN_PLAYER_LEVEL)
 						{
@@ -122,7 +122,7 @@ public class Kekropus extends AbstractNpcAI
 							return null;
 						}
 					}
-					for (PlayerInstance member : members)
+					for (Player member : members)
 					{
 						if ((member.calculateDistance2D(npc) < 1000) && (npc.getId() == KEKROPUS))
 						{
@@ -142,7 +142,7 @@ public class Kekropus extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final int i = getRandom(0, 12);
 		if ((i > 0) && (i <= 3))

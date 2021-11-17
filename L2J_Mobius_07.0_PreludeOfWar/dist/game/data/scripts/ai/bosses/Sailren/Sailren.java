@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
@@ -81,7 +81,7 @@ public class Sailren extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -120,7 +120,7 @@ public class Sailren extends AbstractNpcAI
 					takeItems(player, GAZKH, 1);
 					STATUS = Status.IN_FIGHT;
 					_lastAttack = Chronos.currentTimeMillis();
-					for (PlayerInstance member : player.getParty().getMembers())
+					for (Player member : player.getParty().getMembers())
 					{
 						if (member.isInsideRadius3D(npc, 1000))
 						{
@@ -148,7 +148,7 @@ public class Sailren extends AbstractNpcAI
 			}
 			case "SPAWN_SAILREN":
 			{
-				final RaidBossInstance sailren = (RaidBossInstance) addSpawn(SAILREN, 27549, -6638, -2008, 0, false, 0);
+				final RaidBoss sailren = (RaidBoss) addSpawn(SAILREN, 27549, -6638, -2008, 0, false, 0);
 				final Npc movieNpc = addSpawn(MOVIE_NPC, sailren.getX(), sailren.getY(), sailren.getZ() + 30, 0, false, 26000);
 				sailren.setInvul(true);
 				sailren.setImmobilized(true);
@@ -254,7 +254,7 @@ public class Sailren extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(attacker))
 		{
@@ -264,7 +264,7 @@ public class Sailren extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -108,7 +108,7 @@ public class CastleDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -119,7 +119,7 @@ public class CastleDungeon extends AbstractInstance
 			}
 			else
 			{
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, getRandomEntry(ENTER_LOC), world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -135,13 +135,13 @@ public class CastleDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "36403.html";
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -160,7 +160,7 @@ public class CastleDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final Party party = player.getParty();
 		if (party == null)
@@ -188,7 +188,7 @@ public class CastleDungeon extends AbstractInstance
 			}
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if ((partyMember.getClan() == null) || (partyMember.getClan().getCastleId() != castle.getResidenceId()))
 			{

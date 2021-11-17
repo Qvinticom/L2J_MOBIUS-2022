@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 
@@ -38,13 +38,13 @@ public class RequestRecipeShopMakeInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance shop = World.getInstance().getPlayer(_playerObjectId);
+		final Player shop = World.getInstance().getPlayer(_playerObjectId);
 		if ((shop == null) || (shop.getPrivateStoreType() != 5))
 		{
 			return;

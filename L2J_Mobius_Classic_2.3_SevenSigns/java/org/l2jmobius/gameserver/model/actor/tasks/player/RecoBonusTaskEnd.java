@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 
 /**
@@ -25,9 +25,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
  */
 public class RecoBonusTaskEnd implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public RecoBonusTaskEnd(PlayerInstance player)
+	public RecoBonusTaskEnd(Player player)
 	{
 		_player = player;
 	}

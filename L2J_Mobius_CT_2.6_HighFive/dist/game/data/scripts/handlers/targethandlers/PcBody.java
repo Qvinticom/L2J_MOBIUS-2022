@@ -22,8 +22,8 @@ import java.util.List;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -41,7 +41,7 @@ public class PcBody implements ITargetTypeHandler
 		final List<Creature> targetList = new ArrayList<>();
 		if ((target != null) && target.isDead())
 		{
-			final PlayerInstance player;
+			final Player player;
 			if (creature.isPlayer())
 			{
 				player = creature.getActingPlayer();
@@ -51,7 +51,7 @@ public class PcBody implements ITargetTypeHandler
 				player = null;
 			}
 			
-			final PlayerInstance targetPlayer;
+			final Player targetPlayer;
 			if (target.isPlayer())
 			{
 				targetPlayer = target.getActingPlayer();
@@ -61,10 +61,10 @@ public class PcBody implements ITargetTypeHandler
 				targetPlayer = null;
 			}
 			
-			final PetInstance targetPet;
+			final Pet targetPet;
 			if (target.isPet())
 			{
-				targetPet = (PetInstance) target;
+				targetPet = (Pet) target;
 			}
 			else
 			{

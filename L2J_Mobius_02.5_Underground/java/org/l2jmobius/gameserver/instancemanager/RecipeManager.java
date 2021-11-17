@@ -30,14 +30,14 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.enums.StatType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.model.ManufactureItem;
-import org.l2jmobius.gameserver.model.RecipeInstance;
 import org.l2jmobius.gameserver.model.RecipeList;
-import org.l2jmobius.gameserver.model.RecipeStatInstance;
 import org.l2jmobius.gameserver.model.TempItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.holders.RecipeHolder;
+import org.l2jmobius.gameserver.model.holders.RecipeStatHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -63,7 +63,7 @@ public class RecipeManager
 		// Prevent external initialization.
 	}
 	
-	public void requestBookOpen(PlayerInstance player, boolean isDwarvenCraft)
+	public void requestBookOpen(Player player, boolean isDwarvenCraft)
 	{
 		// Check if player is trying to alter recipe book while engaged in manufacturing.
 		if (!_activeMakers.containsKey(player.getObjectId()))
@@ -76,12 +76,12 @@ public class RecipeManager
 		player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 	}
 	
-	public void requestMakeItemAbort(PlayerInstance player)
+	public void requestMakeItemAbort(Player player)
 	{
 		_activeMakers.remove(player.getObjectId()); // TODO: anything else here?
 	}
 	
-	public void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
+	public void requestManufactureItem(Player manufacturer, int recipeListId, Player player)
 	{
 		final RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
 		if (recipeList == null)
@@ -117,7 +117,7 @@ public class RecipeManager
 		}
 	}
 	
-	public void requestMakeItem(PlayerInstance player, int recipeListId)
+	public void requestMakeItem(Player player, int recipeListId)
 	{
 		// Check if player is trying to operate a private store or private workshop while engaged in combat.
 		if (player.isInCombat() || player.isInDuel())
@@ -169,8 +169,8 @@ public class RecipeManager
 		protected boolean _isValid;
 		protected List<TempItem> _items = null;
 		protected final RecipeList _recipeList;
-		protected final PlayerInstance _player; // "crafter"
-		protected final PlayerInstance _target; // "customer"
+		protected final Player _player; // "crafter"
+		protected final Player _target; // "customer"
 		protected final Skill _skill;
 		protected final int _skillId;
 		protected final int _skillLevel;
@@ -182,7 +182,7 @@ public class RecipeManager
 		protected int _totalItems;
 		protected int _delay;
 		
-		public RecipeItemMaker(PlayerInstance pPlayer, RecipeList pRecipeList, PlayerInstance pTarget)
+		public RecipeItemMaker(Player pPlayer, RecipeList pRecipeList, Player pTarget)
 		{
 			_player = pPlayer;
 			_target = pTarget;
@@ -384,7 +384,7 @@ public class RecipeManager
 			if ((_target != _player) && (_price > 0)) // customer must pay for services
 			{
 				// attempt to pay for item
-				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				final Item adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				if (adenatransfer == null)
 				{
 					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -498,7 +498,7 @@ public class RecipeManager
 		private void calculateAltStatChange()
 		{
 			_itemGrab = _skillLevel;
-			for (RecipeStatInstance altStatChange : _recipeList.getAltStatChange())
+			for (RecipeStatHolder altStatChange : _recipeList.getAltStatChange())
 			{
 				if (altStatChange.getType() == StatType.XP)
 				{
@@ -525,7 +525,7 @@ public class RecipeManager
 		private boolean calculateStatUse(boolean isWait, boolean isReduce)
 		{
 			boolean ret = true;
-			for (RecipeStatInstance statUse : _recipeList.getStatUse())
+			for (RecipeStatHolder statUse : _recipeList.getStatUse())
 			{
 				final double modifiedValue = statUse.getValue() / _creationPasses;
 				if (statUse.getType() == StatType.HP)
@@ -586,15 +586,15 @@ public class RecipeManager
 		
 		private List<TempItem> listItems(boolean remove)
 		{
-			final RecipeInstance[] recipes = _recipeList.getRecipes();
+			final RecipeHolder[] recipes = _recipeList.getRecipes();
 			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
 			SystemMessage sm;
-			for (RecipeInstance recipe : recipes)
+			for (RecipeHolder recipe : recipes)
 			{
 				if (recipe.getQuantity() > 0)
 				{
-					final ItemInstance item = inv.getItemByItemId(recipe.getItemId());
+					final Item item = inv.getItemByItemId(recipe.getItemId());
 					final long itemQuantityAmount = item == null ? 0 : item.getCount();
 					
 					// check materials
@@ -644,12 +644,12 @@ public class RecipeManager
 			_activeMakers.remove(_player.getObjectId());
 		}
 		
-		private void rewardPlayer(PlayerInstance player)
+		private void rewardPlayer(Player player)
 		{
 			final int rareProdId = _recipeList.getRareItemId();
 			int itemId = _recipeList.getItemId();
 			int itemCount = _recipeList.getCount();
-			final Item template = ItemTable.getInstance().getTemplate(itemId);
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
 			
 			// check that the current recipe has a rare production or not
 			if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK))

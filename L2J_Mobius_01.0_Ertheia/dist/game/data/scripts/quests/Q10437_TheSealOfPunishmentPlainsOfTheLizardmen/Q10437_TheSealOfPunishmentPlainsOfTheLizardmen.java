@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -64,7 +64,7 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -149,7 +149,7 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -185,7 +185,7 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 		return htmltext;
 	}
 	
-	private void giveItem(Npc npc, PlayerInstance player)
+	private void giveItem(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
@@ -206,11 +206,11 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (killer.isInParty())
 		{
-			for (PlayerInstance member : killer.getParty().getMembers())
+			for (Player member : killer.getParty().getMembers())
 			{
 				if (Util.checkIfInRange(1500, npc, member, false))
 				{

@@ -25,16 +25,16 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -125,12 +125,12 @@ public class MapRegionData implements IXmlReader
 	public Location getTeleToLocation(Creature creature, TeleportWhereType teleportWhere)
 	{
 		// The character isn't a player, bypass all checks and retrieve a random spawn location on closest town.
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return getClosestTown(creature.getX(), creature.getY()).getSpawnLoc();
 		}
 		
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		
 		// If in Monster Derby Track
 		if (player.isInsideZone(ZoneId.MONSTER_TRACK))
@@ -146,7 +146,7 @@ public class MapRegionData implements IXmlReader
 			// If teleport to clan hall
 			if (teleportWhere == TeleportWhereType.CLANHALL)
 			{
-				clanhall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
+				clanhall = ClanHallTable.getInstance().getClanHallByOwner(player.getClan());
 				if (clanhall != null)
 				{
 					final ClanHallZone zone = clanhall.getZone();
@@ -191,11 +191,11 @@ public class MapRegionData implements IXmlReader
 				if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && castle.getSiege().isInProgress())
 				{
 					// Check if player's clan is attacker
-					final List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
+					final List<Npc> flags = castle.getSiege().getFlag(player.getClan());
 					if ((flags != null) && !flags.isEmpty())
 					{
 						// Spawn to flag - Need more work to get player to the nearest flag
-						final NpcInstance flag = flags.get(0);
+						final Npc flag = flags.get(0);
 						return new Location(flag.getX(), flag.getY(), flag.getZ());
 					}
 				}
@@ -211,11 +211,11 @@ public class MapRegionData implements IXmlReader
 				if ((teleportWhere == TeleportWhereType.SIEGEFLAG) && fort.getSiege().isInProgress())
 				{
 					// Check if player's clan is attacker
-					final List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
+					final List<Npc> flags = fort.getSiege().getFlag(player.getClan());
 					if ((flags != null) && !flags.isEmpty())
 					{
 						// Spawn to flag
-						final NpcInstance flag = flags.get(0);
+						final Npc flag = flags.get(0);
 						return new Location(flag.getX(), flag.getY(), flag.getZ());
 					}
 				}
@@ -419,7 +419,7 @@ public class MapRegionData implements IXmlReader
 	 * @param player : The player used to find race, x and y.
 	 * @return the closest TownZone based on a X/Y location.
 	 */
-	private TownZone getClosestTown(PlayerInstance player)
+	private TownZone getClosestTown(Player player)
 	{
 		switch (getMapRegion(player.getX(), player.getY()))
 		{

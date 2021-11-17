@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -69,7 +69,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
 		String htmltext = null;
@@ -122,7 +122,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
@@ -186,7 +186,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		// Check if monster is inside instance
 		final Instance world = npc.getInstanceWorld();
@@ -232,7 +232,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && (player.getTarget() == npc))
 		{
@@ -248,7 +248,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	 * @param qs quest state of killer
 	 * @return {@code true} when all monsters are killed, otherwise {@code false}
 	 */
-	private boolean onKillQuestChange(PlayerInstance killer, QuestState qs)
+	private boolean onKillQuestChange(Player killer, QuestState qs)
 	{
 		final int value = qs.getMemoStateEx(Q10735_ASpecialPower.KILL_COUNT_VAR) + 1;
 		if (value >= 2)
@@ -268,7 +268,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	 * @param npcId template id of training monster
 	 * @param player player that owns instance
 	 */
-	private void spawnMonsters(int npcId, PlayerInstance player)
+	private void spawnMonsters(int npcId, Player player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -290,7 +290,7 @@ public class FaeronTrainingGrounds1 extends AbstractInstance
 	 * Despawn training monsters inside instance
 	 * @param player player that owns instance
 	 */
-	private void despawnMonsters(PlayerInstance player)
+	private void despawnMonsters(Player player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)

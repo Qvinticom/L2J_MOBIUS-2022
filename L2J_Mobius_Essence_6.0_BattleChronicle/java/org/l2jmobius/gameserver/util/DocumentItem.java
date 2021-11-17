@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.ExtractableProduct;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
@@ -45,7 +45,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 	private static final Logger LOGGER = Logger.getLogger(DocumentItem.class.getName());
 	
 	private DocumentItemDataHolder _currentItem = null;
-	private final List<Item> _itemsInFile = new ArrayList<>();
+	private final List<ItemTemplate> _itemsInFile = new ArrayList<>();
 	
 	private class DocumentItemDataHolder
 	{
@@ -57,7 +57,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 		String type;
 		StatSet set;
 		int currentLevel;
-		Item item;
+		ItemTemplate item;
 	}
 	
 	public DocumentItem(File file)
@@ -228,7 +228,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 		try
 		{
 			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatSet.class);
-			_currentItem.item = (Item) itemClass.newInstance(_currentItem.set);
+			_currentItem.item = (ItemTemplate) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{
@@ -236,7 +236,7 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 		}
 	}
 	
-	public List<Item> getItemList()
+	public List<ItemTemplate> getItemList()
 	{
 		return _itemsInFile;
 	}

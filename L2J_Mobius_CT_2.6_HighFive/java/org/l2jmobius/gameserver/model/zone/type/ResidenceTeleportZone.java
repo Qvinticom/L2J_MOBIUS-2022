@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 
@@ -61,7 +61,7 @@ public class ResidenceTeleportZone extends ZoneRespawn
 	
 	public void oustAllPlayers()
 	{
-		for (PlayerInstance player : getPlayersInside())
+		for (Player player : getPlayersInside())
 		{
 			if ((player != null) && player.isOnline())
 			{

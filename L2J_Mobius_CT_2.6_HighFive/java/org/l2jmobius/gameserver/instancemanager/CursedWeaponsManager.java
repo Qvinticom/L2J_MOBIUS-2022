@@ -40,15 +40,15 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FeedableBeastInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
+import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
+import org.l2jmobius.gameserver.model.actor.instance.FestivalMonster;
+import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.RiftInvader;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -169,7 +169,7 @@ public class CursedWeaponsManager
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT itemId, charId, playerKarma, playerPkKills, nbKills, endTime FROM cursed_weapons"))
 		{
-			// Retrieve the PlayerInstance from the characters table of the database
+			// Retrieve the Player from the characters table of the database
 			CursedWeapon cw;
 			while (rs.next())
 			{
@@ -197,7 +197,7 @@ public class CursedWeaponsManager
 		// Undesired effects result otherwise, such as player with no zariche but with karma
 		// or a lost-child entry in the cursed weapons table, without a corresponding one in items...
 		
-		// Retrieve the PlayerInstance from the characters table of the database
+		// Retrieve the Player from the characters table of the database
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT owner_id FROM items WHERE item_id=?"))
 		{
@@ -254,9 +254,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public synchronized void checkDrop(Attackable attackable, PlayerInstance player)
+	public synchronized void checkDrop(Attackable attackable, Player player)
 	{
-		if ((attackable instanceof DefenderInstance) || (attackable instanceof RiftInvaderInstance) || (attackable instanceof FestivalMonsterInstance) || (attackable instanceof GuardInstance) || (attackable instanceof GrandBossInstance) || (attackable instanceof FeedableBeastInstance) || (attackable instanceof FortCommanderInstance))
+		if ((attackable instanceof Defender) || (attackable instanceof RiftInvader) || (attackable instanceof FestivalMonster) || (attackable instanceof Guard) || (attackable instanceof GrandBoss) || (attackable instanceof FeedableBeast) || (attackable instanceof FortCommander))
 		{
 			return;
 		}
@@ -275,7 +275,7 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public void activate(PlayerInstance player, ItemInstance item)
+	public void activate(Player player, Item item)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(item.getId());
 		if (player.isCursedWeaponEquipped()) // cannot own 2 cursed swords
@@ -319,7 +319,7 @@ public class CursedWeaponsManager
 		Broadcast.toAllOnlinePlayers(sm);
 	}
 	
-	public void checkPlayer(PlayerInstance player)
+	public void checkPlayer(Player player)
 	{
 		if (player == null)
 		{

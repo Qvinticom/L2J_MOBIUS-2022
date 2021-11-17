@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class BuyList extends ServerBasePacket
 {
@@ -41,10 +41,10 @@ public class BuyList extends ServerBasePacket
 		writeD(_list.getListId());
 		final int count = _list.getItems().size();
 		writeH(count);
-		final List<ItemInstance> items = _list.getItems();
+		final List<Item> items = _list.getItems();
 		for (int i = 0; i < count; ++i)
 		{
-			final ItemInstance temp = items.get(i);
+			final Item temp = items.get(i);
 			final int type = temp.getItem().getType1();
 			writeH(type);
 			writeD(temp.getObjectId());

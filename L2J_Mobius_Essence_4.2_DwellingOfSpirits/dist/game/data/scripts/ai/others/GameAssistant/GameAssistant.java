@@ -22,14 +22,14 @@ import java.util.List;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
@@ -109,7 +109,7 @@ public class GameAssistant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = null;
 		switch (event)
@@ -132,7 +132,7 @@ public class GameAssistant extends AbstractNpcAI
 				if ((freight != null) && (freight.getSize() > 0))
 				{
 					player.setActiveWarehouse(freight);
-					for (ItemInstance i : player.getActiveWarehouse().getItems())
+					for (Item i : player.getActiveWarehouse().getItems())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{
@@ -482,8 +482,8 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_black_sayha_cloak_1":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 1) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -503,7 +503,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
@@ -513,15 +513,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(1);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_2":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 2) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -541,7 +541,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
@@ -551,15 +551,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(2);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_3":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 3) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -579,7 +579,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
@@ -589,15 +589,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(3);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_4":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 4) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -617,7 +617,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
@@ -627,15 +627,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(4);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_5":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 5) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -655,7 +655,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
@@ -665,15 +665,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(5);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_6":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 6) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -693,7 +693,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
@@ -703,15 +703,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(6);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_7":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 7) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -731,7 +731,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
@@ -741,15 +741,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(7);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_8":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 8) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -769,7 +769,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
@@ -779,15 +779,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(8);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_9":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 9) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -807,7 +807,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
@@ -817,15 +817,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(9);
 				player.sendItemList();
 				break;
 			}
 			case "exc_black_sayha_cloak_10":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 10) && (item.getId() == BLACK_SAYHA_CLOAK))
 					{
@@ -845,7 +845,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
@@ -855,7 +855,7 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
-				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(10);
 				player.sendItemList();
 				break;
@@ -874,8 +874,8 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_white_sayha_cloak_1":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 1) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -895,7 +895,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
@@ -905,15 +905,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(1);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_2":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 2) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -933,7 +933,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
@@ -943,15 +943,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(2);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_3":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 3) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -971,7 +971,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
@@ -981,15 +981,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(3);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_4":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 4) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1009,7 +1009,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
@@ -1019,15 +1019,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(4);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_5":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 5) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1047,7 +1047,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
@@ -1057,15 +1057,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(5);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_6":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 6) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1085,7 +1085,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
@@ -1095,15 +1095,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(6);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_7":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 7) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1123,7 +1123,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
@@ -1133,15 +1133,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(7);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_8":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 8) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1161,7 +1161,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
@@ -1171,15 +1171,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(8);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_9":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 9) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1199,7 +1199,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
@@ -1209,15 +1209,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(9);
 				player.sendItemList();
 				break;
 			}
 			case "exc_white_sayha_cloak_10":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 10) && (item.getId() == WHITE_SAYHA_CLOAK))
 					{
@@ -1237,7 +1237,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
@@ -1247,7 +1247,7 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
-				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(10);
 				player.sendItemList();
 				break;
@@ -1266,8 +1266,8 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "exc_red_sayha_cloak_1":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 1) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1287,7 +1287,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
@@ -1297,15 +1297,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(1);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_2":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 2) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1325,7 +1325,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
@@ -1335,15 +1335,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(2);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_3":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 3) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1363,7 +1363,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
@@ -1373,15 +1373,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(3);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_4":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 4) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1401,7 +1401,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
@@ -1411,15 +1411,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(4);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_5":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 5) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1439,7 +1439,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
@@ -1449,15 +1449,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(5);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_6":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 6) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1477,7 +1477,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
@@ -1487,15 +1487,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(6);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_7":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 7) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1515,7 +1515,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
@@ -1525,15 +1525,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(7);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_8":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 8) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1553,7 +1553,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
@@ -1563,15 +1563,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(8);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_9":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 9) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1591,7 +1591,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
@@ -1601,15 +1601,15 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(9);
 				player.sendItemList();
 				break;
 			}
 			case "exc_red_sayha_cloak_10":
 			{
-				final List<ItemInstance> cloaks = new ArrayList<>();
-				for (ItemInstance item : player.getInventory().getItems())
+				final List<Item> cloaks = new ArrayList<>();
+				for (Item item : player.getInventory().getItems())
 				{
 					if ((item.getEnchantLevel() == 10) && (item.getId() == RED_SAYHA_CLOAK))
 					{
@@ -1629,7 +1629,7 @@ public class GameAssistant extends AbstractNpcAI
 					return null;
 				}
 				
-				final ItemInstance cloak = cloaks.stream().findFirst().get();
+				final Item cloak = cloaks.stream().findFirst().get();
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
@@ -1639,7 +1639,7 @@ public class GameAssistant extends AbstractNpcAI
 				
 				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
-				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
+				final Item reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(10);
 				player.sendItemList();
 				break;
@@ -1649,7 +1649,7 @@ public class GameAssistant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
 		return null;
@@ -1659,7 +1659,7 @@ public class GameAssistant extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (event.getCommand().startsWith(COMMAND_BYPASS))
 		{
 			notifyEvent(event.getCommand().replace(COMMAND_BYPASS, ""), null, player);

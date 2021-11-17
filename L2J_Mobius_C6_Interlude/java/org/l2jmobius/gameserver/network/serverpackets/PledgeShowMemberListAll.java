@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -36,13 +36,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
 	private final Clan _clan;
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Collection<ClanMember> _members;
 	private int _pledgeType;
 	
 	// private static final Logger LOGGER = Logger.getLogger(PledgeShowMemberListAll.class);
 	
-	public PledgeShowMemberListAll(Clan clan, PlayerInstance player)
+	public PledgeShowMemberListAll(Clan clan, Player player)
 	{
 		_clan = clan;
 		_player = player;
@@ -111,9 +111,9 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			{
 				yellow = m.getSponsor() != 0 ? 1 : 0;
 			}
-			else if (m.getPlayerInstance() != null)
+			else if (m.getPlayer() != null)
 			{
-				yellow = m.getPlayerInstance().isClanLeader() ? 1 : 0;
+				yellow = m.getPlayer().isClanLeader() ? 1 : 0;
 			}
 			else
 			{

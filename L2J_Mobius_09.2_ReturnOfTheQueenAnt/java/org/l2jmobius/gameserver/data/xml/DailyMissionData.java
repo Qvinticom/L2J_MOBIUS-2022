@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -106,7 +106,7 @@ public class DailyMissionData implements IXmlReader
 		//@formatter:on
 	}
 	
-	public Collection<DailyMissionDataHolder> getDailyMissionData(PlayerInstance player)
+	public Collection<DailyMissionDataHolder> getDailyMissionData(Player player)
 	{
 		//@formatter:off
 		return _dailyMissionRewards.values()

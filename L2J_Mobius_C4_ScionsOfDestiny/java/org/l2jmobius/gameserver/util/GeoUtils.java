@@ -20,7 +20,7 @@ import java.awt.Color;
 
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 
 /**
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
  */
 public final class GeoUtils
 {
-	public static void debug2DLine(PlayerInstance player, int x, int y, int tx, int ty, int z)
+	public static void debug2DLine(Player player, int x, int y, int tx, int ty, int z)
 	{
 		final int gx = GeoEngine.getGeoX(x);
 		final int gy = GeoEngine.getGeoY(y);
@@ -51,7 +51,7 @@ public final class GeoUtils
 		player.sendPacket(prim);
 	}
 	
-	public static void debug3DLine(PlayerInstance player, int x, int y, int z, int tx, int ty, int tz)
+	public static void debug3DLine(Player player, int x, int y, int z, int tx, int ty, int tz)
 	{
 		final int gx = GeoEngine.getGeoX(x);
 		final int gy = GeoEngine.getGeoY(y);
@@ -100,7 +100,7 @@ public final class GeoUtils
 		return Color.RED;
 	}
 	
-	public static void debugGrid(PlayerInstance player)
+	public static void debugGrid(Player player)
 	{
 		final int geoRadius = 10;
 		final int blocksPerPacket = 20;

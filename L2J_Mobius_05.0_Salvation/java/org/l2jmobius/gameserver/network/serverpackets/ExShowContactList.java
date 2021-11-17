@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,7 +29,7 @@ public class ExShowContactList implements IClientOutgoingPacket
 {
 	private final Set<String> _contacts;
 	
-	public ExShowContactList(PlayerInstance player)
+	public ExShowContactList(Player player)
 	{
 		_contacts = player.getContactList().getAllContacts();
 	}

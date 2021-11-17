@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -40,9 +40,9 @@ public class SkillChargeEffect extends Skill
 	@Override
 	public boolean checkCondition(Creature creature, WorldObject target, boolean itemOrWeapon)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			final EffectCharge e = (EffectCharge) player.getFirstEffect(chargeSkillId);
 			if ((e == null) || (e.numCharges < getNumCharges()))
 			{

@@ -18,7 +18,7 @@ package ai.areas.MithrilMines.MithrilMinesTeleporter;
 
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -49,7 +49,7 @@ public class MithrilMinesTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final int index = Integer.parseInt(event) - 1;
 		if (LOCS.length > index)
@@ -61,7 +61,7 @@ public class MithrilMinesTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (npc.isInsideRadius2D(173147, -173762, 0, Npc.INTERACTION_DISTANCE))
 		{

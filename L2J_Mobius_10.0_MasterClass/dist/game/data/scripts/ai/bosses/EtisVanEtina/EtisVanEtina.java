@@ -35,9 +35,9 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SpawnHolder;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
@@ -309,9 +309,9 @@ public class EtisVanEtina extends AbstractNpcAI
 	private Npc _sealOfAwakening;
 	private Npc _sealOfCalamity;
 	private Npc _sealOfDestruction;
-	private static MonsterInstance _paragon;
-	private static GrandBossInstance _kain;
-	private static GrandBossInstance _etina;
+	private static Monster _paragon;
+	private static GrandBoss _kain;
+	private static GrandBoss _etina;
 	private boolean _spawned = false;
 	private boolean _kain30 = false;
 	private boolean _kain60 = false;
@@ -349,7 +349,7 @@ public class EtisVanEtina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -410,8 +410,8 @@ public class EtisVanEtina extends AbstractNpcAI
 				closeDoor(DOOR2, 0);
 				closeDoor(DOOR3, 0);
 				closeDoor(DOOR4, 0);
-				_kain = (GrandBossInstance) addSpawn(KAIN_VAN_HALTER, KAIN_LOC, false, 0, true);
-				_etina = (GrandBossInstance) addSpawn(ETIS_VAN_ETINA1, ETINA_LOC, false, 0, true);
+				_kain = (GrandBoss) addSpawn(KAIN_VAN_HALTER, KAIN_LOC, false, 0, true);
+				_etina = (GrandBoss) addSpawn(ETIS_VAN_ETINA1, ETINA_LOC, false, 0, true);
 				_etina.setInvul(true);
 				_etina.setTargetable(false);
 				_etina.setImmobilized(true);
@@ -420,7 +420,7 @@ public class EtisVanEtina extends AbstractNpcAI
 			}
 			case "spawnTransformedEtina":
 			{
-				_etina = (GrandBossInstance) addSpawn(ETIS_VAN_ETINA2, KAIN_LOC, false, 0, true);
+				_etina = (GrandBoss) addSpawn(ETIS_VAN_ETINA2, KAIN_LOC, false, 0, true);
 				for (SpawnHolder spawn : SPAWNS_MINIONS)
 				{
 					_minionSpawns.add(addSpawn(spawn.getNpcId(), spawn.getLocation()));
@@ -513,7 +513,7 @@ public class EtisVanEtina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		_lastAction = Chronos.currentTimeMillis();
 		// Anti BUGGERS
@@ -576,7 +576,7 @@ public class EtisVanEtina extends AbstractNpcAI
 					_sealOfGnosis.setDisplayEffect(3);
 					_sealOfGnosis.broadcastPacket(new MagicSkillUse(_sealOfGnosis, _sealOfGnosis, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 1, 10000, 0));
 					int rnd = getRandom(BOSS_ZONE.getPlayersInside().size());
-					PlayerInstance member = BOSS_ZONE.getPlayersInside().get(rnd);
+					Player member = BOSS_ZONE.getPlayersInside().get(rnd);
 					STIGMA_OF_REVELATION.getSkill().applyEffects(member, member);
 					_minionSpawns.forEach(minion ->
 					{
@@ -694,7 +694,7 @@ public class EtisVanEtina extends AbstractNpcAI
 				{
 					_barricadeSpawns.add(addSpawn(spawn.getNpcId(), spawn.getLocation()));
 				}
-				_paragon = (MonsterInstance) addSpawn(PARAGON, PARAGON_LOC);
+				_paragon = (Monster) addSpawn(PARAGON, PARAGON_LOC);
 				_paragon.setInvul(true);
 				BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_T_DEFEAT_PARAGON_WHILE_PARAGON_S_MINIONS_ARE_ALIVE, ExShowScreenMessage.TOP_CENTER, 7000, true)));
 				GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, FIGHTING);
@@ -719,7 +719,7 @@ public class EtisVanEtina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (npc.getId() == ETIS_VAN_ETINA1)
 		{

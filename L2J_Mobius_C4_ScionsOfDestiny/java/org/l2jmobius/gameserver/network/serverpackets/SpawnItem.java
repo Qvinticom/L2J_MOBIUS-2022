@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -34,7 +34,7 @@ public class SpawnItem implements IClientOutgoingPacket
 	private final int _stackable;
 	private final int _count;
 	
-	public SpawnItem(ItemInstance item)
+	public SpawnItem(Item item)
 	{
 		_objectId = item.getObjectId();
 		_itemId = item.getItemId();

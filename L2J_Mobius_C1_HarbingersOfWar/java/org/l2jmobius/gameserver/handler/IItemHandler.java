@@ -17,12 +17,12 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public interface IItemHandler
 {
-	public int useItem(PlayerInstance var1, ItemInstance item);
+	public int useItem(Player var1, Item item);
 	
 	public int[] getItemIds();
 }

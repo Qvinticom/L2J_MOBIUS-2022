@@ -25,8 +25,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Fence;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 import org.l2jmobius.gameserver.util.UnboundArrayList;
 
@@ -35,9 +35,9 @@ public class WorldRegion
 	/** List containing visible objects in this world region. */
 	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	/** List containing doors in this world region. */
-	private final List<DoorInstance> _doors = new ArrayList<>(1);
+	private final List<Door> _doors = new ArrayList<>(1);
 	/** List containing fences in this world region. */
-	private final List<FenceInstance> _fences = new ArrayList<>(1);
+	private final List<Fence> _fences = new ArrayList<>(1);
 	/** Array containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
@@ -240,7 +240,7 @@ public class WorldRegion
 			}
 			
 			// Start a timer to "suggest" a deactivate to self and neighbors.
-			// Suggest means: first check if a neighbor has PlayerInstances in it. If not, deactivate.
+			// Suggest means: first check if a neighbor has Players in it. If not, deactivate.
 			_neighborsTask = ThreadPool.schedule(() ->
 			{
 				for (int i = 0; i < _surroundingRegions.length; i++)
@@ -257,7 +257,7 @@ public class WorldRegion
 	
 	/**
 	 * Add the WorldObject in the WorldObjectHashSet(WorldObject) _visibleObjects containing WorldObject visible in this WorldRegion<br>
-	 * If WorldObject is a PlayerInstance, Add the PlayerInstance in the WorldObjectHashSet(PlayerInstance) _allPlayable containing PlayerInstance of all player in game in this WorldRegion
+	 * If WorldObject is a Player, Add the Player in the WorldObjectHashSet(Player) _allPlayable containing Player of all player in game in this WorldRegion
 	 * @param object
 	 */
 	public void addVisibleObject(WorldObject object)
@@ -273,14 +273,14 @@ public class WorldRegion
 		{
 			for (int i = 0; i < _surroundingRegions.length; i++)
 			{
-				_surroundingRegions[i].addDoor((DoorInstance) object);
+				_surroundingRegions[i].addDoor((Door) object);
 			}
 		}
 		else if (object.isFence())
 		{
 			for (int i = 0; i < _surroundingRegions.length; i++)
 			{
-				_surroundingRegions[i].addFence((FenceInstance) object);
+				_surroundingRegions[i].addFence((Fence) object);
 			}
 		}
 		
@@ -292,7 +292,7 @@ public class WorldRegion
 	}
 	
 	/**
-	 * Remove the WorldObject from the WorldObjectHashSet(WorldObject) _visibleObjects in this WorldRegion. If WorldObject is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _allPlayable of this WorldRegion
+	 * Remove the WorldObject from the WorldObjectHashSet(WorldObject) _visibleObjects in this WorldRegion. If WorldObject is a Player, remove it from the WorldObjectHashSet(Player) _allPlayable of this WorldRegion
 	 * @param object
 	 */
 	public void removeVisibleObject(WorldObject object)
@@ -313,14 +313,14 @@ public class WorldRegion
 		{
 			for (int i = 0; i < _surroundingRegions.length; i++)
 			{
-				_surroundingRegions[i].removeDoor((DoorInstance) object);
+				_surroundingRegions[i].removeDoor((Door) object);
 			}
 		}
 		else if (object.isFence())
 		{
 			for (int i = 0; i < _surroundingRegions.length; i++)
 			{
-				_surroundingRegions[i].removeFence((FenceInstance) object);
+				_surroundingRegions[i].removeFence((Fence) object);
 			}
 		}
 		
@@ -335,7 +335,7 @@ public class WorldRegion
 		return _visibleObjects;
 	}
 	
-	public synchronized void addDoor(DoorInstance door)
+	public synchronized void addDoor(Door door)
 	{
 		if (!_doors.contains(door))
 		{
@@ -343,17 +343,17 @@ public class WorldRegion
 		}
 	}
 	
-	private synchronized void removeDoor(DoorInstance door)
+	private synchronized void removeDoor(Door door)
 	{
 		_doors.remove(door);
 	}
 	
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}
 	
-	public synchronized void addFence(FenceInstance fence)
+	public synchronized void addFence(Fence fence)
 	{
 		if (!_fences.contains(fence))
 		{
@@ -361,12 +361,12 @@ public class WorldRegion
 		}
 	}
 	
-	private synchronized void removeFence(FenceInstance fence)
+	private synchronized void removeFence(Fence fence)
 	{
 		_fences.remove(fence);
 	}
 	
-	public List<FenceInstance> getFences()
+	public List<Fence> getFences()
 	{
 		return _fences;
 	}

@@ -1048,7 +1048,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
 		<cond msgId="113" addName="1">
-			<target npcType="PetInstance" />
+			<target npcType="Pet" />
 		</cond>
 		<cond>
 			<player canResurrect="true" />

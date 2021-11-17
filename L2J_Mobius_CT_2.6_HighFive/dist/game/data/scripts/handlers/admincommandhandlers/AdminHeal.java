@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -40,7 +40,7 @@ public class AdminHeal implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_heal"))
 		{
@@ -71,17 +71,17 @@ public class AdminHeal implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleHeal(PlayerInstance activeChar)
+	private void handleHeal(Player activeChar)
 	{
 		handleHeal(activeChar, null);
 	}
 	
-	private void handleHeal(PlayerInstance activeChar, String player)
+	private void handleHeal(Player activeChar, String player)
 	{
 		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{
-			final PlayerInstance plyr = World.getInstance().getPlayer(player);
+			final Player plyr = World.getInstance().getPlayer(player);
 			if (plyr != null)
 			{
 				obj = plyr;

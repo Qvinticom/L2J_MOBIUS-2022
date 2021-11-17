@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * This class holds the clan members data.
@@ -43,7 +43,7 @@ public class ClanMember
 	private int _classId;
 	private boolean _sex;
 	private int _raceOrdinal;
-	private PlayerInstance _player;
+	private Player _player;
 	private int _pledgeType;
 	private int _apprentice;
 	private int _sponsor;
@@ -79,7 +79,7 @@ public class ClanMember
 	 * @param clan the clan where the player belongs
 	 * @param player the player from which the clan member will be created
 	 */
-	public ClanMember(Clan clan, PlayerInstance player)
+	public ClanMember(Clan clan, Player player)
 	{
 		if (clan == null)
 		{
@@ -104,7 +104,7 @@ public class ClanMember
 	 * Sets the player instance.
 	 * @param player the new player instance
 	 */
-	public void setPlayerInstance(PlayerInstance player)
+	public void setPlayer(Player player)
 	{
 		if ((player == null) && (_player != null))
 		{
@@ -141,7 +141,7 @@ public class ClanMember
 	 * Gets the player instance.
 	 * @return the player instance
 	 */
-	public PlayerInstance getPlayerInstance()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -384,7 +384,7 @@ public class ClanMember
 	 * @param player the player
 	 * @return the int
 	 */
-	public static int calculatePledgeClass(PlayerInstance player)
+	public static int calculatePledgeClass(Player player)
 	{
 		int pledgeClass = 0;
 		if (player == null)

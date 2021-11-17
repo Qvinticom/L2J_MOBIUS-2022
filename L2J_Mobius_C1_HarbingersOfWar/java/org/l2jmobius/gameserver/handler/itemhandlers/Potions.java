@@ -20,8 +20,8 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Potion;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 
 public class Potions implements IItemHandler
@@ -41,7 +41,7 @@ public class Potions implements IItemHandler
 	};
 	
 	@Override
-	public int useItem(PlayerInstance activeChar, ItemInstance item)
+	public int useItem(Player activeChar, Item item)
 	{
 		final Potion potion = new Potion();
 		final int itemId = item.getItemId();

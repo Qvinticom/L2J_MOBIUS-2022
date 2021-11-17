@@ -20,18 +20,18 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreManageListBuy extends AbstractItemPacket
 {
 	private final int _objId;
 	private final long _playerAdena;
-	private final Collection<ItemInstance> _itemList;
+	private final Collection<Item> _itemList;
 	private final Collection<TradeItem> _buyList;
 	
-	public PrivateStoreManageListBuy(PlayerInstance player)
+	public PrivateStoreManageListBuy(Player player)
 	{
 		_objId = player.getObjectId();
 		_playerAdena = player.getAdena();
@@ -48,7 +48,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 		packet.writeQ(_playerAdena);
 		
 		packet.writeD(_itemList.size()); // inventory items for potential buy
-		for (ItemInstance item : _itemList)
+		for (Item item : _itemList)
 		{
 			writeItem(packet, item);
 			packet.writeQ(item.getItem().getReferencePrice() * 2);

@@ -21,14 +21,14 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 public class PreparedListContainer extends ListContainer
 {
 	private int _npcObjectId = 0;
 	
-	public PreparedListContainer(ListContainer template, boolean inventoryOnly, PlayerInstance player, Npc npc)
+	public PreparedListContainer(ListContainer template, boolean inventoryOnly, Player player, Npc npc)
 	{
 		super(template.getListId());
 		setMaintainEnchantment(template.getMaintainEnchantment());
@@ -51,7 +51,7 @@ public class PreparedListContainer extends ListContainer
 				return;
 			}
 			
-			final Collection<ItemInstance> items;
+			final Collection<Item> items;
 			if (getMaintainEnchantment())
 			{
 				items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);
@@ -67,7 +67,7 @@ public class PreparedListContainer extends ListContainer
 				if (!entry.getIngredients().isEmpty())
 				{
 					final int ingredientId = entry.getIngredients().get(0).getItemId();
-					for (ItemInstance item : items)
+					for (Item item : items)
 					{
 						if (!item.isEquipped() && (item.getId() == ingredientId))
 						{

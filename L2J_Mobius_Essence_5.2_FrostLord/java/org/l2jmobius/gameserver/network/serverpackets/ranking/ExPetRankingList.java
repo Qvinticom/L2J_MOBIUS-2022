@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.enums.RankingCategory;
 import org.l2jmobius.gameserver.enums.RankingScope;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPetRankingList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _season;
 	private final int _tabId;
 	private final int _type;
@@ -45,7 +45,7 @@ public class ExPetRankingList implements IClientOutgoingPacket
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
-	public ExPetRankingList(PlayerInstance player, int season, int tabId, int type, int race)
+	public ExPetRankingList(Player player, int season, int tabId, int type, int race)
 	{
 		_player = player;
 		_season = season;

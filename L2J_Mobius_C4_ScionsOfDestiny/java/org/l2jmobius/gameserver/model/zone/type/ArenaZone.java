@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -75,9 +75,9 @@ public class ArenaZone extends ZoneRespawn
 				continue;
 			}
 			
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				final PlayerInstance player = (PlayerInstance) creature;
+				final Player player = (Player) creature;
 				if (player.isOnline())
 				{
 					player.teleToLocation(TeleportWhereType.TOWN);

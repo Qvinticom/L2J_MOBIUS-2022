@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ForumsBBSManager extends BaseBBSManager
 {
@@ -84,7 +84,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parsecmd(String command, PlayerInstance player)
+	public void parsecmd(String command, Player player)
 	{
 	}
 	
@@ -148,7 +148,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player)
+	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player player)
 	{
 	}
 	

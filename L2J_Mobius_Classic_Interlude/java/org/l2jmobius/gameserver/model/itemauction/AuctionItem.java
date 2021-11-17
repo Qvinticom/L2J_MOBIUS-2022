@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Forsaiken
@@ -76,9 +76,9 @@ public class AuctionItem
 		return _itemCount;
 	}
 	
-	public ItemInstance createNewItemInstance()
+	public Item createNewItemInstance()
 	{
-		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), _itemId);
+		final Item item = new Item(IdManager.getInstance().getNextId(), _itemId);
 		World.getInstance().addObject(item);
 		item.setCount(_itemCount);
 		item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());

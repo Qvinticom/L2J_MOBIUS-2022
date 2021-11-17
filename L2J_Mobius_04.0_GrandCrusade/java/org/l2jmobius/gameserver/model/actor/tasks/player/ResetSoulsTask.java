@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Task dedicated to reset player's current souls.
@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class ResetSoulsTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ResetSoulsTask(PlayerInstance player)
+	public ResetSoulsTask(Player player)
 	{
 		_player = player;
 	}

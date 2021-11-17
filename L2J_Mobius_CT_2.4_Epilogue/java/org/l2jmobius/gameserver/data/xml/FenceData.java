@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Fence;
 
 /**
  * @author HoridoJoho / FBIagent
@@ -41,7 +41,7 @@ public class FenceData implements IXmlReader
 	
 	private static final int MAX_Z_DIFF = 100;
 	
-	private final Map<Integer, FenceInstance> _fences = new ConcurrentHashMap<>();
+	private final Map<Integer, Fence> _fences = new ConcurrentHashMap<>();
 	
 	protected FenceData()
 	{
@@ -78,14 +78,14 @@ public class FenceData implements IXmlReader
 		spawnFence(set.getInt("x"), set.getInt("y"), set.getInt("z"), set.getString("name"), set.getInt("width"), set.getInt("length"), set.getInt("height"), 0, set.getEnum("state", FenceState.class, FenceState.CLOSED));
 	}
 	
-	public FenceInstance spawnFence(int x, int y, int z, int width, int length, int height, int instanceId, FenceState state)
+	public Fence spawnFence(int x, int y, int z, int width, int length, int height, int instanceId, FenceState state)
 	{
 		return spawnFence(x, y, z, null, width, length, height, instanceId, state);
 	}
 	
-	public FenceInstance spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state)
+	public Fence spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state)
 	{
-		final FenceInstance fence = new FenceInstance(x, y, name, width, length, height, state);
+		final Fence fence = new Fence(x, y, name, width, length, height, state);
 		if (instanceId > 0)
 		{
 			fence.setInstanceId(instanceId);
@@ -96,22 +96,22 @@ public class FenceData implements IXmlReader
 		return fence;
 	}
 	
-	private void addFence(FenceInstance fence)
+	private void addFence(Fence fence)
 	{
 		_fences.put(fence.getObjectId(), fence);
 	}
 	
-	public void removeFence(FenceInstance fence)
+	public void removeFence(Fence fence)
 	{
 		_fences.remove(fence.getObjectId());
 	}
 	
-	public Map<Integer, FenceInstance> getFences()
+	public Map<Integer, Fence> getFences()
 	{
 		return _fences;
 	}
 	
-	public FenceInstance getFence(int objectId)
+	public Fence getFence(int objectId)
 	{
 		return _fences.get(objectId);
 	}
@@ -119,13 +119,13 @@ public class FenceData implements IXmlReader
 	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId)
 	{
 		final WorldRegion region = World.getInstance().getRegion(x, y);
-		final List<FenceInstance> fences = region != null ? region.getFences() : null;
+		final List<Fence> fences = region != null ? region.getFences() : null;
 		if ((fences == null) || fences.isEmpty())
 		{
 			return false;
 		}
 		
-		for (FenceInstance fence : fences)
+		for (Fence fence : fences)
 		{
 			// Check if fence is geodata enabled.
 			if (!fence.getState().isGeodataEnabled())

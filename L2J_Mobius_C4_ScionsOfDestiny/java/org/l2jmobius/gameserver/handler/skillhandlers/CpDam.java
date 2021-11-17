@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 
 /**
@@ -61,7 +61,7 @@ public class CpDam implements ISkillHandler
 			}
 			
 			final Creature target = (Creature) target2;
-			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
+			if ((creature instanceof Player) && (target instanceof Player) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);
 			}

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.friend;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -39,7 +39,7 @@ public class FriendStatus implements IClientOutgoingPacket
 	private final int _level;
 	private final String _name;
 	
-	public FriendStatus(PlayerInstance player, int type)
+	public FriendStatus(Player player, int type)
 	{
 		_objectId = player.getObjectId();
 		_classId = player.getActiveClass();

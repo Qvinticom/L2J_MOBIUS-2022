@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.util.MinionList;
@@ -50,15 +50,15 @@ public class Ranku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("checkup") && (npc.getId() == RANKU) && !npc.isDead())
 		{
-			for (MonsterInstance minion : ((MonsterInstance) npc).getMinionList().getSpawnedMinions())
+			for (Monster minion : ((Monster) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					final PlayerInstance killer = getRandomEntry(World.getInstance().getVisibleObjects(minion, PlayerInstance.class));
+					final Player killer = getRandomEntry(World.getInstance().getVisibleObjects(minion, Player.class));
 					minion.reduceCurrentHp(minion.getMaxHp() / 100, killer, null);
 				}
 			}
@@ -68,11 +68,11 @@ public class Ranku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.getId() == RANKU)
 		{
-			for (MonsterInstance minion : ((MonsterInstance) npc).getMinionList().getSpawnedMinions())
+			for (Monster minion : ((Monster) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && !MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
@@ -86,7 +86,7 @@ public class Ranku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == MINION)
 		{
@@ -95,16 +95,16 @@ public class Ranku extends AbstractNpcAI
 				MY_TRACKING_SET.remove(npc.getObjectId());
 			}
 			
-			final MonsterInstance master = ((MonsterInstance) npc).getLeader();
+			final Monster master = ((Monster) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
-				final MonsterInstance minion2 = MinionList.spawnMinion(master, MINION_2);
+				final Monster minion2 = MinionList.spawnMinion(master, MINION_2);
 				minion2.teleToLocation(npc.getLocation());
 			}
 		}
 		else if (npc.getId() == RANKU)
 		{
-			for (MonsterInstance minion : ((MonsterInstance) npc).getMinionList().getSpawnedMinions())
+			for (Monster minion : ((Monster) npc).getMinionList().getSpawnedMinions())
 			{
 				if (MY_TRACKING_SET.contains(minion.getObjectId()))
 				{

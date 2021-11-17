@@ -18,14 +18,14 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PrivateBuyListSell extends ServerBasePacket
 {
-	private final PlayerInstance _buyer;
-	private final PlayerInstance _seller;
+	private final Player _buyer;
+	private final Player _seller;
 	
-	public PrivateBuyListSell(PlayerInstance buyer, PlayerInstance seller)
+	public PrivateBuyListSell(Player buyer, Player seller)
 	{
 		_buyer = buyer;
 		_seller = seller;

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.variables;
 
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * NPC Variables implementation.
@@ -54,9 +54,9 @@ public class NpcVariables extends AbstractVariables
 	 * @param name the name of the variable
 	 * @return the stored player or {@code null}
 	 */
-	public PlayerInstance getPlayer(String name)
+	public Player getPlayer(String name)
 	{
-		return getObject(name, PlayerInstance.class);
+		return getObject(name, Player.class);
 	}
 	
 	/**

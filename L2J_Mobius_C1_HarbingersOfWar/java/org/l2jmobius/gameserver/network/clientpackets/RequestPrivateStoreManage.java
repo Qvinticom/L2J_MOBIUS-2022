@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateSellListSell;
@@ -31,7 +31,7 @@ public class RequestPrivateStoreManage extends ClientBasePacket
 	public RequestPrivateStoreManage(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		final int privatetype = player.getPrivateStoreType();
 		if (privatetype == 0)
 		{

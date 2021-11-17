@@ -18,8 +18,8 @@
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
 public class WorldMap implements IItemHandler
@@ -31,7 +31,7 @@ public class WorldMap implements IItemHandler
 	};
 	
 	@Override
-	public int useItem(PlayerInstance activeChar, ItemInstance item)
+	public int useItem(Player activeChar, Item item)
 	{
 		activeChar.sendPacket(new ShowMiniMap(item.getItemId()));
 		return 0;

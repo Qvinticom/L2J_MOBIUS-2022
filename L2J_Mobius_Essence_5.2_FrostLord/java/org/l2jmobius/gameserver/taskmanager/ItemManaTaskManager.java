@@ -22,14 +22,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Mobius
  */
 public class ItemManaTaskManager implements Runnable
 {
-	private static final Map<ItemInstance, Long> ITEMS = new ConcurrentHashMap<>();
+	private static final Map<Item, Long> ITEMS = new ConcurrentHashMap<>();
 	private static final int MANA_CONSUMPTION_RATE = 60000;
 	private static boolean _working = false;
 	
@@ -48,11 +48,11 @@ public class ItemManaTaskManager implements Runnable
 		_working = true;
 		
 		final long currentTime = Chronos.currentTimeMillis();
-		for (Entry<ItemInstance, Long> entry : ITEMS.entrySet())
+		for (Entry<Item, Long> entry : ITEMS.entrySet())
 		{
 			if (currentTime > entry.getValue().longValue())
 			{
-				final ItemInstance item = entry.getKey();
+				final Item item = entry.getKey();
 				ITEMS.remove(item);
 				item.decreaseMana(true);
 			}
@@ -61,7 +61,7 @@ public class ItemManaTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(ItemInstance item)
+	public void add(Item item)
 	{
 		if (!ITEMS.containsKey(item))
 		{

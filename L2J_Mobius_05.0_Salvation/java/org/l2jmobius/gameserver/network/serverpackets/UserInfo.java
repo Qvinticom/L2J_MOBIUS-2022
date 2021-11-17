@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class UserInfo extends AbstractMaskPacket<UserInfoType>
 {
-	private PlayerInstance _player;
+	private Player _player;
 	
 	private int _relation;
 	private int _runSpd;
@@ -60,12 +60,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	
 	private int _initSize = 5;
 	
-	public UserInfo(PlayerInstance player)
+	public UserInfo(Player player)
 	{
 		this(player, true);
 	}
 	
-	public UserInfo(PlayerInstance player, boolean addAll)
+	public UserInfo(Player player, boolean addAll)
 	{
 		if (!player.isSubclassLocked()) // Changing class.
 		{
@@ -385,7 +385,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		return true;
 	}
 	
-	private int calculateRelation(PlayerInstance player)
+	private int calculateRelation(Player player)
 	{
 		int relation = 0;
 		final Party party = player.getParty();

@@ -21,8 +21,8 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -62,7 +62,7 @@ public class PartySpelled implements IClientOutgoingPacket
 		}
 		
 		OutgoingPackets.PARTY_SPELLED.writeId(packet);
-		packet.writeD(_creature instanceof SummonInstance ? 2 : _creature instanceof PetInstance ? 1 : 0);
+		packet.writeD(_creature instanceof Servitor ? 2 : _creature instanceof Pet ? 1 : 0);
 		packet.writeD(_creature.getObjectId());
 		packet.writeD(_effects.size());
 		for (Effect temp : _effects)

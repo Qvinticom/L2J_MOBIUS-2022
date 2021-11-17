@@ -26,11 +26,11 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TryMixCubeResultType;
 import org.l2jmobius.gameserver.enums.TryMixCubeType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.AlchemyResult;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -73,7 +73,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 			}
 			else // Player used packet injection tool.
 			{
-				final PlayerInstance player = client.getPlayer();
+				final Player player = client.getPlayer();
 				LOGGER.warning("Kicked " + player + " for using packet injection tool with " + getClass().getSimpleName());
 				Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
 				return false;
@@ -85,7 +85,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
 			return;
@@ -124,7 +124,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 		// First loop for safety check + price calculation
 		for (ItemHolder item : _items)
 		{
-			final ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
+			final Item itemInstance = player.getInventory().getItemByObjectId(item.getId());
 			if (itemInstance == null)
 			{
 				return;
@@ -173,7 +173,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 			// Second loop for items deletion if we're still in the game
 			for (ItemHolder item : _items)
 			{
-				final ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
+				final Item itemInstance = player.getInventory().getItemByObjectId(item.getId());
 				if (itemInstance == null)
 				{
 					return;
@@ -203,7 +203,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 				player.broadcastPacket(new MagicSkillUse(player, CommonSkill.ALCHEMY_CUBE_RANDOM_SUCCESS.getId(), TEMPEST_STONE_AMOUNT, 500, 1500));
 				
 				// Give Tempest Stone to the player
-				final ItemInstance tempestStonesInstance = player.addItem("Alchemy", Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, null, true);
+				final Item tempestStonesInstance = player.addItem("Alchemy", Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, null, true);
 				iu.addItem(tempestStonesInstance);
 				
 				// Add the alchemy result entry to the packet
@@ -217,7 +217,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 				airStonesCount *= Math.min(elcyumCrystals, 2);
 			}
 			
-			final ItemInstance airStonesInstance = player.addItem("Alchemy", Inventory.AIR_STONE_ID, airStonesCount, null, true);
+			final Item airStonesInstance = player.addItem("Alchemy", Inventory.AIR_STONE_ID, airStonesCount, null, true);
 			iu.addItem(airStonesInstance);
 			
 			// Add the Air Stones

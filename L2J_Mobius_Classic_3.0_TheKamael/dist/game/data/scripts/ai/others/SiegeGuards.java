@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -154,7 +154,7 @@ public class SiegeGuards extends AbstractNpcAI
 					}
 					
 					// Do not attack defenders who are registered to this castle.
-					final PlayerInstance player = nearby.getActingPlayer();
+					final Player player = nearby.getActingPlayer();
 					if ((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(guard.getScriptValue()))
 					{
 						continue;
@@ -174,7 +174,7 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((attacker.getSiegeState() == 2) && !attacker.isRegisteredOnThisSiegeField(npc.getScriptValue()))
 		{
@@ -185,7 +185,7 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final int residenceId = npc.getScriptValue();
 		final List<Npc> guardList = RESIDENCE_GUARD_MAP[residenceId];

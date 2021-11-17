@@ -24,17 +24,17 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.CrownTable;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -87,13 +87,13 @@ public class UseItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			return;
@@ -144,7 +144,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (item.getItem().getType2() == Item.TYPE2_QUEST)
+		if (item.getItem().getType2() == ItemTemplate.TYPE2_QUEST)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS));
 			return;
@@ -170,7 +170,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((itemId == 5858) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null))
+		if ((itemId == 5858) && (ClanHallTable.getInstance().getClanHallByOwner(player.getClan()) == null))
 		{
 			player.sendMessage("Blessed Scroll of Escape: Clan Hall cannot be used due to unsuitable terms.");
 			return;
@@ -318,9 +318,9 @@ public class UseItem implements IClientIncomingPacket
 			{
 				switch (bodyPart)
 				{
-					case Item.SLOT_LR_HAND:
-					case Item.SLOT_L_HAND:
-					case Item.SLOT_R_HAND:
+					case ItemTemplate.SLOT_LR_HAND:
+					case ItemTemplate.SLOT_L_HAND:
+					case ItemTemplate.SLOT_R_HAND:
 					{
 						if (((item.getEnchantLevel() > Config.NORMAL_WEAPON_ENCHANT_LEVEL.size()) || (item.getEnchantLevel() > Config.BLESS_WEAPON_ENCHANT_LEVEL.size()) || (item.getEnchantLevel() > Config.CRYSTAL_WEAPON_ENCHANT_LEVEL.size())) && !player.isGM())
 						{
@@ -332,13 +332,13 @@ public class UseItem implements IClientIncomingPacket
 						}
 						break;
 					}
-					case Item.SLOT_CHEST:
-					case Item.SLOT_BACK:
-					case Item.SLOT_GLOVES:
-					case Item.SLOT_FEET:
-					case Item.SLOT_HEAD:
-					case Item.SLOT_FULL_ARMOR:
-					case Item.SLOT_LEGS:
+					case ItemTemplate.SLOT_CHEST:
+					case ItemTemplate.SLOT_BACK:
+					case ItemTemplate.SLOT_GLOVES:
+					case ItemTemplate.SLOT_FEET:
+					case ItemTemplate.SLOT_HEAD:
+					case ItemTemplate.SLOT_FULL_ARMOR:
+					case ItemTemplate.SLOT_LEGS:
 					{
 						if (((item.getEnchantLevel() > Config.NORMAL_ARMOR_ENCHANT_LEVEL.size()) || (item.getEnchantLevel() > Config.BLESS_ARMOR_ENCHANT_LEVEL.size()) || (item.getEnchantLevel() > Config.CRYSTAL_ARMOR_ENCHANT_LEVEL.size())) && !player.isGM())
 						{
@@ -350,11 +350,11 @@ public class UseItem implements IClientIncomingPacket
 						}
 						break;
 					}
-					case Item.SLOT_R_EAR:
-					case Item.SLOT_L_EAR:
-					case Item.SLOT_NECK:
-					case Item.SLOT_R_FINGER:
-					case Item.SLOT_L_FINGER:
+					case ItemTemplate.SLOT_R_EAR:
+					case ItemTemplate.SLOT_L_EAR:
+					case ItemTemplate.SLOT_NECK:
+					case ItemTemplate.SLOT_R_FINGER:
+					case ItemTemplate.SLOT_L_FINGER:
 					{
 						if (((item.getEnchantLevel() > Config.NORMAL_JEWELRY_ENCHANT_LEVEL.size()) || (item.getEnchantLevel() > Config.BLESS_JEWELRY_ENCHANT_LEVEL.size()) || (item.getEnchantLevel() > Config.CRYSTAL_JEWELRY_ENCHANT_LEVEL.size())) && !player.isGM())
 						{
@@ -370,13 +370,13 @@ public class UseItem implements IClientIncomingPacket
 			}
 			
 			// Don't allow weapon/shield equipment if a cursed weapon is equiped
-			if (player.isCursedWeaponEquiped() && ((bodyPart == Item.SLOT_LR_HAND) || (bodyPart == Item.SLOT_L_HAND) || (bodyPart == Item.SLOT_R_HAND)))
+			if (player.isCursedWeaponEquiped() && ((bodyPart == ItemTemplate.SLOT_LR_HAND) || (bodyPart == ItemTemplate.SLOT_L_HAND) || (bodyPart == ItemTemplate.SLOT_R_HAND)))
 			{
 				return;
 			}
 			
 			// Don't allow weapon/shield hero equipment during Olimpia
-			if (player.isInOlympiadMode() && ((((bodyPart == Item.SLOT_LR_HAND) || (bodyPart == Item.SLOT_L_HAND) || (bodyPart == Item.SLOT_R_HAND)) && (((item.getItemId() >= 6611) && (item.getItemId() <= 6621)) || (item.getItemId() == 6842))) || Config.LIST_OLY_RESTRICTED_ITEMS.contains(item.getItemId())))
+			if (player.isInOlympiadMode() && ((((bodyPart == ItemTemplate.SLOT_LR_HAND) || (bodyPart == ItemTemplate.SLOT_L_HAND) || (bodyPart == ItemTemplate.SLOT_R_HAND)) && (((item.getItemId() >= 6611) && (item.getItemId() <= 6621)) || (item.getItemId() == 6842))) || Config.LIST_OLY_RESTRICTED_ITEMS.contains(item.getItemId())))
 			{
 				return;
 			}
@@ -387,7 +387,7 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (player.isMoving() && player.isAttackingNow() && ((bodyPart == Item.SLOT_LR_HAND) || (bodyPart == Item.SLOT_L_HAND) || (bodyPart == Item.SLOT_R_HAND)))
+			if (player.isMoving() && player.isAttackingNow() && ((bodyPart == ItemTemplate.SLOT_LR_HAND) || (bodyPart == ItemTemplate.SLOT_L_HAND) || (bodyPart == ItemTemplate.SLOT_R_HAND)))
 			{
 				final WorldObject target = player.getTarget();
 				player.setTarget(null);
@@ -412,13 +412,13 @@ public class UseItem implements IClientIncomingPacket
 			}
 			
 			// Equip or unEquip
-			List<ItemInstance> items = null;
+			List<Item> items = null;
 			final boolean isEquiped = item.isEquipped();
 			SystemMessage sm = null;
-			if (item.getItem().getType2() == Item.TYPE2_WEAPON)
+			if (item.getItem().getType2() == ItemTemplate.TYPE2_WEAPON)
 			{
 				// if used item is a weapon
-				ItemInstance wep = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
+				Item wep = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
 				if (wep == null)
 				{
 					wep = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
@@ -463,22 +463,22 @@ public class UseItem implements IClientIncomingPacket
 				{
 					case 1:
 					{
-						bodyPart = Item.SLOT_L_EAR;
+						bodyPart = ItemTemplate.SLOT_L_EAR;
 						break;
 					}
 					case 2:
 					{
-						bodyPart = Item.SLOT_R_EAR;
+						bodyPart = ItemTemplate.SLOT_R_EAR;
 						break;
 					}
 					case 4:
 					{
-						bodyPart = Item.SLOT_L_FINGER;
+						bodyPart = ItemTemplate.SLOT_L_FINGER;
 						break;
 					}
 					case 5:
 					{
-						bodyPart = Item.SLOT_R_FINGER;
+						bodyPart = ItemTemplate.SLOT_R_FINGER;
 						break;
 					}
 					default:
@@ -518,7 +518,7 @@ public class UseItem implements IClientIncomingPacket
 				}
 				
 				final int tempBodyPart = item.getItem().getBodyPart();
-				ItemInstance tempItem = player.getInventory().getPaperdollItemByItemId(tempBodyPart);
+				Item tempItem = player.getInventory().getPaperdollItemByItemId(tempBodyPart);
 				
 				// remove augmentation stats for replaced items currently weapons only..
 				if ((tempItem != null) && tempItem.isAugmented())
@@ -613,8 +613,8 @@ public class UseItem implements IClientIncomingPacket
 				{
 					// Charge Soulshot/Spiritshot like L2OFF
 					player.rechargeAutoSoulShot(true, true, false);
-					item.setChargedSoulshot(ItemInstance.CHARGED_NONE);
-					item.setChargedSpiritshot(ItemInstance.CHARGED_NONE);
+					item.setChargedSoulshot(Item.CHARGED_NONE);
+					item.setChargedSpiritshot(Item.CHARGED_NONE);
 				}
 				// Consume mana - will start a task if required; returns if item is not a shadow item.
 				item.decreaseMana(false);
@@ -624,14 +624,14 @@ public class UseItem implements IClientIncomingPacket
 			
 			player.sendPacket(new EtcStatusUpdate(player));
 			// If an "invisible" item has changed (Jewels, helmet), we dont need to send broadcast packet to all other users.
-			if ((((item.getItem().getBodyPart() & Item.SLOT_HEAD) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_NECK) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_L_EAR) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_R_EAR) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_L_FINGER) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_R_FINGER) <= 0)))
+			if ((((item.getItem().getBodyPart() & ItemTemplate.SLOT_HEAD) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_NECK) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_L_EAR) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_R_EAR) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_L_FINGER) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_R_FINGER) <= 0)))
 			{
 				player.broadcastUserInfo();
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItems(items);
 				player.sendPacket(iu);
 			}
-			else if ((item.getItem().getBodyPart() & Item.SLOT_HEAD) > 0)
+			else if ((item.getItem().getBodyPart() & ItemTemplate.SLOT_HEAD) > 0)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItems(items);
@@ -656,7 +656,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				player.broadcastUserInfo();
-				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipement
+				// Send a Server->Client packet ItemList to this Player to update left hand equipement
 				player.sendPacket(new ItemList(player, false));
 			}
 			else

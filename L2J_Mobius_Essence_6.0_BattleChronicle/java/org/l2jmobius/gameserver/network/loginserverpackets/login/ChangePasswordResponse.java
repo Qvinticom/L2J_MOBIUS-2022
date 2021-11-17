@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.loginserverpackets.login;
 
 import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ChangePasswordResponse extends BaseRecievePacket
 {
@@ -28,7 +28,7 @@ public class ChangePasswordResponse extends BaseRecievePacket
 		// boolean isSuccessful = readC() > 0;
 		final String character = readS();
 		final String msgToSend = readS();
-		final PlayerInstance player = World.getInstance().getPlayer(character);
+		final Player player = World.getInstance().getPlayer(character);
 		if (player != null)
 		{
 			player.sendMessage(msgToSend);

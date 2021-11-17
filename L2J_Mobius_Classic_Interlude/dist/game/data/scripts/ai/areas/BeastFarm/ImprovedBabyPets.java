@@ -20,8 +20,8 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -56,7 +56,7 @@ public class ImprovedBabyPets extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (player != null)
 		{
@@ -128,7 +128,7 @@ public class ImprovedBabyPets extends AbstractNpcAI
 	
 	private boolean castBuff(Summon summon, int stepNumber, int buffNumber)
 	{
-		final PlayerInstance owner = summon.getOwner();
+		final Player owner = summon.getOwner();
 		final StatSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_buff0" + buffNumber, SkillHolder.class);
 		if ((skill != null) && (owner != null))
@@ -169,7 +169,7 @@ public class ImprovedBabyPets extends AbstractNpcAI
 	private void castHeal(Summon summon, int stepNumber, int healNumber)
 	{
 		final boolean previousFollowStatus = summon.getFollowStatus();
-		final PlayerInstance owner = summon.getOwner();
+		final Player owner = summon.getOwner();
 		final StatSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_heal0" + healNumber, SkillHolder.class);
 		final int targetType = parameters.getInt("step" + stepNumber + "_heal_target0" + healNumber, 0);

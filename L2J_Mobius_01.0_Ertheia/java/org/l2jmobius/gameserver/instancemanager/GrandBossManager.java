@@ -34,7 +34,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.interfaces.IStorable;
 
 /**
@@ -49,7 +49,7 @@ public class GrandBossManager implements IStorable
 	
 	protected static final Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
 	
-	protected static Map<Integer, GrandBossInstance> _bosses = new ConcurrentHashMap<>();
+	protected static Map<Integer, GrandBoss> _bosses = new ConcurrentHashMap<>();
 	
 	protected static Map<Integer, StatSet> _storedInfo = new HashMap<>();
 	
@@ -120,10 +120,10 @@ public class GrandBossManager implements IStorable
 	}
 	
 	/**
-	 * Adds a GrandBossInstance to the list of bosses.
+	 * Adds a GrandBoss to the list of bosses.
 	 * @param boss
 	 */
-	public void addBoss(GrandBossInstance boss)
+	public void addBoss(GrandBoss boss)
 	{
 		if (boss != null)
 		{
@@ -131,7 +131,7 @@ public class GrandBossManager implements IStorable
 		}
 	}
 	
-	public GrandBossInstance getBoss(int bossId)
+	public GrandBoss getBoss(int bossId)
 	{
 		return _bosses.get(bossId);
 	}
@@ -154,7 +154,7 @@ public class GrandBossManager implements IStorable
 		{
 			for (Entry<Integer, StatSet> e : _storedInfo.entrySet())
 			{
-				final GrandBossInstance boss = _bosses.get(e.getKey());
+				final GrandBoss boss = _bosses.get(e.getKey());
 				final StatSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -204,7 +204,7 @@ public class GrandBossManager implements IStorable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final GrandBossInstance boss = _bosses.get(bossId);
+			final GrandBoss boss = _bosses.get(bossId);
 			final StatSet info = _storedInfo.get(bossId);
 			if (statusOnly || (boss == null) || (info == null))
 			{

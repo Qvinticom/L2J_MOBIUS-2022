@@ -27,8 +27,8 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -76,7 +76,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -105,7 +105,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 		Creature merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if (!(target instanceof MerchantInstance) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceId() != target.getInstanceId()))
+			if (!(target instanceof Merchant) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceId() != target.getInstanceId()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -136,10 +136,10 @@ public class RequestBuyItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (merchant instanceof MerchantInstance)
+			if (merchant instanceof Merchant)
 			{
-				castleTaxRate = ((MerchantInstance) merchant).getMpc().getCastleTaxRate();
-				baseTaxRate = ((MerchantInstance) merchant).getMpc().getBaseTaxRate();
+				castleTaxRate = ((Merchant) merchant).getMpc().getCastleTaxRate();
+				baseTaxRate = ((Merchant) merchant).getMpc().getBaseTaxRate();
 			}
 			else
 			{
@@ -264,9 +264,9 @@ public class RequestBuyItem implements IClientIncomingPacket
 		}
 		
 		// add to castle treasury
-		if (merchant instanceof MerchantInstance)
+		if (merchant instanceof Merchant)
 		{
-			((MerchantInstance) merchant).getCastle().addToTreasury((long) (subTotal * castleTaxRate));
+			((Merchant) merchant).getCastle().addToTreasury((long) (subTotal * castleTaxRate));
 		}
 		
 		final StatusUpdate su = new StatusUpdate(player);

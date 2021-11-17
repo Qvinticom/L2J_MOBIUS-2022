@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSelect;
@@ -143,7 +143,7 @@ public class CharacterSelect implements IClientIncomingPacket
 					}
 					
 					// load up character from disk
-					final PlayerInstance cha = client.load(_charSlot);
+					final Player cha = client.load(_charSlot);
 					if (cha == null)
 					{
 						return; // handled in GameClient

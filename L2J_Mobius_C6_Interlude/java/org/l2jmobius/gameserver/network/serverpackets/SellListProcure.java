@@ -25,19 +25,19 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class SellListProcure implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _money;
-	private final Map<ItemInstance, Integer> _sellList = new HashMap<>();
+	private final Map<Item, Integer> _sellList = new HashMap<>();
 	private List<CropProcure> _procureList = new ArrayList<>();
 	private final int _castle;
 	
-	public SellListProcure(PlayerInstance player, int castleId)
+	public SellListProcure(Player player, int castleId)
 	{
 		_money = player.getAdena();
 		_player = player;
@@ -45,7 +45,7 @@ public class SellListProcure implements IClientOutgoingPacket
 		_procureList = CastleManager.getInstance().getCastleById(_castle).getCropProcure(0);
 		for (CropProcure c : _procureList)
 		{
-			final ItemInstance item = _player.getInventory().getItemByItemId(c.getId());
+			final Item item = _player.getInventory().getItemByItemId(c.getId());
 			if ((item != null) && (c.getAmount() > 0))
 			{
 				_sellList.put(item, c.getAmount());
@@ -61,9 +61,9 @@ public class SellListProcure implements IClientOutgoingPacket
 		packet.writeD(0x00); // lease ?
 		packet.writeH(_sellList.size()); // list size
 		
-		for (Entry<ItemInstance, Integer> entry : _sellList.entrySet())
+		for (Entry<Item, Integer> entry : _sellList.entrySet())
 		{
-			final ItemInstance item = entry.getKey();
+			final Item item = entry.getKey();
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());

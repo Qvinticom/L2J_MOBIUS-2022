@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -53,7 +53,7 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			final Item template = ItemTable.getInstance().getTemplate(itemId);
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
 			if (template == null)
 			{
 				_items = null;
@@ -99,7 +99,7 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager.Territory;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowDominionRegistry;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -87,7 +87,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (player != null)
@@ -205,7 +205,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final String htmltext;
 		if ((player.getLevel() < MIN_LEVEL) || (player.getClassId().level() < CLASS_LEVEL))

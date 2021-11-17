@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,7 +30,7 @@ public class ExFishingEnd implements IClientOutgoingPacket
 	private final boolean _win;
 	Creature _creature;
 	
-	public ExFishingEnd(boolean win, PlayerInstance character)
+	public ExFishingEnd(boolean win, Player character)
 	{
 		_win = win;
 		_creature = character;

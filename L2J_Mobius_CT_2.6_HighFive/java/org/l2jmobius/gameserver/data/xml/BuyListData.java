@@ -37,7 +37,7 @@ import org.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * Loads buy lists for NPCs.
@@ -139,7 +139,7 @@ public class BuyListData implements IXmlReader
 							{
 								count = Long.parseLong(attr.getNodeValue());
 							}
-							final Item item = ItemTable.getInstance().getTemplate(itemId);
+							final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
 								final int sellPrice = item.getReferencePrice() / 2;

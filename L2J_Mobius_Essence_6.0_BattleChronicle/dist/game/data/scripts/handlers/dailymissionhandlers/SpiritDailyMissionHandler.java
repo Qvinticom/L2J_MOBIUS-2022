@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnElementalSpiritUpgrade;
@@ -61,7 +61,7 @@ public class SpiritDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(PlayerInstance player)
+	public boolean isAvailable(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return (entry != null) && (entry.getStatus() == DailyMissionStatus.AVAILABLE);

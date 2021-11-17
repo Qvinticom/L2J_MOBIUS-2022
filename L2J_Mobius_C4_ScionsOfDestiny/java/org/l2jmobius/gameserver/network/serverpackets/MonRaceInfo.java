@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,10 +28,10 @@ public class MonRaceInfo implements IClientOutgoingPacket
 {
 	private final int _unknown1;
 	private final int _unknown2;
-	private final NpcInstance[] _monsters;
+	private final Npc[] _monsters;
 	private final int[][] _speeds;
 	
-	public MonRaceInfo(int unknown1, int unknown2, NpcInstance[] monsters, int[][] speeds)
+	public MonRaceInfo(int unknown1, int unknown2, Npc[] monsters, int[][] speeds)
 	{
 		/*
 		 * -1 0 to initial the race 0 15322 to start race 13765 -1 in middle of race -1 0 to end the race

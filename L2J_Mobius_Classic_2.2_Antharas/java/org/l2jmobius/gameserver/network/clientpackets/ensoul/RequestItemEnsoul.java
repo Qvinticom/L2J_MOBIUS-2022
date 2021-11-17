@@ -21,11 +21,11 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.EnsoulData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulStone;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -70,7 +70,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -116,7 +116,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
+		final Item item = player.getInventory().getItemByObjectId(_itemObjectId);
 		if (item == null)
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul item without having it!");
@@ -158,7 +158,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 		for (EnsoulItemOption itemOption : _options)
 		{
 			final int position = itemOption.getPosition() - 1;
-			final ItemInstance soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
+			final Item soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
 			if (soulCrystal == null)
 			{
 				player.sendPacket(SystemMessageId.THE_RUNE_DOES_NOT_FIT);
@@ -215,7 +215,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance gemStones = player.getInventory().getItemByItemId(fee.getId());
+			final Item gemStones = player.getInventory().getItemByItemId(fee.getId());
 			if ((gemStones == null) || (gemStones.getCount() < fee.getCount()))
 			{
 				continue;

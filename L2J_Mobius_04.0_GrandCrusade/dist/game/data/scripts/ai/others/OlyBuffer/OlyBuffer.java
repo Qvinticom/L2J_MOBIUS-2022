@@ -17,7 +17,7 @@
 package ai.others.OlyBuffer;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -53,7 +53,7 @@ public class OlyBuffer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (npc.isScriptValue(0))
@@ -64,7 +64,7 @@ public class OlyBuffer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -89,7 +89,7 @@ public class OlyBuffer extends AbstractNpcAI
 		return "olympiad_master003.htm";
 	}
 	
-	private void applyBuffs(Npc npc, PlayerInstance player, SkillHolder skill)
+	private void applyBuffs(Npc npc, Player player, SkillHolder skill)
 	{
 		for (SkillHolder holder : BUFFS)
 		{

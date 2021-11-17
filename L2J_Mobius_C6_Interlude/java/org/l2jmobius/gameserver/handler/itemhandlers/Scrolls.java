@@ -20,9 +20,9 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -80,16 +80,16 @@ public class Scrolls implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		PlayerInstance player;
-		if (playable instanceof PlayerInstance)
+		Player player;
+		if (playable instanceof Player)
 		{
-			player = (PlayerInstance) playable;
+			player = (Player) playable;
 		}
-		else if (playable instanceof PetInstance)
+		else if (playable instanceof Pet)
 		{
-			player = ((PetInstance) playable).getOwner();
+			player = ((Pet) playable).getOwner();
 		}
 		else
 		{
@@ -390,7 +390,7 @@ public class Scrolls implements IItemHandler
 		playable.destroyItem("Consume", item.getObjectId(), 1, null, true);
 	}
 	
-	public void useScroll(PlayerInstance player, int magicId, int level)
+	public void useScroll(Player player, int magicId, int level)
 	{
 		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)

@@ -23,25 +23,25 @@ import java.util.stream.Stream;
 
 import org.l2jmobius.gameserver.model.KeyValuePair;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author UnAfraid
  */
 public class QuestCondition
 {
-	private final Predicate<PlayerInstance> _condition;
+	private final Predicate<Player> _condition;
 	private Map<Integer, String> _perNpcDialog;
 	private final String _html;
 	
-	public QuestCondition(Predicate<PlayerInstance> cond, String html)
+	public QuestCondition(Predicate<Player> cond, String html)
 	{
 		_condition = cond;
 		_html = html;
 	}
 	
 	@SafeVarargs
-	public QuestCondition(Predicate<PlayerInstance> cond, KeyValuePair<Integer, String>... pairs)
+	public QuestCondition(Predicate<Player> cond, KeyValuePair<Integer, String>... pairs)
 	{
 		_condition = cond;
 		_html = null;
@@ -49,7 +49,7 @@ public class QuestCondition
 		Stream.of(pairs).forEach(pair -> _perNpcDialog.put(pair.getKey(), pair.getValue()));
 	}
 	
-	public boolean test(PlayerInstance player)
+	public boolean test(Player player)
 	{
 		return _condition.test(player);
 	}

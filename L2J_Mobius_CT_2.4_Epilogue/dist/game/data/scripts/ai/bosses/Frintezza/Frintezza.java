@@ -33,9 +33,9 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
@@ -252,10 +252,10 @@ public class Frintezza extends AbstractNpcAI
 	private static int _killDarkChoirCaptain = 0;
 	
 	private static BossZone _zone;
-	private GrandBossInstance _frintezza, _weakScarlet, _strongScarlet, _activeScarlet;
-	private MonsterInstance _demon1, _demon2, _demon3, _demon4, _portrait1, _portrait2, _portrait3, _portrait4;
+	private GrandBoss _frintezza, _weakScarlet, _strongScarlet, _activeScarlet;
+	private Monster _demon1, _demon2, _demon3, _demon4, _portrait1, _portrait2, _portrait3, _portrait4;
 	private Npc _frintezzaDummy, _overheadDummy, _portraitDummy1, _portraitDummy3, _scarletDummy;
-	private static List<PlayerInstance> _playersInside = new CopyOnWriteArrayList<>();
+	private static List<Player> _playersInside = new CopyOnWriteArrayList<>();
 	private static List<Npc> _room1Mobs = new CopyOnWriteArrayList<>();
 	private static List<Npc> _room2Mobs = new CopyOnWriteArrayList<>();
 	private static List<Attackable> _minions = new CopyOnWriteArrayList<>();
@@ -318,7 +318,7 @@ public class Frintezza extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		long temp = 0;
 		if (event.equalsIgnoreCase("waiting"))
@@ -543,25 +543,25 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("camera_3"))
 		{
 			_zone.broadcastPacket(new SpecialCamera(_overheadDummy, 300, 90, -10, 6500, 7000, 0, 0, 1, 0, 0));
-			_frintezza = (GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
+			_frintezza = (GrandBoss) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
 			GrandBossManager.getInstance().addBoss(_frintezza);
 			_frintezza.setImmobilized(true);
 			_frintezza.setInvul(true);
 			_frintezza.disableAllSkills();
 			// _Zone.updateKnownList(frintezza);
-			_demon2 = (MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
+			_demon2 = (Monster) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
 			_demon2.setImmobilized(true);
 			_demon2.disableAllSkills();
 			// _Zone.updateKnownList(demon2);
-			_demon3 = (MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
+			_demon3 = (Monster) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
 			_demon3.setImmobilized(true);
 			_demon3.disableAllSkills();
 			// _Zone.updateKnownList(demon3);
-			_demon1 = (MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
+			_demon1 = (Monster) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
 			_demon1.setImmobilized(true);
 			_demon1.disableAllSkills();
 			// _Zone.updateKnownList(demon1);
-			_demon4 = (MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
+			_demon4 = (Monster) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
 			_demon4.setImmobilized(true);
 			_demon4.disableAllSkills();
 			// _Zone.updateKnownList(demon4);
@@ -628,7 +628,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (Creature pc : _zone.getCharactersInside())
 			{
-				if (pc instanceof PlayerInstance)
+				if (pc instanceof Player)
 				{
 					if (pc.getX() < 174232)
 					{
@@ -692,7 +692,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			_zone.broadcastPacket(new SpecialCamera(_overheadDummy, 600, 180, -25, 0, 10000, 0, 0, 1, 0, 0));
 			_zone.broadcastPacket(new MagicSkillUse(_scarletDummy, _overheadDummy, 5004, 1, 5800, 0));
-			_weakScarlet = (GrandBossInstance) addSpawn(29046, 174232, -88020, -5110, 16384, false, 0, true);
+			_weakScarlet = (GrandBoss) addSpawn(29046, 174232, -88020, -5110, 16384, false, 0, true);
 			_weakScarlet.setInvul(true);
 			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
@@ -722,19 +722,19 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("camera_22"))
 		{
-			_portrait2 = (MonsterInstance) addSpawn(29049, 175876, -88713, -5000, 28205, false, 0);
+			_portrait2 = (Monster) addSpawn(29049, 175876, -88713, -5000, 28205, false, 0);
 			_portrait2.setImmobilized(true);
 			_portrait2.disableAllSkills();
 			// _Zone.updateKnownList(portrait2);
-			_portrait3 = (MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
+			_portrait3 = (Monster) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
 			_portrait3.setImmobilized(true);
 			_portrait3.disableAllSkills();
 			// _Zone.updateKnownList(portrait3);
-			_portrait1 = (MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
+			_portrait1 = (Monster) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
 			_portrait1.setImmobilized(true);
 			_portrait1.disableAllSkills();
 			// _Zone.updateKnownList(portrait1);
-			_portrait4 = (MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
+			_portrait4 = (Monster) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
 			_portrait4.setImmobilized(true);
 			_portrait4.disableAllSkills();
 			// _Zone.updateKnownList(portrait4);
@@ -875,7 +875,7 @@ public class Frintezza extends AbstractNpcAI
 			_weakScarlet.deleteMe();
 			_weakScarlet = null;
 			_activeScarlet = null;
-			_weakScarlet = (GrandBossInstance) addSpawn(29046, _scarletX, _scarletY, _scarletZ, _scarletH, false, 0);
+			_weakScarlet = (GrandBoss) addSpawn(29046, _scarletX, _scarletY, _scarletZ, _scarletH, false, 0);
 			_weakScarlet.setInvul(true);
 			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
@@ -918,7 +918,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("morph_13"))
 		{
-			_strongScarlet = (GrandBossInstance) addSpawn(SCARLET2, _scarletX, _scarletY, _scarletZ, _scarletH, false, 0);
+			_strongScarlet = (GrandBoss) addSpawn(SCARLET2, _scarletX, _scarletY, _scarletZ, _scarletH, false, 0);
 			_strongScarlet.setInvul(true);
 			_strongScarlet.setImmobilized(true);
 			_strongScarlet.disableAllSkills();
@@ -1036,7 +1036,7 @@ public class Frintezza extends AbstractNpcAI
 			{
 				for (Creature cha : _zone.getCharactersInside())
 				{
-					if ((cha instanceof PlayerInstance) && (Rnd.get(100) < 80))
+					if ((cha instanceof Player) && (Rnd.get(100) < 80))
 					{
 						skill.applyEffects(_frintezza, cha);
 						cha.sendPacket(new SystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT).addSkillName(5008, 4));
@@ -1047,7 +1047,7 @@ public class Frintezza extends AbstractNpcAI
 			{
 				for (Creature cha : _zone.getCharactersInside())
 				{
-					if ((cha instanceof PlayerInstance) && (Rnd.get(100) < 70))
+					if ((cha instanceof Player) && (Rnd.get(100) < 70))
 					{
 						cha.abortAttack();
 						cha.abortCast();
@@ -1068,7 +1068,7 @@ public class Frintezza extends AbstractNpcAI
 		{
 			for (Creature cha : _zone.getCharactersInside())
 			{
-				if (cha instanceof PlayerInstance)
+				if (cha instanceof Player)
 				{
 					cha.stopAbnormalVisualEffect(true, AbnormalVisualEffect.DANCE_ROOT);
 					cha.stopAbnormalVisualEffect(true, AbnormalVisualEffect.FLOATING_ROOT);
@@ -1197,7 +1197,7 @@ public class Frintezza extends AbstractNpcAI
 			{
 				for (Creature cha : _zone.getCharactersInside())
 				{
-					if ((cha instanceof PlayerInstance) && (cha.getEffectList().getBuffInfoBySkillId(5016) != null))
+					if ((cha instanceof Player) && (cha.getEffectList().getBuffInfoBySkillId(5016) != null))
 					{
 						cha.abortAttack();
 						cha.abortCast();
@@ -1295,7 +1295,7 @@ public class Frintezza extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == CUBE)
 		{
@@ -1354,7 +1354,7 @@ public class Frintezza extends AbstractNpcAI
 						{
 							continue;
 						}
-						for (PlayerInstance member : party.getMembers())
+						for (Player member : party.getMembers())
 						{
 							if ((member == null) || (member.getLevel() < 74))
 							{
@@ -1396,7 +1396,7 @@ public class Frintezza extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		_lastAction = Chronos.currentTimeMillis();
 		if (npc.getId() == FRINTEZZA)
@@ -1444,7 +1444,7 @@ public class Frintezza extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == FRINTEZZA)
 		{
@@ -1503,7 +1503,7 @@ public class Frintezza extends AbstractNpcAI
 				DoorData.getInstance().getDoor(25150045).closeMe();
 				DoorData.getInstance().getDoor(25150046).closeMe();
 				int outside = 0;
-				for (PlayerInstance room2_pc : _playersInside)
+				for (Player room2_pc : _playersInside)
 				{
 					if (_zone.isInsideZone(room2_pc) && (room2_pc.getY() > -86130))
 					{

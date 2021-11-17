@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.zone.type;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -36,16 +36,16 @@ public class WaterZone extends ZoneType
 	protected void onEnter(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.WATER, true);
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			((PlayerInstance) creature).broadcastUserInfo();
+			((Player) creature).broadcastUserInfo();
 		}
-		else if (creature instanceof NpcInstance)
+		else if (creature instanceof Npc)
 		{
-			final Collection<PlayerInstance> plrs = creature.getKnownList().getKnownPlayers().values();
-			for (PlayerInstance player : plrs)
+			final Collection<Player> plrs = creature.getKnownList().getKnownPlayers().values();
+			for (Player player : plrs)
 			{
-				player.sendPacket(new NpcInfo((NpcInstance) creature, player));
+				player.sendPacket(new NpcInfo((Npc) creature, player));
 			}
 		}
 	}
@@ -56,24 +56,24 @@ public class WaterZone extends ZoneType
 		creature.setInsideZone(ZoneId.WATER, false);
 		
 		// TODO: update to only send speed status when that packet is known
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			// Mobius: Attempt to stop water task.
 			if (!creature.isInsideZone(ZoneId.WATER))
 			{
-				((PlayerInstance) creature).stopWaterTask();
+				((Player) creature).stopWaterTask();
 			}
 			if (!creature.isTeleporting())
 			{
-				((PlayerInstance) creature).broadcastUserInfo();
+				((Player) creature).broadcastUserInfo();
 			}
 		}
-		else if (creature instanceof NpcInstance)
+		else if (creature instanceof Npc)
 		{
-			final Collection<PlayerInstance> plrs = creature.getKnownList().getKnownPlayers().values();
-			for (PlayerInstance player : plrs)
+			final Collection<Player> plrs = creature.getKnownList().getKnownPlayers().values();
+			for (Player player : plrs)
 			{
-				player.sendPacket(new NpcInfo((NpcInstance) creature, player));
+				player.sendPacket(new NpcInfo((Npc) creature, player));
 			}
 		}
 	}

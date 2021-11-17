@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.model.Hit;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class Attack implements IClientOutgoingPacket
@@ -46,7 +46,7 @@ public class Attack implements IClientOutgoingPacket
 		_attackerLoc = new Location(attacker);
 		_targetLoc = new Location(target);
 		
-		final PlayerInstance player = attacker.getActingPlayer();
+		final Player player = attacker.getActingPlayer();
 		if (player == null)
 		{
 			_soulshotVisualSubstitute = 0;

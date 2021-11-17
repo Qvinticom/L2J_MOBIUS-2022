@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -348,7 +348,7 @@ public class SpawnTable
 	 * @param npcId : ID of the NPC to find.
 	 * @param teleportIndex
 	 */
-	public void findNPCInstances(PlayerInstance player, int npcId, int teleportIndex)
+	public void findNpcs(Player player, int npcId, int teleportIndex)
 	{
 		int index = 0;
 		for (Spawn spawn : _spawntable.values())

@@ -16,8 +16,8 @@
  */
 package quests.Q123_TheLeaderAndTheFollower;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -57,7 +57,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -112,7 +112,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 			}
 			case "31961-10.htm":
 			{
-				final PlayerInstance academic = getApprentice(player);
+				final Player academic = getApprentice(player);
 				if (academic != null)
 				{
 					final QuestState st2 = academic.getQuestState(getName());
@@ -157,7 +157,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -184,7 +184,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 				}
 				else if (player.getApprentice() > 0)
 				{
-					final PlayerInstance academic = getApprentice(player);
+					final Player academic = getApprentice(player);
 					if (academic != null)
 					{
 						final QuestState st3 = academic.getQuestState(getName());
@@ -318,7 +318,7 @@ public class Q123_TheLeaderAndTheFollower extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

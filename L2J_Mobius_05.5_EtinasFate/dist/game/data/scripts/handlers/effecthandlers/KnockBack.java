@@ -31,11 +31,11 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
@@ -132,7 +132,7 @@ public class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!_knockDown)
 		{
@@ -141,7 +141,7 @@ public class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		effected.startParalyze();
 		
@@ -191,7 +191,7 @@ public class KnockBack extends AbstractEffect
 			effected.broadcastPacket(new ValidateLocation(effected));
 			effected.revalidateZone(true);
 			
-			World.getInstance().forEachVisibleObjectInRange(effected, PlayerInstance.class, 1200, nearby ->
+			World.getInstance().forEachVisibleObjectInRange(effected, Player.class, 1200, nearby ->
 			{
 				if ((nearby.getRace() != Race.ERTHEIA) && (nearby.getTarget() == effected) && nearby.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearby.isAlterSkillActive())
 				{

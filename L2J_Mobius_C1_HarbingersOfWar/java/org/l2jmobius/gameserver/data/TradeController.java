@@ -28,7 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class TradeController
 {
@@ -82,7 +82,7 @@ public class TradeController
 		{
 			final int itemId = Integer.parseInt(st.nextToken());
 			final int price = Integer.parseInt(st.nextToken());
-			final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+			final Item item = ItemTable.getInstance().createDummyItem(itemId);
 			item.setPrice(price);
 			buy1.addItem(item);
 		}

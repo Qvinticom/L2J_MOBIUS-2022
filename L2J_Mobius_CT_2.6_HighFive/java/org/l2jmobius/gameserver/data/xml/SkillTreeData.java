@@ -41,8 +41,8 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.SkillLearn.SubClassData;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerSkillHolder;
@@ -507,7 +507,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	public List<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
 	{
 		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, true, player);
 	}
@@ -522,7 +522,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
+	private List<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Map<Integer, SkillLearn> skills = getCompleteClassSkillTree(classId);
@@ -576,7 +576,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 * @return a list of auto learnable skills for the player.
 	 */
-	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems)
+	public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet, boolean includeRequiredItems)
 	{
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		List<SkillLearn> learnable;
@@ -602,7 +602,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the player requesting the Auto-Get skills
 	 * @return all the available Auto-Get skills for a given {@code player}
 	 */
-	public List<SkillLearn> getAvailableAutoGetSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableAutoGetSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Map<Integer, SkillLearn> skills = getCompleteClassSkillTree(player.getClassId());
@@ -645,7 +645,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the player
 	 * @return all the available Fishing skills for a given {@code player}
 	 */
-	public List<SkillLearn> getAvailableFishingSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableFishingSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Race playerRace = player.getRace();
@@ -681,7 +681,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the collecting skill learning player
 	 * @return all the available Collecting skills for a given {@code player}
 	 */
-	public List<SkillLearn> getAvailableCollectSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableCollectSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		for (SkillLearn skill : _collectSkillTree.values())
@@ -707,7 +707,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the transfer skill learning player
 	 * @return all the available Transfer skills for a given {@code player}
 	 */
-	public List<SkillLearn> getAvailableTransferSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableTransferSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		ClassId classId = player.getClassId();
@@ -738,7 +738,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the transformation skill learning player
 	 * @return all the available Transformation skills for a given {@code player}
 	 */
-	public List<SkillLearn> getAvailableTransformSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableTransformSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Race race = player.getRace();
@@ -853,7 +853,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the sub-class skill learning player
 	 * @return all the available Sub-Class skills for a given {@code player}
 	 */
-	public List<SkillLearn> getAvailableSubClassSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableSubClassSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		for (SkillLearn skill : _subClassSkillTree.values())
@@ -911,7 +911,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param player the player learning the skill
 	 * @return the skill learn for the specified parameters
 	 */
-	public SkillLearn getSkillLearn(AcquireSkillType skillType, int id, int lvl, PlayerInstance player)
+	public SkillLearn getSkillLearn(AcquireSkillType skillType, int id, int lvl, Player player)
 	{
 		SkillLearn sl = null;
 		switch (skillType)
@@ -1075,7 +1075,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param skillTree the skill tree to search the minimum get level
 	 * @return the minimum level for a new skill for a given {@code player} and {@code skillTree}
 	 */
-	public int getMinLevelForNewSkill(PlayerInstance player, Map<Integer, SkillLearn> skillTree)
+	public int getMinLevelForNewSkill(Player player, Map<Integer, SkillLearn> skillTree)
 	{
 		int minLevel = 0;
 		if (skillTree.isEmpty())
@@ -1153,7 +1153,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param gmchar the player to add the Game Master skills
 	 * @param auraSkills if {@code true} it will add "GM Aura" skills, else will add the "GM regular" skills
 	 */
-	public void addSkills(PlayerInstance gmchar, boolean auraSkills)
+	public void addSkills(Player gmchar, boolean auraSkills)
 	{
 		final Collection<SkillLearn> skills = auraSkills ? _gameMasterAuraSkillTree.values() : _gameMasterSkillTree.values();
 		final SkillData st = SkillData.getInstance();
@@ -1267,7 +1267,7 @@ public class SkillTreeData implements IXmlReader
 	 * @param skill the skill to be verified
 	 * @return {@code true} if the skill is allowed to the given player
 	 */
-	public boolean isSkillAllowed(PlayerInstance player, Skill skill)
+	public boolean isSkillAllowed(Player player, Skill skill)
 	{
 		if (skill.isExcludedFromCheck())
 		{

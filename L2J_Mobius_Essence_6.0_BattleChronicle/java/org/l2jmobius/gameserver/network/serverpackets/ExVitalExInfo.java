@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExVitalExInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExVitalExInfo(PlayerInstance player)
+	public ExVitalExInfo(Player player)
 	{
 		_player = player;
 	}

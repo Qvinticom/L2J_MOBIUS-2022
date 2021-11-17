@@ -24,9 +24,9 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -61,7 +61,7 @@ public class Splendor extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final List<Integer> npcData = NPCS.get(npc.getNpcId());
 		if (Rnd.get(100) < (npcData.get(1) * Config.RATE_DROP_QUEST))
@@ -69,7 +69,7 @@ public class Splendor extends Quest
 			if (npcData.get(2) == 1)
 			{
 				npc.deleteMe();
-				final MonsterInstance newNpc = (MonsterInstance) addSpawn(npcData.get(0), npc);
+				final Monster newNpc = (Monster) addSpawn(npcData.get(0), npc);
 				newNpc.addDamageHate(attacker, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 			}
@@ -80,7 +80,7 @@ public class Splendor extends Quest
 			else if (npcData.get(2) == 2)
 			{
 				npc.setScriptValue(1);
-				final MonsterInstance newNpc = (MonsterInstance) addSpawn(npcData.get(0), npc);
+				final Monster newNpc = (Monster) addSpawn(npcData.get(0), npc);
 				newNpc.addDamageHate(attacker, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 			}

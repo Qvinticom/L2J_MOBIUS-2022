@@ -18,7 +18,7 @@ package ai.areas.StakatoNest.StakatoNestTeleporter;
 
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -47,7 +47,7 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final int index = Integer.parseInt(event) - 1;
 		if (LOCS.length > index)
@@ -55,7 +55,7 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 			final Location loc = LOCS[index];
 			if (player.getParty() != null)
 			{
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 1000))
 					{
@@ -69,7 +69,7 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		// TODO: Pre-Quest removed with Etina's Fate.
 		// final QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());

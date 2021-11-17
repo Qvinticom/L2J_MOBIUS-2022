@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -57,7 +57,7 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -102,7 +102,7 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -200,10 +200,10 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 	 * @param player the player
 	 * @param npc the wild beast
 	 */
-	public static void reward(PlayerInstance player, Npc npc)
+	public static void reward(Player player, Npc npc)
 	{
 		final Clan clan = player.getClan();
-		final PlayerInstance clanLeader = clan != null ? clan.getLeader().getPlayerInstance() : null;
+		final Player clanLeader = clan != null ? clan.getLeader().getPlayer() : null;
 		if (clanLeader != null)
 		{
 			final QuestState qs655 = clanLeader.getQuestState(Q00655_AGrandPlanForTamingWildBeasts.class.getSimpleName());

@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.CommissionManager;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
@@ -58,11 +58,11 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.Ids;
@@ -136,9 +136,9 @@ import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
@@ -187,12 +187,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		onTimerCancel(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
 	}
 	
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		LOGGER.warning("[" + getClass().getSimpleName() + "]: Timer event arrived at non overriden onTimerEvent method event: " + event + " npc: " + npc + " player: " + player);
 	}
 	
-	public void onTimerCancel(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerCancel(String event, StatSet params, Npc npc, Player player)
 	{
 	}
 	
@@ -442,7 +442,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link Attackable} dies from a {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link Attackable} dies from a {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -477,7 +477,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link Attackable} dies from a {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link Attackable} dies from a {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -490,7 +490,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} for first time.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} for first time.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -508,7 +508,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} for first time.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} for first time.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -528,7 +528,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc}.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc}.
 	 * @param npcIds
 	 * @return
 	 */
@@ -545,7 +545,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc}.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc}.
 	 * @param npcIds
 	 * @return
 	 */
@@ -588,7 +588,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} and must receive quest state.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} and must receive quest state.
 	 * @param npcIds
 	 * @return
 	 */
@@ -605,7 +605,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Npc} and must receive quest state.
+	 * Provides instant callback operation when {@link Player} talk to {@link Npc} and must receive quest state.
 	 * @param npcIds
 	 * @return
 	 */
@@ -1020,7 +1020,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} enters in {@link Attackable}'s aggressive range.
+	 * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1031,7 +1031,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} enters in {@link Attackable}'s aggressive range.
+	 * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1044,7 +1044,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} learn's a {@link Skill}.
+	 * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1055,7 +1055,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} learn's a {@link Skill}.
+	 * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1068,7 +1068,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1079,7 +1079,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1092,7 +1092,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk with a servitor or a pet
+	 * Provides instant callback operation when {@link Player} talk with a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1103,7 +1103,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk with a servitor or a pet
+	 * Provides instant callback operation when {@link Player} talk with a servitor or a pet
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1116,7 +1116,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @return
 	 */
@@ -1128,7 +1128,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} summons a servitor or a pet
+	 * Provides instant callback operation when {@link Player} summons a servitor or a pet
 	 * @param callback
 	 * @return
 	 */
@@ -1188,7 +1188,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.TrapInstance} acts.
+	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.Trap} acts.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1199,7 +1199,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.TrapInstance} acts.
+	 * Provides instant callback operation when {@link org.l2jmobius.gameserver.model.actor.instance.Trap} acts.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1212,7 +1212,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link Item} receives an event from {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1223,7 +1223,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link Item} receives an event from {@link PlayerInstance}.
+	 * Provides instant callback operation when {@link ItemTemplate} receives an event from {@link Player}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1236,7 +1236,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Item}.
+	 * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1247,7 +1247,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Provides instant callback operation when {@link PlayerInstance} talk to {@link Item}.
+	 * Provides instant callback operation when {@link Player} talk to {@link ItemTemplate}.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -1655,7 +1655,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 					}
 					case ITEM:
 					{
-						final Item template = ItemTable.getInstance().getTemplate(id);
+						final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 						if (template != null)
 						{
 							listeners.add(template.addListener(action.apply(template)));
@@ -1775,7 +1775,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 					}
 					case ITEM:
 					{
-						final Item template = ItemTable.getInstance().getTemplate(id);
+						final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 						if (template != null)
 						{
 							listeners.add(template.addListener(action.apply(template)));
@@ -1924,7 +1924,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param text the message to display
 	 * @param time the duration of the message in milliseconds
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, String text, int time)
+	public static void showOnScreenMsg(Player player, String text, int time)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -1941,7 +1941,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param time the duration of the message in milliseconds
 	 * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, NpcStringId npcString, int position, int time, String... params)
+	public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -1959,7 +1959,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param showEffect the upper effect
 	 * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, NpcStringId npcString, int position, int time, boolean showEffect, String... params)
+	public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, boolean showEffect, String... params)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -1976,7 +1976,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param time the duration of the message in milliseconds
 	 * @param params values of parameters to replace in the system message (like S1, C1 etc.)
 	 */
-	public static void showOnScreenMsg(PlayerInstance player, SystemMessageId systemMsg, int position, int time, String... params)
+	public static void showOnScreenMsg(Player player, SystemMessageId systemMsg, int position, int time, String... params)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2234,10 +2234,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param instanceId
 	 * @return
 	 */
-	public TrapInstance addTrap(int trapId, int x, int y, int z, int heading, int instanceId)
+	public Trap addTrap(int trapId, int x, int y, int z, int heading, int instanceId)
 	{
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
-		final TrapInstance trap = new TrapInstance(npcTemplate, instanceId, -1);
+		final Trap trap = new Trap(npcTemplate, instanceId, -1);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
 		trap.setInvul(true);
@@ -2251,7 +2251,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param minionId
 	 * @return
 	 */
-	public Npc addMinion(MonsterInstance master, int minionId)
+	public Npc addMinion(Monster master, int minionId)
 	{
 		return MinionList.spawnMinion(master, minionId);
 	}
@@ -2262,7 +2262,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemId the ID of the item whose amount to get
 	 * @return the amount of the specified item in player's inventory
 	 */
-	public static long getQuestItemsCount(PlayerInstance player, int itemId)
+	public static long getQuestItemsCount(Player player, int itemId)
 	{
 		return player.getInventory().getInventoryItemCount(itemId, -1);
 	}
@@ -2273,10 +2273,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemIds a list of IDs of items whose amount to get
 	 * @return the summary amount of all listed items in player's inventory
 	 */
-	public long getQuestItemsCount(PlayerInstance player, int... itemIds)
+	public long getQuestItemsCount(Player player, int... itemIds)
 	{
 		long count = 0;
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (item == null)
 			{
@@ -2304,7 +2304,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param item the {@link ItemHolder} object containing the ID and count of the item to check
 	 * @return {@code true} if the player has the required count of the item
 	 */
-	protected static boolean hasItem(PlayerInstance player, ItemHolder item)
+	protected static boolean hasItem(Player player, ItemHolder item)
 	{
 		return hasItem(player, item, true);
 	}
@@ -2317,7 +2317,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 *            otherwise check only if the player has the item at all
 	 * @return {@code true} if the player has the item
 	 */
-	protected static boolean hasItem(PlayerInstance player, ItemHolder item, boolean checkCount)
+	protected static boolean hasItem(Player player, ItemHolder item, boolean checkCount)
 	{
 		if (item == null)
 		{
@@ -2338,7 +2338,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemList a list of {@link ItemHolder} objects containing the IDs of the items to check
 	 * @return {@code true} if the player has all the items from the list
 	 */
-	protected static boolean hasAllItems(PlayerInstance player, boolean checkCount, ItemHolder... itemList)
+	protected static boolean hasAllItems(Player player, boolean checkCount, ItemHolder... itemList)
 	{
 		if ((itemList == null) || (itemList.length == 0))
 		{
@@ -2360,7 +2360,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemId the ID of the item to check for
 	 * @return {@code true} if the item exists in player's inventory, {@code false} otherwise
 	 */
-	public static boolean hasQuestItems(PlayerInstance player, int itemId)
+	public static boolean hasQuestItems(Player player, int itemId)
 	{
 		return player.getInventory().getItemByItemId(itemId) != null;
 	}
@@ -2371,7 +2371,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemIds a list of item IDs to check for
 	 * @return {@code true} if all items exist in player's inventory, {@code false} otherwise
 	 */
-	public static boolean hasQuestItems(PlayerInstance player, int... itemIds)
+	public static boolean hasQuestItems(Player player, int... itemIds)
 	{
 		if ((itemIds == null) || (itemIds.length == 0))
 		{
@@ -2394,7 +2394,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemIds a list of item IDs to check for
 	 * @return {@code true} if at least one items exist in player's inventory, {@code false} otherwise
 	 */
-	public boolean hasAtLeastOneQuestItem(PlayerInstance player, int... itemIds)
+	public boolean hasAtLeastOneQuestItem(Player player, int... itemIds)
 	{
 		final PlayerInventory inv = player.getInventory();
 		for (int itemId : itemIds)
@@ -2414,7 +2414,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemIds a list of item IDs to check for
 	 * @return {@code true} if player owns at least one items, {@code false} otherwise.
 	 */
-	public boolean ownsAtLeastOneItem(PlayerInstance player, int... itemIds)
+	public boolean ownsAtLeastOneItem(Player player, int... itemIds)
 	{
 		// Inventory.
 		final PlayerInventory inventory = player.getInventory();
@@ -2498,7 +2498,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		// Item auctions.
 		for (int itemId : itemIds)
 		{
-			if (CommissionManager.getInstance().hasCommissionedItemId(player, itemId))
+			if (ItemCommissionManager.getInstance().hasCommissionedItemId(player, itemId))
 			{
 				return true;
 			}
@@ -2512,9 +2512,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemId the ID of the item whose enchantment level to get
 	 * @return the enchantment level of the item or 0 if the item was not found
 	 */
-	public static int getEnchantLevel(PlayerInstance player, int itemId)
+	public static int getEnchantLevel(Player player, int itemId)
 	{
-		final ItemInstance enchantedItem = player.getInventory().getItemByItemId(itemId);
+		final Item enchantedItem = player.getInventory().getItemByItemId(itemId);
 		if (enchantedItem == null)
 		{
 			return 0;
@@ -2528,7 +2528,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param count the amount of Adena to give
 	 * @param applyRates if {@code true} quest rates will be applied to the amount
 	 */
-	public void giveAdena(PlayerInstance player, long count, boolean applyRates)
+	public void giveAdena(Player player, long count, boolean applyRates)
 	{
 		if (applyRates)
 		{
@@ -2545,7 +2545,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param player the player to whom to give the item
 	 * @param holder
 	 */
-	public static void rewardItems(PlayerInstance player, ItemHolder holder)
+	public static void rewardItems(Player player, ItemHolder holder)
 	{
 		rewardItems(player, holder.getId(), holder.getCount());
 	}
@@ -2556,7 +2556,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemId the ID of the item to give
 	 * @param countValue the amount of items to give
 	 */
-	public static void rewardItems(PlayerInstance player, int itemId, long countValue)
+	public static void rewardItems(Player player, int itemId, long countValue)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2568,7 +2568,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			return;
 		}
 		
-		final Item item = ItemTable.getInstance().getTemplate(itemId);
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 		if (item == null)
 		{
 			return;
@@ -2627,7 +2627,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		
 		// Add items to player's inventory
-		final ItemInstance itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
 		if (itemInstance == null)
 		{
 			return;
@@ -2642,7 +2642,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param item the item obtain by the player
 	 * @param count the item count
 	 */
-	private static void sendItemGetMessage(PlayerInstance player, ItemInstance item, long count)
+	private static void sendItemGetMessage(Player player, Item item, long count)
 	{
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
@@ -2676,7 +2676,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemId
 	 * @param count
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count)
+	public static void giveItems(Player player, int itemId, long count)
 	{
 		giveItems(player, itemId, count, 0, false);
 	}
@@ -2688,7 +2688,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param count
 	 * @param playSound
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count, boolean playSound)
+	public static void giveItems(Player player, int itemId, long count, boolean playSound)
 	{
 		giveItems(player, itemId, count, 0, playSound);
 	}
@@ -2698,7 +2698,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param player
 	 * @param holder
 	 */
-	protected void giveItems(PlayerInstance player, ItemHolder holder)
+	protected void giveItems(Player player, ItemHolder holder)
 	{
 		giveItems(player, holder.getId(), holder.getCount());
 	}
@@ -2710,7 +2710,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param enchantlevel
 	 * @param playSound
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count, int enchantlevel, boolean playSound)
+	public static void giveItems(Player player, int itemId, long count, int enchantlevel, boolean playSound)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2723,7 +2723,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		
 		// Add items to player's inventory
-		final ItemInstance item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
 		if (item == null)
 		{
 			return;
@@ -2749,7 +2749,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param attributeType
 	 * @param attributeValue
 	 */
-	public static void giveItems(PlayerInstance player, int itemId, long count, AttributeType attributeType, int attributeValue)
+	public static void giveItems(Player player, int itemId, long count, AttributeType attributeType, int attributeValue)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2762,7 +2762,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		
 		// Add items to player's inventory
-		final ItemInstance item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
 		if (item == null)
 		{
 			return;
@@ -2797,7 +2797,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(PlayerInstance player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
 	{
 		return giveItemRandomly(player, null, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
 	}
@@ -2814,7 +2814,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(PlayerInstance player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
 	{
 		return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
 	}
@@ -2832,7 +2832,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(PlayerInstance player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2909,7 +2909,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param amountValue the amount to take
 	 * @return {@code true} if any items were taken, {@code false} otherwise
 	 */
-	public static boolean takeItems(PlayerInstance player, int itemId, long amountValue)
+	public static boolean takeItems(Player player, int itemId, long amountValue)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2917,7 +2917,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		
 		// Get object item from player's inventory list
-		final ItemInstance item = player.getInventory().getItemByItemId(itemId);
+		final Item item = player.getInventory().getItemByItemId(itemId);
 		if (item == null)
 		{
 			return false;
@@ -2934,7 +2934,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		if (item.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
+			for (Item itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
 			{
 				iu.addModifiedItem(itm);
 			}
@@ -2951,7 +2951,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
 	 * @return {@code true} if the item was taken, {@code false} otherwise
 	 */
-	protected static boolean takeItem(PlayerInstance player, ItemHolder holder)
+	protected static boolean takeItem(Player player, ItemHolder holder)
 	{
 		if (holder == null)
 		{
@@ -2966,7 +2966,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemList the list of {@link ItemHolder} objects containing the IDs and counts of the items to take
 	 * @return {@code true} if all items were taken, {@code false} otherwise
 	 */
-	protected static boolean takeAllItems(PlayerInstance player, ItemHolder... itemList)
+	protected static boolean takeAllItems(Player player, ItemHolder... itemList)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2999,7 +2999,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param itemIds a list or an array of IDs of the items to take
 	 * @return {@code true} if all items were taken, {@code false} otherwise
 	 */
-	public static boolean takeItems(PlayerInstance player, int amount, int... itemIds)
+	public static boolean takeItems(Player player, int amount, int... itemIds)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3027,7 +3027,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param player the player whom to send the packet
 	 * @param sound the name of the sound to play
 	 */
-	public static void playSound(PlayerInstance player, String sound)
+	public static void playSound(Player player, String sound)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3041,7 +3041,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param player the player whom to send the packet
 	 * @param sound the {@link QuestSound} object of the sound to play
 	 */
-	public static void playSound(PlayerInstance player, QuestSound sound)
+	public static void playSound(Player player, QuestSound sound)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3056,7 +3056,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param exp the amount of EXP to give to the player
 	 * @param sp the amount of SP to give to the player
 	 */
-	public static void addExpAndSp(PlayerInstance player, long exp, int sp)
+	public static void addExpAndSp(Player player, long exp, int sp)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3146,7 +3146,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param slot the location in the player's inventory to check
 	 * @return the ID of the item equipped in the specified inventory slot or 0 if the slot is empty or item is {@code null}.
 	 */
-	public static int getItemEquipped(PlayerInstance player, int slot)
+	public static int getItemEquipped(Player player, int slot)
 	{
 		return player.getInventory().getPaperdollItemId(slot);
 	}
@@ -3164,11 +3164,11 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param player the player on which the procedure will be executed
 	 * @param npc the related NPC
 	 * @param isSummon {@code true} if the event that called this method was originated by the player's summon, {@code false} otherwise
-	 * @param includeParty if {@code true}, #actionForEachPlayer(PlayerInstance, Npc, boolean) will be called with the player's party members
-	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(PlayerInstance, Npc, boolean)} will be called with the player's command channel members
-	 * @see #actionForEachPlayer(PlayerInstance, Npc, boolean)
+	 * @param includeParty if {@code true}, #actionForEachPlayer(Player, Npc, boolean) will be called with the player's party members
+	 * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(Player, Npc, boolean)} will be called with the player's command channel members
+	 * @see #actionForEachPlayer(Player, Npc, boolean)
 	 */
-	public void executeForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
+	public void executeForEachPlayer(Player player, Npc npc, boolean isSummon, boolean includeParty, boolean includeCommandChannel)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3200,12 +3200,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Overridable method called from {@link #executeForEachPlayer(PlayerInstance, Npc, boolean, boolean, boolean)}
+	 * Overridable method called from {@link #executeForEachPlayer(Player, Npc, boolean, boolean, boolean)}
 	 * @param player the player on which the action will be run
 	 * @param npc the NPC related to this action
 	 * @param isSummon {@code true} if the event that called this method was originated by the player's summon
 	 */
-	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	public void actionForEachPlayer(Player player, Npc npc, boolean isSummon)
 	{
 		// To be overridden in quest scripts.
 	}
@@ -3217,7 +3217,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void openDoor(int doorId, int instanceId)
 	{
-		final DoorInstance door = getDoor(doorId, instanceId);
+		final Door door = getDoor(doorId, instanceId);
 		if (door == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
@@ -3235,7 +3235,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void closeDoor(int doorId, int instanceId)
 	{
-		final DoorInstance door = getDoor(doorId, instanceId);
+		final Door door = getDoor(doorId, instanceId);
 		if (door == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
@@ -3252,9 +3252,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
 	 * @return the found door or {@code null} if no door with that ID and instance ID was found
 	 */
-	public DoorInstance getDoor(int doorId, int instanceId)
+	public Door getDoor(int doorId, int instanceId)
 	{
-		DoorInstance door = null;
+		Door door = null;
 		if (instanceId <= 0)
 		{
 			door = DoorData.getInstance().getDoor(doorId);
@@ -3386,7 +3386,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param isWide
 	 * @param relAngle
 	 */
-	public static void specialCamera(PlayerInstance player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle)
+	public static void specialCamera(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3409,7 +3409,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param isWide
 	 * @param relAngle
 	 */
-	public static void specialCameraEx(PlayerInstance player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle)
+	public static void specialCameraEx(Player player, Creature creature, int force, int angle1, int angle2, int time, int duration, int relYaw, int relPitch, int isWide, int relAngle)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3434,7 +3434,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param relAngle
 	 * @param unk
 	 */
-	public static void specialCamera3(PlayerInstance player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
+	public static void specialCamera3(Player player, Creature creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3454,7 +3454,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param y
 	 * @param z
 	 */
-	public static void addRadar(PlayerInstance player, int x, int y, int z)
+	public static void addRadar(Player player, int x, int y, int z)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3469,7 +3469,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param y
 	 * @param z
 	 */
-	public void removeRadar(PlayerInstance player, int x, int y, int z)
+	public void removeRadar(Player player, int x, int y, int z)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3481,7 +3481,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	/**
 	 * @param player
 	 */
-	public void clearRadar(PlayerInstance player)
+	public void clearRadar(Player player)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3491,11 +3491,11 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Play scene for PlayerInstance.
+	 * Play scene for Player.
 	 * @param player the player
 	 * @param movie the movie
 	 */
-	public void playMovie(PlayerInstance player, Movie movie)
+	public void playMovie(Player player, Movie movie)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -3505,27 +3505,27 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	}
 	
 	/**
-	 * Play scene for all PlayerInstance inside list.
-	 * @param players list with PlayerInstance
+	 * Play scene for all Player inside list.
+	 * @param players list with Player
 	 * @param movie the movie
 	 */
-	public void playMovie(List<PlayerInstance> players, Movie movie)
+	public void playMovie(List<Player> players, Movie movie)
 	{
 		new MovieHolder(players, movie);
 	}
 	
 	/**
-	 * Play scene for all PlayerInstance inside set.
-	 * @param players set with PlayerInstance
+	 * Play scene for all Player inside set.
+	 * @param players set with Player
 	 * @param movie the movie
 	 */
-	public void playMovie(Set<PlayerInstance> players, Movie movie)
+	public void playMovie(Set<Player> players, Movie movie)
 	{
 		new MovieHolder(new ArrayList<>(players), movie);
 	}
 	
 	/**
-	 * Play scene for all PlayerInstance inside instance.
+	 * Play scene for all Player inside instance.
 	 * @param instance Instance object
 	 * @param movie the movie
 	 */
@@ -3533,7 +3533,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	{
 		if (instance != null)
 		{
-			for (PlayerInstance player : instance.getPlayers())
+			for (Player player : instance.getPlayers())
 			{
 				if ((player != null) && (player.getInstanceWorld() == instance))
 				{

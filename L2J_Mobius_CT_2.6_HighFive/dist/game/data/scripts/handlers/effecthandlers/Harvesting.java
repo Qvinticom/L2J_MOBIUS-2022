@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -52,8 +52,8 @@ public class Harvesting extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffector().getActingPlayer();
-		final MonsterInstance monster = (MonsterInstance) info.getEffected();
+		final Player player = info.getEffector().getActingPlayer();
+		final Monster monster = (Monster) info.getEffected();
 		if (player.getObjectId() != monster.getSeederId())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
@@ -114,7 +114,7 @@ public class Harvesting extends AbstractEffect
 		}
 	}
 	
-	private static boolean calcSuccess(PlayerInstance player, MonsterInstance target)
+	private static boolean calcSuccess(Player player, Monster target)
 	{
 		final int levelPlayer = player.getLevel();
 		final int levelTarget = target.getLevel();

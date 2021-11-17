@@ -18,8 +18,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.SendTradeDone;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,8 +35,8 @@ public class AddTradeItem extends ClientBasePacket
 		final int tradeId = readD();
 		final int objectId = readD();
 		final int amount = readD();
-		final PlayerInstance player = client.getActiveChar();
-		final PlayerInstance requestor = player.getTransactionRequester();
+		final Player player = client.getActiveChar();
+		final Player requestor = player.getTransactionRequester();
 		if (requestor.getTransactionRequester() != null)
 		{
 			final TradeList playerItemList = player.getTradeList();
@@ -46,7 +46,7 @@ public class AddTradeItem extends ClientBasePacket
 			{
 				if (!playerItemList.contains(objectId))
 				{
-					final ItemInstance temp = new ItemInstance();
+					final Item temp = new Item();
 					temp.setObjectId(player.getInventory().getItem(objectId).getObjectId());
 					temp.setCount(amount);
 					playerItemList.addItem(temp);
@@ -55,7 +55,7 @@ public class AddTradeItem extends ClientBasePacket
 				}
 				else
 				{
-					ItemInstance tempTradeItem;
+					Item tempTradeItem;
 					final int InvItemCount = player.getInventory().getItem(objectId).getCount();
 					if (InvItemCount != (tempTradeItem = playerItemList.getItem(objectId)).getCount())
 					{
@@ -76,7 +76,7 @@ public class AddTradeItem extends ClientBasePacket
 			}
 			else
 			{
-				final ItemInstance temp = new ItemInstance();
+				final Item temp = new Item();
 				temp.setObjectId(objectId);
 				temp.setCount(amount);
 				playerItemList.addItem(temp);

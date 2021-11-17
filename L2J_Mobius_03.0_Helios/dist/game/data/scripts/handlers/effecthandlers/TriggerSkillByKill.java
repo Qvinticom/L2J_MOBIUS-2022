@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKilled;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -70,7 +70,7 @@ public class TriggerSkillByKill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_KILLED, (OnCreatureKilled event) -> onCreatureKilled(event, effected), this));
 	}

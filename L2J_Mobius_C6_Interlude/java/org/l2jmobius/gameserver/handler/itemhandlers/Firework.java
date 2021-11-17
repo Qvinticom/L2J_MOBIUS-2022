@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -36,13 +36,13 @@ public class Firework implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
 		if (!playable.isPlayer())
 		{
 			return;
 		}
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		
 		if (player.isCastingNow())
 		{
@@ -119,7 +119,7 @@ public class Firework implements IItemHandler
 		}
 	}
 	
-	public void useFw(PlayerInstance player, int magicId, int level)
+	public void useFw(Player player, int magicId, int level)
 	{
 		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)

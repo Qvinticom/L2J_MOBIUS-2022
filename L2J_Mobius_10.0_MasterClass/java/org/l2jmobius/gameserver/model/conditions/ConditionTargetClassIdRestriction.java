@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.conditions;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -39,7 +39,7 @@ public class ConditionTargetClassIdRestriction extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		return effected.isPlayer() && (_classIds.contains(effected.getActingPlayer().getClassId().getId()));
 	}

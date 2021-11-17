@@ -31,12 +31,12 @@ import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 public class SiegeGuardManager
 {
 	private static final Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
-	private static final Set<ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
+	private static final Set<Item> _droppedTickets = ConcurrentHashMap.newKeySet();
 	private static final Map<Integer, Set<Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 	
 	protected SiegeGuardManager()
@@ -76,7 +76,7 @@ public class SiegeGuardManager
 				final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), npcId);
 				if ((holder != null) && !castle.getSiege().isInProgress())
 				{
-					final ItemInstance dropticket = new ItemInstance(holder.getItemId());
+					final Item dropticket = new Item(holder.getItemId());
 					dropticket.setItemLocation(ItemLocation.VOID);
 					dropticket.dropMe(null, x, y, z);
 					World.getInstance().addObject(dropticket);
@@ -128,13 +128,13 @@ public class SiegeGuardManager
 	}
 	
 	/**
-	 * Checks if {@code PlayerInstance} is too much close to another ticket.
-	 * @param player the PlayerInstance
-	 * @return {@code true} if {@code PlayerInstance} is too much close to another ticket, {@code false} otherwise
+	 * Checks if {@code Player} is too much close to another ticket.
+	 * @param player the Player
+	 * @return {@code true} if {@code Player} is too much close to another ticket, {@code false} otherwise
 	 */
-	public boolean isTooCloseToAnotherTicket(PlayerInstance player)
+	public boolean isTooCloseToAnotherTicket(Player player)
 	{
-		for (ItemInstance ticket : _droppedTickets)
+		for (Item ticket : _droppedTickets)
 		{
 			if (ticket.calculateDistance3D(player) < 25)
 			{
@@ -154,7 +154,7 @@ public class SiegeGuardManager
 	{
 		final SiegeGuardHolder holder = getSiegeGuardByItem(castleId, itemId);
 		long count = 0;
-		for (ItemInstance ticket : _droppedTickets)
+		for (Item ticket : _droppedTickets)
 		{
 			if (ticket.getId() == itemId)
 			{
@@ -167,9 +167,9 @@ public class SiegeGuardManager
 	/**
 	 * Adds ticket in current world.
 	 * @param itemId the ID of the item
-	 * @param player the PlayerInstance
+	 * @param player the Player
 	 */
-	public void addTicket(int itemId, PlayerInstance player)
+	public void addTicket(int itemId, Player player)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if (castle == null)
@@ -204,7 +204,7 @@ public class SiegeGuardManager
 			}
 			
 			spawnMercenary(player, holder);
-			final ItemInstance dropticket = new ItemInstance(itemId);
+			final Item dropticket = new Item(itemId);
 			dropticket.setItemLocation(ItemLocation.VOID);
 			dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
 			World.getInstance().addObject(dropticket);
@@ -222,7 +222,7 @@ public class SiegeGuardManager
 		final NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
 		if (template != null)
 		{
-			final DefenderInstance npc = new DefenderInstance(template);
+			final Defender npc = new Defender(template);
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			npc.setDecayed(false);
 			npc.setHeading(pos.getHeading());
@@ -238,7 +238,7 @@ public class SiegeGuardManager
 	 */
 	public void deleteTickets(int castleId)
 	{
-		for (ItemInstance ticket : _droppedTickets)
+		for (Item ticket : _droppedTickets)
 		{
 			if ((ticket != null) && (getSiegeGuardByItem(castleId, ticket.getId()) != null))
 			{
@@ -252,7 +252,7 @@ public class SiegeGuardManager
 	 * remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example).
 	 * @param item the item ID
 	 */
-	public void removeTicket(ItemInstance item)
+	public void removeTicket(Item item)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(item);
 		if (castle == null)

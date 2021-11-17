@@ -32,9 +32,9 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -114,7 +114,7 @@ public class Core extends Quest
 			else
 			{
 				// The time has already expired while the server was offline. Immediately spawn Core.
-				final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+				final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					AnnouncementsTable.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
@@ -129,7 +129,7 @@ public class Core extends Quest
 			{
 				_firstAttacked = true;
 			}
-			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+			final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
 				AnnouncementsTable.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
@@ -144,7 +144,7 @@ public class Core extends Quest
 		GlobalVariablesManager.getInstance().set("CoreAttacked", _firstAttacked);
 	}
 	
-	public void spawnBoss(GrandBossInstance npc)
+	public void spawnBoss(GrandBoss npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", npc));
@@ -160,12 +160,12 @@ public class Core extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(CORE);
 		if (event.equals("core_unlock"))
 		{
-			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+			final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
 				AnnouncementsTable.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
@@ -196,7 +196,7 @@ public class Core extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == CORE)
 		{
@@ -218,7 +218,7 @@ public class Core extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final String name = npc.getName();

@@ -17,33 +17,33 @@
 package org.l2jmobius.gameserver.model.actor.knownlist;
 
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 
 public class DoorKnownList extends CreatureKnownList
 {
-	public DoorKnownList(DoorInstance activeChar)
+	public DoorKnownList(Door activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public DoorInstance getActiveChar()
+	public Door getActiveChar()
 	{
-		return (DoorInstance) super.getActiveChar();
+		return (Door) super.getActiveChar();
 	}
 	
 	@Override
 	public int getDistanceToForgetObject(WorldObject object)
 	{
-		if ((object instanceof SiegeGuardInstance) || (object instanceof FortSiegeGuardInstance))
+		if ((object instanceof SiegeGuard) || (object instanceof FortSiegeGuard))
 		{
 			return 800;
 		}
 		
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			return 0;
 		}
@@ -54,12 +54,12 @@ public class DoorKnownList extends CreatureKnownList
 	@Override
 	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if ((object instanceof SiegeGuardInstance) || (object instanceof FortSiegeGuardInstance))
+		if ((object instanceof SiegeGuard) || (object instanceof FortSiegeGuard))
 		{
 			return 600;
 		}
 		
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			return 0;
 		}

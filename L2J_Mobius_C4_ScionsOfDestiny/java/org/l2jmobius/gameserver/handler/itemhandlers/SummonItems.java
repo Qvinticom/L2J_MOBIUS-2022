@@ -26,11 +26,11 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SummonItem;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -43,14 +43,14 @@ public class SummonItems implements IItemHandler
 	private static final int[] ITEM_IDS = SummonItemData.getInstance().getAllItemIds();
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		if (!player.getClient().getFloodProtectors().canUsePetSummonItem())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
@@ -161,10 +161,10 @@ public class SummonItems implements IItemHandler
 	
 	static class PetSummonFeedWait implements Runnable
 	{
-		private final PlayerInstance _player;
-		private final PetInstance _petSummon;
+		private final Player _player;
+		private final Pet _petSummon;
 		
-		PetSummonFeedWait(PlayerInstance player, PetInstance petSummon)
+		PetSummonFeedWait(Player player, Pet petSummon)
 		{
 			_player = player;
 			_petSummon = petSummon;
@@ -192,11 +192,11 @@ public class SummonItems implements IItemHandler
 	
 	static class PetSummonFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
-		private final ItemInstance _item;
+		private final Player _player;
+		private final Item _item;
 		private final NpcTemplate _npcTemplate;
 		
-		PetSummonFinalizer(PlayerInstance player, NpcTemplate npcTemplate, ItemInstance item)
+		PetSummonFinalizer(Player player, NpcTemplate npcTemplate, Item item)
 		{
 			_player = player;
 			_npcTemplate = npcTemplate;
@@ -217,12 +217,12 @@ public class SummonItems implements IItemHandler
 				_player.sendPacket(new MagicSkillLaunched(_player, 2046, 1));
 				
 				// check for summon item validity
-				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getItemLocation() != ItemInstance.ItemLocation.INVENTORY))
+				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getItemLocation() != Item.ItemLocation.INVENTORY))
 				{
 					return;
 				}
 				
-				final PetInstance petSummon = PetInstance.spawnPet(_npcTemplate, _player, _item);
+				final Pet petSummon = Pet.spawnPet(_npcTemplate, _player, _item);
 				if (petSummon == null)
 				{
 					return;

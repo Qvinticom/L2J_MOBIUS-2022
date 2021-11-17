@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2jmobius.gameserver.model.events.returns.DamageReturn;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -105,7 +105,7 @@ public class AbsorbDamage extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (_mode == StatModifierType.DIFF)
 		{

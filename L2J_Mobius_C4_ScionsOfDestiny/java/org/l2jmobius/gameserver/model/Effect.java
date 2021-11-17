@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.effects.EffectTemplate;
 import org.l2jmobius.gameserver.model.skills.funcs.Func;
@@ -465,7 +465,7 @@ public abstract class Effect
 			
 			onStart();
 			
-			if (_skill.isPvpSkill() && (_effected != null) && (_effected instanceof PlayerInstance) && _template.showIcon)
+			if (_skill.isPvpSkill() && (_effected != null) && (_effected instanceof Player) && _template.showIcon)
 			{
 				final SystemMessage smsg = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 				smsg.addString(_skill.getName());
@@ -509,7 +509,7 @@ public abstract class Effect
 			onExit();
 			
 			// If the time left is equal to zero, send the message
-			if ((_effected instanceof PlayerInstance) && _template.showIcon && !_effected.isDead())
+			if ((_effected instanceof Player) && _template.showIcon && !_effected.isDead())
 			{
 				// Like L2OFF message S1_HAS_BEEN_ABORTED for toggle skills
 				if (_skill.isToggle())

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.MinionHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -392,7 +392,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 				final Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
 				if ((spawnedNpc != null) && spawnedNpc.isMonster() && (_minions != null))
 				{
-					((MonsterInstance) spawnedNpc).getMinionList().spawnMinions(_minions);
+					((Monster) spawnedNpc).getMinionList().spawnMinions(_minions);
 				}
 				
 				_spawnedNpcs.add(spawnedNpc);
@@ -403,7 +403,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 			final Npc npc = spawn.doSpawn(_spawnAnimation);
 			if (npc.isMonster() && (_minions != null))
 			{
-				((MonsterInstance) npc).getMinionList().spawnMinions(_minions);
+				((Monster) npc).getMinionList().spawnMinions(_minions);
 			}
 			_spawnedNpcs.add(npc);
 			

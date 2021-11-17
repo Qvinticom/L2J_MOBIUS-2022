@@ -16,7 +16,7 @@
  */
 package events.LetterCollector;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -43,7 +43,7 @@ public class LetterCollector extends LongTimeEvent
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player != null)
 		{
 			player.sendPacket(ExLetterCollectorUI.STATIC_PACKET);

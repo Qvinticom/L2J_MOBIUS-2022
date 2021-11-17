@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.enums.SkillEnchantType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.util.SkillEnchantConverter;
@@ -34,7 +34,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	private final int _skillLevel;
 	private final EnchantSkillHolder _enchantSkillHolder;
 	
-	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel, PlayerInstance player)
+	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel, Player player)
 	{
 		_type = type;
 		_skillId = skillId;

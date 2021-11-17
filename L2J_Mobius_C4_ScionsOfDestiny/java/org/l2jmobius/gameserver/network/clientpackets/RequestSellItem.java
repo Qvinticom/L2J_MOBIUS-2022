@@ -20,11 +20,11 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -75,7 +75,7 @@ public class RequestSellItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,23 +95,23 @@ public class RequestSellItem implements IClientIncomingPacket
 		
 		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null) // No target (ie GM Shop)
-			|| !(target instanceof MerchantInstance) // Target not a merchant and not mercmanager
-			|| !player.isInsideRadius2D(target, NpcInstance.INTERACTION_DISTANCE)))
+			|| !(target instanceof Merchant) // Target not a merchant and not mercmanager
+			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)))
 		{
 			return; // Distance is too far
 		}
 		
 		String htmlFolder = "";
-		NpcInstance merchant = null;
-		if (target instanceof MerchantInstance)
+		Npc merchant = null;
+		if (target instanceof Merchant)
 		{
 			htmlFolder = "merchant";
-			merchant = (NpcInstance) target;
+			merchant = (Npc) target;
 		}
-		else if (target instanceof FishermanInstance)
+		else if (target instanceof Fisherman)
 		{
 			htmlFolder = "fisherman";
-			merchant = (NpcInstance) target;
+			merchant = (Npc) target;
 		}
 		else
 		{
@@ -139,7 +139,7 @@ public class RequestSellItem implements IClientIncomingPacket
 				return;
 			}
 			
-			ItemInstance item = player.checkItemManipulation(objectId, count, "sell");
+			Item item = player.checkItemManipulation(objectId, count, "sell");
 			
 			// Check Item
 			if ((item == null) || !item.getItem().isSellable())

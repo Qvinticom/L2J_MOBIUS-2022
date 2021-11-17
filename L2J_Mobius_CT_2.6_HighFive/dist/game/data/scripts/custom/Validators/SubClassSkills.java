@@ -25,8 +25,8 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
@@ -94,7 +94,7 @@ public class SubClassSkills extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterWorld(PlayerInstance player)
+	public String onEnterWorld(Player player)
 	{
 		if (!Config.SKILL_CHECK_ENABLE)
 		{
@@ -128,11 +128,11 @@ public class SubClassSkills extends AbstractNpcAI
 			cSkills[i][1] = skill.getLevel();
 		}
 		
-		final List<ItemInstance> certItems = getCertItems(player);
+		final List<Item> certItems = getCertItems(player);
 		final int[][] cItems = new int[certItems.size()][2]; // objectId/number
 		for (int i = certItems.size(); --i >= 0;)
 		{
-			final ItemInstance item = certItems.get(i);
+			final Item item = certItems.get(i);
 			cItems[i][0] = item.getObjectId();
 			cItems[i][1] = (int) Math.min(item.getCount(), Integer.MAX_VALUE);
 		}
@@ -213,7 +213,7 @@ public class SubClassSkills extends AbstractNpcAI
 							continue;
 						}
 						
-						ItemInstance item = null;
+						Item item = null;
 						if (certItems != null)
 						{
 							// searching item in test array
@@ -296,7 +296,7 @@ public class SubClassSkills extends AbstractNpcAI
 					continue;
 				}
 				
-				final ItemInstance item = certItems.get(i);
+				final Item item = certItems.get(i);
 				Util.handleIllegalPlayerAction(player, "Invalid cert item without variable or with wrong count:" + item.getObjectId(), IllegalActionPunishmentType.NONE);
 			}
 		}
@@ -304,7 +304,7 @@ public class SubClassSkills extends AbstractNpcAI
 		return null;
 	}
 	
-	private List<Skill> getCertSkills(PlayerInstance player)
+	private List<Skill> getCertSkills(Player player)
 	{
 		final List<Skill> tmp = new ArrayList<>();
 		for (Skill s : player.getAllSkills())
@@ -317,10 +317,10 @@ public class SubClassSkills extends AbstractNpcAI
 		return tmp;
 	}
 	
-	private List<ItemInstance> getCertItems(PlayerInstance player)
+	private List<Item> getCertItems(Player player)
 	{
-		final List<ItemInstance> tmp = new ArrayList<>();
-		for (ItemInstance i : player.getInventory().getItems())
+		final List<Item> tmp = new ArrayList<>();
+		for (Item i : player.getInventory().getItems())
 		{
 			if ((i != null) && (Arrays.binarySearch(_allCertItemIds, i.getId()) >= 0))
 			{

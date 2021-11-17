@@ -32,8 +32,8 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -99,9 +99,9 @@ public class Baium extends AbstractNpcAI
 		new Location(114239, 17168, 10136, -1992)
 	};
 	// Misc
-	private GrandBossInstance _baium = null;
+	private GrandBoss _baium = null;
 	private static long _lastAttack = 0;
-	private static PlayerInstance _standbyPlayer = null;
+	private static Player _standbyPlayer = null;
 	
 	private Baium()
 	{
@@ -135,7 +135,7 @@ public class Baium extends AbstractNpcAI
 				final int loc_y = info.getInt("loc_y");
 				final int loc_z = info.getInt("loc_z");
 				final int heading = info.getInt("heading");
-				_baium = (GrandBossInstance) addSpawn(BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
+				_baium = (GrandBoss) addSpawn(BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 				_baium.setCurrentHpMp(curr_hp, curr_mp);
 				_lastAttack = Chronos.currentTimeMillis();
 				addBoss(_baium);
@@ -165,7 +165,7 @@ public class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -206,7 +206,7 @@ public class Baium extends AbstractNpcAI
 				if (getStatus() == ALIVE)
 				{
 					setStatus(IN_FIGHT);
-					_baium = (GrandBossInstance) addSpawn(BAIUM, BAIUM_LOC, false, 0);
+					_baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
 					_baium.disableCoreAI(true);
 					_baium.setRandomWalking(false);
 					addBoss(_baium);
@@ -272,7 +272,7 @@ public class Baium extends AbstractNpcAI
 					npc.doCast(BAIUM_PRESENT.getSkill());
 				}
 				
-				for (PlayerInstance players : zone.getPlayersInside())
+				for (Player players : zone.getPlayersInside())
 				{
 					if (players.isHero())
 					{
@@ -304,7 +304,7 @@ public class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					for (PlayerInstance creature : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
+					for (Player creature : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
 					{
 						if (zone.isInsideZone(creature) && !creature.isDead())
 						{
@@ -411,7 +411,7 @@ public class Baium extends AbstractNpcAI
 						}
 						else if (creature.isPlayer())
 						{
-							notifyEvent("teleportOut", null, (PlayerInstance) creature);
+							notifyEvent("teleportOut", null, (Player) creature);
 						}
 					}
 				}
@@ -483,7 +483,7 @@ public class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = Chronos.currentTimeMillis();
 		if (npc.getId() == BAIUM)
@@ -544,7 +544,7 @@ public class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{
@@ -570,7 +570,7 @@ public class Baium extends AbstractNpcAI
 		
 		if (creature.isPlayer() && !creature.isDead() && (_standbyPlayer == null))
 		{
-			_standbyPlayer = (PlayerInstance) creature;
+			_standbyPlayer = (Player) creature;
 		}
 		
 		if (creature.isInCategory(CategoryType.CLERIC_GROUP))
@@ -602,7 +602,7 @@ public class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
 		if (!zone.isCharacterInZone(npc) && (_baium != null))
@@ -653,7 +653,7 @@ public class Baium extends AbstractNpcAI
 		return GrandBossManager.getInstance().getBossStatus(BAIUM);
 	}
 	
-	private void addBoss(GrandBossInstance grandboss)
+	private void addBoss(GrandBoss grandboss)
 	{
 		GrandBossManager.getInstance().addBoss(grandboss);
 	}

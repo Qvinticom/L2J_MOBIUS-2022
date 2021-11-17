@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.util.Util;
@@ -160,7 +160,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
@@ -265,7 +265,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -1085,7 +1085,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -1363,7 +1363,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortFirstSteps(QuestState qs, int npcId, int weightPoint, int base, int item1a, int item1b, int item1Mul, int item2, int item3, int item4)
 	{
-		final PlayerInstance player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
@@ -1451,7 +1451,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortSecondStepOneItem(QuestState qs, int npcId, int mul, int item1, int item1Mul, int reward1, int item2, int reward2, int item3, int reward3, int item4, int reward4)
 	{
-		final PlayerInstance player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
@@ -1522,7 +1522,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortSecondStepTwoItems(QuestState qs, int npcId, int mul, int item1a, int item1b, int reward1, int item2a, int item2b, int reward2, int item3a, int item3b, int reward3, int item4a, int item4b, int reward4)
 	{
-		final PlayerInstance player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		switch (qs.getInt(PARAM_2))
 		{
 			case 42:
@@ -1589,7 +1589,7 @@ public class Q00336_CoinsOfMagic extends Quest
 	 */
 	private String shortThirdStep(QuestState qs, int npcId, int flag, int item1, int item2, int item3, int item4)
 	{
-		final PlayerInstance player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		qs.set(PARAM_3, 0);
 		qs.set(FLAG, qs.getInt(FLAG) + flag);
 		if ((qs.getInt(PARAM_1) == qs.getInt(FLAG)) && (qs.getInt(WEIGHT_POINT) >= 0))
@@ -1780,7 +1780,7 @@ public class Q00336_CoinsOfMagic extends Quest
 		return null;
 	}
 	
-	private QuestState getRandomPlayerFromParty(PlayerInstance player, Npc npc, int memoState)
+	private QuestState getRandomPlayerFromParty(Player player, Npc npc, int memoState)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
@@ -1804,7 +1804,7 @@ public class Q00336_CoinsOfMagic extends Quest
 		return candidates.isEmpty() ? null : candidates.get(getRandom(candidates.size()));
 	}
 	
-	private QuestState getRandomPlayerFromPartyCoin(PlayerInstance player, Npc npc, int memoState)
+	private QuestState getRandomPlayerFromPartyCoin(Player player, Npc npc, int memoState)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();

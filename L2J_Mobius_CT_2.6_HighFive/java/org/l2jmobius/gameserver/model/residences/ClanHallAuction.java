@@ -31,13 +31,13 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.AuctionItemType;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -261,7 +261,7 @@ public class ClanHallAuction
 	 * @param bidder
 	 * @param bid
 	 */
-	public synchronized void setBid(PlayerInstance bidder, long bid)
+	public synchronized void setBid(Player bidder, long bid)
 	{
 		final long requiredAdena = _highestBidderName.equals(bidder.getClan().getLeaderName()) ? bid - _highestBidderMaxBid : bid;
 		if ((((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid))) && takeItem(bidder, requiredAdena))
@@ -316,7 +316,7 @@ public class ClanHallAuction
 	 * @param quantity
 	 * @return
 	 */
-	private boolean takeItem(PlayerInstance bidder, long quantity)
+	private boolean takeItem(Player bidder, long quantity)
 	{
 		if ((bidder.getClan() != null) && (bidder.getClan().getWarehouse().getAdena() >= quantity))
 		{
@@ -332,7 +332,7 @@ public class ClanHallAuction
 	 * @param bidder
 	 * @param bid
 	 */
-	private void updateInDB(PlayerInstance bidder, long bid)
+	private void updateInDB(Player bidder, long bid)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -384,7 +384,7 @@ public class ClanHallAuction
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Exception: Auction.updateInDB(PlayerInstance bidder, int bid): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.updateInDB(Player bidder, int bid): " + e.getMessage(), e);
 		}
 	}
 	
@@ -436,7 +436,7 @@ public class ClanHallAuction
 	/** End of auction */
 	public void endAuction()
 	{
-		if (ClanHallManager.getInstance().loaded())
+		if (ClanHallTable.getInstance().loaded())
 		{
 			if ((_highestBidderId == 0) && (_sellerId == 0))
 			{
@@ -455,14 +455,14 @@ public class ClanHallAuction
 			if (_sellerId > 0)
 			{
 				returnItem(_sellerClanName, _highestBidderMaxBid, true);
-				returnItem(_sellerClanName, ClanHallManager.getInstance().getAuctionableHallById(_itemId).getLease(), false);
+				returnItem(_sellerClanName, ClanHallTable.getInstance().getAuctionableHallById(_itemId).getLease(), false);
 			}
 			deleteAuctionFromDB();
 			final Clan clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
 			clan.setAuctionBiddedAt(0, true);
 			removeBids();
-			ClanHallManager.getInstance().setOwner(_itemId, clan);
+			ClanHallTable.getInstance().setOwner(_itemId, clan);
 		}
 		else
 		{

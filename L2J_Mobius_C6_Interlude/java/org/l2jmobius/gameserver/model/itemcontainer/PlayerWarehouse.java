@@ -16,20 +16,20 @@
  */
 package org.l2jmobius.gameserver.model.itemcontainer;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
 
 public class PlayerWarehouse extends Warehouse
 {
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	
-	public PlayerWarehouse(PlayerInstance owner)
+	public PlayerWarehouse(Player owner)
 	{
 		_owner = owner;
 	}
 	
 	@Override
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}

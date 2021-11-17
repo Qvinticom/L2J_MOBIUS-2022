@@ -26,8 +26,8 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.zone.type.SiegableHallZone;
@@ -106,7 +106,7 @@ public class SiegableHall extends ClanHall
 	
 	public void spawnDoor(boolean isDoorWeak)
 	{
-		for (DoorInstance door : getDoors())
+		for (Door door : getDoors())
 		{
 			if (door.isDead())
 			{
@@ -255,7 +255,7 @@ public class SiegableHall extends ClanHall
 		_siegeZone.setActive(active);
 	}
 	
-	public void showSiegeInfo(PlayerInstance player)
+	public void showSiegeInfo(Player player)
 	{
 		player.sendPacket(new SiegeInfo(this, player));
 	}

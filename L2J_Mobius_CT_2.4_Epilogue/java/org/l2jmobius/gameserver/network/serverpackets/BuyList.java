@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class BuyList implements IClientOutgoingPacket
@@ -60,7 +60,7 @@ public class BuyList implements IClientOutgoingPacket
 				packet.writeH(product.getItem().getType2());
 				packet.writeH(0x00); // isEquipped
 				
-				if (product.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
+				if (product.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeD(product.getItem().getBodyPart());
 					packet.writeH(0x00); // item enchant level

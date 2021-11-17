@@ -18,7 +18,7 @@ package ai.areas.GardenOfSpirits.Dinford;
 
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -46,7 +46,7 @@ public class Dinford extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -70,7 +70,7 @@ public class Dinford extends AbstractNpcAI
 	@Id(DINFORD)
 	public void OnNpcMenuSelect(OnNpcMenuSelect event)
 	{
-		final PlayerInstance player = event.getTalker();
+		final Player player = event.getTalker();
 		final Npc npc = event.getNpc();
 		final int ask = event.getAsk();
 		final int reply = event.getReply();
@@ -88,7 +88,7 @@ public class Dinford extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (getRandom(10) < 5)
 		{

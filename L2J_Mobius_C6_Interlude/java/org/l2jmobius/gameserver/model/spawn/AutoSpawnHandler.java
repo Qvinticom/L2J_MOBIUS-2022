@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
@@ -448,12 +448,12 @@ public class AutoSpawnHandler
 				
 				// Add the new spawn information to the spawn table, but do not store it.
 				SpawnTable.getInstance().addNewSpawn(newSpawn, false);
-				NpcInstance npcInst = null;
+				Npc npcInst = null;
 				if (spawnInst._spawnCount == 1)
 				{
 					npcInst = newSpawn.doSpawn();
 					npcInst.setXYZ(npcInst.getX(), npcInst.getY(), npcInst.getZ());
-					spawnInst.addNpcInstance(npcInst);
+					spawnInst.addNpc(npcInst);
 				}
 				else
 				{
@@ -465,7 +465,7 @@ public class AutoSpawnHandler
 						npcInst.setXYZ(npcInst.getX() + Rnd.get(50), npcInst.getY() + Rnd.get(50), npcInst.getZ());
 						
 						// Add the NPC instance to the list of managed instances.
-						spawnInst.addNpcInstance(npcInst);
+						spawnInst.addNpc(npcInst);
 					}
 				}
 				newSpawn.stopRespawn();
@@ -528,7 +528,7 @@ public class AutoSpawnHandler
 					return;
 				}
 				
-				for (NpcInstance npcInst : spawnInst.getNPCInstanceList())
+				for (Npc npcInst : spawnInst.getNpcList())
 				{
 					if (npcInst == null)
 					{
@@ -537,7 +537,7 @@ public class AutoSpawnHandler
 					
 					npcInst.deleteMe();
 					SpawnTable.getInstance().deleteSpawn(npcInst.getSpawn(), false);
-					spawnInst.removeNpcInstance(npcInst);
+					spawnInst.removeNpc(npcInst);
 				}
 			}
 			catch (Exception e)
@@ -570,7 +570,7 @@ public class AutoSpawnHandler
 		
 		protected int _lastLocIndex = -1;
 		
-		private final Queue<NpcInstance> _npcList = new ConcurrentLinkedQueue<>();
+		private final Queue<Npc> _npcList = new ConcurrentLinkedQueue<>();
 		
 		private final List<Location> _locList = new CopyOnWriteArrayList<>();
 		
@@ -593,12 +593,12 @@ public class AutoSpawnHandler
 			_spawnActive = activeValue;
 		}
 		
-		protected boolean addNpcInstance(NpcInstance npcInst)
+		protected boolean addNpc(Npc npcInst)
 		{
 			return _npcList.add(npcInst);
 		}
 		
-		protected boolean removeNpcInstance(NpcInstance npcInst)
+		protected boolean removeNpc(Npc npcInst)
 		{
 			return _npcList.remove(npcInst);
 		}
@@ -638,7 +638,7 @@ public class AutoSpawnHandler
 			return _locList;
 		}
 		
-		public Queue<NpcInstance> getNPCInstanceList()
+		public Queue<Npc> getNpcList()
 		{
 			return _npcList;
 		}
@@ -646,7 +646,7 @@ public class AutoSpawnHandler
 		public List<Spawn> getSpawns()
 		{
 			final List<Spawn> npcSpawns = new ArrayList<>();
-			for (NpcInstance npcInst : _npcList)
+			for (Npc npcInst : _npcList)
 			{
 				npcSpawns.add(npcInst.getSpawn());
 			}

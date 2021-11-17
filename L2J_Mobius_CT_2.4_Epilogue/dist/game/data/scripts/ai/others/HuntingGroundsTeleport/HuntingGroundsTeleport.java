@@ -18,7 +18,7 @@ package ai.others.HuntingGroundsTeleport;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 
 import ai.AbstractNpcAI;
@@ -52,7 +52,7 @@ public class HuntingGroundsTeleport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final SevenSigns ss = SevenSigns.getInstance();
 		final int playerCabal = ss.getPlayerCabal(player.getObjectId());

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAskJoinPartyRoom;
@@ -42,14 +42,14 @@ public class RequestAskJoinPartyRoom implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		// Send PartyRoom invite request (with activeChar) name to the target
-		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final Player target = World.getInstance().getPlayer(_name);
 		if (target != null)
 		{
 			if (!target.isProcessingRequest())

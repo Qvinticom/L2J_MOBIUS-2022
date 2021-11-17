@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,13 +27,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExOlympiadMode implements IClientOutgoingPacket
 {
 	private static int _mode;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/**
 	 * @param mode (0 = return, 3 = spectate)
 	 * @param player
 	 */
-	public ExOlympiadMode(int mode, PlayerInstance player)
+	public ExOlympiadMode(int mode, Player player)
 	{
 		_player = player;
 		_mode = mode;

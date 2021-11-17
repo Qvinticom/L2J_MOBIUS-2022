@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -156,12 +156,12 @@ public abstract class ZoneType
 			return false;
 		}
 		
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			// Check class type
 			if (_classType != 0)
 			{
-				if (((PlayerInstance) creature).isMageClass())
+				if (((Player) creature).isMageClass())
 				{
 					if (_classType == 1)
 					{
@@ -180,7 +180,7 @@ public abstract class ZoneType
 				boolean ok = false;
 				for (int element : _race)
 				{
-					if (((PlayerInstance) creature).getRace().ordinal() == element)
+					if (((Player) creature).getRace().ordinal() == element)
 					{
 						ok = true;
 						break;
@@ -199,7 +199,7 @@ public abstract class ZoneType
 				boolean ok = false;
 				for (int clas : _class)
 				{
-					if (((PlayerInstance) creature).getClassId().ordinal() == clas)
+					if (((Player) creature).getClassId().ordinal() == clas)
 					{
 						ok = true;
 						break;
@@ -340,7 +340,7 @@ public abstract class ZoneType
 		
 		for (Creature creature : _characterList.values())
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
 				creature.sendPacket(packet);
 			}

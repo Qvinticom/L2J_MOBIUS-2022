@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -63,7 +63,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -85,14 +85,14 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		getSkillAI(npc);
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		startQuestTimer("random_Target", 5000, npc, null, true);
 		startQuestTimer("attack", 500, npc, null, true);
@@ -100,7 +100,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		cancelQuestTimer("attack", npc, null);
 		cancelQuestTimer("random_Target", npc, null);
@@ -214,7 +214,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	{
 		final List<Creature> result = new ArrayList<>();
 		{
-			for (PlayerInstance obj : npc.getInstanceWorld().getPlayers())
+			for (Player obj : npc.getInstanceWorld().getPlayers())
 			{
 				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 				{

@@ -31,12 +31,12 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -112,7 +112,7 @@ public abstract class AbstractOlympiadGame
 	 * @param player
 	 * @return
 	 */
-	protected static SystemMessage checkDefaulted(PlayerInstance player)
+	protected static SystemMessage checkDefaulted(Player player)
 	{
 		if ((player == null) || !player.isOnline())
 		{
@@ -166,7 +166,7 @@ public abstract class AbstractOlympiadGame
 	
 	protected static boolean portPlayerToArena(Participant par, Location loc, int id, Instance instance)
 	{
-		final PlayerInstance player = par.getPlayer();
+		final Player player = par.getPlayer();
 		if ((player == null) || !player.isOnline())
 		{
 			return false;
@@ -196,7 +196,7 @@ public abstract class AbstractOlympiadGame
 		return true;
 	}
 	
-	protected void removals(PlayerInstance player, boolean removeParty)
+	protected void removals(Player player, boolean removeParty)
 	{
 		try
 		{
@@ -291,7 +291,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected void cleanEffects(PlayerInstance player)
+	protected void cleanEffects(Player player)
 	{
 		try
 		{
@@ -350,7 +350,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected void playerStatusBack(PlayerInstance player)
+	protected void playerStatusBack(Player player)
 	{
 		try
 		{
@@ -397,7 +397,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected void portPlayerBack(PlayerInstance player)
+	protected void portPlayerBack(Player player)
 	{
 		if (player == null)
 		{
@@ -413,7 +413,7 @@ public abstract class AbstractOlympiadGame
 	}
 	
 	// XXX: ML2 Rewards ForGlory, ForHonor and ForVictory quests
-	public static void rewardQuests(PlayerInstance player)
+	public static void rewardQuests(Player player)
 	{
 		final QuestState qs = player.getQuestState("Q10813_ForGlory");
 		final QuestState qs1 = player.getQuestState("Q10819_ForHonor");
@@ -447,7 +447,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	public static void rewardParticipant(PlayerInstance player, List<ItemHolder> list)
+	public static void rewardParticipant(Player player, List<ItemHolder> list)
 	{
 		if ((player == null) || !player.isOnline() || (list == null))
 		{
@@ -459,7 +459,7 @@ public abstract class AbstractOlympiadGame
 			final InventoryUpdate iu = new InventoryUpdate();
 			list.forEach(holder ->
 			{
-				final ItemInstance item = player.getInventory().addItem("Olympiad", holder.getId(), holder.getCount(), player, null);
+				final Item item = player.getInventory().addItem("Olympiad", holder.getId(), holder.getCount(), player, null);
 				if (item == null)
 				{
 					return;
@@ -507,11 +507,11 @@ public abstract class AbstractOlympiadGame
 	
 	protected abstract void clearPlayers();
 	
-	protected abstract void handleDisconnect(PlayerInstance player);
+	protected abstract void handleDisconnect(Player player);
 	
 	protected abstract void resetDamage();
 	
-	protected abstract void addDamage(PlayerInstance player, int damage);
+	protected abstract void addDamage(Player player, int damage);
 	
 	protected abstract boolean checkBattleStatus();
 	

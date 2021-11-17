@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -101,7 +101,7 @@ public class TowerOfInfinitum extends AbstractNpcAI
 	private static final Location ENTER_LOCATION = new Location(-22204, 277056, -15023);
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final int npcId = npc.getId();
@@ -112,14 +112,14 @@ public class TowerOfInfinitum extends AbstractNpcAI
 				final Party party = player.getParty();
 				if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 				{
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, partyMember, npc, true) || !partyMember.isAffectedBySkill(PASS_SKILL))
 						{
 							return "32302-02.htm";
 						}
 					}
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						partyMember.teleToLocation(ENTER_LOCATION, true);
 					}
@@ -149,7 +149,7 @@ public class TowerOfInfinitum extends AbstractNpcAI
 			}
 			else
 			{
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(1000, partyMember, npc, false) || (Math.abs(partyMember.getZ() - npc.getZ()) > 100))
 					{
@@ -160,7 +160,7 @@ public class TowerOfInfinitum extends AbstractNpcAI
 				final Location tele = TELE_COORDS.get(npcId)[direction];
 				if (tele != null)
 				{
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						partyMember.teleToLocation(tele, true);
 					}

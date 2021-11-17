@@ -23,7 +23,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -72,7 +72,7 @@ public class BoatRunePrimeval implements Runnable
 	
 	private static final VehiclePathPoint PRIMEVAL_DOCK = RUNE_TO_PRIMEVAL[RUNE_TO_PRIMEVAL.length - 1];
 	
-	private final BoatInstance _boat;
+	private final Boat _boat;
 	private int _cycle = 0;
 	private int _shoutCount = 0;
 	
@@ -87,7 +87,7 @@ public class BoatRunePrimeval implements Runnable
 	private final PlaySound RUNE_SOUND;
 	private final PlaySound PRIMEVAL_SOUND;
 	
-	public BoatRunePrimeval(BoatInstance boat)
+	public BoatRunePrimeval(Boat boat)
 	{
 		_boat = boat;
 		
@@ -173,7 +173,7 @@ public class BoatRunePrimeval implements Runnable
 	
 	public static void main(String[] args)
 	{
-		final BoatInstance boat = BoatManager.getInstance().getNewBoat(5, 34381, -37680, -3610, 40785);
+		final Boat boat = BoatManager.getInstance().getNewBoat(5, 34381, -37680, -3610, 40785);
 		if (boat != null)
 		{
 			boat.registerEngine(new BoatRunePrimeval(boat));

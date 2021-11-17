@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -70,7 +70,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		String cmd = "";
 		final StringBuilder params = new StringBuilder();
@@ -94,7 +94,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance player, String params)
+	public boolean useVoicedCommand(String command, Player player, String params)
 	{
 		switch (command)
 		{
@@ -108,7 +108,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		return true;
 	}
 	
-	public boolean useBypass(String command, PlayerInstance player, String params)
+	public boolean useBypass(String command, Player player, String params)
 	{
 		if (!Config.SELLBUFF_ENABLED)
 		{
@@ -338,7 +338,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						index = Integer.parseInt(st.nextToken());
 					}
 					
-					final PlayerInstance seller = World.getInstance().getPlayer(objId);
+					final Player seller = World.getInstance().getPlayer(objId);
 					if (seller != null)
 					{
 						if (!seller.isSellingBuffs() || !player.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
@@ -380,7 +380,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final PlayerInstance seller = World.getInstance().getPlayer(objId);
+					final Player seller = World.getInstance().getPlayer(objId);
 					if (seller == null)
 					{
 						return false;
@@ -411,7 +411,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						}
 						else
 						{
-							final Item item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
+							final ItemTemplate item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
 							if (item != null)
 							{
 								player.sendMessage("Not enough " + item.getName() + "!");

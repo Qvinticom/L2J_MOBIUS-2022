@@ -18,7 +18,7 @@ package quests.Q00552_OlympiadVeteran;
 
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import org.l2jmobius.gameserver.model.olympiad.Participant;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -49,7 +49,7 @@ public class Q00552_OlympiadVeteran extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -82,7 +82,7 @@ public class Q00552_OlympiadVeteran extends Quest
 	{
 		if (winner != null)
 		{
-			final PlayerInstance player = winner.getPlayer();
+			final Player player = winner.getPlayer();
 			if (player == null)
 			{
 				return;
@@ -130,7 +130,7 @@ public class Q00552_OlympiadVeteran extends Quest
 		
 		if (looser != null)
 		{
-			final PlayerInstance player = looser.getPlayer();
+			final Player player = looser.getPlayer();
 			if (player == null)
 			{
 				return;
@@ -177,7 +177,7 @@ public class Q00552_OlympiadVeteran extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

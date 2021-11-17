@@ -19,7 +19,7 @@ package ai.others.TeleportToUndergroundColiseum;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -94,7 +94,7 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.endsWith(".htm"))
 		{
@@ -113,7 +113,7 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (CommonUtil.contains(MANAGERS, npc.getId()))
 		{
@@ -127,7 +127,7 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "32491.htm";
 	}

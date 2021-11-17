@@ -37,10 +37,10 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.actor.tasks.player.CancelSkillRestoreTask;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.model.skills.Stat;
@@ -149,7 +149,7 @@ public class Disablers implements ISkillHandler
 					{
 						skill.applyEffects(creature, target, ss, sps, bss);
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
@@ -169,7 +169,7 @@ public class Disablers implements ISkillHandler
 					{
 						skill.applyEffects(creature, target, ss, sps, bss);
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
@@ -189,7 +189,7 @@ public class Disablers implements ISkillHandler
 					{
 						skill.applyEffects(creature, target, ss, sps, bss);
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
@@ -212,7 +212,7 @@ public class Disablers implements ISkillHandler
 						}
 						skill.applyEffects(creature, target, ss, sps, bss);
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						creature.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2));
 					}
@@ -282,7 +282,7 @@ public class Disablers implements ISkillHandler
 						}
 						skill.applyEffects(creature, target, ss, sps, bss);
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
@@ -310,7 +310,7 @@ public class Disablers implements ISkillHandler
 								((Attackable) target).reduceHate(null, ((Attackable) target).getHating(((Attackable) target).getMostHated()));
 							}
 						}
-						else if (creature instanceof PlayerInstance)
+						else if (creature instanceof Player)
 						{
 							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 							sm.addString(target.getName());
@@ -334,16 +334,16 @@ public class Disablers implements ISkillHandler
 				{
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss)
 						// Doesn't affect siege golem, wild hog cannon and pets.
-						&& !(target instanceof SiegeSummonInstance) && !(target instanceof PetInstance))
+						&& !(target instanceof SiegeSummon) && !(target instanceof Pet))
 					{
-						PlayerInstance summonOwner = null;
+						Player summonOwner = null;
 						Summon summonPet = null;
 						summonOwner = ((Summon) target).getOwner();
 						summonPet = summonOwner.getPet();
 						summonPet.unSummon(summonOwner);
 						summonOwner.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());
@@ -409,7 +409,7 @@ public class Disablers implements ISkillHandler
 						// If target isInvul (for example Celestial Shield) CANCEL does not work.
 						if (target.isInvul())
 						{
-							if (creature instanceof PlayerInstance)
+							if (creature instanceof Player)
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 								sm.addString(target.getName());
@@ -420,7 +420,7 @@ public class Disablers implements ISkillHandler
 						}
 						if (target.isRaid())
 						{
-							if (creature instanceof PlayerInstance)
+							if (creature instanceof Player)
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 								sm.addString(target.getName());
@@ -505,10 +505,10 @@ public class Disablers implements ISkillHandler
 							}
 							if ((Config.RESTORE_CANCELLED_BUFFS_SECONDS > 0) && !cancelledBuffs.isEmpty())
 							{
-								ThreadPool.schedule(new CancelSkillRestoreTask((PlayerInstance) target, cancelledBuffs), Config.RESTORE_CANCELLED_BUFFS_SECONDS * 1000);
+								ThreadPool.schedule(new CancelSkillRestoreTask((Player) target, cancelledBuffs), Config.RESTORE_CANCELLED_BUFFS_SECONDS * 1000);
 							}
 						}
-						else if (creature instanceof PlayerInstance)
+						else if (creature instanceof Player)
 						{
 							final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 							sm.addString(target.getName());
@@ -568,7 +568,7 @@ public class Disablers implements ISkillHandler
 							}
 						}
 					}
-					else if (creature instanceof PlayerInstance)
+					else if (creature instanceof Player)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_RESISTED_YOUR_S2);
 						sm.addString(target.getName());

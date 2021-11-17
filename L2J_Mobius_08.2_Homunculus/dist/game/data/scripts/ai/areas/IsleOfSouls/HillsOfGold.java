@@ -18,8 +18,8 @@ package ai.areas.IsleOfSouls;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 import ai.AbstractNpcAI;
 
@@ -57,11 +57,11 @@ public class HillsOfGold extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc != null) && !npc.isDead())
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, npc.getAggroRange(), nearby ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, npc.getAggroRange(), nearby ->
 			{
 				if (npc.isInCombat())
 				{
@@ -79,7 +79,7 @@ public class HillsOfGold extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Npc mob1 = addSpawn(SPICULA_ELITE_GUARD, npc.getX(), npc.getY(), npc.getZ(), attacker.getHeading() + 32500, true, npc.getSpawn().getRespawnDelay());
 		addAttackDesire(mob1, attacker);

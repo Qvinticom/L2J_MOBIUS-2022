@@ -24,11 +24,11 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public class Seed implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!Config.ALLOW_MANOR)
 		{
@@ -57,13 +57,13 @@ public class Seed implements IItemHandler
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		else if (!tgt.isMonster() || ((MonsterInstance) tgt).isRaid() || (tgt instanceof ChestInstance))
+		else if (!tgt.isMonster() || ((Monster) tgt).isRaid() || (tgt instanceof Chest))
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			return false;
 		}
 		
-		final MonsterInstance target = (MonsterInstance) tgt;
+		final Monster target = (Monster) tgt;
 		if (target.isDead())
 		{
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -88,7 +88,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		target.setSeeded(seed, player);
 		
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HeavenlyRiftManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -47,7 +47,7 @@ public class DimensionalVortex extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("30952-1.htm") || event.equals("30952-2.htm") || event.equals("30952-3.htm"))
 		{
@@ -78,7 +78,7 @@ public class DimensionalVortex extends AbstractNpcAI
 					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					return null;
 				}
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (player.calculateDistance2D(partyMember) > Config.ALT_PARTY_RANGE)
 					{
@@ -93,7 +93,7 @@ public class DimensionalVortex extends AbstractNpcAI
 				player.destroyItemByItemId("Rift", CELESTIAL_SHARD, 1, npc, true);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 0);
 				GlobalVariablesManager.getInstance().set("heavenly_rift_level", 0);
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					partyMember.teleToLocation(112685, 13362, 10966);
 				}
@@ -123,7 +123,7 @@ public class DimensionalVortex extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}

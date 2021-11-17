@@ -24,11 +24,11 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -77,7 +77,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -108,7 +108,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getActiveEnchantItemId() != PlayerInstance.ID_NONE)
+		if (player.getActiveEnchantItemId() != Player.ID_NONE)
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 			return;
@@ -126,7 +126,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		int slots = 0;
 		for (ItemHolder itemHolder : _items)
 		{
-			final ItemInstance item = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
+			final Item item = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
 			if (item == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -173,7 +173,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		for (ItemHolder itemHolder : _items)
 		{
 			// Check validity of requested item
-			final ItemInstance oldItem = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
+			final Item oldItem = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -185,7 +185,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), itemHolder.getId(), itemHolder.getCount(), warehouse, player, manager);
+			final Item newItem = player.getInventory().transferItem(warehouse.getName(), itemHolder.getId(), itemHolder.getCount(), warehouse, player, manager);
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

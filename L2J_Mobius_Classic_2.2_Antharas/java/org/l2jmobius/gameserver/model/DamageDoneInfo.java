@@ -16,22 +16,22 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author xban1x
  */
 public class DamageDoneInfo
 {
-	private final PlayerInstance _attacker;
+	private final Player _attacker;
 	private long _damage = 0;
 	
-	public DamageDoneInfo(PlayerInstance attacker)
+	public DamageDoneInfo(Player attacker)
 	{
 		_attacker = attacker;
 	}
 	
-	public PlayerInstance getAttacker()
+	public Player getAttacker()
 	{
 		return _attacker;
 	}

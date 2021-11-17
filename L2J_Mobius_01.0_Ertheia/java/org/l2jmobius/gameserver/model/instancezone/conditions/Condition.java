@@ -21,7 +21,7 @@ import java.util.function.BiConsumer;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -37,7 +37,7 @@ public abstract class Condition
 	private final boolean _leaderOnly;
 	private final boolean _showMessageAndHtml;
 	private SystemMessageId _systemMsg = null;
-	private BiConsumer<SystemMessage, PlayerInstance> _systemMsgParams = null;
+	private BiConsumer<SystemMessage, Player> _systemMsgParams = null;
 	
 	/**
 	 * Create new condition
@@ -79,9 +79,9 @@ public abstract class Condition
 	 * @param htmlCallback HTML callback function used to display fail HTML to player
 	 * @return {@code true} when all conditions met, otherwise {@code false}
 	 */
-	public boolean validate(Npc npc, List<PlayerInstance> group, BiConsumer<PlayerInstance, String> htmlCallback)
+	public boolean validate(Npc npc, List<Player> group, BiConsumer<Player, String> htmlCallback)
 	{
-		for (PlayerInstance member : group)
+		for (Player member : group)
 		{
 			if (!test(member, npc, group))
 			{
@@ -103,7 +103,7 @@ public abstract class Condition
 	 * @param member player which doesn't meet condition
 	 * @param htmlCallback HTML callback function used to display fail HTML to player
 	 */
-	private void sendMessage(List<PlayerInstance> group, PlayerInstance member, BiConsumer<PlayerInstance, String> htmlCallback)
+	private void sendMessage(List<Player> group, Player member, BiConsumer<Player, String> htmlCallback)
 	{
 		// Send HTML message if condition has any
 		final String html = _parameters.getString("html", null);
@@ -158,9 +158,9 @@ public abstract class Condition
 	 * This method is called when all instance conditions are met.
 	 * @param group group of players which wants to enter into instance
 	 */
-	public void applyEffect(List<PlayerInstance> group)
+	public void applyEffect(List<Player> group)
 	{
-		for (PlayerInstance member : group)
+		for (Player member : group)
 		{
 			onSuccess(member);
 			if (_leaderOnly)
@@ -185,7 +185,7 @@ public abstract class Condition
 	 * @param msg identification code of system message
 	 * @param params function which set parameters to system message
 	 */
-	protected void setSystemMessage(SystemMessageId msg, BiConsumer<SystemMessage, PlayerInstance> params)
+	protected void setSystemMessage(SystemMessageId msg, BiConsumer<SystemMessage, Player> params)
 	{
 		setSystemMessage(msg);
 		_systemMsgParams = params;
@@ -193,13 +193,13 @@ public abstract class Condition
 	
 	/**
 	 * Test condition for player.<br>
-	 * <i>Calls {@link Condition#test(PlayerInstance, Npc)} by default.</i>
+	 * <i>Calls {@link Condition#test(Player, Npc)} by default.</i>
 	 * @param player instance of player which should meet condition
 	 * @param npc instance of NPC used to enter into instance
 	 * @param group group of players which wants to enter
 	 * @return {@code true} on success, {@code false} on fail
 	 */
-	protected boolean test(PlayerInstance player, Npc npc, List<PlayerInstance> group)
+	protected boolean test(Player player, Npc npc, List<Player> group)
 	{
 		return test(player, npc);
 	}
@@ -210,7 +210,7 @@ public abstract class Condition
 	 * @param npc instance of NPC used to enter into instance
 	 * @return {@code true} on success, {@code false} on fail
 	 */
-	protected boolean test(PlayerInstance player, Npc npc)
+	protected boolean test(Player player, Npc npc)
 	{
 		return true;
 	}
@@ -220,7 +220,7 @@ public abstract class Condition
 	 * This method is called when all instance conditions are met.
 	 * @param player player which should be affected
 	 */
-	protected void onSuccess(PlayerInstance player)
+	protected void onSuccess(Player player)
 	{
 	}
 }

@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
@@ -65,7 +65,7 @@ public class PlayableStat extends CreatureStat
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
 		}
 		
 		byte level = minimumLevel; // minimum level
@@ -100,7 +100,7 @@ public class PlayableStat extends CreatureStat
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
 		}
 		byte level = minimumLevel;
 		for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
@@ -161,7 +161,7 @@ public class PlayableStat extends CreatureStat
 		
 		if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL)
 		{
-			((PlayerInstance) getActiveChar()).checkPlayerSkills();
+			((Player) getActiveChar()).checkPlayerSkills();
 		}
 		
 		if (!levelIncreased)

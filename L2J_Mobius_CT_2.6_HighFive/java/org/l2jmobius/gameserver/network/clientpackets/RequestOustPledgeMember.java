@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
@@ -47,7 +47,7 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -75,7 +75,7 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 			LOGGER.warning("Target (" + _target + ") is not member of the clan");
 			return;
 		}
-		if (member.isOnline() && member.getPlayerInstance().isInCombat())
+		if (member.isOnline() && member.getPlayer().isInCombat())
 		{
 			player.sendPacket(SystemMessageId.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
 			return;
@@ -96,7 +96,7 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(_target));
 		if (member.isOnline())
 		{
-			final PlayerInstance target = member.getPlayerInstance();
+			final Player target = member.getPlayer();
 			target.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}
 	}

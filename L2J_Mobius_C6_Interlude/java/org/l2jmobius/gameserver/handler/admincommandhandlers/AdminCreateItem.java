@@ -22,9 +22,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -47,7 +47,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String comm = st.nextToken();
@@ -219,11 +219,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return 0;
 	}
 	
-	private void createItem(PlayerInstance activeChar, int id, int num)
+	private void createItem(Player activeChar, int id, int num)
 	{
 		if (num > 20)
 		{
-			final Item template = ItemTable.getInstance().getTemplate(id);
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 			if ((template != null) && !template.isStackable())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
@@ -231,14 +231,14 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 		}
 		
-		PlayerInstance player = null;
+		Player player = null;
 		if (activeChar.getTarget() != null)
 		{
-			if (activeChar.getTarget() instanceof PlayerInstance)
+			if (activeChar.getTarget() instanceof Player)
 			{
 				if (activeChar.getAccessLevel().getLevel() > 70)
 				{
-					player = (PlayerInstance) activeChar.getTarget();
+					player = (Player) activeChar.getTarget();
 				}
 				else
 				{
@@ -259,7 +259,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			player = activeChar;
 		}
 		
-		final ItemInstance newItem = player.getInventory().addItem("Admin", id, num, player, null);
+		final Item newItem = player.getInventory().addItem("Admin", id, num, player, null);
 		player.sendPacket(new ItemList(player, true));
 		if (activeChar.getName().equalsIgnoreCase(player.getName()))
 		{
@@ -272,9 +272,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 	}
 	
-	private void massCreateItem(PlayerInstance activeChar, int id, int num)
+	private void massCreateItem(Player activeChar, int id, int num)
 	{
-		final Item template = ItemTable.getInstance().getTemplate(id);
+		final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 		if ((template != null) && !template.isStackable())
 		{
 			BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
@@ -282,8 +282,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 		
 		int i = 0;
-		ItemInstance item = null;
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		Item item = null;
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			player.sendMessage("Admin is rewarding all online players.");
 			item = player.getInventory().addItem("Admin", id, num, null, null);

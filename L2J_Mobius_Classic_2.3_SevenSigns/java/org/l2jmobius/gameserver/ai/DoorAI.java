@@ -21,10 +21,10 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class DoorAI extends CreatureAI
 {
-	public DoorAI(DoorInstance door)
+	public DoorAI(Door door)
 	{
 		super(door);
 	}
@@ -58,7 +58,7 @@ public class DoorAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, WorldObject target, ItemInstance item, boolean forceUse, boolean dontMove)
+	protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
 	}
 	
@@ -90,7 +90,7 @@ public class DoorAI extends CreatureAI
 	@Override
 	protected void onEvtAttacked(Creature attacker)
 	{
-		ThreadPool.execute(new onEventAttackedDoorTask((DoorInstance) _actor, attacker));
+		ThreadPool.execute(new onEventAttackedDoorTask((Door) _actor, attacker));
 	}
 	
 	@Override
@@ -145,10 +145,10 @@ public class DoorAI extends CreatureAI
 	
 	private class onEventAttackedDoorTask implements Runnable
 	{
-		private final DoorInstance _door;
+		private final Door _door;
 		private final Creature _attacker;
 		
-		public onEventAttackedDoorTask(DoorInstance door, Creature attacker)
+		public onEventAttackedDoorTask(Door door, Creature attacker)
 		{
 			_door = door;
 			_attacker = attacker;
@@ -157,7 +157,7 @@ public class DoorAI extends CreatureAI
 		@Override
 		public void run()
 		{
-			World.getInstance().forEachVisibleObject(_door, DefenderInstance.class, guard ->
+			World.getInstance().forEachVisibleObject(_door, Defender.class, guard ->
 			{
 				if (_actor.isInsideRadius3D(guard, guard.getTemplate().getClanHelpRange()))
 				{

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -56,9 +56,9 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	
 	class DeathTask implements Runnable
 	{
-		final PlayerInstance _player;
+		final Player _player;
 		
-		DeathTask(PlayerInstance player)
+		DeathTask(Player player)
 		{
 			_player = player;
 		}
@@ -73,7 +73,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -122,7 +122,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		portPlayer(player);
 	}
 	
-	protected final void portPlayer(PlayerInstance player)
+	protected final void portPlayer(Player player)
 	{
 		Location loc = null;
 		Instance instance = null;

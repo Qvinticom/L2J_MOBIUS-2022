@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 public class SkillSignet extends Skill
@@ -50,7 +50,7 @@ public class SkillSignet extends Skill
 		}
 		
 		final NpcTemplate template = NpcTable.getInstance().getTemplate(_effectNpcId);
-		final EffectPointInstance effectPoint = new EffectPointInstance(IdManager.getInstance().getNextId(), template, caster);
+		final EffectPoint effectPoint = new EffectPoint(IdManager.getInstance().getNextId(), template, caster);
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		World.getInstance().storeObject(effectPoint);
@@ -58,9 +58,9 @@ public class SkillSignet extends Skill
 		int x = caster.getX();
 		int y = caster.getY();
 		int z = caster.getZ();
-		if ((caster instanceof PlayerInstance) && (getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
+		if ((caster instanceof Player) && (getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
-			final Location wordPosition = ((PlayerInstance) caster).getCurrentSkillWorldPosition();
+			final Location wordPosition = ((Player) caster).getCurrentSkillWorldPosition();
 			if (wordPosition != null)
 			{
 				x = wordPosition.getX();

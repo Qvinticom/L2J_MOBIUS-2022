@@ -20,14 +20,14 @@ import org.l2jmobius.gameserver.data.xml.FishingRodsData;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.fishing.FishingRod;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -73,7 +73,7 @@ public class Reeling extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		final Fishing fish = player.getFishCombat();
 		if (fish == null)
 		{
@@ -83,7 +83,7 @@ public class Reeling extends AbstractEffect
 			return;
 		}
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		final ItemInstance weaponInst = creature.getActiveWeaponInstance();
+		final Item weaponInst = creature.getActiveWeaponInstance();
 		if ((weaponInst == null) || (weaponItem == null))
 		{
 			return;

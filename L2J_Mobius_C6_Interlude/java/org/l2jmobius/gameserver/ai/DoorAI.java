@@ -21,16 +21,16 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 
 /**
  * @author mkizub
  */
 public class DoorAI extends CreatureAI
 {
-	public DoorAI(DoorInstance.AIAccessor accessor)
+	public DoorAI(Door.AIAccessor accessor)
 	{
 		super(accessor);
 	}
@@ -88,7 +88,7 @@ public class DoorAI extends CreatureAI
 	@Override
 	protected void onEvtAttacked(Creature attacker)
 	{
-		ThreadPool.execute(new onEventAttackedDoorTask((DoorInstance) _actor, attacker));
+		ThreadPool.execute(new onEventAttackedDoorTask((Door) _actor, attacker));
 	}
 	
 	@Override
@@ -153,10 +153,10 @@ public class DoorAI extends CreatureAI
 	
 	private class onEventAttackedDoorTask implements Runnable
 	{
-		private final DoorInstance _door;
+		private final Door _door;
 		private final Creature _attacker;
 		
-		public onEventAttackedDoorTask(DoorInstance door, Creature attacker)
+		public onEventAttackedDoorTask(Door door, Creature attacker)
 		{
 			_door = door;
 			_attacker = attacker;
@@ -167,14 +167,14 @@ public class DoorAI extends CreatureAI
 		{
 			_door.getKnownList().updateKnownObjects();
 			
-			for (SiegeGuardInstance guard : _door.getKnownSiegeGuards())
+			for (SiegeGuard guard : _door.getKnownSiegeGuards())
 			{
 				if ((guard != null) && (guard.getAI() != null) && _actor.isInsideRadius2D(guard, guard.getFactionRange()) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
 				{
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
 				}
 			}
-			for (FortSiegeGuardInstance guard : _door.getKnownFortSiegeGuards())
+			for (FortSiegeGuard guard : _door.getKnownFortSiegeGuards())
 			{
 				if ((guard != null) && (guard.getAI() != null) && _actor.isInsideRadius2D(guard, guard.getFactionRange()) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
 				{

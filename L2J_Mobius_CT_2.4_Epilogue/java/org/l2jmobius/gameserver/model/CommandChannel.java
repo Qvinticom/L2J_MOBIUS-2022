@@ -24,7 +24,7 @@ import java.util.function.Function;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.ExMPCCPartyInfoUpdate;
@@ -38,14 +38,14 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class CommandChannel extends AbstractPlayerGroup
 {
 	private final Collection<Party> _parties = ConcurrentHashMap.newKeySet();
-	private PlayerInstance _commandLeader;
+	private Player _commandLeader;
 	private int _channelLvl;
 	
 	/**
 	 * Create a new command channel and add the leader's party to it.
 	 * @param leader the leader of this command channel
 	 */
-	public CommandChannel(PlayerInstance leader)
+	public CommandChannel(Player leader)
 	{
 		_commandLeader = leader;
 		final Party party = leader.getParty();
@@ -159,9 +159,9 @@ public class CommandChannel extends AbstractPlayerGroup
 	 * @return a list of all members in this command channel
 	 */
 	@Override
-	public List<PlayerInstance> getMembers()
+	public List<Player> getMembers()
 	{
-		final List<PlayerInstance> members = new LinkedList<>();
+		final List<Player> members = new LinkedList<>();
 		for (Party party : _parties)
 		{
 			members.addAll(party.getMembers());
@@ -179,7 +179,7 @@ public class CommandChannel extends AbstractPlayerGroup
 	}
 	
 	@Override
-	public void setLeader(PlayerInstance leader)
+	public void setLeader(Player leader)
 	{
 		_commandLeader = leader;
 		if (leader.getLevel() > _channelLvl)
@@ -205,7 +205,7 @@ public class CommandChannel extends AbstractPlayerGroup
 	 * @return the leader of this command channel
 	 */
 	@Override
-	public PlayerInstance getLeader()
+	public Player getLeader()
 	{
 		return _commandLeader;
 	}
@@ -216,7 +216,7 @@ public class CommandChannel extends AbstractPlayerGroup
 	 * @return {@code true} if he does, {@code false} otherwise
 	 */
 	@Override
-	public boolean containsPlayer(PlayerInstance player)
+	public boolean containsPlayer(Player player)
 	{
 		if ((_parties != null) && !_parties.isEmpty())
 		{
@@ -236,7 +236,7 @@ public class CommandChannel extends AbstractPlayerGroup
 	 * @see org.l2jmobius.gameserver.model.AbstractPlayerGroup#forEachMember(Function)
 	 */
 	@Override
-	public boolean forEachMember(Function<PlayerInstance, Boolean> function)
+	public boolean forEachMember(Function<Player, Boolean> function)
 	{
 		if ((_parties != null) && !_parties.isEmpty())
 		{

@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -49,10 +49,10 @@ public class QueenAnt extends Quest
 	private static final int GUARD = 29004;
 	private static final int ROYAL = 29005;
 	// Misc
-	private MonsterInstance _larva = null;
-	private MonsterInstance _queen = null;
-	private final List<MonsterInstance> _minions = new CopyOnWriteArrayList<>();
-	private final List<MonsterInstance> _nurses = new CopyOnWriteArrayList<>();
+	private Monster _larva = null;
+	private Monster _queen = null;
+	private final List<Monster> _minions = new CopyOnWriteArrayList<>();
+	private final List<Monster> _nurses = new CopyOnWriteArrayList<>();
 	
 	enum Event
 	{
@@ -101,7 +101,7 @@ public class QueenAnt extends Quest
 				}
 				else
 				{
-					final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
+					final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 					{
 						AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
@@ -116,7 +116,7 @@ public class QueenAnt extends Quest
 			{
 				final int hp = info.getInt("currentHP");
 				final int mp = info.getInt("currentMP");
-				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
+				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
@@ -128,7 +128,7 @@ public class QueenAnt extends Quest
 			}
 			default:
 			{
-				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
+				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
@@ -141,7 +141,7 @@ public class QueenAnt extends Quest
 		}
 	}
 	
-	private void spawnBoss(GrandBossInstance npc)
+	private void spawnBoss(GrandBoss npc)
 	{
 		startQuestTimer("ACTION", 10000, npc, null, true);
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
@@ -150,14 +150,14 @@ public class QueenAnt extends Quest
 		startQuestTimer("CHECK_MINIONS_ZONE", 30000, npc, null, true);
 		startQuestTimer("HEAL", 1000, null, null, true);
 		_queen = npc;
-		_larva = (MonsterInstance) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
+		_larva = (Monster) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
 		_larva.setUnkillable(true);
 		_larva.setImmobilized(true);
 		_larva.setPhysicalAttackMuted(true);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Event eventEnum = Event.valueOf(event);
 		
@@ -165,7 +165,7 @@ public class QueenAnt extends Quest
 		{
 			case QUEEN_SPAWN:
 			{
-				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
+				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
@@ -187,7 +187,7 @@ public class QueenAnt extends Quest
 				{
 					final int x = (int) (radius * Math.cos(i * 1.407)); // 1.407~2pi/6
 					final int y = (int) (radius * Math.sin(i * 1.407));
-					_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
+					_nurses.add((Monster) addSpawn(NURSE, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
 					_nurses.get(i).setPhysicalAttackMuted(true);
 				}
 				break;
@@ -199,18 +199,18 @@ public class QueenAnt extends Quest
 				{
 					final int x = (int) (radius * Math.cos(i * .7854)); // .7854~2pi/8
 					final int y = (int) (radius * Math.sin(i * .7854));
-					_minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
+					_minions.add((Monster) addSpawn(ROYAL, npc.getX() + x, npc.getY() + y, npc.getZ(), 0, false, 0));
 				}
 				break;
 			}
 			case RESPAWN_ROYAL:
 			{
-				_minions.add((MonsterInstance) addSpawn(ROYAL, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
+				_minions.add((Monster) addSpawn(ROYAL, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
 				break;
 			}
 			case RESPAWN_NURSE:
 			{
-				_nurses.add((MonsterInstance) addSpawn(NURSE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
+				_nurses.add((Monster) addSpawn(NURSE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0));
 				break;
 			}
 			case DESPAWN_MINIONS:
@@ -225,7 +225,7 @@ public class QueenAnt extends Quest
 				}
 				for (int k = 0; k < _nurses.size(); k++)
 				{
-					final MonsterInstance nurse = _nurses.get(k);
+					final Monster nurse = _nurses.get(k);
 					if (nurse != null)
 					{
 						nurse.decayMe();
@@ -250,7 +250,7 @@ public class QueenAnt extends Quest
 			case CHECK_NURSE_ALIVE:
 			{
 				int deadNurses = 0;
-				for (MonsterInstance nurse : _nurses)
+				for (Monster nurse : _nurses)
 				{
 					if (nurse.isDead())
 					{
@@ -284,7 +284,7 @@ public class QueenAnt extends Quest
 				final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
 				final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
 				boolean nurseNeedHeal = false;
-				for (MonsterInstance nurse : _nurses)
+				for (Monster nurse : _nurses)
 				{
 					nurseNeedHeal = (nurse != null) && (nurse.getCurrentHp() < nurse.getMaxHp());
 					if ((nurse == null) || nurse.isDead() || nurse.isCastingNow())
@@ -338,7 +338,7 @@ public class QueenAnt extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if (npcId == NURSE)
@@ -350,7 +350,7 @@ public class QueenAnt extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
@@ -398,7 +398,7 @@ public class QueenAnt extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public void getIntoPosition(MonsterInstance nurse, MonsterInstance caller)
+	public void getIntoPosition(Monster nurse, Monster caller)
 	{
 		if (!nurse.isInsideRadius2D(caller, 300))
 		{

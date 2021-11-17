@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,10 +26,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class DoorInfo implements IClientOutgoingPacket
 {
-	private final DoorInstance _door;
+	private final Door _door;
 	private final boolean _showHp;
 	
-	public DoorInfo(DoorInstance door, boolean showHp)
+	public DoorInfo(Door door, boolean showHp)
 	{
 		_door = door;
 		_showHp = showHp;

@@ -18,9 +18,9 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -42,14 +42,14 @@ public class GiveFame extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		final PlayerInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		player.setFame(player.getFame() + _fame);
 	}
 }

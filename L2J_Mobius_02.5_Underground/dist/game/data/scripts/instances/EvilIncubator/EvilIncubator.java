@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -195,7 +195,7 @@ public class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player);
 		if ((st == null) || !st.isStarted())
@@ -236,7 +236,7 @@ public class EvilIncubator extends AbstractInstance
 							if (helperCount == 2)
 							{
 								st.setCond(7, true);
-								World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpcInstance.class, 1000).forEach(FriendlyNpcInstance::deleteMe);
+								World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpc.class, 1000).forEach(FriendlyNpc::deleteMe);
 							}
 						}
 						break;
@@ -289,7 +289,7 @@ public class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player);
@@ -372,7 +372,7 @@ public class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState st = getQuestState(player);
@@ -507,14 +507,14 @@ public class EvilIncubator extends AbstractInstance
 	
 	private void managerWorldAttack(Instance world, List<Npc> spawnedNpcs)
 	{
-		final List<FriendlyNpcInstance> helperList = World.getInstance().getVisibleObjects(world.getFirstPlayer(), FriendlyNpcInstance.class);
+		final List<FriendlyNpc> helperList = World.getInstance().getVisibleObjects(world.getFirstPlayer(), FriendlyNpc.class);
 		if ((spawnedNpcs != null) && !spawnedNpcs.isEmpty())
 		{
 			for (Npc npc : spawnedNpcs)
 			{
 				if (!helperList.isEmpty())
 				{
-					final FriendlyNpcInstance helper = helperList.get(getRandom(helperList.size()));
+					final FriendlyNpc helper = helperList.get(getRandom(helperList.size()));
 					if (CommonUtil.contains(HELPERS, helper.getId()))
 					{
 						npc.reduceCurrentHp(1, helper, null);
@@ -526,11 +526,11 @@ public class EvilIncubator extends AbstractInstance
 			}
 		}
 		
-		for (FriendlyNpcInstance helper : helperList)
+		for (FriendlyNpc helper : helperList)
 		{
 			for (Attackable monster : World.getInstance().getVisibleObjects(helper, Attackable.class))
 			{
-				if (!(monster instanceof FriendlyNpcInstance))
+				if (!(monster instanceof FriendlyNpc))
 				{
 					addAttackDesire(helper, monster);
 				}
@@ -538,7 +538,7 @@ public class EvilIncubator extends AbstractInstance
 		}
 	}
 	
-	private QuestState getQuestState(PlayerInstance player)
+	private QuestState getQuestState(Player player)
 	{
 		if (player == null)
 		{

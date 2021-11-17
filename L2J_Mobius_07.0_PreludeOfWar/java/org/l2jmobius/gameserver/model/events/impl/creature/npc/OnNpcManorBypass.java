@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -26,13 +26,13 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnNpcManorBypass implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Npc _target;
 	private final int _request;
 	private final int _manorId;
 	private final boolean _nextPeriod;
 	
-	public OnNpcManorBypass(PlayerInstance player, Npc target, int request, int manorId, boolean nextPeriod)
+	public OnNpcManorBypass(Player player, Npc target, int request, int manorId, boolean nextPeriod)
 	{
 		_player = player;
 		_target = target;
@@ -41,7 +41,7 @@ public class OnNpcManorBypass implements IBaseEvent
 		_nextPeriod = nextPeriod;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

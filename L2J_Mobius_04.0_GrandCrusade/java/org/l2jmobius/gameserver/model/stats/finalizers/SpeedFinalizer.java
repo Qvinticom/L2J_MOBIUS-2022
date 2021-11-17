@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -45,7 +45,7 @@ public class SpeedFinalizer implements IStatFunction
 		if (creature.isPlayer())
 		{
 			// Enchanted feet bonus
-			baseValue += calcEnchantBodyPart(creature, Item.SLOT_FEET);
+			baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_FEET);
 		}
 		
 		final byte speedStat = (byte) creature.getStat().getAdd(Stat.STAT_BONUS_SPEED, -1);
@@ -74,7 +74,7 @@ public class SpeedFinalizer implements IStatFunction
 		double baseValue = calcWeaponPlusBaseValue(creature, stat);
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player.isMounted())
 			{
 				final PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());

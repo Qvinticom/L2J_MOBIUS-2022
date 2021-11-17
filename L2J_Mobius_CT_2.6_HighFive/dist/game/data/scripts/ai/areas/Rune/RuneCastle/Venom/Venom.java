@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -96,7 +96,7 @@ public class Venom extends AbstractNpcAI
 	};
 	// @formatter:on
 	
-	private static List<PlayerInstance> _targets = new ArrayList<>();
+	private static List<Player> _targets = new ArrayList<>();
 	
 	private Venom()
 	{
@@ -120,7 +120,7 @@ public class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		switch (npc.getId())
 		{
@@ -146,7 +146,7 @@ public class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -182,7 +182,7 @@ public class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		if (isSummon)
 		{
@@ -225,7 +225,7 @@ public class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		switch (skill.getId())
 		{
@@ -246,7 +246,7 @@ public class Venom extends AbstractNpcAI
 				((Attackable) npc).stopHating(player);
 				if ((_targets != null) && !_targets.isEmpty())
 				{
-					for (PlayerInstance target : _targets)
+					for (Player target : _targets)
 					{
 						final long x = player.getX() - target.getX();
 						final long y = player.getY() - target.getY();
@@ -304,7 +304,7 @@ public class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final double distance = npc.calculateDistance2D(attacker);
 		if (_aggroMode && (getRandom(100) < 25))
@@ -331,7 +331,7 @@ public class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		updateStatus(DEAD);
 		npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.IT_S_NOT_OVER_YET_IT_WON_T_BE_OVER_LIKE_THIS_NEVER);
@@ -375,7 +375,7 @@ public class Venom extends AbstractNpcAI
 		_loc.setLocation(_venom.getLocation());
 	}
 	
-	private void teleportTarget(PlayerInstance player)
+	private void teleportTarget(Player player)
 	{
 		if ((player != null) && !player.isDead())
 		{

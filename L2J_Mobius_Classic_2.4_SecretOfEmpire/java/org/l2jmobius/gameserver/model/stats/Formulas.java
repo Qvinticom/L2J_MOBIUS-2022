@@ -32,15 +32,15 @@ import org.l2jmobius.gameserver.enums.Position;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import org.l2jmobius.gameserver.model.cubic.CubicInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
+import org.l2jmobius.gameserver.model.cubic.Cubic;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -69,7 +69,7 @@ public class Formulas
 	private static final byte MELEE_ATTACK_RANGE = 40;
 	
 	/**
-	 * Return the period between 2 regeneration task (3s for Creature, 5 min for DoorInstance).
+	 * Return the period between 2 regeneration task (3s for Creature, 5 min for Door).
 	 * @param creature
 	 * @return
 	 */
@@ -201,7 +201,7 @@ public class Formulas
 		return damage;
 	}
 	
-	public static double calcMagicDam(CubicInstance attacker, Creature target, Skill skill, double power, boolean mcrit, byte shld)
+	public static double calcMagicDam(Cubic attacker, Creature target, Skill skill, double power, boolean mcrit, byte shld)
 	{
 		final double mAtk = attacker.getTemplate().getPower();
 		return calcMagicDam(attacker.getOwner(), target, skill, mAtk, power, shld, false, false, mcrit);
@@ -565,7 +565,7 @@ public class Formulas
 	 */
 	public static byte calcShldUse(Creature attacker, Creature target, boolean sendSysMsg)
 	{
-		final Item item = target.getSecondaryWeaponItem();
+		final ItemTemplate item = target.getSecondaryWeaponItem();
 		if (!(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
@@ -603,7 +603,7 @@ public class Formulas
 		
 		if (sendSysMsg && target.isPlayer())
 		{
-			final PlayerInstance enemy = target.getActingPlayer();
+			final Player enemy = target.getActingPlayer();
 			
 			switch (shldSuccess)
 			{
@@ -671,7 +671,7 @@ public class Formulas
 	public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill)
 	{
 		// StaticObjects can not receive continuous effects.
-		if (target.isDoor() || (target instanceof SiegeFlagInstance) || (target instanceof StaticObjectInstance))
+		if (target.isDoor() || (target instanceof SiegeFlag) || (target instanceof StaticObject))
 		{
 			return false;
 		}
@@ -741,7 +741,7 @@ public class Formulas
 		return true;
 	}
 	
-	public static boolean calcCubicSkillSuccess(CubicInstance attacker, Creature target, Skill skill, byte shld)
+	public static boolean calcCubicSkillSuccess(Cubic attacker, Creature target, Skill skill, byte shld)
 	{
 		if (skill.isDebuff())
 		{
@@ -1243,7 +1243,7 @@ public class Formulas
 	 * @param finalExp
 	 * @return the amount of karma player has loosed.
 	 */
-	public static int calculateKarmaLost(PlayerInstance player, double finalExp)
+	public static int calculateKarmaLost(Player player, double finalExp)
 	{
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (finalExp > 0) // Received exp
@@ -1578,8 +1578,8 @@ public class Formulas
 	
 	public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill, boolean crit)
 	{
-		final PlayerInstance attackerPlayer = attacker.getActingPlayer();
-		final PlayerInstance targetPlayer = attacker.getActingPlayer();
+		final Player attackerPlayer = attacker.getActingPlayer();
+		final Player targetPlayer = attacker.getActingPlayer();
 		
 		// PvP bonus
 		if (attacker.isPlayable() && target.isPlayable())
@@ -1671,7 +1671,7 @@ public class Formulas
 	{
 		if (attacker.isPlayer())
 		{
-			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final Player attackerPlayer = attacker.getActingPlayer();
 			final ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
 			if (ElementalType.NONE == type)
 			{
@@ -1689,7 +1689,7 @@ public class Formulas
 	{
 		if (attacker.isPlayer())
 		{
-			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final Player attackerPlayer = attacker.getActingPlayer();
 			final ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
 			if (ElementalType.NONE == type)
 			{

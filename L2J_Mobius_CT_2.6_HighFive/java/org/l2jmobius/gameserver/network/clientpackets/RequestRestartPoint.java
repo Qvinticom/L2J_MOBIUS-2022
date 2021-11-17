@@ -18,17 +18,17 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.quest.Event;
@@ -55,9 +55,9 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	
 	class DeathTask implements Runnable
 	{
-		final PlayerInstance _player;
+		final Player _player;
 		
-		DeathTask(PlayerInstance player)
+		DeathTask(Player player)
 		{
 			_player = player;
 		}
@@ -72,7 +72,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -121,7 +121,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		portPlayer(player);
 	}
 	
-	protected final void portPlayer(PlayerInstance player)
+	protected final void portPlayer(Player player)
 	{
 		Location loc = null;
 		Castle castle = null;
@@ -149,9 +149,9 @@ public class RequestRestartPoint implements IClientIncomingPacket
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
-				if ((ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) != null) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
+				if ((ClanHallTable.getInstance().getClanHallByOwner(player.getClan()) != null) && (ClanHallTable.getInstance().getClanHallByOwner(player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
 				{
-					player.restoreExp(ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
+					player.restoreExp(ClanHallTable.getInstance().getClanHallByOwner(player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
 				}
 				break;
 			}
@@ -209,7 +209,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 				castle = CastleManager.getInstance().getCastle(player);
 				fort = FortManager.getInstance().getFort(player);
 				hall = CHSiegeManager.getInstance().getNearbyClanHall(player);
-				final SiegeFlagInstance flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
+				final SiegeFlag flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
 				if ((castle != null) && castle.getSiege().isInProgress())
 				{
 					siegeClan = castle.getSiege().getAttackerClan(player.getClan());

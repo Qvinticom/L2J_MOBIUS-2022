@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class EnchantSkillGroup
 {
@@ -93,7 +93,7 @@ public class EnchantSkillGroup
 			return _adenaCost;
 		}
 		
-		public byte getRate(PlayerInstance ply)
+		public byte getRate(Player ply)
 		{
 			return ply.getLevel() < 76 ? 0 : _rate[ply.getLevel() - 76];
 		}

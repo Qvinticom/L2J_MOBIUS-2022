@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.model.PledgeSkillLearn;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.VillageMasterInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
+import org.l2jmobius.gameserver.model.actor.instance.VillageMaster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -59,20 +59,20 @@ public class RequestAquireSkill implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final FolkInstance trainer = player.getLastFolkNPC();
+		final Folk trainer = player.getLastFolkNPC();
 		if (trainer == null)
 		{
 			return;
 		}
 		
 		final int npcid = trainer.getNpcId();
-		if (!player.isInsideRadius2D(trainer, NpcInstance.INTERACTION_DISTANCE) && !player.isGM())
+		if (!player.isInsideRadius2D(trainer, Npc.INTERACTION_DISTANCE) && !player.isGM())
 		{
 			return;
 		}
@@ -127,7 +127,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 				// spellbook required
 				if (spbId > -1)
 				{
-					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
+					final Item spb = player.getInventory().getItemByItemId(spbId);
 					if (spb == null)
 					{
 						// Haven't spellbook
@@ -256,14 +256,14 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			player.sendPacket(sm);
 			
 			player.getClan().broadcastToOnlineMembers(new PledgeSkillList(player.getClan()));
-			for (PlayerInstance member : player.getClan().getOnlineMembers())
+			for (Player member : player.getClan().getOnlineMembers())
 			{
 				member.sendSkillList();
 			}
 			
-			if (trainer instanceof VillageMasterInstance)
+			if (trainer instanceof VillageMaster)
 			{
-				((VillageMasterInstance) trainer).showPledgeSkillList(player);
+				((VillageMaster) trainer).showPledgeSkillList(player);
 			}
 			
 			return;
@@ -303,9 +303,9 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			}
 		}
 		
-		if (trainer instanceof FishermanInstance)
+		if (trainer instanceof Fisherman)
 		{
-			((FishermanInstance) trainer).showSkillList(player);
+			((Fisherman) trainer).showSkillList(player);
 		}
 		else
 		{

@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
@@ -70,7 +70,7 @@ public class PlayerStat extends PlayableStat
 	public static final int MAX_VITALITY_POINTS = VITALITY_LEVELS[4];
 	public static final int MIN_VITALITY_POINTS = 1;
 	
-	public PlayerStat(PlayerInstance player)
+	public PlayerStat(Player player)
 	{
 		super(player);
 	}
@@ -78,7 +78,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public boolean addExp(long value)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		
 		// Allowed to gain exp?
 		if (!getActiveChar().getAccessLevel().canGainExp())
@@ -112,7 +112,7 @@ public class PlayerStat extends PlayableStat
 	
 	public boolean addExpAndSp(double addToExpValue, double addToSpValue, boolean useBonuses)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		
 		// Allowed to gain exp/sp?
 		if (!player.getAccessLevel().canGainExp())
@@ -145,7 +145,7 @@ public class PlayerStat extends PlayableStat
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
 		if (player.hasPet() && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, player, player.getSummon(), false))
 		{
-			final PetInstance pet = (PetInstance) player.getSummon();
+			final Pet pet = (Pet) player.getSummon();
 			ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 			
 			// only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio
@@ -206,7 +206,7 @@ public class PlayerStat extends PlayableStat
 		
 		if (sendMessage)
 		{
-			// Send a Server->Client System Message to the PlayerInstance
+			// Send a Server->Client System Message to the Player
 			SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_EXPERIENCE_HAS_DECREASED_BY_S1);
 			sm.addLong(addToExp);
 			getActiveChar().sendPacket(sm);
@@ -248,7 +248,7 @@ public class PlayerStat extends PlayableStat
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
 			getActiveChar().sendPacket(SystemMessageId.YOUR_LEVEL_HAS_INCREASED);
 			
-			ClassMasterInstance.showQuestionMark(getActiveChar());
+			ClassMaster.showQuestionMark(getActiveChar());
 		}
 		
 		// Give AutoGet skills and all normal skills if Auto-Learn is activated.
@@ -272,7 +272,7 @@ public class PlayerStat extends PlayableStat
 		// Synchronize level with pet if possible.
 		if (getActiveChar().hasPet())
 		{
-			final PetInstance pet = (PetInstance) getActiveChar().getSummon();
+			final Pet pet = (Pet) getActiveChar().getSummon();
 			if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel()))
 			{
 				pet.getStat().setLevel(getLevel());
@@ -291,11 +291,11 @@ public class PlayerStat extends PlayableStat
 		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
 		getActiveChar().sendPacket(su);
 		
-		// Update the overloaded status of the PlayerInstance
+		// Update the overloaded status of the Player
 		getActiveChar().refreshOverloaded();
-		// Update the expertise status of the PlayerInstance
+		// Update the expertise status of the Player
 		getActiveChar().refreshExpertisePenalty();
-		// Send a Server->Client packet UserInfo to the PlayerInstance
+		// Send a Server->Client packet UserInfo to the Player
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		getActiveChar().sendPacket(new ExBrExtraUserInfo(getActiveChar()));
 		return levelIncreased;
@@ -323,9 +323,9 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
-		return (PlayerInstance) super.getActiveChar();
+		return (Player) super.getActiveChar();
 	}
 	
 	@Override
@@ -448,7 +448,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public int getMaxCp()
 	{
-		// Get the Max CP (base+modifier) of the PlayerInstance
+		// Get the Max CP (base+modifier) of the Player
 		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_CP, getActiveChar().getTemplate().getBaseCpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxCp)
 		{
@@ -466,7 +466,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public int getMaxHp()
 	{
-		// Get the Max HP (base+modifier) of the PlayerInstance
+		// Get the Max HP (base+modifier) of the Player
 		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxHp)
 		{
@@ -484,7 +484,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public int getMaxMp()
 	{
-		// Get the Max MP (base+modifier) of the PlayerInstance
+		// Get the Max MP (base+modifier) of the Player
 		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_MP, getActiveChar().getTemplate().getBaseMpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxMp)
 		{
@@ -534,7 +534,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public double getBaseMoveSpeed(MoveType type)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (player.isTransformed())
 		{
 			final TransformTemplate template = player.getTransformation().getTemplate(player);

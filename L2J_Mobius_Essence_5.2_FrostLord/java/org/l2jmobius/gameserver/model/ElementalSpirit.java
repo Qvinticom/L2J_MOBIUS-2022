@@ -26,7 +26,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnElementalSpiritUpgrade;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritAbsorbItemHolder;
@@ -46,18 +46,18 @@ public class ElementalSpirit
 {
 	private static final String STORE_ELEMENTAL_SPIRIT_QUERY = "REPLACE INTO character_spirits (charId, type, level, stage, experience, attack_points, defense_points, crit_rate_points, crit_damage_points, in_use) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private ElementalSpiritTemplateHolder _template;
 	private final ElementalSpiritDataHolder _data;
 	
-	public ElementalSpirit(ElementalType type, PlayerInstance owner)
+	public ElementalSpirit(ElementalType type, Player owner)
 	{
 		_data = new ElementalSpiritDataHolder(type.getId(), owner.getObjectId());
 		_template = ElementalSpiritData.getInstance().getSpirit(type.getId(), _data.getStage());
 		_owner = owner;
 	}
 	
-	public ElementalSpirit(ElementalSpiritDataHolder data, PlayerInstance owner)
+	public ElementalSpirit(ElementalSpiritDataHolder data, Player owner)
 	{
 		_owner = owner;
 		_data = data;

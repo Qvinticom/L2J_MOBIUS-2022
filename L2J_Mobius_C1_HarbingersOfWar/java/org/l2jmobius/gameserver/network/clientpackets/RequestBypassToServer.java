@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.AdminCommands;
 import org.l2jmobius.gameserver.managers.CommunityBoardManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Npc;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestBypassToServer extends ClientBasePacket
@@ -44,10 +44,10 @@ public class RequestBypassToServer extends ClientBasePacket
 			else if (command.equals("come_here"))
 			{
 				final WorldObject obj = client.getActiveChar().getTarget();
-				if (obj instanceof NpcInstance)
+				if (obj instanceof Npc)
 				{
-					final NpcInstance temp = (NpcInstance) obj;
-					final PlayerInstance player = client.getActiveChar();
+					final Npc temp = (Npc) obj;
+					final Player player = client.getActiveChar();
 					temp.setTarget(player);
 					temp.moveTo(player.getX(), player.getY(), player.getZ(), 0);
 				}
@@ -57,9 +57,9 @@ public class RequestBypassToServer extends ClientBasePacket
 				final int endOfId = command.indexOf(95, 5);
 				final String id = command.substring(4, endOfId);
 				final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
-				if (object instanceof NpcInstance)
+				if (object instanceof Npc)
 				{
-					((NpcInstance) object).onBypassFeedback(client.getActiveChar(), command.substring(endOfId + 1));
+					((Npc) object).onBypassFeedback(client.getActiveChar(), command.substring(endOfId + 1));
 				}
 			}
 			else if (command.startsWith("bbs_"))

@@ -17,22 +17,22 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
 import org.l2jmobius.gameserver.model.Augmentation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnPlayerAugment implements IBaseEvent
 {
-	private final PlayerInstance _player;
-	private final ItemInstance _item;
+	private final Player _player;
+	private final Item _item;
 	private final Augmentation _augmentation;
 	private final boolean _isAugment; // true = is being augmented // false = augment is being removed
 	
-	public OnPlayerAugment(PlayerInstance player, ItemInstance item, Augmentation augment, boolean isAugment)
+	public OnPlayerAugment(Player player, Item item, Augmentation augment, boolean isAugment)
 	{
 		_player = player;
 		_item = item;
@@ -40,12 +40,12 @@ public class OnPlayerAugment implements IBaseEvent
 		_isAugment = isAugment;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

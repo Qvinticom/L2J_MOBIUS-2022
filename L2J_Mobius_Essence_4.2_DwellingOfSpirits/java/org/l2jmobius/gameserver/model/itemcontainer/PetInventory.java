@@ -21,21 +21,21 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 public class PetInventory extends Inventory
 {
-	private final PetInstance _owner;
+	private final Pet _owner;
 	
-	public PetInventory(PetInstance owner)
+	public PetInventory(Pet owner)
 	{
 		_owner = owner;
 	}
 	
 	@Override
-	public PetInstance getOwner()
+	public Pet getOwner()
 	{
 		return _owner;
 	}
@@ -57,12 +57,12 @@ public class PetInventory extends Inventory
 	}
 	
 	@Override
-	public Collection<ItemInstance> getItems()
+	public Collection<Item> getItems()
 	{
-		return super.getItems().stream().filter(ItemInstance::isEquipped).collect(Collectors.toList());
+		return super.getItems().stream().filter(Item::isEquipped).collect(Collectors.toList());
 	}
 	
-	public boolean validateCapacity(ItemInstance item)
+	public boolean validateCapacity(Item item)
 	{
 		int slots = 0;
 		if (!(item.isStackable() && (getItemByItemId(item.getId()) != null)) && !item.getItem().hasExImmediateEffect())
@@ -78,10 +78,10 @@ public class PetInventory extends Inventory
 		return ((_items.size() + slots) <= _owner.getInventoryLimit());
 	}
 	
-	public boolean validateWeight(ItemInstance item, long count)
+	public boolean validateWeight(Item item, long count)
 	{
 		int weight = 0;
-		final Item template = ItemTable.getInstance().getTemplate(item.getId());
+		final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getId());
 		if (template == null)
 		{
 			return false;
@@ -110,7 +110,7 @@ public class PetInventory extends Inventory
 	
 	public void transferItemsToOwner()
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			getOwner().transferItem("return", item.getObjectId(), item.getCount(), getOwner().getOwner().getInventory(), getOwner().getOwner(), getOwner());
 		}

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -40,7 +40,7 @@ public class Clan implements ITargetTypeHandler
 		final List<Creature> targetList = new ArrayList<>();
 		if (creature.isPlayable())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player == null)
 			{
 				return EMPTY_TARGET_LIST;
@@ -73,10 +73,10 @@ public class Clan implements ITargetTypeHandler
 			
 			if (clan != null)
 			{
-				PlayerInstance obj;
+				Player obj;
 				for (ClanMember member : clan.getMembers())
 				{
-					obj = member.getPlayerInstance();
+					obj = member.getPlayer();
 					if ((obj == null) || (obj == player))
 					{
 						continue;

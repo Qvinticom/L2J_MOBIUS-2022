@@ -16,33 +16,33 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.item;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnItemBypassEvent implements IBaseEvent
 {
-	private final ItemInstance _item;
-	private final PlayerInstance _player;
+	private final Item _item;
+	private final Player _player;
 	private final String _event;
 	
-	public OnItemBypassEvent(ItemInstance item, PlayerInstance player, String event)
+	public OnItemBypassEvent(Item item, Player player, String event)
 	{
 		_item = item;
 		_player = player;
 		_event = event;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

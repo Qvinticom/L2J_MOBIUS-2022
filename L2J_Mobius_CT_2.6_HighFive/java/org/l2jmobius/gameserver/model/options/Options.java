@@ -21,9 +21,9 @@ import java.util.Collections;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
@@ -60,7 +60,7 @@ public class Options
 		return !_funcs.isEmpty();
 	}
 	
-	public List<AbstractFunction> getStatFuncs(ItemInstance item, Creature creature)
+	public List<AbstractFunction> getStatFuncs(Item item, Creature creature)
 	{
 		if (_funcs.isEmpty())
 		{
@@ -154,7 +154,7 @@ public class Options
 		_activationSkills.add(holder);
 	}
 	
-	public void apply(PlayerInstance player)
+	public void apply(Player player)
 	{
 		if (!_funcs.isEmpty())
 		{
@@ -179,7 +179,7 @@ public class Options
 		player.sendSkillList();
 	}
 	
-	public void remove(PlayerInstance player)
+	public void remove(Player player)
 	{
 		if (!_funcs.isEmpty())
 		{
@@ -203,7 +203,7 @@ public class Options
 		player.sendSkillList();
 	}
 	
-	private final void addSkill(PlayerInstance player, Skill skill)
+	private final void addSkill(Player player, Skill skill)
 	{
 		boolean updateTimeStamp = false;
 		player.addSkill(skill, false);

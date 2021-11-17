@@ -19,7 +19,7 @@ package ai.others.Tutorial;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -52,7 +52,7 @@ public class Tutorial extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player.getVariables().getInt(TUTORIAL_VAR, 0) == 0)
 		{
 			if (player.getRace() == Race.ERTHEIA)
@@ -80,7 +80,7 @@ public class Tutorial extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (event.getCommand().equals("chat_window"))
 		{
 			ThreadPool.schedule(() ->
@@ -97,7 +97,7 @@ public class Tutorial extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerCreate(OnPlayerCreate event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (Config.DISABLE_TUTORIAL)
 		{
 			return;

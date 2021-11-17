@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -58,7 +58,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		final Inventory inv = caster.getInventory();
 		
 		// Get the itemMask of the weared chest (if exists)
-		final ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final Item chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		if (chest == null)
 		{
 			return false;
@@ -75,12 +75,12 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		final int chestBodyPart = chest.getItem().getBodyPart();
 		// return True if chest armor is a Full Armor
-		if (chestBodyPart == Item.SLOT_FULL_ARMOR)
+		if (chestBodyPart == ItemTemplate.SLOT_FULL_ARMOR)
 		{
 			return true;
 		}
 		// check legs armor
-		final ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final Item legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		if (legs == null)
 		{
 			return false;

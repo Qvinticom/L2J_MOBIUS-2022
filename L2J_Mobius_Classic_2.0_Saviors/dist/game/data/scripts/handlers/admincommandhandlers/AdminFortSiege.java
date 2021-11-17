@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -49,7 +49,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command, " ");
@@ -72,10 +72,10 @@ public class AdminFortSiege implements IAdminCommandHandler
 		else
 		{
 			final WorldObject target = activeChar.getTarget();
-			PlayerInstance player = null;
+			Player player = null;
 			if ((target != null) && target.isPlayer())
 			{
-				player = (PlayerInstance) target;
+				player = (Player) target;
 			}
 			
 			if (command.equalsIgnoreCase("admin_add_fortattacker"))
@@ -144,7 +144,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showFortSelectPage(PlayerInstance activeChar)
+	private void showFortSelectPage(Player activeChar)
 	{
 		int i = 0;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
@@ -171,7 +171,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showFortSiegePage(PlayerInstance activeChar, Fort fort)
+	private void showFortSiegePage(Player activeChar, Fort fort)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/fort.htm");

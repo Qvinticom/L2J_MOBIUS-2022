@@ -21,24 +21,24 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.xml.HitConditionBonusData;
 import org.l2jmobius.gameserver.data.xml.KarmaData;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -92,7 +92,7 @@ public class Formulas
 	private static final byte MELEE_ATTACK_RANGE = 40;
 	
 	/**
-	 * Return the period between 2 regeneration task (3s for Creature, 5 min for DoorInstance).
+	 * Return the period between 2 regeneration task (3s for Creature, 5 min for Door).
 	 * @param creature
 	 * @return
 	 */
@@ -108,7 +108,7 @@ public class Formulas
 	 * <br>
 	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function :<br>
 	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
-	 * To reduce cache memory use, NPCInstances who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * To reduce cache memory use, Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
 	 * @return
 	 */
 	public static Calculator[] getStdNPCCalculators()
@@ -181,13 +181,13 @@ public class Formulas
 	}
 	
 	/**
-	 * Add basics Func objects to PlayerInstance and Summon.<br>
+	 * Add basics Func objects to Player and Summon.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
 	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function :<br>
 	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()
-	 * @param creature PlayerInstance or Summon that must obtain basic Func objects
+	 * @param creature Player or Summon that must obtain basic Func objects
 	 */
 	public static void addFuncsToNewCharacter(Creature creature)
 	{
@@ -258,7 +258,7 @@ public class Formulas
 		
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			
 			// SevenSigns Festival modifier
 			if (SevenSignsFestival.getInstance().isFestivalInProgress() && player.isFestivalParticipant())
@@ -281,7 +281,7 @@ public class Formulas
 				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
 				{
-					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
+					final ClanHall clansHall = ClanHallTable.getInstance().getClanHallById(clanHallIndex);
 					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null))
 					{
 						hpRegenMultiplier *= 1 + ((double) clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() / 100);
@@ -346,7 +346,7 @@ public class Formulas
 		}
 		else if (creature.isPet())
 		{
-			init = ((PetInstance) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
+			init = ((Pet) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
 		}
 		
 		return (creature.calcStat(Stat.REGENERATE_HP_RATE, Math.max(1, init), null, null) * hpRegenMultiplier) + hpRegenBonus;
@@ -365,7 +365,7 @@ public class Formulas
 		
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			
 			// SevenSigns Festival modifier
 			if (SevenSignsFestival.getInstance().isFestivalInProgress() && player.isFestivalParticipant())
@@ -388,7 +388,7 @@ public class Formulas
 				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
 				{
-					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
+					final ClanHall clansHall = ClanHallTable.getInstance().getClanHallById(clanHallIndex);
 					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null))
 					{
 						mpRegenMultiplier *= 1 + ((double) clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() / 100);
@@ -445,7 +445,7 @@ public class Formulas
 		}
 		else if (creature.isPet())
 		{
-			init = ((PetInstance) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
+			init = ((Pet) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
 		}
 		
 		return (creature.calcStat(Stat.REGENERATE_MP_RATE, Math.max(1, init), null, null) * mpRegenMultiplier) + mpRegenBonus;
@@ -456,7 +456,7 @@ public class Formulas
 	 * @param player the player
 	 * @return the CP regeneration rate
 	 */
-	public static double calcCpRegen(PlayerInstance player)
+	public static double calcCpRegen(Player player)
 	{
 		// With CON bonus
 		final double init = player.getActingPlayer().getTemplate().getBaseCpRegen(player.getLevel()) * player.getLevelMod() * BaseStat.CON.calcBonus(player);
@@ -476,7 +476,7 @@ public class Formulas
 		return player.calcStat(Stat.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier;
 	}
 	
-	public static double calcFestivalRegenModifier(PlayerInstance player)
+	public static double calcFestivalRegenModifier(Player player)
 	{
 		final int[] festivalInfo = SevenSignsFestival.getInstance().getFestivalForPlayer(player);
 		final int oracle = festivalInfo[0];
@@ -505,7 +505,7 @@ public class Formulas
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}
 	
-	public static double calcSiegeRegenModifier(PlayerInstance player)
+	public static double calcSiegeRegenModifier(Player player)
 	{
 		if ((player == null) || (player.getClan() == null))
 		{
@@ -931,7 +931,7 @@ public class Formulas
 		return damage;
 	}
 	
-	public static double calcMagicDam(CubicInstance attacker, Creature target, Skill skill, boolean mcrit, byte shld)
+	public static double calcMagicDam(Cubic attacker, Creature target, Skill skill, boolean mcrit, byte shld)
 	{
 		double mDef = target.getMDef(attacker.getOwner(), skill);
 		switch (shld)
@@ -955,7 +955,7 @@ public class Formulas
 		double damage = 91 * ((mAtk + skill.getPower(isPvP, isPvE)) / mDef);
 		
 		// Failure calculation
-		final PlayerInstance owner = attacker.getOwner();
+		final Player owner = attacker.getOwner();
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(owner, target, skill))
 		{
 			if (calcMagicSuccess(owner, target, skill) && ((target.getLevel() - skill.getMagicLevel()) <= 9))
@@ -1170,7 +1170,7 @@ public class Formulas
 			return 0;
 		}
 		
-		final Item item = target.getSecondaryWeaponItem();
+		final ItemTemplate item = target.getSecondaryWeaponItem();
 		if ((item == null) || !(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
@@ -1207,7 +1207,7 @@ public class Formulas
 		
 		if (sendSysMsg && target.isPlayer())
 		{
-			final PlayerInstance enemy = target.getActingPlayer();
+			final Player enemy = target.getActingPlayer();
 			
 			switch (shldSuccess)
 			{
@@ -1279,7 +1279,7 @@ public class Formulas
 	public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill)
 	{
 		// StaticObjects can not receive continuous effects.
-		if (target.isDoor() || (target instanceof SiegeFlagInstance) || (target instanceof StaticObjectInstance))
+		if (target.isDoor() || (target instanceof SiegeFlag) || (target instanceof StaticObject))
 		{
 			return false;
 		}
@@ -1373,7 +1373,7 @@ public class Formulas
 		return true;
 	}
 	
-	public static boolean calcCubicSkillSuccess(CubicInstance attacker, Creature target, Skill skill, byte shld)
+	public static boolean calcCubicSkillSuccess(Cubic attacker, Creature target, Skill skill, byte shld)
 	{
 		if (skill.isDebuff())
 		{
@@ -2010,7 +2010,7 @@ public class Formulas
 	 * @param exp
 	 * @return the amount of karma player has loosed.
 	 */
-	public static int calculateKarmaLost(PlayerInstance player, long exp)
+	public static int calculateKarmaLost(Player player, long exp)
 	{
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (exp > 0) // Received exp

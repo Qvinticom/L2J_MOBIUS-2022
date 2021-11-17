@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -30,9 +30,9 @@ public class ExCuriousHouseMemberList implements IClientOutgoingPacket
 {
 	private final int _id;
 	private final int _maxPlayers;
-	private final Collection<PlayerInstance> _players;
+	private final Collection<Player> _players;
 	
-	public ExCuriousHouseMemberList(int id, int maxPlayers, Collection<PlayerInstance> players)
+	public ExCuriousHouseMemberList(int id, int maxPlayers, Collection<Player> players)
 	{
 		_id = id;
 		_maxPlayers = maxPlayers;
@@ -48,7 +48,7 @@ public class ExCuriousHouseMemberList implements IClientOutgoingPacket
 		packet.writeD(_maxPlayers);
 		packet.writeD(_players.size());
 		int pos = 0;
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			packet.writeD(player.getObjectId());
 			packet.writeD(pos++);

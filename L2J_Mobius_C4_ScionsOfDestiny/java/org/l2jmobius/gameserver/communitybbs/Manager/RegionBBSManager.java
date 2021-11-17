@@ -23,10 +23,10 @@ import java.util.StringTokenizer;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -43,7 +43,7 @@ public class RegionBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, PlayerInstance player)
+	public void parseCmd(String command, Player player)
 	{
 		if (command.equals("_bbsloc"))
 		{
@@ -71,7 +71,7 @@ public class RegionBBSManager extends BaseBBSManager
 		return "region/";
 	}
 	
-	private void showRegionsList(PlayerInstance player)
+	private void showRegionsList(Player player)
 	{
 		final String content = HtmCache.getInstance().getHtm(CB_PATH + "region/castlelist.htm");
 		final StringBuilder sb = new StringBuilder(500);
@@ -83,7 +83,7 @@ public class RegionBBSManager extends BaseBBSManager
 		separateAndSend(content.replace("%castleList%", sb.toString()), player);
 	}
 	
-	private void showRegion(PlayerInstance player, int castleId)
+	private void showRegion(Player player, int castleId)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 		final Clan owner = ClanTable.getInstance().getClan(castle.getOwnerId());
@@ -96,7 +96,7 @@ public class RegionBBSManager extends BaseBBSManager
 		content = content.replace("%siegeDate%", new SimpleDateFormat("yyyy-MM-dd HH:mm").format(castle.getSiegeDate().getTimeInMillis()));
 		
 		final StringBuilder sb = new StringBuilder(200);
-		final List<ClanHall> clanHalls = ClanHallManager.getInstance().getClanHallsByLocation(castle.getName());
+		final List<ClanHall> clanHalls = ClanHallTable.getInstance().getClanHallsByLocation(castle.getName());
 		if ((clanHalls != null) && !clanHalls.isEmpty())
 		{
 			sb.append("<br><br><table width=610 bgcolor=A7A19A><tr><td width=5></td><td width=200>Clan Hall Name</td><td width=200>Owning Clan</td><td width=200>Clan Leader Name</td><td width=5></td></tr></table><br1>");

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public interface IAdminCommandHandler
 {
@@ -26,7 +26,7 @@ public interface IAdminCommandHandler
 	 * @param command
 	 * @return command success
 	 */
-	boolean useAdminCommand(String command, PlayerInstance player);
+	boolean useAdminCommand(String command, Player player);
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

@@ -33,7 +33,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.multisell.Entry;
 import org.l2jmobius.gameserver.model.multisell.Ingredient;
 import org.l2jmobius.gameserver.model.multisell.ListContainer;
@@ -220,7 +220,7 @@ public class MultisellData implements IXmlReader
 	 * @param productMultiplier
 	 * @param ingredientMultiplier
 	 */
-	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
+	public void separateAndSend(int listId, Player player, Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
 	{
 		final ListContainer template = _entries.get(listId);
 		if (template == null)
@@ -270,12 +270,12 @@ public class MultisellData implements IXmlReader
 		player.setMultiSell(list);
 	}
 	
-	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
+	public void separateAndSend(int listId, Player player, Npc npc, boolean inventoryOnly)
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}
 	
-	public static boolean hasSpecialIngredient(int id, long amount, PlayerInstance player)
+	public static boolean hasSpecialIngredient(int id, long amount, Player player)
 	{
 		switch (id)
 		{
@@ -311,7 +311,7 @@ public class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static boolean takeSpecialIngredient(int id, long amount, PlayerInstance player)
+	public static boolean takeSpecialIngredient(int id, long amount, Player player)
 	{
 		switch (id)
 		{
@@ -334,7 +334,7 @@ public class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static void giveSpecialProduct(int id, long amount, PlayerInstance player)
+	public static void giveSpecialProduct(int id, long amount, Player player)
 	{
 		switch (id)
 		{

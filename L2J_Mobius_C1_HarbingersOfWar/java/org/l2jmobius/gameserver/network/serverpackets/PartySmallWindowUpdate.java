@@ -17,13 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PartySmallWindowUpdate extends ServerBasePacket
 {
-	private final PlayerInstance _member;
+	private final Player _member;
 	
-	public PartySmallWindowUpdate(PlayerInstance member)
+	public PartySmallWindowUpdate(Player member)
 	{
 		_member = member;
 	}

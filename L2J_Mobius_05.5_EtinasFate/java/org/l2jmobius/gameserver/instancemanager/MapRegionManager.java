@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.MapRegion;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -222,7 +222,7 @@ public class MapRegionManager implements IXmlReader
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			Castle castle = null;
 			Fort fort = null;
 			ClanHall clanhall = null;
@@ -330,7 +330,7 @@ public class MapRegionManager implements IXmlReader
 					final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
 					if (zone != null)
 					{
-						return getRestartRegion(creature, zone.getRespawnPoint((PlayerInstance) creature)).getChaoticSpawnLoc();
+						return getRestartRegion(creature, zone.getRespawnPoint((Player) creature)).getChaoticSpawnLoc();
 					}
 					return getMapRegion(creature).getChaoticSpawnLoc();
 				}
@@ -382,7 +382,7 @@ public class MapRegionManager implements IXmlReader
 			final RespawnZone zone = ZoneManager.getInstance().getZone(creature, RespawnZone.class);
 			if (zone != null)
 			{
-				return getRestartRegion(creature, zone.getRespawnPoint((PlayerInstance) creature)).getSpawnLoc();
+				return getRestartRegion(creature, zone.getRespawnPoint((Player) creature)).getSpawnLoc();
 			}
 			return getMapRegion(creature).getSpawnLoc();
 		}
@@ -402,7 +402,7 @@ public class MapRegionManager implements IXmlReader
 	{
 		try
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			final MapRegion region = REGIONS.get(point);
 			if (region.getBannedRace().containsKey(player.getRace()))
 			{

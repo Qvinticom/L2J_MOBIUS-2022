@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.AdminCommands;
 import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -32,7 +32,7 @@ public class SendBypassBuildCmd extends ClientBasePacket
 	public SendBypassBuildCmd(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final String command = readS();
 		if (client.getAccessLevel() >= 100)
 		{
@@ -46,7 +46,7 @@ public class SendBypassBuildCmd extends ClientBasePacket
 				{
 					final String text = command.substring(9);
 					final CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), text);
-					for (PlayerInstance player : World.getInstance().getAllPlayers())
+					for (Player player : World.getInstance().getAllPlayers())
 					{
 						player.sendPacket(cs);
 					}

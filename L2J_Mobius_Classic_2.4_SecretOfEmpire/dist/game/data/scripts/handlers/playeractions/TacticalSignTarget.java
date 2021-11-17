@@ -18,7 +18,7 @@ package handlers.playeractions;
 
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public class TacticalSignTarget implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (!player.isInParty())
 		{

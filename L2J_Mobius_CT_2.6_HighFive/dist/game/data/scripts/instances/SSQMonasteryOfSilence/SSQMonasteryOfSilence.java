@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -186,7 +186,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -197,7 +197,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -447,7 +447,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -527,7 +527,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{
@@ -536,7 +536,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 		return super.onTalk(npc, talker);
 	}
 	
-	protected void spawnElcadia(PlayerInstance player, InstanceWorld world)
+	protected void spawnElcadia(Player player, InstanceWorld world)
 	{
 		if (world.getParameters().getObject("elcadia", Npc.class) != null)
 		{

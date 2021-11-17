@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.TerritoryWard;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -45,7 +45,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command);
@@ -172,7 +172,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 		return _adminCommands;
 	}
 	
-	private void showSiegeTimePage(PlayerInstance activeChar)
+	private void showSiegeTimePage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar, "data/html/admin/territorywartime.htm");
@@ -180,7 +180,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "territorywar.htm");
 	}

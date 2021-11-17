@@ -21,7 +21,7 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
@@ -74,14 +74,14 @@ public class Q10294_SporeInfestedPlace extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(PlayerInstance member, Npc npc)
+	public boolean checkPartyMember(Player member, Npc npc)
 	{
 		final QuestState qs = getQuestState(member, false);
 		return ((qs != null) && qs.isStarted());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -142,7 +142,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -188,7 +188,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(2))
@@ -209,7 +209,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2))
@@ -223,7 +223,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 	}
 	
 	@Override
-	public void onQuestAborted(PlayerInstance player)
+	public void onQuestAborted(Player player)
 	{
 		player.removeListenerIf(EventType.ON_PLAYER_LEVEL_CHANGED, listener -> listener.getOwner() == player);
 		super.onQuestAborted(player);
@@ -231,7 +231,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 	
 	private void onLevelUp(OnPlayerLevelChanged event, QuestState qs)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		sendNpcLogList(player);
 		if (allConditionsMet(player, qs))
 		{
@@ -239,12 +239,12 @@ public class Q10294_SporeInfestedPlace extends Quest
 		}
 	}
 	
-	private boolean allConditionsMet(PlayerInstance player, QuestState qs)
+	private boolean allConditionsMet(Player player, QuestState qs)
 	{
 		return (qs != null) && qs.isCond(2) && (player.getLevel() > 43) && (qs.getInt(KILL_COUNT_VAR) >= 200);
 	}
 	
-	private void prepareToFinishQuest(PlayerInstance killer, QuestState qs)
+	private void prepareToFinishQuest(Player killer, QuestState qs)
 	{
 		qs.setCond(3, true);
 		giveItems(killer, SOE_HIGH_PRIEST_OVEN);

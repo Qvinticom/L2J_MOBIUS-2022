@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.enums.SubclassType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -95,7 +95,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -456,7 +456,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		}
 	}
 	
-	public static void showSubUnitSkillList(PlayerInstance player)
+	public static void showSubUnitSkillList(Player player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubPledgeSkills(player.getClan());
 		if (skills.isEmpty())
@@ -469,7 +469,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		}
 	}
 	
-	public static void showSubSkillList(PlayerInstance player)
+	public static void showSubSkillList(Player player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubClassSkills(player);
 		if (!skills.isEmpty())
@@ -482,7 +482,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		}
 	}
 	
-	public static void showDualSkillList(PlayerInstance player)
+	public static void showDualSkillList(Player player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableDualClassSkills(player);
 		if (!skills.isEmpty())
@@ -504,7 +504,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	 * @param skillLearn the skill to be learn.
 	 * @return {@code true} if all requirements are meet, {@code false} otherwise.
 	 */
-	private boolean checkPlayerSkill(PlayerInstance player, Npc trainer, SkillLearn skillLearn)
+	private boolean checkPlayerSkill(Player player, Npc trainer, SkillLearn skillLearn)
 	{
 		if ((skillLearn != null) && (skillLearn.getSkillId() == _id) && (skillLearn.getSkillLevel() == _level))
 		{
@@ -620,7 +620,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	 * @param trainer the Npc teaching a skill.
 	 * @param skill the skill to be learn.
 	 */
-	private void giveSkill(PlayerInstance player, Npc trainer, Skill skill)
+	private void giveSkill(Player player, Npc trainer, Skill skill)
 	{
 		giveSkill(player, trainer, skill, true);
 	}
@@ -632,7 +632,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	 * @param skill the skill to be learn.
 	 * @param store
 	 */
-	private void giveSkill(PlayerInstance player, Npc trainer, Skill skill, boolean store)
+	private void giveSkill(Player player, Npc trainer, Skill skill, boolean store)
 	{
 		// Send message.
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_LEARNED_S1);
@@ -670,7 +670,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	 * @param trainer the Npc which the {@code player} is interacting
 	 * @param player the active character
 	 */
-	private void showSkillList(Npc trainer, PlayerInstance player)
+	private void showSkillList(Npc trainer, Player player)
 	{
 		if (_skillType == AcquireSkillType.SUBCLASS)
 		{
@@ -680,9 +680,9 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		{
 			showDualSkillList(player);
 		}
-		else if (trainer instanceof FishermanInstance)
+		else if (trainer instanceof Fisherman)
 		{
-			FishermanInstance.showFishSkillList(player);
+			Fisherman.showFishSkillList(player);
 		}
 	}
 	
@@ -691,7 +691,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	 * @param player the player to verify
 	 * @return {@code true} if the player meets the required conditions to learn a transformation, {@code false} otherwise
 	 */
-	public static boolean canTransform(PlayerInstance player)
+	public static boolean canTransform(Player player)
 	{
 		if (Config.ALLOW_TRANSFORM_WITHOUT_QUEST)
 		{

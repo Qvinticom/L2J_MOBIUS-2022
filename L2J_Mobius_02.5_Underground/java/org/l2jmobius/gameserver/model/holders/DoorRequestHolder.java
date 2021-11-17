@@ -16,21 +16,21 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 
 /**
  * @author UnAfraid
  */
 public class DoorRequestHolder
 {
-	private final DoorInstance _target;
+	private final Door _target;
 	
-	public DoorRequestHolder(DoorInstance door)
+	public DoorRequestHolder(Door door)
 	{
 		_target = door;
 	}
 	
-	public DoorInstance getDoor()
+	public Door getDoor()
 	{
 		return _target;
 	}

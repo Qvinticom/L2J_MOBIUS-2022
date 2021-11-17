@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -34,7 +34,7 @@ public class AdminFakePlayers implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_fakechat"))
 		{
@@ -44,7 +44,7 @@ public class AdminFakePlayers implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //fakechat playername fpcname message");
 				return false;
 			}
-			final PlayerInstance player = World.getInstance().getPlayer(words[0]);
+			final Player player = World.getInstance().getPlayer(words[0]);
 			if (player == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Player not found.");

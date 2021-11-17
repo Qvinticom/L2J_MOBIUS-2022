@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
@@ -54,7 +54,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_serverinfo"))
 		{
@@ -122,8 +122,8 @@ public class AdminServerInfo implements IAdminCommandHandler
 			{
 				int offlineCount = 0;
 				
-				final Collection<PlayerInstance> objs = World.getInstance().getPlayers();
-				for (PlayerInstance player : objs)
+				final Collection<Player> objs = World.getInstance().getPlayers();
+				for (Player player : objs)
 				{
 					if ((player.getClient() == null) || player.getClient().isDetached())
 					{
@@ -135,7 +135,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "GM":
 			{
 				int onlineGMcount = 0;
-				for (PlayerInstance gm : AdminData.getInstance().getAllGms(true))
+				for (Player gm : AdminData.getInstance().getAllGms(true))
 				{
 					if ((gm != null) && gm.isOnline() && (gm.getClient() != null) && !gm.getClient().isDetached())
 					{
@@ -147,7 +147,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "ALL_REAL":
 			{
 				final Set<String> realPlayers = new HashSet<>();
-				for (PlayerInstance onlinePlayer : World.getInstance().getPlayers())
+				for (Player onlinePlayer : World.getInstance().getPlayers())
 				{
 					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 					{

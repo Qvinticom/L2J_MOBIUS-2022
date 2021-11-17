@@ -52,9 +52,9 @@ import org.l2jmobius.gameserver.model.TowerSpawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FlameTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
+import org.l2jmobius.gameserver.model.actor.instance.FlameTower;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -229,8 +229,8 @@ public class Siege implements Siegable
 	private final Collection<SiegeClan> _defenderWaitingClans = ConcurrentHashMap.newKeySet();
 	
 	// Castle setting
-	private final List<ControlTowerInstance> _controlTowers = new ArrayList<>();
-	private final List<FlameTowerInstance> _flameTowers = new ArrayList<>();
+	private final List<ControlTower> _controlTowers = new ArrayList<>();
+	private final List<FlameTower> _flameTowers = new ArrayList<>();
 	private final Castle _castle;
 	boolean _isInProgress = false;
 	private boolean _isNormalSide = true; // true = Atk is Atk, false = Atk is Def
@@ -276,7 +276,7 @@ public class Siege implements Siegable
 					{
 						if (member != null)
 						{
-							final PlayerInstance player = member.getPlayerInstance();
+							final Player player = member.getPlayer();
 							if ((player != null) && player.isNoble())
 							{
 								Hero.getInstance().setCastleTaken(player.getObjectId(), getCastle().getResidenceId());
@@ -528,7 +528,7 @@ public class Siege implements Siegable
 	{
 		for (SiegeClan siegeClans : getDefenderClans())
 		{
-			for (PlayerInstance member : ClanTable.getInstance().getClan(siegeClans.getClanId()).getOnlineMembers(0))
+			for (Player member : ClanTable.getInstance().getClan(siegeClans.getClanId()).getOnlineMembers(0))
 			{
 				member.sendPacket(message);
 			}
@@ -538,7 +538,7 @@ public class Siege implements Siegable
 		{
 			for (SiegeClan siegeClans : getAttackerClans())
 			{
-				for (PlayerInstance member : ClanTable.getInstance().getClan(siegeClans.getClanId()).getOnlineMembers(0))
+				for (Player member : ClanTable.getInstance().getClan(siegeClans.getClanId()).getOnlineMembers(0))
 				{
 					if (member != null)
 					{
@@ -560,7 +560,7 @@ public class Siege implements Siegable
 			}
 			
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance member : clan.getOnlineMembers(0))
+			for (Player member : clan.getOnlineMembers(0))
 			{
 				if (clear)
 				{
@@ -581,7 +581,7 @@ public class Siege implements Siegable
 				}
 				member.sendPacket(new UserInfo(member));
 				member.sendPacket(new ExBrExtraUserInfo(member));
-				World.getInstance().forEachVisibleObject(member, PlayerInstance.class, player ->
+				World.getInstance().forEachVisibleObject(member, Player.class, player ->
 				{
 					if (!member.isVisibleFor(player))
 					{
@@ -604,7 +604,7 @@ public class Siege implements Siegable
 			}
 			
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance member : clan.getOnlineMembers(0))
+			for (Player member : clan.getOnlineMembers(0))
 			{
 				if (member == null)
 				{
@@ -630,7 +630,7 @@ public class Siege implements Siegable
 				}
 				member.sendPacket(new UserInfo(member));
 				member.sendPacket(new ExBrExtraUserInfo(member));
-				World.getInstance().forEachVisibleObject(member, PlayerInstance.class, player ->
+				World.getInstance().forEachVisibleObject(member, Player.class, player ->
 				{
 					if (!member.isVisibleFor(player))
 					{
@@ -754,16 +754,16 @@ public class Siege implements Siegable
 		}
 	}
 	
-	/** Return list of PlayerInstance registered as attacker in the zone. */
+	/** Return list of Player registered as attacker in the zone. */
 	@Override
-	public List<PlayerInstance> getAttackersInZone()
+	public List<Player> getAttackersInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		Clan clan;
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (PlayerInstance player : clan.getOnlineMembers(0))
+			for (Player player : clan.getOnlineMembers(0))
 			{
 				if (player.isInSiege())
 				{
@@ -775,19 +775,19 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * @return list of PlayerInstance in the zone.
+	 * @return list of Player in the zone.
 	 */
-	public List<PlayerInstance> getPlayersInZone()
+	public List<Player> getPlayersInZone()
 	{
 		return getCastle().getZone().getPlayersInside();
 	}
 	
 	/**
-	 * @return list of PlayerInstance owning the castle in the zone.
+	 * @return list of Player owning the castle in the zone.
 	 */
-	public List<PlayerInstance> getOwnersInZone()
+	public List<Player> getOwnersInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		Clan clan;
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
@@ -796,7 +796,7 @@ public class Siege implements Siegable
 			{
 				continue;
 			}
-			for (PlayerInstance player : clan.getOnlineMembers(0))
+			for (Player player : clan.getOnlineMembers(0))
 			{
 				if (player.isInSiege())
 				{
@@ -808,12 +808,12 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * @return list of PlayerInstance not registered as attacker or defender in the zone.
+	 * @return list of Player not registered as attacker or defender in the zone.
 	 */
-	public List<PlayerInstance> getSpectatorsInZone()
+	public List<Player> getSpectatorsInZone()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
-		for (PlayerInstance player : getCastle().getZone().getPlayersInside())
+		final List<Player> players = new ArrayList<>();
+		for (Player player : getCastle().getZone().getPlayersInside())
 		{
 			if (player == null)
 			{
@@ -863,21 +863,21 @@ public class Siege implements Siegable
 	 * Display list of registered clans
 	 * @param player
 	 */
-	public void listRegisterClan(PlayerInstance player)
+	public void listRegisterClan(Player player)
 	{
 		player.sendPacket(new SiegeInfo(getCastle(), player));
 	}
 	
 	/**
 	 * Register clan as attacker
-	 * @param player The PlayerInstance of the player trying to register
+	 * @param player The Player of the player trying to register
 	 */
-	public void registerAttacker(PlayerInstance player)
+	public void registerAttacker(Player player)
 	{
 		registerAttacker(player, false);
 	}
 	
-	public void registerAttacker(PlayerInstance player, boolean force)
+	public void registerAttacker(Player player, boolean force)
 	{
 		if (player.getClan() == null)
 		{
@@ -913,12 +913,12 @@ public class Siege implements Siegable
 	 * Register a clan as defender.
 	 * @param player the player to register
 	 */
-	public void registerDefender(PlayerInstance player)
+	public void registerDefender(Player player)
 	{
 		registerDefender(player, false);
 	}
 	
-	public void registerDefender(PlayerInstance player, boolean force)
+	public void registerDefender(Player player, boolean force)
 	{
 		if (getCastle().getOwnerId() <= 0)
 		{
@@ -986,9 +986,9 @@ public class Siege implements Siegable
 	
 	/**
 	 * Remove clan from siege
-	 * @param player The PlayerInstance of player/clan being removed
+	 * @param player The Player of player/clan being removed
 	 */
-	public void removeSiegeClan(PlayerInstance player)
+	public void removeSiegeClan(Player player)
 	{
 		removeSiegeClan(player.getClan());
 	}
@@ -1018,7 +1018,7 @@ public class Siege implements Siegable
 	 */
 	public void teleportPlayer(SiegeTeleportWhoType teleportWho, TeleportWhereType teleportWhere)
 	{
-		final List<PlayerInstance> players;
+		final List<Player> players;
 		switch (teleportWho)
 		{
 			case Owner:
@@ -1029,10 +1029,10 @@ public class Siege implements Siegable
 			case NotOwner:
 			{
 				players = getPlayersInZone();
-				final Iterator<PlayerInstance> it = players.iterator();
+				final Iterator<Player> it = players.iterator();
 				while (it.hasNext())
 				{
-					final PlayerInstance player = it.next();
+					final Player player = it.next();
 					if ((player == null) || player.inObserverMode() || ((player.getClanId() > 0) && (player.getClanId() == getCastle().getOwnerId())))
 					{
 						it.remove();
@@ -1056,7 +1056,7 @@ public class Siege implements Siegable
 			}
 		}
 		
-		for (PlayerInstance player : players)
+		for (Player player : players)
 		{
 			if (player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) || player.isJailed())
 			{
@@ -1106,11 +1106,11 @@ public class Siege implements Siegable
 	}
 	
 	/**
-	 * @param player The PlayerInstance of the player trying to register
+	 * @param player The Player of the player trying to register
 	 * @param typeId -1 = owner 0 = defender, 1 = attacker, 2 = defender waiting
 	 * @return true if the player can register.
 	 */
-	private boolean checkIfCanRegister(PlayerInstance player, byte typeId)
+	private boolean checkIfCanRegister(Player player, byte typeId)
 	{
 		if (_isRegistrationOver)
 		{
@@ -1255,12 +1255,12 @@ public class Siege implements Siegable
 	/** Remove all spawned towers. */
 	private void removeTowers()
 	{
-		for (FlameTowerInstance ct : _flameTowers)
+		for (FlameTower ct : _flameTowers)
 		{
 			ct.deleteMe();
 		}
 		
-		for (ControlTowerInstance ct : _controlTowers)
+		for (ControlTower ct : _controlTowers)
 		{
 			ct.deleteMe();
 		}
@@ -1456,7 +1456,7 @@ public class Siege implements Siegable
 			{
 				final Spawn spawn = new Spawn(ts.getId());
 				spawn.setLocation(ts.getLocation());
-				_controlTowers.add((ControlTowerInstance) spawn.doSpawn());
+				_controlTowers.add((ControlTower) spawn.doSpawn());
 			}
 			catch (Exception e)
 			{
@@ -1477,7 +1477,7 @@ public class Siege implements Siegable
 			{
 				final Spawn spawn = new Spawn(ts.getId());
 				spawn.setLocation(ts.getLocation());
-				final FlameTowerInstance tower = (FlameTowerInstance) spawn.doSpawn();
+				final FlameTower tower = (FlameTower) spawn.doSpawn();
 				tower.setUpgradeLevel(ts.getUpgradeLevel());
 				tower.setZoneList(ts.getZoneList());
 				_flameTowers.add(tower);
@@ -1505,9 +1505,9 @@ public class Siege implements Siegable
 				continue;
 			}
 			
-			ControlTowerInstance closestCt = null;
+			ControlTower closestCt = null;
 			double distanceClosest = Integer.MAX_VALUE;
-			for (ControlTowerInstance ct : _controlTowers)
+			for (ControlTower ct : _controlTowers)
 			{
 				if (ct == null)
 				{

@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Shyla
@@ -176,7 +176,7 @@ public class ClassDamageManager
 	 * @param attacked
 	 * @return output = attackerMulti*attackedMulti
 	 */
-	public static double getDamageMultiplier(PlayerInstance attacker, PlayerInstance attacked)
+	public static double getDamageMultiplier(Player attacker, Player attacked)
 	{
 		if ((attacker == null) || (attacked == null))
 		{

@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.holders.RangeChanceHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantRateItem;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScrollGroup;
@@ -140,7 +140,7 @@ public class EnchantItemGroupsData implements IXmlReader
 		}
 	}
 	
-	public EnchantItemGroup getItemGroup(Item item, int scrollGroup)
+	public EnchantItemGroup getItemGroup(ItemTemplate item, int scrollGroup)
 	{
 		final EnchantScrollGroup group = _scrollGroups.get(scrollGroup);
 		final EnchantRateItem rateGroup = group.getRateGroup(item);

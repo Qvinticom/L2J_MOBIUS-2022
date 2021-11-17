@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -50,7 +50,7 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		final Castle castle = CastleManager.getInstance().getCastleById(GODDARD_CASTLE);
@@ -78,7 +78,7 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 			}
 			case "35363-08.html":
 			{
-				if (castle.getOwner().getLeader().getPlayerInstance() != null)
+				if (castle.getOwner().getLeader().getPlayer() != null)
 				{
 					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GODDARD_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_GODDARD);
 					packet.addStringParameter(player.getName());
@@ -92,7 +92,7 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = killer.getQuestState(getName());
 		if (qs == null)
@@ -121,7 +121,7 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -131,7 +131,7 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 			return "Castle has no lord.";
 		}
 		
-		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final Player castleOwner = castle.getOwner().getLeader().getPlayer();
 		if (qs.isCond(0))
 		{
 			if (castleOwner == qs.getPlayer())

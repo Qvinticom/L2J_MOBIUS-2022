@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -63,7 +63,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -85,7 +85,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		QuestState qs = null;
 		if (getRandom(1000) >= MONSTERS.get(npc.getId()))
@@ -108,7 +108,7 @@ public class Q00461_RumbleInTheBase extends Quest
 		}
 		else
 		{
-			final PlayerInstance member = getRandomPartyMember(player, 1);
+			final Player member = getRandomPartyMember(player, 1);
 			if (member == null)
 			{
 				return super.onKill(npc, player, isSummon);
@@ -129,7 +129,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

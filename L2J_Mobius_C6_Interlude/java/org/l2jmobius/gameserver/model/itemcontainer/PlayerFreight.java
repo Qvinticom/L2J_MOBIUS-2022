@@ -20,22 +20,22 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
 
 public class PlayerFreight extends ItemContainer
 {
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private int _activeLocationId;
 	
-	public PlayerFreight(PlayerInstance owner)
+	public PlayerFreight(Player owner)
 	{
 		_owner = owner;
 	}
 	
 	@Override
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}
@@ -64,7 +64,7 @@ public class PlayerFreight extends ItemContainer
 	public int getSize()
 	{
 		int size = 0;
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if ((item.getEquipSlot() == 0) || (_activeLocationId == 0) || (item.getEquipSlot() == _activeLocationId))
 			{
@@ -76,13 +76,13 @@ public class PlayerFreight extends ItemContainer
 	
 	/**
 	 * Returns the list of items in inventory
-	 * @return ItemInstance : items in inventory
+	 * @return Item : items in inventory
 	 */
 	@Override
-	public Collection<ItemInstance> getItems()
+	public Collection<Item> getItems()
 	{
-		final List<ItemInstance> result = new ArrayList<>();
-		for (ItemInstance item : _items)
+		final List<Item> result = new ArrayList<>();
+		for (Item item : _items)
 		{
 			if ((item.getEquipSlot() == 0) || (item.getEquipSlot() == _activeLocationId))
 			{
@@ -95,12 +95,12 @@ public class PlayerFreight extends ItemContainer
 	/**
 	 * Returns the item from inventory by using its <b>itemId</b>
 	 * @param itemId : int designating the ID of the item
-	 * @return ItemInstance designating the item or null if not found in inventory
+	 * @return Item designating the item or null if not found in inventory
 	 */
 	@Override
-	public ItemInstance getItemByItemId(int itemId)
+	public Item getItemByItemId(int itemId)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if ((item.getItemId() == itemId) && ((item.getEquipSlot() == 0) || (_activeLocationId == 0) || (item.getEquipSlot() == _activeLocationId)))
 			{
@@ -112,10 +112,10 @@ public class PlayerFreight extends ItemContainer
 	
 	/**
 	 * Adds item to PcFreight for further adjustments.
-	 * @param item : ItemInstance to be added from inventory
+	 * @param item : Item to be added from inventory
 	 */
 	@Override
-	protected void addItem(ItemInstance item)
+	protected void addItem(Item item)
 	{
 		super.addItem(item);
 		if (_activeLocationId > 0)

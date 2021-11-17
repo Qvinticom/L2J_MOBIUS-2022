@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -46,7 +46,7 @@ public class Pledge implements IAffectScopeHandler
 		if (target.isPlayable())
 		{
 			final Playable playable = (Playable) target;
-			final PlayerInstance player = playable.getActingPlayer();
+			final Player player = playable.getActingPlayer();
 			final int clanId = player.getClanId();
 			
 			// Create the target filter.
@@ -58,7 +58,7 @@ public class Pledge implements IAffectScopeHandler
 					return false;
 				}
 				
-				final PlayerInstance p = c.getActingPlayer();
+				final Player p = c.getActingPlayer();
 				if ((p == null) || p.isDead())
 				{
 					return false;

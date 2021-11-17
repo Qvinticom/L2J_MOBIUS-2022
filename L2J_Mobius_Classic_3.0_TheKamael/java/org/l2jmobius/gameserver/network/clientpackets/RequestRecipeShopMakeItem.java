@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -46,7 +46,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -57,7 +57,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance manufacturer = World.getInstance().getPlayer(_id);
+		final Player manufacturer = World.getInstance().getPlayer(_id);
 		if (manufacturer == null)
 		{
 			return;

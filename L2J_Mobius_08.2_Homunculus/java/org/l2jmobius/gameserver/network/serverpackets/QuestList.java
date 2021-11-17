@@ -20,7 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,7 +29,7 @@ public class QuestList implements IClientOutgoingPacket
 	private final List<QuestState> _activeQuests;
 	private final byte[] _oneTimeQuestMask;
 	
-	public QuestList(PlayerInstance player)
+	public QuestList(Player player)
 	{
 		_activeQuests = new LinkedList<>();
 		_oneTimeQuestMask = new byte[128];

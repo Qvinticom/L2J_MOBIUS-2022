@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.Inventory;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
@@ -32,7 +32,7 @@ public class RequestGiveItemToPet extends ClientBasePacket
 		final int amount = readD();
 		final Inventory petInventory = client.getActiveChar().getPet().getInventory();
 		final Inventory playerInventory = client.getActiveChar().getInventory();
-		final ItemInstance playerItem = playerInventory.getItem(objectId);
+		final Item playerItem = playerInventory.getItem(objectId);
 		if (amount >= playerItem.getCount())
 		{
 			playerInventory.dropItem(objectId, playerItem.getCount());
@@ -44,7 +44,7 @@ public class RequestGiveItemToPet extends ClientBasePacket
 		}
 		else
 		{
-			final ItemInstance newPetItem = playerInventory.dropItem(objectId, amount);
+			final Item newPetItem = playerInventory.dropItem(objectId, amount);
 			petInventory.addItem(newPetItem);
 			final PetItemList petiu = new PetItemList(client.getActiveChar().getPet());
 			final InventoryUpdate playerUI = new InventoryUpdate();

@@ -20,10 +20,10 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -47,7 +47,7 @@ public class RequestNewEnchantPushOne implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -74,7 +74,7 @@ public class RequestNewEnchantPushOne implements IClientIncomingPacket
 		
 		// Make sure player owns this item.
 		request.setItemOne(_objectId);
-		final ItemInstance itemOne = request.getItemOne();
+		final Item itemOne = request.getItemOne();
 		if (itemOne == null)
 		{
 			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);

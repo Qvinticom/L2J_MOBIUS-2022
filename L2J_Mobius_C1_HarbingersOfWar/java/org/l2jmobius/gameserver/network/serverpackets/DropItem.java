@@ -17,14 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class DropItem extends ServerBasePacket
 {
-	private final ItemInstance _item;
+	private final Item _item;
 	private final int _playerId;
 	
-	public DropItem(ItemInstance item, int playerId)
+	public DropItem(Item item, int playerId)
 	{
 		_item = item;
 		_playerId = playerId;

@@ -16,39 +16,39 @@
  */
 package org.l2jmobius.gameserver.model.actor.request;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Sdw
  */
 public class ShapeShiftingItemRequest extends AbstractRequest
 {
-	private ItemInstance _appearanceStone;
-	private ItemInstance _appearanceExtractItem;
+	private Item _appearanceStone;
+	private Item _appearanceExtractItem;
 	
-	public ShapeShiftingItemRequest(PlayerInstance player, ItemInstance appearanceStone)
+	public ShapeShiftingItemRequest(Player player, Item appearanceStone)
 	{
 		super(player);
 		_appearanceStone = appearanceStone;
 	}
 	
-	public ItemInstance getAppearanceStone()
+	public Item getAppearanceStone()
 	{
 		return _appearanceStone;
 	}
 	
-	public void setAppearanceStone(ItemInstance appearanceStone)
+	public void setAppearanceStone(Item appearanceStone)
 	{
 		_appearanceStone = appearanceStone;
 	}
 	
-	public ItemInstance getAppearanceExtractItem()
+	public Item getAppearanceExtractItem()
 	{
 		return _appearanceExtractItem;
 	}
 	
-	public void setAppearanceExtractItem(ItemInstance appearanceExtractItem)
+	public void setAppearanceExtractItem(Item appearanceExtractItem)
 	{
 		_appearanceExtractItem = appearanceExtractItem;
 	}

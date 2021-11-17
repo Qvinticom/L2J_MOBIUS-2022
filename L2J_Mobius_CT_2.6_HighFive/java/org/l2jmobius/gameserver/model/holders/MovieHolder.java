@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.enums.Movie;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author St3eT
@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class MovieHolder
 {
 	private final Movie _movie;
-	private final Collection<PlayerInstance> _players;
+	private final Collection<Player> _players;
 	
-	public MovieHolder(Collection<PlayerInstance> players, Movie movie)
+	public MovieHolder(Collection<Player> players, Movie movie)
 	{
 		_players = players;
 		_movie = movie;
@@ -41,7 +41,7 @@ public class MovieHolder
 		return _movie;
 	}
 	
-	public Collection<PlayerInstance> getPlayers()
+	public Collection<Player> getPlayers()
 	{
 		return _players;
 	}

@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -354,7 +354,7 @@ public class FeedableBeasts extends AbstractNpcAI
 		GROWTH_CAPABLE_MONSTERS.put(21505, temp);
 	}
 	
-	private void spawnNext(Npc npc, int growthLevel, PlayerInstance player, int food)
+	private void spawnNext(Npc npc, int growthLevel, Player player, int food)
 	{
 		final int npcId = npc.getId();
 		int nextNpcId = 0;
@@ -420,13 +420,13 @@ public class FeedableBeasts extends AbstractNpcAI
 		{
 			if ((player.getTrainedBeasts() != null) && !player.getTrainedBeasts().isEmpty())
 			{
-				for (TamedBeastInstance oldTrained : player.getTrainedBeasts())
+				for (TamedBeast oldTrained : player.getTrainedBeasts())
 				{
 					oldTrained.deleteMe();
 				}
 			}
 			
-			final TamedBeastInstance nextNpc = new TamedBeastInstance(nextNpcId, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
+			final TamedBeast nextNpc = new TamedBeast(nextNpcId, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
 			
@@ -479,7 +479,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null) && MAD_COW_POLYMORPH.containsKey(npc.getId()))
 		{
@@ -503,7 +503,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
@@ -584,9 +584,9 @@ public class FeedableBeasts extends AbstractNpcAI
 				spawnNext(npc, growthLevel, caster, food);
 			}
 		}
-		else if (CommonUtil.contains(TAMED_BEASTS, npcId) && (npc instanceof TamedBeastInstance))
+		else if (CommonUtil.contains(TAMED_BEASTS, npcId) && (npc instanceof TamedBeast))
 		{
-			final TamedBeastInstance beast = ((TamedBeastInstance) npc);
+			final TamedBeast beast = ((TamedBeast) npc);
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();
@@ -603,7 +603,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		// remove the feedinfo of the mob that got killed, if any
 		if (FEED_INFO.containsKey(npc.getObjectId()))

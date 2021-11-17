@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -40,14 +40,14 @@ public class RequestVoteNew implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		final WorldObject object = player.getTarget();
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			if (object == null)
 			{
@@ -77,7 +77,7 @@ public class RequestVoteNew implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance target = (PlayerInstance) object;
+		final Player target = (Player) object;
 		if (target.getObjectId() != _targetId)
 		{
 			return;

@@ -24,8 +24,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoppelgangerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Doppelganger;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -36,7 +36,7 @@ public class DoppelgangerAI extends CreatureAI
 	private volatile boolean _startFollow;
 	private Creature _lastAttack = null;
 	
-	public DoppelgangerAI(DoppelgangerInstance clone)
+	public DoppelgangerAI(Doppelganger clone)
 	{
 		super(clone);
 	}
@@ -191,7 +191,7 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, WorldObject target, ItemInstance item, boolean forceUse, boolean dontMove)
+	protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
 		if (getIntention() == AI_INTENTION_ATTACK)
 		{
@@ -273,8 +273,8 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	public DoppelgangerInstance getActor()
+	public Doppelganger getActor()
 	{
-		return (DoppelgangerInstance) super.getActor();
+		return (Doppelganger) super.getActor();
 	}
 }

@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.PetNameTable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -43,7 +43,7 @@ public class RequestChangePetName implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -83,9 +83,9 @@ public class RequestChangePetName implements IClientIncomingPacket
 		pet.updateEffectIcons(true);
 		
 		// set the flag on the control item to say that the pet has a name
-		if (pet instanceof PetInstance)
+		if (pet instanceof Pet)
 		{
-			final ItemInstance controlItem = pet.getOwner().getInventory().getItemByObjectId(pet.getControlItemId());
+			final Item controlItem = pet.getOwner().getInventory().getItemByObjectId(pet.getControlItemId());
 			if (controlItem != null)
 			{
 				controlItem.setCustomType2(1);

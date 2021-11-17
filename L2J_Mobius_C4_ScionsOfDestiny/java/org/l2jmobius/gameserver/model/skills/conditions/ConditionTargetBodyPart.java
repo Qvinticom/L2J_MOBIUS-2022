@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.conditions;
 
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -47,23 +47,23 @@ public class ConditionTargetBodyPart extends Condition
 		{
 			case Inventory.PAPERDOLL_CHEST:
 			{
-				return (armor_part & (Item.SLOT_CHEST | Item.SLOT_FULL_ARMOR | Item.SLOT_UNDERWEAR)) != 0;
+				return (armor_part & (ItemTemplate.SLOT_CHEST | ItemTemplate.SLOT_FULL_ARMOR | ItemTemplate.SLOT_UNDERWEAR)) != 0;
 			}
 			case Inventory.PAPERDOLL_LEGS:
 			{
-				return (armor_part & (Item.SLOT_LEGS | Item.SLOT_FULL_ARMOR)) != 0;
+				return (armor_part & (ItemTemplate.SLOT_LEGS | ItemTemplate.SLOT_FULL_ARMOR)) != 0;
 			}
 			case Inventory.PAPERDOLL_HEAD:
 			{
-				return (armor_part & Item.SLOT_HEAD) != 0;
+				return (armor_part & ItemTemplate.SLOT_HEAD) != 0;
 			}
 			case Inventory.PAPERDOLL_FEET:
 			{
-				return (armor_part & Item.SLOT_FEET) != 0;
+				return (armor_part & ItemTemplate.SLOT_FEET) != 0;
 			}
 			case Inventory.PAPERDOLL_GLOVES:
 			{
-				return (armor_part & Item.SLOT_GLOVES) != 0;
+				return (armor_part & ItemTemplate.SLOT_GLOVES) != 0;
 			}
 			default:
 			{

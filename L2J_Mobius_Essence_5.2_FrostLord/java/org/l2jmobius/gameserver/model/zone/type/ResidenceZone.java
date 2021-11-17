@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 
 /**
@@ -33,7 +33,7 @@ public abstract class ResidenceZone extends ZoneRespawn
 	
 	public void banishForeigners(int owningClanId)
 	{
-		for (PlayerInstance temp : getPlayersInside())
+		for (Player temp : getPlayersInside())
 		{
 			if ((owningClanId != 0) && (temp.getClanId() == owningClanId))
 			{

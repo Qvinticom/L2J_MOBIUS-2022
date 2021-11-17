@@ -22,8 +22,8 @@ import java.util.Map;
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
@@ -56,8 +56,8 @@ public class FuncArmorSet extends AbstractFunction
 		// Should not apply armor set bonus to summons.
 		if (effector.isPlayer())
 		{
-			final PlayerInstance player = effector.getActingPlayer();
-			final ItemInstance chest = player.getChestArmorInstance();
+			final Player player = effector.getActingPlayer();
+			final Item chest = player.getChestArmorInstance();
 			if (chest != null)
 			{
 				final ArmorSet set = ArmorSetData.getInstance().getSet(chest.getId());

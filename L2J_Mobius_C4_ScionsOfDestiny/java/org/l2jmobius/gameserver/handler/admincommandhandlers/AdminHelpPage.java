@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -33,7 +33,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_help"))
 		{
@@ -56,9 +56,9 @@ public class AdminHelpPage implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	// FIXME: implement method to send html to player in PlayerInstance directly
+	// FIXME: implement method to send html to player in Player directly
 	// PUBLIC & STATIC so other classes from package can include it directly
-	public static void showHelpPage(PlayerInstance targetChar, String filename)
+	public static void showHelpPage(Player targetChar, String filename)
 	{
 		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

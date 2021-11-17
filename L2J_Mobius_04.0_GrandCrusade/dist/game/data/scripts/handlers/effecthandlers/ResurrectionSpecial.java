@@ -22,8 +22,8 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -84,7 +84,7 @@ public class ResurrectionSpecial extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance caster = effector.getActingPlayer();
+		final Player caster = effector.getActingPlayer();
 		final Instance instance = caster.getInstanceWorld();
 		if (!_instanceId.isEmpty() && ((instance == null) || !_instanceId.contains(instance.getTemplateId())))
 		{
@@ -97,7 +97,7 @@ public class ResurrectionSpecial extends AbstractEffect
 		}
 		else if (effected.isPet())
 		{
-			final PetInstance pet = (PetInstance) effected;
+			final Pet pet = (Pet) effected;
 			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), true, _power, _hpPercent, _mpPercent, _cpPercent);
 		}
 	}

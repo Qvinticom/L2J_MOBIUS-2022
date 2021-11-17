@@ -21,14 +21,14 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.enums.InventorySlot;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import org.l2jmobius.gameserver.model.holders.AppearanceHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -55,7 +55,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -70,8 +70,8 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		}
 		
 		final PlayerInventory inventory = player.getInventory();
-		final ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
-		ItemInstance stone = request.getAppearanceStone();
+		final Item targetItem = inventory.getItemByObjectId(_targetItemObjId);
+		Item stone = request.getAppearanceStone();
 		if ((targetItem == null) || (stone == null))
 		{
 			client.sendPacket(ExShapeShiftingResult.CLOSE);
@@ -123,7 +123,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance extractItem = request.getAppearanceExtractItem();
+		final Item extractItem = request.getAppearanceExtractItem();
 		int extracItemId = 0;
 		if ((appearanceStone.getType() != AppearanceType.RESTORE) && (appearanceStone.getType() != AppearanceType.FIXED))
 		{
@@ -176,7 +176,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != Item.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != Item.SLOT_CHEST)))
+			if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_CHEST)))
 			{
 				client.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);

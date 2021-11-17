@@ -36,7 +36,7 @@ import org.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
@@ -120,7 +120,7 @@ public class BuyListData implements IXmlReader
 						{
 							final NamedNodeMap attrs = node.getAttributes();
 							final int itemId = parseInteger(attrs, "id");
-							final Item item = ItemTable.getInstance().getTemplate(itemId);
+							final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
 								final long price = parseLong(attrs, "price", -1L);

@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -46,13 +46,13 @@ public class FishingZone extends ZoneType
 		{
 			if ((Config.ALLOW_FISHING || creature.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS)) && !creature.isInsideZone(ZoneId.FISHING))
 			{
-				final WeakReference<PlayerInstance> weakPlayer = new WeakReference<>(creature.getActingPlayer());
+				final WeakReference<Player> weakPlayer = new WeakReference<>(creature.getActingPlayer());
 				ThreadPool.execute(new Runnable()
 				{
 					@Override
 					public void run()
 					{
-						final PlayerInstance player = weakPlayer.get();
+						final Player player = weakPlayer.get();
 						if (player != null)
 						{
 							final Fishing fishing = player.getFishing();

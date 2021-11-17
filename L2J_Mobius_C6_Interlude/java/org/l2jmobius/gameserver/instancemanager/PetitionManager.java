@@ -28,7 +28,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -83,10 +83,10 @@ public class PetitionManager
 		
 		private final List<CreatureSay> _messageLogger = new ArrayList<>();
 		
-		private final PlayerInstance _petitioner;
-		private PlayerInstance _responder;
+		private final Player _petitioner;
+		private Player _responder;
 		
-		public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
+		public Petition(Player petitioner, String petitionText, int petitionType)
 		{
 			_id = IdManager.getInstance().getNextId();
 			if ((petitionType - 1) >= PetitionType.values().length)
@@ -154,12 +154,12 @@ public class PetitionManager
 			return _id;
 		}
 		
-		public PlayerInstance getPetitioner()
+		public Player getPetitioner()
 		{
 			return _petitioner;
 		}
 		
-		public PlayerInstance getResponder()
+		public Player getResponder()
 		{
 			return _responder;
 		}
@@ -205,7 +205,7 @@ public class PetitionManager
 			_state = state;
 		}
 		
-		public void setResponder(PlayerInstance respondingAdmin)
+		public void setResponder(Player respondingAdmin)
 		{
 			if (_responder != null)
 			{
@@ -236,7 +236,7 @@ public class PetitionManager
 		LOGGER.info("PetitionManager: Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
 	}
 	
-	public boolean acceptPetition(PlayerInstance respondingAdmin, int petitionId)
+	public boolean acceptPetition(Player respondingAdmin, int petitionId)
 	{
 		if (!isValidPetition(petitionId))
 		{
@@ -267,7 +267,7 @@ public class PetitionManager
 		return true;
 	}
 	
-	public boolean cancelActivePetition(PlayerInstance player)
+	public boolean cancelActivePetition(Player player)
 	{
 		for (Petition currPetition : _pendingPetitions.values())
 		{
@@ -285,7 +285,7 @@ public class PetitionManager
 		return false;
 	}
 	
-	public void checkPetitionMessages(PlayerInstance petitioner)
+	public void checkPetitionMessages(Player petitioner)
 	{
 		if (petitioner != null)
 		{
@@ -309,7 +309,7 @@ public class PetitionManager
 		}
 	}
 	
-	public boolean endActivePetition(PlayerInstance player)
+	public boolean endActivePetition(Player player)
 	{
 		if (!player.isGM())
 		{
@@ -347,7 +347,7 @@ public class PetitionManager
 		return _pendingPetitions.size();
 	}
 	
-	public int getPlayerTotalPetitionCount(PlayerInstance player)
+	public int getPlayerTotalPetitionCount(Player player)
 	{
 		if (player == null)
 		{
@@ -413,7 +413,7 @@ public class PetitionManager
 		return currPetition.getState() == PetitionState.In_Process;
 	}
 	
-	public boolean isPlayerInConsultation(PlayerInstance player)
+	public boolean isPlayerInConsultation(Player player)
 	{
 		if (player != null)
 		{
@@ -444,7 +444,7 @@ public class PetitionManager
 		return Config.PETITIONING_ALLOWED;
 	}
 	
-	public boolean isPlayerPetitionPending(PlayerInstance petitioner)
+	public boolean isPlayerPetitionPending(Player petitioner)
 	{
 		if (petitioner != null)
 		{
@@ -470,7 +470,7 @@ public class PetitionManager
 		return _pendingPetitions.containsKey(petitionId);
 	}
 	
-	public boolean rejectPetition(PlayerInstance respondingAdmin, int petitionId)
+	public boolean rejectPetition(Player respondingAdmin, int petitionId)
 	{
 		if (!isValidPetition(petitionId))
 		{
@@ -487,7 +487,7 @@ public class PetitionManager
 		return currPetition.endPetitionConsultation(PetitionState.Responder_Reject);
 	}
 	
-	public boolean sendActivePetitionMessage(PlayerInstance player, String messageText)
+	public boolean sendActivePetitionMessage(Player player, String messageText)
 	{
 		CreatureSay cs;
 		for (Petition currPetition : _pendingPetitions.values())
@@ -521,7 +521,7 @@ public class PetitionManager
 		return false;
 	}
 	
-	public void sendPendingPetitionList(PlayerInstance player)
+	public void sendPendingPetitionList(Player player)
 	{
 		final StringBuilder htmlContent = new StringBuilder("<html><body><center><font color=\"LEVEL\">Current Petitions</font><br><table width=\"300\">");
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM HH:mm z");
@@ -562,7 +562,7 @@ public class PetitionManager
 		player.sendPacket(htmlMsg);
 	}
 	
-	public int submitPetition(PlayerInstance petitioner, String petitionText, int petitionType)
+	public int submitPetition(Player petitioner, String petitionText, int petitionType)
 	{
 		// Create a new petition instance and add it to the list of pending petitions.
 		final Petition newPetition = new Petition(petitioner, petitionText, petitionType);
@@ -575,7 +575,7 @@ public class PetitionManager
 		return newPetitionId;
 	}
 	
-	public void viewPetition(PlayerInstance player, int petitionId)
+	public void viewPetition(Player player, int petitionId)
 	{
 		if (!player.isGM())
 		{

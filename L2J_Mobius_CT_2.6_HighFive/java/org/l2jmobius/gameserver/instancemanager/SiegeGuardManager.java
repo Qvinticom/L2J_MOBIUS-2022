@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 public class SiegeGuardManager
@@ -46,7 +46,7 @@ public class SiegeGuardManager
 	 * @param player
 	 * @param npcId
 	 */
-	public void addSiegeGuard(PlayerInstance player, int npcId)
+	public void addSiegeGuard(Player player, int npcId)
 	{
 		if (player == null)
 		{
@@ -73,7 +73,7 @@ public class SiegeGuardManager
 	 * @param player
 	 * @param npcId
 	 */
-	public void hireMerc(PlayerInstance player, int npcId)
+	public void hireMerc(Player player, int npcId)
 	{
 		if (player == null)
 		{

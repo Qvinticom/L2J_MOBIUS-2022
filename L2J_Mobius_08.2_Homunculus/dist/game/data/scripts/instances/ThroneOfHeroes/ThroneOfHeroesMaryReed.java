@@ -18,7 +18,7 @@ package instances.ThroneOfHeroes;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -59,13 +59,13 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance activeInstance, PlayerInstance player)
+	public void onInstanceCreated(Instance activeInstance, Player player)
 	{
 		activeInstance.setStatus(0);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -77,7 +77,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 			}
 			case "reenterInstance":
 			{
-				final Instance activeInstance = getPlayerInstance(player);
+				final Instance activeInstance = getPlayer(player);
 				if (isInInstance(activeInstance))
 				{
 					enterInstance(player, npc, activeInstance.getTemplateId());
@@ -189,7 +189,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -217,7 +217,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))

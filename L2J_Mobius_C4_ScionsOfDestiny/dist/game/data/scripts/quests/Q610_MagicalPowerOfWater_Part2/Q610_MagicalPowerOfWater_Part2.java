@@ -20,9 +20,9 @@ import java.util.logging.Level;
 
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -40,7 +40,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	// Other
 	private static final int CHECK_INTERVAL = 600000; // 10 minutes
 	private static final int IDLE_INTERVAL = 2; // (X * CHECK_INTERVAL) = 20 minutes
-	private NpcInstance _npc = null;
+	private Npc _npc = null;
 	private int _status = -1;
 	
 	public Q610_MagicalPowerOfWater_Part2()
@@ -73,12 +73,12 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		// global quest timer has player==null -> cannot get QuestState
 		if (event.equals("check"))
 		{
-			final RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_WATER_ASHUTAR);
+			final RaidBoss raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_WATER_ASHUTAR);
 			if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 			{
 				if ((_status >= 0) && (_status-- == 0))
@@ -158,7 +158,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -216,16 +216,16 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		_status = IDLE_INTERVAL;
 		return null;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
-		for (PlayerInstance partyMember : getPartyMembers(player, npc, 2))
+		for (Player partyMember : getPartyMembers(player, npc, 2))
 		{
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st == null)
@@ -262,10 +262,10 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 	
 	private boolean spawnRaid()
 	{
-		final RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_WATER_ASHUTAR);
+		final RaidBoss raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_WATER_ASHUTAR);
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
-			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
+			// set temporarily spawn location (to provide correct behavior of RaidBoss.checkAndReturnToSpawn())
 			// raid.getSpawn().setLoc(104771, -36993, -1149, Rnd.get(65536));
 			
 			addSpawn(SOUL_OF_WATER_ASHUTAR, 104771, -36993, -1149, 100, false, 0);
@@ -279,7 +279,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		return false;
 	}
 	
-	private void despawnRaid(NpcInstance raid)
+	private void despawnRaid(Npc raid)
 	{
 		// reset spawn location
 		raid.getSpawn().setLoc(-105900, -252700, -15542, 0);

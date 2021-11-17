@@ -18,22 +18,22 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 
 public class NpcInfo extends ServerBasePacket
 {
-	private NpcInstance _cha;
-	private PetInstance _chaPet;
+	private Npc _cha;
+	private Pet _chaPet;
 	protected String _title = "";
 	
-	public NpcInfo(NpcInstance cha)
+	public NpcInfo(Npc cha)
 	{
 		_cha = cha;
 	}
 	
-	public NpcInfo(PetInstance cha)
+	public NpcInfo(Pet cha)
 	{
 		_chaPet = cha;
 	}
@@ -120,7 +120,7 @@ public class NpcInfo extends ServerBasePacket
 					{
 						t2 += " ";
 					}
-					if (((MonsterInstance) _cha).isAggressive())
+					if (((Monster) _cha).isAggressive())
 					{
 						t2 += "[A]"; // Aggressive.
 					}

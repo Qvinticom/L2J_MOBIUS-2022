@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
@@ -48,12 +48,12 @@ public class AdminPledge implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
 		final WorldObject target = activeChar.getTarget();
-		final PlayerInstance targetPlayer = (target != null) && target.isPlayer() ? (PlayerInstance) target : null;
+		final Player targetPlayer = (target != null) && target.isPlayer() ? (Player) target : null;
 		Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
 		if (targetPlayer == null)
 		{
@@ -159,7 +159,7 @@ public class AdminPledge implements IAdminCommandHandler
 						if ((level >= 0) && (level < 12))
 						{
 							clan.changeLevel(level);
-							for (PlayerInstance member : clan.getOnlineMembers(0))
+							for (Player member : clan.getOnlineMembers(0))
 							{
 								member.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
 							}
@@ -231,7 +231,7 @@ public class AdminPledge implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "game_menu.htm");
 	}

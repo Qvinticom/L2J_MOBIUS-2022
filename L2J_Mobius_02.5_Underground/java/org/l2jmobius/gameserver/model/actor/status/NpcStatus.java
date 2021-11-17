@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.status;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class NpcStatus extends CreatureStatus
 {
@@ -44,7 +44,7 @@ public class NpcStatus extends CreatureStatus
 		
 		if (attacker != null)
 		{
-			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final Player attackerPlayer = attacker.getActingPlayer();
 			if ((attackerPlayer != null) && attackerPlayer.isInDuel())
 			{
 				attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);

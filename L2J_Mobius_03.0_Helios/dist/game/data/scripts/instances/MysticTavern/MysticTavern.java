@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -83,7 +83,7 @@ public class MysticTavern extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -108,7 +108,7 @@ public class MysticTavern extends AbstractNpcAI
 					availableInstances.add(INSTANCE_FREYA);
 					availableInstances.add(INSTANCE_TAUTI);
 					// availableInstances.add(INSTANCE_KELBIM);
-					for (PlayerInstance member : party.getMembers())
+					for (Player member : party.getMembers())
 					{
 						if ((member == null) || !member.isSitting() || (member.calculateDistance3D(player) > 500))
 						{
@@ -386,7 +386,7 @@ public class MysticTavern extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34200.html";
 	}

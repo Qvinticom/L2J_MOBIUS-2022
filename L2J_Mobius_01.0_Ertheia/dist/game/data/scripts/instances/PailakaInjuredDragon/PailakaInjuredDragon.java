@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -139,7 +139,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState qs = player.getQuestState(Q00144_PailakaInjuredDragon.class.getSimpleName());
@@ -171,7 +171,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -447,7 +447,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 				case LATANA_SKILL_USE:
 				{
 					final Npc latana = world.getNpc(LATANA);
-					final PlayerInstance player = world.getFirstPlayer();
+					final Player player = world.getFirstPlayer();
 					if ((latana != null) && (player != null) && (latana.calculateDistance2D(player) <= 900))
 					{
 						addSkillCastDesire(npc, player, STUN, 500000);
@@ -512,7 +512,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -591,7 +591,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	public void onAttackableFactionCall(OnAttackableFactionCall event)
 	{
 		final Npc npc = event.getNpc();
-		final PlayerInstance attacker = event.getAttacker();
+		final Player attacker = event.getAttacker();
 		if (npc.calculateDistance2D(attacker) < 40)
 		{
 			addAttackPlayerDesire(npc, attacker, 1000);
@@ -607,7 +607,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))

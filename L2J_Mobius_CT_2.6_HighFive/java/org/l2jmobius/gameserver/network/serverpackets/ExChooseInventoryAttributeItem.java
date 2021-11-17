@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Elementals;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,7 +30,7 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 	private final byte _atribute;
 	private final int _level;
 	
-	public ExChooseInventoryAttributeItem(ItemInstance item)
+	public ExChooseInventoryAttributeItem(Item item)
 	{
 		_itemId = item.getDisplayId();
 		_atribute = Elementals.getItemElement(_itemId);

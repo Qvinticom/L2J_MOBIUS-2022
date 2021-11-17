@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.MobGroup;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -58,7 +58,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_mobmenu"))
 		{
@@ -143,7 +143,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar, String command)
+	private void showMainPage(Player activeChar, String command)
 	{
 		String filename = "mobgroup.htm";
 		if (command.contains("mobinst"))
@@ -154,7 +154,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		AdminHelpPage.showHelpPage(activeChar, filename);
 	}
 	
-	private void returnToChar(String command, PlayerInstance activeChar)
+	private void returnToChar(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -178,7 +178,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.returnGroup(activeChar);
 	}
 	
-	private void idle(String command, PlayerInstance activeChar)
+	private void idle(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -202,7 +202,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setIdleMode();
 	}
 	
-	private void setNormal(String command, PlayerInstance activeChar)
+	private void setNormal(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -226,7 +226,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setAttackRandom();
 	}
 	
-	private void attack(String command, PlayerInstance activeChar, Creature target)
+	private void attack(String command, Player activeChar, Creature target)
 	{
 		int groupId;
 		
@@ -250,7 +250,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setAttackTarget(target);
 	}
 	
-	private void follow(String command, PlayerInstance activeChar, Creature target)
+	private void follow(String command, Player activeChar, Creature target)
 	{
 		int groupId;
 		
@@ -274,7 +274,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setFollowMode(target);
 	}
 	
-	private void createGroup(String command, PlayerInstance activeChar)
+	private void createGroup(String command, Player activeChar)
 	{
 		int groupId;
 		int templateId;
@@ -311,7 +311,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, "Mob group " + groupId + " created.");
 	}
 	
-	private void removeGroup(String command, PlayerInstance activeChar)
+	private void removeGroup(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -341,7 +341,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 	}
 	
-	private void spawnGroup(String command, PlayerInstance activeChar)
+	private void spawnGroup(String command, Player activeChar)
 	{
 		int groupId;
 		boolean topos = false;
@@ -394,7 +394,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, "Mob group " + groupId + " spawned.");
 	}
 	
-	private void unspawnGroup(String command, PlayerInstance activeChar)
+	private void unspawnGroup(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -421,7 +421,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, "Mob group " + groupId + " unspawned.");
 	}
 	
-	private void killGroup(String command, PlayerInstance activeChar)
+	private void killGroup(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -446,7 +446,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.killGroup(activeChar);
 	}
 	
-	private void setCasting(String command, PlayerInstance activeChar)
+	private void setCasting(String command, Player activeChar)
 	{
 		int groupId;
 		
@@ -470,7 +470,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setCastMode();
 	}
 	
-	private void noMove(String command, PlayerInstance activeChar)
+	private void noMove(String command, Player activeChar)
 	{
 		int groupId;
 		String enabled;
@@ -507,13 +507,13 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 	}
 	
-	private void doAnimation(PlayerInstance activeChar)
+	private void doAnimation(Player activeChar)
 	{
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 1008, 1, 4000, 0), 2250000 /* 1500 */);
 		activeChar.sendPacket(new SetupGauge(0, 4000));
 	}
 	
-	private void attackGrp(String command, PlayerInstance activeChar)
+	private void attackGrp(String command, Player activeChar)
 	{
 		int groupId;
 		int othGroupId;
@@ -546,7 +546,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.setAttackGroup(othGroup);
 	}
 	
-	private void invul(String command, PlayerInstance activeChar)
+	private void invul(String command, Player activeChar)
 	{
 		int groupId;
 		String enabled;
@@ -583,11 +583,11 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 	}
 	
-	private void teleportGroup(String command, PlayerInstance activeChar)
+	private void teleportGroup(String command, Player activeChar)
 	{
 		int groupId;
 		String targetPlayerStr = null;
-		PlayerInstance targetPlayer = null;
+		Player targetPlayer = null;
 		
 		try
 		{
@@ -619,7 +619,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.teleportGroup(activeChar);
 	}
 	
-	private void showGroupList(PlayerInstance activeChar)
+	private void showGroupList(Player activeChar)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "======= <Mob Groups> =======");
 		for (MobGroup mobGroup : MobGroupTable.getInstance().getGroups())

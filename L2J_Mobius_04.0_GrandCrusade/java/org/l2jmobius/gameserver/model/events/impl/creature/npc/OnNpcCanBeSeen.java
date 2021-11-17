@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 public class OnNpcCanBeSeen implements IBaseEvent
 {
 	private final Npc _npc;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public OnNpcCanBeSeen(Npc npc, PlayerInstance player)
+	public OnNpcCanBeSeen(Npc npc, Player player)
 	{
 		_npc = npc;
 		_player = player;
@@ -40,7 +40,7 @@ public class OnNpcCanBeSeen implements IBaseEvent
 		return _npc;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -41,14 +41,14 @@ public class Resurrect implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		PlayerInstance player = null;
-		if (creature instanceof PlayerInstance)
+		Player player = null;
+		if (creature instanceof Player)
 		{
-			player = (PlayerInstance) creature;
+			player = (Player) creature;
 		}
 		
 		Creature target = null;
-		PlayerInstance targetPlayer;
+		Player targetPlayer;
 		final List<Creature> targetToRes = new ArrayList<>();
 		for (WorldObject target2 : targets)
 		{
@@ -58,9 +58,9 @@ public class Resurrect implements ISkillHandler
 			}
 			
 			target = (Creature) target2;
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
-				targetPlayer = (PlayerInstance) target;
+				targetPlayer = (Player) target;
 				
 				// Check for same party or for same clan, if target is for clan.
 				if ((skill.getTargetType() == SkillTargetType.TARGET_CORPSE_CLAN) && ((player == null) || (player.getClanId() != targetPlayer.getClanId())))
@@ -83,21 +83,21 @@ public class Resurrect implements ISkillHandler
 		
 		for (Creature c : targetToRes)
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				if (c instanceof PlayerInstance)
+				if (c instanceof Player)
 				{
-					((PlayerInstance) c).reviveRequest((PlayerInstance) creature, skill, false);
+					((Player) c).reviveRequest((Player) creature, skill, false);
 				}
-				else if (c instanceof PetInstance)
+				else if (c instanceof Pet)
 				{
-					if (((PetInstance) c).getOwner() == creature)
+					if (((Pet) c).getOwner() == creature)
 					{
 						c.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), creature));
 					}
 					else
 					{
-						((PetInstance) c).getOwner().reviveRequest((PlayerInstance) creature, skill, true);
+						((Pet) c).getOwner().reviveRequest((Player) creature, skill, true);
 					}
 				}
 				else

@@ -22,15 +22,15 @@ import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.data.NpcTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
-import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.templates.NpcTemplate;
 import org.l2jmobius.gameserver.threads.ThreadPool;
 
 public class PetSummon implements IItemHandler
@@ -44,7 +44,7 @@ public class PetSummon implements IItemHandler
 	};
 	
 	@Override
-	public int useItem(PlayerInstance activeChar, ItemInstance item)
+	public int useItem(Player activeChar, Item item)
 	{
 		int npcId;
 		if (activeChar.getPet() != null)
@@ -78,8 +78,8 @@ public class PetSummon implements IItemHandler
 				return 0;
 			}
 		}
-		final Npc petTemplate = NpcTable.getInstance().getTemplate(npcId);
-		final PetInstance newpet = new PetInstance(petTemplate);
+		final NpcTemplate petTemplate = NpcTable.getInstance().getTemplate(npcId);
+		final Pet newpet = new Pet(petTemplate);
 		newpet.setTitle(activeChar.getName());
 		newpet.setControlItemId(item.getObjectId());
 		newpet.setObjectId(IdManager.getInstance().getNextId());

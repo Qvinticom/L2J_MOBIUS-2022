@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.data.xml.PetSkillData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class ServitorSkillUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		final Summon summon = player.getAnyServitor();
 		if ((summon == null) || !summon.isServitor())

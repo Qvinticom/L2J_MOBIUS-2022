@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.dailymission;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -29,7 +29,7 @@ public class ExConnectedTimeAndGettableReward implements IClientOutgoingPacket
 {
 	private final int _oneDayRewardAvailableCount;
 	
-	public ExConnectedTimeAndGettableReward(PlayerInstance player)
+	public ExConnectedTimeAndGettableReward(Player player)
 	{
 		_oneDayRewardAvailableCount = (int) DailyMissionData.getInstance().getDailyMissionData(player).stream().filter(d -> d.getStatus(player) == 1).count();
 	}

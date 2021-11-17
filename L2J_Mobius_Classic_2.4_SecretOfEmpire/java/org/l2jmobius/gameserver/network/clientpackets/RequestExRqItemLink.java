@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExRpItemLink;
 
@@ -43,7 +43,7 @@ public class RequestExRqItemLink implements IClientIncomingPacket
 		final WorldObject object = World.getInstance().findObject(_objectId);
 		if ((object != null) && object.isItem())
 		{
-			final ItemInstance item = (ItemInstance) object;
+			final Item item = (Item) object;
 			if (item.isPublished())
 			{
 				client.sendPacket(new ExRpItemLink(item));

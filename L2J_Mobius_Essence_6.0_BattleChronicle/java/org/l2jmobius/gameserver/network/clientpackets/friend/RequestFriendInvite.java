@@ -21,7 +21,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -39,7 +39,7 @@ public class RequestFriendInvite implements IClientIncomingPacket
 		return true;
 	}
 	
-	private void scheduleDeny(PlayerInstance player)
+	private void scheduleDeny(Player player)
 	{
 		if (player != null)
 		{
@@ -51,7 +51,7 @@ public class RequestFriendInvite implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -76,7 +76,7 @@ public class RequestFriendInvite implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance friend = World.getInstance().getPlayer(_name);
+		final Player friend = World.getInstance().getPlayer(_name);
 		
 		// Target is not found in the game.
 		if ((friend == null) || !friend.isOnline() || friend.isInvisible())

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -159,7 +159,7 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 	}
 	
 	@Override
-	public void runImpl(PlayerInstance player)
+	public void runImpl(Player player)
 	{
 		if (Config.BYPASS_VALIDATION && _validate)
 		{
@@ -250,7 +250,7 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 	 * Builds the bypass cache.
 	 * @param player the player
 	 */
-	private final void buildBypassCache(PlayerInstance player)
+	private final void buildBypassCache(Player player)
 	{
 		if (player == null)
 		{
@@ -287,7 +287,7 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 	 * Builds the links cache.
 	 * @param player the player
 	 */
-	private final void buildLinksCache(PlayerInstance player)
+	private final void buildLinksCache(Player player)
 	{
 		if (player == null)
 		{

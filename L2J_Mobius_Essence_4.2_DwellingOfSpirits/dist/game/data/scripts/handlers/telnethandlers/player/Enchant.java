@@ -17,9 +17,9 @@
 package handlers.telnethandlers.player;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import org.l2jmobius.gameserver.util.GMAudit;
@@ -51,7 +51,7 @@ public class Enchant implements ITelnetCommand
 		{
 			return null;
 		}
-		final PlayerInstance player = World.getInstance().getPlayer(args[0]);
+		final Player player = World.getInstance().getPlayer(args[0]);
 		if (player != null)
 		{
 			int itemType = Integer.parseInt(args[1]);
@@ -148,14 +148,14 @@ public class Enchant implements ITelnetCommand
 		return "Couldn't find player with such name.";
 	}
 	
-	private boolean setEnchant(PlayerInstance player, int ench, int armorType)
+	private boolean setEnchant(Player player, int ench, int armorType)
 	{
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
-		ItemInstance itemInstance = null;
+		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;

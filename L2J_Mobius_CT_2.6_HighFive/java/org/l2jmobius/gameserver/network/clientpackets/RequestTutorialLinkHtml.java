@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
-import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
@@ -39,7 +39,7 @@ public class RequestTutorialLinkHtml implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -57,7 +57,7 @@ public class RequestTutorialLinkHtml implements IClientIncomingPacket
 		}
 		else
 		{
-			ClassMasterInstance.onTutorialLink(player, _bypass);
+			ClassMaster.onTutorialLink(player, _bypass);
 			
 			final QuestState qs = player.getQuestState("Q00255_Tutorial");
 			if (qs != null)

@@ -26,9 +26,9 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -98,9 +98,9 @@ public class BossZone extends ZoneType
 		}
 		
 		creature.setInsideZone(ZoneId.BOSS, true);
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			if (player.isGM() || Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM)
 			{
 				player.sendMessage("You entered " + _zoneName);
@@ -110,9 +110,9 @@ public class BossZone extends ZoneType
 			// Ignore the check for Van Halter zone id 12014 if player got marks
 			if (getId() == 12014)
 			{
-				final ItemInstance visitorsMark = player.getInventory().getItemByItemId(8064);
-				final ItemInstance fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
-				final ItemInstance pagansMark = player.getInventory().getItemByItemId(8067);
+				final Item visitorsMark = player.getInventory().getItemByItemId(8064);
+				final Item fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
+				final Item pagansMark = player.getInventory().getItemByItemId(8067);
 				final long mark1 = visitorsMark == null ? 0 : visitorsMark.getCount();
 				final long mark2 = fadedVisitorsMark == null ? 0 : fadedVisitorsMark.getCount();
 				final long mark3 = pagansMark == null ? 0 : pagansMark.getCount();
@@ -171,9 +171,9 @@ public class BossZone extends ZoneType
 	{
 		for (Creature creature : getCharactersInside())
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				final PlayerInstance player = (PlayerInstance) creature;
+				final Player player = (Player) creature;
 				if (player.isOnline())
 				{
 					player.teleToLocation(x, y, z);
@@ -191,10 +191,10 @@ public class BossZone extends ZoneType
 		}
 		
 		creature.setInsideZone(ZoneId.BOSS, false);
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			// Thread.dumpStack();
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			if (player.isGM())
 			{
 				player.sendMessage("You left " + _zoneName);
@@ -243,7 +243,7 @@ public class BossZone extends ZoneType
 		return _playersAllowed;
 	}
 	
-	public boolean isPlayerAllowed(PlayerInstance player)
+	public boolean isPlayerAllowed(Player player)
 	{
 		if (player.isGM())
 		{
@@ -278,9 +278,9 @@ public class BossZone extends ZoneType
 				continue;
 			}
 			
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				final PlayerInstance player = (PlayerInstance) creature;
+				final Player player = (Player) creature;
 				if (player.isOnline())
 				{
 					player.teleToLocation(TeleportWhereType.TOWN);
@@ -296,7 +296,7 @@ public class BossZone extends ZoneType
 	 * @param player reference to the player we wish to allow
 	 * @param durationInSec amount of time in seconds during which entry is valid.
 	 */
-	public void allowPlayerEntry(PlayerInstance player, int durationInSec)
+	public void allowPlayerEntry(Player player, int durationInSec)
 	{
 		if (!player.isGM())
 		{
@@ -318,23 +318,23 @@ public class BossZone extends ZoneType
 	{
 	}
 	
-	public void updateKnownList(NpcInstance npc)
+	public void updateKnownList(Npc npc)
 	{
 		if (getCharactersInside().isEmpty())
 		{
 			return;
 		}
 		
-		final Map<Integer, PlayerInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
+		final Map<Integer, Player> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
 		for (Creature creature : getCharactersInside())
 		{
 			if (creature == null)
 			{
 				continue;
 			}
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				final PlayerInstance player = (PlayerInstance) creature;
+				final Player player = (Player) creature;
 				if (player.isOnline() || player.isInOfflineMode())
 				{
 					npcKnownPlayers.put(player.getObjectId(), player);

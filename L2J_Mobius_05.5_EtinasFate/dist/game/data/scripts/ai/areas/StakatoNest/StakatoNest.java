@@ -21,8 +21,8 @@ import java.util.List;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -89,11 +89,11 @@ public class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
 		{
-			final MonsterInstance follower = checkMinion(npc);
+			final Monster follower = checkMinion(npc);
 			if (follower != null)
 			{
 				final double hp = follower.getCurrentHp();
@@ -113,9 +113,9 @@ public class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final MonsterInstance monster;
+		final Monster monster;
 		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
@@ -134,7 +134,7 @@ public class StakatoNest extends AbstractNpcAI
 			}
 			case STAKATO_BABY:
 			{
-				monster = ((MonsterInstance) npc).getLeader();
+				monster = ((Monster) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("nurse_change", 5000, monster, killer);
@@ -157,7 +157,7 @@ public class StakatoNest extends AbstractNpcAI
 			}
 			case STAKATO_FEMALE:
 			{
-				monster = ((MonsterInstance) npc).getLeader();
+				monster = ((Monster) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("male_change", 5000, monster, killer);
@@ -168,8 +168,8 @@ public class StakatoNest extends AbstractNpcAI
 			{
 				if (killer.isInParty())
 				{
-					final List<PlayerInstance> party = killer.getParty().getMembers();
-					for (PlayerInstance member : party)
+					final List<Player> party = killer.getParty().getMembers();
+					for (Player member : party)
 					{
 						giveCocoon(member, npc);
 					}
@@ -185,7 +185,7 @@ public class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (CommonUtil.contains(COCOONS, npc.getId()) && CommonUtil.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
@@ -197,7 +197,7 @@ public class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc == null) || (player == null) || npc.isDead())
 		{
@@ -228,12 +228,12 @@ public class StakatoNest extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private static MonsterInstance checkMinion(Npc npc)
+	private static Monster checkMinion(Npc npc)
 	{
-		final MonsterInstance mob = (MonsterInstance) npc;
+		final Monster mob = (Monster) npc;
 		if (mob.hasMinions())
 		{
-			final List<MonsterInstance> minion = mob.getMinionList().getSpawnedMinions();
+			final List<Monster> minion = mob.getMinionList().getSpawnedMinions();
 			if ((minion != null) && !minion.isEmpty() && (minion.get(0) != null) && !minion.get(0).isDead())
 			{
 				return minion.get(0);
@@ -242,7 +242,7 @@ public class StakatoNest extends AbstractNpcAI
 		return null;
 	}
 	
-	private void giveCocoon(PlayerInstance player, Npc npc)
+	private void giveCocoon(Player player, Npc npc)
 	{
 		player.addItem("StakatoCocoon", ((getRandom(100) > 80) ? LARGE_COCOON : SMALL_COCOON), 1, npc, true);
 	}

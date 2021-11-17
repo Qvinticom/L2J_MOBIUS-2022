@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.MatchingMemberType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -31,7 +31,7 @@ public class ExMPCCRoomMember implements IClientOutgoingPacket
 	private final CommandChannelMatchingRoom _room;
 	private final MatchingMemberType _type;
 	
-	public ExMPCCRoomMember(PlayerInstance player, CommandChannelMatchingRoom room)
+	public ExMPCCRoomMember(Player player, CommandChannelMatchingRoom room)
 	{
 		_room = room;
 		_type = room.getMemberType(player);
@@ -44,7 +44,7 @@ public class ExMPCCRoomMember implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_room.getMembersCount());
-		for (PlayerInstance member : _room.getMembers())
+		for (Player member : _room.getMembers())
 		{
 			packet.writeD(member.getObjectId());
 			packet.writeS(member.getName());

@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestMagicSkillUse extends ClientBasePacket
@@ -37,7 +37,7 @@ public class RequestMagicSkillUse extends ClientBasePacket
 		@SuppressWarnings("unused")
 		final int data3 = readC();
 		
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final int level = activeChar.getSkillLevel(magicId);
 		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)

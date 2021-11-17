@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -44,7 +44,7 @@ public class AdminCastle implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -76,7 +76,7 @@ public class AdminCastle implements IAdminCommandHandler
 				else
 				{
 					final String action = st.nextToken();
-					final PlayerInstance target = checkTarget(activeChar) ? activeChar.getTarget().getActingPlayer() : null;
+					final Player target = checkTarget(activeChar) ? activeChar.getTarget().getActingPlayer() : null;
 					switch (action)
 					{
 						case "showRegWindow":
@@ -231,7 +231,7 @@ public class AdminCastle implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showCastleMenu(PlayerInstance player, int castleId)
+	private void showCastleMenu(Player player, int castleId)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 		if (castle != null)
@@ -248,9 +248,9 @@ public class AdminCastle implements IAdminCommandHandler
 		}
 	}
 	
-	private boolean checkTarget(PlayerInstance player)
+	private boolean checkTarget(Player player)
 	{
-		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((PlayerInstance) player.getTarget()).getClan() != null));
+		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((Player) player.getTarget()).getClan() != null));
 	}
 	
 	@Override

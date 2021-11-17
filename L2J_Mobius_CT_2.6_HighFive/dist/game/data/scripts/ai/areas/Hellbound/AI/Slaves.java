@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
@@ -56,20 +56,20 @@ public class Slaves extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		((MonsterInstance) npc).enableMinions(HellboundEngine.getInstance().getLevel() < 5);
-		((MonsterInstance) npc).setOnKillDelay(1000);
+		((Monster) npc).enableMinions(HellboundEngine.getInstance().getLevel() < 5);
+		((Monster) npc).setOnKillDelay(1000);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if (((MonsterInstance) npc).getMinionList() != null)
+		if (((Monster) npc).getMinionList() != null)
 		{
-			final List<MonsterInstance> slaves = ((MonsterInstance) npc).getMinionList().getSpawnedMinions();
+			final List<Monster> slaves = ((Monster) npc).getMinionList().getSpawnedMinions();
 			if ((slaves != null) && !slaves.isEmpty())
 			{
-				for (MonsterInstance slave : slaves)
+				for (Monster slave : slaves)
 				{
 					if ((slave == null) || slave.isDead())
 					{

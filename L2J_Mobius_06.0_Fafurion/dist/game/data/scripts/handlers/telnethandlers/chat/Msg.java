@@ -18,7 +18,7 @@ package handlers.telnethandlers.chat;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 
@@ -48,7 +48,7 @@ public class Msg implements ITelnetCommand
 		{
 			return null;
 		}
-		final PlayerInstance player = World.getInstance().getPlayer(args[0]);
+		final Player player = World.getInstance().getPlayer(args[0]);
 		if (player != null)
 		{
 			final StringBuilder sb = new StringBuilder();

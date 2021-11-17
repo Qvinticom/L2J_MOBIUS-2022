@@ -25,10 +25,10 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import org.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ManorManager;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -84,7 +84,7 @@ public class RequestBuyProcure implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -113,12 +113,12 @@ public class RequestBuyProcure implements IClientIncomingPacket
 		// Check for buylist validity and calculates summary values
 		int slots = 0;
 		int weight = 0;
-		if (!(player.getTarget() instanceof ManorManagerInstance))
+		if (!(player.getTarget() instanceof ManorManager))
 		{
 			return;
 		}
 		
-		final ManorManagerInstance manor = (ManorManagerInstance) player.getTarget();
+		final ManorManager manor = (ManorManager) player.getTarget();
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = _items[(i * 2) + 0];
@@ -131,7 +131,7 @@ public class RequestBuyProcure implements IClientIncomingPacket
 				return;
 			}
 			
-			final Item template = ItemTable.getInstance().getTemplate(ManorSeedData.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward()));
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(ManorSeedData.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward()));
 			weight += count * template.getWeight();
 			if (!template.isStackable())
 			{
@@ -172,8 +172,8 @@ public class RequestBuyProcure implements IClientIncomingPacket
 			rewardItemCount = count / rewardItemCount;
 			
 			// Add item to Inventory and adjust update packet
-			final ItemInstance item = player.getInventory().addItem("Manor", rewardItemId, rewardItemCount, player, manor);
-			final ItemInstance iteme = player.getInventory().destroyItemByItemId("Manor", itemId, count, player, manor);
+			final Item item = player.getInventory().addItem("Manor", rewardItemId, rewardItemCount, player, manor);
+			final Item iteme = player.getInventory().destroyItemByItemId("Manor", itemId, count, player, manor);
 			if ((item == null) || (iteme == null))
 			{
 				continue;

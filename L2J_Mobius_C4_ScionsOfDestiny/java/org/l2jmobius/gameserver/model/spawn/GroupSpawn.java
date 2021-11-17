@@ -21,7 +21,7 @@ import java.lang.reflect.Constructor;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.TerritoryTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
@@ -35,14 +35,14 @@ public class GroupSpawn extends Spawn
 	public GroupSpawn(NpcTemplate mobTemplate) throws ClassNotFoundException, NoSuchMethodException
 	{
 		super(mobTemplate);
-		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance").getConstructors()[0];
+		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance.ControllableMob").getConstructors()[0];
 		_template = mobTemplate;
 		setAmount(1);
 	}
 	
-	public NpcInstance doGroupSpawn()
+	public Npc doGroupSpawn()
 	{
-		NpcInstance mob = null;
+		Npc mob = null;
 		
 		try
 		{
@@ -57,12 +57,12 @@ public class GroupSpawn extends Spawn
 				_template
 			};
 			final Object tmp = _constructor.newInstance(parameters);
-			if (!(tmp instanceof NpcInstance))
+			if (!(tmp instanceof Npc))
 			{
 				return null;
 			}
 			
-			mob = (NpcInstance) tmp;
+			mob = (Npc) tmp;
 			int newlocx;
 			int newlocy;
 			int newlocz;

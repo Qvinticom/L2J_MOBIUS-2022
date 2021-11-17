@@ -20,8 +20,8 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 
 /**
  * @author DrHouse
@@ -52,7 +52,7 @@ public class DropProtection implements Runnable
 		return _owner;
 	}
 	
-	public synchronized boolean tryPickUp(PlayerInstance actor)
+	public synchronized boolean tryPickUp(Player actor)
 	{
 		if (!_isProtected)
 		{
@@ -76,7 +76,7 @@ public class DropProtection implements Runnable
 		return false;
 	}
 	
-	public boolean tryPickUp(PetInstance pet)
+	public boolean tryPickUp(Pet pet)
 	{
 		return tryPickUp(pet.getOwner());
 	}

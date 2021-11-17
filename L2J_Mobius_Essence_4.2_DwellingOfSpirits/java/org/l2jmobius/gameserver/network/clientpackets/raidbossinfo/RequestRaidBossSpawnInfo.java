@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
@@ -41,7 +41,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int bossId = packet.readD();
-			final GrandBossInstance boss = GrandBossManager.getInstance().getBoss(bossId);
+			final GrandBoss boss = GrandBossManager.getInstance().getBoss(bossId);
 			if (boss == null)
 			{
 				final int status = DBSpawnManager.getInstance().getNpcStatusId(bossId).ordinal();

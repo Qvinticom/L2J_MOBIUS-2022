@@ -22,8 +22,8 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,10 +31,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class TradeUpdate implements IClientOutgoingPacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	private final List<TradeItem> _tradeItems;
 	
-	public TradeUpdate(TradeList trade, PlayerInstance player)
+	public TradeUpdate(TradeList trade, Player player)
 	{
 		_items = player.getInventory().getItems();
 		_tradeItems = trade.getItems();
@@ -42,7 +42,7 @@ public class TradeUpdate implements IClientOutgoingPacket
 	
 	private int getItemCount(int objectId)
 	{
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			if (item.getObjectId() == objectId)
 			{

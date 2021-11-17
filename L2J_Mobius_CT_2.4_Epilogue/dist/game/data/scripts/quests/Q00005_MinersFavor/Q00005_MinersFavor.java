@@ -18,7 +18,7 @@ package quests.Q00005_MinersFavor;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -56,7 +56,7 @@ public class Q00005_MinersFavor extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -99,7 +99,7 @@ public class Q00005_MinersFavor extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -167,7 +167,7 @@ public class Q00005_MinersFavor extends Quest
 		return htmltext;
 	}
 	
-	private static void checkProgress(PlayerInstance player, QuestState qs)
+	private static void checkProgress(Player player, QuestState qs)
 	{
 		if (hasQuestItems(player, BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
 		{
@@ -175,7 +175,7 @@ public class Q00005_MinersFavor extends Quest
 		}
 	}
 	
-	private static String giveItem(PlayerInstance player, QuestState qs, int npcId, int itemId)
+	private static String giveItem(Player player, QuestState qs, int npcId, int itemId)
 	{
 		if (!qs.isStarted())
 		{

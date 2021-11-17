@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.olympiad;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author GodKratos
@@ -28,7 +28,7 @@ class OlympiadStadium
 {
 	private boolean _freeToUse = true;
 	private final int[] _coords = new int[3];
-	private final List<PlayerInstance> _spectators;
+	private final List<Player> _spectators;
 	
 	public boolean isFreeToUse()
 	{
@@ -59,18 +59,18 @@ class OlympiadStadium
 		_spectators = new ArrayList<>();
 	}
 	
-	protected void addSpectator(int id, PlayerInstance spec, boolean storeCoords)
+	protected void addSpectator(int id, Player spec, boolean storeCoords)
 	{
 		spec.enterOlympiadObserverMode(_coords[0], _coords[1], _coords[2], id, storeCoords);
 		_spectators.add(spec);
 	}
 	
-	protected List<PlayerInstance> getSpectators()
+	protected List<Player> getSpectators()
 	{
 		return _spectators;
 	}
 	
-	protected void removeSpectator(PlayerInstance spec)
+	protected void removeSpectator(Player spec)
 	{
 		if ((_spectators != null) && _spectators.contains(spec))
 		{

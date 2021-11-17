@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
  */
 public class OlympiadStadiumZone extends ZoneRespawn
 {
-	private final List<DoorInstance> _doors = new ArrayList<>(2);
+	private final List<Door> _doors = new ArrayList<>(2);
 	private final List<Spawn> _buffers = new ArrayList<>(2);
 	private final List<Location> _spectatorLocations = new ArrayList<>(1);
 	
@@ -121,7 +121,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		
 		if (creature.isPlayable())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player != null)
 			{
 				// only participants, observers and GMs allowed
@@ -158,9 +158,9 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	
 	private static final class KickPlayer implements Runnable
 	{
-		private PlayerInstance _player;
+		private Player _player;
 		
-		protected KickPlayer(PlayerInstance player)
+		protected KickPlayer(Player player)
 		{
 			_player = player;
 		}
@@ -177,7 +177,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 		}
 	}
 	
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}

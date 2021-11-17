@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -36,7 +36,7 @@ public class Loc implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, PlayerInstance player)
+	public boolean useUserCommand(int id, Player player)
 	{
 		int region;
 		final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);

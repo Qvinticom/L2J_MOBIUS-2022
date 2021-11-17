@@ -12,10 +12,10 @@ import org.l2jmobius.gameserver.data.xml.PetTypesListData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.model.PetData;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
@@ -33,13 +33,13 @@ public class ExEvolvePet implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance activeChar = client.getPlayer();
+		final Player activeChar = client.getPlayer();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		final PetInstance pet = activeChar.getPet();
+		final Pet pet = activeChar.getPet();
 		if (pet == null)
 		{
 			return;
@@ -65,9 +65,9 @@ public class ExEvolvePet implements IClientIncomingPacket
 		}
 	}
 	
-	private void doEvolve(PlayerInstance activeChar, PetInstance pet, EvolveLevel evolveLevel)
+	private void doEvolve(Player activeChar, Pet pet, EvolveLevel evolveLevel)
 	{
-		final ItemInstance controlItem = pet.getControlItem();
+		final Item controlItem = pet.getControlItem();
 		pet.unSummon(activeChar);
 		final List<PetData> pets = PetDataTable.getInstance().getPetDatasByEvolve(controlItem.getId(), evolveLevel);
 		final PetData targetPet = pets.get(Rnd.get(pets.size()));
@@ -78,7 +78,7 @@ public class ExEvolvePet implements IClientIncomingPacket
 		}
 		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(evolveLevel == EvolveLevel.Second ? pet.getId() + 2 : petData.getNpcId());
-		final PetInstance evolved = PetInstance.spawnPet(npcTemplate, activeChar, controlItem);
+		final Pet evolved = Pet.spawnPet(npcTemplate, activeChar, controlItem);
 		
 		if (evolved == null)
 		{

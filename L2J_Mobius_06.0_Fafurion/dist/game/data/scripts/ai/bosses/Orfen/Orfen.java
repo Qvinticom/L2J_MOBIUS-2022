@@ -28,8 +28,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -99,7 +99,7 @@ public class Orfen extends AbstractNpcAI
 			else
 			{
 				// the time has already expired while the server was offline. Immediately spawn Orfen.
-				final GrandBossInstance orfen = (GrandBossInstance) addSpawn(ORFEN, POS, false, 0);
+				final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, POS, false, 0);
 				GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
 				spawnBoss(orfen);
 			}
@@ -112,13 +112,13 @@ public class Orfen extends AbstractNpcAI
 			final int heading = info.getInt("heading");
 			final double hp = info.getDouble("currentHP");
 			final double mp = info.getDouble("currentMP");
-			final GrandBossInstance orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 			orfen.setCurrentHpMp(hp, mp);
 			spawnBoss(orfen);
 		}
 	}
 	
-	public void spawnBoss(GrandBossInstance npc)
+	public void spawnBoss(GrandBoss npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -142,11 +142,11 @@ public class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("orfen_unlock"))
 		{
-			final GrandBossInstance orfen = (GrandBossInstance) addSpawn(ORFEN, POS, false, 0);
+			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, POS, false, 0);
 			GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
 			spawnBoss(orfen);
 		}
@@ -180,7 +180,7 @@ public class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFactionCall(Npc npc, Npc caller, PlayerInstance attacker, boolean isSummon)
+	public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null) || npc.isCastingNow(SkillCaster::isAnyNormalType))
 		{
@@ -211,7 +211,7 @@ public class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if (npcId == ORFEN)
@@ -298,7 +298,7 @@ public class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == ORFEN)
 		{

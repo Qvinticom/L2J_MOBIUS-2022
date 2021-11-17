@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.ai;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExMoveToLocationAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExStopMoveAirShip;
 
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExStopMoveAirShip;
  */
 public class AirShipAI extends VehicleAI
 {
-	public AirShipAI(AirShipInstance creature)
+	public AirShipAI(AirShip creature)
 	{
 		super(creature);
 	}
@@ -59,7 +59,7 @@ public class AirShipAI extends VehicleAI
 	}
 	
 	@Override
-	public void describeStateToPlayer(PlayerInstance player)
+	public void describeStateToPlayer(Player player)
 	{
 		if (_clientMoving)
 		{
@@ -68,8 +68,8 @@ public class AirShipAI extends VehicleAI
 	}
 	
 	@Override
-	public AirShipInstance getActor()
+	public AirShip getActor()
 	{
-		return (AirShipInstance) _actor;
+		return (AirShip) _actor;
 	}
 }

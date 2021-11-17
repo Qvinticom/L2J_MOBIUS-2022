@@ -174,7 +174,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36303" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36303" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -841,7 +841,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36314" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="36314" level="80" type="Folk" name="Mercenary Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -928,7 +928,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36315" level="75" type="Npc" name="Mercenary Private">
+	<npc id="36315" level="75" type="Folk" name="Mercenary Private">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -976,7 +976,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36316" level="20" type="Npc" name="Flagpole">
+	<npc id="36316" level="20" type="Folk" name="Flagpole">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1052,7 +1052,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36318" level="75" type="Npc" name="Suspicious Merchant" title="Demon Fortress">
+	<npc id="36318" level="75" type="Folk" name="Suspicious Merchant" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1091,7 +1091,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36319" level="75" type="Npc" name="Guard Captain" title="Demon Fortress">
+	<npc id="36319" level="75" type="Folk" name="Guard Captain" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1137,7 +1137,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36320" level="75" type="Npc" name="Archer Captain" title="Demon Fortress">
+	<npc id="36320" level="75" type="Folk" name="Archer Captain" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1176,7 +1176,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36321" level="75" type="Npc" name="General" title="Demon Fortress">
+	<npc id="36321" level="75" type="Folk" name="General" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1216,7 +1216,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36322" level="75" type="Npc" name="Support Unit Captain" title="Demon Fortress">
+	<npc id="36322" level="75" type="Folk" name="Support Unit Captain" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1255,7 +1255,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36323" level="75" type="Npc" name="Engineering Manager" title="Demon Fortress">
+	<npc id="36323" level="75" type="Folk" name="Engineering Manager" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -1352,7 +1352,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36325" level="80" type="Npc" name="Supply Box">
+	<npc id="36325" level="80" type="Folk" name="Supply Box">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1388,7 +1388,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36326" level="75" type="Npc" name="Detention Camp Warden" title="Demon Fortress">
+	<npc id="36326" level="75" type="Folk" name="Detention Camp Warden" title="Demon Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1869,7 +1869,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36335" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="36335" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="120" />
@@ -1918,7 +1918,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36336" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="36336" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -1962,7 +1962,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36337" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="36337" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="120" />
@@ -2010,7 +2010,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36338" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36338" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2864,7 +2864,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36352" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="36352" level="80" type="Folk" name="Mercenary Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2951,7 +2951,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36353" level="75" type="Npc" name="Mercenary Private">
+	<npc id="36353" level="75" type="Folk" name="Mercenary Private">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2999,7 +2999,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36354" level="20" type="Npc" name="Flagpole">
+	<npc id="36354" level="20" type="Folk" name="Flagpole">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3075,7 +3075,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36356" level="75" type="Npc" name="Suspicious Merchant" title="Monastic Fortress">
+	<npc id="36356" level="75" type="Folk" name="Suspicious Merchant" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3114,7 +3114,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36357" level="75" type="Npc" name="Guard Captain" title="Monastic Fortress">
+	<npc id="36357" level="75" type="Folk" name="Guard Captain" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3160,7 +3160,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36358" level="75" type="Npc" name="Archer Captain" title="Monastic Fortress">
+	<npc id="36358" level="75" type="Folk" name="Archer Captain" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -3199,7 +3199,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36359" level="75" type="Npc" name="General" title="Monastic Fortress">
+	<npc id="36359" level="75" type="Folk" name="General" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3239,7 +3239,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36360" level="75" type="Npc" name="Support Unit Captain" title="Monastic Fortress">
+	<npc id="36360" level="75" type="Folk" name="Support Unit Captain" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3278,7 +3278,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36361" level="75" type="Npc" name="Engineering Manager" title="Monastic Fortress">
+	<npc id="36361" level="75" type="Folk" name="Engineering Manager" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -3375,7 +3375,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36363" level="80" type="Npc" name="Supply Box">
+	<npc id="36363" level="80" type="Folk" name="Supply Box">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3411,7 +3411,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36364" level="75" type="Npc" name="Detention Camp Warden" title="Monastic Fortress">
+	<npc id="36364" level="75" type="Folk" name="Detention Camp Warden" title="Monastic Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3892,7 +3892,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36373" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="36373" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="121" />
@@ -3941,7 +3941,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36374" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="36374" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -3985,7 +3985,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36375" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="36375" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="121" />
@@ -4033,7 +4033,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36376" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36376" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4887,7 +4887,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36390" level="80" type="Npc" name="Mercenary Captain">
+	<npc id="36390" level="80" type="Folk" name="Mercenary Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4974,7 +4974,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36391" level="75" type="Npc" name="Mercenary Private">
+	<npc id="36391" level="75" type="Folk" name="Mercenary Private">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5022,7 +5022,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36392" level="60" type="Npc" name="Improvised Explosive">
+	<npc id="36392" level="60" type="Folk" name="Improvised Explosive">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -5058,7 +5058,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="36393" level="75" type="Npc" name="Special Envoy" title="Gludio">
+	<npc id="36393" level="75" type="Folk" name="Special Envoy" title="Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5097,7 +5097,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="36394" level="75" type="Npc" name="Special Envoy" title="Gludio">
+	<npc id="36394" level="75" type="Folk" name="Special Envoy" title="Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5136,7 +5136,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="36395" level="75" type="Npc" name="Special Envoy" title="Dion">
+	<npc id="36395" level="75" type="Folk" name="Special Envoy" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5175,7 +5175,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="36396" level="75" type="Npc" name="Special Envoy" title="Giran">
+	<npc id="36396" level="75" type="Folk" name="Special Envoy" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5214,7 +5214,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="36397" level="75" type="Npc" name="Special Envoy" title="Oren">
+	<npc id="36397" level="75" type="Folk" name="Special Envoy" title="Oren">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="106" />
@@ -5253,7 +5253,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="36398" level="75" type="Npc" name="Special Envoy" title="Aden">
+	<npc id="36398" level="75" type="Folk" name="Special Envoy" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5292,7 +5292,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="36399" level="75" type="Npc" name="Special Envoy" title="Aden">
+	<npc id="36399" level="75" type="Folk" name="Special Envoy" title="Aden">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />

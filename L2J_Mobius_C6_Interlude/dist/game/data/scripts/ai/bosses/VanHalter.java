@@ -43,10 +43,10 @@ import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -66,7 +66,7 @@ public class VanHalter extends Quest
 	private static final byte NOTSPAWN = 1;
 	private static final byte ALIVE = 2;
 	// List of intruders.
-	protected Map<Integer, List<PlayerInstance>> _bleedingPlayers = new HashMap<>();
+	protected Map<Integer, List<Player>> _bleedingPlayers = new HashMap<>();
 	// Spawn data of monsters.
 	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
 	protected Collection<Spawn> _royalGuardSpawn = ConcurrentHashMap.newKeySet();
@@ -80,18 +80,18 @@ public class VanHalter extends Quest
 	protected Spawn _ritualSacrificeSpawn = null;
 	protected Spawn _vanHalterSpawn = null;
 	// Instance of monsters.
-	protected Collection<NpcInstance> _monsters = ConcurrentHashMap.newKeySet();
-	protected Collection<NpcInstance> _royalGuard = ConcurrentHashMap.newKeySet();
-	protected Collection<NpcInstance> _royalGuardCaptain = ConcurrentHashMap.newKeySet();
-	protected Collection<NpcInstance> _royalGuardHepler = ConcurrentHashMap.newKeySet();
-	protected Collection<NpcInstance> _triolRevelation = ConcurrentHashMap.newKeySet();
-	protected Collection<NpcInstance> _guardOfAltar = ConcurrentHashMap.newKeySet();
-	protected Map<Integer, NpcInstance> _cameraMarker = new ConcurrentHashMap<>();
-	protected Collection<DoorInstance> _doorOfAltar = ConcurrentHashMap.newKeySet();
-	protected Collection<DoorInstance> _doorOfSacrifice = ConcurrentHashMap.newKeySet();
-	protected NpcInstance _ritualOffering = null;
-	protected NpcInstance _ritualSacrifice = null;
-	protected RaidBossInstance _vanHalter = null;
+	protected Collection<Npc> _monsters = ConcurrentHashMap.newKeySet();
+	protected Collection<Npc> _royalGuard = ConcurrentHashMap.newKeySet();
+	protected Collection<Npc> _royalGuardCaptain = ConcurrentHashMap.newKeySet();
+	protected Collection<Npc> _royalGuardHepler = ConcurrentHashMap.newKeySet();
+	protected Collection<Npc> _triolRevelation = ConcurrentHashMap.newKeySet();
+	protected Collection<Npc> _guardOfAltar = ConcurrentHashMap.newKeySet();
+	protected Map<Integer, Npc> _cameraMarker = new ConcurrentHashMap<>();
+	protected Collection<Door> _doorOfAltar = ConcurrentHashMap.newKeySet();
+	protected Collection<Door> _doorOfSacrifice = ConcurrentHashMap.newKeySet();
+	protected Npc _ritualOffering = null;
+	protected Npc _ritualSacrifice = null;
+	protected RaidBoss _vanHalter = null;
 	// Tasks.
 	protected ScheduledFuture<?> _movieTask = null;
 	protected ScheduledFuture<?> _closeDoorOfAltarTask = null;
@@ -253,7 +253,7 @@ public class VanHalter extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if ((npc.getNpcId() == 29062) && (((int) (npc.getStatus().getCurrentHp() / npc.getMaxHp()) * 100) <= 20))
 		{
@@ -263,7 +263,7 @@ public class VanHalter extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if ((npcId == 32058) || (npcId == 32059) || (npcId == 32060) || (npcId == 32061) || (npcId == 32062) || (npcId == 32063) || (npcId == 32064) || (npcId == 32065) || (npcId == 32066))
@@ -343,7 +343,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteRoyalGuard()
 	{
-		for (NpcInstance rg : _royalGuard)
+		for (Npc rg : _royalGuard)
 		{
 			rg.getSpawn().stopRespawn();
 			rg.deleteMe();
@@ -417,7 +417,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteTriolRevelation()
 	{
-		for (NpcInstance tr : _triolRevelation)
+		for (Npc tr : _triolRevelation)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -487,7 +487,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteRoyalGuardCaptain()
 	{
-		for (NpcInstance tr : _royalGuardCaptain)
+		for (Npc tr : _royalGuardCaptain)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -550,7 +550,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteRoyalGuardHepler()
 	{
-		for (NpcInstance tr : _royalGuardHepler)
+		for (Npc tr : _royalGuardHepler)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -618,7 +618,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteGuardOfAltar()
 	{
-		for (NpcInstance tr : _guardOfAltar)
+		for (Npc tr : _guardOfAltar)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -673,7 +673,7 @@ public class VanHalter extends Quest
 	
 	protected void spawnVanHalter()
 	{
-		_vanHalter = (RaidBossInstance) _vanHalterSpawn.doSpawn();
+		_vanHalter = (RaidBoss) _vanHalterSpawn.doSpawn();
 		// _vanHalter.setImmobilized(true);
 		_vanHalter.setInvul(true);
 		_isHalterSpawned = true;
@@ -850,7 +850,7 @@ public class VanHalter extends Quest
 	
 	protected void openDoorOfAltar(boolean loop)
 	{
-		for (DoorInstance door : _doorOfAltar)
+		for (Door door : _doorOfAltar)
 		{
 			try
 			{
@@ -893,7 +893,7 @@ public class VanHalter extends Quest
 	
 	protected void closeDoorOfAltar(boolean loop)
 	{
-		for (DoorInstance door : _doorOfAltar)
+		for (Door door : _doorOfAltar)
 		{
 			door.closeMe();
 		}
@@ -928,7 +928,7 @@ public class VanHalter extends Quest
 	
 	protected void openDoorOfSacrifice()
 	{
-		for (DoorInstance door : _doorOfSacrifice)
+		for (Door door : _doorOfSacrifice)
 		{
 			try
 			{
@@ -943,7 +943,7 @@ public class VanHalter extends Quest
 	
 	protected void closeDoorOfSacrifice()
 	{
-		for (DoorInstance door : _doorOfSacrifice)
+		for (Door door : _doorOfSacrifice)
 		{
 			try
 			{
@@ -1010,9 +1010,9 @@ public class VanHalter extends Quest
 		}
 		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_FIGHTTIMEOFHALTER);
 		
-		final Map<Integer, PlayerInstance> targets = new HashMap<>();
+		final Map<Integer, Player> targets = new HashMap<>();
 		int i = 0;
-		for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+		for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 		{
 			i++;
 			targets.put(i, pc);
@@ -1121,15 +1121,15 @@ public class VanHalter extends Quest
 	protected void addBleeding()
 	{
 		final Skill bleed = SkillTable.getInstance().getSkill(4615, 12);
-		for (NpcInstance tr : _triolRevelation)
+		for (Npc tr : _triolRevelation)
 		{
 			if (!tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()).iterator().hasNext() || tr.isDead())
 			{
 				continue;
 			}
 			
-			final List<PlayerInstance> bpc = new ArrayList<>();
-			for (PlayerInstance pc : tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()))
+			final List<Player> bpc = new ArrayList<>();
+			for (Player pc : tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()))
 			{
 				if (pc.getFirstEffect(bleed) == null)
 				{
@@ -1150,7 +1150,7 @@ public class VanHalter extends Quest
 		{
 			return;
 		}
-		for (PlayerInstance pc : _bleedingPlayers.get(npcId))
+		for (Player pc : _bleedingPlayers.get(npcId))
 		{
 			if (pc.getFirstEffect(Effect.EffectType.DMG_OVER_TIME) != null)
 			{
@@ -1392,7 +1392,7 @@ public class VanHalter extends Quest
 				{
 					GrandBossManager.getInstance().setBossStatus(29062, ALIVE);
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
@@ -1411,7 +1411,7 @@ public class VanHalter extends Quest
 				case 2:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(5)) <= DISTANCE)
 						{
@@ -1430,7 +1430,7 @@ public class VanHalter extends Quest
 				case 3:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(5)) <= DISTANCE)
 						{
@@ -1449,7 +1449,7 @@ public class VanHalter extends Quest
 				case 4:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(4)) <= DISTANCE)
 						{
@@ -1468,7 +1468,7 @@ public class VanHalter extends Quest
 				case 5:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(4)) <= DISTANCE)
 						{
@@ -1487,7 +1487,7 @@ public class VanHalter extends Quest
 				case 6:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(3)) <= DISTANCE)
 						{
@@ -1506,7 +1506,7 @@ public class VanHalter extends Quest
 				case 7:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(3)) <= DISTANCE)
 						{
@@ -1525,7 +1525,7 @@ public class VanHalter extends Quest
 				case 8:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(2)) <= DISTANCE)
 						{
@@ -1544,7 +1544,7 @@ public class VanHalter extends Quest
 				case 9:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(2)) <= DISTANCE)
 						{
@@ -1563,7 +1563,7 @@ public class VanHalter extends Quest
 				case 10:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(1)) <= DISTANCE)
 						{
@@ -1582,7 +1582,7 @@ public class VanHalter extends Quest
 				case 11:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_cameraMarker.get(1)) <= DISTANCE)
 						{
@@ -1601,7 +1601,7 @@ public class VanHalter extends Quest
 				case 12:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
@@ -1653,7 +1653,7 @@ public class VanHalter extends Quest
 					spawnRitualSacrifice();
 					deleteRitualOffering();
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
@@ -1672,7 +1672,7 @@ public class VanHalter extends Quest
 				case 16:
 				{
 					// Set camera.
-					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{

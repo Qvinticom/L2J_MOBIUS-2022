@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -66,7 +66,7 @@ public class Q00902_ReclaimOurEra extends Quest
 		registerQuestItems(SHATTERED_BONES, CANNIBALISTIC_STAKATO_LDR_CLAW, ANAIS_SCROLL);
 	}
 	
-	private void giveItem(Npc npc, PlayerInstance player)
+	private void giveItem(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted() && !qs.isCond(5) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
@@ -77,7 +77,7 @@ public class Q00902_ReclaimOurEra extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -142,11 +142,11 @@ public class Q00902_ReclaimOurEra extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (killer.isInParty())
 		{
-			for (PlayerInstance member : killer.getParty().getMembers())
+			for (Player member : killer.getParty().getMembers())
 			{
 				giveItem(npc, member);
 			}
@@ -159,7 +159,7 @@ public class Q00902_ReclaimOurEra extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

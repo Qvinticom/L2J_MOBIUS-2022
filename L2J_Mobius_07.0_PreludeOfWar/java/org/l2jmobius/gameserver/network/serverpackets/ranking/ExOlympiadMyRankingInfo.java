@@ -28,7 +28,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -43,9 +43,9 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 	private static final String GET_CURRENT_CYCLE_DATA = "SELECT charId, olympiad_points, competitions_won, competitions_lost FROM olympiad_nobles WHERE class_id = ? ORDER BY olympiad_points DESC LIMIT " + RankManager.PLAYER_LIMIT;
 	private static final String GET_PREVIOUS_CYCLE_DATA = "SELECT charId, olympiad_points, competitions_won, competitions_lost FROM olympiad_nobles_eom WHERE class_id = ? ORDER BY olympiad_points DESC LIMIT " + RankManager.PLAYER_LIMIT;
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExOlympiadMyRankingInfo(PlayerInstance player)
+	public ExOlympiadMyRankingInfo(Player player)
 	{
 		_player = player;
 	}

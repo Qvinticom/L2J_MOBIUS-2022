@@ -18,7 +18,7 @@ package handlers.usercommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.CommandChannel;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ExMultiPartyCommandChannelInfo;
 
 /**
@@ -33,7 +33,7 @@ public class ChannelInfo implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, PlayerInstance player)
+	public boolean useUserCommand(int id, Player player)
 	{
 		if (id != COMMAND_IDS[0])
 		{

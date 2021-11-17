@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.ElementalItemType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
@@ -151,7 +151,7 @@ public class ElementalAttributeData implements IXmlReader
 		return -1;
 	}
 	
-	public boolean isElementableWithStone(ItemInstance targetItem, int stoneId)
+	public boolean isElementableWithStone(Item targetItem, int stoneId)
 	{
 		if (!targetItem.isElementable())
 		{
@@ -166,7 +166,7 @@ public class ElementalAttributeData implements IXmlReader
 		return true;
 	}
 	
-	public boolean isSuccess(ItemInstance item, int stoneId)
+	public boolean isSuccess(Item item, int stoneId)
 	{
 		int row = -1;
 		int column = -1;

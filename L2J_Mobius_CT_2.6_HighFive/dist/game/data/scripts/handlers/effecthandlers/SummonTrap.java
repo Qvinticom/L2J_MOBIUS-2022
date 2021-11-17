@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -62,7 +62,7 @@ public class SummonTrap extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffected().getActingPlayer();
+		final Player player = info.getEffected().getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
 			return;
@@ -81,7 +81,7 @@ public class SummonTrap extends AbstractEffect
 			return;
 		}
 		
-		final TrapInstance trap = new TrapInstance(npcTemplate, player, _despawnTime);
+		final Trap trap = new Trap(npcTemplate, player, _despawnTime);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
 		trap.setInvul(true);

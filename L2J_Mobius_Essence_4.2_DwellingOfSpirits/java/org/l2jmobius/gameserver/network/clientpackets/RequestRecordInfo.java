@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -35,7 +35,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -51,7 +51,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 				if (object.isCreature())
 				{
 					// Update the state of the Creature object client side by sending Server->Client packet
-					// MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance
+					// MoveToPawn/MoveToLocation and AutoAttackStart to the Player
 					final Creature creature = (Creature) object;
 					if (creature.hasAI())
 					{

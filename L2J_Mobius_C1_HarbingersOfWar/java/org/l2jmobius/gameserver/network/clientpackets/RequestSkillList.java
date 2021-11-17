@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 
@@ -28,7 +28,7 @@ public class RequestSkillList extends ClientBasePacket
 	{
 		super(rawPacket);
 		final SkillList response = new SkillList();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		for (Skill skill : activeChar.getAllSkills())
 		{
 			response.addSkill(skill.getId(), skill.getLevel(), skill.isPassive());

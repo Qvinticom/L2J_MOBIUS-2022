@@ -17,24 +17,24 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * An instantly executed event when Attackable is attacked by PlayerInstance.
+ * An instantly executed event when Attackable is attacked by Player.
  * @author UnAfraid
  */
 public class OnAttackableAttack implements IBaseEvent
 {
-	private final PlayerInstance _attacker;
+	private final Player _attacker;
 	private final Attackable _target;
 	private final int _damage;
 	private final Skill _skill;
 	private final boolean _isSummon;
 	
-	public OnAttackableAttack(PlayerInstance attacker, Attackable target, int damage, Skill skill, boolean isSummon)
+	public OnAttackableAttack(Player attacker, Attackable target, int damage, Skill skill, boolean isSummon)
 	{
 		_attacker = attacker;
 		_target = target;
@@ -43,7 +43,7 @@ public class OnAttackableAttack implements IBaseEvent
 		_isSummon = isSummon;
 	}
 	
-	public PlayerInstance getAttacker()
+	public Player getAttacker()
 	{
 		return _attacker;
 	}

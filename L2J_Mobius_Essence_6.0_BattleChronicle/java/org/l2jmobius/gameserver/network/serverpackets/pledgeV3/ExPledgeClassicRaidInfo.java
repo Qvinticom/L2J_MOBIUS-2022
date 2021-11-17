@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.pledgeV3;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -30,7 +30,7 @@ public class ExPledgeClassicRaidInfo implements IClientOutgoingPacket
 {
 	private final Clan _clan;
 	
-	public ExPledgeClassicRaidInfo(PlayerInstance player)
+	public ExPledgeClassicRaidInfo(Player player)
 	{
 		_clan = player.getClan();
 	}

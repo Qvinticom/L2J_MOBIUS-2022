@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -37,10 +37,10 @@ public class BlockList
 	private static final Logger LOGGER = Logger.getLogger(BlockList.class.getName());
 	private static final Map<Integer, List<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
 	
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private List<Integer> _blockList;
 	
-	public BlockList(PlayerInstance owner)
+	public BlockList(Player owner)
 	{
 		_owner = owner;
 		_blockList = OFFLINE_LIST.get(owner.getObjectId());
@@ -125,7 +125,7 @@ public class BlockList
 		}
 	}
 	
-	public boolean isInBlockList(PlayerInstance target)
+	public boolean isInBlockList(Player target)
 	{
 		return _blockList.contains(target.getObjectId());
 	}
@@ -140,13 +140,13 @@ public class BlockList
 		return _owner.getMessageRefusal();
 	}
 	
-	public static boolean isBlocked(PlayerInstance listOwner, PlayerInstance target)
+	public static boolean isBlocked(Player listOwner, Player target)
 	{
 		final BlockList blockList = listOwner.getBlockList();
 		return blockList.isBlockAll() || blockList.isInBlockList(target);
 	}
 	
-	public static boolean isBlocked(PlayerInstance listOwner, int targetId)
+	public static boolean isBlocked(Player listOwner, int targetId)
 	{
 		final BlockList blockList = listOwner.getBlockList();
 		return blockList.isBlockAll() || blockList.isInBlockList(targetId);
@@ -162,7 +162,7 @@ public class BlockList
 		return _blockList;
 	}
 	
-	public static void addToBlockList(PlayerInstance listOwner, int targetId)
+	public static void addToBlockList(Player listOwner, int targetId)
 	{
 		if (listOwner == null)
 		{
@@ -188,7 +188,7 @@ public class BlockList
 		sm.addString(charName);
 		listOwner.sendPacket(sm);
 		
-		final PlayerInstance player = World.getInstance().getPlayer(targetId);
+		final Player player = World.getInstance().getPlayer(targetId);
 		if (player != null)
 		{
 			sm = new SystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
@@ -197,7 +197,7 @@ public class BlockList
 		}
 	}
 	
-	public static void removeFromBlockList(PlayerInstance listOwner, int targetId)
+	public static void removeFromBlockList(Player listOwner, int targetId)
 	{
 		if (listOwner == null)
 		{
@@ -221,22 +221,22 @@ public class BlockList
 		listOwner.sendPacket(sm);
 	}
 	
-	public static boolean isInBlockList(PlayerInstance listOwner, PlayerInstance target)
+	public static boolean isInBlockList(Player listOwner, Player target)
 	{
 		return listOwner.getBlockList().isInBlockList(target);
 	}
 	
-	public boolean isBlockAll(PlayerInstance listOwner)
+	public boolean isBlockAll(Player listOwner)
 	{
 		return listOwner.getBlockList().isBlockAll();
 	}
 	
-	public static void setBlockAll(PlayerInstance listOwner, boolean newValue)
+	public static void setBlockAll(Player listOwner, boolean newValue)
 	{
 		listOwner.getBlockList().setBlockAll(newValue);
 	}
 	
-	public static void sendListToOwner(PlayerInstance listOwner)
+	public static void sendListToOwner(Player listOwner)
 	{
 		int i = 1;
 		listOwner.sendPacket(SystemMessageId.IGNORE_LIST);
@@ -254,7 +254,7 @@ public class BlockList
 	 */
 	public static boolean isInBlockList(int ownerId, int targetId)
 	{
-		final PlayerInstance player = World.getInstance().getPlayer(ownerId);
+		final Player player = World.getInstance().getPlayer(ownerId);
 		if (player != null)
 		{
 			return isBlocked(player, targetId);

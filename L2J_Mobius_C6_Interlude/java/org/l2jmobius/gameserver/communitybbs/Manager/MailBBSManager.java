@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExMailArrived;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -111,7 +111,7 @@ public class MailBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, PlayerInstance activeChar)
+	public void parseCmd(String command, Player activeChar)
 	{
 		CommunityBoard.getInstance().addBypass(activeChar, "Mail Command", command);
 		if (command.equals("_bbsmail") || command.equals("_maillist_0_1_0_"))
@@ -194,7 +194,7 @@ public class MailBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance activeChar)
+	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player activeChar)
 	{
 		if (ar1.equals("Send"))
 		{
@@ -280,7 +280,7 @@ public class MailBBSManager extends BaseBBSManager
 		return letters;
 	}
 	
-	private Mail getLetter(PlayerInstance activeChar, int letterId)
+	private Mail getLetter(Player activeChar, int letterId)
 	{
 		for (Mail letter : getPlayerMails(activeChar.getObjectId()))
 		{
@@ -297,7 +297,7 @@ public class MailBBSManager extends BaseBBSManager
 		return s.length() > maxWidth ? s.substring(0, maxWidth) : s;
 	}
 	
-	public int checkUnreadMail(PlayerInstance activeChar)
+	public int checkUnreadMail(Player activeChar)
 	{
 		int count = 0;
 		for (Mail letter : getPlayerMails(activeChar.getObjectId()))
@@ -310,12 +310,12 @@ public class MailBBSManager extends BaseBBSManager
 		return count;
 	}
 	
-	private void showMailList(PlayerInstance activeChar, int page, MailType type)
+	private void showMailList(Player activeChar, int page, MailType type)
 	{
 		showMailList(activeChar, page, type, "", "");
 	}
 	
-	private void showMailList(PlayerInstance activeChar, int pageValue, MailType type, String sType, String search)
+	private void showMailList(Player activeChar, int pageValue, MailType type, String sType, String search)
 	{
 		List<Mail> letters;
 		if (!sType.equals("") && !search.equals(""))
@@ -483,7 +483,7 @@ public class MailBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private void showLetterView(PlayerInstance activeChar, Mail letter)
+	private void showLetterView(Player activeChar, Mail letter)
 	{
 		if (letter == null)
 		{
@@ -505,13 +505,13 @@ public class MailBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private void showWriteView(PlayerInstance activeChar)
+	private void showWriteView(Player activeChar)
 	{
 		final String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-write.htm");
 		separateAndSend(content, activeChar);
 	}
 	
-	private void showWriteView(PlayerInstance activeChar, String parcipientName, Mail letter)
+	private void showWriteView(Player activeChar, String parcipientName, Mail letter)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail-reply.htm");
 		
@@ -523,7 +523,7 @@ public class MailBBSManager extends BaseBBSManager
 		send1002(activeChar, " ", "Re: " + letter.subject, "0");
 	}
 	
-	public void sendLetter(String recipients, String subjectValue, String messageValue, PlayerInstance activeChar)
+	public void sendLetter(String recipients, String subjectValue, String messageValue, Player activeChar)
 	{
 		// Current time.
 		final long currentDate = Calendar.getInstance().getTimeInMillis();
@@ -579,7 +579,7 @@ public class MailBBSManager extends BaseBBSManager
 					continue;
 				}
 				
-				final PlayerInstance recipientPlayer = World.getInstance().getPlayer(recipientId);
+				final Player recipientPlayer = World.getInstance().getPlayer(recipientId);
 				if (!activeChar.isGM())
 				{
 					// Sender is a regular player, while recipient is a GM.
@@ -717,9 +717,9 @@ public class MailBBSManager extends BaseBBSManager
 		return count;
 	}
 	
-	private static boolean isBlocked(PlayerInstance activeChar, int recipId)
+	private static boolean isBlocked(Player activeChar, int recipId)
 	{
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			if (player.getObjectId() == recipId)
 			{
@@ -729,7 +729,7 @@ public class MailBBSManager extends BaseBBSManager
 		return false;
 	}
 	
-	private void deleteLetter(PlayerInstance activeChar, int letterId)
+	private void deleteLetter(Player activeChar, int letterId)
 	{
 		for (Mail letter : getPlayerMails(activeChar.getObjectId()))
 		{
@@ -753,7 +753,7 @@ public class MailBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void setLetterToRead(PlayerInstance activeChar, int letterId)
+	private void setLetterToRead(Player activeChar, int letterId)
 	{
 		getLetter(activeChar, letterId).unread = false;
 		
@@ -771,7 +771,7 @@ public class MailBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void setLetterLocation(PlayerInstance activeChar, int letterId, MailType location)
+	private void setLetterLocation(Player activeChar, int letterId, MailType location)
 	{
 		getLetter(activeChar, letterId).location = location;
 		
@@ -820,7 +820,7 @@ public class MailBBSManager extends BaseBBSManager
 		return getCountLetters(charId, MailType.INBOX, "", "") >= 100;
 	}
 	
-	private void showLastForum(PlayerInstance activeChar)
+	private void showLastForum(Player activeChar)
 	{
 		final int page = activeChar.getMailPosition() % 1000;
 		final int type = activeChar.getMailPosition() / 1000;

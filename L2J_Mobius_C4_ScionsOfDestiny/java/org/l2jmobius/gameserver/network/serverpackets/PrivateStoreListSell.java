@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,14 +31,14 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PrivateStoreListSell implements IClientOutgoingPacket
 {
-	private final PlayerInstance _storePlayer;
-	private final PlayerInstance _player;
+	private final Player _storePlayer;
+	private final Player _player;
 	private int _playerAdena;
 	private final boolean _packageSale;
 	private final List<TradeItem> _items;
 	
 	// player's private shop
-	public PrivateStoreListSell(PlayerInstance player, PlayerInstance storePlayer)
+	public PrivateStoreListSell(Player player, Player storePlayer)
 	{
 		_player = player;
 		_storePlayer = storePlayer;

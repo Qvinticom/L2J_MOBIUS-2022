@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.fishing;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExFishingStart implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _fishType;
 	private final ILocational _baitLocation;
 	
@@ -36,7 +36,7 @@ public class ExFishingStart implements IClientOutgoingPacket
 	 * @param fishType
 	 * @param baitLocation
 	 */
-	public ExFishingStart(PlayerInstance player, int fishType, ILocational baitLocation)
+	public ExFishingStart(Player player, int fishType, ILocational baitLocation)
 	{
 		_player = player;
 		_fishType = fishType;

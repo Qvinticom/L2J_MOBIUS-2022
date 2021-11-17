@@ -21,15 +21,15 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Fence;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import org.l2jmobius.gameserver.network.serverpackets.DoorInfo;
@@ -44,40 +44,40 @@ import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SpawnItem;
-import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
+import org.l2jmobius.gameserver.network.serverpackets.StaticObjectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
 public class PlayerKnownList extends PlayableKnownList
 {
 	private volatile int _packetSendDelay = 0;
 	
-	public PlayerKnownList(PlayerInstance player)
+	public PlayerKnownList(Player player)
 	{
 		super(player);
 	}
 	
 	/**
-	 * Add a visible WorldObject to PlayerInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packets needed to inform the PlayerInstance of its state and actions in progress.<br>
+	 * Add a visible WorldObject to Player _knownObjects and _knownPlayer (if necessary) and send Server-Client Packets needed to inform the Player of its state and actions in progress.<br>
 	 * <br>
-	 * <b><u>object is a ItemInstance</u>:</b><br>
-	 * <li>Send Server-Client Packet DropItem/SpawnItem to the PlayerInstance</li><br>
+	 * <b><u>object is a Item</u>:</b><br>
+	 * <li>Send Server-Client Packet DropItem/SpawnItem to the Player</li><br>
 	 * <br>
-	 * <b><u>object is a DoorInstance</u>:</b><br>
-	 * <li>Send Server-Client Packets DoorInfo and DoorStatusUpdate to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <b><u>object is a Door</u>:</b><br>
+	 * <li>Send Server-Client Packets DoorInfo and DoorStatusUpdate to the Player</li>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player</li><br>
 	 * <br>
-	 * <b><u>object is a NpcInstance</u>:</b><br>
-	 * <li>Send Server-Client Packet NpcInfo to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <b><u>object is an Npc</u>:</b><br>
+	 * <li>Send Server-Client Packet NpcInfo to the Player</li>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player</li><br>
 	 * <br>
 	 * <b><u>object is a Summon</u>:</b><br>
-	 * <li>Send Server-Client Packet NpcInfo/PetItemList (if the PlayerInstance is the owner) to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <li>Send Server-Client Packet NpcInfo/PetItemList (if the Player is the owner) to the Player</li>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player</li><br>
 	 * <br>
-	 * <b><u>object is a PlayerInstance</u>:</b><br>
-	 * <li>Send Server-Client Packet CharInfo to the PlayerInstance</li>
-	 * <li>If the object has a private store, Send Server-Client Packet PrivateStoreMsgSell to the PlayerInstance</li>
-	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance</li><br>
+	 * <b><u>object is a Player</u>:</b><br>
+	 * <li>Send Server-Client Packet CharInfo to the Player</li>
+	 * <li>If the object has a private store, Send Server-Client Packet PrivateStoreMsgSell to the Player</li>
+	 * <li>Send Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player</li><br>
 	 * @param object The WorldObject to add to _knownObjects and _knownPlayer
 	 */
 	@Override
@@ -94,7 +94,7 @@ public class PlayerKnownList extends PlayableKnownList
 			return false;
 		}
 		
-		final PlayerInstance activeChar = getActiveChar();
+		final Player activeChar = getActiveChar();
 		if (activeChar == null)
 		{
 			return false;
@@ -122,51 +122,51 @@ public class PlayerKnownList extends PlayableKnownList
 			{
 				if (dropper != null)
 				{
-					activeChar.sendPacket(new DropItem((ItemInstance) object, dropper.getObjectId()));
+					activeChar.sendPacket(new DropItem((Item) object, dropper.getObjectId()));
 				}
 				else
 				{
-					activeChar.sendPacket(new SpawnItem((ItemInstance) object));
+					activeChar.sendPacket(new SpawnItem((Item) object));
 				}
 			}
 			else if (object.isDoor())
 			{
-				if (((DoorInstance) object).getCastle() != null)
+				if (((Door) object).getCastle() != null)
 				{
-					activeChar.sendPacket(new DoorInfo((DoorInstance) object, true));
+					activeChar.sendPacket(new DoorInfo((Door) object, true));
 				}
 				else
 				{
-					activeChar.sendPacket(new DoorInfo((DoorInstance) object, false));
+					activeChar.sendPacket(new DoorInfo((Door) object, false));
 				}
-				activeChar.sendPacket(new DoorStatusUpdate((DoorInstance) object, activeChar));
+				activeChar.sendPacket(new DoorStatusUpdate((Door) object, activeChar));
 			}
 			else if (object.isBoat())
 			{
 				if (!activeChar.isInBoat() && (object != activeChar.getBoat()))
 				{
-					activeChar.sendPacket(new VehicleInfo((BoatInstance) object));
-					((BoatInstance) object).sendVehicleDeparture(activeChar);
+					activeChar.sendPacket(new VehicleInfo((Boat) object));
+					((Boat) object).sendVehicleDeparture(activeChar);
 				}
 			}
 			else if (object.isNpc())
 			{
-				activeChar.sendPacket(new NpcInfo((NpcInstance) object, activeChar));
+				activeChar.sendPacket(new NpcInfo((Npc) object, activeChar));
 			}
 			else if (object.isSummon())
 			{
 				final Summon summon = (Summon) object;
 				
-				// Check if the PlayerInstance is the owner of the Pet
+				// Check if the Player is the owner of the Pet
 				if (activeChar.equals(summon.getOwner()))
 				{
 					activeChar.sendPacket(new PetInfo(summon));
 					// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 					summon.updateEffectIcons(true);
 					
-					if (summon instanceof PetInstance)
+					if (summon instanceof Pet)
 					{
-						activeChar.sendPacket(new PetItemList((PetInstance) summon));
+						activeChar.sendPacket(new PetItemList((Pet) summon));
 					}
 				}
 				else
@@ -176,7 +176,7 @@ public class PlayerKnownList extends PlayableKnownList
 			}
 			else if (object.isPlayer())
 			{
-				final PlayerInstance otherPlayer = (PlayerInstance) object;
+				final Player otherPlayer = (Player) object;
 				if (otherPlayer.isInBoat())
 				{
 					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
@@ -201,31 +201,31 @@ public class PlayerKnownList extends PlayableKnownList
 					}
 				}
 				
-				if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL)
+				if (otherPlayer.getPrivateStoreType() == Player.STORE_PRIVATE_SELL)
 				{
 					activeChar.sendPacket(new PrivateStoreMsgSell(otherPlayer));
 				}
-				else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY)
+				else if (otherPlayer.getPrivateStoreType() == Player.STORE_PRIVATE_BUY)
 				{
 					activeChar.sendPacket(new PrivateStoreMsgBuy(otherPlayer));
 				}
-				else if (otherPlayer.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
+				else if (otherPlayer.getPrivateStoreType() == Player.STORE_PRIVATE_MANUFACTURE)
 				{
 					activeChar.sendPacket(new RecipeShopMsg(otherPlayer));
 				}
 			}
-			else if (object instanceof FenceInstance)
+			else if (object instanceof Fence)
 			{
-				((FenceInstance) object).sendInfo(activeChar);
+				((Fence) object).sendInfo(activeChar);
 			}
-			else if (object instanceof StaticObjectInstance)
+			else if (object instanceof StaticObject)
 			{
-				activeChar.sendPacket(new StaticObject((StaticObjectInstance) object));
+				activeChar.sendPacket(new StaticObjectInfo((StaticObject) object));
 			}
 			
 			if (object.isCreature())
 			{
-				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance
+				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player
 				final Creature obj = (Creature) object;
 				final CreatureAI objAi = obj.getAI();
 				if (objAi != null)
@@ -238,7 +238,7 @@ public class PlayerKnownList extends PlayableKnownList
 	}
 	
 	/**
-	 * Remove a WorldObject from PlayerInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packet DeleteObject to the PlayerInstance.
+	 * Remove a WorldObject from Player _knownObjects and _knownPlayer (if necessary) and send Server-Client Packet DeleteObject to the Player.
 	 * @param object The WorldObject to remove from _knownObjects and _knownPlayer
 	 */
 	@Override
@@ -249,11 +249,11 @@ public class PlayerKnownList extends PlayableKnownList
 			return false;
 		}
 		
-		final PlayerInstance activeChar = getActiveChar();
-		PlayerInstance player = null;
-		if (object instanceof PlayerInstance)
+		final Player activeChar = getActiveChar();
+		Player player = null;
+		if (object instanceof Player)
 		{
-			player = (PlayerInstance) object;
+			player = (Player) object;
 		}
 		
 		// TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
@@ -262,18 +262,18 @@ public class PlayerKnownList extends PlayableKnownList
 			// GM has to receive remove however because he can see any invisible or in observer mode player.
 			if (!player.getAppearance().isInvisible() && !player.inObserverMode())
 			{
-				// Send Server-Client Packet DeleteObject to the PlayerInstance
+				// Send Server-Client Packet DeleteObject to the Player
 				activeChar.sendPacket(new DeleteObject(object));
 			}
 			else if (player.isGM() && player.getAppearance().isInvisible() && !player.isTeleporting())
 			{
-				// Send Server-Client Packet DeleteObject to the PlayerInstance
+				// Send Server-Client Packet DeleteObject to the Player
 				activeChar.sendPacket(new DeleteObject(object));
 			}
 		}
 		else // All other objects has to be removed
 		{
-			// Send Server-Client Packet DeleteObject to the PlayerInstance
+			// Send Server-Client Packet DeleteObject to the Player
 			activeChar.sendPacket(new DeleteObject(object));
 		}
 		
@@ -281,9 +281,9 @@ public class PlayerKnownList extends PlayableKnownList
 	}
 	
 	@Override
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
-		return (PlayerInstance) super.getActiveChar();
+		return (Player) super.getActiveChar();
 	}
 	
 	@Override

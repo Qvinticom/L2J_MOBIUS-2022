@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 
 /**
  * Trap trigger task.
@@ -25,9 +25,9 @@ import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
  */
 public class TrapTriggerTask implements Runnable
 {
-	private final TrapInstance _trap;
+	private final Trap _trap;
 	
-	public TrapTriggerTask(TrapInstance trap)
+	public TrapTriggerTask(Trap trap)
 	{
 		_trap = trap;
 	}

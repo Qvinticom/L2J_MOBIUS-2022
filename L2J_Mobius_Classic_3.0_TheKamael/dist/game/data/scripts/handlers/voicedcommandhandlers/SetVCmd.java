@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -34,7 +34,7 @@ public class SetVCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (command.equals("set"))
 		{
@@ -44,7 +44,7 @@ public class SetVCmd implements IVoicedCommandHandler
 				return false;
 			}
 			
-			final PlayerInstance player = activeChar.getTarget().getActingPlayer();
+			final Player player = activeChar.getTarget().getActingPlayer();
 			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getId() != player.getClan().getId()))
 			{
 				return false;

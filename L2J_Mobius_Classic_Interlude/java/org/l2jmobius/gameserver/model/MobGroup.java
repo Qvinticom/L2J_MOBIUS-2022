@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.ai.ControllableMobAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
@@ -37,7 +37,7 @@ public class MobGroup
 	private final int _groupId;
 	private final int _maxMobCount;
 	
-	private Set<ControllableMobInstance> _mobs;
+	private Set<ControllableMob> _mobs;
 	
 	public MobGroup(int groupId, NpcTemplate npcTemplate, int maxMobCount)
 	{
@@ -61,7 +61,7 @@ public class MobGroup
 		return _maxMobCount;
 	}
 	
-	public Set<ControllableMobInstance> getMobs()
+	public Set<ControllableMob> getMobs()
 	{
 		if (_mobs == null)
 		{
@@ -115,9 +115,9 @@ public class MobGroup
 		return _npcTemplate;
 	}
 	
-	public boolean isGroupMember(ControllableMobInstance mobInst)
+	public boolean isGroupMember(ControllableMob mobInst)
 	{
-		for (ControllableMobInstance groupMember : getMobs())
+		for (ControllableMob groupMember : getMobs())
 		{
 			if (groupMember == null)
 			{
@@ -153,7 +153,7 @@ public class MobGroup
 				spawn.stopRespawn();
 				
 				SpawnTable.getInstance().addNewSpawn(spawn, false);
-				getMobs().add((ControllableMobInstance) spawn.doGroupSpawn());
+				getMobs().add((ControllableMob) spawn.doGroupSpawn());
 			}
 		}
 		catch (ClassNotFoundException e)
@@ -164,16 +164,16 @@ public class MobGroup
 		}
 	}
 	
-	public void spawnGroup(PlayerInstance player)
+	public void spawnGroup(Player player)
 	{
 		spawnGroup(player.getX(), player.getY(), player.getZ());
 	}
 	
-	public void teleportGroup(PlayerInstance player)
+	public void teleportGroup(Player player)
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -190,7 +190,7 @@ public class MobGroup
 		}
 	}
 	
-	public ControllableMobInstance getRandomMob()
+	public ControllableMob getRandomMob()
 	{
 		removeDead();
 		
@@ -200,7 +200,7 @@ public class MobGroup
 		}
 		
 		int choice = Rnd.get(getMobs().size());
-		for (ControllableMobInstance mob : getMobs())
+		for (ControllableMob mob : getMobs())
 		{
 			if (--choice == 0)
 			{
@@ -219,7 +219,7 @@ public class MobGroup
 			return;
 		}
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -237,11 +237,11 @@ public class MobGroup
 		getMobs().clear();
 	}
 	
-	public void killGroup(PlayerInstance player)
+	public void killGroup(Player player)
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -263,7 +263,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -280,7 +280,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -295,7 +295,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -310,7 +310,7 @@ public class MobGroup
 	{
 		setIdleMode();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -330,7 +330,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -345,7 +345,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -360,7 +360,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{
@@ -380,7 +380,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst != null)
 			{
@@ -393,7 +393,7 @@ public class MobGroup
 	{
 		removeDead();
 		
-		for (ControllableMobInstance mobInst : getMobs())
+		for (ControllableMob mobInst : getMobs())
 		{
 			if (mobInst == null)
 			{

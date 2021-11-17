@@ -37,8 +37,8 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -146,7 +146,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	private static Map<Integer, Integer> ZONES = new HashMap<>();
 	private static Map<Integer, int[][]> SPAWNS = new HashMap<>();
 	
-	private MonsterInstance _lock;
+	private Monster _lock;
 	private final Npc _controller;
 	private int _counter;
 	private final AtomicInteger _despawnedSporesCount = new AtomicInteger();
@@ -373,7 +373,7 @@ public class TowerOfNaia extends AbstractNpcAI
 			addKillId(npcId);
 		}
 		
-		_lock = (MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
+		_lock = (Monster) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
 		_controller = addSpawn(CONTROLLER, 16608, 244420, 11620, 31264, false, 0, false);
 		_counter = 90;
 		initSporeChallenge();
@@ -381,7 +381,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (npcId == CONTROLLER)
@@ -405,7 +405,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		
@@ -413,7 +413,7 @@ public class TowerOfNaia extends AbstractNpcAI
 		if (event.equalsIgnoreCase("spawn_lock"))
 		{
 			htmltext = null;
-			_lock = (MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
+			_lock = (Monster) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
 			_counter = 90;
 		}
 		
@@ -508,7 +508,7 @@ public class TowerOfNaia extends AbstractNpcAI
 			{
 				if (Util.checkIfInRange(3000, party.getLeader(), npc, true))
 				{
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(2000, partyMember, npc, true))
 						{
@@ -554,7 +554,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((_lock != null) && (npc.getObjectId() == _lock.getObjectId()))
 		{
@@ -579,7 +579,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if (npcId == LOCK)
@@ -875,7 +875,7 @@ public class TowerOfNaia extends AbstractNpcAI
 		if ((party != null) && ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
 			final ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (PlayerInstance player : zone.getPlayersInside())
+			for (Player player : zone.getPlayersInside())
 			{
 				if (player != null)
 				{
@@ -894,7 +894,7 @@ public class TowerOfNaia extends AbstractNpcAI
 		if (ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
 			final ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (PlayerInstance player : zone.getPlayersInside())
+			for (Player player : zone.getPlayersInside())
 			{
 				if (player != null)
 				{

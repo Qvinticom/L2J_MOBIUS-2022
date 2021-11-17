@@ -21,7 +21,7 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.PremiumItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExGetPremiumItemList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	private final Map<Integer, PremiumItem> _map;
 	
-	public ExGetPremiumItemList(PlayerInstance player)
+	public ExGetPremiumItemList(Player player)
 	{
 		_player = player;
 		_map = _player.getPremiumItemList();

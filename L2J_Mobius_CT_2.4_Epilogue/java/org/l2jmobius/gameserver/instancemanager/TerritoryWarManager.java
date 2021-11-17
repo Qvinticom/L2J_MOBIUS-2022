@@ -48,9 +48,9 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.TerritoryWard;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -105,7 +105,7 @@ public class TerritoryWarManager implements Siegable
 	private final Map<Integer, Territory> _territoryList = new ConcurrentHashMap<>();
 	protected Collection<Integer> _disguisedPlayers = ConcurrentHashMap.newKeySet();
 	private final Collection<TerritoryWard> _territoryWards = ConcurrentHashMap.newKeySet();
-	private final Map<Clan, SiegeFlagInstance> _clanFlags = new ConcurrentHashMap<>();
+	private final Map<Clan, SiegeFlag> _clanFlags = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer[]> _participantPoints = new ConcurrentHashMap<>();
 	protected Calendar _startTWDate = Calendar.getInstance();
 	protected boolean _isRegistrationOver = true;
@@ -120,7 +120,7 @@ public class TerritoryWarManager implements Siegable
 		load();
 	}
 	
-	public int getRegisteredTerritoryId(PlayerInstance player)
+	public int getRegisteredTerritoryId(Player player)
 	{
 		if ((player == null) || !_isTWChannelOpen || (player.getLevel() < PLAYERMINLEVEL))
 		{
@@ -150,7 +150,7 @@ public class TerritoryWarManager implements Siegable
 		return 0;
 	}
 	
-	public boolean isAllyField(PlayerInstance player, int fieldId)
+	public boolean isAllyField(Player player, int fieldId)
 	{
 		if ((player == null) || (player.getSiegeSide() == 0))
 		{
@@ -305,7 +305,7 @@ public class TerritoryWarManager implements Siegable
 		changeRegistration(castleId, clan.getId(), false);
 	}
 	
-	public void registerMerc(int castleId, PlayerInstance player)
+	public void registerMerc(int castleId, Player player)
 	{
 		if ((player == null) || (player.getLevel() < PLAYERMINLEVEL) || ((_registeredMercenaries.get(castleId) != null) && _registeredMercenaries.get(castleId).contains(player.getObjectId())))
 		{
@@ -326,7 +326,7 @@ public class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void removeMerc(int castleId, PlayerInstance player)
+	public void removeMerc(int castleId, Player player)
 	{
 		if ((player != null) && (_registeredMercenaries.get(castleId) != null) && _registeredMercenaries.get(castleId).contains(player.getObjectId()))
 		{
@@ -351,7 +351,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			_territoryList.get(castleId).changeNPCsSpawn(2, false);
 		}
-		for (DoorInstance door : CastleManager.getInstance().getCastleById(castleId).getDoors())
+		for (Door door : CastleManager.getInstance().getCastleById(castleId).getDoors())
 		{
 			door.openMe();
 		}
@@ -383,7 +383,7 @@ public class TerritoryWarManager implements Siegable
 							final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 							if (sk != null)
 							{
-								for (PlayerInstance member : terNew.getOwnerClan().getOnlineMembers(0))
+								for (Player member : terNew.getOwnerClan().getOnlineMembers(0))
 								{
 									if (!member.isInOlympiadMode())
 									{
@@ -416,7 +416,7 @@ public class TerritoryWarManager implements Siegable
 						final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 						if (sk != null)
 						{
-							for (PlayerInstance member : terOld.getOwnerClan().getOnlineMembers(0))
+							for (Player member : terOld.getOwnerClan().getOnlineMembers(0))
 							{
 								member.removeSkill(sk, false);
 							}
@@ -433,7 +433,7 @@ public class TerritoryWarManager implements Siegable
 								final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 								if (sk != null)
 								{
-									for (PlayerInstance member : terOld.getOwnerClan().getOnlineMembers(0))
+									for (Player member : terOld.getOwnerClan().getOnlineMembers(0))
 									{
 										member.removeSkill(sk, false);
 									}
@@ -451,7 +451,7 @@ public class TerritoryWarManager implements Siegable
 		return ret;
 	}
 	
-	public SiegeFlagInstance getHQForClan(Clan clan)
+	public SiegeFlag getHQForClan(Clan clan)
 	{
 		if (clan.getCastleId() > 0)
 		{
@@ -460,12 +460,12 @@ public class TerritoryWarManager implements Siegable
 		return null;
 	}
 	
-	public SiegeFlagInstance getHQForTerritory(int territoryId)
+	public SiegeFlag getHQForTerritory(int territoryId)
 	{
 		return _territoryList.get(territoryId - 80).getHQ();
 	}
 	
-	public void setHQForClan(Clan clan, SiegeFlagInstance hq)
+	public void setHQForClan(Clan clan, SiegeFlag hq)
 	{
 		if (clan.getCastleId() > 0)
 		{
@@ -473,7 +473,7 @@ public class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void addClanFlag(Clan clan, SiegeFlagInstance flag)
+	public void addClanFlag(Clan clan, SiegeFlag flag)
 	{
 		_clanFlags.put(clan, flag);
 	}
@@ -483,7 +483,7 @@ public class TerritoryWarManager implements Siegable
 		return _clanFlags.containsKey(clan);
 	}
 	
-	public SiegeFlagInstance getFlagForClan(Clan clan)
+	public SiegeFlag getFlagForClan(Clan clan)
 	{
 		return _clanFlags.get(clan);
 	}
@@ -522,7 +522,7 @@ public class TerritoryWarManager implements Siegable
 		return null;
 	}
 	
-	public TerritoryWard getTerritoryWard(PlayerInstance player)
+	public TerritoryWard getTerritoryWard(Player player)
 	{
 		for (TerritoryWard twWard : _territoryWards)
 		{
@@ -534,7 +534,7 @@ public class TerritoryWarManager implements Siegable
 		return null;
 	}
 	
-	public void dropCombatFlag(PlayerInstance player, boolean isKilled, boolean isSpawnBack)
+	public void dropCombatFlag(Player player, boolean isKilled, boolean isSpawnBack)
 	{
 		for (TerritoryWard twWard : _territoryWards)
 		{
@@ -574,7 +574,7 @@ public class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void giveTWQuestPoint(PlayerInstance player)
+	public void giveTWQuestPoint(Player player)
 	{
 		_participantPoints.putIfAbsent(player.getObjectId(), new Integer[]
 		{
@@ -589,7 +589,7 @@ public class TerritoryWarManager implements Siegable
 		_participantPoints.get(player.getObjectId())[2]++;
 	}
 	
-	public void giveTWPoint(PlayerInstance killer, int victimSide, int type)
+	public void giveTWPoint(Player killer, int victimSide, int type)
 	{
 		if (victimSide == 0)
 		{
@@ -597,7 +597,7 @@ public class TerritoryWarManager implements Siegable
 		}
 		if ((killer.getParty() != null) && (type < 5))
 		{
-			for (PlayerInstance pl : killer.getParty().getMembers())
+			for (Player pl : killer.getParty().getMembers())
 			{
 				if ((pl.getSiegeSide() == victimSide) || (pl.getSiegeSide() == 0) || !Util.checkIfInRange(2000, killer, pl, false))
 				{
@@ -638,7 +638,7 @@ public class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public int[] calcReward(PlayerInstance player)
+	public int[] calcReward(Player player)
 	{
 		if (_participantPoints.containsKey(player.getObjectId()))
 		{
@@ -687,7 +687,7 @@ public class TerritoryWarManager implements Siegable
 		};
 	}
 	
-	public void debugReward(PlayerInstance player)
+	public void debugReward(Player player)
 	{
 		player.sendMessage("Registred TerrId: " + player.getSiegeSide());
 		if (_participantPoints.containsKey(player.getObjectId()))
@@ -713,7 +713,7 @@ public class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void resetReward(PlayerInstance player)
+	public void resetReward(Player player)
 	{
 		if (_participantPoints.containsKey(player.getObjectId()))
 		{
@@ -1083,7 +1083,7 @@ public class TerritoryWarManager implements Siegable
 			}
 		}
 		
-		for (SiegeFlagInstance flag : _clanFlags.values())
+		for (SiegeFlag flag : _clanFlags.values())
 		{
 			flag.deleteMe();
 		}
@@ -1152,7 +1152,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			for (Clan clan : _registeredClans.get(castleId))
 			{
-				for (PlayerInstance player : clan.getOnlineMembers(0))
+				for (Player player : clan.getOnlineMembers(0))
 				{
 					if (clear)
 					{
@@ -1182,7 +1182,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			for (int objId : _registeredMercenaries.get(castleId))
 			{
-				final PlayerInstance player = World.getInstance().getPlayer(objId);
+				final Player player = World.getInstance().getPlayer(objId);
 				if (player == null)
 				{
 					continue;
@@ -1210,7 +1210,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			if (terr.getOwnerClan() != null)
 			{
-				for (PlayerInstance player : terr.getOwnerClan().getOnlineMembers(0))
+				for (Player player : terr.getOwnerClan().getOnlineMembers(0))
 				{
 					if (player == null)
 					{
@@ -1249,7 +1249,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			if (_isTWInProgress)
 			{
-				for (PlayerInstance player : World.getInstance().getPlayers())
+				for (Player player : World.getInstance().getPlayers())
 				{
 					if ((player != null) && (player.getSiegeSide() > 0))
 					{
@@ -1425,7 +1425,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			if (ter.getOwnerClan() != null)
 			{
-				for (PlayerInstance member : ter.getOwnerClan().getOnlineMembers(0))
+				for (Player member : ter.getOwnerClan().getOnlineMembers(0))
 				{
 					member.sendPacket(sm);
 					if ((exp > 0) || (sp > 0))
@@ -1439,7 +1439,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			for (Clan c : list)
 			{
-				for (PlayerInstance member : c.getOnlineMembers(0))
+				for (Player member : c.getOnlineMembers(0))
 				{
 					member.sendPacket(sm);
 					if ((exp > 0) || (sp > 0))
@@ -1454,7 +1454,7 @@ public class TerritoryWarManager implements Siegable
 		{
 			for (int objId : list)
 			{
-				final PlayerInstance player = World.getInstance().getPlayer(objId);
+				final Player player = World.getInstance().getPlayer(objId);
 				if ((player != null) && ((player.getClan() == null) || !checkIsRegistered(-1, player.getClan())))
 				{
 					player.sendPacket(sm);
@@ -1535,7 +1535,7 @@ public class TerritoryWarManager implements Siegable
 		private final List<TerritoryNPCSpawn> _spawnList = new LinkedList<>();
 		private final TerritoryNPCSpawn[] _territoryWardSpawnPlaces;
 		private boolean _isInProgress = false;
-		private SiegeFlagInstance _territoryHQ = null;
+		private SiegeFlag _territoryHQ = null;
 		private final int[] _questDone;
 		
 		public Territory(int castleId)
@@ -1660,12 +1660,12 @@ public class TerritoryWarManager implements Siegable
 			_ownerClan = newOwner;
 		}
 		
-		public void setHQ(SiegeFlagInstance hq)
+		public void setHQ(SiegeFlag hq)
 		{
 			_territoryHQ = hq;
 		}
 		
-		public SiegeFlagInstance getHQ()
+		public SiegeFlag getHQ()
 		{
 			return _territoryHQ;
 		}
@@ -1735,7 +1735,7 @@ public class TerritoryWarManager implements Siegable
 	}
 	
 	@Override
-	public List<PlayerInstance> getAttackersInZone()
+	public List<Player> getAttackersInZone()
 	{
 		throw new UnsupportedOperationException();
 	}

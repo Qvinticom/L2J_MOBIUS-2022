@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.ShotType;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -50,7 +50,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -58,7 +58,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 		
 		if ((player.getPrivateStoreType() == PrivateStoreType.NONE) && (player.getActiveRequester() == null) && !player.isDead())
 		{
-			final ItemInstance item = player.getInventory().getItemByItemId(_itemId);
+			final Item item = player.getInventory().getItemByItemId(_itemId);
 			if (item == null)
 			{
 				return;
@@ -189,7 +189,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 		}
 	}
 	
-	public static boolean isPlayerShot(Item item)
+	public static boolean isPlayerShot(ItemTemplate item)
 	{
 		switch (item.getDefaultAction())
 		{
@@ -206,7 +206,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 		}
 	}
 	
-	public static boolean isSummonShot(Item item)
+	public static boolean isSummonShot(ItemTemplate item)
 	{
 		switch (item.getDefaultAction())
 		{

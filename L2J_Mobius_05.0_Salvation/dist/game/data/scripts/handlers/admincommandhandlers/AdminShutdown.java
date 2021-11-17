@@ -22,7 +22,7 @@ import java.util.Calendar;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -41,7 +41,7 @@ public class AdminShutdown implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_server_shutdown"))
 		{
@@ -96,7 +96,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void sendHtmlForm(PlayerInstance activeChar)
+	private void sendHtmlForm(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		final int t = GameTimeTaskManager.getInstance().getGameTime();
@@ -113,12 +113,12 @@ public class AdminShutdown implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void serverShutdown(PlayerInstance activeChar, int seconds, boolean restart)
+	private void serverShutdown(Player activeChar, int seconds, boolean restart)
 	{
 		Shutdown.getInstance().startShutdown(activeChar, seconds, restart);
 	}
 	
-	private void serverAbort(PlayerInstance activeChar)
+	private void serverAbort(Player activeChar)
 	{
 		Shutdown.getInstance().abort(activeChar);
 	}

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,7 +31,7 @@ public class StopMoveInVehicle implements IClientOutgoingPacket
 	private final Location _pos;
 	private final int _heading;
 	
-	public StopMoveInVehicle(PlayerInstance player, int boatId)
+	public StopMoveInVehicle(Player player, int boatId)
 	{
 		_objectId = player.getObjectId();
 		_boatId = boatId;

@@ -22,8 +22,8 @@ import java.util.List;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
@@ -70,9 +70,9 @@ public class FortZone extends ZoneRespawn
 		{
 			creature.setInsideZone(ZoneId.PVP, true);
 			creature.setInsideZone(ZoneId.SIEGE, true);
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+				((Player) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 			}
 		}
 	}
@@ -84,20 +84,20 @@ public class FortZone extends ZoneRespawn
 		{
 			creature.setInsideZone(ZoneId.PVP, false);
 			creature.setInsideZone(ZoneId.SIEGE, false);
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+				((Player) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 				
 				// Set pvp flag
-				if (((PlayerInstance) creature).getPvpFlag() == 0)
+				if (((Player) creature).getPvpFlag() == 0)
 				{
-					((PlayerInstance) creature).startPvPFlag();
+					((Player) creature).startPvPFlag();
 				}
 			}
 		}
-		if (creature instanceof SiegeSummonInstance)
+		if (creature instanceof SiegeSummon)
 		{
-			((SiegeSummonInstance) creature).unSummon(((SiegeSummonInstance) creature).getOwner());
+			((SiegeSummon) creature).unSummon(((SiegeSummon) creature).getOwner());
 		}
 	}
 	
@@ -134,14 +134,14 @@ public class FortZone extends ZoneRespawn
 				{
 					creature.setInsideZone(ZoneId.PVP, false);
 					creature.setInsideZone(ZoneId.SIEGE, false);
-					if (creature instanceof PlayerInstance)
+					if (creature instanceof Player)
 					{
-						((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+						((Player) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 					}
 					
-					if (creature instanceof SiegeSummonInstance)
+					if (creature instanceof SiegeSummon)
 					{
-						((SiegeSummonInstance) creature).unSummon(((SiegeSummonInstance) creature).getOwner());
+						((SiegeSummon) creature).unSummon(((SiegeSummon) creature).getOwner());
 					}
 				}
 				catch (NullPointerException e)
@@ -159,17 +159,17 @@ public class FortZone extends ZoneRespawn
 	{
 		for (Creature temp : getCharactersInside())
 		{
-			if (!(temp instanceof PlayerInstance))
+			if (!(temp instanceof Player))
 			{
 				continue;
 			}
 			
-			if (((PlayerInstance) temp).getClanId() == owningClanId)
+			if (((Player) temp).getClanId() == owningClanId)
 			{
 				continue;
 			}
 			
-			((PlayerInstance) temp).teleToLocation(TeleportWhereType.TOWN);
+			((Player) temp).teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 	
@@ -181,9 +181,9 @@ public class FortZone extends ZoneRespawn
 	{
 		for (Creature temp : getCharactersInside())
 		{
-			if (temp instanceof PlayerInstance)
+			if (temp instanceof Player)
 			{
-				((PlayerInstance) temp).sendMessage(message);
+				((Player) temp).sendMessage(message);
 			}
 		}
 	}
@@ -192,14 +192,14 @@ public class FortZone extends ZoneRespawn
 	 * Returns all players within this zone
 	 * @return
 	 */
-	public List<PlayerInstance> getAllPlayers()
+	public List<Player> getAllPlayers()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		for (Creature temp : getCharactersInside())
 		{
-			if (temp instanceof PlayerInstance)
+			if (temp instanceof Player)
 			{
-				players.add((PlayerInstance) temp);
+				players.add((Player) temp);
 			}
 		}
 		return players;

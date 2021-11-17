@@ -23,8 +23,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.model.ArmorSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
@@ -33,13 +33,13 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public final class PaperdollCache
 {
-	private final Set<ItemInstance> _paperdollItems = ConcurrentHashMap.newKeySet();
+	private final Set<Item> _paperdollItems = ConcurrentHashMap.newKeySet();
 	
 	private final Map<BaseStat, Double> _baseStatValues = new ConcurrentHashMap<>();
 	private final Map<Stat, Double> _statValues = new ConcurrentHashMap<>();
 	private int _maxSetEnchant = -1;
 	
-	public Set<ItemInstance> getPaperdollItems()
+	public Set<Item> getPaperdollItems()
 	{
 		return _paperdollItems;
 	}
@@ -57,7 +57,7 @@ public final class PaperdollCache
 		_maxSetEnchant = -1;
 	}
 	
-	public double getBaseStatValue(PlayerInstance player, BaseStat stat)
+	public double getBaseStatValue(Player player, BaseStat stat)
 	{
 		final Double baseStatValue = _baseStatValues.get(stat);
 		if (baseStatValue != null)
@@ -67,7 +67,7 @@ public final class PaperdollCache
 		
 		final Set<ArmorSet> appliedSets = new HashSet<>(2);
 		double value = 0;
-		for (ItemInstance item : _paperdollItems)
+		for (Item item : _paperdollItems)
 		{
 			for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
 			{
@@ -82,7 +82,7 @@ public final class PaperdollCache
 		return value;
 	}
 	
-	public int getMaxSetEnchant(PlayerInstance player)
+	public int getMaxSetEnchant(Player player)
 	{
 		int maxSetEnchant = _maxSetEnchant;
 		if (maxSetEnchant >= 0)
@@ -91,7 +91,7 @@ public final class PaperdollCache
 		}
 		
 		maxSetEnchant = 0;
-		for (ItemInstance item : _paperdollItems)
+		for (Item item : _paperdollItems)
 		{
 			for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
 			{
@@ -116,7 +116,7 @@ public final class PaperdollCache
 		}
 		
 		double value = 0;
-		for (ItemInstance item : _paperdollItems)
+		for (Item item : _paperdollItems)
 		{
 			value += item.getItem().getStats(stat, 0);
 		}

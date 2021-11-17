@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -49,15 +49,15 @@ public class SiegeInfo implements IClientOutgoingPacket
 {
 	private Castle _castle;
 	private ClanHall _hall;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public SiegeInfo(Castle castle, PlayerInstance player)
+	public SiegeInfo(Castle castle, Player player)
 	{
 		_castle = castle;
 		_player = player;
 	}
 	
-	public SiegeInfo(ClanHall hall, PlayerInstance player)
+	public SiegeInfo(ClanHall hall, Player player)
 	{
 		_hall = hall;
 		_player = player;

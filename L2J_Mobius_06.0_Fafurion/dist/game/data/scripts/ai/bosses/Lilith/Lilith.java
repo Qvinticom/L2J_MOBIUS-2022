@@ -36,8 +36,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -78,7 +78,7 @@ public class Lilith extends AbstractNpcAI
 	// Others
 	private static long _lastAction;
 	private static Npc _lilithBoss;
-	private GrandBossInstance _tempLilith = null;
+	private GrandBoss _tempLilith = null;
 	
 	public Lilith()
 	{
@@ -101,27 +101,27 @@ public class Lilith extends AbstractNpcAI
 			}
 			else
 			{
-				_tempLilith = (GrandBossInstance) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
+				_tempLilith = (GrandBoss) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempLilith);
 				GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 			}
 		}
 		else
 		{
-			_tempLilith = (GrandBossInstance) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
+			_tempLilith = (GrandBoss) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_tempLilith);
 			GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
 			case "unlock_lilith":
 			{
-				_tempLilith = (GrandBossInstance) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
+				_tempLilith = (GrandBoss) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempLilith);
 				GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 				break;
@@ -193,7 +193,7 @@ public class Lilith extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int _lilithStatus = GrandBossManager.getInstance().getBossStatus(LILITH);
 		if ((npc.getId() == LILITH_CUBIC) && (_lilithStatus > ALIVE))
@@ -210,7 +210,7 @@ public class Lilith extends AbstractNpcAI
 		}
 		final Party party = player.getParty();
 		final boolean isInCC = party.isInCommandChannel();
-		final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+		final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 		final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 		if (!isPartyLeader)
 		{
@@ -226,7 +226,7 @@ public class Lilith extends AbstractNpcAI
 			return null;
 		}
 		
-		for (PlayerInstance member : members)
+		for (Player member : members)
 		{
 			if (member.getLevel() < Config.LILITH_MIN_PLAYER_LEVEL)
 			{
@@ -238,7 +238,7 @@ public class Lilith extends AbstractNpcAI
 			}
 		}
 		
-		for (PlayerInstance member : members)
+		for (Player member : members)
 		{
 			if (member.isInsideRadius3D(npc, 1000) && (npc.getId() == LILITH_CUBIC))
 			{
@@ -251,7 +251,7 @@ public class Lilith extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(LILITH, FIGHTING);
 			// Spawn the rb
 			_lilithBoss = addSpawn(LILITH, 185062, -9605, -5499, 15640, false, 0);
-			GrandBossManager.getInstance().addBoss((GrandBossInstance) _lilithBoss);
+			GrandBossManager.getInstance().addBoss((GrandBoss) _lilithBoss);
 			_lastAction = Chronos.currentTimeMillis();
 			startQuestTimer("check_activity_task", 60000, null, null, true);
 			startQuestTimer("end_lilith", 60 * 60000, null, null); // 1h
@@ -260,7 +260,7 @@ public class Lilith extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		_lastAction = Chronos.currentTimeMillis();
 		if (npc.isMinion() || npc.isRaid()) // Lilith and minions
@@ -284,7 +284,7 @@ public class Lilith extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (npc.getId() == LILITH)
 		{
@@ -304,7 +304,7 @@ public class Lilith extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && Rnd.nextBoolean())
 		{
@@ -358,7 +358,7 @@ public class Lilith extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".html";
 	}

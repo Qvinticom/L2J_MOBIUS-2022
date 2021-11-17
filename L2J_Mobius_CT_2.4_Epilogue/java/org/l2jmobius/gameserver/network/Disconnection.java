@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -33,7 +33,7 @@ public class Disconnection
 {
 	private static final Logger LOGGER = Logger.getLogger(Disconnection.class.getName());
 	
-	public static GameClient getClient(GameClient client, PlayerInstance player)
+	public static GameClient getClient(GameClient client, Player player)
 	{
 		if (client != null)
 		{
@@ -48,7 +48,7 @@ public class Disconnection
 		return null;
 	}
 	
-	public static PlayerInstance getActiveChar(GameClient client, PlayerInstance player)
+	public static Player getActiveChar(GameClient client, Player player)
 	{
 		if (player != null)
 		{
@@ -64,7 +64,7 @@ public class Disconnection
 	}
 	
 	private final GameClient _client;
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	private Disconnection(GameClient client)
 	{
@@ -76,17 +76,17 @@ public class Disconnection
 		return new Disconnection(client);
 	}
 	
-	private Disconnection(PlayerInstance player)
+	private Disconnection(Player player)
 	{
 		this(null, player);
 	}
 	
-	public static Disconnection of(PlayerInstance player)
+	public static Disconnection of(Player player)
 	{
 		return new Disconnection(player);
 	}
 	
-	private Disconnection(GameClient client, PlayerInstance player)
+	private Disconnection(GameClient client, Player player)
 	{
 		_client = getClient(client, player);
 		_player = getActiveChar(client, player);
@@ -111,7 +111,7 @@ public class Disconnection
 		}
 	}
 	
-	public static Disconnection of(GameClient client, PlayerInstance player)
+	public static Disconnection of(GameClient client, Player player)
 	{
 		return new Disconnection(client, player);
 	}

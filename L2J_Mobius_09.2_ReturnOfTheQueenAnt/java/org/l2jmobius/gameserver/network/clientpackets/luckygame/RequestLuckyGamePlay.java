@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.data.xml.LuckyGameData;
 import org.l2jmobius.gameserver.enums.LuckyGameItemType;
 import org.l2jmobius.gameserver.enums.LuckyGameResultType;
 import org.l2jmobius.gameserver.enums.LuckyGameType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -64,7 +64,7 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -155,7 +155,7 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 		{
 			for (ItemHolder r : reward.getValue())
 			{
-				final ItemInstance item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
+				final Item item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
 				iu.addItem(item);
 				if (reward.getKey() == LuckyGameItemType.UNIQUE)
 				{

@@ -18,13 +18,13 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.Inventory;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class CharInfo extends ServerBasePacket
 {
-	private final PlayerInstance _cha;
+	private final Player _cha;
 	
-	public CharInfo(PlayerInstance cha)
+	public CharInfo(Player cha)
 	{
 		_cha = cha;
 	}

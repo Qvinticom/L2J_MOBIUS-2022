@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.templates;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -96,7 +96,7 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 		_level = set.getInt("level", 0);
 		_openType = set.getInt("open_method", 0);
 		_checkCollision = set.getBoolean("check_collision", true);
-		if ((_openType & DoorInstance.OPEN_BY_TIME) == DoorInstance.OPEN_BY_TIME)
+		if ((_openType & Door.OPEN_BY_TIME) == Door.OPEN_BY_TIME)
 		{
 			_openTime = set.getInt("open_time");
 			_randomTime = set.getInt("random_time", -1);

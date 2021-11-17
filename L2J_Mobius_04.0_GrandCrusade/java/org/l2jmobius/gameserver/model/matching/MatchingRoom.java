@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.enums.MatchingRoomType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -39,10 +39,10 @@ public abstract class MatchingRoom implements IIdentifiable
 	private int _minLevel;
 	private int _maxLevel;
 	private int _maxCount;
-	private Set<PlayerInstance> _members;
-	private PlayerInstance _leader;
+	private Set<Player> _members;
+	private Player _leader;
 	
-	public MatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance leader)
+	public MatchingRoom(String title, int loot, int minLevel, int maxLevel, int maxmem, Player leader)
 	{
 		_id = MatchingRoomManager.getInstance().addMatchingRoom(this);
 		_title = title;
@@ -55,7 +55,7 @@ public abstract class MatchingRoom implements IIdentifiable
 		onRoomCreation(leader);
 	}
 	
-	public Set<PlayerInstance> getMembers()
+	public Set<Player> getMembers()
 	{
 		if (_members == null)
 		{
@@ -70,7 +70,7 @@ public abstract class MatchingRoom implements IIdentifiable
 		return _members;
 	}
 	
-	public void addMember(PlayerInstance player)
+	public void addMember(Player player)
 	{
 		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel) || ((_members != null) && (_members.size() >= _maxCount)))
 		{
@@ -85,7 +85,7 @@ public abstract class MatchingRoom implements IIdentifiable
 		player.broadcastUserInfo(UserInfoType.CLAN);
 	}
 	
-	public void deleteMember(PlayerInstance player, boolean kicked)
+	public void deleteMember(Player player, boolean kicked)
 	{
 		boolean leaderChanged = false;
 		if (player == _leader)
@@ -96,7 +96,7 @@ public abstract class MatchingRoom implements IIdentifiable
 			}
 			else
 			{
-				final Iterator<PlayerInstance> iter = getMembers().iterator();
+				final Iterator<Player> iter = getMembers().iterator();
 				if (iter.hasNext())
 				{
 					_leader = iter.next();
@@ -158,12 +158,12 @@ public abstract class MatchingRoom implements IIdentifiable
 		return _title;
 	}
 	
-	public PlayerInstance getLeader()
+	public Player getLeader()
 	{
 		return _leader;
 	}
 	
-	public boolean isLeader(PlayerInstance player)
+	public boolean isLeader(Player player)
 	{
 		return player == _leader;
 	}
@@ -193,17 +193,17 @@ public abstract class MatchingRoom implements IIdentifiable
 		_title = title;
 	}
 	
-	protected abstract void onRoomCreation(PlayerInstance player);
+	protected abstract void onRoomCreation(Player player);
 	
-	protected abstract void notifyInvalidCondition(PlayerInstance player);
+	protected abstract void notifyInvalidCondition(Player player);
 	
-	protected abstract void notifyNewMember(PlayerInstance player);
+	protected abstract void notifyNewMember(Player player);
 	
-	protected abstract void notifyRemovedMember(PlayerInstance player, boolean kicked, boolean leaderChanged);
+	protected abstract void notifyRemovedMember(Player player, boolean kicked, boolean leaderChanged);
 	
 	public abstract void disbandRoom();
 	
 	public abstract MatchingRoomType getRoomType();
 	
-	public abstract MatchingMemberType getMemberType(PlayerInstance player);
+	public abstract MatchingMemberType getMemberType(Player player);
 }

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -40,7 +40,7 @@ public class EnterWorld extends ClientBasePacket
 	public EnterWorld(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (client.getAccessLevel() >= 100)
 		{
 			activeChar.setGM(true);
@@ -99,15 +99,15 @@ public class EnterWorld extends ClientBasePacket
 		activeChar.checkWaterState();
 	}
 	
-	private void notifyClanMembers(PlayerInstance activeChar)
+	private void notifyClanMembers(Player activeChar)
 	{
 		final Clan clan = activeChar.getClan();
 		if (clan != null)
 		{
-			clan.getClanMember(activeChar.getName()).setPlayerInstance(activeChar);
+			clan.getClanMember(activeChar.getName()).setPlayer(activeChar);
 			final SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_LOGGED_IN);
 			msg.addString(activeChar.getName());
-			for (PlayerInstance clanMember : clan.getOnlineMembers(activeChar.getName()))
+			for (Player clanMember : clan.getOnlineMembers(activeChar.getName()))
 			{
 				clanMember.sendPacket(msg);
 			}

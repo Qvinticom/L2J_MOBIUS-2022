@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.gameserver.data.xml.MonsterBookData;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 
 import ai.AbstractNpcAI;
@@ -44,10 +44,10 @@ public class MonsterBook extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Party party = killer.getParty();
-		List<PlayerInstance> rewardedPlayers = new ArrayList<>();
+		List<Player> rewardedPlayers = new ArrayList<>();
 		if (party != null)
 		{
 			rewardedPlayers = party.isInCommandChannel() ? party.getCommandChannel().getMembers() : party.getMembers();
@@ -58,7 +58,7 @@ public class MonsterBook extends AbstractNpcAI
 		}
 		
 		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardByMonsterId(npc.getId());
-		for (PlayerInstance player : rewardedPlayers)
+		for (Player player : rewardedPlayers)
 		{
 			if (((player != null) && (player.calculateDistance2D(killer) < MAXIMUM_REWARD_RANGE)) && (player.getLevel() >= MINIMUM_PARTY_LEVEL))
 			{

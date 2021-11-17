@@ -17,7 +17,7 @@
 package instances.ResidenceOfKingProcella;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -55,7 +55,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -120,7 +120,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					final PlayerInstance plr = world.getPlayers().stream().findAny().orElse(null);
+					final Player plr = world.getPlayers().stream().findAny().orElse(null);
 					if ((plr != null) && (plr.isInsideRadius3D(npc, 100)))
 					{
 						npc.abortAttack();
@@ -152,7 +152,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)

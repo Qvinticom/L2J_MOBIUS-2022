@@ -17,7 +17,7 @@
 package instances.KaraphonHabitat;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -48,7 +48,7 @@ public class KaraphonHabitat extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(Q10745_TheSecretIngredients.class.getSimpleName());
 		if (qs != null)
@@ -71,7 +71,7 @@ public class KaraphonHabitat extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = killer.getInstanceWorld();
 		if (world != null)

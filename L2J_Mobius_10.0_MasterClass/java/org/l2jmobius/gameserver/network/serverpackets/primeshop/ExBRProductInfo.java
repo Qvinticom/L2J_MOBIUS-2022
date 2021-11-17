@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.primeshop;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -33,7 +33,7 @@ public class ExBRProductInfo implements IClientOutgoingPacket
 	private final long _charAdena;
 	private final long _charCoins;
 	
-	public ExBRProductInfo(PrimeShopGroup item, PlayerInstance player)
+	public ExBRProductInfo(PrimeShopGroup item, Player player)
 	{
 		_item = item;
 		_charPoints = player.getPrimePoints();

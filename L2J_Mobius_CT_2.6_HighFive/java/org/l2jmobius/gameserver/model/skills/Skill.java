@@ -44,9 +44,9 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.BlockInstance;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Block;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -1021,7 +1021,7 @@ public class Skill implements IIdentifiable
 	 * <br>
 	 * <b><u>Values of skill type</u>:</b>
 	 * <ul>
-	 * <li>ONE : The skill can only be used on the PlayerInstance targeted, or on the caster if it's a PlayerInstance and no PlayerInstance targeted</li>
+	 * <li>ONE : The skill can only be used on the Player targeted, or on the caster if it's a Player and no Player targeted</li>
 	 * <li>SELF</li>
 	 * <li>HOLY, UNDEAD</li>
 	 * <li>PET</li>
@@ -1088,8 +1088,8 @@ public class Skill implements IIdentifiable
 			return false;
 		}
 		
-		final PlayerInstance player = caster.getActingPlayer();
-		final PlayerInstance targetPlayer = target.getActingPlayer();
+		final Player player = caster.getActingPlayer();
+		final Player targetPlayer = target.getActingPlayer();
 		if (player != null)
 		{
 			if (targetPlayer != null)
@@ -1169,7 +1169,7 @@ public class Skill implements IIdentifiable
 		return true;
 	}
 	
-	public static boolean addSummon(Creature caster, PlayerInstance owner, int radius, boolean isDead)
+	public static boolean addSummon(Creature caster, Player owner, int radius, boolean isDead)
 	{
 		if (!owner.hasSummon())
 		{
@@ -1395,7 +1395,7 @@ public class Skill implements IIdentifiable
 	 * @param cubic the cubic
 	 * @param targets the targets
 	 */
-	public void activateSkill(CubicInstance cubic, WorldObject... targets)
+	public void activateSkill(Cubic cubic, WorldObject... targets)
 	{
 		activateSkill(cubic.getOwner(), cubic, targets);
 	}
@@ -1406,7 +1406,7 @@ public class Skill implements IIdentifiable
 	 * @param cubic the cubic, can be {@code null}
 	 * @param targets the targets
 	 */
-	private void activateSkill(Creature caster, CubicInstance cubic, WorldObject... targets)
+	private void activateSkill(Creature caster, Cubic cubic, WorldObject... targets)
 	{
 		switch (_id)
 		{
@@ -1414,8 +1414,8 @@ public class Skill implements IIdentifiable
 			case 5852:
 			case 5853:
 			{
-				final BlockInstance block = targets[0] instanceof BlockInstance ? (BlockInstance) targets[0] : null;
-				final PlayerInstance player = caster.isPlayer() ? (PlayerInstance) caster : null;
+				final Block block = targets[0] instanceof Block ? (Block) targets[0] : null;
+				final Player player = caster.isPlayer() ? (Player) caster : null;
 				if ((block == null) || (player == null))
 				{
 					return;

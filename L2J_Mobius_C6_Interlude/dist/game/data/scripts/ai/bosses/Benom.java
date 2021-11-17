@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -128,8 +128,8 @@ public class Benom extends Quest
 	private static final int DEAD = 1;
 	private static int _benomWalkRouteStep = 0;
 	private static int _benomIsSpawned = 0;
-	private static NpcInstance _benomInstance;
-	private static NpcInstance _teleportInstance;
+	private static Npc _benomInstance;
+	private static Npc _teleportInstance;
 	
 	public Benom()
 	{
@@ -169,7 +169,7 @@ public class Benom extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -217,11 +217,11 @@ public class Benom extends Quest
 			}
 			case "Attacking":
 			{
-				final Collection<PlayerInstance> knownPlayers = npc.getKnownList().getKnownPlayers().values();
+				final Collection<Player> knownPlayers = npc.getKnownList().getKnownPlayers().values();
 				if (!knownPlayers.isEmpty())
 				{
-					final PlayerInstance target = knownPlayers.stream().findAny().get();
-					((MonsterInstance) npc).addDamageHate(target, 0, 999);
+					final Player target = knownPlayers.stream().findAny().get();
+					((Monster) npc).addDamageHate(target, 0, 999);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					startQuestTimer("Attacking", 2000, npc, player);
 				}
@@ -300,7 +300,7 @@ public class Benom extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final int castleOwner = CastleManager.getInstance().getCastleById(8).getOwnerId();
 		final int clanId = player.getClanId();
@@ -319,7 +319,7 @@ public class Benom extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		cancelQuestTimer("BenomWalk", npc, null);
 		cancelQuestTimer("BenomWalkFinish", npc, null);
@@ -328,7 +328,7 @@ public class Benom extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		GrandBossManager.getInstance().setBossStatus(BENOM, DEAD);
 		cancelQuestTimer("BenomWalk", npc, null);

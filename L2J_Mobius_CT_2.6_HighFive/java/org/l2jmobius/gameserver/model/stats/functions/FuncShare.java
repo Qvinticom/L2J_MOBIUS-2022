@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.stats.functions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -39,7 +39,7 @@ public class FuncShare extends AbstractFunction
 		if (((getApplayCond() == null) || getApplayCond().test(effector, effected, skill)) && (effector != null) && effector.isServitor())
 		{
 			final Summon summon = (Summon) effector;
-			final PlayerInstance player = summon.getOwner();
+			final Player player = summon.getOwner();
 			if (player != null)
 			{
 				return initVal + (getBaseValue(getStat(), player) * getValue());
@@ -48,7 +48,7 @@ public class FuncShare extends AbstractFunction
 		return initVal;
 	}
 	
-	public static double getBaseValue(Stat stat, PlayerInstance player)
+	public static double getBaseValue(Stat stat, Player player)
 	{
 		switch (stat)
 		{

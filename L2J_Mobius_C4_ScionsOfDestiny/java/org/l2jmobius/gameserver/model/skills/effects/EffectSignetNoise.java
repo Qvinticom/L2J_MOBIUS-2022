@@ -18,12 +18,12 @@ package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 public class EffectSignetNoise extends Effect
 {
-	private EffectPointInstance _actor;
+	private EffectPoint _actor;
 	
 	public EffectSignetNoise(Env env, EffectTemplate template)
 	{
@@ -39,7 +39,7 @@ public class EffectSignetNoise extends Effect
 	@Override
 	public void onStart()
 	{
-		_actor = (EffectPointInstance) getEffected();
+		_actor = (EffectPoint) getEffected();
 	}
 	
 	@Override

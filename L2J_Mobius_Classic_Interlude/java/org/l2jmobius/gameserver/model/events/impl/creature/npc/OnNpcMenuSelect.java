@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnNpcMenuSelect implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Npc _npc;
 	private final int _ask;
 	private final int _reply;
@@ -37,7 +37,7 @@ public class OnNpcMenuSelect implements IBaseEvent
 	 * @param ask
 	 * @param reply
 	 */
-	public OnNpcMenuSelect(PlayerInstance player, Npc npc, int ask, int reply)
+	public OnNpcMenuSelect(Player player, Npc npc, int ask, int reply)
 	{
 		_player = player;
 		_npc = npc;
@@ -45,7 +45,7 @@ public class OnNpcMenuSelect implements IBaseEvent
 		_reply = reply;
 	}
 	
-	public PlayerInstance getTalker()
+	public Player getTalker()
 	{
 		return _player;
 	}

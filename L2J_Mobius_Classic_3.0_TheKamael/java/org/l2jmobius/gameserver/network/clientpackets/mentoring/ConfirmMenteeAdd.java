@@ -24,7 +24,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeAdd;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -54,13 +54,13 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance mentee = client.getPlayer();
+		final Player mentee = client.getPlayer();
 		if (mentee == null)
 		{
 			return;
 		}
 		
-		final PlayerInstance mentor = World.getInstance().getPlayer(_mentor);
+		final Player mentor = World.getInstance().getPlayer(_mentor);
 		if (mentor == null)
 		{
 			return;
@@ -101,7 +101,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 	 * @param mentee
 	 * @return
 	 */
-	public static boolean validate(PlayerInstance mentor, PlayerInstance mentee)
+	public static boolean validate(Player mentor, Player mentee)
 	{
 		return false;
 		

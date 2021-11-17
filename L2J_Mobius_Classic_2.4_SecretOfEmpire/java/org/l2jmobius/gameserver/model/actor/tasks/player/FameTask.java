@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -28,10 +28,10 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public class FameTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _value;
 	
-	public FameTask(PlayerInstance player, int value)
+	public FameTask(Player player, int value)
 	{
 		_player = player;
 		_value = value;

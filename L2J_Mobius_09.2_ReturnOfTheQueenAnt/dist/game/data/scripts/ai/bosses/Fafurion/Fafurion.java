@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -71,7 +71,7 @@ public class Fafurion extends AbstractNpcAI
 	// Misc
 	private static final int MAX_PEOPLE = 200;
 	private static final int RAID_DURATION = 5; // hours
-	private static GrandBossInstance _fafurion;
+	private static GrandBoss _fafurion;
 	private int _stage;
 	
 	private Fafurion()
@@ -92,28 +92,28 @@ public class Fafurion extends AbstractNpcAI
 			}
 			else
 			{
-				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
+				final GrandBoss fafurion = (GrandBoss) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(fafurion);
 				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 			}
 		}
 		else
 		{
-			final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
+			final GrandBoss fafurion = (GrandBoss) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(fafurion);
 			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
 		{
 			case "unlock_fafurion":
 			{
-				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
+				final GrandBoss fafurion = (GrandBoss) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(fafurion);
 				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 				break;
@@ -123,7 +123,7 @@ public class Fafurion extends AbstractNpcAI
 				if (player.calculateDistance2D(FAFURION_SPAWN_LOC) < 5000)
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_OF_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
-					for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(player, PlayerInstance.class, 5000))
+					for (Player plr : World.getInstance().getVisibleObjectsInRange(player, Player.class, 5000))
 					{
 						plr.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_WHO_FEAR_OF_FAFURION_LEAVE_THIS_PLACE_AT_ONCE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					}
@@ -145,37 +145,37 @@ public class Fafurion extends AbstractNpcAI
 					{
 						case 1:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_1, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_1, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 						case 2:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_2, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_2, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 						case 3:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_3, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_3, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 						case 4:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_4, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_4, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 						case 5:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_5, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_5, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 						case 6:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_6, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_6, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 						case 7:
 						{
-							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_7, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							_fafurion = (GrandBoss) addSpawn(FAFURION_STAGE_7, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 							break;
 						}
 					}
@@ -188,7 +188,7 @@ public class Fafurion extends AbstractNpcAI
 				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 				if ((status > ALIVE) && (status < DEAD))
 				{
-					for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
+					for (Player plr : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 5000))
 					{
 						plr.sendPacket(new ExShowScreenMessage(NpcStringId.FAFURION_S_NEST_RAID_IS_OVER, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					}
@@ -226,7 +226,7 @@ public class Fafurion extends AbstractNpcAI
 					}
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
@@ -240,7 +240,7 @@ public class Fafurion extends AbstractNpcAI
 					{
 						return "34488-03.html";
 					}
-					for (PlayerInstance member : members)
+					for (Player member : members)
 					{
 						if (member.getLevel() < Config.FAFURION_MIN_PLAYER_LEVEL)
 						{
@@ -254,7 +254,7 @@ public class Fafurion extends AbstractNpcAI
 						return null;
 					}
 					takeItems(player, FONDUS_STONE, 1);
-					for (PlayerInstance member : members)
+					for (Player member : members)
 					{
 						if ((member.calculateDistance2D(npc) < 1000) && (npc.getId() == HEART_OF_TSUNAMI))
 						{
@@ -275,7 +275,7 @@ public class Fafurion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.getId() == _fafurion.getId())
 		{
@@ -430,7 +430,7 @@ public class Fafurion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == _fafurion.getId())
 		{
@@ -464,7 +464,7 @@ public class Fafurion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34488.html";
 	}

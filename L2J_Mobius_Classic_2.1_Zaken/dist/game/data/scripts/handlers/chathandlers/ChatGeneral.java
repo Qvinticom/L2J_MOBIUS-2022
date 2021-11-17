@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +43,7 @@ public class ChatGeneral implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, PlayerInstance activeChar, String paramsValue, String text)
+	public void handleChat(ChatType type, Player activeChar, String paramsValue, String text)
 	{
 		boolean vcdUsed = false;
 		if (text.startsWith("."))
@@ -89,7 +89,7 @@ public class ChatGeneral implements IChatHandler
 			
 			final CreatureSay cs = new CreatureSay(activeChar, type, activeChar.getAppearance().getVisibleName(), text);
 			final CreatureSay csRandom = new CreatureSay(activeChar, type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
-			World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, 1250, player ->
+			World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, 1250, player ->
 			{
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{

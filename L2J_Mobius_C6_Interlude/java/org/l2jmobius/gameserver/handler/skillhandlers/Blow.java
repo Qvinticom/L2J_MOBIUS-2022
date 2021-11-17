@@ -25,10 +25,10 @@ import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.BaseStat;
@@ -127,7 +127,7 @@ public class Blow implements ISkillHandler
 					}
 				}
 				
-				final ItemInstance weapon = creature.getActiveWeaponInstance();
+				final Item weapon = creature.getActiveWeaponInstance();
 				boolean soul = false;
 				if (weapon != null)
 				{
@@ -150,7 +150,7 @@ public class Blow implements ISkillHandler
 				}
 				
 				double damage = Formulas.calcBlowDamage(creature, target, skill, shld, crit, soul);
-				if (skill.getDmgDirectlyToHP() && (target instanceof PlayerInstance))
+				if (skill.getDmgDirectlyToHP() && (target instanceof Player))
 				{
 					// No vengeance implementation.
 					final Creature[] ts =
@@ -161,12 +161,12 @@ public class Blow implements ISkillHandler
 					
 					for (Creature targ : ts)
 					{
-						final PlayerInstance player = (PlayerInstance) targ;
+						final Player player = (Player) targ;
 						if (!player.isInvul())
 						{
 							// Check and calculate transfered damage.
 							final Summon summon = player.getPet();
-							if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, player, summon, true))
+							if ((summon instanceof Servitor) && Util.checkIfInRange(900, player, summon, true))
 							{
 								int tDmg = ((int) damage * (int) player.getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 								
@@ -242,11 +242,11 @@ public class Blow implements ISkillHandler
 					target.breakAttack();
 					target.breakCast();
 				}
-				if (creature instanceof PlayerInstance)
+				if (creature instanceof Player)
 				{
-					final PlayerInstance activePlayer = (PlayerInstance) creature;
+					final Player activePlayer = (Player) creature;
 					activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
-					if (activePlayer.isInOlympiadMode() && (target instanceof PlayerInstance) && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == activePlayer.getOlympiadGameId()))
+					if (activePlayer.isInOlympiadMode() && (target instanceof Player) && ((Player) target).isInOlympiadMode() && (((Player) target).getOlympiadGameId() == activePlayer.getOlympiadGameId()))
 					{
 						Olympiad.getInstance().notifyCompetitorDamage(activePlayer, (int) damage, activePlayer.getOlympiadGameId());
 					}
@@ -258,11 +258,11 @@ public class Blow implements ISkillHandler
 			}
 			else
 			{
-				if (skillIsEvaded && (target instanceof PlayerInstance))
+				if (skillIsEvaded && (target instanceof Player))
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_S1_S_ATTACK);
 					sm.addString(creature.getName());
-					((PlayerInstance) target).sendPacket(sm);
+					((Player) target).sendPacket(sm);
 				}
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED);

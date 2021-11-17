@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -40,7 +40,7 @@ public class ConfirmDlg implements IClientOutgoingPacket
 	private final List<Object> _values = new ArrayList<>();
 	private int _time = 0;
 	private int _requesterId = 0;
-	private PlayerInstance _targetPlayer = null;
+	private Player _targetPlayer = null;
 	
 	public ConfirmDlg(int messageId)
 	{
@@ -101,7 +101,7 @@ public class ConfirmDlg implements IClientOutgoingPacket
 		return this;
 	}
 	
-	public ConfirmDlg addTime(int time, PlayerInstance targetPlayer)
+	public ConfirmDlg addTime(int time, Player targetPlayer)
 	{
 		_time = time;
 		_targetPlayer = targetPlayer;

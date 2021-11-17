@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAnswer;
 import org.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -45,10 +45,10 @@ import ai.AbstractNpcAI;
  */
 public class MercTicket extends AbstractNpcAI implements IItemHandler
 {
-	private final Map<Integer, ItemInstance> _items = new ConcurrentHashMap<>();
+	private final Map<Integer, Item> _items = new ConcurrentHashMap<>();
 	
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -56,7 +56,7 @@ public class MercTicket extends AbstractNpcAI implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if ((castle == null) || (player.getClan() == null) || (castle.getOwnerId() != player.getClanId()) || !player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
 		{
@@ -100,7 +100,7 @@ public class MercTicket extends AbstractNpcAI implements IItemHandler
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerDlgAnswer(OnPlayerDlgAnswer event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player.removeAction(PlayerAction.MERCENARY_CONFIRM) && _items.containsKey(player.getObjectId()))
 		{
 			if (SiegeGuardManager.getInstance().isTooCloseToAnotherTicket(player))
@@ -111,7 +111,7 @@ public class MercTicket extends AbstractNpcAI implements IItemHandler
 			
 			if (event.getAnswer() == 1)
 			{
-				final ItemInstance item = _items.get(player.getObjectId());
+				final Item item = _items.get(player.getObjectId());
 				SiegeGuardManager.getInstance().addTicket(item.getId(), player);
 				player.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
 			}

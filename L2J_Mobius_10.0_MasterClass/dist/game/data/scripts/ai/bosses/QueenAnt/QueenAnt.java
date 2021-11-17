@@ -21,8 +21,8 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
@@ -58,7 +58,7 @@ public class QueenAnt extends AbstractNpcAI
 			}
 			else // The time has already expired while the server was offline. Immediately spawn queen ant.
 			{
-				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN_ANT, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN_ANT, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(QUEEN_ANT, ALIVE);
 				spawnBoss(queen);
 			}
@@ -71,24 +71,24 @@ public class QueenAnt extends AbstractNpcAI
 			final int heading = info.getInt("heading");
 			final double hp = info.getDouble("currentHP");
 			final double mp = info.getDouble("currentMP");
-			final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN_ANT, locX, locY, locZ, heading, false, 0);
+			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN_ANT, locX, locY, locZ, heading, false, 0);
 			queen.setCurrentHpMp(hp, mp);
 			spawnBoss(queen);
 		}
 	}
 	
-	private void spawnBoss(GrandBossInstance npc)
+	private void spawnBoss(GrandBoss npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ("queen_unlock".equals(event))
 		{
-			final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN_ANT, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN_ANT, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
 			GrandBossManager.getInstance().setBossStatus(QUEEN_ANT, ALIVE);
 			spawnBoss(queen);
 		}
@@ -96,7 +96,7 @@ public class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		GrandBossManager.getInstance().setBossStatus(QUEEN_ANT, DEAD);

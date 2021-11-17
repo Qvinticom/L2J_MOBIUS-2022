@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -32,7 +32,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		handleChangeLevel(command, activeChar);
 		return true;
@@ -42,7 +42,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	 * @param command
 	 * @param activeChar
 	 */
-	private void handleChangeLevel(String command, PlayerInstance activeChar)
+	private void handleChangeLevel(String command, Player activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -53,16 +53,16 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		if (parts.length == 2)
 		{
 			final int lvl = Integer.parseInt(parts[1]);
-			if (activeChar.getTarget() instanceof PlayerInstance)
+			if (activeChar.getTarget() instanceof Player)
 			{
-				((PlayerInstance) activeChar.getTarget()).setAccessLevel(lvl);
+				((Player) activeChar.getTarget()).setAccessLevel(lvl);
 				BuilderUtil.sendSysMessage(activeChar, "You have changed the access level of player " + activeChar.getTarget().getName() + " to " + lvl + " .");
 			}
 		}
 		else if (parts.length == 3)
 		{
 			final int lvl = Integer.parseInt(parts[2]);
-			final PlayerInstance player = World.getInstance().getPlayer(parts[1]);
+			final Player player = World.getInstance().getPlayer(parts[1]);
 			if (player != null)
 			{
 				player.setAccessLevel(lvl);

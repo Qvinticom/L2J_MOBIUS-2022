@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.handler.DailyMissionHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -88,12 +88,12 @@ public class DailyMissionDataHolder
 		return _isOneTime;
 	}
 	
-	public boolean isDisplayable(PlayerInstance player)
+	public boolean isDisplayable(Player player)
 	{
 		return (!_isOneTime || (getStatus(player) != DailyMissionStatus.COMPLETED.getClientId())) && (_classRestriction.isEmpty() || _classRestriction.contains(player.getClassId()));
 	}
 	
-	public void requestReward(PlayerInstance player)
+	public void requestReward(Player player)
 	{
 		if ((_handler != null) && isDisplayable(player))
 		{
@@ -101,12 +101,12 @@ public class DailyMissionDataHolder
 		}
 	}
 	
-	public int getStatus(PlayerInstance player)
+	public int getStatus(Player player)
 	{
 		return _handler != null ? _handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
-	public int getProgress(PlayerInstance player)
+	public int getProgress(Player player)
 	{
 		return _handler != null ? _handler.getProgress(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}

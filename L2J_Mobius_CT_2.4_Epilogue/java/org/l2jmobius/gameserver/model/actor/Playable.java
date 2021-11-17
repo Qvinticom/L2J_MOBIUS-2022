@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
@@ -39,14 +38,14 @@ import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
  * This class represents all Playable characters in the world.<br>
  * Playable:
  * <ul>
- * <li>PlayerInstance</li>
+ * <li>Player</li>
  * <li>Summon</li>
  * </ul>
  */
 public abstract class Playable extends Creature
 {
 	private Creature _lockedTarget = null;
-	private PlayerInstance transferDmgTo = null;
+	private Player transferDmgTo = null;
 	
 	/**
 	 * Creates an abstract playable creature.
@@ -134,7 +133,7 @@ public abstract class Playable extends Creature
 		}
 		if (isPlayer())
 		{
-			final PlayerInstance player = getActingPlayer();
+			final Player player = getActingPlayer();
 			if (player.hasCharmOfCourage())
 			{
 				if (player.isInSiege())
@@ -151,13 +150,13 @@ public abstract class Playable extends Creature
 			stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		broadcastStatusUpdate();
 		
 		ZoneManager.getInstance().getRegion(this).onDeath(this);
 		
 		// Notify Quest of Playable's death
-		final PlayerInstance actingPlayer = getActingPlayer();
+		final Player actingPlayer = getActingPlayer();
 		if (!actingPlayer.isNotifyQuestOfDeathEmpty())
 		{
 			for (QuestState qs : actingPlayer.getNotifyQuestOfDeath())
@@ -177,7 +176,7 @@ public abstract class Playable extends Creature
 		
 		if (killer != null)
 		{
-			final PlayerInstance player = killer.getActingPlayer();
+			final Player player = killer.getActingPlayer();
 			if (player != null)
 			{
 				player.onKillUpdatePvPKarma(this);
@@ -207,7 +206,7 @@ public abstract class Playable extends Creature
 			return false; // Target is not a Playable
 		}
 		
-		final PlayerInstance player = getActingPlayer();
+		final Player player = getActingPlayer();
 		if (player == null)
 		{
 			return false; // Active player is null
@@ -218,7 +217,7 @@ public abstract class Playable extends Creature
 			return false; // Active player has karma
 		}
 		
-		final PlayerInstance targetPlayer = target.getActingPlayer();
+		final Player targetPlayer = target.getActingPlayer();
 		if (targetPlayer == null)
 		{
 			return false; // Target player is null
@@ -303,12 +302,12 @@ public abstract class Playable extends Creature
 		_lockedTarget = creature;
 	}
 	
-	public void setTransferDamageTo(PlayerInstance val)
+	public void setTransferDamageTo(Player val)
 	{
 		transferDmgTo = val;
 	}
 	
-	public PlayerInstance getTransferingDamageTo()
+	public Player getTransferingDamageTo()
 	{
 		return transferDmgTo;
 	}

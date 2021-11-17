@@ -35,14 +35,14 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Commander;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -109,30 +109,30 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The PlayerInstance target has karma (=PK)</li>
-	 * <li>The MonsterInstance target is aggressive</li>
+	 * <li>The Player target has karma (=PK)</li>
+	 * <li>The Monster target is aggressive</li>
 	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a SiegeGuardInstance</u>:</b>
+	 * <b><u>Actor is a SiegeGuard</u>:</b>
 	 * <ul>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>A siege is in progress</li>
-	 * <li>The PlayerInstance target isn't a Defender</li>
+	 * <li>The Player target isn't a Defender</li>
 	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a FriendlyMobInstance</u>:</b>
+	 * <b><u>Actor is a FriendlyMob</u>:</b>
 	 * <ul>
-	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
+	 * <li>The target isn't a Folk, a Door or another Npc</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The PlayerInstance target has karma (=PK)</li>
+	 * <li>The Player target has karma (=PK)</li>
 	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a MonsterInstance</u>:</b>
+	 * <b><u>Actor is a Monster</u>:</b>
 	 * <ul>
-	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
+	 * <li>The target isn't a Folk, a Door or another Npc</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>The actor is Aggressive</li>
@@ -143,18 +143,18 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	private boolean autoAttackCondition(Creature target)
 	{
 		// Check if the target isn't another guard, folk or a door
-		if ((target == null) || (target instanceof FortSiegeGuardInstance) || (target instanceof FolkInstance) || (target instanceof DoorInstance) || target.isAlikeDead() || (target instanceof CommanderInstance) || (target instanceof Playable))
+		if ((target == null) || (target instanceof FortSiegeGuard) || (target instanceof Folk) || (target instanceof Door) || target.isAlikeDead() || (target instanceof Commander) || (target instanceof Playable))
 		{
-			PlayerInstance player = null;
-			if (target instanceof PlayerInstance)
+			Player player = null;
+			if (target instanceof Player)
 			{
-				player = (PlayerInstance) target;
+				player = (Player) target;
 			}
 			else if (target instanceof Summon)
 			{
 				player = ((Summon) target).getOwner();
 			}
-			if ((player == null) || ((player.getClan() != null) && (player.getClan().getFortId() == ((NpcInstance) _actor).getFort().getFortId())))
+			if ((player == null) || ((player.getClan() != null) && (player.getClan().getFortId() == ((Npc) _actor).getFort().getFortId())))
 			{
 				return false;
 			}
@@ -164,7 +164,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		if ((target != null) && target.isInvul())
 		{
 			// However EffectInvincible requires to check GMs specially
-			if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isGM())
+			if ((target instanceof Player) && ((Player) target).isGM())
 			{
 				return false;
 			}
@@ -178,15 +178,15 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		Creature currentTarget = target;
 		if (currentTarget instanceof Summon)
 		{
-			final PlayerInstance owner = ((Summon) currentTarget).getOwner();
+			final Player owner = ((Summon) currentTarget).getOwner();
 			if (_actor.isInsideRadius3D(owner, 1000))
 			{
 				currentTarget = owner;
 			}
 		}
 		
-		// Check if the target is a PlayerInstance and if the target isn't in silent move mode AND too far (>100)
-		if ((currentTarget instanceof PlayerInstance) && ((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius2D(currentTarget, 250))
+		// Check if the target is a Player and if the target isn't in silent move mode AND too far (>100)
+		if ((currentTarget instanceof Player) && ((Player) currentTarget).isSilentMoving() && !_actor.isInsideRadius2D(currentTarget, 250))
 		{
 			return false;
 		}
@@ -336,7 +336,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				final int aggro = npc.getHating(hated);
 				if ((aggro + _globalAggro) > 0)
 				{
-					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 					if (!_actor.isRunning())
 					{
 						_actor.setRunning();
@@ -349,16 +349,16 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				return;
 			}
 		}
-		// Order to the SiegeGuardInstance to return to its home location because there's no target to attack
+		// Order to the SiegeGuard to return to its home location because there's no target to attack
 		if (_actor.getWalkSpeed() >= 0)
 		{
-			if (_actor instanceof FortSiegeGuardInstance)
+			if (_actor instanceof FortSiegeGuard)
 			{
-				((FortSiegeGuardInstance) _actor).returnHome();
+				((FortSiegeGuard) _actor).returnHome();
 			}
 			else
 			{
-				((CommanderInstance) _actor).returnHome();
+				((Commander) _actor).returnHome();
 			}
 		}
 	}
@@ -380,7 +380,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		// Check if the actor is running
 		if ((_attackTimeout < GameTimeTaskManager.getGameTicks()) && _actor.isRunning())
 		{
-			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
+			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others Player
 			_actor.setWalking();
 			
 			// Calculate a new attack timeout
@@ -416,7 +416,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	{
 		final Creature target = getAttackTarget();
 		// Call all WorldObject of its Faction inside the Faction Range
-		if ((((NpcInstance) _actor).getFactionId() == null) || (target == null))
+		if ((((Npc) _actor).getFactionId() == null) || (target == null))
 		{
 			return;
 		}
@@ -431,7 +431,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			return; // test for reducing CPU load
 		}
 		
-		final String faction_id = ((NpcInstance) _actor).getFactionId();
+		final String faction_id = ((Npc) _actor).getFactionId();
 		
 		// SalfAnalisis ))
 		for (Skill sk : _actor.getAllSkills())
@@ -476,7 +476,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// Go through all Creature that belong to its faction
-		// for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(((NpcInstance) _actor).getFactionRange()+_actor.getTemplate().collisionRadius))
+		// for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(((Npc) _actor).getFactionRange()+_actor.getTemplate().collisionRadius))
 		for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(1000))
 		{
 			if (creature == null)
@@ -484,9 +484,9 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				continue;
 			}
 			
-			if (!(creature instanceof NpcInstance))
+			if (!(creature instanceof Npc))
 			{
-				if (/* _selfAnalysis.hasHealOrResurrect && */(creature instanceof PlayerInstance) && ((NpcInstance) _actor).getFort().getSiege().checkIsDefender(((PlayerInstance) creature).getClan()))
+				if (/* _selfAnalysis.hasHealOrResurrect && */(creature instanceof Player) && ((Npc) _actor).getFort().getSiege().checkIsDefender(((Player) creature).getClan()))
 				{
 					// heal friends
 					if (!_actor.isAttackDisabled() && (creature.getCurrentHp() < (creature.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && creature.isInCombat())
@@ -528,7 +528,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				continue;
 			}
 			
-			final NpcInstance npc = (NpcInstance) creature;
+			final Npc npc = (Npc) creature;
 			if (!faction_id.equalsIgnoreCase(npc.getFactionId()))
 			{
 				continue;
@@ -595,8 +595,8 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		Collection<Skill> skills = null;
 		double dist2 = 0;
 		int range = 0;
-		FortSiegeGuardInstance sGuard;
-		sGuard = (FortSiegeGuardInstance) _actor;
+		FortSiegeGuard sGuard;
+		sGuard = (FortSiegeGuard) _actor;
 		Creature attackTarget = getAttackTarget();
 		try
 		{
@@ -617,7 +617,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// never attack defenders
-		if ((attackTarget instanceof PlayerInstance) && sGuard.getFort().getSiege().checkIsDefender(((PlayerInstance) attackTarget).getClan()))
+		if ((attackTarget instanceof Player) && sGuard.getFort().getSiege().checkIsDefender(((Player) attackTarget).getClan()))
 		{
 			// Cancel the target
 			sGuard.stopHating(attackTarget);
@@ -678,7 +678,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				}
 			}
 			
-			// Check if the SiegeGuardInstance is attacking, knows the target and can't run
+			// Check if the SiegeGuard is attacking, knows the target and can't run
 			if (!_actor.isAttackingNow() && (_actor.getRunSpeed() == 0) && _actor.getKnownList().knowsObject(attackTarget))
 			{
 				// Cancel the target
@@ -694,7 +694,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				final double homeX = attackTarget.getX() - sGuard.getSpawn().getX();
 				final double homeY = attackTarget.getY() - sGuard.getSpawn().getY();
 				
-				// Check if the SiegeGuardInstance isn't too far from it's home location
+				// Check if the SiegeGuard isn't too far from it's home location
 				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) && _actor.getKnownList().knowsObject(attackTarget))
 				{
 					// Cancel the target
@@ -862,7 +862,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
-	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance</li>
+	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player</li>
 	 * <li>Set the Intention to AI_INTENTION_ATTACK</li>
 	 * </ul>
 	 * @param attacker The Creature that attacks the actor
@@ -882,7 +882,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		// Add the attacker to the _aggroList of the actor
 		((Attackable) _actor).addDamageHate(attacker, 0, 1);
 		
-		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 		if (!_actor.isRunning())
 		{
 			_actor.setRunning();
@@ -937,18 +937,18 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			// Set the actor AI Intention to AI_INTENTION_ATTACK
 			if (getIntention() != AI_INTENTION_ATTACK)
 			{
-				// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+				// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 				if (!_actor.isRunning())
 				{
 					_actor.setRunning();
 				}
 				
-				FortSiegeGuardInstance sGuard;
-				sGuard = (FortSiegeGuardInstance) _actor;
+				FortSiegeGuard sGuard;
+				sGuard = (FortSiegeGuard) _actor;
 				final double homeX = target.getX() - sGuard.getSpawn().getX();
 				final double homeY = target.getY() - sGuard.getSpawn().getY();
 				
-				// Check if the SiegeGuardInstance is not too far from its home location
+				// Check if the SiegeGuard is not too far from its home location
 				if (((homeX * homeX) + (homeY * homeY)) < 3240000)
 				{
 					setIntention(AI_INTENTION_ATTACK, target, null);

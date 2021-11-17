@@ -37,15 +37,15 @@ import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.util.DocumentItem;
 
 /**
@@ -56,7 +56,7 @@ public class ItemTable
 	private static final Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	private static final Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
-	private Item[] _allTemplates;
+	private ItemTemplate[] _allTemplates;
 	private final Map<Integer, EtcItem> _etcItems;
 	private final Map<Integer, Armor> _armors;
 	private final Map<Integer, Weapon> _weapons;
@@ -65,12 +65,12 @@ public class ItemTable
 	private static final Map<String, Integer> _crystalTypes = new HashMap<>();
 	static
 	{
-		_crystalTypes.put("s", Item.CRYSTAL_S);
-		_crystalTypes.put("a", Item.CRYSTAL_A);
-		_crystalTypes.put("b", Item.CRYSTAL_B);
-		_crystalTypes.put("c", Item.CRYSTAL_C);
-		_crystalTypes.put("d", Item.CRYSTAL_D);
-		_crystalTypes.put("none", Item.CRYSTAL_NONE);
+		_crystalTypes.put("s", ItemTemplate.CRYSTAL_S);
+		_crystalTypes.put("a", ItemTemplate.CRYSTAL_A);
+		_crystalTypes.put("b", ItemTemplate.CRYSTAL_B);
+		_crystalTypes.put("c", ItemTemplate.CRYSTAL_C);
+		_crystalTypes.put("d", ItemTemplate.CRYSTAL_D);
+		_crystalTypes.put("none", ItemTemplate.CRYSTAL_NONE);
 	}
 	
 	protected ItemTable()
@@ -105,9 +105,9 @@ public class ItemTable
 		}
 	}
 	
-	public List<Item> loadItems()
+	public List<ItemTemplate> loadItems()
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<ItemTemplate> list = new ArrayList<>();
 		for (File f : _itemFiles)
 		{
 			final DocumentItem document = new DocumentItem(f);
@@ -123,7 +123,7 @@ public class ItemTable
 		_armors.clear();
 		_etcItems.clear();
 		_weapons.clear();
-		for (Item item : loadItems())
+		for (ItemTemplate item : loadItems())
 		{
 			if (highest < item.getItemId())
 			{
@@ -153,7 +153,7 @@ public class ItemTable
 	{
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
 		LOGGER.info("Highest item id used: " + size);
-		_allTemplates = new Item[size + 1];
+		_allTemplates = new ItemTemplate[size + 1];
 		
 		// Insert armor item in Fast Look Up Table
 		for (Armor item : _armors.values())
@@ -179,7 +179,7 @@ public class ItemTable
 	 * @param id : int designating the item
 	 * @return Item
 	 */
-	public Item getTemplate(int id)
+	public ItemTemplate getTemplate(int id)
 	{
 		if (id >= _allTemplates.length)
 		{
@@ -189,21 +189,21 @@ public class ItemTable
 	}
 	
 	/**
-	 * Create the ItemInstance corresponding to the Item Identifier and quantitiy add logs the activity. <b><u>Actions</u>:</b>
-	 * <li>Create and Init the ItemInstance corresponding to the Item Identifier and quantity</li>
-	 * <li>Add the ItemInstance object to _allObjects of L2world</li>
+	 * Create the Item corresponding to the Item Identifier and quantitiy add logs the activity. <b><u>Actions</u>:</b>
+	 * <li>Create and Init the Item corresponding to the Item Identifier and quantity</li>
+	 * <li>Add the Item object to _allObjects of L2world</li>
 	 * <li>Logs Item creation according to log settings</li><br>
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be created
 	 * @param count : int Quantity of items to be created for stackable items
-	 * @param actor : PlayerInstance Player requesting the item creation
+	 * @param actor : Player Player requesting the item creation
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
-	 * @return ItemInstance corresponding to the new item
+	 * @return Item corresponding to the new item
 	 */
-	public ItemInstance createItem(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
+	public Item createItem(String process, int itemId, int count, Player actor, WorldObject reference)
 	{
-		// Create and Init the ItemInstance corresponding to the Item Identifier
-		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
+		// Create and Init the Item corresponding to the Item Identifier
+		final Item item = new Item(IdManager.getInstance().getNextId(), itemId);
 		
 		// create loot schedule also if autoloot is enabled
 		if (process.equalsIgnoreCase("loot")/* && !Config.AUTO_LOOT */)
@@ -211,7 +211,7 @@ public class ItemTable
 			ScheduledFuture<?> itemLootShedule;
 			long delay = 0;
 			// if in CommandChannel and was killing a World/RaidBoss
-			if ((reference instanceof GrandBossInstance) || (reference instanceof RaidBossInstance))
+			if ((reference instanceof GrandBoss) || (reference instanceof RaidBoss))
 			{
 				if ((((Attackable) reference).getFirstCommandChannelAttacked() != null) && ((Attackable) reference).getFirstCommandChannelAttacked().meetRaidWarCondition(reference))
 				{
@@ -233,7 +233,7 @@ public class ItemTable
 			item.setItemLootShedule(itemLootShedule);
 		}
 		
-		// Add the ItemInstance object to _allObjects of L2world
+		// Add the Item object to _allObjects of L2world
 		World.getInstance().storeObject(item);
 		
 		// Set Item parameters
@@ -257,7 +257,7 @@ public class ItemTable
 		return item;
 	}
 	
-	public ItemInstance createItem(String process, int itemId, int count, PlayerInstance actor)
+	public Item createItem(String process, int itemId, int count, Player actor)
 	{
 		return createItem(process, itemId, count, actor, null);
 	}
@@ -267,21 +267,21 @@ public class ItemTable
 	 * <u><i>Concept :</i></u><br>
 	 * Dummy item is created by setting the ID of the object in the world at null value
 	 * @param itemId : int designating the item
-	 * @return ItemInstance designating the dummy item created
+	 * @return Item designating the dummy item created
 	 */
-	public ItemInstance createDummyItem(int itemId)
+	public Item createDummyItem(int itemId)
 	{
-		final Item item = getTemplate(itemId);
+		final ItemTemplate item = getTemplate(itemId);
 		if (item == null)
 		{
 			return null;
 		}
 		
-		ItemInstance temp = new ItemInstance(0, item);
+		Item temp = new Item(0, item);
 		
 		try
 		{
-			temp = new ItemInstance(0, itemId);
+			temp = new Item(0, itemId);
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
@@ -297,12 +297,12 @@ public class ItemTable
 	}
 	
 	/**
-	 * Destroys the ItemInstance.<br>
+	 * Destroys the Item.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
-	 * <li>Sets ItemInstance parameters to be unusable</li>
-	 * <li>Removes the ItemInstance object to _allObjects of L2world</li>
+	 * <li>Sets Item parameters to be unusable</li>
+	 * <li>Removes the Item object to _allObjects of L2world</li>
 	 * <li>Logs Item deletion according to log settings</li>
 	 * </ul>
 	 * @param process a string identifier of process triggering this action.
@@ -310,14 +310,14 @@ public class ItemTable
 	 * @param actor the player requesting the item destroy.
 	 * @param reference the object referencing current action like NPC selling item or previous item in transformation.
 	 */
-	public void destroyItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
+	public void destroyItem(String process, Item item, Player actor, WorldObject reference)
 	{
 		synchronized (item)
 		{
 			item.setCount(0);
 			item.setOwnerId(0);
 			item.setLocation(ItemLocation.VOID);
-			item.setLastChange(ItemInstance.REMOVED);
+			item.setLastChange(Item.REMOVED);
 			
 			World.getInstance().removeObject(item);
 			IdManager.getInstance().releaseId(item.getObjectId());
@@ -362,9 +362,9 @@ public class ItemTable
 	
 	protected static class ResetOwner implements Runnable
 	{
-		ItemInstance _item;
+		Item _item;
 		
-		public ResetOwner(ItemInstance item)
+		public ResetOwner(Item item)
 		{
 			_item = item;
 		}

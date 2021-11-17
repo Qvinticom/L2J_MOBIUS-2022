@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -53,7 +53,7 @@ public class QuestLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		String quest = "";
 		try
@@ -84,15 +84,15 @@ public class QuestLink implements IBypassHandler
 	}
 	
 	/**
-	 * Open a choose quest window on client with all quests available of the NpcInstance.<br>
+	 * Open a choose quest window on client with all quests available of the Npc.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li><br>
-	 * @param player The PlayerInstance that talk with the NpcInstance
-	 * @param npc The table containing quests of the NpcInstance
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player</li><br>
+	 * @param player The Player that talk with the Npc
+	 * @param npc The table containing quests of the Npc
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(PlayerInstance player, Npc npc, Collection<Quest> quests)
+	private static void showQuestChooseWindow(Player player, Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sb = new StringBuilder(128);
 		sb.append("<html><body>");
@@ -198,24 +198,24 @@ public class QuestLink implements IBypassHandler
 		}
 		sb.append("</body></html>");
 		
-		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Npc
 		npc.insertObjectIdAndShowChatWindow(player, sb.toString());
 	}
 	
 	/**
-	 * Open a quest window on client with the text of the NpcInstance.<br>
+	 * Open a quest window on client with the text of the Npc.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player</li>
+	 * <li>Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet</li>
 	 * </ul>
-	 * @param player the PlayerInstance that talk with the {@code npc}
-	 * @param npc the NpcInstance that chats with the {@code player}
+	 * @param player the Player that talk with the {@code npc}
+	 * @param npc the Npc that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	public static void showQuestWindow(PlayerInstance player, Npc npc, String questId)
+	public static void showQuestWindow(Player player, Npc npc, String questId)
 	{
 		String content = null;
 		
@@ -246,22 +246,22 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Npc
 		if (content != null)
 		{
 			npc.insertObjectIdAndShowChatWindow(player, content);
 		}
 		
-		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	/**
 	 * @param player
 	 * @param npcId The Identifier of the NPC
-	 * @return a table containing all QuestState from the table _quests in which the PlayerInstance must talk to the NPC.
+	 * @return a table containing all QuestState from the table _quests in which the Player must talk to the NPC.
 	 */
-	private static List<QuestState> getQuestsForTalk(PlayerInstance player, int npcId)
+	private static List<QuestState> getQuestsForTalk(Player player, int npcId)
 	{
 		// Create a QuestState table that will contain all QuestState to modify
 		final List<QuestState> states = new ArrayList<>();
@@ -272,14 +272,14 @@ public class QuestLink implements IBypassHandler
 			return states;
 		}
 		
-		// Go through the QuestState of the PlayerInstance quests
+		// Go through the QuestState of the Player quests
 		for (AbstractEventListener listener : template.getListeners(EventType.ON_NPC_TALK))
 		{
 			if (listener.getOwner() instanceof Quest)
 			{
 				final Quest quest = (Quest) listener.getOwner();
 				
-				// Copy the current PlayerInstance QuestState in the QuestState table
+				// Copy the current Player QuestState in the QuestState table
 				final QuestState qs = player.getQuestState(quest.getName());
 				if (qs != null)
 				{
@@ -294,10 +294,10 @@ public class QuestLink implements IBypassHandler
 	
 	/**
 	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
-	 * @param player the PlayerInstance that talk with the {@code npc}.
-	 * @param npc the NpcInstance that chats with the {@code player}.
+	 * @param player the Player that talk with the {@code npc}.
+	 * @param npc the Npc that chats with the {@code player}.
 	 */
-	public static void showQuestWindow(PlayerInstance player, Npc npc)
+	public static void showQuestWindow(Player player, Npc npc)
 	{
 		boolean conditionMeet = false;
 		final Set<Quest> options = new HashSet<>();

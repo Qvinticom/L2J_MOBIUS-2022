@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
@@ -63,8 +63,8 @@ public class Olympiad extends ListenersContainer
 	private static final Map<Integer, StatSet> NOBLES = new ConcurrentHashMap<>();
 	protected static List<StatSet> HEROS_TO_BE;
 	private static Map<Integer, Integer> NOBLES_RANK = new HashMap<>();
-	private static List<PlayerInstance> _nonClassBasedRegisters;
-	private static Map<Integer, List<PlayerInstance>> _classBasedRegisters;
+	private static List<Player> _nonClassBasedRegisters;
+	private static Map<Integer, List<Player>> _classBasedRegisters;
 	
 	public static final String OLYMPIAD_HTML_PATH = "data/html/olympiad/";
 	private static final String OLYMPIAD_LOAD_DATA = "SELECT current_cycle, period, olympiad_end, validation_end, next_weekly_change FROM olympiad_data WHERE id = 0";
@@ -389,7 +389,7 @@ public class Olympiad extends ListenersContainer
 			final int points = getNoblessePasses(noblesId);
 			if (points > 0)
 			{
-				final PlayerInstance player = World.getInstance().getPlayer(noblesId);
+				final Player player = World.getInstance().getPlayer(noblesId);
 				if (player != null)
 				{
 					player.getVariables().set(UNCLAIMED_OLYMPIAD_PASSES_VAR, points);
@@ -529,7 +529,7 @@ public class Olympiad extends ListenersContainer
 		}
 	}
 	
-	public boolean registerNoble(PlayerInstance noble, boolean classBased)
+	public boolean registerNoble(Player noble, boolean classBased)
 	{
 		SystemMessage sm;
 		
@@ -590,8 +590,8 @@ public class Olympiad extends ListenersContainer
 		
 		if (_classBasedRegisters.containsKey(noble.getClassId().getId()))
 		{
-			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
-			for (PlayerInstance participant : classed)
+			final List<Player> classed = _classBasedRegisters.get(noble.getClassId().getId());
+			for (Player participant : classed)
 			{
 				if (participant.getObjectId() == noble.getObjectId())
 				{
@@ -641,7 +641,7 @@ public class Olympiad extends ListenersContainer
 		{
 			if (_classBasedRegisters.containsKey(noble.getClassId().getId()))
 			{
-				final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+				final List<Player> classed = _classBasedRegisters.get(noble.getClassId().getId());
 				classed.add(noble);
 				
 				_classBasedRegisters.remove(noble.getClassId().getId());
@@ -649,7 +649,7 @@ public class Olympiad extends ListenersContainer
 			}
 			else
 			{
-				final List<PlayerInstance> classed = new ArrayList<>();
+				final List<Player> classed = new ArrayList<>();
 				classed.add(noble);
 				
 				_classBasedRegisters.put(noble.getClassId().getId(), classed);
@@ -683,12 +683,12 @@ public class Olympiad extends ListenersContainer
 		NOBLES.put(playerId, stats);
 	}
 	
-	protected static List<PlayerInstance> getRegisteredNonClassBased()
+	protected static List<Player> getRegisteredNonClassBased()
 	{
 		return _nonClassBasedRegisters;
 	}
 	
-	protected static Map<Integer, List<PlayerInstance>> getRegisteredClassBased()
+	protected static Map<Integer, List<Player>> getRegisteredClassBased()
 	{
 		return _classBasedRegisters;
 	}
@@ -723,7 +723,7 @@ public class Olympiad extends ListenersContainer
 		_classBasedRegisters.clear();
 	}
 	
-	public boolean isRegistered(PlayerInstance noble)
+	public boolean isRegistered(Player noble)
 	{
 		boolean result = false;
 		
@@ -733,7 +733,7 @@ public class Olympiad extends ListenersContainer
 		}
 		else if ((_classBasedRegisters != null) && _classBasedRegisters.containsKey(noble.getClassId().getId()))
 		{
-			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+			final List<Player> classed = _classBasedRegisters.get(noble.getClassId().getId());
 			if ((classed != null) && classed.contains(noble))
 			{
 				result = true;
@@ -743,7 +743,7 @@ public class Olympiad extends ListenersContainer
 		return result;
 	}
 	
-	public boolean unRegisterNoble(PlayerInstance noble)
+	public boolean unRegisterNoble(Player noble)
 	{
 		SystemMessage sm;
 		
@@ -789,7 +789,7 @@ public class Olympiad extends ListenersContainer
 		}
 		else
 		{
-			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+			final List<Player> classed = _classBasedRegisters.get(noble.getClassId().getId());
 			classed.remove(noble);
 			
 			_classBasedRegisters.remove(noble.getClassId().getId());
@@ -807,14 +807,14 @@ public class Olympiad extends ListenersContainer
 		return true;
 	}
 	
-	public void removeDisconnectedCompetitor(PlayerInstance player)
+	public void removeDisconnectedCompetitor(Player player)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGame(player.getOlympiadGameId()) != null)
 		{
 			OlympiadManager.getInstance().getOlympiadGame(player.getOlympiadGameId()).handleDisconnect(player);
 		}
 		
-		final List<PlayerInstance> classed = _classBasedRegisters.get(player.getClassId().getId());
+		final List<Player> classed = _classBasedRegisters.get(player.getClassId().getId());
 		
 		if (_nonClassBasedRegisters.contains(player))
 		{
@@ -829,7 +829,7 @@ public class Olympiad extends ListenersContainer
 		}
 	}
 	
-	public void notifyCompetitorDamage(PlayerInstance player, int damage, int gameId)
+	public void notifyCompetitorDamage(Player player, int damage, int gameId)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGames().get(gameId) != null)
 		{
@@ -1150,7 +1150,7 @@ public class Olympiad extends ListenersContainer
 	}
 	
 	// returns the players for the given olympiad game Id
-	public PlayerInstance[] getPlayers(int id)
+	public Player[] getPlayers(int id)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGame(id) == null)
 		{
@@ -1164,7 +1164,7 @@ public class Olympiad extends ListenersContainer
 		return _currentCycle;
 	}
 	
-	public static void addSpectator(int id, PlayerInstance spectator, boolean storeCoords)
+	public static void addSpectator(int id, Player spectator, boolean storeCoords)
 	{
 		if (getInstance().isRegisteredInComp(spectator))
 		{
@@ -1185,7 +1185,7 @@ public class Olympiad extends ListenersContainer
 		}
 	}
 	
-	public static int getSpectatorArena(PlayerInstance player)
+	public static int getSpectatorArena(Player player)
 	{
 		for (int i = 0; i < OlympiadManager.STADIUMS.length; i++)
 		{
@@ -1197,7 +1197,7 @@ public class Olympiad extends ListenersContainer
 		return -1;
 	}
 	
-	public static void removeSpectator(int id, PlayerInstance spectator)
+	public static void removeSpectator(int id, Player spectator)
 	{
 		try
 		{
@@ -1209,7 +1209,7 @@ public class Olympiad extends ListenersContainer
 		}
 	}
 	
-	public List<PlayerInstance> getSpectators(int id)
+	public List<Player> getSpectators(int id)
 	{
 		try
 		{
@@ -1230,7 +1230,7 @@ public class Olympiad extends ListenersContainer
 		return OlympiadManager.getInstance().getOlympiadGames();
 	}
 	
-	public boolean playerInStadia(PlayerInstance player)
+	public boolean playerInStadia(Player player)
 	{
 		return (ZoneManager.getInstance().getOlympiadStadium(player) != null);
 	}
@@ -1248,7 +1248,7 @@ public class Olympiad extends ListenersContainer
 		
 		if (_classBasedRegisters.size() != 0)
 		{
-			for (List<PlayerInstance> classed : _classBasedRegisters.values())
+			for (List<Player> classed : _classBasedRegisters.values())
 			{
 				classCount += classed.size();
 			}
@@ -1617,7 +1617,7 @@ public class Olympiad extends ListenersContainer
 		return points;
 	}
 	
-	public boolean isRegisteredInComp(PlayerInstance player)
+	public boolean isRegisteredInComp(Player player)
 	{
 		boolean result = isRegistered(player);
 		
@@ -1736,7 +1736,7 @@ public class Olympiad extends ListenersContainer
 		NOBLES.clear();
 	}
 	
-	public static void sendMatchList(PlayerInstance player)
+	public static void sendMatchList(Player player)
 	{
 		final NpcHtmlMessage message = new NpcHtmlMessage(0);
 		message.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_observe2.htm");
@@ -1766,7 +1766,7 @@ public class Olympiad extends ListenersContainer
 		player.sendPacket(message);
 	}
 	
-	private static void handleSpectatorEnter(int gameId, PlayerInstance player)
+	private static void handleSpectatorEnter(int gameId, Player player)
 	{
 		final OlympiadGame game = OlympiadManager.getInstance().getOlympiadGame(gameId);
 		if (game != null)
@@ -1785,7 +1785,7 @@ public class Olympiad extends ListenersContainer
 		}
 	}
 	
-	public static void bypassChangeArena(String command, PlayerInstance player)
+	public static void bypassChangeArena(String command, Player player)
 	{
 		if (!player.inObserverMode())
 		{

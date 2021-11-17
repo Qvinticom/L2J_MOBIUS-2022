@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.QuestSoundHtmlHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -143,7 +143,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -215,7 +215,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
@@ -309,14 +309,14 @@ public class Q00255_Tutorial extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30))
 		{
 			// check for too many gems on ground
 			int counter = 0;
-			for (ItemInstance item : World.getInstance().getVisibleObjectsInRange(killer, ItemInstance.class, 1500))
+			for (Item item : World.getInstance().getVisibleObjectsInRange(killer, Item.class, 1500))
 			{
 				if (item.getId() == BLUE_GEM)
 				{
@@ -336,7 +336,7 @@ public class Q00255_Tutorial extends Quest
 	@Id(BLUE_GEM)
 	public void OnPlayerItemPickup(OnPlayerItemPickup event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.getMemoState() < 3))
 		{
@@ -395,7 +395,7 @@ public class Q00255_Tutorial extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (event.getCommand().startsWith(TUTORIAL_BYPASS))
 		{
 			notifyEvent(event.getCommand().replace(TUTORIAL_BYPASS, ""), null, player);
@@ -411,7 +411,7 @@ public class Q00255_Tutorial extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player.getLevel() > 6)
 		{
 			return;
@@ -424,12 +424,12 @@ public class Q00255_Tutorial extends Quest
 		}
 	}
 	
-	private void showTutorialHtml(PlayerInstance player, String html)
+	private void showTutorialHtml(Player player, String html)
 	{
 		player.sendPacket(new TutorialShowHtml(getHtm(player, html)));
 	}
 	
-	public void playTutorialVoice(PlayerInstance player, String voice)
+	public void playTutorialVoice(Player player, String voice)
 	{
 		player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
 	}

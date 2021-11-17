@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PartyMatchList extends ServerBasePacket
 {
-	private final Collection<PlayerInstance> _matchingPlayers;
+	private final Collection<Player> _matchingPlayers;
 	
-	public PartyMatchList(Collection<PlayerInstance> allPlayers)
+	public PartyMatchList(Collection<Player> allPlayers)
 	{
 		_matchingPlayers = allPlayers;
 	}
@@ -40,7 +40,7 @@ public class PartyMatchList extends ServerBasePacket
 			size = 40;
 		}
 		writeD(size);
-		for (PlayerInstance player : _matchingPlayers)
+		for (Player player : _matchingPlayers)
 		{
 			writeD(player.getObjectId());
 			writeS(player.getName());

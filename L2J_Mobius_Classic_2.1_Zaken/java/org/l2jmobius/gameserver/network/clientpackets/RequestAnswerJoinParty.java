@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.PartyRequest;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -42,7 +42,7 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -55,7 +55,7 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 		}
 		request.setProcessing(true);
 		
-		final PlayerInstance requestor = request.getActiveChar();
+		final Player requestor = request.getActiveChar();
 		if (requestor == null)
 		{
 			return;

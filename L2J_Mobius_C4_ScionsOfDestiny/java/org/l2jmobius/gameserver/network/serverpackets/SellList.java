@@ -21,8 +21,8 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,15 +30,15 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class SellList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _money;
-	private final List<ItemInstance> _selllist = new ArrayList<>();
+	private final List<Item> _selllist = new ArrayList<>();
 	
-	public SellList(PlayerInstance player)
+	public SellList(Player player)
 	{
 		_player = player;
 		_money = _player.getAdena();
-		for (ItemInstance item : _player.getInventory().getItems())
+		for (Item item : _player.getInventory().getItems())
 		{
 			if ((item != null) && !item.isEquipped() && // Not equipped
 				item.getItem().isSellable() && // Item is sellable
@@ -60,7 +60,7 @@ public class SellList implements IClientOutgoingPacket
 		
 		packet.writeH(_selllist.size());
 		
-		for (ItemInstance item : _selllist)
+		for (Item item : _selllist)
 		{
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());

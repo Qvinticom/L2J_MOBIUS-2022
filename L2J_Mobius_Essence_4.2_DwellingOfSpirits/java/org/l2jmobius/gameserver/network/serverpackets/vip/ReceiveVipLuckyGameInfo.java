@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.serverpackets.vip;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ReceiveVipLuckyGameInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ReceiveVipLuckyGameInfo(PlayerInstance player)
+	public ReceiveVipLuckyGameInfo(Player player)
 	{
 		_player = player;
 	}
@@ -41,7 +41,7 @@ public class ReceiveVipLuckyGameInfo implements IClientOutgoingPacket
 		OutgoingPackets.RECIVE_VIP_LUCKY_GAME_INFO.writeId(packet);
 		packet.writeC(1); // enabled
 		packet.writeH((int) _player.getAdena());
-		final ItemInstance item = _player.getInventory().getItemByItemId(Inventory.LCOIN_ID);
+		final Item item = _player.getInventory().getItemByItemId(Inventory.LCOIN_ID);
 		packet.writeH(item == null ? 0 : (int) item.getCount()); // L Coin count
 		return true;
 	}

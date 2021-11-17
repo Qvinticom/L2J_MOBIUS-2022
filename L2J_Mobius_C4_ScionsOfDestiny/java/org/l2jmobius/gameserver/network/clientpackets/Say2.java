@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Player.PunishLevel;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -98,7 +98,7 @@ public class Say2 implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("[Say2.java] Active Character is null.");
@@ -191,7 +191,7 @@ public class Say2 implements IClientIncomingPacket
 		{
 			case WHISPER:
 			{
-				final PlayerInstance receiver = World.getInstance().getPlayer(_target);
+				final Player receiver = World.getInstance().getPlayer(_target);
 				if (receiver == null)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_CURRENTLY_LOGGED_IN);
@@ -251,7 +251,7 @@ public class Say2 implements IClientIncomingPacket
 							return;
 						}
 						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
@@ -266,7 +266,7 @@ public class Say2 implements IClientIncomingPacket
 					else
 					{
 						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
@@ -288,7 +288,7 @@ public class Say2 implements IClientIncomingPacket
 							player.sendMessage("You must have at least " + Config.GLOBAL_PVP_AMOUNT + " pvp kills in order to speak in global chat");
 							return;
 						}
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							// Like L2OFF if player is blocked can't read the message
 							if (!plr.getBlockList().isInBlockList(player))
@@ -299,7 +299,7 @@ public class Say2 implements IClientIncomingPacket
 					}
 					else
 					{
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							// Like L2OFF if player is blocked can't read the message
 							if (!plr.getBlockList().isInBlockList(player))
@@ -322,7 +322,7 @@ public class Say2 implements IClientIncomingPacket
 							player.sendMessage("You must have at least " + Config.TRADE_PVP_AMOUNT + "  pvp kills in order to speak in trade chat");
 							return;
 						}
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							// Like L2OFF if player is blocked can't read the message
 							if (!plr.getBlockList().isInBlockList(player))
@@ -333,7 +333,7 @@ public class Say2 implements IClientIncomingPacket
 					}
 					else
 					{
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							// Like L2OFF if player is blocked can't read the message
 							if (!plr.getBlockList().isInBlockList(player))
@@ -353,7 +353,7 @@ public class Say2 implements IClientIncomingPacket
 							return;
 						}
 						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
@@ -373,7 +373,7 @@ public class Say2 implements IClientIncomingPacket
 							return;
 						}
 						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
@@ -388,7 +388,7 @@ public class Say2 implements IClientIncomingPacket
 					else
 					{
 						final int region = MapRegionData.getInstance().getMapRegion(player.getX(), player.getY());
-						for (PlayerInstance plr : World.getInstance().getAllPlayers())
+						for (Player plr : World.getInstance().getAllPlayers())
 						{
 							if (region == MapRegionData.getInstance().getMapRegion(plr.getX(), plr.getY()))
 							{
@@ -428,7 +428,7 @@ public class Say2 implements IClientIncomingPacket
 						break;
 					}
 				}
-				for (PlayerInstance plr : player.getKnownList().getKnownPlayers().values())
+				for (Player plr : player.getKnownList().getKnownPlayers().values())
 				{
 					if ((plr != null) && player.isInsideRadius2D(plr, 1250))
 					{
@@ -497,7 +497,7 @@ public class Say2 implements IClientIncomingPacket
 			{
 				if (player.isGM())
 				{
-					for (PlayerInstance plr : World.getInstance().getAllPlayers())
+					for (Player plr : World.getInstance().getAllPlayers())
 					{
 						if (plr == null)
 						{
@@ -513,7 +513,7 @@ public class Say2 implements IClientIncomingPacket
 					{
 						return;
 					}
-					for (PlayerInstance plr : World.getInstance().getAllPlayers())
+					for (Player plr : World.getInstance().getAllPlayers())
 					{
 						if (plr == null)
 						{
@@ -543,7 +543,7 @@ public class Say2 implements IClientIncomingPacket
 		return false;
 	}
 	
-	private void checkText(PlayerInstance player)
+	private void checkText(Player player)
 	{
 		if (Config.USE_SAY_FILTER)
 		{

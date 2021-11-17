@@ -19,8 +19,8 @@ package ai.bosses;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.siege.clanhalls.FortressOfResistance;
@@ -48,7 +48,7 @@ public class Nurka extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final Clan playerClan = player.getClan();
 		for (Clan clan : _clans)
@@ -72,7 +72,7 @@ public class Nurka extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final Clan playerClan = attacker.getClan();
 		if (playerClan != null)
@@ -90,7 +90,7 @@ public class Nurka extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		FortressOfResistance.getInstance().CaptureFinish();
 		return super.onKill(npc, killer, isPet);

@@ -18,7 +18,7 @@ package ai.areas.SeedOfHellfire;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 import ai.AbstractNpcAI;
 
@@ -68,7 +68,7 @@ public class Zofan extends AbstractNpcAI
 				{
 					if (params.getInt(param, -1) != -1)
 					{
-						addMinion((MonsterInstance) npc, params.getInt(param));
+						addMinion((Monster) npc, params.getInt(param));
 					}
 				}
 			}

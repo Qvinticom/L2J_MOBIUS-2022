@@ -20,7 +20,7 @@ import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.BeautyShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,14 +29,14 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExResponseBeautyList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _type;
 	private final Map<Integer, BeautyItem> _beautyItem;
 	
 	public static final int SHOW_FACESHAPE = 1;
 	public static final int SHOW_HAIRSTYLE = 0;
 	
-	public ExResponseBeautyList(PlayerInstance player, int type)
+	public ExResponseBeautyList(Player player, int type)
 	{
 		_player = player;
 		_type = type;

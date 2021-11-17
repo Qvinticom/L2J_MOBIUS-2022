@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -39,11 +39,11 @@ public class ConditionTargetInvSize extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		if ((effected != null) && effected.isPlayer())
 		{
-			final PlayerInstance target = effected.getActingPlayer();
+			final Player target = effected.getActingPlayer();
 			return target.getInventory().getNonQuestSize() <= (target.getInventoryLimit() - _size);
 		}
 		return false;

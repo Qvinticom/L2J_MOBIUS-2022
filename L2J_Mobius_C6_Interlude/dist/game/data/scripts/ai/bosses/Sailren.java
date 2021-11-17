@@ -19,8 +19,8 @@ package ai.bosses;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -40,10 +40,10 @@ public class Sailren extends Quest
 	private static final int TREX = 22215;
 	private static final int STONE = 8784;
 	// Misc
-	private static NpcInstance _vlcInstance;
-	private static NpcInstance _ptrInstance;
-	private static NpcInstance _trxInstance;
-	private static NpcInstance _slrnInstance;
+	private static Npc _vlcInstance;
+	private static Npc _ptrInstance;
+	private static Npc _trxInstance;
+	private static Npc _slrnInstance;
 	
 	private Sailren()
 	{
@@ -55,7 +55,7 @@ public class Sailren extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -113,7 +113,7 @@ public class Sailren extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (player.getInventory().getItemByItemId(STONE) != null)
 		{
@@ -125,7 +125,7 @@ public class Sailren extends Quest
 					player.destroyItemByItemId("Sailren", STONE, 1, player, true);
 					GlobalVariablesManager.getInstance().set("SailrenClose", true);
 					final BossZone zone = GrandBossManager.getInstance().getZone(27244, -7026, -1974);
-					for (PlayerInstance member : party.getPartyMembers())
+					for (Player member : party.getPartyMembers())
 					{
 						if (zone != null)
 						{
@@ -154,7 +154,7 @@ public class Sailren extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (npc == _vlcInstance)
 		{

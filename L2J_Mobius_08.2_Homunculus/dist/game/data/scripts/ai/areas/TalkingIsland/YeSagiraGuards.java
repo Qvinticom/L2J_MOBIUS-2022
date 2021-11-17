@@ -18,8 +18,8 @@ package ai.areas.TalkingIsland;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 import ai.AbstractNpcAI;
 
@@ -42,13 +42,13 @@ public class YeSagiraGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc != null) && !npc.isDead())
 		{
 			if (!npc.isInCombat())
 			{
-				final MonsterInstance monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 1000));
+				final Monster monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 1000));
 				if ((monster != null) && !monster.isDead() && !monster.isInCombat())
 				{
 					npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack

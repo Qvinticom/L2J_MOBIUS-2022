@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -69,7 +69,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		
@@ -105,7 +105,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enter_instance"))
 		{
@@ -170,7 +170,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -206,7 +206,7 @@ public class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -232,7 +232,7 @@ public class MuseumDungeon extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
-			final PlayerInstance player = world.getFirstPlayer();
+			final Player player = world.getFirstPlayer();
 			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
 			if ((qs != null) && qs.isCond(2) && world.getAliveNpcs(THIEF).isEmpty())
 			{

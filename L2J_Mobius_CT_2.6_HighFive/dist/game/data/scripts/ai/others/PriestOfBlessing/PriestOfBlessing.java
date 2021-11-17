@@ -19,7 +19,7 @@ package ai.others.PriestOfBlessing;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -102,7 +102,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		if (event.equalsIgnoreCase("buy_voice"))
@@ -167,7 +167,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String content = getHtm(player, "32783.htm");
 		content = content.replace("%donate%", Util.formatAdena(PRICE_HOURGLASS[getHGIndex(player.getLevel())]));

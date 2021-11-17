@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -54,9 +54,9 @@ public class SwampZone extends ZoneType
 	protected void onEnter(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.SWAMP, true);
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			((PlayerInstance) creature).broadcastUserInfo();
+			((Player) creature).broadcastUserInfo();
 		}
 	}
 	
@@ -64,9 +64,9 @@ public class SwampZone extends ZoneType
 	protected void onExit(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.SWAMP, false);
-		if (!creature.isTeleporting() && (creature instanceof PlayerInstance))
+		if (!creature.isTeleporting() && (creature instanceof Player))
 		{
-			((PlayerInstance) creature).broadcastUserInfo();
+			((Player) creature).broadcastUserInfo();
 		}
 	}
 	

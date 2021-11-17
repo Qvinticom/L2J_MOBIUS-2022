@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -70,7 +70,7 @@ public class SilentValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc != null) && !npc.isDead())
 		{
@@ -98,7 +98,7 @@ public class SilentValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -140,7 +140,7 @@ public class SilentValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (getRandom(1000) < SPAWN_CHANCE)
 		{
@@ -158,7 +158,7 @@ public class SilentValley extends AbstractNpcAI
 	{
 		if (creature.isPlayable())
 		{
-			final PlayerInstance player = (creature.isSummon()) ? ((Summon) creature).getOwner() : creature.getActingPlayer();
+			final Player player = (creature.isSummon()) ? ((Summon) creature).getOwner() : creature.getActingPlayer();
 			if ((npc.getId() == GUARD1) || (npc.getId() == GUARD2))
 			{
 				npc.setTarget(player);

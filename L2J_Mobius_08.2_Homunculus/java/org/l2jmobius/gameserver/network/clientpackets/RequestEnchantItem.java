@@ -26,13 +26,13 @@ import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantResultType;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -63,7 +63,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -91,9 +91,9 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = request.getEnchantingItem();
-		final ItemInstance scroll = request.getEnchantingScroll();
-		final ItemInstance support = request.getSupportItem();
+		final Item item = request.getEnchantingItem();
+		final Item scroll = request.getEnchantingScroll();
+		final Item support = request.getSupportItem();
 		if ((item == null) || (scroll == null))
 		{
 			player.removeRequest(request.getClass());
@@ -181,7 +181,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 				case SUCCESS:
 				{
-					final Item it = item.getItem();
+					final ItemTemplate it = item.getItem();
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(player, item) > 0)
 					{
@@ -304,7 +304,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								client.sendPacket(sm);
 							}
 							
-							for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot()))
+							for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot()))
 							{
 								iu.addModifiedItem(itm);
 							}
@@ -392,7 +392,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								count = Math.max(0, item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2));
 							}
 							
-							ItemInstance crystals = null;
+							Item crystals = null;
 							final int crystalId = item.getItem().getCrystalItemId();
 							if (count > 0)
 							{

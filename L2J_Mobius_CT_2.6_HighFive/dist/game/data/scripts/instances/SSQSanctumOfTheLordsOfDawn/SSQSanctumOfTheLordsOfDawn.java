@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -75,7 +75,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -165,7 +165,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -179,7 +179,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		switch (npc.getId())
 		{
@@ -215,7 +215,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 							world.openDoor(DOOR_TWO);
 							world.setParameter("doorst", doorst + 1);
 							npc.decayMe();
-							for (PlayerInstance plr : world.getAllowed())
+							for (Player plr : world.getAllowed())
 							{
 								if (plr != null)
 								{
@@ -259,7 +259,7 @@ public class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		npc.disableCoreAI(true); // disable core AI
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));

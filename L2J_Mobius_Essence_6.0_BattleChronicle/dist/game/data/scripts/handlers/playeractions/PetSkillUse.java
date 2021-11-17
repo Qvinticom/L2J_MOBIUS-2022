@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -32,14 +32,14 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class PetSkillUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (player.getTarget() == null)
 		{
 			return;
 		}
 		
-		final PetInstance pet = player.getPet();
+		final Pet pet = player.getPet();
 		if (pet == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_PET);

@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.HtmlUtil;
 import org.l2jmobius.gameserver.util.Util;
@@ -54,7 +54,7 @@ public class NpcViewMod implements IBypassHandler
 	private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature bypassOrigin)
+	public boolean useBypass(String command, Player player, Creature bypassOrigin)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
@@ -139,7 +139,7 @@ public class NpcViewMod implements IBypassHandler
 		return COMMANDS;
 	}
 	
-	public static void sendNpcView(PlayerInstance player, Npc npc)
+	public static void sendNpcView(Player player, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(player, "data/html/mods/NpcView/Info.htm");
@@ -226,7 +226,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	private void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int pageValue)
+	private void sendNpcDropList(Player player, Npc npc, DropType dropType, int pageValue)
 	{
 		final List<DropHolder> templateList = dropType == DropType.SPOIL ? npc.getTemplate().getSpoilList() : npc.getTemplate().getDropList();
 		if (templateList == null)
@@ -279,7 +279,7 @@ public class NpcViewMod implements IBypassHandler
 			final StringBuilder sb = new StringBuilder();
 			final int height = 64;
 			final DropHolder dropItem = dropList.get(i);
-			final Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
+			final ItemTemplate item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 			
 			// real time server rate calculations
 			double rateChance = 1;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchResult;
@@ -103,9 +103,9 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		
 		List<Integer> teamOne = null;
 		List<Integer> teamTwo = null;
-		PlayerInstance player;
-		final List<PlayerInstance> teamOnePlayers = new ArrayList<>(MAX_TEAM_SIZE);
-		final List<PlayerInstance> teamTwoPlayers = new ArrayList<>(MAX_TEAM_SIZE);
+		Player player;
+		final List<Player> teamOnePlayers = new ArrayList<>(MAX_TEAM_SIZE);
+		final List<Player> teamTwoPlayers = new ArrayList<>(MAX_TEAM_SIZE);
 		
 		while (list.size() > 1)
 		{
@@ -462,7 +462,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void handleDisconnect(PlayerInstance player)
+	protected final void handleDisconnect(Player player)
 	{
 		Participant par;
 		for (int i = _teamOneSize; --i >= 0;)
@@ -962,7 +962,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	 * UnAfraid: TODO: We should calculate the damage in array separately for each player so we can display it on ExOlympiadMatchResult correctly.
 	 */
 	@Override
-	protected final void addDamage(PlayerInstance player, int damage)
+	protected final void addDamage(Player player, int damage)
 	{
 		Participant par;
 		for (int i = _teamOneSize; --i >= 0;)

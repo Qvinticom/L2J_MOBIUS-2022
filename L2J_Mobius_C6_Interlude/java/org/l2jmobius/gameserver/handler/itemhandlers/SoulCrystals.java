@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -81,21 +81,21 @@ public class SoulCrystals implements IItemHandler
 	
 	// Our main method, where everything goes on
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		final WorldObject target = player.getTarget();
-		if (!(target instanceof MonsterInstance))
+		if (!(target instanceof Monster))
 		{
 			// Send a System Message to the caster
 			player.sendPacket(new SystemMessage(SystemMessageId.INVALID_TARGET));
 			
-			// Send a Server->Client packet ActionFailed to the PlayerInstance
+			// Send a Server->Client packet ActionFailed to the Player
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			
 			return;
@@ -109,7 +109,7 @@ public class SoulCrystals implements IItemHandler
 		}
 		
 		// u can use soul crystal only when target hp goes below 50%
-		if (((MonsterInstance) target).getCurrentHp() > (((MonsterInstance) target).getMaxHp() / 2.0))
+		if (((Monster) target).getCurrentHp() > (((Monster) target).getMaxHp() / 2.0))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -129,11 +129,11 @@ public class SoulCrystals implements IItemHandler
 	
 	static class CrystalFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		private final Attackable _target;
 		private final int _crystalId;
 		
-		CrystalFinalizer(PlayerInstance player, WorldObject target, int crystalId)
+		CrystalFinalizer(Player player, WorldObject target, int crystalId)
 		{
 			_player = player;
 			_target = (Attackable) target;

@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -30,14 +30,14 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class AddSpiritExp implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		
 		ElementalSpirit spirit = null;
 		switch (item.getId())
@@ -78,7 +78,7 @@ public class AddSpiritExp implements IItemHandler
 		return false;
 	}
 	
-	private boolean checkConditions(PlayerInstance player, ElementalSpirit spirit)
+	private boolean checkConditions(Player player, ElementalSpirit spirit)
 	{
 		if (player.isInBattle())
 		{

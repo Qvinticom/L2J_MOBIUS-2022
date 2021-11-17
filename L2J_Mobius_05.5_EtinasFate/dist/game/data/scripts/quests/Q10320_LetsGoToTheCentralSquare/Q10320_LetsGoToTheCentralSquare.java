@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -58,7 +58,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -98,7 +98,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
@@ -128,7 +128,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				if (player.getLevel() <= MAX_LEVEL)
@@ -146,7 +146,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerCreate(OnPlayerCreate event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player.getRace() != Race.ERTHEIA)
 		{
 			player.getVariables().set(MOVIE_VAR, true);

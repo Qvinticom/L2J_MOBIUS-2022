@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExReplyPostItemList implements IClientOutgoingPacket
 {
-	PlayerInstance _player;
-	private final Collection<ItemInstance> _itemList;
+	Player _player;
+	private final Collection<Item> _itemList;
 	
-	public ExReplyPostItemList(PlayerInstance player)
+	public ExReplyPostItemList(Player player)
 	{
 		_player = player;
 		_itemList = _player.getInventory().getAvailableItems(true, false, false);
@@ -43,7 +43,7 @@ public class ExReplyPostItemList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_REPLY_POST_ITEM_LIST.writeId(packet);
 		packet.writeD(_itemList.size());
-		for (ItemInstance item : _itemList)
+		for (Item item : _itemList)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());

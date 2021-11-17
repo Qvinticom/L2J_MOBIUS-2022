@@ -19,15 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreListSell implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
-	private final PlayerInstance _seller;
+	private final Player _player;
+	private final Player _seller;
 	
-	public PrivateStoreListSell(PlayerInstance player, PlayerInstance seller)
+	public PrivateStoreListSell(Player player, Player seller)
 	{
 		_player = player;
 		_seller = seller;

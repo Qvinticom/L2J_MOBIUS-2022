@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Task dedicated to make damage to the player while drowning.
@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class WaterTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public WaterTask(PlayerInstance player)
+	public WaterTask(Player player)
 	{
 		_player = player;
 	}

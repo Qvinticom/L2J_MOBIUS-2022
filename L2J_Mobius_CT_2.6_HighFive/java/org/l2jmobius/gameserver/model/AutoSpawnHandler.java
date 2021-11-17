@@ -439,7 +439,7 @@ public class AutoSpawnHandler
 				{
 					npcInst = newSpawn.doSpawn();
 					npcInst.setXYZ(npcInst.getX(), npcInst.getY(), npcInst.getZ());
-					spawnInst.addNpcInstance(npcInst);
+					spawnInst.addNpc(npcInst);
 				}
 				else
 				{
@@ -451,7 +451,7 @@ public class AutoSpawnHandler
 						npcInst.setXYZ(npcInst.getX() + Rnd.get(50), npcInst.getY() + Rnd.get(50), npcInst.getZ());
 						
 						// Add the NPC instance to the list of managed instances.
-						spawnInst.addNpcInstance(npcInst);
+						spawnInst.addNpc(npcInst);
 					}
 				}
 				newSpawn.stopRespawn();
@@ -512,7 +512,7 @@ public class AutoSpawnHandler
 					return;
 				}
 				
-				for (Npc npcInst : spawnInst.getNPCInstanceList())
+				for (Npc npcInst : spawnInst.getNpcList())
 				{
 					if (npcInst == null)
 					{
@@ -521,7 +521,7 @@ public class AutoSpawnHandler
 					
 					npcInst.deleteMe();
 					SpawnTable.getInstance().deleteSpawn(npcInst.getSpawn(), false);
-					spawnInst.removeNpcInstance(npcInst);
+					spawnInst.removeNpc(npcInst);
 				}
 			}
 			catch (Exception e)
@@ -577,12 +577,12 @@ public class AutoSpawnHandler
 			_spawnActive = activeValue;
 		}
 		
-		protected boolean addNpcInstance(Npc npcInst)
+		protected boolean addNpc(Npc npcInst)
 		{
 			return _npcList.add(npcInst);
 		}
 		
-		protected boolean removeNpcInstance(Npc npcInst)
+		protected boolean removeNpc(Npc npcInst)
 		{
 			return _npcList.remove(npcInst);
 		}
@@ -627,7 +627,7 @@ public class AutoSpawnHandler
 			return _locList;
 		}
 		
-		public Queue<Npc> getNPCInstanceList()
+		public Queue<Npc> getNpcList()
 		{
 			return _npcList;
 		}

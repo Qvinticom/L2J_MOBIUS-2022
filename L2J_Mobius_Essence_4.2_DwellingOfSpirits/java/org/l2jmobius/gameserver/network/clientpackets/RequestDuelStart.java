@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -46,7 +46,7 @@ public class RequestDuelStart implements IClientIncomingPacket
 		return true;
 	}
 	
-	private void scheduleDeny(PlayerInstance player, String name)
+	private void scheduleDeny(Player player, String name)
 	{
 		if (player != null)
 		{
@@ -60,7 +60,7 @@ public class RequestDuelStart implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -106,7 +106,7 @@ public class RequestDuelStart implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance targetChar = World.getInstance().getPlayer(_player);
+		final Player targetChar = World.getInstance().getPlayer(_player);
 		if (targetChar == null)
 		{
 			player.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
@@ -162,7 +162,7 @@ public class RequestDuelStart implements IClientIncomingPacket
 			}
 			
 			// Check if every player is ready for a duel
-			for (PlayerInstance temp : player.getParty().getMembers())
+			for (Player temp : player.getParty().getMembers())
 			{
 				if (!temp.canDuel())
 				{
@@ -170,8 +170,8 @@ public class RequestDuelStart implements IClientIncomingPacket
 					return;
 				}
 			}
-			PlayerInstance partyLeader = null; // snatch party leader of targetChar's party
-			for (PlayerInstance temp : targetChar.getParty().getMembers())
+			Player partyLeader = null; // snatch party leader of targetChar's party
+			for (Player temp : targetChar.getParty().getMembers())
 			{
 				if (partyLeader == null)
 				{

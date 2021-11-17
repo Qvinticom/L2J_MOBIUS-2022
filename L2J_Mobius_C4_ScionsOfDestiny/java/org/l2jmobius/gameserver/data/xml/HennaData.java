@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Henna;
 
 /**
@@ -85,11 +85,11 @@ public class HennaData implements IXmlReader
 	}
 	
 	/**
-	 * Retrieve all {@link Henna}s available for a {@link PlayerInstance} class.
+	 * Retrieve all {@link Henna}s available for a {@link Player} class.
 	 * @param player : The Player used as class parameter.
 	 * @return a List of all available Hennas for this Player.
 	 */
-	public List<Henna> getAvailableHennasFor(PlayerInstance player)
+	public List<Henna> getAvailableHennasFor(Player player)
 	{
 		final List<Henna> result = new ArrayList<>();
 		for (Henna henna : _hennas.values())

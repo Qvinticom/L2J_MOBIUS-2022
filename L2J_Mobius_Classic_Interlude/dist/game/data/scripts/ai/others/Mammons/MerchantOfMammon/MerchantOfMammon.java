@@ -19,7 +19,7 @@ package ai.others.Mammons.MerchantOfMammon;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 import ai.AbstractNpcAI;
@@ -55,7 +55,7 @@ public class MerchantOfMammon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)

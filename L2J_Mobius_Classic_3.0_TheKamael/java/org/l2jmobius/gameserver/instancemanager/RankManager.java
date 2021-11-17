@@ -30,7 +30,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 
 /**
@@ -246,7 +246,7 @@ public class RankManager
 		return _snapshotOlyList;
 	}
 	
-	public int getPlayerGlobalRank(PlayerInstance player)
+	public int getPlayerGlobalRank(Player player)
 	{
 		final int playerOid = player.getObjectId();
 		for (Entry<Integer, StatSet> entry : _mainList.entrySet())
@@ -261,7 +261,7 @@ public class RankManager
 		return 0;
 	}
 	
-	public int getPlayerRaceRank(PlayerInstance player)
+	public int getPlayerRaceRank(Player player)
 	{
 		final int playerOid = player.getObjectId();
 		for (StatSet stats : _mainList.values())

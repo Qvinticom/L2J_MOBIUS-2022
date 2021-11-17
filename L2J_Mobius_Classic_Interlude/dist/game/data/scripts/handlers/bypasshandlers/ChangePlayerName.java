@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
@@ -39,7 +39,7 @@ public class ChangePlayerName implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		// Need to have at least one Name Change Ticket in order to proceed.
 		final PlayerInventory inventory = player.getInventory();
@@ -78,7 +78,7 @@ public class ChangePlayerName implements IBypassHandler
 		{
 			// Delete party window for other party members
 			player.getParty().broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
-			for (PlayerInstance member : player.getParty().getMembers())
+			for (Player member : player.getParty().getMembers())
 			{
 				// And re-add
 				if (member != player)

@@ -55,11 +55,10 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TeleporterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.WarehouseInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
+import org.l2jmobius.gameserver.model.actor.instance.Teleporter;
+import org.l2jmobius.gameserver.model.actor.instance.Warehouse;
 import org.l2jmobius.gameserver.model.actor.stat.NpcStat;
 import org.l2jmobius.gameserver.model.actor.status.NpcStatus;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -76,7 +75,7 @@ import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -114,15 +113,15 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class Npc extends Creature
 {
-	/** The interaction distance of the NpcInstance(is used as offset in MovetoLocation method) */
+	/** The interaction distance of the Npc(is used as offset in MovetoLocation method) */
 	public static final int INTERACTION_DISTANCE = 250;
 	/** Maximum distance where the drop may appear given this NPC position. */
 	public static final int RANDOM_ITEM_DROP_LIMIT = 70;
 	/** Ids of NPCs that see creatures through the OnCreatureSee event. */
 	private static final Set<Integer> CREATURE_SEE_IDS = ConcurrentHashMap.newKeySet();
-	/** The Spawn object that manage this NpcInstance */
+	/** The Spawn object that manage this Npc */
 	private Spawn _spawn;
-	/** The flag to specify if this NpcInstance is busy */
+	/** The flag to specify if this Npc is busy */
 	private boolean _isBusy = false;
 	/** True if endDecayTask has already been called */
 	private volatile boolean _isDecayed = false;
@@ -169,7 +168,7 @@ public class Npc extends Creature
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
 	
 	/**
-	 * Constructor of NpcInstance (use Creature constructor).<br>
+	 * Constructor of Npc (use Creature constructor).<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
@@ -201,12 +200,12 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Send a packet SocialAction to all PlayerInstance in the _KnownPlayers of the NpcInstance and create a new RandomAnimation Task.
+	 * Send a packet SocialAction to all Player in the _KnownPlayers of the Npc and create a new RandomAnimation Task.
 	 * @param animationId
 	 */
 	public void onRandomAnimation(int animationId)
 	{
-		// Send a packet SocialAction to all PlayerInstance in the _KnownPlayers of the NpcInstance
+		// Send a packet SocialAction to all Player in the _KnownPlayers of the Npc
 		final long now = Chronos.currentTimeMillis();
 		if ((now - _lastSocialBroadcast) > MINIMUM_SOCIAL_INTERVAL)
 		{
@@ -274,7 +273,7 @@ public class Npc extends Creature
 		setStatus(new NpcStatus(this));
 	}
 	
-	/** Return the NpcTemplate of the NpcInstance. */
+	/** Return the NpcTemplate of the Npc. */
 	@Override
 	public NpcTemplate getTemplate()
 	{
@@ -298,7 +297,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Return the Level of this NpcInstance contained in the NpcTemplate.
+	 * Return the Level of this Npc contained in the NpcTemplate.
 	 */
 	@Override
 	public int getLevel()
@@ -315,7 +314,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the Aggro Range of this NpcInstance either contained in the NpcTemplate, or overriden by spawnlist AI value.
+	 * @return the Aggro Range of this Npc either contained in the NpcTemplate, or overriden by spawnlist AI value.
 	 */
 	public int getAggroRange()
 	{
@@ -332,7 +331,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Return True if this NpcInstance is undead in function of the NpcTemplate.
+	 * Return True if this Npc is undead in function of the NpcTemplate.
 	 */
 	@Override
 	public boolean isUndead()
@@ -341,12 +340,12 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Send a packet NpcInfo with state of abnormal effect to all PlayerInstance in the _KnownPlayers of the NpcInstance.
+	 * Send a packet NpcInfo with state of abnormal effect to all Player in the _KnownPlayers of the Npc.
 	 */
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
+		World.getInstance().forEachVisibleObject(this, Player.class, player ->
 		{
 			if (!isVisibleFor(player))
 			{
@@ -413,7 +412,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the Identifier of the item in the left hand of this NpcInstance contained in the NpcTemplate.
+	 * @return the Identifier of the item in the left hand of this Npc contained in the NpcTemplate.
 	 */
 	public int getLeftHandItem()
 	{
@@ -421,7 +420,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the Identifier of the item in the right hand of this NpcInstance contained in the NpcTemplate.
+	 * @return the Identifier of the item in the right hand of this Npc contained in the NpcTemplate.
 	 */
 	public int getRightHandItem()
 	{
@@ -434,7 +433,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the busy status of this NpcInstance.
+	 * @return the busy status of this Npc.
 	 */
 	public boolean isBusy()
 	{
@@ -457,7 +456,7 @@ public class Npc extends Creature
 		return false;
 	}
 	
-	public boolean canTarget(PlayerInstance player)
+	public boolean canTarget(Player player)
 	{
 		if (player.isControlBlocked())
 		{
@@ -473,7 +472,7 @@ public class Npc extends Creature
 		return true;
 	}
 	
-	public boolean canInteract(PlayerInstance player)
+	public boolean canInteract(Player player)
 	{
 		if (player.isCastingNow())
 		{
@@ -549,7 +548,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the nearest Castle this NpcInstance belongs to. Otherwise null.
+	 * @return the nearest Castle this Npc belongs to. Otherwise null.
 	 */
 	public Castle getCastle()
 	{
@@ -586,7 +585,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the nearest Fort this NpcInstance belongs to. Otherwise null.
+	 * @return the nearest Fort this Npc belongs to. Otherwise null.
 	 */
 	public Fort getFort()
 	{
@@ -604,7 +603,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Open a quest or chat window on client with the text of the NpcInstance in function of the command.<br>
+	 * Open a quest or chat window on client with the text of the Npc in function of the command.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b>
 	 * <ul>
@@ -613,7 +612,7 @@ public class Npc extends Creature
 	 * @param player
 	 * @param command The command string received from client
 	 */
-	public void onBypassFeedback(PlayerInstance player, String command)
+	public void onBypassFeedback(Player player, String command)
 	{
 		if (canInteract(player))
 		{
@@ -633,13 +632,13 @@ public class Npc extends Creature
 	 * Return null (regular NPCs don't have weapons instances).
 	 */
 	@Override
-	public ItemInstance getActiveWeaponInstance()
+	public Item getActiveWeaponInstance()
 	{
 		return null;
 	}
 	
 	/**
-	 * Return the weapon item equipped in the right hand of the NpcInstance or null.
+	 * Return the weapon item equipped in the right hand of the Npc or null.
 	 */
 	@Override
 	public Weapon getActiveWeaponItem()
@@ -651,13 +650,13 @@ public class Npc extends Creature
 	 * Return null (regular NPCs don't have weapons instances).
 	 */
 	@Override
-	public ItemInstance getSecondaryWeaponInstance()
+	public Item getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
 	/**
-	 * Return the weapon item equipped in the left hand of the NpcInstance or null.
+	 * Return the weapon item equipped in the left hand of the Npc or null.
 	 */
 	@Override
 	public Weapon getSecondaryWeaponItem()
@@ -672,12 +671,12 @@ public class Npc extends Creature
 	 * <li>if the file exists on the server (page number > 0) : <b>data/html/default/12006-1.htm</b> (npcId-page number)</li>
 	 * <li>if the file doesn't exist on the server : <b>data/html/npcdefault.htm</b> (message : "I have nothing to say to you")</li>
 	 * </ul>
-	 * @param npcId The Identifier of the NpcInstance whose text must be display
+	 * @param npcId The Identifier of the Npc whose text must be display
 	 * @param value The number of the page to display
 	 * @param player The player that speaks to this NPC
 	 * @return the pathfile of the selected HTML file in function of the npcId and of the page number.
 	 */
-	public String getHtmlPath(int npcId, int value, PlayerInstance player)
+	public String getHtmlPath(int npcId, int value, Player player)
 	{
 		String pom = "";
 		if (value == 0)
@@ -707,7 +706,7 @@ public class Npc extends Creature
 		return "data/html/npcdefault.htm";
 	}
 	
-	public void showChatWindow(PlayerInstance player)
+	public void showChatWindow(Player player)
 	{
 		showChatWindow(player, 0);
 	}
@@ -718,7 +717,7 @@ public class Npc extends Creature
 	 * @param type
 	 * @return boolean
 	 */
-	private boolean showPkDenyChatWindow(PlayerInstance player, String type)
+	private boolean showPkDenyChatWindow(Player player, String type)
 	{
 		String html = HtmCache.getInstance().getHtm(player, "data/html/" + type + "/" + getId() + "-pk.htm");
 		if (html != null)
@@ -732,18 +731,18 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Open a chat window on client with the text of the NpcInstance.<br>
+	 * Open a chat window on client with the text of the Npc.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player</li>
+	 * <li>Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet</li>
 	 * </ul>
-	 * @param player The PlayerInstance that talk with the NpcInstance
-	 * @param value The number of the page of the NpcInstance to display
+	 * @param player The Player that talk with the Npc
+	 * @param value The number of the page of the Npc to display
 	 */
-	public void showChatWindow(PlayerInstance player, int value)
+	public void showChatWindow(Player player, int value)
 	{
 		if (!_isTalkable)
 		{
@@ -753,28 +752,28 @@ public class Npc extends Creature
 		
 		if (player.getReputation() < 0)
 		{
-			if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof MerchantInstance))
+			if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof Merchant))
 			{
 				if (showPkDenyChatWindow(player, "merchant"))
 				{
 					return;
 				}
 			}
-			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (this instanceof TeleporterInstance))
+			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (this instanceof Teleporter))
 			{
 				if (showPkDenyChatWindow(player, "teleporter"))
 				{
 					return;
 				}
 			}
-			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (this instanceof WarehouseInstance))
+			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (this instanceof Warehouse))
 			{
 				if (showPkDenyChatWindow(player, "warehouse"))
 				{
 					return;
 				}
 			}
-			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof FishermanInstance))
+			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (this instanceof Fisherman))
 			{
 				if (showPkDenyChatWindow(player, "fisherman"))
 				{
@@ -844,31 +843,31 @@ public class Npc extends Creature
 			}
 		}
 		
-		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
+		// Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player, filename);
 		html.replace("%npcname%", getName());
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		player.sendPacket(html);
 		
-		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	/**
 	 * Open a chat window on client with the text specified by the given file name and path, relative to the datapack root.
-	 * @param player The PlayerInstance that talk with the NpcInstance
+	 * @param player The Player that talk with the Npc
 	 * @param filename The filename that contains the text to send
 	 */
-	public void showChatWindow(PlayerInstance player, String filename)
+	public void showChatWindow(Player player, String filename)
 	{
-		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
+		// Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player, filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		player.sendPacket(html);
 		
-		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
@@ -893,16 +892,16 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Kill the NpcInstance (the corpse disappeared after 7 seconds).<br>
+	 * Kill the Npc (the corpse disappeared after 7 seconds).<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
-	 * <li>Create a DecayTask to remove the corpse of the NpcInstance after 7 seconds</li>
+	 * <li>Create a DecayTask to remove the corpse of the Npc after 7 seconds</li>
 	 * <li>Set target to null and cancel Attack or Cast</li>
 	 * <li>Stop movement</li>
 	 * <li>Stop HP/MP/CP Regeneration task</li>
 	 * <li>Stop all active skills effects in progress on the Creature</li>
-	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform</li>
+	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform</li>
 	 * <li>Notify Creature AI</li>
 	 * </ul>
 	 * @param killer The Creature who killed it
@@ -926,7 +925,7 @@ public class Npc extends Creature
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
 		if (_isFakePlayer && (killer != null) && killer.isPlayable())
 		{
-			final PlayerInstance player = killer.getActingPlayer();
+			final Player player = killer.getActingPlayer();
 			if (isScriptValue(0) && (getReputation() >= 0))
 			{
 				if (Config.FAKE_PLAYER_KILL_KARMA)
@@ -1007,7 +1006,7 @@ public class Npc extends Creature
 		// Apply Mp Rewards
 		if ((getTemplate().getMpRewardValue() > 0) && (killer != null) && killer.isPlayable())
 		{
-			final PlayerInstance killerPlayer = killer.getActingPlayer();
+			final Player killerPlayer = killer.getActingPlayer();
 			new MpRewardTask(killerPlayer, this);
 			for (Summon summon : killerPlayer.getServitors().values())
 			{
@@ -1018,7 +1017,7 @@ public class Npc extends Creature
 				final Party party = killerPlayer.getParty();
 				if (party != null)
 				{
-					for (PlayerInstance member : party.getMembers())
+					for (Player member : party.getMembers())
 					{
 						if ((member != killerPlayer) && (member.calculateDistance3D(getX(), getY(), getZ()) <= Config.ALT_PARTY_RANGE))
 						{
@@ -1038,8 +1037,8 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Set the spawn of the NpcInstance.
-	 * @param spawn The Spawn that manage the NpcInstance
+	 * Set the spawn of the Npc.
+	 * @param spawn The Spawn that manage the Npc
 	 */
 	public void setSpawn(Spawn spawn)
 	{
@@ -1131,11 +1130,11 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Remove the NpcInstance from the world and update its spawn object (for a complete removal use the deleteMe method).<br>
+	 * Remove the Npc from the world and update its spawn object (for a complete removal use the deleteMe method).<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
-	 * <li>Remove the NpcInstance from the world when the decay task is launched</li>
+	 * <li>Remove the Npc from the world when the decay task is launched</li>
 	 * <li>Decrease its spawn counter</li>
 	 * <li>Manage Siege task (killFlag, killCT)</li>
 	 * </ul>
@@ -1151,7 +1150,7 @@ public class Npc extends Creature
 		}
 		setDecayed(true);
 		
-		// Remove the NpcInstance from the world when the decay task is launched
+		// Remove the Npc from the world when the decay task is launched
 		super.onDecay();
 		
 		// Decrease its spawn counter
@@ -1182,12 +1181,12 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Remove PROPERLY the NpcInstance from the world.<br>
+	 * Remove PROPERLY the Npc from the world.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
-	 * <li>Remove the NpcInstance from the world and update its spawn object</li>
-	 * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the NpcInstance then cancel Attack or Cast and notify AI</li>
+	 * <li>Remove the Npc from the world and update its spawn object</li>
+	 * <li>Remove all WorldObject from _knownObjects and _knownPlayer of the Npc then cancel Attack or Cast and notify AI</li>
 	 * <li>Remove WorldObject object from _allObjects of World</li>
 	 * </ul>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packets to players</b></font><br>
@@ -1216,7 +1215,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * @return the Spawn object that manage this NpcInstance.
+	 * @return the Spawn object that manage this Npc.
 	 */
 	public Spawn getSpawn()
 	{
@@ -1303,7 +1302,7 @@ public class Npc extends Creature
 	}
 	
 	@Override
-	public void sendInfo(PlayerInstance player)
+	public void sendInfo(Player player)
 	{
 		if (isVisibleFor(player))
 		{
@@ -1565,9 +1564,9 @@ public class Npc extends Creature
 	 * @param itemCount the item count
 	 * @return the dropped item
 	 */
-	public ItemInstance dropItem(Creature creature, int itemId, long itemCount)
+	public Item dropItem(Creature creature, int itemId, long itemCount)
 	{
-		ItemInstance item = null;
+		Item item = null;
 		for (int i = 0; i < itemCount; i++)
 		{
 			// Randomize drop position.
@@ -1615,7 +1614,7 @@ public class Npc extends Creature
 	 * @param item the item holder
 	 * @return the dropped item
 	 */
-	public ItemInstance dropItem(Creature creature, ItemHolder item)
+	public Item dropItem(Creature creature, ItemHolder item)
 	{
 		return dropItem(creature, item.getId(), item.getCount());
 	}
@@ -1627,7 +1626,7 @@ public class Npc extends Creature
 	}
 	
 	@Override
-	public boolean isVisibleFor(PlayerInstance player)
+	public boolean isVisibleFor(Player player)
 	{
 		if (hasListener(EventType.ON_NPC_CAN_BE_SEEN))
 		{

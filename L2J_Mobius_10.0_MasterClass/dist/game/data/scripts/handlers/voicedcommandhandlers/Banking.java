@@ -18,7 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * This class trades Gold Bars for Adena and vice versa.
@@ -34,7 +34,7 @@ public class Banking implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (command.equals("bank"))
 		{

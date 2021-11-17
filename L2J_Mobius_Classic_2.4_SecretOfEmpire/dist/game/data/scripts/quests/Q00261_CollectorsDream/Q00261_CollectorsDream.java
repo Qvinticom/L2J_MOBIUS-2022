@@ -18,7 +18,7 @@ package quests.Q00261_CollectorsDream;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -60,7 +60,7 @@ public class Q00261_CollectorsDream extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && event.equals("30222-03.htm"))
@@ -72,7 +72,7 @@ public class Q00261_CollectorsDream extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && giveItemRandomly(killer, SPIDER_LEG, 1, MAX_LEG_COUNT, 1, true))
@@ -83,7 +83,7 @@ public class Q00261_CollectorsDream extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -121,7 +121,7 @@ public class Q00261_CollectorsDream extends Quest
 		return htmltext;
 	}
 	
-	public static void giveNewbieReward(PlayerInstance player)
+	public static void giveNewbieReward(Player player)
 	{
 		final PlayerVariables vars = player.getVariables();
 		if (vars.getString("GUIDE_MISSION", null) == null)

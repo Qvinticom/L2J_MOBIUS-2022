@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
@@ -32,7 +32,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(PacketWriter packet, ItemInstance item)
+	protected void writeItem(PacketWriter packet, Item item)
 	{
 		writeItem(packet, new ItemInfo(item));
 	}

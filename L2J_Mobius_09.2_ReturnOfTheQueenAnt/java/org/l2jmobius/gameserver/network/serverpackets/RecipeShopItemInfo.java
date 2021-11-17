@@ -17,18 +17,18 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopItemInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _manufacturer;
+	private final Player _manufacturer;
 	private final int _recipeId;
 	private final Boolean _success;
 	private final long _manufacturePrice;
 	private final long _offeringMaximumAdena;
 	
-	public RecipeShopItemInfo(PlayerInstance manufacturer, int recipeId, boolean success, long manufacturePrice, long offeringMaximumAdena)
+	public RecipeShopItemInfo(Player manufacturer, int recipeId, boolean success, long manufacturePrice, long offeringMaximumAdena)
 	{
 		_manufacturer = manufacturer;
 		_recipeId = recipeId;
@@ -37,7 +37,7 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 		_offeringMaximumAdena = offeringMaximumAdena;
 	}
 	
-	public RecipeShopItemInfo(PlayerInstance manufacturer, int recipeId, long manufacturePrice, long offeringMaximumAdena)
+	public RecipeShopItemInfo(Player manufacturer, int recipeId, long manufacturePrice, long offeringMaximumAdena)
 	{
 		_manufacturer = manufacturer;
 		_recipeId = recipeId;

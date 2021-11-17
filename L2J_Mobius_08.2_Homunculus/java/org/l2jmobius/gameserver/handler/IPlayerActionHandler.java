@@ -17,12 +17,12 @@
 package org.l2jmobius.gameserver.handler;
 
 import org.l2jmobius.gameserver.model.ActionDataHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author UnAfraid
  */
 public interface IPlayerActionHandler
 {
-	void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed);
+	void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed);
 }

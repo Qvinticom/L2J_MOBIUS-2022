@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
@@ -111,7 +111,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance world, PlayerInstance player)
+	public void onInstanceCreated(Instance world, Player player)
 	{
 		world.setStatus(0);
 		world.getParameters().set("BARRICADE_DESTROYED", false);
@@ -128,7 +128,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -184,7 +184,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				boolean CORRIDOR_MOBS_4_SPAWNED = world.getParameters().getBoolean("CORRIDOR_MOBS_4_SPAWNED", false);
 				if (isInInstance(world))
 				{
-					final MonsterInstance monsterCheck = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 2500));
+					final Monster monsterCheck = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 					if (monsterCheck == null)
 					{
 						if (!world.getNpcsOfGroup("BARRICADES_2").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty() && world.getNpcsOfGroup("BARRICADES_1").isEmpty())
@@ -356,7 +356,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 					final Npc _sealOfGnosis = world.getNpc(SEAL_OF_GNOSIS);
 					_sealOfGnosis.setDisplayEffect(3);
 					_sealOfGnosis.broadcastPacket(new MagicSkillUse(_sealOfGnosis, _sealOfGnosis, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 1, 10000, 0));
-					PlayerInstance member = world.getPlayers().stream().findAny().get();
+					Player member = world.getPlayers().stream().findAny().get();
 					STIGMA_OF_REVELATION.getSkill().applyEffects(member, member);
 					world.getNpcsOfGroup("ETINA_MINIONS").forEach(minion ->
 					{
@@ -477,7 +477,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = attacker.getInstanceWorld();
 		if (isInInstance(world))
@@ -547,7 +547,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -669,7 +669,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = player.getInstanceWorld();
 		String htmltext = null;

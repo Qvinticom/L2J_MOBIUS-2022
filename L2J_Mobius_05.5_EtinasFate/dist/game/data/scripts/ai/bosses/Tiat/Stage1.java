@@ -42,10 +42,10 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -307,10 +307,10 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		spawnState(instance);
-		for (DoorInstance door : instance.getDoors())
+		for (Door door : instance.getDoors())
 		{
 			if (CommonUtil.contains(ATTACKABLE_DOORS, door.getId()))
 			{
@@ -445,7 +445,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 		{
 			for (int i = 0; i < TIAT_GUARD_NUMBER; i++)
 			{
-				addMinion((MonsterInstance) npc, TIAT_GUARD);
+				addMinion((Monster) npc, TIAT_GUARD);
 			}
 		}
 	}
@@ -469,7 +469,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 				final Npc videoNpc = world.getNpc(TIAT_VIDEO_NPC);
 				if (videoNpc != null)
 				{
-					playMovie(World.getInstance().getVisibleObjectsInRange(videoNpc, PlayerInstance.class, 8000), Movie.SC_BOSS_TIAT_OPENING);
+					playMovie(World.getInstance().getVisibleObjectsInRange(videoNpc, Player.class, 8000), Movie.SC_BOSS_TIAT_OPENING);
 					videoNpc.deleteMe();
 				}
 			}
@@ -478,7 +478,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -507,7 +507,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -516,7 +516,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 			{
 				case "Spawn":
 				{
-					final List<PlayerInstance> players = new ArrayList<>(world.getPlayers());
+					final List<Player> players = new ArrayList<>(world.getPlayers());
 					final int deviceCount = world.getParameters().getInt("deviceCount", 0);
 					if ((deviceCount < MAX_DEVICESPAWNEDMOBCOUNT) && !players.isEmpty() && !getRandomEntry(players).isDead())
 					{
@@ -531,7 +531,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 				}
 				case "DoorCheck":
 				{
-					final DoorInstance tmp = world.getDoor(FORTRESS_DOOR);
+					final Door tmp = world.getDoor(FORTRESS_DOOR);
 					if (tmp.getCurrentHp() < tmp.getMaxHp())
 					{
 						world.setParameter("deviceCount", 0);
@@ -558,7 +558,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -612,14 +612,14 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 						if (npc.getId() == TIAT)
 						{
 							world.incStatus();
-							playMovie(World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 8000), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
+							playMovie(World.getInstance().getVisibleObjectsInRange(npc, Player.class, 8000), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
 							world.removeNpcs();
 							world.finishInstance();
 							GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
 						}
 						else if (npc.getId() == TIAT_GUARD)
 						{
-							addMinion(((MonsterInstance) npc).getLeader(), TIAT_GUARD);
+							addMinion(((Monster) npc).getLeader(), TIAT_GUARD);
 						}
 					}
 				}
@@ -635,7 +635,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (npcId == ALENOS)
@@ -658,7 +658,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	}
 	
 	@Override
-	public String onTrapAction(TrapInstance trap, Creature trigger, TrapAction action)
+	public String onTrapAction(Trap trap, Creature trigger, TrapAction action)
 	{
 		final Instance world = trap.getInstanceWorld();
 		if ((world != null) && (action == TrapAction.TRAP_TRIGGERED))

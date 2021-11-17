@@ -23,11 +23,11 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
  * This class is dedicated to the management of EtcItem.
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:30:10 $
  */
-public class EtcItem extends Item
+public class EtcItem extends ItemTemplate
 {
 	/**
 	 * Constructor for EtcItem.
-	 * @see Item constructor
+	 * @see ItemTemplate constructor
 	 * @param type : EtcItemType designating the type of object Etc
 	 * @param set : StatSet designating the set of couples (key,value) for description of the Etc
 	 */

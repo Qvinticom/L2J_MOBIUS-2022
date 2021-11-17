@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.clanhalls.ClanHallSiegeEngine;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
@@ -60,7 +60,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final String[] split = command.split(" ");
 		SiegableHall hall = null;
@@ -192,7 +192,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 			if (split.length < 3)
 			{
 				final WorldObject rawTarget = activeChar.getTarget();
-				PlayerInstance target = null;
+				Player target = null;
 				if (rawTarget == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a clan member of the attacker!");
@@ -201,7 +201,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a player with clan!");
 				}
-				else if ((target = (PlayerInstance) rawTarget).getClan() == null)
+				else if ((target = (Player) rawTarget).getClan() == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Your target does not have any clan!");
 				}
@@ -247,7 +247,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 			if (split.length < 3)
 			{
 				final WorldObject rawTarget = activeChar.getTarget();
-				PlayerInstance target = null;
+				Player target = null;
 				if (rawTarget == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a clan member of the attacker!");
@@ -256,7 +256,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a player with clan!");
 				}
-				else if ((target = (PlayerInstance) rawTarget).getClan() == null)
+				else if ((target = (Player) rawTarget).getClan() == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Your target does not have any clan!");
 				}
@@ -329,7 +329,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 		return false;
 	}
 	
-	private SiegableHall getHall(String id, PlayerInstance gm)
+	private SiegableHall getHall(String id, Player gm)
 	{
 		final int ch = parseInt(id);
 		if (ch == 0)
@@ -361,7 +361,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 		return val;
 	}
 	
-	private void sendSiegableHallPage(PlayerInstance activeChar, String hallId, SiegableHall hall)
+	private void sendSiegableHallPage(Player activeChar, String hallId, SiegableHall hall)
 	{
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		msg.setFile(null, "data/html/admin/siegablehall.htm");

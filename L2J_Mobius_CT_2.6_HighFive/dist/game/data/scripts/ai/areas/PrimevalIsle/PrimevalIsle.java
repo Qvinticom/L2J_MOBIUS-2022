@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.util.Util;
@@ -120,7 +120,7 @@ public class PrimevalIsle extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (skill.getId() == CREW_SKILL.getSkillId())
 		{
@@ -179,7 +179,7 @@ public class PrimevalIsle extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -302,7 +302,7 @@ public class PrimevalIsle extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -315,7 +315,7 @@ public class PrimevalIsle extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (npc.getId() == EGG)
 		{
@@ -438,7 +438,7 @@ public class PrimevalIsle extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if ((npc.getId() == DEINO) || ((npc.getId() == ORNIT) && !npc.isScriptValue(1)))
 		{
@@ -446,11 +446,11 @@ public class PrimevalIsle extends AbstractNpcAI
 		}
 		if ((npc.getId() == SAILREN) || (getRandom(100) < 3))
 		{
-			final PlayerInstance player = npc.getId() == SAILREN ? getRandomPartyMember(killer) : killer;
+			final Player player = npc.getId() == SAILREN ? getRandomPartyMember(killer) : killer;
 			if (player.isInventoryUnder80(false))
 			{
 				giveItems(player, DEINONYCHUS, 1);
-				final ItemInstance summonItem = player.getInventory().getItemByItemId(DEINONYCHUS);
+				final Item summonItem = player.getInventory().getItemByItemId(DEINONYCHUS);
 				final IItemHandler handler = ItemHandler.getInstance().getHandler(summonItem.getEtcItem());
 				if ((handler != null) && !player.hasPet())
 				{

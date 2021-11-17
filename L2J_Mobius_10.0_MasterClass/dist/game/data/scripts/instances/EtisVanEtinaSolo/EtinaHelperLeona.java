@@ -25,9 +25,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -83,14 +83,14 @@ public class EtinaHelperLeona extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
 			final StatSet npcVars = npc.getVariables();
-			final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
-			final MonsterInstance monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 2500));
+			final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
+			final Monster monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 			if (plr != null)
 			{
 				final double distance = npc.calculateDistance2D(plr);
@@ -107,7 +107,7 @@ public class EtinaHelperLeona extends AbstractNpcAI
 						npc.setRunning();
 					}
 					addMoveToDesire(npc, randLoc, 23);
-					((FriendlyNpcInstance) npc).setCanReturnToSpawnPoint(false);
+					((FriendlyNpc) npc).setCanReturnToSpawnPoint(false);
 				}
 				else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
 				{
@@ -120,7 +120,7 @@ public class EtinaHelperLeona extends AbstractNpcAI
 					{
 						npc.setInvul(true);
 						npc.setRunning();
-						((FriendlyNpcInstance) npc).setCanReturnToSpawnPoint(false);
+						((FriendlyNpc) npc).setCanReturnToSpawnPoint(false);
 						addAttackDesire(npc, (Creature) target);
 						// npc.reduceCurrentHp(1, monster, null);
 					}
@@ -131,7 +131,7 @@ public class EtinaHelperLeona extends AbstractNpcAI
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final FriendlyNpcInstance npc = (FriendlyNpcInstance) event.getTarget();
+		final FriendlyNpc npc = (FriendlyNpc) event.getTarget();
 		final Npc attacker = (Npc) event.getAttacker();
 		if (npc != null)
 		{

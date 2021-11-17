@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.primeshop;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -30,11 +30,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExBRProductList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _type;
 	private final Collection<PrimeShopGroup> _primeList;
 	
-	public ExBRProductList(PlayerInstance player, int type, Collection<PrimeShopGroup> items)
+	public ExBRProductList(Player player, int type, Collection<PrimeShopGroup> items)
 	{
 		_player = player;
 		_type = type;

@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmVariationItem;
@@ -43,8 +43,8 @@ public class RequestConfirmTargetItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemObjId);
+		final Player player = client.getPlayer();
+		final Item item = (Item) World.getInstance().findObject(_itemObjId);
 		if (item == null)
 		{
 			return;
@@ -65,14 +65,14 @@ public class RequestConfirmTargetItem implements IClientIncomingPacket
 			return;
 		}
 		// TODO: can do better? : currently: using isdestroyable() as a check for hero / cursed weapons
-		else if ((itemGrade < Item.CRYSTAL_C) || (itemType != Item.TYPE2_WEAPON) || !item.isDestroyable() || item.isShadowItem())
+		else if ((itemGrade < ItemTemplate.CRYSTAL_C) || (itemType != ItemTemplate.TYPE2_WEAPON) || !item.isDestroyable() || item.isShadowItem())
 		{
 			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
 		// check if the player can augment
-		if (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
 			return;

@@ -20,18 +20,18 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class SummonActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		if (player.isGM())
 		{
 			if (player.getTarget() != target)
 			{
-				// Set the target of the PlayerInstance player
+				// Set the target of the Player player
 				player.setTarget(target);
 			}
 			

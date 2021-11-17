@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author DS
@@ -33,7 +33,7 @@ public class VoiceCommand implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		// only voice commands allowed
 		if ((command.length() > 7) && (command.charAt(6) == '.'))

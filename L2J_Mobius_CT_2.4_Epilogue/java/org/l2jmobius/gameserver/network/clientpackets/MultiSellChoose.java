@@ -25,9 +25,9 @@ import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.multisell.Entry;
 import org.l2jmobius.gameserver.model.multisell.Ingredient;
 import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
@@ -91,7 +91,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -262,7 +262,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					else
 					{
-						ItemInstance itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
+						Item itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
 						if (itemToTake == null)
 						{ // this is a cheat, transaction will be aborted and if any items already taken will not be returned back to inventory!
 							LOGGER.severe("Character: " + player.getName() + " is trying to cheat in multisell, id:" + _listId + ":" + _entryId);
@@ -298,7 +298,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 								if (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0))
 								{
 									// loop through this list and remove (one by one) each item until the required amount is taken.
-									final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
+									final List<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
 									for (int i = 0; i < (e.getItemCount() * _amount); i++)
 									{
 										if (inventoryContents.get(i).isAugmented())
@@ -356,13 +356,13 @@ public class MultiSellChoose implements IClientIncomingPacket
 									// choice 1. Small number of items exchanged. No sorting.
 									for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 									{
-										final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
+										final List<Item> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
 										itemToTake = inventoryContents.get(0);
 										// get item with the LOWEST enchantment level from the inventory...
 										// +0 is lowest by default...
 										if (itemToTake.getEnchantLevel() > 0)
 										{
-											for (ItemInstance item : inventoryContents)
+											for (Item item : inventoryContents)
 											{
 												if (item.getEnchantLevel() < itemToTake.getEnchantLevel())
 												{
@@ -403,7 +403,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						else
 						{
-							ItemInstance product = null;
+							Item product = null;
 							for (int i = 0; i < (e.getItemCount() * _amount); i++)
 							{
 								product = inv.addItem("Multisell", e.getItemId(), 1, player, player.getTarget());

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -69,7 +69,7 @@ public class StatusUpdate implements IClientOutgoingPacket
 	public static final int CUR_CP = 0x21;
 	public static final int MAX_CP = 0x22;
 	
-	private PlayerInstance _actor;
+	private Player _actor;
 	
 	private List<Attribute> _attributes;
 	public int _objectId;
@@ -87,7 +87,7 @@ public class StatusUpdate implements IClientOutgoingPacket
 		}
 	}
 	
-	public StatusUpdate(PlayerInstance actor)
+	public StatusUpdate(Player actor)
 	{
 		_actor = actor;
 	}

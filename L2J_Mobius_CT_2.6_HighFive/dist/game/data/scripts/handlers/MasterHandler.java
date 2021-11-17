@@ -38,21 +38,21 @@ import org.l2jmobius.gameserver.handler.UserCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
 
-import handlers.actionhandlers.ArtefactInstanceAction;
+import handlers.actionhandlers.ArtefactAction;
 import handlers.actionhandlers.DecoyAction;
-import handlers.actionhandlers.DoorInstanceAction;
-import handlers.actionhandlers.ItemInstanceAction;
+import handlers.actionhandlers.DoorAction;
+import handlers.actionhandlers.ItemAction;
 import handlers.actionhandlers.NpcAction;
-import handlers.actionhandlers.PetInstanceAction;
-import handlers.actionhandlers.PlayerInstanceAction;
-import handlers.actionhandlers.StaticObjectInstanceAction;
+import handlers.actionhandlers.PetAction;
+import handlers.actionhandlers.PlayerAction;
+import handlers.actionhandlers.StaticObjectAction;
 import handlers.actionhandlers.SummonAction;
 import handlers.actionhandlers.TrapAction;
-import handlers.actionshifthandlers.DoorInstanceActionShift;
-import handlers.actionshifthandlers.ItemInstanceActionShift;
+import handlers.actionshifthandlers.DoorActionShift;
+import handlers.actionshifthandlers.ItemActionShift;
 import handlers.actionshifthandlers.NpcActionShift;
-import handlers.actionshifthandlers.PlayerInstanceActionShift;
-import handlers.actionshifthandlers.StaticObjectInstanceActionShift;
+import handlers.actionshifthandlers.PlayerActionShift;
+import handlers.actionshifthandlers.StaticObjectActionShift;
 import handlers.actionshifthandlers.SummonActionShift;
 import handlers.admincommandhandlers.AdminAdmin;
 import handlers.admincommandhandlers.AdminAnnouncements;
@@ -327,24 +327,24 @@ public class MasterHandler
 	{
 		{
 			// Action Handlers
-			ArtefactInstanceAction.class,
+			ArtefactAction.class,
 			DecoyAction.class,
-			DoorInstanceAction.class,
-			ItemInstanceAction.class,
+			DoorAction.class,
+			ItemAction.class,
 			NpcAction.class,
-			PlayerInstanceAction.class,
-			PetInstanceAction.class,
-			StaticObjectInstanceAction.class,
+			PlayerAction.class,
+			PetAction.class,
+			StaticObjectAction.class,
 			SummonAction.class,
 			TrapAction.class,
 		},
 		{
 			// Action Shift Handlers
-			DoorInstanceActionShift.class,
-			ItemInstanceActionShift.class,
+			DoorActionShift.class,
+			ItemActionShift.class,
 			NpcActionShift.class,
-			PlayerInstanceActionShift.class,
-			StaticObjectInstanceActionShift.class,
+			PlayerActionShift.class,
+			StaticObjectActionShift.class,
 			SummonActionShift.class,
 		},
 		{

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,16 +25,16 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerSocialAction implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _socialActionId;
 	
-	public OnPlayerSocialAction(PlayerInstance player, int socialActionId)
+	public OnPlayerSocialAction(Player player, int socialActionId)
 	{
 		_player = player;
 		_socialActionId = socialActionId;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

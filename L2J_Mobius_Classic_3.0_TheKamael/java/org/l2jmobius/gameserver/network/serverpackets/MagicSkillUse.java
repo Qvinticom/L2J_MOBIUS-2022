@@ -24,7 +24,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -61,7 +61,7 @@ public class MagicSkillUse implements IClientOutgoingPacket
 		Location skillWorldPos = null;
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player.getCurrentSkillWorldPosition() != null)
 			{
 				skillWorldPos = player.getCurrentSkillWorldPosition();

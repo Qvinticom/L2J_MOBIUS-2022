@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
@@ -47,7 +47,7 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -62,15 +62,15 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 		request.setEnchantingItem(_enchantObjectId);
 		request.setSupportItem(_supportObjectId);
 		
-		final ItemInstance item = request.getEnchantingItem();
-		final ItemInstance scroll = request.getEnchantingScroll();
-		final ItemInstance support = request.getSupportItem();
+		final Item item = request.getEnchantingItem();
+		final Item scroll = request.getEnchantingScroll();
+		final Item support = request.getSupportItem();
 		if ((item == null) || (scroll == null) || (support == null))
 		{
 			// message may be custom
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			request.setEnchantingItem(PlayerInstance.ID_NONE);
-			request.setSupportItem(PlayerInstance.ID_NONE);
+			request.setEnchantingItem(Player.ID_NONE);
+			request.setSupportItem(Player.ID_NONE);
 			return;
 		}
 		
@@ -80,7 +80,7 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 		{
 			// message may be custom
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			request.setSupportItem(PlayerInstance.ID_NONE);
+			request.setSupportItem(Player.ID_NONE);
 			player.sendPacket(new ExPutEnchantSupportItemResult(0));
 			return;
 		}

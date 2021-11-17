@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.knownlist.WorldObjectKnownList;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.GetItem;
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.GetItem;
  * <br>
  * WorldObject:<br>
  * <li>Creature</li>
- * <li>ItemInstance</li>
+ * <li>Item</li>
  * <li>Potion</li>
  */
 public abstract class WorldObject
@@ -56,26 +56,26 @@ public abstract class WorldObject
 		_objectId = objectId;
 	}
 	
-	public void onAction(PlayerInstance player)
+	public void onAction(Player player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	public void onActionShift(GameClient client)
 	{
-		// Like L2OFF send to PlayerInstance
+		// Like L2OFF send to Player
 		onActionShift(client.getPlayer());
 	}
 	
 	/**
 	 * @param player
 	 */
-	public void onActionShift(PlayerInstance player)
+	public void onActionShift(Player player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	public void onForcedAttack(PlayerInstance player)
+	public void onForcedAttack(Player player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
@@ -146,7 +146,7 @@ public abstract class WorldObject
 	}
 	
 	/**
-	 * Remove a ItemInstance from the world and send server->client GetItem packets.<br>
+	 * Remove a Item from the world and send server->client GetItem packets.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Send a Server->Client Packet GetItem to player that pick up and its _knowPlayers member</li>
@@ -154,19 +154,19 @@ public abstract class WorldObject
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
 	 * <br>
 	 * <b><u>Assert</u>:</b><br>
-	 * <li>this instanceof ItemInstance</li>
+	 * <li>this instanceof Item</li>
 	 * <li>_worldRegion != null <i>(WorldObject is visible at the beginning)</i></li><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
-	 * <li>Do Pickup Item : PlayerInstance and Pet</li><br>
+	 * <li>Do Pickup Item : Player and Pet</li><br>
 	 * @param creature Player that pick up the item
 	 */
-	public void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature
+	public void pickupMe(Creature creature) // NOTE: Should move this function into Item because it does not apply to Creature
 	{
 		final WorldRegion oldregion = getPosition().getWorldRegion();
 		
-		// Create a server->client GetItem packet to pick up the ItemInstance
-		creature.broadcastPacket(new GetItem((ItemInstance) this, creature.getObjectId()));
+		// Create a server->client GetItem packet to pick up the Item
+		creature.broadcastPacket(new GetItem((Item) this, creature.getObjectId()));
 		
 		synchronized (this)
 		{
@@ -175,18 +175,18 @@ public abstract class WorldObject
 		}
 		
 		// if this item is a mercenary ticket, remove the spawns!
-		if (this instanceof ItemInstance)
+		if (this instanceof Item)
 		{
-			final int itemId = ((ItemInstance) this).getItemId();
+			final int itemId = ((Item) this).getItemId();
 			if (MercTicketManager.getInstance().getTicketCastleId(itemId) > 0)
 			{
-				MercTicketManager.getInstance().removeTicket((ItemInstance) this);
+				MercTicketManager.getInstance().removeTicket((Item) this);
 				ItemsOnGroundManager.getInstance().removeObject(this);
 			}
 		}
 		
 		// this can synchronize on others instancies, so it's out of synchronized, to avoid deadlocks
-		// Remove the ItemInstance from the world
+		// Remove the Item from the world
 		World.getInstance().removeVisibleObject(this, oldregion);
 	}
 	
@@ -383,7 +383,7 @@ public abstract class WorldObject
 		// If we change it for visible objects, me must clear & revalidates knownlists
 		if (_isSpawned && (_knownList != null))
 		{
-			if (this instanceof PlayerInstance)
+			if (this instanceof Player)
 			{
 				// We don't want some ugly looking disappear/appear effects, so don't update the knownlist here, but players usually enter instancezones through teleporting and the teleport will do the revalidation for us.
 			}
@@ -404,7 +404,7 @@ public abstract class WorldObject
 		return false;
 	}
 	
-	public PlayerInstance getActingPlayer()
+	public Player getActingPlayer()
 	{
 		return null;
 	}

@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 public class DoorData implements IXmlReader
 {
 	private static final Map<String, Set<Integer>> _groups = new HashMap<>();
-	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
+	private final Map<Integer, Door> _doors = new HashMap<>();
 	private final Map<Integer, StatSet> _templates = new HashMap<>();
 	
 	protected DoorData()
@@ -120,7 +120,7 @@ public class DoorData implements IXmlReader
 	{
 		insertCollisionData(set);
 		final DoorTemplate template = new DoorTemplate(set);
-		final DoorInstance door = new DoorInstance(template);
+		final Door door = new Door(template);
 		door.setCurrentHp(door.getMaxHp());
 		door.spawnMe(template.getX(), template.getY(), template.getZ());
 		_doors.put(door.getId(), door);
@@ -131,7 +131,7 @@ public class DoorData implements IXmlReader
 		return _templates.get(doorId);
 	}
 	
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		return _doors.get(doorId);
 	}
@@ -152,7 +152,7 @@ public class DoorData implements IXmlReader
 		return _groups.get(groupName);
 	}
 	
-	public Collection<DoorInstance> getDoors()
+	public Collection<Door> getDoors()
 	{
 		return _doors.values();
 	}
@@ -169,7 +169,7 @@ public class DoorData implements IXmlReader
 	
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean doubleFaceCheck)
 	{
-		final Collection<DoorInstance> doors;
+		final Collection<Door> doors;
 		if (instanceId < 1)
 		{
 			final WorldRegion region = World.getInstance().getRegion(x, y);
@@ -199,7 +199,7 @@ public class DoorData implements IXmlReader
 			return false;
 		}
 		
-		for (DoorInstance doorInst : doors)
+		for (Door doorInst : doors)
 		{
 			// check dead and open
 			if (doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0))

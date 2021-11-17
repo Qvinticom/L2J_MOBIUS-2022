@@ -32,8 +32,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.QuestGuard;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -224,13 +224,13 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		tumorRespawnTime = 180 * 1000;
 	}
 	
-	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(Player player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private boolean checkConditions(PlayerInstance player)
+	private boolean checkConditions(Player player)
 	{
 		if (player.isGM())
 		{
@@ -269,7 +269,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			return false;
 		}
 		
-		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
+		for (Player partyMember : party.getCommandChannel().getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
@@ -308,7 +308,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(PlayerInstance player, int[] coords)
+	protected void enterInstance(Player player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -331,7 +331,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			LOGGER.info("Hall Of Erosion Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			if (player.isInParty())
 			{
-				for (PlayerInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -423,7 +423,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HEDWorld)
@@ -443,7 +443,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-					for (PlayerInstance partyMember : player.getParty().getMembers())
+					for (Player partyMember : player.getParty().getMembers())
 					{
 						if (partyMember.isInsideRadius3D(player, 500))
 						{
@@ -457,7 +457,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{
@@ -468,7 +468,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEDWorld)
@@ -497,7 +497,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		
 		if (npc.getId() == SEED)
 		{
-			((QuestGuardInstance) npc).setPassive(true);
+			((QuestGuard) npc).setPassive(true);
 		}
 		
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
@@ -514,7 +514,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEDWorld)
@@ -615,7 +615,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 				if (inst != null)
 				{
-					for (PlayerInstance player : _world.getAllowed())
+					for (Player player : _world.getAllowed())
 					{
 						if (player != null)
 						{
@@ -669,7 +669,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	
 	protected void broadCastPacket(HEDWorld world, IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -48,15 +48,15 @@ public class RelationChanged implements IClientOutgoingPacket
 		_objId = activeChar.getObjectId();
 		_relation = relation;
 		_autoAttackable = autoattackable ? 1 : 0;
-		if (activeChar instanceof PlayerInstance)
+		if (activeChar instanceof Player)
 		{
-			_karma = ((PlayerInstance) activeChar).getKarma();
-			_pvpFlag = ((PlayerInstance) activeChar).getPvpFlag();
+			_karma = ((Player) activeChar).getKarma();
+			_pvpFlag = ((Player) activeChar).getPvpFlag();
 		}
-		else if (activeChar instanceof SummonInstance)
+		else if (activeChar instanceof Servitor)
 		{
-			_karma = ((SummonInstance) activeChar).getOwner().getKarma();
-			_pvpFlag = ((SummonInstance) activeChar).getOwner().getPvpFlag();
+			_karma = ((Servitor) activeChar).getOwner().getKarma();
+			_pvpFlag = ((Servitor) activeChar).getOwner().getPvpFlag();
 		}
 	}
 	

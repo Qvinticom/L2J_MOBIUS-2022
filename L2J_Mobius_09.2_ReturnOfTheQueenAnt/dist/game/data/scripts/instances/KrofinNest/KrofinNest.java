@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -134,7 +134,7 @@ public class KrofinNest extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.contains("enterInstance"))
 		{
@@ -229,7 +229,7 @@ public class KrofinNest extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = attacker.getInstanceWorld();
 		if (isInInstance(world))
@@ -263,7 +263,7 @@ public class KrofinNest extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -295,7 +295,7 @@ public class KrofinNest extends AbstractInstance
 				}
 				else if (npc.getId() == KROSHA_FINAL_FORM)
 				{
-					for (PlayerInstance member : world.getPlayers())
+					for (Player member : world.getPlayers())
 					{
 						giveItems(member, BENUSTAS_REWARD_BOX);
 					}
@@ -304,7 +304,7 @@ public class KrofinNest extends AbstractInstance
 				}
 				else if (npc.getId() == KROSHA_FINAL_FORM_110)
 				{
-					for (PlayerInstance member : world.getPlayers())
+					for (Player member : world.getPlayers())
 					{
 						giveItems(member, BENUSTAS_REWARD_BOX_110);
 					}

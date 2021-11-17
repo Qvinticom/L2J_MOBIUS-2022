@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 
 /**
@@ -93,9 +93,9 @@ public class ClientHardwareInfoHolder
 	
 	/**
 	 * Save hardware info to account variables for later use.
-	 * @param player The PlayerInstance related with this hardware info.
+	 * @param player The Player related with this hardware info.
 	 */
-	public void store(PlayerInstance player)
+	public void store(Player player)
 	{
 		final StringBuilder sb = new StringBuilder();
 		sb.append(_macAddress);

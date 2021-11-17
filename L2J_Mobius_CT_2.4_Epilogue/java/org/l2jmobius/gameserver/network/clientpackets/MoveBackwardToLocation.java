@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMoveRequest;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
@@ -61,7 +61,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		{
 			if (Config.L2WALKER_PROTECTION)
 			{
-				final PlayerInstance player = client.getPlayer();
+				final Player player = client.getPlayer();
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " is trying to use L2Walker and got kicked.", Config.DEFAULT_PUNISH);
 			}
 		}
@@ -71,7 +71,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;

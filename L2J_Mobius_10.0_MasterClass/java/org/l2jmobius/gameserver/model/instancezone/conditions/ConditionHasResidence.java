@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 import org.l2jmobius.gameserver.enums.ResidenceType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 
@@ -35,7 +35,7 @@ public class ConditionHasResidence extends Condition
 	}
 	
 	@Override
-	protected boolean test(PlayerInstance player, Npc npc)
+	protected boolean test(Player player, Npc npc)
 	{
 		final Clan clan = player.getClan();
 		if (clan == null)

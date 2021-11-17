@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -92,7 +92,7 @@ public class IstinaCavern extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final Instance instance = npc.getInstanceWorld();
@@ -153,7 +153,7 @@ public class IstinaCavern extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -314,7 +314,7 @@ public class IstinaCavern extends AbstractInstance
 						istina.teleToLocation(DEFEAT_ISTINA_LOC);
 						istina.setInvisible(false);
 						istina.setUndying(false);
-						istina.reduceCurrentHp(istina.getVariables().getInt("REWARD_DAMAGE", 1000000), istina.getVariables().getObject("REWARD_PLAYER", PlayerInstance.class), null);
+						istina.reduceCurrentHp(istina.getVariables().getInt("REWARD_DAMAGE", 1000000), istina.getVariables().getObject("REWARD_PLAYER", Player.class), null);
 					});
 					break;
 				}
@@ -361,7 +361,7 @@ public class IstinaCavern extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((skill != null) && isInInstance(instance))
@@ -379,7 +379,7 @@ public class IstinaCavern extends AbstractInstance
 					getTimers().addTimer("NPC_DELETE", 2000, event -> npc.deleteMe());
 					if (isExtremeMode(instance) && (getRandom(100) < 30))
 					{
-						addAttackPlayerDesire(addSpawn(EXTREME_MINION, npc, false, 0, false, instance.getId()), npc.getVariables().getObject("ERUPTION_TARGET", PlayerInstance.class), 23);
+						addAttackPlayerDesire(addSpawn(EXTREME_MINION, npc, false, 0, false, instance.getId()), npc.getVariables().getObject("ERUPTION_TARGET", Player.class), 23);
 					}
 				}
 			}
@@ -428,7 +428,7 @@ public class IstinaCavern extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -468,7 +468,7 @@ public class IstinaCavern extends AbstractInstance
 					{
 						instance.setStatus(1);
 						npcVars.set("ISTINA_STAGE", 1);
-						instance.getDoors().forEach(DoorInstance::closeMe);
+						instance.getDoors().forEach(Door::closeMe);
 						npc.setUndying(true);
 						((Attackable) npc).setCanReturnToSpawnPoint(false);
 						getTimers().addTimer("DEATH_TIMER", 3500, npc, null);
@@ -543,7 +543,7 @@ public class IstinaCavern extends AbstractInstance
 							instance.spawnGroup("BALLISTA");
 							instance.setStatus(2);
 							instance.getAliveNpcs(RUMIESE_INSTANCE).forEach(rumiese -> rumiese.teleToLocation(RUMIESE_LOC));
-							instance.getDoors().forEach(DoorInstance::openMe);
+							instance.getDoors().forEach(Door::openMe);
 							// myself->AddTimerEx(Broadcast_Timer, (2 * 1000));
 							onTimerEvent("AUTHORITY_END_TIMER", null, npc, null);
 							// myself->AddTimerEx(Location_Check_Timer, (4 * 1000));
@@ -587,7 +587,7 @@ public class IstinaCavern extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		final Instance instance = npc.getInstanceWorld();
@@ -644,11 +644,11 @@ public class IstinaCavern extends AbstractInstance
 		return charged;
 	}
 	
-	private PlayerInstance setPlayerRewardInfo(Npc npc)
+	private Player setPlayerRewardInfo(Npc npc)
 	{
-		final Map<PlayerInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
+		final Map<Player, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
 		final StatSet npcVars = npc.getVariables();
-		PlayerInstance maxDealer = null;
+		Player maxDealer = null;
 		long maxDamage = 0;
 		int totalDamage = 0;
 		for (AggroInfo info : ((Attackable) npc).getAggroList().values())
@@ -658,7 +658,7 @@ public class IstinaCavern extends AbstractInstance
 				continue;
 			}
 			
-			final PlayerInstance attacker = info.getAttacker().getActingPlayer();
+			final Player attacker = info.getAttacker().getActingPlayer();
 			if (attacker != null)
 			{
 				final long damage = info.getDamage();

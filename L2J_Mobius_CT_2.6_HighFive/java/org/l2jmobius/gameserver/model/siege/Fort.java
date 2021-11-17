@@ -48,9 +48,9 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.residences.AbstractResidence;
@@ -66,8 +66,8 @@ public class Fort extends AbstractResidence
 {
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
 	
-	private final List<DoorInstance> _doors = new ArrayList<>();
-	private StaticObjectInstance _flagPole = null;
+	private final List<Door> _doors = new ArrayList<>();
+	private StaticObject _flagPole = null;
 	private FortSiege _siege = null;
 	private Calendar _siegeDate;
 	private Calendar _lastOwnedTime;
@@ -324,24 +324,24 @@ public class Fort extends AbstractResidence
 		return getZone().getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(PlayerInstance player, int doorId)
+	public void closeDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(PlayerInstance player, int doorId)
+	public void openDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
+	public void openCloseDoor(Player player, int doorId, boolean open)
 	{
 		if (player.getClan() != _fortOwner)
 		{
 			return;
 		}
 		
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -386,7 +386,7 @@ public class Fort extends AbstractResidence
 			updateClansReputation(oldowner, true);
 			try
 			{
-				final PlayerInstance oldleader = oldowner.getLeader().getPlayerInstance();
+				final Player oldleader = oldowner.getLeader().getPlayer();
 				if ((oldleader != null) && (oldleader.getMountType() == MountType.WYVERN))
 				{
 					oldleader.dismount();
@@ -434,7 +434,7 @@ public class Fort extends AbstractResidence
 			getSiege().endSiege();
 		}
 		
-		for (PlayerInstance member : clan.getOnlineMembers(0))
+		for (Player member : clan.getOnlineMembers(0))
 		{
 			giveResidentialSkills(member);
 			member.sendSkillList();
@@ -447,7 +447,7 @@ public class Fort extends AbstractResidence
 		final Clan clan = _fortOwner;
 		if (clan != null)
 		{
-			for (PlayerInstance member : clan.getOnlineMembers(0))
+			for (Player member : clan.getOnlineMembers(0))
 			{
 				removeResidentialSkills(member);
 				member.sendSkillList();
@@ -508,7 +508,7 @@ public class Fort extends AbstractResidence
 	 */
 	public void setVisibleFlag(boolean value)
 	{
-		final StaticObjectInstance flagPole = _flagPole;
+		final StaticObject flagPole = _flagPole;
 		if (flagPole != null)
 		{
 			flagPole.setMeshIndex(value ? 1 : 0);
@@ -520,7 +520,7 @@ public class Fort extends AbstractResidence
 	 */
 	public void resetDoors()
 	{
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			if (door.isOpen())
 			{
@@ -541,7 +541,7 @@ public class Fort extends AbstractResidence
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door != null)
 		{
 			door.setCurrentHp(door.getMaxHp() + hp);
@@ -663,7 +663,7 @@ public class Fort extends AbstractResidence
 		}
 	}
 	
-	public boolean updateFunctions(PlayerInstance player, int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(Player player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
 		if (player == null)
 		{
@@ -703,7 +703,7 @@ public class Fort extends AbstractResidence
 	// This method loads fort door data from database
 	private void loadDoor()
 	{
-		for (DoorInstance door : DoorData.getInstance().getDoors())
+		for (Door door : DoorData.getInstance().getDoors())
 		{
 			if ((door.getFort() != null) && (door.getFort().getResidenceId() == getResidenceId()))
 			{
@@ -714,7 +714,7 @@ public class Fort extends AbstractResidence
 	
 	private void loadFlagPoles()
 	{
-		for (StaticObjectInstance obj : StaticObjectData.getInstance().getStaticObjects())
+		for (StaticObject obj : StaticObjectData.getInstance().getStaticObjects())
 		{
 			if ((obj.getType() == 3) && obj.getName().startsWith(getName()))
 			{
@@ -859,14 +859,14 @@ public class Fort extends AbstractResidence
 		_fortOwner = clan;
 	}
 	
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
 			return null;
 		}
 		
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			if (door.getId() == doorId)
 			{
@@ -876,12 +876,12 @@ public class Fort extends AbstractResidence
 		return null;
 	}
 	
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}
 	
-	public StaticObjectInstance getFlagPole()
+	public StaticObject getFlagPole()
 	{
 		return _flagPole;
 	}

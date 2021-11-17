@@ -17,8 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
@@ -30,8 +30,8 @@ public class RequestSellItem extends ClientBasePacket
 		@SuppressWarnings("unused")
 		final int listId = readD();
 		final int count = readD();
-		final PlayerInstance activeChar = client.getActiveChar();
-		// ItemInstance[] items = new ItemInstance[count];
+		final Player activeChar = client.getActiveChar();
+		// Item[] items = new Item[count];
 		for (int i = 0; i < count; ++i)
 		{
 			final int objectId = readD();
@@ -41,7 +41,7 @@ public class RequestSellItem extends ClientBasePacket
 			{
 				continue;
 			}
-			final ItemInstance item = activeChar.getInventory().getItem(objectId);
+			final Item item = activeChar.getInventory().getItem(objectId);
 			activeChar.addAdena((item.getItem().getReferencePrice() / 2) * cnt);
 			activeChar.getInventory().destroyItem(objectId, cnt);
 		}

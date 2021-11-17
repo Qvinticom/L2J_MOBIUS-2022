@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -68,7 +68,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -136,7 +136,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		
 		if (_count <= 0)
 		{
-			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
 			return;
 		}
@@ -159,11 +159,11 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		player.sitDown();
 		if (_packageSale)
 		{
-			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_PACKAGE_SELL);
+			player.setPrivateStoreType(Player.STORE_PRIVATE_PACKAGE_SELL);
 		}
 		else
 		{
-			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_SELL);
+			player.setPrivateStoreType(Player.STORE_PRIVATE_SELL);
 		}
 		player.broadcastUserInfo();
 		player.broadcastPacket(new PrivateStoreMsgSell(player));

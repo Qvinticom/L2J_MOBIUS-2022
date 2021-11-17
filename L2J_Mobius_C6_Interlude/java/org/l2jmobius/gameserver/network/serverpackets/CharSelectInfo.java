@@ -26,7 +26,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -264,7 +264,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		final long deletetime = chardata.getLong("deletetime");
 		if ((deletetime > 0) && (Chronos.currentTimeMillis() > deletetime))
 		{
-			final PlayerInstance cha = PlayerInstance.load(objectId);
+			final Player cha = Player.load(objectId);
 			final Clan clan = cha.getClan();
 			if (clan != null)
 			{

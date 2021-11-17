@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -208,7 +208,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 					{
 						t2 += " ";
 					}
-					final MonsterInstance monster = (MonsterInstance) _npc;
+					final Monster monster = (Monster) _npc;
 					if (monster.isAggressive())
 					{
 						t2 += "[A]"; // Aggressive.
@@ -260,9 +260,9 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	
 	public static class TrapInfo extends AbstractNpcInfo
 	{
-		private final TrapInstance _trap;
+		private final Trap _trap;
 		
-		public TrapInfo(TrapInstance cha, Creature attacker)
+		public TrapInfo(Trap cha, Creature attacker)
 		{
 			super(cha, (attacker != null) && attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			

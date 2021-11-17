@@ -28,8 +28,8 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -104,7 +104,7 @@ public class BeastFarm extends AbstractNpcAI
 	};
 	
 	private static Map<Integer, GrowthCapableMob> GROWTH_CAPABLE_MOBS = new HashMap<>();
-	private static List<TamedBeast> TAMED_BEAST_DATA = new ArrayList<>();
+	private static List<TamedBeastSkillHolder> TAMED_BEAST_DATA = new ArrayList<>();
 	private final Map<Integer, Integer> _feedInfo = new ConcurrentHashMap<>();
 	
 	private BeastFarm()
@@ -219,15 +219,15 @@ public class BeastFarm extends AbstractNpcAI
 		GROWTH_CAPABLE_MOBS.put(18898, temp);
 		
 		// Tamed beasts data
-		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Focus", new SkillHolder(6432, 1), new SkillHolder(6668, 1)));
-		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Guiding", new SkillHolder(6433, 1), new SkillHolder(6670, 1)));
-		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Swifth", new SkillHolder(6434, 1), new SkillHolder(6667, 1)));
-		TAMED_BEAST_DATA.add(new TamedBeast("Berserker %name%", new SkillHolder(6671, 1)));
-		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Protect", new SkillHolder(6669, 1), new SkillHolder(6672, 1)));
-		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Vigor", new SkillHolder(6431, 1), new SkillHolder(6666, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeastSkillHolder("%name% of Focus", new SkillHolder(6432, 1), new SkillHolder(6668, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeastSkillHolder("%name% of Guiding", new SkillHolder(6433, 1), new SkillHolder(6670, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeastSkillHolder("%name% of Swifth", new SkillHolder(6434, 1), new SkillHolder(6667, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeastSkillHolder("Berserker %name%", new SkillHolder(6671, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeastSkillHolder("%name% of Protect", new SkillHolder(6669, 1), new SkillHolder(6672, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeastSkillHolder("%name% of Vigor", new SkillHolder(6431, 1), new SkillHolder(6666, 1)));
 	}
 	
-	public void spawnNext(Npc npc, PlayerInstance player, int nextNpcId, int food)
+	public void spawnNext(Npc npc, Player player, int nextNpcId, int food)
 	{
 		// remove the feedinfo of the mob that got despawned, if any
 		if (_feedInfo.containsKey(npc.getObjectId()) && (_feedInfo.get(npc.getObjectId()) == player.getObjectId()))
@@ -242,8 +242,8 @@ public class BeastFarm extends AbstractNpcAI
 		// player might have and initialize the Tamed Beast.
 		if (CommonUtil.contains(TAMED_BEASTS, nextNpcId))
 		{
-			final TamedBeastInstance nextNpc = new TamedBeastInstance(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
-			final TamedBeast beast = getRandomEntry(TAMED_BEAST_DATA);
+			final TamedBeast nextNpc = new TamedBeast(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
+			final TamedBeastSkillHolder beast = getRandomEntry(TAMED_BEAST_DATA);
 			String name = beast.getName();
 			switch (nextNpcId)
 			{
@@ -296,7 +296,7 @@ public class BeastFarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
@@ -376,7 +376,7 @@ public class BeastFarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		// remove the feedinfo of the mob that got killed, if any
 		if (_feedInfo.containsKey(npc.getObjectId()))
@@ -451,12 +451,12 @@ public class BeastFarm extends AbstractNpcAI
 		}
 	}
 	
-	private static class TamedBeast
+	private static class TamedBeastSkillHolder
 	{
 		private final String name;
 		private final SkillHolder[] sh;
 		
-		public TamedBeast(String beastName, SkillHolder... holders)
+		public TamedBeastSkillHolder(String beastName, SkillHolder... holders)
 		{
 			name = beastName;
 			sh = holders;

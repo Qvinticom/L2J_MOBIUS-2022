@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -81,7 +81,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -93,8 +93,8 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			return;
 		}
 		
-		final FolkInstance manager = player.getLastFolkNPC();
-		if ((manager == null) || !player.isInsideRadius2D(manager, NpcInstance.INTERACTION_DISTANCE))
+		final Folk manager = player.getLastFolkNPC();
+		if ((manager == null) || !player.isInsideRadius2D(manager, Npc.INTERACTION_DISTANCE))
 		{
 			return;
 		}
@@ -163,7 +163,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			final int count = _items[(i * 2) + 1];
 			
 			// Check validity of requested item
-			final ItemInstance item = player.checkItemManipulation(objectId, count, "deposit");
+			final Item item = player.checkItemManipulation(objectId, count, "deposit");
 			if (item == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -220,7 +220,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
+			final Item oldItem = player.getInventory().getItemByObjectId(objectId);
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -239,7 +239,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
+			final Item newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.model.RecipeList;
-import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
+import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 
 public class RecipeData extends RecipeManager implements IXmlReader
 {
@@ -57,7 +57,7 @@ public class RecipeData extends RecipeManager implements IXmlReader
 	{
 		try
 		{
-			List<RecipeInstance> recipePartList = new ArrayList<>();
+			List<RecipeHolder> recipePartList = new ArrayList<>();
 			Node n = doc.getFirstChild();
 			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 			{
@@ -106,7 +106,7 @@ public class RecipeData extends RecipeManager implements IXmlReader
 						{
 							int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
 							int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
-							recipePartList.add(new RecipeInstance(ingId, ingCount));
+							recipePartList.add(new RecipeHolder(ingId, ingCount));
 						}
 						else if ("production".equalsIgnoreCase(c.getNodeName()))
 						{
@@ -116,7 +116,7 @@ public class RecipeData extends RecipeManager implements IXmlReader
 					}
 					
 					final RecipeList recipeList = new RecipeList(id, level, recipeId, recipeName, successRate, mpCost, prodId, count, isDwarvenRecipe);
-					for (RecipeInstance recipePart : recipePartList)
+					for (RecipeHolder recipePart : recipePartList)
 					{
 						recipeList.addRecipe(recipePart);
 					}

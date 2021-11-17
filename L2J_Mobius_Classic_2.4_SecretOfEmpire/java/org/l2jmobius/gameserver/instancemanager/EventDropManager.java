@@ -24,7 +24,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.EventDropHolder;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
@@ -59,7 +59,7 @@ public class EventDropManager
 		}
 		
 		// Event items drop only within a 9 level difference.
-		final PlayerInstance player = attacker.getActingPlayer();
+		final Player player = attacker.getActingPlayer();
 		if ((player.getLevel() - attackable.getLevel()) > 9)
 		{
 			return;

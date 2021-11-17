@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -140,7 +140,7 @@ public class Transform extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		for (Transformer monster : _mobs)
 		{
@@ -170,7 +170,7 @@ public class Transform extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		for (Transformer monster : _mobs)
 		{
@@ -192,7 +192,7 @@ public class Transform extends Quest
 	
 	private class NPCSpawnTask implements Runnable
 	{
-		private final NpcInstance spawn;
+		private final Npc spawn;
 		private final long spawnEffectTime;
 		private final int spawnAbnormalEffect;
 		
@@ -201,7 +201,7 @@ public class Transform extends Quest
 		 * @param spawnEffectTime
 		 * @param spawnAbnormalEffect
 		 */
-		public NPCSpawnTask(NpcInstance spawn, long spawnEffectTime, int spawnAbnormalEffect)
+		public NPCSpawnTask(Npc spawn, long spawnEffectTime, int spawnAbnormalEffect)
 		{
 			super();
 			this.spawn = spawn;

@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
@@ -84,7 +84,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_show_spawns"))
 		{
@@ -338,7 +338,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Command format is //list_spawns <npcId|npc_name> [tele_index]");
 			}
-			findNPCInstances(activeChar, npcId, teleportIndex, command.startsWith("admin_list_positions"));
+			findNpcs(activeChar, npcId, teleportIndex, command.startsWith("admin_list_positions"));
 		}
 		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))
 		{
@@ -402,7 +402,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	 * @param teleportIndex
 	 * @param showposition
 	 */
-	private void findNPCInstances(PlayerInstance activeChar, int npcId, int teleportIndex, boolean showposition)
+	private void findNpcs(Player activeChar, int npcId, int teleportIndex, boolean showposition)
 	{
 		int index = 0;
 		for (Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
@@ -470,7 +470,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 	}
 	
-	private void spawnMonster(PlayerInstance activeChar, String monsterIdValue, int respawnTime, int mobCount, boolean permanentValue)
+	private void spawnMonster(Player activeChar, String monsterIdValue, int respawnTime, int mobCount, boolean permanentValue)
 	{
 		WorldObject target = activeChar.getTarget();
 		if (target == null)
@@ -546,7 +546,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMonsters(PlayerInstance activeChar, int level, int from)
+	private void showMonsters(Player activeChar, int level, int from)
 	{
 		final List<NpcTemplate> mobs = NpcData.getInstance().getAllMonstersOfLevel(level);
 		final int mobsCount = mobs.size();
@@ -572,7 +572,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		activeChar.sendPacket(new NpcHtmlMessage(tb.toString()));
 	}
 	
-	private void showNpcs(PlayerInstance activeChar, String starting, int from)
+	private void showNpcs(Player activeChar, String starting, int from)
 	{
 		final List<NpcTemplate> mobs = NpcData.getInstance().getAllNpcStartingWith(starting);
 		final int mobsCount = mobs.size();

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 /**
  * This class is dedicated to the management of armors.
  */
-public class Armor extends Item
+public class Armor extends ItemTemplate
 {
 	/**
 	 * Skill that activates when armor is enchanted +4.
@@ -48,19 +48,19 @@ public class Armor extends Item
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 		
 		final int bodyPart = getBodyPart();
-		if ((bodyPart == Item.SLOT_NECK) || ((bodyPart & Item.SLOT_L_EAR) != 0) || ((bodyPart & Item.SLOT_L_FINGER) != 0) || ((bodyPart & Item.SLOT_R_BRACELET) != 0) || ((bodyPart & Item.SLOT_L_BRACELET) != 0))
+		if ((bodyPart == ItemTemplate.SLOT_NECK) || ((bodyPart & ItemTemplate.SLOT_L_EAR) != 0) || ((bodyPart & ItemTemplate.SLOT_L_FINGER) != 0) || ((bodyPart & ItemTemplate.SLOT_R_BRACELET) != 0) || ((bodyPart & ItemTemplate.SLOT_L_BRACELET) != 0))
 		{
-			_type1 = Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;
-			_type2 = Item.TYPE2_ACCESSORY;
+			_type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
+			_type2 = ItemTemplate.TYPE2_ACCESSORY;
 		}
 		else
 		{
-			if ((_type == ArmorType.NONE) && (getBodyPart() == Item.SLOT_L_HAND))
+			if ((_type == ArmorType.NONE) && (getBodyPart() == ItemTemplate.SLOT_L_HAND))
 			{
 				_type = ArmorType.SHIELD;
 			}
-			_type1 = Item.TYPE1_SHIELD_ARMOR;
-			_type2 = Item.TYPE2_SHIELD_ARMOR;
+			_type1 = ItemTemplate.TYPE1_SHIELD_ARMOR;
+			_type2 = ItemTemplate.TYPE2_SHIELD_ARMOR;
 		}
 		
 		final String skill = set.getString("enchant4_skill", null);

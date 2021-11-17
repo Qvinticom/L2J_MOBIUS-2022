@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -43,7 +43,7 @@ public class AdminLogin implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_server_gm_only"))
 		{
@@ -163,7 +163,7 @@ public class AdminLogin implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 */
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/login.htm");

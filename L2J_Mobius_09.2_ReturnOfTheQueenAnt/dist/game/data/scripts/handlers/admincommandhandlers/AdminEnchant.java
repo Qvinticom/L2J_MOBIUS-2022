@@ -22,10 +22,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -94,7 +94,7 @@ public class AdminEnchant implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int currentPage = 0;
 		if (command.equals("admin_enchant"))
@@ -349,11 +349,11 @@ public class AdminEnchant implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void setEnchant(PlayerInstance activeChar, int ench, int armorType)
+	private void setEnchant(Player activeChar, int ench, int armorType)
 	{
 		// get the target
 		
-		final PlayerInstance player = activeChar.getTarget() != null ? activeChar.getTarget().getActingPlayer() : activeChar;
+		final Player player = activeChar.getTarget() != null ? activeChar.getTarget().getActingPlayer() : activeChar;
 		if (player == null)
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -361,10 +361,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 		
 		// now we need to find the equipped weapon of the targeted character...
-		ItemInstance itemInstance = null;
+		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		final ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		final Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -389,7 +389,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(PlayerInstance activeChar, int currentPage)
+	private void showMainPage(Player activeChar, int currentPage)
 	{
 		if (currentPage == 1)
 		{
@@ -398,11 +398,11 @@ public class AdminEnchant implements IAdminCommandHandler
 		else if (currentPage == 2)
 		{
 			String getVars = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/enchantArtifact.htm");
-			ItemInstance findItem = null;
+			Item findItem = null;
 			int currentEnch = 0;
 			for (int i = 0; i < 21; i++)
 			{
-				Item item = ItemTable.getInstance().getTemplate(activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_ARTIFACT1 + i));
+				ItemTemplate item = ItemTable.getInstance().getTemplate(activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_ARTIFACT1 + i));
 				findItem = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_ARTIFACT1 + i);
 				if (findItem != null) // null check for unequipped slots
 				{
@@ -436,11 +436,11 @@ public class AdminEnchant implements IAdminCommandHandler
 		else if (currentPage == 3)
 		{
 			String getVars = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/enchantAgathion.htm");
-			ItemInstance findItem = null;
+			Item findItem = null;
 			int currentEnch = 0;
 			for (int i = 0; i < 5; i++)
 			{
-				Item item = ItemTable.getInstance().getTemplate(activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_AGATHION1 + i));
+				ItemTemplate item = ItemTable.getInstance().getTemplate(activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_AGATHION1 + i));
 				findItem = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_AGATHION1 + i);
 				if (findItem != null) // null check for unequipped slots
 				{

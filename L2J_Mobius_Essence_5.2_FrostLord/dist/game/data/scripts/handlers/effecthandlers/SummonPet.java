@@ -24,14 +24,14 @@ import org.l2jmobius.gameserver.enums.EvolveLevel;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.PetEvolveHolder;
 import org.l2jmobius.gameserver.model.holders.PetItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -58,14 +58,14 @@ public class SummonPet extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		final PlayerInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		if (player.hasPet() || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
@@ -79,7 +79,7 @@ public class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final ItemInstance collar = holder.getItem();
+		final Item collar = holder.getItem();
 		if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar)
 		{
 			LOGGER.warning("Player: " + player + " is trying to summon pet from item that he doesn't owns.");
@@ -94,7 +94,7 @@ public class SummonPet extends AbstractEffect
 		}
 		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
-		final PetInstance pet = PetInstance.spawnPet(npcTemplate, player, collar);
+		final Pet pet = Pet.spawnPet(npcTemplate, player, collar);
 		player.setPet(pet);
 		pet.setShowSummonAnimation(true);
 		if (!pet.isRespawned())

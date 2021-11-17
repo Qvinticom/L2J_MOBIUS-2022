@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 public class SitStand implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (player.isSitting() || !player.isMoving() || player.isFakeDeath())
 		{
@@ -58,14 +58,14 @@ public class SitStand implements IPlayerActionHandler
 	 * @param target the target to sit, throne, bench or chair
 	 * @return {@code true} if the player can sit, {@code false} otherwise
 	 */
-	private boolean useSit(PlayerInstance player, WorldObject target)
+	private boolean useSit(Player player, WorldObject target)
 	{
 		if (player.getMountType() != MountType.NONE)
 		{
 			return false;
 		}
 		
-		if (!player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
+		if (!player.isSitting() && (target instanceof StaticObject) && (((StaticObject) target).getType() == 1) && player.isInsideRadius2D(target, StaticObject.INTERACTION_DISTANCE))
 		{
 			final ChairSit cs = new ChairSit(player, target.getId());
 			player.sendPacket(cs);

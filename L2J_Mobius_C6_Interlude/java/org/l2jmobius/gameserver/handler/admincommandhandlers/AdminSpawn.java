@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -72,7 +72,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_show_spawns"))
 		{
@@ -170,7 +170,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		// Command for unspawn all Npcs on Server, use //repsawnall to respawn the npc
 		else if (command.startsWith("admin_unspawnall"))
 		{
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME);
 			}
@@ -225,11 +225,11 @@ public class AdminSpawn implements IAdminCommandHandler
 			final Map<Integer, Integer> npcsFound = new HashMap<>();
 			for (WorldObject obj : World.getInstance().getAllVisibleObjects())
 			{
-				if (!(obj instanceof NpcInstance))
+				if (!(obj instanceof Npc))
 				{
 					continue;
 				}
-				final int npcId = ((NpcInstance) obj).getNpcId();
+				final int npcId = ((Npc) obj).getNpcId();
 				if (npcsFound.containsKey(npcId))
 				{
 					npcsFound.put(npcId, npcsFound.get(npcId) + 1);
@@ -261,7 +261,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void spawnMonster(PlayerInstance activeChar, String monsterIdValue, int respawnTime, int mobCount, boolean permanent)
+	private void spawnMonster(Player activeChar, String monsterIdValue, int respawnTime, int mobCount, boolean permanent)
 	{
 		WorldObject target = activeChar.getTarget();
 		if (target == null)
@@ -334,7 +334,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMonsters(PlayerInstance activeChar, int level, int from)
+	private void showMonsters(Player activeChar, int level, int from)
 	{
 		final StringBuilder tb = new StringBuilder();
 		final List<NpcTemplate> mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
@@ -372,7 +372,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
 	}
 	
-	private void showNpcs(PlayerInstance activeChar, String starting, int from)
+	private void showNpcs(Player activeChar, String starting, int from)
 	{
 		final StringBuilder tb = new StringBuilder();
 		final List<NpcTemplate> mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);

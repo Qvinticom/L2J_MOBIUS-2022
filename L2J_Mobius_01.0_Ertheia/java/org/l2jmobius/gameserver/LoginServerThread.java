@@ -47,7 +47,7 @@ import org.l2jmobius.commons.network.BaseSendablePacket;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.crypt.NewCrypt;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -281,7 +281,7 @@ public class LoginServerThread extends Thread
 							}
 							sendPacket(st);
 							final List<String> playerList = new ArrayList<>();
-							for (PlayerInstance player : World.getInstance().getPlayers())
+							for (Player player : World.getInstance().getPlayers())
 							{
 								if (!player.isInOfflineMode())
 								{

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siegable;
@@ -146,7 +146,7 @@ public class SiegeZone extends ZoneType
 			
 			if (creature.isPlayer())
 			{
-				final PlayerInstance plyer = creature.getActingPlayer();
+				final Player plyer = creature.getActingPlayer();
 				if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
 				{
 					plyer.setInSiege(true); // in siege
@@ -184,7 +184,7 @@ public class SiegeZone extends ZoneType
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
 		if (getSettings().isActiveSiege() && creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 			if (player.getMountType() == MountType.WYVERN)
 			{
@@ -198,7 +198,7 @@ public class SiegeZone extends ZoneType
 		}
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			player.stopFameTask();
 			player.setInSiege(false);
 			
@@ -256,7 +256,7 @@ public class SiegeZone extends ZoneType
 	}
 	
 	@Override
-	public void onPlayerLogoutInside(PlayerInstance player)
+	public void onPlayerLogoutInside(Player player)
 	{
 		if (player.getClanId() != getSettings().getSiegeableId())
 		{
@@ -278,7 +278,7 @@ public class SiegeZone extends ZoneType
 		}
 		else
 		{
-			PlayerInstance player;
+			Player player;
 			for (Creature creature : getCharactersInside())
 			{
 				if (creature == null)
@@ -310,7 +310,7 @@ public class SiegeZone extends ZoneType
 	 */
 	public void announceToPlayers(String message)
 	{
-		for (PlayerInstance player : getPlayersInside())
+		for (Player player : getPlayersInside())
 		{
 			if (player != null)
 			{
@@ -345,7 +345,7 @@ public class SiegeZone extends ZoneType
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		for (PlayerInstance temp : getPlayersInside())
+		for (Player temp : getPlayersInside())
 		{
 			if (temp.getClanId() == owningClanId)
 			{

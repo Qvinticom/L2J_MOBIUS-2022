@@ -40,8 +40,8 @@ import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProductio
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.zone.type.CastleTeleportZone;
@@ -67,7 +67,7 @@ public class Castle
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
 	
 	private int _castleId = 0;
-	private final List<DoorInstance> _doors = new ArrayList<>();
+	private final List<Door> _doors = new ArrayList<>();
 	private final List<StatSet> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
@@ -277,24 +277,24 @@ public class Castle
 		return _zone.getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(PlayerInstance player, int doorId)
+	public void closeDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(PlayerInstance player, int doorId)
+	public void openDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
+	public void openCloseDoor(Player player, int doorId, boolean open)
 	{
 		if (player.getClanId() != _ownerId)
 		{
 			return;
 		}
 		
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -371,7 +371,7 @@ public class Castle
 	}
 	
 	// This method updates the castle tax rate
-	public void setTaxPercent(PlayerInstance player, int taxPercent)
+	public void setTaxPercent(Player player, int taxPercent)
 	{
 		int maxTax;
 		
@@ -438,7 +438,7 @@ public class Castle
 	{
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			DoorInstance door = _doors.get(i);
+			Door door = _doors.get(i);
 			if (door.getCurrentHp() <= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
@@ -466,7 +466,7 @@ public class Castle
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door == null)
 		{
 			return;
@@ -570,7 +570,7 @@ public class Castle
 				set.set("mDef", rs.getInt("mDef"));
 				_doorDefault.add(set);
 				
-				final DoorInstance door = DoorData.createDoor(set);
+				final Door door = DoorData.createDoor(set);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorData.getInstance().putDoor(door);
@@ -695,14 +695,14 @@ public class Castle
 		return _castleId;
 	}
 	
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
 			return null;
 		}
 		
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			if (door.getDoorId() == doorId)
 			{
@@ -712,7 +712,7 @@ public class Castle
 		return null;
 	}
 	
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}

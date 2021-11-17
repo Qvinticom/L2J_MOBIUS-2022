@@ -25,8 +25,8 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 
@@ -59,7 +59,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
 	 * StatusUpdate.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
@@ -123,7 +123,7 @@ public class CreatureStatus
 		}
 		
 		double value = amount;
-		if (_creature instanceof PlayerInstance)
+		if (_creature instanceof Player)
 		{
 			if (_creature.isDead() && !_creature.isFakeDeath())
 			{
@@ -154,7 +154,7 @@ public class CreatureStatus
 		}
 		
 		// Add attackers to npc's attacker list
-		if (_creature instanceof NpcInstance)
+		if (_creature instanceof Npc)
 		{
 			_creature.addAttackerToAttackByList(attacker);
 		}
@@ -193,7 +193,7 @@ public class CreatureStatus
 			_creature.abortAttack();
 			_creature.abortCast();
 			
-			if ((_creature instanceof PlayerInstance) && ((PlayerInstance) _creature).isInOlympiadMode())
+			if ((_creature instanceof Player) && ((Player) _creature).isInOlympiadMode())
 			{
 				stopHpMpRegeneration();
 				return;
@@ -226,7 +226,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
 	 * StatusUpdate.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
@@ -363,7 +363,7 @@ public class CreatureStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();
@@ -456,7 +456,7 @@ public class CreatureStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();
@@ -537,7 +537,7 @@ public class CreatureStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();
@@ -549,7 +549,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
 	 * StatusUpdate.
 	 * @return The list of Creature to inform or null if empty
 	 */

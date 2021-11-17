@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Luno
@@ -55,13 +55,13 @@ public class ArmorSet
 	 * @param player whose inventory is being checked
 	 * @return True if player equips whole set
 	 */
-	public boolean containAll(PlayerInstance player)
+	public boolean containAll(Player player)
 	{
 		final Inventory inv = player.getInventory();
-		final ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
-		final ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
-		final ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
-		final ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
+		final Item legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final Item headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
+		final Item glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
+		final Item feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		int legs = 0;
 		int head = 0;
 		int gloves = 0;
@@ -146,10 +146,10 @@ public class ArmorSet
 		return _skillId;
 	}
 	
-	public boolean containShield(PlayerInstance player)
+	public boolean containShield(Player player)
 	{
 		final Inventory inv = player.getInventory();
-		final ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final Item shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if ((shieldItem != null) && (shieldItem.getItemId() == _shield))
 		{
 			return true;
@@ -181,7 +181,7 @@ public class ArmorSet
 	 * @param player
 	 * @return
 	 */
-	public boolean isEnchanted6(PlayerInstance player)
+	public boolean isEnchanted6(Player player)
 	{
 		// Player don't have full set
 		if (!containAll(player))
@@ -190,11 +190,11 @@ public class ArmorSet
 		}
 		
 		final Inventory inv = player.getInventory();
-		final ItemInstance chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
-		final ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
-		final ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
-		final ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
-		final ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
+		final Item chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final Item legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final Item headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
+		final Item glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
+		final Item feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		if (chestItem.getEnchantLevel() < 6)
 		{
 			return false;

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -37,7 +37,7 @@ public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -96,12 +96,12 @@ public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL) || (player.getPrivateStoreType() == (PlayerInstance.STORE_PRIVATE_SELL + 1)) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL))
+		if ((player.getPrivateStoreType() == Player.STORE_PRIVATE_SELL) || (player.getPrivateStoreType() == (Player.STORE_PRIVATE_SELL + 1)) || (player.getPrivateStoreType() == Player.STORE_PRIVATE_PACKAGE_SELL))
 		{
-			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 		}
 		
-		if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() == Player.STORE_PRIVATE_NONE)
 		{
 			if (player.isSitting())
 			{
@@ -113,7 +113,7 @@ public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 				player.sendPacket(new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", "ATTENTION: Store System is not based on Adena, be careful!"));
 			}
 			
-			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_SELL + 1);
+			player.setPrivateStoreType(Player.STORE_PRIVATE_SELL + 1);
 			player.sendPacket(new PrivateStoreManageListSell(player));
 		}
 	}

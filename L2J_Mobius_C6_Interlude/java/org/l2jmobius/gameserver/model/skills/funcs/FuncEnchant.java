@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.skills.funcs;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Stat;
@@ -38,10 +38,10 @@ public class FuncEnchant extends Func
 		{
 			return;
 		}
-		final ItemInstance item = (ItemInstance) funcOwner;
+		final Item item = (Item) funcOwner;
 		final int cristall = item.getItem().getCrystalType();
 		final Enum<?> itemType = item.getItemType();
-		if (cristall == Item.CRYSTAL_NONE)
+		if (cristall == ItemTemplate.CRYSTAL_NONE)
 		{
 			return;
 		}
@@ -53,9 +53,9 @@ public class FuncEnchant extends Func
 			enchant = 3;
 		}
 		
-		if ((env.player != null) && (env.player instanceof PlayerInstance))
+		if ((env.player != null) && (env.player instanceof Player))
 		{
-			final PlayerInstance player = (PlayerInstance) env.player;
+			final Player player = (Player) env.player;
 			if (player.isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && ((enchant + overenchant) > Config.ALT_OLY_ENCHANT_LIMIT))
 			{
 				if (Config.ALT_OLY_ENCHANT_LIMIT > 3)
@@ -80,27 +80,27 @@ public class FuncEnchant extends Func
 		{
 			switch (item.getItem().getCrystalType())
 			{
-				case Item.CRYSTAL_S:
+				case ItemTemplate.CRYSTAL_S:
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 					break;
 				}
-				case Item.CRYSTAL_A:
+				case ItemTemplate.CRYSTAL_A:
 				{
 					env.value += (3 * enchant) + (6 * overenchant);
 					break;
 				}
-				case Item.CRYSTAL_B:
+				case ItemTemplate.CRYSTAL_B:
 				{
 					env.value += (3 * enchant) + (6 * overenchant);
 					break;
 				}
-				case Item.CRYSTAL_C:
+				case ItemTemplate.CRYSTAL_C:
 				{
 					env.value += (3 * enchant) + (6 * overenchant);
 					break;
 				}
-				case Item.CRYSTAL_D:
+				case ItemTemplate.CRYSTAL_D:
 				{
 					env.value += (2 * enchant) + (4 * overenchant);
 					break;
@@ -111,7 +111,7 @@ public class FuncEnchant extends Func
 		
 		switch (item.getItem().getCrystalType())
 		{
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				if (itemType == WeaponType.BOW)
 				{
@@ -127,7 +127,7 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				if (itemType == WeaponType.BOW)
 				{
@@ -143,7 +143,7 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				if (itemType == WeaponType.BOW)
 				{
@@ -159,7 +159,7 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case Item.CRYSTAL_D:
+			case ItemTemplate.CRYSTAL_D:
 			{
 				if (itemType == WeaponType.BOW)
 				{
@@ -171,7 +171,7 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				if (itemType == WeaponType.BOW)
 				{

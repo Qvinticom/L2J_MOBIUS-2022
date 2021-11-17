@@ -17,13 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 
 public class DoorStatusUpdate extends ServerBasePacket
 {
-	private final DoorInstance _door;
+	private final Door _door;
 	
-	public DoorStatusUpdate(DoorInstance door)
+	public DoorStatusUpdate(Door door)
 	{
 		_door = door;
 	}

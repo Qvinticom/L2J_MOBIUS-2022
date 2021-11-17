@@ -23,10 +23,10 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -38,9 +38,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class PetFood implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (playable.isPet() && !((PetInstance) playable).canEatFoodId(item.getId()))
+		if (playable.isPet() && !((Pet) playable).canEatFoodId(item.getId()))
 		{
 			playable.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return false;
@@ -54,14 +54,14 @@ public class PetFood implements IItemHandler
 		return true;
 	}
 	
-	private boolean useFood(Playable activeChar, int skillId, int skillLevel, ItemInstance item)
+	private boolean useFood(Playable activeChar, int skillId, int skillLevel, Item item)
 	{
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
 		{
 			if (activeChar.isPet())
 			{
-				final PetInstance pet = (PetInstance) activeChar;
+				final Pet pet = (Pet) activeChar;
 				if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false))
 				{
 					pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
@@ -76,7 +76,7 @@ public class PetFood implements IItemHandler
 			}
 			else if (activeChar.isPlayer())
 			{
-				final PlayerInstance player = activeChar.getActingPlayer();
+				final Player player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
 					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();

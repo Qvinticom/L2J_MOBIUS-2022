@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -40,7 +40,7 @@ public class HealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isDead() || effected.isDoor())
 		{
@@ -91,7 +91,7 @@ public class HealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isPlayer() && (getTicks() > 0) && (skill.getAbnormalType() == AbnormalType.HP_RECOVER))
 		{

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -44,7 +44,7 @@ public class PartyClan implements ITargetTypeHandler
 			};
 		}
 		
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (player == null)
 		{
 			return EMPTY_TARGET_LIST;
@@ -68,7 +68,7 @@ public class PartyClan implements ITargetTypeHandler
 		
 		// Get all visible objects in a spherical area near the Creature
 		final int maxTargets = skill.getAffectLimit();
-		for (PlayerInstance obj : World.getInstance().getVisibleObjectsInRange(creature, PlayerInstance.class, radius))
+		for (Player obj : World.getInstance().getVisibleObjectsInRange(creature, Player.class, radius))
 		{
 			if (obj == null)
 			{

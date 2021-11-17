@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -39,9 +39,9 @@ import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type. <b><u>Concept</u>:</b><br>
+ * This class manages the spawn and respawn of a group of Npcs that are in the same are and have the same type. <b><u>Concept</u>:</b><br>
  * <br>
- * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
+ * Npc can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the Npc can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
  * <br>
  * @author Nightmare
  * @version $Revision: 1.9.2.3.2.8 $ $Date: 2005/03/27 15:29:32 $
@@ -66,7 +66,7 @@ public class Spawn
 	private Constructor<?> _constructor;
 	private boolean _doRespawn;
 	private int _instanceId = 0;
-	private NpcInstance _lastSpawn;
+	private Npc _lastSpawn;
 	private static List<SpawnListener> _spawnListeners = new ArrayList<>();
 	
 	/**
@@ -76,12 +76,12 @@ public class Spawn
 	 * <br>
 	 * Each Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...). All of those properties are stored in a different NpcTemplate for each type of Spawn. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Spawn is created,
 	 * server just create a link between the instance and the template. This link is stored in <b>_template</b><br>
-	 * Each NpcInstance is linked to a Spawn that manages its spawn and respawn (delay, location...). This link is stored in <b>_spawn</b> of the NpcInstance<br>
+	 * Each Npc is linked to a Spawn that manages its spawn and respawn (delay, location...). This link is stored in <b>_spawn</b> of the Npc<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Set the _template of the Spawn</li>
-	 * <li>Calculate the implementationName used to generate the generic constructor of NpcInstance managed by this Spawn</li>
-	 * <li>Create the generic constructor of NpcInstance managed by this Spawn</li><br>
+	 * <li>Calculate the implementationName used to generate the generic constructor of Npc managed by this Spawn</li>
+	 * <li>Create the generic constructor of Npc managed by this Spawn</li><br>
 	 * @param mobTemplate The NpcTemplate to link to this Spawn
 	 * @throws ClassNotFoundException
 	 * @throws NoSuchMethodException
@@ -95,7 +95,7 @@ public class Spawn
 			return;
 		}
 		
-		// The Name of the NpcInstance type managed by this Spawn
+		// The Name of the Npc type managed by this Spawn
 		String implementationName = _template.getType(); // implementing class name
 		if (mobTemplate.getNpcId() == 30995)
 		{
@@ -107,17 +107,17 @@ public class Spawn
 			implementationName = "SymbolMaker";
 		}
 		
-		// Create the generic constructor of NpcInstance managed by this Spawn
+		// Create the generic constructor of Npc managed by this Spawn
 		final Class<?>[] parameters =
 		{
 			int.class,
 			NpcTemplate.class
 		};
-		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + implementationName + "Instance").getConstructor(parameters);
+		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + implementationName).getConstructor(parameters);
 	}
 	
 	/**
-	 * @return the maximum number of NpcInstance that this Spawn can manage.
+	 * @return the maximum number of Npc that this Spawn can manage.
 	 */
 	public int getAmount()
 	{
@@ -133,7 +133,7 @@ public class Spawn
 	}
 	
 	/**
-	 * @return the Identifier of the location area where NpcInstance can be spawned.
+	 * @return the Identifier of the location area where Npc can be spawned.
 	 */
 	public int getLocation()
 	{
@@ -165,7 +165,7 @@ public class Spawn
 	}
 	
 	/**
-	 * @return the Identifier of the NpcInstance manage by this L2spawn contained in the NpcTemplate.
+	 * @return the Identifier of the Npc manage by this L2spawn contained in the NpcTemplate.
 	 */
 	public int getNpcId()
 	{
@@ -177,7 +177,7 @@ public class Spawn
 	}
 	
 	/**
-	 * @return the heading of NpcInstance when they are spawned.
+	 * @return the heading of Npc when they are spawned.
 	 */
 	public int getHeading()
 	{
@@ -185,7 +185,7 @@ public class Spawn
 	}
 	
 	/**
-	 * @return the delay between a NpcInstance remove and its re-spawn.
+	 * @return the delay between a Npc remove and its re-spawn.
 	 */
 	public int getRespawnDelay()
 	{
@@ -209,7 +209,7 @@ public class Spawn
 	}
 	
 	/**
-	 * Set the maximum number of NpcInstance that this Spawn can manage.
+	 * Set the maximum number of Npc that this Spawn can manage.
 	 * @param amount
 	 */
 	public void setAmount(int amount)
@@ -227,7 +227,7 @@ public class Spawn
 	}
 	
 	/**
-	 * Set the Identifier of the location area where NpcInstance can be spawned.
+	 * Set the Identifier of the location area where Npc can be spawned.
 	 * @param location
 	 */
 	public void setLocation(int location)
@@ -281,7 +281,7 @@ public class Spawn
 	}
 	
 	/**
-	 * Set the heading of NpcInstance when they are spawned.
+	 * Set the heading of Npc when they are spawned.
 	 * @param heading
 	 */
 	public void setHeading(int heading)
@@ -298,19 +298,19 @@ public class Spawn
 	}
 	
 	/**
-	 * Decrease the current number of NpcInstance of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay.<br>
+	 * Decrease the current number of Npc of this Spawn and if necessary create a SpawnTask to launch after the respawn Delay.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Decrease the current number of NpcInstance of this Spawn</li>
+	 * <li>Decrease the current number of Npc of this Spawn</li>
 	 * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
 	 * <li>Update the current number of SpawnTask in progress or stand by of this Spawn</li>
 	 * <li>Create a new SpawnTask to launch after the respawn Delay</li><br>
 	 * <font color=#FF0000><b><u>Caution</u>: A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</b></font>
 	 * @param oldNpc
 	 */
-	public void decreaseCount(NpcInstance oldNpc)
+	public void decreaseCount(Npc oldNpc)
 	{
-		// Decrease the current number of NpcInstance of this Spawn
+		// Decrease the current number of Npc of this Spawn
 		_currentCount--;
 		
 		// Check if respawn is possible to prevent multiple respawning caused by lag
@@ -326,7 +326,7 @@ public class Spawn
 	
 	/**
 	 * Create the initial spawning and set _doRespawn to True.
-	 * @return The number of NpcInstance that were spawned
+	 * @return The number of Npc that were spawned
 	 */
 	public int init()
 	{
@@ -355,28 +355,28 @@ public class Spawn
 	}
 	
 	/**
-	 * Create the NpcInstance, add it to the world and launch its OnSpawn action.<br>
+	 * Create the Npc, add it to the world and launch its OnSpawn action.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * NpcInstance can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
+	 * Npc can be spawned either in a random position into a location area (if Lox=0 and Locy=0), either at an exact position. The heading of the Npc can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).<br>
 	 * <br>
 	 * <b><u>Actions for an random spawn into location area</u> : <i>(if Locx=0 and Locy=0)</i></b><br>
-	 * <li>Get NpcInstance Init parameters and its generate an Identifier</li>
-	 * <li>Call the constructor of the NpcInstance</li>
+	 * <li>Get Npc Init parameters and its generate an Identifier</li>
+	 * <li>Call the constructor of the Npc</li>
 	 * <li>Calculate the random position in the location area (if Locx=0 and Locy=0) or get its exact position from the Spawn</li>
-	 * <li>Set the position of the NpcInstance</li>
-	 * <li>Set the HP and MP of the NpcInstance to the max</li>
-	 * <li>Set the heading of the NpcInstance (random heading if not defined : value=-1)</li>
-	 * <li>Link the NpcInstance to this Spawn</li>
-	 * <li>Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world</li>
-	 * <li>Lauch the action OnSpawn fo the NpcInstance</li>
-	 * <li>Increase the current number of NpcInstance managed by this Spawn</li><br>
+	 * <li>Set the position of the Npc</li>
+	 * <li>Set the HP and MP of the Npc to the max</li>
+	 * <li>Set the heading of the Npc (random heading if not defined : value=-1)</li>
+	 * <li>Link the Npc to this Spawn</li>
+	 * <li>Init other values of the Npc (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world</li>
+	 * <li>Lauch the action OnSpawn fo the Npc</li>
+	 * <li>Increase the current number of Npc managed by this Spawn</li><br>
 	 * @return
 	 */
-	public NpcInstance doSpawn()
+	public Npc doSpawn()
 	{
-		NpcInstance npc = null;
+		Npc npc = null;
 		try
 		{
 			// Check if the Spawn is not a Net or Minion spawn
@@ -386,28 +386,28 @@ public class Spawn
 				return npc;
 			}
 			
-			// Get NpcInstance Init parameters and its generate an Identifier
+			// Get Npc Init parameters and its generate an Identifier
 			final Object[] parameters =
 			{
 				IdManager.getInstance().getNextId(),
 				_template
 			};
 			
-			// Call the constructor of the NpcInstance
-			// (can be a ArtefactInstance, FriendlyMobInstance, GuardInstance, MonsterInstance, SiegeGuardInstance, FeedableBeastInstance, TamedBeastInstance, FolkInstance)
+			// Call the constructor of the Npc
+			// (can be a Artefact, FriendlyMob, Guard, Monster, SiegeGuard, FeedableBeast, TamedBeast, Folk)
 			final Object tmp = _constructor.newInstance(parameters);
 			
 			// Must be done before object is spawned into visible world
 			((WorldObject) tmp).setInstanceId(_instanceId);
 			
-			// Check if the Instance is a NpcInstance
-			if (!(tmp instanceof NpcInstance))
+			// Check if the Instance is a Npc
+			if (!(tmp instanceof Npc))
 			{
 				return npc;
 			}
 			
-			npc = (NpcInstance) tmp;
-			return initializeNpcInstance(npc);
+			npc = (Npc) tmp;
+			return initializeNpc(npc);
 		}
 		catch (Exception e)
 		{
@@ -416,13 +416,13 @@ public class Spawn
 		return npc;
 	}
 	
-	private NpcInstance initializeNpcInstance(NpcInstance npc)
+	private Npc initializeNpc(Npc npc)
 	{
 		int newlocx;
 		int newlocy;
 		int newlocz;
 		
-		// If Locx and Locy are not defined, the NpcInstance must be spawned in an area defined by location.
+		// If Locx and Locy are not defined, the Npc must be spawned in an area defined by location.
 		if ((_locX == 0) && (_locY == 0))
 		{
 			if (_location == 0)
@@ -433,14 +433,14 @@ public class Spawn
 			// Calculate the random position in the location area
 			final int[] p = TerritoryTable.getInstance().getRandomPoint(getLocation());
 			
-			// Set the calculated position of the NpcInstance
+			// Set the calculated position of the Npc
 			newlocx = p[0];
 			newlocy = p[1];
 			newlocz = p[3];
 		}
 		else
 		{
-			// The NpcInstance is spawned at the exact position (Lox, Locy, Locz)
+			// The Npc is spawned at the exact position (Lox, Locy, Locz)
 			newlocx = _locX;
 			newlocy = _locY;
 			newlocz = _locZ;
@@ -474,13 +474,13 @@ public class Spawn
 		
 		npc.stopAllEffects();
 		
-		// Set the HP and MP of the NpcInstance to the max
+		// Set the HP and MP of the Npc to the max
 		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 		
 		// Clear script value.
 		npc.setScriptValue(0);
 		
-		// Set the heading of the NpcInstance (random heading if not defined)
+		// Set the heading of the Npc (random heading if not defined)
 		if (_heading == -1)
 		{
 			npc.setHeading(Rnd.get(61794));
@@ -493,10 +493,10 @@ public class Spawn
 		// Reset decay info
 		npc.setDecayed(false);
 		
-		// Link the NpcInstance to this Spawn
+		// Link the Npc to this Spawn
 		npc.setSpawn(this);
 		
-		// Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world as a visible object
+		// Init other values of the Npc (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world as a visible object
 		npc.spawnMe(newlocx, newlocy, newlocz);
 		notifyNpcSpawned(npc);
 		
@@ -506,7 +506,7 @@ public class Spawn
 			quest.notifySpawn(npc);
 		}
 		
-		// Increase the current number of NpcInstance managed by this Spawn
+		// Increase the current number of Npc managed by this Spawn
 		_currentCount++;
 		
 		return npc;
@@ -528,7 +528,7 @@ public class Spawn
 		}
 	}
 	
-	public static void notifyNpcSpawned(NpcInstance npc)
+	public static void notifyNpcSpawned(Npc npc)
 	{
 		synchronized (_spawnListeners)
 		{
@@ -552,17 +552,17 @@ public class Spawn
 		_respawnDelay = value < 10 ? 10000 : value * 1000;
 	}
 	
-	public NpcInstance getLastSpawn()
+	public Npc getLastSpawn()
 	{
 		return _lastSpawn;
 	}
 	
-	public void respawnNpc(NpcInstance oldNpc)
+	public void respawnNpc(Npc oldNpc)
 	{
 		if (_doRespawn)
 		{
 			// oldNpc.refreshId();
-			initializeNpcInstance(oldNpc);
+			initializeNpc(oldNpc);
 		}
 	}
 	

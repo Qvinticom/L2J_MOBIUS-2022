@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.handler.PlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -53,7 +53,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -74,7 +74,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			player.removeAutoShortcut(_slot, _page);
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(shortcut.getId());
+		final Item item = player.getInventory().getItemByObjectId(shortcut.getId());
 		Skill skill = null;
 		if (item == null)
 		{

@@ -18,17 +18,17 @@ package org.l2jmobius.gameserver.model.skills;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
- * @author ProGramMoS, eX1steam, An Env object is just a class to pass parameters to a calculator such as PlayerInstance, ItemInstance, Initial value.
+ * @author ProGramMoS, eX1steam, An Env object is just a class to pass parameters to a calculator such as Player, Item, Initial value.
  */
 public class Env
 {
 	public Creature player;
 	public Creature target;
-	public ItemInstance item;
+	public Item item;
 	public Skill skill;
 	public double value;
 	public double baseValue;
@@ -41,7 +41,7 @@ public class Env
 		return creature;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return creature == null ? null : creature.getActingPlayer();
 	}

@@ -18,7 +18,7 @@ package quests.Q00128_PailakaSongOfIceAndFire;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -82,7 +82,7 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -186,7 +186,7 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -280,7 +280,7 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted())
@@ -357,7 +357,7 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
 		if ((oldLevel < newLevel) && (newLevel == MIN_LEVEL))
@@ -372,7 +372,7 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	{
 		if (event.getMarkId() == getId())
 		{
-			final PlayerInstance player = event.getPlayer();
+			final Player player = event.getPlayer();
 			player.sendPacket(new TutorialShowHtml(getHtm(player, "popup.html")));
 		}
 	}

@@ -29,9 +29,9 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -142,7 +142,7 @@ public class PrecautionaryRestartManager
 			}
 		}
 		
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			if ((player == null) || player.isInOfflineMode())
 			{
@@ -165,7 +165,7 @@ public class PrecautionaryRestartManager
 			}
 			
 			final WorldObject target = player.getTarget();
-			if ((target instanceof RaidBossInstance) || (target instanceof GrandBossInstance))
+			if ((target instanceof RaidBoss) || (target instanceof GrandBoss))
 			{
 				return true;
 			}

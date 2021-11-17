@@ -20,11 +20,11 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.data.xml.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -42,12 +42,12 @@ public class MaxHpFinalizer implements IStatFunction
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 		if (creature.isPet())
 		{
-			final PetInstance pet = (PetInstance) creature;
+			final Pet pet = (Pet) creature;
 			baseValue = pet.getPetLevelData().getPetMaxHP();
 		}
 		else if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (player != null)
 			{
 				baseValue = player.getTemplate().getBaseHpMax(player.getLevel());
@@ -70,7 +70,7 @@ public class MaxHpFinalizer implements IStatFunction
 		if (inv != null)
 		{
 			// Add maxHP bonus from items
-			for (ItemInstance item : inv.getPaperdollItems())
+			for (Item item : inv.getPaperdollItems())
 			{
 				addItem += item.getItem().getStats(stat, 0);
 				
@@ -78,7 +78,7 @@ public class MaxHpFinalizer implements IStatFunction
 				if (item.isArmor() && item.isEnchanted())
 				{
 					final long bodyPart = item.getItem().getBodyPart();
-					if ((bodyPart != Item.SLOT_NECK) && (bodyPart != Item.SLOT_LR_EAR) && (bodyPart != Item.SLOT_LR_FINGER))
+					if ((bodyPart != ItemTemplate.SLOT_NECK) && (bodyPart != ItemTemplate.SLOT_LR_EAR) && (bodyPart != ItemTemplate.SLOT_LR_FINGER))
 					{
 						addItem += EnchantItemHPBonusData.getInstance().getHPBonus(item);
 					}

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,10 +39,10 @@ class EffectRelax extends Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof PlayerInstance)
+		if (getEffected() instanceof Player)
 		{
 			setRelax(true);
-			((PlayerInstance) getEffected()).sitDown();
+			((Player) getEffected()).sitDown();
 		}
 		else
 		{
@@ -67,7 +67,7 @@ class EffectRelax extends Effect
 			retval = false;
 		}
 		
-		if ((getEffected() instanceof PlayerInstance) && !((PlayerInstance) getEffected()).isSitting())
+		if ((getEffected() instanceof Player) && !((Player) getEffected()).isSitting())
 		{
 			retval = false;
 		}
@@ -99,9 +99,9 @@ class EffectRelax extends Effect
 	
 	private void setRelax(boolean value)
 	{
-		if (getEffected() instanceof PlayerInstance)
+		if (getEffected() instanceof Player)
 		{
-			((PlayerInstance) getEffected()).setRelax(value);
+			((Player) getEffected()).setRelax(value);
 		}
 	}
 }

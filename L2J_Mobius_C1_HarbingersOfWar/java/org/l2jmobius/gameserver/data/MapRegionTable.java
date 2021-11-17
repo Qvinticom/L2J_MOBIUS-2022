@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class MapRegionTable
 {
@@ -157,7 +157,7 @@ public class MapRegionTable
 		return _regions[tileX][tileY];
 	}
 	
-	public int[] getClosestTownCords(PlayerInstance player)
+	public int[] getClosestTownCords(Player player)
 	{
 		final int closest = getMapRegion(player.getX(), player.getY());
 		int[] closestCords;

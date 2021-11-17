@@ -29,9 +29,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -214,7 +214,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 	 * @param skill the skill
 	 * @return the enchant skill rate
 	 */
-	public byte getEnchantSkillRate(PlayerInstance player, Skill skill)
+	public byte getEnchantSkillRate(Player player, Skill skill)
 	{
 		final EnchantSkillLearn enchantSkillLearn = _enchantSkillTrees.get(skill.getId());
 		if (enchantSkillLearn != null)

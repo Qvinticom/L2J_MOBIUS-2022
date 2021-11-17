@@ -48,11 +48,11 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -145,7 +145,7 @@ public class EnterWorld implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.warning("EnterWorld failed! player returned 'null'.");
@@ -170,7 +170,7 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.RESTORE_PLAYER_INSTANCE)
 		{
 			final PlayerVariables vars = player.getVariables();
-			final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+			final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
 			if ((instance != null) && (instance.getId() == vars.getInt("INSTANCE_RESTORE", 0)))
 			{
 				player.setInstance(instance);
@@ -506,7 +506,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		client.sendPacket(new SkillCoolTime(player));
 		client.sendPacket(new ExVoteSystemInfo(player));
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (item.isTimeLimitedItem())
 			{
@@ -518,7 +518,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		for (ItemInstance whItem : player.getWarehouse().getItems())
+		for (Item whItem : player.getWarehouse().getItems())
 		{
 			if (whItem.isTimeLimitedItem())
 			{
@@ -687,7 +687,7 @@ public class EnterWorld implements IClientIncomingPacket
 				else if (Config.MAX_PLAYERS_PER_HWID > 0)
 				{
 					int count = 0;
-					for (PlayerInstance plr : World.getInstance().getPlayers())
+					for (Player plr : World.getInstance().getPlayers())
 					{
 						if (plr.isOnlineInt() == 1)
 						{
@@ -719,12 +719,12 @@ public class EnterWorld implements IClientIncomingPacket
 	/**
 	 * @param player
 	 */
-	private void notifyClanMembers(PlayerInstance player)
+	private void notifyClanMembers(Player player)
 	{
 		final Clan clan = player.getClan();
 		if (clan != null)
 		{
-			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
+			clan.getClanMember(player.getObjectId()).setPlayer(player);
 			
 			final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
 			msg.addString(player.getName());
@@ -736,11 +736,11 @@ public class EnterWorld implements IClientIncomingPacket
 	/**
 	 * @param player
 	 */
-	private void notifySponsorOrApprentice(PlayerInstance player)
+	private void notifySponsorOrApprentice(Player player)
 	{
 		if (player.getSponsor() != 0)
 		{
-			final PlayerInstance sponsor = World.getInstance().getPlayer(player.getSponsor());
+			final Player sponsor = World.getInstance().getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
@@ -750,7 +750,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		else if (player.getApprentice() != 0)
 		{
-			final PlayerInstance apprentice = World.getInstance().getPlayer(player.getApprentice());
+			final Player apprentice = World.getInstance().getPlayer(player.getApprentice());
 			if (apprentice != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);

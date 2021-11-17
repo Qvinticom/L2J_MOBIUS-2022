@@ -19,7 +19,7 @@ package quests.Q00901_HowLavasaurusesAreMade;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -58,7 +58,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -116,7 +116,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1))
@@ -149,7 +149,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -202,7 +202,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	
 	private void giveQuestItems(QuestState qs, int itemId)
 	{
-		final PlayerInstance player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		if (getQuestItemsCount(player, itemId) < 10)
 		{
 			giveItems(player, itemId, 1);
@@ -214,7 +214,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		}
 	}
 	
-	private static boolean gotAllQuestItems(PlayerInstance player)
+	private static boolean gotAllQuestItems(Player player)
 	{
 		return (getQuestItemsCount(player, FRAGMENT_STONE) >= 10) && (getQuestItemsCount(player, FRAGMENT_HEAD) >= 10) && (getQuestItemsCount(player, FRAGMENT_BODY) >= 10) && (getQuestItemsCount(player, FRAGMENT_HORN) >= 10);
 	}

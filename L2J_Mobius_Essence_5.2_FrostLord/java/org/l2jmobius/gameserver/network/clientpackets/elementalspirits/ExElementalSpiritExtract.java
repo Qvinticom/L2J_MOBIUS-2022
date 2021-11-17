@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -47,7 +47,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -76,7 +76,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 		client.sendPacket(new ElementalSpiritExtract(player, _type, canExtract));
 	}
 	
-	private boolean checkConditions(PlayerInstance player, ElementalSpirit spirit)
+	private boolean checkConditions(Player player, ElementalSpirit spirit)
 	{
 		if ((spirit.getLevel() < 2) || (spirit.getExtractAmount() < 1))
 		{

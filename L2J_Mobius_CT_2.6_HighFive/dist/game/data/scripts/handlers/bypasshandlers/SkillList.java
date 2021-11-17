@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -38,7 +38,7 @@ public class SkillList implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if ((target == null) || !target.isNpc())
 		{
@@ -52,13 +52,13 @@ public class SkillList implements IBypassHandler
 				final String id = command.substring(9).trim();
 				if (id.length() != 0)
 				{
-					NpcInstance.showSkillList(player, (Npc) target, ClassId.getClassId(Integer.parseInt(id)));
+					Folk.showSkillList(player, (Npc) target, ClassId.getClassId(Integer.parseInt(id)));
 				}
 				else
 				{
 					boolean ownClass = false;
 					
-					final List<ClassId> classesToTeach = ((NpcInstance) target).getClassesToTeach();
+					final List<ClassId> classesToTeach = ((Folk) target).getClassesToTeach();
 					for (ClassId cid : classesToTeach)
 					{
 						if (cid.equalsOrChildOf(player.getClassId()))
@@ -123,7 +123,7 @@ public class SkillList implements IBypassHandler
 		}
 		else
 		{
-			NpcInstance.showSkillList(player, (Npc) target, player.getClassId());
+			Folk.showSkillList(player, (Npc) target, player.getClassId());
 		}
 		return true;
 	}

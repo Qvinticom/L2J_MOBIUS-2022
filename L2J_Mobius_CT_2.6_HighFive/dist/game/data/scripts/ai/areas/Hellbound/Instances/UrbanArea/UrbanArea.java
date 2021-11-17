@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.QuestGuard;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -92,7 +92,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (!npc.isAffectedBySkill(STONE.getSkillId()))
 		{
@@ -102,7 +102,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (npc.getId() == KANAF)
@@ -141,7 +141,7 @@ public class UrbanArea extends AbstractInstance
 				}
 				else if (player.getInventory().getInventoryItemCount(KEY, -1, false) >= 1)
 				{
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, npc, partyMember, true))
 						{
@@ -170,7 +170,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if ((world != null) && (npc.getId() == DOWNTOWN_NATIVE))
@@ -220,8 +220,8 @@ public class UrbanArea extends AbstractInstance
 	{
 		if (npc.getId() == DOWNTOWN_NATIVE)
 		{
-			((QuestGuardInstance) npc).setPassive(true);
-			((QuestGuardInstance) npc).setAutoAttackable(false);
+			((QuestGuard) npc).setPassive(true);
+			((QuestGuard) npc).setAutoAttackable(false);
 			STONE.getSkill().applyEffects(npc, npc);
 			startQuestTimer("rebuff", 357000, npc, null);
 		}
@@ -234,7 +234,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if ((world != null) && !npc.isBusy())
@@ -257,7 +257,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if ((world != null) && !world.getParameters().getBoolean("isAmaskariDead", false) && !(npc.getBusyMessage().equalsIgnoreCase("atk") || npc.isBusy()))
@@ -306,7 +306,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -317,7 +317,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(PlayerInstance player)
+	protected boolean checkConditions(Player player)
 	{
 		if (player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
@@ -331,7 +331,7 @@ public class UrbanArea extends AbstractInstance
 			return false;
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < MIN_LV)
 			{
@@ -355,7 +355,7 @@ public class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -366,7 +366,7 @@ public class UrbanArea extends AbstractInstance
 			}
 			else
 			{
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -424,7 +424,7 @@ public class UrbanArea extends AbstractInstance
 		{
 			if ((_party != null) && (_world != null))
 			{
-				for (PlayerInstance partyMember : _party.getMembers())
+				for (Player partyMember : _party.getMembers())
 				{
 					if ((partyMember != null) && !partyMember.isDead())
 					{

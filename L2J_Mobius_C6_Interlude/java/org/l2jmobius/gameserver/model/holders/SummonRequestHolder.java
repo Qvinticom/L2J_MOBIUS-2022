@@ -18,25 +18,25 @@ package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class SummonRequestHolder
 {
-	private PlayerInstance _summoner;
+	private Player _summoner;
 	private Location _location;
 	private Skill _skill;
 	
-	public void setTarget(PlayerInstance summoner, Skill skill)
+	public void setTarget(Player summoner, Skill skill)
 	{
 		_summoner = summoner;
 		_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
 		_skill = skill;
 	}
 	
-	public PlayerInstance getSummoner()
+	public Player getSummoner()
 	{
 		return _summoner;
 	}

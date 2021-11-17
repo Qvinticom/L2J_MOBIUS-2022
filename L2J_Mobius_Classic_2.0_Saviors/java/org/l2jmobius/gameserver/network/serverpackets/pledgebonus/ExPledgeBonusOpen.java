@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
 import org.l2jmobius.gameserver.enums.ClanRewardType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -34,9 +34,9 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(ExPledgeBonusOpen.class.getName());
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public ExPledgeBonusOpen(PlayerInstance player)
+	public ExPledgeBonusOpen(Player player)
 	{
 		_player = player;
 	}

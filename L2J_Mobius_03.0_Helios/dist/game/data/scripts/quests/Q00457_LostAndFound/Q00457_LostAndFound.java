@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -65,7 +65,7 @@ public class Q00457_LostAndFound extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -180,7 +180,7 @@ public class Q00457_LostAndFound extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (npc.getTarget() != null)
 		{
@@ -190,7 +190,7 @@ public class Q00457_LostAndFound extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, true);
 		if ((getRandom(100) < CHANCE_SPAWN) && qs.isNowAvailable() && (player.getLevel() >= MIN_LV))
@@ -201,7 +201,7 @@ public class Q00457_LostAndFound extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -237,7 +237,7 @@ public class Q00457_LostAndFound extends Quest
 		return super.onSpawn(npc);
 	}
 	
-	private void broadcastNpcSay(Npc npc, PlayerInstance player, NpcStringId stringId, boolean whisper)
+	private void broadcastNpcSay(Npc npc, Player player, NpcStringId stringId, boolean whisper)
 	{
 		(whisper ? player : npc).sendPacket(new NpcSay(npc.getObjectId(), (whisper ? ChatType.NPC_WHISPER : ChatType.NPC_GENERAL), npc.getId(), stringId));
 	}

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skills.conditions;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
@@ -40,7 +40,7 @@ public class ConditionPlayerWeight extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		final PlayerInstance player = env.getPlayer();
+		final Player player = env.getPlayer();
 		if ((player != null) && (player.getMaxLoad() > 0))
 		{
 			final int weightproc = (int) (((player.getCurrentLoad() - player.calcStat(Stat.WEIGHT_PENALTY, 1, player, null)) * 100) / player.getMaxLoad());

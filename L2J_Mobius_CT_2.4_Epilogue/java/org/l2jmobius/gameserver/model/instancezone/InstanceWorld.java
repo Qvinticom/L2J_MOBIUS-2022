@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 
 /**
  * Basic instance zone data transfer object.
@@ -67,12 +67,12 @@ public class InstanceWorld
 		return _instance.getTemplateId();
 	}
 	
-	public List<PlayerInstance> getAllowed()
+	public List<Player> getAllowed()
 	{
-		final List<PlayerInstance> allowed = new ArrayList<>(_allowed.size());
+		final List<Player> allowed = new ArrayList<>(_allowed.size());
 		for (int playerId : _allowed)
 		{
-			final PlayerInstance player = World.getInstance().getPlayer(playerId);
+			final Player player = World.getInstance().getPlayer(playerId);
 			if (player != null)
 			{
 				allowed.add(player);
@@ -81,13 +81,13 @@ public class InstanceWorld
 		return allowed;
 	}
 	
-	public void removeAllowed(PlayerInstance player)
+	public void removeAllowed(Player player)
 	{
 		final Integer playerId = player.getId();
 		_allowed.remove(playerId);
 	}
 	
-	public void addAllowed(PlayerInstance player)
+	public void addAllowed(Player player)
 	{
 		final Integer playerId = player.getId();
 		if (!_allowed.contains(playerId))
@@ -96,7 +96,7 @@ public class InstanceWorld
 		}
 	}
 	
-	public boolean isAllowed(PlayerInstance player)
+	public boolean isAllowed(Player player)
 	{
 		return _allowed.contains(player.getId());
 	}
@@ -305,7 +305,7 @@ public class InstanceWorld
 	 */
 	public void openDoor(int doorId)
 	{
-		final DoorInstance door = _instance.getDoor(doorId);
+		final Door door = _instance.getDoor(doorId);
 		if ((door != null) && !door.isOpen())
 		{
 			door.openMe();
@@ -318,7 +318,7 @@ public class InstanceWorld
 	 */
 	public void closeDoor(int doorId)
 	{
-		final DoorInstance door = _instance.getDoor(doorId);
+		final Door door = _instance.getDoor(doorId);
 		if ((door != null) && door.isOpen())
 		{
 			door.closeMe();

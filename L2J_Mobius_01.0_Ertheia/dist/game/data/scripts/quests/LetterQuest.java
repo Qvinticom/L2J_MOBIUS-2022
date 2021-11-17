@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -63,7 +63,7 @@ public abstract class LetterQuest extends Quest
 	 * @param player player trying start quest
 	 * @return {@code true} when additional conditions are met, otherwise {@code false}
 	 */
-	public boolean canShowTutorialMark(PlayerInstance player)
+	public boolean canShowTutorialMark(Player player)
 	{
 		return true;
 	}
@@ -134,7 +134,7 @@ public abstract class LetterQuest extends Quest
 	}
 	
 	@Override
-	public boolean canStartQuest(PlayerInstance player)
+	public boolean canStartQuest(Player player)
 	{
 		return canShowTutorialMark(player) && super.canStartQuest(player);
 	}
@@ -143,7 +143,7 @@ public abstract class LetterQuest extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((event.getMarkId() == getId()) && canStartQuest(player))
 		{
 			final String html = getHtm(player, "popup.html").replace("%teleport%", getTeleportCommand());
@@ -160,7 +160,7 @@ public abstract class LetterQuest extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if (event.getCommand().equals(getTeleportCommand()))
 		{
@@ -214,7 +214,7 @@ public abstract class LetterQuest extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
@@ -233,7 +233,7 @@ public abstract class LetterQuest extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && canStartQuest(player))
 		{
@@ -244,7 +244,7 @@ public abstract class LetterQuest extends Quest
 	}
 	
 	@Override
-	public void onQuestAborted(PlayerInstance player)
+	public void onQuestAborted(Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		qs.startQuest();

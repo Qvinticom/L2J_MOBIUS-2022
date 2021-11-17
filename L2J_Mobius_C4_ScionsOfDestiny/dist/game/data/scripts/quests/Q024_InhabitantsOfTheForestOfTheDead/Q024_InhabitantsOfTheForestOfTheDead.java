@@ -17,8 +17,8 @@
 package quests.Q024_InhabitantsOfTheForestOfTheDead;
 
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -65,7 +65,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
@@ -189,7 +189,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -379,7 +379,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		if (isPet)
 		{
@@ -394,7 +394,7 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 				qs.takeItems(SILVER_CROSS, -1);
 				qs.giveItems(BROKEN_SILVER_CROSS, 1);
 				qs.setCond(4);
-				for (PlayerInstance nearby : npc.getKnownList().getKnownPlayers().values())
+				for (Player nearby : npc.getKnownList().getKnownPlayers().values())
 				{
 					nearby.sendPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "That sign!"));
 				}
@@ -404,9 +404,9 @@ public class Q024_InhabitantsOfTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(player, npc, 9);
+		final Player partyMember = getRandomPartyMember(player, npc, 9);
 		if (partyMember == null)
 		{
 			return null;

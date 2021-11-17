@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSocialAction;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 public class SocialAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		switch (data.getOptionId())
 		{
@@ -80,7 +80,7 @@ public class SocialAction implements IPlayerActionHandler
 		}
 	}
 	
-	private boolean useSocial(PlayerInstance player, int id)
+	private boolean useSocial(Player player, int id)
 	{
 		if (player.isFishing())
 		{
@@ -99,7 +99,7 @@ public class SocialAction implements IPlayerActionHandler
 		return true;
 	}
 	
-	private void scheduleDeny(PlayerInstance player)
+	private void scheduleDeny(Player player)
 	{
 		if (player != null)
 		{
@@ -108,7 +108,7 @@ public class SocialAction implements IPlayerActionHandler
 		}
 	}
 	
-	private void useCoupleSocial(PlayerInstance player, int id)
+	private void useCoupleSocial(Player player, int id)
 	{
 		if (player == null)
 		{
@@ -227,7 +227,7 @@ public class SocialAction implements IPlayerActionHandler
 		}
 		
 		// Checks for partner.
-		final PlayerInstance partner = target.getActingPlayer();
+		final Player partner = target.getActingPlayer();
 		if (partner.isInStoreMode() || partner.isCrafting())
 		{
 			sm = new SystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);

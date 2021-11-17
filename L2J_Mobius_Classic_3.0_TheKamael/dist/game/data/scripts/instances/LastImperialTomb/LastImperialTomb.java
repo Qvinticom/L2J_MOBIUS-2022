@@ -25,8 +25,8 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -166,7 +166,7 @@ public class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -234,7 +234,7 @@ public class LastImperialTomb extends AbstractInstance
 				final List<Npc> demons = new ArrayList<>();
 				for (int[] element : PORTRAIT_SPAWNS)
 				{
-					final MonsterInstance demon = (MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, world.getId());
+					final Monster demon = (Monster) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, world.getId());
 					demon.setImmobilized(true);
 					demon.disableAllSkills();
 					demons.add(demon);
@@ -655,7 +655,7 @@ public class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == GUIDE)
 		{
@@ -663,7 +663,7 @@ public class LastImperialTomb extends AbstractInstance
 		}
 		else // Teleport Cube
 		{
-			final Instance world = getPlayerInstance(player);
+			final Instance world = getPlayer(player);
 			if (world != null)
 			{
 				teleportPlayerOut(player, world);
@@ -689,7 +689,7 @@ public class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.getId() == SCARLET1)
 		{
@@ -716,7 +716,7 @@ public class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (skill.isSuicideAttack())
 		{
@@ -726,14 +726,14 @@ public class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = killer.getInstanceWorld();
 		if ((npc.getId() == HALL_ALARM) && (world.getStatus() == 0))
 		{
 			world.setStatus(1);
 			world.spawnGroup("room1");
-			final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
+			final List<Monster> monsters = world.getAliveNpcs(Monster.class);
 			world.setParameter("monstersCount", monsters.size() - 1);
 			for (int doorId : FIRST_ROOM_DOORS)
 			{
@@ -780,7 +780,7 @@ public class LastImperialTomb extends AbstractInstance
 					{
 						world.setStatus(2);
 						world.spawnGroup("room2_part1");
-						final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
+						final List<Monster> monsters = world.getAliveNpcs(Monster.class);
 						world.setParameter("monstersCount", monsters.size() - 1);
 						for (int doorId : FIRST_ROUTE_DOORS)
 						{
@@ -792,7 +792,7 @@ public class LastImperialTomb extends AbstractInstance
 					{
 						world.setStatus(3);
 						world.spawnGroup("room2_part2");
-						final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
+						final List<Monster> monsters = world.getAliveNpcs(Monster.class);
 						world.setParameter("monstersCount", monsters.size() - 1);
 						for (int doorId : SECOND_ROOM_DOORS)
 						{
@@ -834,7 +834,7 @@ public class LastImperialTomb extends AbstractInstance
 		final SkillHolder skillEffect = new SkillHolder(5008, random);
 		broadcastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));
 		broadcastPacket(world, new MagicSkillUse(frintezza, frintezza, skill.getSkillId(), skill.getSkillLevel(), skill.getSkill().getHitTime(), 0));
-		for (PlayerInstance player : world.getPlayers())
+		for (Player player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -847,7 +847,7 @@ public class LastImperialTomb extends AbstractInstance
 	
 	private void disablePlayers(Instance world)
 	{
-		for (PlayerInstance player : world.getPlayers())
+		for (Player player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -864,7 +864,7 @@ public class LastImperialTomb extends AbstractInstance
 	
 	private void enablePlayers(Instance world)
 	{
-		for (PlayerInstance player : world.getPlayers())
+		for (Player player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -876,7 +876,7 @@ public class LastImperialTomb extends AbstractInstance
 	
 	void broadcastPacket(Instance world, IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : world.getPlayers())
+		for (Player player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -887,7 +887,7 @@ public class LastImperialTomb extends AbstractInstance
 	
 	private void sendPacketX(Instance world, IClientOutgoingPacket packet1, IClientOutgoingPacket packet2, int x)
 	{
-		for (PlayerInstance player : world.getPlayers())
+		for (Player player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{

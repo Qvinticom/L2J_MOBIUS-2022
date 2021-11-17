@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -62,14 +62,14 @@ public class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(PlayerInstance member, Npc npc)
+	public boolean checkPartyMember(Player member, Npc npc)
 	{
 		final QuestState qs = getQuestState(member, false);
 		return ((qs != null) && qs.isStarted());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -125,14 +125,14 @@ public class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if (MOBS1.containsKey(npcId))
 		{
 			if (getRandom(100) < MOBS1.get(npcId))
 			{
-				final PlayerInstance luckyPlayer = getRandomPartyMember(player, npc);
+				final Player luckyPlayer = getRandomPartyMember(player, npc);
 				if (luckyPlayer != null)
 				{
 					giveItemRandomly(luckyPlayer, npc, SPELLBOOK_PAGE, 1, 0, 1.0, true);
@@ -151,7 +151,7 @@ public class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -166,7 +166,7 @@ public class Q00370_AnElderSowsSeeds extends Quest
 		return htmltext;
 	}
 	
-	private final boolean exchangeChapters(PlayerInstance player, boolean takeAllItems)
+	private final boolean exchangeChapters(Player player, boolean takeAllItems)
 	{
 		final long waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
 		final long earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);

@@ -20,15 +20,15 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
@@ -77,14 +77,14 @@ public class ScrollOfEscape implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		if (checkConditions(player))
 		{
 			return;
@@ -180,10 +180,10 @@ public class ScrollOfEscape implements IItemHandler
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		private final int _itemId;
 		
-		EscapeFinalizer(PlayerInstance player, int itemId)
+		EscapeFinalizer(Player player, int itemId)
 		{
 			_player = player;
 			_itemId = itemId;
@@ -226,7 +226,7 @@ public class ScrollOfEscape implements IItemHandler
 						_player.teleToLocation(TeleportWhereType.TOWN);
 					}
 				}
-				else if (((_itemId == 1829) || (_itemId == 5858)) && (_player.getClan() != null) && (ClanHallManager.getInstance().getClanHallByOwner(_player.getClan()) != null)) // escape to clan hall if own's one
+				else if (((_itemId == 1829) || (_itemId == 5858)) && (_player.getClan() != null) && (ClanHallTable.getInstance().getClanHallByOwner(_player.getClan()) != null)) // escape to clan hall if own's one
 				{
 					_player.teleToLocation(TeleportWhereType.CLANHALL);
 				}
@@ -395,7 +395,7 @@ public class ScrollOfEscape implements IItemHandler
 		}
 	}
 	
-	private static boolean checkConditions(PlayerInstance actor)
+	private static boolean checkConditions(Player actor)
 	{
 		return actor.isStunned() || actor.isSleeping() || actor.isParalyzed() || actor.isFakeDeath() || actor.isTeleporting() || actor.isMuted() || actor.isAlikeDead() || actor.isAllSkillsDisabled();
 	}

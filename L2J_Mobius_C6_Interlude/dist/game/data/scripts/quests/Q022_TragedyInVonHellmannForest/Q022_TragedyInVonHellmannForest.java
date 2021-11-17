@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
@@ -60,7 +60,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	private static final Location PRIEST_LOC = new Location(38354, -49777, -1128);
 	private static final Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
 	private static int _tifarenOwner = 0;
-	private static NpcInstance _soulWellNpc = null;
+	private static Npc _soulWellNpc = null;
 	
 	public Q022_TragedyInVonHellmannForest()
 	{
@@ -74,7 +74,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		String htmltext = null;
@@ -170,7 +170,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 					if (_tifarenOwner == 0)
 					{
 						_tifarenOwner = player.getObjectId();
-						final NpcInstance ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
+						final Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 						ghost2.setScriptValue(player.getObjectId());
 						startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2, player);
 						ghost2.broadcastNpcSay("Did you call me, " + player.getName() + "?");
@@ -333,7 +333,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
@@ -614,7 +614,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = attacker.getQuestState(getName());
 		if ((qs != null) && qs.isCond(10) && qs.hasQuestItems(JEWEL_OF_ADVENTURER_1))
@@ -634,7 +634,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{

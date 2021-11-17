@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -87,9 +87,9 @@ public class Manadam implements ISkillHandler
 				target.sendPacket(sump);
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_S1);
-				if (creature instanceof NpcInstance)
+				if (creature instanceof Npc)
 				{
-					sm.addString(((NpcInstance) creature).getName());
+					sm.addString(((Npc) creature).getName());
 				}
 				else if (creature instanceof Summon)
 				{
@@ -102,7 +102,7 @@ public class Manadam implements ISkillHandler
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 				
-				if (creature instanceof PlayerInstance)
+				if (creature instanceof Player)
 				{
 					final SystemMessage sm2 = new SystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 					sm2.addNumber((int) mp);

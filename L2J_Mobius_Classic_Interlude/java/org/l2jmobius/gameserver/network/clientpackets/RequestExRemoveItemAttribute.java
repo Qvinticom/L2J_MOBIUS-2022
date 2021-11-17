@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.AttributeType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
@@ -45,13 +45,13 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_objectId);
+		final Item targetItem = player.getInventory().getItemByObjectId(_objectId);
 		if (targetItem == null)
 		{
 			return;
@@ -122,7 +122,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		}
 	}
 	
-	private long getPrice(ItemInstance item)
+	private long getPrice(Item item)
 	{
 		switch (item.getItem().getCrystalType())
 		{

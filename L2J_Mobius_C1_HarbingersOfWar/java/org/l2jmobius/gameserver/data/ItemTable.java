@@ -27,10 +27,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.templates.Armor;
 import org.l2jmobius.gameserver.templates.EtcItem;
-import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.templates.ItemTemplate;
 import org.l2jmobius.gameserver.templates.Weapon;
 
 public class ItemTable
@@ -44,39 +44,39 @@ public class ItemTable
 	private static final HashMap<String, Integer> _materials = new HashMap<>();
 	static
 	{
-		_materials.put("steel", Item.MATERIAL_STEEL);
-		_materials.put("fine_steel", Item.MATERIAL_FINE_STEEL);
-		_materials.put("cotton", Item.MATERIAL_FINE_STEEL);
-		_materials.put("blood_steel", Item.MATERIAL_BLOOD_STEEL);
-		_materials.put("bronze", Item.MATERIAL_BRONZE);
-		_materials.put("silver", Item.MATERIAL_SILVER);
-		_materials.put("gold", Item.MATERIAL_GOLD);
-		_materials.put("mithril", Item.MATERIAL_MITHRIL);
-		_materials.put("oriharukon", Item.MATERIAL_ORIHARUKON);
-		_materials.put("paper", Item.MATERIAL_PAPER);
-		_materials.put("wood", Item.MATERIAL_WOOD);
-		_materials.put("cloth", Item.MATERIAL_CLOTH);
-		_materials.put("leather", Item.MATERIAL_LEATHER);
-		_materials.put("bone", Item.MATERIAL_BONE);
-		_materials.put("horn", Item.MATERIAL_HORN);
-		_materials.put("damascus", Item.MATERIAL_DAMASCUS);
-		_materials.put("adamantaite", Item.MATERIAL_ADAMANTAITE);
-		_materials.put("chrysolite", Item.MATERIAL_CHRYSOLITE);
-		_materials.put("crystal", Item.MATERIAL_CRYSTAL);
-		_materials.put("liquid", Item.MATERIAL_LIQUID);
-		_materials.put("scale_of_dragon", Item.MATERIAL_SCALE_OF_DRAGON);
-		_materials.put("dyestuff", Item.MATERIAL_DYESTUFF);
-		_materials.put("cobweb", Item.MATERIAL_COBWEB);
+		_materials.put("steel", ItemTemplate.MATERIAL_STEEL);
+		_materials.put("fine_steel", ItemTemplate.MATERIAL_FINE_STEEL);
+		_materials.put("cotton", ItemTemplate.MATERIAL_FINE_STEEL);
+		_materials.put("blood_steel", ItemTemplate.MATERIAL_BLOOD_STEEL);
+		_materials.put("bronze", ItemTemplate.MATERIAL_BRONZE);
+		_materials.put("silver", ItemTemplate.MATERIAL_SILVER);
+		_materials.put("gold", ItemTemplate.MATERIAL_GOLD);
+		_materials.put("mithril", ItemTemplate.MATERIAL_MITHRIL);
+		_materials.put("oriharukon", ItemTemplate.MATERIAL_ORIHARUKON);
+		_materials.put("paper", ItemTemplate.MATERIAL_PAPER);
+		_materials.put("wood", ItemTemplate.MATERIAL_WOOD);
+		_materials.put("cloth", ItemTemplate.MATERIAL_CLOTH);
+		_materials.put("leather", ItemTemplate.MATERIAL_LEATHER);
+		_materials.put("bone", ItemTemplate.MATERIAL_BONE);
+		_materials.put("horn", ItemTemplate.MATERIAL_HORN);
+		_materials.put("damascus", ItemTemplate.MATERIAL_DAMASCUS);
+		_materials.put("adamantaite", ItemTemplate.MATERIAL_ADAMANTAITE);
+		_materials.put("chrysolite", ItemTemplate.MATERIAL_CHRYSOLITE);
+		_materials.put("crystal", ItemTemplate.MATERIAL_CRYSTAL);
+		_materials.put("liquid", ItemTemplate.MATERIAL_LIQUID);
+		_materials.put("scale_of_dragon", ItemTemplate.MATERIAL_SCALE_OF_DRAGON);
+		_materials.put("dyestuff", ItemTemplate.MATERIAL_DYESTUFF);
+		_materials.put("cobweb", ItemTemplate.MATERIAL_COBWEB);
 	}
 	private static final HashMap<String, Integer> _crystalTypes = new HashMap<>();
 	static
 	{
-		_crystalTypes.put("none", Item.CRYSTAL_NONE);
-		_crystalTypes.put("d", Item.CRYSTAL_D);
-		_crystalTypes.put("c", Item.CRYSTAL_C);
-		_crystalTypes.put("b", Item.CRYSTAL_B);
-		_crystalTypes.put("a", Item.CRYSTAL_A);
-		_crystalTypes.put("s", Item.CRYSTAL_S);
+		_crystalTypes.put("none", ItemTemplate.CRYSTAL_NONE);
+		_crystalTypes.put("d", ItemTemplate.CRYSTAL_D);
+		_crystalTypes.put("c", ItemTemplate.CRYSTAL_C);
+		_crystalTypes.put("b", ItemTemplate.CRYSTAL_B);
+		_crystalTypes.put("a", ItemTemplate.CRYSTAL_A);
+		_crystalTypes.put("s", ItemTemplate.CRYSTAL_S);
 	}
 	private static final HashMap<String, Integer> _weaponTypes = new HashMap<>();
 	static
@@ -103,28 +103,28 @@ public class ItemTable
 	private static final HashMap<String, Integer> _slots = new HashMap<>();
 	static
 	{
-		_slots.put("none", Item.SLOT_NONE);
-		_slots.put("underwear", Item.SLOT_UNDERWEAR);
-		_slots.put("rear,lear", Item.SLOT_R_EAR + Item.SLOT_L_EAR);
-		_slots.put("neck", Item.SLOT_NECK);
-		_slots.put("rfinger,lfinger", Item.SLOT_R_FINGER + Item.SLOT_L_FINGER);
-		_slots.put("head", Item.SLOT_HEAD);
-		_slots.put("rhand", Item.SLOT_R_HAND);
-		_slots.put("lhand", Item.SLOT_L_HAND);
-		_slots.put("gloves", Item.SLOT_GLOVES);
-		_slots.put("chest", Item.SLOT_CHEST);
-		_slots.put("legs", Item.SLOT_LEGS);
-		_slots.put("chest,legs", Item.SLOT_CHEST + Item.SLOT_LEGS);
-		_slots.put("feet", Item.SLOT_FEET);
-		_slots.put("back", Item.SLOT_BACK);
-		_slots.put("lrhand", Item.SLOT_LR_HAND);
-		_slots.put("fullarmor", Item.SLOT_FULL_ARMOR);
+		_slots.put("none", ItemTemplate.SLOT_NONE);
+		_slots.put("underwear", ItemTemplate.SLOT_UNDERWEAR);
+		_slots.put("rear,lear", ItemTemplate.SLOT_R_EAR + ItemTemplate.SLOT_L_EAR);
+		_slots.put("neck", ItemTemplate.SLOT_NECK);
+		_slots.put("rfinger,lfinger", ItemTemplate.SLOT_R_FINGER + ItemTemplate.SLOT_L_FINGER);
+		_slots.put("head", ItemTemplate.SLOT_HEAD);
+		_slots.put("rhand", ItemTemplate.SLOT_R_HAND);
+		_slots.put("lhand", ItemTemplate.SLOT_L_HAND);
+		_slots.put("gloves", ItemTemplate.SLOT_GLOVES);
+		_slots.put("chest", ItemTemplate.SLOT_CHEST);
+		_slots.put("legs", ItemTemplate.SLOT_LEGS);
+		_slots.put("chest,legs", ItemTemplate.SLOT_CHEST + ItemTemplate.SLOT_LEGS);
+		_slots.put("feet", ItemTemplate.SLOT_FEET);
+		_slots.put("back", ItemTemplate.SLOT_BACK);
+		_slots.put("lrhand", ItemTemplate.SLOT_LR_HAND);
+		_slots.put("fullarmor", ItemTemplate.SLOT_FULL_ARMOR);
 	}
 	
-	private Item[] _allTemplates;
-	private HashMap<Integer, Item> _etcItems;
-	private HashMap<Integer, Item> _armors;
-	private HashMap<Integer, Item> _weapons;
+	private ItemTemplate[] _allTemplates;
+	private HashMap<Integer, ItemTemplate> _etcItems;
+	private HashMap<Integer, ItemTemplate> _armors;
+	private HashMap<Integer, ItemTemplate> _weapons;
 	private boolean _initialized = true;
 	private static ItemTable _instance;
 	
@@ -184,26 +184,26 @@ public class ItemTable
 		_log.config("Laoded " + _weapons.size() + " weapons.");
 	}
 	
-	private void fixEtcItems(HashMap<Integer, Item> items)
+	private void fixEtcItems(HashMap<Integer, ItemTemplate> items)
 	{
-		for (Item i : items.values())
+		for (ItemTemplate i : items.values())
 		{
 			final EtcItem item = (EtcItem) i;
 			if ((item.getWeight() == 0) && (item.getEtcItemType() != EtcItem.TYPE_MONEY) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
 			{
-				item.setType2(Item.TYPE2_QUEST);
+				item.setType2(ItemTemplate.TYPE2_QUEST);
 				item.setEtcItemType(EtcItem.TYPE_QUEST);
 				continue;
 			}
 			if (item.getName().startsWith("sb_"))
 			{
-				item.setType2(Item.TYPE2_OTHER);
+				item.setType2(ItemTemplate.TYPE2_OTHER);
 				item.setEtcItemType(EtcItem.TYPE_SPELLBOOK);
 				continue;
 			}
 			if (item.getName().startsWith("rp_"))
 			{
-				item.setType2(Item.TYPE2_OTHER);
+				item.setType2(ItemTemplate.TYPE2_OTHER);
 				item.setEtcItemType(EtcItem.TYPE_RECIPE);
 				continue;
 			}
@@ -211,16 +211,16 @@ public class ItemTable
 			{
 				continue;
 			}
-			item.setType2(Item.TYPE2_QUEST);
+			item.setType2(ItemTemplate.TYPE2_QUEST);
 			item.setEtcItemType(EtcItem.TYPE_QUEST);
 		}
 	}
 	
-	private HashMap<Integer, Item> parseFile(File dataFile, int type)
+	private HashMap<Integer, ItemTemplate> parseFile(File dataFile, int type)
 	{
-		final HashMap<Integer, Item> result = new HashMap<>();
+		final HashMap<Integer, ItemTemplate> result = new HashMap<>();
 		LineNumberReader lnr = null;
-		Item temp = null;
+		ItemTemplate temp = null;
 		try
 		{
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(dataFile)));
@@ -278,46 +278,46 @@ public class ItemTable
 			result.setName(st.nextToken());
 			result.setCrystallizable(Boolean.parseBoolean(st.nextToken()));
 			final String itemType = st.nextToken();
-			result.setType1(Item.TYPE1_ITEM_QUESTITEM_ADENA);
+			result.setType1(ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA);
 			if (itemType.equals("none"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_OTHER);
 			}
 			else if (itemType.equals("arrow"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_ARROW);
-				result.setBodyPart(Item.SLOT_L_HAND);
+				result.setBodyPart(ItemTemplate.SLOT_L_HAND);
 			}
 			else if (itemType.equals("castle_guard"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_SCROLL);
 			}
 			else if (itemType.equals("material"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_MATERIAL);
 			}
 			else if (itemType.equals("pet_collar"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_PET_COLLAR);
 			}
 			else if (itemType.equals("potion"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_POTION);
 			}
 			else if (itemType.equals("recipe"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_RECIPE);
 			}
 			else if (itemType.equals("scroll"))
 			{
-				result.setType2(Item.TYPE2_OTHER);
+				result.setType2(ItemTemplate.TYPE2_OTHER);
 				result.setEtcItemType(EtcItem.TYPE_SCROLL);
 			}
 			else
@@ -330,7 +330,7 @@ public class ItemTable
 			{
 				result.setStackable(true);
 				result.setEtcItemType(EtcItem.TYPE_MONEY);
-				result.setType2(Item.TYPE2_MONEY);
+				result.setType2(ItemTemplate.TYPE2_MONEY);
 			}
 			else if (consume.equals("stackable"))
 			{
@@ -363,15 +363,15 @@ public class ItemTable
 			final Integer armor = _armorTypes.get(st.nextToken());
 			result.setArmorType(armor);
 			final int slot = result.getBodyPart();
-			if ((slot == Item.SLOT_NECK) || ((slot & Item.SLOT_L_EAR) != 0) || ((slot & Item.SLOT_L_FINGER) != 0))
+			if ((slot == ItemTemplate.SLOT_NECK) || ((slot & ItemTemplate.SLOT_L_EAR) != 0) || ((slot & ItemTemplate.SLOT_L_FINGER) != 0))
 			{
-				result.setType1(Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
-				result.setType2(Item.TYPE2_ACCESSORY);
+				result.setType1(ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+				result.setType2(ItemTemplate.TYPE2_ACCESSORY);
 			}
 			else
 			{
-				result.setType1(Item.TYPE1_SHIELD_ARMOR);
-				result.setType2(Item.TYPE2_SHIELD_ARMOR);
+				result.setType1(ItemTemplate.TYPE1_SHIELD_ARMOR);
+				result.setType2(ItemTemplate.TYPE2_SHIELD_ARMOR);
 			}
 			result.setWeight(Integer.parseInt(st.nextToken()));
 			final Integer material = _materials.get(st.nextToken());
@@ -399,8 +399,8 @@ public class ItemTable
 			final StringTokenizer st = new StringTokenizer(line, ";");
 			result.setItemId(Integer.parseInt(st.nextToken()));
 			result.setName(st.nextToken());
-			result.setType1(Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
-			result.setType2(Item.TYPE2_WEAPON);
+			result.setType1(ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+			result.setType2(ItemTemplate.TYPE2_WEAPON);
 			final Integer bodyPart = _slots.get(st.nextToken());
 			result.setBodyPart(bodyPart);
 			result.setCrystallizable(Boolean.parseBoolean(st.nextToken()));
@@ -417,8 +417,8 @@ public class ItemTable
 			result.setWeaponType(weapon);
 			if (weapon == 1)
 			{
-				result.setType1(Item.TYPE1_SHIELD_ARMOR);
-				result.setType2(Item.TYPE2_SHIELD_ARMOR);
+				result.setType1(ItemTemplate.TYPE1_SHIELD_ARMOR);
+				result.setType2(ItemTemplate.TYPE2_SHIELD_ARMOR);
 			}
 			result.setCritical(Integer.parseInt(st.nextToken()));
 			result.setHitModifier(Double.parseDouble(st.nextToken()));
@@ -466,46 +466,46 @@ public class ItemTable
 		}
 		
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
-		_allTemplates = new Item[highestId + 1];
+		_allTemplates = new ItemTemplate[highestId + 1];
 		
 		// Insert armor item in Fast Look Up Table
-		for (Item armor : _armors.values())
+		for (ItemTemplate armor : _armors.values())
 		{
 			_allTemplates[armor.getItemId()] = armor;
 		}
 		
 		// Insert weapon item in Fast Look Up Table
-		for (Item weapon : _weapons.values())
+		for (ItemTemplate weapon : _weapons.values())
 		{
 			_allTemplates[weapon.getItemId()] = weapon;
 		}
 		
 		// Insert etcItem item in Fast Look Up Table
-		for (Item etcItem : _etcItems.values())
+		for (ItemTemplate etcItem : _etcItems.values())
 		{
 			_allTemplates[etcItem.getItemId()] = etcItem;
 		}
 	}
 	
-	public Item getTemplate(int id)
+	public ItemTemplate getTemplate(int id)
 	{
 		return _allTemplates[id];
 	}
 	
-	public ItemInstance createItem(int itemId)
+	public Item createItem(int itemId)
 	{
-		final ItemInstance temp = new ItemInstance();
+		final Item temp = new Item();
 		temp.setObjectId(IdManager.getInstance().getNextId());
 		temp.setItem(getTemplate(itemId));
 		World.getInstance().storeObject(temp);
 		return temp;
 	}
 	
-	public ItemInstance createDummyItem(int itemId)
+	public Item createDummyItem(int itemId)
 	{
-		final ItemInstance temp = new ItemInstance();
+		final Item temp = new Item();
 		temp.setObjectId(0);
-		Item item = null;
+		ItemTemplate item = null;
 		try
 		{
 			item = getTemplate(itemId);

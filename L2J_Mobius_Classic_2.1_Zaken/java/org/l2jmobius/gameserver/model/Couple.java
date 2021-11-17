@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author evill33t
@@ -70,7 +70,7 @@ public class Couple
 		}
 	}
 	
-	public Couple(PlayerInstance player1, PlayerInstance player2)
+	public Couple(Player player1, Player player2)
 	{
 		final int _tempPlayer1Id = player1.getObjectId();
 		final int _tempPlayer2Id = player2.getObjectId();

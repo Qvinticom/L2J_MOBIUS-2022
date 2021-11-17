@@ -22,9 +22,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Decoy;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -81,7 +81,7 @@ public class SummonNpc extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffected().getActingPlayer();
+		final Player player = info.getEffected().getActingPlayer();
 		if (player.isMounted())
 		{
 			return;
@@ -98,7 +98,7 @@ public class SummonNpc extends AbstractEffect
 		{
 			case "Decoy":
 			{
-				final DecoyInstance decoy = new DecoyInstance(npcTemplate, player, _despawnDelay);
+				final Decoy decoy = new Decoy(npcTemplate, player, _despawnDelay);
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
@@ -110,7 +110,7 @@ public class SummonNpc extends AbstractEffect
 			}
 			case "EffectPoint": // TODO: Implement proper signet skills.
 			{
-				final EffectPointInstance effectPoint = new EffectPointInstance(npcTemplate, player);
+				final EffectPoint effectPoint = new EffectPoint(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
 				int x = player.getX();

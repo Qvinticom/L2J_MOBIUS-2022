@@ -20,9 +20,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AugmentationData;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
@@ -54,7 +54,7 @@ public class RequestRefine implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -66,9 +66,9 @@ public class RequestRefine implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
-		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
-		final ItemInstance gemstoneItem = (ItemInstance) World.getInstance().findObject(_gemstoneItemObjId);
+		final Item targetItem = (Item) World.getInstance().findObject(_targetItemObjId);
+		final Item refinerItem = (Item) World.getInstance().findObject(_refinerItemObjId);
+		final Item gemstoneItem = (Item) World.getInstance().findObject(_gemstoneItemObjId);
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null) || (targetItem.getOwnerId() != player.getObjectId()) || (refinerItem.getOwnerId() != player.getObjectId()) || (gemstoneItem.getOwnerId() != player.getObjectId()) || (player.getLevel() < 46)) // must
 																																																																					// be
 																																																																					// level
@@ -99,7 +99,7 @@ public class RequestRefine implements IClientIncomingPacket
 		}
 	}
 	
-	boolean TryAugmentItem(PlayerInstance player, ItemInstance targetItem, ItemInstance refinerItem, ItemInstance gemstoneItem)
+	boolean TryAugmentItem(Player player, Item targetItem, Item refinerItem, Item gemstoneItem)
 	{
 		if (targetItem.isAugmented() || targetItem.isWear())
 		{
@@ -137,7 +137,7 @@ public class RequestRefine implements IClientIncomingPacket
 			return false;
 		}
 		
-		if (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
 			return false;
@@ -175,13 +175,13 @@ public class RequestRefine implements IClientIncomingPacket
 		
 		// must be a weapon, must be > d grade
 		// TODO: can do better? : currently: using isdestroyable() as a check for hero / cursed weapons
-		if ((itemGrade < Item.CRYSTAL_C) || (itemType != Item.TYPE2_WEAPON) || !targetItem.isDestroyable())
+		if ((itemGrade < ItemTemplate.CRYSTAL_C) || (itemType != ItemTemplate.TYPE2_WEAPON) || !targetItem.isDestroyable())
 		{
 			return false;
 		}
 		
 		// player must be able to use augmentation
-		if ((player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE) || player.isDead() || player.isParalyzed() || player.isFishing() || player.isSitting())
+		if ((player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE) || player.isDead() || player.isParalyzed() || player.isFishing() || player.isSitting())
 		{
 			return false;
 		}
@@ -191,7 +191,7 @@ public class RequestRefine implements IClientIncomingPacket
 		final int lifeStoneGrade = getLifeStoneGrade(lifeStoneId);
 		switch (itemGrade)
 		{
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				if ((player.getLevel() < 46) || (gemstoneItemId != 2130))
 				{
@@ -200,7 +200,7 @@ public class RequestRefine implements IClientIncomingPacket
 				modifyGemstoneCount = 20;
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				if ((player.getLevel() < 52) || (gemstoneItemId != 2130))
 				{
@@ -209,7 +209,7 @@ public class RequestRefine implements IClientIncomingPacket
 				modifyGemstoneCount = 30;
 				break;
 			}
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				if ((player.getLevel() < 61) || (gemstoneItemId != 2131))
 				{
@@ -218,7 +218,7 @@ public class RequestRefine implements IClientIncomingPacket
 				modifyGemstoneCount = 20;
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				if ((player.getLevel() < 76) || (gemstoneItemId != 2131))
 				{

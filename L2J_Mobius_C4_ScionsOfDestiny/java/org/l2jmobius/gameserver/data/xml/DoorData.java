@@ -27,13 +27,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 
@@ -44,7 +44,7 @@ public class DoorData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(DoorData.class.getName());
 	
-	private static final Map<Integer, DoorInstance> DOORS = new HashMap<>();
+	private static final Map<Integer, Door> DOORS = new HashMap<>();
 	
 	@Override
 	public void load()
@@ -74,10 +74,10 @@ public class DoorData implements IXmlReader
 					set.set(attr.getNodeName(), attr.getNodeValue());
 				}
 				
-				final DoorInstance door = createDoor(set);
+				final Door door = createDoor(set);
 				DOORS.put(door.getDoorId(), door);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
-				final ClanHall clanhall = ClanHallManager.getInstance().getNearbyClanHall(door.getX(), door.getY(), 500);
+				final ClanHall clanhall = ClanHallTable.getInstance().getNearbyClanHall(door.getX(), door.getY(), 500);
 				if (clanhall != null)
 				{
 					clanhall.getDoors().add(door);
@@ -91,7 +91,7 @@ public class DoorData implements IXmlReader
 		}
 	}
 	
-	public static DoorInstance createDoor(StatSet set)
+	public static Door createDoor(StatSet set)
 	{
 		final String name = set.getString("name");
 		final int id = set.getInt("id");
@@ -178,7 +178,7 @@ public class DoorData implements IXmlReader
 		npcDat.set("baseMDef", mDef);
 		
 		final CreatureTemplate template = new CreatureTemplate(npcDat);
-		final DoorInstance door = new DoorInstance(IdManager.getInstance().getNextId(), template, id, name, unlockable);
+		final Door door = new Door(IdManager.getInstance().getNextId(), template, id, name, unlockable);
 		door.setRange(xMin, yMin, zMin, xMax, yMax, zMax);
 		try
 		{
@@ -194,17 +194,17 @@ public class DoorData implements IXmlReader
 		return door;
 	}
 	
-	public DoorInstance getDoor(Integer id)
+	public Door getDoor(Integer id)
 	{
 		return DOORS.get(id);
 	}
 	
-	public void putDoor(DoorInstance door)
+	public void putDoor(Door door)
 	{
 		DOORS.put(door.getDoorId(), door);
 	}
 	
-	public Collection<DoorInstance> getDoors()
+	public Collection<Door> getDoors()
 	{
 		return DOORS.values();
 	}
@@ -214,7 +214,7 @@ public class DoorData implements IXmlReader
 	 */
 	public void checkAutoOpen()
 	{
-		for (DoorInstance doorInst : DOORS.values())
+		for (Door doorInst : DOORS.values())
 		{
 			// Garden of Eva (every 7 minutes)
 			if (doorInst.getDoorName().startsWith("goe"))
@@ -242,13 +242,13 @@ public class DoorData implements IXmlReader
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId)
 	{
 		final WorldRegion region = World.getInstance().getRegion(x, y);
-		final Collection<DoorInstance> doors = region != null ? region.getDoors() : null;
+		final Collection<Door> doors = region != null ? region.getDoors() : null;
 		if ((doors == null) || doors.isEmpty())
 		{
 			return false;
 		}
 		
-		for (DoorInstance door : doors)
+		for (Door door : doors)
 		{
 			if ((door.getXMax() == 0) || (door.getInstanceId() != instanceId))
 			{

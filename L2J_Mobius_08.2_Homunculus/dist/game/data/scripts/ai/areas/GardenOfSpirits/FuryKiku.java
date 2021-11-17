@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -46,7 +46,7 @@ public class FuryKiku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -66,7 +66,7 @@ public class FuryKiku extends AbstractNpcAI
 			case "ATTACK":
 			{
 				npc.setRunning();
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, p ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 300, p ->
 				{
 					if ((p != null) && p.isPlayable() && !p.isDead())
 					{
@@ -80,7 +80,7 @@ public class FuryKiku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (getRandom(10) < 5)
 		{

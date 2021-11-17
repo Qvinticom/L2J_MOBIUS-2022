@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ObjectPosition
 {
@@ -66,10 +66,10 @@ public class ObjectPosition
 		catch (Exception e)
 		{
 			LOGGER.warning("Object Id at bad coords: (x: " + getWorldPosition().getX() + ", y: " + getWorldPosition().getY() + ", z: " + getWorldPosition().getZ() + ").");
-			if (_activeObject instanceof PlayerInstance)
+			if (_activeObject instanceof Player)
 			{
-				((PlayerInstance) _activeObject).teleToLocation(0, 0, 0);
-				((PlayerInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
+				((Player) _activeObject).teleToLocation(0, 0, 0);
+				((Player) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
 			}
 			else if (_activeObject instanceof Creature)
 			{
@@ -90,7 +90,7 @@ public class ObjectPosition
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Create a Door</li>
-	 * <li>Restore PlayerInstance</li><br>
+	 * <li>Restore Player</li><br>
 	 * @param x the x
 	 * @param y the y
 	 * @param z the z

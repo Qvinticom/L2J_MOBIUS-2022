@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Task dedicated to enable player's inventory.
@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class InventoryEnableTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public InventoryEnableTask(PlayerInstance player)
+	public InventoryEnableTask(Player player)
 	{
 		_player = player;
 	}

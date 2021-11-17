@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -42,7 +42,7 @@ public class Unstuck implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, PlayerInstance player)
+	public boolean useUserCommand(int id, Player player)
 	{
 		if (player.isRegisteredOnEvent())
 		{
@@ -118,9 +118,9 @@ public class Unstuck implements IUserCommandHandler
 	
 	private static class EscapeFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		
-		protected EscapeFinalizer(PlayerInstance player)
+		protected EscapeFinalizer(Player player)
 		{
 			_player = player;
 		}

@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
@@ -64,8 +64,8 @@ public class CallPc extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance target = info.getEffected().getActingPlayer();
-		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final Player target = info.getEffected().getActingPlayer();
+		final Player player = info.getEffector().getActingPlayer();
 		if (player != null)
 		{
 			if (checkSummonTargetStatus(target, player))
@@ -102,7 +102,7 @@ public class CallPc extends AbstractEffect
 		}
 	}
 	
-	public static boolean checkSummonTargetStatus(PlayerInstance target, PlayerInstance activeChar)
+	public static boolean checkSummonTargetStatus(Player target, Player activeChar)
 	{
 		if (target == activeChar)
 		{

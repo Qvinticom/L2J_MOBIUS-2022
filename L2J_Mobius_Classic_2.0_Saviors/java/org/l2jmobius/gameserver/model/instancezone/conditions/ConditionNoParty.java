@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 
 /**
@@ -33,7 +33,7 @@ public class ConditionNoParty extends Condition
 	}
 	
 	@Override
-	public boolean test(PlayerInstance player, Npc npc)
+	public boolean test(Player player, Npc npc)
 	{
 		return !player.isInParty();
 	}

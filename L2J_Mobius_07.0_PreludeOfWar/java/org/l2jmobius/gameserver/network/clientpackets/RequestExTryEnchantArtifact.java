@@ -21,9 +21,9 @@ import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExTryEnchantArtifactResult;
@@ -69,7 +69,7 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -81,14 +81,14 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_targetObjectId);
+		final Item targetItem = player.getInventory().getItemByObjectId(_targetObjectId);
 		if (targetItem == null)
 		{
 			player.sendPacket(ExTryEnchantArtifactResult.ERROR_PACKET);
 			return;
 		}
 		
-		final Item item = targetItem.getItem();
+		final ItemTemplate item = targetItem.getItem();
 		final int artifactSlot = item.getArtifactSlot();
 		if (artifactSlot <= 0)
 		{
@@ -142,7 +142,7 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 		
 		for (int objectId : _ingridients)
 		{
-			final ItemInstance ingridient = player.getInventory().getItemByObjectId(objectId);
+			final Item ingridient = player.getInventory().getItemByObjectId(objectId);
 			if ((ingridient == null) || (ingridient.getEnchantLevel() < minIngridientEnchant) || (ingridient.getItem().getArtifactSlot() != artifactSlot))
 			{
 				player.sendPacket(ExTryEnchantArtifactResult.ERROR_PACKET);

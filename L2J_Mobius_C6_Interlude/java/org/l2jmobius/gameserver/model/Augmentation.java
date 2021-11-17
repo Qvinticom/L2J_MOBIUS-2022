@@ -25,8 +25,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.AugmentationData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.skills.funcs.FuncAdd;
 import org.l2jmobius.gameserver.model.skills.funcs.LambdaConst;
@@ -39,12 +39,12 @@ public class Augmentation
 {
 	private static final Logger LOGGER = Logger.getLogger(Augmentation.class.getName());
 	
-	private final ItemInstance _item;
+	private final Item _item;
 	private int _effectsId = 0;
 	private augmentationStatBonus _bonus = null;
 	private Skill _skill = null;
 	
-	public Augmentation(ItemInstance item, int effects, Skill skill, boolean save)
+	public Augmentation(Item item, int effects, Skill skill, boolean save)
 	{
 		_item = item;
 		_effectsId = effects;
@@ -58,7 +58,7 @@ public class Augmentation
 		}
 	}
 	
-	public Augmentation(ItemInstance item, int effects, int skill, int skillLevel, boolean save)
+	public Augmentation(Item item, int effects, int skill, int skillLevel, boolean save)
 	{
 		this(item, effects, SkillTable.getInstance().getSkill(skill, skillLevel), save);
 	}
@@ -84,7 +84,7 @@ public class Augmentation
 			}
 		}
 		
-		public void applyBonus(PlayerInstance player)
+		public void applyBonus(Player player)
 		{
 			// make sure the bonus are not applyed twice..
 			if (_active)
@@ -100,7 +100,7 @@ public class Augmentation
 			_active = true;
 		}
 		
-		public void removeBonus(PlayerInstance player)
+		public void removeBonus(Player player)
 		{
 			// make sure the bonus is not removed twice
 			if (!_active)
@@ -180,7 +180,7 @@ public class Augmentation
 	 * Applies the bonus to the player.
 	 * @param player
 	 */
-	public void applyBonus(PlayerInstance player)
+	public void applyBonus(Player player)
 	{
 		_bonus.applyBonus(player);
 		
@@ -203,7 +203,7 @@ public class Augmentation
 	 * Removes the augmentation bonus from the player.
 	 * @param player
 	 */
-	public void removeBonus(PlayerInstance player)
+	public void removeBonus(Player player)
 	{
 		_bonus.removeBonus(player);
 		

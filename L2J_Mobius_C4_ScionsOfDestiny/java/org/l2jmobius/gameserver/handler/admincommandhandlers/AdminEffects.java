@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
@@ -95,7 +95,7 @@ public class AdminEffects implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
@@ -168,7 +168,7 @@ public class AdminEffects implements IAdminCommandHandler
 					activeChar.setSayMode(null);
 					BuilderUtil.sendSysMessage(activeChar, "NpcSay mode off");
 				}
-				else if ((target != null) && (target instanceof NpcInstance))
+				else if ((target != null) && (target instanceof Npc))
 				{
 					activeChar.setSayMode(target);
 					BuilderUtil.sendSysMessage(activeChar, "NpcSay mode on for " + target.getName());
@@ -264,7 +264,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
+				for (Player player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					if (!player.isGM())
 					{
@@ -284,7 +284,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
+				for (Player player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					player.stopAbnormalEffect(0x0400);
 					player.setParalyzed(false);
@@ -330,7 +330,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
+				for (Player player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					player.setTeam(0);
 					player.broadcastUserInfo();
@@ -346,7 +346,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final String val = st.nextToken();
 				final int teamVal = Integer.parseInt(val);
-				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
+				for (Player player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					if (activeChar.isInsideRadius2D(player, 400))
 					{
@@ -370,10 +370,10 @@ public class AdminEffects implements IAdminCommandHandler
 			final String val = command.substring(14);
 			final int teamVal = Integer.parseInt(val);
 			final WorldObject target = activeChar.getTarget();
-			PlayerInstance player = null;
-			if (target instanceof PlayerInstance)
+			Player player = null;
+			if (target instanceof Player)
 			{
-				player = (PlayerInstance) target;
+				player = (Player) target;
 			}
 			else
 			{
@@ -401,7 +401,7 @@ public class AdminEffects implements IAdminCommandHandler
 					target = st.nextToken();
 					if (target != null)
 					{
-						final PlayerInstance player = World.getInstance().getPlayer(target);
+						final Player player = World.getInstance().getPlayer(target);
 						if (player != null)
 						{
 							if (performSocial(social, player, activeChar))
@@ -487,7 +487,7 @@ public class AdminEffects implements IAdminCommandHandler
 					target = st.nextToken();
 					if (target != null)
 					{
-						final PlayerInstance player = World.getInstance().getPlayer(target);
+						final Player player = World.getInstance().getPlayer(target);
 						if (player != null)
 						{
 							if (performAbnormal(abnormal, player))
@@ -618,27 +618,27 @@ public class AdminEffects implements IAdminCommandHandler
 		return false;
 	}
 	
-	private boolean performSocial(int action, WorldObject target, PlayerInstance activeChar)
+	private boolean performSocial(int action, WorldObject target, Player activeChar)
 	{
 		try
 		{
 			if (target instanceof Creature)
 			{
-				if ((target instanceof Summon) || (target instanceof ChestInstance))
+				if ((target instanceof Summon) || (target instanceof Chest))
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					
 					return false;
 				}
 				
-				if ((target instanceof NpcInstance) && ((action < 1) || (action > 3)))
+				if ((target instanceof Npc) && ((action < 1) || (action > 3)))
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					
 					return false;
 				}
 				
-				if ((target instanceof PlayerInstance) && ((action < 2) || (action > 16)))
+				if ((target instanceof Player) && ((action < 2) || (action > 16)))
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					
@@ -664,7 +664,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 * @param state - atmosphere state(night,day)
 	 * @param activeChar
 	 */
-	private void adminAtmosphere(String type, String state, PlayerInstance activeChar)
+	private void adminAtmosphere(String type, String state, Player activeChar)
 	{
 		IClientOutgoingPacket packet = null;
 		
@@ -707,14 +707,14 @@ public class AdminEffects implements IAdminCommandHandler
 		
 		if (packet != null)
 		{
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(packet);
 			}
 		}
 	}
 	
-	private void playAdminSound(PlayerInstance activeChar, String sound)
+	private void playAdminSound(Player activeChar, String sound)
 	{
 		final PlaySound snd = new PlaySound(1, sound);
 		activeChar.sendPacket(snd);
@@ -728,7 +728,7 @@ public class AdminEffects implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar, String command)
+	private void showMainPage(Player activeChar, String command)
 	{
 		String filename = "effects_menu";
 		if (command.contains("menu_main"))

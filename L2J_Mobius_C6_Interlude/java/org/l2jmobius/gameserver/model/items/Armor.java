@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.funcs.Func;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.skills.funcs.FuncTemplate;
  * This class is dedicated to the management of armors.
  * @version $Revision: 1.2.2.1.2.6 $ $Date: 2005/03/27 15:30:10 $
  */
-public class Armor extends Item
+public class Armor extends ItemTemplate
 {
 	private final int _avoidModifier;
 	private final int _pDef;
@@ -51,7 +51,7 @@ public class Armor extends Item
 	 * <li>_mpBonus & _hpBonus</li><br>
 	 * @param type : ArmorType designating the type of armor
 	 * @param set : StatSet designating the set of couples (key,value) caracterizing the armor
-	 * @see Item constructor
+	 * @see ItemTemplate constructor
 	 */
 	public Armor(ArmorType type, StatSet set)
 	{
@@ -146,12 +146,12 @@ public class Armor extends Item
 	
 	/**
 	 * Returns array of Func objects containing the list of functions used by the armor
-	 * @param instance : ItemInstance pointing out the armor
+	 * @param instance : Item pointing out the armor
 	 * @param creature : Creature pointing out the player
 	 * @return List<Func> : List of functions
 	 */
 	@Override
-	public List<Func> getStatFuncs(ItemInstance instance, Creature creature)
+	public List<Func> getStatFuncs(Item instance, Creature creature)
 	{
 		if (_funcTemplates == null)
 		{

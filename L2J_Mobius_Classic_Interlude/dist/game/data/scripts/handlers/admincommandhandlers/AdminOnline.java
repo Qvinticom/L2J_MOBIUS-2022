@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -37,7 +37,7 @@ public class AdminOnline implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equalsIgnoreCase("admin_online"))
 		{
@@ -49,7 +49,7 @@ public class AdminOnline implements IAdminCommandHandler
 			int notPeace = 0;
 			int instanced = 0;
 			int combat = 0;
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				final String ip = player.getIPAddress();
 				if ((ip != null) && !ips.contains(ip))

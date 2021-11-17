@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Shyla
@@ -55,7 +55,7 @@ public class PlayerStatsHolder
 	public int CUR_CP = -1;
 	public int MAX_CP = -1;
 	
-	public PlayerStatsHolder(PlayerInstance actor)
+	public PlayerStatsHolder(Player actor)
 	{
 		level = actor.getLevel();
 		EXP = (int) actor.getExp();

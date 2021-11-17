@@ -37,9 +37,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -310,7 +310,7 @@ public class EnergySeeds extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!CommonUtil.contains(targets, npc) || (skill.getId() != 5780))
 		{
@@ -383,13 +383,13 @@ public class EnergySeeds extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("StartSoDAi"))
 		{
 			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
 			{
-				final DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
+				final Door doorInstance = DoorData.getInstance().getDoor(doorId);
 				if (doorInstance != null)
 				{
 					doorInstance.openMe();
@@ -401,13 +401,13 @@ public class EnergySeeds extends AbstractNpcAI
 		{
 			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
 			{
-				final DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
+				final Door doorInstance = DoorData.getInstance().getDoor(doorId);
 				if (doorInstance != null)
 				{
 					doorInstance.closeMe();
 				}
 			}
-			for (PlayerInstance ch : ZoneManager.getInstance().getZoneById(SOD_ZONE).getPlayersInside())
+			for (Player ch : ZoneManager.getInstance().getZoneById(SOD_ZONE).getPlayersInside())
 			{
 				if (ch != null)
 				{
@@ -431,7 +431,7 @@ public class EnergySeeds extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == TEMPORARY_TELEPORTER)
 		{
@@ -442,7 +442,7 @@ public class EnergySeeds extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		if (_spawnedNpcs.containsKey(npc) && SPAWNS.containsKey(_spawnedNpcs.get(npc)))
 		{
@@ -520,7 +520,7 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 	}
 	
-	public void seedCollectEvent(PlayerInstance player, Npc seedEnergy, GraciaSeeds seedType)
+	public void seedCollectEvent(Player player, Npc seedEnergy, GraciaSeeds seedType)
 	{
 		if (player == null)
 		{
@@ -553,7 +553,7 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				if (getRandom(100) < 50)
 				{
-					final MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
+					final Monster mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player, 0, 999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -568,7 +568,7 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				if (getRandom(100) < 50)
 				{
-					final MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
+					final Monster mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player, 0, 999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -583,7 +583,7 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				if (getRandom(100) < 50)
 				{
-					final MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
+					final Monster mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player, 0, 999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -593,10 +593,10 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 	}
 	
-	private MonsterInstance spawnSupriseMob(Npc energy, int npcId)
+	private Monster spawnSupriseMob(Npc energy, int npcId)
 	{
 		final NpcTemplate surpriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
-		final MonsterInstance monster = new MonsterInstance(surpriseMobTemplate);
+		final Monster monster = new Monster(surpriseMobTemplate);
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
 		monster.setHeading(energy.getHeading());
 		monster.setInstanceId(energy.getInstanceId());
@@ -606,7 +606,7 @@ public class EnergySeeds extends AbstractNpcAI
 		return monster;
 	}
 	
-	private void handleQuestDrop(PlayerInstance player, int itemId)
+	private void handleQuestDrop(Player player, int itemId)
 	{
 		double chance = HOW_TO_OPPOSE_EVIL_CHANCE * Config.RATE_QUEST_DROP;
 		int numItems = (int) (chance / 100);

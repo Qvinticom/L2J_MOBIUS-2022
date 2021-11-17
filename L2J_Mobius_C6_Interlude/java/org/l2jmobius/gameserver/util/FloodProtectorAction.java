@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
+import org.l2jmobius.gameserver.model.actor.Player.PunishLevel;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;

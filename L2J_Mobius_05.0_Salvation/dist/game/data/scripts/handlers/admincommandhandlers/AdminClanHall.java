@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
@@ -51,7 +51,7 @@ public class AdminClanHall implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -62,7 +62,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void doAction(PlayerInstance player, int clanHallId, String action, String actionVal)
+	private void doAction(Player player, int clanHallId, String action, String actionVal)
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
@@ -153,7 +153,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		useAdminCommand("admin_clanhall id=" + clanHallId, player);
 	}
 	
-	private void sendClanHallList(PlayerInstance player, int page)
+	private void sendClanHallList(Player player, int page)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
@@ -201,7 +201,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		player.sendPacket(html);
 	}
 	
-	private void sendClanHallDetails(PlayerInstance player, int clanHallId)
+	private void sendClanHallDetails(Player player, int clanHallId)
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
@@ -252,7 +252,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		}
 	}
 	
-	private void processBypass(PlayerInstance player, BypassParser parser)
+	private void processBypass(Player player, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);

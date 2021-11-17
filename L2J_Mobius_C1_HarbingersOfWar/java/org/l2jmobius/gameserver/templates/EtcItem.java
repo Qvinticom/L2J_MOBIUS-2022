@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.templates;
 
-public class EtcItem extends Item
+public class EtcItem extends ItemTemplate
 {
 	public static final int TYPE_ARROW = 0;
 	public static final int TYPE_MATERIAL = 1;

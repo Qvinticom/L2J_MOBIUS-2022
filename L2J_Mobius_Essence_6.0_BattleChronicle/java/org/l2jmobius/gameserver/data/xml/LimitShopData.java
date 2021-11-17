@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author Mobius
@@ -121,7 +121,7 @@ public class LimitShopData implements IXmlReader
 									final long ingredientQuantity = parseLong(attrs, "count", 1L);
 									final int ingredientEnchant = parseInteger(attrs, "enchant", 0);
 									
-									final Item item = ItemTable.getInstance().getTemplate(ingredientId);
+									final ItemTemplate item = ItemTable.getInstance().getTemplate(ingredientId);
 									if (item == null)
 									{
 										LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + productionId + " productId: " + id);
@@ -197,7 +197,7 @@ public class LimitShopData implements IXmlReader
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);
 									accountBuyLimit = parseInteger(attrs, "accountBuyLimit", 0);
 									
-									final Item item = ItemTable.getInstance().getTemplate(productionId);
+									final ItemTemplate item = ItemTable.getInstance().getTemplate(productionId);
 									if (item == null)
 									{
 										LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + productionId + " productId: " + id);

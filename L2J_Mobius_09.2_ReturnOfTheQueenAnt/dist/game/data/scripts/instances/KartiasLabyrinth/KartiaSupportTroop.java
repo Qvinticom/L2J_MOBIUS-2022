@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -49,7 +49,7 @@ public class KartiaSupportTroop extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		if (event.equals("NPC_SAY") && !npc.isDead())
 		{
@@ -58,10 +58,10 @@ public class KartiaSupportTroop extends AbstractNpcAI
 		}
 		else if (event.equals("CHECK_TARGET") && (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null)))
 		{
-			final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjects(npc, MonsterInstance.class);
+			final List<Monster> monsterList = World.getInstance().getVisibleObjects(npc, Monster.class);
 			if (!monsterList.isEmpty())
 			{
-				final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
+				final Monster monster = monsterList.get(getRandom(monsterList.size()));
 				if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster))
 				{
 					addAttackDesire(npc, monster);

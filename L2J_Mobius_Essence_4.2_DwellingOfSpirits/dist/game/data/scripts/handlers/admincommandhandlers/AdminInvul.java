@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -37,7 +37,7 @@ public class AdminInvul implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_invul"))
 		{
@@ -55,7 +55,7 @@ public class AdminInvul implements IAdminCommandHandler
 			final WorldObject target = activeChar.getTarget();
 			if ((target != null) && target.isPlayer())
 			{
-				handleInvul((PlayerInstance) target);
+				handleInvul((Player) target);
 			}
 		}
 		else if (command.equals("admin_setundying"))
@@ -75,7 +75,7 @@ public class AdminInvul implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleInvul(PlayerInstance activeChar)
+	private void handleInvul(Player activeChar)
 	{
 		String text;
 		if (activeChar.isInvul())
@@ -91,7 +91,7 @@ public class AdminInvul implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 	
-	private void handleUndying(PlayerInstance activeChar, Creature target)
+	private void handleUndying(Player activeChar, Creature target)
 	{
 		String text;
 		if (target.isUndying())

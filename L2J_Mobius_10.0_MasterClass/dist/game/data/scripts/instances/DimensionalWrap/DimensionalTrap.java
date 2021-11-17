@@ -18,7 +18,7 @@ package instances.DimensionalWrap;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -53,7 +53,7 @@ public class DimensionalTrap extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc == null) || npc.isAlikeDead())
 		{
@@ -64,7 +64,7 @@ public class DimensionalTrap extends AbstractNpcAI
 		{
 			case "debuff_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, _type, p ->
 				{
 					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
@@ -77,7 +77,7 @@ public class DimensionalTrap extends AbstractNpcAI
 			}
 			case "damage_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, _type, p ->
 				{
 					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
@@ -90,7 +90,7 @@ public class DimensionalTrap extends AbstractNpcAI
 			}
 			case "heal_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, _type, p ->
 				{
 					if ((p != null) && p.isPlayer() && !p.isDead())
 					{

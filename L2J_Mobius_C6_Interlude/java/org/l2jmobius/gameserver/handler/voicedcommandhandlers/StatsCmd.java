@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class StatsCmd implements IVoicedCommandHandler
@@ -30,7 +30,7 @@ public class StatsCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
 		if (command == null)
 		{
@@ -55,13 +55,13 @@ public class StatsCmd implements IVoicedCommandHandler
 					activeChar.sendMessage("You cannot request your stats.");
 					return false;
 				}
-				if (!(activeChar.getTarget() instanceof PlayerInstance))
+				if (!(activeChar.getTarget() instanceof Player))
 				{
 					activeChar.sendMessage("You can only get the info of a player.");
 					return false;
 				}
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-				final PlayerInstance targetp = (PlayerInstance) activeChar.getTarget();
+				final Player targetp = (Player) activeChar.getTarget();
 				final StringBuilder replyMSG = new StringBuilder("<html><body><center>");
 				replyMSG.append("<br><br><font color=\"00FF00\">=========>>" + targetp.getName() + "<<=========</font><br>");
 				replyMSG.append("<font color=\"FF0000\">Level: " + targetp.getLevel() + "</font><br>");
@@ -126,13 +126,13 @@ public class StatsCmd implements IVoicedCommandHandler
 					activeChar.sendMessage("You cannot request your stats.");
 					return false;
 				}
-				if (!(activeChar.getTarget() instanceof PlayerInstance))
+				if (!(activeChar.getTarget() instanceof Player))
 				{
 					activeChar.sendMessage("You can only get the info of a player.");
 					return false;
 				}
 				
-				final PlayerInstance targetp = (PlayerInstance) activeChar.getTarget();
+				final Player targetp = (Player) activeChar.getTarget();
 				if (targetp != null)
 				{
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

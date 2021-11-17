@@ -27,7 +27,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -144,7 +144,7 @@ public class HandysBlockCheckerManager
 	 * @param arenaId
 	 * @return
 	 */
-	public boolean addPlayerToArena(PlayerInstance player, int arenaId)
+	public boolean addPlayerToArena(Player player, int arenaId)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		
@@ -217,7 +217,7 @@ public class HandysBlockCheckerManager
 	 * @param arenaId
 	 * @param team
 	 */
-	public void removePlayer(PlayerInstance player, int arenaId, int team)
+	public void removePlayer(Player player, int arenaId, int team)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		synchronized (holder)
@@ -243,7 +243,7 @@ public class HandysBlockCheckerManager
 	 * @param player
 	 * @param arena
 	 */
-	public void changePlayerToTeam(PlayerInstance player, int arena)
+	public void changePlayerToTeam(Player player, int arena)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
 		
@@ -320,7 +320,7 @@ public class HandysBlockCheckerManager
 	 * Called when played logs out while participating in Block Checker Event
 	 * @param player
 	 */
-	public void onDisconnect(PlayerInstance player)
+	public void onDisconnect(Player player)
 	{
 		final int arena = player.getBlockCheckerArena();
 		final int team = getHolder(arena).getPlayerTeam(player);

@@ -18,7 +18,7 @@ package events.HeavyMedal;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
@@ -59,7 +59,7 @@ public class HeavyMedal extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		int level = checkLevel(player);
@@ -101,7 +101,7 @@ public class HeavyMedal extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (player.getQuestState(getName()) == null)
 		{
@@ -110,7 +110,7 @@ public class HeavyMedal extends LongTimeEvent
 		return npc.getId() + ".htm";
 	}
 	
-	public int checkLevel(PlayerInstance player)
+	public int checkLevel(Player player)
 	{
 		int level = 0;
 		if (hasQuestItems(player, 6402))

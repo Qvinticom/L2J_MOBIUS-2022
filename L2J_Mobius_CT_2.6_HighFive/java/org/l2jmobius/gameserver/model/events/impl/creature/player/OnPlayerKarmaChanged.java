@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerKarmaChanged implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _oldKarma;
 	private final int _newKarma;
 	
-	public OnPlayerKarmaChanged(PlayerInstance player, int oldKarma, int newKarma)
+	public OnPlayerKarmaChanged(Player player, int oldKarma, int newKarma)
 	{
 		_player = player;
 		_oldKarma = oldKarma;
 		_newKarma = newKarma;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

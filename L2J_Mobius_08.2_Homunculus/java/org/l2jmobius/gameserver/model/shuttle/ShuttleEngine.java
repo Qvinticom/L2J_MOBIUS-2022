@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.DoorData;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
 
 /**
  * @author UnAfraid
@@ -33,12 +33,12 @@ public class ShuttleEngine implements Runnable
 	
 	private static final int DELAY = 15 * 1000;
 	
-	private final ShuttleInstance _shuttle;
+	private final Shuttle _shuttle;
 	private int _cycle = 0;
-	private final DoorInstance _door1;
-	private final DoorInstance _door2;
+	private final Door _door1;
+	private final Door _door2;
 	
-	public ShuttleEngine(ShuttleDataHolder data, ShuttleInstance shuttle)
+	public ShuttleEngine(ShuttleDataHolder data, Shuttle shuttle)
 	{
 		_shuttle = shuttle;
 		_door1 = DoorData.getInstance().getDoor(data.getDoors().get(0));

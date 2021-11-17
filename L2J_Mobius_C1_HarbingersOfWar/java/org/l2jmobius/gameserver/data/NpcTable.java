@@ -28,13 +28,13 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.DropData;
-import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.templates.NpcTemplate;
 
 public class NpcTable
 {
 	private static Logger _log = Logger.getLogger(NpcTable.class.getName());
 	private static NpcTable _instance;
-	private final Map<Integer, Npc> _npcs = new HashMap<>();
+	private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
 	private boolean _initialized = true;
 	
 	public static NpcTable getInstance()
@@ -71,7 +71,7 @@ public class NpcTable
 				{
 					continue;
 				}
-				final Npc npc = parseList(line);
+				final NpcTemplate npc = parseList(line);
 				_npcs.put(npc.getNpcId(), npc);
 			}
 			lnr.close();
@@ -89,10 +89,10 @@ public class NpcTable
 		}
 	}
 	
-	private Npc parseList(String line)
+	private NpcTemplate parseList(String line)
 	{
 		final StringTokenizer st = new StringTokenizer(line, ";");
-		final Npc npc = new Npc();
+		final NpcTemplate npc = new NpcTemplate();
 		int id = Integer.parseInt(st.nextToken());
 		if (id > 1000000)
 		{
@@ -144,7 +144,7 @@ public class NpcTable
 	{
 		final StringTokenizer st = new StringTokenizer(line, ";");
 		final int id = Integer.parseInt(st.nextToken());
-		final Npc npcDat = _npcs.get(id);
+		final NpcTemplate npcDat = _npcs.get(id);
 		if (npcDat == null)
 		{
 			_log.warning("Missing npc template id:" + id);
@@ -214,7 +214,7 @@ public class NpcTable
 	{
 		final StringTokenizer st = new StringTokenizer(line, ";");
 		final int mobId = Integer.parseInt(st.nextToken());
-		final Npc npc = _npcs.get(mobId);
+		final NpcTemplate npc = _npcs.get(mobId);
 		if (npc == null)
 		{
 			_log.warning("Could not add drop data for npcid:" + mobId);
@@ -229,7 +229,7 @@ public class NpcTable
 		npc.addDropData(dropDat);
 	}
 	
-	public Npc getTemplate(int id)
+	public NpcTemplate getTemplate(int id)
 	{
 		return _npcs.get(id);
 	}

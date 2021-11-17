@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameNonClassed;
@@ -47,7 +47,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -61,7 +61,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					return false;
 				}
 				
-				final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
+				final Player player = World.getInstance().getPlayer(st.nextToken());
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
@@ -102,7 +102,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			case "admin_addolypoints":
 			{
 				final WorldObject target = activeChar.getTarget();
-				final PlayerInstance player = target != null ? target.getActingPlayer() : null;
+				final Player player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
 					final int val = parseInt(st);
@@ -143,7 +143,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			case "admin_removeolypoints":
 			{
 				final WorldObject target = activeChar.getTarget();
-				final PlayerInstance player = target != null ? target.getActingPlayer() : null;
+				final Player player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
 					final int val = parseInt(st);
@@ -184,7 +184,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			case "admin_setolypoints":
 			{
 				final WorldObject target = activeChar.getTarget();
-				final PlayerInstance player = target != null ? target.getActingPlayer() : null;
+				final Player player = target != null ? target.getActingPlayer() : null;
 				if (player != null)
 				{
 					final int val = parseInt(st);
@@ -236,7 +236,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 		return Integer.decode(token);
 	}
 	
-	private StatSet getPlayerSet(PlayerInstance player)
+	private StatSet getPlayerSet(Player player)
 	{
 		StatSet statDat = Olympiad.getNobleStats(player.getObjectId());
 		if (statDat == null)
@@ -256,7 +256,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 		return statDat;
 	}
 	
-	private boolean checkplayer(PlayerInstance player, PlayerInstance activeChar)
+	private boolean checkplayer(Player player, Player activeChar)
 	{
 		if (player.isSubClassActive())
 		{

@@ -391,7 +391,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35707" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="35707" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -442,7 +442,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="35708" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="35708" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="broadcast_range" value="2000" />
@@ -488,7 +488,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="35709" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="35709" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -538,7 +538,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="35710" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35710" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1534,7 +1534,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35726" level="20" type="Npc" name="Flagpole">
+	<npc id="35726" level="20" type="Folk" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1619,7 +1619,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35728" level="75" type="Npc" name="Suspicious Merchant" title="Hive Fortress">
+	<npc id="35728" level="75" type="Folk" name="Suspicious Merchant" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1665,7 +1665,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35729" level="75" type="Npc" name="Guard Captain" title="Hive Fortress">
+	<npc id="35729" level="75" type="Folk" name="Guard Captain" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1714,7 +1714,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="35730" level="75" type="Npc" name="Archer Captain" title="Hive Fortress">
+	<npc id="35730" level="75" type="Folk" name="Archer Captain" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1755,7 +1755,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35731" level="75" type="Npc" name="Support Unit Captain" title="Hive Fortress">
+	<npc id="35731" level="75" type="Folk" name="Support Unit Captain" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1796,7 +1796,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35732" level="75" type="Npc" name="Engineering Manager" title="Hive Fortress">
+	<npc id="35732" level="75" type="Folk" name="Engineering Manager" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1936,7 +1936,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="35735" level="75" type="Npc" name="Detention Camp Warden" title="Hive Fortress">
+	<npc id="35735" level="75" type="Folk" name="Detention Camp Warden" title="Hive Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2421,7 +2421,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35744" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35744" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3234,7 +3234,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35757" level="20" type="Npc" name="Flagpole">
+	<npc id="35757" level="20" type="Folk" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3319,7 +3319,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35759" level="75" type="Npc" name="Suspicious Merchant" title="Valley Fortress">
+	<npc id="35759" level="75" type="Folk" name="Suspicious Merchant" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3365,7 +3365,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35760" level="75" type="Npc" name="Guard Captain" title="Valley Fortress">
+	<npc id="35760" level="75" type="Folk" name="Guard Captain" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3414,7 +3414,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="35761" level="75" type="Npc" name="Archer Captain" title="Valley Fortress">
+	<npc id="35761" level="75" type="Folk" name="Archer Captain" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3455,7 +3455,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35762" level="75" type="Npc" name="General" title="Valley Fortress">
+	<npc id="35762" level="75" type="Folk" name="General" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3497,7 +3497,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="35763" level="75" type="Npc" name="Support Unit Captain" title="Valley Fortress">
+	<npc id="35763" level="75" type="Folk" name="Support Unit Captain" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3538,7 +3538,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35764" level="75" type="Npc" name="Engineering Manager" title="Valley Fortress">
+	<npc id="35764" level="75" type="Folk" name="Engineering Manager" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3678,7 +3678,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="35767" level="75" type="Npc" name="Detention Camp Warden" title="Valley Fortress">
+	<npc id="35767" level="75" type="Folk" name="Detention Camp Warden" title="Valley Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4163,7 +4163,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35776" level="75" type="Npc" name="Main Machine" title="Control Room">
+	<npc id="35776" level="75" type="Folk" name="Main Machine" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -4214,7 +4214,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="35777" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="35777" level="75" type="Folk" name="Backup Power Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="broadcast_range" value="2000" />
@@ -4260,7 +4260,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="35778" level="75" type="Npc" name="Control Unit" title="Control Room">
+	<npc id="35778" level="75" type="Folk" name="Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -4310,7 +4310,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="35779" level="75" type="Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35779" level="75" type="Folk" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -5306,7 +5306,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35795" level="20" type="Npc" name="Flagpole">
+	<npc id="35795" level="20" type="Folk" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -5391,7 +5391,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35797" level="75" type="Npc" name="Suspicious Merchant" title="Ivory Fortress">
+	<npc id="35797" level="75" type="Folk" name="Suspicious Merchant" title="Ivory Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5437,7 +5437,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35798" level="75" type="Npc" name="Guard Captain" title="Ivory Fortress">
+	<npc id="35798" level="75" type="Folk" name="Guard Captain" title="Ivory Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5486,7 +5486,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="35799" level="75" type="Npc" name="Archer Captain" title="Ivory Fortress">
+	<npc id="35799" level="75" type="Folk" name="Archer Captain" title="Ivory Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

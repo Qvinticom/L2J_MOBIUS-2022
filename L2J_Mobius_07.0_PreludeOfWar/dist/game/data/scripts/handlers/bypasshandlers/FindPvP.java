@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -42,16 +42,16 @@ public class FindPvP implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!Config.ENABLE_FIND_PVP || !target.isNpc())
 		{
 			return false;
 		}
 		
-		PlayerInstance mostPvP = null;
+		Player mostPvP = null;
 		int max = -1;
-		for (PlayerInstance plr : World.getInstance().getPlayers())
+		for (Player plr : World.getInstance().getPlayers())
 		{
 			if ((plr == null) //
 				|| (plr.getPvpFlag() == 0) //
@@ -65,7 +65,7 @@ public class FindPvP implements IBypassHandler
 			}
 			
 			int count = 0;
-			for (PlayerInstance pl : World.getInstance().getVisibleObjects(plr, PlayerInstance.class))
+			for (Player pl : World.getInstance().getVisibleObjects(plr, Player.class))
 			{
 				if ((pl.getPvpFlag() > 0) && !pl.isInsideZone(ZoneId.PEACE))
 				{
@@ -92,7 +92,7 @@ public class FindPvP implements IBypassHandler
 					allyId = player.getClanId();
 				}
 				clanNumbers.put(allyId, 1);
-				for (PlayerInstance known : World.getInstance().getVisibleObjects(mostPvP, PlayerInstance.class))
+				for (Player known : World.getInstance().getVisibleObjects(mostPvP, Player.class))
 				{
 					int knownAllyId = known.getAllyId();
 					if (knownAllyId == 0)

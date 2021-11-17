@@ -39,8 +39,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.interfaces.IStorable;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 
@@ -58,7 +58,7 @@ public class GrandBossManager implements IStorable
 	
 	protected static final Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
 	
-	protected static final Map<Integer, GrandBossInstance> BOSSES = new ConcurrentHashMap<>();
+	protected static final Map<Integer, GrandBoss> BOSSES = new ConcurrentHashMap<>();
 	
 	protected static Map<Integer, StatSet> _storedInfo = new HashMap<>();
 	
@@ -195,7 +195,7 @@ public class GrandBossManager implements IStorable
 		return (temp != null) && temp.getName().equalsIgnoreCase(zoneType);
 	}
 	
-	public boolean checkIfInZone(PlayerInstance player)
+	public boolean checkIfInZone(Player player)
 	{
 		return (player != null) && (getZone(player.getX(), player.getY(), player.getZ()) != null);
 	}
@@ -213,10 +213,10 @@ public class GrandBossManager implements IStorable
 	}
 	
 	/**
-	 * Adds a GrandBossInstance to the list of bosses.
+	 * Adds a GrandBoss to the list of bosses.
 	 * @param boss
 	 */
-	public void addBoss(GrandBossInstance boss)
+	public void addBoss(GrandBoss boss)
 	{
 		if (boss != null)
 		{
@@ -224,7 +224,7 @@ public class GrandBossManager implements IStorable
 		}
 	}
 	
-	public GrandBossInstance getBoss(int bossId)
+	public GrandBoss getBoss(int bossId)
 	{
 		return BOSSES.get(bossId);
 	}
@@ -268,7 +268,7 @@ public class GrandBossManager implements IStorable
 			}
 			for (Entry<Integer, StatSet> e : _storedInfo.entrySet())
 			{
-				final GrandBossInstance boss = BOSSES.get(e.getKey());
+				final GrandBoss boss = BOSSES.get(e.getKey());
 				final StatSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -318,7 +318,7 @@ public class GrandBossManager implements IStorable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final GrandBossInstance boss = BOSSES.get(bossId);
+			final GrandBoss boss = BOSSES.get(bossId);
 			final StatSet info = _storedInfo.get(bossId);
 			if (statusOnly || (boss == null) || (info == null))
 			{

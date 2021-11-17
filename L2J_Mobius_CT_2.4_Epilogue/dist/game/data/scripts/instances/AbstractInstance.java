@@ -25,8 +25,8 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -48,7 +48,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	{
 	}
 	
-	protected void enterInstance(PlayerInstance player, int templateId)
+	protected void enterInstance(Player player, int templateId)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -172,7 +172,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	protected void handleRemoveBuffs(InstanceWorld world)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if (player != null)
 			{
@@ -181,9 +181,9 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		}
 	}
 	
-	protected abstract void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance);
+	protected abstract void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance);
 	
-	protected boolean checkConditions(PlayerInstance player)
+	protected boolean checkConditions(Player player)
 	{
 		return true;
 	}
@@ -195,7 +195,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 */
 	protected void setReenterTime(InstanceWorld world, long time)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if (player != null)
 			{
@@ -208,7 +208,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		}
 	}
 	
-	private void handleRemoveBuffs(PlayerInstance player, InstanceWorld world)
+	private void handleRemoveBuffs(Player player, InstanceWorld world)
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		switch (inst.getRemoveBuffType())

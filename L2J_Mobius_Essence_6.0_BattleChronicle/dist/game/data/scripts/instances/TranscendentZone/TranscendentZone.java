@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -126,7 +126,7 @@ public class TranscendentZone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.startsWith("ENTER"))
 		{
@@ -170,7 +170,7 @@ public class TranscendentZone extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (player.getInstanceWorld().getParameters().getBoolean("TranscendentZoneTaskFinished", false))
 		{
@@ -195,7 +195,7 @@ public class TranscendentZone extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		instance.setParameter("PlayerIsOut", false);
@@ -206,7 +206,7 @@ public class TranscendentZone extends AbstractInstance
 		}
 	}
 	
-	private void replaceNormalSkills(PlayerInstance player)
+	private void replaceNormalSkills(Player player)
 	{
 		// Replace normal skills.
 		for (Entry<Integer, Integer> entry : SKILL_REPLACEMENTS.entrySet())
@@ -238,7 +238,7 @@ public class TranscendentZone extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceLeave(PlayerInstance player, Instance instance)
+	public void onInstanceLeave(Player player, Instance instance)
 	{
 		if (instance.getParameters().getBoolean("TranscendentZoneTaskFinished", false))
 		{
@@ -279,7 +279,7 @@ public class TranscendentZone extends AbstractInstance
 		ThreadPool.schedule(() -> player.sendPacket(new ShortCutInit(player)), 1100);
 	}
 	
-	private void startEvent(PlayerInstance player)
+	private void startEvent(Player player)
 	{
 		// Start instance tasks.
 		if (!player.getInstanceWorld().getParameters().getBoolean("TranscendentZoneTaskFinished", false))

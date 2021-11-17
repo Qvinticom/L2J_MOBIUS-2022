@@ -50,8 +50,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -75,7 +75,7 @@ public class Instance
 	private final Collection<Integer> _players = ConcurrentHashMap.newKeySet();
 	private final Collection<Npc> _npcs = ConcurrentHashMap.newKeySet();
 	private final Collection<StatSet> _doorTemplates = ConcurrentHashMap.newKeySet();
-	private final Map<Integer, DoorInstance> _doors = new ConcurrentHashMap<>();
+	private final Map<Integer, Door> _doors = new ConcurrentHashMap<>();
 	private final Collection<StatSet> _spawnTemplates = ConcurrentHashMap.newKeySet();
 	private Collection<Location> _enterLocations = ConcurrentHashMap.newKeySet();
 	private Location _exitLocation = null;
@@ -268,7 +268,7 @@ public class Instance
 			// Create new door instance
 			final int doorId = template.getInt("DoorId");
 			final StatSet doorTemplate = DoorData.getInstance().getDoorTemplate(doorId);
-			final DoorInstance newdoor = new DoorInstance(new DoorTemplate(doorTemplate));
+			final Door newdoor = new Door(new DoorTemplate(doorTemplate));
 			newdoor.setInstanceId(_id);
 			newdoor.setCurrentHp(newdoor.getMaxHp());
 			newdoor.spawnMe(newdoor.getTemplate().getX(), newdoor.getTemplate().getY(), newdoor.getTemplate().getZ());
@@ -286,12 +286,12 @@ public class Instance
 		return _npcs;
 	}
 	
-	public Collection<DoorInstance> getDoors()
+	public Collection<Door> getDoors()
 	{
 		return _doors.values();
 	}
 	
-	public DoorInstance getDoor(int id)
+	public Door getDoor(int id)
 	{
 		return _doors.get(id);
 	}
@@ -359,7 +359,7 @@ public class Instance
 	{
 		for (Integer objectId : _players)
 		{
-			final PlayerInstance player = World.getInstance().getPlayer(objectId);
+			final Player player = World.getInstance().getPlayer(objectId);
 			if ((player != null) && (player.getInstanceId() == _id))
 			{
 				player.setInstanceId(0);
@@ -394,7 +394,7 @@ public class Instance
 	
 	public void removeDoors()
 	{
-		for (DoorInstance door : _doors.values())
+		for (Door door : _doors.values())
 		{
 			if (door != null)
 			{
@@ -837,7 +837,7 @@ public class Instance
 		{
 			for (Integer objectId : _players)
 			{
-				final PlayerInstance player = World.getInstance().getPlayer(objectId);
+				final Player player = World.getInstance().getPlayer(objectId);
 				if ((player != null) && (player.getInstanceId() == _id))
 				{
 					player.sendPacket(cs);
@@ -863,7 +863,7 @@ public class Instance
 		}
 	}
 	
-	public void cancelEjectDeadPlayer(PlayerInstance player)
+	public void cancelEjectDeadPlayer(Player player)
 	{
 		final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
 		if (task != null)
@@ -876,7 +876,7 @@ public class Instance
 	 * This method is called when player dies inside instance.
 	 * @param player
 	 */
-	public void notifyDeath(PlayerInstance player)
+	public void notifyDeath(Player player)
 	{
 		if (!player.isOnEvent() && (_ejectTime > 0))
 		{

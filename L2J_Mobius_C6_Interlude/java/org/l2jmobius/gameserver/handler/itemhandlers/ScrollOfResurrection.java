@@ -22,9 +22,9 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,14 +41,14 @@ public class ScrollOfResurrection implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		if (player.isSitting())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
@@ -73,16 +73,16 @@ public class ScrollOfResurrection implements IItemHandler
 		final Creature target = (Creature) player.getTarget();
 		if ((target != null) && target.isDead())
 		{
-			PlayerInstance targetPlayer = null;
-			if (target instanceof PlayerInstance)
+			Player targetPlayer = null;
+			if (target instanceof Player)
 			{
-				targetPlayer = (PlayerInstance) target;
+				targetPlayer = (Player) target;
 			}
 			
-			PetInstance targetPet = null;
-			if (target instanceof PetInstance)
+			Pet targetPet = null;
+			if (target instanceof Pet)
 			{
-				targetPet = (PetInstance) target;
+				targetPet = (Pet) target;
 			}
 			
 			if ((targetPlayer != null) || (targetPet != null))

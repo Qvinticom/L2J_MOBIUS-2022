@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.primeshop;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -29,7 +29,7 @@ public class ExBRGamePoint implements IClientOutgoingPacket
 	private final int _charId;
 	private final int _charPoints;
 	
-	public ExBRGamePoint(PlayerInstance player)
+	public ExBRGamePoint(Player player)
 	{
 		_charId = player.getObjectId();
 		_charPoints = player.getPrimePoints();

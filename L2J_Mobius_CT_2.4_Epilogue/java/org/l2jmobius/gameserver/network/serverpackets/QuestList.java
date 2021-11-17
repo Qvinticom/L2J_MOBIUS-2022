@@ -19,16 +19,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class QuestList implements IClientOutgoingPacket
 {
-	final PlayerInstance _player;
+	final Player _player;
 	
-	public QuestList(PlayerInstance player)
+	public QuestList(Player player)
 	{
 		_player = player;
 	}

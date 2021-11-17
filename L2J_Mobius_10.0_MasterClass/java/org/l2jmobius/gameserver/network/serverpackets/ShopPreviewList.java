@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ShopPreviewList implements IClientOutgoingPacket
@@ -71,7 +71,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 				packet.writeD(product.getItemId());
 				packet.writeH(product.getItem().getType2()); // item type2
 				
-				if (product.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
+				if (product.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeQ(product.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}

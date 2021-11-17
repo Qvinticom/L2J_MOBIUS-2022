@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ClanTable
 {
@@ -127,7 +127,7 @@ public class ClanTable
 		return _clans.get(clanId);
 	}
 	
-	public Clan createClan(PlayerInstance player, String clanName)
+	public Clan createClan(Player player, String clanName)
 	{
 		for (Clan oldClans : _clans.values())
 		{

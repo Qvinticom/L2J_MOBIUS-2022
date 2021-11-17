@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author BiggBoss
@@ -58,7 +58,7 @@ public class SiegableHallZone extends ClanHallZone
 	
 	public void banishNonSiegeParticipants()
 	{
-		for (PlayerInstance player : getPlayersInside())
+		for (Player player : getPlayersInside())
 		{
 			if ((player != null) && player.isInHideoutSiege())
 			{

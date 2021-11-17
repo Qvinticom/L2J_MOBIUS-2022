@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -142,7 +142,7 @@ public class Valakas extends AbstractNpcAI
 				final Npc valakas = addSpawn(VALAKAS, VALAKAS_REGENERATION_LOC, false, 0);
 				valakas.teleToLocation(VALAKAS_HIDDEN_LOC);
 				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
-				GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
+				GrandBossManager.getInstance().addBoss((GrandBoss) valakas);
 				
 				valakas.setInvul(true);
 				valakas.setRunning();
@@ -160,7 +160,7 @@ public class Valakas extends AbstractNpcAI
 			final double mp = info.getDouble("currentMP");
 			
 			final Npc valakas = addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
-			GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
+			GrandBossManager.getInstance().addBoss((GrandBoss) valakas);
 			
 			valakas.setCurrentHpMp(hp, mp);
 			valakas.setRunning();
@@ -190,7 +190,7 @@ public class Valakas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (npc != null)
 		{
@@ -269,7 +269,7 @@ public class Valakas extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("broadcast_spawn"))
 			{
-				for (PlayerInstance plyr : ZONE.getPlayersInside())
+				for (Player plyr : ZONE.getPlayersInside())
 				{
 					plyr.sendPacket(new PlaySound(1, "BS03_A", 0, 0, 0, 0, 0));
 					plyr.sendPacket(new SocialAction(npc.getObjectId(), 3));
@@ -372,7 +372,7 @@ public class Valakas extends AbstractNpcAI
 			valakas.setInvul(true);
 			valakas.setRunning();
 			valakas.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			GrandBossManager.getInstance().addBoss((GrandBossInstance) valakas);
+			GrandBossManager.getInstance().addBoss((GrandBoss) valakas);
 			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 		}
 		else if (event.equalsIgnoreCase("remove_players"))
@@ -392,7 +392,7 @@ public class Valakas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (!ZONE.isInsideZone(attacker))
 		{
@@ -423,7 +423,7 @@ public class Valakas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		// Cancel skill_task and regen_task.
 		cancelQuestTimer("regen_task", npc, null);
@@ -455,7 +455,7 @@ public class Valakas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		return null;
 	}
@@ -526,7 +526,7 @@ public class Valakas extends AbstractNpcAI
 		}
 		
 		// Valakas will use mass spells if he feels surrounded.
-		if (World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 1200).size() >= 20)
+		if (World.getInstance().getVisibleObjectsInRange(npc, Player.class, 1200).size() >= 20)
 		{
 			return VALAKAS_AOE_SKILLS[getRandom(VALAKAS_AOE_SKILLS.length)];
 		}

@@ -21,14 +21,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class PvpFlagTaskManager implements Runnable
 {
-	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> PLAYERS = ConcurrentHashMap.newKeySet();
 	private static boolean _working = false;
 	
 	protected PvpFlagTaskManager()
@@ -48,7 +48,7 @@ public class PvpFlagTaskManager implements Runnable
 		if (!PLAYERS.isEmpty())
 		{
 			final long time = Chronos.currentTimeMillis();
-			for (PlayerInstance player : PLAYERS)
+			for (Player player : PLAYERS)
 			{
 				if (time > player.getPvpFlagLasts())
 				{
@@ -68,12 +68,12 @@ public class PvpFlagTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(PlayerInstance player)
+	public void add(Player player)
 	{
 		PLAYERS.add(player);
 	}
 	
-	public void remove(PlayerInstance player)
+	public void remove(Player player)
 	{
 		PLAYERS.remove(player);
 	}

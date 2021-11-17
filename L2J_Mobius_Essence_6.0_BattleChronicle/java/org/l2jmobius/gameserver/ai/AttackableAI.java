@@ -40,19 +40,19 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFactionCall;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableHate;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -128,7 +128,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Gets the player if there is any.
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		if (player != null)
 		{
 			// Don't take the aggro if the GM has the access level below or equal to GM_DONT_TAKE_AGGRO
@@ -143,9 +143,9 @@ public class AttackableAI extends CreatureAI
 				return false;
 			}
 			
-			if (me instanceof GuardInstance)
+			if (me instanceof Guard)
 			{
-				World.getInstance().forEachVisibleObjectInRange(me, GuardInstance.class, 500, guard ->
+				World.getInstance().forEachVisibleObjectInRange(me, Guard.class, 500, guard ->
 				{
 					if (guard.isAttackingNow() && (guard.getTarget() == player))
 					{
@@ -211,7 +211,7 @@ public class AttackableAI extends CreatureAI
 			if (!npc.isAlikeDead())
 			{
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
-				if (!World.getInstance().getVisibleObjects(npc, PlayerInstance.class).isEmpty())
+				if (!World.getInstance().getVisibleObjects(npc, Player.class).isEmpty())
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}
@@ -248,7 +248,7 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	@Override
-	protected void changeIntentionToCast(Skill skill, WorldObject target, ItemInstance item, boolean forceUse, boolean dontMove)
+	protected void changeIntentionToCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove)
 	{
 		// Set the AI cast target
 		setTarget(target);
@@ -293,7 +293,7 @@ public class AttackableAI extends CreatureAI
 	 * <li>Update every 1s the _globalAggro counter to come close to 0</li>
 	 * <li>If the actor is Aggressive and can attack, add all autoAttackable Creature in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
 	 * <li>If the actor is a GuardInstance that can't attack, order to it to return to its home location</li>
-	 * <li>If the actor is a MonsterInstance that can't attack, order to it to random walk (1/100)</li>
+	 * <li>If the actor is a Monster that can't attack, order to it to random walk (1/100)</li>
 	 * </ul>
 	 */
 	protected void thinkActive()
@@ -320,7 +320,7 @@ public class AttackableAI extends CreatureAI
 		{
 			if (npc.isFakePlayer() && npc.isAggressive())
 			{
-				final List<ItemInstance> droppedItems = npc.getFakePlayerDrops();
+				final List<Item> droppedItems = npc.getFakePlayerDrops();
 				if (droppedItems.isEmpty())
 				{
 					Creature nearestTarget = null;
@@ -352,7 +352,7 @@ public class AttackableAI extends CreatureAI
 				else if (!npc.isInCombat()) // must pickup items
 				{
 					final int itemIndex = npc.getFakePlayerDrops().size() - 1; // last item dropped - can also use 0 for first item dropped
-					final ItemInstance droppedItem = npc.getFakePlayerDrops().get(itemIndex);
+					final Item droppedItem = npc.getFakePlayerDrops().get(itemIndex);
 					if ((droppedItem != null) && droppedItem.isSpawned())
 					{
 						if (npc.calculateDistance2D(droppedItem) > 50)
@@ -384,9 +384,9 @@ public class AttackableAI extends CreatureAI
 					npc.setRunning();
 				}
 			}
-			else if (npc.isAggressive() || (npc instanceof GuardInstance))
+			else if (npc.isAggressive() || (npc instanceof Guard))
 			{
-				final int range = npc instanceof GuardInstance ? 500 : npc.getAggroRange(); // TODO Make sure how guards behave towards players.
+				final int range = npc instanceof Guard ? 500 : npc.getAggroRange(); // TODO Make sure how guards behave towards players.
 				World.getInstance().forEachVisibleObjectInRange(npc, Creature.class, range, t ->
 				{
 					// For each Creature check if the target is autoattackable
@@ -419,9 +419,9 @@ public class AttackableAI extends CreatureAI
 							{
 								npc.addDamageHate(t, 0, 0);
 							}
-							if (npc instanceof GuardInstance)
+							if (npc instanceof Guard)
 							{
-								World.getInstance().forEachVisibleObjectInRange(npc, GuardInstance.class, 500, guard -> guard.addDamageHate(t, 0, 10));
+								World.getInstance().forEachVisibleObjectInRange(npc, Guard.class, 500, guard -> guard.addDamageHate(t, 0, 10));
 							}
 						}
 					}
@@ -446,7 +446,7 @@ public class AttackableAI extends CreatureAI
 				final int aggro = npc.getHating(hated);
 				if ((aggro + _globalAggro) > 0)
 				{
-					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 					if (!npc.isRunning())
 					{
 						npc.setRunning();
@@ -474,7 +474,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if the actor is a guard
-		if (((npc instanceof GuardInstance) || (npc instanceof DefenderInstance)) && !npc.isWalker() && !npc.isRandomWalkingEnabled())
+		if (((npc instanceof Guard) || (npc instanceof Defender)) && !npc.isWalker() && !npc.isRandomWalkingEnabled())
 		{
 			// Order to the GuardInstance to return to its home location because there's no target to attack
 			npc.returnHome();
@@ -542,7 +542,7 @@ public class AttackableAI extends CreatureAI
 				}
 			}
 		}
-		// Order to the MonsterInstance to random walk (1/100)
+		// Order to the Monster to random walk (1/100)
 		else if ((npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled())
 		{
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
@@ -598,7 +598,7 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && npc.isMonster() && !npc.isWalker() && !(npc instanceof GrandBossInstance))
+		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && npc.isMonster() && !npc.isWalker() && !(npc instanceof GrandBoss))
 		{
 			final Spawn spawn = npc.getSpawn();
 			if ((spawn != null) && (npc.calculateDistance3D(spawn.getLocation()) > (npc.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE)))
@@ -623,9 +623,9 @@ public class AttackableAI extends CreatureAI
 					}
 					
 					// Minions should return as well.
-					if (((MonsterInstance) _actor).hasMinions())
+					if (((Monster) _actor).hasMinions())
 					{
-						for (MonsterInstance minion : ((MonsterInstance) _actor).getMinionList().getSpawnedMinions())
+						for (Monster minion : ((Monster) _actor).getMinionList().getSpawnedMinions())
 						{
 							if (Config.AGGRO_DISTANCE_CHECK_RESTORE_LIFE)
 							{
@@ -675,7 +675,7 @@ public class AttackableAI extends CreatureAI
 			}
 			
 			// Monster teleport to spawn
-			if (npc.isMonster() && (npc.getSpawn() != null) && !npc.isInInstance() && (npc.isInCombat() || World.getInstance().getVisibleObjects(npc, PlayerInstance.class).isEmpty()))
+			if (npc.isMonster() && (npc.getSpawn() != null) && !npc.isInInstance() && (npc.isInCombat() || World.getInstance().getVisibleObjects(npc, Player.class).isEmpty()))
 			{
 				npc.teleToLocation(npc.getSpawn(), false);
 			}
@@ -853,12 +853,12 @@ public class AttackableAI extends CreatureAI
 		{
 			chaostime++;
 			boolean changeTarget = false;
-			if ((npc instanceof RaidBossInstance) && (chaostime > Config.RAID_CHAOS_TIME))
+			if ((npc instanceof RaidBoss) && (chaostime > Config.RAID_CHAOS_TIME))
 			{
-				final double multiplier = ((MonsterInstance) npc).hasMinions() ? 200 : 100;
+				final double multiplier = ((Monster) npc).hasMinions() ? 200 : 100;
 				changeTarget = Rnd.get(100) <= (100 - ((npc.getCurrentHp() * multiplier) / npc.getMaxHp()));
 			}
-			else if ((npc instanceof GrandBossInstance) && (chaostime > Config.GRAND_CHAOS_TIME))
+			else if ((npc instanceof GrandBoss) && (chaostime > Config.GRAND_CHAOS_TIME))
 			{
 				final double chaosRate = 100 - ((npc.getCurrentHp() * 300) / npc.getMaxHp());
 				changeTarget = ((chaosRate <= 10) && (Rnd.get(100) <= 10)) || ((chaosRate > 10) && (Rnd.get(100) <= chaosRate));
@@ -1303,7 +1303,7 @@ public class AttackableAI extends CreatureAI
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
-	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance</li>
+	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player</li>
 	 * <li>Set the Intention to AI_INTENTION_ATTACK</li>
 	 * </ul>
 	 * @param attacker The Creature that attacks the actor
@@ -1325,7 +1325,7 @@ public class AttackableAI extends CreatureAI
 		// Add the attacker to the _aggroList of the actor
 		me.addDamageHate(attacker, 0, 1);
 		
-		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 		if (!me.isRunning())
 		{
 			me.setRunning();
@@ -1346,7 +1346,7 @@ public class AttackableAI extends CreatureAI
 		
 		if (me.isMonster())
 		{
-			MonsterInstance master = (MonsterInstance) me;
+			Monster master = (Monster) me;
 			if (master.hasMinions())
 			{
 				master.getMinionList().onAssist(me, attacker);
@@ -1389,7 +1389,7 @@ public class AttackableAI extends CreatureAI
 			// Set the actor AI Intention to AI_INTENTION_ATTACK
 			if (getIntention() != AI_INTENTION_ATTACK)
 			{
-				// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+				// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 				if (!me.isRunning())
 				{
 					me.setRunning();
@@ -1400,7 +1400,7 @@ public class AttackableAI extends CreatureAI
 			
 			if (me.isMonster())
 			{
-				MonsterInstance master = (MonsterInstance) me;
+				Monster master = (Monster) me;
 				if (master.hasMinions())
 				{
 					master.getMinionList().onAssist(me, target);

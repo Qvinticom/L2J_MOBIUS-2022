@@ -19,15 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class PetItemList extends ServerBasePacket
 {
-	private final PetInstance _cha;
-	private final Collection<ItemInstance> _items;
+	private final Pet _cha;
+	private final Collection<Item> _items;
 	
-	public PetItemList(PetInstance cha)
+	public PetItemList(Pet cha)
 	{
 		_cha = cha;
 		_items = _cha.getInventory().getItems();
@@ -38,7 +38,7 @@ public class PetItemList extends ServerBasePacket
 	{
 		writeC(0xCB);
 		writeH(_items.size());
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.RandomCraftExtractDataHolder;
 import org.l2jmobius.gameserver.model.holders.RandomCraftRewardDataHolder;
 import org.l2jmobius.gameserver.model.holders.RandomCraftRewardItemHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author Mode, Mobius
@@ -93,7 +93,7 @@ public class RandomCraftData implements IXmlReader
 			{
 				final StatSet stats = new StatSet(parseAttributes(itemNode));
 				final int itemId = stats.getInt("id");
-				final Item item = ItemTable.getInstance().getTemplate(itemId);
+				final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 				if (item == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + " unexisting item reward: " + itemId);

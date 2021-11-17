@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
@@ -39,7 +39,7 @@ public class AdminPrimePoints implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -48,7 +48,7 @@ public class AdminPrimePoints implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String action = st.nextToken();
-				final PlayerInstance target = getTarget(activeChar);
+				final Player target = getTarget(activeChar);
 				if ((target == null) || !st.hasMoreTokens())
 				{
 					return false;
@@ -127,7 +127,7 @@ public class AdminPrimePoints implements IAdminCommandHandler
 						}
 						else if (range > 0)
 						{
-							final int count = increaseForAll(World.getInstance().getVisibleObjectsInRange(activeChar, PlayerInstance.class, range), value);
+							final int count = increaseForAll(World.getInstance().getVisibleObjectsInRange(activeChar, Player.class, range), value);
 							BuilderUtil.sendSysMessage(activeChar, "You increased Prime Point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;
@@ -139,10 +139,10 @@ public class AdminPrimePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private int increaseForAll(Collection<PlayerInstance> playerList, int value)
+	private int increaseForAll(Collection<Player> playerList, int value)
 	{
 		int counter = 0;
-		for (PlayerInstance temp : playerList)
+		for (Player temp : playerList)
 		{
 			if ((temp != null) && (temp.isOnlineInt() == 1))
 			{
@@ -164,15 +164,15 @@ public class AdminPrimePoints implements IAdminCommandHandler
 		return counter;
 	}
 	
-	private PlayerInstance getTarget(PlayerInstance activeChar)
+	private Player getTarget(Player activeChar)
 	{
 		return ((activeChar.getTarget() != null) && (activeChar.getTarget().getActingPlayer() != null)) ? activeChar.getTarget().getActingPlayer() : activeChar;
 	}
 	
-	private void showMenuHtml(PlayerInstance activeChar)
+	private void showMenuHtml(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		final PlayerInstance target = getTarget(activeChar);
+		final Player target = getTarget(activeChar);
 		final int points = target.getPrimePoints();
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/primepoints.htm"));
 		html.replace("%points%", Util.formatAdena(points));

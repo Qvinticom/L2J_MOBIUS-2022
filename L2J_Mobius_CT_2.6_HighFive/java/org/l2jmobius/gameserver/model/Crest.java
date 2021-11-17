@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
@@ -87,11 +87,11 @@ public class Crest implements IIdentifiable
 	}
 	
 	/**
-	 * Gets the client path to crest for use in html and sends the crest to {@code PlayerInstance}
-	 * @param player the @{code PlayerInstance} where html is send to.
+	 * Gets the client path to crest for use in html and sends the crest to {@code Player}
+	 * @param player the @{code Player} where html is send to.
 	 * @return the client path to crest
 	 */
-	public String getClientPath(PlayerInstance player)
+	public String getClientPath(Player player)
 	{
 		String path = null;
 		switch (_type)

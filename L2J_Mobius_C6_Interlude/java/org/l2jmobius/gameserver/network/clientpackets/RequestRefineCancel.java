@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExVariationCancelResult;
@@ -45,8 +45,8 @@ public class RequestRefineCancel implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
+		final Player player = client.getPlayer();
+		final Item targetItem = (Item) World.getInstance().findObject(_targetItemObjId);
 		if (player == null)
 		{
 			return;
@@ -70,7 +70,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		int price = 0;
 		switch (targetItem.getItem().getItemGrade())
 		{
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				if (targetItem.getCrystalCount() < 1720)
 				{
@@ -86,7 +86,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				if (targetItem.getCrystalCount() < 1746)
 				{
@@ -98,7 +98,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				if (targetItem.getCrystalCount() < 2160)
 				{
@@ -114,7 +114,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				price = 480000;
 				break;
@@ -137,7 +137,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetItem.isEquipped())
 		{
-			for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
+			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
 			{
 				iu.addModifiedItem(itm);
 			}

@@ -40,9 +40,9 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -130,8 +130,8 @@ public class TullyWorkshop extends AbstractNpcAI
 	protected static Set<Integer> rewardedContraptions = new HashSet<>();
 	protected static Set<Integer> talkedContraptions = new HashSet<>();
 	
-	private final List<MonsterInstance> spawnedFollowers = new ArrayList<>();
-	private final List<MonsterInstance> spawnedFollowerMinions = new ArrayList<>();
+	private final List<Monster> spawnedFollowers = new ArrayList<>();
+	private final List<Monster> spawnedFollowerMinions = new ArrayList<>();
 	private Npc spawnedAgent = null;
 	private Spawn pillarSpawn = null;
 	
@@ -537,7 +537,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final ClassId classId = player.getClassId();
 		final int npcId = npc.getId();
@@ -628,7 +628,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == TOMBSTONE)
 		{
@@ -647,7 +647,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				false
 			};
 			// For teleportation party should have all 5 medals
-			for (PlayerInstance pl : party.getMembers())
+			for (Player pl : party.getMembers())
 			{
 				if (pl == null)
 				{
@@ -682,7 +682,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				return "32344-02.htm";
 			}
 			
-			for (PlayerInstance pl : party.getMembers())
+			for (Player pl : party.getMembers())
 			{
 				if ((pl != null) && Util.checkIfInRange(6000, pl, npc, false))
 				{
@@ -694,7 +694,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		if (event.equalsIgnoreCase("disable_zone"))
@@ -765,7 +765,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("despawn_agent_7"))
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, pl ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 300, pl ->
 			{
 				if (pl != null)
 				{
@@ -779,7 +779,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("cube_68_despawn"))
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 500, pl ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 500, pl ->
 			{
 				if (pl != null)
 				{
@@ -801,7 +801,7 @@ public class TullyWorkshop extends AbstractNpcAI
 			final Party party = player.getParty();
 			if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 			{
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(300, partyMember, npc, true))
 					{
@@ -809,7 +809,7 @@ public class TullyWorkshop extends AbstractNpcAI
 					}
 				}
 				
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					partyMember.teleToLocation(-13400, 272827, -15300, true);
 				}
@@ -856,7 +856,7 @@ public class TullyWorkshop extends AbstractNpcAI
 			else
 			{
 				final Location loc = TELE_COORDS.get(npcId)[direction];
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (Util.checkIfInRange(4000, partyMember, npc, true))
 					{
@@ -943,7 +943,7 @@ public class TullyWorkshop extends AbstractNpcAI
 					}
 					else
 					{
-						for (PlayerInstance partyMember : party.getMembers())
+						for (Player partyMember : party.getMembers())
 						{
 							if (Util.checkIfInRange(6000, partyMember, npc, true))
 							{
@@ -981,7 +981,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				}
 				else
 				{
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(400, partyMember, npc, true))
 						{
@@ -989,7 +989,7 @@ public class TullyWorkshop extends AbstractNpcAI
 						}
 					}
 					
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						npc.setTarget(partyMember);
 						npc.doCast(SkillData.getInstance().getSkill(5526, 1));
@@ -1001,7 +1001,7 @@ public class TullyWorkshop extends AbstractNpcAI
 			{
 				allowAgentSpawn_7th = true;
 				spawnedAgent = null;
-				for (MonsterInstance monster : spawnedFollowers)
+				for (Monster monster : spawnedFollowers)
 				{
 					if ((monster != null) && !monster.isDead())
 					{
@@ -1011,7 +1011,7 @@ public class TullyWorkshop extends AbstractNpcAI
 							MinionList.spawnMinion(monster, 25596);
 						}
 						
-						final PlayerInstance target = player.getParty() == null ? player : getRandomEntry(player.getParty().getMembers());
+						final Player target = player.getParty() == null ? player : getRandomEntry(player.getParty().getMembers());
 						if ((target != null) && !target.isDead())
 						{
 							monster.addDamageHate(target, 0, 999);
@@ -1045,7 +1045,7 @@ public class TullyWorkshop extends AbstractNpcAI
 					return null;
 				}
 				
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(3000, partyMember, npc, true))
 					{
@@ -1053,7 +1053,7 @@ public class TullyWorkshop extends AbstractNpcAI
 					}
 				}
 				
-				for (PlayerInstance partyMember : party.getMembers())
+				for (Player partyMember : party.getMembers())
 				{
 					if (Util.checkIfInRange(6000, partyMember, npc, true))
 					{
@@ -1079,7 +1079,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				}
 				else
 				{
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(6000, partyMember, npc, true))
 						{
@@ -1097,22 +1097,22 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final int npcId = npc.getId();
 		if (Arrays.binarySearch(TELEPORTING_MONSTERS, npcId) >= 0)
 		{
 			if (Math.abs(npc.getZ() - attacker.getZ()) > 150)
 			{
-				((MonsterInstance) npc).clearAggroList();
+				((Monster) npc).clearAggroList();
 				attacker.teleToLocation(npc.getX() + 50, npc.getY() - 50, npc.getZ());
 			}
 		}
 		else if (((npcId == TEMENIR) || (npcId == KIRETCENAH)) && spawnedFollowers.contains(npc))
 		{
-			final MonsterInstance victim1 = spawnedFollowers.get(1); // TEMENIR
-			final MonsterInstance victim2 = spawnedFollowers.get(0); // KIRETCENAH
-			final MonsterInstance actor = spawnedFollowers.get(2); // DRAXIUS
+			final Monster victim1 = spawnedFollowers.get(1); // TEMENIR
+			final Monster victim2 = spawnedFollowers.get(0); // KIRETCENAH
+			final Monster actor = spawnedFollowers.get(2); // DRAXIUS
 			if ((actor != null) && !actor.isDead())
 			{
 				final double transferringHp = actor.getMaxHp() * 0.0001;
@@ -1132,8 +1132,8 @@ public class TullyWorkshop extends AbstractNpcAI
 		
 		if (((npcId == TEMENIR) || (npcId == DRAXIUS)) && spawnedFollowers.contains(npc))
 		{
-			final MonsterInstance victim = npcId == TEMENIR ? spawnedFollowers.get(1) : spawnedFollowers.get(2);
-			final MonsterInstance actor = spawnedFollowers.get(0);
+			final Monster victim = npcId == TEMENIR ? spawnedFollowers.get(1) : spawnedFollowers.get(2);
+			final Monster actor = spawnedFollowers.get(0);
 			if ((actor != null) && (victim != null) && !actor.isDead() && !victim.isDead() && (getRandom(1000) > 333))
 			{
 				actor.clearAggroList();
@@ -1147,15 +1147,15 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFactionCall(Npc npc, Npc caller, PlayerInstance attacker, boolean isSummon)
+	public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if ((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH))
 		{
-			if (!((MonsterInstance) npc).hasMinions())
+			if (!((Monster) npc).hasMinions())
 			{
-				MinionList.spawnMinion((MonsterInstance) npc, 25596);
-				MinionList.spawnMinion((MonsterInstance) npc, 25596);
+				MinionList.spawnMinion((Monster) npc, 25596);
+				MinionList.spawnMinion((Monster) npc, 25596);
 			}
 			
 			if (!is7thFloorAttackBegan)
@@ -1174,7 +1174,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if ((npcId == TULLY) && npc.isInsideRadius2D(-12557, 273901, -9000, 1000))
@@ -1404,7 +1404,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		final int npcId = npc.getId();
 		final int skillId = skill.getId();
@@ -1475,7 +1475,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		is7thFloorAttackBegan = false;
 		for (int[] data : SPAWNLIST_7TH_FLOOR)
 		{
-			final MonsterInstance monster = (MonsterInstance) addSpawn(data[0], data[1], data[2], data[3], data[4], false, 0, false);
+			final Monster monster = (Monster) addSpawn(data[0], data[1], data[2], data[3], data[4], false, 0, false);
 			if ((data[0] == TEMENIR) || (data[0] == DRAXIUS) || (data[0] == KIRETCENAH))
 			{
 				spawnedFollowers.add(monster);
@@ -1490,7 +1490,7 @@ public class TullyWorkshop extends AbstractNpcAI
 	private void do7thFloorDespawn()
 	{
 		cancelQuestTimers("end_7th_floor_attack");
-		for (MonsterInstance monster : spawnedFollowers)
+		for (Monster monster : spawnedFollowers)
 		{
 			if ((monster != null) && !monster.isDead())
 			{
@@ -1498,7 +1498,7 @@ public class TullyWorkshop extends AbstractNpcAI
 			}
 		}
 		
-		for (MonsterInstance monster : spawnedFollowerMinions)
+		for (Monster monster : spawnedFollowerMinions)
 		{
 			if ((monster != null) && !monster.isDead())
 			{
@@ -1598,7 +1598,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			DoorInstance door;
+			Door door;
 			for (int doorId : _doorIds)
 			{
 				door = DoorData.getInstance().getDoor(doorId);

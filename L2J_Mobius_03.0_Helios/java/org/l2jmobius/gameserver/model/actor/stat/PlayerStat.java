@@ -23,13 +23,13 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -62,7 +62,7 @@ public class PlayerStat extends PlayableStat
 	
 	private static final int FANCY_FISHING_ROD_SKILL = 21484;
 	
-	public PlayerStat(PlayerInstance player)
+	public PlayerStat(Player player)
 	{
 		super(player);
 	}
@@ -70,7 +70,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public boolean addExp(long value)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		
 		// Allowed to gain exp?
 		if (!player.getAccessLevel().canGainExp())
@@ -100,7 +100,7 @@ public class PlayerStat extends PlayableStat
 	
 	public void addExpAndSp(double addToExpValue, double addToSpValue, boolean useBonuses)
 	{
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		
 		// Allowed to gain exp/sp?
 		if (!player.getAccessLevel().canGainExp())
@@ -127,7 +127,7 @@ public class PlayerStat extends PlayableStat
 			if (player.isFishing())
 			{
 				// rod fishing skills
-				final ItemInstance rod = player.getActiveWeaponInstance();
+				final Item rod = player.getActiveWeaponInstance();
 				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getItem().getAllSkills() != null))
 				{
 					for (ItemSkillHolder s : rod.getItem().getAllSkills())
@@ -155,7 +155,7 @@ public class PlayerStat extends PlayableStat
 		final Summon sPet = player.getPet();
 		if ((sPet != null) && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, player, sPet, false))
 		{
-			final PetInstance pet = (PetInstance) sPet;
+			final Pet pet = (Pet) sPet;
 			ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 			
 			// only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio
@@ -217,7 +217,7 @@ public class PlayerStat extends PlayableStat
 		
 		if (sendMessage)
 		{
-			// Send a Server->Client System Message to the PlayerInstance
+			// Send a Server->Client System Message to the Player
 			SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_XP_HAS_DECREASED_BY_S1);
 			sm.addLong(addToExp);
 			getActiveChar().sendPacket(sm);
@@ -272,7 +272,7 @@ public class PlayerStat extends PlayableStat
 		final Summon sPet = getActiveChar().getPet();
 		if (sPet != null)
 		{
-			final PetInstance pet = (PetInstance) sPet;
+			final Pet pet = (Pet) sPet;
 			if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel()))
 			{
 				final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
@@ -286,11 +286,11 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		getActiveChar().broadcastStatusUpdate();
-		// Update the overloaded status of the PlayerInstance
+		// Update the overloaded status of the Player
 		getActiveChar().refreshOverloaded(true);
-		// Update the expertise status of the PlayerInstance
+		// Update the expertise status of the Player
 		getActiveChar().refreshExpertisePenalty();
-		// Send a Server->Client packet UserInfo to the PlayerInstance
+		// Send a Server->Client packet UserInfo to the Player
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		// Send acquirable skill list
 		getActiveChar().sendPacket(new AcquireSkillList(getActiveChar()));
@@ -323,9 +323,9 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
-		return (PlayerInstance) super.getActiveChar();
+		return (Player) super.getActiveChar();
 	}
 	
 	@Override
@@ -525,7 +525,7 @@ public class PlayerStat extends PlayableStat
 			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
 		}
 		
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		player.sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
 		player.broadcastUserInfo(UserInfoType.VITA_FAME);
 		final Party party = player.getParty();
@@ -676,7 +676,7 @@ public class PlayerStat extends PlayableStat
 	{
 		super.onRecalculateStats(broadcast);
 		
-		final PlayerInstance player = getActiveChar();
+		final Player player = getActiveChar();
 		if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors())
 		{
 			player.getServitors().values().forEach(servitor -> servitor.getStat().recalculateStats(broadcast));

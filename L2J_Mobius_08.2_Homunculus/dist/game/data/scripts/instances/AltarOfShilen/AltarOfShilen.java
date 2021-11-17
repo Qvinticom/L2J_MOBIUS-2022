@@ -28,8 +28,8 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -105,7 +105,7 @@ public class AltarOfShilen extends AbstractInstance
 	private static final Location SECOND_FLOOR = new Location(179357, 13664, -9828);
 	private static final Location THIRD_FLOOR = new Location(179354, 12922, -12776);
 	// Misc
-	final List<PlayerInstance> _playersInside = new ArrayList<>();
+	final List<Player> _playersInside = new ArrayList<>();
 	final Map<Integer, Integer> _killedMonsters = new ConcurrentHashMap<>();
 	static List<Npc> _firstFloorVictims = new ArrayList<>();
 	public static Future<?> _timer;
@@ -122,7 +122,7 @@ public class AltarOfShilen extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		instance.spawnGroup("general");
 		instance.spawnGroup("first_floor");
@@ -130,7 +130,7 @@ public class AltarOfShilen extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (event.equals("enterInstance"))
@@ -142,7 +142,7 @@ public class AltarOfShilen extends AbstractInstance
 			}
 			if (player.getParty() != null)
 			{
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					_playersInside.add(partyMember);
 				}
@@ -150,7 +150,7 @@ public class AltarOfShilen extends AbstractInstance
 		}
 		if (event.equals("check_player"))
 		{
-			World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 400, p ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 400, p ->
 			{
 				if ((p != null) && p.isPlayer() && !p.isDead())
 				{
@@ -215,7 +215,7 @@ public class AltarOfShilen extends AbstractInstance
 				{
 					if ((world.getStatus() == 3) && event.equals("teleport1"))
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, p ->
+						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, p ->
 						{
 							if ((p != null) && p.isPlayable() && !p.isDead())
 							{
@@ -234,7 +234,7 @@ public class AltarOfShilen extends AbstractInstance
 				{
 					if ((world.getStatus() == 5) && event.equals("teleport2"))
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, p ->
+						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, p ->
 						{
 							if ((p != null) && p.isPlayable() && !p.isDead())
 							{
@@ -270,7 +270,7 @@ public class AltarOfShilen extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getInstanceWorld() != null) && (getRandom(30) < 3))
 		{
@@ -280,7 +280,7 @@ public class AltarOfShilen extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -308,7 +308,7 @@ public class AltarOfShilen extends AbstractInstance
 				}
 				if (_killedMonsters.containsKey(CORRUPTED_CAPTAIN) && (_killedMonsters.get(CORRUPTED_CAPTAIN) >= 1))
 				{
-					for (PlayerInstance player : _playersInside)
+					for (Player player : _playersInside)
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_MOVE_TO_THE_NEXT_FLOOR_THROUGH_THE_ALTAR_OF_SACRIFICE, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 					}
@@ -331,7 +331,7 @@ public class AltarOfShilen extends AbstractInstance
 				}
 				if (_killedMonsters.containsKey(CORRUPTED_HIGH_PRIEST) && (_killedMonsters.get(CORRUPTED_HIGH_PRIEST) >= 1))
 				{
-					for (PlayerInstance player : _playersInside)
+					for (Player player : _playersInside)
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_MOVE_TO_THE_NEXT_FLOOR_THROUGH_THE_ALTAR_OF_SACRIFICE, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 					}
@@ -370,7 +370,7 @@ public class AltarOfShilen extends AbstractInstance
 			{
 				if (_killedMonsters.containsKey(MELISSA) && (_killedMonsters.get(MELISSA) == 1))
 				{
-					for (PlayerInstance player : _playersInside)
+					for (Player player : _playersInside)
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.ALTAR_OF_SHILLIEN_HAS_BEEN_DESTROYED_YOU_VE_WON, ExShowScreenMessage.TOP_CENTER, 5000, true));
 					}
@@ -415,7 +415,7 @@ public class AltarOfShilen extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		final String htmltext = null;
@@ -486,7 +486,7 @@ public class AltarOfShilen extends AbstractInstance
 		@Override
 		public void run()
 		{
-			for (PlayerInstance player : _world.getPlayers())
+			for (Player player : _world.getPlayers())
 			{
 				player.sendPacket(new ExSendUIEvent(player, ExSendUIEvent.TYPE_GP_TIMER, (_time--), 0, NpcStringId.SACRIFICE_LEFT_S1, String.valueOf(_victims)));
 			}
@@ -494,7 +494,7 @@ public class AltarOfShilen extends AbstractInstance
 			{
 				_time = _initialTime;
 				--_victims;
-				for (PlayerInstance player : _world.getPlayers())
+				for (Player player : _world.getPlayers())
 				{
 					player.sendPacket(new Earthquake(player.getX(), player.getY(), player.getZ(), 20, 5));
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.SACRIFICE_HAS_BEEN_KILLED_SACRIFICE_LEFT_S1, ExShowScreenMessage.MIDDLE_CENTER, 3000, String.valueOf(_victims)));
@@ -507,14 +507,14 @@ public class AltarOfShilen extends AbstractInstance
 			}
 			if ((_victims == 1) && (_world.getStatus() == 2))
 			{
-				for (PlayerInstance player : _world.getPlayers())
+				for (Player player : _world.getPlayers())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.FOUR_LIVES_WERE_SACRIFICED_AND_THE_BLESSING_OF_BLOOD_IS_BESTOWED_UPON_THE_CORRUPTED_CAPTAIN, ExShowScreenMessage.MIDDLE_CENTER, 10000));
 				}
 			}
 			if ((_victims == 1) && (_world.getStatus() == 4))
 			{
-				for (PlayerInstance player : _world.getPlayers())
+				for (Player player : _world.getPlayers())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.FOUR_LIVES_WERE_SACRIFICED_AND_THE_BLESSING_OF_BLOOD_IS_BESTOWED_UPON_THE_CORRUPTED_HIGH_PRIEST, ExShowScreenMessage.MIDDLE_CENTER, 10000));
 				}
@@ -523,7 +523,7 @@ public class AltarOfShilen extends AbstractInstance
 			{
 				ThreadPool.schedule(() ->
 				{
-					for (PlayerInstance player : _world.getPlayers())
+					for (Player player : _world.getPlayers())
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_OFFERINGS_WERE_SACRIFICED_AND_THE_BLESSING_OF_BLOOD_IS_BESTOWED_UPON_THE_EMBRYO_COLONY_IN_THAT_FLOOR, ExShowScreenMessage.MIDDLE_CENTER, 3000));
 					}
@@ -553,7 +553,7 @@ public class AltarOfShilen extends AbstractInstance
 				{
 					_timer.cancel(true);
 				}
-				for (PlayerInstance player : _playersInside)
+				for (Player player : _playersInside)
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_MUST_STOP_THE_ALTAR_BEFORE_EVERYTHING_IS_SACRIFICED, ExShowScreenMessage.MIDDLE_CENTER, 6000));
 				}
@@ -575,7 +575,7 @@ public class AltarOfShilen extends AbstractInstance
 				{
 					_timer.cancel(true);
 				}
-				for (PlayerInstance player : _playersInside)
+				for (Player player : _playersInside)
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_MUST_STOP_THE_ALTAR_BEFORE_EVERYTHING_IS_SACRIFICED, ExShowScreenMessage.MIDDLE_CENTER, 6000));
 				}
@@ -609,7 +609,7 @@ public class AltarOfShilen extends AbstractInstance
 						if (_killedMonsters.containsKey(MELISSA0) && (_killedMonsters.get(MELISSA0) == 1) && _killedMonsters.containsKey(ISADORA) && (_killedMonsters.get(ISADORA) == 1))
 						{
 							defeated = true;
-							for (PlayerInstance player : _playersInside)
+							for (Player player : _playersInside)
 							{
 								player.sendPacket(new ExSendUIEvent(player, ExSendUIEvent.TYPE_NORNIL, (_time--), 0, 0, 0, 0, 2518008));
 								player.sendPacket(new ExSendUIEvent(player, 0x01, 0, 0, 0, 0, 0, 2518008));
@@ -626,7 +626,7 @@ public class AltarOfShilen extends AbstractInstance
 						}
 						else
 						{
-							for (PlayerInstance player : world.getPlayers())
+							for (Player player : world.getPlayers())
 							{
 								if (_time == ALTAR_TIME)
 								{
@@ -638,7 +638,7 @@ public class AltarOfShilen extends AbstractInstance
 						
 						if (!defeated && (_time == 9))
 						{
-							for (PlayerInstance player : _playersInside)
+							for (Player player : _playersInside)
 							{
 								player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ALTAR_OF_SHILLIEN_WILL_BE_ACTIVATED_IN_10_SEC, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 							}
@@ -646,7 +646,7 @@ public class AltarOfShilen extends AbstractInstance
 						
 						if (!defeated && (_time == 4))
 						{
-							for (PlayerInstance player : _playersInside)
+							for (Player player : _playersInside)
 							{
 								player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ALTAR_OF_SHILLIEN_WILL_BE_ACTIVATED_IN_5_SEC, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 							}
@@ -654,20 +654,20 @@ public class AltarOfShilen extends AbstractInstance
 						
 						if (!defeated && (_time <= 0))
 						{
-							for (PlayerInstance player : _playersInside)
+							for (Player player : _playersInside)
 							{
 								player.sendPacket(new ExShowScreenMessage(NpcStringId.FOCUS_FIRE_ON_THE_ALTAR_TO_STOP_BLESSING_OF_SHILLIEN, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 							}
 							
 							if (isInInstance(world))
 							{
-								World.getInstance().forEachVisibleObjectInRange(_altar, MonsterInstance.class, 8000, boss ->
+								World.getInstance().forEachVisibleObjectInRange(_altar, Monster.class, 8000, boss ->
 								{
 									if ((boss != null) && !boss.isDead())
 									{
 										_altar.doCast(PROTECTED_ALTAR.getSkill());
 										boss.setCurrentHp(boss.getCurrentHp() + (boss.getMaxHp() / 2));
-										for (PlayerInstance player : _playersInside)
+										for (Player player : _playersInside)
 										{
 											player.sendPacket(new Earthquake(player.getX(), player.getY(), player.getZ(), 30, 5));
 										}

@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -151,7 +151,7 @@ public class OlympiadGameManager implements Runnable
 							continue;
 						}
 						
-						final PlayerInstance noble = World.getInstance().getPlayer(id);
+						final Player noble = World.getInstance().getPlayer(id);
 						if (noble != null)
 						{
 							noble.sendPacket(new SystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
@@ -167,7 +167,7 @@ public class OlympiadGameManager implements Runnable
 								continue;
 							}
 							
-							final PlayerInstance noble = World.getInstance().getPlayer(id);
+							final Player noble = World.getInstance().getPlayer(id);
 							if (noble != null)
 							{
 								noble.sendPacket(new SystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
@@ -218,7 +218,7 @@ public class OlympiadGameManager implements Runnable
 		return _tasks.size();
 	}
 	
-	public void notifyCompetitorDamage(PlayerInstance attacker, int damage)
+	public void notifyCompetitorDamage(Player attacker, int damage)
 	{
 		if (attacker == null)
 		{

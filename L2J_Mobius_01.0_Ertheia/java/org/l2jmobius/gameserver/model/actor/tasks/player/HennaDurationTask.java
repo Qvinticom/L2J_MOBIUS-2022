@@ -16,17 +16,17 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class HennaDurationTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _slot;
 	
-	public HennaDurationTask(PlayerInstance player, int slot)
+	public HennaDurationTask(Player player, int slot)
 	{
 		_player = player;
 		_slot = slot;

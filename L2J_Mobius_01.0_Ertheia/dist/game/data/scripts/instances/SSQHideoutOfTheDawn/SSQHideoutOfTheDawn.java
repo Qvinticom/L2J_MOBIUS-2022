@@ -17,7 +17,7 @@
 package instances.SSQHideoutOfTheDawn;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import instances.AbstractInstance;
 
@@ -41,7 +41,7 @@ public class SSQHideoutOfTheDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		if (npc.getId() == WOOD)
 		{

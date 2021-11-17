@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExResponseBeautyRegistReset implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _type;
 	private final int _result;
 	
@@ -35,7 +35,7 @@ public class ExResponseBeautyRegistReset implements IClientOutgoingPacket
 	public static final int CHANGE = 0;
 	public static final int RESTORE = 1;
 	
-	public ExResponseBeautyRegistReset(PlayerInstance player, int type, int result)
+	public ExResponseBeautyRegistReset(Player player, int type, int result)
 	{
 		_player = player;
 		_type = type;

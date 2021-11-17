@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -104,7 +104,7 @@ public class Kelbim extends AbstractNpcAI
 	private static final ZoneType ZONE = ZoneManager.getInstance().getZoneById(60023);
 	private static final Location KELBIM_LOCATION = new Location(-55386, 58939, -274);
 	// Vars
-	private static GrandBossInstance _kelbimBoss;
+	private static GrandBoss _kelbimBoss;
 	private static long _lastAction;
 	private static int _bossStage;
 	private static List<Npc> _minions = new ArrayList<>();
@@ -143,7 +143,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -192,7 +192,7 @@ public class Kelbim extends AbstractNpcAI
 			}
 			case "stage_1_kelbim_spawn":
 			{
-				_kelbimBoss = (GrandBossInstance) addSpawn(KELBIM, -56340, 60801, -269, 54262, false, 0);
+				_kelbimBoss = (GrandBoss) addSpawn(KELBIM, -56340, 60801, -269, 54262, false, 0);
 				GrandBossManager.getInstance().addBoss(_kelbimBoss);
 				_lastAction = Chronos.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null);
@@ -225,7 +225,7 @@ public class Kelbim extends AbstractNpcAI
 					{
 						final Skill randomAttackSkill = AREA_SKILLS[Rnd.get(AREA_SKILLS.length)];
 						final List<Npc> skillNpcs = new ArrayList<>();
-						for (PlayerInstance pl : ZONE.getPlayersInside())
+						for (Player pl : ZONE.getPlayersInside())
 						{
 							if (pl == null)
 							{
@@ -287,7 +287,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		switch (npc.getId())
 		{
@@ -305,7 +305,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == ENTER_DEVICE)
 		{
@@ -325,9 +325,9 @@ public class Kelbim extends AbstractNpcAI
 			
 			final Party party = player.getParty();
 			final boolean isInCC = party.isInCommandChannel();
-			final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
-			for (PlayerInstance member : members)
+			for (Player member : members)
 			{
 				if (!member.isInsideRadius3D(npc, 1000))
 				{
@@ -347,7 +347,7 @@ public class Kelbim extends AbstractNpcAI
 			}
 			else
 			{
-				for (PlayerInstance member : members)
+				for (Player member : members)
 				{
 					if ((status == ALIVE) && member.isInsideRadius3D(npc, 1000))
 					{
@@ -366,7 +366,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (npc.getId() == KELBIM)
 		{
@@ -425,7 +425,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		_bossStage = 7;
 		addSpawn(TELEPORT_DEVICE, -54331, 58331, -264, 16292, false, 1800000);

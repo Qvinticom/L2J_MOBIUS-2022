@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -43,7 +43,7 @@ public class AdminInstance implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
@@ -115,7 +115,7 @@ public class AdminInstance implements IAdminCommandHandler
 				target.setInstanceId(val);
 				if (target.isPlayer())
 				{
-					final PlayerInstance player = (PlayerInstance) target;
+					final Player player = (Player) target;
 					player.sendMessage("Admin set your instance to:" + val);
 					player.teleToLocation(player.getLocation());
 				}

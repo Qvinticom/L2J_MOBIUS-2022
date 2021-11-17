@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -65,7 +65,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_admin"))
 		{
@@ -126,7 +126,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final PlayerInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
 		}
@@ -138,7 +138,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				return false;
 			}
 			
-			final PlayerInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			final Player target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
 			if (Hero.getInstance().isHero(target.getObjectId()))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This player has already claimed the hero status.");
@@ -298,7 +298,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar, String command)
+	private void showMainPage(Player activeChar, String command)
 	{
 		int mode = 0;
 		String filename = null;
@@ -356,7 +356,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
 	
-	private void showConfigPage(PlayerInstance activeChar)
+	private void showConfigPage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");

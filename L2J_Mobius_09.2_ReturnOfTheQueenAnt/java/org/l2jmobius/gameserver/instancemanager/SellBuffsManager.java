@@ -32,9 +32,9 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -84,27 +84,27 @@ public class SellBuffsManager implements IXmlReader
 		}
 	}
 	
-	public void sendSellMenu(PlayerInstance player)
+	public void sendSellMenu(Player player)
 	{
 		final String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + (player.isSellingBuffs() ? "BuffMenu_already.html" : "BuffMenu.html"));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
-	public void sendBuffChoiceMenu(PlayerInstance player, int index)
+	public void sendBuffChoiceMenu(Player player, int index)
 	{
 		String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + "BuffChoice.html");
 		html = html.replace("%list%", buildSkillMenu(player, index));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
-	public void sendBuffEditMenu(PlayerInstance player)
+	public void sendBuffEditMenu(Player player)
 	{
 		String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + "BuffChoice.html");
 		html = html.replace("%list%", buildEditMenu(player));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
-	public void sendBuffMenu(PlayerInstance player, PlayerInstance seller, int index)
+	public void sendBuffMenu(Player player, Player seller, int index)
 	{
 		if (!seller.isSellingBuffs() || seller.getSellingBuffs().isEmpty())
 		{
@@ -116,7 +116,7 @@ public class SellBuffsManager implements IXmlReader
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
-	public void startSellBuffs(PlayerInstance player, String title)
+	public void startSellBuffs(Player player, String title)
 	{
 		player.sitDown();
 		player.setSellingBuffs(true);
@@ -128,7 +128,7 @@ public class SellBuffsManager implements IXmlReader
 		sendSellMenu(player);
 	}
 	
-	public void stopSellBuffs(PlayerInstance player)
+	public void stopSellBuffs(Player player)
 	{
 		player.setSellingBuffs(false);
 		player.setPrivateStoreType(PrivateStoreType.NONE);
@@ -137,7 +137,7 @@ public class SellBuffsManager implements IXmlReader
 		sendSellMenu(player);
 	}
 	
-	private String buildBuffMenu(PlayerInstance seller, int index)
+	private String buildBuffMenu(Player seller, int index)
 	{
 		final int ceiling = 10;
 		int nextIndex = -1;
@@ -194,7 +194,7 @@ public class SellBuffsManager implements IXmlReader
 				continue;
 			}
 			
-			final Item item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
+			final ItemTemplate item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
 			
 			sb.append("<tr>");
 			sb.append("<td fixwidth=\"20\"></td>");
@@ -241,7 +241,7 @@ public class SellBuffsManager implements IXmlReader
 		return sb.toString();
 	}
 	
-	private String buildEditMenu(PlayerInstance player)
+	private String buildEditMenu(Player player)
 	{
 		final StringBuilder sb = new StringBuilder();
 		
@@ -293,7 +293,7 @@ public class SellBuffsManager implements IXmlReader
 		return sb.toString();
 	}
 	
-	private String buildSkillMenu(PlayerInstance player, int index)
+	private String buildSkillMenu(Player player, int index)
 	{
 		final int ceiling = index + 10;
 		int nextIndex = -1;
@@ -377,7 +377,7 @@ public class SellBuffsManager implements IXmlReader
 		return sb.toString();
 	}
 	
-	public boolean isInSellList(PlayerInstance player, Skill skill)
+	public boolean isInSellList(Player player, Skill skill)
 	{
 		for (SellBuffHolder holder : player.getSellingBuffs())
 		{
@@ -389,7 +389,7 @@ public class SellBuffsManager implements IXmlReader
 		return false;
 	}
 	
-	public boolean canStartSellBuffs(PlayerInstance player)
+	public boolean canStartSellBuffs(Player player)
 	{
 		if (player.isAlikeDead())
 		{

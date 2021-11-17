@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class DamageSkill implements ISkillHandler
@@ -37,7 +37,7 @@ public class DamageSkill implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(PlayerInstance activeChar, Skill skill, WorldObject target)
+	public void useSkill(Player activeChar, Skill skill, WorldObject target)
 	{
 		// PvP flag.
 		final boolean isEnemy = activeChar.isEnemy(target);

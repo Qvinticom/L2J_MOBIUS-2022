@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -55,7 +55,7 @@ public class TargetMeProbability extends AbstractEffect
 	{
 		if (info.getEffected().isPlayable() && (info.getEffected().getTarget() != info.getEffector()))
 		{
-			final PlayerInstance effector = info.getEffector().getActingPlayer();
+			final Player effector = info.getEffector().getActingPlayer();
 			// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
 			if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
 			{

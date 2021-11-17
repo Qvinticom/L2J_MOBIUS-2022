@@ -20,26 +20,26 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class Warehouse
 {
-	private final List<ItemInstance> _items = new ArrayList<>();
+	private final List<Item> _items = new ArrayList<>();
 	
 	public int getSize()
 	{
 		return _items.size();
 	}
 	
-	public List<ItemInstance> getItems()
+	public List<Item> getItems()
 	{
 		return _items;
 	}
 	
-	public ItemInstance addItem(ItemInstance newItem)
+	public Item addItem(Item newItem)
 	{
-		ItemInstance old;
-		ItemInstance result = newItem;
+		Item old;
+		Item result = newItem;
 		boolean stackableFound = false;
 		if (newItem.isStackable() && ((old = findItemId(newItem.getItemId())) != null))
 		{
@@ -56,11 +56,11 @@ public class Warehouse
 		return result;
 	}
 	
-	private ItemInstance findItemId(int itemId)
+	private Item findItemId(int itemId)
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			final ItemInstance temp = _items.get(i);
+			final Item temp = _items.get(i);
 			if (temp.getItemId() != itemId)
 			{
 				continue;
@@ -70,11 +70,11 @@ public class Warehouse
 		return null;
 	}
 	
-	public ItemInstance getItem(int objectId)
+	public Item getItem(int objectId)
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			final ItemInstance temp = _items.get(i);
+			final Item temp = _items.get(i);
 			if (temp.getObjectId() != objectId)
 			{
 				continue;
@@ -84,9 +84,9 @@ public class Warehouse
 		return null;
 	}
 	
-	public ItemInstance destroyItem(int itemId, int count)
+	public Item destroyItem(int itemId, int count)
 	{
-		final ItemInstance item = findItemId(itemId);
+		final Item item = findItemId(itemId);
 		if (item != null)
 		{
 			if (item.getCount() == count)

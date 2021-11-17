@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.mentoring;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMentorAdd implements IClientOutgoingPacket
 {
-	final PlayerInstance _mentor;
+	final Player _mentor;
 	
-	public ExMentorAdd(PlayerInstance mentor)
+	public ExMentorAdd(Player mentor)
 	{
 		_mentor = mentor;
 	}

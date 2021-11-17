@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncAdd;
@@ -171,7 +171,7 @@ public class Elementals
 			_active = false;
 		}
 		
-		public void applyBonus(PlayerInstance player, boolean isArmor)
+		public void applyBonus(Player player, boolean isArmor)
 		{
 			// make sure the bonuses are not applied twice..
 			if (_active)
@@ -216,7 +216,7 @@ public class Elementals
 			_active = true;
 		}
 		
-		public void removeBonus(PlayerInstance player)
+		public void removeBonus(Player player)
 		{
 			// make sure the bonuses are not removed twice
 			if (!_active)
@@ -280,17 +280,17 @@ public class Elementals
 		_bonus = new ElementalStatBonus(_element, _value);
 	}
 	
-	public void applyBonus(PlayerInstance player, boolean isArmor)
+	public void applyBonus(Player player, boolean isArmor)
 	{
 		_bonus.applyBonus(player, isArmor);
 	}
 	
-	public void removeBonus(PlayerInstance player)
+	public void removeBonus(Player player)
 	{
 		_bonus.removeBonus(player);
 	}
 	
-	public void updateBonus(PlayerInstance player, boolean isArmor)
+	public void updateBonus(Player player, boolean isArmor)
 	{
 		_bonus.removeBonus(player);
 		_bonus.applyBonus(player, isArmor);

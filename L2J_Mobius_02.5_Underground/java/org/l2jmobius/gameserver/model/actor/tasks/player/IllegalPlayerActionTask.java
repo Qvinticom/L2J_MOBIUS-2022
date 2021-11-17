@@ -22,7 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -38,9 +38,9 @@ public class IllegalPlayerActionTask implements Runnable
 	
 	private final String _message;
 	private final IllegalActionPunishmentType _punishment;
-	private final PlayerInstance _actor;
+	private final Player _actor;
 	
-	public IllegalPlayerActionTask(PlayerInstance actor, String message, IllegalActionPunishmentType punishment)
+	public IllegalPlayerActionTask(Player actor, String message, IllegalActionPunishmentType punishment)
 	{
 		_message = message;
 		_punishment = punishment;

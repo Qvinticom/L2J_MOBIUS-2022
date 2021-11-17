@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
@@ -54,7 +54,7 @@ public class FactionSystem extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -125,7 +125,7 @@ public class FactionSystem extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final String htmltext = null;
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
@@ -151,14 +151,14 @@ public class FactionSystem extends AbstractNpcAI
 	{
 		if (factionName.equals(Config.FACTION_GOOD_TEAM_NAME))
 		{
-			for (PlayerInstance player : World.getInstance().getAllGoodPlayers())
+			for (Player player : World.getInstance().getAllGoodPlayers())
 			{
 				player.sendMessage(message);
 			}
 		}
 		else
 		{
-			for (PlayerInstance player : World.getInstance().getAllEvilPlayers())
+			for (Player player : World.getInstance().getAllEvilPlayers())
 			{
 				player.sendMessage(message);
 			}

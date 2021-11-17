@@ -18,9 +18,9 @@ package handlers.playeractions;
 
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -30,14 +30,14 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class UnsummonPet implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		final Summon pet = player.getPet();
 		if (pet == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 		}
-		else if (((PetInstance) pet).isUncontrollable())
+		else if (((Pet) pet).isUncontrollable())
 		{
 			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
 		}

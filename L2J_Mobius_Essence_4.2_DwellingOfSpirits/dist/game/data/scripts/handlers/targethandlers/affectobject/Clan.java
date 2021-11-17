@@ -19,7 +19,7 @@ package handlers.targethandlers.affectobject;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
 
 /**
@@ -35,7 +35,7 @@ public class Clan implements IAffectObjectHandler
 			return true;
 		}
 		
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
 			final org.l2jmobius.gameserver.model.clan.Clan clan = player.getClan();

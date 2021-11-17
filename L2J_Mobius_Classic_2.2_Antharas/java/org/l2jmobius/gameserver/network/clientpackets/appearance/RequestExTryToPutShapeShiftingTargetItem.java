@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets.appearance;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -46,7 +46,7 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -61,8 +61,8 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 		}
 		
 		final PlayerInventory inventory = player.getInventory();
-		final ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
-		ItemInstance stone = request.getAppearanceStone();
+		final Item targetItem = inventory.getItemByObjectId(_targetItemObjId);
+		Item stone = request.getAppearanceStone();
 		if ((targetItem == null) || (stone == null))
 		{
 			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);

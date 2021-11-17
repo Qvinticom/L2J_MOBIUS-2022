@@ -28,10 +28,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.RandomCraftData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.RandomCraftRequest;
 import org.l2jmobius.gameserver.model.holders.RandomCraftRewardItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -51,14 +51,14 @@ public class PlayerRandomCraft
 	public static final int MAX_FULL_CRAFT_POINTS = 99;
 	public static final int MAX_CRAFT_POINTS = 1000000;
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final List<RandomCraftRewardItemHolder> _rewardList = new ArrayList<>(5);
 	
 	private int _fullCraftPoints = 0;
 	private int _craftPoints = 0;
 	private boolean _isSayhaRoll = false;
 	
-	public PlayerRandomCraft(PlayerInstance player)
+	public PlayerRandomCraft(Player player)
 	{
 		_player = player;
 	}
@@ -253,7 +253,7 @@ public class PlayerRandomCraft
 			final int itemId = holder.getItemId();
 			final long itemCount = holder.getItemCount();
 			_rewardList.clear();
-			final ItemInstance item = _player.addItem("RandomCraft Make", itemId, itemCount, _player, true);
+			final Item item = _player.addItem("RandomCraft Make", itemId, itemCount, _player, true);
 			if (RandomCraftData.getInstance().isAnnounce(itemId))
 			{
 				Broadcast.toAllOnlinePlayers(new ExItemAnnounce(_player, item, ExItemAnnounce.RANDOM_CRAFT));

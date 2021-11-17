@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
@@ -70,7 +70,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(PlayerInstance player)
+	public boolean isAvailable(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
@@ -103,7 +103,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 			return;
 		}
 		
-		final PlayerInstance player = event.getAttacker();
+		final Player player = event.getAttacker();
 		if (_minLevel > 0)
 		{
 			final int monsterLevel = monster.getLevel();
@@ -117,7 +117,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 		if (party != null)
 		{
 			final CommandChannel channel = party.getCommandChannel();
-			final List<PlayerInstance> members = channel != null ? channel.getMembers() : party.getMembers();
+			final List<Player> members = channel != null ? channel.getMembers() : party.getMembers();
 			members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::processPlayerProgress);
 		}
 		else
@@ -126,7 +126,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 		}
 	}
 	
-	private void processPlayerProgress(PlayerInstance player)
+	private void processPlayerProgress(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
 		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)

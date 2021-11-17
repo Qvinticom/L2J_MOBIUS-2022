@@ -31,11 +31,11 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -158,7 +158,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enterEasy"))
 		{
@@ -226,7 +226,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "STAGE_1_START":
 					{
-						final GrandBossInstance frey = (GrandBossInstance) addSpawn(FREYA_THRONE, FREYA_SPAWN, false, 0, true, world.getId());
+						final GrandBoss frey = (GrandBoss) addSpawn(FREYA_THRONE, FREYA_SPAWN, false, 0, true, world.getId());
 						frey.setUndying(true);
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_1);
 						startQuestTimer("CAST_BLIZZARD", 50000, controller, null);
@@ -253,7 +253,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "STAGE_1_PAUSE":
 					{
-						final GrandBossInstance frey = (GrandBossInstance) addSpawn(FREYA_SPELLING, FREYA_SPELLING_SPAWN, false, 0, true, world.getId());
+						final GrandBoss frey = (GrandBoss) addSpawn(FREYA_SPELLING, FREYA_SPELLING_SPAWN, false, 0, true, world.getId());
 						frey.setInvul(true);
 						frey.setRandomWalking(false);
 						frey.disableCoreAI(true);
@@ -295,7 +295,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 							}
 						}
 						
-						final RaidBossInstance glakias = (RaidBossInstance) addSpawn((isHardMode ? GLAKIAS_HARD : GLAKIAS_EASY), GLAKIAS_SPAWN, false, 0, true, world.getId());
+						final RaidBoss glakias = (RaidBoss) addSpawn((isHardMode ? GLAKIAS_HARD : GLAKIAS_EASY), GLAKIAS_SPAWN, false, 0, true, world.getId());
 						startQuestTimer("LEADER_DELAY", 5000, glakias, null);
 						
 						if (isHardMode)
@@ -325,7 +325,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					case "STAGE_3_START":
 					{
 						final boolean isHardMode = isHard(world);
-						for (PlayerInstance players : world.getPlayers())
+						for (Player players : world.getPlayers())
 						{
 							players.broadcastPacket(ExChangeClientEffectInfo.STATIC_FREYA_DESTROYED);
 							for (int emmiterId : EMMITERS)
@@ -333,7 +333,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 								players.sendPacket(new OnEventTrigger(emmiterId, true));
 							}
 						}
-						final GrandBossInstance frey = (GrandBossInstance) addSpawn((isHardMode ? FREYA_STAND_HARD : FREYA_STAND_EASY), FREYA_SPAWN, false, 0, true, world.getId());
+						final GrandBoss frey = (GrandBoss) addSpawn((isHardMode ? FREYA_STAND_HARD : FREYA_STAND_EASY), FREYA_SPAWN, false, 0, true, world.getId());
 						world.setStatus(4);
 						world.setParameter("canSpawnMobs", true);
 						world.setParameter("freya", frey);
@@ -404,7 +404,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "SPAWN_SUPPORT":
 					{
-						for (PlayerInstance players : world.getPlayers())
+						for (Player players : world.getPlayers())
 						{
 							players.setInvul(false);
 						}
@@ -412,14 +412,14 @@ public class IceQueensCastleBattle extends AbstractInstance
 						freya.disableCoreAI(false);
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_4);
 						
-						final FriendlyNpcInstance jinia = (FriendlyNpcInstance) addSpawn(SUPP_JINIA, SUPP_JINIA_SPAWN, false, 0, true, world.getId());
+						final FriendlyNpc jinia = (FriendlyNpc) addSpawn(SUPP_JINIA, SUPP_JINIA_SPAWN, false, 0, true, world.getId());
 						jinia.setRunning();
 						jinia.setInvul(true);
 						jinia.setCanReturnToSpawnPoint(false);
 						jinia.reduceCurrentHp(1, freya, null); // TODO: Find better way for attack
 						freya.reduceCurrentHp(1, jinia, null);
 						
-						final FriendlyNpcInstance kegor = (FriendlyNpcInstance) addSpawn(SUPP_KEGOR, SUPP_KEGOR_SPAWN, false, 0, true, world.getId());
+						final FriendlyNpc kegor = (FriendlyNpc) addSpawn(SUPP_KEGOR, SUPP_KEGOR_SPAWN, false, 0, true, world.getId());
 						kegor.setRunning();
 						kegor.setInvul(true);
 						kegor.setCanReturnToSpawnPoint(false);
@@ -575,7 +575,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 							freya.decayMe();
 						}
 						
-						for (PlayerInstance players : world.getPlayers())
+						for (Player players : world.getPlayers())
 						{
 							players.broadcastPacket(ExChangeClientEffectInfo.STATIC_FREYA_DEFAULT);
 						}
@@ -600,7 +600,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 						final Attackable mob = (Attackable) npc;
 						mob.clearAggroList();
 						
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, characters -> mob.addDamageHate(characters, 0, getRandom(10000, 20000)));
+						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, characters -> mob.addDamageHate(characters, 0, getRandom(10000, 20000)));
 						startQuestTimer("LEADER_RANDOMIZE", 25000, npc, null);
 						break;
 					}
@@ -682,7 +682,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -707,7 +707,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -809,7 +809,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 						world.setParameter("isSupportActive", true);
 						freya.setInvul(true);
 						freya.disableCoreAI(true);
-						for (PlayerInstance players : world.getPlayers())
+						for (Player players : world.getPlayers())
 						{
 							players.setInvul(true);
 							players.abortAttack();
@@ -998,7 +998,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -1042,7 +1042,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -1134,7 +1134,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		
@@ -1150,10 +1150,10 @@ public class IceQueensCastleBattle extends AbstractInstance
 	
 	private void manageRandomAttack(Instance world, Npc mob)
 	{
-		final List<PlayerInstance> players = world.getPlayers().stream().filter(p -> !p.isDead() && !p.isInvisible()).collect(Collectors.toList());
+		final List<Player> players = world.getPlayers().stream().filter(p -> !p.isDead() && !p.isInvisible()).collect(Collectors.toList());
 		Collections.shuffle(players);
 		
-		final PlayerInstance target = (!players.isEmpty()) ? players.get(0) : null;
+		final Player target = (!players.isEmpty()) ? players.get(0) : null;
 		if (target != null)
 		{
 			((Attackable) mob).addDamageHate(target, 0, 999);
@@ -1169,7 +1169,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	private void manageDespawnMinions(Instance world)
 	{
 		world.setParameter("canSpawnMobs", false);
-		for (MonsterInstance mobs : world.getAliveNpcs(MonsterInstance.class, BREATH, GLACIER, KNIGHT_EASY, KNIGHT_HARD))
+		for (Monster mobs : world.getAliveNpcs(Monster.class, BREATH, GLACIER, KNIGHT_EASY, KNIGHT_HARD))
 		{
 			mobs.doDie(null);
 		}
@@ -1182,7 +1182,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	
 	private void manageTimer(Instance world, int time, NpcStringId npcStringId)
 	{
-		for (PlayerInstance p : world.getPlayers())
+		for (Player p : world.getPlayers())
 		{
 			p.sendPacket(new ExSendUIEvent(p, false, false, time, 0, npcStringId));
 		}
@@ -1196,7 +1196,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 	private void manageMovie(Instance world, Movie movie)
 	{
 		final Npc controller = world.getParameters().getObject("controller", Npc.class);
-		playMovie(World.getInstance().getVisibleObjectsInRange(controller, PlayerInstance.class, 8000), movie);
+		playMovie(World.getInstance().getVisibleObjectsInRange(controller, Player.class, 8000), movie);
 	}
 	
 	private List<Npc> getKnightStatues(Instance world)

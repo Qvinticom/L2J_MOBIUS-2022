@@ -19,7 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -36,7 +36,7 @@ public class EquipShieldSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final Item shield = caster.getSecondaryWeaponItem();
+		final ItemTemplate shield = caster.getSecondaryWeaponItem();
 		return (shield != null) && (shield.getItemType() == ArmorType.SHIELD);
 	}
 }

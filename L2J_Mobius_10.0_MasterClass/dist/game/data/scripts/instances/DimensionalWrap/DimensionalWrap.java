@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -115,7 +115,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -139,8 +139,8 @@ public class DimensionalWrap extends AbstractInstance
 					else
 					{
 						final Party party = player.getParty();
-						final List<PlayerInstance> members = party.getMembers();
-						for (PlayerInstance member : members)
+						final List<Player> members = party.getMembers();
+						for (Player member : members)
 						{
 							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 							{
@@ -310,7 +310,7 @@ public class DimensionalWrap extends AbstractInstance
 					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
 					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
 				}
-				for (PlayerInstance pl : world.getPlayers())
+				for (Player pl : world.getPlayers())
 				{
 					pl.teleToLocation(FIRST_TELEPORT, world.getTemplateId());
 				}
@@ -348,7 +348,7 @@ public class DimensionalWrap extends AbstractInstance
 					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
 					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
 				}
-				for (PlayerInstance pl : world.getPlayers())
+				for (Player pl : world.getPlayers())
 				{
 					pl.teleToLocation(SECOND_TELEPORT, world.getTemplateId());
 				}
@@ -386,7 +386,7 @@ public class DimensionalWrap extends AbstractInstance
 					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
 					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
 				}
-				for (PlayerInstance pl : world.getPlayers())
+				for (Player pl : world.getPlayers())
 				{
 					pl.teleToLocation(THIRD_TELEPORT, world.getTemplateId());
 				}
@@ -424,7 +424,7 @@ public class DimensionalWrap extends AbstractInstance
 					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
 					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
 				}
-				for (PlayerInstance pl : world.getPlayers())
+				for (Player pl : world.getPlayers())
 				{
 					pl.teleToLocation(TELEPORTS, world.getTemplateId());
 				}
@@ -462,7 +462,7 @@ public class DimensionalWrap extends AbstractInstance
 					cancelQuestTimer("THIRD_SPAWN", null, world.getFirstPlayer());
 					startQuestTimer("START_STAGE", 5000, null, world.getFirstPlayer());
 				}
-				for (PlayerInstance pl : world.getPlayers())
+				for (Player pl : world.getPlayers())
 				{
 					pl.teleToLocation(FOURTH_TELEPORT, world.getTemplateId());
 				}
@@ -497,7 +497,7 @@ public class DimensionalWrap extends AbstractInstance
 				{
 					final Npc salamandra = addSpawn(world.getParameters().getInt("worldState", 0) < 17 ? DIMENSIONAL_SALAMANDRA : UNWORDLY_SALAMANDER, npc, false, 0, false, world.getId());
 					salamandra.setRunning();
-					World.getInstance().forEachVisibleObjectInRange(salamandra, PlayerInstance.class, 2500, p ->
+					World.getInstance().forEachVisibleObjectInRange(salamandra, Player.class, 2500, p ->
 					{
 						if ((p != null) && !p.isDead())
 						{
@@ -569,7 +569,7 @@ public class DimensionalWrap extends AbstractInstance
 					skilllevel = 4;
 				}
 				final Skill skill = SkillData.getInstance().getSkill(DIMENSIONAL_DARK_FORCES, skilllevel);
-				for (PlayerInstance p : world.getPlayers())
+				for (Player p : world.getPlayers())
 				{
 					if ((p != null) && !p.isDead())
 					{
@@ -644,7 +644,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -696,7 +696,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -745,11 +745,11 @@ public class DimensionalWrap extends AbstractInstance
 	public void checkCrystallCount(Instance world, Npc npc)
 	{
 		boolean canStart = true;
-		for (PlayerInstance p : world.getPlayers())
+		for (Player p : world.getPlayers())
 		{
 			if (p.getInventory().getInventoryItemCount(WARP_CRYSTAL, -1) < world.getParameters().getInt("count", 0))
 			{
-				for (PlayerInstance ps : world.getPlayers())
+				for (Player ps : world.getPlayers())
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(ps, "33975-03.html"));
@@ -766,13 +766,13 @@ public class DimensionalWrap extends AbstractInstance
 		}
 		
 		startQuestTimer("START_STAGE", 1000, null, world.getFirstPlayer());
-		for (PlayerInstance p : world.getPlayers())
+		for (Player p : world.getPlayers())
 		{
 			takeItems(p, WARP_CRYSTAL, world.getParameters().getInt("count", 0));
 		}
 	}
 	
-	protected void clean(PlayerInstance player)
+	protected void clean(Player player)
 	{
 		cancelQuestTimer("SALAMANDRA_SPAWN", null, player);
 		cancelQuestTimer("SALAMANDRA_SPAWN_DUMMY", null, player);

@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Dice;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class RollingDice implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -41,7 +41,7 @@ public class RollingDice implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance player = playable.getActingPlayer();
+		final Player player = playable.getActingPlayer();
 		final int itemId = item.getId();
 		if (player.isInOlympiadMode())
 		{
@@ -84,7 +84,7 @@ public class RollingDice implements IItemHandler
 		return true;
 	}
 	
-	private int rollDice(PlayerInstance player)
+	private int rollDice(Player player)
 	{
 		// Check if the dice is ready
 		if (!player.getClient().getFloodProtectors().canRollDice())

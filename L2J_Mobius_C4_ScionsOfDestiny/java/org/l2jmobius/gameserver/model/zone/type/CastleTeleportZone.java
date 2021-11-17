@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -109,7 +109,7 @@ public class CastleTeleportZone extends ZoneType
 		final List<Creature> players = new ArrayList<>();
 		for (Creature creature : getCharactersInside())
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
 				players.add(creature);
 			}
@@ -121,9 +121,9 @@ public class CastleTeleportZone extends ZoneType
 	{
 		for (Creature creature : getCharactersInside())
 		{
-			if ((creature != null) && (creature instanceof PlayerInstance))
+			if ((creature != null) && (creature instanceof Player))
 			{
-				final PlayerInstance player = (PlayerInstance) creature;
+				final Player player = (Player) creature;
 				if (player.isOnline())
 				{
 					player.teleToLocation(Rnd.get(_spawnLoc[0], _spawnLoc[1]), Rnd.get(_spawnLoc[2], _spawnLoc[3]), _spawnLoc[4]);

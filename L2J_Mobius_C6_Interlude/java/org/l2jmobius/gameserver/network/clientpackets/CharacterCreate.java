@@ -33,11 +33,11 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -109,7 +109,7 @@ public class CharacterCreate implements IClientIncomingPacket
 			}
 		}
 		
-		PlayerInstance newChar = null;
+		Player newChar = null;
 		PlayerTemplate template = null;
 		
 		// Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
@@ -134,7 +134,7 @@ public class CharacterCreate implements IClientIncomingPacket
 			}
 			
 			final int objectId = IdManager.getInstance().getNextId();
-			newChar = PlayerInstance.create(objectId, template, client.getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
+			newChar = Player.create(objectId, template, client.getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
 			newChar.setCurrentHp(newChar.getMaxHp()); // L2Off like
 			// newChar.setCurrentCp(template.baseCpMax);
 			newChar.setCurrentCp(0); // L2Off like
@@ -172,7 +172,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		return result;
 	}
 	
-	private void initNewChar(GameClient client, PlayerInstance newChar)
+	private void initNewChar(GameClient client, Player newChar)
 	{
 		World.getInstance().storeObject(newChar);
 		final PlayerTemplate template = newChar.getTemplate();
@@ -260,13 +260,13 @@ public class CharacterCreate implements IClientIncomingPacket
 		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1)); // Sit
 		for (ItemHolder item : template.getItems())
 		{
-			final ItemInstance itemInstance = newChar.getInventory().addItem("Init", item.getId(), (int) item.getCount(), newChar, null);
+			final Item itemInstance = newChar.getInventory().addItem("Init", item.getId(), (int) item.getCount(), newChar, null);
 			if (itemInstance.getItemId() == 5588)
 			{
 				newChar.registerShortCut(new ShortCut(11, 0, 1, itemInstance.getObjectId(), -1)); // Tutorial Book shortcut
 			}
 			
-			if (itemInstance.isEquipable() && ((newChar.getActiveWeaponItem() == null) || (itemInstance.getItem().getType2() == Item.TYPE2_WEAPON)))
+			if (itemInstance.isEquipable() && ((newChar.getActiveWeaponItem() == null) || (itemInstance.getItem().getType2() == ItemTemplate.TYPE2_WEAPON)))
 			{
 				newChar.getInventory().equipItemAndRecord(itemInstance);
 			}
@@ -300,7 +300,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		client.setCharSelection(cl.getCharInfo());
 	}
 	
-	public void startTutorialQuest(PlayerInstance player)
+	public void startTutorialQuest(Player player)
 	{
 		final QuestState qs1 = player.getQuestState("NewbieHelper");
 		Quest q1 = null;

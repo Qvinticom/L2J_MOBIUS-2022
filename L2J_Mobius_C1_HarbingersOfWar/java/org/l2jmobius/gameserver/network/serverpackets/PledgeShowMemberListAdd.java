@@ -17,13 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PledgeShowMemberListAdd extends ServerBasePacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public PledgeShowMemberListAdd(PlayerInstance player)
+	public PledgeShowMemberListAdd(Player player)
 	{
 		_player = player;
 	}

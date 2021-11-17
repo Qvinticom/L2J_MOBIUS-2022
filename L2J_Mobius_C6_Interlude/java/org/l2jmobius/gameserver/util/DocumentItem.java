@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.items.type.WeaponType;
 public class DocumentItem extends DocumentBase
 {
 	private DocumentItemDataHolder _currentItem = null;
-	private final List<Item> _itemsInFile = new ArrayList<>();
+	private final List<ItemTemplate> _itemsInFile = new ArrayList<>();
 	
 	private class DocumentItemDataHolder
 	{
@@ -53,35 +53,35 @@ public class DocumentItem extends DocumentBase
 		public Enum<?> type;
 		public StatSet set;
 		public int currentLevel;
-		public Item item;
+		public ItemTemplate item;
 	}
 	
 	private static final Map<String, Integer> _slots = new HashMap<>();
 	static
 	{
-		_slots.put("chest", Item.SLOT_CHEST);
-		_slots.put("fullarmor", Item.SLOT_FULL_ARMOR);
-		_slots.put("head", Item.SLOT_HEAD);
-		_slots.put("hair", Item.SLOT_HAIR);
-		_slots.put("face", Item.SLOT_FACE);
-		_slots.put("dhair", Item.SLOT_DHAIR);
-		_slots.put("underwear", Item.SLOT_UNDERWEAR);
-		_slots.put("back", Item.SLOT_BACK);
-		_slots.put("neck", Item.SLOT_NECK);
-		_slots.put("legs", Item.SLOT_LEGS);
-		_slots.put("feet", Item.SLOT_FEET);
-		_slots.put("gloves", Item.SLOT_GLOVES);
-		_slots.put("chest,legs", Item.SLOT_CHEST | Item.SLOT_LEGS);
-		_slots.put("rhand", Item.SLOT_R_HAND);
-		_slots.put("lhand", Item.SLOT_L_HAND);
-		_slots.put("lrhand", Item.SLOT_LR_HAND);
-		_slots.put("rear,lear", Item.SLOT_R_EAR | Item.SLOT_L_EAR);
-		_slots.put("rfinger,lfinger", Item.SLOT_R_FINGER | Item.SLOT_L_FINGER);
-		_slots.put("none", Item.SLOT_NONE);
-		_slots.put("wolf", Item.SLOT_WOLF); // for wolf
-		_slots.put("hatchling", Item.SLOT_HATCHLING); // for hatchling
-		_slots.put("strider", Item.SLOT_STRIDER); // for strider
-		_slots.put("babypet", Item.SLOT_BABYPET); // for babypet
+		_slots.put("chest", ItemTemplate.SLOT_CHEST);
+		_slots.put("fullarmor", ItemTemplate.SLOT_FULL_ARMOR);
+		_slots.put("head", ItemTemplate.SLOT_HEAD);
+		_slots.put("hair", ItemTemplate.SLOT_HAIR);
+		_slots.put("face", ItemTemplate.SLOT_FACE);
+		_slots.put("dhair", ItemTemplate.SLOT_DHAIR);
+		_slots.put("underwear", ItemTemplate.SLOT_UNDERWEAR);
+		_slots.put("back", ItemTemplate.SLOT_BACK);
+		_slots.put("neck", ItemTemplate.SLOT_NECK);
+		_slots.put("legs", ItemTemplate.SLOT_LEGS);
+		_slots.put("feet", ItemTemplate.SLOT_FEET);
+		_slots.put("gloves", ItemTemplate.SLOT_GLOVES);
+		_slots.put("chest,legs", ItemTemplate.SLOT_CHEST | ItemTemplate.SLOT_LEGS);
+		_slots.put("rhand", ItemTemplate.SLOT_R_HAND);
+		_slots.put("lhand", ItemTemplate.SLOT_L_HAND);
+		_slots.put("lrhand", ItemTemplate.SLOT_LR_HAND);
+		_slots.put("rear,lear", ItemTemplate.SLOT_R_EAR | ItemTemplate.SLOT_L_EAR);
+		_slots.put("rfinger,lfinger", ItemTemplate.SLOT_R_FINGER | ItemTemplate.SLOT_L_FINGER);
+		_slots.put("none", ItemTemplate.SLOT_NONE);
+		_slots.put("wolf", ItemTemplate.SLOT_WOLF); // for wolf
+		_slots.put("hatchling", ItemTemplate.SLOT_HATCHLING); // for hatchling
+		_slots.put("strider", ItemTemplate.SLOT_STRIDER); // for strider
+		_slots.put("babypet", ItemTemplate.SLOT_BABYPET); // for babypet
 	}
 	private static final Map<String, WeaponType> _weaponTypes = new HashMap<>();
 	static
@@ -195,44 +195,44 @@ public class DocumentItem extends DocumentBase
 			// lets see if this is a shield
 			if (_currentItem.type == WeaponType.NONE)
 			{
-				_currentItem.set.set("type1", Item.TYPE1_SHIELD_ARMOR);
-				_currentItem.set.set("type2", Item.TYPE2_SHIELD_ARMOR);
+				_currentItem.set.set("type1", ItemTemplate.TYPE1_SHIELD_ARMOR);
+				_currentItem.set.set("type2", ItemTemplate.TYPE2_SHIELD_ARMOR);
 			}
 			else
 			{
-				_currentItem.set.set("type1", Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
-				_currentItem.set.set("type2", Item.TYPE2_WEAPON);
+				_currentItem.set.set("type1", ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+				_currentItem.set.set("type2", ItemTemplate.TYPE2_WEAPON);
 			}
 			
 			if (_currentItem.type == WeaponType.PET)
 			{
-				_currentItem.set.set("type1", Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+				_currentItem.set.set("type1", ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE);
 				
 				switch (_currentItem.set.getString("bodypart"))
 				{
 					case "wolf":
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_WOLF);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_WOLF);
 						break;
 					}
 					case "hatchling":
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_HATCHLING);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_HATCHLING);
 						break;
 					}
 					case "babypet":
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_BABY);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_BABY);
 						break;
 					}
 					default:
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_STRIDER);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_STRIDER);
 						break;
 					}
 				}
 				
-				bodypart = Item.SLOT_R_HAND;
+				bodypart = ItemTemplate.SLOT_R_HAND;
 			}
 			
 			_currentItem.set.set("bodypart", bodypart);
@@ -242,54 +242,54 @@ public class DocumentItem extends DocumentBase
 			_currentItem.type = _armorTypes.get(_currentItem.set.getString("armor_type"));
 			
 			int bodypart = _slots.get(_currentItem.set.getString("bodypart"));
-			if ((bodypart == Item.SLOT_NECK) || (bodypart == Item.SLOT_HAIR) || (bodypart == Item.SLOT_FACE) || (bodypart == Item.SLOT_DHAIR) || ((bodypart & Item.SLOT_L_EAR) != 0) || ((bodypart & Item.SLOT_L_FINGER) != 0))
+			if ((bodypart == ItemTemplate.SLOT_NECK) || (bodypart == ItemTemplate.SLOT_HAIR) || (bodypart == ItemTemplate.SLOT_FACE) || (bodypart == ItemTemplate.SLOT_DHAIR) || ((bodypart & ItemTemplate.SLOT_L_EAR) != 0) || ((bodypart & ItemTemplate.SLOT_L_FINGER) != 0))
 			{
-				_currentItem.set.set("type1", Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
-				_currentItem.set.set("type2", Item.TYPE2_ACCESSORY);
+				_currentItem.set.set("type1", ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+				_currentItem.set.set("type2", ItemTemplate.TYPE2_ACCESSORY);
 			}
 			else
 			{
-				_currentItem.set.set("type1", Item.TYPE1_SHIELD_ARMOR);
-				_currentItem.set.set("type2", Item.TYPE2_SHIELD_ARMOR);
+				_currentItem.set.set("type1", ItemTemplate.TYPE1_SHIELD_ARMOR);
+				_currentItem.set.set("type2", ItemTemplate.TYPE2_SHIELD_ARMOR);
 			}
 			
 			if (_currentItem.type == ArmorType.PET)
 			{
-				_currentItem.set.set("type1", Item.TYPE1_SHIELD_ARMOR);
+				_currentItem.set.set("type1", ItemTemplate.TYPE1_SHIELD_ARMOR);
 				
 				switch (_currentItem.set.getString("bodypart"))
 				{
 					case "wolf":
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_WOLF);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_WOLF);
 						break;
 					}
 					case "hatchling":
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_HATCHLING);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_HATCHLING);
 						break;
 					}
 					case "babypet":
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_BABY);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_BABY);
 						break;
 					}
 					default:
 					{
-						_currentItem.set.set("type2", Item.TYPE2_PET_STRIDER);
+						_currentItem.set.set("type2", ItemTemplate.TYPE2_PET_STRIDER);
 						break;
 					}
 				}
 				
-				bodypart = Item.SLOT_CHEST;
+				bodypart = ItemTemplate.SLOT_CHEST;
 			}
 			
 			_currentItem.set.set("bodypart", bodypart);
 		}
 		else
 		{
-			_currentItem.set.set("type1", Item.TYPE1_ITEM_QUESTITEM_ADENA);
-			_currentItem.set.set("type2", Item.TYPE2_OTHER);
+			_currentItem.set.set("type1", ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA);
+			_currentItem.set.set("type2", ItemTemplate.TYPE2_OTHER);
 			
 			final String itemType = _currentItem.set.getString("item_type");
 			switch (itemType)
@@ -347,19 +347,19 @@ public class DocumentItem extends DocumentBase
 				case "arrow":
 				{
 					_currentItem.type = EtcItemType.ARROW;
-					_currentItem.set.set("bodypart", Item.SLOT_L_HAND);
+					_currentItem.set.set("bodypart", ItemTemplate.SLOT_L_HAND);
 					break;
 				}
 				case "quest":
 				{
 					_currentItem.type = EtcItemType.QUEST;
-					_currentItem.set.set("type2", Item.TYPE2_QUEST);
+					_currentItem.set.set("type2", ItemTemplate.TYPE2_QUEST);
 					break;
 				}
 				case "lure":
 				{
 					_currentItem.type = EtcItemType.OTHER;
-					_currentItem.set.set("bodypart", Item.SLOT_L_HAND);
+					_currentItem.set.set("bodypart", ItemTemplate.SLOT_L_HAND);
 					break;
 				}
 				default:
@@ -376,7 +376,7 @@ public class DocumentItem extends DocumentBase
 				{
 					_currentItem.type = EtcItemType.MONEY;
 					_currentItem.set.set("stackable", true);
-					_currentItem.set.set("type2", Item.TYPE2_MONEY);
+					_currentItem.set.set("type2", ItemTemplate.TYPE2_MONEY);
 					break;
 				}
 				case "stackable":
@@ -430,7 +430,7 @@ public class DocumentItem extends DocumentBase
 		}
 	}
 	
-	public List<Item> getItemList()
+	public List<ItemTemplate> getItemList()
 	{
 		return _itemsInFile;
 	}

@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -63,7 +63,7 @@ public class PailakaSongOfIceAndFire extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -106,7 +106,7 @@ public class PailakaSongOfIceAndFire extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		if ((damage > 0) && npc.isScriptValue(0))
 		{
@@ -148,7 +148,7 @@ public class PailakaSongOfIceAndFire extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		npc.dropItem(player, getRandomBoolean() ? SHIELD_POTION : HEAL_POTION, getRandom(1, 7));
 		return super.onKill(npc, player, isSummon);
@@ -157,7 +157,7 @@ public class PailakaSongOfIceAndFire extends AbstractInstance
 	@Override
 	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if ((creature.isPlayer()) && !creature.isDead() && !creature.isTeleporting() && ((PlayerInstance) creature).isOnline())
+		if ((creature.isPlayer()) && !creature.isDead() && !creature.isTeleporting() && ((Player) creature).isOnline())
 		{
 			final Instance world = creature.getInstanceWorld();
 			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))

@@ -21,9 +21,9 @@ import java.util.logging.Level;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 public class BeastSoulShot implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -43,7 +43,7 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		final PlayerInstance activeOwner = playable.getActingPlayer();
+		final Player activeOwner = playable.getActingPlayer();
 		if (!activeOwner.hasSummon())
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);

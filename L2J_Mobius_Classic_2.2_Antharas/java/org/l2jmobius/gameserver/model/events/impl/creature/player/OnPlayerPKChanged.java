@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,18 +25,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerPKChanged implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _oldPoints;
 	private final int _newPoints;
 	
-	public OnPlayerPKChanged(PlayerInstance player, int oldPoints, int newPoints)
+	public OnPlayerPKChanged(Player player, int oldPoints, int newPoints)
 	{
 		_player = player;
 		_oldPoints = oldPoints;
 		_newPoints = newPoints;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

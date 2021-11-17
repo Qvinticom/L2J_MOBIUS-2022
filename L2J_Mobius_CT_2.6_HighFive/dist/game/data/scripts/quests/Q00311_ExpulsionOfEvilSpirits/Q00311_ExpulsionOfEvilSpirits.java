@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -114,7 +114,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("altarSpawn"))
 		{
@@ -211,12 +211,12 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 2, npc);
 		if (qs != null)
 		{
-			final PlayerInstance member = qs.getPlayer();
+			final Player member = qs.getPlayer();
 			if (npc.getId() == VARANGKA)
 			{
 				if (!qs.isCond(1))
@@ -278,7 +278,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -294,7 +294,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player player, int damage, boolean isPet)
 	{
 		QuestState qs = player.getQuestState(Q00311_ExpulsionOfEvilSpirits.class.getSimpleName());
 		if (qs == null)
@@ -349,9 +349,9 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 		private final static int DEBUFF_SKILL_ID = 6148;
 		private final static int DEBUFF_SKILL_LEVEL = 1;
 		
-		private final PlayerInstance _player;
+		private final Player _player;
 		
-		protected zoneCheck(PlayerInstance player)
+		protected zoneCheck(Player player)
 		{
 			_player = player;
 		}
@@ -375,7 +375,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 			}
 		}
 		
-		private void castDebuff(PlayerInstance player)
+		private void castDebuff(Player player)
 		{
 			for (BuffInfo info : player.getEffectList().getDebuffs())
 			{

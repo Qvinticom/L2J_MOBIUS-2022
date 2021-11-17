@@ -19,21 +19,21 @@ package org.l2jmobius.gameserver.model.partymatching;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Gnacik
  */
 public class PartyMatchWaitingList
 {
-	private final Collection<PlayerInstance> _members;
+	private final Collection<Player> _members;
 	
 	protected PartyMatchWaitingList()
 	{
 		_members = ConcurrentHashMap.newKeySet();
 	}
 	
-	public void addPlayer(PlayerInstance player)
+	public void addPlayer(Player player)
 	{
 		// player.setPartyWait(1);
 		if (!_members.contains(player))
@@ -42,7 +42,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public void removePlayer(PlayerInstance player)
+	public void removePlayer(Player player)
 	{
 		// player.setPartyWait(0);
 		if (_members.contains(player))
@@ -51,7 +51,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public Collection<PlayerInstance> getPlayers()
+	public Collection<Player> getPlayers()
 	{
 		return _members;
 	}

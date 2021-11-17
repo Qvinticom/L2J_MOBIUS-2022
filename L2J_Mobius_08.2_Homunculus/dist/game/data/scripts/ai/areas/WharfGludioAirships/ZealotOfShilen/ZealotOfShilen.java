@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 
 import ai.AbstractNpcAI;
 
@@ -47,7 +47,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (npc == null)
 		{
@@ -58,7 +58,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 		{
 			Npc nearby = null;
 			double maxDistance = Double.MAX_VALUE;
-			for (MonsterInstance obj : World.getInstance().getVisibleObjects(npc, MonsterInstance.class))
+			for (Monster obj : World.getInstance().getVisibleObjects(npc, Monster.class))
 			{
 				final double distance = npc.calculateDistance2D(obj);
 				if ((distance < maxDistance) && !obj.isDead() && !obj.isDecayed())
@@ -79,7 +79,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return (npc.isAttackingNow()) ? "32628-01.html" : npc.getId() + ".html";
 	}

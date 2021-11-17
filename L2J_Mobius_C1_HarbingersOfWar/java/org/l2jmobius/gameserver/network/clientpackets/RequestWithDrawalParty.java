@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestWithDrawalParty extends ClientBasePacket
@@ -26,7 +26,7 @@ public class RequestWithDrawalParty extends ClientBasePacket
 	{
 		super(decrypt);
 		
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		if ((player != null) && player.isInParty())
 		{
 			player.getParty().oustPartyMember(player);

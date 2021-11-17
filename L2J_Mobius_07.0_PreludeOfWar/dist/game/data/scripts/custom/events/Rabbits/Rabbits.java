@@ -25,7 +25,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Event;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -51,7 +51,7 @@ public class Rabbits extends Event
 	private static final int TOTAL_CHEST_COUNT = 75;
 	private static final int TRANSFORMATION_ID = 105;
 	private final Collection<Npc> _npcs = ConcurrentHashMap.newKeySet();
-	private final List<PlayerInstance> _players = new ArrayList<>();
+	private final List<Player> _players = new ArrayList<>();
 	private boolean _isActive = false;
 	
 	/**
@@ -84,7 +84,7 @@ public class Rabbits extends Event
 	}
 	
 	@Override
-	public boolean eventStart(PlayerInstance eventMaker)
+	public boolean eventStart(Player eventMaker)
 	{
 		// Don't start event if its active
 		if (_isActive)
@@ -147,7 +147,7 @@ public class Rabbits extends Event
 		}
 		_npcs.clear();
 		
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			if ((player != null) && (player.getTransformationId() == TRANSFORMATION_ID))
 			{
@@ -162,7 +162,7 @@ public class Rabbits extends Event
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -197,13 +197,13 @@ public class Rabbits extends Event
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (skill.getId() == RABBIT_TORNADO.getSkillId())
 		{
@@ -228,7 +228,7 @@ public class Rabbits extends Event
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (_isActive && ((skill == null) || (skill.getId() != RABBIT_TORNADO.getSkillId())))
 		{
@@ -237,7 +237,7 @@ public class Rabbits extends Event
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private void dropItem(Npc npc, PlayerInstance player, int[][] droplist)
+	private void dropItem(Npc npc, Player player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		for (int[] drop : droplist)
@@ -263,7 +263,7 @@ public class Rabbits extends Event
 	}
 	
 	@Override
-	public boolean eventBypass(PlayerInstance player, String bypass)
+	public boolean eventBypass(Player player, String bypass)
 	{
 		return false;
 	}

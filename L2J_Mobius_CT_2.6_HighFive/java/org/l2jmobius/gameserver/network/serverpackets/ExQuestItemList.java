@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExQuestItemList extends AbstractItemPacket
 {
-	private final PlayerInstance _player;
-	private final List<ItemInstance> _items = new ArrayList<>();
+	private final Player _player;
+	private final List<Item> _items = new ArrayList<>();
 	
-	public ExQuestItemList(PlayerInstance player)
+	public ExQuestItemList(Player player)
 	{
 		_player = player;
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (item.isQuestItem())
 			{
@@ -49,7 +49,7 @@ public class ExQuestItemList extends AbstractItemPacket
 	{
 		OutgoingPackets.EX_QUEST_ITEM_LIST.writeId(packet);
 		packet.writeH(_items.size());
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeItem(packet, item);
 		}

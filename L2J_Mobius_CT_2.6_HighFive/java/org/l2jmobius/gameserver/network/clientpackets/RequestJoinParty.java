@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -48,8 +48,8 @@ public class RequestJoinParty implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance requestor = client.getPlayer();
-		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final Player requestor = client.getPlayer();
+		final Player target = World.getInstance().getPlayer(_name);
 		if (requestor == null)
 		{
 			return;
@@ -157,7 +157,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void addTargetToParty(PlayerInstance target, PlayerInstance requestor)
+	private void addTargetToParty(Player target, Player requestor)
 	{
 		final Party party = requestor.getParty();
 		// summary of ppl already in party and ppl that get invitation
@@ -196,7 +196,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
+	private void createNewParty(Player target, Player requestor)
 	{
 		final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
 		if (partyDistributionType == null)

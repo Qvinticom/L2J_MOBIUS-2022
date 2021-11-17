@@ -27,11 +27,11 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.RestorationItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -67,7 +67,7 @@ public class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;
@@ -94,14 +94,14 @@ public class RestorationRandom extends AbstractEffect
 			chanceFrom += chance;
 		}
 		
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (creationList.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			return;
 		}
 		
-		final Map<ItemInstance, Long> extractedItems = new HashMap<>();
+		final Map<Item, Long> extractedItems = new HashMap<>();
 		for (RestorationItemHolder createdItem : creationList)
 		{
 			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
@@ -110,7 +110,7 @@ public class RestorationRandom extends AbstractEffect
 			}
 			
 			final long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
-			final ItemInstance newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
+			final Item newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 			
 			if (createdItem.getMaxEnchant() > 0)
 			{
@@ -130,7 +130,7 @@ public class RestorationRandom extends AbstractEffect
 		if (!extractedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (Entry<ItemInstance, Long> entry : extractedItems.entrySet())
+			for (Entry<Item, Long> entry : extractedItems.entrySet())
 			{
 				if (entry.getKey().getItem().isStackable())
 				{
@@ -138,7 +138,7 @@ public class RestorationRandom extends AbstractEffect
 				}
 				else
 				{
-					for (ItemInstance itemInstance : player.getInventory().getAllItemsByItemId(entry.getKey().getId()))
+					for (Item itemInstance : player.getInventory().getAllItemsByItemId(entry.getKey().getId()))
 					{
 						playerIU.addModifiedItem(itemInstance);
 					}
@@ -155,7 +155,7 @@ public class RestorationRandom extends AbstractEffect
 		return EffectType.EXTRACT_ITEM;
 	}
 	
-	private void sendMessage(PlayerInstance player, ItemInstance item, long count)
+	private void sendMessage(Player player, Item item, long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

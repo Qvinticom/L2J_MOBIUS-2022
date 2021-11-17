@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Message;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -105,7 +105,7 @@ public class RequestSendPost implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -264,7 +264,7 @@ public class RequestSendPost implements IClientIncomingPacket
 		}
 	}
 	
-	private boolean removeItems(PlayerInstance player, Message msg)
+	private boolean removeItems(Player player, Message msg)
 	{
 		long currentAdena = player.getAdena();
 		long fee = MESSAGE_FEE;
@@ -273,7 +273,7 @@ public class RequestSendPost implements IClientIncomingPacket
 			for (AttachmentItem i : _items)
 			{
 				// Check validity of requested item
-				final ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+				final Item item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 				if ((item == null) || !item.isTradeable() || item.isEquipped())
 				{
 					player.sendPacket(SystemMessageId.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER);
@@ -313,14 +313,14 @@ public class RequestSendPost implements IClientIncomingPacket
 		for (AttachmentItem i : _items)
 		{
 			// Check validity of requested item
-			final ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+			final Item oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 			if ((oldItem == null) || !oldItem.isTradeable() || oldItem.isEquipped())
 			{
 				LOGGER.warning("Error adding attachment for char " + player.getName() + " (olditem == null)");
 				return false;
 			}
 			
-			final ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
+			final Item newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
 			if (newItem == null)
 			{
 				LOGGER.warning("Error adding attachment for char " + player.getName() + " (newitem == null)");

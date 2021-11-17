@@ -62,7 +62,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Returns the lower level that the PlayerInstance must achieve in order to obtain this buff
+	 * Returns the lower level that the Player must achieve in order to obtain this buff
 	 * @return int
 	 */
 	public int getLowerLevel()
@@ -71,7 +71,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Sets the lower level that the PlayerInstance must achieve in order to obtain this buff
+	 * Sets the lower level that the Player must achieve in order to obtain this buff
 	 * @param lowerLevel
 	 */
 	public void setLowerLevel(int lowerLevel)
@@ -80,7 +80,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Returns the upper level that the PlayerInstance mustn't exceed in order to obtain this buff
+	 * Returns the upper level that the Player mustn't exceed in order to obtain this buff
 	 * @return int
 	 */
 	public int getUpperLevel()
@@ -89,7 +89,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Sets the upper level that the PlayerInstance mustn't exceed in order to obtain this buff
+	 * Sets the upper level that the Player mustn't exceed in order to obtain this buff
 	 * @param upperLevel
 	 */
 	public void setUpperLevel(int upperLevel)
@@ -98,7 +98,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Returns the ID of the buff that the PlayerInstance will receive
+	 * Returns the ID of the buff that the Player will receive
 	 * @return int
 	 */
 	public int getSkillID()
@@ -107,7 +107,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Sets the ID of the buff that the PlayerInstance will receive
+	 * Sets the ID of the buff that the Player will receive
 	 * @param skillID
 	 */
 	public void setSkillID(int skillID)
@@ -116,7 +116,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Returns the Level of the buff that the PlayerInstance will receive
+	 * Returns the Level of the buff that the Player will receive
 	 * @return int
 	 */
 	public int getSkillLevel()
@@ -125,7 +125,7 @@ public class HelperBuffHolder
 	}
 	
 	/**
-	 * Sets the Level of the buff that the PlayerInstance will receive
+	 * Sets the Level of the buff that the Player will receive
 	 * @param skillLevel
 	 */
 	public void setSkillLevel(int skillLevel)

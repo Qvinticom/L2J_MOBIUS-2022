@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -214,9 +214,9 @@ public abstract class DocumentBase
 		final int ord = Integer.decode(getValue(order, template));
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, name, stat, ord, lambda);
-		if (template instanceof Item)
+		if (template instanceof ItemTemplate)
 		{
-			((Item) template).attach(ft);
+			((ItemTemplate) template).attach(ft);
 		}
 		else if (template instanceof Skill)
 		{
@@ -352,9 +352,9 @@ public abstract class DocumentBase
 		
 		final EffectTemplate lt = new EffectTemplate(attachCond, applayCond, name, lambda, count, time, abnormal, stackType, stackOrder, showIcon, type, effectPower);
 		parseTemplate(n, lt);
-		if (template instanceof Item)
+		if (template instanceof ItemTemplate)
 		{
-			((Item) template).attach(lt);
+			((ItemTemplate) template).attach(lt);
 		}
 		else if ((template instanceof Skill) && !self)
 		{
@@ -384,7 +384,7 @@ public abstract class DocumentBase
 		final Skill skill = SkillTable.getInstance().getSkill(id, lvl);
 		if (attrs.getNamedItem("chance") != null)
 		{
-			if ((template instanceof Weapon) || (template instanceof Item))
+			if ((template instanceof Weapon) || (template instanceof ItemTemplate))
 			{
 				skill.attach(new ConditionGameChance(Integer.decode(getValue(attrs.getNamedItem("chance").getNodeValue(), template))), true);
 			}
@@ -411,9 +411,9 @@ public abstract class DocumentBase
 				((Weapon) template).attachOnCast(skill); // Attach as skill triggered on cast
 			}
 		}
-		else if (template instanceof Item)
+		else if (template instanceof ItemTemplate)
 		{
-			((Item) template).attach(skill); // Attach as skill triggered on use
+			((ItemTemplate) template).attach(skill); // Attach as skill triggered on use
 		}
 	}
 	

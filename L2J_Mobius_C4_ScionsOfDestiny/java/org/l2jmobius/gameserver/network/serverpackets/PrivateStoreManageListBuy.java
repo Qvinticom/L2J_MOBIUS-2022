@@ -22,8 +22,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,12 +31,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private int _playerAdena;
-	private final List<ItemInstance> _itemList;
+	private final List<Item> _itemList;
 	private final List<TradeItem> _buyList;
 	
-	public PrivateStoreManageListBuy(PlayerInstance player)
+	public PrivateStoreManageListBuy(Player player)
 	{
 		_player = player;
 		if (Config.SELL_BY_ITEM)
@@ -62,7 +62,7 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		
 		// section2
 		packet.writeD(_itemList.size()); // inventory items for potential buy
-		for (ItemInstance item : _itemList)
+		for (Item item : _itemList)
 		{
 			packet.writeD(item.getItemId());
 			packet.writeH(item.getEnchantLevel()); // show enchant level, but you can't buy enchanted weapons because of L2 Interlude Client bug

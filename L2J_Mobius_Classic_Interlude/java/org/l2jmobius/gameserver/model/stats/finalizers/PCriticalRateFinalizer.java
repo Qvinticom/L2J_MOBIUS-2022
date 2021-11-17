@@ -20,7 +20,7 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -39,7 +39,7 @@ public class PCriticalRateFinalizer implements IStatFunction
 		if (creature.isPlayer())
 		{
 			// Enchanted legs bonus
-			baseValue += calcEnchantBodyPart(creature, Item.SLOT_LEGS);
+			baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_LEGS);
 		}
 		final double dexBonus = creature.getDEX() > 0 ? BaseStat.DEX.calcBonus(creature) : 1.;
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, creature.isPlayer() ? Config.MAX_PCRIT_RATE : Double.MAX_VALUE);

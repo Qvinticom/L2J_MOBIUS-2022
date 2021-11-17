@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.BB.Post;
 import org.l2jmobius.gameserver.communitybbs.BB.Topic;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PostBBSManager extends BaseBBSManager
 {
@@ -44,7 +44,7 @@ public class PostBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, PlayerInstance player)
+	public void parseCmd(String command, Player player)
 	{
 		if (command.startsWith("_bbsposts;read;"))
 		{
@@ -92,7 +92,7 @@ public class PostBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player)
+	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player player)
 	{
 		final StringTokenizer st = new StringTokenizer(ar1, ";");
 		final int idf = Integer.parseInt(st.nextToken());
@@ -153,7 +153,7 @@ public class PostBBSManager extends BaseBBSManager
 		return new Post(t);
 	}
 	
-	private void showEditPost(Topic topic, Forum forum, PlayerInstance player, int idp)
+	private void showEditPost(Topic topic, Forum forum, Player player, int idp)
 	{
 		if ((forum == null) || (topic == null))
 		{
@@ -171,7 +171,7 @@ public class PostBBSManager extends BaseBBSManager
 		showHtmlEditPost(topic, player, forum, p);
 	}
 	
-	private void showPost(Topic topic, Forum forum, PlayerInstance player, int ind)
+	private void showPost(Topic topic, Forum forum, Player player, int ind)
 	{
 		if ((forum == null) || (topic == null))
 		{
@@ -187,14 +187,14 @@ public class PostBBSManager extends BaseBBSManager
 		}
 	}
 	
-	private void showHtmlEditPost(Topic topic, PlayerInstance player, Forum forum, Post p)
+	private void showHtmlEditPost(Topic topic, Player player, Forum forum, Post p)
 	{
 		final String html = "<html><body><br><br><table border=0 width=610><tr><td width=10></td><td width=600 align=left><a action=\"bypass _bbshome\">HOME</a>&nbsp;>&nbsp;<a action=\"bypass _bbsmemo\">" + forum.getName() + " Form</a></td></tr></table><img src=\"L2UI.squareblank\" width=\"1\" height=\"10\"><center><table border=0 cellspacing=0 cellpadding=0><tr><td width=610><img src=\"sek.cbui355\" width=\"610\" height=\"1\"><br1><img src=\"sek.cbui355\" width=\"610\" height=\"1\"></td></tr></table><table fixwidth=610 border=0 cellspacing=0 cellpadding=0><tr><td><img src=\"l2ui.mini_logo\" width=5 height=20></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=1></td><td align=center FIXWIDTH=60 height=29>&$413;</td><td FIXWIDTH=540>" + topic.getName() + "</td><td><img src=\"l2ui.mini_logo\" width=5 height=1></td></tr></table><table fixwidth=610 border=0 cellspacing=0 cellpadding=0><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=1></td><td align=center FIXWIDTH=60 height=29 valign=top>&$427;</td><td align=center FIXWIDTH=540><MultiEdit var =\"Content\" width=535 height=313></td><td><img src=\"l2ui.mini_logo\" width=5 height=1></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr></table><table fixwidth=610 border=0 cellspacing=0 cellpadding=0><tr><td><img src=\"l2ui.mini_logo\" width=5 height=10></td></tr><tr><td><img src=\"l2ui.mini_logo\" width=5 height=1></td><td align=center FIXWIDTH=60 height=29>&nbsp;</td><td align=center FIXWIDTH=70><button value=\"&$140;\" action=\"Write Post " + forum.getID() + ";" + topic.getID() + ";0 _ Content Content Content\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td><td align=center FIXWIDTH=70><button value = \"&$141;\" action=\"bypass _bbsmemo\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"> </td><td align=center FIXWIDTH=400>&nbsp;</td><td><img src=\"l2ui.mini_logo\" width=5 height=1></td></tr></table></center></body></html>";
 		send1001(html, player);
 		send1002(player, p.getCPost(0).getPostText(), topic.getName(), DateFormat.getInstance().format(new Date(topic.getDate())));
 	}
 	
-	private void showMemoPost(Topic topic, PlayerInstance player, Forum forum)
+	private void showMemoPost(Topic topic, Player player, Forum forum)
 	{
 		final Post p = getPostByTopic(topic);
 		final Locale locale = Locale.getDefault();

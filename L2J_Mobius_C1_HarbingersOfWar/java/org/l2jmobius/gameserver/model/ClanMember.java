@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class ClanMember
 {
@@ -25,7 +25,7 @@ public class ClanMember
 	private String _name;
 	private int _level;
 	private int _classId;
-	private PlayerInstance _player;
+	private Player _player;
 	
 	public ClanMember(String name, int level, int classId, int objectId)
 	{
@@ -35,12 +35,12 @@ public class ClanMember
 		_objectId = objectId;
 	}
 	
-	public ClanMember(PlayerInstance player)
+	public ClanMember(Player player)
 	{
 		_player = player;
 	}
 	
-	public void setPlayerInstance(PlayerInstance player)
+	public void setPlayer(Player player)
 	{
 		if ((player == null) && (_player != null))
 		{
@@ -52,7 +52,7 @@ public class ClanMember
 		_player = player;
 	}
 	
-	public PlayerInstance getPlayerInstance()
+	public Player getPlayer()
 	{
 		return _player;
 	}

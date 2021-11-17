@@ -23,7 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -46,7 +46,7 @@ public class Mentee
 	
 	public void load()
 	{
-		final PlayerInstance player = getPlayerInstance();
+		final Player player = getPlayer();
 		if (player == null) // Only if player is offline
 		{
 			try (Connection con = DatabaseFactory.getConnection();
@@ -88,42 +88,42 @@ public class Mentee
 	
 	public int getClassId()
 	{
-		if (isOnline() && (getPlayerInstance().getClassId().getId() != _classId))
+		if (isOnline() && (getPlayer().getClassId().getId() != _classId))
 		{
-			_classId = getPlayerInstance().getClassId().getId();
+			_classId = getPlayer().getClassId().getId();
 		}
 		return _classId;
 	}
 	
 	public int getLevel()
 	{
-		if (isOnline() && (getPlayerInstance().getLevel() != _currentLevel))
+		if (isOnline() && (getPlayer().getLevel() != _currentLevel))
 		{
-			_currentLevel = getPlayerInstance().getLevel();
+			_currentLevel = getPlayer().getLevel();
 		}
 		return _currentLevel;
 	}
 	
-	public PlayerInstance getPlayerInstance()
+	public Player getPlayer()
 	{
 		return World.getInstance().getPlayer(_objectId);
 	}
 	
 	public boolean isOnline()
 	{
-		return (getPlayerInstance() != null) && (getPlayerInstance().isOnlineInt() > 0);
+		return (getPlayer() != null) && (getPlayer().isOnlineInt() > 0);
 	}
 	
 	public int isOnlineInt()
 	{
-		return isOnline() ? getPlayerInstance().isOnlineInt() : 0;
+		return isOnline() ? getPlayer().isOnlineInt() : 0;
 	}
 	
 	public void sendPacket(IClientOutgoingPacket packet)
 	{
 		if (isOnline())
 		{
-			getPlayerInstance().sendPacket(packet);
+			getPlayer().sendPacket(packet);
 		}
 	}
 }

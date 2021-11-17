@@ -21,16 +21,16 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewSkillInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Collection<Skill> _skills;
 	
-	public GMViewSkillInfo(PlayerInstance player)
+	public GMViewSkillInfo(Player player)
 	{
 		_player = player;
 		_skills = _player.getAllSkills();

@@ -32,11 +32,11 @@ import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -73,10 +73,10 @@ public class Continuous implements ISkillHandler
 			return;
 		}
 		
-		PlayerInstance player = null;
-		if (creature instanceof PlayerInstance)
+		Player player = null;
+		if (creature instanceof Player)
 		{
-			player = (PlayerInstance) creature;
+			player = (Player) creature;
 		}
 		
 		Skill usedSkill = skillValue;
@@ -112,10 +112,10 @@ public class Continuous implements ISkillHandler
 				continue;
 			}
 			
-			if ((target instanceof PlayerInstance) && (creature instanceof Playable) && skill.isOffensive())
+			if ((target instanceof Player) && (creature instanceof Playable) && skill.isOffensive())
 			{
-				final PlayerInstance targetChar = (creature instanceof PlayerInstance) ? (PlayerInstance) creature : ((Summon) creature).getOwner();
-				final PlayerInstance attacked = (PlayerInstance) target;
+				final Player targetChar = (creature instanceof Player) ? (Player) creature : ((Summon) creature).getOwner();
+				final Player attacked = (Player) target;
 				if ((attacked.getClanId() != 0) && (targetChar.getClanId() != 0) && (attacked.getClanId() == targetChar.getClanId()) && (attacked.getPvpFlag() == 0))
 				{
 					continue;
@@ -132,7 +132,7 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// Walls and doors should not be buffed.
-			if ((target instanceof DoorInstance) && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HOT)))
+			if ((target instanceof Door) && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HOT)))
 			{
 				continue;
 			}
@@ -144,13 +144,13 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// Possibility of a lethal strike.
-			if (!target.isRaid() && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)))
+			if (!target.isRaid() && (!(target instanceof Npc) || (((Npc) target).getNpcId() != 35062)))
 			{
 				final int chance = Rnd.get(1000);
 				Formulas.getInstance();
 				if ((skill.getLethalChance2() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance2())))
 				{
-					if (target instanceof NpcInstance)
+					if (target instanceof Npc)
 					{
 						target.reduceCurrentHp(target.getCurrentHp() - 1, creature);
 						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
@@ -159,7 +159,7 @@ public class Continuous implements ISkillHandler
 				else
 				{
 					Formulas.getInstance();
-					if ((skill.getLethalChance1() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance1())) && (target instanceof NpcInstance))
+					if ((skill.getLethalChance1() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance1())) && (target instanceof Npc))
 					{
 						target.reduceCurrentHp(target.getCurrentHp() / 2, creature);
 						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
@@ -208,7 +208,7 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// If target is not in game anymore...
-			if ((target instanceof PlayerInstance) && !((PlayerInstance) target).isOnline())
+			if ((target instanceof Player) && !((Player) target).isOnline())
 			{
 				continue;
 			}
@@ -234,9 +234,9 @@ public class Continuous implements ISkillHandler
 				}
 			}
 			
-			if (target.isDead() && (skill.getTargetType() == Skill.SkillTargetType.TARGET_AREA_CORPSE_MOB) && (target instanceof NpcInstance))
+			if (target.isDead() && (skill.getTargetType() == Skill.SkillTargetType.TARGET_AREA_CORPSE_MOB) && (target instanceof Npc))
 			{
-				((NpcInstance) target).endDecayTask();
+				((Npc) target).endDecayTask();
 			}
 		}
 		

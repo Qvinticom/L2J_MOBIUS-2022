@@ -17,7 +17,7 @@
 package ai.areas.FrozenLabyrinth.Rafforty;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -35,7 +35,7 @@ public class Rafforty extends AbstractNpcAI
 	private static final int BOTTLE = 16027;
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		switch (event)

@@ -16,31 +16,31 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.item;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnItemTalk implements IBaseEvent
 {
-	private final ItemInstance _item;
-	private final PlayerInstance _player;
+	private final Item _item;
+	private final Player _player;
 	
-	public OnItemTalk(ItemInstance item, PlayerInstance player)
+	public OnItemTalk(Item item, Player player)
 	{
 		_item = item;
 		_player = player;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

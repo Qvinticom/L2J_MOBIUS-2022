@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
@@ -176,7 +176,7 @@ public class Shutdown extends Thread
 	 * @param seconds seconds until shutdown
 	 * @param restart true if the server will restart after shutdown
 	 */
-	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
+	public void startShutdown(Player player, int seconds, boolean restart)
 	{
 		final AnnouncementsTable announcements = AnnouncementsTable.getInstance();
 		
@@ -221,7 +221,7 @@ public class Shutdown extends Thread
 	 * This function aborts a running countdown
 	 * @param player GM who issued the abort command
 	 */
-	public void abort(PlayerInstance player)
+	public void abort(Player player)
 	{
 		final AnnouncementsTable announcements = AnnouncementsTable.getInstance();
 		
@@ -509,7 +509,7 @@ public class Shutdown extends Thread
 	{
 		LOGGER.info("Saving all players data...");
 		
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			if (player == null)
 			{
@@ -541,7 +541,7 @@ public class Shutdown extends Thread
 	{
 		LOGGER.info("Disconnecting all players from the Server...");
 		
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			if (player == null)
 			{

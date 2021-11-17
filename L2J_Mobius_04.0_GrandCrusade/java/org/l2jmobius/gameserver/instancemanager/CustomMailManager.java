@@ -32,7 +32,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.util.Util;
@@ -59,7 +59,7 @@ public class CustomMailManager
 				while (rs.next())
 				{
 					final int playerId = rs.getInt("receiver");
-					final PlayerInstance player = World.getInstance().getPlayer(playerId);
+					final Player player = World.getInstance().getPlayer(playerId);
 					if ((player != null) && player.isOnline())
 					{
 						// Create message.

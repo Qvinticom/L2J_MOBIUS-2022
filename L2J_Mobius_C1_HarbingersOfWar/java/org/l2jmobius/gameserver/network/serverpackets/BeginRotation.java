@@ -17,15 +17,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class BeginRotation extends ServerBasePacket
 {
-	private final PlayerInstance _char;
+	private final Player _char;
 	private final int _degree;
 	private final int _side;
 	
-	public BeginRotation(PlayerInstance player, int degree, int side)
+	public BeginRotation(Player player, int degree, int side)
 	{
 		_char = player;
 		_degree = degree;

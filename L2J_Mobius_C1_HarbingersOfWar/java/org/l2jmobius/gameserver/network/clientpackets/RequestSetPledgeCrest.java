@@ -22,7 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.model.Clan;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -35,7 +35,7 @@ public class RequestSetPledgeCrest extends ClientBasePacket
 		final int length = readD();
 		final byte[] data = readB(length);
 		// Connection con = client.getConnection();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (!activeChar.isClanLeader())
 		{
 			return;

@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmVariationGemstone;
@@ -49,10 +49,10 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
-		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
-		final ItemInstance gemstoneItem = (ItemInstance) World.getInstance().findObject(_gemstoneItemObjId);
+		final Player player = client.getPlayer();
+		final Item targetItem = (Item) World.getInstance().findObject(_targetItemObjId);
+		final Item refinerItem = (Item) World.getInstance().findObject(_refinerItemObjId);
+		final Item gemstoneItem = (Item) World.getInstance().findObject(_gemstoneItemObjId);
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null))
 		{
 			return;
@@ -71,7 +71,7 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 		
 		switch (itemGrade)
 		{
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				if ((_gemstoneCount != 20) || (gemstoneItemId != 2130))
 				{
@@ -80,7 +80,7 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				if ((_gemstoneCount != 30) || (gemstoneItemId != 2130))
 				{
@@ -89,7 +89,7 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				if ((_gemstoneCount != 20) || (gemstoneItemId != 2131))
 				{
@@ -98,7 +98,7 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 				}
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				if ((_gemstoneCount != 25) || (gemstoneItemId != 2131))
 				{

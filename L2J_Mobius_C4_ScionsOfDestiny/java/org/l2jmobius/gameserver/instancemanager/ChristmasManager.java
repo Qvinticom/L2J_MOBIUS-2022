@@ -31,10 +31,10 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -49,7 +49,7 @@ public class ChristmasManager
 {
 	private static final Logger LOGGER = Logger.getLogger(ChristmasManager.class.getName());
 	
-	protected List<NpcInstance> objectQueue = new ArrayList<>();
+	protected List<Npc> objectQueue = new ArrayList<>();
 	protected Random rand = new Random();
 	
 	// X-Mas message list
@@ -270,7 +270,7 @@ public class ChristmasManager
 	 * initialize <b>this</b> ChristmasManager
 	 * @param player
 	 */
-	public void init(PlayerInstance player)
+	public void init(Player player)
 	{
 		if (isManagerInit > 0)
 		{
@@ -296,7 +296,7 @@ public class ChristmasManager
 	 * ends <b>this</b> ChristmasManager
 	 * @param player
 	 */
-	public void end(PlayerInstance player)
+	public void end(Player player)
 	{
 		if (isManagerInit < 4)
 		{
@@ -415,7 +415,7 @@ public class ChristmasManager
 	}
 	
 	/**
-	 * Delete all x-mas spawned trees from the world. Delete all x-mas trees spawns, and clears the NpcInstance tree queue.
+	 * Delete all x-mas spawned trees from the world. Delete all x-mas trees spawns, and clears the Npc tree queue.
 	 */
 	public class DeleteSpawns implements Runnable
 	{
@@ -427,7 +427,7 @@ public class ChristmasManager
 				return;
 			}
 			
-			for (NpcInstance deleted : objectQueue)
+			for (Npc deleted : objectQueue)
 			{
 				if (deleted == null)
 				{
@@ -472,7 +472,7 @@ public class ChristmasManager
 			spawn.setY(y);
 			spawn.setZ(z);
 			
-			final NpcInstance tree = spawn.doSpawn();
+			final Npc tree = spawn.doSpawn();
 			World.getInstance().storeObject(tree);
 			objectQueue.add(tree);
 		}
@@ -513,7 +513,7 @@ public class ChristmasManager
 		{
 			try
 			{
-				for (PlayerInstance pc : World.getInstance().getAllPlayers())
+				for (Player pc : World.getInstance().getAllPlayers())
 				{
 					if (pc == null)
 					{
@@ -578,7 +578,7 @@ public class ChristmasManager
 		{
 			try
 			{
-				for (PlayerInstance pc : World.getInstance().getAllPlayers())
+				for (Player pc : World.getInstance().getAllPlayers())
 				{
 					if (pc == null)
 					{
@@ -596,7 +596,7 @@ public class ChristmasManager
 					else if (rand.nextInt(100) < 50)
 					{
 						final int itemId = getSantaRandomPresent();
-						final ItemInstance item = ItemTable.getInstance().createItem("Christmas Event", itemId, 1, pc);
+						final Item item = ItemTable.getInstance().createItem("Christmas Event", itemId, 1, pc);
 						pc.getInventory().addItem("Christmas Event", item.getItemId(), 1, pc, pc);
 						final String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
 						SystemMessage sm;
@@ -668,7 +668,7 @@ public class ChristmasManager
 					}
 				}
 				
-				if ((rand.nextInt(100) < 80) && (obj instanceof NpcInstance))
+				if ((rand.nextInt(100) < 80) && (obj instanceof Npc))
 				{
 					spawnOneTree(getSantaId(), (obj.getX() + rand.nextInt(500)) - 250, (obj.getY() + rand.nextInt(500)) - 250, obj.getZ());
 				}

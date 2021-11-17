@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -63,7 +63,7 @@ public class Warpgate extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enter"))
 		{
@@ -84,7 +84,7 @@ public class Warpgate extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return HellboundEngine.getInstance().isLocked() ? "Warpgate-01.html" : "Warpgate-02.html";
 	}
@@ -94,7 +94,7 @@ public class Warpgate extends AbstractNpcAI
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if (!canEnter(player) && !player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS) && !player.isOnEvent())
 			{
 				startQuestTimer("TELEPORT", 1000, null, player);
@@ -107,7 +107,7 @@ public class Warpgate extends AbstractNpcAI
 		return super.onEnterZone(creature, zone);
 	}
 	
-	private static boolean canEnter(PlayerInstance player)
+	private static boolean canEnter(Player player)
 	{
 		if (player.isFlying())
 		{

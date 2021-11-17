@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -37,7 +37,7 @@ public class ConditionGroupMin extends Condition
 	}
 	
 	@Override
-	protected boolean test(PlayerInstance player, Npc npc, List<PlayerInstance> group)
+	protected boolean test(Player player, Npc npc, List<Player> group)
 	{
 		return group.size() >= getLimit();
 	}

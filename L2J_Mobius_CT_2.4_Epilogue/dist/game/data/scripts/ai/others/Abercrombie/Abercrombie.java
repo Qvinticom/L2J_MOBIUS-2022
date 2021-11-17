@@ -17,7 +17,7 @@
 package ai.others.Abercrombie;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -39,7 +39,7 @@ public class Abercrombie extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final String htmltext;
 		if (hasQuestItems(player, GOLDEN_RAM_BADGE_SOLDIER))

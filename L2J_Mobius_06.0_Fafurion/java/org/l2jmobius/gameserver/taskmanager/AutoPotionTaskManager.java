@@ -22,15 +22,15 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Mobius, Gigi
  */
 public class AutoPotionTaskManager implements Runnable
 {
-	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> PLAYERS = ConcurrentHashMap.newKeySet();
 	private static boolean _working = false;
 	
 	protected AutoPotionTaskManager()
@@ -47,7 +47,7 @@ public class AutoPotionTaskManager implements Runnable
 		}
 		_working = true;
 		
-		PLAYER: for (PlayerInstance player : PLAYERS)
+		PLAYER: for (Player player : PLAYERS)
 		{
 			if ((player == null) || player.isAlikeDead() || (player.isOnlineInt() != 1) || (!Config.AUTO_POTIONS_IN_OLYMPIAD && player.isInOlympiadMode()))
 			{
@@ -61,7 +61,7 @@ public class AutoPotionTaskManager implements Runnable
 				final boolean restoreHP = ((player.getStatus().getCurrentHp() / player.getMaxHp()) * 100) < Config.AUTO_HP_PERCENTAGE;
 				HP: for (int itemId : Config.AUTO_HP_ITEM_IDS)
 				{
-					final ItemInstance hpPotion = player.getInventory().getItemByItemId(itemId);
+					final Item hpPotion = player.getInventory().getItemByItemId(itemId);
 					if ((hpPotion != null) && (hpPotion.getCount() > 0))
 					{
 						success = true;
@@ -79,7 +79,7 @@ public class AutoPotionTaskManager implements Runnable
 				final boolean restoreCP = ((player.getStatus().getCurrentCp() / player.getMaxCp()) * 100) < Config.AUTO_CP_PERCENTAGE;
 				CP: for (int itemId : Config.AUTO_CP_ITEM_IDS)
 				{
-					final ItemInstance cpPotion = player.getInventory().getItemByItemId(itemId);
+					final Item cpPotion = player.getInventory().getItemByItemId(itemId);
 					if ((cpPotion != null) && (cpPotion.getCount() > 0))
 					{
 						success = true;
@@ -97,7 +97,7 @@ public class AutoPotionTaskManager implements Runnable
 				final boolean restoreMP = ((player.getStatus().getCurrentMp() / player.getMaxMp()) * 100) < Config.AUTO_MP_PERCENTAGE;
 				MP: for (int itemId : Config.AUTO_MP_ITEM_IDS)
 				{
-					final ItemInstance mpPotion = player.getInventory().getItemByItemId(itemId);
+					final Item mpPotion = player.getInventory().getItemByItemId(itemId);
 					if ((mpPotion != null) && (mpPotion.getCount() > 0))
 					{
 						success = true;
@@ -120,7 +120,7 @@ public class AutoPotionTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(PlayerInstance player)
+	public void add(Player player)
 	{
 		if (!PLAYERS.contains(player))
 		{
@@ -128,7 +128,7 @@ public class AutoPotionTaskManager implements Runnable
 		}
 	}
 	
-	public void remove(PlayerInstance player)
+	public void remove(Player player)
 	{
 		PLAYERS.remove(player);
 	}

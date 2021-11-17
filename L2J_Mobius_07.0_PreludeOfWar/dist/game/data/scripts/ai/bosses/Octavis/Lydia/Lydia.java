@@ -18,7 +18,7 @@ package ai.bosses.Octavis.Lydia;
 
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 import ai.AbstractNpcAI;
@@ -43,10 +43,10 @@ public class Lydia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
-		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+		final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
 		if ((instance != null) && ((instance.getTemplateId() == OCTAVIS_TEMPLATE_ID) || (instance.getTemplateId() == OCTAVIS_EXTREME_TEMPLATE_ID)))
 		{
 			htmltext = "Lydia-02.html";
@@ -59,7 +59,7 @@ public class Lydia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class Charge implements ISkillHandler
 {
@@ -38,11 +38,11 @@ public class Charge implements ISkillHandler
 	{
 		for (WorldObject target1 : targets)
 		{
-			if (!(target1 instanceof PlayerInstance))
+			if (!(target1 instanceof Player))
 			{
 				continue;
 			}
-			final PlayerInstance target = (PlayerInstance) target1;
+			final Player target = (Player) target1;
 			skill.applyEffects(creature, target, false, false, false);
 		}
 		

@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.MinionData;
-import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Minion;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
@@ -39,11 +39,11 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  */
 public class MinionList
 {
-	private final Set<MinionInstance> _spawnedMinions = ConcurrentHashMap.newKeySet();
+	private final Set<Minion> _spawnedMinions = ConcurrentHashMap.newKeySet();
 	private final Map<Long, Integer> _respawnTasks = new ConcurrentHashMap<>();
-	private final MonsterInstance _master;
+	private final Monster _master;
 	
-	public MinionList(MonsterInstance master)
+	public MinionList(Monster master)
 	{
 		_master = master;
 	}
@@ -56,7 +56,7 @@ public class MinionList
 	public int countSpawnedMinionsById(int minionId)
 	{
 		int count = 0;
-		for (MinionInstance minion : _spawnedMinions)
+		for (Minion minion : _spawnedMinions)
 		{
 			if (minion.getNpcId() == minionId)
 			{
@@ -71,12 +71,12 @@ public class MinionList
 		return !_spawnedMinions.isEmpty();
 	}
 	
-	public Collection<MinionInstance> getSpawnedMinions()
+	public Collection<Minion> getSpawnedMinions()
 	{
 		return _spawnedMinions;
 	}
 	
-	public void addSpawnedMinion(MinionInstance minion)
+	public void addSpawnedMinion(Minion minion)
 	{
 		_spawnedMinions.add(minion);
 	}
@@ -84,19 +84,19 @@ public class MinionList
 	public int lazyCountSpawnedMinionsGroups()
 	{
 		final Set<Integer> seenGroups = new HashSet<>();
-		for (MinionInstance minion : _spawnedMinions)
+		for (Minion minion : _spawnedMinions)
 		{
 			seenGroups.add(minion.getNpcId());
 		}
 		return seenGroups.size();
 	}
 	
-	public void removeSpawnedMinion(MinionInstance minion)
+	public void removeSpawnedMinion(Minion minion)
 	{
 		_spawnedMinions.remove(minion);
 	}
 	
-	public void moveMinionToRespawnList(MinionInstance minion)
+	public void moveMinionToRespawnList(Minion minion)
 	{
 		final Long current = Chronos.currentTimeMillis();
 		_spawnedMinions.remove(minion);
@@ -119,7 +119,7 @@ public class MinionList
 	
 	public void clearRespawnList()
 	{
-		for (MinionInstance minion : _spawnedMinions)
+		for (Minion minion : _spawnedMinions)
 		{
 			if (minion == null)
 			{
@@ -207,7 +207,7 @@ public class MinionList
 		final NpcTemplate minionTemplate = NpcTable.getInstance().getTemplate(minionid);
 		
 		// Create and Init the Minion and generate its Identifier
-		final MinionInstance monster = new MinionInstance(IdManager.getInstance().getNextId(), minionTemplate);
+		final Minion monster = new Minion(IdManager.getInstance().getNextId(), minionTemplate);
 		
 		// Set the Minion HP, MP and Heading
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());

@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class DoorStatusUpdate implements IClientOutgoingPacket
 {
-	private final DoorInstance _door;
-	private final PlayerInstance _player;
+	private final Door _door;
+	private final Player _player;
 	
-	public DoorStatusUpdate(DoorInstance door, PlayerInstance player)
+	public DoorStatusUpdate(Door door, Player player)
 	{
 		_door = door;
 		_player = player;

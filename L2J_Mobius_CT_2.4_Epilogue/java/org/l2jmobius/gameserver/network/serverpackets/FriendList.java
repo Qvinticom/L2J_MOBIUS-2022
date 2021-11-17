@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -48,13 +48,13 @@ public class FriendList implements IClientOutgoingPacket
 		}
 	}
 	
-	public FriendList(PlayerInstance player)
+	public FriendList(Player player)
 	{
 		_info = new ArrayList<>(player.getFriendList().size());
 		for (int objId : player.getFriendList())
 		{
 			final String name = CharNameTable.getInstance().getNameById(objId);
-			final PlayerInstance player1 = World.getInstance().getPlayer(objId);
+			final Player player1 = World.getInstance().getPlayer(objId);
 			boolean online = false;
 			if ((player1 != null) && player1.isOnline())
 			{

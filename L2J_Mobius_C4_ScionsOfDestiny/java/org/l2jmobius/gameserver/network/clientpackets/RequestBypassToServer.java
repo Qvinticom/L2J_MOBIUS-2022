@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.instancemanager.RebirthManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SymbolMakerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
+import org.l2jmobius.gameserver.model.actor.instance.SymbolMaker;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -52,7 +52,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -112,9 +112,9 @@ public class RequestBypassToServer implements IClientIncomingPacket
 					return;
 				}
 				
-				if (obj instanceof NpcInstance)
+				if (obj instanceof Npc)
 				{
-					final NpcInstance npc = (NpcInstance) obj;
+					final Npc npc = (Npc) obj;
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(player.getX(), player.getY(), player.getZ(), 0));
 				}
@@ -153,10 +153,10 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				try
 				{
 					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
-					if ((Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS && (object instanceof ClassMasterInstance)) //
-						|| ((object instanceof NpcInstance) && (endOfId > 0) && player.isInsideRadius2D(object, NpcInstance.INTERACTION_DISTANCE)))
+					if ((Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS && (object instanceof ClassMaster)) //
+						|| ((object instanceof Npc) && (endOfId > 0) && player.isInsideRadius2D(object, Npc.INTERACTION_DISTANCE)))
 					{
-						((NpcInstance) object).onBypassFeedback(player, _command.replace("npc_" + object.getObjectId() + "_", ""));
+						((Npc) object).onBypassFeedback(player, _command.replace("npc_" + object.getObjectId() + "_", ""));
 					}
 					
 					player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -169,34 +169,34 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			else if (_command.equals("Draw"))
 			{
 				final WorldObject object = player.getTarget();
-				if (object instanceof NpcInstance)
+				if (object instanceof Npc)
 				{
-					((SymbolMakerInstance) object).onBypassFeedback(player, _command);
+					((SymbolMaker) object).onBypassFeedback(player, _command);
 				}
 			}
 			else if (_command.equals("RemoveList"))
 			{
 				final WorldObject object = player.getTarget();
-				if (object instanceof NpcInstance)
+				if (object instanceof Npc)
 				{
-					((SymbolMakerInstance) object).onBypassFeedback(player, _command);
+					((SymbolMaker) object).onBypassFeedback(player, _command);
 				}
 			}
 			else if (_command.equals("Remove "))
 			{
 				final WorldObject object = player.getTarget();
-				if (object instanceof NpcInstance)
+				if (object instanceof Npc)
 				{
-					((SymbolMakerInstance) object).onBypassFeedback(player, _command);
+					((SymbolMaker) object).onBypassFeedback(player, _command);
 				}
 			}
 			// Navigate throught Manor windows
 			else if (_command.startsWith("manor_menu_select?"))
 			{
 				final WorldObject object = player.getTarget();
-				if (object instanceof NpcInstance)
+				if (object instanceof Npc)
 				{
-					((NpcInstance) object).onBypassFeedback(player, _command);
+					((Npc) object).onBypassFeedback(player, _command);
 				}
 			}
 			else if (_command.startsWith("bbs_") || _command.startsWith("_bbs") || _command.startsWith("_friend") || _command.startsWith("_mail") || _command.startsWith("_block"))
@@ -219,10 +219,10 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				else
 				{
 					final WorldObject object = player.getTarget();
-					if ((object instanceof NpcInstance) && (player.getLastQuestNpcObject() != object.getObjectId()))
+					if ((object instanceof Npc) && (player.getLastQuestNpcObject() != object.getObjectId()))
 					{
 						final WorldObject lastQuestNpc = World.getInstance().findObject(player.getLastQuestNpcObject());
-						if ((lastQuestNpc == null) || !player.isInsideRadius2D(lastQuestNpc, NpcInstance.INTERACTION_DISTANCE))
+						if ((lastQuestNpc == null) || !player.isInsideRadius2D(lastQuestNpc, Npc.INTERACTION_DISTANCE))
 						{
 							player.setLastQuestNpcObject(object.getObjectId());
 						}

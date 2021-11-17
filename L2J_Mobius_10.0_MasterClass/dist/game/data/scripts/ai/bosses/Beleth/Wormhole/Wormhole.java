@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
@@ -49,7 +49,7 @@ public class Wormhole extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("teleport"))
 		{
@@ -74,7 +74,7 @@ public class Wormhole extends AbstractNpcAI
 			
 			final Party party = player.getParty();
 			final boolean isInCC = party.isInCommandChannel();
-			final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 			if (!isPartyLeader)
 			{
@@ -89,7 +89,7 @@ public class Wormhole extends AbstractNpcAI
 			}
 			else
 			{
-				for (PlayerInstance member : members)
+				for (Player member : members)
 				{
 					if (member.isInsideRadius3D(npc, 1000))
 					{
@@ -102,7 +102,7 @@ public class Wormhole extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 		packet.setHtml(getHtm(player, "33901-1.html"));

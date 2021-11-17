@@ -25,10 +25,10 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.model.RecipeList;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.WarehouseItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.MaterialType;
@@ -87,7 +87,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param itemtype is the Itemtype to sort for
 	 * @param sortorder is the integer Sortorder like 1 for A..Z (use public constant)
 	 */
-	public SortedWareHouseWithdrawalList(PlayerInstance player, int type, WarehouseListType itemtype, byte sortorder)
+	public SortedWareHouseWithdrawalList(Player player, int type, WarehouseListType itemtype, byte sortorder)
 	{
 		_whType = type;
 		_playerAdena = player.getAdena();
@@ -281,11 +281,11 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		@Override
 		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
+			if ((o1.getType2() == ItemTemplate.TYPE2_MONEY) && (o2.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
+			if ((o2.getType2() == ItemTemplate.TYPE2_MONEY) && (o1.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -313,11 +313,11 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		@Override
 		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
+			if ((o1.getType2() == ItemTemplate.TYPE2_MONEY) && (o2.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
+			if ((o2.getType2() == ItemTemplate.TYPE2_MONEY) && (o1.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -367,11 +367,11 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		@Override
 		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
+			if ((o1.getType2() == ItemTemplate.TYPE2_MONEY) && (o2.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
+			if ((o2.getType2() == ItemTemplate.TYPE2_MONEY) && (o1.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -396,11 +396,11 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		@Override
 		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
+			if ((o1.getType2() == ItemTemplate.TYPE2_MONEY) && (o2.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
+			if ((o2.getType2() == ItemTemplate.TYPE2_MONEY) && (o1.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -425,11 +425,11 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		@Override
 		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
+			if ((o1.getType2() == ItemTemplate.TYPE2_MONEY) && (o2.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
+			if ((o2.getType2() == ItemTemplate.TYPE2_MONEY) && (o1.getType2() != ItemTemplate.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -454,12 +454,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createWeaponList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createWeaponList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if ((item.isWeapon() || (item.getItem().getType2() == Item.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if ((item.isWeapon() || (item.getItem().getType2() == ItemTemplate.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -474,12 +474,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createArmorList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createArmorList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if ((item.isArmor() || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if ((item.isArmor() || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -494,12 +494,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createEtcItemList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createEtcItemList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if ((item.isEtcItem() || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if ((item.isEtcItem() || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -514,12 +514,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createMatList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createMatList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -534,12 +534,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createRecipeList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createRecipeList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -554,12 +554,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createAmulettList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createAmulettList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -574,12 +574,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createSpellbookList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createSpellbookList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -594,12 +594,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createConsumableList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createConsumableList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -614,12 +614,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createShotList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createShotList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -634,12 +634,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createScrollList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createScrollList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -654,12 +654,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createSeedList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createSeedList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -674,12 +674,12 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createOtherList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createOtherList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
-			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == Item.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -693,10 +693,10 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createAllList(Collection<ItemInstance> items)
+	private List<WarehouseItem> createAllList(Collection<Item> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : items)
+		for (Item item : items)
 		{
 			if (list.size() < MAX_SORT_LIST_ITEMS)
 			{

@@ -19,7 +19,7 @@ package instances.TalkingIslandPast;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -60,7 +60,7 @@ public class TalkingIslandPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -68,7 +68,7 @@ public class TalkingIslandPast extends AbstractInstance
 		}
 		else if (event.equals("exitInstance"))
 		{
-			final Instance world = getPlayerInstance(player);
+			final Instance world = getPlayer(player);
 			if (world != null)
 			{
 				teleportPlayerOut(player, world);
@@ -78,7 +78,7 @@ public class TalkingIslandPast extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		if ((qs != null) && qs.isCond(21) && (qs.isMemoState(2)))
@@ -109,7 +109,7 @@ public class TalkingIslandPast extends AbstractInstance
 		if (creature.isPlayer())
 		{
 			final Instance instance = creature.getInstanceWorld();
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 			if ((instance != null) && (npc.getId() == INVISIBLE_TI_NPC) && (qs != null) && qs.isCond(21) && qs.isMemoState(1))
 			{

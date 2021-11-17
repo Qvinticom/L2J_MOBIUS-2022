@@ -42,7 +42,7 @@ import org.l2jmobius.commons.network.BaseSendablePacket;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.crypt.NewCrypt;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.loginserverpackets.game.AuthRequest;
@@ -259,7 +259,7 @@ public class LoginServerThread extends Thread
 							if (World.getAllPlayersCount() > 0)
 							{
 								final List<String> playerList = new ArrayList<>();
-								for (PlayerInstance player : World.getInstance().getAllPlayers())
+								for (Player player : World.getInstance().getAllPlayers())
 								{
 									playerList.add(player.getAccountName());
 								}

@@ -29,8 +29,8 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.StatFunction;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
@@ -85,21 +85,21 @@ public class EnchantItemHPBonusData implements IXmlReader
 			final Collection<Integer> armorIds = it.getAllArmorsId();
 			for (Integer itemId : armorIds)
 			{
-				final Item item = it.getTemplate(itemId);
+				final ItemTemplate item = it.getTemplate(itemId);
 				if ((item != null) && (item.getCrystalType() != CrystalType.NONE))
 				{
 					switch (item.getBodyPart())
 					{
-						case Item.SLOT_CHEST:
-						case Item.SLOT_FEET:
-						case Item.SLOT_GLOVES:
-						case Item.SLOT_HEAD:
-						case Item.SLOT_LEGS:
-						case Item.SLOT_BACK:
-						case Item.SLOT_FULL_ARMOR:
-						case Item.SLOT_UNDERWEAR:
-						case Item.SLOT_L_HAND:
-						case Item.SLOT_BELT:
+						case ItemTemplate.SLOT_CHEST:
+						case ItemTemplate.SLOT_FEET:
+						case ItemTemplate.SLOT_GLOVES:
+						case ItemTemplate.SLOT_HEAD:
+						case ItemTemplate.SLOT_LEGS:
+						case ItemTemplate.SLOT_BACK:
+						case ItemTemplate.SLOT_FULL_ARMOR:
+						case ItemTemplate.SLOT_UNDERWEAR:
+						case ItemTemplate.SLOT_L_HAND:
+						case ItemTemplate.SLOT_BELT:
 						{
 							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stat.MAX_HP, 0));
 							break;
@@ -127,7 +127,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 	 * @param item the item
 	 * @return the HP bonus
 	 */
-	public int getHPBonus(ItemInstance item)
+	public int getHPBonus(Item item)
 	{
 		final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalTypePlus());
 		if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0))
@@ -136,7 +136,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 		}
 		
 		final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-		if (item.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR)
+		if (item.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)
 		{
 			return (int) (bonus * FULL_ARMOR_MODIFIER);
 		}

@@ -19,9 +19,9 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
+import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -43,8 +43,8 @@ public class Fear extends AbstractEffect
 	public boolean canStart(BuffInfo info)
 	{
 		return info.getEffected().isPlayer() || info.getEffected().isSummon() || (info.getEffected().isAttackable() && //
-			!((info.getEffected() instanceof DefenderInstance) || (info.getEffected() instanceof FortCommanderInstance) || //
-				(info.getEffected() instanceof SiegeFlagInstance) || (info.getEffected().getTemplate().getRace() == Race.SIEGE_WEAPON)));
+			!((info.getEffected() instanceof Defender) || (info.getEffected() instanceof FortCommander) || //
+				(info.getEffected() instanceof SiegeFlag) || (info.getEffected().getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override

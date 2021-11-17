@@ -23,12 +23,12 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionCancel;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -60,7 +60,7 @@ public class SkillTransfer extends AbstractNpcAI
 	
 	public void onProfessionChange(OnPlayerProfessionChange event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final int index = getTransferClassIndex(player);
 		if (index < 0)
 		{
@@ -77,7 +77,7 @@ public class SkillTransfer extends AbstractNpcAI
 	
 	public void onProfessionCancel(OnPlayerProfessionCancel event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final ClassId classId = ClassId.getClassId(event.getClassId());
 		final int index = getTransferClassIndex(classId);
 		
@@ -90,7 +90,7 @@ public class SkillTransfer extends AbstractNpcAI
 		final int pomanderId = PORMANDERS[index].getId();
 		// remove unsused HolyPomander
 		final PlayerInventory inv = player.getInventory();
-		for (ItemInstance itemI : inv.getAllItemsByItemId(pomanderId))
+		for (Item itemI : inv.getAllItemsByItemId(pomanderId))
 		{
 			inv.destroyItem("[HolyPomander - remove]", itemI, player, null);
 		}
@@ -100,7 +100,7 @@ public class SkillTransfer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterWorld(PlayerInstance player)
+	public String onEnterWorld(Player player)
 	{
 		if (!player.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)
 		{
@@ -144,7 +144,7 @@ public class SkillTransfer extends AbstractNpcAI
 		return super.onEnterWorld(player);
 	}
 	
-	private static int getTransferClassIndex(PlayerInstance player)
+	private static int getTransferClassIndex(Player player)
 	{
 		return getTransferClassIndex(player.getClassId());
 	}

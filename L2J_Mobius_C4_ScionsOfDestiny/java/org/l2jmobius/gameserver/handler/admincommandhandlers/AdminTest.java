@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -47,7 +47,7 @@ public class AdminTest implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_stats"))
 		{
@@ -144,7 +144,7 @@ public class AdminTest implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void adminTestSkill(PlayerInstance activeChar, int id)
+	private void adminTestSkill(Player activeChar, int id)
 	{
 		Creature creature;
 		final WorldObject target = activeChar.getTarget();

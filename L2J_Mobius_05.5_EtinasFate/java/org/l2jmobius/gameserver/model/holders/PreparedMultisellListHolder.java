@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * A modified version of {@link MultisellListHolder} that may include altered data of the original and other dynamic data resulted from players' interraction.
@@ -55,7 +55,7 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 			_itemInfos = new ArrayList<>();
 			
 			// Only do the match up on equippable items that are not currently equipped. For each appropriate item, produce a set of entries for the multisell list.
-			for (ItemInstance item : inventory.getItems())
+			for (Item item : inventory.getItems())
 			{
 				if (!item.isEquipped() && (item.isArmor() || item.isWeapon()))
 				{

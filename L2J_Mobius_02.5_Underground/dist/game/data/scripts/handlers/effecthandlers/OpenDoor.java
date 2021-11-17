@@ -19,9 +19,9 @@ package handlers.effecthandlers;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -47,14 +47,14 @@ public class OpenDoor extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isDoor() || (effector.getInstanceWorld() != effected.getInstanceWorld()))
 		{
 			return;
 		}
 		
-		final DoorInstance door = (DoorInstance) effected;
+		final Door door = (Door) effected;
 		if ((!door.isOpenableBySkill() && !_isItem) || (door.getFort() != null))
 		{
 			effector.sendPacket(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED);

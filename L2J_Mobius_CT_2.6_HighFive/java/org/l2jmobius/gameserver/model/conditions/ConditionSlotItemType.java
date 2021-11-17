@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -41,14 +41,14 @@ public class ConditionSlotItemType extends ConditionInventory
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
 			return false;
 		}
 		
-		final ItemInstance itemSlot = effector.getInventory().getPaperdollItem(_slot);
+		final Item itemSlot = effector.getInventory().getPaperdollItem(_slot);
 		return (itemSlot != null) && ((itemSlot.getItem().getItemMask() & _mask) != 0);
 	}
 }

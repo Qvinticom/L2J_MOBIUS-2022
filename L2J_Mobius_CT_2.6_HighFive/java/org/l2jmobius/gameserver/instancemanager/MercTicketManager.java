@@ -28,10 +28,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
@@ -45,7 +45,7 @@ public class MercTicketManager
 {
 	private static final Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
 	
-	private static final Collection<ItemInstance> DROPPED_TICKETS = ConcurrentHashMap.newKeySet();
+	private static final Collection<Item> DROPPED_TICKETS = ConcurrentHashMap.newKeySet();
 	
 	// TODO: move all these values into siege.properties
 	// max tickets per merc type = 10 + (castleid * 2)?
@@ -187,7 +187,7 @@ public class MercTicketManager
 						{
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
-							final ItemInstance dropticket = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
+							final Item dropticket = new Item(IdManager.getInstance().getNextId(), itemId);
 							dropticket.setItemLocation(ItemLocation.VOID);
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from being removed by the auto item destroyer
@@ -233,7 +233,7 @@ public class MercTicketManager
 		}
 		
 		int count = 0;
-		for (ItemInstance ticket : DROPPED_TICKETS)
+		for (Item ticket : DROPPED_TICKETS)
 		{
 			if ((ticket != null) && (ticket.getId() == itemId))
 			{
@@ -262,7 +262,7 @@ public class MercTicketManager
 		}
 		
 		int count = 0;
-		for (ItemInstance ticket : DROPPED_TICKETS)
+		for (Item ticket : DROPPED_TICKETS)
 		{
 			if ((ticket != null) && (getTicketCastleId(ticket.getId()) == castleId))
 			{
@@ -279,7 +279,7 @@ public class MercTicketManager
 	
 	public boolean isTooCloseToAnotherTicket(int x, int y, int z)
 	{
-		for (ItemInstance item : DROPPED_TICKETS)
+		for (Item item : DROPPED_TICKETS)
 		{
 			final double dx = x - item.getX();
 			final double dy = y - item.getY();
@@ -299,7 +299,7 @@ public class MercTicketManager
 	 * @param player
 	 * @return
 	 */
-	public int addTicket(int itemId, PlayerInstance player)
+	public int addTicket(int itemId, Player player)
 	{
 		final int x = player.getX();
 		final int y = player.getY();
@@ -321,7 +321,7 @@ public class MercTicketManager
 				castle.getSiege().getSiegeGuardManager().hireMerc(x, y, z, heading, NPC_IDS[i]);
 				
 				// create the ticket in the gameworld
-				final ItemInstance dropticket = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
+				final Item dropticket = new Item(IdManager.getInstance().getNextId(), itemId);
 				dropticket.setItemLocation(ItemLocation.VOID);
 				dropticket.dropMe(null, x, y, z);
 				dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
@@ -342,7 +342,7 @@ public class MercTicketManager
 		{
 			return;
 		}
-		final DefenderInstance npc = new DefenderInstance(template);
+		final Defender npc = new Defender(template);
 		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 		npc.setDecayed(false);
 		npc.spawnMe(x, y, z + 20);
@@ -358,7 +358,7 @@ public class MercTicketManager
 	 */
 	public void deleteTickets(int castleId)
 	{
-		for (ItemInstance item : DROPPED_TICKETS)
+		for (Item item : DROPPED_TICKETS)
 		{
 			if ((item != null) && (getTicketCastleId(item.getId()) == castleId))
 			{
@@ -373,7 +373,7 @@ public class MercTicketManager
 	 * remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example)
 	 * @param item
 	 */
-	public void removeTicket(ItemInstance item)
+	public void removeTicket(Item item)
 	{
 		final int itemId = item.getId();
 		int npcId = -1;
@@ -402,7 +402,7 @@ public class MercTicketManager
 		return ITEM_IDS;
 	}
 	
-	public Collection<ItemInstance> getDroppedTickets()
+	public Collection<Item> getDroppedTickets()
 	{
 		return DROPPED_TICKETS;
 	}

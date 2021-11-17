@@ -28,11 +28,11 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.multisell.MultiSellEntry;
 import org.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import org.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
@@ -92,7 +92,7 @@ public class MultisellData
 	 * @param taxRate
 	 * @return
 	 */
-	private MultiSellListContainer generateMultiSell(int listId, boolean inventoryOnly, PlayerInstance player, double taxRate)
+	private MultiSellListContainer generateMultiSell(int listId, boolean inventoryOnly, Player player, double taxRate)
 	{
 		final MultiSellListContainer listTemplate = getInstance().getList(listId);
 		MultiSellListContainer list = new MultiSellListContainer();
@@ -111,7 +111,7 @@ public class MultisellData
 				return list;
 			}
 			
-			List<ItemInstance> items;
+			List<Item> items;
 			if (listTemplate.getMaintainEnchantment())
 			{
 				items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false, true);
@@ -122,7 +122,7 @@ public class MultisellData
 			}
 			
 			int enchantLevel;
-			for (ItemInstance item : items)
+			for (Item item : items)
 			{
 				// Only do the matchup on equipable items that are not currently equipped so for each appropriate item, produce a set of entries for the multisell list.
 				if (!item.isWear() && ((item.getItem() instanceof Armor) || (item.getItem() instanceof Weapon)))
@@ -196,7 +196,7 @@ public class MultisellData
 			// if it is an armor/weapon, modify the enchantment level appropriately, if necessary
 			else if (maintainEnchantment)
 			{
-				final Item tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -221,7 +221,7 @@ public class MultisellData
 			if (maintainEnchantment)
 			{
 				// if it is an armor/weapon, modify the enchantment level appropriately (note, if maintain enchantment is "false" this modification will result to a +0)
-				final Item tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -234,7 +234,7 @@ public class MultisellData
 		return newEntry;
 	}
 	
-	public void separateAndSend(int listId, PlayerInstance player, boolean inventoryOnly, double taxRate)
+	public void separateAndSend(int listId, Player player, boolean inventoryOnly, double taxRate)
 	{
 		final MultiSellListContainer list = generateMultiSell(listId, inventoryOnly, player, taxRate);
 		MultiSellListContainer temp = new MultiSellListContainer();

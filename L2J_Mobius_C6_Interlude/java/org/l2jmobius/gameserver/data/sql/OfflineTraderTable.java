@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -67,12 +67,12 @@ public class OfflineTraderTable
 			con.setAutoCommit(false); // avoid halfway done
 			stm = con.prepareStatement(SAVE_OFFLINE_STATUS);
 			final PreparedStatement stmItems = con.prepareStatement(SAVE_ITEMS);
-			for (PlayerInstance pc : World.getInstance().getAllPlayers())
+			for (Player pc : World.getInstance().getAllPlayers())
 			{
 				try
 				{
 					// without second check, server will store all guys that are in shop mode
-					if ((pc.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE)/* && (pc.isOffline()) */)
+					if ((pc.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)/* && (pc.isOffline()) */)
 					{
 						stm.setInt(1, pc.getObjectId()); // Char Id
 						stm.setLong(2, pc.getOfflineStartTime());
@@ -81,7 +81,7 @@ public class OfflineTraderTable
 						
 						switch (pc.getPrivateStoreType())
 						{
-							case PlayerInstance.STORE_PRIVATE_BUY:
+							case Player.STORE_PRIVATE_BUY:
 							{
 								if (!Config.OFFLINE_TRADE_ENABLE)
 								{
@@ -100,8 +100,8 @@ public class OfflineTraderTable
 								}
 								break;
 							}
-							case PlayerInstance.STORE_PRIVATE_SELL:
-							case PlayerInstance.STORE_PRIVATE_PACKAGE_SELL:
+							case Player.STORE_PRIVATE_SELL:
+							case Player.STORE_PRIVATE_PACKAGE_SELL:
 							{
 								if (!Config.OFFLINE_TRADE_ENABLE)
 								{
@@ -121,7 +121,7 @@ public class OfflineTraderTable
 								}
 								break;
 							}
-							case PlayerInstance.STORE_PRIVATE_MANUFACTURE:
+							case Player.STORE_PRIVATE_MANUFACTURE:
 							{
 								if (!Config.OFFLINE_CRAFT_ENABLE)
 								{
@@ -192,17 +192,17 @@ public class OfflineTraderTable
 				}
 				
 				final int type = rs.getInt("type");
-				if (type == PlayerInstance.STORE_PRIVATE_NONE)
+				if (type == Player.STORE_PRIVATE_NONE)
 				{
 					continue;
 				}
 				
-				PlayerInstance player = null;
+				Player player = null;
 				try
 				{
 					final GameClient client = new GameClient();
 					client.setDetached(true);
-					player = PlayerInstance.load(rs.getInt("charId"));
+					player = Player.load(rs.getInt("charId"));
 					client.setPlayer(player);
 					client.setAccountName(player.getAccountName());
 					player.setClient(client);
@@ -221,7 +221,7 @@ public class OfflineTraderTable
 					
 					switch (type)
 					{
-						case PlayerInstance.STORE_PRIVATE_BUY:
+						case Player.STORE_PRIVATE_BUY:
 						{
 							while (items.next())
 							{
@@ -230,18 +230,18 @@ public class OfflineTraderTable
 							player.getBuyList().setTitle(rs.getString("title"));
 							break;
 						}
-						case PlayerInstance.STORE_PRIVATE_SELL:
-						case PlayerInstance.STORE_PRIVATE_PACKAGE_SELL:
+						case Player.STORE_PRIVATE_SELL:
+						case Player.STORE_PRIVATE_PACKAGE_SELL:
 						{
 							while (items.next())
 							{
 								player.getSellList().addItem(items.getInt(2), items.getInt(3), items.getInt(4));
 							}
 							player.getSellList().setTitle(rs.getString("title"));
-							player.getSellList().setPackaged(type == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL);
+							player.getSellList().setPackaged(type == Player.STORE_PRIVATE_PACKAGE_SELL);
 							break;
 						}
-						case PlayerInstance.STORE_PRIVATE_MANUFACTURE:
+						case Player.STORE_PRIVATE_MANUFACTURE:
 						{
 							final ManufactureList createList = new ManufactureList();
 							while (items.next())
@@ -296,9 +296,9 @@ public class OfflineTraderTable
 		}
 	}
 	
-	public static void storeOffliner(PlayerInstance pc)
+	public static void storeOffliner(Player pc)
 	{
-		if ((pc.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_NONE) || (!pc.isInOfflineMode()))
+		if ((pc.getPrivateStoreType() == Player.STORE_PRIVATE_NONE) || (!pc.isInOfflineMode()))
 		{
 			return;
 		}
@@ -330,7 +330,7 @@ public class OfflineTraderTable
 				
 				switch (pc.getPrivateStoreType())
 				{
-					case PlayerInstance.STORE_PRIVATE_BUY:
+					case Player.STORE_PRIVATE_BUY:
 					{
 						if (!Config.OFFLINE_TRADE_ENABLE)
 						{
@@ -349,8 +349,8 @@ public class OfflineTraderTable
 						}
 						break;
 					}
-					case PlayerInstance.STORE_PRIVATE_SELL:
-					case PlayerInstance.STORE_PRIVATE_PACKAGE_SELL:
+					case Player.STORE_PRIVATE_SELL:
+					case Player.STORE_PRIVATE_PACKAGE_SELL:
 					{
 						if (!Config.OFFLINE_TRADE_ENABLE)
 						{
@@ -370,7 +370,7 @@ public class OfflineTraderTable
 						}
 						break;
 					}
-					case PlayerInstance.STORE_PRIVATE_MANUFACTURE:
+					case Player.STORE_PRIVATE_MANUFACTURE:
 					{
 						if (!Config.OFFLINE_CRAFT_ENABLE)
 						{

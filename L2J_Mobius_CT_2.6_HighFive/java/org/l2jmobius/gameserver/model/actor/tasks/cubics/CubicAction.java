@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -37,11 +37,11 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 public class CubicAction implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicAction.class.getName());
-	private final CubicInstance _cubic;
+	private final Cubic _cubic;
 	private final AtomicInteger _currentCount = new AtomicInteger();
 	private final int _chance;
 	
-	public CubicAction(CubicInstance cubic, int chance)
+	public CubicAction(Cubic cubic, int chance)
 	{
 		_cubic = cubic;
 		_chance = chance;
@@ -92,7 +92,7 @@ public class CubicAction implements Runnable
 			
 			// Smart Cubic debuff cancel is 100%
 			boolean useCubicCure = false;
-			if ((_cubic.getId() >= CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= CubicInstance.SMART_CUBIC_SPECTRALMASTER))
+			if ((_cubic.getId() >= Cubic.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= Cubic.SMART_CUBIC_SPECTRALMASTER))
 			{
 				for (BuffInfo info : _cubic.getOwner().getEffectList().getDebuffs())
 				{
@@ -107,7 +107,7 @@ public class CubicAction implements Runnable
 			if (useCubicCure)
 			{
 				// Smart Cubic debuff cancel is needed, no other skill is used in this activation period
-				_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0));
+				_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), Cubic.SKILL_CUBIC_CURE, 1, 0, 0));
 				
 				// The cubic has done an action, increase the current count
 				_currentCount.incrementAndGet();
@@ -120,7 +120,7 @@ public class CubicAction implements Runnable
 					return;
 				}
 				
-				if (skill.getId() == CubicInstance.SKILL_CUBIC_HEAL)
+				if (skill.getId() == Cubic.SKILL_CUBIC_HEAL)
 				{
 					// friendly skill, so we look a target in owner's party
 					_cubic.cubicTargetForHeal();
@@ -129,7 +129,7 @@ public class CubicAction implements Runnable
 				{
 					// offensive skill, we look for an enemy target
 					_cubic.getCubicTarget();
-					if (!CubicInstance.isInCubicRange(_cubic.getOwner(), _cubic.getTarget()))
+					if (!Cubic.isInCubicRange(_cubic.getOwner(), _cubic.getTarget()))
 					{
 						_cubic.setTarget(null);
 					}

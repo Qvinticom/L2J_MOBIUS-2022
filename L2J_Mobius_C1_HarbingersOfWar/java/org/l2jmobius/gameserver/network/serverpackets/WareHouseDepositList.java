@@ -20,15 +20,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class WareHouseDepositList extends ServerBasePacket
 {
-	private final PlayerInstance _cha;
+	private final Player _cha;
 	private final int _money;
 	
-	public WareHouseDepositList(PlayerInstance cha)
+	public WareHouseDepositList(Player cha)
 	{
 		_cha = cha;
 		_money = cha.getAdena();
@@ -40,8 +40,8 @@ public class WareHouseDepositList extends ServerBasePacket
 		int i;
 		writeC(0x53);
 		writeD(_money);
-		final List<ItemInstance> itemlist = new ArrayList<>();
-		for (ItemInstance item : _cha.getInventory().getItems())
+		final List<Item> itemlist = new ArrayList<>();
+		for (Item item : _cha.getInventory().getItems())
 		{
 			if (item.isEquipped() || (item.getItem().getType2() == 3))
 			{
@@ -53,7 +53,7 @@ public class WareHouseDepositList extends ServerBasePacket
 		writeH(count);
 		for (i = 0; i < count; ++i)
 		{
-			final ItemInstance temp = itemlist.get(i);
+			final Item temp = itemlist.get(i);
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

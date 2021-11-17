@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Fence;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
 import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
@@ -47,7 +47,7 @@ public class AdminFence implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
@@ -93,9 +93,9 @@ public class AdminFence implements IAdminCommandHandler
 					else
 					{
 						final WorldObject obj = World.getInstance().findObject(objId);
-						if (obj instanceof FenceInstance)
+						if (obj instanceof Fence)
 						{
-							final FenceInstance fence = (FenceInstance) obj;
+							final Fence fence = (Fence) obj;
 							final FenceState state = FenceState.values()[fenceTypeOrdinal];
 							fence.setState(state);
 							BuilderUtil.sendSysMessage(activeChar, "Fence " + fence.getName() + "[" + fence.getId() + "]'s state has been changed to " + state.toString());
@@ -118,9 +118,9 @@ public class AdminFence implements IAdminCommandHandler
 				{
 					final int objId = Integer.parseInt(st.nextToken());
 					final WorldObject obj = World.getInstance().findObject(objId);
-					if (obj instanceof FenceInstance)
+					if (obj instanceof Fence)
 					{
-						((FenceInstance) obj).deleteMe();
+						((Fence) obj).deleteMe();
 						BuilderUtil.sendSysMessage(activeChar, "Fence removed succesfully.");
 					}
 					else
@@ -173,7 +173,7 @@ public class AdminFence implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void sendHtml(PlayerInstance activeChar, int page)
+	private void sendHtml(Player activeChar, int page)
 	{
 		final PageResult result = PageBuilder.newBuilder(FenceData.getInstance().getFences().values(), 10, "bypass -h admin_listfence").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, fence, sb) ->
 		{

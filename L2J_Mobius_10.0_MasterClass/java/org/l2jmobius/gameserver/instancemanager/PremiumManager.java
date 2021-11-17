@@ -31,7 +31,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
@@ -52,9 +52,9 @@ public class PremiumManager
 	
 	class PremiumExpireTask implements Runnable
 	{
-		final PlayerInstance _player;
+		final Player _player;
 		
-		PremiumExpireTask(PlayerInstance player)
+		PremiumExpireTask(Player player)
 		{
 			_player = player;
 		}
@@ -77,7 +77,7 @@ public class PremiumManager
 	
 	private final Consumer<OnPlayerLogin> _playerLoginEvent = event ->
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final String accountName = player.getAccountName();
 		loadPremiumData(accountName);
 		final long now = Chronos.currentTimeMillis();
@@ -108,7 +108,7 @@ public class PremiumManager
 	 * @param player
 	 * @param delay
 	 */
-	private void startExpireTask(PlayerInstance player, long delay)
+	private void startExpireTask(Player player, long delay)
 	{
 		_expiretasks.put(player.getAccountName(), ThreadPool.schedule(new PremiumExpireTask(player), delay));
 	}
@@ -116,7 +116,7 @@ public class PremiumManager
 	/**
 	 * @param player
 	 */
-	private void stopExpireTask(PlayerInstance player)
+	private void stopExpireTask(Player player)
 	{
 		ScheduledFuture<?> task = _expiretasks.remove(player.getAccountName());
 		if (task != null)
@@ -176,7 +176,7 @@ public class PremiumManager
 		_premiumData.put(accountName, newPremiumExpiration);
 		
 		// UPDATE PlAYER PREMIUMSTATUS
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			if (accountName.equals(player.getAccountName()))
 			{
@@ -195,7 +195,7 @@ public class PremiumManager
 	{
 		if (checkOnline)
 		{
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if (accountName.equals(player.getAccountName()) && player.hasPremiumStatus())
 				{

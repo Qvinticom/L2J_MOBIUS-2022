@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 public class PoisonZone extends ZoneType
@@ -104,7 +104,7 @@ public class PoisonZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if ((((creature instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((creature instanceof PlayerInstance) && _target.equalsIgnoreCase("pc_only")) || ((creature instanceof MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (_task == null))
+		if ((((creature instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((creature instanceof Player) && _target.equalsIgnoreCase("pc_only")) || ((creature instanceof Monster) && _target.equalsIgnoreCase("npc"))) && (_task == null))
 		{
 			_task = ThreadPool.scheduleAtFixedRate(new ApplySkill(/* this */), _initialDelay, _reuse);
 		}
@@ -154,7 +154,7 @@ public class PoisonZone extends ZoneType
 			{
 				for (Creature temp : getCharactersInside())
 				{
-					if ((temp != null) && !temp.isDead() && (((temp instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof PlayerInstance) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
+					if ((temp != null) && !temp.isDead() && (((temp instanceof Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof Player) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof Monster) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
 					{
 						final Skill skill = getSkill();
 						if (skill == null)

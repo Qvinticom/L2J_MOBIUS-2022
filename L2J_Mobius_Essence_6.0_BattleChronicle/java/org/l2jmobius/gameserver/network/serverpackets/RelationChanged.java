@@ -32,7 +32,7 @@ public class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_PARTY1 = 0x1; // party member
 	public static final int RELATION_PARTY2 = 0x2; // party member
 	public static final int RELATION_PARTY3 = 0x4; // party member
-	public static final int RELATION_PARTY4 = 0x8; // party member (for information, see PlayerInstance.getRelation())
+	public static final int RELATION_PARTY4 = 0x8; // party member (for information, see Player.getRelation())
 	public static final int RELATION_PARTYLEADER = 0x10; // true if is party leader
 	public static final int RELATION_HAS_PARTY = 0x20; // true if is in party
 	public static final int RELATION_CLAN_MEMBER = 0x40; // true if is in clan

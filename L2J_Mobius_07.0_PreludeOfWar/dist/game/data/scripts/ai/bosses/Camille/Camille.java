@@ -18,8 +18,8 @@ package ai.bosses.Camille;
 
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 import instances.AbstractInstance;
@@ -53,7 +53,7 @@ public class Camille extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -64,7 +64,7 @@ public class Camille extends AbstractInstance
 				if (isInInstance(world))
 				{
 					world.getPlayers().forEach(p -> p.teleToLocation(ENTER_LOCATION));
-					world.getDoors().forEach(DoorInstance::closeMe);
+					world.getDoors().forEach(Door::closeMe);
 				}
 				break;
 			}
@@ -74,7 +74,7 @@ public class Camille extends AbstractInstance
 				if (isInInstance(world) && (npc.getId() == TRANSMISSION_UNIT))
 				{
 					world.getPlayers().forEach(p -> p.teleToLocation(CAMILLE_LOCATION));
-					world.getDoors().forEach(DoorInstance::closeMe);
+					world.getDoors().forEach(Door::closeMe);
 				}
 				break;
 			}
@@ -83,7 +83,7 @@ public class Camille extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))

@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.GMAudit;
@@ -38,7 +38,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		final String target = (activeChar.getTarget() != null) ? activeChar.getTarget().getName() : "no-target";
 		String command = commandValue;
@@ -49,7 +49,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 			{
 				final StringTokenizer st = new StringTokenizer(command, " ");
 				st.nextToken();
-				final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
+				final Player player = World.getInstance().getPlayer(st.nextToken());
 				final int instanceId = Integer.parseInt(st.nextToken());
 				final String name = InstanceManager.getInstance().getInstanceName(instanceId);
 				InstanceManager.getInstance().deleteInstanceTime(player, instanceId);
@@ -72,7 +72,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 			
 			if (st.hasMoreTokens())
 			{
-				PlayerInstance player = null;
+				Player player = null;
 				final String playername = st.nextToken();
 				
 				try
@@ -98,7 +98,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 			{
 				if (activeChar.getTarget().isPlayer())
 				{
-					display((PlayerInstance) activeChar.getTarget(), activeChar);
+					display((Player) activeChar.getTarget(), activeChar);
 				}
 			}
 			else
@@ -109,7 +109,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void display(PlayerInstance player, PlayerInstance activeChar)
+	private void display(Player player, Player activeChar)
 	{
 		final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
 		final StringBuilder html = new StringBuilder(500 + (instanceTimes.size() * 200));

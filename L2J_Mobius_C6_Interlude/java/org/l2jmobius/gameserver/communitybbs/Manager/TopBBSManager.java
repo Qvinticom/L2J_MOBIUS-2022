@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.communitybbs.Manager;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class TopBBSManager extends BaseBBSManager
 {
@@ -32,7 +32,7 @@ public class TopBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, PlayerInstance player)
+	public void parseCmd(String command, Player player)
 	{
 		if (command.equals("_bbshome"))
 		{

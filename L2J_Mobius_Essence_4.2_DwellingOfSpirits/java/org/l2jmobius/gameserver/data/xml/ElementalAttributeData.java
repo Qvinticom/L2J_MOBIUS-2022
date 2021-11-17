@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.ElementalItemType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Mobius
@@ -149,7 +149,7 @@ public class ElementalAttributeData implements IXmlReader
 		return -1;
 	}
 	
-	public boolean isSuccess(ItemInstance item, int stoneId)
+	public boolean isSuccess(Item item, int stoneId)
 	{
 		int row = -1;
 		int column = -1;

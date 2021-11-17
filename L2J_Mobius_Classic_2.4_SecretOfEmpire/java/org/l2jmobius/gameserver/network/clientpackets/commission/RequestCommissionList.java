@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets.commission;
 import java.util.function.Predicate;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.instancemanager.CommissionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.commission.CommissionItemType;
 import org.l2jmobius.gameserver.model.commission.CommissionTreeType;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -54,19 +54,19 @@ public class RequestCommissionList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!CommissionManager.isPlayerAllowedToInteract(player))
+		if (!ItemCommissionManager.isPlayerAllowedToInteract(player))
 		{
 			client.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
-		Predicate<Item> filter = i -> true;
+		Predicate<ItemTemplate> filter = i -> true;
 		switch (_treeViewDepth)
 		{
 			case 1:
@@ -158,6 +158,6 @@ public class RequestCommissionList implements IClientIncomingPacket
 		}
 		
 		filter = filter.and(i -> _query.isEmpty() || i.getName().toLowerCase().contains(_query.toLowerCase()));
-		CommissionManager.getInstance().showAuctions(player, filter);
+		ItemCommissionManager.getInstance().showAuctions(player, filter);
 	}
 }

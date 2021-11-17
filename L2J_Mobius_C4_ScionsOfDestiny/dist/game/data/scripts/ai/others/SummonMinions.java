@@ -28,8 +28,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -38,7 +38,7 @@ public class SummonMinions extends Quest
 {
 	private static int hasSpawned;
 	private static Set<Integer> myTrackingSet = new CopyOnWriteArraySet<>(); // Used to track instances of npcs
-	private final Map<Integer, List<PlayerInstance>> _attackersList = new ConcurrentHashMap<>();
+	private final Map<Integer, List<Player>> _attackersList = new ConcurrentHashMap<>();
 	private static final Map<Integer, Integer[]> MINIONS = new HashMap<>();
 	static
 	{
@@ -144,7 +144,7 @@ public class SummonMinions extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final int npcObjId = npc.getObjectId();
@@ -179,7 +179,7 @@ public class SummonMinions extends Quest
 				}
 				else if ((npcId == 22257) || (npcId == 22258) || (npcId == 22259) || (npcId == 22260) || (npcId == 22261) || (npcId == 22262) || (npcId == 22263) || (npcId == 22264) || (npcId == 22265) || (npcId == 22266))
 				{
-					PlayerInstance currentAttacker = attacker;
+					Player currentAttacker = attacker;
 					if (isPet)
 					{
 						currentAttacker = attacker.getPet().getOwner();
@@ -187,11 +187,11 @@ public class SummonMinions extends Quest
 					
 					if (currentAttacker.getParty() != null)
 					{
-						for (PlayerInstance member : currentAttacker.getParty().getPartyMembers())
+						for (Player member : currentAttacker.getParty().getPartyMembers())
 						{
 							if (_attackersList.get(npcObjId) == null)
 							{
-								final List<PlayerInstance> player = new ArrayList<>();
+								final List<Player> player = new ArrayList<>();
 								player.add(member);
 								_attackersList.put(npcObjId, player);
 							}
@@ -203,7 +203,7 @@ public class SummonMinions extends Quest
 					}
 					else if (_attackersList.get(npcObjId) == null)
 					{
-						final List<PlayerInstance> player = new ArrayList<>();
+						final List<Player> player = new ArrayList<>();
 						player.add(currentAttacker);
 						_attackersList.put(npcObjId, player);
 					}
@@ -263,7 +263,7 @@ public class SummonMinions extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final int npcObjId = npc.getObjectId();

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerDlgAnswer implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _messageId;
 	private final int _answer;
 	private final int _requesterId;
 	
-	public OnPlayerDlgAnswer(PlayerInstance player, int messageId, int answer, int requesterId)
+	public OnPlayerDlgAnswer(Player player, int messageId, int answer, int requesterId)
 	{
 		_player = player;
 		_messageId = messageId;
@@ -38,7 +38,7 @@ public class OnPlayerDlgAnswer implements IBaseEvent
 		_requesterId = requesterId;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

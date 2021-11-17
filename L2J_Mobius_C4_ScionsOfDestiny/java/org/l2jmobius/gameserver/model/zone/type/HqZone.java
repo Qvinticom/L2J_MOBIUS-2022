@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -35,7 +35,7 @@ public class HqZone extends ZoneType
 	@Override
 	protected void onEnter(Creature character)
 	{
-		if (character instanceof PlayerInstance)
+		if (character instanceof Player)
 		{
 			character.setInsideZone(ZoneId.HQ, true);
 		}
@@ -44,7 +44,7 @@ public class HqZone extends ZoneType
 	@Override
 	protected void onExit(Creature character)
 	{
-		if (character instanceof PlayerInstance)
+		if (character instanceof Player)
 		{
 			character.setInsideZone(ZoneId.HQ, false);
 		}

@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 import ai.AbstractNpcAI;
@@ -53,7 +53,7 @@ public class DungeonOfAbyssZone extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.startsWith("EXIT_PLAYER") && (player != null))
 		{
@@ -98,7 +98,7 @@ public class DungeonOfAbyssZone extends AbstractNpcAI
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			cancelQuestTimer("EXIT_PLAYER" + ABYSS_WEST_ZONE_1.getName() + player.getObjectId(), null, player);
 			cancelQuestTimer("EXIT_PLAYER" + ABYSS_WEST_ZONE_2.getName() + player.getObjectId(), null, player);
 			cancelQuestTimer("EXIT_PLAYER" + ABYSS_EAST_ZONE_3.getName() + player.getObjectId(), null, player);

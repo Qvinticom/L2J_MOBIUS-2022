@@ -17,12 +17,12 @@
 package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Artefact;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
@@ -58,7 +58,7 @@ public class EffectBluff extends Effect
 			return;
 		}
 		
-		if ((getEffected() instanceof FolkInstance) || (getEffected() instanceof ControlTowerInstance) || (getEffected() instanceof ArtefactInstance) || (getEffected() instanceof EffectPointInstance) || (getEffected() instanceof SiegeFlagInstance) || (getEffected() instanceof SiegeSummonInstance))
+		if ((getEffected() instanceof Folk) || (getEffected() instanceof ControlTower) || (getEffected() instanceof Artefact) || (getEffected() instanceof EffectPoint) || (getEffected() instanceof SiegeFlag) || (getEffected() instanceof SiegeSummon))
 		{
 			return;
 		}

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="13001" level="70" type="Npc" name="Heart of Warding">
+	<npc id="13001" level="70" type="Folk" name="Heart of Warding">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
@@ -180,7 +180,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13006" level="70" type="Npc" name="Christmas Tree">
+	<npc id="13006" level="70" type="Folk" name="Christmas Tree">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
@@ -217,7 +217,7 @@
 			<height normal="0.01" />
 		</collision>
 	</npc>
-	<npc id="13007" level="70" type="Npc" name="Special Christmas Tree">
+	<npc id="13007" level="70" type="Folk" name="Special Christmas Tree">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
@@ -254,7 +254,7 @@
 			<height normal="0.01" />
 		</collision>
 	</npc>
-	<npc id="13014" level="85" type="Npc" name="">
+	<npc id="13014" level="85" type="Folk" name="">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -296,7 +296,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="13015" level="85" type="Npc">
+	<npc id="13015" level="85" type="Folk">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -335,7 +335,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="13016" level="1" type="Npc" name="King Squash">
+	<npc id="13016" level="1" type="Folk" name="King Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -371,7 +371,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13017" level="1" type="Npc" name="Emperor Squash">
+	<npc id="13017" level="1" type="Folk" name="Emperor Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -940,7 +940,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13031" level="80" type="Npc" name="Huge Pig">
+	<npc id="13031" level="80" type="Folk" name="Huge Pig">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -984,7 +984,7 @@
 			<height normal="18.3" />
 		</collision>
 	</npc>
-	<npc id="13032" level="80" type="Npc" name="Huge Pig">
+	<npc id="13032" level="80" type="Folk" name="Huge Pig">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1023,7 +1023,7 @@
 			<height normal="18.3" />
 		</collision>
 	</npc>
-	<npc id="13033" level="80" type="Npc" name="Huge Pig">
+	<npc id="13033" level="80" type="Folk" name="Huge Pig">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1107,7 +1107,7 @@
 			<height normal="38.7" />
 		</collision>
 	</npc>
-	<npc id="13035" level="80" type="Npc" name="Golden Pig">
+	<npc id="13035" level="80" type="Folk" name="Golden Pig">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1202,7 +1202,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="13037" level="28" type="Npc" name="Trap">
+	<npc id="13037" level="28" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="1" /> <!-- Trap Explosion -->
@@ -1242,7 +1242,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13038" level="36" type="Npc" name="Trap">
+	<npc id="13038" level="36" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="2" /> <!-- Trap Explosion -->
@@ -1282,7 +1282,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13039" level="43" type="Npc" name="Trap">
+	<npc id="13039" level="43" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="3" /> <!-- Trap Explosion -->
@@ -1322,7 +1322,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13040" level="49" type="Npc" name="Trap">
+	<npc id="13040" level="49" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="4" /> <!-- Trap Explosion -->
@@ -1362,7 +1362,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13041" level="55" type="Npc" name="Trap">
+	<npc id="13041" level="55" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="5" /> <!-- Trap Explosion -->
@@ -1402,7 +1402,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13042" level="60" type="Npc" name="Trap">
+	<npc id="13042" level="60" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="6" /> <!-- Trap Explosion -->
@@ -1442,7 +1442,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13043" level="64" type="Npc" name="Trap">
+	<npc id="13043" level="64" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="7" /> <!-- Trap Explosion -->
@@ -1482,7 +1482,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13044" level="68" type="Npc" name="Trap">
+	<npc id="13044" level="68" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="8" /> <!-- Trap Explosion -->
@@ -1522,7 +1522,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13045" level="72" type="Npc" name="Trap">
+	<npc id="13045" level="72" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="9" /> <!-- Trap Explosion -->
@@ -1562,7 +1562,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13046" level="49" type="Npc" name="Trap">
+	<npc id="13046" level="49" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="1" /> <!-- Poison -->
@@ -1602,7 +1602,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13047" level="55" type="Npc" name="Trap">
+	<npc id="13047" level="55" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="2" /> <!-- Poison -->
@@ -1642,7 +1642,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13048" level="60" type="Npc" name="Trap">
+	<npc id="13048" level="60" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="3" /> <!-- Poison -->
@@ -1682,7 +1682,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13049" level="64" type="Npc" name="Trap">
+	<npc id="13049" level="64" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="4" /> <!-- Poison -->
@@ -1722,7 +1722,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13050" level="68" type="Npc" name="Trap">
+	<npc id="13050" level="68" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="5" /> <!-- Poison -->
@@ -1762,7 +1762,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13051" level="72" type="Npc" name="Trap">
+	<npc id="13051" level="72" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="6" /> <!-- Poison -->
@@ -1802,7 +1802,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13052" level="55" type="Npc" name="Trap">
+	<npc id="13052" level="55" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="1" /> <!-- Flash Trap -->
@@ -1842,7 +1842,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13053" level="60" type="Npc" name="Trap">
+	<npc id="13053" level="60" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="2" /> <!-- Flash Trap -->
@@ -1882,7 +1882,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13054" level="64" type="Npc" name="Trap">
+	<npc id="13054" level="64" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="3" /> <!-- Flash Trap -->
@@ -1922,7 +1922,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13055" level="68" type="Npc" name="Trap">
+	<npc id="13055" level="68" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="4" /> <!-- Flash Trap -->
@@ -1962,7 +1962,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13056" level="72" type="Npc" name="Trap">
+	<npc id="13056" level="72" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="5" /> <!-- Flash Trap -->
@@ -2002,7 +2002,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13057" level="40" type="Npc" name="Trap">
+	<npc id="13057" level="40" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="1" /> <!-- Hold -->
@@ -2042,7 +2042,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13058" level="46" type="Npc" name="Trap">
+	<npc id="13058" level="46" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="2" /> <!-- Hold -->
@@ -2082,7 +2082,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13059" level="52" type="Npc" name="Trap">
+	<npc id="13059" level="52" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="3" /> <!-- Hold -->
@@ -2122,7 +2122,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13060" level="58" type="Npc" name="Trap">
+	<npc id="13060" level="58" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="4" /> <!-- Hold -->
@@ -2162,7 +2162,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13061" level="62" type="Npc" name="Trap">
+	<npc id="13061" level="62" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="5" /> <!-- Hold -->
@@ -2202,7 +2202,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13062" level="66" type="Npc" name="Trap">
+	<npc id="13062" level="66" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="6" /> <!-- Hold -->
@@ -2242,7 +2242,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13063" level="70" type="Npc" name="Trap">
+	<npc id="13063" level="70" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="7" /> <!-- Hold -->
@@ -2282,7 +2282,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13064" level="74" type="Npc" name="Trap">
+	<npc id="13064" level="74" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="8" /> <!-- Hold -->
@@ -2322,7 +2322,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13065" level="52" type="Npc" name="Trap">
+	<npc id="13065" level="52" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="1" /> <!-- Slow Trap -->
@@ -2362,7 +2362,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13066" level="58" type="Npc" name="Trap">
+	<npc id="13066" level="58" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="2" /> <!-- Slow Trap -->
@@ -2402,7 +2402,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13067" level="62" type="Npc" name="Trap">
+	<npc id="13067" level="62" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="3" /> <!-- Slow Trap -->
@@ -2442,7 +2442,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13068" level="66" type="Npc" name="Trap">
+	<npc id="13068" level="66" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="4" /> <!-- Slow Trap -->
@@ -2482,7 +2482,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13069" level="70" type="Npc" name="Trap">
+	<npc id="13069" level="70" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="5" /> <!-- Slow Trap -->
@@ -2522,7 +2522,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13070" level="74" type="Npc" name="Trap">
+	<npc id="13070" level="74" type="Folk" name="Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="6" /> <!-- Slow Trap -->
@@ -2790,7 +2790,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13077" level="55" type="Npc" name="Onyx Beast">
+	<npc id="13077" level="55" type="Folk" name="Onyx Beast">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2826,7 +2826,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="13078" level="55" type="Npc" name="Doom Wraith">
+	<npc id="13078" level="55" type="Folk" name="Doom Wraith">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2862,7 +2862,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13079" level="55" type="Npc" name="Grail Apostle">
+	<npc id="13079" level="55" type="Folk" name="Grail Apostle">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2898,7 +2898,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="13080" level="55" type="Npc" name="Grail Apostle">
+	<npc id="13080" level="55" type="Folk" name="Grail Apostle">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2934,7 +2934,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="13081" level="55" type="Npc" name="Unicorn">
+	<npc id="13081" level="55" type="Folk" name="Unicorn">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2970,7 +2970,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="13082" level="55" type="Npc" name="Lilim Knight">
+	<npc id="13082" level="55" type="Folk" name="Lilim Knight">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3006,7 +3006,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="13083" level="55" type="Npc" name="Golem Guardian">
+	<npc id="13083" level="55" type="Folk" name="Golem Guardian">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3042,7 +3042,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13084" level="55" type="Npc" name="Inferno Drake">
+	<npc id="13084" level="55" type="Folk" name="Inferno Drake">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3078,7 +3078,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13085" level="55" type="Npc" name="Dragon Bomber">
+	<npc id="13085" level="55" type="Folk" name="Dragon Bomber">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3113,7 +3113,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13086" level="55" type="Npc" name="Zariche">
+	<npc id="13086" level="55" type="Folk" name="Zariche">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8190" /> <!-- rhand: Demonic Sword Zariche -->
@@ -3150,7 +3150,7 @@
 			<height normal="31.5725" />
 		</collision>
 	</npc>
-	<npc id="13087" level="55" type="Npc" name="Akamanah">
+	<npc id="13087" level="55" type="Folk" name="Akamanah">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8689" /> <!-- rhand: Blood Sword Akamanah -->
@@ -3187,7 +3187,7 @@
 			<height normal="32.7295" />
 		</collision>
 	</npc>
-	<npc id="13088" level="55" type="Npc" name="Final Form">
+	<npc id="13088" level="55" type="Folk" name="Final Form">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3223,7 +3223,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="13089" level="55" type="Npc" name="Final Form">
+	<npc id="13089" level="55" type="Folk" name="Final Form">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3259,7 +3259,7 @@
 			<height normal="32.7615" />
 		</collision>
 	</npc>
-	<npc id="13090" level="55" type="Npc" name="Native">
+	<npc id="13090" level="55" type="Folk" name="Native">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3294,7 +3294,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13091" level="55" type="Npc" name="Yeti">
+	<npc id="13091" level="55" type="Folk" name="Yeti">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3330,7 +3330,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="13092" level="55" type="Npc" name="Buffalo">
+	<npc id="13092" level="55" type="Folk" name="Buffalo">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3366,7 +3366,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="13093" level="55" type="Npc" name="Pig">
+	<npc id="13093" level="55" type="Folk" name="Pig">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3401,7 +3401,7 @@
 			<height normal="18.3" />
 		</collision>
 	</npc>
-	<npc id="13094" level="55" type="Npc" name="Zombie">
+	<npc id="13094" level="55" type="Folk" name="Zombie">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3437,7 +3437,7 @@
 			<height normal="24.6" />
 		</collision>
 	</npc>
-	<npc id="13095" level="55" type="Npc" name="Pixy">
+	<npc id="13095" level="55" type="Folk" name="Pixy">
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3473,7 +3473,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13096" level="55" type="Npc" name="Rabbit">
+	<npc id="13096" level="55" type="Folk" name="Rabbit">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3544,7 +3544,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="13098" level="80" type="Npc" name="Event Treasure Chest">
+	<npc id="13098" level="80" type="Folk" name="Event Treasure Chest">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3585,7 +3585,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="13099" level="55" type="Npc" name="Zaken">
+	<npc id="13099" level="55" type="Folk" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">

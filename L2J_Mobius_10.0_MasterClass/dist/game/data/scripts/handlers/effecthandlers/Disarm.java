@@ -21,11 +21,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
@@ -54,15 +54,15 @@ public class Disarm extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance itemToDisarm = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		final Item itemToDisarm = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (itemToDisarm == null)
 		{
 			return;
@@ -82,7 +82,7 @@ public class Disarm extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		if (player == null)
 		{
 			return;
@@ -94,7 +94,7 @@ public class Disarm extends AbstractEffect
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(itemObjectId);
+		final Item item = player.getInventory().getItemByObjectId(itemObjectId);
 		if (item == null)
 		{
 			return;

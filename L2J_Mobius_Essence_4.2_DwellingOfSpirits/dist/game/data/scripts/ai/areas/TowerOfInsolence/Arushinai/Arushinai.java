@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HeavenlyRiftManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -44,13 +44,13 @@ public class Arushinai extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("30401-1.htm") || event.equals("30401-2.htm"))
 		{
@@ -117,7 +117,7 @@ public class Arushinai extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_A_PARTY_LEADER);
 				return null;
 			}
-			for (PlayerInstance partyMember : party.getMembers())
+			for (Player partyMember : party.getMembers())
 			{
 				if (player.calculateDistance2D(partyMember) > Config.ALT_PARTY_RANGE)
 				{
@@ -130,7 +130,7 @@ public class Arushinai extends AbstractNpcAI
 				return null;
 			}
 			GlobalVariablesManager.getInstance().set("heavenly_rift_reward", 0);
-			for (PlayerInstance partyMember : party.getMembers())
+			for (Player partyMember : party.getMembers())
 			{
 				partyMember.teleToLocation(114264, 13352, -5104);
 			}

@@ -19,8 +19,8 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -51,7 +51,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 		
 		if (target.isPlayer())
 		{
-			final PlayerInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			if (!player.isDead())
 			{
 				canResurrect = false;
@@ -82,7 +82,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 		else if (target.isSummon())
 		{
 			final Summon summon = (Summon) target;
-			final PlayerInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			if (!summon.isDead())
 			{
 				canResurrect = false;

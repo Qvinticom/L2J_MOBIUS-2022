@@ -19,14 +19,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.DoorInfo;
@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SpawnItem;
-import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
+import org.l2jmobius.gameserver.network.serverpackets.StaticObjectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
@@ -52,7 +52,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -67,49 +67,49 @@ public class RequestRecordInfo implements IClientIncomingPacket
 				continue;
 			}
 			
-			if (object instanceof ItemInstance)
+			if (object instanceof Item)
 			{
-				player.sendPacket(new SpawnItem((ItemInstance) object));
+				player.sendPacket(new SpawnItem((Item) object));
 			}
-			else if (object instanceof DoorInstance)
+			else if (object instanceof Door)
 			{
-				if (((DoorInstance) object).getCastle() != null)
+				if (((Door) object).getCastle() != null)
 				{
-					player.sendPacket(new DoorInfo((DoorInstance) object, true));
+					player.sendPacket(new DoorInfo((Door) object, true));
 				}
 				else
 				{
-					player.sendPacket(new DoorInfo((DoorInstance) object, false));
+					player.sendPacket(new DoorInfo((Door) object, false));
 				}
-				player.sendPacket(new DoorStatusUpdate((DoorInstance) object, player));
+				player.sendPacket(new DoorStatusUpdate((Door) object, player));
 			}
-			else if (object instanceof BoatInstance)
+			else if (object instanceof Boat)
 			{
 				if (!player.isInBoat() && (object != player.getBoat()))
 				{
-					player.sendPacket(new VehicleInfo((BoatInstance) object));
-					((BoatInstance) object).sendVehicleDeparture(player);
+					player.sendPacket(new VehicleInfo((Boat) object));
+					((Boat) object).sendVehicleDeparture(player);
 				}
 			}
-			else if (object instanceof StaticObjectInstance)
+			else if (object instanceof StaticObject)
 			{
-				player.sendPacket(new StaticObject((StaticObjectInstance) object));
+				player.sendPacket(new StaticObjectInfo((StaticObject) object));
 			}
-			else if (object instanceof NpcInstance)
+			else if (object instanceof Npc)
 			{
-				player.sendPacket(new NpcInfo((NpcInstance) object, player));
+				player.sendPacket(new NpcInfo((Npc) object, player));
 			}
 			else if (object instanceof Summon)
 			{
 				final Summon summon = (Summon) object;
 				
-				// Check if the PlayerInstance is the owner of the Pet
+				// Check if the Player is the owner of the Pet
 				if (player.equals(summon.getOwner()))
 				{
 					player.sendPacket(new PetInfo(summon));
-					if (summon instanceof PetInstance)
+					if (summon instanceof Pet)
 					{
-						player.sendPacket(new PetItemList((PetInstance) summon));
+						player.sendPacket(new PetItemList((Pet) summon));
 					}
 				}
 				else
@@ -120,9 +120,9 @@ public class RequestRecordInfo implements IClientIncomingPacket
 				// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 				summon.updateEffectIcons(true);
 			}
-			else if (object instanceof PlayerInstance)
+			else if (object instanceof Player)
 			{
-				final PlayerInstance otherPlayer = (PlayerInstance) object;
+				final Player otherPlayer = (Player) object;
 				if (otherPlayer.isInBoat())
 				{
 					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
@@ -147,7 +147,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 			
 			if (object instanceof Creature)
 			{
-				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance
+				// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player
 				final Creature obj = (Creature) object;
 				if (obj.hasAI())
 				{

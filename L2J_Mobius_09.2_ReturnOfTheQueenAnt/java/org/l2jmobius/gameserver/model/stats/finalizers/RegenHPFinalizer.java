@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.residences.AbstractResidence;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
@@ -65,7 +65,7 @@ public class RegenHPFinalizer implements IStatFunction
 		
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			final double siegeModifier = calcSiegeRegenModifier(player);
 			if (siegeModifier > 0)
 			{
@@ -156,13 +156,13 @@ public class RegenHPFinalizer implements IStatFunction
 		}
 		else if (creature.isPet())
 		{
-			baseValue = ((PetInstance) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
+			baseValue = ((Pet) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
 		}
 		
 		return Stat.defaultValue(creature, stat, baseValue);
 	}
 	
-	private static double calcSiegeRegenModifier(PlayerInstance player)
+	private static double calcSiegeRegenModifier(Player player)
 	{
 		if ((player == null) || (player.getClan() == null))
 		{

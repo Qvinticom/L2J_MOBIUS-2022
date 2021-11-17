@@ -20,7 +20,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -40,7 +40,7 @@ public class SummonEffectTable
 		return _servitorEffects;
 	}
 	
-	public Map<Integer, Collection<SummonEffect>> getServitorEffects(PlayerInstance owner)
+	public Map<Integer, Collection<SummonEffect>> getServitorEffects(Player owner)
 	{
 		final Map<Integer, Map<Integer, Collection<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
 		if (servitorMap == null)

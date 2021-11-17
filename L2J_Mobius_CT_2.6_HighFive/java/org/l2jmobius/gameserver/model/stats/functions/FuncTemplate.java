@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.enums.StatFunction;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
@@ -122,7 +122,7 @@ public class FuncTemplate
 	 * @param owner the owner
 	 * @return the function if conditions are met, {@code null} otherwise
 	 */
-	public AbstractFunction getFunc(Creature caster, Creature target, ItemInstance item, Object owner)
+	public AbstractFunction getFunc(Creature caster, Creature target, Item item, Object owner)
 	{
 		return getFunc(caster, target, null, item, owner);
 	}
@@ -136,7 +136,7 @@ public class FuncTemplate
 	 * @param owner the owner
 	 * @return the function if conditions are met, {@code null} otherwise
 	 */
-	private AbstractFunction getFunc(Creature caster, Creature target, Skill skill, ItemInstance item, Object owner)
+	private AbstractFunction getFunc(Creature caster, Creature target, Skill skill, Item item, Object owner)
 	{
 		if ((_attachCond != null) && !_attachCond.test(caster, target, skill))
 		{

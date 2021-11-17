@@ -21,14 +21,14 @@ import java.util.HashMap;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
@@ -82,7 +82,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -172,7 +172,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 					if (freight.getSize() > 0)
 					{
 						player.setActiveWarehouse(freight);
-						for (ItemInstance i : player.getActiveWarehouse().getItems())
+						for (Item i : player.getActiveWarehouse().getItems())
 						{
 							if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 							{
@@ -193,14 +193,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String giveMinion(PlayerInstance player, String event, int couponId, int eventCouponId)
+	private String giveMinion(Player player, String event, int couponId, int eventCouponId)
 	{
 		if (hasAtLeastOneQuestItem(player, couponId, eventCouponId))
 		{
 			takeItems(player, (hasQuestItems(player, eventCouponId) ? eventCouponId : couponId), 1);
 			final int minionId = MINION_EXCHANGE.get(event);
 			giveItems(player, minionId, 1);
-			final ItemInstance summonItem = player.getInventory().getItemByItemId(minionId);
+			final Item summonItem = player.getInventory().getItemByItemId(minionId);
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(summonItem.getEtcItem());
 			if ((handler != null) && !player.hasPet())
 			{
@@ -215,7 +215,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (event.getCommand().startsWith(COMMAND_BYPASS))
 		{
 			notifyEvent(event.getCommand().replace(COMMAND_BYPASS, ""), null, player);

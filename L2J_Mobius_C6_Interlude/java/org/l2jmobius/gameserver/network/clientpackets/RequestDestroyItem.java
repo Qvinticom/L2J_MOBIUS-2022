@@ -24,8 +24,8 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -49,7 +49,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -77,7 +77,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
+		final Item itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		
 		// if we cant find requested item, its actualy a cheat!
 		if (itemToRemove == null)
@@ -118,7 +118,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance element : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot()))
+			for (Item element : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot()))
 			{
 				player.checkSSMatch(null, element);
 				iu.addModifiedItem(element);
@@ -148,7 +148,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			}
 		}
 		
-		final ItemInstance removedItem = player.getInventory().destroyItem("Destroy", _objectId, count, player, null);
+		final Item removedItem = player.getInventory().destroyItem("Destroy", _objectId, count, player, null);
 		if (removedItem == null)
 		{
 			return;

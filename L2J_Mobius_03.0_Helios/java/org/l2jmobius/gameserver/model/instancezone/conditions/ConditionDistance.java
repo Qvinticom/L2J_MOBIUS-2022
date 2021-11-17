@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -35,7 +35,7 @@ public class ConditionDistance extends Condition
 	}
 	
 	@Override
-	public boolean test(PlayerInstance player, Npc npc)
+	public boolean test(Player player, Npc npc)
 	{
 		final int distance = getParameters().getInt("distance", 1000);
 		return player.isInsideRadius3D(npc, distance);

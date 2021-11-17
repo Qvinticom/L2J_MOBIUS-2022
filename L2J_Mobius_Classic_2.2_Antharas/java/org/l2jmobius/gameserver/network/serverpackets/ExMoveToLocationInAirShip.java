@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExMoveToLocationInAirShip implements IClientOutgoingPacket
@@ -31,7 +31,7 @@ public class ExMoveToLocationInAirShip implements IClientOutgoingPacket
 	/**
 	 * @param player
 	 */
-	public ExMoveToLocationInAirShip(PlayerInstance player)
+	public ExMoveToLocationInAirShip(Player player)
 	{
 		_objectId = player.getObjectId();
 		_airShipId = player.getAirShip().getObjectId();

@@ -24,10 +24,10 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
@@ -68,7 +68,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	/** The skill we are currently casting by INTENTION_CAST */
 	protected Skill _skill;
-	protected ItemInstance _item;
+	protected Item _item;
 	protected boolean _forceUse;
 	protected boolean _dontMove;
 	
@@ -121,7 +121,7 @@ public abstract class AbstractAI implements Ctrl
 	 * <font color=#FF0000><b><u>Caution</u>: This method is USED by AI classes</b></font><b><u><br>
 	 * Overridden in</u>:</b><br>
 	 * <b>AttackableAI</b> : Create an AI Task executed every 1s (if necessary)<br>
-	 * <b>L2PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary.
+	 * <b>PlayerAI</b> : Stores the current AI intention parameters to later restore it if necessary.
 	 * @param intention The new Intention to set to the AI
 	 * @param args The first parameter of the Intention
 	 */
@@ -183,7 +183,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			case AI_INTENTION_CAST:
 			{
-				onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (ItemInstance) args[2] : null, (args.length > 3) && (boolean) args[3], (args.length > 4) && (boolean) args[4]);
+				onIntentionCast((Skill) args[0], (WorldObject) args[1], args.length > 2 ? (Item) args[2] : null, (args.length > 3) && (boolean) args[3], (args.length > 4) && (boolean) args[4]);
 				break;
 			}
 			case AI_INTENTION_MOVE_TO:
@@ -368,7 +368,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	protected abstract void onIntentionAttack(Creature target);
 	
-	protected abstract void onIntentionCast(Skill skill, WorldObject target, ItemInstance item, boolean forceUse, boolean dontMove);
+	protected abstract void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove);
 	
 	protected abstract void onIntentionMoveTo(ILocational destination);
 	
@@ -413,7 +413,7 @@ public abstract class AbstractAI implements Ctrl
 	protected abstract void onEvtFinishCasting();
 	
 	/**
-	 * Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor. <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
+	 * Cancel action client side by sending Server->Client packet ActionFailed to the Player actor. <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 */
 	protected void clientActionFailed()
 	{
@@ -480,7 +480,7 @@ public abstract class AbstractAI implements Ctrl
 			// return;
 			// }
 			
-			// Send a Server->Client packet MoveToPawn/MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToPawn/MoveToLocation to the actor and all Player in its _knownPlayers
 			if (pawn.isCreature())
 			{
 				if (_actor.isOnGeodataPath())
@@ -532,7 +532,7 @@ public abstract class AbstractAI implements Ctrl
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeTaskManager
 			_actor.moveToLocation(x, y, z, 0);
 			
-			// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet MoveToLocation to the actor and all Player in its _knownPlayers
 			_actor.broadcastMoveToLocation();
 		}
 		else
@@ -623,7 +623,7 @@ public abstract class AbstractAI implements Ctrl
 				}
 				_actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStart(s.getObjectId())));
 			}
-			// Send a Server->Client packet AutoAttackStart to the actor and all PlayerInstance in its _knownPlayers
+			// Send a Server->Client packet AutoAttackStart to the actor and all Player in its _knownPlayers
 			_actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId()));
 			setAutoAttacking(true);
 		}
@@ -666,7 +666,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	protected void clientNotifyDead()
 	{
-		// Send a Server->Client packet Die to the actor and all PlayerInstance in its _knownPlayers
+		// Send a Server->Client packet Die to the actor and all Player in its _knownPlayers
 		_actor.broadcastPacket(new Die(_actor));
 		
 		// Init AI
@@ -679,22 +679,22 @@ public abstract class AbstractAI implements Ctrl
 	}
 	
 	/**
-	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the PlayerInstance player.<br>
+	 * Update the state of this actor client side by sending Server->Client packet MoveToPawn/MoveToLocation and AutoAttackStart to the Player player.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param player The PlayerIstance to notify with state of this Creature
 	 */
-	public void describeStateToPlayer(PlayerInstance player)
+	public void describeStateToPlayer(Player player)
 	{
 		if (_actor.isVisibleFor(player) && _clientMoving)
 		{
 			if ((_clientMovingToPawnOffset != 0) && isFollowing())
 			{
-				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
+				// Send a Server->Client packet MoveToPawn to the actor and all Player in its _knownPlayers
 				player.sendPacket(new MoveToPawn(_actor, _target, _clientMovingToPawnOffset));
 			}
 			else
 			{
-				// Send a Server->Client packet MoveToLocation to the actor and all PlayerInstance in its _knownPlayers
+				// Send a Server->Client packet MoveToLocation to the actor and all Player in its _knownPlayers
 				player.sendPacket(new MoveToLocation(_actor));
 			}
 		}

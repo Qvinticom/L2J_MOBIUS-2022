@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.zone.type.FishingZone;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
@@ -49,12 +49,12 @@ public class Fishing implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) creature;
+		final Player player = (Player) creature;
 		
 		// If fishing is disabled, there isn't much point in doing anything else, unless you are GM. so this got moved up here, before anything else.
 		if (!Config.ALLOWFISHING && !player.isGM())
@@ -84,7 +84,7 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		final ItemInstance lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final Item lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (lure == null)
 		{
 			// Bait not equiped.
@@ -96,7 +96,7 @@ public class Fishing implements ISkillHandler
 		}
 		
 		player.setLure(lure);
-		ItemInstance lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		Item lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if ((lure2 == null) || (lure2.getCount() < 1)) // Not enough bait.
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_BAIT);
@@ -116,7 +116,7 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		// If fishing is enabled, here is the code that was striped from startFishing() in PlayerInstance. Decide now where will the hook be cast...
+		// If fishing is enabled, here is the code that was striped from startFishing() in Player. Decide now where will the hook be cast...
 		final int rnd = Rnd.get(200) + 200;
 		final double angle = Util.convertHeadingToDegree(player.getHeading());
 		final double radian = Math.toRadians(angle);

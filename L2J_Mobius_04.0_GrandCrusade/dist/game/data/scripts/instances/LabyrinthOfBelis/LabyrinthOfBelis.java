@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -95,7 +95,7 @@ public class LabyrinthOfBelis extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enter_instance"))
 		{
@@ -218,7 +218,7 @@ public class LabyrinthOfBelis extends AbstractInstance
 		// TODO: Replace me with effect zone when support for instances are done.
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			final Instance world = player.getInstanceWorld();
 			if ((world != null) && world.isStatus(6))
 			{
@@ -234,7 +234,7 @@ public class LabyrinthOfBelis extends AbstractInstance
 		// TODO: Replace me with effect zone when support for instances are done.
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			final Instance world = player.getInstanceWorld();
 			if ((world != null) && (world.isStatus(6) || world.isStatus(7)))
 			{
@@ -288,7 +288,7 @@ public class LabyrinthOfBelis extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -354,7 +354,7 @@ public class LabyrinthOfBelis extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -448,7 +448,7 @@ public class LabyrinthOfBelis extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)

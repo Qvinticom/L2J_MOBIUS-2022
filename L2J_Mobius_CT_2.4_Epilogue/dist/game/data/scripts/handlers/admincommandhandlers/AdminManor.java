@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class AdminManor implements IAdminCommandHandler
 {
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		final NpcHtmlMessage msg = new NpcHtmlMessage();

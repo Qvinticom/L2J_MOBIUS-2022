@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
@@ -46,9 +46,9 @@ public class SkillChargeDmg extends Skill
 	@Override
 	public boolean checkCondition(Creature creature, WorldObject target, boolean itemOrWeapon)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			final EffectCharge e = (EffectCharge) player.getFirstEffect(chargeSkillId);
 			if ((e == null) || (e.numCharges < getNumCharges()))
 			{
@@ -86,9 +86,9 @@ public class SkillChargeDmg extends Skill
 			effect.numCharges -= getNumCharges();
 		}
 		
-		if (caster instanceof PlayerInstance)
+		if (caster instanceof Player)
 		{
-			caster.sendPacket(new EtcStatusUpdate((PlayerInstance) caster));
+			caster.sendPacket(new EtcStatusUpdate((Player) caster));
 		}
 		
 		if (effect.numCharges == 0)
@@ -99,7 +99,7 @@ public class SkillChargeDmg extends Skill
 		final boolean ss = caster.checkSs();
 		for (WorldObject target2 : targets)
 		{
-			final ItemInstance weapon = caster.getActiveWeaponInstance();
+			final Item weapon = caster.getActiveWeaponInstance();
 			final Creature target = (Creature) target2;
 			if (target.isAlikeDead())
 			{
@@ -112,7 +112,7 @@ public class SkillChargeDmg extends Skill
 			
 			// boolean dual = caster.isUsingDualWeapon();
 			final boolean shld = Formulas.calcShldUse(caster, target);
-			final boolean soul = ((weapon != null) && (weapon.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT) && (weapon.getItemType() != WeaponType.DAGGER));
+			final boolean soul = ((weapon != null) && (weapon.getChargedSoulshot() == Item.CHARGED_SOULSHOT) && (weapon.getItemType() != WeaponType.DAGGER));
 			boolean crit = false;
 			if (getBaseCritRate() > 0)
 			{

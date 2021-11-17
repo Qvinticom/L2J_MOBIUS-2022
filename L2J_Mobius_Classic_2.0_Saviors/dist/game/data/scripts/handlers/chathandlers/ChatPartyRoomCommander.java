@@ -20,7 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IChatHandler;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -36,7 +36,7 @@ public class ChatPartyRoomCommander implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, PlayerInstance activeChar, String target, String text)
+	public void handleChat(ChatType type, Player activeChar, String target, String text)
 	{
 		if (activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
 		{

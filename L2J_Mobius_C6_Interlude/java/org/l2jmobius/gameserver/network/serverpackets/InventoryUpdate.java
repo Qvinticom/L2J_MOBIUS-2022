@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ItemInfo;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -60,7 +60,7 @@ public class InventoryUpdate implements IClientOutgoingPacket
 		_items = items;
 	}
 	
-	public void addItem(ItemInstance item)
+	public void addItem(Item item)
 	{
 		if (item != null)
 		{
@@ -68,7 +68,7 @@ public class InventoryUpdate implements IClientOutgoingPacket
 		}
 	}
 	
-	public void addNewItem(ItemInstance item)
+	public void addNewItem(Item item)
 	{
 		if (item != null)
 		{
@@ -76,7 +76,7 @@ public class InventoryUpdate implements IClientOutgoingPacket
 		}
 	}
 	
-	public void addModifiedItem(ItemInstance item)
+	public void addModifiedItem(Item item)
 	{
 		if (item != null)
 		{
@@ -84,7 +84,7 @@ public class InventoryUpdate implements IClientOutgoingPacket
 		}
 	}
 	
-	public void addRemovedItem(ItemInstance item)
+	public void addRemovedItem(Item item)
 	{
 		if (item != null)
 		{
@@ -92,11 +92,11 @@ public class InventoryUpdate implements IClientOutgoingPacket
 		}
 	}
 	
-	public void addItems(List<ItemInstance> items)
+	public void addItems(List<Item> items)
 	{
 		if (items != null)
 		{
-			for (ItemInstance item : items)
+			for (Item item : items)
 			{
 				if (item != null)
 				{

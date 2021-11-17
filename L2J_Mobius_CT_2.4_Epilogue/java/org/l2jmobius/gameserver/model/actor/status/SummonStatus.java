@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -44,14 +44,14 @@ public class SummonStatus extends PlayableStatus
 			return;
 		}
 		
-		final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+		final Player attackerPlayer = attacker.getActingPlayer();
 		if ((attackerPlayer != null) && ((getActiveChar().getOwner() == null) || (getActiveChar().getOwner().getDuelId() != attackerPlayer.getDuelId())))
 		{
 			attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
 		}
 		
 		double value = amount;
-		final PlayerInstance caster = getActiveChar().getTransferingDamageTo();
+		final Player caster = getActiveChar().getTransferingDamageTo();
 		if (getActiveChar().getOwner().getParty() != null)
 		{
 			if ((caster != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster))
@@ -60,7 +60,7 @@ public class SummonStatus extends PlayableStatus
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
-					for (PlayerInstance member : caster.getParty().getMembers())
+					for (Player member : caster.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(1000, member, caster, false) && (member != caster))
 						{

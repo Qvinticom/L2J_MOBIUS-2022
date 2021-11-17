@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -64,7 +64,7 @@ public class AdminQuest implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_quest_reload"))
 		{
@@ -294,7 +294,7 @@ public class AdminQuest implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showDir(String dir, PlayerInstance activeChar)
+	private void showDir(String dir, Player activeChar)
 	{
 		String replace = null;
 		File path;

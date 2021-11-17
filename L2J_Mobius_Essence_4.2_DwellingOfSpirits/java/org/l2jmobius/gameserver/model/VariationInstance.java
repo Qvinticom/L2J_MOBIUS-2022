@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.gameserver.data.xml.OptionData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.options.Options;
 
 /**
@@ -59,7 +59,7 @@ public class VariationInstance
 		return _option2 == null ? -1 : _option2.getId();
 	}
 	
-	public void applyBonus(PlayerInstance player)
+	public void applyBonus(Player player)
 	{
 		if (_option1 != null)
 		{
@@ -71,7 +71,7 @@ public class VariationInstance
 		}
 	}
 	
-	public void removeBonus(PlayerInstance player)
+	public void removeBonus(Player player)
 	{
 		if (_option1 != null)
 		{

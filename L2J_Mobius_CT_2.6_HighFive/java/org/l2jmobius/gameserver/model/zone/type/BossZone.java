@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -150,7 +150,7 @@ public class BossZone extends ZoneType
 		{
 			if (creature.isPlayer())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				if (player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS))
 				{
 					return;
@@ -194,7 +194,7 @@ public class BossZone extends ZoneType
 			}
 			else if (creature.isSummon())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				if (player != null)
 				{
 					if (getSettings().getPlayersAllowed().contains(player.getObjectId()) || player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS))
@@ -225,7 +225,7 @@ public class BossZone extends ZoneType
 		{
 			if (creature.isPlayer())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				if (player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS))
 				{
 					return;
@@ -321,7 +321,7 @@ public class BossZone extends ZoneType
 		return getSettings().getPlayersAllowed();
 	}
 	
-	public boolean isPlayerAllowed(PlayerInstance player)
+	public boolean isPlayerAllowed(Player player)
 	{
 		if (player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS) || getSettings().getPlayersAllowed().contains(player.getObjectId()))
 		{
@@ -348,7 +348,7 @@ public class BossZone extends ZoneType
 		{
 			if ((creature != null) && creature.isPlayer())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				if (player.isOnline())
 				{
 					player.teleToLocation(loc);
@@ -372,7 +372,7 @@ public class BossZone extends ZoneType
 		{
 			if ((creature != null) && creature.isPlayer())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				if (player.isOnline())
 				{
 					if ((_oustLoc[0] != 0) && (_oustLoc[1] != 0) && (_oustLoc[2] != 0))
@@ -395,7 +395,7 @@ public class BossZone extends ZoneType
 	 * @param player reference to the player we wish to allow
 	 * @param durationInSec amount of time in seconds during which entry is valid.
 	 */
-	public void allowPlayerEntry(PlayerInstance player, int durationInSec)
+	public void allowPlayerEntry(Player player, int durationInSec)
 	{
 		if (player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS))
 		{
@@ -408,7 +408,7 @@ public class BossZone extends ZoneType
 		getSettings().getPlayerAllowedReEntryTimes().put(player.getObjectId(), Chronos.currentTimeMillis() + (durationInSec * 1000));
 	}
 	
-	public void removePlayer(PlayerInstance player)
+	public void removePlayer(Player player)
 	{
 		if (player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS))
 		{
@@ -425,12 +425,12 @@ public class BossZone extends ZoneType
 	// return;
 	// }
 	//
-	// final Map<Integer, PlayerInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
+	// final Map<Integer, Player> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
 	// for (Creature creature : getCharactersInside())
 	// {
 	// if ((character != null) && character.isPlayer())
 	// {
-	// final PlayerInstance player = character.getActingPlayer();
+	// final Player player = character.getActingPlayer();
 	// if (player.isOnline())
 	// {
 	// npcKnownPlayers.put(player.getObjectId(), player);

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,7 +27,7 @@ public class ExPledgeCoinInfo implements IClientOutgoingPacket
 {
 	private final long _count;
 	
-	public ExPledgeCoinInfo(PlayerInstance player)
+	public ExPledgeCoinInfo(Player player)
 	{
 		_count = player.getHonorCoins();
 	}

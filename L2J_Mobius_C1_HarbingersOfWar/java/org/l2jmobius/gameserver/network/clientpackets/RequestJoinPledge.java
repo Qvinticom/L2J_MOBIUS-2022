@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -32,7 +32,7 @@ public class RequestJoinPledge extends ClientBasePacket
 		WorldObject object;
 		final int target = readD();
 		// Connection con = client.getConnection();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (activeChar.isTransactionInProgress())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_REPLY));
@@ -43,9 +43,9 @@ public class RequestJoinPledge extends ClientBasePacket
 			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_INVITE_YOURSELF));
 			return;
 		}
-		if (activeChar.isClanLeader() && ((object = World.getInstance().findObject(target)) instanceof PlayerInstance))
+		if (activeChar.isClanLeader() && ((object = World.getInstance().findObject(target)) instanceof Player))
 		{
-			final PlayerInstance member = (PlayerInstance) object;
+			final Player member = (Player) object;
 			if (member.getClanId() != 0)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessage.S1_WORKING_WITH_ANOTHER_CLAN);

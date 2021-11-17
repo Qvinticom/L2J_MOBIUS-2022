@@ -27,10 +27,10 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
@@ -71,7 +71,7 @@ public class QuestState
 	private final String _questName;
 	
 	/** The "owner" of this QuestState object */
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/** The current state of the quest */
 	private byte _state;
@@ -88,7 +88,7 @@ public class QuestState
 	 * @param player the owner of this {@link QuestState} object
 	 * @param state the initial state of the quest
 	 */
-	public QuestState(Quest quest, PlayerInstance player, byte state)
+	public QuestState(Quest quest, Player player, byte state)
 	{
 		_questName = quest.getName();
 		_player = player;
@@ -113,9 +113,9 @@ public class QuestState
 	}
 	
 	/**
-	 * @return the {@link PlayerInstance} object of the owner of this QuestState
+	 * @return the {@link Player} object of the owner of this QuestState
 	 */
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -553,7 +553,7 @@ public class QuestState
 		int count = 0;
 		if ((_player != null) && (_player.getInventory() != null) && (_player.getInventory().getItems() != null))
 		{
-			for (ItemInstance item : _player.getInventory().getItems())
+			for (Item item : _player.getInventory().getItems())
 			{
 				if ((item != null) && (item.getItemId() == itemId))
 				{
@@ -638,7 +638,7 @@ public class QuestState
 		
 		// Set quantity of item
 		// Add items to player's inventory
-		final ItemInstance item = _player.getInventory().addItem("Quest", itemId, count, _player, _player.getTarget());
+		final Item item = _player.getInventory().addItem("Quest", itemId, count, _player, _player.getTarget());
 		if (item == null)
 		{
 			return;
@@ -688,7 +688,7 @@ public class QuestState
 	public void takeItems(int itemId, int amount)
 	{
 		// Get object item from player's inventory list
-		final ItemInstance item = _player.getInventory().getItemByItemId(itemId);
+		final Item item = _player.getInventory().getItemByItemId(itemId);
 		if (item == null)
 		{
 			return;
@@ -1087,12 +1087,12 @@ public class QuestState
 	 * @param npcId
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId)
+	public Npc addSpawn(int npcId)
 	{
 		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, 0);
 	}
 	
-	public NpcInstance addSpawn(int npcId, int x, int y, int z)
+	public Npc addSpawn(int npcId, int x, int y, int z)
 	{
 		return addSpawn(npcId, x, y, z, 0, false, 0);
 	}
@@ -1106,7 +1106,7 @@ public class QuestState
 	 * @param despawnDelay
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId, int x, int y, int z, int despawnDelay)
+	public Npc addSpawn(int npcId, int x, int y, int z, int despawnDelay)
 	{
 		return addSpawn(npcId, x, y, z, 0, false, despawnDelay);
 	}
@@ -1119,7 +1119,7 @@ public class QuestState
 	 * @param despawnDelay
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId, Creature creature, boolean randomOffset, int despawnDelay)
+	public Npc addSpawn(int npcId, Creature creature, boolean randomOffset, int despawnDelay)
 	{
 		return addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), randomOffset, despawnDelay);
 	}
@@ -1135,7 +1135,7 @@ public class QuestState
 	 * @param despawnDelay
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
 		return getQuest().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
 	}

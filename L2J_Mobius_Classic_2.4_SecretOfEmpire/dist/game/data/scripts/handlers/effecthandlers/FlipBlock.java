@@ -20,10 +20,10 @@ import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.BlockInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Block;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -43,10 +43,10 @@ public class FlipBlock extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final BlockInstance block = effected instanceof BlockInstance ? (BlockInstance) effected : null;
-		final PlayerInstance player = effector.isPlayer() ? (PlayerInstance) effector : null;
+		final Block block = effected instanceof Block ? (Block) effected : null;
+		final Player player = effector.isPlayer() ? (Player) effector : null;
 		if ((block == null) || (player == null))
 		{
 			return;

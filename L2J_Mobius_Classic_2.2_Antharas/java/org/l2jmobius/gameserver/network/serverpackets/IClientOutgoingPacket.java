@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.IOutgoingPacket;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
@@ -123,12 +123,12 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 	 * {@code World.getInstance().getPlayers().forEach(packet::sendTo)}
 	 * @param player
 	 */
-	default void sendTo(PlayerInstance player)
+	default void sendTo(Player player)
 	{
 		player.sendPacket(this);
 	}
 	
-	default void runImpl(PlayerInstance player)
+	default void runImpl(Player player)
 	{
 	}
 	

@@ -18,7 +18,7 @@ package quests.Q10766_ANewCraft;
 
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -63,7 +63,7 @@ public class Q10766_ANewCraft extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -129,7 +129,7 @@ public class Q10766_ANewCraft extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -215,7 +215,7 @@ public class Q10766_ANewCraft extends Quest
 	@Id(WINDY_HEALING_POTION_1)
 	public void onItemCreate(OnItemCreate event)
 	{
-		final PlayerInstance player = event.getActiveChar().getActingPlayer();
+		final Player player = event.getActiveChar().getActingPlayer();
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, false);

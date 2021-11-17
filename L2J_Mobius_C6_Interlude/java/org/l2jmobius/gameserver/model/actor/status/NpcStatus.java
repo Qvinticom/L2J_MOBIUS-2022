@@ -17,11 +17,11 @@
 package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 
 public class NpcStatus extends CreatureStatus
 {
-	public NpcStatus(NpcInstance activeChar)
+	public NpcStatus(Npc activeChar)
 	{
 		super(activeChar);
 	}
@@ -50,8 +50,8 @@ public class NpcStatus extends CreatureStatus
 	}
 	
 	@Override
-	public NpcInstance getActiveChar()
+	public Npc getActiveChar()
 	{
-		return (NpcInstance) super.getActiveChar();
+		return (Npc) super.getActiveChar();
 	}
 }

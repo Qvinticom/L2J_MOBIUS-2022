@@ -17,7 +17,7 @@
 package ai.others.SupportUnitCaptain;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
@@ -128,7 +128,7 @@ public class SupportUnitCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final int fortOwner = npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId();
 		if ((player.getClan() == null) || (player.getClanId() != fortOwner))
@@ -269,7 +269,7 @@ public class SupportUnitCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final int fortOwner = npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId();
 		return ((player.getClan() != null) && (player.getClanId() == fortOwner)) ? "unitcaptain.html" : "unitcaptain-04.html";

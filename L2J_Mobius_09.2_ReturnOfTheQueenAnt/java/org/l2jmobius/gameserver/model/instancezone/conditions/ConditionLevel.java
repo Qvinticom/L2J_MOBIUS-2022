@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -43,7 +43,7 @@ public class ConditionLevel extends Condition
 	}
 	
 	@Override
-	protected boolean test(PlayerInstance player, Npc npc)
+	protected boolean test(Player player, Npc npc)
 	{
 		return (player.getLevel() >= _min) && (player.getLevel() <= _max);
 	}

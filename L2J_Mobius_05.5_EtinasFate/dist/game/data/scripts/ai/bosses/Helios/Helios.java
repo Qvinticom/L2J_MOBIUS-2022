@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SpawnHolder;
 import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
@@ -124,7 +124,7 @@ public class Helios extends AbstractNpcAI
 	private static final int HELIOS_RAID_DURATION = 5; // hours
 	private static Npc bossInstance;
 	private final NoSummonFriendZone bossZone;
-	private GrandBossInstance _tempHelios;
+	private GrandBoss _tempHelios;
 	private static List<Npc> _minionSpawns = new ArrayList<>();
 	private static Npc blueLightning;
 	private static Npc redLightning;
@@ -158,21 +158,21 @@ public class Helios extends AbstractNpcAI
 			}
 			else
 			{
-				_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
+				_tempHelios = (GrandBoss) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempHelios);
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
 			}
 		}
 		else
 		{
-			_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
+			_tempHelios = (GrandBoss) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_tempHelios);
 			GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
 		}
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getId() == HELIOS1) && !_announce)
 		{
@@ -200,7 +200,7 @@ public class Helios extends AbstractNpcAI
 				int count = bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
+					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
 					if (blueLightning != null)
 					{
 						blueLightning.setTarget(randomPlayer);
@@ -214,7 +214,7 @@ public class Helios extends AbstractNpcAI
 				int count = bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
+					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
 					if (redLightning != null)
 					{
 						redLightning.setTarget(randomPlayer);
@@ -228,7 +228,7 @@ public class Helios extends AbstractNpcAI
 				int count = bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
+					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
 					if (leopold != null)
 					{
 						leopold.setTarget(randomPlayer);
@@ -275,7 +275,7 @@ public class Helios extends AbstractNpcAI
 				int count = bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					PlayerInstance randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
+					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
 					if (leopold != null)
 					{
 						leopold.setTarget(randomPlayer);
@@ -327,14 +327,14 @@ public class Helios extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
 		{
 			case "unlock_helios":
 			{
-				_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
+				_tempHelios = (GrandBoss) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempHelios);
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
 				break;
@@ -444,7 +444,7 @@ public class Helios extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{

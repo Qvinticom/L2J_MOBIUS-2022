@@ -20,8 +20,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
 
 /**
@@ -70,7 +70,7 @@ public class BoatPathHolder
 		_max = _path.size();
 	}
 	
-	public int state(int state, BoatInstance boat)
+	public int state(int state, Boat boat)
 	{
 		if (state < _max)
 		{
@@ -84,12 +84,12 @@ public class BoatPathHolder
 			boat.vd = new VehicleDeparture(boat, path.speed1, path.speed2, path.x, path.y, path.z);
 			boat.boatSpeed = path.speed1;
 			boat.moveToLocation(path.x, path.y, path.z, path.speed1);
-			final Collection<PlayerInstance> knownPlayers = boat.getKnownList().getKnownPlayers().values();
+			final Collection<Player> knownPlayers = boat.getKnownList().getKnownPlayers().values();
 			if ((knownPlayers == null) || knownPlayers.isEmpty())
 			{
 				return path.time;
 			}
-			for (PlayerInstance player : knownPlayers)
+			for (Player player : knownPlayers)
 			{
 				player.sendPacket(boat.vd);
 			}

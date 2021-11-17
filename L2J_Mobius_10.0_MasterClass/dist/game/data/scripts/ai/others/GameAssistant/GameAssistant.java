@@ -22,9 +22,9 @@ import java.util.HashMap;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
@@ -91,7 +91,7 @@ public class GameAssistant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -188,7 +188,7 @@ public class GameAssistant extends AbstractNpcAI
 				if ((freight != null) && (freight.getSize() > 0))
 				{
 					player.setActiveWarehouse(freight);
-					for (ItemInstance i : player.getActiveWarehouse().getItems())
+					for (Item i : player.getActiveWarehouse().getItems())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{
@@ -208,7 +208,7 @@ public class GameAssistant extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String giveMinion(PlayerInstance player, String event, int couponId, int eventCouponId)
+	private String giveMinion(Player player, String event, int couponId, int eventCouponId)
 	{
 		String htmltext = null;
 		if (!hasAtLeastOneQuestItem(player, couponId, eventCouponId))
@@ -220,7 +220,7 @@ public class GameAssistant extends AbstractNpcAI
 			takeItems(player, (hasQuestItems(player, eventCouponId) ? eventCouponId : couponId), 1);
 			final int minionId = MINION_EXCHANGE.get(event);
 			giveItems(player, minionId, 1);
-			final ItemInstance summonItem = player.getInventory().getItemByItemId(minionId);
+			final Item summonItem = player.getInventory().getItemByItemId(minionId);
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(summonItem.getEtcItem());
 			if ((handler != null) && !player.hasPet())
 			{
@@ -231,12 +231,12 @@ public class GameAssistant extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String giveCircletStone(PlayerInstance player, String event)
+	private String giveCircletStone(Player player, String event)
 	{
 		String htmltext = null;
 		final int circletId = CIRCLET_EXCHANGE.get(event);
-		final Collection<ItemInstance> circletNum = player.getInventory().getAllItemsByItemId(circletId);
-		final Collection<ItemInstance> enchCircletNum = player.getInventory().getAllItemsByItemId(circletId, 5);
+		final Collection<Item> circletNum = player.getInventory().getAllItemsByItemId(circletId);
+		final Collection<Item> enchCircletNum = player.getInventory().getAllItemsByItemId(circletId, 5);
 		if (circletNum.size() == enchCircletNum.size())
 		{
 			switch (enchCircletNum.size())

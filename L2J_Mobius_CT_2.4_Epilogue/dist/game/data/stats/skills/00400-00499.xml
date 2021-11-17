@@ -2397,7 +2397,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
-			<target npcType="TrapInstance" />
+			<target npcType="Trap" />
 		</cond>
 		<effect name="TrapRemove">
 			<param power="#power" />

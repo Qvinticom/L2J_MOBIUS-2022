@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.BabyPetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.BabyPet;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -44,14 +44,14 @@ public class BeastSoulShot implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
 		if (playable == null)
 		{
 			return;
 		}
 		
-		PlayerInstance activeOwner = null;
+		Player activeOwner = null;
 		if (playable instanceof Summon)
 		{
 			activeOwner = ((Summon) playable).getOwner();
@@ -59,9 +59,9 @@ public class BeastSoulShot implements IItemHandler
 			
 			return;
 		}
-		else if (playable instanceof PlayerInstance)
+		else if (playable instanceof Player)
 		{
-			activeOwner = (PlayerInstance) playable;
+			activeOwner = (Player) playable;
 		}
 		
 		if (activeOwner == null)
@@ -84,19 +84,19 @@ public class BeastSoulShot implements IItemHandler
 		
 		final int itemId = 6645;
 		int shotConsumption = 1;
-		ItemInstance weaponInst = null;
+		Item weaponInst = null;
 		Weapon weaponItem = null;
-		if ((activePet instanceof PetInstance) && !(activePet instanceof BabyPetInstance))
+		if ((activePet instanceof Pet) && !(activePet instanceof BabyPet))
 		{
-			weaponInst = ((PetInstance) activePet).getActiveWeaponInstance();
-			weaponItem = ((PetInstance) activePet).getActiveWeaponItem();
+			weaponInst = ((Pet) activePet).getActiveWeaponInstance();
+			weaponItem = ((Pet) activePet).getActiveWeaponItem();
 			if (weaponInst == null)
 			{
 				activeOwner.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
 				return;
 			}
 			
-			if (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE)
+			if (weaponInst.getChargedSoulshot() != Item.CHARGED_NONE)
 			{
 				// SoulShots are already active.
 				return;
@@ -117,16 +117,16 @@ public class BeastSoulShot implements IItemHandler
 				return;
 			}
 			
-			weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
+			weaponInst.setChargedSoulshot(Item.CHARGED_SOULSHOT);
 		}
 		else
 		{
-			if (activePet.getChargedSoulShot() != ItemInstance.CHARGED_NONE)
+			if (activePet.getChargedSoulShot() != Item.CHARGED_NONE)
 			{
 				return;
 			}
 			
-			activePet.setChargedSoulShot(ItemInstance.CHARGED_SOULSHOT);
+			activePet.setChargedSoulShot(Item.CHARGED_SOULSHOT);
 		}
 		
 		// If the player doesn't have enough beast soulshot remaining, remove any auto soulshot task.

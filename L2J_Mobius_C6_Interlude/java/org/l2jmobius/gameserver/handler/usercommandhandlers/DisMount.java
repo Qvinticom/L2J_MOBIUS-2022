@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Support for /dismount command.
@@ -31,7 +31,7 @@ public class DisMount implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, PlayerInstance player)
+	public synchronized boolean useUserCommand(int id, Player player)
 	{
 		if (id != COMMAND_IDS[0])
 		{

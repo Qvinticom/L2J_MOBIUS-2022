@@ -22,11 +22,11 @@ import java.util.Set;
 import java.util.function.Function;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 
 /**
@@ -167,7 +167,7 @@ public class ArmorSet
 	 * @param player
 	 * @return true if all parts of set are enchanted to +6 or more
 	 */
-	public int getLowestSetEnchant(PlayerInstance player)
+	public int getLowestSetEnchant(Player player)
 	{
 		// Player don't have full set
 		if (getPiecesCountById(player) < _minimumPieces)
@@ -179,7 +179,7 @@ public class ArmorSet
 		int enchantLevel = Byte.MAX_VALUE;
 		for (int armorSlot : ARMORSET_SLOTS)
 		{
-			final ItemInstance itemPart = inv.getPaperdollItem(armorSlot);
+			final Item itemPart = inv.getPaperdollItem(armorSlot);
 			if ((itemPart != null) && CommonUtil.contains(_requiredItems, itemPart.getId()) && (enchantLevel > itemPart.getEnchantLevel()))
 			{
 				enchantLevel = itemPart.getEnchantLevel();
@@ -198,7 +198,7 @@ public class ArmorSet
 	 * @param bookSlot
 	 * @return total paperdoll(busy) count for 1 of 3 artifact book slots
 	 */
-	public int getArtifactSlotMask(PlayerInstance player, int bookSlot)
+	public int getArtifactSlotMask(Player player, int bookSlot)
 	{
 		final PlayerInventory inv = player.getInventory();
 		int slotMask = 0;
@@ -208,7 +208,7 @@ public class ArmorSet
 			{
 				for (int artifactSlot : ARTIFACT_1_SLOTS)
 				{
-					final ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+					final Item itemPart = inv.getPaperdollItem(artifactSlot);
 					if ((itemPart != null) && CommonUtil.contains(_requiredItems, itemPart.getId()))
 					{
 						slotMask += artifactSlot;
@@ -220,7 +220,7 @@ public class ArmorSet
 			{
 				for (int artifactSlot : ARTIFACT_2_SLOTS)
 				{
-					final ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+					final Item itemPart = inv.getPaperdollItem(artifactSlot);
 					if ((itemPart != null) && CommonUtil.contains(_requiredItems, itemPart.getId()))
 					{
 						slotMask += artifactSlot;
@@ -232,7 +232,7 @@ public class ArmorSet
 			{
 				for (int artifactSlot : ARTIFACT_3_SLOTS)
 				{
-					final ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+					final Item itemPart = inv.getPaperdollItem(artifactSlot);
 					if ((itemPart != null) && CommonUtil.contains(_requiredItems, itemPart.getId()))
 					{
 						slotMask += artifactSlot;
@@ -244,7 +244,7 @@ public class ArmorSet
 		return slotMask;
 	}
 	
-	public boolean hasOptionalEquipped(PlayerInstance player, Function<ItemInstance, Integer> idProvider)
+	public boolean hasOptionalEquipped(Player player, Function<Item, Integer> idProvider)
 	{
 		return player.getInventory().getPaperdollItems().stream().anyMatch(item -> CommonUtil.contains(_optionalItems, idProvider.apply(item)));
 	}
@@ -254,12 +254,12 @@ public class ArmorSet
 	 * @param idProvider
 	 * @return the amount of set visual items that player has equipped
 	 */
-	public long getPiecesCount(PlayerInstance player, Function<ItemInstance, Integer> idProvider)
+	public long getPiecesCount(Player player, Function<Item, Integer> idProvider)
 	{
 		return player.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, idProvider.apply(item)));
 	}
 	
-	public long getPiecesCountById(PlayerInstance player)
+	public long getPiecesCountById(Player player)
 	{
 		return player.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, item.getId()));
 	}

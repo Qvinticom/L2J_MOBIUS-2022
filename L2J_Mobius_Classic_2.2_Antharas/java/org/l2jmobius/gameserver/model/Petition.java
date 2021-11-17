@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.PetitionState;
 import org.l2jmobius.gameserver.enums.PetitionType;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -43,10 +43,10 @@ public class Petition
 	private PetitionState _state = PetitionState.PENDING;
 	private final String _content;
 	private final Collection<CreatureSay> _messageLog = ConcurrentHashMap.newKeySet();
-	private final PlayerInstance _petitioner;
-	private PlayerInstance _responder;
+	private final Player _petitioner;
+	private Player _responder;
 	
-	public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
+	public Petition(Player petitioner, String petitionText, int petitionType)
 	{
 		_id = IdManager.getInstance().getNextId();
 		_type = PetitionType.values()[petitionType - 1];
@@ -112,12 +112,12 @@ public class Petition
 		return _id;
 	}
 	
-	public PlayerInstance getPetitioner()
+	public Player getPetitioner()
 	{
 		return _petitioner;
 	}
 	
-	public PlayerInstance getResponder()
+	public Player getResponder()
 	{
 		return _responder;
 	}
@@ -167,7 +167,7 @@ public class Petition
 		_state = state;
 	}
 	
-	public void setResponder(PlayerInstance respondingAdmin)
+	public void setResponder(Player respondingAdmin)
 	{
 		if (_responder != null)
 		{

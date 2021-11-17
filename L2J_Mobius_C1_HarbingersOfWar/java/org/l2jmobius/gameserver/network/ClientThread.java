@@ -39,9 +39,9 @@ import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.templates.ItemTemplate;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.util.Chronos;
 
@@ -49,7 +49,7 @@ public class ClientThread extends Thread
 {
 	private static Logger _log = Logger.getLogger(ClientThread.class.getName());
 	private String _loginName;
-	private PlayerInstance _activeChar;
+	private Player _activeChar;
 	private final int _sessionId;
 	private final byte[] _cryptkey =
 	{
@@ -197,7 +197,7 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	public void saveCharToDisk(PlayerInstance cha)
+	public void saveCharToDisk(Player cha)
 	{
 		if (_charFolder != null)
 		{
@@ -215,7 +215,7 @@ public class ClientThread extends Thread
 		IdManager.getInstance().saveCurrentState();
 	}
 	
-	private void storeShortcuts(PlayerInstance cha, File saveFile)
+	private void storeShortcuts(Player cha, File saveFile)
 	{
 		try
 		{
@@ -257,9 +257,9 @@ public class ClientThread extends Thread
 		CharNameTable.getInstance().deleteCharName(chars[charslot].getName().replaceAll("_warehouse.csv", "").toLowerCase());
 	}
 	
-	public PlayerInstance loadCharFromDisk(int charslot)
+	public Player loadCharFromDisk(int charslot)
 	{
-		PlayerInstance character = new PlayerInstance();
+		Player character = new Player();
 		final File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
 		character = restoreChar(chars[charslot]);
 		if (character != null)
@@ -290,7 +290,7 @@ public class ClientThread extends Thread
 		return character;
 	}
 	
-	private void restoreShortCuts(File file, PlayerInstance restored)
+	private void restoreShortCuts(File file, Player restored)
 	{
 		try
 		{
@@ -316,13 +316,13 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void storeInventory(PlayerInstance cha, File saveFile)
+	private void storeInventory(Player cha, File saveFile)
 	{
 		try
 		{
 			final OutputStreamWriter out = new FileWriter(saveFile);
 			out.write("objectId;itemId;name;count;price;equipSlot;\r\n");
-			for (ItemInstance item : cha.getInventory().getItems())
+			for (Item item : cha.getInventory().getItems())
 			{
 				out.write(item.getObjectId() + ";");
 				out.write(item.getItemId() + ";");
@@ -344,7 +344,7 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void storeSkills(PlayerInstance cha, File saveFile)
+	private void storeSkills(Player cha, File saveFile)
 	{
 		try
 		{
@@ -364,7 +364,7 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void storeChar(PlayerInstance cha, File charFile)
+	private void storeChar(Player cha, File charFile)
 	{
 		try
 		{
@@ -427,7 +427,7 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void restoreWarehouse(File wfile, PlayerInstance cha)
+	private void restoreWarehouse(File wfile, Player cha)
 	{
 		try
 		{
@@ -437,10 +437,10 @@ public class ClientThread extends Thread
 			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
-				final ItemInstance item = new ItemInstance();
+				final Item item = new Item();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
 				final int itemId = Integer.parseInt(st.nextToken());
-				final Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				final ItemTemplate itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));
@@ -455,16 +455,16 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void storeWarehouse(PlayerInstance cha, File saveFile)
+	private void storeWarehouse(Player cha, File saveFile)
 	{
 		try
 		{
-			final List<ItemInstance> items = cha.getWarehouse().getItems();
+			final List<Item> items = cha.getWarehouse().getItems();
 			final OutputStreamWriter out = new FileWriter(saveFile);
 			out.write("#objectId;itemId;name;count;\n");
 			for (int i = 0; i < items.size(); ++i)
 			{
-				final ItemInstance item = items.get(i);
+				final Item item = items.get(i);
 				out.write(item.getObjectId() + ";");
 				out.write(item.getItemId() + ";");
 				out.write(item.getItem().getName() + ";");
@@ -478,7 +478,7 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void restoreInventory(File inventory, PlayerInstance cha)
+	private void restoreInventory(File inventory, Player cha)
 	{
 		try
 		{
@@ -488,10 +488,10 @@ public class ClientThread extends Thread
 			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
-				final ItemInstance item = new ItemInstance();
+				final Item item = new Item();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
 				final int itemId = Integer.parseInt(st.nextToken());
-				final Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				final ItemTemplate itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));
@@ -512,7 +512,7 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void restoreSkills(File inventory, PlayerInstance cha)
+	private void restoreSkills(File inventory, Player cha)
 	{
 		try
 		{
@@ -536,9 +536,9 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private PlayerInstance restoreChar(File charFile)
+	private Player restoreChar(File charFile)
 	{
-		final PlayerInstance oldChar = new PlayerInstance();
+		final Player oldChar = new Player();
 		try
 		{
 			final LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(charFile)));
@@ -611,7 +611,7 @@ public class ClientThread extends Thread
 		return _connection;
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _activeChar;
 	}
@@ -637,7 +637,7 @@ public class ClientThread extends Thread
 		_loginName = loginName;
 	}
 	
-	public void setActiveChar(PlayerInstance cha)
+	public void setActiveChar(Player cha)
 	{
 		_activeChar = cha;
 		if (cha != null)

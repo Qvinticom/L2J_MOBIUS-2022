@@ -22,8 +22,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class HeroCustomItem implements IItemHandler
@@ -36,16 +36,16 @@ public class HeroCustomItem implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
 		if (Config.HERO_CUSTOM_ITEMS)
 		{
-			if (!(playable instanceof PlayerInstance))
+			if (!(playable instanceof Player))
 			{
 				return;
 			}
 			
-			final PlayerInstance player = (PlayerInstance) playable;
+			final Player player = (Player) playable;
 			if (player.isInOlympiadMode())
 			{
 				player.sendMessage("This item cannot be used in olympiad mode.");

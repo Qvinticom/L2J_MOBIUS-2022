@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -56,7 +56,7 @@ public class TrapDetect extends AbstractEffect
 			return;
 		}
 		
-		final TrapInstance trap = (TrapInstance) info.getEffected();
+		final Trap trap = (Trap) info.getEffected();
 		if (trap.getLevel() <= _power)
 		{
 			trap.setDetected(info.getEffector());

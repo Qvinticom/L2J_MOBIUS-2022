@@ -30,10 +30,10 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
@@ -64,8 +64,8 @@ public class CursedWeapon
 	long _endTime = 0;
 	
 	private int _playerId = 0;
-	private PlayerInstance _player = null;
-	private ItemInstance _item = null;
+	private Player _player = null;
+	private Item _item = null;
 	private int _playerKarma = 0;
 	private int _playerPkKills = 0;
 	
@@ -93,7 +93,7 @@ public class CursedWeapon
 				removeSkill();
 				
 				// Remove and destroy
-				_player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_LR_HAND);
+				_player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_LR_HAND);
 				_player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
 				_player.store();
 				
@@ -139,7 +139,7 @@ public class CursedWeapon
 		}
 		else if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null)) // either this cursed weapon is in the inventory of someone who has another cursed weapon equipped, OR this cursed weapon is on the ground.
 		{
-			final ItemInstance rhand = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			final Item rhand = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (rhand != null)
 			{
 				_player.getInventory().unEquipItemInSlotAndRecord(rhand.getEquipSlot());
@@ -203,12 +203,12 @@ public class CursedWeapon
 		}
 	}
 	
-	private void dropIt(Attackable attackable, PlayerInstance player)
+	private void dropIt(Attackable attackable, Player player)
 	{
 		dropIt(attackable, player, null, true);
 	}
 	
-	public void dropIt(Attackable attackable, PlayerInstance player, Creature killer, boolean fromMonster)
+	public void dropIt(Attackable attackable, Player player, Creature killer, boolean fromMonster)
 	{
 		_isActivated = false;
 		
@@ -221,7 +221,7 @@ public class CursedWeapon
 			// RedSky and Earthquake
 			final ExRedSky rs = new ExRedSky(10);
 			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
-			for (PlayerInstance aPlayer : World.getInstance().getAllPlayers())
+			for (Player aPlayer : World.getInstance().getAllPlayers())
 			{
 				aPlayer.sendPacket(rs);
 				aPlayer.sendPacket(eq);
@@ -244,7 +244,7 @@ public class CursedWeapon
 			removeSkill();
 			
 			// Remove
-			_player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_LR_HAND);
+			_player.getInventory().unEquipItemInBodySlotAndRecord(ItemTemplate.SLOT_LR_HAND);
 			
 			// drop
 			_player.dropItem("DieDrop", _item, killer, true, true);
@@ -313,7 +313,7 @@ public class CursedWeapon
 		}
 	}
 	
-	public boolean checkDrop(Attackable attackable, PlayerInstance player)
+	public boolean checkDrop(Attackable attackable, Player player)
 	{
 		if (Rnd.get(1000000) < _dropRate)
 		{
@@ -328,7 +328,7 @@ public class CursedWeapon
 		return false;
 	}
 	
-	public void activate(PlayerInstance player, ItemInstance item)
+	public void activate(Player player, Item item)
 	{
 		_player = player;
 		// if the player is mounted, attempt to unmount first. Only allow picking up the zariche if unmounting is successful.
@@ -374,7 +374,7 @@ public class CursedWeapon
 		
 		// Equip with the weapon
 		_item = item;
-		// ItemInstance[] items =
+		// Item[] items =
 		_player.getInventory().equipItemAndRecord(_item);
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
@@ -518,12 +518,12 @@ public class CursedWeapon
 		_endTime = endTime;
 	}
 	
-	public void setPlayer(PlayerInstance player)
+	public void setPlayer(Player player)
 	{
 		_player = player;
 	}
 	
-	public void setItem(ItemInstance item)
+	public void setItem(Item item)
 	{
 		_item = item;
 	}
@@ -563,7 +563,7 @@ public class CursedWeapon
 		return _playerId;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
@@ -612,7 +612,7 @@ public class CursedWeapon
 		return _duration;
 	}
 	
-	public void goTo(PlayerInstance player)
+	public void goTo(Player player)
 	{
 		if (player == null)
 		{

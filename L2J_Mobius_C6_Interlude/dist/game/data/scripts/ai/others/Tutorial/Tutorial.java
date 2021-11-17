@@ -21,8 +21,8 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
@@ -162,7 +162,7 @@ public class Tutorial extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || Config.DISABLE_TUTORIAL)
@@ -706,7 +706,7 @@ public class Tutorial extends Quest
 		return null;
 	}
 	
-	private void showTutorialHTML(PlayerInstance player, String html)
+	private void showTutorialHTML(Player player, String html)
 	{
 		String text = HtmCache.getInstance().getHtm("data/scripts/ai/others/Tutorial/" + html);
 		if (text == null)
@@ -718,12 +718,12 @@ public class Tutorial extends Quest
 		player.sendPacket(new TutorialShowHtml(text));
 	}
 	
-	private void closeTutorialHtml(PlayerInstance player)
+	private void closeTutorialHtml(Player player)
 	{
 		player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 	}
 	
-	private void onTutorialClientEvent(PlayerInstance player, int number)
+	private void onTutorialClientEvent(Player player, int number)
 	{
 		player.sendPacket(new TutorialEnableClientEvent(number));
 	}

@@ -31,7 +31,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 
 /**
@@ -42,7 +42,7 @@ public class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
-	private final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet();
+	private final Set<Item> _items = ConcurrentHashMap.newKeySet();
 	
 	protected ItemsOnGroundManager()
 	{
@@ -100,10 +100,10 @@ public class ItemsOnGroundManager implements Runnable
 			int count = 0;
 			try (ResultSet rs = ps.executeQuery())
 			{
-				ItemInstance item;
+				Item item;
 				while (rs.next())
 				{
-					item = new ItemInstance(rs.getInt(1), rs.getInt(2));
+					item = new Item(rs.getInt(1), rs.getInt(2));
 					World.getInstance().addObject(item);
 					// this check and..
 					if (item.isStackable() && (rs.getInt(3) > 1))
@@ -145,7 +145,7 @@ public class ItemsOnGroundManager implements Runnable
 		}
 	}
 	
-	public void save(ItemInstance item)
+	public void save(Item item)
 	{
 		if (Config.SAVE_DROPPED_ITEM)
 		{
@@ -153,7 +153,7 @@ public class ItemsOnGroundManager implements Runnable
 		}
 	}
 	
-	public void removeObject(ItemInstance item)
+	public void removeObject(Item item)
 	{
 		if (Config.SAVE_DROPPED_ITEM)
 		{
@@ -202,7 +202,7 @@ public class ItemsOnGroundManager implements Runnable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
 		{
-			for (ItemInstance item : _items)
+			for (Item item : _items)
 			{
 				if (item == null)
 				{

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
@@ -42,12 +42,12 @@ import handlers.bypasshandlers.NpcViewMod;
 public class NpcActionShift implements IActionShiftHandler
 {
 	@Override
-	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
-		// Check if the PlayerInstance is a GM
+		// Check if the Player is a GM
 		if (player.isGM())
 		{
-			// Set the target of the PlayerInstance player
+			// Set the target of the Player player
 			player.setTarget(target);
 			
 			final Npc npc = (Npc) target;

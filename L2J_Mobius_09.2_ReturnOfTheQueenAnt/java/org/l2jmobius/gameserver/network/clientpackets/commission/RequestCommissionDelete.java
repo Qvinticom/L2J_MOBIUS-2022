@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.commission;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.instancemanager.CommissionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
@@ -42,18 +42,18 @@ public class RequestCommissionDelete implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!CommissionManager.isPlayerAllowedToInteract(player))
+		if (!ItemCommissionManager.isPlayerAllowedToInteract(player))
 		{
 			client.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
-		CommissionManager.getInstance().deleteItem(player, _commissionId);
+		ItemCommissionManager.getInstance().deleteItem(player, _commissionId);
 	}
 }

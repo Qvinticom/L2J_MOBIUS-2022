@@ -21,9 +21,9 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -52,7 +52,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			LOGGER.fine("RequestCrystalizeItem: activeChar was null");
@@ -92,7 +92,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final PlayerInventory inventory = player.getInventory();
 		if (inventory != null)
 		{
-			final ItemInstance item = inventory.getItemByObjectId(_objectId);
+			final Item item = inventory.getItemByObjectId(_objectId);
 			if ((item == null) || item.isHeroItem() || (!Config.ALT_ALLOW_AUGMENT_DESTROY && item.isAugmented()))
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -105,7 +105,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			}
 		}
 		
-		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
+		final Item itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		if ((itemToRemove == null) || itemToRemove.isShadowItem() || itemToRemove.isTimeLimitedItem())
 		{
 			return;
@@ -176,7 +176,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		if (itemToRemove.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance item : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot()))
+			for (Item item : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot()))
 			{
 				iu.addModifiedItem(item);
 			}
@@ -197,7 +197,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		}
 		
 		// remove from inventory
-		final ItemInstance removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
+		final Item removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
 		player.sendPacket(iu);
@@ -205,7 +205,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// add crystals
 		final int crystalId = itemToRemove.getItem().getCrystalItemId();
 		final int crystalAmount = itemToRemove.getCrystalCount();
-		final ItemInstance createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, player);
+		final Item createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, player);
 		sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_CRYSTALLIZED);
 		sm.addItemName(removedItem);
 		player.sendPacket(sm);

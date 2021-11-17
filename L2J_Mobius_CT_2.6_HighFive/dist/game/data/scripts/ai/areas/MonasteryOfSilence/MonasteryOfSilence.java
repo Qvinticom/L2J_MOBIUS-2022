@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -81,7 +81,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -133,7 +133,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		final Attackable mob = (Attackable) npc;
 		
@@ -195,13 +195,13 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
+	public boolean onNpcHate(Attackable mob, Player player, boolean isSummon)
 	{
 		return player.getActiveWeaponInstance() != null;
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		if (player.getActiveWeaponInstance() != null)
 		{
@@ -259,7 +259,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (skill.hasEffectType(EffectType.AGGRESSION) && (targets.length != 0))
 		{

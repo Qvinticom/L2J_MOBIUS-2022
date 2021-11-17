@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -51,7 +51,7 @@ public class HeavenlyRiftManager
 		return result;
 	}
 	
-	public static void startEvent20Bomb(PlayerInstance player)
+	public static void startEvent20Bomb(Player player)
 	{
 		ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.SET_OFF_BOMBS_AND_GET_TREASURES, 2, 5000));
 		spawnMonster(18003, 113352, 12936, 10976, 1800000);
@@ -76,7 +76,7 @@ public class HeavenlyRiftManager
 		spawnMonster(18003, 113144, 14216, 10976, 1800000);
 	}
 	
-	public static void startEventTower(PlayerInstance player)
+	public static void startEventTower(Player player)
 	{
 		ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.PROTECT_THE_CENTRAL_TOWER_FROM_DIVINE_ANGELS, 2, 5000));
 		spawnMonster(18004, 112648, 14072, 10976, 1800000);
@@ -89,7 +89,7 @@ public class HeavenlyRiftManager
 		}, 10000);
 	}
 	
-	public static void startEvent40Angels(PlayerInstance player)
+	public static void startEvent40Angels(Player player)
 	{
 		ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.DESTROY_WEAKENED_DIVINE_ANGELS, 2, 5000));
 		for (int i = 0; i < 40; ++i)

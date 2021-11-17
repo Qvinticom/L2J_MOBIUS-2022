@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.pledgeV3;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -42,7 +42,7 @@ public class RequestExPledgeV3SetAnnounce implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance activeChar = client.getPlayer();
+		final Player activeChar = client.getPlayer();
 		if (activeChar == null)
 		{
 			return;

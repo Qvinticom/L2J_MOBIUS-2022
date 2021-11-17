@@ -28,16 +28,16 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
@@ -88,7 +88,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -194,7 +194,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					continue;
 				}
 				
-				final Item template = ItemTable.getInstance().getTemplate(product.getId());
+				final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
 				if (template == null)
 				{
 					player.setMultiSell(null);
@@ -267,7 +267,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				if (ingredient.getEnchantmentLevel() > 0)
 				{
 					int found = 0;
-					for (ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
+					for (Item item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
 					{
 						if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel())
 						{
@@ -348,7 +348,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else if (ingredient.getEnchantmentLevel() > 0)
 				{
 					// Take the enchanted item.
-					final ItemInstance destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
+					final Item destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
 					if (destroyedItem != null)
 					{
 						itemEnchantmentProcessed = true;
@@ -369,7 +369,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else if (!itemEnchantmentProcessed && (itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId()))
 				{
 					// Take the enchanted item.
-					final ItemInstance destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
+					final Item destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
 					if (destroyedItem != null)
 					{
 						itemEnchantmentProcessed = true;
@@ -390,7 +390,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else
 				{
 					// Take a regular item.
-					final ItemInstance destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.getId(), totalCount, player, npc);
+					final Item destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.getId(), totalCount, player, npc);
 					if (destroyedItem != null)
 					{
 						iu.addItem(destroyedItem);
@@ -458,7 +458,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else
 				{
 					// Give item.
-					final ItemInstance addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
+					final Item addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
 					
 					// Check if the newly given item should be enchanted.
 					if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getItem().getClass().equals(itemEnchantment.getItem().getClass()))
@@ -573,7 +573,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	 * @param totalCount
 	 * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
 	 */
-	private boolean checkIngredients(PlayerInstance player, PreparedMultisellListHolder list, PlayerInventory inventory, Clan clan, int ingredientId, long totalCount)
+	private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PlayerInventory inventory, Clan clan, int ingredientId, long totalCount)
 	{
 		final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
 		if (specialItem != null)

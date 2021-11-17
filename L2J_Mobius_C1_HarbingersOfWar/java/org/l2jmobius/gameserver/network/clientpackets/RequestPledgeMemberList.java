@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.Clan;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
@@ -27,7 +27,7 @@ public class RequestPledgeMemberList extends ClientBasePacket
 	public RequestPledgeMemberList(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final Clan clan = activeChar.getClan();
 		if (clan != null)
 		{

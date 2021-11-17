@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ExVitalityPointInfo;
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ExVitalityPointInfo;
  */
 public class VitalityTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public VitalityTask(PlayerInstance player)
+	public VitalityTask(Player player)
 	{
 		_player = player;
 	}

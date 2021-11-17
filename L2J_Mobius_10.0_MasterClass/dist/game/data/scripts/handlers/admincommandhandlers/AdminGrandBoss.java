@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -56,7 +56,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -155,7 +155,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void manageHtml(PlayerInstance activeChar, int grandBossId)
+	private void manageHtml(Player activeChar, int grandBossId)
 	{
 		if (Arrays.asList(VALAKAS, BAIUM, QUEENANT, ORFEN, CORE, FAFURION).contains(grandBossId))
 		{

@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.Movie;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author St3eT
@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class MovieHolder
 {
 	private final Movie _movie;
-	private final List<PlayerInstance> _players;
-	private final Collection<PlayerInstance> _votedPlayers = ConcurrentHashMap.newKeySet();
+	private final List<Player> _players;
+	private final Collection<Player> _votedPlayers = ConcurrentHashMap.newKeySet();
 	
-	public MovieHolder(List<PlayerInstance> players, Movie movie)
+	public MovieHolder(List<Player> players, Movie movie)
 	{
 		_players = players;
 		_movie = movie;
@@ -44,7 +44,7 @@ public class MovieHolder
 		return _movie;
 	}
 	
-	public void playerEscapeVote(PlayerInstance player)
+	public void playerEscapeVote(Player player)
 	{
 		if (_votedPlayers.contains(player) || !_players.contains(player) || !_movie.isEscapable())
 		{
@@ -55,16 +55,16 @@ public class MovieHolder
 		
 		if (((_votedPlayers.size() * 100) / _players.size()) >= 50)
 		{
-			_players.forEach(PlayerInstance::stopMovie);
+			_players.forEach(Player::stopMovie);
 		}
 	}
 	
-	public List<PlayerInstance> getPlayers()
+	public List<Player> getPlayers()
 	{
 		return _players;
 	}
 	
-	public Collection<PlayerInstance> getVotedPlayers()
+	public Collection<Player> getVotedPlayers()
 	{
 		return _votedPlayers;
 	}

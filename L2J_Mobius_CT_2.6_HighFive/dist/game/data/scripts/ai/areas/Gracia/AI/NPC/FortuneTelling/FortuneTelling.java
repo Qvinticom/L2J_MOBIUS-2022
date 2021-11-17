@@ -17,7 +17,7 @@
 package ai.areas.Gracia.AI.NPC.FortuneTelling;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 import ai.AbstractNpcAI;
@@ -41,7 +41,7 @@ public class FortuneTelling extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext;
 		if (player.getAdena() < COST)

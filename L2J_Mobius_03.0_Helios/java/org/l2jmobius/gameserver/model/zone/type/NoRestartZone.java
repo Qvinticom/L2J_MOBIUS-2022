@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -93,7 +93,7 @@ public class NoRestartZone extends ZoneType
 	}
 	
 	@Override
-	public void onPlayerLoginInside(PlayerInstance player)
+	public void onPlayerLoginInside(Player player)
 	{
 		if (!_enabled)
 		{

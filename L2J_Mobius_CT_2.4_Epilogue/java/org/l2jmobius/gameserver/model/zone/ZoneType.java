@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneEnter;
@@ -218,7 +218,7 @@ public abstract class ZoneType extends ListenersContainer
 			// Check class type
 			if (_classType != 0)
 			{
-				if (((PlayerInstance) creature).isMageClass())
+				if (((Player) creature).isMageClass())
 				{
 					if (_classType == 1)
 					{
@@ -256,7 +256,7 @@ public abstract class ZoneType extends ListenersContainer
 				boolean ok = false;
 				for (int _clas : _class)
 				{
-					if (((PlayerInstance) creature).getClassId().getId() == _clas)
+					if (((Player) creature).getClassId().getId() == _clas)
 					{
 						ok = true;
 						break;
@@ -472,11 +472,11 @@ public abstract class ZoneType extends ListenersContainer
 	{
 	}
 	
-	public void onPlayerLoginInside(PlayerInstance player)
+	public void onPlayerLoginInside(Player player)
 	{
 	}
 	
-	public void onPlayerLogoutInside(PlayerInstance player)
+	public void onPlayerLogoutInside(Player player)
 	{
 	}
 	
@@ -485,9 +485,9 @@ public abstract class ZoneType extends ListenersContainer
 		return _characterList.values();
 	}
 	
-	public List<PlayerInstance> getPlayersInside()
+	public List<Player> getPlayersInside()
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		for (Creature ch : _characterList.values())
 		{
 			if ((ch != null) && ch.isPlayer())

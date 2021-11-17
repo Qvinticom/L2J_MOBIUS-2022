@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.SkillTreeTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
@@ -33,7 +33,7 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 		final int id = readD();
 		final int level = readD();
 		
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final Skill skill = SkillTable.getInstance().getSkill(id, level);
 		int requiredSp = 0;
 		for (SkillLearn skill2 : SkillTreeTable.getInstance().getAvailableSkills(activeChar))

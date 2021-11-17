@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -425,7 +425,7 @@ public class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -649,7 +649,7 @@ public class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		getTimers().addTimer("OPENING_SCENE", 1000, e -> instance.getPlayers().forEach(p ->
 		{
@@ -878,7 +878,7 @@ public class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		switch (npc.getId())
 		{
@@ -991,7 +991,7 @@ public class MemoryOfDisaster extends AbstractInstance
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR) && (player.getRace() != Race.ERTHEIA))
 		{
 			for (ClassId newClass : player.getClassId().getNextClassIds())
@@ -1011,7 +1011,7 @@ public class MemoryOfDisaster extends AbstractInstance
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR) && (player.getRace() != Race.ERTHEIA))
 		{
 			for (ClassId newClass : player.getClassId().getNextClassIds())

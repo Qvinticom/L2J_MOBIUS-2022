@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ObservationReturn implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	/**
 	 * @param observer
 	 */
-	public ObservationReturn(PlayerInstance observer)
+	public ObservationReturn(Player observer)
 	{
 		_player = observer;
 	}

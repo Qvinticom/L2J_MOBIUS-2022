@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -36,9 +36,9 @@ public class PetFeedTask implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(PetFeedTask.class.getName());
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public PetFeedTask(PlayerInstance player)
+	public PetFeedTask(Player player)
 	{
 		_player = player;
 	}
@@ -75,7 +75,7 @@ public class PetFeedTask implements Runnable
 				return;
 			}
 			
-			ItemInstance food = null;
+			Item food = null;
 			for (int id : foodIds)
 			{
 				// TODO: possibly pet inv?

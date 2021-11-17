@@ -22,11 +22,11 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -66,7 +66,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -85,15 +85,15 @@ public class RequestRefundItem implements IClientIncomingPacket
 		}
 		
 		final WorldObject target = player.getTarget();
-		MerchantInstance merchant = null;
+		Merchant merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if (!(target instanceof MerchantInstance) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
+			if (!(target instanceof Merchant) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			merchant = (MerchantInstance) target;
+			merchant = (Merchant) target;
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
@@ -119,7 +119,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		long adena = 0;
 		long slots = 0;
 		
-		final ItemInstance[] refund = player.getRefund().getItems().toArray(new ItemInstance[0]);
+		final Item[] refund = player.getRefund().getItems().toArray(new Item[0]);
 		final int[] objectIds = new int[_items.length];
 		for (int i = 0; i < _items.length; i++)
 		{
@@ -140,8 +140,8 @@ public class RequestRefundItem implements IClientIncomingPacket
 				}
 			}
 			
-			final ItemInstance item = refund[idx];
-			final Item template = item.getItem();
+			final Item item = refund[idx];
+			final ItemTemplate template = item.getItem();
 			objectIds[i] = item.getObjectId();
 			
 			// second check for duplicates - object ids
@@ -190,7 +190,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		for (int i = 0; i < _items.length; i++)
 		{
-			final ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
+			final Item item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
 			if (item == null)
 			{
 				LOGGER.warning("Error refunding object for char " + player.getName() + " (newitem == null)");

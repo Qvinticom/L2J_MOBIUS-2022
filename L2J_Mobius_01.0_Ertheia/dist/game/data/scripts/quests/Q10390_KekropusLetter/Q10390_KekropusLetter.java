@@ -18,7 +18,7 @@ package quests.Q10390_KekropusLetter;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -68,7 +68,7 @@ public class Q10390_KekropusLetter extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -163,7 +163,7 @@ public class Q10390_KekropusLetter extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -301,7 +301,7 @@ public class Q10390_KekropusLetter extends Quest
 	{
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			if ((qs != null) && qs.isCond(4))
 			{
@@ -311,7 +311,7 @@ public class Q10390_KekropusLetter extends Quest
 		return super.onCreatureSee(npc, creature);
 	}
 	
-	private boolean isRightMaster(Npc npc, PlayerInstance player)
+	private boolean isRightMaster(Npc npc, Player player)
 	{
 		switch (npc.getId())
 		{

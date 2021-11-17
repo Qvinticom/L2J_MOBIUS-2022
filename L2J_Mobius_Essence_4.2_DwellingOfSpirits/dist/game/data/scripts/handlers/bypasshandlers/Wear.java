@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ShopPreviewList;
@@ -36,7 +36,7 @@ public class Wear implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -68,7 +68,7 @@ public class Wear implements IBypassHandler
 		return false;
 	}
 	
-	private void showWearWindow(PlayerInstance player, int value)
+	private void showWearWindow(Player player, int value)
 	{
 		final ProductList buyList = BuyListData.getInstance().getBuyList(value);
 		if (buyList == null)

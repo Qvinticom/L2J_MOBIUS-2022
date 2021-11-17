@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -76,7 +76,7 @@ public abstract class AbstractSagaQuest extends Quest
 		super(questId);
 	}
 	
-	private QuestState findQuest(PlayerInstance player)
+	private QuestState findQuest(Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st != null)
@@ -101,7 +101,7 @@ public abstract class AbstractSagaQuest extends Quest
 	
 	private QuestState findRightState(Npc npc)
 	{
-		PlayerInstance player = null;
+		Player player = null;
 		QuestState st = null;
 		if (SPAWN_LIST.containsKey(npc))
 		{
@@ -114,7 +114,7 @@ public abstract class AbstractSagaQuest extends Quest
 		return st;
 	}
 	
-	private int getClassId(PlayerInstance player)
+	private int getClassId(Player player)
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
@@ -123,7 +123,7 @@ public abstract class AbstractSagaQuest extends Quest
 		return _classId[0];
 	}
 	
-	private int getPrevClass(PlayerInstance player)
+	private int getPrevClass(Player player)
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
@@ -140,7 +140,7 @@ public abstract class AbstractSagaQuest extends Quest
 	{
 		if (st2.getInt("spawned") == 0)
 		{
-			final PlayerInstance player = st2.getPlayer();
+			final Player player = st2.getPlayer();
 			if (getQuestItemsCount(player, _items[3]) >= 700)
 			{
 				takeItems(player, _items[3], 20);
@@ -163,7 +163,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
@@ -515,7 +515,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		final QuestState st2 = findRightState(npc);
 		if (st2 != null)
@@ -554,7 +554,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = "";
 		final QuestState st = getQuestState(player, false);
@@ -622,7 +622,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		QuestState st = getQuestState(player, false);
@@ -634,7 +634,7 @@ public abstract class AbstractSagaQuest extends Quest
 				if (party != null)
 				{
 					final List<QuestState> partyQuestMembers = new ArrayList<>();
-					for (PlayerInstance player1 : party.getMembers())
+					for (Player player1 : party.getMembers())
 					{
 						final QuestState st1 = findQuest(player1);
 						if ((st1 != null) && st1.isCond(15) && player1.isInsideRadius2D(player, Config.ALT_PARTY_RANGE))
@@ -762,11 +762,11 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (SPAWN_LIST.containsKey(npc) && (SPAWN_LIST.get(npc) != player.getObjectId()))
 		{
-			final PlayerInstance questPlayer = (PlayerInstance) World.getInstance().findObject(SPAWN_LIST.get(npc));
+			final Player questPlayer = (Player) World.getInstance().findObject(SPAWN_LIST.get(npc));
 			if (questPlayer == null)
 			{
 				return null;
@@ -792,7 +792,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -1104,7 +1104,7 @@ public abstract class AbstractSagaQuest extends Quest
 		}
 	}
 	
-	private static Npc FindSpawn(PlayerInstance player, Npc npc)
+	private static Npc FindSpawn(Player player, Npc npc)
 	{
 		if (SPAWN_LIST.containsKey(npc) && (SPAWN_LIST.get(npc) == player.getObjectId()))
 		{

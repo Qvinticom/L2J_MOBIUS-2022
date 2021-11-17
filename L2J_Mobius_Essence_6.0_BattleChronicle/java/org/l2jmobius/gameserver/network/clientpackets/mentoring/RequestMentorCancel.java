@@ -21,7 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.Mentee;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeLeft;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeRemove;
@@ -54,7 +54,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		final int objectId = CharNameTable.getInstance().getIdByName(_name);
 		if (player != null)
 		{
@@ -63,7 +63,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 				final Mentee mentee = MentorManager.getInstance().getMentee(player.getObjectId(), objectId);
 				if (mentee != null)
 				{
-					MentorManager.getInstance().cancelAllMentoringBuffs(mentee.getPlayerInstance());
+					MentorManager.getInstance().cancelAllMentoringBuffs(mentee.getPlayer());
 					
 					if (MentorManager.getInstance().isAllMenteesOffline(player.getObjectId(), mentee.getObjectId()))
 					{
@@ -87,7 +87,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					
 					if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
 					{
-						MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayerInstance());
+						MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayer());
 					}
 					
 					MentorManager.getInstance().setPenalty(mentor.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_LEAVE);
@@ -95,7 +95,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeLeft(mentor, player), player);
-					mentor.getPlayerInstance().sendPacket(new SystemMessage(SystemMessageId.S1_S_MENTORING_CONTRACT_IS_CANCELLED_THE_MENTOR_CANNOT_BOND_WITH_ANOTHER_MENTEE_FOR_2_DAYS).addString(_name));
+					mentor.getPlayer().sendPacket(new SystemMessage(SystemMessageId.S1_S_MENTORING_CONTRACT_IS_CANCELLED_THE_MENTOR_CANNOT_BOND_WITH_ANOTHER_MENTEE_FOR_2_DAYS).addString(_name));
 				}
 			}
 		}

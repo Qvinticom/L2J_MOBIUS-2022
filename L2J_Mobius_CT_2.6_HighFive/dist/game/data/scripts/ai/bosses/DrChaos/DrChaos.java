@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
@@ -91,7 +91,7 @@ public class DrChaos extends AbstractNpcAI
 			final int heading = info.getInt("heading");
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
+			final GrandBoss golem = (GrandBoss) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
 			golem.setCurrentHpMp(hp, mp);
@@ -109,7 +109,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("reset_drchaos"))
 		{
@@ -149,7 +149,7 @@ public class DrChaos extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("5"))
 		{
-			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, 96080, -110822, -3343, 0, false, 0, false);
+			final GrandBoss golem = (GrandBoss) addSpawn(CHAOS_GOLEM, 96080, -110822, -3343, 0, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
 			golem.broadcastPacket(new SpecialCamera(npc, 30, 200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
@@ -166,7 +166,7 @@ public class DrChaos extends AbstractNpcAI
 		// Check every sec if someone is in range, if found, launch one task to decrease the timer.
 		else if (event.equalsIgnoreCase("paranoia_activity") && (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL))
 		{
-			for (PlayerInstance obj : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 500))
+			for (Player obj : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 500))
 			{
 				if (obj.isDead())
 				{
@@ -193,7 +193,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = "";
 		if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
@@ -231,7 +231,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		cancelQuestTimer("golem_despawn", npc, null);
 		npc.broadcastSay(ChatType.NPC_GENERAL, "Urggh! You will pay dearly for this insult.");
@@ -249,7 +249,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance victim, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player victim, int damage, boolean isPet)
 	{
 		final int chance = Rnd.get(300);
 		

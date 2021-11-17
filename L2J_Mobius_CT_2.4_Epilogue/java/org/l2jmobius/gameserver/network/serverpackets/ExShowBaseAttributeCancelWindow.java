@@ -19,17 +19,17 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	private long _price;
 	
-	public ExShowBaseAttributeCancelWindow(PlayerInstance player)
+	public ExShowBaseAttributeCancelWindow(Player player)
 	{
 		_items = player.getInventory().getElementItems();
 	}
@@ -39,7 +39,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
 		packet.writeD(_items.size());
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeQ(getPrice(item));
@@ -52,7 +52,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	 * @param item
 	 * @return
 	 */
-	private long getPrice(ItemInstance item)
+	private long getPrice(Item item)
 	{
 		switch (item.getItem().getCrystalType())
 		{

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.classchange;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -41,7 +41,7 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -82,7 +82,7 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 		player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 	}
 	
-	private boolean firstClassCheck(PlayerInstance player)
+	private boolean firstClassCheck(Player player)
 	{
 		QuestState qs = null;
 		if (player.isDeathKnight())
@@ -133,13 +133,13 @@ public class ExRequestClassChangeVerifying implements IClientIncomingPacket
 		return (qs != null) && qs.isCompleted();
 	}
 	
-	private boolean secondClassCheck(PlayerInstance player)
+	private boolean secondClassCheck(Player player)
 	{
 		// SecondClassChange.java has only level check.
 		return player.getLevel() >= 40;
 	}
 	
-	private boolean thirdClassCheck(PlayerInstance player)
+	private boolean thirdClassCheck(Player player)
 	{
 		final QuestState qs = player.getQuestState("Q10673_SagaOfLegend");
 		return (qs != null) && qs.isCompleted();

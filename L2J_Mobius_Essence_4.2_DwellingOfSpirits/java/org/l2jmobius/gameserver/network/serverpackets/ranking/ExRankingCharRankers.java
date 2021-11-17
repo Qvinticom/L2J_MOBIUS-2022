@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExRankingCharRankers implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _group;
 	private final int _scope;
 	private final int _race;
@@ -40,7 +40,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
-	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int race, int baseclass)
+	public ExRankingCharRankers(Player player, int group, int scope, int race, int baseclass)
 	{
 		_player = player;
 		_group = group;

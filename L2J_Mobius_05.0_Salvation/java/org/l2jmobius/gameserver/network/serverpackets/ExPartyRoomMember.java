@@ -25,7 +25,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.MatchingMemberType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.PartyMatchingRoom;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -37,7 +37,7 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 	private final PartyMatchingRoom _room;
 	private final MatchingMemberType _type;
 	
-	public ExPartyRoomMember(PlayerInstance player, PartyMatchingRoom room)
+	public ExPartyRoomMember(Player player, PartyMatchingRoom room)
 	{
 		_room = room;
 		_type = room.getMemberType(player);
@@ -50,7 +50,7 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_room.getMembersCount());
-		for (PlayerInstance member : _room.getMembers())
+		for (Player member : _room.getMembers())
 		{
 			packet.writeD(member.getObjectId());
 			packet.writeS(member.getName());

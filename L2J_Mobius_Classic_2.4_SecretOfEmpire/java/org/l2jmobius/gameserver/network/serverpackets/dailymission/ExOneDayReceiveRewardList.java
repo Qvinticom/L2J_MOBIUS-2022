@@ -25,7 +25,7 @@ import org.l2jmobius.commons.time.SchedulingPattern;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -38,13 +38,13 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 	private static final SchedulingPattern WEEKLY_REUSE_PATTERN = new SchedulingPattern("30 6 * * 1");
 	private static final SchedulingPattern MONTHLY_REUSE_PATTERN = new SchedulingPattern("30 6 1 * *");
 	
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
 	private final int _dayRemainTime;
 	private final int _weekRemainTime;
 	private final int _monthRemainTime;
 	
-	public ExOneDayReceiveRewardList(PlayerInstance player, boolean sendRewards)
+	public ExOneDayReceiveRewardList(Player player, boolean sendRewards)
 	{
 		_player = player;
 		_rewards = sendRewards ? DailyMissionData.getInstance().getDailyMissionData(player) : Collections.emptyList();

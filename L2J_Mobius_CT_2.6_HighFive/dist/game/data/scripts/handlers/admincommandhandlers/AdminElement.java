@@ -19,9 +19,9 @@ package handlers.admincommandhandlers;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -44,7 +44,7 @@ public class AdminElement implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int armorType = -1;
 		if (command.startsWith("admin_setlh"))
@@ -107,7 +107,7 @@ public class AdminElement implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void setElement(PlayerInstance activeChar, byte type, int value, int armorType)
+	private void setElement(Player activeChar, byte type, int value, int armorType)
 	{
 		// get the target
 		WorldObject target = activeChar.getTarget();
@@ -115,10 +115,10 @@ public class AdminElement implements IAdminCommandHandler
 		{
 			target = activeChar;
 		}
-		PlayerInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -126,10 +126,10 @@ public class AdminElement implements IAdminCommandHandler
 			return;
 		}
 		
-		ItemInstance itemInstance = null;
+		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		final ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		final Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;

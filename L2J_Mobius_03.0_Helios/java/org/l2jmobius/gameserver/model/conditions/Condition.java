@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -110,7 +110,7 @@ public abstract class Condition implements ConditionListener
 		return test(caster, target, skill, null);
 	}
 	
-	public boolean test(Creature caster, Creature target, Item item)
+	public boolean test(Creature caster, Creature target, ItemTemplate item)
 	{
 		return test(caster, target, null, null);
 	}
@@ -120,7 +120,7 @@ public abstract class Condition implements ConditionListener
 		return test(caster, null, null, null);
 	}
 	
-	public boolean test(Creature caster, Creature target, Skill skill, Item item)
+	public boolean test(Creature caster, Creature target, Skill skill, ItemTemplate item)
 	{
 		final boolean res = testImpl(caster, target, skill, item);
 		if ((_listener != null) && (res != _result))
@@ -139,7 +139,7 @@ public abstract class Condition implements ConditionListener
 	 * @param item the item
 	 * @return {@code true} if successful, {@code false} otherwise
 	 */
-	public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, Item item);
+	public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item);
 	
 	@Override
 	public void notifyChanged()

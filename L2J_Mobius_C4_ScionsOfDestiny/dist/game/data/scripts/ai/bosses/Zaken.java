@@ -31,9 +31,9 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
@@ -121,11 +121,11 @@ public class Zaken extends Quest
 	private int _quest0 = 0; // Used for teleporting progress.
 	private int _quest1 = 0; // Used for most hated players progress.
 	private int _quest2 = 0; // Used for zaken HP check for teleport.
-	private PlayerInstance c_quest0 = null; // 1st player used for area teleport.
-	private PlayerInstance c_quest1 = null; // 2nd player used for area teleport.
-	private PlayerInstance c_quest2 = null; // 3rd player used for area teleport.
-	private PlayerInstance c_quest3 = null; // 4th player used for area teleport.
-	private PlayerInstance c_quest4 = null; // 5th player used for area teleport.
+	private Player c_quest0 = null; // 1st player used for area teleport.
+	private Player c_quest1 = null; // 2nd player used for area teleport.
+	private Player c_quest2 = null; // 3rd player used for area teleport.
+	private Player c_quest3 = null; // 4th player used for area teleport.
+	private Player c_quest4 = null; // 5th player used for area teleport.
 	
 	public Zaken()
 	{
@@ -180,7 +180,7 @@ public class Zaken extends Quest
 			else
 			{
 				// The time has already expired while the server was offline. Immediately spawn Zaken.
-				final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
+				final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 				spawnBoss(zaken);
 			}
@@ -193,14 +193,14 @@ public class Zaken extends Quest
 			final int heading = info.getInt("heading");
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, x, y, z, heading, false, 0);
+			final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, x, y, z, heading, false, 0);
 			zaken.setCurrentHpMp(hp, mp);
 			spawnBoss(zaken);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -579,7 +579,7 @@ public class Zaken extends Quest
 			{
 				if (GrandBossManager.getInstance().getBossStatus(ZAKEN) != DEAD)
 				{
-					final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
+					final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
 					GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 					spawnBoss(zaken);
 				}
@@ -595,7 +595,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
+	public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isPet)
 	{
 		if ((caller == null) || (npc == null))
 		{
@@ -620,7 +620,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (npc.getNpcId() == ZAKEN)
 		{
@@ -743,7 +743,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -826,7 +826,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
@@ -852,7 +852,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -937,7 +937,7 @@ public class Zaken extends Quest
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
-	public void spawnBoss(GrandBossInstance npc)
+	public void spawnBoss(GrandBoss npc)
 	{
 		if (npc == null)
 		{

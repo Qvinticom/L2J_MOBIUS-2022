@@ -19,7 +19,7 @@ package handlers.targethandlers;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -31,7 +31,7 @@ public class Unlockable implements ITargetTypeHandler
 	@Override
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		if ((target == null) || (!target.isDoor() && !(target instanceof ChestInstance)))
+		if ((target == null) || (!target.isDoor() && !(target instanceof Chest)))
 		{
 			return EMPTY_TARGET_LIST;
 		}

@@ -16,19 +16,22 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import org.l2jmobius.gameserver.model.holders.RecipeHolder;
+import org.l2jmobius.gameserver.model.holders.RecipeStatHolder;
+
 /**
- * This class describes a Recipe used by Dwarf to craft Item. All RecipeList are made of RecipeInstance (1 line of the recipe : Item-Quantity needed).
+ * This class describes a Recipe used by Dwarf to craft Item. All RecipeList are made of RecipeHolder (1 line of the recipe : Item-Quantity needed).
  */
 public class RecipeList
 {
-	/** The table containing all RecipeInstance (1 line of the recipe : Item-Quantity needed) of the RecipeList */
-	private RecipeInstance[] _recipes;
+	/** The table containing all RecipeHolder (1 line of the recipe : Item-Quantity needed) of the RecipeList */
+	private RecipeHolder[] _recipes;
 	
-	/** The table containing all RecipeStatInstance for the statUse parameter of the RecipeList */
-	private RecipeStatInstance[] _statUse;
+	/** The table containing all RecipeStatHolder for the statUse parameter of the RecipeList */
+	private RecipeStatHolder[] _statUse;
 	
-	/** The table containing all RecipeStatInstance for the altStatChange parameter of the RecipeList */
-	private RecipeStatInstance[] _altStatChange;
+	/** The table containing all RecipeStatHolder for the altStatChange parameter of the RecipeList */
+	private RecipeStatHolder[] _altStatChange;
 	
 	/** The Identifier of the Instance */
 	private final int _id;
@@ -70,9 +73,9 @@ public class RecipeList
 	 */
 	public RecipeList(StatSet set, boolean haveRare)
 	{
-		_recipes = new RecipeInstance[0];
-		_statUse = new RecipeStatInstance[0];
-		_altStatChange = new RecipeStatInstance[0];
+		_recipes = new RecipeHolder[0];
+		_statUse = new RecipeStatHolder[0];
+		_altStatChange = new RecipeStatHolder[0];
 		_id = set.getInt("id");
 		_level = set.getInt("craftLevel");
 		_recipeId = set.getInt("recipeId");
@@ -90,39 +93,39 @@ public class RecipeList
 	}
 	
 	/**
-	 * Add a RecipeInstance to the RecipeList (add a line Item-Quantity needed to the Recipe).
+	 * Add a RecipeHolder to the RecipeList (add a line Item-Quantity needed to the Recipe).
 	 * @param recipe
 	 */
-	public void addRecipe(RecipeInstance recipe)
+	public void addRecipe(RecipeHolder recipe)
 	{
 		final int len = _recipes.length;
-		final RecipeInstance[] tmp = new RecipeInstance[len + 1];
+		final RecipeHolder[] tmp = new RecipeHolder[len + 1];
 		System.arraycopy(_recipes, 0, tmp, 0, len);
 		tmp[len] = recipe;
 		_recipes = tmp;
 	}
 	
 	/**
-	 * Add a RecipeStatInstance of the statUse parameter to the RecipeList.
+	 * Add a RecipeStatHolder of the statUse parameter to the RecipeList.
 	 * @param statUse
 	 */
-	public void addStatUse(RecipeStatInstance statUse)
+	public void addStatUse(RecipeStatHolder statUse)
 	{
 		final int len = _statUse.length;
-		final RecipeStatInstance[] tmp = new RecipeStatInstance[len + 1];
+		final RecipeStatHolder[] tmp = new RecipeStatHolder[len + 1];
 		System.arraycopy(_statUse, 0, tmp, 0, len);
 		tmp[len] = statUse;
 		_statUse = tmp;
 	}
 	
 	/**
-	 * Add a RecipeStatInstance of the altStatChange parameter to the RecipeList.
+	 * Add a RecipeStatHolder of the altStatChange parameter to the RecipeList.
 	 * @param statChange
 	 */
-	public void addAltStatChange(RecipeStatInstance statChange)
+	public void addAltStatChange(RecipeStatHolder statChange)
 	{
 		final int len = _altStatChange.length;
-		final RecipeStatInstance[] tmp = new RecipeStatInstance[len + 1];
+		final RecipeStatHolder[] tmp = new RecipeStatHolder[len + 1];
 		System.arraycopy(_altStatChange, 0, tmp, 0, len);
 		tmp[len] = statChange;
 		_altStatChange = tmp;
@@ -217,25 +220,25 @@ public class RecipeList
 	}
 	
 	/**
-	 * @return the table containing all RecipeInstance (1 line of the recipe : Item-Quantity needed) of the RecipeList.
+	 * @return the table containing all RecipeHolder (1 line of the recipe : Item-Quantity needed) of the RecipeList.
 	 */
-	public RecipeInstance[] getRecipes()
+	public RecipeHolder[] getRecipes()
 	{
 		return _recipes;
 	}
 	
 	/**
-	 * @return the table containing all RecipeStatInstance of the statUse parameter of the RecipeList.
+	 * @return the table containing all RecipeStatHolder of the statUse parameter of the RecipeList.
 	 */
-	public RecipeStatInstance[] getStatUse()
+	public RecipeStatHolder[] getStatUse()
 	{
 		return _statUse;
 	}
 	
 	/**
-	 * @return the table containing all RecipeStatInstance of the AltStatChange parameter of the RecipeList.
+	 * @return the table containing all RecipeStatHolder of the AltStatChange parameter of the RecipeList.
 	 */
-	public RecipeStatInstance[] getAltStatChange()
+	public RecipeStatHolder[] getAltStatChange()
 	{
 		return _altStatChange;
 	}

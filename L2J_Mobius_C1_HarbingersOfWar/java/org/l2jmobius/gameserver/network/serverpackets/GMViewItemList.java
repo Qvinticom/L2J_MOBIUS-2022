@@ -19,15 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class GMViewItemList extends ServerBasePacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	private final String _playerName;
 	
-	public GMViewItemList(PlayerInstance cha)
+	public GMViewItemList(Player cha)
 	{
 		_items = cha.getInventory().getItems();
 		_playerName = cha.getName();
@@ -40,7 +40,7 @@ public class GMViewItemList extends ServerBasePacket
 		writeS(_playerName);
 		writeH(1);
 		writeH(_items.size());
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());

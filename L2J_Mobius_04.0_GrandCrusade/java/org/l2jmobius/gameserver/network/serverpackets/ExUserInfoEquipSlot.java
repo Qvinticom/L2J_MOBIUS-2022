@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.InventorySlot;
 import org.l2jmobius.gameserver.model.VariationInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
 	private final byte[] _masks = new byte[]
 	{
@@ -39,12 +39,12 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		(byte) 0x00
 	};
 	
-	public ExUserInfoEquipSlot(PlayerInstance player)
+	public ExUserInfoEquipSlot(Player player)
 	{
 		this(player, true);
 	}
 	
-	public ExUserInfoEquipSlot(PlayerInstance player, boolean addAll)
+	public ExUserInfoEquipSlot(Player player, boolean addAll)
 	{
 		_player = player;
 		if (addAll)

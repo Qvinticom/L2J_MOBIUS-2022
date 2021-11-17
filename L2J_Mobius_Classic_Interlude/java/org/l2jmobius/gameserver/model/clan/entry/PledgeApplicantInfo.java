@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.clan.entry;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Sdw
@@ -54,27 +54,27 @@ public class PledgeApplicantInfo
 	
 	public String getPlayerName()
 	{
-		if (isOnline() && !getPlayerInstance().getName().equalsIgnoreCase(_playerName))
+		if (isOnline() && !getPlayer().getName().equalsIgnoreCase(_playerName))
 		{
-			_playerName = getPlayerInstance().getName();
+			_playerName = getPlayer().getName();
 		}
 		return _playerName;
 	}
 	
 	public int getPlayerLvl()
 	{
-		if (isOnline() && (getPlayerInstance().getLevel() != _playerLvl))
+		if (isOnline() && (getPlayer().getLevel() != _playerLvl))
 		{
-			_playerLvl = getPlayerInstance().getLevel();
+			_playerLvl = getPlayer().getLevel();
 		}
 		return _playerLvl;
 	}
 	
 	public int getClassId()
 	{
-		if (isOnline() && (getPlayerInstance().getBaseClass() != _classId))
+		if (isOnline() && (getPlayer().getBaseClass() != _classId))
 		{
-			_classId = getPlayerInstance().getClassId().getId();
+			_classId = getPlayer().getClassId().getId();
 		}
 		return _classId;
 	}
@@ -89,13 +89,13 @@ public class PledgeApplicantInfo
 		return _karma;
 	}
 	
-	public PlayerInstance getPlayerInstance()
+	public Player getPlayer()
 	{
 		return World.getInstance().getPlayer(_playerId);
 	}
 	
 	public boolean isOnline()
 	{
-		return (getPlayerInstance() != null) && (getPlayerInstance().isOnlineInt() > 0);
+		return (getPlayer() != null) && (getPlayer().isOnlineInt() > 0);
 	}
 }

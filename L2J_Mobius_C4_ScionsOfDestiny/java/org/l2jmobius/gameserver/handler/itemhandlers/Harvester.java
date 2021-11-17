@@ -21,9 +21,9 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -38,9 +38,9 @@ public class Harvester implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
@@ -50,15 +50,15 @@ public class Harvester implements IItemHandler
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
-		if (!(player.getTarget() instanceof MonsterInstance))
+		final Player player = (Player) playable;
+		if (!(player.getTarget() instanceof Monster))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final MonsterInstance target = (MonsterInstance) player.getTarget();
+		final Monster target = (Monster) player.getTarget();
 		if ((target == null) || !target.isDead())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);

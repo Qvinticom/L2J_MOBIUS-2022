@@ -17,33 +17,33 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.player.inventory;
 
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
  */
 public class OnPlayerItemDrop implements IBaseEvent
 {
-	private final PlayerInstance _player;
-	private final ItemInstance _item;
+	private final Player _player;
+	private final Item _item;
 	private final Location _loc;
 	
-	public OnPlayerItemDrop(PlayerInstance player, ItemInstance item, Location loc)
+	public OnPlayerItemDrop(Player player, Item item, Location loc)
 	{
 		_player = player;
 		_item = item;
 		_loc = loc;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

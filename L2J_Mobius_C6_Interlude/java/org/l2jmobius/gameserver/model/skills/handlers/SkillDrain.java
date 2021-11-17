@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -149,9 +149,9 @@ public class SkillDrain extends Skill
 			}
 			
 			// Check to see if we should do the decay right after the cast
-			if (target.isDead() && (getTargetType() == SkillTargetType.TARGET_CORPSE_MOB) && (target instanceof NpcInstance))
+			if (target.isDead() && (getTargetType() == SkillTargetType.TARGET_CORPSE_MOB) && (target instanceof Npc))
 			{
-				((NpcInstance) target).endDecayTask();
+				((Npc) target).endDecayTask();
 			}
 		}
 		
@@ -175,7 +175,7 @@ public class SkillDrain extends Skill
 		applySelfEffects(creature);
 	}
 	
-	public void useCubicSkill(CubicInstance activeCubic, List<Creature> targets)
+	public void useCubicSkill(Cubic activeCubic, List<Creature> targets)
 	{
 		for (Creature target : targets)
 		{
@@ -187,7 +187,7 @@ public class SkillDrain extends Skill
 			final boolean mcrit = Formulas.calcMCrit(activeCubic.getMCriticalHit(target, this));
 			final int damage = (int) Formulas.calcMagicDam(activeCubic, target, this, mcrit);
 			final double hpAdd = _absorbAbs + (_absorbPart * damage);
-			final PlayerInstance owner = activeCubic.getOwner();
+			final Player owner = activeCubic.getOwner();
 			final double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));
 			owner.setCurrentHp(hp);
 			

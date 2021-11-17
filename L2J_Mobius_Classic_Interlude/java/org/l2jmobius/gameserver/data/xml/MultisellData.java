@@ -38,13 +38,13 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
@@ -139,7 +139,7 @@ public class MultisellData implements IXmlReader
 								byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
 								if (enchantmentLevel > 0)
 								{
-									final Item item = ItemTable.getInstance().getTemplate(id);
+									final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
 									if (item != null)
 									{
 										if (item.isWeapon())
@@ -148,7 +148,7 @@ public class MultisellData implements IXmlReader
 										}
 										else if (item.isArmor())
 										{
-											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == Item.SLOT_FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
+											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
 										}
 									}
 								}
@@ -164,7 +164,7 @@ public class MultisellData implements IXmlReader
 									}
 									
 									// Max equipable item grade configuration.
-									final Item item = ItemTable.getInstance().getTemplate(id);
+									final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
 									if (item != null)
 									{
 										final int itemCrystalLevel = item.getCrystalType().getLevel();
@@ -269,7 +269,7 @@ public class MultisellData implements IXmlReader
 	 * @param ingredientMultiplierValue
 	 * @param productMultiplierValue
 	 */
-	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double ingredientMultiplierValue, double productMultiplierValue)
+	public void separateAndSend(int listId, Player player, Npc npc, boolean inventoryOnly, double ingredientMultiplierValue, double productMultiplierValue)
 	{
 		final MultisellListHolder template = _multisells.get(listId);
 		if (template == null)
@@ -307,7 +307,7 @@ public class MultisellData implements IXmlReader
 		player.setMultiSell(list);
 	}
 	
-	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
+	public void separateAndSend(int listId, Player player, Npc npc, boolean inventoryOnly)
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, Double.NaN, Double.NaN);
 	}
@@ -320,7 +320,7 @@ public class MultisellData implements IXmlReader
 			return true;
 		}
 		
-		final Item template = ItemTable.getInstance().getTemplate(holder.getId());
+		final ItemTemplate template = ItemTable.getInstance().getTemplate(holder.getId());
 		return (template != null) && (template.isStackable() ? (holder.getCount() >= 1) : (holder.getCount() == 1));
 	}
 	

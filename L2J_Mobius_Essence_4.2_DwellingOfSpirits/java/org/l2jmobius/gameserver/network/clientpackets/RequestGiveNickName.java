@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -39,7 +39,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -70,7 +70,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 			final ClanMember member1 = player.getClan().getClanMember(_target);
 			if (member1 != null)
 			{
-				final PlayerInstance member = member1.getPlayerInstance();
+				final Player member = member1.getPlayer();
 				if (member != null)
 				{
 					// is target from the same clan?

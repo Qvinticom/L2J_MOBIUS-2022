@@ -18,14 +18,14 @@ package ai.others.DimensionalMerchant;
 
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
@@ -52,7 +52,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = null;
 		switch (event)
@@ -77,7 +77,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 					if (freight.getSize() > 0)
 					{
 						player.setActiveWarehouse(freight);
-						for (ItemInstance i : player.getActiveWarehouse().getItems())
+						for (Item i : player.getActiveWarehouse().getItems())
 						{
 							if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 							{
@@ -107,7 +107,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (event.getCommand().startsWith(COMMAND_BYPASS))
 		{
 			notifyEvent(event.getCommand().replace(COMMAND_BYPASS, ""), null, player);

@@ -23,7 +23,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.FishingMonstersData;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExFishingHpRegen;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Fishing implements Runnable
 {
-	private PlayerInstance _fisher;
+	private Player _fisher;
 	private int _time;
 	private int _stop = 0;
 	private int _goodUse = 0;
@@ -76,7 +76,7 @@ public class Fishing implements Runnable
 		}
 	}
 	
-	public Fishing(PlayerInstance fisher, Fish fish, boolean isNoob, boolean isUpperGrade, int lureId)
+	public Fishing(Player fisher, Fish fish, boolean isNoob, boolean isUpperGrade, int lureId)
 	{
 		_fisher = fisher;
 		_fishMaxHp = fish.getFishHp();

@@ -21,9 +21,9 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -55,13 +55,13 @@ public class RequestSaveInventoryOrder implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player != null)
 		{
 			final Inventory inventory = player.getInventory();
 			for (InventoryOrder order : _order)
 			{
-				final ItemInstance item = inventory.getItemByObjectId(order.objectID);
+				final Item item = inventory.getItemByObjectId(order.objectID);
 				if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
 				{
 					item.setItemLocation(ItemLocation.INVENTORY, order.order);

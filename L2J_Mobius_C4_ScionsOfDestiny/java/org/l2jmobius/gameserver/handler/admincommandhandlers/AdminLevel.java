@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -36,7 +36,7 @@ public class AdminLevel implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final WorldObject targetChar = activeChar.getTarget();
 		final StringTokenizer st = new StringTokenizer(command, " ");
@@ -74,7 +74,7 @@ public class AdminLevel implements IAdminCommandHandler
 				final Playable targetPlayer = (Playable) targetChar;
 				final byte level = Byte.parseByte(val);
 				int maxLevel = ExperienceData.getInstance().getMaxLevel();
-				if ((targetChar instanceof PlayerInstance) && ((PlayerInstance) targetPlayer).isSubClassActive())
+				if ((targetChar instanceof Player) && ((Player) targetPlayer).isSubClassActive())
 				{
 					maxLevel = Config.MAX_SUBCLASS_LEVEL;
 				}

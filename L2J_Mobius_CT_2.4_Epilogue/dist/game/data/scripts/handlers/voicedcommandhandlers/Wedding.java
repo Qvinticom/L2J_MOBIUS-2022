@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -60,7 +60,7 @@ public class Wedding implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, Player activeChar, String params)
 	{
 		if (activeChar == null)
 		{
@@ -81,7 +81,7 @@ public class Wedding implements IVoicedCommandHandler
 		return false;
 	}
 	
-	public boolean divorce(PlayerInstance activeChar)
+	public boolean divorce(Player activeChar)
 	{
 		if (activeChar.getPartnerId() == 0)
 		{
@@ -102,7 +102,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You have broken up as a couple.");
 		}
 		
-		final PlayerInstance partner = World.getInstance().getPlayer(partnerId);
+		final Player partner = World.getInstance().getPlayer(partnerId);
 		if (partner != null)
 		{
 			partner.setPartnerId(0);
@@ -125,7 +125,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean engage(PlayerInstance activeChar)
+	public boolean engage(Player activeChar)
 	{
 		if (activeChar.getTarget() == null)
 		{
@@ -168,7 +168,7 @@ public class Wedding implements IVoicedCommandHandler
 			}
 			return false;
 		}
-		final PlayerInstance ptarget = (PlayerInstance) activeChar.getTarget();
+		final Player ptarget = (Player) activeChar.getTarget();
 		// check if player target himself
 		if (ptarget.getObjectId() == activeChar.getObjectId())
 		{
@@ -238,7 +238,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean goToLove(PlayerInstance activeChar)
+	public boolean goToLove(Player activeChar)
 	{
 		if (!activeChar.isMarried())
 		{
@@ -331,7 +331,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final PlayerInstance partner = World.getInstance().getPlayer(activeChar.getPartnerId());
+		final Player partner = World.getInstance().getPlayer(activeChar.getPartnerId());
 		if ((partner == null) || !partner.isOnline())
 		{
 			activeChar.sendMessage("Your partner is not online.");
@@ -454,11 +454,11 @@ public class Wedding implements IVoicedCommandHandler
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
+		private final Player _player;
 		private final Location _partnerLoc;
 		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(PlayerInstance activeChar, Location loc, boolean to7sDungeon)
+		EscapeFinalizer(Player activeChar, Location loc, boolean to7sDungeon)
 		{
 			_player = activeChar;
 			_partnerLoc = loc;

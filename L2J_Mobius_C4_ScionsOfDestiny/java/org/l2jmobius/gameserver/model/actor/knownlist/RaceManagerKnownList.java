@@ -18,13 +18,13 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 
 import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaceManagerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.RaceManager;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
 public class RaceManagerKnownList extends NpcKnownList
 {
-	public RaceManagerKnownList(RaceManagerInstance activeChar)
+	public RaceManagerKnownList(RaceManager activeChar)
 	{
 		super(activeChar);
 	}
@@ -43,13 +43,13 @@ public class RaceManagerKnownList extends NpcKnownList
 			return false;
 		}
 		
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
 			DeleteObject obj = null;
 			for (int i = 0; i < 8; i++)
 			{
 				obj = new DeleteObject(MonsterRace.getInstance().getMonsters()[i]);
-				((PlayerInstance) object).sendPacket(obj);
+				((Player) object).sendPacket(obj);
 			}
 		}
 		
@@ -57,8 +57,8 @@ public class RaceManagerKnownList extends NpcKnownList
 	}
 	
 	@Override
-	public RaceManagerInstance getActiveChar()
+	public RaceManager getActiveChar()
 	{
-		return (RaceManagerInstance) super.getActiveChar();
+		return (RaceManager) super.getActiveChar();
 	}
 }

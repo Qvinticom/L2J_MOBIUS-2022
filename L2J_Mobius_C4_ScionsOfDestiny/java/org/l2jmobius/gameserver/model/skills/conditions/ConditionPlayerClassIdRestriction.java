@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.skills.conditions;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -40,10 +40,10 @@ public class ConditionPlayerClassIdRestriction extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		if (!(env.player instanceof PlayerInstance))
+		if (!(env.player instanceof Player))
 		{
 			return false;
 		}
-		return (_classIds.contains(((PlayerInstance) env.player).getClassId().getId()));
+		return (_classIds.contains(((Player) env.player).getClassId().getId()));
 	}
 }

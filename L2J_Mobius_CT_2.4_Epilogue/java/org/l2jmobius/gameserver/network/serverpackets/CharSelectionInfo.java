@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.Disconnection;
@@ -178,7 +178,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					{
 						characterList.add(charInfopackage);
 						
-						final PlayerInstance player = World.getInstance().getPlayer(charInfopackage.getObjectId());
+						final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
 						if (player != null)
 						{
 							Disconnection.of(player).storeMe().deleteMe();

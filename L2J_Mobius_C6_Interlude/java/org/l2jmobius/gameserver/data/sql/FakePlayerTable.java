@@ -170,7 +170,7 @@ public class FakePlayerTable
 			statement.close();
 			rset.close();
 			
-			LOGGER.info("CustomNpcInstanceManager: loaded " + count + " NPC to PC polymorphs.");
+			LOGGER.info("FakePlayerTable: loaded " + count + " NPC to PC polymorphs.");
 		}
 		catch (Exception e)
 		{
@@ -178,12 +178,12 @@ public class FakePlayerTable
 	}
 	
 	/**
-	 * Checks if the NpcInstance calling this function has polymorphing data
-	 * @param spwnId - NpcInstance's unique Object id
-	 * @param npcId - NpcInstance's npc template id
+	 * Checks if the Npc calling this function has polymorphing data
+	 * @param spwnId - Npc's unique Object id
+	 * @param npcId - Npc's npc template id
 	 * @return
 	 */
-	public boolean isCustomNpcInstance(int spwnId, int npcId)
+	public boolean isCustomNpc(int spwnId, int npcId)
 	{
 		if ((spwnId == 0) || (npcId == 0))
 		{
@@ -204,9 +204,9 @@ public class FakePlayerTable
 	}
 	
 	/**
-	 * Return the polymorphing data for this NpcInstance if the data exists
-	 * @param spwnId - NpcInstance's unique Object Id
-	 * @param npcId - NpcInstance's npc template Id
+	 * Return the polymorphing data for this Npc if the data exists
+	 * @param spwnId - Npc's unique Object Id
+	 * @param npcId - Npc's npc template Id
 	 * @return customInfo type data pack, or null if no such data exists.
 	 */
 	public customInfo getCustomData(int spwnId, int npcId)

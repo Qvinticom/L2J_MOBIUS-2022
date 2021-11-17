@@ -35,9 +35,9 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
-import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
+import org.l2jmobius.gameserver.network.serverpackets.StaticObjectInfo;
 import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -92,7 +92,7 @@ public class Beleth extends AbstractNpcAI
 	private Npc _beleth;
 	private Npc _priest;
 	private Npc _stone;
-	private PlayerInstance _killer;
+	private Player _killer;
 	private int _allowedObjId;
 	private int _killedCount;
 	private long _lastAttack;
@@ -127,7 +127,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -191,10 +191,10 @@ public class Beleth extends AbstractNpcAI
 			}
 			case "SPAWN6":
 			{
-				final DoorInstance door = DoorData.getInstance().getDoor(DOOR1);
+				final Door door = DoorData.getInstance().getDoor(DOOR1);
 				door.closeMe();
 				
-				ZONE.broadcastPacket(new StaticObject(door, false));
+				ZONE.broadcastPacket(new StaticObjectInfo(door, false));
 				ZONE.broadcastPacket(new DoorStatusUpdate(door));
 				startQuestTimer("SPAWN7", 1700, null, null);
 				break;
@@ -438,7 +438,7 @@ public class Beleth extends AbstractNpcAI
 			case "SPAWN_REAL":
 			{
 				_beleth = addSpawn(REAL_BELETH, new Location(16323, 213170, -9357, 49152));
-				GrandBossManager.getInstance().addBoss((GrandBossInstance) _beleth);
+				GrandBossManager.getInstance().addBoss((GrandBoss) _beleth);
 				break;
 			}
 			case "SPAWN26":
@@ -487,10 +487,10 @@ public class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 				
-				final DoorInstance door2 = DoorData.getInstance().getDoor(DOOR2);
+				final Door door2 = DoorData.getInstance().getDoor(DOOR2);
 				door2.openMe();
 				
-				ZONE.broadcastPacket(new StaticObject(door2, false));
+				ZONE.broadcastPacket(new StaticObjectInfo(door2, false));
 				ZONE.broadcastPacket(new DoorStatusUpdate(door2));
 				DoorData.getInstance().getDoor(DOOR3).openMe();
 				
@@ -559,7 +559,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && (npc.getId() == REAL_BELETH) && !npc.isCastingNow() && skill.hasEffectType(EffectType.HEAL) && (getRandom(100) < 80))
 		{
@@ -570,9 +570,9 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
-		if (!npc.isDead() && !npc.isCastingNow() && (getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 200).isEmpty())
+		if (!npc.isDead() && !npc.isCastingNow() && (getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, Player.class, 200).isEmpty())
 		{
 			npc.setTarget(player);
 			npc.doCast(FIREBALL.getSkill());
@@ -581,7 +581,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (!npc.isDead() && !npc.isCastingNow())
 		{
@@ -601,13 +601,13 @@ public class Beleth extends AbstractNpcAI
 				}
 				return null;
 			}
-			if ((getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 200).isEmpty())
+			if ((getRandom(100) < 40) && !World.getInstance().getVisibleObjectsInRange(npc, Player.class, 200).isEmpty())
 			{
 				npc.doCast(LIGHTENING.getSkill());
 				return null;
 			}
 			//@formatter:off
-			final PlayerInstance plr = World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 950)
+			final Player plr = World.getInstance().getVisibleObjectsInRange(npc, Player.class, 950)
 				.stream()
 				.findFirst()
 				.orElse(null);
@@ -627,7 +627,7 @@ public class Beleth extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		npc.setRunning();
-		if ((getRandom(100) < 60) && !World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 300).isEmpty())
+		if ((getRandom(100) < 60) && !World.getInstance().getVisibleObjectsInRange(npc, Player.class, 300).isEmpty())
 		{
 			npc.doCast(BLEED.getSkill());
 		}
@@ -639,7 +639,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String html;
 		if ((_killer != null) && (player.getObjectId() == _killer.getObjectId()))
@@ -656,13 +656,13 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return onTalk(npc, player);
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		if (getRandom(100) < 40)
 		{
@@ -688,7 +688,7 @@ public class Beleth extends AbstractNpcAI
 		}
 		else if (!npc.isDead() && !npc.isCastingNow())
 		{
-			if (!World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 200).isEmpty())
+			if (!World.getInstance().getVisibleObjectsInRange(npc, Player.class, 200).isEmpty())
 			{
 				npc.doCast(LIGHTENING.getSkill());
 				return null;
@@ -700,7 +700,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == REAL_BELETH)
 		{
@@ -752,7 +752,7 @@ public class Beleth extends AbstractNpcAI
 		return null;
 	}
 	
-	private void setBelethKiller(PlayerInstance killer)
+	private void setBelethKiller(Player killer)
 	{
 		if (killer.getParty() != null)
 		{

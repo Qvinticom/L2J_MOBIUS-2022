@@ -23,7 +23,7 @@ import java.util.logging.LogRecord;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Advi
@@ -47,9 +47,9 @@ public class ItemLogFormatter extends Formatter
 					continue;
 				}
 				output.append(", ");
-				if (p instanceof ItemInstance)
+				if (p instanceof Item)
 				{
-					final ItemInstance item = (ItemInstance) p;
+					final Item item = (Item) p;
 					StringUtil.append(output, "item ", String.valueOf(item.getObjectId()), ":");
 					if (item.getEnchantLevel() > 0)
 					{

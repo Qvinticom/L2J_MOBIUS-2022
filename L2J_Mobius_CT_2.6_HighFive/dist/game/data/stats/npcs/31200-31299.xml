@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="31200" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31200" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="PosX1" value="147481" />
@@ -45,7 +45,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31201" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31201" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="PosX1" value="0" />
@@ -91,7 +91,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31202" level="70" type="Npc" name="Maximus">
+	<npc id="31202" level="70" type="Folk" name="Maximus">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -128,7 +128,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="31203" level="70" type="Npc" name="Moon Dancer">
+	<npc id="31203" level="70" type="Folk" name="Moon Dancer">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -165,7 +165,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="31204" level="70" type="Npc" name="Georgio">
+	<npc id="31204" level="70" type="Folk" name="Georgio">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -202,7 +202,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="31205" level="70" type="Npc" name="Katz">
+	<npc id="31205" level="70" type="Folk" name="Katz">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -239,7 +239,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="31206" level="70" type="Npc" name="Ten Ten">
+	<npc id="31206" level="70" type="Folk" name="Ten Ten">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -276,7 +276,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="31207" level="70" type="Npc" name="Sardinia">
+	<npc id="31207" level="70" type="Folk" name="Sardinia">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -313,7 +313,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="31208" level="70" type="Npc" name="La Grange">
+	<npc id="31208" level="70" type="Folk" name="La Grange">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -350,7 +350,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="31209" level="70" type="Npc" name="Misty Rain">
+	<npc id="31209" level="70" type="Folk" name="Misty Rain">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -387,7 +387,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="31210" level="70" type="Npc" name="Race Track Gatekeeper">
+	<npc id="31210" level="70" type="Folk" name="Race Track Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1080,7 +1080,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31227" level="70" type="Npc" name="Buzz the Cat" title="Event Manager">
+	<npc id="31227" level="70" type="Folk" name="Buzz the Cat" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1121,7 +1121,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31228" level="70" type="Npc" name="Roy the Cat" title="Event Manager">
+	<npc id="31228" level="70" type="Folk" name="Roy the Cat" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1162,7 +1162,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31229" level="70" type="Npc" name="Winnie the Cat" title="Event Manager">
+	<npc id="31229" level="70" type="Folk" name="Winnie the Cat" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1203,7 +1203,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31230" level="70" type="Npc" name="Louie the Cat" title="Event Manager">
+	<npc id="31230" level="70" type="Folk" name="Louie the Cat" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="30" />
@@ -1295,7 +1295,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31231" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31231" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1332,7 +1332,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31232" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31232" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1369,7 +1369,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31233" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31233" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1406,7 +1406,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31234" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31234" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1443,7 +1443,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31235" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31235" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1480,7 +1480,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31236" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31236" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1517,7 +1517,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31237" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31237" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1554,7 +1554,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31238" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31238" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1591,7 +1591,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31239" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31239" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1628,7 +1628,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31240" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31240" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1665,7 +1665,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31241" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31241" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1702,7 +1702,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31242" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31242" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1739,7 +1739,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31243" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31243" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1776,7 +1776,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31244" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31244" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1813,7 +1813,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31245" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31245" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1850,7 +1850,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31246" level="70" type="Npc" name="Preacher of Doom">
+	<npc id="31246" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1887,7 +1887,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31247" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31247" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1925,7 +1925,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31248" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31248" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1963,7 +1963,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31249" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31249" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2001,7 +2001,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31250" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31250" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2039,7 +2039,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31251" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31251" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2077,7 +2077,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31252" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31252" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2115,7 +2115,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31253" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31253" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2153,7 +2153,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31254" level="70" type="Npc" name="Orator of Revelations">
+	<npc id="31254" level="70" type="Folk" name="Orator of Revelations">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2191,7 +2191,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31255" level="70" type="Npc" name="Buzz the Cat" title="Event Manager">
+	<npc id="31255" level="70" type="Folk" name="Buzz the Cat" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2552,7 +2552,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31264" level="70" type="Npc" name="Olsun" title="Symbol Maker">
+	<npc id="31264" level="70" type="Folk" name="Olsun" title="Symbol Maker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2664,7 +2664,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="31266" level="70" type="Npc" name="Kaiser">
+	<npc id="31266" level="70" type="Folk" name="Kaiser">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3396,7 +3396,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31284" level="70" type="Npc" name="Elena" title="Spellbook Seller">
+	<npc id="31284" level="70" type="Folk" name="Elena" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

@@ -30,7 +30,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 
@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 public class ItemsOnGroundManager
 {
 	static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
-	protected List<ItemInstance> _items = new ArrayList<>();
+	protected List<Item> _items = new ArrayList<>();
 	
 	protected ItemsOnGroundManager()
 	{
@@ -115,7 +115,7 @@ public class ItemsOnGroundManager
 			result = s.executeQuery("select object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable from itemsonground");
 			while (result.next())
 			{
-				final ItemInstance item = new ItemInstance(result.getInt(1), result.getInt(2));
+				final Item item = new Item(result.getInt(1), result.getInt(2));
 				World.getInstance().storeObject(item);
 				if (item.isStackable() && (result.getInt(3) > 1))
 				{
@@ -166,7 +166,7 @@ public class ItemsOnGroundManager
 		}
 	}
 	
-	public void save(ItemInstance item)
+	public void save(Item item)
 	{
 		if (!Config.SAVE_DROPPED_ITEM)
 		{
@@ -227,7 +227,7 @@ public class ItemsOnGroundManager
 				return;
 			}
 			
-			for (ItemInstance item : _items)
+			for (Item item : _items)
 			{
 				if (item == null)
 				{

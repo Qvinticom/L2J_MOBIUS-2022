@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
@@ -49,7 +49,7 @@ public class DoorData implements IXmlReader
 	
 	// Info holders
 	private final Map<String, Set<Integer>> _groups = new HashMap<>();
-	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
+	private final Map<Integer, Door> _doors = new HashMap<>();
 	private final Map<Integer, StatSet> _templates = new HashMap<>();
 	
 	protected DoorData()
@@ -139,11 +139,11 @@ public class DoorData implements IXmlReader
 	 * @param set
 	 * @return
 	 */
-	public DoorInstance spawnDoor(StatSet set)
+	public Door spawnDoor(StatSet set)
 	{
 		// Create door template + door instance
 		final DoorTemplate template = new DoorTemplate(set);
-		final DoorInstance door = spawnDoor(template, null);
+		final Door door = spawnDoor(template, null);
 		
 		// Register the door
 		_templates.put(door.getId(), set);
@@ -158,9 +158,9 @@ public class DoorData implements IXmlReader
 	 * @param instance
 	 * @return a new door instance based on provided template
 	 */
-	public DoorInstance spawnDoor(DoorTemplate template, Instance instance)
+	public Door spawnDoor(DoorTemplate template, Instance instance)
 	{
-		final DoorInstance door = new DoorInstance(template);
+		final Door door = new Door(template);
 		door.setCurrentHp(door.getMaxHp());
 		
 		// Set instance world if provided
@@ -185,7 +185,7 @@ public class DoorData implements IXmlReader
 		return _templates.get(doorId);
 	}
 	
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		return _doors.get(doorId);
 	}
@@ -195,7 +195,7 @@ public class DoorData implements IXmlReader
 		return _groups.getOrDefault(groupName, Collections.emptySet());
 	}
 	
-	public Collection<DoorInstance> getDoors()
+	public Collection<Door> getDoors()
 	{
 		return _doors.values();
 	}
@@ -212,7 +212,7 @@ public class DoorData implements IXmlReader
 	
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean doubleFaceCheck)
 	{
-		final Collection<DoorInstance> doors;
+		final Collection<Door> doors;
 		if (instance == null)
 		{
 			final WorldRegion region = World.getInstance().getRegion(x, y);
@@ -234,7 +234,7 @@ public class DoorData implements IXmlReader
 			return false;
 		}
 		
-		for (DoorInstance doorInst : doors)
+		for (Door doorInst : doors)
 		{
 			// check dead and open
 			if (doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0))

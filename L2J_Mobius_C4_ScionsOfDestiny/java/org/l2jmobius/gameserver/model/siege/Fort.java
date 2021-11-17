@@ -31,8 +31,8 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.zone.type.FortZone;
@@ -47,7 +47,7 @@ public class Fort
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
 	
 	private int _fortId = 0;
-	private final List<DoorInstance> _doors = new ArrayList<>();
+	private final List<Door> _doors = new ArrayList<>();
 	private final List<StatSet> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
@@ -139,24 +139,24 @@ public class Fort
 		return _zone.getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(PlayerInstance player, int doorId)
+	public void closeDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(PlayerInstance player, int doorId)
+	public void openDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
+	public void openCloseDoor(Player player, int doorId, boolean open)
 	{
 		if (player.getClanId() != _ownerId)
 		{
 			return;
 		}
 		
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -229,7 +229,7 @@ public class Fort
 	}
 	
 	// This method updates the fort tax rate
-	public void setTaxPercent(PlayerInstance player, int taxPercent)
+	public void setTaxPercent(Player player, int taxPercent)
 	{
 		int maxTax;
 		
@@ -276,7 +276,7 @@ public class Fort
 	{
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			DoorInstance door = _doors.get(i);
+			Door door = _doors.get(i);
 			if (door.getCurrentHp() >= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
@@ -305,7 +305,7 @@ public class Fort
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door == null)
 		{
 			return;
@@ -402,7 +402,7 @@ public class Fort
 				set.set("mDef", rs.getInt("mDef"));
 				_doorDefault.add(set);
 				
-				final DoorInstance door = DoorData.createDoor(set);
+				final Door door = DoorData.createDoor(set);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorData.getInstance().putDoor(door);
@@ -522,7 +522,7 @@ public class Fort
 		return _ownerId;
 	}
 	
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -531,7 +531,7 @@ public class Fort
 		
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			final DoorInstance door = _doors.get(i);
+			final Door door = _doors.get(i);
 			if (door.getDoorId() == doorId)
 			{
 				return door;
@@ -540,7 +540,7 @@ public class Fort
 		return null;
 	}
 	
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}

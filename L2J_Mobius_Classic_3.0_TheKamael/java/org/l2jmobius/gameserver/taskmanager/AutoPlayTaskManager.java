@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
 
 /**
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro
  */
 public class AutoPlayTaskManager implements Runnable
 {
-	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> PLAYERS = ConcurrentHashMap.newKeySet();
 	private static boolean _working = false;
 	
 	protected AutoPlayTaskManager()
@@ -53,7 +53,7 @@ public class AutoPlayTaskManager implements Runnable
 		}
 		_working = true;
 		
-		PLAY: for (PlayerInstance player : PLAYERS)
+		PLAY: for (Player player : PLAYERS)
 		{
 			if (!player.isOnline() || player.isInOfflineMode() || !Config.ENABLE_AUTO_PLAY)
 			{
@@ -70,7 +70,7 @@ public class AutoPlayTaskManager implements Runnable
 			final WorldObject target = player.getTarget();
 			if ((target != null) && target.isMonster())
 			{
-				final MonsterInstance monster = (MonsterInstance) target;
+				final Monster monster = (Monster) target;
 				if (monster.isAlikeDead())
 				{
 					player.setTarget(null);
@@ -95,7 +95,7 @@ public class AutoPlayTaskManager implements Runnable
 			// Pickup.
 			if (player.getAutoPlaySettings().doPickup())
 			{
-				PICKUP: for (ItemInstance droppedItem : World.getInstance().getVisibleObjectsInRange(player, ItemInstance.class, 200))
+				PICKUP: for (Item droppedItem : World.getInstance().getVisibleObjectsInRange(player, Item.class, 200))
 				{
 					// Check if item is reachable.
 					if ((droppedItem == null) //
@@ -125,9 +125,9 @@ public class AutoPlayTaskManager implements Runnable
 			}
 			
 			// Find target.
-			MonsterInstance monster = null;
+			Monster monster = null;
 			double closestDistance = Double.MAX_VALUE;
-			TARGET: for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(player, MonsterInstance.class, player.getAutoPlaySettings().isShortRange() ? 600 : 1400))
+			TARGET: for (Monster nearby : World.getInstance().getVisibleObjectsInRange(player, Monster.class, player.getAutoPlaySettings().isShortRange() ? 600 : 1400))
 			{
 				// Skip unavailable monsters.
 				if ((nearby == null) || nearby.isAlikeDead())
@@ -171,7 +171,7 @@ public class AutoPlayTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void doAutoPlay(PlayerInstance player)
+	public void doAutoPlay(Player player)
 	{
 		if (!PLAYERS.contains(player))
 		{
@@ -180,17 +180,17 @@ public class AutoPlayTaskManager implements Runnable
 		}
 	}
 	
-	public void stopAutoPlay(PlayerInstance player)
+	public void stopAutoPlay(Player player)
 	{
 		PLAYERS.remove(player);
 	}
 	
-	public boolean isAutoPlay(PlayerInstance player)
+	public boolean isAutoPlay(Player player)
 	{
 		return PLAYERS.contains(player);
 	}
 	
-	private boolean isMageCaster(PlayerInstance player)
+	private boolean isMageCaster(Player player)
 	{
 		return player.isMageClass() && (player.getRace() != Race.ORC);
 	}

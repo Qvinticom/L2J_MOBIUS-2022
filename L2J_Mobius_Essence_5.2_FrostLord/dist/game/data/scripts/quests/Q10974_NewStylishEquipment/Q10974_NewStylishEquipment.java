@@ -17,9 +17,9 @@
 package quests.Q10974_NewStylishEquipment;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -57,7 +57,7 @@ public class Q10974_NewStylishEquipment extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -96,7 +96,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				if (qs.isCond(1))
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
+					SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -134,7 +134,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				if (qs.isCond(2))
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()))
+					SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -172,7 +172,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				if (qs.isCond(3))
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()))
+					SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -206,7 +206,7 @@ public class Q10974_NewStylishEquipment extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -221,7 +221,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				case 1:
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
+					SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(ADVENTURER_SHEEP_HAT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -243,7 +243,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				case 2:
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()))
+					SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(ADVENTURER_BELT.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{
@@ -265,7 +265,7 @@ public class Q10974_NewStylishEquipment extends Quest
 				case 3:
 				{
 					boolean foundEnchant = false;
-					SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()))
+					SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(ADVENTURER_CLOAK.getId()))
 					{
 						if (item.getEnchantLevel() > 0)
 						{

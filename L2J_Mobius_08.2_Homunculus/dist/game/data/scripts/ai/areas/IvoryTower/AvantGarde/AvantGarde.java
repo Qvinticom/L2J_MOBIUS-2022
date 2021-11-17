@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
@@ -51,7 +51,7 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAcquireSkill(Npc npc, PlayerInstance player, Skill skill, AcquireSkillType type)
+	public String onAcquireSkill(Npc npc, Player player, Skill skill, AcquireSkillType type)
 	{
 		if (type == AcquireSkillType.TRANSFORM)
 		{
@@ -61,7 +61,7 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -107,13 +107,13 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "32323-01.html";
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		return "32323-01.html";
 	}
@@ -122,7 +122,7 @@ public class AvantGarde extends AbstractNpcAI
 	 * This displays Transformation Skill List to the player.
 	 * @param player the active character.
 	 */
-	public static void showTransformSkillList(PlayerInstance player)
+	public static void showTransformSkillList(Player player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableTransformSkills(player);
 		if (skills.isEmpty())

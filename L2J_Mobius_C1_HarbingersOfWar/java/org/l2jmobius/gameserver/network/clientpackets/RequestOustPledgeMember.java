@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
@@ -38,7 +38,7 @@ public class RequestOustPledgeMember extends ClientBasePacket
 		super(rawPacket);
 		final String target = readS();
 		// Connection con = client.getConnection();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (!activeChar.isClanLeader())
 		{
 			return;
@@ -58,7 +58,7 @@ public class RequestOustPledgeMember extends ClientBasePacket
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(target));
 		if (member.isOnline())
 		{
-			final PlayerInstance player = member.getPlayerInstance();
+			final Player player = member.getPlayer();
 			player.setClan(null);
 			player.setClanId(0);
 			player.setTitle("");

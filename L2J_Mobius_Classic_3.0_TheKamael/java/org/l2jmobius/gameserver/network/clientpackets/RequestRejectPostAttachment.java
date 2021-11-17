@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -52,7 +52,7 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -90,7 +90,7 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 		client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
 		client.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
 		
-		final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
+		final Player sender = World.getInstance().getPlayer(msg.getSenderId());
 		if (sender != null)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);

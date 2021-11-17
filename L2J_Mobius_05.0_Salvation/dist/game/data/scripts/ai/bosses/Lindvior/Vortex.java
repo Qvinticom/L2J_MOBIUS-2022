@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
@@ -48,13 +48,13 @@ public class Vortex extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
 			case "rnd_small":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 250, attackers ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 250, attackers ->
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
@@ -76,7 +76,7 @@ public class Vortex extends AbstractNpcAI
 			}
 			case "rnd_big":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 500, attackers ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 500, attackers ->
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
@@ -156,7 +156,7 @@ public class Vortex extends AbstractNpcAI
 	
 	private void attackRandomTarget(Npc npc)
 	{
-		final Collection<PlayerInstance> players = World.getInstance().getVisibleObjects(npc, PlayerInstance.class);
+		final Collection<Player> players = World.getInstance().getVisibleObjects(npc, Player.class);
 		{
 			if ((players == null) || players.isEmpty())
 			{

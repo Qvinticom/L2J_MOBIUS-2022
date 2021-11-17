@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -209,10 +209,10 @@ public class BotReportTable
 	
 	/**
 	 * Attempts to perform a bot report. R/W to ip and char id registry is synchronized. Triggers bot punish management
-	 * @param reporter (PlayerInstance who issued the report)
+	 * @param reporter (Player who issued the report)
 	 * @return True, if the report was registered, False otherwise
 	 */
-	public boolean reportBot(PlayerInstance reporter)
+	public boolean reportBot(Player reporter)
 	{
 		final WorldObject target = reporter.getTarget();
 		if (target == null)
@@ -342,10 +342,10 @@ public class BotReportTable
 	
 	/**
 	 * Find the punishs to apply to the given bot and triggers the punish method.
-	 * @param bot (PlayerInstance to be punished)
+	 * @param bot (Player to be punished)
 	 * @param rcd (RepotedCharData linked to this bot)
 	 */
-	private void handleReport(PlayerInstance bot, ReportedCharData rcd)
+	private void handleReport(Player bot, ReportedCharData rcd)
 	{
 		// Report count punishment
 		punishBot(bot, _punishments.get(rcd.getReportCount()));
@@ -363,10 +363,10 @@ public class BotReportTable
 	
 	/**
 	 * Applies the given punish to the bot if the action is secure
-	 * @param bot (PlayerInstance to punish)
+	 * @param bot (Player to punish)
 	 * @param ph (PunishHolder containing the debuff and a possible system message to send)
 	 */
-	private void punishBot(PlayerInstance bot, PunishHolder ph)
+	private void punishBot(Player bot, PunishHolder ph)
 	{
 		if (ph != null)
 		{
@@ -445,10 +445,10 @@ public class BotReportTable
 	
 	/**
 	 * Returns a integer representative number from a connection
-	 * @param player (The PlayerInstance owner of the connection)
+	 * @param player (The Player owner of the connection)
 	 * @return int (hashed ip)
 	 */
-	private static int hashIp(PlayerInstance player)
+	private static int hashIp(Player player)
 	{
 		final String con = player.getClient().getConnectionAddress().getHostAddress();
 		final String[] rawByte = con.split("\\.");

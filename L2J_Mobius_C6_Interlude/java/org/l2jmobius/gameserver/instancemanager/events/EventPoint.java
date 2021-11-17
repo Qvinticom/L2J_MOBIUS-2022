@@ -21,20 +21,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class EventPoint
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private Integer _points = 0;
 	
-	public EventPoint(PlayerInstance player)
+	public EventPoint(Player player)
 	{
 		_player = player;
 		loadFromDB();
 	}
 	
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
 		return _player;
 	}

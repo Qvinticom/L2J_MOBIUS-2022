@@ -21,9 +21,9 @@ import java.util.logging.Level;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
@@ -45,7 +45,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((_objectId == 0) || (player == null))
 		{
 			return;
@@ -56,8 +56,8 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		final ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
+		final Item scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
 		if ((item == null) || (scroll == null))
 		{
 			return;
@@ -67,7 +67,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
 		{
 			player.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			player.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{

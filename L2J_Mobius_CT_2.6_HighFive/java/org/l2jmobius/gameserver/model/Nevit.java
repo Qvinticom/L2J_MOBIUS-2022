@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
@@ -42,12 +42,12 @@ import org.l2jmobius.gameserver.network.serverpackets.ExNevitAdventTimeChange;
  */
 public class Nevit implements IUniqueId
 {
-	public PlayerInstance _player;
+	public Player _player;
 	
 	private ScheduledFuture<?> _adventTask;
 	private ScheduledFuture<?> _nevitEffectTask;
 	
-	public Nevit(PlayerInstance player)
+	public Nevit(Player player)
 	{
 		_player = player;
 		if (Config.NEVIT_ENABLED)
@@ -248,7 +248,7 @@ public class Nevit implements IUniqueId
 		}
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

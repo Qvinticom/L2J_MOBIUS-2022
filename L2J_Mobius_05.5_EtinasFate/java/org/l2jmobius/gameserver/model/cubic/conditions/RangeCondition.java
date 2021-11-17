@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.cubic.conditions;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.cubic.CubicInstance;
+import org.l2jmobius.gameserver.model.cubic.Cubic;
 
 /**
  * @author Sdw
@@ -33,7 +33,7 @@ public class RangeCondition implements ICubicCondition
 	}
 	
 	@Override
-	public boolean test(CubicInstance cubic, Creature owner, WorldObject target)
+	public boolean test(Cubic cubic, Creature owner, WorldObject target)
 	{
 		return owner.calculateDistance2D(target) <= _range;
 	}

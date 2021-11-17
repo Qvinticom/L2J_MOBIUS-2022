@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.StopMoveWithLocation;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
@@ -35,7 +35,7 @@ public class StopMove extends ClientBasePacket
 		final int z = readD();
 		final int heading = readD();
 		
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		player.stopMove();
 		final StopMoveWithLocation smwl = new StopMoveWithLocation(player);
 		client.getActiveChar().sendPacket(smwl);

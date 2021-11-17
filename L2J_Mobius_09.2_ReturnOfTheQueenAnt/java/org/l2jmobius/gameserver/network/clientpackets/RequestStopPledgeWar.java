@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
@@ -41,7 +41,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -76,11 +76,11 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		
 		for (ClanMember member : playerClan.getMembers())
 		{
-			if ((member == null) || (member.getPlayerInstance() == null))
+			if ((member == null) || (member.getPlayer() == null))
 			{
 				continue;
 			}
-			if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(member.getPlayerInstance()))
+			if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(member.getPlayer()))
 			{
 				player.sendPacket(SystemMessageId.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE);
 				return;
@@ -90,12 +90,12 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		// Reduce reputation.
 		playerClan.takeReputationScore(5000, true);
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
-		for (PlayerInstance member : playerClan.getOnlineMembers(0))
+		for (Player member : playerClan.getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();
 		}
 		
-		for (PlayerInstance member : clan.getOnlineMembers(0))
+		for (Player member : clan.getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();
 		}

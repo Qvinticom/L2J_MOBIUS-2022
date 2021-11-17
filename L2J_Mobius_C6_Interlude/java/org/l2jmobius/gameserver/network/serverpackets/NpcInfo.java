@@ -20,16 +20,16 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeNpc;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -73,9 +73,9 @@ public class NpcInfo implements IClientOutgoingPacket
 	 * @param cha the cha
 	 * @param attacker the attacker
 	 */
-	public NpcInfo(NpcInstance cha, Creature attacker)
+	public NpcInfo(Npc cha, Creature attacker)
 	{
-		if (cha.getFakePlayerInstance() != null)
+		if (cha.getFakePlayer() != null)
 		{
 			attacker.sendPacket(new FakePlayerInfo(cha));
 			attacker.broadcastPacket(new StopRotation(cha, cha.getHeading(), 0));
@@ -91,10 +91,10 @@ public class NpcInfo implements IClientOutgoingPacket
 		_collisionHeight = cha.getTemplate().getFCollisionHeight();
 		_collisionRadius = cha.getTemplate().getFCollisionRadius();
 		
-		if (Config.SHOW_NPC_CLAN_CREST && (cha.getCastle() != null) && (cha.getCastle().getOwnerId() != 0) && !cha.isMonster() && !cha.isArtefact() && !(cha instanceof ControlTowerInstance))
+		if (Config.SHOW_NPC_CLAN_CREST && (cha.getCastle() != null) && (cha.getCastle().getOwnerId() != 0) && !cha.isMonster() && !cha.isArtefact() && !(cha instanceof ControlTower))
 		{
 			if (cha.isInsideZone(ZoneId.TOWN) || cha.isInsideZone(ZoneId.CASTLE) //
-				|| (cha instanceof GuardInstance) || (cha instanceof SiegeGuardInstance) || (cha instanceof FortSiegeGuardInstance) || (cha instanceof SiegeNpcInstance))
+				|| (cha instanceof Guard) || (cha instanceof SiegeGuard) || (cha instanceof FortSiegeGuard) || (cha instanceof SiegeNpc))
 			{
 				final Clan clan = ClanTable.getInstance().getClan(cha.getCastle().getOwnerId());
 				_clanCrest = clan.getCrestId();
@@ -137,7 +137,7 @@ public class NpcInfo implements IClientOutgoingPacket
 				{
 					t2 += " ";
 				}
-				final MonsterInstance monster = (MonsterInstance) cha;
+				final Monster monster = (Monster) cha;
 				if (monster.isAggressive())
 				{
 					t2 += "[A]"; // Aggressive.
@@ -178,7 +178,7 @@ public class NpcInfo implements IClientOutgoingPacket
 		_isSummoned = cha.isShowSummonAnimation();
 		_collisionHeight = _creature.getTemplate().getFCollisionHeight();
 		_collisionRadius = _creature.getTemplate().getFCollisionRadius();
-		if (cha.getTemplate().isServerSideName() || (cha instanceof PetInstance) || (cha instanceof SummonInstance))
+		if (cha.getTemplate().isServerSideName() || (cha instanceof Pet) || (cha instanceof Servitor))
 		{
 			_name = _creature.getName();
 			_title = cha.getTitle();

@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.model.Couple;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -50,14 +50,14 @@ public class Wedding extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (player.getPartnerId() == 0)
 		{
 			return "NoPartner.html";
 		}
 		
-		final PlayerInstance partner = World.getInstance().getPlayer(player.getPartnerId());
+		final Player partner = World.getInstance().getPlayer(player.getPartnerId());
 		if ((partner == null) || !partner.isOnline())
 		{
 			return "NotFound.html";
@@ -171,13 +171,13 @@ public class Wedding extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final String htmltext = getHtm(player, "Start.html");
 		return htmltext.replaceAll("%fee%", String.valueOf(Config.WEDDING_PRICE));
 	}
 	
-	private String sendHtml(PlayerInstance player, String fileName, String regex, String replacement)
+	private String sendHtml(Player player, String fileName, String regex, String replacement)
 	{
 		String html = getHtm(player, fileName);
 		if ((regex != null) && (replacement != null))
@@ -188,11 +188,11 @@ public class Wedding extends AbstractNpcAI
 		return html;
 	}
 	
-	private static boolean isWearingFormalWear(PlayerInstance player)
+	private static boolean isWearingFormalWear(Player player)
 	{
 		if (Config.WEDDING_FORMALWEAR)
 		{
-			final ItemInstance formalWear = player.getChestArmorInstance();
+			final Item formalWear = player.getChestArmorInstance();
 			return (formalWear != null) && (formalWear.getId() == FORMAL_WEAR);
 		}
 		return true;

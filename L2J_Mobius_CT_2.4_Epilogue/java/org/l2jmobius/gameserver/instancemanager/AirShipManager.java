@@ -30,9 +30,9 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.AirShipTeleportList;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableAirShip;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAirShipTeleportList;
 
@@ -46,7 +46,7 @@ public class AirShipManager
 	
 	private CreatureTemplate _airShipTemplate = null;
 	private final Map<Integer, StatSet> _airShipsInfo = new HashMap<>();
-	private final Map<Integer, AirShipInstance> _airShips = new HashMap<>();
+	private final Map<Integer, AirShip> _airShips = new HashMap<>();
 	private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
 	
 	protected AirShipManager()
@@ -89,9 +89,9 @@ public class AirShipManager
 		load();
 	}
 	
-	public AirShipInstance getNewAirShip(int x, int y, int z, int heading)
+	public AirShip getNewAirShip(int x, int y, int z, int heading)
 	{
-		final AirShipInstance airShip = new AirShipInstance(_airShipTemplate);
+		final AirShip airShip = new AirShip(_airShipTemplate);
 		airShip.setHeading(heading);
 		airShip.setXYZInvisible(x, y, z);
 		airShip.spawnMe();
@@ -100,7 +100,7 @@ public class AirShipManager
 		return airShip;
 	}
 	
-	public AirShipInstance getNewAirShip(int x, int y, int z, int heading, int ownerId)
+	public AirShip getNewAirShip(int x, int y, int z, int heading, int ownerId)
 	{
 		final StatSet info = _airShipsInfo.get(ownerId);
 		if (info == null)
@@ -108,7 +108,7 @@ public class AirShipManager
 			return null;
 		}
 		
-		final AirShipInstance airShip;
+		final AirShip airShip;
 		if (_airShips.containsKey(ownerId))
 		{
 			airShip = _airShips.get(ownerId);
@@ -116,7 +116,7 @@ public class AirShipManager
 		}
 		else
 		{
-			airShip = new ControllableAirShipInstance(_airShipTemplate, ownerId);
+			airShip = new ControllableAirShip(_airShipTemplate, ownerId);
 			_airShips.put(ownerId, airShip);
 			
 			airShip.setMaxFuel(600);
@@ -131,7 +131,7 @@ public class AirShipManager
 		return airShip;
 	}
 	
-	public void removeAirShip(AirShipInstance ship)
+	public void removeAirShip(AirShip ship)
 	{
 		if (ship.getOwnerId() == 0)
 		{
@@ -178,7 +178,7 @@ public class AirShipManager
 	
 	public boolean hasAirShip(int ownerId)
 	{
-		final AirShipInstance ship = _airShips.get(ownerId);
+		final AirShip ship = _airShips.get(ownerId);
 		return (ship != null) && (ship.isSpawned() || ship.isTeleporting());
 	}
 	
@@ -192,14 +192,14 @@ public class AirShipManager
 		_teleports.put(dockId, new AirShipTeleportList(locationId, fuelConsumption, tp));
 	}
 	
-	public void sendAirShipTeleportList(PlayerInstance player)
+	public void sendAirShipTeleportList(Player player)
 	{
 		if ((player == null) || !player.isInAirShip())
 		{
 			return;
 		}
 		
-		final AirShipInstance ship = player.getAirShip();
+		final AirShip ship = player.getAirShip();
 		if (!ship.isCaptain(player) || !ship.isInDock() || ship.isMoving())
 		{
 			return;

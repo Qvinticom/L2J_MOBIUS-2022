@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.enums.StorageType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -75,7 +75,7 @@ public class EnlargeSlot extends AbstractEffect
 		effected.getStat().mergeAdd(stat, _amount);
 		if (effected.isPlayer())
 		{
-			effected.sendPacket(new ExStorageMaxCount((PlayerInstance) effected));
+			effected.sendPacket(new ExStorageMaxCount((Player) effected));
 		}
 	}
 }

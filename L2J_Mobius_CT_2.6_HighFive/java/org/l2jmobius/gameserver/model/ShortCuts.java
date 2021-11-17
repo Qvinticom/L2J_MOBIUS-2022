@@ -27,9 +27,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.ShortcutType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IRestorable;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
@@ -39,10 +39,10 @@ public class ShortCuts implements IRestorable
 {
 	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	private static final int MAX_SHORTCUTS_PER_BAR = 12;
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private final Map<Integer, Shortcut> _shortCuts = new ConcurrentHashMap<>();
 	
-	public ShortCuts(PlayerInstance owner)
+	public ShortCuts(Player owner)
 	{
 		_owner = owner;
 	}
@@ -69,7 +69,7 @@ public class ShortCuts implements IRestorable
 		// Verify shortcut
 		if (shortcut.getType() == ShortcutType.ITEM)
 		{
-			final ItemInstance item = _owner.getInventory().getItemByObjectId(shortcut.getId());
+			final Item item = _owner.getInventory().getItemByObjectId(shortcut.getId());
 			if (item == null)
 			{
 				return;
@@ -118,7 +118,7 @@ public class ShortCuts implements IRestorable
 		deleteShortCutFromDb(old);
 		if (old.getType() == ShortcutType.ITEM)
 		{
-			final ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
+			final Item item = _owner.getInventory().getItemByObjectId(old.getId());
 			if ((item != null) && (item.getItemType() == EtcItemType.SHOT) && _owner.removeAutoSoulShot(item.getId()))
 			{
 				_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0));
@@ -196,7 +196,7 @@ public class ShortCuts implements IRestorable
 		{
 			if (sc.getType() == ShortcutType.ITEM)
 			{
-				final ItemInstance item = _owner.getInventory().getItemByObjectId(sc.getId());
+				final Item item = _owner.getInventory().getItemByObjectId(sc.getId());
 				if (item == null)
 				{
 					deleteShortCut(sc.getSlot(), sc.getPage());

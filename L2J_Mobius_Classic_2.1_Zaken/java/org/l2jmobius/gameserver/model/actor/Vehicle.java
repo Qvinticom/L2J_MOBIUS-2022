@@ -31,12 +31,11 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.VehicleStat;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -50,7 +49,7 @@ import org.l2jmobius.gameserver.util.Util;
 public abstract class Vehicle extends Creature
 {
 	protected int _dockId = 0;
-	protected final Set<PlayerInstance> _passengers = ConcurrentHashMap.newKeySet();
+	protected final Set<Player> _passengers = ConcurrentHashMap.newKeySet();
 	protected Location _oustLoc = null;
 	private Runnable _engine = null;
 	
@@ -253,10 +252,10 @@ public abstract class Vehicle extends Creature
 	
 	public void oustPlayers()
 	{
-		PlayerInstance player;
+		Player player;
 		
 		// Use iterator because oustPlayer will try to remove player from _passengers
-		final Iterator<PlayerInstance> iter = _passengers.iterator();
+		final Iterator<Player> iter = _passengers.iterator();
 		while (iter.hasNext())
 		{
 			player = iter.next();
@@ -268,14 +267,14 @@ public abstract class Vehicle extends Creature
 		}
 	}
 	
-	public void oustPlayer(PlayerInstance player)
+	public void oustPlayer(Player player)
 	{
 		player.setVehicle(null);
 		player.setInVehiclePosition(null);
 		removePassenger(player);
 	}
 	
-	public boolean addPassenger(PlayerInstance player)
+	public boolean addPassenger(Player player)
 	{
 		if ((player == null) || _passengers.contains(player))
 		{
@@ -292,7 +291,7 @@ public abstract class Vehicle extends Creature
 		return true;
 	}
 	
-	public void removePassenger(PlayerInstance player)
+	public void removePassenger(Player player)
 	{
 		try
 		{
@@ -308,14 +307,14 @@ public abstract class Vehicle extends Creature
 		return _passengers.isEmpty();
 	}
 	
-	public Set<PlayerInstance> getPassengers()
+	public Set<Player> getPassengers()
 	{
 		return _passengers;
 	}
 	
 	public void broadcastToPassengers(IClientOutgoingPacket sm)
 	{
-		for (PlayerInstance player : _passengers)
+		for (Player player : _passengers)
 		{
 			if (player != null)
 			{
@@ -334,13 +333,13 @@ public abstract class Vehicle extends Creature
 	 */
 	public void payForRide(int itemId, int count, int oustX, int oustY, int oustZ)
 	{
-		World.getInstance().forEachVisibleObjectInRange(this, PlayerInstance.class, 1000, player ->
+		World.getInstance().forEachVisibleObjectInRange(this, Player.class, 1000, player ->
 		{
 			if (player.isInBoat() && (player.getBoat() == this))
 			{
 				if (itemId > 0)
 				{
-					final ItemInstance ticket = player.getInventory().getItemByItemId(itemId);
+					final Item ticket = player.getInventory().getItemByItemId(itemId);
 					if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null))
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
@@ -360,7 +359,7 @@ public abstract class Vehicle extends Creature
 	public boolean updatePosition()
 	{
 		final boolean result = super.updatePosition();
-		for (PlayerInstance player : _passengers)
+		for (Player player : _passengers)
 		{
 			if ((player != null) && (player.getVehicle() == this))
 			{
@@ -383,7 +382,7 @@ public abstract class Vehicle extends Creature
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		
-		for (PlayerInstance player : _passengers)
+		for (Player player : _passengers)
 		{
 			if (player != null)
 			{
@@ -459,7 +458,7 @@ public abstract class Vehicle extends Creature
 	}
 	
 	@Override
-	public ItemInstance getActiveWeaponInstance()
+	public Item getActiveWeaponInstance()
 	{
 		return null;
 	}
@@ -471,7 +470,7 @@ public abstract class Vehicle extends Creature
 	}
 	
 	@Override
-	public ItemInstance getSecondaryWeaponInstance()
+	public Item getSecondaryWeaponInstance()
 	{
 		return null;
 	}

@@ -16,14 +16,14 @@
  */
 package org.l2jmobius.gameserver.model.actor.request;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class RewardRequest extends AbstractRequest
 {
-	public RewardRequest(PlayerInstance player)
+	public RewardRequest(Player player)
 	{
 		super(player);
 	}

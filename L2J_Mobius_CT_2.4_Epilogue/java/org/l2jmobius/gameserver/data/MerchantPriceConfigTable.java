@@ -33,7 +33,7 @@ import org.xml.sax.SAXException;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
@@ -54,7 +54,7 @@ public class MerchantPriceConfigTable
 	private final Map<Integer, MerchantPriceConfig> _mpcs = new HashMap<>();
 	private MerchantPriceConfig _defaultMpc;
 	
-	public MerchantPriceConfig getMerchantPriceConfig(MerchantInstance npc)
+	public MerchantPriceConfig getMerchantPriceConfig(Merchant npc)
 	{
 		for (MerchantPriceConfig mpc : _mpcs.values())
 		{

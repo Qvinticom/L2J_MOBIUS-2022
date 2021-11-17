@@ -20,19 +20,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoom;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PartyMatchList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final int _loc;
 	private final int _lim;
 	private final List<PartyMatchRoom> _rooms;
 	
-	public PartyMatchList(PlayerInstance player, int auto, int location, int limit)
+	public PartyMatchList(Player player, int auto, int location, int limit)
 	{
 		_player = player;
 		_loc = location;

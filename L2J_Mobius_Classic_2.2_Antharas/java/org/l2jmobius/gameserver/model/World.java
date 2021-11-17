@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
@@ -80,15 +80,15 @@ public class World
 	private static final int REGIONS_Y = (WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y;
 	
 	/** Map containing all the players in game. */
-	private static final Map<Integer, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
+	private static final Map<Integer, Player> _allPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Good players in game. */
-	private static final Map<Integer, PlayerInstance> _allGoodPlayers = new ConcurrentHashMap<>();
+	private static final Map<Integer, Player> _allGoodPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Evil players in game. */
-	private static final Map<Integer, PlayerInstance> _allEvilPlayers = new ConcurrentHashMap<>();
+	private static final Map<Integer, Player> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
 	private static final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
-	private static final Map<Integer, PetInstance> _petsInstance = new ConcurrentHashMap<>();
+	private static final Map<Integer, Pet> _petsInstance = new ConcurrentHashMap<>();
 	
 	private static final AtomicInteger _partyNumber = new AtomicInteger();
 	private static final AtomicInteger _memberInPartyNumber = new AtomicInteger();
@@ -151,13 +151,13 @@ public class World
 		
 		if (object.isPlayer())
 		{
-			final PlayerInstance newPlayer = (PlayerInstance) object;
+			final Player newPlayer = (Player) object;
 			if (newPlayer.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
 			{
 				return;
 			}
 			
-			final PlayerInstance existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
+			final Player existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
 			if (existingPlayer != null)
 			{
 				Disconnection.of(existingPlayer).defaultSequence(LeaveWorld.STATIC_PACKET);
@@ -187,7 +187,7 @@ public class World
 		_allObjects.remove(object.getObjectId());
 		if (object.isPlayer())
 		{
-			final PlayerInstance player = (PlayerInstance) object;
+			final Player player = (Player) object;
 			if (player.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
 			{
 				return;
@@ -235,17 +235,17 @@ public class World
 		return _allObjects.size();
 	}
 	
-	public Collection<PlayerInstance> getPlayers()
+	public Collection<Player> getPlayers()
 	{
 		return _allPlayers.values();
 	}
 	
-	public Collection<PlayerInstance> getAllGoodPlayers()
+	public Collection<Player> getAllGoodPlayers()
 	{
 		return _allGoodPlayers.values();
 	}
 	
-	public Collection<PlayerInstance> getAllEvilPlayers()
+	public Collection<Player> getAllEvilPlayers()
 	{
 		return _allEvilPlayers.values();
 	}
@@ -255,7 +255,7 @@ public class World
 	 * @param name Name of the player to get Instance
 	 * @return the player instance corresponding to the given name.
 	 */
-	public PlayerInstance getPlayer(String name)
+	public Player getPlayer(String name)
 	{
 		return getPlayer(CharNameTable.getInstance().getIdByName(name));
 	}
@@ -264,7 +264,7 @@ public class World
 	 * @param objectId of the player to get Instance
 	 * @return the player instance corresponding to the given object ID.
 	 */
-	public PlayerInstance getPlayer(int objectId)
+	public Player getPlayer(int objectId)
 	{
 		return _allPlayers.get(objectId);
 	}
@@ -273,7 +273,7 @@ public class World
 	 * @param ownerId ID of the owner
 	 * @return the pet instance from the given ownerId.
 	 */
-	public PetInstance getPet(int ownerId)
+	public Pet getPet(int ownerId)
 	{
 		return _petsInstance.get(ownerId);
 	}
@@ -281,10 +281,10 @@ public class World
 	/**
 	 * Add the given pet instance from the given ownerId.
 	 * @param ownerId ID of the owner
-	 * @param pet PetInstance of the pet
+	 * @param pet Pet of the pet
 	 * @return
 	 */
-	public PetInstance addPet(int ownerId, PetInstance pet)
+	public Pet addPet(int ownerId, Pet pet)
 	{
 		return _petsInstance.put(ownerId, pet);
 	}
@@ -299,18 +299,18 @@ public class World
 	}
 	
 	/**
-	 * Add a WorldObject in the world. <b><u>Concept</u>:</b> WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
-	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures <b><u> Actions</u>:</b>
+	 * Add a WorldObject in the world. <b><u>Concept</u>:</b> WorldObject (including Player) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * Player are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures <b><u> Actions</u>:</b>
 	 * <li>Add the WorldObject object in _allPlayers* of World</li>
 	 * <li>Add the WorldObject object in _gmList** of GmListTable</li>
 	 * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
-	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding PlayerInstance in its _knownPlayer</li><br>
-	 * <i>* only if object is a PlayerInstance</i><br>
-	 * <i>** only if object is a GM PlayerInstance</i> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</b></font><br>
+	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding Player in its _knownPlayer</li><br>
+	 * <i>* only if object is a Player</i><br>
+	 * <i>** only if object is a GM Player</i> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</b></font><br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</b></font> <b><u> Example of use</u>:</b>
 	 * <li>Drop an Item</li>
 	 * <li>Spawn a Creature</li>
-	 * <li>Apply Death Penalty of a PlayerInstance</li><br>
+	 * <li>Apply Death Penalty of a Player</li><br>
 	 * @param object L2object to add in the world
 	 * @param newRegion WorldRegion in wich the object will be add (not used)
 	 */
@@ -323,15 +323,15 @@ public class World
 		
 		forEachVisibleObject(object, WorldObject.class, wo ->
 		{
-			if (object.isPlayer() && wo.isVisibleFor((PlayerInstance) object))
+			if (object.isPlayer() && wo.isVisibleFor((Player) object))
 			{
-				wo.sendInfo((PlayerInstance) object);
+				wo.sendInfo((Player) object);
 				if (wo.isCreature())
 				{
 					final CreatureAI ai = ((Creature) wo).getAI();
 					if (ai != null)
 					{
-						ai.describeStateToPlayer((PlayerInstance) object);
+						ai.describeStateToPlayer((Player) object);
 						if (wo.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 						{
 							ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -340,15 +340,15 @@ public class World
 				}
 			}
 			
-			if (wo.isPlayer() && object.isVisibleFor((PlayerInstance) wo))
+			if (wo.isPlayer() && object.isVisibleFor((Player) wo))
 			{
-				object.sendInfo((PlayerInstance) wo);
+				object.sendInfo((Player) wo);
 				if (object.isCreature())
 				{
 					final CreatureAI ai = ((Creature) object).getAI();
 					if (ai != null)
 					{
-						ai.describeStateToPlayer((PlayerInstance) wo);
+						ai.describeStateToPlayer((Player) wo);
 						if (object.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 						{
 							ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -359,7 +359,7 @@ public class World
 		});
 	}
 	
-	public static void addFactionPlayerToWorld(PlayerInstance player)
+	public static void addFactionPlayerToWorld(Player player)
 	{
 		if (player.isGood())
 		{
@@ -372,14 +372,14 @@ public class World
 	}
 	
 	/**
-	 * Remove a WorldObject from the world. <b><u>Concept</u>:</b> WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
-	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures <b><u> Actions</u>:</b>
+	 * Remove a WorldObject from the world. <b><u>Concept</u>:</b> WorldObject (including Player) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * Player are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures <b><u> Actions</u>:</b>
 	 * <li>Remove the WorldObject object from _allPlayers* of World</li>
 	 * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of WorldRegion</li>
 	 * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
 	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
-	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all PlayerInstance from its _knownPlayer</li> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World</b></font> <i>* only if object is a PlayerInstance</i><br>
-	 * <i>** only if object is a GM PlayerInstance</i> <b><u> Example of use</u>:</b>
+	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li> <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World</b></font> <i>* only if object is a Player</i><br>
+	 * <i>** only if object is a GM Player</i> <b><u> Example of use</u>:</b>
 	 * <li>Pickup an Item</li>
 	 * <li>Decay a Creature</li><br>
 	 * @param object L2object to remove from the world
@@ -536,15 +536,15 @@ public class World
 					continue;
 				}
 				
-				if (object.isPlayer() && wo.isVisibleFor((PlayerInstance) object))
+				if (object.isPlayer() && wo.isVisibleFor((Player) object))
 				{
-					wo.sendInfo((PlayerInstance) object);
+					wo.sendInfo((Player) object);
 					if (wo.isCreature())
 					{
 						final CreatureAI ai = ((Creature) wo).getAI();
 						if (ai != null)
 						{
-							ai.describeStateToPlayer((PlayerInstance) object);
+							ai.describeStateToPlayer((Player) object);
 							if (wo.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 							{
 								ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -553,15 +553,15 @@ public class World
 					}
 				}
 				
-				if (wo.isPlayer() && object.isVisibleFor((PlayerInstance) wo))
+				if (wo.isPlayer() && object.isVisibleFor((Player) wo))
 				{
-					object.sendInfo((PlayerInstance) wo);
+					object.sendInfo((Player) wo);
 					if (object.isCreature())
 					{
 						final CreatureAI ai = ((Creature) object).getAI();
 						if (ai != null)
 						{
-							ai.describeStateToPlayer((PlayerInstance) wo);
+							ai.describeStateToPlayer((Player) wo);
 							if (object.isMonster() && (ai.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 							{
 								ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -732,7 +732,7 @@ public class World
 	{
 		if (object.isPlayer())
 		{
-			((Creature) object).stopMove(((PlayerInstance) object).getLastServerPosition());
+			((Creature) object).stopMove(((Player) object).getLastServerPosition());
 		}
 		else if (object.isSummon())
 		{

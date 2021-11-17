@@ -31,9 +31,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -107,7 +107,7 @@ public class StoryOfTauti extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		switch (event)
@@ -120,7 +120,7 @@ public class StoryOfTauti extends AbstractInstance
 				if (party != null)
 				{
 					final Instance instance = player.getInstanceWorld();
-					for (PlayerInstance member : party.getMembers())
+					for (Player member : party.getMembers())
 					{
 						if (member != player)
 						{
@@ -156,7 +156,7 @@ public class StoryOfTauti extends AbstractInstance
 			{
 				final Npc deton = world.getNpc(DETON);
 				deton.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARE_YOU_THE_ONES_WHO_WILL_BE_HELPING_OUT_WELCOME_I_VE_BEEN_WAITING_FOR_YOU);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 				{
 					if ((pl != null) && ((pl.isInParty() && pl.getParty().isLeader(pl)) || pl.isGM()))
 					{
@@ -229,7 +229,7 @@ public class StoryOfTauti extends AbstractInstance
 			{
 				if ((world != null) && !npc.isDead())
 				{
-					for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 1000))
+					for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpc.class, 1000))
 					{
 						if ((nearby.getId() == FLAME_FLOWER) && npc.isScriptValue(0) && nearby.isScriptValue(0))
 						{
@@ -276,7 +276,7 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "attack_player":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1500, pl ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, pl ->
 				{
 					if ((pl != null) && !pl.isDead())
 					{
@@ -373,13 +373,13 @@ public class StoryOfTauti extends AbstractInstance
 			}
 			case "switch_quest":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 				{
 					if (pl.isInParty())
 					{
 						final Party party = pl.getParty();
-						final List<PlayerInstance> members = party.getMembers();
-						for (PlayerInstance member : members)
+						final List<Player> members = party.getMembers();
+						for (Player member : members)
 						{
 							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 							{
@@ -521,7 +521,7 @@ public class StoryOfTauti extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -603,13 +603,13 @@ public class StoryOfTauti extends AbstractInstance
 						archangel.setInvul(true);
 						SEAL_ARCHANGEL_WRATH.getSkill().applyEffects(npc, attacker);
 						world.setStatus(12);
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->
+						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 						{
 							if (pl.isInParty())
 							{
 								final Party party = pl.getParty();
-								final List<PlayerInstance> members = party.getMembers();
-								for (PlayerInstance member : members)
+								final List<Player> members = party.getMembers();
+								for (Player member : members)
 								{
 									if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 									{
@@ -640,7 +640,7 @@ public class StoryOfTauti extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -649,13 +649,13 @@ public class StoryOfTauti extends AbstractInstance
 			{
 				case FLAME_STACATO:
 				{
-					if (world.isStatus(3) && world.getAliveNpcs(MonsterInstance.class).isEmpty())
+					if (world.isStatus(3) && world.getAliveNpcs(Monster.class).isEmpty())
 					{
 						final Npc deton = world.getNpc(DETON);
 						cancelQuestTimer("end_instance", deton, null);
 						world.getPlayers().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, true, true, 0, 0, NpcStringId.ELAPSED_TIME)));
 						world.setStatus(4);
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, pl ->
+						World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, pl ->
 						{
 							if ((pl.isInParty() && pl.getParty().isLeader(pl)) || pl.isGM())
 							{
@@ -671,7 +671,7 @@ public class StoryOfTauti extends AbstractInstance
 				}
 				case FLAME_SCORPION:
 				{
-					if (world.isStatus(5) && (world.getAliveNpcs(MonsterInstance.class).size() < 2))
+					if (world.isStatus(5) && (world.getAliveNpcs(Monster.class).size() < 2))
 					{
 						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.LEFT_OR_RIGHT_WHICH_WAY, ExShowScreenMessage.BOTTOM_RIGHT, 10000, false));
 						startQuestTimer("msg_8", 3000, world.getNpc(DETON), null);
@@ -706,7 +706,7 @@ public class StoryOfTauti extends AbstractInstance
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		final Instance world = creature.getInstanceWorld();
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		if (isInInstance(world))
 		{
 			switch (zone.getId())
@@ -810,7 +810,7 @@ public class StoryOfTauti extends AbstractInstance
 				case FLAME_FLOWER:
 				{
 					npc.setCurrentHp(npc.getMaxHp() * 0.20);
-					for (Npc tombstone : World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 500))
+					for (Npc tombstone : World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 500))
 					{
 						if (tombstone.getId() == SEAL_TOMBSTONE)
 						{
@@ -837,13 +837,13 @@ public class StoryOfTauti extends AbstractInstance
 				}
 				case FLAME_GOLEM:
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1500, player ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, player ->
 					{
 						if (player.isInParty())
 						{
 							final Party party = player.getParty();
-							final List<PlayerInstance> members = party.getMembers();
-							for (PlayerInstance member : members)
+							final List<Player> members = party.getMembers();
+							for (Player member : members)
 							{
 								if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 								{
@@ -865,13 +865,13 @@ public class StoryOfTauti extends AbstractInstance
 				case FLAME_SCARAB:
 				{
 					startQuestTimer("attack_player", 2000, npc, null);
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1500, player ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1500, player ->
 					{
 						if (player.isInParty())
 						{
 							final Party party = player.getParty();
-							final List<PlayerInstance> members = party.getMembers();
-							for (PlayerInstance member : members)
+							final List<Player> members = party.getMembers();
+							for (Player member : members)
 							{
 								if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 								{
@@ -892,7 +892,7 @@ public class StoryOfTauti extends AbstractInstance
 				}
 				case NPC_1:
 				{
-					for (PlayerInstance nearby : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
+					for (Player nearby : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 2000))
 					{
 						if (world.getNpc(NPC_1).isScriptValue(0) && (nearby != null))
 						{
@@ -915,7 +915,7 @@ public class StoryOfTauti extends AbstractInstance
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -947,7 +947,7 @@ public class StoryOfTauti extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".html";
 	}

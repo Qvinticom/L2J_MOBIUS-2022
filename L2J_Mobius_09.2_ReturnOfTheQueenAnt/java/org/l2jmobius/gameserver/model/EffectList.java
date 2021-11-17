@@ -34,7 +34,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
@@ -1072,7 +1072,7 @@ public class EffectList
 	 */
 	public void updateEffectIcons(boolean partyOnly)
 	{
-		final PlayerInstance player = _owner.getActingPlayer();
+		final Player player = _owner.getActingPlayer();
 		if (player != null)
 		{
 			final Party party = player.getParty();

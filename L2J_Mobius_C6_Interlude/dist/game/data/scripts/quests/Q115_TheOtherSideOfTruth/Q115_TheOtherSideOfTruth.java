@@ -17,8 +17,8 @@
 package quests.Q115_TheOtherSideOfTruth;
 
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -54,7 +54,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
@@ -138,7 +138,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			{
 				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.setCond(9);
-				final NpcInstance man = qs.addSpawn(SUSPICIOUS, 104562, -107598, -3688, 0, false, 4000);
+				final Npc man = qs.addSpawn(SUSPICIOUS, 104562, -107598, -3688, 0, false, 4000);
 				man.broadcastPacket(new CreatureSay(man.getObjectId(), ChatType.GENERAL, man.getName(), "We meet again."));
 				startQuestTimer("2", 3700, man, player);
 				qs.giveItems(REPORT, 1);
@@ -155,7 +155,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 			{
 				qs.playSound(QuestState.SOUND_MIDDLE);
 				qs.setCond(8);
-				final NpcInstance man = qs.addSpawn(SUSPICIOUS, 117890, -126478, -2584, 0, false, 4000);
+				final Npc man = qs.addSpawn(SUSPICIOUS, 117890, -126478, -2584, 0, false, 4000);
 				man.broadcastPacket(new CreatureSay(man.getObjectId(), ChatType.GENERAL, man.getName(), "This looks like the right place..."));
 				startQuestTimer("1", 3700, man, player);
 				htmltext = "Sculpture-04.htm";
@@ -186,7 +186,7 @@ public class Q115_TheOtherSideOfTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();

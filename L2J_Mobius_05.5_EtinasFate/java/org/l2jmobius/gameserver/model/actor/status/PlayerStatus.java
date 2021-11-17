@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -38,9 +38,9 @@ import org.l2jmobius.gameserver.util.Util;
 
 public class PlayerStatus extends PlayableStatus
 {
-	private double _currentCp = 0; // Current CP of the PlayerInstance
+	private double _currentCp = 0; // Current CP of the Player
 	
-	public PlayerStatus(PlayerInstance player)
+	public PlayerStatus(Player player)
 	{
 		super(player);
 	}
@@ -130,7 +130,7 @@ public class PlayerStatus extends PlayableStatus
 		int mpDam = 0;
 		if ((attacker != null) && (attacker != getActiveChar()))
 		{
-			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final Player attackerPlayer = attacker.getActingPlayer();
 			if (attackerPlayer != null)
 			{
 				if (attackerPlayer.isGM() && !attackerPlayer.getAccessLevel().canGiveDamage())
@@ -194,7 +194,7 @@ public class PlayerStatus extends PlayableStatus
 				}
 			}
 			
-			final PlayerInstance caster = getActiveChar().getTransferingDamageTo();
+			final Player caster = getActiveChar().getTransferingDamageTo();
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
 				int transferDmg = 0;
@@ -203,7 +203,7 @@ public class PlayerStatus extends PlayableStatus
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
-					for (PlayerInstance member : caster.getParty().getMembers())
+					for (Player member : caster.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(1000, member, caster, false) && (member != caster))
 						{
@@ -249,7 +249,7 @@ public class PlayerStatus extends PlayableStatus
 			
 			if ((fullValue > 0) && !isDOT)
 			{
-				// Send a System Message to the PlayerInstance
+				// Send a System Message to the Player
 				SystemMessage smsg = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 				smsg.addString(getActiveChar().getName());
 				
@@ -378,7 +378,7 @@ public class PlayerStatus extends PlayableStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if ((currentCp != _currentCp) && broadcastPacket)
 		{
 			getActiveChar().broadcastStatusUpdate();
@@ -412,8 +412,8 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public PlayerInstance getActiveChar()
+	public Player getActiveChar()
 	{
-		return (PlayerInstance) super.getActiveChar();
+		return (Player) super.getActiveChar();
 	}
 }

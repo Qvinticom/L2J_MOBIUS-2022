@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.SkillTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -31,12 +31,12 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class CombatFlag
 {
-	protected PlayerInstance _player = null;
+	protected Player _player = null;
 	public int playerId = 0;
-	private ItemInstance _item = null;
+	private Item _item = null;
 	
 	private final Location _location;
-	public ItemInstance itemInstance;
+	public Item itemInstance;
 	
 	private final int _itemId;
 	
@@ -48,7 +48,7 @@ public class CombatFlag
 	
 	public synchronized void spawnMe()
 	{
-		ItemInstance i;
+		Item i;
 		
 		// Init the dropped ItemInstance and add it in the world as a visible object at the position where mob was last
 		i = ItemTable.getInstance().createItem("Combat", _itemId, 1, null, null);
@@ -69,7 +69,7 @@ public class CombatFlag
 		}
 	}
 	
-	public void activate(PlayerInstance player, ItemInstance item)
+	public void activate(Player player, Item item)
 	{
 		// if the player is mounted, attempt to unmount first. Only allow picking up the combat flag if dismount is successful.
 		if (player.isMounted() && !player.dismount())

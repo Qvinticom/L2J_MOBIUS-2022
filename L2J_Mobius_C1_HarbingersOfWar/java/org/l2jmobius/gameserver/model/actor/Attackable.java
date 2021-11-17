@@ -30,16 +30,15 @@ import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Npc;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
-import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.templates.NpcTemplate;
 import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.gameserver.threads.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
-public class Attackable extends NpcInstance
+public class Attackable extends Npc
 {
 	// private int _moveRadius;
 	private boolean _active;
@@ -50,12 +49,12 @@ public class Attackable extends NpcInstance
 	private boolean _sweepActive;
 	private boolean _killedAlready = false;
 	
-	public Attackable(Npc template)
+	public Attackable(NpcTemplate template)
 	{
 		super(template);
 	}
 	
-	public boolean getCondition2(PlayerInstance player)
+	public boolean getCondition2(Player player)
 	{
 		return false;
 	}
@@ -145,7 +144,7 @@ public class Attackable extends NpcInstance
 					stopTargetScan();
 					calculateRewards(attacker);
 					
-					final PlayerInstance killer = attacker.getActingPlayer();
+					final Player killer = attacker.getActingPlayer();
 					if ((killer != null) && (killer.getKarma() > 0))
 					{
 						killer.decreaseKarma();
@@ -162,11 +161,11 @@ public class Attackable extends NpcInstance
 		final int npcID = getNpcTemplate().getNpcId();
 		while (it.hasNext())
 		{
-			PlayerInstance temp;
+			Player temp;
 			final Creature attacker = (Creature) it.next();
 			final Integer value = _aggroList.get(attacker);
 			Party attackerParty = null;
-			if ((attacker instanceof PlayerInstance) && (temp = (PlayerInstance) attacker).isInParty())
+			if ((attacker instanceof Player) && (temp = (Player) attacker).isInParty())
 			{
 				attackerParty = temp.getParty();
 			}
@@ -214,10 +213,10 @@ public class Attackable extends NpcInstance
 			int partyDmg = 0;
 			if (attackerParty != null)
 			{
-				final List<PlayerInstance> members = attackerParty.getPartyMembers();
+				final List<Player> members = attackerParty.getPartyMembers();
 				for (int i = 0; i < members.size(); ++i)
 				{
-					final PlayerInstance tmp = members.get(i);
+					final Player tmp = members.get(i);
 					if (!_aggroList.containsKey(tmp))
 					{
 						continue;
@@ -256,7 +255,7 @@ public class Attackable extends NpcInstance
 			{
 				continue;
 			}
-			final ItemInstance dropit = ItemTable.getInstance().createItem(drop.getItemId());
+			final Item dropit = ItemTable.getInstance().createItem(drop.getItemId());
 			final int min = drop.getMinDrop();
 			final int max = drop.getMaxDrop();
 			int itemCount = 0;
@@ -272,7 +271,7 @@ public class Attackable extends NpcInstance
 				dropit.setY(getY());
 				dropit.setZ(getZ() + 100);
 				dropit.setOnTheGround(true);
-				for (PlayerInstance player : broadcastPacket(new DropItem(dropit, getObjectId())))
+				for (Player player : broadcastPacket(new DropItem(dropit, getObjectId())))
 				{
 					player.addKnownObjectWithoutCreate(dropit);
 				}
@@ -374,7 +373,7 @@ public class Attackable extends NpcInstance
 		{
 			if (!isInCombat())
 			{
-				for (PlayerInstance player : getKnownPlayers())
+				for (Player player : getKnownPlayers())
 				{
 					if (!getCondition2(player) || (getDistance(player.getX(), player.getY()) > (getCollisionRadius() + 200.0)))
 					{

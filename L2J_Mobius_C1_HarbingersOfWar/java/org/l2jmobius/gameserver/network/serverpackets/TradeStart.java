@@ -20,15 +20,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class TradeStart extends ServerBasePacket
 {
-	private final PlayerInstance _me;
-	private final List<ItemInstance> _tradelist = new ArrayList<>();
+	private final Player _me;
+	private final List<Item> _tradelist = new ArrayList<>();
 	
-	public TradeStart(PlayerInstance me)
+	public TradeStart(Player me)
 	{
 		_me = me;
 	}
@@ -38,7 +38,7 @@ public class TradeStart extends ServerBasePacket
 	{
 		writeC(0x2E);
 		writeD(_me.getTransactionRequester().getObjectId());
-		for (ItemInstance item : _me.getInventory().getItems())
+		for (Item item : _me.getInventory().getItems())
 		{
 			if (item.isEquipped() || (item.getItem().getType2() == 3))
 			{
@@ -50,7 +50,7 @@ public class TradeStart extends ServerBasePacket
 		writeH(count);
 		for (int i = 0; i < count; ++i)
 		{
-			final ItemInstance temp = _tradelist.get(i);
+			final Item temp = _tradelist.get(i);
 			final int type = temp.getItem().getType1();
 			writeH(type);
 			writeD(temp.getObjectId());

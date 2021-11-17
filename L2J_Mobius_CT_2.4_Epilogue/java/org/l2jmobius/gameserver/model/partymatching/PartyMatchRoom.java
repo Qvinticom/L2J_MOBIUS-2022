@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
@@ -37,9 +37,9 @@ public class PartyMatchRoom implements IIdentifiable
 	private int _minLevel;
 	private int _maxLevel;
 	private int _maxmem;
-	private final List<PlayerInstance> _members = new ArrayList<>();
+	private final List<Player> _members = new ArrayList<>();
 	
-	public PartyMatchRoom(int id, String title, int loot, int minLevel, int maxLevel, int maxmem, PlayerInstance owner)
+	public PartyMatchRoom(int id, String title, int loot, int minLevel, int maxLevel, int maxmem, Player owner)
 	{
 		_id = id;
 		_title = title;
@@ -50,17 +50,17 @@ public class PartyMatchRoom implements IIdentifiable
 		_members.add(owner);
 	}
 	
-	public List<PlayerInstance> getPartyMembers()
+	public List<Player> getPartyMembers()
 	{
 		return _members;
 	}
 	
-	public void addMember(PlayerInstance player)
+	public void addMember(Player player)
 	{
 		_members.add(player);
 	}
 	
-	public void deleteMember(PlayerInstance player)
+	public void deleteMember(Player player)
 	{
 		if (player != getOwner())
 		{
@@ -78,9 +78,9 @@ public class PartyMatchRoom implements IIdentifiable
 		}
 	}
 	
-	public void notifyMembersAboutExit(PlayerInstance player)
+	public void notifyMembersAboutExit(Player player)
 	{
-		for (PlayerInstance _member : _members)
+		for (Player _member : _members)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
 			sm.addString(player.getName());
@@ -89,10 +89,10 @@ public class PartyMatchRoom implements IIdentifiable
 		}
 	}
 	
-	public void changeLeader(PlayerInstance newLeader)
+	public void changeLeader(Player newLeader)
 	{
 		// Get current leader
-		final PlayerInstance oldLeader = _members.get(0);
+		final Player oldLeader = _members.get(0);
 		// Remove new leader
 		_members.remove(newLeader);
 		// Move him to first position
@@ -100,7 +100,7 @@ public class PartyMatchRoom implements IIdentifiable
 		// Add old leader as normal member
 		_members.add(oldLeader);
 		// Broadcast change
-		for (PlayerInstance member : _members)
+		for (Player member : _members)
 		{
 			member.sendPacket(new ExManagePartyRoomMember(newLeader, this, 1));
 			member.sendPacket(new ExManagePartyRoomMember(oldLeader, this, 1));
@@ -169,7 +169,7 @@ public class PartyMatchRoom implements IIdentifiable
 		return _title;
 	}
 	
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _members.get(0);
 	}

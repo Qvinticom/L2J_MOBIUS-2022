@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -57,7 +57,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 	private static final SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
 	// Misc
 	private static final int TEMPLATE_ID = 195;
-	private static final Map<PlayerInstance, Integer> _playerFireRage = new ConcurrentHashMap<>();
+	private static final Map<Player, Integer> _playerFireRage = new ConcurrentHashMap<>();
 	
 	public ResidenceOfKingIgnis()
 	{
@@ -70,7 +70,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -185,7 +185,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.99)) && (npc.getCurrentHp() > (npc.getMaxHp() * 0.70)))
 		{
@@ -231,7 +231,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)

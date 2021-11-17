@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -56,7 +56,7 @@ public class QueenAntLair extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -66,8 +66,8 @@ public class QueenAntLair extends AbstractInstance
 				{
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-					for (PlayerInstance member : members)
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					for (Player member : members)
 					{
 						if (!member.isInsideRadius3D(npc, 1000))
 						{
@@ -180,7 +180,7 @@ public class QueenAntLair extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -265,7 +265,7 @@ public class QueenAntLair extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -286,7 +286,7 @@ public class QueenAntLair extends AbstractInstance
 			addSpawn(JIO, -22130, 182482, -5720, 49151, false, 0, true, player.getInstanceId());
 			world.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_SUCCEEDED_IN_DEFEATING_QUEEN_ANT_NRECEIVE_YOUR_REWARD_FROM_JIO, 2, 9000));
 			
-			for (PlayerInstance gamer : world.getPlayers())
+			for (Player gamer : world.getPlayers())
 			{
 				gamer.sendPacket(new ExSendUIEvent(gamer, false, false, 0, 0, NpcStringId.TIME_LEFT));
 			}

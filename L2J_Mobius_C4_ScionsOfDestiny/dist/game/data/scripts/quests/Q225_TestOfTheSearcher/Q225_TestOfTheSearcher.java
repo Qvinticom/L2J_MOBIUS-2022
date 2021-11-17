@@ -17,8 +17,8 @@
 package quests.Q225_TestOfTheSearcher;
 
 import org.l2jmobius.gameserver.enums.ClassId;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -72,7 +72,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	private static final int MARK_OF_SEARCHER = 2809;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Misc
-	private static NpcInstance _strongWoodenChest; // Used to avoid to spawn multiple instances.
+	private static Npc _strongWoodenChest; // Used to avoid to spawn multiple instances.
 	
 	public Q225_TestOfTheSearcher()
 	{
@@ -85,7 +85,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
@@ -182,7 +182,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -447,7 +447,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
@@ -465,7 +465,7 @@ public class Q225_TestOfTheSearcher extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		QuestState st;
 		switch (npc.getNpcId())

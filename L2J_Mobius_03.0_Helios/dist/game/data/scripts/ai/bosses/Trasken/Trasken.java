@@ -36,8 +36,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -404,7 +404,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -419,7 +419,7 @@ public class Trasken extends AbstractNpcAI
 				{
 					return super.onAttack(npc, attacker, damage, isSummon);
 				}
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 250, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 250, cha ->
 				{
 					if (cha != null)
 					{
@@ -493,7 +493,7 @@ public class Trasken extends AbstractNpcAI
 			case TIE:
 			case BIG_TIE:
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 600, npc::setTarget);
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 600, npc::setTarget);
 				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
@@ -502,7 +502,7 @@ public class Trasken extends AbstractNpcAI
 			case TRADJAN:
 			{
 				npc.getSpawn().setRespawnDelay(120);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, npc::setTarget);
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 3500, npc::setTarget);
 				break;
 			}
 			case LAVRA_1:
@@ -510,7 +510,7 @@ public class Trasken extends AbstractNpcAI
 			case LAVRA_3:
 			{
 				npc.getSpawn().setRespawnDelay(200);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, npc::setTarget);
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 3500, npc::setTarget);
 				break;
 			}
 			case VICTIM_EARTWORMS_1:
@@ -518,7 +518,7 @@ public class Trasken extends AbstractNpcAI
 			case VICTIM_EARTWORMS_3:
 			{
 				npc.getSpawn().setRespawnDelay(30);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, npc::setTarget);
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, npc::setTarget);
 				break;
 			}
 			case DIGISTIVE:
@@ -526,7 +526,7 @@ public class Trasken extends AbstractNpcAI
 				npc.setOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, npc::setTarget);
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 1000, npc::setTarget);
 				break;
 			}
 			case HEART_ERTHWYRM:
@@ -571,7 +571,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -600,9 +600,9 @@ public class Trasken extends AbstractNpcAI
 					_collapseTask = null;
 				}
 				_zoneLair.getCharactersInside().stream().filter(Creature::isNpc).forEach(Creature::deleteMe);
-				_zoneLair.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((MonsterInstance) cha).getSpawn().stopRespawn());
+				_zoneLair.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((Monster) cha).getSpawn().stopRespawn());
 				_zoneLair2.getCharactersInside().stream().filter(Creature::isNpc).forEach(Creature::deleteMe);
-				_zoneLair2.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((MonsterInstance) cha).getSpawn().stopRespawn());
+				_zoneLair2.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((Monster) cha).getSpawn().stopRespawn());
 				ThreadPool.schedule(npc::decayMe, 10000);
 				cancelQuestTimer("finish", npc, null);
 				
@@ -669,7 +669,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{

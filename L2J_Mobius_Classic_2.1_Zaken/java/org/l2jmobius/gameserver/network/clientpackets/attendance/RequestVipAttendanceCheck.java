@@ -20,10 +20,10 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -44,7 +44,7 @@ public class RequestVipAttendanceCheck implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -79,7 +79,7 @@ public class RequestVipAttendanceCheck implements IClientIncomingPacket
 		final boolean isRewardAvailable = attendanceInfo.isRewardAvailable();
 		final int rewardIndex = attendanceInfo.getRewardIndex();
 		final ItemHolder reward = AttendanceRewardData.getInstance().getRewards().get(rewardIndex);
-		final Item itemTemplate = ItemTable.getInstance().getTemplate(reward.getId());
+		final ItemTemplate itemTemplate = ItemTable.getInstance().getTemplate(reward.getId());
 		
 		// Weight check.
 		final long weight = itemTemplate.getWeight() * reward.getCount();

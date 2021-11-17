@@ -28,8 +28,8 @@ import org.l2jmobius.gameserver.model.ChanceLocation;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -150,7 +150,7 @@ public class EnergyOfInsolence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (CommonUtil.contains(UNIDENTIFIED_STONE_NPC_IDS, npc.getId()) && ((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF) && (Rnd.get(100) <= UNIDENTIFIED_STONE_DROP_RATE))
 		{
@@ -180,7 +180,7 @@ public class EnergyOfInsolence extends AbstractNpcAI
 		}
 		if (CommonUtil.contains(ENERGY_OF_INSOLENCE_MINIONS, npc.getId()))
 		{
-			final MonsterInstance leader = ((MonsterInstance) npc).getLeader();
+			final Monster leader = ((Monster) npc).getLeader();
 			if ((leader != null) && (leader.getMinionList().getSpawnedMinions().isEmpty()) && !leader.isDead())
 			{
 				makeMortal(leader);

@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -47,7 +47,7 @@ public class Evolve
 {
 	protected static final Logger LOGGER = Logger.getLogger(Evolve.class.getName());
 	
-	public static boolean doEvolve(PlayerInstance player, Npc npc, int itemIdtake, int itemIdgive, int petminLevel)
+	public static boolean doEvolve(Player player, Npc npc, int itemIdtake, int itemIdgive, int petminLevel)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminLevel == 0))
 		{
@@ -59,14 +59,14 @@ public class Evolve
 			return false;
 		}
 		
-		final PetInstance currentPet = (PetInstance) player.getSummon();
+		final Pet currentPet = (Pet) player.getSummon();
 		if (currentPet.isAlikeDead())
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use death pet exploit!", Config.DEFAULT_PUNISH);
 			return false;
 		}
 		
-		ItemInstance item = null;
+		Item item = null;
 		long petexp = currentPet.getStat().getExp();
 		final String oldname = currentPet.getName();
 		final int oldX = currentPet.getX();
@@ -104,7 +104,7 @@ public class Evolve
 		item = player.getInventory().addItem("Evolve", itemIdgive, 1, player, npc);
 		
 		// Summoning new pet
-		final PetInstance petSummon = PetInstance.spawnPet(npcTemplate, player, item);
+		final Pet petSummon = Pet.spawnPet(npcTemplate, player, item);
 		if (petSummon == null)
 		{
 			return false;
@@ -148,14 +148,14 @@ public class Evolve
 		return true;
 	}
 	
-	public static boolean doRestore(PlayerInstance player, Npc npc, int itemIdtake, int itemIdgive, int petminLevel)
+	public static boolean doRestore(Player player, Npc npc, int itemIdtake, int itemIdgive, int petminLevel)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminLevel == 0))
 		{
 			return false;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByItemId(itemIdtake);
+		final Item item = player.getInventory().getItemByItemId(itemIdtake);
 		if (item == null)
 		{
 			return false;
@@ -183,16 +183,16 @@ public class Evolve
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
 		
 		// deleting old pet item
-		final ItemInstance removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
+		final Item removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(removedItem);
 		player.sendPacket(sm);
 		
 		// Give new pet item
-		final ItemInstance addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
+		final Item addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
 		
 		// Summoning new pet
-		final PetInstance petSummon = PetInstance.spawnPet(npcTemplate, player, addedItem);
+		final Pet petSummon = Pet.spawnPet(npcTemplate, player, addedItem);
 		if (petSummon == null)
 		{
 			return false;
@@ -256,10 +256,10 @@ public class Evolve
 	
 	static final class EvolveFeedWait implements Runnable
 	{
-		private final PlayerInstance _player;
-		private final PetInstance _petSummon;
+		private final Player _player;
+		private final Pet _petSummon;
 		
-		EvolveFeedWait(PlayerInstance player, PetInstance petSummon)
+		EvolveFeedWait(Player player, Pet petSummon)
 		{
 			_player = player;
 			_petSummon = petSummon;
@@ -288,10 +288,10 @@ public class Evolve
 	
 	static final class EvolveFinalizer implements Runnable
 	{
-		private final PlayerInstance _player;
-		private final PetInstance _petSummon;
+		private final Player _player;
+		private final Pet _petSummon;
 		
-		EvolveFinalizer(PlayerInstance player, PetInstance petSummon)
+		EvolveFinalizer(Player player, Pet petSummon)
 		{
 			_player = player;
 			_petSummon = petSummon;

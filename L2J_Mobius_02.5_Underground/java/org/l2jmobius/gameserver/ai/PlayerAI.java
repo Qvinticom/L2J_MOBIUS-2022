@@ -27,9 +27,9 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -41,7 +41,7 @@ public class PlayerAI extends PlayableAI
 	
 	private IntentionCommand _nextIntention = null;
 	
-	public PlayerAI(PlayerInstance player)
+	public PlayerAI(Player player)
 	{
 		super(player);
 	}
@@ -227,7 +227,7 @@ public class PlayerAI extends PlayableAI
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -311,7 +311,7 @@ public class PlayerAI extends PlayableAI
 		final WorldObject target = getCastTarget();
 		if ((_skill.getTargetType() == TargetType.GROUND) && _actor.isPlayer())
 		{
-			if (maybeMoveToPosition(((PlayerInstance) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill)))
+			if (maybeMoveToPosition(((Player) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill)))
 			{
 				return;
 			}
@@ -381,7 +381,7 @@ public class PlayerAI extends PlayableAI
 		{
 			return;
 		}
-		if (!(target instanceof StaticObjectInstance))
+		if (!(target instanceof StaticObject))
 		{
 			getActor().doInteract((Creature) target);
 		}
@@ -423,8 +423,8 @@ public class PlayerAI extends PlayableAI
 	}
 	
 	@Override
-	public PlayerInstance getActor()
+	public Player getActor()
 	{
-		return (PlayerInstance) super.getActor();
+		return (Player) super.getActor();
 	}
 }

@@ -130,7 +130,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.instancemanager.CommissionManager;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
@@ -310,7 +310,7 @@ public class GameServer
 		CollectionData.getInstance();
 		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
-		CommissionManager.getInstance();
+		ItemCommissionManager.getInstance();
 		LuckyGameData.getInstance();
 		AttendanceRewardData.getInstance();
 		MagicLampData.getInstance();

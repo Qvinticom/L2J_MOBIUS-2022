@@ -32,7 +32,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.taskmanager.MessageDeletionTaskManager;
 
@@ -83,7 +83,7 @@ public class MailManager
 		return _messages.values();
 	}
 	
-	public boolean hasUnreadPost(PlayerInstance player)
+	public boolean hasUnreadPost(Player player)
 	{
 		final int objectId = player.getObjectId();
 		for (Message msg : _messages.values())
@@ -161,7 +161,7 @@ public class MailManager
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error saving message:", e);
 		}
 		
-		final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
+		final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
 		{
 			receiver.sendPacket(ExNoticePostArrived.valueOf(true));

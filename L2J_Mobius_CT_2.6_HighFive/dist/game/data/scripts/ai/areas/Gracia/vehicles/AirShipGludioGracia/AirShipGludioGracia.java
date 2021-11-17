@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.AirShip;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -99,7 +99,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 		new VehiclePathPoint(-149378, 252552, 198)
 	};
 	
-	private final AirShipInstance _ship;
+	private final AirShip _ship;
 	private int _cycle = 0;
 	
 	private boolean _foundAtcGludio = false;
@@ -162,7 +162,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (player.isTransformed())
 		{
@@ -219,7 +219,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 			return null;
 		}
-		else if (_ship.isInDock() && World.getInstance().getVisibleObjects(player, AirShipInstance.class).contains(_ship))
+		else if (_ship.isInDock() && World.getInstance().getVisibleObjects(player, AirShip.class).contains(_ship))
 		{
 			_ship.addPassenger(player);
 		}
@@ -227,7 +227,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}

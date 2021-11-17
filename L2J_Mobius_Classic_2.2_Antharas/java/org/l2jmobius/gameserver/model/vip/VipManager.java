@@ -23,7 +23,7 @@ import java.util.function.Consumer;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.VipData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLoad;
@@ -54,7 +54,7 @@ public final class VipManager
 	
 	private void onPlayerLoaded(OnPlayerLoad event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		player.setVipTier(getVipTier(player));
 		if (player.getVipTier() > 0)
 		{
@@ -68,7 +68,7 @@ public final class VipManager
 		}
 	}
 	
-	private boolean canReceiveGift(PlayerInstance player)
+	private boolean canReceiveGift(Player player)
 	{
 		if (!Config.VIP_SYSTEM_ENABLED)
 		{
@@ -83,7 +83,7 @@ public final class VipManager
 	
 	private void onVipLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (canReceiveGift(player))
 		{
 			player.sendPacket(new ExBRNewIconCashBtnWnd((byte) 1));
@@ -96,7 +96,7 @@ public final class VipManager
 		player.sendPacket(new ReceiveVipInfo(player));
 	}
 	
-	public void manageTier(PlayerInstance player)
+	public void manageTier(Player player)
 	{
 		if (!checkVipTierExpiration(player))
 		{
@@ -127,7 +127,7 @@ public final class VipManager
 		}
 	}
 	
-	public byte getVipTier(PlayerInstance player)
+	public byte getVipTier(Player player)
 	{
 		return getVipInfo(player).getTier();
 	}
@@ -142,17 +142,17 @@ public final class VipManager
 		return temp;
 	}
 	
-	private VipInfo getVipInfo(PlayerInstance player)
+	private VipInfo getVipInfo(Player player)
 	{
 		return getVipInfo(player.getVipPoints());
 	}
 	
-	public float getSilverCoinDropChance(PlayerInstance player)
+	public float getSilverCoinDropChance(Player player)
 	{
 		return getVipInfo(player).getSilverCoinChance();
 	}
 	
-	public float getRustyCoinDropChance(PlayerInstance player)
+	public float getRustyCoinDropChance(Player player)
 	{
 		return getVipInfo(player).getGoldCoinChance();
 	}
@@ -194,7 +194,7 @@ public final class VipManager
 		return tier.getPointsRequired();
 	}
 	
-	public boolean checkVipTierExpiration(PlayerInstance player)
+	public boolean checkVipTierExpiration(Player player)
 	{
 		final Instant now = Instant.now();
 		if (now.isAfter(Instant.ofEpochMilli(player.getVipTierExpiration())))

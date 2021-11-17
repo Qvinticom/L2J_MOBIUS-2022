@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExConfirmVariationRefiner;
@@ -49,9 +49,9 @@ public class RequestConfirmRefinerItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
-		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
+		final Player player = client.getPlayer();
+		final Item targetItem = (Item) World.getInstance().findObject(_targetItemObjId);
+		final Item refinerItem = (Item) World.getInstance().findObject(_refinerItemObjId);
 		if ((targetItem == null) || (refinerItem == null))
 		{
 			return;
@@ -75,7 +75,7 @@ public class RequestConfirmRefinerItem implements IClientIncomingPacket
 		
 		switch (itemGrade)
 		{
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				gemstoneCount = 20;
 				gemstoneItemId = GEMSTONE_D;
@@ -83,7 +83,7 @@ public class RequestConfirmRefinerItem implements IClientIncomingPacket
 				sm.addString("Gemstone D");
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				gemstoneCount = 30;
 				gemstoneItemId = GEMSTONE_D;
@@ -91,7 +91,7 @@ public class RequestConfirmRefinerItem implements IClientIncomingPacket
 				sm.addString("Gemstone D");
 				break;
 			}
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				gemstoneCount = 20;
 				gemstoneItemId = GEMSTONE_C;
@@ -99,7 +99,7 @@ public class RequestConfirmRefinerItem implements IClientIncomingPacket
 				sm.addString("Gemstone C");
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				gemstoneCount = 25;
 				gemstoneItemId = GEMSTONE_C;

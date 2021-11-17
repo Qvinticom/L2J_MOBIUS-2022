@@ -30,7 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
 /**
@@ -70,7 +70,7 @@ public class TradeManager
 					int currentCount = rset.getInt("currentCount");
 					int time = rset.getInt("time");
 					
-					final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+					final Item item = ItemTable.getInstance().createDummyItem(itemId);
 					if (item == null)
 					{
 						rset.close();
@@ -116,7 +116,7 @@ public class TradeManager
 							count = rset.getInt("count");
 							time = rset.getInt("time");
 							currentCount = rset.getInt("currentCount");
-							final ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
+							final Item item2 = ItemTable.getInstance().createDummyItem(itemId);
 							if (item2 == null)
 							{
 								continue;
@@ -236,7 +236,7 @@ public class TradeManager
 						int count = rset.getInt("count");
 						int currentCount = rset.getInt("currentCount");
 						int time = rset.getInt("time");
-						final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+						final Item item = ItemTable.getInstance().createDummyItem(itemId);
 						if (item == null)
 						{
 							rset.close();
@@ -281,7 +281,7 @@ public class TradeManager
 								count = rset.getInt("count");
 								time = rset.getInt("time");
 								currentCount = rset.getInt("currentCount");
-								final ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
+								final Item item2 = ItemTable.getInstance().createDummyItem(itemId);
 								if (item2 == null)
 								{
 									continue;
@@ -462,7 +462,7 @@ public class TradeManager
 				}
 				
 				listId = list.getListId();
-				for (ItemInstance item : list.getItems())
+				for (Item item : list.getItems())
 				{
 					if (item.getCount() < item.getInitCount()) // needed?
 					{

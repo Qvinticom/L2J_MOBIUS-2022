@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewCharacterInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
@@ -33,7 +33,7 @@ public class RequestGMCommand extends ClientBasePacket
 		final int command = readD();
 		@SuppressWarnings("unused")
 		final int unknown = readD();
-		final PlayerInstance player = World.getInstance().getPlayer(targetName);
+		final Player player = World.getInstance().getPlayer(targetName);
 		if (player == null)
 		{
 			return;

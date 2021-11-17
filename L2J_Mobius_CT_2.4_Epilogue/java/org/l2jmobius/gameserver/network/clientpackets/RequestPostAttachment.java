@@ -26,9 +26,9 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -61,7 +61,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -127,7 +127,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		
 		int weight = 0;
 		int slots = 0;
-		for (ItemInstance item : attachments.getItems())
+		for (Item item : attachments.getItems())
 		{
 			if (item == null)
 			{
@@ -187,7 +187,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		
 		// Proceed to the transfer
 		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (ItemInstance item : attachments.getItems())
+		for (Item item : attachments.getItems())
 		{
 			if (item == null)
 			{
@@ -201,7 +201,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			}
 			
 			final long count = item.getCount();
-			final ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), player.getInventory(), player, null);
+			final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), player.getInventory(), player, null);
 			if (newItem == null)
 			{
 				return;
@@ -242,7 +242,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		player.sendPacket(su);
 		
 		SystemMessage sm;
-		final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
+		final Player sender = World.getInstance().getPlayer(msg.getSenderId());
 		if (adena > 0)
 		{
 			if (sender != null)
@@ -255,7 +255,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			}
 			else
 			{
-				final ItemInstance paidAdena = ItemTable.getInstance().createItem("PayMail", ADENA_ID, adena, player, null);
+				final Item paidAdena = ItemTable.getInstance().createItem("PayMail", ADENA_ID, adena, player, null);
 				paidAdena.setOwnerId(msg.getSenderId());
 				paidAdena.setItemLocation(ItemLocation.INVENTORY);
 				paidAdena.updateDatabase(true);

@@ -31,10 +31,10 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -53,9 +53,9 @@ public class RecipeManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(RecipeManager.class.getName());
 	
-	protected static final Map<PlayerInstance, RecipeItemMaker> _activeMakers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RecipeItemMaker>());
+	protected static final Map<Player, RecipeItemMaker> _activeMakers = Collections.synchronizedMap(new WeakHashMap<Player, RecipeItemMaker>());
 	
-	public synchronized void requestBookOpen(PlayerInstance player, boolean isDwarvenCraft)
+	public synchronized void requestBookOpen(Player player, boolean isDwarvenCraft)
 	{
 		RecipeItemMaker maker = null;
 		if (Config.ALT_GAME_CREATION)
@@ -74,12 +74,12 @@ public class RecipeManager
 		player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING));
 	}
 	
-	public synchronized void requestMakeItemAbort(PlayerInstance player)
+	public synchronized void requestMakeItemAbort(Player player)
 	{
 		_activeMakers.remove(player);
 	}
 	
-	public synchronized void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
+	public synchronized void requestManufactureItem(Player manufacturer, int recipeListId, Player player)
 	{
 		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		if (recipeList == null)
@@ -115,7 +115,7 @@ public class RecipeManager
 		}
 	}
 	
-	public synchronized void requestMakeItem(PlayerInstance player, int recipeListId)
+	public synchronized void requestMakeItem(Player player, int recipeListId)
 	{
 		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		if (recipeList == null)
@@ -158,8 +158,8 @@ public class RecipeManager
 		protected boolean _isValid;
 		protected List<TempItem> _items = null;
 		protected final RecipeList _recipeList;
-		protected final PlayerInstance _player; // "crafter"
-		protected final PlayerInstance _target; // "customer"
+		protected final Player _player; // "crafter"
+		protected final Player _target; // "customer"
 		protected final Skill _skill;
 		protected final int _skillId;
 		protected final int _skillLevel;
@@ -169,7 +169,7 @@ public class RecipeManager
 		protected int _totalItems;
 		protected int _delay;
 		
-		public RecipeItemMaker(PlayerInstance pPlayer, RecipeList pRecipeList, PlayerInstance pTarget)
+		public RecipeItemMaker(Player pPlayer, RecipeList pRecipeList, Player pTarget)
 		{
 			_player = pPlayer;
 			_target = pTarget;
@@ -394,7 +394,7 @@ public class RecipeManager
 			if ((_target != _player) && (_price > 0)) // customer must pay for services
 			{
 				// attempt to pay for item
-				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				final Item adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				if (adenatransfer == null)
 				{
 					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -521,15 +521,15 @@ public class RecipeManager
 		
 		private List<TempItem> listItems(boolean remove)
 		{
-			final RecipeInstance[] recipes = _recipeList.getRecipes();
+			final RecipeHolder[] recipes = _recipeList.getRecipes();
 			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
-			for (RecipeInstance recipe : recipes)
+			for (RecipeHolder recipe : recipes)
 			{
 				final int quantity = _recipeList.isConsumable() ? (int) (recipe.getQuantity() * Config.RATE_CONSUMABLE_COST) : recipe.getQuantity();
 				if (quantity > 0)
 				{
-					final ItemInstance item = inv.getItemByItemId(recipe.getItemId());
+					final Item item = inv.getItemByItemId(recipe.getItemId());
 					
 					// check materials
 					if ((item == null) || (item.getCount() < quantity))
@@ -577,7 +577,7 @@ public class RecipeManager
 			 * @param item
 			 * @param quantity of that item
 			 */
-			public TempItem(ItemInstance item, int quantity)
+			public TempItem(Item item, int quantity)
 			{
 				super();
 				_itemId = item.getItemId();
@@ -622,7 +622,7 @@ public class RecipeManager
 		{
 			final int itemId = _recipeList.getItemId();
 			final int itemCount = _recipeList.getCount();
-			final ItemInstance createdItem = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
+			final Item createdItem = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
 			
 			// inform customer of earned item
 			SystemMessage sm = null;
@@ -680,7 +680,7 @@ public class RecipeManager
 		}
 	}
 	
-	private RecipeList getValidRecipeList(PlayerInstance player, int id)
+	private RecipeList getValidRecipeList(Player player, int id)
 	{
 		final RecipeList recipeList = RecipeData.getInstance().getRecipe(id);
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))

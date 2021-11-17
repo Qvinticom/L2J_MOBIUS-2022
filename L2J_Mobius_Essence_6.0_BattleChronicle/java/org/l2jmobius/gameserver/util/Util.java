@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractHtmlPacket;
@@ -60,7 +60,7 @@ public class Util
 	private static final Logger LOGGER = Logger.getLogger(Util.class.getName());
 	private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 	
-	public static void handleIllegalPlayerAction(PlayerInstance actor, String message, IllegalActionPunishmentType punishment)
+	public static void handleIllegalPlayerAction(Player actor, String message, IllegalActionPunishmentType punishment)
 	{
 		ThreadPool.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
 	}
@@ -395,7 +395,7 @@ public class Util
 		return dateFormat.format(date.getTime());
 	}
 	
-	private static void buildHtmlBypassCache(PlayerInstance player, HtmlActionScope scope, String html)
+	private static void buildHtmlBypassCache(Player player, HtmlActionScope scope, String html)
 	{
 		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int bypassEnd = 0;
@@ -436,7 +436,7 @@ public class Util
 		}
 	}
 	
-	private static void buildHtmlLinkCache(PlayerInstance player, HtmlActionScope scope, String html)
+	private static void buildHtmlLinkCache(Player player, HtmlActionScope scope, String html)
 	{
 		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int linkEnd = 0;
@@ -483,7 +483,7 @@ public class Util
 	 * @param npcObjId the npc object id the html actions are cached for
 	 * @param html the html code to parse
 	 */
-	public static void buildHtmlActionCache(PlayerInstance player, HtmlActionScope scope, int npcObjId, String html)
+	public static void buildHtmlActionCache(Player player, HtmlActionScope scope, int npcObjId, String html)
 	{
 		if ((player == null) || (scope == null) || (npcObjId < 0) || (html == null))
 		{
@@ -506,7 +506,7 @@ public class Util
 	 * @param player the player
 	 * @param html the html content
 	 */
-	public static void sendCBHtml(PlayerInstance player, String html)
+	public static void sendCBHtml(Player player, String html)
 	{
 		sendCBHtml(player, html, 0);
 	}
@@ -520,7 +520,7 @@ public class Util
 	 * @param html the html content
 	 * @param npcObjId bypass origin to use
 	 */
-	public static void sendCBHtml(PlayerInstance player, String html, int npcObjId)
+	public static void sendCBHtml(Player player, String html, int npcObjId)
 	{
 		sendCBHtml(player, html, null, npcObjId);
 	}
@@ -534,7 +534,7 @@ public class Util
 	 * @param html the html content
 	 * @param fillMultiEdit text to fill the multiedit field with(may be null)
 	 */
-	public static void sendCBHtml(PlayerInstance player, String html, String fillMultiEdit)
+	public static void sendCBHtml(Player player, String html, String fillMultiEdit)
 	{
 		sendCBHtml(player, html, fillMultiEdit, 0);
 	}
@@ -550,7 +550,7 @@ public class Util
 	 * @param fillMultiEdit text to fill the multiedit field with(may be null)
 	 * @param npcObjId bypass origin to use
 	 */
-	public static void sendCBHtml(PlayerInstance player, String html, String fillMultiEdit, int npcObjId)
+	public static void sendCBHtml(Player player, String html, String fillMultiEdit, int npcObjId)
 	{
 		if ((player == null) || (html == null))
 		{
@@ -600,7 +600,7 @@ public class Util
 	 * @param player
 	 * @param text
 	 */
-	public static void fillMultiEditContent(PlayerInstance player, String text)
+	public static void fillMultiEditContent(Player player, String text)
 	{
 		player.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", player.getName(), Integer.toString(player.getObjectId()), player.getAccountName(), "9", " ", " ", text.replace("<br>", Config.EOL), "0", "0", "0", "0")));
 	}

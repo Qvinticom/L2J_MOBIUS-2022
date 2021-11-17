@@ -47,9 +47,9 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.TowerSpawn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Artefact;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.CastleSpawnHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -70,7 +70,7 @@ public class Castle extends AbstractResidence
 {
 	protected static final Logger LOGGER = Logger.getLogger(Castle.class.getName());
 	
-	private final List<DoorInstance> _doors = new ArrayList<>();
+	private final List<Door> _doors = new ArrayList<>();
 	private final List<Npc> _sideNpcs = new ArrayList<>();
 	int _ownerId = 0;
 	private Siege _siege = null;
@@ -83,7 +83,7 @@ public class Castle extends AbstractResidence
 	private SiegeZone _zone = null;
 	private ResidenceTeleportZone _teleZone;
 	private Clan _formerOwner = null;
-	private final List<ArtefactInstance> _artefacts = new ArrayList<>(1);
+	private final List<Artefact> _artefacts = new ArrayList<>(1);
 	private final Map<Integer, CastleFunction> _function = new ConcurrentHashMap<>();
 	private int _ticketBuyCount = 0;
 	
@@ -452,24 +452,24 @@ public class Castle extends AbstractResidence
 		return getZone().getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(PlayerInstance player, int doorId)
+	public void closeDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(PlayerInstance player, int doorId)
+	public void openDoor(Player player, int doorId)
 	{
 		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
+	public void openCloseDoor(Player player, int doorId, boolean open)
 	{
 		if ((player.getClanId() != _ownerId) && !player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS))
 		{
 			return;
 		}
 		
-		final DoorInstance door = getDoor(doorId);
+		final Door door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -483,14 +483,14 @@ public class Castle extends AbstractResidence
 		}
 	}
 	
-	public void openCloseDoor(PlayerInstance player, String doorName, boolean open)
+	public void openCloseDoor(Player player, String doorName, boolean open)
 	{
 		if ((player.getClanId() != _ownerId) && !player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS))
 		{
 			return;
 		}
 		
-		final DoorInstance door = getDoor(doorName);
+		final Door door = getDoor(doorName);
 		if (door != null)
 		{
 			if (open)
@@ -535,7 +535,7 @@ public class Castle extends AbstractResidence
 				}
 				try
 				{
-					final PlayerInstance oldleader = oldOwner.getLeader().getPlayerInstance();
+					final Player oldleader = oldOwner.getLeader().getPlayer();
 					if ((oldleader != null) && (oldleader.getMountType() == MountType.WYVERN))
 					{
 						oldleader.dismount();
@@ -546,7 +546,7 @@ public class Castle extends AbstractResidence
 					LOGGER.log(Level.WARNING, "Exception in setOwner: " + e.getMessage(), e);
 				}
 				oldOwner.setCastleId(0); // Unset has castle flag for old owner
-				for (PlayerInstance member : oldOwner.getOnlineMembers(0))
+				for (Player member : oldOwner.getOnlineMembers(0))
 				{
 					removeResidentialSkills(member);
 					member.sendSkillList();
@@ -571,7 +571,7 @@ public class Castle extends AbstractResidence
 		
 		if (clan != null)
 		{
-			for (PlayerInstance member : clan.getOnlineMembers(0))
+			for (Player member : clan.getOnlineMembers(0))
 			{
 				giveResidentialSkills(member);
 				member.sendSkillList();
@@ -588,7 +588,7 @@ public class Castle extends AbstractResidence
 			{
 				CastleManager.getInstance().removeCirclet(_formerOwner, getResidenceId());
 			}
-			for (PlayerInstance member : clan.getOnlineMembers(0))
+			for (Player member : clan.getOnlineMembers(0))
 			{
 				removeResidentialSkills(member);
 				member.sendSkillList();
@@ -625,7 +625,7 @@ public class Castle extends AbstractResidence
 	 */
 	public void spawnDoor(boolean isDoorWeak)
 	{
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			if (door.isDead())
 			{
@@ -723,7 +723,7 @@ public class Castle extends AbstractResidence
 		}
 	}
 	
-	public boolean updateFunctions(PlayerInstance player, int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(Player player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
 		if (player == null)
 		{
@@ -767,7 +767,7 @@ public class Castle extends AbstractResidence
 	// This method loads castle door data from database
 	private void loadDoor()
 	{
-		for (DoorInstance door : DoorData.getInstance().getDoors())
+		for (Door door : DoorData.getInstance().getDoors())
 		{
 			if ((door.getCastle() != null) && (door.getCastle().getResidenceId() == getResidenceId()))
 			{
@@ -799,7 +799,7 @@ public class Castle extends AbstractResidence
 	
 	private void removeDoorUpgrade()
 	{
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			door.getStat().setUpgradeHpRatio(1);
 			door.setCurrentHp(door.getCurrentHp());
@@ -819,7 +819,7 @@ public class Castle extends AbstractResidence
 	
 	public void setDoorUpgrade(int doorId, int ratio, boolean save)
 	{
-		final DoorInstance door = (getDoors().isEmpty()) ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
+		final Door door = (getDoors().isEmpty()) ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
 		if (door == null)
 		{
 			return;
@@ -887,9 +887,9 @@ public class Castle extends AbstractResidence
 		}
 	}
 	
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			if (door.getId() == doorId)
 			{
@@ -899,9 +899,9 @@ public class Castle extends AbstractResidence
 		return null;
 	}
 	
-	public DoorInstance getDoor(String doorName)
+	public Door getDoor(String doorName)
 	{
-		for (DoorInstance door : _doors)
+		for (Door door : _doors)
 		{
 			if (door.getTemplate().getName().equals(doorName))
 			{
@@ -911,7 +911,7 @@ public class Castle extends AbstractResidence
 		return null;
 	}
 	
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}
@@ -1056,12 +1056,12 @@ public class Castle extends AbstractResidence
 	 * Register Artefact to castle
 	 * @param artefact
 	 */
-	public void registerArtefact(ArtefactInstance artefact)
+	public void registerArtefact(Artefact artefact)
 	{
 		_artefacts.add(artefact);
 	}
 	
-	public List<ArtefactInstance> getArtefacts()
+	public List<Artefact> getArtefacts()
 	{
 		return _artefacts;
 	}
@@ -1159,7 +1159,7 @@ public class Castle extends AbstractResidence
 	}
 	
 	@Override
-	public void giveResidentialSkills(PlayerInstance player)
+	public void giveResidentialSkills(Player player)
 	{
 		super.giveResidentialSkills(player);
 		final Skill skill = _castleSide == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill();
@@ -1167,7 +1167,7 @@ public class Castle extends AbstractResidence
 	}
 	
 	@Override
-	public void removeResidentialSkills(PlayerInstance player)
+	public void removeResidentialSkills(Player player)
 	{
 		super.removeResidentialSkills(player);
 		player.removeSkill(CommonSkill.ABILITY_OF_DARKNESS.getId());

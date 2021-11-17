@@ -19,7 +19,7 @@ package ai.areas.TalkingIsland.Toyron;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -48,9 +48,9 @@ public class Toyron extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
+		final Instance world = InstanceManager.getInstance().getPlayer(player, true);
 		if (event.equals("museum_teleport"))
 		{
 			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
@@ -73,7 +73,7 @@ public class Toyron extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = "33004.html";
 		final Instance world = npc.getInstanceWorld();

@@ -18,16 +18,16 @@ package org.l2jmobius.gameserver.model.actor.status;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStatus extends SummonStatus
 {
-	private int _currentFed = 0; // Current Fed of the PetInstance
+	private int _currentFed = 0; // Current Fed of the Pet
 	
-	public PetStatus(PetInstance activeChar)
+	public PetStatus(Pet activeChar)
 	{
 		super(activeChar);
 	}
@@ -51,9 +51,9 @@ public class PetStatus extends SummonStatus
 		if (attacker != null)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_CAUSED_BY_S1);
-			if (attacker instanceof NpcInstance)
+			if (attacker instanceof Npc)
 			{
-				sm.addNpcName(((NpcInstance) attacker).getTemplate().getDisplayId());
+				sm.addNpcName(((Npc) attacker).getTemplate().getDisplayId());
 			}
 			else
 			{
@@ -67,9 +67,9 @@ public class PetStatus extends SummonStatus
 	}
 	
 	@Override
-	public PetInstance getActiveChar()
+	public Pet getActiveChar()
 	{
-		return (PetInstance) super.getActiveChar();
+		return (Pet) super.getActiveChar();
 	}
 	
 	public int getCurrentFed()

@@ -17,7 +17,7 @@
 package ai.areas.Aden.Tarti;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
@@ -46,7 +46,7 @@ public class Tarti extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		player.sendPacket(new PlaySound(3, TARTI_VOICE[getRandom(3)], 0, 0, 0, 0, 0));
 		return "34360.html";

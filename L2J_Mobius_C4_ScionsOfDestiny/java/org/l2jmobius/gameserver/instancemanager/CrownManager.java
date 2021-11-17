@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.CrownTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
@@ -41,14 +41,14 @@ public class CrownManager
 		
 		for (ClanMember member : clan.getMembers())
 		{
-			if ((member != null) && member.isOnline() && (member.getPlayerInstance() != null))
+			if ((member != null) && member.isOnline() && (member.getPlayer() != null))
 			{
-				checkCrowns(member.getPlayerInstance());
+				checkCrowns(member.getPlayer());
 			}
 		}
 	}
 	
-	public void checkCrowns(PlayerInstance player)
+	public void checkCrowns(Player player)
 	{
 		if (player == null)
 		{
@@ -100,7 +100,7 @@ public class CrownManager
 		
 		boolean alreadyFoundCirclet = false;
 		boolean alreadyFoundCrown = false;
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (CrownTable.getCrownList().contains(item.getItemId()))
 			{

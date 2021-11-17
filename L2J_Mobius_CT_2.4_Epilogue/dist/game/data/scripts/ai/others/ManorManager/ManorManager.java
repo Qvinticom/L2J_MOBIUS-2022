@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -71,7 +71,7 @@ public class ManorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -88,7 +88,7 @@ public class ManorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (Config.ALLOW_MANOR)
 		{
@@ -109,7 +109,7 @@ public class ManorManager extends AbstractNpcAI
 	// @formatter:on
 	public void onNpcManorBypass(OnNpcManorBypass evt)
 	{
-		final PlayerInstance player = evt.getActiveChar();
+		final Player player = evt.getActiveChar();
 		if (CastleManorManager.getInstance().isUnderMaintenance())
 		{
 			player.sendPacket(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
@@ -153,7 +153,7 @@ public class ManorManager extends AbstractNpcAI
 			}
 			case 6: // Buy harvester
 			{
-				((MerchantInstance) npc).showBuyWindow(player, 300000 + npc.getId());
+				((Merchant) npc).showBuyWindow(player, 300000 + npc.getId());
 				break;
 			}
 			case 9: // Edit sales (Crop sales)

@@ -17,7 +17,7 @@
 package instances.JiniaGuildHideout4;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -43,7 +43,7 @@ public class JiniaGuildHideout4 extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		if (firstEnter)
@@ -57,7 +57,7 @@ public class JiniaGuildHideout4 extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		enterInstance(talker, npc, TEMPLATE_ID);
 		return super.onTalk(npc, talker);

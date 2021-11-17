@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -45,10 +45,10 @@ public class TargetParty implements ITargetTypeHandler
 		}
 		
 		final int radius = skill.getAffectRange();
-		final PlayerInstance player = (PlayerInstance) creature.getTarget();
+		final Player player = (Player) creature.getTarget();
 		if (player.isInParty())
 		{
-			for (PlayerInstance partyMember : player.getParty().getMembers())
+			for (Player partyMember : player.getParty().getMembers())
 			{
 				if ((partyMember == null))
 				{

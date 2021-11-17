@@ -20,11 +20,11 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -53,7 +53,7 @@ public class PDefenseFinalizer implements IStatFunction
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 		if (creature.isPet())
 		{
-			final PetInstance pet = (PetInstance) creature;
+			final Pet pet = (Pet) creature;
 			baseValue = pet.getPetLevelData().getPetPDef();
 		}
 		baseValue += calcEnchantedItemBonus(creature, stat);
@@ -61,18 +61,18 @@ public class PDefenseFinalizer implements IStatFunction
 		final Inventory inv = creature.getInventory();
 		if (inv != null)
 		{
-			for (ItemInstance item : inv.getPaperdollItems())
+			for (Item item : inv.getPaperdollItems())
 			{
 				baseValue += item.getItem().getStats(stat, 0);
 			}
 			
 			if (creature.isPlayer())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				for (int slot : SLOTS)
 				{
 					if (!inv.isPaperdollSlotEmpty(slot) || //
-						((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR)))
+						((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)))
 					{
 						final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
 						baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);

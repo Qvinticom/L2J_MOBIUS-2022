@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.TradeItem;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
@@ -33,7 +33,7 @@ public class SetPrivateStoreListSell extends ClientBasePacket
 	{
 		super(decrypt);
 		final int count = readD();
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		// TradeList tradelist = player.getTradeList();
 		player.setSellList(new ArrayList<>());
 		List<TradeItem> listsell = player.getSellList();

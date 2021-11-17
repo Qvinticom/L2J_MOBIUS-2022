@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneForm;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
@@ -99,7 +99,7 @@ public class ZoneManager implements IXmlReader
 	private final Map<Class<? extends ZoneType>, ConcurrentHashMap<Integer, ? extends ZoneType>> _classZones = new ConcurrentHashMap<>();
 	private final Map<String, SpawnTerritory> _spawnTerritories = new ConcurrentHashMap<>();
 	private final AtomicInteger _lastDynamicId = new AtomicInteger(300000);
-	private List<ItemInstance> _debugItems;
+	private List<Item> _debugItems;
 	
 	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.WORLD_X_MAX >> SHIFT_BY) + OFFSET_X + 1][(World.WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y + 1];
 	
@@ -744,7 +744,7 @@ public class ZoneManager implements IXmlReader
 	 * General storage for debug items used for visualizing zones.
 	 * @return list of items
 	 */
-	public List<ItemInstance> getDebugItems()
+	public List<Item> getDebugItems()
 	{
 		if (_debugItems == null)
 		{
@@ -760,10 +760,10 @@ public class ZoneManager implements IXmlReader
 	{
 		if (_debugItems != null)
 		{
-			final Iterator<ItemInstance> it = _debugItems.iterator();
+			final Iterator<Item> it = _debugItems.iterator();
 			while (it.hasNext())
 			{
-				final ItemInstance item = it.next();
+				final Item item = it.next();
 				if (item != null)
 				{
 					item.decayMe();

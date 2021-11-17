@@ -18,8 +18,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -30,7 +30,7 @@ public class SendWareHouseDepositList extends ClientBasePacket
 	{
 		super(decrypt);
 		int i;
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final int count = readD();
 		final int price = 30;
 		int neededMoney = count * price;
@@ -40,12 +40,12 @@ public class SendWareHouseDepositList extends ClientBasePacket
 			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA));
 			return;
 		}
-		final ItemInstance[] items = new ItemInstance[count];
+		final Item[] items = new Item[count];
 		for (i = 0; i < count; ++i)
 		{
 			final int itemId = readD();
 			final int cnt = readD();
-			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
+			final Item inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(cnt);
 			items[i] = inst;
 		}

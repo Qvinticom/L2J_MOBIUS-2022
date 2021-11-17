@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.Util;
@@ -39,7 +39,7 @@ public class AdminDelete implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_delete"))
 		{
@@ -49,7 +49,7 @@ public class AdminDelete implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void handleDelete(PlayerInstance activeChar, int range)
+	private void handleDelete(Player activeChar, int range)
 	{
 		if (range > 0)
 		{
@@ -59,15 +59,15 @@ public class AdminDelete implements IAdminCommandHandler
 				{
 					continue;
 				}
-				deleteNpc(activeChar, (NpcInstance) target);
+				deleteNpc(activeChar, (Npc) target);
 			}
 			return;
 		}
 		
 		final WorldObject obj = activeChar.getTarget();
-		if (obj instanceof NpcInstance)
+		if (obj instanceof Npc)
 		{
-			deleteNpc(activeChar, (NpcInstance) obj);
+			deleteNpc(activeChar, (Npc) obj);
 		}
 		else
 		{
@@ -75,7 +75,7 @@ public class AdminDelete implements IAdminCommandHandler
 		}
 	}
 	
-	private void deleteNpc(PlayerInstance activeChar, NpcInstance target)
+	private void deleteNpc(Player activeChar, Npc target)
 	{
 		target.deleteMe();
 		

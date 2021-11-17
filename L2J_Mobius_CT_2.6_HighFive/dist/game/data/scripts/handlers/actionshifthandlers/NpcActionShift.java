@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -38,25 +38,25 @@ import handlers.bypasshandlers.NpcViewMod;
 public class NpcActionShift implements IActionShiftHandler
 {
 	/**
-	 * Manage and Display the GM console to modify the NpcInstance (GM only).<br>
+	 * Manage and Display the GM console to modify the Npc (GM only).<br>
 	 * <br>
-	 * <b><u>Actions (If the PlayerInstance is a GM only)</u>:</b><br>
-	 * <li>Set the NpcInstance as target of the PlayerInstance player (if necessary)</li>
-	 * <li>Send a Server->Client packet MyTargetSelected to the PlayerInstance player (display the select window)</li>
-	 * <li>If NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the PlayerInstance in order to update NpcInstance HP bar</li>
-	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance</li><br>
+	 * <b><u>Actions (If the Player is a GM only)</u>:</b><br>
+	 * <li>Set the Npc as target of the Player player (if necessary)</li>
+	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
+	 * <li>If Npc is autoAttackable, send a Server->Client packet StatusUpdate to the Player in order to update Npc HP bar</li>
+	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this Npc</li><br>
 	 * <font color=#FF0000><b><u>Caution</u>: Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Client packet : Action</li>
 	 */
 	@Override
-	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
-		// Check if the PlayerInstance is a GM
+		// Check if the Player is a GM
 		if (player.isGM())
 		{
-			// Set the target of the PlayerInstance player
+			// Set the target of the Player player
 			player.setTarget(target);
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage();

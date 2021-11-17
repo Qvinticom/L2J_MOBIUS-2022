@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -86,7 +86,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		addCondMinLevel(MIN_LV, "32734-03.html");
 	}
 	
-	private void increaseKill(PlayerInstance player, Npc npc)
+	private void increaseKill(Player player, Npc npc)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -174,7 +174,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
@@ -210,11 +210,11 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		if (player.getParty() != null)
 		{
-			for (PlayerInstance member : player.getParty().getMembers())
+			for (Player member : player.getParty().getMembers())
 			{
 				increaseKill(member, npc);
 			}
@@ -227,7 +227,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -375,7 +375,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final Set<NpcLogListHolder> npcLogList = new HashSet<>(3);

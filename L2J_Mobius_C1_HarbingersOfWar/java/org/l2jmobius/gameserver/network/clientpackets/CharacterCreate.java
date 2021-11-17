@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.SkillTreeTable;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
@@ -40,7 +40,7 @@ public class CharacterCreate extends ClientBasePacket
 	public CharacterCreate(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		final PlayerInstance newChar = new PlayerInstance();
+		final Player newChar = new Player();
 		newChar.setName(readS());
 		newChar.setRace(readD());
 		newChar.setSex(readD());
@@ -87,7 +87,7 @@ public class CharacterCreate extends ClientBasePacket
 		return result;
 	}
 	
-	private void initNewChar(ClientThread client, PlayerInstance newChar) throws IOException
+	private void initNewChar(ClientThread client, Player newChar) throws IOException
 	{
 		newChar.setObjectId(IdManager.getInstance().getNextId());
 		World.getInstance().storeObject(newChar);
@@ -142,7 +142,7 @@ public class CharacterCreate extends ClientBasePacket
 		final ItemTable itemTable = ItemTable.getInstance();
 		for (Integer item2 : template.getItems())
 		{
-			final ItemInstance item = itemTable.createItem(item2);
+			final Item item = itemTable.createItem(item2);
 			newChar.getInventory().addItem(item);
 		}
 		newChar.setTitle("");

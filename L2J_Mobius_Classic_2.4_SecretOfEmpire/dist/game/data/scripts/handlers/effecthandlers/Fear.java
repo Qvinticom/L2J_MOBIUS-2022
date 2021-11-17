@@ -23,12 +23,12 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
+import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -59,8 +59,8 @@ public class Fear extends AbstractEffect
 		}
 		
 		return effected.isPlayer() || effected.isSummon() || (effected.isAttackable() //
-			&& !((effected instanceof DefenderInstance) || (effected instanceof FortCommanderInstance) //
-				|| (effected instanceof SiegeFlagInstance) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
+			&& !((effected instanceof Defender) || (effected instanceof FortCommander) //
+				|| (effected instanceof SiegeFlag) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override
@@ -70,14 +70,14 @@ public class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		fearAction(null, effected);
 		return false;
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		effected.getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
 		fearAction(effector, effected);

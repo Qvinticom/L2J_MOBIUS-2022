@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.NpcWalkerNode;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcWalkerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.NpcWalker;
 
 public class NpcWalkerAI extends CreatureAI implements Runnable
 {
@@ -142,7 +142,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 				}
 				catch (ArrayIndexOutOfBoundsException e)
 				{
-					// LOGGER.info("NpcWalkerInstance: Error, " + e);
+					// LOGGER.info("NpcWalker: Error, " + e);
 				}
 			}
 			
@@ -202,9 +202,9 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	}
 	
 	@Override
-	public NpcWalkerInstance getActor()
+	public NpcWalker getActor()
 	{
-		return (NpcWalkerInstance) super.getActor();
+		return (NpcWalker) super.getActor();
 	}
 	
 	public int getHomeX()

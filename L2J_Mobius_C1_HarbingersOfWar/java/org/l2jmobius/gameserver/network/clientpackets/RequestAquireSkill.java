@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TrainerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Trainer;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
@@ -41,17 +41,17 @@ public class RequestAquireSkill extends ClientBasePacket
 		final int id = readD();
 		final int level = readD();
 		
-		final PlayerInstance player = client.getActiveChar();
+		final Player player = client.getActiveChar();
 		
 		// Prevent learning skills far from trainer.
-		if (!(player.getTarget() instanceof TrainerInstance))
+		if (!(player.getTarget() instanceof Trainer))
 		{
 			return;
 		}
 		boolean found = false;
 		for (WorldObject object : player.getKnownObjects())
 		{
-			if ((object instanceof TrainerInstance) && (player.calculateDistance2D(object) < 250))
+			if ((object instanceof Trainer) && (player.calculateDistance2D(object) < 250))
 			{
 				found = true;
 				break;

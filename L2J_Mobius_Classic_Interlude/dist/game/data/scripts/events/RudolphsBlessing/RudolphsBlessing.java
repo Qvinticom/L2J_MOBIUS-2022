@@ -18,7 +18,7 @@ package events.RudolphsBlessing;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonAgathion;
@@ -58,7 +58,7 @@ public class RudolphsBlessing extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("rudolph_eat"))
 		{
@@ -127,7 +127,7 @@ public class RudolphsBlessing extends LongTimeEvent
 		{
 			return;
 		}
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -142,7 +142,7 @@ public class RudolphsBlessing extends LongTimeEvent
 		{
 			return;
 		}
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -152,7 +152,7 @@ public class RudolphsBlessing extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "13285.htm";
 	}

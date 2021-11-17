@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.PledgeSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.skills.holders.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.holders.PlayerSkillHolder;
@@ -288,7 +288,7 @@ public class SkillTreeTable
 		return 0;
 	}
 	
-	public List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId)
+	public List<SkillLearn> getAvailableSkills(Player player, ClassId classId)
 	{
 		return getAvailableSkills(player, classId, player);
 	}
@@ -300,7 +300,7 @@ public class SkillTreeTable
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}.
 	 */
-	private List<SkillLearn> getAvailableSkills(PlayerInstance player, ClassId classId, ISkillsHolder holder)
+	private List<SkillLearn> getAvailableSkills(Player player, ClassId classId, ISkillsHolder holder)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Collection<SkillLearn> skills = _skillTrees.get(classId).values();
@@ -331,7 +331,7 @@ public class SkillTreeTable
 		return result;
 	}
 	
-	public List<SkillLearn> getAvailableSkills(PlayerInstance player)
+	public List<SkillLearn> getAvailableSkills(Player player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final List<SkillLearn> skills = new ArrayList<>();
@@ -371,7 +371,7 @@ public class SkillTreeTable
 		return result;
 	}
 	
-	public List<EnchantSkillLearn> getAvailableEnchantSkills(PlayerInstance player)
+	public List<EnchantSkillLearn> getAvailableEnchantSkills(Player player)
 	{
 		if (player.getLevel() < 76)
 		{
@@ -406,7 +406,7 @@ public class SkillTreeTable
 		return result;
 	}
 	
-	public List<PledgeSkillLearn> getAvailablePledgeSkills(PlayerInstance player)
+	public List<PledgeSkillLearn> getAvailablePledgeSkills(Player player)
 	{
 		final List<PledgeSkillLearn> result = new ArrayList<>();
 		final List<PledgeSkillLearn> skills = _pledgeSkillTrees;
@@ -455,7 +455,7 @@ public class SkillTreeTable
 		return _skillTrees.get(classId).values();
 	}
 	
-	public int getMinLevelForNewSkill(PlayerInstance player, ClassId classId)
+	public int getMinLevelForNewSkill(Player player, ClassId classId)
 	{
 		int minLevel = 0;
 		final Collection<SkillLearn> skills = _skillTrees.get(classId).values();
@@ -469,7 +469,7 @@ public class SkillTreeTable
 		return minLevel;
 	}
 	
-	public int getMinLevelForNewSkill(PlayerInstance player)
+	public int getMinLevelForNewSkill(Player player)
 	{
 		int minLevel = 0;
 		final List<SkillLearn> skills = new ArrayList<>();
@@ -491,7 +491,7 @@ public class SkillTreeTable
 		return minLevel;
 	}
 	
-	public int getSkillCost(PlayerInstance player, Skill skill)
+	public int getSkillCost(Player player, Skill skill)
 	{
 		int skillCost = 100000000;
 		final ClassId classId = player.getSkillLearningClassId();
@@ -528,7 +528,7 @@ public class SkillTreeTable
 		return skillCost;
 	}
 	
-	public int getSkillSpCost(PlayerInstance player, Skill skill)
+	public int getSkillSpCost(Player player, Skill skill)
 	{
 		int skillCost = 100000000;
 		for (EnchantSkillLearn enchantSkillLearn : getAvailableEnchantSkills(player))
@@ -553,7 +553,7 @@ public class SkillTreeTable
 		return skillCost;
 	}
 	
-	public int getSkillExpCost(PlayerInstance player, Skill skill)
+	public int getSkillExpCost(Player player, Skill skill)
 	{
 		int skillCost = 100000000;
 		for (EnchantSkillLearn enchantSkillLearn : getAvailableEnchantSkills(player))
@@ -578,7 +578,7 @@ public class SkillTreeTable
 		return skillCost;
 	}
 	
-	public byte getSkillRate(PlayerInstance player, Skill skill)
+	public byte getSkillRate(Player player, Skill skill)
 	{
 		for (EnchantSkillLearn enchantSkillLearn : getAvailableEnchantSkills(player))
 		{
@@ -597,7 +597,7 @@ public class SkillTreeTable
 		return 0;
 	}
 	
-	public Collection<Skill> getAllAvailableSkills(PlayerInstance player, ClassId classId)
+	public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId)
 	{
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player.getSkills());
 		List<SkillLearn> learnable;

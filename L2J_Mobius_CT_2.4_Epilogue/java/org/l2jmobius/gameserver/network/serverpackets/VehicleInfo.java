@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,7 +31,7 @@ public class VehicleInfo implements IClientOutgoingPacket
 	private final int _z;
 	private final int _heading;
 	
-	public VehicleInfo(BoatInstance boat)
+	public VehicleInfo(Boat boat)
 	{
 		_objId = boat.getObjectId();
 		_x = boat.getX();

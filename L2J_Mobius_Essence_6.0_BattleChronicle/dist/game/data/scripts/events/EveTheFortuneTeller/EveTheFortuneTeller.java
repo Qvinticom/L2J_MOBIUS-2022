@@ -18,7 +18,7 @@ package events.EveTheFortuneTeller;
 
 import org.l2jmobius.gameserver.enums.LuckyGameType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
 
@@ -44,7 +44,7 @@ public class EveTheFortuneTeller extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -70,7 +70,7 @@ public class EveTheFortuneTeller extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "31855.htm";
 	}

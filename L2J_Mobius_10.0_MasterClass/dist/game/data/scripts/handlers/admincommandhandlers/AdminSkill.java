@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -86,7 +86,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private static Skill[] adminSkills;
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		if (command.equals("admin_show_skills"))
@@ -178,7 +178,7 @@ public class AdminSkill implements IAdminCommandHandler
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
-			final PlayerInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			for (Skill skill : player.getAllSkills())
 			{
 				player.removeSkill(skill);
@@ -281,7 +281,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param includeByFp if {@code true} Forgotten Power skills will be delivered.
 	 * @param includeRequiredItems if {@code true} skills that have required items will be added
 	 */
-	private void adminGiveAllSkills(PlayerInstance activeChar, boolean includeByFs, boolean includeByFp, boolean includeRequiredItems)
+	private void adminGiveAllSkills(Player activeChar, boolean includeByFs, boolean includeByFp, boolean includeRequiredItems)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -289,7 +289,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		// Notify player and admin
 		BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(includeByFs, includeByFp, true, includeRequiredItems) + " skills to " + player.getName());
 		player.sendSkillList();
@@ -302,7 +302,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param activeChar the player, probably a Game Master.
 	 * @param includeSquad if Squad skills is included
 	 */
-	private void adminGiveClanSkills(PlayerInstance activeChar, boolean includeSquad)
+	private void adminGiveClanSkills(Player activeChar, boolean includeSquad)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -311,7 +311,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		final Clan clan = player.getClan();
 		if (clan == null)
 		{
@@ -334,7 +334,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		// Notify target and active char
 		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-		for (PlayerInstance member : clan.getOnlineMembers(0))
+		for (Player member : clan.getOnlineMembers(0))
 		{
 			member.sendSkillList();
 		}
@@ -348,7 +348,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param activeChar the active Game Master.
 	 * @param pageValue
 	 */
-	private void removeSkillsPage(PlayerInstance activeChar, int pageValue)
+	private void removeSkillsPage(Player activeChar, int pageValue)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -357,7 +357,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
 		final int maxSkillsPerPage = 30;
 		int maxPages = skills.length / maxSkillsPerPage;
@@ -402,7 +402,7 @@ public class AdminSkill implements IAdminCommandHandler
 	/**
 	 * @param activeChar the active Game Master.
 	 */
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -410,7 +410,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/charskills.htm");
 		adminReply.replace("%name%", player.getName());
@@ -422,7 +422,7 @@ public class AdminSkill implements IAdminCommandHandler
 	/**
 	 * @param activeChar the active Game Master.
 	 */
-	private void adminGetSkills(PlayerInstance activeChar)
+	private void adminGetSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -430,7 +430,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		if (player.getName().equals(activeChar.getName()))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
@@ -456,7 +456,7 @@ public class AdminSkill implements IAdminCommandHandler
 	/**
 	 * @param activeChar the active Game Master.
 	 */
-	private void adminResetSkills(PlayerInstance activeChar)
+	private void adminResetSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -464,7 +464,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		if (adminSkills == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "You must get the skills of someone in order to do this.");
@@ -501,7 +501,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param activeChar the active Game Master.
 	 * @param value
 	 */
-	private void adminAddSkill(PlayerInstance activeChar, String value)
+	private void adminAddSkill(Player activeChar, String value)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -510,7 +510,7 @@ public class AdminSkill implements IAdminCommandHandler
 			showMainPage(activeChar);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		final StringTokenizer st = new StringTokenizer(value);
 		if ((st.countTokens() != 1) && (st.countTokens() != 2))
 		{
@@ -554,7 +554,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param activeChar the active Game Master.
 	 * @param idval
 	 */
-	private void adminRemoveSkill(PlayerInstance activeChar, int idval)
+	private void adminRemoveSkill(Player activeChar, int idval)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -562,7 +562,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		final Skill skill = SkillData.getInstance().getSkill(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
@@ -585,7 +585,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param id
 	 * @param level
 	 */
-	private void adminAddClanSkill(PlayerInstance activeChar, int id, int level)
+	private void adminAddClanSkill(Player activeChar, int id, int level)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -594,7 +594,7 @@ public class AdminSkill implements IAdminCommandHandler
 			showMainPage(activeChar);
 			return;
 		}
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		if (!player.isClanLeader())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
@@ -626,7 +626,7 @@ public class AdminSkill implements IAdminCommandHandler
 		clan.addNewSkill(skill);
 		BuilderUtil.sendSysMessage(activeChar, "You gave the Clan Skill: " + skillname + " to the clan " + clan.getName() + ".");
 		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-		for (PlayerInstance member : clan.getOnlineMembers(0))
+		for (Player member : clan.getOnlineMembers(0))
 		{
 			member.sendSkillList();
 		}

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -32,7 +32,7 @@ public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 	private final int _vpPoints;
 	private final int _homunculusCreateTime;
 	
-	public ExShowHomunculusBirthInfo(PlayerInstance player)
+	public ExShowHomunculusBirthInfo(Player player)
 	{
 		_hpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_HP_POINTS, 0);
 		_spPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);

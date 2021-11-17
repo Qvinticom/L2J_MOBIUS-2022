@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -63,7 +63,7 @@ public class ManaHeal implements ISkillHandler
 			sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 			target.sendPacket(sump);
 			
-			if ((creature instanceof PlayerInstance) && (creature != target))
+			if ((creature instanceof Player) && (creature != target))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_S1);
 				sm.addString(creature.getName());

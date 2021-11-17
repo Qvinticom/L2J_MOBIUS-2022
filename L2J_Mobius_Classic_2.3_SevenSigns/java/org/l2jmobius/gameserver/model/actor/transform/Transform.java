@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTransform;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
@@ -228,7 +228,7 @@ public class Transform implements IIdentifiable
 		creature.abortAttack();
 		creature.abortCast();
 		
-		final PlayerInstance player = creature.getActingPlayer();
+		final Player player = creature.getActingPlayer();
 		
 		// Get off the strider or something else if character is mounted
 		if (creature.isPlayer() && player.isMounted())
@@ -361,7 +361,7 @@ public class Transform implements IIdentifiable
 			
 			if (creature.isPlayer())
 			{
-				final PlayerInstance player = creature.getActingPlayer();
+				final Player player = creature.getActingPlayer();
 				final boolean hasTransformSkills = player.hasTransformSkills();
 				if (_name != null)
 				{
@@ -404,7 +404,7 @@ public class Transform implements IIdentifiable
 		}
 	}
 	
-	public void onLevelUp(PlayerInstance player)
+	public void onLevelUp(Player player)
 	{
 		// Add skills depending on level.
 		final TransformTemplate template = getTemplate(player);
@@ -450,7 +450,7 @@ public class Transform implements IIdentifiable
 		return val;
 	}
 	
-	public int getBaseDefBySlot(PlayerInstance player, int slot)
+	public int getBaseDefBySlot(Player player, int slot)
 	{
 		final int defaultValue = player.getTemplate().getBaseDefBySlot(slot);
 		final TransformTemplate template = getTemplate(player);

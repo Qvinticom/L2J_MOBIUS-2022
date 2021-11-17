@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -57,7 +57,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -91,7 +91,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
+		final Item itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		
 		// if we can't find the requested item, its actually a cheat
 		if (itemToRemove == null)
@@ -102,9 +102,9 @@ public class RequestDestroyItem implements IClientIncomingPacket
 				final WorldObject obj = World.getInstance().findObject(_objectId);
 				if (obj.isItem())
 				{
-					if (_count > ((ItemInstance) obj).getCount())
+					if (_count > ((Item) obj).getCount())
 					{
-						count = ((ItemInstance) obj).getCount();
+						count = ((Item) obj).getCount();
 					}
 					AdminCommandHandler.getInstance().useAdminCommand(player, "admin_delete_item " + _objectId + " " + count, true);
 				}
@@ -194,14 +194,14 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot()))
+			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot()))
 			{
 				iu.addModifiedItem(itm);
 			}
 			player.sendInventoryUpdate(iu);
 		}
 		
-		final ItemInstance removedItem = player.getInventory().destroyItem("Destroy", itemToRemove, count, player, null);
+		final Item removedItem = player.getInventory().destroyItem("Destroy", itemToRemove, count, player, null);
 		if (removedItem == null)
 		{
 			return;

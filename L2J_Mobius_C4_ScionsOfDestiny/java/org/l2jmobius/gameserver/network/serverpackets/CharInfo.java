@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Inventory _inventory;
 	private final int _runSpd;
 	private final int _walkSpd;
@@ -34,7 +34,7 @@ public class CharInfo implements IClientOutgoingPacket
 	private final float _moveMultiplier;
 	private final boolean _gmSeeInvis;
 	
-	public CharInfo(PlayerInstance player, boolean gmSeeInvis)
+	public CharInfo(Player player, boolean gmSeeInvis)
 	{
 		_player = player;
 		_inventory = player.getInventory();

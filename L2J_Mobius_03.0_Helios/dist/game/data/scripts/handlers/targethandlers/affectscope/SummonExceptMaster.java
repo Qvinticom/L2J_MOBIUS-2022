@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import org.l2jmobius.gameserver.util.Util;
@@ -41,7 +41,7 @@ public class SummonExceptMaster implements IAffectScopeHandler
 		final int affectLimit = skill.getAffectLimit();
 		if (target.isPlayable())
 		{
-			final PlayerInstance player = target.getActingPlayer();
+			final Player player = target.getActingPlayer();
 			//@formatter:off
 			player.getServitorsAndPets().stream()
 			.filter(c -> !c.isDead())

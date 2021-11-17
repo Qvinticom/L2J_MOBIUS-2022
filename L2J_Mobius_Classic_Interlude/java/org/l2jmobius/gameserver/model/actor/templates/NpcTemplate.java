@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.util.Util;
@@ -791,7 +791,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 			case LUCKY:
 			{
 				final int itemId = dropItem.getItemId();
-				final Item item = ItemTable.getInstance().getTemplate(itemId);
+				final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 				final boolean champion = victim.isChampion();
 				
 				// chance

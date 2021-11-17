@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.Macro.MacroCmd;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.SendMacroList;
 
 /**
@@ -39,12 +39,12 @@ public class MacroList
 {
 	private static final Logger LOGGER = Logger.getLogger(MacroList.class.getName());
 	
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private int _revision;
 	private int _macroId;
 	private final Map<Integer, Macro> _macroses = new HashMap<>();
 	
-	public MacroList(PlayerInstance owner)
+	public MacroList(Player owner)
 	{
 		_owner = owner;
 		_revision = 1;

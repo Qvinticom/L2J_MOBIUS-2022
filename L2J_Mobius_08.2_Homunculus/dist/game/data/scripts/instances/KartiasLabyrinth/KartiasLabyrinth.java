@@ -28,8 +28,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -195,7 +195,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -272,7 +272,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = (npc != null) ? npc.getInstanceWorld() : player.getInstanceWorld();
 		if (instance != null)
@@ -339,7 +339,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		instance.spawnGroup("PRISONERS").forEach(npc ->
 		{
@@ -397,7 +397,7 @@ public class KartiasLabyrinth extends AbstractInstance
 		{
 			if (isSoloKartia(instance))
 			{
-				final PlayerInstance player = instance.getFirstPlayer();
+				final Player player = instance.getFirstPlayer();
 				if (player != null)
 				{
 					switch (instance.getTemplateId())
@@ -425,7 +425,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -876,7 +876,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	public String onCreatureSee(Npc npc, Creature creature)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(1))
+		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpc)) && npc.isScriptValue(1))
 		{
 			final double distance = npc.calculateDistance2D(creature);
 			if ((distance < 450) && !CommonUtil.contains(PRISONERS, creature.getId()))
@@ -885,7 +885,7 @@ public class KartiasLabyrinth extends AbstractInstance
 				npc.setInvul(false);
 				npc.setScriptValue(1);
 				WalkingManager.getInstance().cancelMoving(npc);
-				((MonsterInstance) npc).addDamageHate(creature, 0, 1000);
+				((Monster) npc).addDamageHate(creature, 0, 1000);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				addAttackDesire(npc, creature);
 			}
@@ -894,7 +894,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == KARTIA_RESEARCHER)
 		{

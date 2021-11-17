@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -32,15 +32,15 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 	{
 		super(decrypt);
 		int i;
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final int itemCount = readD();
 		int weight = 0;
-		final ItemInstance[] items = new ItemInstance[itemCount];
+		final Item[] items = new Item[itemCount];
 		for (i = 0; i < itemCount; ++i)
 		{
 			final int itemId = readD();
 			final int count = readD();
-			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
+			final Item inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(count);
 			items[i] = inst;
 			weight += items[i].getItem().getWeight() * count;

@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -58,7 +58,7 @@ public class RankuFloor extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (npc.getId() == GK_9)
@@ -92,7 +92,7 @@ public class RankuFloor extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final int instanceId = npc.getInstanceId();
 		if (instanceId > 0)
@@ -107,7 +107,7 @@ public class RankuFloor extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(PlayerInstance player)
+	protected boolean checkConditions(Player player)
 	{
 		if (player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
@@ -121,7 +121,7 @@ public class RankuFloor extends AbstractInstance
 			return false;
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < MIN_LV)
 			{
@@ -158,7 +158,7 @@ public class RankuFloor extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -170,7 +170,7 @@ public class RankuFloor extends AbstractInstance
 			}
 			else
 			{
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 					partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_10, 1, null, true);

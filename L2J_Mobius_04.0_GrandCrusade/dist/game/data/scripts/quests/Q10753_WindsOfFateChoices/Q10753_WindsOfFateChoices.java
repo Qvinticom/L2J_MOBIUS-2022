@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -134,7 +134,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -402,7 +402,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -615,7 +615,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(2))
@@ -667,7 +667,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2))
@@ -694,7 +694,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(9) && npc.isScriptValue(0))
@@ -709,7 +709,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	@Id(ATHREAS_BELONGINGS)
 	public void onItemAdd(OnPlayerItemAdd event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.isCond(9)) && (getQuestItemsCount(player, ATHREAS_BELONGINGS) >= 4))
 		{
@@ -723,7 +723,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	{
 		if (event.getMarkId() == getId())
 		{
-			final PlayerInstance player = event.getPlayer();
+			final Player player = event.getPlayer();
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
 			{
@@ -746,7 +746,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
 		final String command = event.getCommand();
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
@@ -802,7 +802,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
@@ -830,7 +830,7 @@ public class Q10753_WindsOfFateChoices extends Quest
 			return;
 		}
 		
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
 		{

@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -46,7 +46,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((_amount <= 0) || (player == null) || !player.hasPet())
 		{
 			return;
@@ -58,13 +58,13 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 			return;
 		}
 		
-		final PetInstance pet = (PetInstance) player.getSummon();
-		if (player.getActiveEnchantItemId() != PlayerInstance.ID_NONE)
+		final Pet pet = (Pet) player.getSummon();
+		if (player.getActiveEnchantItemId() != Player.ID_NONE)
 		{
 			return;
 		}
 		
-		final ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
+		final Item item = pet.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			return;

@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -89,7 +89,7 @@ public class Joachim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -149,12 +149,12 @@ public class Joachim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34513.html";
 	}
 	
-	private NpcHtmlMessage getNpcHtmlMessage(PlayerInstance player, Npc npc, String fileName)
+	private NpcHtmlMessage getNpcHtmlMessage(Player player, Npc npc, String fileName)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
@@ -167,7 +167,7 @@ public class Joachim extends AbstractNpcAI
 		return html;
 	}
 	
-	private List<ClassId> getDualClasses(PlayerInstance player, CategoryType cType)
+	private List<ClassId> getDualClasses(Player player, CategoryType cType)
 	{
 		final List<ClassId> tempList = new ArrayList<>();
 		final int baseClassId = player.getBaseClass();
@@ -187,7 +187,7 @@ public class Joachim extends AbstractNpcAI
 	@Id(JOACHIM)
 	public void OnNpcMenuSelect(OnNpcMenuSelect event)
 	{
-		final PlayerInstance player = event.getTalker();
+		final Player player = event.getTalker();
 		final Npc npc = event.getNpc();
 		final int ask = event.getAsk();
 		
@@ -232,7 +232,7 @@ public class Joachim extends AbstractNpcAI
 		}
 	}
 	
-	private int getPowerItemId(PlayerInstance player)
+	private int getPowerItemId(Player player)
 	{
 		return POWER_ITEMS.entrySet().stream().filter(e -> player.isInCategory(e.getKey())).mapToInt(Entry::getValue).findFirst().orElse(0);
 	}

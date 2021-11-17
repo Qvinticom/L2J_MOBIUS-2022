@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -41,13 +41,13 @@ public class SummonFriend implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		if (!(creature instanceof PlayerInstance))
+		if (!(creature instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance activePlayer = creature.getActingPlayer();
-		if (!PlayerInstance.checkSummonerStatus(activePlayer))
+		final Player activePlayer = creature.getActingPlayer();
+		if (!Player.checkSummonerStatus(activePlayer))
 		{
 			return;
 		}
@@ -99,10 +99,10 @@ public class SummonFriend implements ISkillHandler
 					continue;
 				}
 				
-				if (target instanceof PlayerInstance)
+				if (target instanceof Player)
 				{
-					final PlayerInstance targetPlayer = target.getActingPlayer();
-					if (!PlayerInstance.checkSummonTargetStatus(targetPlayer, activePlayer))
+					final Player targetPlayer = target.getActingPlayer();
+					if (!Player.checkSummonTargetStatus(targetPlayer, activePlayer))
 					{
 						continue;
 					}
@@ -190,7 +190,7 @@ public class SummonFriend implements ISkillHandler
 						}
 						else
 						{
-							PlayerInstance.teleToTarget(targetPlayer, activePlayer, activePlayer.getLocation(), skill);
+							Player.teleToTarget(targetPlayer, activePlayer, activePlayer.getLocation(), skill);
 							targetPlayer.teleportRequest(activePlayer, skill);
 						}
 					}

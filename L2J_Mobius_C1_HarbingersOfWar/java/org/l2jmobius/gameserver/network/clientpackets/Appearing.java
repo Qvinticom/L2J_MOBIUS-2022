@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -34,35 +34,35 @@ public class Appearing extends ClientBasePacket
 	public Appearing(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		activeChar.removeAllKnownObjects();
 		
 		activeChar.sendPacket(new UserInfo(activeChar));
 		for (WorldObject worldObject : World.getInstance().getVisibleObjects(activeChar, 2000))
 		{
 			activeChar.addKnownObject(worldObject);
-			if (worldObject instanceof ItemInstance)
+			if (worldObject instanceof Item)
 			{
-				activeChar.sendPacket(new SpawnItem((ItemInstance) worldObject));
+				activeChar.sendPacket(new SpawnItem((Item) worldObject));
 				continue;
 			}
-			if (worldObject instanceof NpcInstance)
+			if (worldObject instanceof Npc)
 			{
-				activeChar.sendPacket(new NpcInfo((NpcInstance) worldObject));
-				final NpcInstance npc = (NpcInstance) worldObject;
+				activeChar.sendPacket(new NpcInfo((Npc) worldObject));
+				final Npc npc = (Npc) worldObject;
 				npc.addKnownObject(activeChar);
 				continue;
 			}
-			if (worldObject instanceof PetInstance)
+			if (worldObject instanceof Pet)
 			{
-				activeChar.sendPacket(new NpcInfo((PetInstance) worldObject));
-				final PetInstance pet = (PetInstance) worldObject;
+				activeChar.sendPacket(new NpcInfo((Pet) worldObject));
+				final Pet pet = (Pet) worldObject;
 				pet.addKnownObject(activeChar);
 				continue;
 			}
-			if (worldObject instanceof PlayerInstance)
+			if (worldObject instanceof Player)
 			{
-				final PlayerInstance player = (PlayerInstance) worldObject;
+				final Player player = (Player) worldObject;
 				activeChar.sendPacket(new CharInfo(player));
 				player.addKnownObject(activeChar);
 				player.sendPacket(new CharInfo(activeChar));

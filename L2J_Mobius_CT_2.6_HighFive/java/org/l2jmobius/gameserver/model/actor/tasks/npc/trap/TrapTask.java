@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**
@@ -31,9 +31,9 @@ public class TrapTask implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(TrapTask.class.getName());
 	private static final int TICK = 1000; // 1s
-	private final TrapInstance _trap;
+	private final Trap _trap;
 	
-	public TrapTask(TrapInstance trap)
+	public TrapTask(Trap trap)
 	{
 		_trap = trap;
 	}

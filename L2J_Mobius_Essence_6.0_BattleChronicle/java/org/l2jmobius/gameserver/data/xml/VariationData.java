@@ -30,7 +30,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.VariationInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.options.OptionDataCategory;
 import org.l2jmobius.gameserver.model.options.OptionDataGroup;
 import org.l2jmobius.gameserver.model.options.Options;
@@ -223,7 +223,7 @@ public class VariationData implements IXmlReader
 	 * @param targetItem The item on which the variation will be applied
 	 * @return VariationInstance
 	 */
-	public VariationInstance generateRandomVariation(Variation variation, ItemInstance targetItem)
+	public VariationInstance generateRandomVariation(Variation variation, Item targetItem)
 	{
 		return generateRandomVariation(variation, targetItem.getId());
 	}

@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -40,17 +40,17 @@ public class ConditionTargetAggro extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		if (effected != null)
 		{
 			if (effected.isMonster())
 			{
-				return ((MonsterInstance) effected).isAggressive() == _isAggro;
+				return ((Monster) effected).isAggressive() == _isAggro;
 			}
 			if (effected.isPlayer())
 			{
-				return ((PlayerInstance) effected).getReputation() < 0;
+				return ((Player) effected).getReputation() < 0;
 			}
 		}
 		return false;

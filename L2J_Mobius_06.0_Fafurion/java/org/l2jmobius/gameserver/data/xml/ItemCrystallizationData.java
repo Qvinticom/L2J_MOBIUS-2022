@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.enums.CrystallizationType;
 import org.l2jmobius.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
@@ -138,7 +138,7 @@ public class ItemCrystallizationData implements IXmlReader
 		return _crystallizationTemplates.size();
 	}
 	
-	private List<ItemChanceHolder> calculateCrystallizeRewards(Item item, List<ItemChanceHolder> crystallizeRewards)
+	private List<ItemChanceHolder> calculateCrystallizeRewards(ItemTemplate item, List<ItemChanceHolder> crystallizeRewards)
 	{
 		if (crystallizeRewards == null)
 		{
@@ -166,7 +166,7 @@ public class ItemCrystallizationData implements IXmlReader
 	private void generateCrystallizationData()
 	{
 		final int previousCount = _items.size();
-		for (Item item : ItemTable.getInstance().getAllItems())
+		for (ItemTemplate item : ItemTable.getInstance().getAllItems())
 		{
 			// Check if the data has not been generated.
 			if (((item instanceof Weapon) || (item instanceof Armor)) && item.isCrystallizable() && !_items.containsKey(item.getId()))
@@ -201,7 +201,7 @@ public class ItemCrystallizationData implements IXmlReader
 	 * @param item to calculate its worth in crystals.
 	 * @return List of {@code ItemChanceHolder} for the rewards with altered crystal count.
 	 */
-	public List<ItemChanceHolder> getCrystallizationRewards(ItemInstance item)
+	public List<ItemChanceHolder> getCrystallizationRewards(Item item)
 	{
 		final List<ItemChanceHolder> result = new ArrayList<>();
 		final CrystallizationDataHolder data = getCrystallizationData(item.getId());

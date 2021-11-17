@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
@@ -26,16 +26,16 @@ import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.Fishi
  */
 public class OnPlayerFishing implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final FishingEndReason _reason;
 	
-	public OnPlayerFishing(PlayerInstance player, FishingEndReason reason)
+	public OnPlayerFishing(Player player, FishingEndReason reason)
 	{
 		_player = player;
 		_reason = reason;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

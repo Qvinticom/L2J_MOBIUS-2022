@@ -19,14 +19,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PledgeShowMemberListAll extends ServerBasePacket
 {
 	private final Clan _clan;
-	private final PlayerInstance _activeChar;
+	private final Player _activeChar;
 	
-	public PledgeShowMemberListAll(Clan clan, PlayerInstance activeChar)
+	public PledgeShowMemberListAll(Clan clan, Player activeChar)
 	{
 		_clan = clan;
 		_activeChar = activeChar;

@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.AdenaDistributionRequest;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -67,7 +67,7 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<PlayerInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
+		final List<Player> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
 		if (player.getAdena() < targets.size())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA);

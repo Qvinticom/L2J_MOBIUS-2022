@@ -23,7 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
@@ -99,7 +99,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		addKillId(MUCROKIAN.keySet());
 	}
 	
-	private boolean canGiveItem(PlayerInstance player, int quanty)
+	private boolean canGiveItem(Player player, int quanty)
 	{
 		final long mucrokian = getQuestItemsCount(player, MUCROKIAN_HIDE);
 		final long awakened = getQuestItemsCount(player, AWAKENED_MUCROKIAN_HIDE);
@@ -126,7 +126,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -206,7 +206,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		return htmltext;
 	}
 	
-	private String onItemExchangeRequest(PlayerInstance player, int item, int quanty)
+	private String onItemExchangeRequest(Player player, int item, int quanty)
 	{
 		String htmltext;
 		if (canGiveItem(player, quanty))
@@ -230,9 +230,9 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final PlayerInstance partyMember = getRandomPartyMember(killer, 1);
+		final Player partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
 			final float chance = (MUCROKIAN.get(npc.getId()) * Config.RATE_QUEST_DROP);
@@ -253,7 +253,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance talker)
+	public String onTalk(Npc npc, Player talker)
 	{
 		String htmltext;
 		final QuestState qs = getQuestState(talker, true);

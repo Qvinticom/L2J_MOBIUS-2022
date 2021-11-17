@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -186,13 +186,13 @@ public class AdminPForge implements IAdminCommandHandler
 		return false;
 	}
 	
-	private void showValuesUsage(PlayerInstance activeChar)
+	private void showValuesUsage(Player activeChar)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Usage: //forge_values opcode1[ opcode2[ opcode3]] ;[ format]");
 		showMainPage(activeChar);
 	}
 	
-	private void showSendUsage(PlayerInstance activeChar, String[] opCodes, String format)
+	private void showSendUsage(Player activeChar, String[] opCodes, String format)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Usage: //forge_send sc|sb|cs opcode1[;opcode2[;opcode3]][ format value1 ... valueN] ");
 		if (opCodes == null)
@@ -205,12 +205,12 @@ public class AdminPForge implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "pforge/main.htm");
 	}
 	
-	private void showValuesPage(PlayerInstance activeChar, String[] opCodes, String format)
+	private void showValuesPage(Player activeChar, String[] opCodes, String format)
 	{
 		String sendBypass = null;
 		String valuesHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/pforge/values.htm");
@@ -267,7 +267,7 @@ public class AdminPForge implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_forge"))
 		{
@@ -400,7 +400,7 @@ public class AdminPForge implements IAdminCommandHandler
 						}
 						
 						WorldObject target = null;
-						BoatInstance boat = null;
+						Boat boat = null;
 						String value = st.nextToken();
 						switch (value)
 						{

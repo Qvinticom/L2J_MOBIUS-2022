@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 /**
@@ -56,10 +56,10 @@ public class BalanceLife implements ISkillHandler
 		}
 		
 		Creature target = null;
-		PlayerInstance player = null;
-		if (creature instanceof PlayerInstance)
+		Player player = null;
+		if (creature instanceof Player)
 		{
-			player = (PlayerInstance) creature;
+			player = (Player) creature;
 		}
 		
 		double fullHP = 0;
@@ -83,7 +83,7 @@ public class BalanceLife implements ISkillHandler
 			// Player holding a cursed weapon can't be healed and can't heal.
 			if (target != creature)
 			{
-				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
+				if ((target instanceof Player) && ((Player) target).isCursedWeaponEquiped())
 				{
 					continue;
 				}

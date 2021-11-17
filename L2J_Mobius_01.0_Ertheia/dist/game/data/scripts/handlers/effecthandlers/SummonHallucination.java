@@ -20,12 +20,12 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DoppelgangerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Doppelganger;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -57,7 +57,7 @@ public class SummonHallucination extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isAlikeDead())
 		{
@@ -70,7 +70,7 @@ public class SummonHallucination extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = effector.getActingPlayer();
+		final Player player = effector.getActingPlayer();
 		if (player.isMounted())
 		{
 			return;
@@ -92,7 +92,7 @@ public class SummonHallucination extends AbstractEffect
 			x += (Rnd.nextBoolean() ? Rnd.get(0, 20) : Rnd.get(-20, 0));
 			y += (Rnd.nextBoolean() ? Rnd.get(0, 20) : Rnd.get(-20, 0));
 			
-			final DoppelgangerInstance clone = new DoppelgangerInstance(npcTemplate, player);
+			final Doppelganger clone = new Doppelganger(npcTemplate, player);
 			clone.setCurrentHp(clone.getMaxHp());
 			clone.setCurrentMp(clone.getMaxMp());
 			clone.setSummoner(player);

@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.QuestGuard;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -66,7 +66,7 @@ public class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -114,7 +114,7 @@ public class Quarry extends AbstractNpcAI
 						{
 							if (getRandom(10000) < item.getChance())
 							{
-								npc.dropItem((PlayerInstance) npc.getTarget(), item.getId(), (int) (item.getCount() * Config.RATE_QUEST_DROP));
+								npc.dropItem((Player) npc.getTarget(), item.getId(), (int) (item.getCount() * Config.RATE_QUEST_DROP));
 								break;
 							}
 						}
@@ -133,15 +133,15 @@ public class Quarry extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		npc.setAutoAttackable(false);
-		if (npc instanceof QuestGuardInstance)
+		if (npc instanceof QuestGuard)
 		{
-			((QuestGuardInstance) npc).setPassive(true);
+			((QuestGuard) npc).setPassive(true);
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (HellboundEngine.getInstance().getLevel() != 5)
 		{
@@ -151,7 +151,7 @@ public class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.setAutoAttackable(false);
 		return super.onKill(npc, killer, isSummon);

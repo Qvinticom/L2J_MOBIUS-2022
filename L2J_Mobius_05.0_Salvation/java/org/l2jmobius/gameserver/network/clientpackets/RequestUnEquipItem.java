@@ -20,10 +20,10 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -49,13 +49,13 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getPaperdollItemByItemId(_slot);
+		final Item item = player.getInventory().getPaperdollItemByItemId(_slot);
 		// Wear-items are not to be unequipped.
 		if (item == null)
 		{
@@ -70,13 +70,13 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 		}
 		
 		// Arrows and bolts.
-		if ((_slot == Item.SLOT_L_HAND) && (item.getItem() instanceof EtcItem))
+		if ((_slot == ItemTemplate.SLOT_L_HAND) && (item.getItem() instanceof EtcItem))
 		{
 			return;
 		}
 		
 		// Prevent of unequipping a cursed weapon.
-		if ((_slot == Item.SLOT_LR_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped()))
+		if ((_slot == ItemTemplate.SLOT_LR_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped()))
 		{
 			return;
 		}
@@ -99,14 +99,14 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<ItemInstance> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final List<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		player.broadcastUserInfo();
 		
 		// This can be 0 if the user pressed the right mouse button twice very fast.
 		if (!unequipped.isEmpty())
 		{
 			SystemMessage sm = null;
-			final ItemInstance unequippedItem = unequipped.get(0);
+			final Item unequippedItem = unequipped.get(0);
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);

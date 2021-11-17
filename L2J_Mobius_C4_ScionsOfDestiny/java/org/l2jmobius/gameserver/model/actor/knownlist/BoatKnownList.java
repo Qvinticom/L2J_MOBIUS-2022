@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Maktakien
@@ -33,7 +33,7 @@ public class BoatKnownList extends CreatureKnownList
 	@Override
 	public int getDistanceToForgetObject(WorldObject object)
 	{
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			return 0;
 		}
@@ -43,7 +43,7 @@ public class BoatKnownList extends CreatureKnownList
 	@Override
 	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if (!(object instanceof PlayerInstance))
+		if (!(object instanceof Player))
 		{
 			return 0;
 		}

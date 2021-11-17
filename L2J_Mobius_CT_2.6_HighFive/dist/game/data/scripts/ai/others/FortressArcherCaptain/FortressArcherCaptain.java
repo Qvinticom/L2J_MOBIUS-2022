@@ -17,7 +17,7 @@
 package ai.others.FortressArcherCaptain;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -60,7 +60,7 @@ public class FortressArcherCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return ((player.getClan() != null) && (player.getClanId() == (npc.getFort().getOwnerClan() == null ? 0 : npc.getFort().getOwnerClan().getId()))) ? "FortressArcherCaptain.html" : "FortressArcherCaptain-01.html";
 	}

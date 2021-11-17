@@ -25,11 +25,11 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.CropProcure;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.holders.UniqueItemHolder;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -77,7 +77,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -91,7 +91,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 		}
 		
 		final Npc manager = player.getLastFolkNPC();
-		if (!(manager instanceof MerchantInstance) || !manager.canInteract(player))
+		if (!(manager instanceof Merchant) || !manager.canInteract(player))
 		{
 			client.sendActionFailed();
 			return;
@@ -108,7 +108,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 		int weight = 0;
 		for (CropHolder i : _items)
 		{
-			final ItemInstance item = player.getInventory().getItemByObjectId(i.getObjectId());
+			final Item item = player.getInventory().getItemByObjectId(i.getObjectId());
 			if ((item == null) || (item.getCount() < i.getCount()) || (item.getId() != i.getId()))
 			{
 				client.sendActionFailed();
@@ -122,7 +122,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 				return;
 			}
 			
-			final Item template = ItemTable.getInstance().getTemplate(i.getRewardId());
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(i.getRewardId());
 			weight += (i.getCount() * template.getWeight());
 			if (!template.isStackable())
 			{

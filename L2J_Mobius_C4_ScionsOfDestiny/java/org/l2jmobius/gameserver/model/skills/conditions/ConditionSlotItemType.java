@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.skills.conditions;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -37,12 +37,12 @@ public class ConditionSlotItemType extends ConditionInventory
 	@Override
 	public boolean testImpl(Env env)
 	{
-		if (!(env.player instanceof PlayerInstance))
+		if (!(env.player instanceof Player))
 		{
 			return false;
 		}
-		final Inventory inv = ((PlayerInstance) env.player).getInventory();
-		final ItemInstance item = inv.getPaperdollItem(_slot);
+		final Inventory inv = ((Player) env.player).getInventory();
+		final Item item = inv.getPaperdollItem(_slot);
 		if (item == null)
 		{
 			return false;

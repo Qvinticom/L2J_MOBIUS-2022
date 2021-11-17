@@ -41,14 +41,14 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveFinished;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -248,7 +248,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if ((target == null) || (getIntention() == AI_INTENTION_REST) || _actor.isAllSkillsDisabled() || _actor.isCastingNow() || _actor.isAfraid())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -294,7 +294,7 @@ public class CreatureAI extends AbstractAI
 	 * <ul>
 	 * <li>Set the AI cast target</li>
 	 * <li>Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)</li>
-	 * <li>Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor</li>
+	 * <li>Cancel action client side by sending Server->Client packet ActionFailed to the Player actor</li>
 	 * <li>Set the AI skill used by INTENTION_CAST</li>
 	 * <li>Set the Intention of this AI to AI_INTENTION_CAST</li>
 	 * <li>Launch the Think Event</li>
@@ -348,7 +348,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if ((getIntention() == AI_INTENTION_REST) || _actor.isAllSkillsDisabled() || _actor.isCastingNow())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -410,7 +410,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if ((getIntention() == AI_INTENTION_REST) || _actor.isAllSkillsDisabled() || _actor.isCastingNow())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -418,7 +418,7 @@ public class CreatureAI extends AbstractAI
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		clientStopAutoAttack();
 		
-		if (object.isItem() && (((ItemInstance) object).getItemLocation() != ItemLocation.VOID))
+		if (object.isItem() && (((Item) object).getItemLocation() != ItemLocation.VOID))
 		{
 			return;
 		}
@@ -455,7 +455,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if ((getIntention() == AI_INTENTION_REST) || _actor.isAllSkillsDisabled() || _actor.isCastingNow())
 		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
+			// Cancel action client side by sending Server->Client packet ActionFailed to the Player actor
 			clientActionFailed();
 			return;
 		}
@@ -1056,7 +1056,7 @@ public class CreatureAI extends AbstractAI
 				return true;
 			}
 			
-			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 			if (!_actor.isRunning() && !(this instanceof PlayerAI) && !(this instanceof SummonAI))
 			{
 				_actor.setRunning();
@@ -1116,7 +1116,7 @@ public class CreatureAI extends AbstractAI
 		if ((target == null) || target.isAlikeDead())
 		{
 			// check if player is fakedeath
-			if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
+			if ((target != null) && target.isPlayer() && ((Player) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 			{
 				target.stopFakeDeath(true);
 				return false;
@@ -1148,9 +1148,9 @@ public class CreatureAI extends AbstractAI
 	 */
 	protected boolean checkTargetLost(WorldObject target)
 	{
-		if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
+		if ((target != null) && target.isPlayer() && ((Player) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 		{
-			((PlayerInstance) target).stopFakeDeath(true);
+			((Player) target).stopFakeDeath(true);
 			return false;
 		}
 		if ((target != null) && ((_actor == null) || (_skill == null) || !_skill.isBad() || (_skill.getAffectRange() <= 0) || GeoEngine.getInstance().canSeeTarget(_actor, target)))

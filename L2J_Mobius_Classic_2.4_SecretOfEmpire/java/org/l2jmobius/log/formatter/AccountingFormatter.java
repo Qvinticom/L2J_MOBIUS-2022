@@ -23,7 +23,7 @@ import java.util.logging.LogRecord;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -98,9 +98,9 @@ public class AccountingFormatter extends Formatter
 						}
 					}
 				}
-				else if (p instanceof PlayerInstance)
+				else if (p instanceof Player)
 				{
-					final PlayerInstance player = (PlayerInstance) p;
+					final Player player = (Player) p;
 					StringUtil.append(output, player.getName());
 					StringUtil.append(output, "(", String.valueOf(player.getObjectId()), ")");
 				}

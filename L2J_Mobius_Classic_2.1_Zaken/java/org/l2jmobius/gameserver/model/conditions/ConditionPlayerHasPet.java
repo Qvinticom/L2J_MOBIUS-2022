@@ -20,9 +20,9 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -49,7 +49,7 @@ public class ConditionPlayerHasPet extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		final Summon pet = effector.getActingPlayer().getPet();
 		if ((effector.getActingPlayer() == null) || (pet == null))
@@ -62,7 +62,7 @@ public class ConditionPlayerHasPet extends Condition
 			return true;
 		}
 		
-		final ItemInstance controlItem = ((PetInstance) pet).getControlItem();
+		final Item controlItem = ((Pet) pet).getControlItem();
 		return (controlItem != null) && _controlItemIds.contains(controlItem.getId());
 	}
 }

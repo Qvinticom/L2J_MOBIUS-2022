@@ -17,7 +17,7 @@
 package ai.areas.IsleOfPrayer;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -42,7 +42,7 @@ public class EvasGiftBox extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (killer.hasAbnormalType(KISS_OF_EVA.getSkill().getAbnormalType())) // It was checking if abnormal level is > 0. All cases when has this abnormal type, level is > 0.
 		{

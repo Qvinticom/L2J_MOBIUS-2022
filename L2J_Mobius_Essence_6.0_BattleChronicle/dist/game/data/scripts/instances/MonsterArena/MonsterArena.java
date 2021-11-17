@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -90,7 +90,7 @@ public class MonsterArena extends AbstractInstance
 	// Skill
 	private static final int CLAN_EXUBERANCE = 1867;
 	// Misc
-	private static final Collection<PlayerInstance> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Collection<Player> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final int TEMPLATE_ID = 192;
 	
 	public MonsterArena()
@@ -104,7 +104,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -125,7 +125,7 @@ public class MonsterArena extends AbstractInstance
 				// If you died, you may return to the arena.
 				if ((player.getClan() != null) && (player.getCommandChannel() != null))
 				{
-					for (PlayerInstance member : player.getCommandChannel().getMembers())
+					for (Player member : player.getCommandChannel().getMembers())
 					{
 						final Instance world = member.getInstanceWorld();
 						if ((world != null) && (world.getTemplateId() == TEMPLATE_ID) && (world.getPlayersCount() < 40) && (player.getClanId() == member.getClanId()))
@@ -150,7 +150,7 @@ public class MonsterArena extends AbstractInstance
 					player.sendMessage("Your clan must be at least level 3.");
 					return null;
 				}
-				for (PlayerInstance member : player.getCommandChannel().getMembers())
+				for (Player member : player.getCommandChannel().getMembers())
 				{
 					if ((member.getClan() == null) || (member.getClanId() != player.getClanId()))
 					{
@@ -201,7 +201,7 @@ public class MonsterArena extends AbstractInstance
 				if (world != null)
 				{
 					world.setStatus(1);
-					for (PlayerInstance plr : world.getPlayers())
+					for (Player plr : world.getPlayers())
 					{
 						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1800, 0, NpcStringId.TIME_LEFT));
 					}
@@ -286,13 +286,13 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceLeave(PlayerInstance player, Instance instance)
+	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.TIME_LEFT));
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -318,7 +318,7 @@ public class MonsterArena extends AbstractInstance
 			}
 			else // Finish.
 			{
-				for (PlayerInstance plr : world.getPlayers())
+				for (Player plr : world.getPlayers())
 				{
 					plr.sendPacket(new ExSendUIEvent(plr, false, false, 0, 0, NpcStringId.TIME_LEFT));
 				}
@@ -329,7 +329,7 @@ public class MonsterArena extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + "-01.htm";
 	}
@@ -338,7 +338,7 @@ public class MonsterArena extends AbstractInstance
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -373,7 +373,7 @@ public class MonsterArena extends AbstractInstance
 			return;
 		}
 		
-		member.getPlayerInstance().removeSkill(CLAN_EXUBERANCE, true);
+		member.getPlayer().removeSkill(CLAN_EXUBERANCE, true);
 	}
 	
 	public static void main(String[] args)

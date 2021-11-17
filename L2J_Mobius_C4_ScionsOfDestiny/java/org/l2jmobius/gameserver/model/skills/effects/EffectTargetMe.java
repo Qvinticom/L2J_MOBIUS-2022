@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.skills.effects;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 
@@ -44,7 +44,7 @@ public class EffectTargetMe extends Effect
 	{
 		if (getEffected() instanceof Playable)
 		{
-			if (getEffected() instanceof SiegeSummonInstance)
+			if (getEffected() instanceof SiegeSummon)
 			{
 				return;
 			}

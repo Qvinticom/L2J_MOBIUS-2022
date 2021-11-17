@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Azagthtot
@@ -25,5 +25,5 @@ public interface ICustomByPassHandler
 {
 	String[] getByPassCommands();
 	
-	void handleCommand(String command, PlayerInstance player, String parameters);
+	void handleCommand(String command, Player player, String parameters);
 }

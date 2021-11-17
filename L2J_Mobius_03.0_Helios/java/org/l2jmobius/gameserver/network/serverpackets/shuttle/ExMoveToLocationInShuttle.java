@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -35,7 +35,7 @@ public class ExMoveToLocationInShuttle implements IClientOutgoingPacket
 	private final int _fromY;
 	private final int _fromZ;
 	
-	public ExMoveToLocationInShuttle(PlayerInstance player, int fromX, int fromY, int fromZ)
+	public ExMoveToLocationInShuttle(Player player, int fromX, int fromY, int fromZ)
 	{
 		_objectId = player.getObjectId();
 		_airShipId = player.getShuttle().getObjectId();

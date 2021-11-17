@@ -18,7 +18,7 @@ package ai.areas.Gracia.AI.NPC.EkimusMouth;
 
 import org.l2jmobius.gameserver.instancemanager.SoIManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -36,7 +36,7 @@ public class EkimusMouth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
 		QuestState qs = player.getQuestState(getName());
@@ -71,7 +71,7 @@ public class EkimusMouth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		QuestState qs = player.getQuestState(getName());
 		if (qs == null)

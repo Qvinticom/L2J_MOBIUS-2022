@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -111,7 +111,7 @@ public class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ("DESPAWN".equals(event))
 		{
@@ -1151,7 +1151,7 @@ public class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -1179,7 +1179,7 @@ public class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int memoState = qs.getMemoState();
@@ -1350,7 +1350,7 @@ public class Q00060_GoodWorksReward extends Quest
 	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("DESPAWN", 60000, npc, null);
-		final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);
+		final Player player = npc.getVariables().getObject("player0", Player.class);
 		if ((player != null) && player.isPlayer())
 		{
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_I_MUST_KILL_YOU_BLAME_YOUR_OWN_CURIOSITY).addStringParameter(player.getAppearance().getVisibleName()));

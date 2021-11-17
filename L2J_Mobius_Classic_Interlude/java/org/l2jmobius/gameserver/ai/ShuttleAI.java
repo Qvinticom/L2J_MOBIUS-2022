@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.ai;
 
-import org.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
 import org.l2jmobius.gameserver.network.serverpackets.shuttle.ExShuttleMove;
 
 /**
@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.shuttle.ExShuttleMove;
  */
 public class ShuttleAI extends VehicleAI
 {
-	public ShuttleAI(ShuttleInstance shuttle)
+	public ShuttleAI(Shuttle shuttle)
 	{
 		super(shuttle);
 	}
@@ -41,8 +41,8 @@ public class ShuttleAI extends VehicleAI
 	}
 	
 	@Override
-	public ShuttleInstance getActor()
+	public Shuttle getActor()
 	{
-		return (ShuttleInstance) _actor;
+		return (Shuttle) _actor;
 	}
 }

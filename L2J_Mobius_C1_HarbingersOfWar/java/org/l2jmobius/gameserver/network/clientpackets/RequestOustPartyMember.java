@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestOustPartyMember extends ClientBasePacket
@@ -26,7 +26,7 @@ public class RequestOustPartyMember extends ClientBasePacket
 	{
 		super(decrypt);
 		final String name = readS();
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if (activeChar.isInParty() && activeChar.getParty().isLeader(activeChar))
 		{
 			activeChar.getParty().oustPartyMember(name);

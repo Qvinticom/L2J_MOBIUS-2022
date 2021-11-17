@@ -18,7 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.Clan;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.JoinPledge;
@@ -35,8 +35,8 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 		super(rawPacket);
 		final int answer = readD();
 		// Connection con = client.getConnection();
-		final PlayerInstance activeChar = client.getActiveChar();
-		final PlayerInstance requestor = activeChar.getTransactionRequester();
+		final Player activeChar = client.getActiveChar();
+		final Player requestor = activeChar.getTransactionRequester();
 		if (answer == 1)
 		{
 			activeChar.sendPacket(new JoinPledge(requestor.getClanId()));

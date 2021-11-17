@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -66,7 +66,7 @@ public class OfflineTraderTable
 			stm1.execute();
 			stm2.execute();
 			con.setAutoCommit(false); // avoid halfway done
-			for (PlayerInstance pc : World.getInstance().getPlayers())
+			for (Player pc : World.getInstance().getPlayers())
 			{
 				try
 				{
@@ -210,13 +210,13 @@ public class OfflineTraderTable
 					continue;
 				}
 				
-				PlayerInstance player = null;
+				Player player = null;
 				
 				try
 				{
 					final GameClient client = new GameClient();
 					client.setDetached(true);
-					player = PlayerInstance.load(rs.getInt("charId"));
+					player = Player.load(rs.getInt("charId"));
 					client.setPlayer(player);
 					player.setOnlineStatus(true, false);
 					client.setAccountName(player.getAccountNamePlayer());
@@ -325,7 +325,7 @@ public class OfflineTraderTable
 		}
 	}
 	
-	public static synchronized void onTransaction(PlayerInstance trader, boolean finished, boolean firstCall)
+	public static synchronized void onTransaction(Player trader, boolean finished, boolean firstCall)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);

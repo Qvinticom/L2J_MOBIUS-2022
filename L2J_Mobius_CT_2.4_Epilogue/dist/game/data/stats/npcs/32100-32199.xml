@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="32100" level="70" type="Npc" name="Tony the Cat" title="Event Manager">
+	<npc id="32100" level="70" type="Folk" name="Tony the Cat" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -39,7 +39,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="32101" level="70" type="Npc" name="Tony the Cat" title="Event Manager">
+	<npc id="32101" level="70" type="Folk" name="Tony the Cat" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -78,7 +78,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="32102" level="70" type="Npc" name="Tony the Cat" title="Event Manager">
+	<npc id="32102" level="70" type="Folk" name="Tony the Cat" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -117,7 +117,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="32103" level="70" type="Npc" name="Telling the Cat" title="Event Manager">
+	<npc id="32103" level="70" type="Folk" name="Telling the Cat" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -156,7 +156,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="32104" level="70" type="Npc" name="Vervato">
+	<npc id="32104" level="70" type="Folk" name="Vervato">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -271,7 +271,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="32107" level="70" type="Npc" name="Teleportation Cubic">
+	<npc id="32107" level="70" type="Folk" name="Teleportation Cubic">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -348,7 +348,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="32109" level="70" type="Npc" name="Shilen's Stone Statue">
+	<npc id="32109" level="70" type="Folk" name="Shilen's Stone Statue">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -383,7 +383,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="32110" level="70" type="Npc" name="">
+	<npc id="32110" level="70" type="Folk" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -418,7 +418,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="32111" level="70" type="Npc" name="Orahochin">
+	<npc id="32111" level="70" type="Folk" name="Orahochin">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -456,7 +456,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="32112" level="70" type="Npc" name="Gariachin">
+	<npc id="32112" level="70" type="Folk" name="Gariachin">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -494,7 +494,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="32113" level="70" type="Npc" name="Marquez">
+	<npc id="32113" level="70" type="Folk" name="Marquez">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -532,7 +532,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="32114" level="70" type="Npc" name="Mushika">
+	<npc id="32114" level="70" type="Folk" name="Mushika">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -570,7 +570,7 @@
 			<height normal="42.5105" />
 		</collision>
 	</npc>
-	<npc id="32115" level="70" type="Npc" name="Asamah">
+	<npc id="32115" level="70" type="Folk" name="Asamah">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -608,7 +608,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="32116" level="70" type="Npc" name="Kirikachin">
+	<npc id="32116" level="70" type="Folk" name="Kirikachin">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -646,7 +646,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="32117" level="70" type="Npc" name="Karakawei">
+	<npc id="32117" level="70" type="Folk" name="Karakawei">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -684,7 +684,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="32118" level="70" type="Npc" name="Mantarasa Egg">
+	<npc id="32118" level="70" type="Folk" name="Mantarasa Egg">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -723,7 +723,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="32119" level="70" type="Npc" name="Ulu Kaimu">
+	<npc id="32119" level="70" type="Folk" name="Ulu Kaimu">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -763,7 +763,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="32120" level="70" type="Npc" name="Balu Kaimu">
+	<npc id="32120" level="70" type="Folk" name="Balu Kaimu">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -803,7 +803,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="32121" level="70" type="Npc" name="Chuta Kaimu">
+	<npc id="32121" level="70" type="Folk" name="Chuta Kaimu">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -843,7 +843,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="32122" level="70" type="Npc" name="Warrior's Grave">
+	<npc id="32122" level="70" type="Folk" name="Warrior's Grave">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -883,7 +883,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="32123" level="70" type="Npc" name="Valakas">
+	<npc id="32123" level="70" type="Folk" name="Valakas">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -917,7 +917,7 @@
 			<height normal="335" />
 		</collision>
 	</npc>
-	<npc id="32124" level="70" type="Npc" name="Great Soul">
+	<npc id="32124" level="70" type="Folk" name="Great Soul">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -956,7 +956,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32125" level="70" type="Npc" name="Great Soul">
+	<npc id="32125" level="70" type="Folk" name="Great Soul">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -995,7 +995,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32126" level="70" type="Npc" name="Priest Guard">
+	<npc id="32126" level="70" type="Folk" name="Priest Guard">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<equipment rhand="7824" /> <!-- rhand: Traveler's Long Bow -->
@@ -1030,7 +1030,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="32127" level="70" type="Npc" name="Priest Guard">
+	<npc id="32127" level="70" type="Folk" name="Priest Guard">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<equipment rhand="7824" /> <!-- rhand: Traveler's Long Bow -->
@@ -1065,7 +1065,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="32128" level="70" type="Npc" name="Guardian Wizard of the Cloth">
+	<npc id="32128" level="70" type="Folk" name="Guardian Wizard of the Cloth">
 		<parameters>
 			<minions name="Privates">
 				<npc id="32127" count="6" respawnTime="0" weightPoint="1" />
@@ -1105,7 +1105,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="32129" level="70" type="Npc" name="">
+	<npc id="32129" level="70" type="Folk" name="">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1140,7 +1140,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="32130" level="70" type="Npc" name="Strategist Lucien" title="Event Manager">
+	<npc id="32130" level="70" type="Folk" name="Strategist Lucien" title="Event Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1178,7 +1178,7 @@
 			<height normal="16.0055" />
 		</collision>
 	</npc>
-	<npc id="32131" level="70" type="Npc" name="Magic Laboratory Worker" title="Event Manager">
+	<npc id="32131" level="70" type="Folk" name="Magic Laboratory Worker" title="Event Manager">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="313" /> <!-- rhand: Temptation of Abyss -->
@@ -1213,7 +1213,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="32132" level="70" type="Npc" name="Alchemist's Servitor">
+	<npc id="32132" level="70" type="Folk" name="Alchemist's Servitor">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1248,7 +1248,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="32133" level="70" type="Npc" name="Perwan" title="Vice Hierarch">
+	<npc id="32133" level="70" type="Folk" name="Perwan" title="Vice Hierarch">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1287,7 +1287,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32134" level="70" type="Npc" name="Newbie Helper">
+	<npc id="32134" level="70" type="Folk" name="Newbie Helper">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="166" />
@@ -1326,7 +1326,7 @@
 			<height normal="22.25" />
 		</collision>
 	</npc>
-	<npc id="32135" level="70" type="Npc" name="Newbie Guide">
+	<npc id="32135" level="70" type="Folk" name="Newbie Guide">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1447,7 +1447,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="32138" level="70" type="Npc" name="Kekropus" title="Hierarch">
+	<npc id="32138" level="70" type="Folk" name="Kekropus" title="Hierarch">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2828,7 +2828,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="32173" level="70" type="Npc" name="Marcela" title="Zerstorer">
+	<npc id="32173" level="70" type="Folk" name="Marcela" title="Zerstorer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3401,7 +3401,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="32187" level="70" type="Npc" name="Nadir" title="Vice Hierarch">
+	<npc id="32187" level="70" type="Folk" name="Nadir" title="Vice Hierarch">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="166" />
@@ -3521,7 +3521,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="32190" level="70" type="Npc" name="Mao" title="Vice Hierarch">
+	<npc id="32190" level="70" type="Folk" name="Mao" title="Vice Hierarch">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="108" />

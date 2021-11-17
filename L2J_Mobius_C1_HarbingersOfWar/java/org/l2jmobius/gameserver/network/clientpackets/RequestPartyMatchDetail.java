@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 
@@ -30,7 +30,7 @@ public class RequestPartyMatchDetail extends ClientBasePacket
 	{
 		super(decrypt);
 		final int objectId = readD();
-		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(objectId);
+		final Player player = (Player) World.getInstance().findObject(objectId);
 		client.getConnection().sendPacket(new PartyMatchDetail(player));
 	}
 }

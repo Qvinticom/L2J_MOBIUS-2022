@@ -20,8 +20,8 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.TeleporterInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Teleporter;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Link implements IBypassHandler
@@ -55,7 +55,7 @@ public class Link implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		final String htmlPath = command.substring(4).trim();
 		if (htmlPath.isEmpty())
@@ -72,7 +72,7 @@ public class Link implements IBypassHandler
 		
 		String content = CommonUtil.contains(VALID_LINKS, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
 		// Precaution.
-		if (htmlPath.startsWith("teleporter/") && !(player.getTarget() instanceof TeleporterInstance))
+		if (htmlPath.startsWith("teleporter/") && !(player.getTarget() instanceof Teleporter))
 		{
 			content = null;
 		}

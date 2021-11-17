@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -68,15 +68,15 @@ public class PetInfo implements IClientOutgoingPacket
 		_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
 		_maxHp = _summon.getMaxHp();
 		_maxMp = _summon.getMaxMp();
-		if (_summon instanceof PetInstance)
+		if (_summon instanceof Pet)
 		{
-			final PetInstance pet = (PetInstance) _summon;
+			final Pet pet = (Pet) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
-		else if (_summon instanceof SummonInstance)
+		else if (_summon instanceof Servitor)
 		{
-			final SummonInstance sum = (SummonInstance) _summon;
+			final Servitor sum = (Servitor) _summon;
 			_curFed = sum.getTimeRemaining();
 			_maxFed = sum.getTotalLifeTime();
 		}
@@ -135,7 +135,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD((int) _summon.getStat().getExp());
 		packet.writeD((int) _summon.getExpForThisLevel()); // 0% absolute value
 		packet.writeD((int) _summon.getExpForNextLevel()); // 100% absoulte value
-		packet.writeD(_summon instanceof PetInstance ? _summon.getInventory().getTotalWeight() : 0); // weight
+		packet.writeD(_summon instanceof Pet ? _summon.getInventory().getTotalWeight() : 0); // weight
 		packet.writeD(_summon.getMaxLoad()); // max weight it can carry
 		packet.writeD(_summon.getPAtk(null)); // patk
 		packet.writeD(_summon.getPDef(null)); // pdef

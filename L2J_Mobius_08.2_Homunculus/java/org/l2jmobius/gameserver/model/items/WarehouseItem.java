@@ -22,13 +22,13 @@ import java.util.Objects;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 
 /**
- * This class contains ItemInstance<br>
- * Use to sort ItemInstance of :
+ * This class contains Item<br>
+ * Use to sort Item of :
  * <ul>
  * <li>Armor</li>
  * <li>EtcItem</li>
@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.items.type.ItemType;
  */
 public class WarehouseItem
 {
-	private final Item _item;
+	private final ItemTemplate _item;
 	private final int _object;
 	private final long _count;
 	private final int _owner;
@@ -69,7 +69,7 @@ public class WarehouseItem
 	
 	private final int _time;
 	
-	public WarehouseItem(ItemInstance item)
+	public WarehouseItem(Item item)
 	{
 		Objects.requireNonNull(item);
 		_item = item.getItem();
@@ -98,7 +98,7 @@ public class WarehouseItem
 	/**
 	 * @return the item.
 	 */
-	public Item getItem()
+	public ItemTemplate getItem()
 	{
 		return _item;
 	}

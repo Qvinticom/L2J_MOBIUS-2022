@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -36,7 +36,7 @@ public class AdminHeal implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_heal"))
 		{
@@ -63,17 +63,17 @@ public class AdminHeal implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleRes(PlayerInstance activeChar)
+	private void handleRes(Player activeChar)
 	{
 		handleRes(activeChar, null);
 	}
 	
-	private void handleRes(PlayerInstance activeChar, String player)
+	private void handleRes(Player activeChar, String player)
 	{
 		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{
-			final PlayerInstance plyr = World.getInstance().getPlayer(player);
+			final Player plyr = World.getInstance().getPlayer(player);
 			if (plyr != null)
 			{
 				obj = plyr;
@@ -89,7 +89,7 @@ public class AdminHeal implements IAdminCommandHandler
 						{
 							final Creature creature = (Creature) object;
 							creature.setCurrentHpMp(creature.getMaxHp(), creature.getMaxMp());
-							if (object instanceof PlayerInstance)
+							if (object instanceof Player)
 							{
 								creature.setCurrentCp(creature.getMaxCp());
 							}
@@ -113,7 +113,7 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			final Creature target = (Creature) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
 				target.setCurrentCp(target.getMaxCp());
 			}

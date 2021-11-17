@@ -19,9 +19,9 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -48,14 +48,14 @@ public class FocusSouls extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayer() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		final PlayerInstance target = effected.getActingPlayer();
+		final Player target = effected.getActingPlayer();
 		final int maxSouls = (int) target.getStat().getValue(Stat.MAX_SOULS, 0);
 		if (maxSouls > 0)
 		{

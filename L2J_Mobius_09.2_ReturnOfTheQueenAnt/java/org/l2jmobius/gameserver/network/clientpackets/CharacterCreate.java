@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.events.Containers;
@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.items.PlayerItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
@@ -146,7 +146,7 @@ public class CharacterCreate implements IClientIncomingPacket
 			return;
 		}
 		
-		PlayerInstance newChar = null;
+		Player newChar = null;
 		PlayerTemplate template = null;
 		boolean balthusKnights = false;
 		
@@ -278,7 +278,7 @@ public class CharacterCreate implements IClientIncomingPacket
 					break;
 				}
 			}
-			newChar = PlayerInstance.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
+			newChar = Player.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
 		if (balthusKnights)
@@ -342,7 +342,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		{
 			for (PlayerItemTemplate ie : initialItems)
 			{
-				final ItemInstance item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
+				final Item item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
 				if (item == null)
 				{
 					LOGGER.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
@@ -359,7 +359,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		{
 			for (ItemHolder reward : Config.BALTHUS_KNIGHTS_REWARDS)
 			{
-				final ItemInstance item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
+				final Item item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
 				if (item == null)
 				{
 					LOGGER.warning("Could not create item during char creation: itemId " + reward.getId() + ", amount " + reward.getCount() + ".");

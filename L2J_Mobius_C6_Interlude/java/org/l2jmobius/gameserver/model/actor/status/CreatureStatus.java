@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -64,7 +64,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
 	 * StatusUpdate.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
@@ -128,24 +128,24 @@ public class CreatureStatus
 		}
 		
 		double value = amount;
-		if (_creature instanceof PlayerInstance)
+		if (_creature instanceof Player)
 		{
-			if (((PlayerInstance) _creature).isInDuel())
+			if (((Player) _creature).isInDuel())
 			{
 				// the duel is finishing - players do not recive damage
-				if (((PlayerInstance) _creature).getDuelState() == Duel.DUELSTATE_DEAD)
+				if (((Player) _creature).getDuelState() == Duel.DUELSTATE_DEAD)
 				{
 					return;
 				}
-				else if (((PlayerInstance) _creature).getDuelState() == Duel.DUELSTATE_WINNER)
+				else if (((Player) _creature).getDuelState() == Duel.DUELSTATE_WINNER)
 				{
 					return;
 				}
 				
 				// cancel duel if player got hit by another player, that is not part of the duel or a monster
-				if (!(attacker instanceof SummonInstance) && (!(attacker instanceof PlayerInstance) || (((PlayerInstance) attacker).getDuelId() != ((PlayerInstance) _creature).getDuelId())))
+				if (!(attacker instanceof Servitor) && (!(attacker instanceof Player) || (((Player) attacker).getDuelId() != ((Player) _creature).getDuelId())))
 				{
-					((PlayerInstance) _creature).setDuelState(Duel.DUELSTATE_INTERRUPTED);
+					((Player) _creature).setDuelState(Duel.DUELSTATE_INTERRUPTED);
 				}
 			}
 			if (_creature.isDead() && !_creature.isFakeDeath())
@@ -160,9 +160,9 @@ public class CreatureStatus
 				return; // Disabled == null check so skills like Body to Mind work again untill another solution is found
 			}
 			
-			if ((attacker instanceof PlayerInstance) && ((PlayerInstance) attacker).isInDuel() && (!(_creature instanceof SummonInstance) || (((SummonInstance) _creature).getOwner().getDuelId() != ((PlayerInstance) attacker).getDuelId()))) // Duelling player attacks mob
+			if ((attacker instanceof Player) && ((Player) attacker).isInDuel() && (!(_creature instanceof Servitor) || (((Servitor) _creature).getOwner().getDuelId() != ((Player) attacker).getDuelId()))) // Duelling player attacks mob
 			{
-				((PlayerInstance) attacker).setDuelState(Duel.DUELSTATE_INTERRUPTED);
+				((Player) attacker).setDuelState(Duel.DUELSTATE_INTERRUPTED);
 			}
 		}
 		
@@ -182,7 +182,7 @@ public class CreatureStatus
 		}
 		
 		// Add attackers to npc's attacker list
-		if (_creature instanceof NpcInstance)
+		if (_creature instanceof Npc)
 		{
 			_creature.addAttackerToAttackByList(attacker);
 		}
@@ -207,7 +207,7 @@ public class CreatureStatus
 			if (value <= 0)
 			{
 				// is the dieing one a duelist? if so change his duel state to dead
-				if ((_creature instanceof PlayerInstance) && ((PlayerInstance) _creature).isInDuel())
+				if ((_creature instanceof Player) && ((Player) _creature).isInDuel())
 				{
 					_creature.disableAllSkills();
 					stopHpMpRegeneration();
@@ -215,7 +215,7 @@ public class CreatureStatus
 					attacker.sendPacket(ActionFailed.STATIC_PACKET);
 					
 					// let the DuelManager know of his defeat
-					DuelManager.getInstance().onPlayerDefeat((PlayerInstance) getActiveChar());
+					DuelManager.getInstance().onPlayerDefeat((Player) getActiveChar());
 					value = 1;
 				}
 				else
@@ -236,7 +236,7 @@ public class CreatureStatus
 			_creature.abortAttack();
 			_creature.abortCast();
 			
-			if ((_creature instanceof PlayerInstance) && ((PlayerInstance) _creature).isInOlympiadMode())
+			if ((_creature instanceof Player) && ((Player) _creature).isInOlympiadMode())
 			{
 				stopHpMpRegeneration();
 				return;
@@ -269,7 +269,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
 	 * StatusUpdate.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
@@ -406,7 +406,7 @@ public class CreatureStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();
@@ -499,7 +499,7 @@ public class CreatureStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();
@@ -580,7 +580,7 @@ public class CreatureStatus
 			}
 		}
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		if (broadcastPacket)
 		{
 			_creature.broadcastStatusUpdate();
@@ -592,7 +592,7 @@ public class CreatureStatus
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * Each Creature owns a list called <b>_statusListener</b> that contains all PlayerInstance to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
+	 * Each Creature owns a list called <b>_statusListener</b> that contains all Player to inform of HP/MP updates. Players who must be informed are players that target this Creature. When a RegenTask is in progress sever just need to go through this list to send Server->Client packet
 	 * StatusUpdate.
 	 * @return The list of Creature to inform or null if empty
 	 */

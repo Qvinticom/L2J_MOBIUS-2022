@@ -23,9 +23,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class World
 {
@@ -42,7 +42,7 @@ public class World
 	public static final int MAP_MIN_X = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
 	public static final int MAP_MIN_Y = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
 	
-	private final Map<String, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
+	private final Map<String, Player> _allPlayers = new ConcurrentHashMap<>();
 	private final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	private final Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
 	private static World _instance;
@@ -77,26 +77,26 @@ public class World
 	
 	public void addVisibleObject(WorldObject object)
 	{
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) object;
+			final Player player = (Player) object;
 			_allPlayers.put(player.getName().toLowerCase(), player);
 			for (WorldObject element : getVisibleObjects(object, 2000))
 			{
 				object.addKnownObject(element);
-				if ((object instanceof ItemInstance) && element.getKnownObjects().contains(object))
+				if ((object instanceof Item) && element.getKnownObjects().contains(object))
 				{
 					continue;
 				}
 				element.addKnownObject(object);
 			}
 		}
-		else if ((_allPlayers.size() != 0) && !(object instanceof PetInstance) && !(object instanceof ItemInstance))
+		else if ((_allPlayers.size() != 0) && !(object instanceof Pet) && !(object instanceof Item))
 		{
 			final int x = object.getX();
 			final int y = object.getY();
 			final int sqRadius = 4000000;
-			for (PlayerInstance player : _allPlayers.values())
+			for (Player player : _allPlayers.values())
 			{
 				long dy;
 				final int x1 = player.getX();
@@ -121,9 +121,9 @@ public class World
 			wo.removeKnownObject(object);
 			object.removeKnownObject(wo);
 		}
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			_allPlayers.remove(((PlayerInstance) object).getName().toLowerCase());
+			_allPlayers.remove(((Player) object).getName().toLowerCase());
 		}
 	}
 	
@@ -143,12 +143,12 @@ public class World
 		return result;
 	}
 	
-	public Collection<PlayerInstance> getAllPlayers()
+	public Collection<Player> getAllPlayers()
 	{
 		return _allPlayers.values();
 	}
 	
-	public PlayerInstance getPlayer(String name)
+	public Player getPlayer(String name)
 	{
 		return _allPlayers.get(name.toLowerCase());
 	}

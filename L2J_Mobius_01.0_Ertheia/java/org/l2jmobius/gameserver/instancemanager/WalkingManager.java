@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.NpcWalkerNode;
 import org.l2jmobius.gameserver.model.WalkInfo;
 import org.l2jmobius.gameserver.model.WalkRoute;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveNodeArrived;
@@ -216,7 +216,7 @@ public class WalkingManager implements IXmlReader
 	 */
 	public boolean isOnWalk(Npc npc)
 	{
-		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
+		final Monster monster = npc.isMonster() ? ((Monster) npc).getLeader() == null ? (Monster) npc : ((Monster) npc).getLeader() : null;
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return false;
@@ -388,7 +388,7 @@ public class WalkingManager implements IXmlReader
 	 */
 	public void stopMoving(Npc npc, boolean suspend, boolean stoppedByAttack)
 	{
-		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
+		final Monster monster = npc.isMonster() ? ((Monster) npc).getLeader() == null ? (Monster) npc : ((Monster) npc).getLeader() : null;
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return;

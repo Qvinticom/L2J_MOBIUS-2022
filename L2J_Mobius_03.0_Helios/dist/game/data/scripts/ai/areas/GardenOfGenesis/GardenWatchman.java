@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -48,7 +48,7 @@ public class GardenWatchman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -65,7 +65,7 @@ public class GardenWatchman extends AbstractNpcAI
 			}
 			case "DEBUFF":
 			{
-				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 100, nearby ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 100, nearby ->
 				{
 					if ((npc != null) && npc.isScriptValue(0) && nearby.isPlayer() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
 					{

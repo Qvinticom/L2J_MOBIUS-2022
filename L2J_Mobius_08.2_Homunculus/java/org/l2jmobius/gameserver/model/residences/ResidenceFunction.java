@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 
 /**
@@ -163,7 +163,7 @@ public class ResidenceFunction
 		}
 		
 		final ItemContainer wh = clan.getWarehouse();
-		final ItemInstance item = wh.getItemByItemId(template.getCost().getId());
+		final Item item = wh.getItemByItemId(template.getCost().getId());
 		if ((item == null) || (item.getCount() < template.getCost().getCount()))
 		{
 			return false;

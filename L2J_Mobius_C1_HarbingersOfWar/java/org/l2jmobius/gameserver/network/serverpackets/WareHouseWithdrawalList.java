@@ -19,15 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class WareHouseWithdrawalList extends ServerBasePacket
 {
-	private final PlayerInstance _cha;
+	private final Player _cha;
 	private final int _money;
 	
-	public WareHouseWithdrawalList(PlayerInstance cha)
+	public WareHouseWithdrawalList(Player cha)
 	{
 		_cha = cha;
 		_money = cha.getAdena();
@@ -40,10 +40,10 @@ public class WareHouseWithdrawalList extends ServerBasePacket
 		writeD(_money);
 		final int count = _cha.getWarehouse().getSize();
 		writeH(count);
-		final List<ItemInstance> items = _cha.getWarehouse().getItems();
+		final List<Item> items = _cha.getWarehouse().getItems();
 		for (int i = 0; i < count; ++i)
 		{
-			final ItemInstance temp = items.get(i);
+			final Item temp = items.get(i);
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

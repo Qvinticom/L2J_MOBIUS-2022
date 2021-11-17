@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.attributechange;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -43,13 +43,13 @@ public class SendChangeAttributeTargetItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjId);
+		final Item item = player.getInventory().getItemByObjectId(_itemObjId);
 		if ((item == null) || !item.isWeapon())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);

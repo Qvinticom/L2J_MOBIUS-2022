@@ -24,7 +24,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -34,13 +34,13 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExPetRankingMyInfo implements IClientOutgoingPacket
 {
 	private final int _petId;
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Optional<Entry<Integer, StatSet>> _ranking;
 	private final Optional<Entry<Integer, StatSet>> _snapshotRanking;
 	private final Map<Integer, StatSet> _rankingList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
-	public ExPetRankingMyInfo(PlayerInstance player, int petId)
+	public ExPetRankingMyInfo(Player player, int petId)
 	{
 		_player = player;
 		_petId = petId;

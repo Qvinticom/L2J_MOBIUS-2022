@@ -20,7 +20,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
 
 /**
  * @author littlecrow
@@ -56,7 +56,7 @@ public class MobGroupTable
 		return _groupMap.size();
 	}
 	
-	public MobGroup getGroupForMob(ControllableMobInstance mobInst)
+	public MobGroup getGroupForMob(ControllableMob mobInst)
 	{
 		for (MobGroup mobGroup : _groupMap.values())
 		{

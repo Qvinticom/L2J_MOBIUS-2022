@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 public class GetPlayer implements ISkillHandler
@@ -44,9 +44,9 @@ public class GetPlayer implements ISkillHandler
 		
 		for (WorldObject target : targets)
 		{
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
-				final PlayerInstance trg = (PlayerInstance) target;
+				final Player trg = (Player) target;
 				if (trg.isAlikeDead())
 				{
 					continue;

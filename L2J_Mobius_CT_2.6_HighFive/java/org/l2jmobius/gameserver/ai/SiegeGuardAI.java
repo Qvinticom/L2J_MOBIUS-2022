@@ -32,9 +32,9 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -69,7 +69,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	 * Constructor of AttackableAI.
 	 * @param creature the creature
 	 */
-	public SiegeGuardAI(DefenderInstance creature)
+	public SiegeGuardAI(Defender creature)
 	{
 		super(creature);
 		_selfAnalysis.init();
@@ -91,30 +91,30 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The PlayerInstance target has karma (=PK)</li>
-	 * <li>The MonsterInstance target is aggressive</li>
+	 * <li>The Player target has karma (=PK)</li>
+	 * <li>The Monster target is aggressive</li>
 	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a SiegeGuardInstance</u>:</b>
+	 * <b><u>Actor is a SiegeGuard</u>:</b>
 	 * <ul>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>A siege is in progress</li>
-	 * <li>The PlayerInstance target isn't a Defender</li>
+	 * <li>The Player target isn't a Defender</li>
 	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a FriendlyMobInstance</u>:</b>
+	 * <b><u>Actor is a FriendlyMob</u>:</b>
 	 * <ul>
-	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
+	 * <li>The target isn't a Folk, a Door or another Npc</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
-	 * <li>The PlayerInstance target has karma (=PK)</li>
+	 * <li>The Player target has karma (=PK)</li>
 	 * </ul>
 	 * <br>
-	 * <b><u>Actor is a MonsterInstance</u>:</b>
+	 * <b><u>Actor is a Monster</u>:</b>
 	 * <ul>
-	 * <li>The target isn't a Folk, a Door or another NpcInstance</li>
+	 * <li>The target isn't a Folk, a Door or another Npc</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
 	 * <li>The target is in the actor Aggro range and is at the same height</li>
 	 * <li>The actor is Aggressive</li>
@@ -125,7 +125,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	protected boolean autoAttackCondition(Creature target)
 	{
 		// Check if the target isn't another guard, folk or a door
-		if ((target == null) || (target instanceof DefenderInstance) || target.isNpc() || target.isDoor() || target.isAlikeDead())
+		if ((target == null) || (target instanceof Defender) || target.isNpc() || target.isDoor() || target.isAlikeDead())
 		{
 			return false;
 		}
@@ -140,7 +140,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		Creature currentTarget = target;
 		if (currentTarget.isSummon())
 		{
-			final PlayerInstance owner = ((Summon) currentTarget).getOwner();
+			final Player owner = ((Summon) currentTarget).getOwner();
 			if (_actor.isInsideRadius3D(owner, 1000))
 			{
 				currentTarget = owner;
@@ -176,7 +176,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				final Attackable npc = (Attackable) _actor;
 				
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
-				if (!World.getInstance().getVisibleObjects(npc, PlayerInstance.class).isEmpty())
+				if (!World.getInstance().getVisibleObjects(npc, Player.class).isEmpty())
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}
@@ -278,7 +278,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				final int aggro = npc.getHating(hated);
 				if ((aggro + _globalAggro) > 0)
 				{
-					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 					if (!_actor.isRunning())
 					{
 						_actor.setRunning();
@@ -291,8 +291,8 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				return;
 			}
 		}
-		// Order to the DefenderInstance to return to its home location because there's no target to attack
-		((DefenderInstance) _actor).returnHome();
+		// Order to the Defender to return to its home location because there's no target to attack
+		((Defender) _actor).returnHome();
 	}
 	
 	/**
@@ -311,7 +311,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	{
 		if ((_attackTimeout < GameTimeTaskManager.getInstance().getGameTicks()) && _actor.isRunning())
 		{
-			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others PlayerInstance
+			// Set the actor movement type to walk and send Server->Client packet ChangeMoveType to all others Player
 			_actor.setWalking();
 			
 			// Calculate a new attack timeout
@@ -352,12 +352,12 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// Go through all Creature that belong to its faction
-		// for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(((NpcInstance) _actor).getFactionRange()+_actor.getTemplate().collisionRadius))
+		// for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(((Npc) _actor).getFactionRange()+_actor.getTemplate().collisionRadius))
 		for (Creature creature : World.getInstance().getVisibleObjectsInRange(_actor, Creature.class, 1000))
 		{
 			if (!(creature instanceof Npc))
 			{
-				if (_selfAnalysis.hasHealOrResurrect && creature.isPlayer() && (((Npc) _actor).getCastle().getSiege().checkIsDefender(((PlayerInstance) creature).getClan()))//
+				if (_selfAnalysis.hasHealOrResurrect && creature.isPlayer() && (((Npc) _actor).getCastle().getSiege().checkIsDefender(((Player) creature).getClan()))//
 					&& !_actor.isAttackDisabled() && (creature.getCurrentHp() < (creature.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && creature.isInCombat())
 				{
 					for (Skill sk : _selfAnalysis.healSkills)
@@ -457,8 +457,8 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// never attack defenders
-		final DefenderInstance sGuard = (DefenderInstance) _actor;
-		if (attackTarget.isPlayer() && (sGuard.getConquerableHall() == null) && sGuard.getCastle().getSiege().checkIsDefender(((PlayerInstance) attackTarget).getClan()))
+		final Defender sGuard = (Defender) _actor;
+		if (attackTarget.isPlayer() && (sGuard.getConquerableHall() == null) && sGuard.getCastle().getSiege().checkIsDefender(((Player) attackTarget).getClan()))
 		{
 			// Cancel the target
 			sGuard.stopHating(attackTarget);
@@ -513,7 +513,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				}
 			}
 			
-			// Check if the SiegeGuardInstance is attacking, knows the target and can't run
+			// Check if the SiegeGuard is attacking, knows the target and can't run
 			if (!(_actor.isAttackingNow()) && (_actor.getRunSpeed() == 0) && (_actor.isInSurroundingRegion(attackTarget)))
 			{
 				// Cancel the target
@@ -528,7 +528,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				final double homeX = attackTarget.getX() - sGuard.getSpawn().getX();
 				final double homeY = attackTarget.getY() - sGuard.getSpawn().getY();
 				
-				// Check if the SiegeGuardInstance isn't too far from it's home location
+				// Check if the SiegeGuard isn't too far from it's home location
 				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) // 1800 * 1800
 					&& (_actor.isInSurroundingRegion(attackTarget)))
 				{
@@ -671,7 +671,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Init the attack : Calculate the attack timeout, Set the _globalAggro to 0, Add the attacker to the actor _aggroList</li>
-	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance</li>
+	 * <li>Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player</li>
 	 * <li>Set the Intention to AI_INTENTION_ATTACK</li>
 	 * </ul>
 	 * @param attacker The Creature that attacks the actor
@@ -691,7 +691,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		// Add the attacker to the _aggroList of the actor
 		((Attackable) _actor).addDamageHate(attacker, 0, 1);
 		
-		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 		if (!_actor.isRunning())
 		{
 			_actor.setRunning();
@@ -745,17 +745,17 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			// Set the actor AI Intention to AI_INTENTION_ATTACK
 			if (getIntention() != AI_INTENTION_ATTACK)
 			{
-				// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
+				// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 				if (!_actor.isRunning())
 				{
 					_actor.setRunning();
 				}
 				
-				final DefenderInstance sGuard = (DefenderInstance) _actor;
+				final Defender sGuard = (Defender) _actor;
 				final double homeX = target.getX() - sGuard.getSpawn().getX();
 				final double homeY = target.getY() - sGuard.getSpawn().getY();
 				
-				// Check if the SiegeGuardInstance is not too far from its home location
+				// Check if the SiegeGuard is not too far from its home location
 				if (((homeX * homeX) + (homeY * homeY)) < 3240000)
 				{
 					setIntention(AI_INTENTION_ATTACK, target, null);

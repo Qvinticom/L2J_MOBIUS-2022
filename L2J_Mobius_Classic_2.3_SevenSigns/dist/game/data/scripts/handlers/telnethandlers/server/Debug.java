@@ -42,9 +42,9 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -90,7 +90,7 @@ public class Debug implements ITelnetCommand
 				{
 					return "Usage: debug packetsend <charName> <packetData>";
 				}
-				final PlayerInstance player = World.getInstance().getPlayer(args[1]);
+				final Player player = World.getInstance().getPlayer(args[1]);
 				if (player == null)
 				{
 					return "Couldn't find player with such name.";
@@ -278,7 +278,7 @@ public class Debug implements ITelnetCommand
 			}
 			if (obj.isItem())
 			{
-				if (((ItemInstance) obj).getItemLocation() == ItemLocation.VOID)
+				if (((Item) obj).getItemLocation() == ItemLocation.VOID)
 				{
 					itemVoidCount++;
 				}
@@ -290,10 +290,10 @@ public class Debug implements ITelnetCommand
 			else if (obj.isMonster())
 			{
 				monsterCount++;
-				if (((MonsterInstance) obj).hasMinions())
+				if (((Monster) obj).hasMinions())
 				{
-					minionCount += ((MonsterInstance) obj).getMinionList().countSpawnedMinions();
-					minionsGroupCount += ((MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
+					minionCount += ((Monster) obj).getMinionList().countSpawnedMinions();
+					minionsGroupCount += ((Monster) obj).getMinionList().lazyCountSpawnedMinionsGroups();
 				}
 			}
 			else if (obj.isNpc())
@@ -303,7 +303,7 @@ public class Debug implements ITelnetCommand
 			else if (obj.isPlayer())
 			{
 				pcCount++;
-				if ((((PlayerInstance) obj).getClient() != null) && ((PlayerInstance) obj).getClient().isDetached())
+				if ((((Player) obj).getClient() != null) && ((Player) obj).getClient().isDetached())
 				{
 					detachedCount++;
 				}

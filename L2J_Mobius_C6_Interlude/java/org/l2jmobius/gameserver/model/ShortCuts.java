@@ -25,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
@@ -38,10 +38,10 @@ public class ShortCuts
 {
 	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	private final Map<Integer, ShortCut> _shortCuts = new ConcurrentHashMap<>();
 	
-	public ShortCuts(PlayerInstance owner)
+	public ShortCuts(Player owner)
 	{
 		_owner = owner;
 	}
@@ -111,7 +111,7 @@ public class ShortCuts
 		
 		if (old.getType() == ShortCut.TYPE_ITEM)
 		{
-			final ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
+			final Item item = _owner.getInventory().getItemByObjectId(old.getId());
 			
 			if ((item != null) && (item.getItemType() == EtcItemType.SHOT))
 			{

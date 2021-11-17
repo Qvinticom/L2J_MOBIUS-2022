@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -76,7 +76,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -261,7 +261,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, 2, 2, npc);
 		if (qs != null)
@@ -288,7 +288,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -341,7 +341,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 		return htmltext;
 	}
 	
-	private void tradeItems(PlayerInstance player, long requiredValue, long itemCount1, long itemCount2, long itemCount3)
+	private void tradeItems(Player player, long requiredValue, long itemCount1, long itemCount2, long itemCount3)
 	{
 		long required = requiredValue;
 		if (itemCount1 < required)

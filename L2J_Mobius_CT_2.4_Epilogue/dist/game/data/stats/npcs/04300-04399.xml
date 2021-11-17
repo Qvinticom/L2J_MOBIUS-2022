@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="4301" level="70" type="Npc" name="Queen of Hearts" title="Valentine Messenger">
+	<npc id="4301" level="70" type="Folk" name="Queen of Hearts" title="Valentine Messenger">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire sp="10" />
@@ -37,7 +37,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="4302" level="1" type="Npc" name="Master Dugi" title="Soul Healer">
+	<npc id="4302" level="1" type="Folk" name="Master Dugi" title="Soul Healer">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -71,7 +71,7 @@
 			<height normal="16.7" />
 		</collision>
 	</npc>
-	<npc id="4303" level="85" type="Npc" name="Skooldy" title="Halloween Children">
+	<npc id="4303" level="85" type="Folk" name="Skooldy" title="Halloween Children">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="722" sp="10" />
@@ -107,7 +107,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="4304" level="70" type="Npc" name="Santa" title="Merry Christmas">
+	<npc id="4304" level="70" type="Folk" name="Santa" title="Merry Christmas">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
@@ -143,7 +143,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="4305" level="70" type="Npc" name="Rosalia" title="Hopeless Romantic">
+	<npc id="4305" level="70" type="Folk" name="Rosalia" title="Hopeless Romantic">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -177,7 +177,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="4306" level="85" type="Npc" name="Jack Sage" title="Eva's High Priest">
+	<npc id="4306" level="85" type="Folk" name="Jack Sage" title="Eva's High Priest">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="722" sp="10" />

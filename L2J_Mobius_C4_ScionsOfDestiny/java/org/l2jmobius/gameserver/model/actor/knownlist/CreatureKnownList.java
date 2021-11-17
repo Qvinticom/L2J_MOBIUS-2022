@@ -24,14 +24,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.util.Util;
 
 public class CreatureKnownList extends WorldObjectKnownList
 {
-	private Map<Integer, PlayerInstance> _knownPlayers;
+	private Map<Integer, Player> _knownPlayers;
 	private Map<Integer, Integer> _knownRelations;
 	
 	public CreatureKnownList(Creature creature)
@@ -53,19 +53,19 @@ public class CreatureKnownList extends WorldObjectKnownList
 			return false;
 		}
 		
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			getKnownPlayers().put(object.getObjectId(), (PlayerInstance) object);
+			getKnownPlayers().put(object.getObjectId(), (Player) object);
 			getKnownRelations().put(object.getObjectId(), -1);
 		}
 		return true;
 	}
 	
 	/**
-	 * @param player The PlayerInstance to search in _knownPlayer
-	 * @return True if the PlayerInstance is in _knownPlayer of the Creature.
+	 * @param player The Player to search in _knownPlayer
+	 * @return True if the Player is in _knownPlayer of the Creature.
 	 */
-	public boolean knowsThePlayer(PlayerInstance player)
+	public boolean knowsThePlayer(Player player)
 	{
 		return (getActiveChar() == player) || getKnownPlayers().containsKey(player.getObjectId());
 	}
@@ -99,7 +99,7 @@ public class CreatureKnownList extends WorldObjectKnownList
 			return false;
 		}
 		
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
 			getKnownPlayers().remove(object.getObjectId());
 			getKnownRelations().remove(object.getObjectId());
@@ -148,32 +148,32 @@ public class CreatureKnownList extends WorldObjectKnownList
 		final List<Creature> result = new ArrayList<>();
 		for (WorldObject obj : getKnownObjects().values())
 		{
-			if (obj instanceof PlayerInstance)
+			if (obj instanceof Player)
 			{
 				if (Util.checkIfInRange((int) radius, getActiveChar(), obj, true))
 				{
-					result.add((PlayerInstance) obj);
+					result.add((Player) obj);
 				}
 			}
-			else if (obj instanceof MonsterInstance)
+			else if (obj instanceof Monster)
 			{
 				if (Util.checkIfInRange((int) radius, getActiveChar(), obj, true))
 				{
-					result.add((MonsterInstance) obj);
+					result.add((Monster) obj);
 				}
 			}
-			else if (obj instanceof NpcInstance)
+			else if (obj instanceof Npc)
 			{
 				if (Util.checkIfInRange((int) radius, getActiveChar(), obj, true))
 				{
-					result.add((NpcInstance) obj);
+					result.add((Npc) obj);
 				}
 			}
 		}
 		return result;
 	}
 	
-	public Map<Integer, PlayerInstance> getKnownPlayers()
+	public Map<Integer, Player> getKnownPlayers()
 	{
 		if (_knownPlayers == null)
 		{
@@ -191,10 +191,10 @@ public class CreatureKnownList extends WorldObjectKnownList
 		return _knownRelations;
 	}
 	
-	public Collection<PlayerInstance> getKnownPlayersInRadius(long radius)
+	public Collection<Player> getKnownPlayersInRadius(long radius)
 	{
-		final List<PlayerInstance> result = new ArrayList<>();
-		for (PlayerInstance player : getKnownPlayers().values())
+		final List<Player> result = new ArrayList<>();
+		for (Player player : getKnownPlayers().values())
 		{
 			if (Util.checkIfInRange((int) radius, getActiveChar(), player, true))
 			{

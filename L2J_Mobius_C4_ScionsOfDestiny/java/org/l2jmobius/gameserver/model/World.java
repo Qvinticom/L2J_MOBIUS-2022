@@ -25,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 
 public class World
 {
@@ -61,14 +61,14 @@ public class World
 	private static final int REGIONS_X = (WORLD_X_MAX >> SHIFT_BY) + OFFSET_X;
 	private static final int REGIONS_Y = (WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y;
 	
-	/** HashMap(String Player name, PlayerInstance) containing all the players in game. */
-	private static Map<String, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
+	/** HashMap(String Player name, Player) containing all the players in game. */
+	private static Map<String, Player> _allPlayers = new ConcurrentHashMap<>();
 	
 	/** WorldObjectHashMap(WorldObject) containing all visible objects. */
 	private static final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	
 	/** List with the pets instances and their owner id. */
-	private static final Map<Integer, PetInstance> _petsInstance = new ConcurrentHashMap<>();
+	private static final Map<Integer, Pet> _petsInstance = new ConcurrentHashMap<>();
 	
 	/** The _world regions. */
 	private WorldRegion[][] _worldRegions;
@@ -153,7 +153,7 @@ public class World
 	 * <font color=#FF0000><b><u>Caution</u>: Read-only, please! </b></font>
 	 * @return the all players
 	 */
-	public Collection<PlayerInstance> getAllPlayers()
+	public Collection<Player> getAllPlayers()
 	{
 		return _allPlayers.values();
 	}
@@ -172,7 +172,7 @@ public class World
 	 * @param name Name of the player to get Instance
 	 * @return the player
 	 */
-	public PlayerInstance getPlayer(String name)
+	public Player getPlayer(String name)
 	{
 		return _allPlayers.get(name.toLowerCase());
 	}
@@ -182,9 +182,9 @@ public class World
 	 * @param playerObjId the player obj id
 	 * @return the player
 	 */
-	public PlayerInstance getPlayer(int playerObjId)
+	public Player getPlayer(int playerObjId)
 	{
-		for (PlayerInstance actual : _allPlayers.values())
+		for (Player actual : _allPlayers.values())
 		{
 			if (actual.getObjectId() == playerObjId)
 			{
@@ -199,7 +199,7 @@ public class World
 	 * <font color=#FF0000><b><u>Caution</u>: Read-only, please! </b></font>
 	 * @return the all pets
 	 */
-	public Collection<PetInstance> getAllPets()
+	public Collection<Pet> getAllPets()
 	{
 		return _petsInstance.values();
 	}
@@ -209,7 +209,7 @@ public class World
 	 * @param ownerId ID of the owner
 	 * @return the pet
 	 */
-	public PetInstance getPet(int ownerId)
+	public Pet getPet(int ownerId)
 	{
 		return _petsInstance.get(ownerId);
 	}
@@ -217,10 +217,10 @@ public class World
 	/**
 	 * Add the given pet instance from the given ownerId.
 	 * @param ownerId ID of the owner
-	 * @param pet PetInstance of the pet
+	 * @param pet Pet of the pet
 	 * @return the pet instance
 	 */
-	public PetInstance addPet(int ownerId, PetInstance pet)
+	public Pet addPet(int ownerId, Pet pet)
 	{
 		return _petsInstance.put(ownerId, pet);
 	}
@@ -238,7 +238,7 @@ public class World
 	 * Remove the given pet instance.
 	 * @param pet the pet to remove
 	 */
-	public void removePet(PetInstance pet)
+	public void removePet(Pet pet)
 	{
 		_petsInstance.values().remove(pet);
 	}
@@ -248,33 +248,33 @@ public class World
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
-	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures<br>
+	 * WorldObject (including Player) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * Player are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Add the WorldObject object in _allPlayers* of World</li>
 	 * <li>Add the WorldObject object in _gmList** of GmListTable</li>
 	 * <li>Add object in _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
-	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding PlayerInstance in its _knownPlayer</li><br>
-	 * <i>* only if object is a PlayerInstance</i><br>
-	 * <i>** only if object is a GM PlayerInstance</i><br>
+	 * <li>If object is a Creature, add all surrounding WorldObject in its _knownObjects and all surrounding Player in its _knownPlayer</li><br>
+	 * <i>* only if object is a Player</i><br>
+	 * <i>** only if object is a GM Player</i><br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object in _visibleObjects and _allPlayers* of WorldRegion (need synchronisation)</b></font><br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T ADD the object to _allObjects and _allPlayers* of World (need synchronisation)</b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Drop an Item</li>
 	 * <li>Spawn a Creature</li>
-	 * <li>Apply Death Penalty of a PlayerInstance</li><br>
+	 * <li>Apply Death Penalty of a Player</li><br>
 	 * @param object L2object to add in the world
 	 * @param newRegion the new region
 	 * @param dropper Creature who has dropped the object (if necessary)
 	 */
 	public void addVisibleObject(WorldObject object, WorldRegion newRegion, Creature dropper)
 	{
-		if (object instanceof PlayerInstance)
+		if (object instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) object;
-			final PlayerInstance tmp = _allPlayers.get(player.getName().toLowerCase());
+			final Player player = (Player) object;
+			final Player tmp = _allPlayers.get(player.getName().toLowerCase());
 			if ((tmp != null) && (tmp != player)) // just kick the player previous instance
 			{
 				tmp.store(); // Store character and items
@@ -305,11 +305,11 @@ public class World
 				// - Creature is visible
 				// - object is not already known
 				// - object is in the watch distance
-				// If WorldObject is a PlayerInstance, add WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the visible Creature
+				// If WorldObject is a Player, add WorldObject in WorldObjectHashSet(Player) _knownPlayer of the visible Creature
 				wo.getKnownList().addKnownObject(object);
 				
 				// Add the visible WorldObject in WorldObjectHashSet(WorldObject) _knownObjects of the object according to conditions
-				// If visible WorldObject is a PlayerInstance, add visible WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the object
+				// If visible WorldObject is a Player, add visible WorldObject in WorldObjectHashSet(Player) _knownPlayer of the object
 				object.getKnownList().addKnownObject(wo);
 			}
 			
@@ -342,32 +342,32 @@ public class World
 			// - Creature is visible
 			// - object is not already known
 			// - object is in the watch distance
-			// If WorldObject is a PlayerInstance, add WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the visible Creature
+			// If WorldObject is a Player, add WorldObject in WorldObjectHashSet(Player) _knownPlayer of the visible Creature
 			wo.getKnownList().addKnownObject(object, dropper);
 			
 			// Add the visible WorldObject in WorldObjectHashSet(WorldObject) _knownObjects of the object according to conditions
-			// If visible WorldObject is a PlayerInstance, add visible WorldObject in WorldObjectHashSet(PlayerInstance) _knownPlayer of the object
+			// If visible WorldObject is a Player, add visible WorldObject in WorldObjectHashSet(Player) _knownPlayer of the object
 			object.getKnownList().addKnownObject(wo, dropper);
 		}
 	}
 	
 	/**
-	 * Add the PlayerInstance to _allPlayers of World.
+	 * Add the Player to _allPlayers of World.
 	 * @param player the cha
 	 */
-	public void addToAllPlayers(PlayerInstance player)
+	public void addToAllPlayers(Player player)
 	{
 		_allPlayers.put(player.getName().toLowerCase(), player);
 	}
 	
 	/**
-	 * Remove the PlayerInstance from _allPlayers of World.<br>
+	 * Remove the Player from _allPlayers of World.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Remove a player fom the visible objects</li><br>
 	 * @param player the cha
 	 */
-	public void removeFromAllPlayers(PlayerInstance player)
+	public void removeFromAllPlayers(Player player)
 	{
 		if ((player != null) && !player.isTeleporting())
 		{
@@ -380,18 +380,18 @@ public class World
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * WorldObject (including PlayerInstance) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
-	 * PlayerInstance are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures<br>
+	 * WorldObject (including Player) are identified in <b>_visibleObjects</b> of his current WorldRegion and in <b>_knownObjects</b> of other surrounding Creatures<br>
+	 * Player are identified in <b>_allPlayers</b> of World, in <b>_allPlayers</b> of his current WorldRegion and in <b>_knownPlayer</b> of other surrounding Creatures<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove the WorldObject object from _allPlayers* of World</li>
 	 * <li>Remove the WorldObject object from _visibleObjects and _allPlayers* of WorldRegion</li>
 	 * <li>Remove the WorldObject object from _gmList** of GmListTable</li>
 	 * <li>Remove object from _knownObjects and _knownPlayer* of all surrounding WorldRegion Creatures</li>
-	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all PlayerInstance from its _knownPlayer</li><br>
+	 * <li>If object is a Creature, remove all WorldObject from its _knownObjects and all Player from its _knownPlayer</li><br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World</b></font><br>
-	 * <i>* only if object is a PlayerInstance</i><br>
-	 * <i>** only if object is a GM PlayerInstance</i><br>
+	 * <i>* only if object is a Player</i><br>
+	 * <i>** only if object is a GM Player</i><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Pickup an Item</li>
@@ -407,7 +407,7 @@ public class World
 		}
 		
 		// Remove the object from the WorldObjectHashSet(WorldObject) _visibleObjects of WorldRegion
-		// If object is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _allPlayers of this WorldRegion
+		// If object is a Player, remove it from the WorldObjectHashSet(Player) _allPlayers of this WorldRegion
 		oldRegion.removeVisibleObject(object);
 		
 		// Go through all surrounding WorldRegion Creatures
@@ -424,7 +424,7 @@ public class World
 				}
 				
 				// Remove the WorldObject from the WorldObjectHashSet(WorldObject) _knownObjects of the surrounding WorldRegion Creatures
-				// If object is a PlayerInstance, remove the WorldObject from the WorldObjectHashSet(PlayerInstance) _knownPlayer of the surrounding WorldRegion Creatures
+				// If object is a Player, remove the WorldObject from the WorldObjectHashSet(Player) _knownPlayer of the surrounding WorldRegion Creatures
 				// If object is targeted by one of the surrounding WorldRegion Creatures, cancel ATTACK and cast
 				if (wo.getKnownList() != null)
 				{
@@ -432,7 +432,7 @@ public class World
 				}
 				
 				// Remove surrounding WorldRegion Creatures from the WorldObjectHashSet(WorldObject) _KnownObjects of object
-				// If surrounding WorldRegion Creatures is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _knownPlayer of object
+				// If surrounding WorldRegion Creatures is a Player, remove it from the WorldObjectHashSet(Player) _knownPlayer of object
 				//
 				if (object.getKnownList() != null)
 				{
@@ -443,20 +443,20 @@ public class World
 		
 		// If object is a Creature :
 		// Remove all WorldObject from WorldObjectHashSet(WorldObject) containing all WorldObject detected by the Creature
-		// Remove all PlayerInstance from WorldObjectHashSet(PlayerInstance) containing all player ingame detected by the Creature
+		// Remove all Player from WorldObjectHashSet(Player) containing all player ingame detected by the Creature
 		object.getKnownList().removeAllKnownObjects();
 		
-		// If selected WorldObject is a NcIntance, remove it from WorldObjectHashSet(PlayerInstance) _allPlayers of World
-		if (object instanceof PlayerInstance)
+		// If selected WorldObject is a NcIntance, remove it from WorldObjectHashSet(Player) _allPlayers of World
+		if (object instanceof Player)
 		{
 			if (object.getActingPlayer().isInOfflineMode())
 			{
 				OFFLINE_TRADE_COUNT--;
 			}
 			
-			if (!((PlayerInstance) object).isTeleporting())
+			if (!((Player) object).isTeleporting())
 			{
-				removeFromAllPlayers((PlayerInstance) object);
+				removeFromAllPlayers((Player) object);
 			}
 		}
 	}

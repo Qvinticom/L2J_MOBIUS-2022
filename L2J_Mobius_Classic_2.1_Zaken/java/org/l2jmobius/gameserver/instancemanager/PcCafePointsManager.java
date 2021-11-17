@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PcCafePointsManager
 {
-	public void givePcCafePoint(PlayerInstance player, double exp)
+	public void givePcCafePoint(Player player, double exp)
 	{
 		if (!Config.PC_CAFE_ENABLED || player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.SIEGE) || (player.isOnlineInt() == 0) || player.isJailed())
 		{

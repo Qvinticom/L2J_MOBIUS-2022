@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -514,7 +514,7 @@ public class MerrySquashmas extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (LARGE_SQUASH_LIST.contains(npc.getId()))
 		{
@@ -535,7 +535,7 @@ public class MerrySquashmas extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()) && (skill.getId() == SNOWY_NECTAR_SKILL))
 		{
@@ -557,7 +557,7 @@ public class MerrySquashmas extends LongTimeEvent
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()))
 		{
@@ -567,12 +567,12 @@ public class MerrySquashmas extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
-	private void dropItem(Npc mob, PlayerInstance player)
+	private void dropItem(Npc mob, Player player)
 	{
 		final int npcId = mob.getId();
 		for (int[] drop : DROPLIST)
@@ -587,10 +587,10 @@ public class MerrySquashmas extends LongTimeEvent
 				{
 					if (ItemTable.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
 					{
-						((MonsterInstance) mob).dropItem(player, drop[1], 1);
+						((Monster) mob).dropItem(player, drop[1], 1);
 						break;
 					}
-					((MonsterInstance) mob).dropItem(player, drop[1], (getRandom(1, 3)));
+					((Monster) mob).dropItem(player, drop[1], (getRandom(1, 3)));
 					if (getRandomBoolean())
 					{
 						break;

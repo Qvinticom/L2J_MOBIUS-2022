@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Seed;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -55,8 +55,8 @@ public class Sow extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffector().getActingPlayer();
-		final MonsterInstance target = (MonsterInstance) info.getEffected();
+		final Player player = info.getEffector().getActingPlayer();
+		final Monster target = (Monster) info.getEffected();
 		if (target.isDead() || (!target.getTemplate().canBeSown()) || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
 		{
 			return;

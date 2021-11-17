@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.handler.IPunishmentHandler;
 import org.l2jmobius.gameserver.handler.PunishmentHandler;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 
 /**
@@ -239,7 +239,7 @@ public class PunishmentTask implements Runnable
 		
 		if ((_type == PunishmentType.CHAT_BAN) && (_affect == PunishmentAffect.CHARACTER))
 		{
-			final PlayerInstance player = World.getInstance().getPlayer(Integer.parseInt(_key));
+			final Player player = World.getInstance().getPlayer(Integer.parseInt(_key));
 			if (player != null)
 			{
 				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);

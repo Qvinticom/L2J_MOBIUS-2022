@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -27,7 +27,7 @@ public class QuestList implements IClientOutgoingPacket
 {
 	private final Collection<QuestState> _questStates;
 	
-	public QuestList(PlayerInstance player)
+	public QuestList(Player player)
 	{
 		_questStates = player.getAllQuestStates();
 	}

@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
@@ -45,11 +45,11 @@ public class ReplaceSkillBySkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isPlayer())
 		{
-			final PlayerInstance player = effected.getActingPlayer();
+			final Player player = effected.getActingPlayer();
 			final Skill knownSkill = player.getKnownSkill(_existingSkill.getSkillId());
 			if ((knownSkill == null) || (knownSkill.getLevel() < _existingSkill.getSkillLevel()))
 			{
@@ -81,7 +81,7 @@ public class ReplaceSkillBySkill extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		final PlayerInstance player = effected.getActingPlayer();
+		final Player player = effected.getActingPlayer();
 		final Skill knownSkill = player.getKnownSkill(_replacementSkill.getSkillId());
 		if (knownSkill == null)
 		{

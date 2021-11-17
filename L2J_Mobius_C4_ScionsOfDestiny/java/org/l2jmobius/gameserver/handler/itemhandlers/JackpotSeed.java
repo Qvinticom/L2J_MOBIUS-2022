@@ -21,10 +21,10 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.GourdInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Gourd;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 public class JackpotSeed implements IItemHandler
@@ -42,9 +42,9 @@ public class JackpotSeed implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		NpcTemplate template1 = null;
 		final int itemId = item.getItemId();
 		for (int i = 0; i < ITEM_IDS.length; i++)
@@ -68,7 +68,7 @@ public class JackpotSeed implements IItemHandler
 			spawn.setX(player.getX());
 			spawn.setY(player.getY());
 			spawn.setZ(player.getZ());
-			final GourdInstance gourd = (GourdInstance) spawn.doSpawn();
+			final Gourd gourd = (Gourd) spawn.doSpawn();
 			World.getInstance().storeObject(gourd);
 			gourd.setOwner(player.getName());
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);

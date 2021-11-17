@@ -24,9 +24,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 public class ZombieGatekeepers extends Quest
@@ -41,7 +41,7 @@ public class ZombieGatekeepers extends Quest
 	private final Map<Integer, List<Creature>> _attackersList = new ConcurrentHashMap<>();
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
 		final Creature target = isPet ? attacker.getPet() : attacker;
@@ -59,13 +59,13 @@ public class ZombieGatekeepers extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
 		final Creature target = isPet ? player.getPet() : player;
-		final ItemInstance visitorsMark = player.getInventory().getItemByItemId(8064);
-		final ItemInstance fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
-		final ItemInstance pagansMark = player.getInventory().getItemByItemId(8067);
+		final Item visitorsMark = player.getInventory().getItemByItemId(8064);
+		final Item fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
+		final Item pagansMark = player.getInventory().getItemByItemId(8067);
 		final long mark1 = visitorsMark == null ? 0 : visitorsMark.getCount();
 		final long mark2 = fadedVisitorsMark == null ? 0 : fadedVisitorsMark.getCount();
 		final long mark3 = pagansMark == null ? 0 : pagansMark.getCount();
@@ -87,7 +87,7 @@ public class ZombieGatekeepers extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
+	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
 		if (_attackersList.get(npcObjId) != null)

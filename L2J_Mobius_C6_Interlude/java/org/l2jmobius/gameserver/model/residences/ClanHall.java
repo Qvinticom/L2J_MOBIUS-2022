@@ -29,13 +29,13 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -55,7 +55,7 @@ public class ClanHall
 	public static final int FUNC_DECO_FRONTPLATEFORM = 7;
 	public static final int FUNC_DECO_CURTAINS = 8;
 	final int _clanHallId;
-	private final List<DoorInstance> _doors = new ArrayList<>();
+	private final List<Door> _doors = new ArrayList<>();
 	private final List<StatSet> _doorDefault = new ArrayList<>();
 	final String _name;
 	private int _ownerId;
@@ -396,10 +396,10 @@ public class ClanHall
 	}
 	
 	/**
-	 * Return all DoorInstance.
+	 * Return all Door.
 	 * @return the doors
 	 */
-	public List<DoorInstance> getDoors()
+	public List<Door> getDoors()
 	{
 		return _doors;
 	}
@@ -409,7 +409,7 @@ public class ClanHall
 	 * @param doorId the door id
 	 * @return the door
 	 */
-	public DoorInstance getDoor(int doorId)
+	public Door getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -418,7 +418,7 @@ public class ClanHall
 		
 		for (int i = 0; i < getDoors().size(); i++)
 		{
-			final DoorInstance door = getDoors().get(i);
+			final Door door = getDoors().get(i);
 			if (door.getDoorId() == doorId)
 			{
 				return door;
@@ -521,7 +521,7 @@ public class ClanHall
 	{
 		for (int i = 0; i < getDoors().size(); i++)
 		{
-			DoorInstance door = getDoors().get(i);
+			Door door = getDoors().get(i);
 			if (door.getCurrentHp() <= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
@@ -544,7 +544,7 @@ public class ClanHall
 	 * @param doorId the door id
 	 * @param open the open
 	 */
-	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
+	public void openCloseDoor(Player player, int doorId, boolean open)
 	{
 		if ((player != null) && (player.getClanId() == _ownerId))
 		{
@@ -567,7 +567,7 @@ public class ClanHall
 	 * @param door the door
 	 * @param open the open
 	 */
-	public void openCloseDoor(DoorInstance door, boolean open)
+	public void openCloseDoor(Door door, boolean open)
 	{
 		if (door != null)
 		{
@@ -587,7 +587,7 @@ public class ClanHall
 	 * @param player the player
 	 * @param open the open
 	 */
-	public void openCloseDoors(PlayerInstance player, boolean open)
+	public void openCloseDoors(Player player, boolean open)
 	{
 		if ((player != null) && (player.getClanId() == _ownerId))
 		{
@@ -601,7 +601,7 @@ public class ClanHall
 	 */
 	public void openCloseDoors(boolean open)
 	{
-		for (DoorInstance door : getDoors())
+		for (Door door : getDoors())
 		{
 			if (door != null)
 			{
@@ -810,10 +810,10 @@ public class ClanHall
 					_paid = false;
 					if (Chronos.currentTimeMillis() > (_paidUntil + _chRate))
 					{
-						if (ClanHallManager.getInstance().loaded())
+						if (ClanHallTable.getInstance().loaded())
 						{
 							AuctionManager.getInstance().initNPC(getId());
-							ClanHallManager.getInstance().setFree(getId());
+							ClanHallTable.getInstance().setFree(getId());
 							clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
 						}
 						else
@@ -877,7 +877,7 @@ public class ClanHall
 				set.set("mDef", rs.getInt("mDef"));
 				_doorDefault.add(set);
 				
-				final DoorInstance door = DoorData.createDoor(set);
+				final Door door = DoorData.createDoor(set);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorData.getInstance().putDoor(door);

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExRotation;
@@ -47,8 +47,8 @@ public class AnswerCoupleAction implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final PlayerInstance target = World.getInstance().getPlayer(_objectId);
+		final Player player = client.getPlayer();
+		final Player target = World.getInstance().getPlayer(_objectId);
 		if ((player == null) || (target == null))
 		{
 			return;

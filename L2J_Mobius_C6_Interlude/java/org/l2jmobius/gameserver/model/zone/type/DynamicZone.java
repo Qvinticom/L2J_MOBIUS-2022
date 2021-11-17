@@ -22,7 +22,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
@@ -57,9 +57,9 @@ public class DynamicZone extends ZoneType
 	{
 		try
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				((PlayerInstance) creature).sendMessage("You have entered a temporary zone!");
+				((Player) creature).sendMessage("You have entered a temporary zone!");
 			}
 			
 			_skill.applyEffects(_owner, creature, false, false, false);
@@ -72,9 +72,9 @@ public class DynamicZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			((PlayerInstance) creature).sendMessage("You have left a temporary zone!");
+			((Player) creature).sendMessage("You have left a temporary zone!");
 		}
 		
 		if (creature == _owner)

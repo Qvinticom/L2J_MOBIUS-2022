@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -48,7 +48,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	 * @param chatType
 	 * @param text
 	 */
-	public CreatureSay(PlayerInstance sender, PlayerInstance receiver, String name, ChatType chatType, String text)
+	public CreatureSay(Player sender, Player receiver, String name, ChatType chatType, String text)
 	{
 		_sender = sender;
 		_senderName = name;
@@ -202,7 +202,7 @@ public class CreatureSay implements IClientOutgoingPacket
 	}
 	
 	@Override
-	public void runImpl(PlayerInstance player)
+	public void runImpl(Player player)
 	{
 		if (player != null)
 		{

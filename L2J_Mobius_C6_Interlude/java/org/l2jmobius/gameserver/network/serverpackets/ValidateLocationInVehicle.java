@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ValidateLocationInVehicle implements IClientOutgoingPacket
@@ -37,7 +37,7 @@ public class ValidateLocationInVehicle implements IClientOutgoingPacket
 		_y = creature.getY();
 		_z = creature.getZ();
 		_heading = creature.getHeading();
-		_boat = ((PlayerInstance) creature).getBoat().getObjectId();
+		_boat = ((Player) creature).getBoat().getObjectId();
 	}
 	
 	@Override

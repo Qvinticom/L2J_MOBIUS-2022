@@ -19,15 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets.pet;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
 
 public class PetItemList extends AbstractItemPacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	
-	public PetItemList(Collection<ItemInstance> items)
+	public PetItemList(Collection<Item> items)
 	{
 		_items = items;
 	}
@@ -38,7 +38,7 @@ public class PetItemList extends AbstractItemPacket
 		OutgoingPackets.PET_ITEM_LIST.writeId(packet);
 		
 		packet.writeH(_items.size());
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			writeItem(packet, item);
 		}

@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -45,7 +45,7 @@ public class NoPvPZone extends ZoneType
 		
 		if (creature.isPlayer())
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			// PVP possible during siege, now for siege participants only
 			// Could also check if this town is in siege, or if any siege is going on
 			if ((player.getSiegeState() != 0) && (Config.PEACE_ZONE_MODE == 1))
@@ -87,7 +87,7 @@ public class NoPvPZone extends ZoneType
 		super.setEnabled(value);
 		if (value)
 		{
-			for (PlayerInstance player : World.getInstance().getPlayers())
+			for (Player player : World.getInstance().getPlayers())
 			{
 				if ((player != null) && isInsideZone(player))
 				{

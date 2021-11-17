@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager.Territory;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -40,7 +40,7 @@ public class ExShowDominionRegistry implements IClientOutgoingPacket
 	private int _warTime = (int) (Calendar.getInstance().getTimeInMillis() / 1000);
 	private final int _currentTime = (int) (Calendar.getInstance().getTimeInMillis() / 1000);
 	
-	public ExShowDominionRegistry(int castleId, PlayerInstance player)
+	public ExShowDominionRegistry(int castleId, Player player)
 	{
 		_castleId = castleId;
 		if (TerritoryWarManager.getInstance().getRegisteredClans(castleId) != null)

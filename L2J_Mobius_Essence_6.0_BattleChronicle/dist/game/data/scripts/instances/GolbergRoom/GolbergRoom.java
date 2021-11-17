@@ -18,7 +18,7 @@ package instances.GolbergRoom;
 
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -50,7 +50,7 @@ public class GolbergRoom extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -70,7 +70,7 @@ public class GolbergRoom extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (world != null)
 				{
-					for (PlayerInstance member : party.getMembers())
+					for (Player member : party.getMembers())
 					{
 						if (member == player)
 						{
@@ -227,7 +227,7 @@ public class GolbergRoom extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		switch (npc.getId())
 		{

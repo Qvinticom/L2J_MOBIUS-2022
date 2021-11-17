@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,11 +26,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ElementalSpiritInfo extends AbstractElementalSpiritPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final byte _spiritType;
 	private final byte _type;
 	
-	public ElementalSpiritInfo(PlayerInstance player, byte spiritType, byte packetType)
+	public ElementalSpiritInfo(Player player, byte spiritType, byte packetType)
 	{
 		_player = player;
 		_spiritType = spiritType;

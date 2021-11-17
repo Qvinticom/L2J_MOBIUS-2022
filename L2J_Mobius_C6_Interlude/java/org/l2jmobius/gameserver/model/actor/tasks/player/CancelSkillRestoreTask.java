@@ -19,14 +19,14 @@ package org.l2jmobius.gameserver.model.actor.tasks.player;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class CancelSkillRestoreTask implements Runnable
 {
-	private PlayerInstance _player = null;
+	private Player _player = null;
 	private List<Skill> _buffs = null;
 	
-	public CancelSkillRestoreTask(PlayerInstance player, List<Skill> buffs)
+	public CancelSkillRestoreTask(Player player, List<Skill> buffs)
 	{
 		_player = player;
 		_buffs = buffs;

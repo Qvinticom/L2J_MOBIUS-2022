@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -122,7 +122,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
@@ -155,7 +155,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final QuestState qs2 = player.getQuestState(Q00727_HopeWithinTheDarkness.class.getSimpleName());
@@ -204,7 +204,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final Party party = player.getParty();
 		if (party == null)
@@ -216,7 +216,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		if (tmpworld instanceof PAWORLD)
 		{
 			final PAWORLD world = (PAWORLD) tmpworld;
-			for (PlayerInstance partymember : party.getMembers())
+			for (Player partymember : party.getMembers())
 			{
 				final QuestState qs = partymember.getQuestState(getName());
 				if ((qs != null) && qs.isCond(1) && (npc.getId() == KANADIS_GUIDE3) && !partymember.isDead() && partymember.isInsideRadius3D(npc, 1000))
@@ -239,7 +239,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(PlayerInstance player, String template, int[] coords, FortDungeon dungeon, String retValue)
+	protected String enterInstance(Player player, String template, int[] coords, FortDungeon dungeon, String retValue)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -272,7 +272,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		dungeon.setReEnterTime(Chronos.currentTimeMillis() + 14400000);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((PAWORLD) world), 10000);
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			teleportPlayer(partyMember, coords, world.getInstanceId());
 			world.addAllowed(partyMember);
@@ -284,13 +284,13 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		return "";
 	}
 	
-	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(Player player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private String checkConditions(PlayerInstance player)
+	private String checkConditions(Player player)
 	{
 		final Party party = player.getParty();
 		if (party == null)
@@ -303,7 +303,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return null;
 		}
-		for (PlayerInstance partymember : party.getMembers())
+		for (Player partymember : party.getMembers())
 		{
 			if (!partymember.isInsideRadius3D(player, 1000))
 			{
@@ -323,7 +323,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	private String checkFortCondition(PlayerInstance player, Npc npc, boolean isEnter)
+	private String checkFortCondition(Player player, Npc npc, boolean isEnter)
 	{
 		final Fort fort = npc.getFort();
 		final FortDungeon dungeon = _fortDungeons.get(npc.getId());
@@ -353,7 +353,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		{
 			return "FortWarden-10.htm";
 		}
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			if ((partyMember.getClan() == null) || (partyMember.getClan().getFortId() == 0) || (partyMember.getClan().getFortId() != fort.getResidenceId()))
 			{
@@ -421,7 +421,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	
 	protected void broadCastPacket(PAWORLD world, IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

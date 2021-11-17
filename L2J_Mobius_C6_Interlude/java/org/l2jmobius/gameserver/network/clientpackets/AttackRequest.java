@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -55,7 +55,7 @@ public class AttackRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -92,7 +92,7 @@ public class AttackRequest implements IClientIncomingPacket
 		}
 		
 		// Only GMs can directly attack invisible characters
-		if ((target instanceof PlayerInstance) && ((PlayerInstance) target).getAppearance().isInvisible() && !player.isGM())
+		if ((target instanceof Player) && ((Player) target).getAppearance().isInvisible() && !player.isGM())
 		{
 			return;
 		}
@@ -100,17 +100,17 @@ public class AttackRequest implements IClientIncomingPacket
 		// No attacks to same team in event
 		if (player.isOnEvent() && !player.isOnSoloEvent())
 		{
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
-				if (player.getTeam() == ((PlayerInstance) target).getTeam())
+				if (player.getTeam() == ((Player) target).getTeam())
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
-			else if (target instanceof SummonInstance)
+			else if (target instanceof Servitor)
 			{
-				if (player.getTeam() == ((SummonInstance) target).getOwner().getTeam())
+				if (player.getTeam() == ((Servitor) target).getOwner().getTeam())
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.PartyRequest;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -49,7 +49,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		return true;
 	}
 	
-	private void scheduleDeny(PlayerInstance player)
+	private void scheduleDeny(Player player)
 	{
 		if (player != null)
 		{
@@ -68,7 +68,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance requestor = client.getPlayer();
+		final Player requestor = client.getPlayer();
 		if (requestor == null)
 		{
 			return;
@@ -91,7 +91,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final Player target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
@@ -184,7 +184,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void addTargetToParty(PlayerInstance target, PlayerInstance requestor)
+	private void addTargetToParty(Player target, Player requestor)
 	{
 		final Party party = requestor.getParty();
 		
@@ -222,7 +222,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
+	private void createNewParty(Player target, Player requestor)
 	{
 		final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
 		if (partyDistributionType == null)

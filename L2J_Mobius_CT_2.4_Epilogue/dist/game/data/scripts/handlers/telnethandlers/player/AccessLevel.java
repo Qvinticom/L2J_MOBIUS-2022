@@ -17,7 +17,7 @@
 package handlers.telnethandlers.player;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -47,7 +47,7 @@ public class AccessLevel implements ITelnetCommand
 		{
 			return null;
 		}
-		final PlayerInstance player = World.getInstance().getPlayer(args[0]);
+		final Player player = World.getInstance().getPlayer(args[0]);
 		if (player != null)
 		{
 			final int level = Integer.parseInt(args[1]);

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -43,10 +43,10 @@ public class ClanGate implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		PlayerInstance player = null;
-		if (creature instanceof PlayerInstance)
+		Player player = null;
+		if (creature instanceof Player)
 		{
-			player = (PlayerInstance) creature;
+			player = (Player) creature;
 		}
 		else
 		{
@@ -84,9 +84,9 @@ public class ClanGate implements ISkillHandler
 	private class RemoveClanGate implements Runnable
 	{
 		private final int castle;
-		private final PlayerInstance player;
+		private final Player player;
 		
-		protected RemoveClanGate(int castle, PlayerInstance player)
+		protected RemoveClanGate(int castle, Player player)
 		{
 			this.castle = castle;
 			this.player = player;

@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -50,7 +50,7 @@ public class FortSiegeGuardManager
 	 * @param player
 	 * @param npcId
 	 */
-	public void addSiegeGuard(PlayerInstance player, int npcId)
+	public void addSiegeGuard(Player player, int npcId)
 	{
 		if (player == null)
 		{
@@ -78,7 +78,7 @@ public class FortSiegeGuardManager
 	 * @param player
 	 * @param npcId
 	 */
-	public void hireMerc(PlayerInstance player, int npcId)
+	public void hireMerc(Player player, int npcId)
 	{
 		if (player == null)
 		{

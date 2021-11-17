@@ -26,7 +26,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -44,7 +44,7 @@ public class AdminAio implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String comm = st.nextToken();
@@ -61,7 +61,7 @@ public class AdminAio implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{ // char_name not specified
 					final String char_name = st.nextToken();
-					final PlayerInstance player = World.getInstance().getPlayer(char_name);
+					final Player player = World.getInstance().getPlayer(char_name);
 					if (player != null)
 					{
 						if (st.hasMoreTokens()) // time
@@ -118,7 +118,7 @@ public class AdminAio implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{ // char_name
 					final String char_name = st.nextToken();
-					final PlayerInstance player = World.getInstance().getPlayer(char_name);
+					final Player player = World.getInstance().getPlayer(char_name);
 					if (player != null)
 					{
 						removeAio(activeChar, player, char_name);
@@ -148,7 +148,7 @@ public class AdminAio implements IAdminCommandHandler
 		return true;
 	}
 	
-	public void doAio(PlayerInstance activeChar, PlayerInstance player, String playerName, String time)
+	public void doAio(Player activeChar, Player player, String playerName, String time)
 	{
 		final int days = Integer.parseInt(time);
 		if (player == null)
@@ -199,7 +199,7 @@ public class AdminAio implements IAdminCommandHandler
 		}
 	}
 	
-	public void removeAio(PlayerInstance activeChar, PlayerInstance player, String playerName)
+	public void removeAio(Player activeChar, Player player, String playerName)
 	{
 		player.setAio(false);
 		player.setAioEndTime(0);

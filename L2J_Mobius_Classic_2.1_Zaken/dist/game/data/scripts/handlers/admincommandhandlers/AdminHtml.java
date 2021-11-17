@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -38,7 +38,7 @@ public class AdminHtml implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -77,7 +77,7 @@ public class AdminHtml implements IAdminCommandHandler
 	 * @param activeChar activeChar where html is shown
 	 * @param path relative path from directory data/html/admin/ to html
 	 */
-	static void showAdminHtml(PlayerInstance activeChar, String path)
+	static void showAdminHtml(Player activeChar, String path)
 	{
 		showHtml(activeChar, "data/html/admin/" + path, false);
 	}
@@ -88,7 +88,7 @@ public class AdminHtml implements IAdminCommandHandler
 	 * @param path relative path from Config.DATAPACK_ROOT to html.
 	 * @param reload {@code true} will reload html and show it {@code false} will show it from cache.
 	 */
-	private static void showHtml(PlayerInstance activeChar, String path, boolean reload)
+	private static void showHtml(Player activeChar, String path, boolean reload)
 	{
 		String content = null;
 		if (!reload)

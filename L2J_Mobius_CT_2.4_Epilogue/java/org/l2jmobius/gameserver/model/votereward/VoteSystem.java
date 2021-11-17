@@ -28,7 +28,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Broadcast;
 
@@ -138,7 +138,7 @@ public abstract class VoteSystem implements Runnable
 		
 		if (currentVotes >= (lastVotes + votesDiff))
 		{
-			final Collection<PlayerInstance> pls = World.getInstance().getPlayers();
+			final Collection<Player> pls = World.getInstance().getPlayers();
 			if (allowReport)
 			{
 				LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
@@ -147,7 +147,7 @@ public abstract class VoteSystem implements Runnable
 			announce(getSiteName() + ": Everyone has been rewarded.");
 			announce(getSiteName() + ": Current vote count is " + currentVotes + ".");
 			announce(getSiteName() + ": We need " + votesDiff + " vote(s) for next reward.");
-			for (PlayerInstance p : pls)
+			for (Player p : pls)
 			{
 				if ((p.getClient() == null) || p.getClient().isDetached())
 				{

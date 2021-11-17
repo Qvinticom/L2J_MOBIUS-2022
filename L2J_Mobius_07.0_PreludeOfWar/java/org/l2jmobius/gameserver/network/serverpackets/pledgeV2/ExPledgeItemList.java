@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ClanShopData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ClanShopProductHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExPledgeItemList extends AbstractItemPacket
 {
-	final PlayerInstance _player;
+	final Player _player;
 	
-	public ExPledgeItemList(PlayerInstance player)
+	public ExPledgeItemList(Player player)
 	{
 		_player = player;
 	}

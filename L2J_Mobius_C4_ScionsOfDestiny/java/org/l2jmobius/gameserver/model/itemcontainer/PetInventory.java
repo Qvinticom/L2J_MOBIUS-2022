@@ -16,20 +16,20 @@
  */
 package org.l2jmobius.gameserver.model.itemcontainer;
 
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
 
 public class PetInventory extends Inventory
 {
-	private final PetInstance _owner;
+	private final Pet _owner;
 	
-	public PetInventory(PetInstance owner)
+	public PetInventory(Pet owner)
 	{
 		_owner = owner;
 	}
 	
 	@Override
-	public PetInstance getOwner()
+	public Pet getOwner()
 	{
 		return _owner;
 	}

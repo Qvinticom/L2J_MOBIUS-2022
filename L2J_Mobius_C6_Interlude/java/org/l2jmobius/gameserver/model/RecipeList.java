@@ -16,15 +16,15 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
+import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 
 /**
- * This class describes a Recipe used by Dwarf to craft Item. All RecipeList are made of RecipeInstance (1 line of the recipe : Item-Quantity needed).
+ * This class describes a Recipe used by Dwarf to craft Item. All RecipeList are made of RecipeHolder (1 line of the recipe : Item-Quantity needed).
  */
 public class RecipeList
 {
-	/** The table containing all RecipeInstance (1 line of the recipe : Item-Quantity needed) of the RecipeList */
-	private RecipeInstance[] _recipes;
+	/** The table containing all RecipeHolder (1 line of the recipe : Item-Quantity needed) of the RecipeList */
+	private RecipeHolder[] _recipes;
 	
 	/** The recipe id */
 	private final int _id;
@@ -68,7 +68,7 @@ public class RecipeList
 	public RecipeList(int id, int level, int recipeId, String recipeName, int successRate, int mpCost, int itemId, int count, boolean isDwarvenRecipe)
 	{
 		_id = id;
-		_recipes = new RecipeInstance[0];
+		_recipes = new RecipeHolder[0];
 		_level = level;
 		_recipeId = recipeId;
 		_recipeName = recipeName;
@@ -80,13 +80,13 @@ public class RecipeList
 	}
 	
 	/**
-	 * Add a RecipeInstance to the RecipeList (add a line Item-Quantity needed to the Recipe).
+	 * Add a RecipeHolder to the RecipeList (add a line Item-Quantity needed to the Recipe).
 	 * @param recipe
 	 */
-	public void addRecipe(RecipeInstance recipe)
+	public void addRecipe(RecipeHolder recipe)
 	{
 		final int len = _recipes.length;
-		final RecipeInstance[] tmp = new RecipeInstance[len + 1];
+		final RecipeHolder[] tmp = new RecipeHolder[len + 1];
 		System.arraycopy(_recipes, 0, tmp, 0, len);
 		tmp[len] = recipe;
 		_recipes = tmp;
@@ -173,9 +173,9 @@ public class RecipeList
 	}
 	
 	/**
-	 * @return the table containing all RecipeInstance (1 line of the recipe : Item-Quantity needed) of the RecipeList.
+	 * @return the table containing all RecipeHolder (1 line of the recipe : Item-Quantity needed) of the RecipeList.
 	 */
-	public RecipeInstance[] getRecipes()
+	public RecipeHolder[] getRecipes()
 	{
 		return _recipes;
 	}

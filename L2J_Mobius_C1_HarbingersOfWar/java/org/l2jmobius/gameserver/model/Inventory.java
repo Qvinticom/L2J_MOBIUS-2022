@@ -24,8 +24,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.templates.ItemTemplate;
 import org.l2jmobius.gameserver.templates.Weapon;
 
 public class Inventory
@@ -48,9 +48,9 @@ public class Inventory
 	public static final int PAPERDOLL_BACK = 13;
 	public static final int PAPERDOLL_LRHAND = 14;
 	
-	private final ItemInstance[] _paperdoll = new ItemInstance[16];
-	private ItemInstance _adena;
-	private final List<ItemInstance> _items = new CopyOnWriteArrayList<>();
+	private final Item[] _paperdoll = new Item[16];
+	private Item _adena;
+	private final List<Item> _items = new CopyOnWriteArrayList<>();
 	private int _totalWeight;
 	
 	public int getSize()
@@ -58,15 +58,15 @@ public class Inventory
 		return _items.size();
 	}
 	
-	public Collection<ItemInstance> getItems()
+	public Collection<Item> getItems()
 	{
 		return _items;
 	}
 	
-	public ItemInstance addItem(ItemInstance newItem)
+	public Item addItem(Item newItem)
 	{
-		ItemInstance old;
-		ItemInstance result = newItem;
+		Item old;
+		Item result = newItem;
 		boolean stackableFound = false;
 		if (newItem.getItemId() == 57)
 		{
@@ -89,9 +89,9 @@ public class Inventory
 		return result;
 	}
 	
-	public ItemInstance findItemByItemId(int itemId)
+	public Item findItemByItemId(int itemId)
 	{
-		for (ItemInstance temp : _items)
+		for (Item temp : _items)
 		{
 			if (temp.getItemId() != itemId)
 			{
@@ -102,7 +102,7 @@ public class Inventory
 		return null;
 	}
 	
-	public ItemInstance getPaperdollItem(int slot)
+	public Item getPaperdollItem(int slot)
 	{
 		return _paperdoll[slot];
 	}
@@ -125,93 +125,93 @@ public class Inventory
 		return 0;
 	}
 	
-	public void setPaperdollItem(int slot, ItemInstance item)
+	public void setPaperdollItem(int slot, Item item)
 	{
 		_paperdoll[slot] = item;
 		item.setEquipSlot(slot);
 		refreshWeight();
 	}
 	
-	public Collection<ItemInstance> unEquipItemInBodySlot(int slot)
+	public Collection<Item> unEquipItemInBodySlot(int slot)
 	{
-		final List<ItemInstance> changedItems = new ArrayList<>();
+		final List<Item> changedItems = new ArrayList<>();
 		int pdollSlot = -1;
 		switch (slot)
 		{
-			case Item.SLOT_L_EAR:
+			case ItemTemplate.SLOT_L_EAR:
 			{
 				pdollSlot = PAPERDOLL_LEAR;
 				break;
 			}
-			case Item.SLOT_R_EAR:
+			case ItemTemplate.SLOT_R_EAR:
 			{
 				pdollSlot = PAPERDOLL_REAR;
 				break;
 			}
-			case Item.SLOT_NECK:
+			case ItemTemplate.SLOT_NECK:
 			{
 				pdollSlot = PAPERDOLL_NECK;
 				break;
 			}
-			case Item.SLOT_R_FINGER:
+			case ItemTemplate.SLOT_R_FINGER:
 			{
 				pdollSlot = PAPERDOLL_RFINGER;
 				break;
 			}
-			case Item.SLOT_L_FINGER:
+			case ItemTemplate.SLOT_L_FINGER:
 			{
 				pdollSlot = PAPERDOLL_LFINGER;
 				break;
 			}
-			case Item.SLOT_HEAD:
+			case ItemTemplate.SLOT_HEAD:
 			{
 				pdollSlot = PAPERDOLL_HEAD;
 				break;
 			}
-			case Item.SLOT_R_HAND:
+			case ItemTemplate.SLOT_R_HAND:
 			{
 				pdollSlot = PAPERDOLL_RHAND;
 				break;
 			}
-			case Item.SLOT_L_HAND:
+			case ItemTemplate.SLOT_L_HAND:
 			{
 				pdollSlot = PAPERDOLL_LHAND;
 				break;
 			}
-			case Item.SLOT_GLOVES:
+			case ItemTemplate.SLOT_GLOVES:
 			{
 				pdollSlot = PAPERDOLL_GLOVES;
 				break;
 			}
-			case Item.SLOT_CHEST:
-			case Item.SLOT_FULL_ARMOR:
+			case ItemTemplate.SLOT_CHEST:
+			case ItemTemplate.SLOT_FULL_ARMOR:
 			{
 				pdollSlot = PAPERDOLL_CHEST;
 				break;
 			}
-			case Item.SLOT_LEGS:
+			case ItemTemplate.SLOT_LEGS:
 			{
 				pdollSlot = PAPERDOLL_LEGS;
 				break;
 			}
-			case Item.SLOT_LR_HAND:
+			case ItemTemplate.SLOT_LR_HAND:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_LHAND);
 				unEquipSlot(PAPERDOLL_RHAND);
 				pdollSlot = PAPERDOLL_LRHAND;
 				break;
 			}
-			case Item.SLOT_BACK:
+			case ItemTemplate.SLOT_BACK:
 			{
 				pdollSlot = PAPERDOLL_BACK;
 				break;
 			}
-			case Item.SLOT_FEET:
+			case ItemTemplate.SLOT_FEET:
 			{
 				pdollSlot = PAPERDOLL_FEET;
 				break;
 			}
-			case Item.SLOT_UNDERWEAR:
+			case ItemTemplate.SLOT_UNDERWEAR:
 			{
 				pdollSlot = PAPERDOLL_UNDER;
 			}
@@ -220,9 +220,9 @@ public class Inventory
 		return changedItems;
 	}
 	
-	public Collection<ItemInstance> unEquipItemOnPaperdoll(int pdollSlot)
+	public Collection<Item> unEquipItemOnPaperdoll(int pdollSlot)
 	{
-		final List<ItemInstance> changedItems = new ArrayList<>();
+		final List<Item> changedItems = new ArrayList<>();
 		if (pdollSlot == 14)
 		{
 			unEquipSlot(changedItems, PAPERDOLL_LHAND);
@@ -232,17 +232,17 @@ public class Inventory
 		return changedItems;
 	}
 	
-	public List<ItemInstance> equipItem(ItemInstance item)
+	public List<Item> equipItem(Item item)
 	{
-		final List<ItemInstance> changedItems = new ArrayList<>();
+		final List<Item> changedItems = new ArrayList<>();
 		final int targetSlot = item.getItem().getBodyPart();
 		switch (targetSlot)
 		{
-			case Item.SLOT_LR_HAND:
+			case ItemTemplate.SLOT_LR_HAND:
 			{
-				ItemInstance arrow;
+				Item arrow;
 				unEquipSlot(changedItems, PAPERDOLL_LHAND);
-				final ItemInstance old1 = unEquipSlot(PAPERDOLL_LRHAND);
+				final Item old1 = unEquipSlot(PAPERDOLL_LRHAND);
 				if (old1 != null)
 				{
 					changedItems.add(old1);
@@ -264,9 +264,9 @@ public class Inventory
 				changedItems.add(arrow);
 				break;
 			}
-			case Item.SLOT_L_HAND:
+			case ItemTemplate.SLOT_L_HAND:
 			{
-				final ItemInstance old1 = unEquipSlot(PAPERDOLL_LRHAND);
+				final Item old1 = unEquipSlot(PAPERDOLL_LRHAND);
 				if (old1 != null)
 				{
 					unEquipSlot(changedItems, PAPERDOLL_RHAND);
@@ -275,7 +275,7 @@ public class Inventory
 				setPaperdollItem(PAPERDOLL_LHAND, item);
 				break;
 			}
-			case Item.SLOT_R_HAND:
+			case ItemTemplate.SLOT_R_HAND:
 			{
 				if (unEquipSlot(changedItems, PAPERDOLL_LRHAND))
 				{
@@ -289,9 +289,9 @@ public class Inventory
 				setPaperdollItem(PAPERDOLL_RHAND, item);
 				break;
 			}
-			case Item.SLOT_R_EAR:
-			case Item.SLOT_L_EAR:
-			case Item.SLOT_R_EAR + Item.SLOT_L_EAR:
+			case ItemTemplate.SLOT_R_EAR:
+			case ItemTemplate.SLOT_L_EAR:
+			case ItemTemplate.SLOT_R_EAR + ItemTemplate.SLOT_L_EAR:
 			{
 				if (_paperdoll[1] == null)
 				{
@@ -307,9 +307,9 @@ public class Inventory
 				setPaperdollItem(PAPERDOLL_LEAR, item);
 				break;
 			}
-			case Item.SLOT_R_FINGER:
-			case Item.SLOT_L_FINGER:
-			case Item.SLOT_R_FINGER + Item.SLOT_L_FINGER:
+			case ItemTemplate.SLOT_R_FINGER:
+			case ItemTemplate.SLOT_L_FINGER:
+			case ItemTemplate.SLOT_R_FINGER + ItemTemplate.SLOT_L_FINGER:
 			{
 				if (_paperdoll[4] == null)
 				{
@@ -325,29 +325,29 @@ public class Inventory
 				setPaperdollItem(PAPERDOLL_LFINGER, item);
 				break;
 			}
-			case Item.SLOT_NECK:
+			case ItemTemplate.SLOT_NECK:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_NECK);
 				setPaperdollItem(PAPERDOLL_NECK, item);
 				break;
 			}
-			case Item.SLOT_FULL_ARMOR:
+			case ItemTemplate.SLOT_FULL_ARMOR:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_CHEST);
 				unEquipSlot(changedItems, PAPERDOLL_LEGS);
 				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
 			}
-			case Item.SLOT_CHEST:
+			case ItemTemplate.SLOT_CHEST:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_CHEST);
 				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
 			}
-			case Item.SLOT_LEGS:
+			case ItemTemplate.SLOT_LEGS:
 			{
-				final ItemInstance chest = getPaperdollItem(10);
-				if ((chest != null) && (chest.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR))
+				final Item chest = getPaperdollItem(10);
+				if ((chest != null) && (chest.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
 				{
 					unEquipSlot(changedItems, PAPERDOLL_CHEST);
 				}
@@ -355,31 +355,31 @@ public class Inventory
 				setPaperdollItem(PAPERDOLL_LEGS, item);
 				break;
 			}
-			case Item.SLOT_FEET:
+			case ItemTemplate.SLOT_FEET:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_FEET);
 				setPaperdollItem(PAPERDOLL_FEET, item);
 				break;
 			}
-			case Item.SLOT_GLOVES:
+			case ItemTemplate.SLOT_GLOVES:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_GLOVES);
 				setPaperdollItem(PAPERDOLL_GLOVES, item);
 				break;
 			}
-			case Item.SLOT_HEAD:
+			case ItemTemplate.SLOT_HEAD:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_HEAD);
 				setPaperdollItem(PAPERDOLL_HEAD, item);
 				break;
 			}
-			case Item.SLOT_UNDERWEAR:
+			case ItemTemplate.SLOT_UNDERWEAR:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_UNDER);
 				setPaperdollItem(PAPERDOLL_UNDER, item);
 				break;
 			}
-			case Item.SLOT_BACK:
+			case ItemTemplate.SLOT_BACK:
 			{
 				unEquipSlot(changedItems, PAPERDOLL_BACK);
 				setPaperdollItem(PAPERDOLL_BACK, item);
@@ -395,9 +395,9 @@ public class Inventory
 		return changedItems;
 	}
 	
-	private ItemInstance unEquipSlot(int slot)
+	private Item unEquipSlot(int slot)
 	{
-		final ItemInstance item = _paperdoll[slot];
+		final Item item = _paperdoll[slot];
 		if (item != null)
 		{
 			item.setEquipSlot(-1);
@@ -407,13 +407,13 @@ public class Inventory
 		return item;
 	}
 	
-	private boolean unEquipSlot(List<ItemInstance> changedItems, int slot)
+	private boolean unEquipSlot(List<Item> changedItems, int slot)
 	{
 		if (slot == -1)
 		{
 			return false;
 		}
-		final ItemInstance item = _paperdoll[slot];
+		final Item item = _paperdoll[slot];
 		if (item != null)
 		{
 			item.setEquipSlot(-1);
@@ -424,9 +424,9 @@ public class Inventory
 		return item != null;
 	}
 	
-	public ItemInstance getItem(int objectId)
+	public Item getItem(int objectId)
 	{
-		for (ItemInstance temp : _items)
+		for (Item temp : _items)
 		{
 			if (temp.getObjectId() != objectId)
 			{
@@ -437,7 +437,7 @@ public class Inventory
 		return null;
 	}
 	
-	public ItemInstance getAdenaInstance()
+	public Item getAdenaInstance()
 	{
 		return _adena;
 	}
@@ -485,9 +485,9 @@ public class Inventory
 		setAdena(getAdena() - adena);
 	}
 	
-	public ItemInstance destroyItem(int objectId, int count)
+	public Item destroyItem(int objectId, int count)
 	{
-		final ItemInstance item = getItem(objectId);
+		final Item item = getItem(objectId);
 		if (item.getCount() == count)
 		{
 			_items.remove(item);
@@ -503,9 +503,9 @@ public class Inventory
 		return item;
 	}
 	
-	public ItemInstance destroyItemByItemId(int itemId, int count)
+	public Item destroyItemByItemId(int itemId, int count)
 	{
-		final ItemInstance item = findItemByItemId(itemId);
+		final Item item = findItemByItemId(itemId);
 		if (item.getCount() == count)
 		{
 			_items.remove(item);
@@ -521,13 +521,13 @@ public class Inventory
 		return item;
 	}
 	
-	public ItemInstance dropItem(int objectId, int count)
+	public Item dropItem(int objectId, int count)
 	{
-		final ItemInstance oldItem = getItem(objectId);
+		final Item oldItem = getItem(objectId);
 		return this.dropItem(oldItem, count);
 	}
 	
-	public ItemInstance dropItem(ItemInstance oldItem, int count)
+	public Item dropItem(Item oldItem, int count)
 	{
 		if (oldItem == null)
 		{
@@ -541,7 +541,7 @@ public class Inventory
 		if (oldItem.getItemId() == 57)
 		{
 			reduceAdena(count);
-			final ItemInstance adena = ItemTable.getInstance().createItem(oldItem.getItemId());
+			final Item adena = ItemTable.getInstance().createItem(oldItem.getItemId());
 			adena.setCount(count);
 			return adena;
 		}
@@ -554,7 +554,7 @@ public class Inventory
 		}
 		oldItem.setCount(oldItem.getCount() - count);
 		oldItem.setLastChange(2);
-		final ItemInstance newItem = ItemTable.getInstance().createItem(oldItem.getItemId());
+		final Item newItem = ItemTable.getInstance().createItem(oldItem.getItemId());
 		newItem.setCount(count);
 		refreshWeight();
 		return newItem;
@@ -563,7 +563,7 @@ public class Inventory
 	private void refreshWeight()
 	{
 		int weight = 0;
-		for (ItemInstance item : _items)
+		for (Item item : _items)
 		{
 			weight += item.getItem().getWeight() * item.getCount();
 		}
@@ -575,37 +575,37 @@ public class Inventory
 		return _totalWeight;
 	}
 	
-	public ItemInstance findArrowForBow(Item bow)
+	public Item findArrowForBow(ItemTemplate bow)
 	{
 		int arrowsId = 0;
 		switch (bow.getCrystalType())
 		{
-			case Item.CRYSTAL_NONE:
+			case ItemTemplate.CRYSTAL_NONE:
 			{
 				arrowsId = 17;
 				break;
 			}
-			case Item.CRYSTAL_D:
+			case ItemTemplate.CRYSTAL_D:
 			{
 				arrowsId = 1341;
 				break;
 			}
-			case Item.CRYSTAL_C:
+			case ItemTemplate.CRYSTAL_C:
 			{
 				arrowsId = 1342;
 				break;
 			}
-			case Item.CRYSTAL_B:
+			case ItemTemplate.CRYSTAL_B:
 			{
 				arrowsId = 1343;
 				break;
 			}
-			case Item.CRYSTAL_A:
+			case ItemTemplate.CRYSTAL_A:
 			{
 				arrowsId = 1344;
 				break;
 			}
-			case Item.CRYSTAL_S:
+			case ItemTemplate.CRYSTAL_S:
 			{
 				arrowsId = 1345;
 				break;

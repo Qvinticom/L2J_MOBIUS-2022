@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.model.actor;
 
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.PlayableKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
@@ -28,7 +27,7 @@ import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
  * This class represents all Playable characters in the world.<br>
  * Playable:
  * <ul>
- * <li>PlayerInstance</li>
+ * <li>Player</li>
  * <li>Summon</li>
  * </ul>
  */
@@ -95,10 +94,10 @@ public abstract class Playable extends Creature
 		
 		if (killer != null)
 		{
-			PlayerInstance player = null;
-			if (killer instanceof PlayerInstance)
+			Player player = null;
+			if (killer instanceof Player)
 			{
-				player = (PlayerInstance) killer;
+				player = (Player) killer;
 			}
 			else if (killer instanceof Summon)
 			{
@@ -133,10 +132,10 @@ public abstract class Playable extends Creature
 			return false; // Target is not a PlayableInstance
 		}
 		
-		PlayerInstance player = null;
-		if (this instanceof PlayerInstance)
+		Player player = null;
+		if (this instanceof Player)
 		{
-			player = (PlayerInstance) this;
+			player = (Player) this;
 		}
 		else if (this instanceof Summon)
 		{
@@ -152,10 +151,10 @@ public abstract class Playable extends Creature
 			return false; // Active player has karma
 		}
 		
-		PlayerInstance targetPlayer = null;
-		if (target instanceof PlayerInstance)
+		Player targetPlayer = null;
+		if (target instanceof Player)
 		{
-			targetPlayer = (PlayerInstance) target;
+			targetPlayer = (Player) target;
 		}
 		else if (target instanceof Summon)
 		{
@@ -455,11 +454,11 @@ public abstract class Playable extends Creature
 	 * @return the acting player
 	 */
 	@Override
-	public PlayerInstance getActingPlayer()
+	public Player getActingPlayer()
 	{
-		if (this instanceof PlayerInstance)
+		if (this instanceof Player)
 		{
-			return (PlayerInstance) this;
+			return (Player) this;
 		}
 		return null;
 	}

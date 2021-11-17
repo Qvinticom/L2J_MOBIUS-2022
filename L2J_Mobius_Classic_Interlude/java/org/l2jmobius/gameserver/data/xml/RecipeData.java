@@ -30,12 +30,12 @@ import org.w3c.dom.Node;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.RecipeInstance;
 import org.l2jmobius.gameserver.model.RecipeList;
-import org.l2jmobius.gameserver.model.RecipeStatInstance;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.holders.RecipeHolder;
+import org.l2jmobius.gameserver.model.holders.RecipeStatHolder;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
@@ -68,9 +68,9 @@ public class RecipeData implements IXmlReader
 	public void parseDocument(Document doc, File f)
 	{
 		// TODO: Cleanup checks enforced by XSD.
-		final List<RecipeInstance> recipePartList = new ArrayList<>();
-		final List<RecipeStatInstance> recipeStatUseList = new ArrayList<>();
-		final List<RecipeStatInstance> recipeAltStatChangeList = new ArrayList<>();
+		final List<RecipeHolder> recipePartList = new ArrayList<>();
+		final List<RecipeStatHolder> recipeStatUseList = new ArrayList<>();
+		final List<RecipeStatHolder> recipeAltStatChangeList = new ArrayList<>();
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -145,7 +145,7 @@ public class RecipeData implements IXmlReader
 								final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
 								try
 								{
-									recipeStatUseList.add(new RecipeStatInstance(statName, value));
+									recipeStatUseList.add(new RecipeStatHolder(statName, value));
 								}
 								catch (Exception e)
 								{
@@ -159,7 +159,7 @@ public class RecipeData implements IXmlReader
 								final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
 								try
 								{
-									recipeAltStatChangeList.add(new RecipeStatInstance(statName, value));
+									recipeAltStatChangeList.add(new RecipeStatHolder(statName, value));
 								}
 								catch (Exception e)
 								{
@@ -171,14 +171,14 @@ public class RecipeData implements IXmlReader
 							{
 								final int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
 								final int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
-								recipePartList.add(new RecipeInstance(ingId, ingCount));
+								recipePartList.add(new RecipeHolder(ingId, ingCount));
 							}
 							else if ("production".equalsIgnoreCase(c.getNodeName()))
 							{
 								final int itemId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
 								
 								// Max equipable item grade configuration.
-								final Item item = ItemTable.getInstance().getTemplate(id);
+								final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
 								if (item != null)
 								{
 									final int itemCrystalLevel = item.getCrystalType().getLevel();
@@ -201,15 +201,15 @@ public class RecipeData implements IXmlReader
 						}
 						
 						final RecipeList recipeList = new RecipeList(set, haveRare);
-						for (RecipeInstance recipePart : recipePartList)
+						for (RecipeHolder recipePart : recipePartList)
 						{
 							recipeList.addRecipe(recipePart);
 						}
-						for (RecipeStatInstance recipeStatUse : recipeStatUseList)
+						for (RecipeStatHolder recipeStatUse : recipeStatUseList)
 						{
 							recipeList.addStatUse(recipeStatUse);
 						}
-						for (RecipeStatInstance recipeAltStatChange : recipeAltStatChangeList)
+						for (RecipeStatHolder recipeAltStatChange : recipeAltStatChangeList)
 						{
 							recipeList.addAltStatChange(recipeAltStatChange);
 						}
@@ -269,7 +269,7 @@ public class RecipeData implements IXmlReader
 	 * @param id the recipe list id
 	 * @return the valid recipe list
 	 */
-	public RecipeList getValidRecipeList(PlayerInstance player, int id)
+	public RecipeList getValidRecipeList(Player player, int id)
 	{
 		final RecipeList recipeList = _recipes.get(id);
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))

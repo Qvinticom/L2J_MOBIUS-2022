@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -38,7 +38,7 @@ public class AdminGmChat implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_gmchat"))
 		{
@@ -61,7 +61,7 @@ public class AdminGmChat implements IAdminCommandHandler
 	 * @param command
 	 * @param activeChar
 	 */
-	private void snoop(String command, PlayerInstance activeChar)
+	private void snoop(String command, Player activeChar)
 	{
 		WorldObject target = null;
 		if (command.length() > 12)
@@ -78,12 +78,12 @@ public class AdminGmChat implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
 			return;
 		}
-		if (!(target instanceof PlayerInstance))
+		if (!(target instanceof Player))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		final PlayerInstance player = (PlayerInstance) target;
+		final Player player = (Player) target;
 		player.addSnooper(activeChar);
 		activeChar.addSnooped(player);
 	}
@@ -98,13 +98,13 @@ public class AdminGmChat implements IAdminCommandHandler
 	 * @param command
 	 * @param activeChar
 	 */
-	private void handleGmChat(String command, PlayerInstance activeChar)
+	private void handleGmChat(String command, Player activeChar)
 	{
 		try
 		{
 			final int offset = command.contains("menu") ? 17 : 13;
 			final String text = command.substring(offset);
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				if (player.isGM())
 				{

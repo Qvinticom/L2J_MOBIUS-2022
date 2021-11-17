@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 
 /**
  * @author la2 Lets drink to code!
@@ -53,7 +53,7 @@ public class DecayTaskManager implements Runnable
 				for (Entry<Creature, Long> entry : _decayTasks.entrySet())
 				{
 					final Creature actor = entry.getKey();
-					if (actor instanceof RaidBossInstance)
+					if (actor instanceof RaidBoss)
 					{
 						delay = 30000;
 					}

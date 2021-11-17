@@ -20,9 +20,9 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -45,17 +45,17 @@ public class CustomPotions implements IItemHandler
 	};
 	
 	@Override
-	public synchronized void useItem(Playable playable, ItemInstance item)
+	public synchronized void useItem(Playable playable, Item item)
 	{
-		PlayerInstance player;
+		Player player;
 		boolean res = false;
-		if (playable instanceof PlayerInstance)
+		if (playable instanceof Player)
 		{
-			player = (PlayerInstance) playable;
+			player = (Player) playable;
 		}
-		else if (playable instanceof PetInstance)
+		else if (playable instanceof Pet)
 		{
-			player = ((PetInstance) playable).getOwner();
+			player = ((Pet) playable).getOwner();
 		}
 		else
 		{
@@ -86,7 +86,7 @@ public class CustomPotions implements IItemHandler
 		}
 	}
 	
-	public boolean usePotion(PlayerInstance player, int magicId, int level)
+	public boolean usePotion(Player player, int magicId, int level)
 	{
 		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)

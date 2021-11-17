@@ -27,12 +27,12 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
@@ -84,8 +84,8 @@ public class Pdam implements ISkillHandler
 			
 			final Creature target = (Creature) target2;
 			final Formulas f = Formulas.getInstance();
-			final ItemInstance weapon = creature.getActiveWeaponInstance();
-			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
+			final Item weapon = creature.getActiveWeaponInstance();
+			if ((creature instanceof Player) && (target instanceof Player) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);
 			}
@@ -174,21 +174,21 @@ public class Pdam implements ISkillHandler
 				
 				// Success of lethal effect.
 				final int chance = Rnd.get(1000);
-				if ((target != creature) && !target.isRaid() && (chance < skill.getLethalChance1()) && !(target instanceof DoorInstance) && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)))
+				if ((target != creature) && !target.isRaid() && (chance < skill.getLethalChance1()) && !(target instanceof Door) && (!(target instanceof Npc) || (((Npc) target).getNpcId() != 35062)))
 				{
 					// 1st lethal effect activate (cp to 1 or if target is npc then hp to 50%).
 					if ((skill.getLethalChance2() > 0) && (chance >= skill.getLethalChance2()))
 					{
-						if (target instanceof PlayerInstance)
+						if (target instanceof Player)
 						{
-							final PlayerInstance player = (PlayerInstance) target;
+							final Player player = (Player) target;
 							if (!player.isInvul())
 							{
 								player.setCurrentCp(1); // Set CP to 1
 								player.reduceCurrentHp(damage, creature);
 							}
 						}
-						else if (target instanceof MonsterInstance) // If is a monster remove first damage and after 50% of current hp.
+						else if (target instanceof Monster) // If is a monster remove first damage and after 50% of current hp.
 						{
 							target.reduceCurrentHp(damage, creature);
 							target.reduceCurrentHp(target.getCurrentHp() / 2, creature);
@@ -199,13 +199,13 @@ public class Pdam implements ISkillHandler
 					else // 2nd lethal effect activate (cp,hp to 1 or if target is npc then hp to 1).
 					{
 						// If is a monster damage is (CurrentHp - 1) so HP = 1.
-						if (target instanceof NpcInstance)
+						if (target instanceof Npc)
 						{
 							target.reduceCurrentHp(target.getCurrentHp() - 1, creature);
 						}
-						else if (target instanceof PlayerInstance) // If is a active player set his HP and CP to 1.
+						else if (target instanceof Player) // If is a active player set his HP and CP to 1.
 						{
-							final PlayerInstance player = (PlayerInstance) target;
+							final Player player = (Player) target;
 							if (!player.isInvul())
 							{
 								player.setCurrentHp(1);
@@ -219,9 +219,9 @@ public class Pdam implements ISkillHandler
 				}
 				else if (skill.getDmgDirectlyToHP() || !(creature instanceof Playable)) // Make damage directly to HP.
 				{
-					if (target instanceof PlayerInstance)
+					if (target instanceof Player)
 					{
-						final PlayerInstance player = (PlayerInstance) target;
+						final Player player = (Player) target;
 						if (!player.isInvul())
 						{
 							if (damage >= player.getCurrentHp())
@@ -253,9 +253,9 @@ public class Pdam implements ISkillHandler
 						target.reduceCurrentHp(damage, creature);
 					}
 				}
-				else if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && !target.isInvul()) // only players can reduce CPs each other
+				else if ((creature instanceof Player) && (target instanceof Player) && !target.isInvul()) // only players can reduce CPs each other
 				{
-					final PlayerInstance player = (PlayerInstance) target;
+					final Player player = (Player) target;
 					double hpDamage = 0;
 					if (damage >= player.getCurrentCp())
 					{

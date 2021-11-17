@@ -52,9 +52,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceCreated;
@@ -87,9 +87,9 @@ public class Instance implements IIdentifiable, INamable
 	private long _endTime;
 	// Advanced instance parameters
 	private final Set<Integer> _allowed = ConcurrentHashMap.newKeySet(); // Player ids which can enter to instance
-	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
+	private final Set<Player> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
 	private final Set<Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
-	private final Map<Integer, DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
+	private final Map<Integer, Door> _doors = new HashMap<>(); // Spawned doors inside instance
 	private final StatSet _parameters = new StatSet();
 	// Timers
 	private final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new ConcurrentHashMap<>();
@@ -103,7 +103,7 @@ public class Instance implements IIdentifiable, INamable
 	 * @param template template of instance world
 	 * @param player player who create instance world.
 	 */
-	public Instance(int id, InstanceTemplate template, PlayerInstance player)
+	public Instance(int id, InstanceTemplate template, Player player)
 	{
 		// Set basic instance info
 		_id = id;
@@ -239,7 +239,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Add player who can enter to instance.
 	 * @param player player instance
 	 */
-	public void addAllowed(PlayerInstance player)
+	public void addAllowed(Player player)
 	{
 		if (!_allowed.contains(player.getObjectId()))
 		{
@@ -252,7 +252,7 @@ public class Instance implements IIdentifiable, INamable
 	 * @param player player itself
 	 * @return {@code true} when can enter, otherwise {@code false}
 	 */
-	public boolean isAllowed(PlayerInstance player)
+	public boolean isAllowed(Player player)
 	{
 		return _allowed.contains(player.getObjectId());
 	}
@@ -261,12 +261,12 @@ public class Instance implements IIdentifiable, INamable
 	 * Returns all players who can enter to instance.
 	 * @return allowed players list
 	 */
-	public List<PlayerInstance> getAllowed()
+	public List<Player> getAllowed()
 	{
-		final List<PlayerInstance> allowed = new ArrayList<>(_allowed.size());
+		final List<Player> allowed = new ArrayList<>(_allowed.size());
 		for (int playerId : _allowed)
 		{
-			final PlayerInstance player = World.getInstance().getPlayer(playerId);
+			final Player player = World.getInstance().getPlayer(playerId);
 			if (player != null)
 			{
 				allowed.add(player);
@@ -279,7 +279,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Add player to instance
 	 * @param player player instance
 	 */
-	public void addPlayer(PlayerInstance player)
+	public void addPlayer(Player player)
 	{
 		_players.add(player);
 		if (_emptyDestroyTask != null)
@@ -293,7 +293,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Remove player from instance.
 	 * @param player player instance
 	 */
-	public void removePlayer(PlayerInstance player)
+	public void removePlayer(Player player)
 	{
 		_players.remove(player);
 		if (_players.isEmpty())
@@ -315,7 +315,7 @@ public class Instance implements IIdentifiable, INamable
 	 * @param player player to be checked
 	 * @return {@code true} if player is inside, otherwise {@code false}
 	 */
-	public boolean containsPlayer(PlayerInstance player)
+	public boolean containsPlayer(Player player)
 	{
 		return _players.contains(player);
 	}
@@ -324,7 +324,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Get all players inside instance.
 	 * @return players within instance
 	 */
-	public Set<PlayerInstance> getPlayers()
+	public Set<Player> getPlayers()
 	{
 		return _players;
 	}
@@ -343,9 +343,9 @@ public class Instance implements IIdentifiable, INamable
 	 * <i>This method is useful for instances with one player inside.</i>
 	 * @return first found player, otherwise {@code null}
 	 */
-	public PlayerInstance getFirstPlayer()
+	public Player getFirstPlayer()
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			return player;
 		}
@@ -357,9 +357,9 @@ public class Instance implements IIdentifiable, INamable
 	 * @param id objectId of player
 	 * @return first player by ID, otherwise {@code null}
 	 */
-	public PlayerInstance getPlayerById(int id)
+	public Player getPlayerById(int id)
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			if (player.getObjectId() == id)
 			{
@@ -375,10 +375,10 @@ public class Instance implements IIdentifiable, INamable
 	 * @param radius radius around target
 	 * @return players within radius
 	 */
-	public List<PlayerInstance> getPlayersInsideRadius(ILocational object, int radius)
+	public List<Player> getPlayersInsideRadius(ILocational object, int radius)
 	{
-		final List<PlayerInstance> result = new ArrayList<>();
-		for (PlayerInstance player : _players)
+		final List<Player> result = new ArrayList<>();
+		for (Player player : _players)
 		{
 			if (player.isInsideRadius3D(object, radius))
 			{
@@ -404,7 +404,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Get all doors spawned inside instance world.
 	 * @return collection of spawned doors
 	 */
-	public Collection<DoorInstance> getDoors()
+	public Collection<Door> getDoors()
 	{
 		return _doors.values();
 	}
@@ -414,7 +414,7 @@ public class Instance implements IIdentifiable, INamable
 	 * @param id template ID of door
 	 * @return instance of door if found, otherwise {@code null}
 	 */
-	public DoorInstance getDoor(int id)
+	public Door getDoor(int id)
 	{
 		return _doors.get(id);
 	}
@@ -426,7 +426,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public void openCloseDoor(int id, boolean open)
 	{
-		final DoorInstance door = _doors.get(id);
+		final Door door = _doors.get(id);
 		if (door != null)
 		{
 			if (open)
@@ -716,7 +716,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	private void removeDoors()
 	{
-		_doors.values().stream().filter(Objects::nonNull).forEach(DoorInstance::decayMe);
+		_doors.values().stream().filter(Objects::nonNull).forEach(Door::decayMe);
 		_doors.clear();
 	}
 	
@@ -815,7 +815,7 @@ public class Instance implements IIdentifiable, INamable
 	 * Teleport player out of instance.
 	 * @param player player that should be moved out
 	 */
-	public void ejectPlayer(PlayerInstance player)
+	public void ejectPlayer(Player player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if ((world != null) && world.equals(this))
@@ -838,7 +838,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public void broadcastPacket(IClientOutgoingPacket... packets)
 	{
-		for (PlayerInstance player : _players)
+		for (Player player : _players)
 		{
 			for (IClientOutgoingPacket packet : packets)
 			{
@@ -930,7 +930,7 @@ public class Instance implements IIdentifiable, INamable
 			_allowed.forEach(playerId ->
 			{
 				InstanceManager.getInstance().setReenterPenalty(playerId, getTemplateId(), time);
-				final PlayerInstance player = World.getInstance().getPlayer(playerId);
+				final Player player = World.getInstance().getPlayer(playerId);
 				if ((player != null) && player.isOnline())
 				{
 					player.sendPacket(msg);
@@ -976,7 +976,7 @@ public class Instance implements IIdentifiable, INamable
 	 * This method is called when player dies inside instance.
 	 * @param player
 	 */
-	public void onDeath(PlayerInstance player)
+	public void onDeath(Player player)
 	{
 		if (!player.isOnEvent() && (_template.getEjectTime() > 0))
 		{
@@ -1000,7 +1000,7 @@ public class Instance implements IIdentifiable, INamable
 	 * This method is called when player was resurrected inside instance.
 	 * @param player resurrected player
 	 */
-	public void doRevive(PlayerInstance player)
+	public void doRevive(Player player)
 	{
 		final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
 		if (task != null)
@@ -1018,7 +1018,7 @@ public class Instance implements IIdentifiable, INamable
 	{
 		if (object.isPlayer())
 		{
-			final PlayerInstance player = object.getActingPlayer();
+			final Player player = object.getActingPlayer();
 			if (enter)
 			{
 				addPlayer(player);
@@ -1074,7 +1074,7 @@ public class Instance implements IIdentifiable, INamable
 	 * This method is called when player logout inside instance world.
 	 * @param player player who logout
 	 */
-	public void onPlayerLogout(PlayerInstance player)
+	public void onPlayerLogout(Player player)
 	{
 		removePlayer(player);
 		if (Config.RESTORE_PLAYER_INSTANCE)
@@ -1168,7 +1168,7 @@ public class Instance implements IIdentifiable, INamable
 	 * @param player instance of player who wants to leave instance world
 	 * @return {@link Location} object if instance has exit location defined, otherwise {@code null}
 	 */
-	public Location getExitLocation(PlayerInstance player)
+	public Location getExitLocation(Player player)
 	{
 		return _template.getExitLocation(player);
 	}

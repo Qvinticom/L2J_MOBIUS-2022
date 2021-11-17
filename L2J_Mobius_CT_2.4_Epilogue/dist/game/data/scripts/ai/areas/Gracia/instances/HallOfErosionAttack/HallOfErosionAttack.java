@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -222,13 +222,13 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		tumorRespawnTime = 180 * 1000;
 	}
 	
-	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(Player player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private boolean checkConditions(PlayerInstance player)
+	private boolean checkConditions(Player player)
 	{
 		if (player.isGM())
 		{
@@ -267,7 +267,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			return false;
 		}
 		
-		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
+		for (Player partyMember : party.getCommandChannel().getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
@@ -306,7 +306,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(PlayerInstance player, int[] coords)
+	protected void enterInstance(Player player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -329,7 +329,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			LOGGER.info("Hall Of Erosion Attack started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			if (player.isInParty())
 			{
-				for (PlayerInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -401,7 +401,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HEAWorld)
@@ -421,7 +421,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-					for (PlayerInstance partyMember : player.getParty().getMembers())
+					for (Player partyMember : player.getParty().getMembers())
 					{
 						if (partyMember.isInsideRadius3D(player, 500))
 						{
@@ -435,7 +435,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{
@@ -446,7 +446,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
@@ -465,7 +465,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
@@ -480,7 +480,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(INSTANCEID);
 				
-				for (PlayerInstance player : tmpworld.getAllowed())
+				for (Player player : tmpworld.getAllowed())
 				{
 					if ((player != null) && player.isOnline())
 					{
@@ -529,7 +529,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
@@ -562,7 +562,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			if (npc.getId() == COHEMENES)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.SHOUT, npc.getId(), NpcStringId.KEU_I_WILL_LEAVE_FOR_NOW_BUT_DON_T_THINK_THIS_IS_OVER_THE_SEED_OF_INFINITY_CAN_NEVER_DIE));
-				for (PlayerInstance plr : world.getAllowed())
+				for (Player plr : world.getAllowed())
 				{
 					if (plr != null)
 					{
@@ -604,7 +604,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addInstanceName(INSTANCEID);
 			
-			for (PlayerInstance plr : world.getAllowed())
+			for (Player plr : world.getAllowed())
 			{
 				if (plr != null)
 				{
@@ -676,7 +676,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	
 	protected void broadCastPacket(HEAWorld world, IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

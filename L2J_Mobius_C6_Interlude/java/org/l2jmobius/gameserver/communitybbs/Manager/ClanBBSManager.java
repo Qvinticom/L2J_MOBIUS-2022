@@ -22,7 +22,7 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,7 +39,7 @@ public class ClanBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, PlayerInstance activeChar)
+	public void parseCmd(String command, Player activeChar)
 	{
 		if (command.equalsIgnoreCase("_bbsclan"))
 		{
@@ -99,7 +99,7 @@ public class ClanBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance activeChar)
+	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player activeChar)
 	{
 		if (ar1.equalsIgnoreCase("intro"))
 		{
@@ -164,7 +164,7 @@ public class ClanBBSManager extends BaseBBSManager
 		return "clan/";
 	}
 	
-	private void sendClanMail(PlayerInstance activeChar, int clanId)
+	private void sendClanMail(Player activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)
@@ -185,7 +185,7 @@ public class ClanBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private void sendClanManagement(PlayerInstance activeChar, int clanId)
+	private void sendClanManagement(Player activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)
@@ -206,7 +206,7 @@ public class ClanBBSManager extends BaseBBSManager
 		send1002(activeChar, clan.getIntroduction(), "", "");
 	}
 	
-	private void sendClanNotice(PlayerInstance activeChar, int clanId)
+	private void sendClanNotice(Player activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if ((clan == null) || (activeChar.getClanId() != clanId))
@@ -229,7 +229,7 @@ public class ClanBBSManager extends BaseBBSManager
 		send1002(activeChar, clan.getNotice(), "", "");
 	}
 	
-	private void sendClanList(PlayerInstance activeChar, int indexValue)
+	private void sendClanList(Player activeChar, int indexValue)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanlist.htm");
 		
@@ -308,7 +308,7 @@ public class ClanBBSManager extends BaseBBSManager
 		separateAndSend(content, activeChar);
 	}
 	
-	private void sendClanDetails(PlayerInstance activeChar, int clanId)
+	private void sendClanDetails(Player activeChar, int clanId)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)

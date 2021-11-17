@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model.conditions;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -48,9 +48,9 @@ public class ConditionPlayerHasPet extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
-		if ((effector.getActingPlayer() == null) || (!(effector.getActingPlayer().getSummon() instanceof PetInstance)))
+		if ((effector.getActingPlayer() == null) || (!(effector.getActingPlayer().getSummon() instanceof Pet)))
 		{
 			return false;
 		}
@@ -60,7 +60,7 @@ public class ConditionPlayerHasPet extends Condition
 			return true;
 		}
 		
-		final ItemInstance controlItem = ((PetInstance) effector.getActingPlayer().getSummon()).getControlItem();
+		final Item controlItem = ((Pet) effector.getActingPlayer().getSummon()).getControlItem();
 		return (controlItem != null) && _controlItemIds.contains(controlItem.getId());
 	}
 }

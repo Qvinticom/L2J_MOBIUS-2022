@@ -32,7 +32,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 
@@ -48,7 +48,7 @@ public class InstanceManager implements IXmlReader
 	private static final Map<Integer, String> _instanceIdNames = new HashMap<>();
 	// Instance templates
 	private final Map<Integer, String> _instanceTemplates = new ConcurrentHashMap<>();
-	private final Map<Integer, Map<Integer, Long>> _playerInstanceTimes = new ConcurrentHashMap<>();
+	private final Map<Integer, Map<Integer, Long>> _PlayerTimes = new ConcurrentHashMap<>();
 	// SQL Queries
 	private static final String ADD_INSTANCE_TIME = "INSERT INTO character_instance_time (charId,instanceId,time) values (?,?,?) ON DUPLICATE KEY UPDATE time=?";
 	private static final String RESTORE_INSTANCE_TIMES = "SELECT instanceId,time FROM character_instance_time WHERE charId=?";
@@ -84,13 +84,13 @@ public class InstanceManager implements IXmlReader
 	 */
 	public long getInstanceTime(int playerObjId, int id)
 	{
-		if (!_playerInstanceTimes.containsKey(playerObjId))
+		if (!_PlayerTimes.containsKey(playerObjId))
 		{
 			restoreInstanceTimes(playerObjId);
 		}
-		if (_playerInstanceTimes.get(playerObjId).containsKey(id))
+		if (_PlayerTimes.get(playerObjId).containsKey(id))
 		{
-			return _playerInstanceTimes.get(playerObjId).get(id);
+			return _PlayerTimes.get(playerObjId).get(id);
 		}
 		return -1;
 	}
@@ -101,11 +101,11 @@ public class InstanceManager implements IXmlReader
 	 */
 	public Map<Integer, Long> getAllInstanceTimes(int playerObjId)
 	{
-		if (!_playerInstanceTimes.containsKey(playerObjId))
+		if (!_PlayerTimes.containsKey(playerObjId))
 		{
 			restoreInstanceTimes(playerObjId);
 		}
-		return _playerInstanceTimes.get(playerObjId);
+		return _PlayerTimes.get(playerObjId);
 	}
 	
 	/**
@@ -115,7 +115,7 @@ public class InstanceManager implements IXmlReader
 	 */
 	public void setInstanceTime(int playerObjId, int id, long time)
 	{
-		if (!_playerInstanceTimes.containsKey(playerObjId))
+		if (!_PlayerTimes.containsKey(playerObjId))
 		{
 			restoreInstanceTimes(playerObjId);
 		}
@@ -128,7 +128,7 @@ public class InstanceManager implements IXmlReader
 			ps.setLong(3, time);
 			ps.setLong(4, time);
 			ps.execute();
-			_playerInstanceTimes.get(playerObjId).put(id, time);
+			_PlayerTimes.get(playerObjId).put(id, time);
 		}
 		catch (Exception e)
 		{
@@ -148,7 +148,7 @@ public class InstanceManager implements IXmlReader
 			ps.setInt(1, playerObjId);
 			ps.setInt(2, id);
 			ps.execute();
-			_playerInstanceTimes.get(playerObjId).remove(id);
+			_PlayerTimes.get(playerObjId).remove(id);
 		}
 		catch (Exception e)
 		{
@@ -161,11 +161,11 @@ public class InstanceManager implements IXmlReader
 	 */
 	public void restoreInstanceTimes(int playerObjId)
 	{
-		if (_playerInstanceTimes.containsKey(playerObjId))
+		if (_PlayerTimes.containsKey(playerObjId))
 		{
 			return; // already restored
 		}
-		_playerInstanceTimes.put(playerObjId, new ConcurrentHashMap<>());
+		_PlayerTimes.put(playerObjId, new ConcurrentHashMap<>());
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(RESTORE_INSTANCE_TIMES))
 		{
@@ -182,7 +182,7 @@ public class InstanceManager implements IXmlReader
 					}
 					else
 					{
-						_playerInstanceTimes.get(playerObjId).put(id, time);
+						_PlayerTimes.get(playerObjId).put(id, time);
 					}
 				}
 			}
@@ -267,7 +267,7 @@ public class InstanceManager implements IXmlReader
 	 * @param player the player to check
 	 * @return the instance world
 	 */
-	public InstanceWorld getPlayerWorld(PlayerInstance player)
+	public InstanceWorld getPlayerWorld(Player player)
 	{
 		for (InstanceWorld temp : _instanceWorlds.values())
 		{
@@ -321,7 +321,7 @@ public class InstanceManager implements IXmlReader
 	 * @param objectId
 	 * @return
 	 */
-	public int getPlayerInstance(int objectId)
+	public int getPlayer(int objectId)
 	{
 		for (Instance temp : INSTANCES.values())
 		{

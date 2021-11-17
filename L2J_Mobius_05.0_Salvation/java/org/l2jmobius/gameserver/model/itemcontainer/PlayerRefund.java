@@ -20,17 +20,17 @@ import java.util.logging.Level;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author DS
  */
 public class PlayerRefund extends ItemContainer
 {
-	private final PlayerInstance _owner;
+	private final Player _owner;
 	
-	public PlayerRefund(PlayerInstance owner)
+	public PlayerRefund(Player owner)
 	{
 		_owner = owner;
 	}
@@ -42,7 +42,7 @@ public class PlayerRefund extends ItemContainer
 	}
 	
 	@Override
-	public PlayerInstance getOwner()
+	public Player getOwner()
 	{
 		return _owner;
 	}
@@ -54,14 +54,14 @@ public class PlayerRefund extends ItemContainer
 	}
 	
 	@Override
-	protected void addItem(ItemInstance item)
+	protected void addItem(Item item)
 	{
 		super.addItem(item);
 		try
 		{
 			if (getSize() > 12)
 			{
-				final ItemInstance removedItem = _items.stream().findFirst().get();
+				final Item removedItem = _items.stream().findFirst().get();
 				if (_items.remove(removedItem))
 				{
 					ItemTable.getInstance().destroyItem("ClearRefund", removedItem, getOwner(), null);
@@ -85,7 +85,7 @@ public class PlayerRefund extends ItemContainer
 	{
 		try
 		{
-			for (ItemInstance item : _items)
+			for (Item item : _items)
 			{
 				ItemTable.getInstance().destroyItem("ClearRefund", item, getOwner(), null);
 				item.updateDatabase(true);

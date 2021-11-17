@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.announce.Announcement;
 import org.l2jmobius.gameserver.model.announce.AnnouncementType;
 import org.l2jmobius.gameserver.model.announce.AutoAnnouncement;
@@ -59,7 +59,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String comm = st.nextToken();
@@ -100,7 +100,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_announce_announcements":
 			{
-				for (PlayerInstance player : World.getInstance().getAllPlayers())
+				for (Player player : World.getInstance().getAllPlayers())
 				{
 					AnnouncementsTable.getInstance().showAnnouncements(player);
 				}
@@ -242,7 +242,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		return false;
 	}
 	
-	private void listAnnouncements(PlayerInstance player)
+	private void listAnnouncements(Player player)
 	{
 		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce.htm");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -261,7 +261,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		player.sendPacket(adminReply);
 	}
 	
-	private void listAutoAnnouncements(PlayerInstance player)
+	private void listAutoAnnouncements(Player player)
 	{
 		final String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce_auto.htm");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

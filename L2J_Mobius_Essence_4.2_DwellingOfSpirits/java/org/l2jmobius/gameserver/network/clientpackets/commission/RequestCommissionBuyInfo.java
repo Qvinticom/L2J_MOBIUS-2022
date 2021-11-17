@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets.commission;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.instancemanager.CommissionManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.commission.CommissionItem;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -44,13 +44,13 @@ public class RequestCommissionBuyInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!CommissionManager.isPlayerAllowedToInteract(player))
+		if (!ItemCommissionManager.isPlayerAllowedToInteract(player))
 		{
 			client.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
@@ -63,7 +63,7 @@ public class RequestCommissionBuyInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final CommissionItem commissionItem = CommissionManager.getInstance().getCommissionItem(_commissionId);
+		final CommissionItem commissionItem = ItemCommissionManager.getInstance().getCommissionItem(_commissionId);
 		if (commissionItem != null)
 		{
 			client.sendPacket(new ExResponseCommissionBuyInfo(commissionItem));

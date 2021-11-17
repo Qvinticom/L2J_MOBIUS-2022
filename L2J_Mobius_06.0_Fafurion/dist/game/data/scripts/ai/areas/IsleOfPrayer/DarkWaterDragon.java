@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 import ai.AbstractNpcAI;
 
@@ -42,7 +42,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	private static final int DETRACTOR2 = 22271;
 	private static Set<Integer> SECOND_SPAWN = ConcurrentHashMap.newKeySet(); // Used to track if second Shades were already spawned
 	private static Set<Integer> MY_TRACKING_SET = ConcurrentHashMap.newKeySet(); // Used to track instances of npcs
-	private static Map<Integer, PlayerInstance> ID_MAP = new ConcurrentHashMap<>(); // Used to track instances of npcs
+	private static Map<Integer, Player> ID_MAP = new ConcurrentHashMap<>(); // Used to track instances of npcs
 	
 	private DarkWaterDragon()
 	{
@@ -63,7 +63,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (npc != null)
 		{
@@ -108,7 +108,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 				cancelQuestTimer("4", npc, null);
 				
 				MY_TRACKING_SET.remove(npc.getObjectId());
-				final PlayerInstance removed = ID_MAP.remove(npc.getObjectId());
+				final Player removed = ID_MAP.remove(npc.getObjectId());
 				if (removed != null)
 				{
 					((Attackable) npc).doItemDrop(NpcData.getInstance().getTemplate(18485), removed);
@@ -139,7 +139,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		final int npcObjId = npc.getObjectId();
@@ -170,7 +170,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		final int npcObjId = npc.getObjectId();

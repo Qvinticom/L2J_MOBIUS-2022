@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -80,7 +80,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -122,9 +122,9 @@ public class RequestActionUse implements IClientIncomingPacket
 				{
 					break;
 				}
-				if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
+				if ((target != null) && !player.isSitting() && (target instanceof StaticObject) && (((StaticObject) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObject.INTERACTION_DISTANCE))
 				{
-					final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
+					final ChairSit cs = new ChairSit(player, ((StaticObject) target).getStaticObjectId());
 					player.sendPacket(cs);
 					player.sitDown();
 					player.broadcastPacket(cs);
@@ -180,12 +180,12 @@ public class RequestActionUse implements IClientIncomingPacket
 					
 					if (player.isInOlympiadMode() && !player.isOlympiadStart())
 					{
-						// if PlayerInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
+						// if Player is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
 					
-					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target) && (!player.isOnEvent() || !((PlayerInstance) target).isOnEvent()))
+					if ((target instanceof Player) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target) && (!player.isOnEvent() || !((Player) target).isOnEvent()))
 					{
 						player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 						return;
@@ -193,15 +193,15 @@ public class RequestActionUse implements IClientIncomingPacket
 					
 					if (target.isAutoAttackable(player) || _ctrlPressed)
 					{
-						if (target instanceof DoorInstance)
+						if (target instanceof Door)
 						{
-							if (((DoorInstance) target).isAttackable(player) && (pet.getNpcId() != SiegeSummonInstance.SWOOP_CANNON_ID))
+							if (((Door) target).isAttackable(player) && (pet.getNpcId() != SiegeSummon.SWOOP_CANNON_ID))
 							{
 								pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 							}
 						}
 						// siege golem AI doesn't support attacking other than doors at the moment
-						else if (pet.getNpcId() != SiegeSummonInstance.SIEGE_GOLEM_ID)
+						else if (pet.getNpcId() != SiegeSummon.SIEGE_GOLEM_ID)
 						{
 							pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 						}
@@ -236,9 +236,9 @@ public class RequestActionUse implements IClientIncomingPacket
 						player.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
 					}
 					else // if it is a pet and not a summon
-					if (pet instanceof PetInstance)
+					if (pet instanceof Pet)
 					{
-						final PetInstance petInst = (PetInstance) pet;
+						final Pet petInst = (Pet) pet;
 						// if the pet is more than 40% fed
 						if (petInst.getCurrentFed() > (petInst.getMaxFed() * 0.40))
 						{
@@ -351,20 +351,20 @@ public class RequestActionUse implements IClientIncomingPacket
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are in private store
-				if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL))
+				if ((player.getPrivateStoreType() == Player.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == Player.STORE_PRIVATE_SELL))
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are sitting
-				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
+				if (player.isSitting() && (player.getPrivateStoreType() != Player.STORE_PRIVATE_MANUFACTURE))
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
+				if (player.getPrivateStoreType() == Player.STORE_PRIVATE_MANUFACTURE)
 				{
-					player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+					player.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 					if (player.isSitting())
 					{
 						player.standUp();
@@ -431,20 +431,20 @@ public class RequestActionUse implements IClientIncomingPacket
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are in private store
-				if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL))
+				if ((player.getPrivateStoreType() == Player.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == Player.STORE_PRIVATE_SELL))
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are sitting
-				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
+				if (player.isSitting() && (player.getPrivateStoreType() != Player.STORE_PRIVATE_MANUFACTURE))
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
+				if (player.getPrivateStoreType() == Player.STORE_PRIVATE_MANUFACTURE)
 				{
-					player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+					player.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 					if (player.isSitting())
 					{
 						player.standUp();
@@ -459,7 +459,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 52: // unsummon
 			{
-				if ((pet != null) && (pet instanceof SummonInstance))
+				if ((pet != null) && (pet instanceof Servitor))
 				{
 					if (pet.isInCombat() || player.isInCombat())
 					{
@@ -507,7 +507,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 1000: // Siege Golem - Siege Hammer
 			{
-				if (target instanceof DoorInstance)
+				if (target instanceof Door)
 				{
 					useSkill(client, 4079);
 				}
@@ -634,7 +634,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 1039: // Swoop Cannon - Cannon Fodder
 			{
-				if (!(target instanceof DoorInstance))
+				if (!(target instanceof Door))
 				{
 					useSkill(client, 5110);
 				}
@@ -642,7 +642,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 1040: // Swoop Cannon - Big Bang
 			{
-				if (!(target instanceof DoorInstance))
+				if (!(target instanceof Door))
 				{
 					useSkill(client, 5111);
 				}
@@ -660,7 +660,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void useSkill(GameClient client, int skillId, WorldObject target)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -705,7 +705,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void useSkill(GameClient client, int skillId)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;

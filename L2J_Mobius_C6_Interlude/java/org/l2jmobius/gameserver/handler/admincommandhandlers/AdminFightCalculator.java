@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -44,7 +44,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		try
 		{
@@ -73,7 +73,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleStart(String params, PlayerInstance activeChar)
+	private void handleStart(String params, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(params);
 		int lvl1 = 0;
@@ -180,7 +180,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void handleShow(String params, PlayerInstance activeChar)
+	private void handleShow(String params, Player activeChar)
 	{
 		String trimmedParams = params.trim();
 		Creature npc1 = null;
@@ -203,8 +203,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(trimmedParams);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
-			npc1 = new MonsterInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid1));
-			npc2 = new MonsterInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid2));
+			npc1 = new Monster(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid1));
+			npc2 = new Monster(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid2));
 		}
 		
 		int miss1 = 0;
@@ -402,8 +402,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		if (trimmedParams.length() != 0)
 		{
-			((MonsterInstance) npc1).deleteMe();
-			((MonsterInstance) npc2).deleteMe();
+			((Monster) npc1).deleteMe();
+			((Monster) npc2).deleteMe();
 		}
 	}
 }

@@ -19,20 +19,20 @@ package org.l2jmobius.gameserver.communitybbs.Manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 
 public abstract class BaseBBSManager
 {
-	public abstract void parsecmd(String command, PlayerInstance player);
+	public abstract void parsecmd(String command, Player player);
 	
-	public abstract void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player);
+	public abstract void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, Player player);
 	
 	/**
 	 * @param html
 	 * @param acha
 	 */
-	protected void send1001(String html, PlayerInstance acha)
+	protected void send1001(String html, Player acha)
 	{
 		if (html.length() < 8192)
 		{
@@ -43,7 +43,7 @@ public abstract class BaseBBSManager
 	/**
 	 * @param acha
 	 */
-	protected void send1002(PlayerInstance acha)
+	protected void send1002(Player acha)
 	{
 		send1002(acha, " ", " ", "0");
 	}
@@ -54,7 +54,7 @@ public abstract class BaseBBSManager
 	 * @param string2
 	 * @param string3
 	 */
-	protected void send1002(PlayerInstance player, String string, String string2, String string3)
+	protected void send1002(Player player, String string, String string2, String string3)
 	{
 		final List<String> arg = new ArrayList<>(20);
 		arg.add("0");

@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -37,12 +37,12 @@ public class MotherTreeZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			final PlayerInstance player = (PlayerInstance) creature;
+			final Player player = (Player) creature;
 			if (player.isInParty())
 			{
-				for (PlayerInstance member : player.getParty().getPartyMembers())
+				for (Player member : player.getParty().getPartyMembers())
 				{
 					if (member.getRace() != Race.ELF)
 					{
@@ -59,10 +59,10 @@ public class MotherTreeZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if ((creature instanceof PlayerInstance) && creature.isInsideZone(ZoneId.MOTHERTREE))
+		if ((creature instanceof Player) && creature.isInsideZone(ZoneId.MOTHERTREE))
 		{
 			creature.setInsideZone(ZoneId.MOTHERTREE, false);
-			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_SHADOW_OF_THE_MOTHER_TREE);
+			((Player) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_SHADOW_OF_THE_MOTHER_TREE);
 		}
 	}
 	

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
@@ -86,7 +86,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -290,7 +290,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
 		if (!player.isCursedWeaponEquipped())
@@ -305,7 +305,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature bypassOrigin)
+	public boolean useBypass(String command, Player player, Creature bypassOrigin)
 	{
 		try
 		{

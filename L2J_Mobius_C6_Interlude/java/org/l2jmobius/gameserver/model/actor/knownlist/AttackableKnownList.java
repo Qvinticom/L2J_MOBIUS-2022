@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 
 public class AttackableKnownList extends NpcKnownList
 {
@@ -49,7 +49,7 @@ public class AttackableKnownList extends NpcKnownList
 		}
 		
 		// Set the Attackable Intention to AI_INTENTION_IDLE
-		final Collection<PlayerInstance> known = getKnownPlayers().values();
+		final Collection<Player> known = getKnownPlayers().values();
 		
 		// FIXME: This is a temporary solution
 		final CreatureAI ai = getActiveChar().getAI();
@@ -80,7 +80,7 @@ public class AttackableKnownList extends NpcKnownList
 	@Override
 	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if ((object instanceof FolkInstance) || !(object instanceof Creature))
+		if ((object instanceof Folk) || !(object instanceof Creature))
 		{
 			return 0;
 		}

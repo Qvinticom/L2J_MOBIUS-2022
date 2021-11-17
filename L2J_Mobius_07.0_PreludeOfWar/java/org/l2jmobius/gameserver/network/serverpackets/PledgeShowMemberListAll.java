@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -40,7 +40,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		_members = _clan.getMembers();
 	}
 	
-	public static void sendAllTo(PlayerInstance player)
+	public static void sendAllTo(Player player)
 	{
 		final Clan clan = player.getClan();
 		player.sendPacket(new PledgeShowMemberListAll(clan, true));

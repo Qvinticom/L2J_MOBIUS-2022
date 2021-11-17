@@ -16,11 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player.clanwh;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid
@@ -28,12 +28,12 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 public class OnPlayerClanWHItemTransfer implements IBaseEvent
 {
 	private final String _process;
-	private final PlayerInstance _player;
-	private final ItemInstance _item;
+	private final Player _player;
+	private final Item _item;
 	private final long _count;
 	private final ItemContainer _container;
 	
-	public OnPlayerClanWHItemTransfer(String process, PlayerInstance player, ItemInstance item, long count, ItemContainer container)
+	public OnPlayerClanWHItemTransfer(String process, Player player, Item item, long count, ItemContainer container)
 	{
 		_process = process;
 		_player = player;
@@ -47,12 +47,12 @@ public class OnPlayerClanWHItemTransfer implements IBaseEvent
 		return _process;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

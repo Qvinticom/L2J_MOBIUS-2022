@@ -26,20 +26,20 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DecoInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Deco;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.ClanHallSiege;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
@@ -53,7 +53,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	boolean _registrationPeriod = false;
 	private int _clanCounter = 0;
 	protected Map<Integer, clanPlayersInfo> _clansInfo = new HashMap<>();
-	public ClanHall clanhall = ClanHallManager.getInstance().getClanHallById(63);
+	public ClanHall clanhall = ClanHallTable.getInstance().getClanHallById(63);
 	protected clanPlayersInfo _ownerClanInfo = new clanPlayersInfo();
 	protected boolean _finalStage = false;
 	protected ScheduledFuture<?> _midTimer;
@@ -135,7 +135,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			final Clan winner = checkHaveWinner();
 			if (winner != null)
 			{
-				ClanHallManager.getInstance().setOwner(clanhall.getId(), winner);
+				ClanHallTable.getInstance().setOwner(clanhall.getId(), winner);
 				anonce("Attention! Clan hall, farm beasts was conquered by the clan " + winner.getName(), 2);
 			}
 			else
@@ -157,8 +157,8 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		for (String clanName : getRegisteredClans())
 		{
 			final Clan clan = ClanTable.getInstance().getClanByName(clanName);
-			final MonsterInstance mob = getQuestMob(clan);
-			final DecoInstance flag = getSiegeFlag(clan);
+			final Monster mob = getQuestMob(clan);
+			final Deco flag = getSiegeFlag(clan);
 			if (mob != null)
 			{
 				mob.deleteMe();
@@ -193,9 +193,9 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		final ClanHallZone zone = clanhall.getZone();
 		for (Creature creature : zone.getCharactersInside())
 		{
-			if (creature instanceof PlayerInstance)
+			if (creature instanceof Player)
 			{
-				final Clan clan = ((PlayerInstance) creature).getClan();
+				final Clan clan = ((Player) creature).getClan();
 				if (!isPlayerRegister(clan, creature.getName()))
 				{
 					creature.teleToLocation(53468, -94092, -1634);
@@ -235,7 +235,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			{
 				if (clanhall.getOwnerClan() == null)
 				{
-					ClanHallManager.getInstance().setOwner(clanhall.getId(), winner);
+					ClanHallTable.getInstance().setOwner(clanhall.getId(), winner);
 					anonce("Attention! Hall clan Fkrma wild animals was conquered by the clan " + winner.getName(), 2);
 					endSiege(false);
 				}
@@ -264,7 +264,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 				NpcTemplate template;
 				final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 				template = NpcTable.getInstance().getTemplate(35617 + mobCounter);
-				final MonsterInstance questMob = new MonsterInstance(IdManager.getInstance().getNextId(), template);
+				final Monster questMob = new Monster(IdManager.getInstance().getNextId(), template);
 				questMob.setHeading(100);
 				questMob.getStatus().setCurrentHpMp(questMob.getMaxHp(), questMob.getMaxMp());
 				if (mobCounter == 1)
@@ -311,7 +311,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			{
 				template = NpcTable.getInstance().getTemplate(35422 + flagCounter);
 			}
-			final DecoInstance flag = new DecoInstance(IdManager.getInstance().getNextId(), template);
+			final Deco flag = new Deco(IdManager.getInstance().getNextId(), template);
 			flag.setTitle(clan.getName());
 			flag.setHeading(100);
 			flag.getStatus().setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());
@@ -379,13 +379,13 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		return regPlayers != null;
 	}
 	
-	public synchronized int registerClanOnSiege(PlayerInstance player, Clan playerClan)
+	public synchronized int registerClanOnSiege(Player player, Clan playerClan)
 	{
 		if (_clanCounter == 5)
 		{
 			return 2;
 		}
-		final ItemInstance item = player.getInventory().getItemByItemId(8293);
+		final Item item = player.getInventory().getItemByItemId(8293);
 		if ((item != null) && player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false))
 		{
 			_clanCounter++;
@@ -438,7 +438,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		return null;
 	}
 	
-	public DecoInstance getSiegeFlag(Clan playerClan)
+	public Deco getSiegeFlag(Clan playerClan)
 	{
 		final clanPlayersInfo clanInfo = _clansInfo.get(playerClan.getClanId());
 		if (clanInfo != null)
@@ -448,7 +448,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		return null;
 	}
 	
-	public MonsterInstance getQuestMob(Clan clan)
+	public Monster getQuestMob(Clan clan)
 	{
 		final clanPlayersInfo clanInfo = _clansInfo.get(clan.getClanId());
 		if (clanInfo != null)
@@ -548,7 +548,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 				final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 				for (String playerName : getRegisteredPlayers(clan))
 				{
-					final PlayerInstance cha = World.getInstance().getPlayer(playerName);
+					final Player cha = World.getInstance().getPlayer(playerName);
 					if (cha != null)
 					{
 						cha.sendPacket(cs);
@@ -559,7 +559,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		else
 		{
 			final CreatureSay cs = new CreatureSay(0, ChatType.SHOUT, "Journal", text);
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				if (player.getInstanceId() == 0)
 				{
@@ -632,8 +632,8 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	protected class clanPlayersInfo
 	{
 		public String _clanName;
-		public DecoInstance _flag = null;
-		public MonsterInstance _mob = null;
+		public Deco _flag = null;
+		public Monster _mob = null;
 		public List<String> _players = new ArrayList<>();
 	}
 	

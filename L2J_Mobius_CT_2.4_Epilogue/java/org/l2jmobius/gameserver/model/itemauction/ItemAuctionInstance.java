@@ -48,8 +48,8 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -477,8 +477,8 @@ public class ItemAuctionInstance
 		final ItemAuctionBid bid = auction.getHighestBid();
 		if (bid != null)
 		{
-			final ItemInstance item = auction.createNewItemInstance();
-			final PlayerInstance player = bid.getPlayer();
+			final Item item = auction.createNewItemInstance();
+			final Player player = bid.getPlayer();
 			if (player != null)
 			{
 				player.getWarehouse().addItem("ItemAuction", item, null, null);

@@ -29,7 +29,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -116,7 +116,7 @@ public class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (NPCS.containsKey(npcId))
@@ -127,7 +127,7 @@ public class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -135,8 +135,8 @@ public class FortressDungeon extends AbstractInstance
 			if (CommonUtil.contains(RAIDS3, npc.getId()))
 			{
 				// Get players with active quest
-				final List<PlayerInstance> members = new ArrayList<>();
-				for (PlayerInstance member : world.getPlayers())
+				final List<Player> members = new ArrayList<>();
+				for (Player member : world.getPlayers())
 				{
 					final QuestState qs = member.getQuestState(Q00511_AwlUnderFoot.class.getSimpleName());
 					if ((qs != null) && qs.isCond(1))
@@ -149,7 +149,7 @@ public class FortressDungeon extends AbstractInstance
 				if (!members.isEmpty())
 				{
 					final long itemCount = MARK_COUNT / members.size();
-					for (PlayerInstance member : members)
+					for (Player member : members)
 					{
 						giveItems(member, MARK, itemCount);
 						playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -167,7 +167,7 @@ public class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		// Put re-enter for instance
 		REENETER_HOLDER.put(instance.getTemplateId(), Chronos.currentTimeMillis() + REENTER);
@@ -176,9 +176,9 @@ public class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean validateConditions(List<PlayerInstance> group, Npc npc, InstanceTemplate template)
+	protected boolean validateConditions(List<Player> group, Npc npc, InstanceTemplate template)
 	{
-		final PlayerInstance groupLeader = group.get(0);
+		final Player groupLeader = group.get(0);
 		final Fort fort = npc.getFort();
 		if (fort == null)
 		{

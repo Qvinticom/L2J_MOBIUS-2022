@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
@@ -25,21 +25,21 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerPvPKill implements IBaseEvent
 {
-	private final PlayerInstance _player;
-	private final PlayerInstance _target;
+	private final Player _player;
+	private final Player _target;
 	
-	public OnPlayerPvPKill(PlayerInstance player, PlayerInstance target)
+	public OnPlayerPvPKill(Player player, Player target)
 	{
 		_player = player;
 		_target = target;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public PlayerInstance getTarget()
+	public Player getTarget()
 	{
 		return _target;
 	}

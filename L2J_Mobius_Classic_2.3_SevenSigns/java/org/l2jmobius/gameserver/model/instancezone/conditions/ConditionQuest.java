@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.instancezone.conditions;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -39,7 +39,7 @@ public class ConditionQuest extends Condition
 	}
 	
 	@Override
-	protected boolean test(PlayerInstance player, Npc npc)
+	protected boolean test(Player player, Npc npc)
 	{
 		final int id = getParameters().getInt("id");
 		final Quest q = QuestManager.getInstance().getQuest(id);

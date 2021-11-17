@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanJoin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLeaderChange;
@@ -253,9 +253,9 @@ public class Clan implements IIdentifiable, INamable
 	
 	public void setNewLeader(ClanMember member)
 	{
-		final PlayerInstance newLeader = member.getPlayerInstance();
+		final Player newLeader = member.getPlayer();
 		final ClanMember exMember = _leader;
-		final PlayerInstance exLeader = exMember.getPlayerInstance();
+		final Player exLeader = exMember.getPlayer();
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeaderChange(exMember, member, this));
@@ -378,12 +378,12 @@ public class Clan implements IIdentifiable, INamable
 	 * Using a different constructor, to make it easier to read.
 	 * @param player the clan member
 	 */
-	public void addClanMember(PlayerInstance player)
+	public void addClanMember(Player player)
 	{
 		final ClanMember member = new ClanMember(this, player);
 		// store in memory
 		addClanMember(member);
-		member.setPlayerInstance(player);
+		member.setPlayer(player);
 		player.setClan(this);
 		player.setPledgeClass(PLEDGE_CLASS_COMMON);
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
@@ -398,7 +398,7 @@ public class Clan implements IIdentifiable, INamable
 	 * Updates player status in clan.
 	 * @param player the player to be updated.
 	 */
-	public void updateClanMember(PlayerInstance player)
+	public void updateClanMember(Player player)
 	{
 		final ClanMember member = new ClanMember(player.getClan(), player);
 		if (player.isClanLeader())
@@ -460,9 +460,9 @@ public class Clan implements IIdentifiable, INamable
 			final ClanMember apprentice = getClanMember(exMember.getApprentice());
 			if (apprentice != null)
 			{
-				if (apprentice.getPlayerInstance() != null)
+				if (apprentice.getPlayer() != null)
 				{
-					apprentice.getPlayerInstance().setSponsor(0);
+					apprentice.getPlayer().setSponsor(0);
 				}
 				else
 				{
@@ -477,9 +477,9 @@ public class Clan implements IIdentifiable, INamable
 			final ClanMember sponsor = getClanMember(exMember.getSponsor());
 			if (sponsor != null)
 			{
-				if (sponsor.getPlayerInstance() != null)
+				if (sponsor.getPlayer() != null)
 				{
-					sponsor.getPlayerInstance().setApprentice(0);
+					sponsor.getPlayer().setApprentice(0);
 				}
 				else
 				{
@@ -496,7 +496,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (exMember.isOnline())
 		{
-			final PlayerInstance player = exMember.getPlayerInstance();
+			final Player player = exMember.getPlayer();
 			if (player.getNobleLevel() == 0)
 			{
 				player.setTitle("");
@@ -576,14 +576,14 @@ public class Clan implements IIdentifiable, INamable
 	 * @param exclude the object Id to exclude from list.
 	 * @return all online members excluding the one with object id {code exclude}.
 	 */
-	public List<PlayerInstance> getOnlineMembers(int exclude)
+	public List<Player> getOnlineMembers(int exclude)
 	{
-		final List<PlayerInstance> result = new ArrayList<>();
+		final List<Player> result = new ArrayList<>();
 		for (ClanMember member : _members.values())
 		{
-			if ((member.getObjectId() != exclude) && member.isOnline() && (member.getPlayerInstance() != null))
+			if ((member.getObjectId() != exclude) && member.isOnline() && (member.getPlayer() != null))
 			{
-				result.add(member.getPlayerInstance());
+				result.add(member.getPlayer());
 			}
 		}
 		return result;
@@ -1175,7 +1175,7 @@ public class Clan implements IIdentifiable, INamable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT skill_id,skill_level,sub_pledge_id FROM clan_skills WHERE clan_id=?"))
 		{
-			// Retrieve all skills of this PlayerInstance from the database
+			// Retrieve all skills of this Player from the database
 			ps.setInt(1, _clanId);
 			try (ResultSet rset = ps.executeQuery())
 			{
@@ -1322,24 +1322,24 @@ public class Clan implements IIdentifiable, INamable
 			
 			for (ClanMember temp : _members.values())
 			{
-				if ((temp != null) && (temp.getPlayerInstance() != null) && temp.isOnline())
+				if ((temp != null) && (temp.getPlayer() != null) && temp.isOnline())
 				{
 					if (subType == -2)
 					{
-						if (newSkill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass())
+						if (newSkill.getMinPledgeClass() <= temp.getPlayer().getPledgeClass())
 						{
-							temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-							temp.getPlayerInstance().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
-							temp.getPlayerInstance().sendPacket(sm);
-							temp.getPlayerInstance().sendSkillList();
+							temp.getPlayer().addSkill(newSkill, false); // Skill is not saved to player DB
+							temp.getPlayer().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
+							temp.getPlayer().sendPacket(sm);
+							temp.getPlayer().sendSkillList();
 						}
 					}
 					else if (temp.getPledgeType() == subType)
 					{
-						temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-						temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
-						temp.getPlayerInstance().sendPacket(sm);
-						temp.getPlayerInstance().sendSkillList();
+						temp.getPlayer().addSkill(newSkill, false); // Skill is not saved to player DB
+						temp.getPlayer().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
+						temp.getPlayer().sendPacket(sm);
+						temp.getPlayer().sendSkillList();
 					}
 				}
 			}
@@ -1356,9 +1356,9 @@ public class Clan implements IIdentifiable, INamable
 			{
 				try
 				{
-					if ((temp != null) && temp.isOnline() && (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()))
+					if ((temp != null) && temp.isOnline() && (skill.getMinPledgeClass() <= temp.getPlayer().getPledgeClass()))
 					{
-						temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
+						temp.getPlayer().addSkill(skill, false); // Skill is not saved to player DB
 					}
 				}
 				catch (NullPointerException e)
@@ -1369,7 +1369,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void addSkillEffects(PlayerInstance player)
+	public void addSkillEffects(Player player)
 	{
 		if (player == null)
 		{
@@ -1415,7 +1415,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void removeSkillEffects(PlayerInstance player)
+	public void removeSkillEffects(Player player)
 	{
 		if (player == null)
 		{
@@ -1448,7 +1448,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void skillsStatus(PlayerInstance player, boolean disable)
+	public void skillsStatus(Player player, boolean disable)
 	{
 		if (player == null)
 		{
@@ -1520,10 +1520,10 @@ public class Clan implements IIdentifiable, INamable
 		
 		for (ClanMember member : _members.values())
 		{
-			if ((member != null) && (member.getPlayerInstance() != null) && member.isOnline())
+			if ((member != null) && (member.getPlayer() != null) && member.isOnline())
 			{
-				member.getPlayerInstance().removeSkill(skill, false);
-				member.getPlayerInstance().sendSkillList();
+				member.getPlayer().removeSkill(skill, false);
+				member.getPlayer().sendSkillList();
 			}
 		}
 	}
@@ -1542,29 +1542,29 @@ public class Clan implements IIdentifiable, INamable
 		{
 			if ((member != null) && member.isOnline())
 			{
-				member.getPlayerInstance().sendPacket(packet);
+				member.getPlayer().sendPacket(packet);
 			}
 		}
 	}
 	
-	public void broadcastCSToOnlineMembers(CreatureSay packet, PlayerInstance broadcaster)
+	public void broadcastCSToOnlineMembers(CreatureSay packet, Player broadcaster)
 	{
 		for (ClanMember member : _members.values())
 		{
-			if ((member != null) && member.isOnline() && !BlockList.isBlocked(member.getPlayerInstance(), broadcaster))
+			if ((member != null) && member.isOnline() && !BlockList.isBlocked(member.getPlayer(), broadcaster))
 			{
-				member.getPlayerInstance().sendPacket(packet);
+				member.getPlayer().sendPacket(packet);
 			}
 		}
 	}
 	
-	public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, PlayerInstance player)
+	public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, Player player)
 	{
 		for (ClanMember member : _members.values())
 		{
-			if ((member != null) && member.isOnline() && (member.getPlayerInstance() != player))
+			if ((member != null) && member.isOnline() && (member.getPlayer() != player))
 			{
-				member.getPlayerInstance().sendPacket(packet);
+				member.getPlayer().sendPacket(packet);
 			}
 		}
 	}
@@ -1616,7 +1616,7 @@ public class Clan implements IIdentifiable, INamable
 	
 	public void broadcastClanStatus()
 	{
-		for (PlayerInstance member : getOnlineMembers(0))
+		for (Player member : getOnlineMembers(0))
 		{
 			member.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
 			PledgeShowMemberListAll.sendAllTo(member);
@@ -1835,7 +1835,7 @@ public class Clan implements IIdentifiable, INamable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT privs,`rank`,party FROM clan_privs WHERE clan_id=?"))
 		{
-			// Retrieve all skills of this PlayerInstance from the database
+			// Retrieve all skills of this Player from the database
 			ps.setInt(1, _clanId);
 			// LOGGER.warning("clanPrivs restore for ClanId : "+getClanId());
 			try (ResultSet rset = ps.executeQuery())
@@ -1884,7 +1884,7 @@ public class Clan implements IIdentifiable, INamable
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)"))
 			{
-				// Retrieve all skills of this PlayerInstance from the database
+				// Retrieve all skills of this Player from the database
 				ps.setInt(1, _clanId);
 				ps.setInt(2, rank);
 				ps.setInt(3, 0);
@@ -1898,10 +1898,10 @@ public class Clan implements IIdentifiable, INamable
 			
 			for (ClanMember cm : _members.values())
 			{
-				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayerInstance() != null))
+				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayer() != null))
 				{
-					cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
-					cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
+					cm.getPlayer().getClanPrivileges().setBitmask(privs);
+					cm.getPlayer().sendPacket(new UserInfo(cm.getPlayer()));
 				}
 			}
 			broadcastClanStatus();
@@ -1913,7 +1913,7 @@ public class Clan implements IIdentifiable, INamable
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)"))
 			{
-				// Retrieve all skills of this PlayerInstance from the database
+				// Retrieve all skills of this Player from the database
 				ps.setInt(1, _clanId);
 				ps.setInt(2, rank);
 				ps.setInt(3, 0);
@@ -1969,9 +1969,9 @@ public class Clan implements IIdentifiable, INamable
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.SINCE_THE_CLAN_REPUTATION_HAS_DROPPED_BELOW_0_YOUR_CLAN_SKILL_S_WILL_BE_DE_ACTIVATED));
 			for (ClanMember member : _members.values())
 			{
-				if (member.isOnline() && (member.getPlayerInstance() != null))
+				if (member.isOnline() && (member.getPlayer() != null))
 				{
-					skillsStatus(member.getPlayerInstance(), true);
+					skillsStatus(member.getPlayer(), true);
 				}
 			}
 		}
@@ -1980,9 +1980,9 @@ public class Clan implements IIdentifiable, INamable
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_SKILLS_WILL_NOW_BE_ACTIVATED_SINCE_THE_CLAN_REPUTATION_IS_1_OR_HIGHER));
 			for (ClanMember member : _members.values())
 			{
-				if (member.isOnline() && (member.getPlayerInstance() != null))
+				if (member.isOnline() && (member.getPlayer() != null))
 				{
-					skillsStatus(member.getPlayerInstance(), false);
+					skillsStatus(member.getPlayer(), false);
 				}
 			}
 		}
@@ -2048,7 +2048,7 @@ public class Clan implements IIdentifiable, INamable
 	 * @param pledgeType the pledge type to join.
 	 * @return {core true} if player and target meet various conditions to join a clan.
 	 */
-	public boolean checkClanJoinCondition(PlayerInstance player, PlayerInstance target, int pledgeType)
+	public boolean checkClanJoinCondition(Player player, Player target, int pledgeType)
 	{
 		if (player == null)
 		{
@@ -2111,7 +2111,7 @@ public class Clan implements IIdentifiable, INamable
 	 * @param target the invited player.
 	 * @return {core true} if player and target meet various conditions to join a clan.
 	 */
-	public boolean checkAllyJoinCondition(PlayerInstance player, PlayerInstance target)
+	public boolean checkAllyJoinCondition(Player player, Player target)
 	{
 		if (player == null)
 		{
@@ -2231,7 +2231,7 @@ public class Clan implements IIdentifiable, INamable
 		_dissolvingExpiryTime = time;
 	}
 	
-	public void createAlly(PlayerInstance player, String allyName)
+	public void createAlly(Player player, String allyName)
 	{
 		if (null == player)
 		{
@@ -2290,7 +2290,7 @@ public class Clan implements IIdentifiable, INamable
 		player.sendMessage("Alliance " + allyName + " has been created.");
 	}
 	
-	public void dissolveAlly(PlayerInstance player)
+	public void dissolveAlly(Player player)
 	{
 		if (_allyId == 0)
 		{
@@ -2329,7 +2329,7 @@ public class Clan implements IIdentifiable, INamable
 		updateClanInDB();
 	}
 	
-	public boolean levelUpClan(PlayerInstance player)
+	public boolean levelUpClan(Player player)
 	{
 		if (!player.isClanLeader())
 		{
@@ -2388,7 +2388,7 @@ public class Clan implements IIdentifiable, INamable
 		
 		if (_leader.isOnline())
 		{
-			final PlayerInstance leader = _leader.getPlayerInstance();
+			final Player leader = _leader.getPlayer();
 			if (level > 4)
 			{
 				SiegeManager.getInstance().addSiegeSkills(leader);
@@ -2430,7 +2430,7 @@ public class Clan implements IIdentifiable, INamable
 			LOGGER.log(Level.WARNING, "Could not update crest for clan " + _name + " [" + _clanId + "] : " + e.getMessage(), e);
 		}
 		
-		for (PlayerInstance member : getOnlineMembers(0))
+		for (Player member : getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();
 		}
@@ -2470,7 +2470,7 @@ public class Clan implements IIdentifiable, INamable
 		if (onlyThisClan)
 		{
 			setAllyCrestId(crestId);
-			for (PlayerInstance member : getOnlineMembers(0))
+			for (Player member : getOnlineMembers(0))
 			{
 				member.broadcastUserInfo();
 			}
@@ -2480,7 +2480,7 @@ public class Clan implements IIdentifiable, INamable
 			for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId()))
 			{
 				clan.setAllyCrestId(crestId);
-				for (PlayerInstance member : clan.getOnlineMembers(0))
+				for (Player member : clan.getOnlineMembers(0))
 				{
 					member.broadcastUserInfo();
 				}
@@ -2513,7 +2513,7 @@ public class Clan implements IIdentifiable, INamable
 			LOGGER.log(Level.WARNING, "Could not update large crest for clan " + _name + " [" + _clanId + "] : " + e.getMessage(), e);
 		}
 		
-		for (PlayerInstance member : getOnlineMembers(0))
+		for (Player member : getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();
 		}
@@ -2624,7 +2624,7 @@ public class Clan implements IIdentifiable, INamable
 		return _newLeaderId;
 	}
 	
-	public PlayerInstance getNewLeader()
+	public Player getNewLeader()
 	{
 		return World.getInstance().getPlayer(_newLeaderId);
 	}

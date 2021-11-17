@@ -34,12 +34,12 @@ import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.Spawn;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.BlockInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Block;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -61,8 +61,8 @@ public class BlockChecker
 	// The object which holds all basic members info
 	protected ArenaParticipantsHolder _holder;
 	// Maps to hold player of each team and his points
-	protected Map<PlayerInstance, Integer> _redTeamPoints = new ConcurrentHashMap<>();
-	protected Map<PlayerInstance, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
+	protected Map<Player, Integer> _redTeamPoints = new ConcurrentHashMap<>();
+	protected Map<Player, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
 	// The initial points of the event
 	protected int _redPoints = 15;
 	protected int _bluePoints = 15;
@@ -118,7 +118,7 @@ public class BlockChecker
 	// Common z coordinate
 	private static final int Z_COORD = -2405;
 	// List of dropped items in event (for later deletion)
-	protected Set<ItemInstance> _drops = ConcurrentHashMap.newKeySet();
+	protected Set<Item> _drops = ConcurrentHashMap.newKeySet();
 	// Default arena
 	private static final byte DEFAULT_ARENA = -1;
 	// Event is started
@@ -136,11 +136,11 @@ public class BlockChecker
 			_arena = arena;
 		}
 		
-		for (PlayerInstance player : holder.getRedPlayers())
+		for (Player player : holder.getRedPlayers())
 		{
 			_redTeamPoints.put(player, 0);
 		}
-		for (PlayerInstance player : holder.getBluePlayers())
+		for (Player player : holder.getBluePlayers())
 		{
 			_blueTeamPoints.put(player, 0);
 		}
@@ -212,7 +212,7 @@ public class BlockChecker
 	 * @param isRed
 	 * @return int
 	 */
-	public int getPlayerPoints(PlayerInstance player, boolean isRed)
+	public int getPlayerPoints(Player player, boolean isRed)
 	{
 		if (!_redTeamPoints.containsKey(player) && !_blueTeamPoints.containsKey(player))
 		{
@@ -231,7 +231,7 @@ public class BlockChecker
 	 * @param player
 	 * @param team
 	 */
-	public synchronized void increasePlayerPoints(PlayerInstance player, int team)
+	public synchronized void increasePlayerPoints(Player player, int team)
 	{
 		if (player == null)
 		{
@@ -258,7 +258,7 @@ public class BlockChecker
 	 * Will add a new drop into the list of dropped items
 	 * @param item
 	 */
-	public void addNewDrop(ItemInstance item)
+	public void addNewDrop(Item item)
 	{
 		if (item != null)
 		{
@@ -279,9 +279,9 @@ public class BlockChecker
 	 * Will send all packets for the event members with the relation info
 	 * @param plr
 	 */
-	protected void broadcastRelationChanged(PlayerInstance plr)
+	protected void broadcastRelationChanged(Player plr)
 	{
-		for (PlayerInstance p : _holder.getAllPlayers())
+		for (Player p : _holder.getAllPlayers())
 		{
 			p.sendPacket(new RelationChanged(plr, plr.getRelation(p), plr.isAutoAttackable(p)));
 		}
@@ -345,7 +345,7 @@ public class BlockChecker
 			_bluePoints = _spawns.size() / 2;
 			final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(300, _bluePoints, _redPoints);
 			ExCubeGameExtendedChangePoints clientSetUp;
-			for (PlayerInstance player : _holder.getAllPlayers())
+			for (Player player : _holder.getAllPlayers())
 			{
 				if (player == null)
 				{
@@ -487,7 +487,7 @@ public class BlockChecker
 					spawn.setRespawnDelay(1);
 					SpawnTable.getInstance().addNewSpawn(spawn, false);
 					spawn.init();
-					final BlockInstance block = (BlockInstance) spawn.getLastSpawn();
+					final Block block = (Block) spawn.getLastSpawn();
 					// switch color
 					block.setRed((random % 2) == 0);
 					block.disableCoreAI(true);
@@ -581,7 +581,7 @@ public class BlockChecker
 			}
 			_spawns.clear();
 			
-			for (ItemInstance item : _drops)
+			for (Item item : _drops)
 			{
 				// npe
 				if (item == null)
@@ -640,10 +640,10 @@ public class BlockChecker
 		 */
 		private void rewardAsWinner(boolean isRed)
 		{
-			final Map<PlayerInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			final Map<Player, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
 			
 			// Main give
-			for (Entry<PlayerInstance, Integer> points : tempPoints.entrySet())
+			for (Entry<Player, Integer> points : tempPoints.entrySet())
 			{
 				if (points.getKey() == null)
 				{
@@ -662,11 +662,11 @@ public class BlockChecker
 			
 			int first = 0;
 			int second = 0;
-			PlayerInstance winner1 = null;
-			PlayerInstance winner2 = null;
-			for (Entry<PlayerInstance, Integer> entry : tempPoints.entrySet())
+			Player winner1 = null;
+			Player winner2 = null;
+			for (Entry<Player, Integer> entry : tempPoints.entrySet())
 			{
-				final PlayerInstance pc = entry.getKey();
+				final Player pc = entry.getKey();
 				final int pcPoints = entry.getValue();
 				if (pcPoints > first)
 				{
@@ -699,9 +699,9 @@ public class BlockChecker
 		 */
 		private void rewardAsLooser(boolean isRed)
 		{
-			for (Entry<PlayerInstance, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet())
+			for (Entry<Player, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet())
 			{
-				final PlayerInstance player = entry.getKey();
+				final Player player = entry.getKey();
 				if ((player != null) && (entry.getValue() >= 10))
 				{
 					player.addItem("Block Checker", 13067, 2, player, true);
@@ -715,7 +715,7 @@ public class BlockChecker
 		private void setPlayersBack()
 		{
 			final ExCubeGameEnd end = new ExCubeGameEnd(_isRedWinner);
-			for (PlayerInstance player : _holder.getAllPlayers())
+			for (Player player : _holder.getAllPlayers())
 			{
 				if (player == null)
 				{

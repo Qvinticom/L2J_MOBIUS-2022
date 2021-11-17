@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
@@ -47,7 +47,7 @@ public class Erda extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("teleport"))
 		{
@@ -73,7 +73,7 @@ public class Erda extends AbstractNpcAI
 				}
 				final Party party = player.getParty();
 				final boolean isInCC = party.isInCommandChannel();
-				final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+				final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 				final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 				if (!isPartyLeader)
 				{
@@ -88,7 +88,7 @@ public class Erda extends AbstractNpcAI
 					player.sendPacket(packet);
 					return null;
 				}
-				for (PlayerInstance member : members)
+				for (Player member : members)
 				{
 					if (member.getLevel() < Config.ETINA_MIN_PLAYER_LEVEL)
 					{
@@ -99,7 +99,7 @@ public class Erda extends AbstractNpcAI
 						return null;
 					}
 				}
-				for (PlayerInstance member : members)
+				for (Player member : members)
 				{
 					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
@@ -117,7 +117,7 @@ public class Erda extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "34319.html";
 	}

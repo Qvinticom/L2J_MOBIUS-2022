@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class VehicleDeparture implements IClientOutgoingPacket
 {
-	private final BoatInstance _boat;
+	private final Boat _boat;
 	private final int _speed1;
 	private final int _speed2; // rotation
 	private final int _x;
@@ -40,7 +40,7 @@ public class VehicleDeparture implements IClientOutgoingPacket
 	 * @param y
 	 * @param z
 	 */
-	public VehicleDeparture(BoatInstance boat, int speed1, int speed2, int x, int y, int z)
+	public VehicleDeparture(Boat boat, int speed1, int speed2, int x, int y, int z)
 	{
 		_boat = boat;
 		_speed1 = speed1;

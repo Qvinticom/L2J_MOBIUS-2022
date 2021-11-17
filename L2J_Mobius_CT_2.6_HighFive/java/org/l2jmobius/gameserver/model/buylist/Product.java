@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
 /**
@@ -35,13 +35,13 @@ public class Product
 	private static final Logger LOGGER = Logger.getLogger(Product.class.getName());
 	
 	private final int _buyListId;
-	private final Item _item;
+	private final ItemTemplate _item;
 	private final long _price;
 	private final long _restockDelay;
 	private final long _maxCount;
 	private AtomicLong _count = null;
 	
-	public Product(int buyListId, Item item, long price, long restockDelay, long maxCount)
+	public Product(int buyListId, ItemTemplate item, long price, long restockDelay, long maxCount)
 	{
 		_buyListId = buyListId;
 		_item = item;
@@ -59,7 +59,7 @@ public class Product
 		return _buyListId;
 	}
 	
-	public Item getItem()
+	public ItemTemplate getItem()
 	{
 		return _item;
 	}

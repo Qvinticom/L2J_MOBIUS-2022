@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -83,7 +83,7 @@ public class Wastelands extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if ((npc == null) || !npc.isSpawned())
 		{
@@ -137,7 +137,7 @@ public class Wastelands extends AbstractNpcAI
 				if (attackId > 0)
 				{
 					//@formatter:off
-					final MonsterInstance monster = World.getInstance().getVisibleObjectsInRange(guard, MonsterInstance.class, 1000)
+					final Monster monster = World.getInstance().getVisibleObjectsInRange(guard, Monster.class, 1000)
 						.stream()
 						.filter(obj -> (obj.getId() == attackId))
 						.findFirst()
@@ -163,7 +163,7 @@ public class Wastelands extends AbstractNpcAI
 						if (guard.getId() == SCHUAZEN)
 						{
 							//@formatter:off
-							final FriendlyNpcInstance decoGuard = World.getInstance().getVisibleObjectsInRange(guard, FriendlyNpcInstance.class, 500)
+							final FriendlyNpc decoGuard = World.getInstance().getVisibleObjectsInRange(guard, FriendlyNpc.class, 500)
 								.stream()
 								.filter(obj -> (obj.getId() == DECO_GUARD2))
 								.findFirst()
@@ -213,7 +213,7 @@ public class Wastelands extends AbstractNpcAI
 			{
 				final int guardId = npc.getId() == REGENERATED_KANILOV ? JOEL : SCHUAZEN;
 				//@formatter:off
-				final FriendlyNpcInstance guard =  World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 500)
+				final FriendlyNpc guard =  World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpc.class, 500)
 					.stream()
 					.filter(obj -> (obj.getId() == guardId))
 					.findFirst()
@@ -247,7 +247,7 @@ public class Wastelands extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (npc.getId() == REGENERATED_POSLOF)
 		{

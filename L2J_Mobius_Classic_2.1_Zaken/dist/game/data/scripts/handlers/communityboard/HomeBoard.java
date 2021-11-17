@@ -41,9 +41,9 @@ import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
@@ -79,7 +79,7 @@ public class HomeBoard implements IParseBoardHandler
 		Config.COMMUNITYBOARD_ENABLE_DELEVEL ? "_bbsdelevel" : null
 	};
 	
-	private static final BiPredicate<String, PlayerInstance> COMBAT_CHECK = (command, player) ->
+	private static final BiPredicate<String, Player> COMBAT_CHECK = (command, player) ->
 	{
 		boolean commandCheck = false;
 		for (String c : CUSTOM_COMMANDS)
@@ -93,7 +93,7 @@ public class HomeBoard implements IParseBoardHandler
 		return commandCheck && (player.isCastingNow() || player.isInCombat() || player.isInDuel() || player.isInOlympiadMode() || player.isInsideZone(ZoneId.SIEGE) || player.isInsideZone(ZoneId.PVP) || (player.getPvpFlag() > 0) || player.isAlikeDead() || player.isOnEvent());
 	};
 	
-	private static final Predicate<PlayerInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
+	private static final Predicate<Player> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
 	
 	@Override
 	public String[] getCommunityBoardCommands()
@@ -105,7 +105,7 @@ public class HomeBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		// Old custom conditions check move to here
 		if (COMBAT_CHECK.test(command, player))
@@ -198,7 +198,7 @@ public class HomeBoard implements IParseBoardHandler
 			else
 			{
 				player.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, player, true);
-				final PetInstance pet = player.getPet();
+				final Pet pet = player.getPet();
 				final List<Creature> targets = new ArrayList<>(4);
 				targets.add(player);
 				if (pet != null)
@@ -320,7 +320,7 @@ public class HomeBoard implements IParseBoardHandler
 	 * @param player the player
 	 * @return the favorite links count
 	 */
-	private static int getFavoriteCount(PlayerInstance player)
+	private static int getFavoriteCount(Player player)
 	{
 		int count = 0;
 		try (Connection con = DatabaseFactory.getConnection();
@@ -347,7 +347,7 @@ public class HomeBoard implements IParseBoardHandler
 	 * @param player the player
 	 * @return the registered regions count
 	 */
-	private static int getRegionCount(PlayerInstance player)
+	private static int getRegionCount(Player player)
 	{
 		return 0; // TODO: Implement.
 	}

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 
@@ -77,7 +77,7 @@ public class SevenSignsRBs extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -87,14 +87,14 @@ public class SevenSignsRBs extends AbstractInstance
 				{
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					if (members.size() > (MAX_PLAYERS_IN_ZONE - ANAKIM_ZONE.getPlayersInside().size()))
 					{
 						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
 					}
 					else
 					{
-						for (PlayerInstance member : members)
+						for (Player member : members)
 						{
 							if (!member.isInsideRadius3D(npc, 1000))
 							{
@@ -125,14 +125,14 @@ public class SevenSignsRBs extends AbstractInstance
 				{
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					if (members.size() > (MAX_PLAYERS_IN_ZONE - LILITH_ZONE.getPlayersInside().size()))
 					{
 						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
 					}
 					else
 					{
-						for (PlayerInstance member : members)
+						for (Player member : members)
 						{
 							if (!member.isInsideRadius3D(npc, 1000))
 							{
@@ -216,7 +216,7 @@ public class SevenSignsRBs extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		switch (npc.getId())
 		{

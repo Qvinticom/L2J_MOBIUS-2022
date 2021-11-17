@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
 /**
@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
  */
 public class Radar
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Set<RadarMarker> _markers = ConcurrentHashMap.newKeySet();
 	
-	public Radar(PlayerInstance player)
+	public Radar(Player player)
 	{
 		_player = player;
 	}

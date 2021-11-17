@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.AttributeType;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -45,7 +45,7 @@ public class ExChangeAttributeInfo implements IClientOutgoingPacket
 	private int _attributes;
 	private int _itemObjId;
 	
-	public ExChangeAttributeInfo(int crystalItemId, ItemInstance item)
+	public ExChangeAttributeInfo(int crystalItemId, Item item)
 	{
 		_crystalItemId = crystalItemId;
 		_attributes = 0;

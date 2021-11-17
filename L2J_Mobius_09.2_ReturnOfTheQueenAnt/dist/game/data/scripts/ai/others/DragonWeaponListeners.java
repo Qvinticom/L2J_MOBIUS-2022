@@ -17,7 +17,7 @@
 package ai.others;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -167,7 +167,7 @@ public class DragonWeaponListeners extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player != null)
 		{
 			final Weapon weapon = player.getActiveWeaponItem();
@@ -306,7 +306,7 @@ public class DragonWeaponListeners extends AbstractNpcAI
 	@Id(80318)
 	public void onPlayerItemEquip(OnPlayerItemEquip event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player != null)
 		{
 			player.setDragonWeaponEquipped(true);
@@ -441,7 +441,7 @@ public class DragonWeaponListeners extends AbstractNpcAI
 	@Id(80318)
 	public void onPlayerItemUnequip(OnPlayerItemUnequip event)
 	{
-		final PlayerInstance player = event.getPlayer();
+		final Player player = event.getPlayer();
 		if (player != null)
 		{
 			player.setDragonWeaponEquipped(false);

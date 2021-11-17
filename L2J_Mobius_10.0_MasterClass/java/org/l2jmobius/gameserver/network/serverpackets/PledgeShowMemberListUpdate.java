@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -32,7 +32,7 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 	private final int _classId;
 	private final int _objectId;
 	
-	public PledgeShowMemberListUpdate(PlayerInstance player)
+	public PledgeShowMemberListUpdate(Player player)
 	{
 		this(player.getClan().getClanMember(player.getObjectId()));
 	}

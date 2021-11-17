@@ -22,7 +22,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -35,8 +35,8 @@ public class SendPrivateStoreBuyBuyList extends ClientBasePacket
 		final int buyerID = readD();
 		final int count = readD();
 		final World world = World.getInstance();
-		final PlayerInstance seller = client.getActiveChar();
-		final PlayerInstance buyer = (PlayerInstance) world.findObject(buyerID);
+		final Player seller = client.getActiveChar();
+		final Player buyer = (Player) world.findObject(buyerID);
 		final List<TradeItem> buyerlist = buyer.getBuyList();
 		final List<TradeItem> sellerlist = new ArrayList<>();
 		int cost = 0;

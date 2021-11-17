@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -46,7 +46,7 @@ public class ExAcquireSkillInfo implements IClientOutgoingPacket
 	 * @param player
 	 * @param skillLearn the skill learn.
 	 */
-	public ExAcquireSkillInfo(PlayerInstance player, SkillLearn skillLearn)
+	public ExAcquireSkillInfo(Player player, SkillLearn skillLearn)
 	{
 		_id = skillLearn.getSkillId();
 		_level = skillLearn.getSkillLevel();

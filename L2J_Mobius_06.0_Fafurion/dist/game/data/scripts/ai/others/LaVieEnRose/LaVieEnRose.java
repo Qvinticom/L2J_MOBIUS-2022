@@ -18,7 +18,7 @@ package ai.others.LaVieEnRose;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -47,7 +47,7 @@ public class LaVieEnRose extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -119,7 +119,7 @@ public class LaVieEnRose extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean canUseBeautyShop(PlayerInstance player)
+	private boolean canUseBeautyShop(Player player)
 	{
 		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
 		{

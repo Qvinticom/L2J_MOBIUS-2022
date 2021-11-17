@@ -23,14 +23,14 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class BoatManager
 {
-	private final Map<Integer, BoatInstance> _boats = new HashMap<>();
+	private final Map<Integer, Boat> _boats = new HashMap<>();
 	private final boolean[] _docksBusy = new boolean[3];
 	
 	public static final int TALKING_ISLAND = 1;
@@ -50,7 +50,7 @@ public class BoatManager
 		}
 	}
 	
-	public BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading)
+	public Boat getNewBoat(int boatId, int x, int y, int z, int heading)
 	{
 		if (!Config.ALLOW_BOAT)
 		{
@@ -99,7 +99,7 @@ public class BoatManager
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
 		final CreatureTemplate template = new CreatureTemplate(npcDat);
-		final BoatInstance boat = new BoatInstance(template);
+		final Boat boat = new Boat(template);
 		_boats.put(boat.getObjectId(), boat);
 		boat.setHeading(heading);
 		boat.setXYZInvisible(x, y, z);
@@ -111,7 +111,7 @@ public class BoatManager
 	 * @param boatId
 	 * @return
 	 */
-	public BoatInstance getBoat(int boatId)
+	public Boat getBoat(int boatId)
 	{
 		return _boats.get(boatId);
 	}
@@ -174,7 +174,7 @@ public class BoatManager
 	
 	private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets)
 	{
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			if (Math.hypot(player.getX() - point1.getX(), player.getY() - point1.getY()) < Config.BOAT_BROADCAST_RADIUS)
 			{

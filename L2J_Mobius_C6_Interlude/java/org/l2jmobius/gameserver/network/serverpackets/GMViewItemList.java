@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,11 +28,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GMViewItemList implements IClientOutgoingPacket
 {
-	private final Collection<ItemInstance> _items;
-	private final PlayerInstance _player;
+	private final Collection<Item> _items;
+	private final Player _player;
 	private final String _playerName;
 	
-	public GMViewItemList(PlayerInstance player)
+	public GMViewItemList(Player player)
 	{
 		_items = player.getInventory().getItems();
 		_playerName = player.getName();
@@ -48,7 +48,7 @@ public class GMViewItemList implements IClientOutgoingPacket
 		packet.writeH(0x01); // show window ??
 		packet.writeH(_items.size());
 		
-		for (ItemInstance temp : _items)
+		for (Item temp : _items)
 		{
 			if ((temp == null) || (temp.getItem() == null))
 			{

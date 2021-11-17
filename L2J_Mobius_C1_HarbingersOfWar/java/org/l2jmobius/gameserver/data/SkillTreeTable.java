@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class SkillTreeTable
 {
@@ -217,7 +217,7 @@ public class SkillTreeTable
 		return skill;
 	}
 	
-	public Collection<SkillLearn> getAvailableSkills(PlayerInstance cha)
+	public Collection<SkillLearn> getAvailableSkills(Player cha)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final List<SkillLearn> skills = _skillTrees.get(cha.getClassId());

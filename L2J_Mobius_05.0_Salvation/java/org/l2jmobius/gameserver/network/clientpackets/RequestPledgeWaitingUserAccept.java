@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -53,7 +53,7 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null))
 		{
 			return;
@@ -61,7 +61,7 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 		
 		if (_acceptRequest)
 		{
-			final PlayerInstance target = World.getInstance().getPlayer(_playerId);
+			final Player target = World.getInstance().getPlayer(_playerId);
 			final Clan clan = player.getClan();
 			if ((target != null) && (target.getClan() == null) && (clan != null))
 			{

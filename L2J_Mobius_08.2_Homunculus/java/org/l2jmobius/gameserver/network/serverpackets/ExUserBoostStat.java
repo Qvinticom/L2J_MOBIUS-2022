@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.BonusExpType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExUserBoostStat implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final BonusExpType _type;
 	
-	public ExUserBoostStat(PlayerInstance player, BonusExpType type)
+	public ExUserBoostStat(Player player, BonusExpType type)
 	{
 		_player = player;
 		_type = type;

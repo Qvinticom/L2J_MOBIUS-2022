@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public interface IUserCommandHandler
 {
@@ -26,7 +26,7 @@ public interface IUserCommandHandler
 	 * @param player
 	 * @return command success
 	 */
-	boolean useUserCommand(int id, PlayerInstance player);
+	boolean useUserCommand(int id, Player player);
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

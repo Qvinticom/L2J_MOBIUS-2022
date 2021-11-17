@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -433,7 +433,7 @@ public class Kamaloka extends AbstractInstance
 	 * @param index (0-18) index of the kamaloka in arrays
 	 * @return true if party allowed to enter
 	 */
-	private static boolean checkPartyConditions(PlayerInstance player, int index)
+	private static boolean checkPartyConditions(Player player, int index)
 	{
 		final Party party = player.getParty();
 		// player must be in party
@@ -461,7 +461,7 @@ public class Kamaloka extends AbstractInstance
 		final String instanceName = InstanceManager.getInstance().getInstanceIdName(TEMPLATE_IDS[index]);
 		Map<Integer, Long> instanceTimes;
 		// for each party member
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
@@ -533,7 +533,7 @@ public class Kamaloka extends AbstractInstance
 	 * @param player party leader
 	 * @param index (0-18) kamaloka index in arrays
 	 */
-	private final synchronized void enterKamalokaInstance(PlayerInstance player, int index)
+	private final synchronized void enterKamalokaInstance(Player player, int index)
 	{
 		int templateId;
 		try
@@ -601,7 +601,7 @@ public class Kamaloka extends AbstractInstance
 		
 		// and finally teleport party into instance
 		final Party party = player.getParty();
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			world.addAllowed(partyMember);
 			removeBuffs(partyMember);
@@ -631,7 +631,7 @@ public class Kamaloka extends AbstractInstance
 			sm.addInstanceName(world.getTemplateId());
 			
 			// set instance reenter time for all allowed players
-			for (PlayerInstance plr : world.getAllowed())
+			for (Player plr : world.getAllowed())
 			{
 				if (plr != null)
 				{
@@ -719,7 +719,7 @@ public class Kamaloka extends AbstractInstance
 		
 		// boss
 		npc = addSpawn(BOSS[index][0], BOSS[index][1], BOSS[index][2], BOSS[index][3], 0, false, 0, false, world.getInstanceId());
-		((MonsterInstance) npc).setOnKillDelay(100);
+		((Monster) npc).setOnKillDelay(100);
 		world.boss = npc;
 	}
 	
@@ -727,7 +727,7 @@ public class Kamaloka extends AbstractInstance
 	 * Handles only player's enter, single parameter - integer kamaloka index
 	 */
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (npc != null)
 		{
@@ -747,7 +747,7 @@ public class Kamaloka extends AbstractInstance
 	 * Talk with captains and using of the escape teleporter
 	 */
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (npcId == TELEPORTER)
@@ -762,7 +762,7 @@ public class Kamaloka extends AbstractInstance
 					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 					
 					// teleports entire party away
-					for (PlayerInstance partyMember : party.getMembers())
+					for (Player partyMember : party.getMembers())
 					{
 						if ((partyMember != null) && (partyMember.getInstanceId() == world.getInstanceId()))
 						{
@@ -783,7 +783,7 @@ public class Kamaloka extends AbstractInstance
 	 * Only escape teleporters first talk handled
 	 */
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		if (npc.getId() == TELEPORTER)
 		{
@@ -797,7 +797,7 @@ public class Kamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpWorld instanceof KamaWorld)
@@ -907,7 +907,7 @@ public class Kamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(Player player, InstanceWorld world, boolean firstEntrance)
 	{
 		// Managed by script.
 	}

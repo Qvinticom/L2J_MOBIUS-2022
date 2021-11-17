@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -73,7 +73,7 @@ public class Q00021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -214,7 +214,7 @@ public class Q00021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -434,7 +434,7 @@ public class Q00021_HiddenTruth extends Quest
 	{
 		if (creature.isPlayer())
 		{
-			playSound((PlayerInstance) creature, QuestSound.HORROR_01);
+			playSound((Player) creature, QuestSound.HORROR_01);
 		}
 		return super.onCreatureSee(npc, creature);
 	}

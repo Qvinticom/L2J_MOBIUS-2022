@@ -27,7 +27,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.PlayerAction;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.util.GMAudit;
@@ -66,7 +66,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 	}
 	
 	/**
-	 * WARNING: Please use {@link #useAdminCommand(PlayerInstance, String, boolean)} instead.
+	 * WARNING: Please use {@link #useAdminCommand(Player, String, boolean)} instead.
 	 */
 	@Override
 	public IAdminCommandHandler getHandler(String adminCommand)
@@ -79,7 +79,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		return _datatable.get(command);
 	}
 	
-	public void useAdminCommand(PlayerInstance player, String fullCommand, boolean useConfirm)
+	public void useAdminCommand(Player player, String fullCommand, boolean useConfirm)
 	{
 		if (!player.isGM())
 		{

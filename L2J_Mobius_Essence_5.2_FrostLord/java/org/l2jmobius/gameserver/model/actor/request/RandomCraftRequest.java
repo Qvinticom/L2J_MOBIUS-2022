@@ -16,14 +16,14 @@
  */
 package org.l2jmobius.gameserver.model.actor.request;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author Mobius
  */
 public class RandomCraftRequest extends AbstractRequest
 {
-	public RandomCraftRequest(PlayerInstance player)
+	public RandomCraftRequest(Player player)
 	{
 		super(player);
 	}

@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.util.Util;
 /**
  * This class is dedicated to the management of weapons.
  */
-public class Weapon extends Item
+public class Weapon extends ItemTemplate
 {
 	private WeaponType _type;
 	private boolean _isMagicWeapon;
@@ -70,8 +70,8 @@ public class Weapon extends Item
 	{
 		super.set(set);
 		_type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
-		_type1 = Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;
-		_type2 = Item.TYPE2_WEAPON;
+		_type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
+		_type2 = ItemTemplate.TYPE2_WEAPON;
 		_isMagicWeapon = set.getBoolean("is_magic_weapon", false);
 		_soulShotCount = set.getInt("soulshots", 0);
 		_spiritShotCount = set.getInt("spiritshots", 0);

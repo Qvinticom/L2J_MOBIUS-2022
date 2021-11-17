@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.data.sql.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStat extends SummonStat
 {
-	public PetStat(PetInstance activeChar)
+	public PetStat(Pet activeChar)
 	{
 		super(activeChar);
 	}
@@ -90,7 +90,7 @@ public class PetStat extends SummonStat
 		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
 		getActiveChar().broadcastPacket(su);
 		
-		// Send a Server->Client packet PetInfo to the PlayerInstance
+		// Send a Server->Client packet PetInfo to the Player
 		getActiveChar().getOwner().sendPacket(new PetInfo(getActiveChar()));
 		// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 		getActiveChar().updateEffectIcons(true);
@@ -110,9 +110,9 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public PetInstance getActiveChar()
+	public Pet getActiveChar()
 	{
-		return (PetInstance) super.getActiveChar();
+		return (Pet) super.getActiveChar();
 	}
 	
 	public int getFeedBattle()

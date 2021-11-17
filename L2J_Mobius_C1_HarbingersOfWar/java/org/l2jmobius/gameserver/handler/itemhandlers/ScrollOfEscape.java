@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.threads.ThreadPool;
@@ -35,7 +35,7 @@ public class ScrollOfEscape implements IItemHandler
 	};
 	
 	@Override
-	public int useItem(PlayerInstance activeChar, ItemInstance item)
+	public int useItem(Player activeChar, Item item)
 	{
 		if (activeChar.isAllSkillsDisabled())
 		{

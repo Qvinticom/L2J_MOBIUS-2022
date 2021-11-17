@@ -34,12 +34,12 @@ import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.BabyPetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.instance.BabyPet;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -94,7 +94,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -212,7 +212,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				}
 				if (summon.isHungry())
 				{
-					if (summon.isPet() && !((PetInstance) summon).getPetData().getFood().isEmpty())
+					if (summon.isPet() && !((Pet) summon).getPetData().getFood().isEmpty())
 					{
 						client.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
 					}
@@ -297,7 +297,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			{
 				if (validateSummon(summon, false))
 				{
-					if ((target != null) && (target.isDoor() || (target instanceof SiegeFlagInstance)))
+					if ((target != null) && (target.isDoor() || (target instanceof SiegeFlag)))
 					{
 						useSkill(4230, false);
 					}
@@ -815,7 +815,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 1084: // Switch State
 			{
-				if (summon instanceof BabyPetInstance)
+				if (summon instanceof BabyPet)
 				{
 					useSkill(6054, true);
 				}
@@ -1046,14 +1046,14 @@ public class RequestActionUse implements IClientIncomingPacket
 	 * @param target the target to sit, throne, bench or chair
 	 * @return {@code true} if the player can sit, {@code false} otherwise
 	 */
-	protected boolean useSit(PlayerInstance player, WorldObject target)
+	protected boolean useSit(Player player, WorldObject target)
 	{
 		if (player.getMountType() != MountType.NONE)
 		{
 			return false;
 		}
 		
-		if (!player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
+		if (!player.isSitting() && (target instanceof StaticObject) && (((StaticObject) target).getType() == 1) && player.isInsideRadius2D(target, StaticObject.INTERACTION_DISTANCE))
 		{
 			final ChairSit cs = new ChairSit(player, target.getId());
 			_client.sendPacket(cs);
@@ -1086,7 +1086,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void useSkill(int skillId, WorldObject target, boolean pet)
 	{
-		final PlayerInstance player = _client.getPlayer();
+		final Player player = _client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -1127,7 +1127,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	
 	private void useSkill(String skillName, WorldObject target, boolean pet)
 	{
-		final PlayerInstance player = _client.getPlayer();
+		final Player player = _client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -1144,7 +1144,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((summon instanceof BabyPetInstance) && !((BabyPetInstance) summon).isInSupportMode())
+		if ((summon instanceof BabyPet) && !((BabyPet) summon).isInSupportMode())
 		{
 			_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
 			return;
@@ -1170,7 +1170,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	
 	private boolean canControl(Summon summon)
 	{
-		if ((summon instanceof BabyPetInstance) && !((BabyPetInstance) summon).isInSupportMode())
+		if ((summon instanceof BabyPet) && !((BabyPet) summon).isInSupportMode())
 		{
 			_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
 			return false;
@@ -1193,7 +1193,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void useSkill(int skillId, boolean pet)
 	{
-		final PlayerInstance player = _client.getPlayer();
+		final Player player = _client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -1210,7 +1210,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void useSkill(String skillName, boolean pet)
 	{
-		final PlayerInstance player = _client.getPlayer();
+		final Player player = _client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -1229,7 +1229,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	{
 		if ((summon != null) && ((checkPet && summon.isPet()) || summon.isServitor()))
 		{
-			if (summon.isPet() && ((PetInstance) summon).isUncontrollable())
+			if (summon.isPet() && ((Pet) summon).isUncontrollable())
 			{
 				_client.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_CAN_VIEW_THE_SIEGE_WAR_STATUS_WINDOW_DURING_A_SIEGE_WAR);
 				return false;
@@ -1259,7 +1259,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void tryBroadcastSocial(int id)
 	{
-		final PlayerInstance player = _client.getPlayer();
+		final Player player = _client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -1282,7 +1282,7 @@ public class RequestActionUse implements IClientIncomingPacket
 	 */
 	private void useCoupleSocial(int id)
 	{
-		final PlayerInstance requester = _client.getPlayer();
+		final Player requester = _client.getPlayer();
 		if (requester == null)
 		{
 			return;
@@ -1381,7 +1381,7 @@ public class RequestActionUse implements IClientIncomingPacket
 		}
 		
 		// Checks for partner.
-		final PlayerInstance partner = target.getActingPlayer();
+		final Player partner = target.getActingPlayer();
 		if (partner.isInStoreMode() || partner.isCrafting())
 		{
 			sm = new SystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_SHOP_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);

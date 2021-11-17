@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -68,7 +68,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		if (CommonUtil.contains(mobs1, npc.getId()) && !npc.isInCombat() && (npc.getTarget() == null))
 		{
@@ -103,7 +103,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (CommonUtil.contains(mobs2, npc.getId()))
 		{
@@ -132,7 +132,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 			final ArrayList<Playable> result = new ArrayList<>();
 			for (WorldObject obj : World.getInstance().getVisibleObjects(npc, WorldObject.class))
 			{
-				if ((obj instanceof PlayerInstance) || (obj instanceof PetInstance))
+				if ((obj instanceof Player) || (obj instanceof Pet))
 				{
 					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
 					{
@@ -145,7 +145,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 				final Object[] characters = result.toArray();
 				for (Object obj : characters)
 				{
-					final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
+					final Playable target = (Playable) (obj instanceof Player ? obj : ((Summon) obj).getOwner());
 					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
 					{
 						npc.setTarget(target);
@@ -176,7 +176,7 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (CommonUtil.contains(mobs1, npc.getId()) && (skill.getId() == 4589))
 		{

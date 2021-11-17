@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -51,7 +51,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		try
 		{
@@ -93,13 +93,13 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_closeall"))
 			{
-				for (DoorInstance door : _doorTable.getDoors())
+				for (Door door : _doorTable.getDoors())
 				{
 					door.closeMe();
 				}
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					for (DoorInstance door : castle.getDoors())
+					for (Door door : castle.getDoors())
 					{
 						door.closeMe();
 					}
@@ -107,13 +107,13 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_openall"))
 			{
-				for (DoorInstance door : _doorTable.getDoors())
+				for (Door door : _doorTable.getDoors())
 				{
 					door.openMe();
 				}
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					for (DoorInstance door : castle.getDoors())
+					for (Door door : castle.getDoors())
 					{
 						door.openMe();
 					}
@@ -124,7 +124,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isDoor())
 				{
-					((DoorInstance) target).openMe();
+					((Door) target).openMe();
 				}
 				else
 				{
@@ -136,7 +136,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				final WorldObject target = activeChar.getTarget();
 				if ((target != null) && target.isDoor())
 				{
-					((DoorInstance) target).closeMe();
+					((Door) target).closeMe();
 				}
 				else
 				{
@@ -145,7 +145,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.equals("admin_showdoors"))
 			{
-				World.getInstance().forEachVisibleObject(activeChar, DoorInstance.class, door ->
+				World.getInstance().forEachVisibleObject(activeChar, Door.class, door ->
 				{
 					final ExServerPrimitive packet = new ExServerPrimitive("door" + door.getId(), activeChar.getX(), activeChar.getY(), -16000);
 					final Color color = door.isOpen() ? Color.GREEN : Color.RED;

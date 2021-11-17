@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
@@ -56,7 +56,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return _holder;
 	}
 	
-	public abstract boolean isAvailable(PlayerInstance player);
+	public abstract boolean isAvailable(Player player);
 	
 	public boolean isLevelUpMission()
 	{
@@ -65,19 +65,19 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	public abstract void init();
 	
-	public int getStatus(PlayerInstance player)
+	public int getStatus(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return entry != null ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
-	public int getProgress(PlayerInstance player)
+	public int getProgress(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return entry != null ? entry.getProgress() : 0;
 	}
 	
-	public boolean getRecentlyCompleted(PlayerInstance player)
+	public boolean getRecentlyCompleted(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return (entry != null) && entry.getRecentlyCompleted();
@@ -107,7 +107,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		}
 	}
 	
-	public boolean requestReward(PlayerInstance player)
+	public boolean requestReward(Player player)
 	{
 		if (isAvailable(player) || isLevelUpMission())
 		{
@@ -124,7 +124,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return false;
 	}
 	
-	protected void giveRewards(PlayerInstance player)
+	protected void giveRewards(Player player)
 	{
 		for (ItemHolder reward : _holder.getRewards())
 		{

@@ -32,14 +32,14 @@ import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
  */
 public class AutoUseTaskManager implements Runnable
 {
-	private static final Set<PlayerInstance> PLAYERS = ConcurrentHashMap.newKeySet();
+	private static final Set<Player> PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final int REUSE_MARGIN_TIME = 3;
 	private static boolean _working = false;
 	
@@ -72,7 +72,7 @@ public class AutoUseTaskManager implements Runnable
 		}
 		_working = true;
 		
-		for (PlayerInstance player : PLAYERS)
+		for (Player player : PLAYERS)
 		{
 			if (!player.isOnline() || player.isInOfflineMode())
 			{
@@ -96,14 +96,14 @@ public class AutoUseTaskManager implements Runnable
 						break ITEMS;
 					}
 					
-					final ItemInstance item = player.getInventory().getItemByItemId(itemId.intValue());
+					final Item item = player.getInventory().getItemByItemId(itemId.intValue());
 					if (item == null)
 					{
 						player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
 						continue ITEMS;
 					}
 					
-					final Item it = item.getItem();
+					final ItemTemplate it = item.getItem();
 					if (it != null)
 					{
 						if (!it.checkCondition(player, player, false))
@@ -142,7 +142,7 @@ public class AutoUseTaskManager implements Runnable
 			{
 				POTIONS: for (Integer itemId : player.getAutoUseSettings().getAutoPotionItems())
 				{
-					final ItemInstance item = player.getInventory().getItemByItemId(itemId.intValue());
+					final Item item = player.getInventory().getItemByItemId(itemId.intValue());
 					if (item == null)
 					{
 						player.getAutoUseSettings().getAutoPotionItems().remove(itemId);
@@ -253,7 +253,7 @@ public class AutoUseTaskManager implements Runnable
 					}
 					
 					// Do not attack guards.
-					if (target instanceof GuardInstance)
+					if (target instanceof Guard)
 					{
 						break SKILLS;
 					}
@@ -305,7 +305,7 @@ public class AutoUseTaskManager implements Runnable
 		_working = false;
 	}
 	
-	private boolean canCastBuff(PlayerInstance player, WorldObject target, Skill skill)
+	private boolean canCastBuff(Player player, WorldObject target, Skill skill)
 	{
 		// Summon check.
 		if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
@@ -338,7 +338,7 @@ public class AutoUseTaskManager implements Runnable
 		return (buffInfo == null) || (buffInfo.getTime() <= REUSE_MARGIN_TIME);
 	}
 	
-	private boolean canUseMagic(PlayerInstance player, WorldObject target, Skill skill)
+	private boolean canUseMagic(Player player, WorldObject target, Skill skill)
 	{
 		if ((skill.getItemConsumeCount() > 0) && (player.getInventory().getInventoryItemCount(skill.getItemConsumeId(), -1) < skill.getItemConsumeCount()))
 		{
@@ -347,7 +347,7 @@ public class AutoUseTaskManager implements Runnable
 		return !player.isSkillDisabled(skill) && skill.checkCondition(player, target, false);
 	}
 	
-	public void startAutoUseTask(PlayerInstance player)
+	public void startAutoUseTask(Player player)
 	{
 		if (!PLAYERS.contains(player))
 		{
@@ -355,7 +355,7 @@ public class AutoUseTaskManager implements Runnable
 		}
 	}
 	
-	public void stopAutoUseTask(PlayerInstance player)
+	public void stopAutoUseTask(Player player)
 	{
 		player.getAutoUseSettings().resetSkillOrder();
 		if (player.getAutoUseSettings().isEmpty() || !player.isOnline() || player.isInOfflineMode())
@@ -364,61 +364,61 @@ public class AutoUseTaskManager implements Runnable
 		}
 	}
 	
-	public void addAutoSupplyItem(PlayerInstance player, int itemId)
+	public void addAutoSupplyItem(Player player, int itemId)
 	{
 		player.getAutoUseSettings().getAutoSupplyItems().add(itemId);
 		startAutoUseTask(player);
 	}
 	
-	public void removeAutoSupplyItem(PlayerInstance player, int itemId)
+	public void removeAutoSupplyItem(Player player, int itemId)
 	{
 		player.getAutoUseSettings().getAutoSupplyItems().remove(itemId);
 		stopAutoUseTask(player);
 	}
 	
-	public void addAutoPotionItem(PlayerInstance player, int itemId)
+	public void addAutoPotionItem(Player player, int itemId)
 	{
 		player.getAutoUseSettings().getAutoPotionItems().add(itemId);
 		startAutoUseTask(player);
 	}
 	
-	public void removeAutoPotionItem(PlayerInstance player, int itemId)
+	public void removeAutoPotionItem(Player player, int itemId)
 	{
 		player.getAutoUseSettings().getAutoPotionItems().remove(itemId);
 		stopAutoUseTask(player);
 	}
 	
-	public void addAutoBuff(PlayerInstance player, int skillId)
+	public void addAutoBuff(Player player, int skillId)
 	{
 		player.getAutoUseSettings().getAutoBuffs().add(skillId);
 		startAutoUseTask(player);
 	}
 	
-	public void removeAutoBuff(PlayerInstance player, int skillId)
+	public void removeAutoBuff(Player player, int skillId)
 	{
 		player.getAutoUseSettings().getAutoBuffs().remove(skillId);
 		stopAutoUseTask(player);
 	}
 	
-	public void addAutoSkill(PlayerInstance player, Integer skillId)
+	public void addAutoSkill(Player player, Integer skillId)
 	{
 		player.getAutoUseSettings().getAutoSkills().add(skillId);
 		startAutoUseTask(player);
 	}
 	
-	public void removeAutoSkill(PlayerInstance player, Integer skillId)
+	public void removeAutoSkill(Player player, Integer skillId)
 	{
 		player.getAutoUseSettings().getAutoSkills().remove(skillId);
 		stopAutoUseTask(player);
 	}
 	
-	public void addAutoAction(PlayerInstance player, int actionId)
+	public void addAutoAction(Player player, int actionId)
 	{
 		player.getAutoUseSettings().getAutoActions().add(actionId);
 		startAutoUseTask(player);
 	}
 	
-	public void removeAutoAction(PlayerInstance player, int actionId)
+	public void removeAutoAction(Player player, int actionId)
 	{
 		player.getAutoUseSettings().getAutoActions().remove(actionId);
 		stopAutoUseTask(player);

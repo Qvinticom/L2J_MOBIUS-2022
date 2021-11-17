@@ -26,7 +26,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.ICustomByPassHandler;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -55,7 +55,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
 		if (activeChar == null)
 		{
@@ -74,7 +74,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		return false;
 	}
 	
-	private String getCharList(PlayerInstance activeChar)
+	private String getCharList(Player activeChar)
 	{
 		String result = "";
 		final String repCharAcc = activeChar.getAccountName();
@@ -100,7 +100,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		return result;
 	}
 	
-	private boolean checkAcc(PlayerInstance activeChar, String repairChar)
+	private boolean checkAcc(Player activeChar, String repairChar)
 	{
 		boolean result = false;
 		String repCharAcc = "";
@@ -128,7 +128,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		return result;
 	}
 	
-	private boolean checkPunish(PlayerInstance activeChar, String repairChar)
+	private boolean checkPunish(Player activeChar, String repairChar)
 	{
 		boolean result = false;
 		int accessLevel = 0;
@@ -158,7 +158,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		return result;
 	}
 	
-	private boolean checkKarma(PlayerInstance activeChar, String repairChar)
+	private boolean checkKarma(Player activeChar, String repairChar)
 	{
 		boolean result = false;
 		int repCharKarma = 0;
@@ -186,7 +186,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		return result;
 	}
 	
-	private boolean checkChar(PlayerInstance activeChar, String repairChar)
+	private boolean checkChar(Player activeChar, String repairChar)
 	{
 		boolean result = false;
 		if (activeChar.getName().compareTo(repairChar) == 0)
@@ -236,7 +236,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	}
 	
 	@Override
-	public void handleCommand(String command, PlayerInstance activeChar, String repairChar)
+	public void handleCommand(String command, Player activeChar, String repairChar)
 	{
 		if (command == null)
 		{

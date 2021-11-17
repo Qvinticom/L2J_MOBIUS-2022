@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -56,9 +56,9 @@ public class OlympiadStadiumZone extends ZoneType
 		creature.setInsideZone(ZoneId.NO_RESTART, true);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
 		
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
-			final PlayerInstance player = creature.getActingPlayer();
+			final Player player = creature.getActingPlayer();
 			if ((player.getOlympiadGameId() + 1) == _stadiumId)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
@@ -77,7 +77,7 @@ public class OlympiadStadiumZone extends ZoneType
 		creature.setInsideZone(ZoneId.NO_RESTART, false);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
 		
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.getActingPlayer().sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}

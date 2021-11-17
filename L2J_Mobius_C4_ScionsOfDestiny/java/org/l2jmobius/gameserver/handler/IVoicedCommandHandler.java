@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public interface IVoicedCommandHandler
 {
@@ -27,7 +27,7 @@ public interface IVoicedCommandHandler
 	 * @param target
 	 * @return command success
 	 */
-	boolean useVoicedCommand(String command, PlayerInstance player, String target);
+	boolean useVoicedCommand(String command, Player player, String target);
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

@@ -21,11 +21,11 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -119,7 +119,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		final QuestState st = player.getQuestState(getName());
@@ -174,7 +174,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(getName());
@@ -343,12 +343,12 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final Party party = player.getParty();
 		if (party != null)
 		{
-			for (PlayerInstance partyMember : party.getPartyMembers())
+			for (Player partyMember : party.getPartyMembers())
 			{
 				testKetraDemote(partyMember);
 			}
@@ -361,7 +361,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
+	public String onSkillUse(Npc npc, Player caster, Skill skill)
 	{
 		// Caster is an allied.
 		if (caster.isAlliedWithKetra())
@@ -391,7 +391,7 @@ public class KetraOrcSupport extends Quest
 						}
 						
 						// Retrieve the player behind that target.
-						final PlayerInstance player = target.getActingPlayer();
+						final Player player = target.getActingPlayer();
 						
 						// Character is dead.
 						if (player.isDead())
@@ -432,7 +432,7 @@ public class KetraOrcSupport extends Quest
 	 * If any Varka quest is in progress, it stops the quest (and drop all related qItems) :
 	 * @param player The player to check.
 	 */
-	private void testKetraDemote(PlayerInstance player)
+	private void testKetraDemote(Player player)
 	{
 		if (player.isAlliedWithKetra())
 		{
@@ -444,7 +444,7 @@ public class KetraOrcSupport extends Quest
 			// Drop by 1 the level of that alliance (symbolized by a quest item).
 			for (int i = 7215; i >= 7211; i--)
 			{
-				final ItemInstance item = inventory.getItemByItemId(i);
+				final Item item = inventory.getItemByItemId(i);
 				if (item != null)
 				{
 					// Destroy the badge.

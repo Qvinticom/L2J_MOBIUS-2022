@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.data.sql.HelperBuffTable;
@@ -79,7 +80,6 @@ import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.ClassDamageManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
@@ -258,7 +258,7 @@ public class GameServer
 		MultisellData.getInstance();
 		
 		printSection("Clan Halls");
-		ClanHallManager.getInstance();
+		ClanHallTable.getInstance();
 		FortressOfResistance.getInstance();
 		DevastatedCastle.getInstance();
 		BanditStrongholdSiege.getInstance();

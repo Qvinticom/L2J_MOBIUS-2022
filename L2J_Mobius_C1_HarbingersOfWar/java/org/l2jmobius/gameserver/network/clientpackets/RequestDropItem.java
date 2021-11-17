@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -47,10 +47,10 @@ public class RequestDropItem extends ClientBasePacket
 			return;
 		}
 		
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null))
 		{
-			final ItemInstance oldItem = activeChar.getInventory().getItem(objectId);
+			final Item oldItem = activeChar.getInventory().getItem(objectId);
 			if (oldItem == null)
 			{
 				_log.warning("tried to drop an item that is not in the inventory ?!?:" + objectId);
@@ -58,7 +58,7 @@ public class RequestDropItem extends ClientBasePacket
 			}
 			
 			final int oldCount = oldItem.getCount();
-			ItemInstance dropedItem = null;
+			Item dropedItem = null;
 			if (oldCount < count)
 			{
 				return;
@@ -98,7 +98,7 @@ public class RequestDropItem extends ClientBasePacket
 			final DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
 			activeChar.sendPacket(di);
 			activeChar.addKnownObjectWithoutCreate(dropedItem);
-			for (PlayerInstance player : activeChar.broadcastPacket(di))
+			for (Player player : activeChar.broadcastPacket(di))
 			{
 				player.addKnownObjectWithoutCreate(dropedItem);
 			}

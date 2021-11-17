@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 
 /**
  * @author mkizub, JIV
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 public class DocumentItem extends DocumentBase
 {
 	private DocumentItemDataHolder _currentItem = null;
-	private final List<Item> _itemsInFile = new ArrayList<>();
+	private final List<ItemTemplate> _itemsInFile = new ArrayList<>();
 	
 	private class DocumentItemDataHolder
 	{
@@ -48,7 +48,7 @@ public class DocumentItem extends DocumentBase
 		String type;
 		StatSet set;
 		int currentLevel;
-		Item item;
+		ItemTemplate item;
 	}
 	
 	/**
@@ -180,7 +180,7 @@ public class DocumentItem extends DocumentBase
 		try
 		{
 			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatSet.class);
-			_currentItem.item = (Item) itemClass.newInstance(_currentItem.set);
+			_currentItem.item = (ItemTemplate) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{
@@ -188,7 +188,7 @@ public class DocumentItem extends DocumentBase
 		}
 	}
 	
-	public List<Item> getItemList()
+	public List<ItemTemplate> getItemList()
 	{
 		return _itemsInFile;
 	}

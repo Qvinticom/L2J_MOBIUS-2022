@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
@@ -54,15 +54,15 @@ public class SoulShots implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		if (!(playable instanceof PlayerInstance))
+		if (!(playable instanceof Player))
 		{
 			return;
 		}
 		
-		final PlayerInstance player = (PlayerInstance) playable;
-		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Player player = (Player) playable;
+		final Item weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
 		final int itemId = item.getItemId();
 		
@@ -78,7 +78,7 @@ public class SoulShots implements IItemHandler
 		
 		// Check for correct grade
 		final int weaponGrade = weaponItem.getCrystalType();
-		if (((weaponGrade == Item.CRYSTAL_NONE) && (itemId != 5789) && (itemId != 1835)) || ((weaponGrade == Item.CRYSTAL_D) && (itemId != 1463)) || ((weaponGrade == Item.CRYSTAL_C) && (itemId != 1464)) || ((weaponGrade == Item.CRYSTAL_B) && (itemId != 1465)) || ((weaponGrade == Item.CRYSTAL_A) && (itemId != 1466)) || ((weaponGrade == Item.CRYSTAL_S) && (itemId != 1467)))
+		if (((weaponGrade == ItemTemplate.CRYSTAL_NONE) && (itemId != 5789) && (itemId != 1835)) || ((weaponGrade == ItemTemplate.CRYSTAL_D) && (itemId != 1463)) || ((weaponGrade == ItemTemplate.CRYSTAL_C) && (itemId != 1464)) || ((weaponGrade == ItemTemplate.CRYSTAL_B) && (itemId != 1465)) || ((weaponGrade == ItemTemplate.CRYSTAL_A) && (itemId != 1466)) || ((weaponGrade == ItemTemplate.CRYSTAL_S) && (itemId != 1467)))
 		{
 			if (!player.getAutoSoulShot().containsKey(itemId))
 			{
@@ -88,7 +88,7 @@ public class SoulShots implements IItemHandler
 		}
 		
 		// Check if Soulshot is already active
-		if (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE)
+		if (weaponInst.getChargedSoulshot() != Item.CHARGED_NONE)
 		{
 			return;
 		}
@@ -119,7 +119,7 @@ public class SoulShots implements IItemHandler
 		{
 			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
 		}
-		weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
+		weaponInst.setChargedSoulshot(Item.CHARGED_SOULSHOT);
 		
 		// Send message to client
 		player.sendPacket(SystemMessageId.POWER_OF_THE_SPIRITS_ENABLED);

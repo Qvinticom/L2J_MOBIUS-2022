@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.model.VariationInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.options.Variation;
 import org.l2jmobius.gameserver.model.options.VariationFee;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -52,25 +52,25 @@ public class RequestRefine extends AbstractRefinePacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
+		final Item targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
 			return;
 		}
 		
-		final ItemInstance mineralItem = player.getInventory().getItemByObjectId(_mineralItemObjId);
+		final Item mineralItem = player.getInventory().getItemByObjectId(_mineralItemObjId);
 		if (mineralItem == null)
 		{
 			return;
 		}
 		
-		final ItemInstance feeItem = player.getInventory().getItemByObjectId(_feeItemObjId);
+		final Item feeItem = player.getInventory().getItemByObjectId(_feeItemObjId);
 		if (feeItem == null)
 		{
 			return;
@@ -109,7 +109,7 @@ public class RequestRefine extends AbstractRefinePacket
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetItem.isEquipped())
 		{
-			for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
+			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
 			{
 				iu.addModifiedItem(itm);
 			}

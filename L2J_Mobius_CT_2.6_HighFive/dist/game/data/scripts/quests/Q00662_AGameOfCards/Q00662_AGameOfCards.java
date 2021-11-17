@@ -24,7 +24,7 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -97,7 +97,7 @@ public class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -556,7 +556,7 @@ public class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -649,15 +649,15 @@ public class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final List<PlayerInstance> players = new ArrayList<>();
+		final List<Player> players = new ArrayList<>();
 		players.add(killer);
 		players.add(killer);
 		
 		if (killer.isInParty())
 		{
-			for (PlayerInstance member : killer.getParty().getMembers())
+			for (Player member : killer.getParty().getMembers())
 			{
 				if (getQuestState(member, false) != null)
 				{
@@ -666,7 +666,7 @@ public class Q00662_AGameOfCards extends Quest
 			}
 		}
 		
-		final PlayerInstance player = players.get(Rnd.get(players.size()));
+		final Player player = players.get(Rnd.get(players.size()));
 		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (MONSTERS.get(npc.getId()) < getRandom(1000)))
 		{
 			final QuestState qs = getQuestState(player, false);

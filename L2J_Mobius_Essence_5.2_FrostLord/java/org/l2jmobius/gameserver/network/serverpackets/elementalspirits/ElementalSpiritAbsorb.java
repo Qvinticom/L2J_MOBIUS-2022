@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ElementalSpiritAbsorb extends UpdateElementalSpiritPacket
 {
-	public ElementalSpiritAbsorb(PlayerInstance player, byte type, boolean absorbed)
+	public ElementalSpiritAbsorb(Player player, byte type, boolean absorbed)
 	{
 		super(player, type, absorbed);
 	}

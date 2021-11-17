@@ -22,9 +22,9 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
@@ -38,14 +38,14 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class CommandChannel
 {
 	private final Collection<Party> _parties;
-	private PlayerInstance _commandLeader = null;
+	private Player _commandLeader = null;
 	private int _channelLvl;
 	
 	/**
 	 * Creates a New Command Channel and Add the Leaders party to the CC
 	 * @param leader
 	 */
-	public CommandChannel(PlayerInstance leader)
+	public CommandChannel(Player leader)
 	{
 		_commandLeader = leader;
 		_parties = ConcurrentHashMap.newKeySet();
@@ -161,7 +161,7 @@ public class CommandChannel
 		}
 	}
 	
-	public void broadcastCSToChannelMembers(CreatureSay gsp, PlayerInstance broadcaster)
+	public void broadcastCSToChannelMembers(CreatureSay gsp, Player broadcaster)
 	{
 		if ((_parties != null) && !_parties.isEmpty())
 		{
@@ -186,9 +186,9 @@ public class CommandChannel
 	/**
 	 * @return list of all Members in Command Channel
 	 */
-	public List<PlayerInstance> getMembers()
+	public List<Player> getMembers()
 	{
-		final List<PlayerInstance> members = new ArrayList<>();
+		final List<Player> members = new ArrayList<>();
 		for (Party party : _parties)
 		{
 			members.addAll(party.getPartyMembers());
@@ -207,7 +207,7 @@ public class CommandChannel
 	/**
 	 * @param leader the leader of the Command Channel
 	 */
-	public void setChannelLeader(PlayerInstance leader)
+	public void setChannelLeader(Player leader)
 	{
 		_commandLeader = leader;
 	}
@@ -215,7 +215,7 @@ public class CommandChannel
 	/**
 	 * @return the leader of the Command Channel
 	 */
-	public PlayerInstance getChannelLeader()
+	public Player getChannelLeader()
 	{
 		return _commandLeader;
 	}
@@ -231,7 +231,7 @@ public class CommandChannel
 	 */
 	public boolean meetRaidWarCondition(WorldObject obj)
 	{
-		if (!(obj instanceof RaidBossInstance) || !(obj instanceof GrandBossInstance))
+		if (!(obj instanceof RaidBoss) || !(obj instanceof GrandBoss))
 		{
 			return false;
 		}

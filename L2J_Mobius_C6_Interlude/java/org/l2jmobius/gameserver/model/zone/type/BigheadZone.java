@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
@@ -34,7 +34,7 @@ public class BigheadZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.startAbnormalEffect(0x2000);
 		}
@@ -43,7 +43,7 @@ public class BigheadZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (creature instanceof PlayerInstance)
+		if (creature instanceof Player)
 		{
 			creature.stopAbnormalEffect((short) 0x2000);
 		}

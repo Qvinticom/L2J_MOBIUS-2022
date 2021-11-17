@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Defender;
 
 /**
  * @author BiggBoss
@@ -32,7 +32,7 @@ public class SpecialSiegeGuardAI extends SiegeGuardAI
 	/**
 	 * @param creature
 	 */
-	public SpecialSiegeGuardAI(DefenderInstance creature)
+	public SpecialSiegeGuardAI(Defender creature)
 	{
 		super(creature);
 	}

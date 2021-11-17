@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -253,13 +253,13 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		addEnterZoneId(200032);
 	}
 	
-	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(Player player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private boolean checkConditions(PlayerInstance player)
+	private boolean checkConditions(Player player)
 	{
 		if (player.isGM())
 		{
@@ -287,7 +287,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			party.getCommandChannel().broadcastPacket(new SystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY));
 			return false;
 		}
-		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
+		for (Player partyMember : party.getCommandChannel().getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
@@ -317,7 +317,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(PlayerInstance player, int[] coords)
+	protected void enterInstance(Player player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		
@@ -352,7 +352,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			}
 			else
 			{
-				for (PlayerInstance partyMember : player.getParty().getCommandChannel().getMembers())
+				for (Player partyMember : player.getParty().getCommandChannel().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -457,7 +457,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HIDWorld)
@@ -467,7 +467,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			if (event.startsWith("warpechmus"))
 			{
 				broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 800))
 					{
@@ -478,7 +478,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			else if (event.startsWith("reenterechmus"))
 			{
 				player.destroyItemByItemId("SOI", 13797, 3, player, true);
-				for (PlayerInstance partyMember : player.getParty().getMembers())
+				for (Player partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 400))
 					{
@@ -500,7 +500,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-					for (PlayerInstance partyMember : player.getParty().getMembers())
+					for (Player partyMember : player.getParty().getMembers())
 					{
 						if (partyMember.isInsideRadius3D(player, 500))
 						{
@@ -514,7 +514,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		QuestState qs = player.getQuestState(qn);
@@ -531,7 +531,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
@@ -562,14 +562,14 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if ((tmpworld instanceof HIDWorld) && (npc.getId() == SOULWAGON))
 		{
-			// ((MonsterInstance) npc).setPassive(true);
-			((MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			// ((Monster) npc).setPassive(true);
+			((Monster) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
@@ -671,7 +671,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 				if (inst != null)
 				{
-					for (PlayerInstance player : _world.getAllowed())
+					for (Player player : _world.getAllowed())
 					{
 						final QuestState qs = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
 						if ((qs != null) && qs.isCond(1))
@@ -753,7 +753,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	
 	protected void broadCastPacket(HIDWorld world, IClientOutgoingPacket packet)
 	{
-		for (PlayerInstance player : world.getAllowed())
+		for (Player player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -56,7 +56,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 				return false;
 			}
 			
-			if (!c.isDoor() && !(c instanceof StaticObjectInstance))
+			if (!c.isDoor() && !(c instanceof StaticObject))
 			{
 				return false;
 			}

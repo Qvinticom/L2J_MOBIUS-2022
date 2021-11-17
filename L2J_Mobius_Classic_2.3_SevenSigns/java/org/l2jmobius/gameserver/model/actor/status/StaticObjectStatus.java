@@ -16,18 +16,18 @@
  */
 package org.l2jmobius.gameserver.model.actor.status;
 
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 
 public class StaticObjectStatus extends CreatureStatus
 {
-	public StaticObjectStatus(StaticObjectInstance activeChar)
+	public StaticObjectStatus(StaticObject activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public StaticObjectInstance getActiveChar()
+	public StaticObject getActiveChar()
 	{
-		return (StaticObjectInstance) super.getActiveChar();
+		return (StaticObject) super.getActiveChar();
 	}
 }

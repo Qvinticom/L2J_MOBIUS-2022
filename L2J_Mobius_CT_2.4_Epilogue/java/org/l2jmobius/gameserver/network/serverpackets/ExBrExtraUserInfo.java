@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,7 +33,7 @@ public class ExBrExtraUserInfo implements IClientOutgoingPacket
 	/** Lecture mark. */
 	private final int _lectureMark;
 	
-	public ExBrExtraUserInfo(PlayerInstance player)
+	public ExBrExtraUserInfo(Player player)
 	{
 		_objectId = player.getObjectId();
 		_abnormalVisualEffectsEvent = player.getAbnormalVisualEffectEvent();

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -69,7 +69,7 @@ public class SeerUgoros extends AbstractNpcAI
 	private static boolean _killedOneWeed = false;
 	protected static Attackable _weed = null;
 	protected static Attackable _ugoros = null;
-	protected static PlayerInstance _attacker = null;
+	protected static Player _attacker = null;
 	protected static ScheduledFuture<?> _thinkTask = null;
 	
 	private SeerUgoros()
@@ -83,7 +83,7 @@ public class SeerUgoros extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -217,7 +217,7 @@ public class SeerUgoros extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		if (npc.isDead())
 		{
@@ -248,7 +248,7 @@ public class SeerUgoros extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		if (_thinkTask != null)
 		{
@@ -292,7 +292,7 @@ public class SeerUgoros extends AbstractNpcAI
 		}
 		
 		final NpcSay npcSay = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), npcString);
-		for (PlayerInstance player : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 6000))
+		for (Player player : World.getInstance().getVisibleObjectsInRange(npc, Player.class, 6000))
 		{
 			player.sendPacket(npcSay);
 		}

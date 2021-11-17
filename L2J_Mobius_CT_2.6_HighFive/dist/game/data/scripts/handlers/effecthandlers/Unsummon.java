@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -68,7 +68,7 @@ public class Unsummon extends AbstractEffect
 		final Summon summon = info.getEffected().getSummon();
 		if (summon != null)
 		{
-			final PlayerInstance summonOwner = summon.getOwner();
+			final Player summonOwner = summon.getOwner();
 			summon.abortAttack();
 			summon.abortCast();
 			summon.stopAllEffects();

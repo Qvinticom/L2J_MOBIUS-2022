@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Task dedicated to dismount player from pet.
@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class DismountTask implements Runnable
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	
-	public DismountTask(PlayerInstance player)
+	public DismountTask(Player player)
 	{
 		_player = player;
 	}

@@ -31,8 +31,8 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -186,7 +186,7 @@ public class ControllableMobAI extends AttackableAI
 		
 		setTarget(target);
 		// as a response, we put the target in a forcedattack mode
-		final ControllableMobInstance theTarget = (ControllableMobInstance) target;
+		final ControllableMob theTarget = (ControllableMob) target;
 		final ControllableMobAI ctrlAi = (ControllableMobAI) theTarget.getAI();
 		ctrlAi.forceAttack(_actor);
 		
@@ -400,7 +400,7 @@ public class ControllableMobAI extends AttackableAI
 		}
 		
 		// Spawn protection (only against mobs)
-		if (target.isPlayer() && ((PlayerInstance) target).isSpawnProtected())
+		if (target.isPlayer() && ((Player) target).isSpawnProtected())
 		{
 			return false;
 		}
@@ -433,12 +433,12 @@ public class ControllableMobAI extends AttackableAI
 		return !potentialTarget.isEmpty() ? potentialTarget.get(Rnd.get(potentialTarget.size())) : null;
 	}
 	
-	private ControllableMobInstance findNextGroupTarget()
+	private ControllableMob findNextGroupTarget()
 	{
 		return getGroupTarget().getRandomMob();
 	}
 	
-	public ControllableMobAI(ControllableMobInstance controllableMob)
+	public ControllableMobAI(ControllableMob controllableMob)
 	{
 		super(controllableMob);
 		setAlternateAI(AI_IDLE);

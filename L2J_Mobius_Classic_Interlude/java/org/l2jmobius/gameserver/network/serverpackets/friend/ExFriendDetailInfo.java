@@ -21,7 +21,7 @@ import java.util.Calendar;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -31,11 +31,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExFriendDetailInfo implements IClientOutgoingPacket
 {
 	private final int _objectId;
-	private final PlayerInstance _friend;
+	private final Player _friend;
 	private final String _name;
 	private final int _lastAccess;
 	
-	public ExFriendDetailInfo(PlayerInstance player, String name)
+	public ExFriendDetailInfo(Player player, String name)
 	{
 		_objectId = player.getObjectId();
 		_name = name;

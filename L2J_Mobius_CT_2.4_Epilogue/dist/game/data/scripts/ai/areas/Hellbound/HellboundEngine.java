@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 import ai.AbstractNpcAI;
@@ -68,7 +68,7 @@ public class HellboundEngine extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals(UPDATE_EVENT))
 		{
@@ -220,7 +220,7 @@ public class HellboundEngine extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		final HellboundPointData hellboundPointData = HellboundPointData.getInstance();
@@ -264,7 +264,7 @@ public class HellboundEngine extends AbstractNpcAI
 		{
 			try
 			{
-				final DoorInstance door = DoorData.getInstance().getDoor(doorData[0]);
+				final Door door = DoorData.getInstance().getDoor(doorData[0]);
 				if (door.isOpen())
 				{
 					if (newLevel < doorData[1])

@@ -16,37 +16,37 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
- * Get all information from ItemInstance to generate ItemInfo.
+ * Get all information from Item to generate ItemInfo.
  */
 public class ItemInfo
 {
-	/** Identifier of the ItemInstance */
+	/** Identifier of the Item */
 	private int _objectId;
 	
-	/** The Item template of the ItemInstance */
-	private Item _item;
+	/** The Item template of the Item */
+	private ItemTemplate _item;
 	
-	/** The level of enchant on the ItemInstance */
+	/** The level of enchant on the Item */
 	private int _enchant;
 	
 	/** The augmentation of the item */
 	private int _augmentation;
 	
-	/** The quantity of ItemInstance */
+	/** The quantity of Item */
 	private long _count;
 	
-	/** The price of the ItemInstance */
+	/** The price of the Item */
 	private int _price;
 	
-	/** The custom ItemInstance types (used loto, race tickets) */
+	/** The custom Item types (used loto, race tickets) */
 	private int _type1;
 	private int _type2;
 	
-	/** If True the ItemInstance is equipped */
+	/** If True the Item is equipped */
 	private int _equipped;
 	
 	/** The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE) */
@@ -73,52 +73,52 @@ public class ItemInfo
 	private int[] _option;
 	
 	/**
-	 * Get all information from ItemInstance to generate ItemInfo.
+	 * Get all information from Item to generate ItemInfo.
 	 * @param item
 	 */
-	public ItemInfo(ItemInstance item)
+	public ItemInfo(Item item)
 	{
 		if (item == null)
 		{
 			return;
 		}
 		
-		// Get the Identifier of the ItemInstance
+		// Get the Identifier of the Item
 		_objectId = item.getObjectId();
 		
-		// Get the Item of the ItemInstance
+		// Get the Item of the Item
 		_item = item.getItem();
 		
-		// Get the enchant level of the ItemInstance
+		// Get the enchant level of the Item
 		_enchant = item.getEnchantLevel();
 		
 		// Get the augmentation bonus
 		_augmentation = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
 		
-		// Get the quantity of the ItemInstance
+		// Get the quantity of the Item
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the ItemInstance is equipped
+		// Verify if the Item is equipped
 		_equipped = item.isEquipped() ? 1 : 0;
 		
 		// Get the action to do clientside
 		switch (item.getLastChange())
 		{
-			case ItemInstance.ADDED:
+			case Item.ADDED:
 			{
 				_change = 1;
 				break;
 			}
-			case ItemInstance.MODIFIED:
+			case Item.MODIFIED:
 			{
 				_change = 2;
 				break;
 			}
-			case ItemInstance.REMOVED:
+			case Item.REMOVED:
 			{
 				_change = 3;
 				break;
@@ -138,7 +138,7 @@ public class ItemInfo
 		_option = item.getEnchantOptions();
 	}
 	
-	public ItemInfo(ItemInstance item, int change)
+	public ItemInfo(Item item, int change)
 	{
 		this(item);
 		_change = change;
@@ -151,26 +151,26 @@ public class ItemInfo
 			return;
 		}
 		
-		// Get the Identifier of the ItemInstance
+		// Get the Identifier of the Item
 		_objectId = item.getObjectId();
 		
-		// Get the Item of the ItemInstance
+		// Get the Item of the Item
 		_item = item.getItem();
 		
-		// Get the enchant level of the ItemInstance
+		// Get the enchant level of the Item
 		_enchant = item.getEnchant();
 		
 		// Get the augmentation bonus
 		_augmentation = 0;
 		
-		// Get the quantity of the ItemInstance
+		// Get the quantity of the Item
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the ItemInstance is equipped
+		// Verify if the Item is equipped
 		_equipped = 0;
 		
 		// Get the action to do clientside
@@ -195,7 +195,7 @@ public class ItemInfo
 		return _objectId;
 	}
 	
-	public Item getItem()
+	public ItemTemplate getItem()
 	{
 		return _item;
 	}

@@ -32,9 +32,9 @@ import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -142,14 +142,14 @@ public class CastleChamberlain extends AbstractNpcAI
 		addFirstTalkId(NPC);
 	}
 	
-	private NpcHtmlMessage getHtmlPacket(PlayerInstance player, Npc npc, String htmlFile)
+	private NpcHtmlMessage getHtmlPacket(Player player, Npc npc, String htmlFile)
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 		packet.setHtml(getHtm(player, htmlFile));
 		return packet;
 	}
 	
-	private final String funcConfirmHtml(PlayerInstance player, Npc npc, Castle castle, int func, int level)
+	private final String funcConfirmHtml(Player player, Npc npc, Castle castle, int func, int level)
 	{
 		if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_SET_FUNCTIONS))
 		{
@@ -387,13 +387,13 @@ public class CastleChamberlain extends AbstractNpcAI
 		return false;
 	}
 	
-	private final boolean isOwner(PlayerInstance player, Npc npc)
+	private final boolean isOwner(Player player, Npc npc)
 	{
 		return player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final Castle castle = npc.getCastle();
 		final StringTokenizer st = new StringTokenizer(event, " ");
@@ -545,7 +545,7 @@ public class CastleChamberlain extends AbstractNpcAI
 							doors[i] = Integer.parseInt(st.nextToken());
 						}
 						
-						final DoorInstance door = castle.getDoor(doors[0]);
+						final Door door = castle.getDoor(doors[0]);
 						if (door != null)
 						{
 							final int currentLevel = door.getStat().getUpgradeHpRatio();
@@ -1121,7 +1121,7 @@ public class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(st.nextToken()));
+					((Merchant) npc).showBuyWindow(player, Integer.parseInt(st.nextToken()));
 				}
 				else
 				{
@@ -1184,7 +1184,7 @@ public class CastleChamberlain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return (isOwner(player, npc)) ? "chamberlain-01.html" : "chamberlain-04.html";
 	}
@@ -1196,7 +1196,7 @@ public class CastleChamberlain extends AbstractNpcAI
 	// @formatter:on
 	public void onNpcManorBypass(OnNpcManorBypass evt)
 	{
-		final PlayerInstance player = evt.getActiveChar();
+		final Player player = evt.getActiveChar();
 		final Npc npc = evt.getTarget();
 		if (isOwner(player, npc))
 		{

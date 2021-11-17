@@ -37,9 +37,9 @@ import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
+import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -81,7 +81,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_instant_move"))
 		{
@@ -174,7 +174,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				final String targetName = command.substring(17);
-				final PlayerInstance player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -208,7 +208,7 @@ public class AdminTeleport implements IAdminCommandHandler
 					return false;
 				}
 				final String targetName = param[1];
-				final PlayerInstance player = World.getInstance().getPlayer(targetName);
+				final Player player = World.getInstance().getPlayer(targetName);
 				if (player != null)
 				{
 					teleportCharacter(player, activeChar.getLocation(), activeChar);
@@ -284,7 +284,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			else if (st.countTokens() == 1)
 			{
 				final String name = st.nextToken();
-				final PlayerInstance player = World.getInstance().getPlayer(name);
+				final Player player = World.getInstance().getPlayer(name);
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -318,7 +318,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	 * This method sends a player to it's home town.
 	 * @param player the player to teleport.
 	 */
-	private void teleportHome(PlayerInstance player)
+	private void teleportHome(Player player)
 	{
 		String regionName;
 		switch (player.getRace())
@@ -358,7 +358,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true, null);
 	}
 	
-	private void teleportTo(PlayerInstance activeChar, String coords)
+	private void teleportTo(Player activeChar, String coords)
 	{
 		try
 		{
@@ -376,18 +376,18 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
-	private void showTeleportWindow(PlayerInstance activeChar)
+	private void showTeleportWindow(Player activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "move.htm");
 	}
 	
-	private void showTeleportCharWindow(PlayerInstance activeChar)
+	private void showTeleportCharWindow(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
+		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -400,13 +400,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void teleportCharacter(PlayerInstance activeChar, String coords)
+	private void teleportCharacter(Player activeChar, String coords)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
+		Player player = null;
 		if ((target != null) && target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -442,7 +442,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	 * @param loc
 	 * @param activeChar
 	 */
-	private void teleportCharacter(PlayerInstance player, Location loc, PlayerInstance activeChar)
+	private void teleportCharacter(Player player, Location loc, Player activeChar)
 	{
 		if (player != null)
 		{
@@ -461,7 +461,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
-	private void teleportToCharacter(PlayerInstance activeChar, WorldObject target)
+	private void teleportToCharacter(Player activeChar, WorldObject target)
 	{
 		if ((target == null) || !target.isPlayer())
 		{
@@ -469,7 +469,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			return;
 		}
 		
-		final PlayerInstance player = target.getActingPlayer();
+		final Player player = target.getActingPlayer();
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
@@ -482,7 +482,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
-	private void changeCharacterPosition(PlayerInstance activeChar, String name)
+	private void changeCharacterPosition(Player activeChar, String name)
 	{
 		final int x = activeChar.getX();
 		final int y = activeChar.getY();
@@ -512,10 +512,10 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
-	private void recallNPC(PlayerInstance activeChar)
+	private void recallNPC(Player activeChar)
 	{
 		final WorldObject obj = activeChar.getTarget();
-		if ((obj instanceof Npc) && !((Npc) obj).isMinion() && !(obj instanceof RaidBossInstance) && !(obj instanceof GrandBossInstance))
+		if ((obj instanceof Npc) && !((Npc) obj).isMinion() && !(obj instanceof RaidBoss) && !(obj instanceof GrandBoss))
 		{
 			final Npc target = (Npc) obj;
 			final int monsterTemplate = target.getTemplate().getId();
@@ -564,9 +564,9 @@ public class AdminTeleport implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Target is not in game.");
 			}
 		}
-		else if (obj instanceof RaidBossInstance)
+		else if (obj instanceof RaidBoss)
 		{
-			final RaidBossInstance target = (RaidBossInstance) obj;
+			final RaidBoss target = (RaidBoss) obj;
 			final Spawn spawn = target.getSpawn();
 			final double curHP = target.getCurrentHp();
 			final double curMP = target.getCurrentMp();

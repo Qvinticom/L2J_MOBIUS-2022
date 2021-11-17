@@ -21,8 +21,8 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
@@ -72,7 +72,7 @@ public class Zaken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("zaken_unlock"))
 		{
@@ -83,14 +83,14 @@ public class Zaken extends AbstractNpcAI
 	
 	private void spawnBoss()
 	{
-		final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, ZAKEN_HEADING, false, 0);
+		final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, ZAKEN_HEADING, false, 0);
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 		GrandBossManager.getInstance().addBoss(zaken);
 		zaken.broadcastPacket(new PlaySound(1, "BS01_A", 1, zaken.getObjectId(), zaken.getX(), zaken.getY(), zaken.getZ()));
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);

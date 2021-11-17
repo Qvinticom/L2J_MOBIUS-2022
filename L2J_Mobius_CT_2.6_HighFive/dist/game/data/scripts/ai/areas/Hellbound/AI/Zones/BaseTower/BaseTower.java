@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -41,7 +41,7 @@ public class BaseTower extends AbstractNpcAI
 	// Skills
 	private static final SkillHolder DEATH_WORD = new SkillHolder(5256, 1);
 	// Misc
-	private static final Map<Integer, PlayerInstance> BODY_DESTROYER_TARGET_LIST = new ConcurrentHashMap<>();
+	private static final Map<Integer, Player> BODY_DESTROYER_TARGET_LIST = new ConcurrentHashMap<>();
 	
 	public BaseTower()
 	{
@@ -52,7 +52,7 @@ public class BaseTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final ClassId classId = player.getClassId();
 		if (classId.equalsOrChildOf(ClassId.HELL_KNIGHT) || classId.equalsOrChildOf(ClassId.SOULTAKER))
@@ -63,7 +63,7 @@ public class BaseTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("CLOSE"))
 		{
@@ -73,7 +73,7 @@ public class BaseTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{
 		if (!BODY_DESTROYER_TARGET_LIST.containsKey(npc.getObjectId()))
 		{
@@ -85,7 +85,7 @@ public class BaseTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -102,7 +102,7 @@ public class BaseTower extends AbstractNpcAI
 			{
 				if (BODY_DESTROYER_TARGET_LIST.containsKey(npc.getObjectId()))
 				{
-					final PlayerInstance pl = BODY_DESTROYER_TARGET_LIST.get(npc.getObjectId());
+					final Player pl = BODY_DESTROYER_TARGET_LIST.get(npc.getObjectId());
 					if ((pl != null) && pl.isOnline() && !pl.isDead())
 					{
 						pl.stopSkillEffects(SkillFinishType.REMOVED, DEATH_WORD.getSkillId());

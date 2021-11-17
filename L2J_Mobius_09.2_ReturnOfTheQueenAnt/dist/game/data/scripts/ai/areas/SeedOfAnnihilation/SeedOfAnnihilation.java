@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.EffectZone;
 
@@ -276,7 +276,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - Chronos.currentTimeMillis(), null, null);
 	}
 	
-	private void spawnGroupOfMinion(MonsterInstance npc, int[] mobIds)
+	private void spawnGroupOfMinion(Monster npc, int[] mobIds)
 	{
 		for (int mobId : mobIds)
 		{
@@ -291,14 +291,14 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		{
 			if (CommonUtil.contains(element.elite_mob_ids, npc.getId()))
 			{
-				spawnGroupOfMinion((MonsterInstance) npc, getRandomEntry(element.minion_lists));
+				spawnGroupOfMinion((Monster) npc, getRandomEntry(element.minion_lists));
 			}
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{

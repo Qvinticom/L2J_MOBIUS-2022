@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
 
@@ -41,7 +41,7 @@ public class HomunculusManager
 	private static final String DELETE_QUERY = "DELETE FROM character_homunculus WHERE ownerId=? AND slot=? AND id=? AND level=? AND exp=? AND skillLevel1=? AND skillLevel2=? AND skillLevel3=? AND skillLevel4=? AND skillLevel5=? AND active=?";
 	private static final String UPDATE_QUERY = "UPDATE character_homunculus SET level=?, exp=?, skillLevel1=?, skillLevel2=?, skillLevel3=?, skillLevel4=?, skillLevel5=?, active=?, slot=? WHERE id=? AND ownerId=?";
 	
-	public List<Homunculus> select(PlayerInstance owner)
+	public List<Homunculus> select(Player owner)
 	{
 		final List<Homunculus> list = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection();
@@ -88,7 +88,7 @@ public class HomunculusManager
 		return list;
 	}
 	
-	public boolean insert(PlayerInstance owner, Homunculus homunculus)
+	public boolean insert(Player owner, Homunculus homunculus)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_QUERY))
@@ -114,12 +114,12 @@ public class HomunculusManager
 		return true;
 	}
 	
-	public boolean delete(PlayerInstance owner, Homunculus homunculus)
+	public boolean delete(Player owner, Homunculus homunculus)
 	{
 		return delete(owner, homunculus.getSlot(), homunculus.getId(), homunculus.getLevel(), homunculus.getExp(), homunculus.getSkillLevel1(), homunculus.getSkillLevel2(), homunculus.getSkillLevel3(), homunculus.getSkillLevel4(), homunculus.getSkillLevel5(), homunculus.isActive());
 	}
 	
-	private boolean delete(PlayerInstance owner, int slot, int id, int level, int exp, int skillLevel1, int skillLevel2, int skillLevel3, int skillLevel4, int skillLevel5, boolean active)
+	private boolean delete(Player owner, int slot, int id, int level, int exp, int skillLevel1, int skillLevel2, int skillLevel3, int skillLevel4, int skillLevel5, boolean active)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(DELETE_QUERY))
@@ -145,7 +145,7 @@ public class HomunculusManager
 		return true;
 	}
 	
-	public boolean update(PlayerInstance owner, Homunculus homunculus)
+	public boolean update(Player owner, Homunculus homunculus)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(UPDATE_QUERY))

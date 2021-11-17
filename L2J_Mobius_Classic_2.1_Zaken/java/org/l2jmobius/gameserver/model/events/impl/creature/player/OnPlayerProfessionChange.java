@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
@@ -26,18 +26,18 @@ import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerProfessionChange implements IBaseEvent
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final PlayerTemplate _template;
 	private final boolean _isSubClass;
 	
-	public OnPlayerProfessionChange(PlayerInstance player, PlayerTemplate template, boolean isSubClass)
+	public OnPlayerProfessionChange(Player player, PlayerTemplate template, boolean isSubClass)
 	{
 		_player = player;
 		_template = template;
 		_isSubClass = isSubClass;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}

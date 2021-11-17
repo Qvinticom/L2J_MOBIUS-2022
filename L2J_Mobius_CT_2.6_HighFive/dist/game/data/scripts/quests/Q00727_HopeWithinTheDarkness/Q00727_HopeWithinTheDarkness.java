@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.QuestGuard;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -209,7 +209,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final String htmltext = event;
 		if (event.equalsIgnoreCase("enter"))
@@ -245,7 +245,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 		else if (event.equalsIgnoreCase("buff"))
 		{
-			for (PlayerInstance pl : World.getInstance().getVisibleObjects(npc, PlayerInstance.class))
+			for (Player pl : World.getInstance().getVisibleObjects(npc, Player.class))
 			{
 				if ((pl != null) && Util.checkIfInRange(75, npc, pl, false) && (NPC_BUFFS.get(npc.getId()) != null))
 				{
@@ -262,10 +262,10 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			{
 				for (Creature foe : World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange()))
 				{
-					if (foe.isAttackable() && !(foe instanceof QuestGuardInstance))
+					if (foe.isAttackable() && !(foe instanceof QuestGuard))
 					{
-						((QuestGuardInstance) npc).addDamageHate(foe, 0, 999);
-						((QuestGuardInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, foe, null);
+						((QuestGuard) npc).addDamageHate(foe, 0, 999);
+						((QuestGuard) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, foe, null);
 					}
 				}
 			}
@@ -296,7 +296,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 		if (tmpworld instanceof CAUWorld)
@@ -319,7 +319,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -383,7 +383,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player player, int damage, boolean isSummon)
 	{
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
@@ -410,7 +410,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 				}
 				else if (player.getParty() != null)
 				{
-					for (PlayerInstance pmember : player.getParty().getMembers())
+					for (Player pmember : player.getParty().getMembers())
 					{
 						if ((pmember.getBuffCount() > 0) || (pmember.getDanceCount() > 0))
 						{
@@ -425,7 +425,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
@@ -498,7 +498,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	private String checkEnterConditions(PlayerInstance player, Npc npc)
+	private String checkEnterConditions(Player player, Npc npc)
 	{
 		if (DEBUG)
 		{
@@ -561,7 +561,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			return getHtm(player, "CastleWarden-10.html").replace("%leader%", party.getLeader().getName());
 		}
 		
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			qs = partyMember.getQuestState(getName());
 			
@@ -591,7 +591,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(PlayerInstance player, String template, Location coords, CastleDungeon dungeon, String ret)
+	protected String enterInstance(Player player, String template, Location coords, CastleDungeon dungeon, String ret)
 	{
 		// Check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -631,7 +631,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			return "CastleWarden-09.html";
 		}
-		for (PlayerInstance partyMember : party.getMembers())
+		for (Player partyMember : party.getMembers())
 		{
 			teleportPlayer(partyMember, coords, instanceId);
 			world.addAllowed(partyMember);
@@ -734,9 +734,9 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	private class completeDungeon implements Runnable
 	{
 		private final CAUWorld _world;
-		private final PlayerInstance _player;
+		private final Player _player;
 		
-		public completeDungeon(CAUWorld world, PlayerInstance player)
+		public completeDungeon(CAUWorld world, Player player)
 		{
 			_world = world;
 			_player = player;
@@ -774,7 +774,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 						}
 						else
 						{
-							for (PlayerInstance partyMember : party.getMembers())
+							for (Player partyMember : party.getMembers())
 							{
 								if ((partyMember != null) && (partyMember.getInstanceId() == _player.getInstanceId()))
 								{
@@ -792,7 +792,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 	}
 	
-	protected void rewardPlayer(PlayerInstance player)
+	protected void rewardPlayer(Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if ((qs != null) && (qs.isCond(2)))

@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 
 /**
@@ -39,7 +39,7 @@ public class StaticObjectData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(StaticObjectData.class.getName());
 	
-	private final Map<Integer, StaticObjectInstance> _staticObjects = new HashMap<>();
+	private final Map<Integer, StaticObject> _staticObjects = new HashMap<>();
 	
 	/**
 	 * Instantiates a new static objects.
@@ -88,7 +88,7 @@ public class StaticObjectData implements IXmlReader
 	 */
 	private void addObject(StatSet set)
 	{
-		final StaticObjectInstance obj = new StaticObjectInstance(new CreatureTemplate(new StatSet()), set.getInt("id"));
+		final StaticObject obj = new StaticObject(new CreatureTemplate(new StatSet()), set.getInt("id"));
 		obj.setType(set.getInt("type", 0));
 		obj.setName(set.getString("name"));
 		obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));
@@ -100,7 +100,7 @@ public class StaticObjectData implements IXmlReader
 	 * Gets the static objects.
 	 * @return a collection of static objects.
 	 */
-	public Collection<StaticObjectInstance> getStaticObjects()
+	public Collection<StaticObject> getStaticObjects()
 	{
 		return _staticObjects.values();
 	}

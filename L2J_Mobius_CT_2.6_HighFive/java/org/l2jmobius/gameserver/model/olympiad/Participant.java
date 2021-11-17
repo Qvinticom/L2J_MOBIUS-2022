@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.olympiad;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author DS, Zoey76
@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class Participant
 {
 	private final int objectId;
-	private PlayerInstance player;
+	private Player player;
 	private final String name;
 	private final int side;
 	private final int baseClass;
@@ -36,7 +36,7 @@ public class Participant
 	public String clanName;
 	public int clanId;
 	
-	public Participant(PlayerInstance plr, int olympiadSide)
+	public Participant(Player plr, int olympiadSide)
 	{
 		objectId = plr.getObjectId();
 		player = plr;
@@ -109,7 +109,7 @@ public class Participant
 	/**
 	 * @return the player
 	 */
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return player;
 	}
@@ -133,7 +133,7 @@ public class Participant
 	/**
 	 * @param noble the player to set
 	 */
-	public void setPlayer(PlayerInstance noble)
+	public void setPlayer(Player noble)
 	{
 		player = noble;
 	}

@@ -17,14 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class TradeOtherAdd extends ServerBasePacket
 {
-	private final ItemInstance temp;
+	private final Item temp;
 	private final int _amount;
 	
-	public TradeOtherAdd(ItemInstance x, int amount)
+	public TradeOtherAdd(Item x, int amount)
 	{
 		temp = x;
 		_amount = amount;

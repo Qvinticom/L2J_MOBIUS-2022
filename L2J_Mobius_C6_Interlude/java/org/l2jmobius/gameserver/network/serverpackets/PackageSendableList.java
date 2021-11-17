@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,11 +27,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PackageSendableList implements IClientOutgoingPacket
 {
-	private final List<ItemInstance> _items;
+	private final List<Item> _items;
 	private final int _playerObjId;
 	private final int _adena;
 	
-	public PackageSendableList(List<ItemInstance> items, int playerObjId, int adena)
+	public PackageSendableList(List<Item> items, int playerObjId, int adena)
 	{
 		_items = items;
 		_playerObjId = playerObjId;
@@ -46,7 +46,7 @@ public class PackageSendableList implements IClientOutgoingPacket
 		packet.writeD(_playerObjId);
 		packet.writeD(_adena);
 		packet.writeD(_items.size());
-		for (ItemInstance item : _items) // format inside the for taken from SellList part use should be about the same
+		for (Item item : _items) // format inside the for taken from SellList part use should be about the same
 		{
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());

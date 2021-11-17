@@ -32,15 +32,15 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import org.l2jmobius.gameserver.model.items.PlayerItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
@@ -143,7 +143,7 @@ public class CharacterCreate implements IClientIncomingPacket
 			return;
 		}
 		
-		PlayerInstance newChar = null;
+		Player newChar = null;
 		PlayerTemplate template = null;
 		
 		/*
@@ -246,7 +246,7 @@ public class CharacterCreate implements IClientIncomingPacket
 					break;
 				}
 			}
-			newChar = PlayerInstance.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
+			newChar = Player.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
 		// HP and MP are at maximum and CP is zero by default.
@@ -265,7 +265,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		return Config.CHARNAME_TEMPLATE_PATTERN.matcher(text).matches();
 	}
 	
-	private void initNewChar(GameClient client, PlayerInstance newChar)
+	private void initNewChar(GameClient client, Player newChar)
 	{
 		World.getInstance().addObject(newChar);
 		
@@ -309,7 +309,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		{
 			for (PlayerItemTemplate ie : initialItems)
 			{
-				final ItemInstance item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
+				final Item item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
 				if (item == null)
 				{
 					LOGGER.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");

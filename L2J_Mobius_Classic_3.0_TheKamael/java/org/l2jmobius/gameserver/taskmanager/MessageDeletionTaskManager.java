@@ -25,7 +25,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -68,7 +68,7 @@ public class MessageDeletionTaskManager implements Runnable
 				
 				if (msg.hasAttachments())
 				{
-					final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
+					final Player sender = World.getInstance().getPlayer(msg.getSenderId());
 					if (sender != null)
 					{
 						msg.getAttachments().returnToWh(sender.getWarehouse());
@@ -81,7 +81,7 @@ public class MessageDeletionTaskManager implements Runnable
 					msg.getAttachments().deleteMe();
 					msg.removeAttachments();
 					
-					final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
+					final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
 					if (receiver != null)
 					{
 						receiver.sendPacket(new SystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));

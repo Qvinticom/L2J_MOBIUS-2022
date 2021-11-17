@@ -16,16 +16,16 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
- * Get all information from ItemInstance to generate ItemInfo.
+ * Get all information from Item to generate ItemInfo.
  */
 public class ItemInfo
 {
 	private int _objectId;
-	private Item _item;
+	private ItemTemplate _item;
 	private int _enchant;
 	private int _count;
 	private int _price;
@@ -36,49 +36,49 @@ public class ItemInfo
 	private int _mana;
 	
 	/**
-	 * Get all information from ItemInstance to generate ItemInfo.
+	 * Get all information from Item to generate ItemInfo.
 	 * @param item
 	 */
-	public ItemInfo(ItemInstance item)
+	public ItemInfo(Item item)
 	{
 		if (item == null)
 		{
 			return;
 		}
 		
-		// Get the Identifier of the ItemInstance
+		// Get the Identifier of the Item
 		_objectId = item.getObjectId();
 		
-		// Get the Item of the ItemInstance
+		// Get the Item of the Item
 		_item = item.getItem();
 		
-		// Get the enchant level of the ItemInstance
+		// Get the enchant level of the Item
 		_enchant = item.getEnchantLevel();
 		
-		// Get the quantity of the ItemInstance
+		// Get the quantity of the Item
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the ItemInstance is equipped
+		// Verify if the Item is equipped
 		_equipped = item.isEquipped() ? 1 : 0;
 		
 		// Get the action to do clientside
 		switch (item.getLastChange())
 		{
-			case ItemInstance.ADDED:
+			case Item.ADDED:
 			{
 				_change = 1;
 				break;
 			}
-			case ItemInstance.MODIFIED:
+			case Item.MODIFIED:
 			{
 				_change = 2;
 				break;
 			}
-			case ItemInstance.REMOVED:
+			case Item.REMOVED:
 			{
 				_change = 3;
 				break;
@@ -89,30 +89,30 @@ public class ItemInfo
 		_mana = item.getMana();
 	}
 	
-	public ItemInfo(ItemInstance item, int change)
+	public ItemInfo(Item item, int change)
 	{
 		if (item == null)
 		{
 			return;
 		}
 		
-		// Get the Identifier of the ItemInstance
+		// Get the Identifier of the Item
 		_objectId = item.getObjectId();
 		
-		// Get the Item of the ItemInstance
+		// Get the Item of the Item
 		_item = item.getItem();
 		
-		// Get the enchant level of the ItemInstance
+		// Get the enchant level of the Item
 		_enchant = item.getEnchantLevel();
 		
-		// Get the quantity of the ItemInstance
+		// Get the quantity of the Item
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the ItemInstance is equipped
+		// Verify if the Item is equipped
 		_equipped = item.isEquipped() ? 1 : 0;
 		
 		// Get the action to do clientside
@@ -127,7 +127,7 @@ public class ItemInfo
 		return _objectId;
 	}
 	
-	public Item getItem()
+	public ItemTemplate getItem()
 	{
 		return _item;
 	}

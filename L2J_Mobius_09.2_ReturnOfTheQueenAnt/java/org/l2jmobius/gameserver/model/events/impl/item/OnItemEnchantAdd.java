@@ -16,31 +16,31 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.item;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author NightBR
  */
 public class OnItemEnchantAdd implements IBaseEvent
 {
-	private final PlayerInstance _player;
-	private final ItemInstance _item;
+	private final Player _player;
+	private final Item _item;
 	
-	public OnItemEnchantAdd(PlayerInstance player, ItemInstance item)
+	public OnItemEnchantAdd(Player player, Item item)
 	{
 		_player = player;
 		_item = item;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

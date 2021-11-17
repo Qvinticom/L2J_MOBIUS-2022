@@ -17,28 +17,28 @@
 package org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable;
 
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
 /**
- * An instantly executed event when Attackable is killed by PlayerInstance.
+ * An instantly executed event when Attackable is killed by Player.
  * @author UnAfraid
  */
 public class OnAttackableKill implements IBaseEvent
 {
-	private final PlayerInstance _attacker;
+	private final Player _attacker;
 	private final Attackable _target;
 	private final boolean _isSummon;
 	
-	public OnAttackableKill(PlayerInstance attacker, Attackable target, boolean isSummon)
+	public OnAttackableKill(Player attacker, Attackable target, boolean isSummon)
 	{
 		_attacker = attacker;
 		_target = target;
 		_isSummon = isSummon;
 	}
 	
-	public PlayerInstance getAttacker()
+	public Player getAttacker()
 	{
 		return _attacker;
 	}

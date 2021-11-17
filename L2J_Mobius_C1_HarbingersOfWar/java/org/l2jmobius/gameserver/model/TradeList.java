@@ -21,14 +21,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TradeList
 {
-	private final List<ItemInstance> _items = new ArrayList<>();
+	private final List<Item> _items = new ArrayList<>();
 	private final int _listId;
 	private boolean _confirmed;
 	private String _Buystorename;
@@ -40,7 +40,7 @@ public class TradeList
 		_confirmed = false;
 	}
 	
-	public void addItem(ItemInstance item)
+	public void addItem(Item item)
 	{
 		_items.add(item);
 	}
@@ -70,7 +70,7 @@ public class TradeList
 		return _Buystorename;
 	}
 	
-	public List<ItemInstance> getItems()
+	public List<Item> getItems()
 	{
 		return _items;
 	}
@@ -79,7 +79,7 @@ public class TradeList
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			final ItemInstance item = _items.get(i);
+			final Item item = _items.get(i);
 			if (item.getItemId() != itemId)
 			{
 				continue;
@@ -89,11 +89,11 @@ public class TradeList
 		return -1;
 	}
 	
-	public ItemInstance getItem(int objectId)
+	public Item getItem(int objectId)
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			final ItemInstance item = _items.get(i);
+			final Item item = _items.get(i);
 			if (item.getObjectId() != objectId)
 			{
 				continue;
@@ -117,7 +117,7 @@ public class TradeList
 	{
 		for (int y = 0; y < _items.size(); ++y)
 		{
-			final ItemInstance temp = _items.get(y);
+			final Item temp = _items.get(y);
 			if (temp.getObjectId() != objId)
 			{
 				continue;
@@ -136,7 +136,7 @@ public class TradeList
 		boolean bool = false;
 		for (int y = 0; y < _items.size(); ++y)
 		{
-			final ItemInstance temp = _items.get(y);
+			final Item temp = _items.get(y);
 			if (temp.getObjectId() != objId)
 			{
 				continue;
@@ -147,7 +147,7 @@ public class TradeList
 		return bool;
 	}
 	
-	public void tradeItems(PlayerInstance player, PlayerInstance reciever)
+	public void tradeItems(Player player, Player reciever)
 	{
 		final Inventory playersInv = player.getInventory();
 		final Inventory recieverInv = reciever.getInventory();
@@ -155,12 +155,12 @@ public class TradeList
 		final ItemTable itemTable = ItemTable.getInstance();
 		for (int y = 0; y < _items.size(); ++y)
 		{
-			final ItemInstance temp = _items.get(y);
-			ItemInstance playerItem = playersInv.getItem(temp.getObjectId());
-			final ItemInstance newitem = itemTable.createItem(playerItem.getItemId());
+			final Item temp = _items.get(y);
+			Item playerItem = playersInv.getItem(temp.getObjectId());
+			final Item newitem = itemTable.createItem(playerItem.getItemId());
 			newitem.setCount(temp.getCount());
 			playerItem = playersInv.destroyItem(playerItem.getObjectId(), temp.getCount());
-			final ItemInstance recieverItem = recieverInv.addItem(newitem);
+			final Item recieverItem = recieverInv.addItem(newitem);
 			if (playerItem.getLastChange() == 2)
 			{
 				update.addModifiedItem(playerItem);
@@ -185,13 +185,13 @@ public class TradeList
 		}
 	}
 	
-	public void updateBuyList(PlayerInstance player, List<TradeItem> list)
+	public void updateBuyList(Player player, List<TradeItem> list)
 	{
 		final Inventory playersInv = player.getInventory();
 		for (int count = 0; count != list.size(); ++count)
 		{
 			final TradeItem temp = list.get(count);
-			final ItemInstance temp2 = playersInv.findItemByItemId(temp.getItemId());
+			final Item temp2 = playersInv.findItemByItemId(temp.getItemId());
 			if (temp2 == null)
 			{
 				list.remove(count);
@@ -207,13 +207,13 @@ public class TradeList
 		}
 	}
 	
-	public void updateSellList(PlayerInstance player, List<TradeItem> list)
+	public void updateSellList(Player player, List<TradeItem> list)
 	{
 		final Inventory playersInv = player.getInventory();
 		for (int count = 0; count != list.size(); ++count)
 		{
 			final TradeItem temp = list.get(count);
-			final ItemInstance temp2 = playersInv.getItem(temp.getObjectId());
+			final Item temp2 = playersInv.getItem(temp.getObjectId());
 			if (temp2 == null)
 			{
 				list.remove(count);
@@ -228,7 +228,7 @@ public class TradeList
 		}
 	}
 	
-	public synchronized void BuySellItems(PlayerInstance buyer, List<TradeItem> buyerlist, PlayerInstance seller, List<TradeItem> sellerlist)
+	public synchronized void BuySellItems(Player buyer, List<TradeItem> buyerlist, Player seller, List<TradeItem> sellerlist)
 	{
 		int x;
 		int y;
@@ -236,7 +236,7 @@ public class TradeList
 		final Inventory buyerInv = buyer.getInventory();
 		TradeItem temp2 = null;
 		WorldObject sellerItem = null;
-		ItemInstance newitem = null;
+		Item newitem = null;
 		final InventoryUpdate buyerupdate = new InventoryUpdate();
 		final InventoryUpdate sellerupdate = new InventoryUpdate();
 		final ItemTable itemTable = ItemTable.getInstance();
@@ -264,30 +264,30 @@ public class TradeList
 			sellerItem = sellerInv.destroyItem(sellerItem.getObjectId(), amount);
 			cost = buyerItem.getCount() * buyerItem.getOwnersPrice();
 			seller.addAdena(cost);
-			newitem = itemTable.createItem(((ItemInstance) sellerItem).getItemId());
+			newitem = itemTable.createItem(((Item) sellerItem).getItemId());
 			newitem.setCount(amount);
-			final ItemInstance temp = buyerInv.addItem(newitem);
+			final Item temp = buyerInv.addItem(newitem);
 			if (amount == 1)
 			{
 				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S2);
 				msg.addString(buyer.getName());
-				msg.addItemName(((ItemInstance) sellerItem).getItemId());
+				msg.addItemName(((Item) sellerItem).getItemId());
 				sysmsgs.add(msg);
 				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S2);
 				msg.addString("You");
-				msg.addItemName(((ItemInstance) sellerItem).getItemId());
+				msg.addItemName(((Item) sellerItem).getItemId());
 				sysmsgs.add(msg);
 			}
 			else
 			{
 				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_S);
 				msg.addString(buyer.getName());
-				msg.addItemName(((ItemInstance) sellerItem).getItemId());
+				msg.addItemName(((Item) sellerItem).getItemId());
 				msg.addNumber(amount);
 				sysmsgs.add(msg);
 				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_S);
 				msg.addString("You");
-				msg.addItemName(((ItemInstance) sellerItem).getItemId());
+				msg.addItemName(((Item) sellerItem).getItemId());
 				msg.addNumber(amount);
 				sysmsgs.add(msg);
 			}
@@ -305,15 +305,15 @@ public class TradeList
 			{
 				buyerItem.setCount(buyerItem.getCount() - temp2.getCount());
 			}
-			if (((ItemInstance) sellerItem).getLastChange() == 2)
+			if (((Item) sellerItem).getLastChange() == 2)
 			{
-				sellerupdate.addModifiedItem((ItemInstance) sellerItem);
+				sellerupdate.addModifiedItem((Item) sellerItem);
 			}
 			else
 			{
 				final World world = World.getInstance();
 				world.removeObject(sellerItem);
-				sellerupdate.addRemovedItem((ItemInstance) sellerItem);
+				sellerupdate.addRemovedItem((Item) sellerItem);
 			}
 			if (temp.getLastChange() == 2)
 			{
@@ -327,7 +327,7 @@ public class TradeList
 		}
 		if (newitem != null)
 		{
-			ItemInstance adena = seller.getInventory().getAdenaInstance();
+			Item adena = seller.getInventory().getAdenaInstance();
 			adena.setLastChange(2);
 			sellerupdate.addModifiedItem(adena);
 			adena = buyer.getInventory().getAdenaInstance();

@@ -23,11 +23,11 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -207,7 +207,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param gemStones
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance refinerItem, ItemInstance gemStones)
+	protected static boolean isValid(Player player, Item item, Item refinerItem, Item gemStones)
 	{
 		if (!isValid(player, item, refinerItem))
 		{
@@ -249,7 +249,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param refinerItem
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance refinerItem)
+	protected static boolean isValid(Player player, Item item, Item refinerItem)
 	{
 		if (!isValid(player, item))
 		{
@@ -297,7 +297,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param item
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player, ItemInstance item)
+	protected static boolean isValid(Player player, Item item)
 	{
 		if (!isValid(player))
 		{
@@ -376,9 +376,9 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			// only accessories can be augmented
 			switch (item.getItem().getBodyPart())
 			{
-				case Item.SLOT_LR_FINGER:
-				case Item.SLOT_LR_EAR:
-				case Item.SLOT_NECK:
+				case ItemTemplate.SLOT_LR_FINGER:
+				case ItemTemplate.SLOT_LR_EAR:
+				case ItemTemplate.SLOT_NECK:
 				{
 					break;
 				}
@@ -407,7 +407,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param player
 	 * @return
 	 */
-	protected static boolean isValid(PlayerInstance player)
+	protected static boolean isValid(Player player)
 	{
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -52,7 +52,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
@@ -65,7 +65,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "> " + cw.getName() + " (" + cw.getItemId() + ")");
 				if (cw.isActivated())
 				{
-					final PlayerInstance pl = cw.getPlayer();
+					final Player pl = cw.getPlayer();
 					BuilderUtil.sendSysMessage(activeChar, "  Player holding: " + (pl == null ? "null" : pl.getName()));
 					BuilderUtil.sendSysMessage(activeChar, "    Player karma: " + cw.getPlayerKarma());
 					BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
@@ -97,7 +97,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				replyMSG.append("<table width=270><tr><td>Name:</td><td>" + cw.getName() + "</td></tr>");
 				if (cw.isActivated())
 				{
-					final PlayerInstance pl = cw.getPlayer();
+					final Player pl = cw.getPlayer();
 					replyMSG.append("<tr><td>Weilder:</td><td>" + (pl == null ? "null" : pl.getName()) + "</td></tr>");
 					replyMSG.append("<tr><td>Karma:</td><td>" + cw.getPlayerKarma() + "</td></tr>");
 					replyMSG.append("<tr><td>Kills:</td><td>" + cw.getPlayerPkKills() + "/" + cw.getNbKills() + "</td></tr>");
@@ -243,9 +243,9 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					cursedWeapon.setEndTime(endTime);
 					
 					final WorldObject target = activeChar.getTarget();
-					if ((target != null) && (target instanceof PlayerInstance))
+					if ((target != null) && (target instanceof Player))
 					{
-						((PlayerInstance) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);
+						((Player) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);
 					}
 					else
 					{

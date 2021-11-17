@@ -20,8 +20,8 @@ import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.handlers.SkillSignet;
 import org.l2jmobius.gameserver.model.skills.handlers.SkillSignetCasttime;
@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class EffectSignet extends Effect
 {
 	private Skill _skill;
-	private EffectPointInstance _actor;
+	private EffectPoint _actor;
 	
 	public EffectSignet(Env env, EffectTemplate template)
 	{
@@ -55,7 +55,7 @@ public class EffectSignet extends Effect
 		{
 			_skill = SkillTable.getInstance().getSkill(((SkillSignetCasttime) getSkill()).effectId, getLevel());
 		}
-		_actor = (EffectPointInstance) getEffected();
+		_actor = (EffectPoint) getEffected();
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public class EffectSignet extends Effect
 			return true;
 		}
 		final int mpConsume = _skill.getMpConsume();
-		final PlayerInstance caster = (PlayerInstance) getEffector();
+		final Player caster = (Player) getEffector();
 		if (mpConsume > getEffector().getStatus().getCurrentMp())
 		{
 			getEffector().sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));
@@ -84,14 +84,14 @@ public class EffectSignet extends Effect
 			
 			if (_skill.isOffensive())
 			{
-				if ((creature instanceof PlayerInstance) && (((((PlayerInstance) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((PlayerInstance) creature).getClanId() != caster.getClanId())) || ((((PlayerInstance) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((PlayerInstance) creature).getAllyId() != caster.getAllyId())) || ((creature.getParty() != null) && (caster.getParty() != null) && !creature.getParty().equals(caster.getParty()))))
+				if ((creature instanceof Player) && (((((Player) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((Player) creature).getClanId() != caster.getClanId())) || ((((Player) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((Player) creature).getAllyId() != caster.getAllyId())) || ((creature.getParty() != null) && (caster.getParty() != null) && !creature.getParty().equals(caster.getParty()))))
 				{
 					_skill.applyEffects(_actor, creature, false, false, false);
 				}
 			}
-			else if (creature instanceof PlayerInstance)
+			else if (creature instanceof Player)
 			{
-				if (((creature.getParty() != null) && (caster.getParty() != null) && creature.getParty().equals(caster.getParty())) || ((((PlayerInstance) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((PlayerInstance) creature).getClanId() == caster.getClanId())) || ((((PlayerInstance) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((PlayerInstance) creature).getAllyId() == caster.getAllyId())))
+				if (((creature.getParty() != null) && (caster.getParty() != null) && creature.getParty().equals(caster.getParty())) || ((((Player) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((Player) creature).getClanId() == caster.getClanId())) || ((((Player) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((Player) creature).getAllyId() == caster.getAllyId())))
 				{
 					_skill.applyEffects(_actor, creature, false, false, false);
 					_skill.applyEffects(_actor, caster, false, false, false); // Affect caster too.

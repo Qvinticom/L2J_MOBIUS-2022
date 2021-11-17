@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
@@ -97,13 +97,13 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
+	public void onTimerEvent(String event, StatSet params, Npc npc, Player player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
 			final StatSet npcVars = npc.getVariables();
-			final PlayerInstance plr = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
+			final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
 			if (plr != null)
 			{
 				final double distance = npc.calculateDistance2D(plr);
@@ -123,10 +123,10 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 				}
 				else if (!npc.isInCombat() || (npc.getTarget() == null))
 				{
-					final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 500);
+					final List<Monster> monsterList = World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 500);
 					if (!monsterList.isEmpty())
 					{
-						final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
+						final Monster monster = monsterList.get(getRandom(monsterList.size()));
 						if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 						{
 							addAttackDesire(npc, monster);
@@ -187,10 +187,10 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
 							npc.doCast(skill_01.getSkill(), null, true, false);
-							final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 300);
+							final List<Monster> monsterList = World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 300);
 							if (!monsterList.isEmpty())
 							{
-								for (MonsterInstance monster : monsterList)
+								for (Monster monster : monsterList)
 								{
 									if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 									{

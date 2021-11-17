@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -104,7 +104,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, PlayerInstance player)
+	public void onInstanceCreated(Instance instance, Player player)
 	{
 		// Choose start room
 		changeRoom(instance);
@@ -119,7 +119,7 @@ public class ChamberOfDelusion extends AbstractInstance
 			}
 			else
 			{
-				for (PlayerInstance plr : instance.getAllowed())
+				for (Player plr : instance.getAllowed())
 				{
 					if ((plr != null) && plr.isOnline() && !plr.isInParty())
 					{
@@ -148,7 +148,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		// Teleport player to instance
 		super.onEnter(player, instance, firstEnter);
@@ -169,7 +169,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	protected void teleportPlayerIn(PlayerInstance player, Instance instance)
+	protected void teleportPlayerIn(Player player, Instance instance)
 	{
 		final int room = instance.getParameters().getInt("currentRoom");
 		final Location loc = instance.getEnterLocations().get(room);
@@ -177,7 +177,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		
@@ -238,7 +238,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
 		if (ENTRANCE_GATEKEEPER.containsKey(npcId))
@@ -249,7 +249,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
 		if (!npc.isDead() && CommonUtil.contains(BOX, npc.getId()) && ((skill.getId() == FAIL_SKILL.getSkillId()) || (skill.getId() == SUCCESS_SKILL.getSkillId())))
 		{
@@ -280,7 +280,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet, Skill skill)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet, Skill skill)
 	{
 		if (!npc.isBusy() && (npc.getCurrentHp() < (npc.getMaxHp() / 10)))
 		{
@@ -315,7 +315,7 @@ public class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
+	public String onKill(Npc npc, Player player, boolean isPet)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -416,7 +416,7 @@ public class ChamberOfDelusion extends AbstractInstance
 				try
 				{
 					// Send earthquake packet
-					for (PlayerInstance player : world.getPlayers())
+					for (Player player : world.getPlayers())
 					{
 						player.sendPacket(new Earthquake(player, 20, 10));
 					}

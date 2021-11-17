@@ -17,13 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class PrivateStoreMsgSell extends ServerBasePacket
 {
-	private final PlayerInstance _cha;
+	private final Player _cha;
 	
-	public PrivateStoreMsgSell(PlayerInstance player)
+	public PrivateStoreMsgSell(Player player)
 	{
 		_cha = player;
 	}

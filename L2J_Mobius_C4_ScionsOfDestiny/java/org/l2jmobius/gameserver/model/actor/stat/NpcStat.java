@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
 public class NpcStat extends CreatureStat
 {
-	public NpcStat(NpcInstance activeChar)
+	public NpcStat(Npc activeChar)
 	{
 		super(activeChar);
 		
@@ -29,9 +29,9 @@ public class NpcStat extends CreatureStat
 	}
 	
 	@Override
-	public NpcInstance getActiveChar()
+	public Npc getActiveChar()
 	{
-		return (NpcInstance) super.getActiveChar();
+		return (Npc) super.getActiveChar();
 	}
 	
 	@Override

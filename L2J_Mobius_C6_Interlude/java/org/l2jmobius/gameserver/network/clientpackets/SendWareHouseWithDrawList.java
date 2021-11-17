@@ -18,13 +18,13 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -69,7 +69,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,8 +95,8 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 			return;
 		}
 		
-		final FolkInstance manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius2D(manager, NpcInstance.INTERACTION_DISTANCE)) && !player.isGM())
+		final Folk manager = player.getLastFolkNPC();
+		if (((manager == null) || !player.isInsideRadius2D(manager, Npc.INTERACTION_DISTANCE)) && !player.isGM())
 		{
 			return;
 		}
@@ -136,7 +136,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 			final int count = _items[(i * 2) + 1];
 			
 			// Calculate needed slots
-			final ItemInstance item = warehouse.getItemByObjectId(objectId);
+			final Item item = warehouse.getItemByObjectId(objectId);
 			if (item == null)
 			{
 				continue;
@@ -181,12 +181,12 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		{
 			final int objectId = _items[(i * 2) + 0];
 			final int count = _items[(i * 2) + 1];
-			final ItemInstance oldItem = warehouse.getItemByObjectId(objectId);
+			final Item oldItem = warehouse.getItemByObjectId(objectId);
 			if ((oldItem == null) || (oldItem.getCount() < count))
 			{
 				player.sendMessage("Can't withdraw requested item" + (count > 1 ? "s" : ""));
 			}
-			final ItemInstance newItem = warehouse.transferItem("Warehouse", objectId, count, player.getInventory(), player, player.getLastFolkNPC());
+			final Item newItem = warehouse.transferItem("Warehouse", objectId, count, player.getInventory(), player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
 				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName());

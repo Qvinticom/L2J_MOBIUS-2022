@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.model.PledgeSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
@@ -48,19 +48,19 @@ public class RequestAquireSkillInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final FolkInstance trainer = player.getLastFolkNPC();
+		final Folk trainer = player.getLastFolkNPC();
 		if (trainer == null)
 		{
 			return;
 		}
 		
-		if (!player.isGM() && !player.isInsideRadius2D(trainer, NpcInstance.INTERACTION_DISTANCE))
+		if (!player.isGM() && !player.isInsideRadius2D(trainer, Npc.INTERACTION_DISTANCE))
 		{
 			return;
 		}

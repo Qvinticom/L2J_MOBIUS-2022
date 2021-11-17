@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -38,7 +38,7 @@ public class AttackRequest extends ClientBasePacket
 		@SuppressWarnings("unused")
 		final int attackId = readC();
 		
-		final PlayerInstance activeChar = client.getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		final WorldObject target = World.getInstance().findObject(objectId);
 		if ((target != null) && (activeChar.getTarget() != target))
 		{

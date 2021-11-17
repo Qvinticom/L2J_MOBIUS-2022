@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**
@@ -42,9 +42,9 @@ final class EffectBetray extends Effect
 	@Override
 	public void onStart()
 	{
-		if ((getEffected() != null) && (getEffector() instanceof PlayerInstance) && (getEffected() instanceof Summon))
+		if ((getEffected() != null) && (getEffector() instanceof Player) && (getEffected() instanceof Summon))
 		{
-			PlayerInstance targetOwner = null;
+			Player targetOwner = null;
 			targetOwner = ((Summon) getEffected()).getOwner();
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
 			targetOwner.setBetrayed(true);
@@ -56,9 +56,9 @@ final class EffectBetray extends Effect
 	@Override
 	public void onExit()
 	{
-		if ((getEffected() != null) && (getEffector() instanceof PlayerInstance) && (getEffected() instanceof Summon))
+		if ((getEffected() != null) && (getEffector() instanceof Player) && (getEffected() instanceof Summon))
 		{
-			PlayerInstance targetOwner = null;
+			Player targetOwner = null;
 			targetOwner = ((Summon) getEffected()).getOwner();
 			targetOwner.setBetrayed(false);
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -68,7 +68,7 @@ final class EffectBetray extends Effect
 	@Override
 	public boolean onActionTime()
 	{
-		PlayerInstance targetOwner = null;
+		Player targetOwner = null;
 		targetOwner = ((Summon) getEffected()).getOwner();
 		targetOwner.setBetrayed(true);
 		return false;

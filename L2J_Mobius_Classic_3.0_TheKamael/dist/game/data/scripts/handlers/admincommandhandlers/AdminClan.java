@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -48,7 +48,7 @@ public class AdminClan implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -56,7 +56,7 @@ public class AdminClan implements IAdminCommandHandler
 		{
 			case "admin_clan_info":
 			{
-				final PlayerInstance player = getPlayer(activeChar, st);
+				final Player player = getPlayer(activeChar, st);
 				if (player == null)
 				{
 					break;
@@ -87,7 +87,7 @@ public class AdminClan implements IAdminCommandHandler
 			}
 			case "admin_clan_changeleader":
 			{
-				final PlayerInstance player = getPlayer(activeChar, st);
+				final Player player = getPlayer(activeChar, st);
 				if (player == null)
 				{
 					break;
@@ -170,10 +170,10 @@ public class AdminClan implements IAdminCommandHandler
 	 * @param st
 	 * @return
 	 */
-	private PlayerInstance getPlayer(PlayerInstance activeChar, StringTokenizer st)
+	private Player getPlayer(Player activeChar, StringTokenizer st)
 	{
 		String val;
-		PlayerInstance player = null;
+		Player player = null;
 		if (st.hasMoreTokens())
 		{
 			val = st.nextToken();

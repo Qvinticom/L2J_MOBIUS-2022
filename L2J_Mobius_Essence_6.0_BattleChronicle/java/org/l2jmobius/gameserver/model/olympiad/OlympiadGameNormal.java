@@ -32,7 +32,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -72,8 +72,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		}
 		int playerOneObjectId = 0;
 		int playerTwoObjectId = 0;
-		PlayerInstance playerOne = null;
-		PlayerInstance playerTwo = null;
+		Player playerOne = null;
+		Player playerTwo = null;
 		
 		while (set.size() > 1)
 		{
@@ -263,7 +263,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void handleDisconnect(PlayerInstance player)
+	protected final void handleDisconnect(Player player)
 	{
 		if (player.getObjectId() == _playerOne.getObjectId())
 		{
@@ -679,10 +679,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected void addDamage(PlayerInstance player, int damage)
+	protected void addDamage(Player player, int damage)
 	{
-		final PlayerInstance player1 = _playerOne.getPlayer();
-		final PlayerInstance player2 = _playerTwo.getPlayer();
+		final Player player1 = _playerOne.getPlayer();
+		final Player player2 = _playerTwo.getPlayer();
 		if ((player1 == null) || (player2 == null))
 		{
 			return;
@@ -775,7 +775,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected void healPlayers()
 	{
-		final PlayerInstance player1 = _playerOne.getPlayer();
+		final Player player1 = _playerOne.getPlayer();
 		if (player1 != null)
 		{
 			player1.setCurrentCp(player1.getMaxCp());
@@ -783,7 +783,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			player1.setCurrentMp(player1.getMaxMp());
 		}
 		
-		final PlayerInstance player2 = _playerTwo.getPlayer();
+		final Player player2 = _playerTwo.getPlayer();
 		if (player2 != null)
 		{
 			player2.setCurrentCp(player2.getMaxCp());
@@ -795,13 +795,13 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected void untransformPlayers()
 	{
-		final PlayerInstance player1 = _playerOne.getPlayer();
+		final Player player1 = _playerOne.getPlayer();
 		if ((player1 != null) && player1.isTransformed())
 		{
 			player1.stopTransformation(true);
 		}
 		
-		final PlayerInstance player2 = _playerTwo.getPlayer();
+		final Player player2 = _playerTwo.getPlayer();
 		if ((player2 != null) && player2.isTransformed())
 		{
 			player2.stopTransformation(true);

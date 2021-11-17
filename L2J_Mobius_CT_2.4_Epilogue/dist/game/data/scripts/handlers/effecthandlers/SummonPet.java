@@ -22,14 +22,14 @@ import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.PetItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
@@ -65,7 +65,7 @@ public class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final Player player = info.getEffector().getActingPlayer();
 		if ((player.hasSummon() || player.isMounted()))
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
@@ -79,7 +79,7 @@ public class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final ItemInstance item = holder.getItem();
+		final Item item = holder.getItem();
 		if (player.getInventory().getItemByObjectId(item.getObjectId()) != item)
 		{
 			LOGGER.log(Level.WARNING, "Player: " + player + " is trying to summon pet from item that he doesn't owns.");
@@ -93,7 +93,7 @@ public class SummonPet extends AbstractEffect
 		}
 		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
-		final PetInstance pet = PetInstance.spawnPet(npcTemplate, player, item);
+		final Pet pet = Pet.spawnPet(npcTemplate, player, item);
 		pet.setShowSummonAnimation(true);
 		if (!pet.isRespawned())
 		{

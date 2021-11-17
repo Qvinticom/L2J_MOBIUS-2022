@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -53,7 +53,7 @@ public class Restoration extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!effected.isPlayable())
 		{
@@ -68,7 +68,7 @@ public class Restoration extends AbstractEffect
 		}
 		
 		// Max equipable item grade configuration.
-		final Item extractable = ItemTable.getInstance().getTemplate(_itemId);
+		final ItemTemplate extractable = ItemTable.getInstance().getTemplate(_itemId);
 		if (extractable != null)
 		{
 			final int itemCrystalLevel = extractable.getCrystalType().getLevel();
@@ -81,7 +81,7 @@ public class Restoration extends AbstractEffect
 		
 		if (effected.isPlayer())
 		{
-			final ItemInstance newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
+			final Item newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
 			if (_itemEnchantmentLevel > 0)
 			{
 				newItem.setEnchantLevel(_itemEnchantmentLevel);
@@ -89,7 +89,7 @@ public class Restoration extends AbstractEffect
 		}
 		else if (effected.isPet())
 		{
-			final ItemInstance newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
+			final Item newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
 			if (_itemEnchantmentLevel > 0)
 			{
 				newItem.setEnchantLevel(_itemEnchantmentLevel);

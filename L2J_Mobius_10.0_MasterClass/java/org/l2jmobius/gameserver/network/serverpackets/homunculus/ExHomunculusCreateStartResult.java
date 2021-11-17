@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExHomunculusCreateStartResult implements IClientOutgoingPacket
 {
-	public ExHomunculusCreateStartResult(PlayerInstance player)
+	public ExHomunculusCreateStartResult(Player player)
 	{
 	}
 	

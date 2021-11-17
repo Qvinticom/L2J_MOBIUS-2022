@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -76,7 +76,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		(byte) 0x87 // The last 4 bytes are fixed.
 	};
 	
-	protected PlayerInstance _player;
+	protected Player _player;
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
 	private final ReentrantLock _playerLock = new ReentrantLock();
 	private final Crypt _crypt = new Crypt();
@@ -183,12 +183,12 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		return _addr;
 	}
 	
-	public PlayerInstance getPlayer()
+	public Player getPlayer()
 	{
 		return _player;
 	}
 	
-	public void setPlayer(PlayerInstance player)
+	public void setPlayer(Player player)
 	{
 		_player = player;
 		if (_player != null)
@@ -460,7 +460,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		}
 	}
 	
-	public PlayerInstance loadCharFromDisk(int characterSlot)
+	public Player loadCharFromDisk(int characterSlot)
 	{
 		final int objectId = getObjectIdForSlot(characterSlot);
 		if (objectId < 0)
@@ -468,7 +468,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return null;
 		}
 		
-		PlayerInstance player = World.getInstance().getPlayer(objectId);
+		Player player = World.getInstance().getPlayer(objectId);
 		if (player != null)
 		{
 			// This can happen when offline system is enabled.
@@ -493,7 +493,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			}
 		}
 		
-		player = PlayerInstance.load(objectId);
+		player = Player.load(objectId);
 		return player;
 	}
 	
@@ -579,7 +579,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			{
 				// we are going to manually save the char below thus we can force the cancel
 				
-				final PlayerInstance player = _player;
+				final Player player = _player;
 				if (player != null) // this should only happen on connection loss
 				{
 					if (player.isFlying())
@@ -637,7 +637,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			{
 				// we are going to manually save the char bellow thus we can force the cancel
 				
-				final PlayerInstance player = _player;
+				final Player player = _player;
 				if (player != null) // this should only happen on connection loss
 				{
 					if (player.isFlying())

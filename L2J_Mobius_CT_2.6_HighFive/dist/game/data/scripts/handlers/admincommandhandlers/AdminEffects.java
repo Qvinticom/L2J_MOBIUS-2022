@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -101,7 +101,7 @@ public class AdminEffects implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, Player activeChar)
 	{
 		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command);
@@ -169,7 +169,7 @@ public class AdminEffects implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(activeChar, "You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
 			if (target.isPlayer())
 			{
-				((PlayerInstance) target).broadcastUserInfo();
+				((Player) target).broadcastUserInfo();
 			}
 		}
 		else if (command.startsWith("admin_earthquake"))
@@ -229,7 +229,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_para_all"))
 		{
-			World.getInstance().forEachVisibleObject(activeChar, PlayerInstance.class, player ->
+			World.getInstance().forEachVisibleObject(activeChar, Player.class, player ->
 			{
 				if (!player.isGM())
 				{
@@ -241,7 +241,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_unpara_all"))
 		{
-			World.getInstance().forEachVisibleObject(activeChar, PlayerInstance.class, player ->
+			World.getInstance().forEachVisibleObject(activeChar, Player.class, player ->
 			{
 				player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
 				player.setParalyzed(false);
@@ -353,7 +353,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_clearteams"))
 		{
-			World.getInstance().forEachVisibleObject(activeChar, PlayerInstance.class, player ->
+			World.getInstance().forEachVisibleObject(activeChar, Player.class, player ->
 			{
 				player.setTeam(Team.NONE);
 				player.broadcastUserInfo();
@@ -370,7 +370,7 @@ public class AdminEffects implements IAdminCommandHandler
 					radius = Integer.parseInt(st.nextToken());
 				}
 				final Team team = Team.valueOf(val.toUpperCase());
-				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, player -> player.setTeam(team));
+				World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, player -> player.setTeam(team));
 			}
 			catch (Exception e)
 			{
@@ -410,7 +410,7 @@ public class AdminEffects implements IAdminCommandHandler
 					target = st.nextToken();
 					if (target != null)
 					{
-						final PlayerInstance player = World.getInstance().getPlayer(target);
+						final Player player = World.getInstance().getPlayer(target);
 						if (player != null)
 						{
 							if (performSocial(social, player, activeChar))
@@ -572,7 +572,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final int triggerId = Integer.parseInt(st.nextToken());
 				final boolean enable = Boolean.parseBoolean(st.nextToken());
-				World.getInstance().forEachVisibleObject(activeChar, PlayerInstance.class, player -> player.sendPacket(new OnEventTrigger(triggerId, enable)));
+				World.getInstance().forEachVisibleObject(activeChar, Player.class, player -> player.sendPacket(new OnEventTrigger(triggerId, enable)));
 				activeChar.sendPacket(new OnEventTrigger(triggerId, enable));
 			}
 			catch (Exception e)
@@ -611,13 +611,13 @@ public class AdminEffects implements IAdminCommandHandler
 		return false;
 	}
 	
-	private boolean performSocial(int action, WorldObject target, PlayerInstance activeChar)
+	private boolean performSocial(int action, WorldObject target, Player activeChar)
 	{
 		try
 		{
 			if (target.isCreature())
 			{
-				if (target instanceof ChestInstance)
+				if (target instanceof Chest)
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					return false;
@@ -653,7 +653,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 * @param duration
 	 * @param activeChar
 	 */
-	private void adminAtmosphere(String type, String state, int duration, PlayerInstance activeChar)
+	private void adminAtmosphere(String type, String state, int duration, Player activeChar)
 	{
 		IClientOutgoingPacket packet = null;
 		if (type.equals("signsky"))
@@ -699,7 +699,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 	}
 	
-	private void playAdminSound(PlayerInstance activeChar, String sound)
+	private void playAdminSound(Player activeChar, String sound)
 	{
 		final PlaySound snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
 		activeChar.sendPacket(snd);
@@ -713,7 +713,7 @@ public class AdminEffects implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(PlayerInstance activeChar, String command)
+	private void showMainPage(Player activeChar, String command)
 	{
 		String filename = "effects_menu";
 		if (command.contains("ave_abnormal"))

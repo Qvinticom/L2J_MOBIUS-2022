@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -47,12 +47,12 @@ public class ConditionPlayerCanSweep extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		boolean canSweep = false;
 		if (effector.getActingPlayer() != null)
 		{
-			final PlayerInstance sweeper = effector.getActingPlayer();
+			final Player sweeper = effector.getActingPlayer();
 			if (skill != null)
 			{
 				final WorldObject[] targets = skill.getTargetList(sweeper);

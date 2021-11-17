@@ -22,12 +22,12 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -76,7 +76,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((_items == null) || (player == null) || !player.getAccountChars().containsKey(_objectId))
 		{
 			return;
@@ -94,7 +94,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.getActiveEnchantItemId() != PlayerInstance.ID_NONE)
+		if (player.getActiveEnchantItemId() != Player.ID_NONE)
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 			return;
@@ -121,7 +121,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		for (ItemHolder i : _items)
 		{
 			// Check validity of requested item
-			final ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
+			final Item item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
 			if (item == null)
 			{
 				LOGGER.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -170,7 +170,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		for (ItemHolder i : _items)
 		{
 			// Check validity of requested item
-			final ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final Item oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (oldItem == null)
 			{
 				LOGGER.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -178,7 +178,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 				return;
 			}
 			
-			final ItemInstance newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
+			final Item newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
 			if (newItem == null)
 			{
 				LOGGER.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

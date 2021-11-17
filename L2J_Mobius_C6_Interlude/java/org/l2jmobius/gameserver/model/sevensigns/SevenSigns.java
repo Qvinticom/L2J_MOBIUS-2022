@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.handler.AutoChatHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler.AutoSpawnInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -735,7 +735,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player data
 	 */
-	public StatSet getPlayerData(PlayerInstance player)
+	public StatSet getPlayerData(Player player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -749,7 +749,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player stone contrib
 	 */
-	public int getPlayerStoneContrib(PlayerInstance player)
+	public int getPlayerStoneContrib(Player player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -770,7 +770,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player contrib score
 	 */
-	public int getPlayerContribScore(PlayerInstance player)
+	public int getPlayerContribScore(Player player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -786,7 +786,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player adena collect
 	 */
-	public int getPlayerAdenaCollect(PlayerInstance player)
+	public int getPlayerAdenaCollect(Player player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -800,7 +800,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player seal
 	 */
-	public int getPlayerSeal(PlayerInstance player)
+	public int getPlayerSeal(Player player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -814,7 +814,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return the player cabal
 	 */
-	public int getPlayerCabal(PlayerInstance player)
+	public int getPlayerCabal(Player player)
 	{
 		if (!hasRegisteredBefore(player))
 		{
@@ -912,7 +912,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @param updateSettings the update settings
 	 */
-	public void saveSevenSignsData(PlayerInstance player, boolean updateSettings)
+	public void saveSevenSignsData(Player player, boolean updateSettings)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -1006,7 +1006,7 @@ public class SevenSigns
 	 * @param player the player
 	 * @return boolean hasRegistered
 	 */
-	private boolean hasRegisteredBefore(PlayerInstance player)
+	private boolean hasRegisteredBefore(Player player)
 	{
 		return _signsPlayerData.containsKey(player.getObjectId());
 	}
@@ -1019,7 +1019,7 @@ public class SevenSigns
 	 * @param chosenSeal the chosen seal
 	 * @return int cabal
 	 */
-	public int setPlayerInfo(PlayerInstance player, int chosenCabal, int chosenSeal)
+	public int setPlayerInfo(Player player, int chosenCabal, int chosenSeal)
 	{
 		final int charObjId = player.getObjectId();
 		PreparedStatement statement = null;
@@ -1081,7 +1081,7 @@ public class SevenSigns
 	 * @param removeReward the remove reward
 	 * @return int rewardAmount
 	 */
-	public int getAncientAdenaReward(PlayerInstance player, boolean removeReward)
+	public int getAncientAdenaReward(Player player, boolean removeReward)
 	{
 		final StatSet currPlayer = getPlayerData(player);
 		final int rewardAmount = currPlayer.getInt("ancient_adena_amount");
@@ -1105,7 +1105,7 @@ public class SevenSigns
 	 * @param redCount the red count
 	 * @return int contribScore
 	 */
-	public int addPlayerStoneContrib(PlayerInstance player, int blueCount, int greenCount, int redCount)
+	public int addPlayerStoneContrib(Player player, int blueCount, int greenCount, int redCount)
 	{
 		final StatSet currPlayer = getPlayerData(player);
 		final int contribScore = calcContributionScore(blueCount, greenCount, redCount);
@@ -1172,7 +1172,7 @@ public class SevenSigns
 	 * Send info on the current Seven Signs period to the specified player.
 	 * @param player the player
 	 */
-	public void sendCurrentPeriodMsg(PlayerInstance player)
+	public void sendCurrentPeriodMsg(Player player)
 	{
 		SystemMessage sm = null;
 		
@@ -1210,7 +1210,7 @@ public class SevenSigns
 	public void sendMessageToAll(SystemMessageId sysMsgId)
 	{
 		final SystemMessage sm = new SystemMessage(sysMsgId);
-		for (PlayerInstance player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(sm);
 		}
@@ -1462,7 +1462,7 @@ public class SevenSigns
 	 */
 	protected void teleLosingCabalFromDungeons(String compWinner)
 	{
-		for (PlayerInstance onlinePlayer : World.getInstance().getAllPlayers())
+		for (Player onlinePlayer : World.getInstance().getAllPlayers())
 		{
 			final StatSet currPlayer = getPlayerData(onlinePlayer);
 			if (isSealValidationPeriod() || isCompResultsPeriod())
@@ -1566,7 +1566,7 @@ public class SevenSigns
 			teleLosingCabalFromDungeons(getCabalShortName(getCabalHighestScore()));
 			
 			final SignsSky ss = new SignsSky();
-			for (PlayerInstance player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(ss);
 			}

@@ -17,16 +17,16 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class AskJoinPledge implements IClientOutgoingPacket
 {
-	private final PlayerInstance _requestor;
+	private final Player _requestor;
 	private final int _pledgeType;
 	private final String _pledgeName;
 	
-	public AskJoinPledge(PlayerInstance requestor, int pledgeType, String pledgeName)
+	public AskJoinPledge(Player requestor, int pledgeType, String pledgeName)
 	{
 		_requestor = requestor;
 		_pledgeType = pledgeType;

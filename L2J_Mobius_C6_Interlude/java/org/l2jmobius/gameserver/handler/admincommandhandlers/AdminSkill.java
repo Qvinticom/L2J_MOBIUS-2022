@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
@@ -56,7 +56,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private static Skill[] adminSkills;
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_show_skills"))
 		{
@@ -140,9 +140,9 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		else if (command.equals("admin_remove_all_skills"))
 		{
-			if (activeChar.getTarget() instanceof PlayerInstance)
+			if (activeChar.getTarget() instanceof Player)
 			{
-				final PlayerInstance player = (PlayerInstance) activeChar.getTarget();
+				final Player player = (Player) activeChar.getTarget();
 				for (Skill skill : player.getAllSkills())
 				{
 					player.removeSkill(skill);
@@ -175,13 +175,13 @@ public class AdminSkill implements IAdminCommandHandler
 	 * This function will give all the skills that the target can learn at his/her level
 	 * @param activeChar the GM char
 	 */
-	private void adminGiveAllSkills(PlayerInstance activeChar)
+	private void adminGiveAllSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -233,14 +233,14 @@ public class AdminSkill implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void removeSkillsPage(PlayerInstance activeChar, int pageValue)
+	private void removeSkillsPage(Player activeChar, int pageValue)
 	{
 		// TODO: Externalize HTML
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -312,13 +312,13 @@ public class AdminSkill implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showMainPage(PlayerInstance activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -334,13 +334,13 @@ public class AdminSkill implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void adminGetSkills(PlayerInstance activeChar)
+	private void adminGetSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -373,13 +373,13 @@ public class AdminSkill implements IAdminCommandHandler
 		showMainPage(activeChar);
 	}
 	
-	private void adminResetSkills(PlayerInstance activeChar)
+	private void adminResetSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -423,15 +423,15 @@ public class AdminSkill implements IAdminCommandHandler
 		showMainPage(activeChar);
 	}
 	
-	private void adminAddSkill(PlayerInstance activeChar, String value)
+	private void adminAddSkill(Player activeChar, String value)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
 			if ((target == activeChar) || (activeChar.getAccessLevel().getLevel() > 70))
 			{
-				player = (PlayerInstance) target;
+				player = (Player) target;
 			}
 			else
 			{
@@ -486,13 +486,13 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 	}
 	
-	private void adminRemoveSkill(PlayerInstance activeChar, int idval)
+	private void adminRemoveSkill(Player activeChar, int idval)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -519,13 +519,13 @@ public class AdminSkill implements IAdminCommandHandler
 		removeSkillsPage(activeChar, 0);
 	}
 	
-	private void adminAddClanSkill(PlayerInstance activeChar, int id, int level)
+	private void adminAddClanSkill(Player activeChar, int id, int level)
 	{
 		final WorldObject target = activeChar.getTarget();
-		PlayerInstance player = null;
-		if (target instanceof PlayerInstance)
+		Player player = null;
+		if (target instanceof Player)
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -562,7 +562,7 @@ public class AdminSkill implements IAdminCommandHandler
 			player.getClan().addNewSkill(skill);
 			BuilderUtil.sendSysMessage(activeChar, "You gave the Clan Skill: " + skillname + " to the clan " + player.getClan().getName() + ".");
 			activeChar.getClan().broadcastToOnlineMembers(new PledgeSkillList(activeChar.getClan()));
-			for (PlayerInstance member : activeChar.getClan().getOnlineMembers())
+			for (Player member : activeChar.getClan().getOnlineMembers())
 			{
 				member.sendSkillList();
 			}

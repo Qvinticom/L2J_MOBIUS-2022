@@ -37,9 +37,9 @@ import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -1170,7 +1170,7 @@ public class SevenSigns
 	 * Send info on the current Seven Signs period to the specified player.
 	 * @param player
 	 */
-	public void sendCurrentPeriodMsg(PlayerInstance player)
+	public void sendCurrentPeriodMsg(Player player)
 	{
 		SystemMessage sm = null;
 		
@@ -1460,7 +1460,7 @@ public class SevenSigns
 	 */
 	protected void teleLosingCabalFromDungeons(String compWinner)
 	{
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			final StatSet currPlayer = _signsPlayerData.get(player.getObjectId());
 			if (isSealValidationPeriod() || isCompResultsPeriod())
@@ -1654,7 +1654,7 @@ public class SevenSigns
 	
 	public void giveCPMult(int strifeOwner)
 	{
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			// Gives "Victor of War" passive skill to all online characters with Cabal, which controls Seal of Strife
 			final int cabal = getPlayerCabal(player.getObjectId());
@@ -1676,14 +1676,14 @@ public class SevenSigns
 	public void removeCPMult()
 	{
 		// Remove SevenSigns' buffs/debuffs.
-		for (PlayerInstance player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.removeSkill(CommonSkill.THE_VICTOR_OF_WAR.getSkill());
 			player.removeSkill(CommonSkill.THE_VANQUISHED_OF_WAR.getSkill());
 		}
 	}
 	
-	public boolean checkSummonConditions(PlayerInstance player)
+	public boolean checkSummonConditions(Player player)
 	{
 		if (player == null)
 		{

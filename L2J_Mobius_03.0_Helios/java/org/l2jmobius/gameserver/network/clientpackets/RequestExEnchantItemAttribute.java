@@ -21,11 +21,11 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
@@ -50,7 +50,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,8 +95,8 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		final ItemInstance stone = request.getEnchantingStone();
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
+		final Item stone = request.getEnchantingStone();
 		if ((item == null) || (stone == null))
 		{
 			player.removeRequest(request.getClass());
@@ -277,7 +277,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		player.sendInventoryUpdate(iu);
 	}
 	
-	private int addElement(PlayerInstance player, ItemInstance stone, ItemInstance item, AttributeType elementToAdd)
+	private int addElement(Player player, Item stone, Item item, AttributeType elementToAdd)
 	{
 		final AttributeHolder oldElement = item.getAttribute(elementToAdd);
 		final int elementValue = oldElement == null ? 0 : oldElement.getValue();
@@ -306,7 +306,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		return success ? 1 : 0;
 	}
 	
-	public int getLimit(ItemInstance item, int sotneId)
+	public int getLimit(Item item, int sotneId)
 	{
 		final ElementalItemHolder elementItem = ElementalAttributeData.getInstance().getItemElemental(sotneId);
 		if (elementItem == null)
@@ -321,7 +321,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		return ElementalAttributeData.ARMOR_VALUES[elementItem.getType().getMaxLevel()];
 	}
 	
-	public int getPowerToAdd(int stoneId, int oldValue, ItemInstance item)
+	public int getPowerToAdd(int stoneId, int oldValue, Item item)
 	{
 		if (ElementalAttributeData.getInstance().getItemElement(stoneId) != AttributeType.NONE)
 		{

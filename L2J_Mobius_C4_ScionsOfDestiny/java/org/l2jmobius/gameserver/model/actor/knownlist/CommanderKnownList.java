@@ -19,16 +19,16 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Commander;
 
 /**
  * @author programmos
  */
 public class CommanderKnownList extends AttackableKnownList
 {
-	public CommanderKnownList(CommanderInstance activeChar)
+	public CommanderKnownList(Commander activeChar)
 	{
 		super(activeChar);
 	}
@@ -55,10 +55,10 @@ public class CommanderKnownList extends AttackableKnownList
 		// Check if siege is in progress
 		if ((getActiveChar().getFort() != null) && getActiveChar().getFort().getSiege().isInProgress())
 		{
-			PlayerInstance player = null;
-			if (object instanceof PlayerInstance)
+			Player player = null;
+			if (object instanceof Player)
 			{
-				player = (PlayerInstance) object;
+				player = (Player) object;
 			}
 			else if (object instanceof Summon)
 			{
@@ -76,8 +76,8 @@ public class CommanderKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public CommanderInstance getActiveChar()
+	public Commander getActiveChar()
 	{
-		return (CommanderInstance) super.getActiveChar();
+		return (Commander) super.getActiveChar();
 	}
 }

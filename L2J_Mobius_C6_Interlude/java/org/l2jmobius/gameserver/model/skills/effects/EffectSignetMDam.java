@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Formulas;
@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
  */
 public class EffectSignetMDam extends Effect
 {
-	private EffectPointInstance _actor;
+	private EffectPoint _actor;
 	private boolean bss;
 	private boolean sps;
 	
@@ -72,7 +72,7 @@ public class EffectSignetMDam extends Effect
 			return;
 		}
 		
-		final EffectPointInstance effectPoint = new EffectPointInstance(IdManager.getInstance().getNextId(), template, getEffector());
+		final EffectPoint effectPoint = new EffectPoint(IdManager.getInstance().getNextId(), template, getEffector());
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		
@@ -81,9 +81,9 @@ public class EffectSignetMDam extends Effect
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
-		if ((getEffector() instanceof PlayerInstance) && (getSkill().getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
+		if ((getEffector() instanceof Player) && (getSkill().getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
-			final Location wordPosition = ((PlayerInstance) getEffector()).getCurrentSkillWorldPosition();
+			final Location wordPosition = ((Player) getEffector()).getCurrentSkillWorldPosition();
 			if (wordPosition != null)
 			{
 				x = wordPosition.getX();
@@ -105,7 +105,7 @@ public class EffectSignetMDam extends Effect
 		}
 		
 		final int mpConsume = getSkill().getMpConsume();
-		final PlayerInstance caster = (PlayerInstance) getEffector();
+		final Player caster = (Player) getEffector();
 		sps = caster.checkSps();
 		bss = caster.checkBss();
 		
@@ -175,7 +175,7 @@ public class EffectSignetMDam extends Effect
 	{
 		if (_actor != null)
 		{
-			final PlayerInstance caster = (PlayerInstance) getEffector();
+			final Player caster = (Player) getEffector();
 			
 			// remove shots
 			if (bss)

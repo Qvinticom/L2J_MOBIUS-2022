@@ -47,8 +47,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -58,9 +58,9 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
@@ -91,7 +91,7 @@ public class SkillCaster implements Runnable
 	private final WeakReference<Creature> _caster;
 	private final WeakReference<WorldObject> _target;
 	private final Skill _skill;
-	private final ItemInstance _item;
+	private final Item _item;
 	private final SkillCastingType _castingType;
 	private final boolean _shiftPressed;
 	private int _hitTime;
@@ -101,7 +101,7 @@ public class SkillCaster implements Runnable
 	private ScheduledFuture<?> _task;
 	private int _phase;
 	
-	private SkillCaster(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
+	private SkillCaster(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
 	{
 		Objects.requireNonNull(caster);
 		Objects.requireNonNull(skill);
@@ -128,7 +128,7 @@ public class SkillCaster implements Runnable
 	 * @param shiftPressed dont move while casting
 	 * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
 	 */
-	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
+	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
 	{
 		// Prevent players from attacking before the Olympiad countdown ends. Olympiad Manager NPC is excluded.
 		if (caster.isPlayer() && caster.getActingPlayer().isInOlympiadMode() && !caster.getActingPlayer().isOlympiadStart() && skill.isBad() && (target != null) && (target.getId() != 36402))
@@ -150,7 +150,7 @@ public class SkillCaster implements Runnable
 	 * @param castTime custom cast time in milliseconds or -1 for default.
 	 * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
 	 */
-	public static SkillCaster castSkill(Creature caster, WorldObject worldObject, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
+	public static SkillCaster castSkill(Creature caster, WorldObject worldObject, Skill skill, Item item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
 	{
 		if ((caster == null) || (skill == null) || (castingType == null))
 		{
@@ -289,9 +289,9 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Reduce talisman mana on skill use
-		if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == Item.SLOT_DECO))
+		if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == ItemTemplate.SLOT_DECO))
 		{
-			for (ItemInstance item : caster.getInventory().getItems())
+			for (Item item : caster.getInventory().getItems())
 			{
 				if (item.isEquipped() && (item.getId() == _skill.getReferenceItemId()))
 				{
@@ -356,8 +356,8 @@ public class SkillCaster implements Runnable
 		// Consume reagent item.
 		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
 		{
-			// Get the ItemInstance consumed by the spell.
-			final ItemInstance requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
+			// Get the Item consumed by the spell.
+			final Item requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
 			if (_skill.isBad() || (requiredItem.getItem().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
 			{
 				caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
@@ -366,7 +366,7 @@ public class SkillCaster implements Runnable
 		
 		if (caster.isPlayer())
 		{
-			final PlayerInstance player = caster.getActingPlayer();
+			final Player player = caster.getActingPlayer();
 			
 			// Consume fame points.
 			if (_skill.getFamePointConsume() > 0)
@@ -556,7 +556,7 @@ public class SkillCaster implements Runnable
 		return true;
 	}
 	
-	public static void callSkill(Creature caster, WorldObject target, Collection<WorldObject> targets, Skill skill, ItemInstance item)
+	public static void callSkill(Creature caster, WorldObject target, Collection<WorldObject> targets, Skill skill, Item item)
 	{
 		// Launch the magic skill in order to calculate its effects
 		try
@@ -621,7 +621,7 @@ public class SkillCaster implements Runnable
 			// Launch the magic skill and calculate its effects
 			skill.activateSkill(caster, item, targets.toArray(new WorldObject[0]));
 			
-			final PlayerInstance player = caster.getActingPlayer();
+			final Player player = caster.getActingPlayer();
 			if (player != null)
 			{
 				for (WorldObject obj : targets)
@@ -762,7 +762,7 @@ public class SkillCaster implements Runnable
 		// If there is a queued skill, launch it and wipe the queue.
 		if (caster.isPlayer())
 		{
-			final PlayerInstance currPlayer = caster.getActingPlayer();
+			final Player currPlayer = caster.getActingPlayer();
 			final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 			if (queuedSkill != null)
 			{
@@ -826,7 +826,7 @@ public class SkillCaster implements Runnable
 		triggerCast(creature, target, skill, null, true);
 	}
 	
-	public static void triggerCast(Creature creature, WorldObject target, Skill skill, ItemInstance item, boolean ignoreTargetType)
+	public static void triggerCast(Creature creature, WorldObject target, Skill skill, Item item, boolean ignoreTargetType)
 	{
 		try
 		{
@@ -908,7 +908,7 @@ public class SkillCaster implements Runnable
 	/**
 	 * @return the item that has been used in this casting.
 	 */
-	public ItemInstance getItem()
+	public Item getItem()
 	{
 		return _item;
 	}
@@ -1052,8 +1052,8 @@ public class SkillCaster implements Runnable
 		// Check if a spell consumes an item.
 		if ((skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
 		{
-			// Get the ItemInstance consumed by the spell
-			final ItemInstance requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
+			// Get the Item consumed by the spell
+			final Item requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
 			if ((requiredItem == null) || (requiredItem.getCount() < skill.getItemConsumeCount()))
 			{
 				if (skill.hasEffectType(EffectType.SUMMON))
@@ -1073,7 +1073,7 @@ public class SkillCaster implements Runnable
 		
 		if (caster.isPlayer())
 		{
-			final PlayerInstance player = caster.getActingPlayer();
+			final Player player = caster.getActingPlayer();
 			if (player.inObserverMode())
 			{
 				return false;

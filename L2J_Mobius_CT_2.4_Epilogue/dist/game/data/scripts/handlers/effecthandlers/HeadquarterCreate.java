@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -49,17 +49,17 @@ public class HeadquarterCreate extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final Player player = info.getEffector().getActingPlayer();
 		if (!player.isClanLeader())
 		{
 			return;
 		}
 		
-		final SiegeFlagInstance flag = new SiegeFlagInstance(player, NpcData.getInstance().getTemplate(HQ_NPC_ID), _isAdvanced, false);
+		final SiegeFlag flag = new SiegeFlag(player, NpcData.getInstance().getTemplate(HQ_NPC_ID), _isAdvanced, false);
 		flag.setTitle(player.getClan().getName());
 		flag.setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());
 		flag.setHeading(player.getHeading());
 		flag.spawnMe(player.getX(), player.getY(), player.getZ() + 50);
-		// already call addFlag method in SiegeFlagInstance constructor
+		// already call addFlag method in SiegeFlag constructor
 	}
 }

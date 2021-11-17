@@ -27,7 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * Contains objectId and factionId for all players.
@@ -97,7 +97,7 @@ public class FactionManager
 		return 0; // not found
 	}
 	
-	public boolean isSameFaction(PlayerInstance player1, PlayerInstance player2)
+	public boolean isSameFaction(Player player1, Player player2)
 	{
 		// TODO: Maybe add support for multiple factions?
 		return (player1.isGood() && player2.isGood()) || (player1.isEvil() && player2.isEvil());

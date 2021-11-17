@@ -18,7 +18,7 @@ package quests.Q10767_AWholeNewLevelOfAlchemy;
 
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
@@ -60,7 +60,7 @@ public class Q10767_AWholeNewLevelOfAlchemy extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -101,7 +101,7 @@ public class Q10767_AWholeNewLevelOfAlchemy extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
@@ -140,7 +140,7 @@ public class Q10767_AWholeNewLevelOfAlchemy extends Quest
 	@Id(HIGH_GRADE_LOVE_POTION)
 	public void onItemCreate(OnItemCreate event)
 	{
-		final PlayerInstance player = event.getActiveChar().getActingPlayer();
+		final Player player = event.getActiveChar().getActingPlayer();
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, false);

@@ -21,11 +21,11 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 public class ChristmasTree implements IItemHandler
@@ -43,9 +43,9 @@ public class ChristmasTree implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(Playable playable, ItemInstance item)
+	public void useItem(Playable playable, Item item)
 	{
-		final PlayerInstance player = (PlayerInstance) playable;
+		final Player player = (Player) playable;
 		NpcTemplate template1 = null;
 		
 		final int itemId = item.getItemId();
@@ -76,7 +76,7 @@ public class ChristmasTree implements IItemHandler
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());
-			final NpcInstance result = spawn.doSpawn();
+			final Npc result = spawn.doSpawn();
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			ThreadPool.schedule(new DeSpawn(result), 3600000);
 		}
@@ -88,9 +88,9 @@ public class ChristmasTree implements IItemHandler
 	
 	public class DeSpawn implements Runnable
 	{
-		NpcInstance _npc = null;
+		Npc _npc = null;
 		
-		public DeSpawn(NpcInstance npc)
+		public DeSpawn(Npc npc)
 		{
 			_npc = npc;
 		}

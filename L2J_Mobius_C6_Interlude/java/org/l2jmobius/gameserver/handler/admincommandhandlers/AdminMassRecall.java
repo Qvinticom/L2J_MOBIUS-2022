@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -39,7 +39,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_recallclan"))
 		{
@@ -53,7 +53,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				for (PlayerInstance element : clan.getOnlineMembers())
+				for (Player element : clan.getOnlineMembers())
 				{
 					Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 				}
@@ -78,7 +78,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				final int ally = clan.getAllyId();
 				if (ally == 0)
 				{
-					for (PlayerInstance element : clan.getOnlineMembers())
+					for (Player element : clan.getOnlineMembers())
 					{
 						Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 					}
@@ -89,7 +89,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 					{
 						if (aclan.getAllyId() == ally)
 						{
-							for (PlayerInstance element : aclan.getOnlineMembers())
+							for (Player element : aclan.getOnlineMembers())
 							{
 								Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 							}
@@ -107,7 +107,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(18).trim();
-				final PlayerInstance player = World.getInstance().getPlayer(val);
+				final Player player = World.getInstance().getPlayer(val);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Target error.");
@@ -121,7 +121,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				}
 				
 				final Party p = player.getParty();
-				for (PlayerInstance ppl : p.getPartyMembers())
+				for (Player ppl : p.getPartyMembers())
 				{
 					Teleport(ppl, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 				}
@@ -134,7 +134,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void Teleport(PlayerInstance player, int x, int y, int z, String message)
+	private void Teleport(Player player, int x, int y, int z, String message)
 	{
 		player.sendMessage(message);
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -55,8 +55,8 @@ public class DimensionalRift
 	
 	protected byte _choosenRoom = -1;
 	private boolean _hasJumped = false;
-	protected Collection<PlayerInstance> _deadPlayers = ConcurrentHashMap.newKeySet();
-	protected Collection<PlayerInstance> _revivedInWaitingRoom = ConcurrentHashMap.newKeySet();
+	protected Collection<Player> _deadPlayers = ConcurrentHashMap.newKeySet();
+	protected Collection<Player> _revivedInWaitingRoom = ConcurrentHashMap.newKeySet();
 	private boolean isBossRoom = false;
 	
 	public DimensionalRift(Party party, byte type, byte room)
@@ -67,7 +67,7 @@ public class DimensionalRift
 		_choosenRoom = room;
 		final Location coords = getRoomCoord(room);
 		party.setDimensionalRift(this);
-		for (PlayerInstance p : party.getMembers())
+		for (Player p : party.getMembers())
 		{
 			final Quest riftQuest = QuestManager.getInstance().getQuest(635);
 			if (riftQuest != null)
@@ -141,7 +141,7 @@ public class DimensionalRift
 					_completedRooms.add(_choosenRoom);
 					_choosenRoom = -1;
 					
-					for (PlayerInstance p : _party.getMembers())
+					for (Player p : _party.getMembers())
 					{
 						if (!_revivedInWaitingRoom.contains(p))
 						{
@@ -153,7 +153,7 @@ public class DimensionalRift
 				}
 				else
 				{
-					for (PlayerInstance p : _party.getMembers())
+					for (Player p : _party.getMembers())
 					{
 						if (!_revivedInWaitingRoom.contains(p))
 						{
@@ -173,7 +173,7 @@ public class DimensionalRift
 			
 			earthQuakeTask = ThreadPool.schedule(() ->
 			{
-				for (PlayerInstance p : _party.getMembers())
+				for (Player p : _party.getMembers())
 				{
 					if (!_revivedInWaitingRoom.contains(p))
 					{
@@ -220,7 +220,7 @@ public class DimensionalRift
 		createTeleporterTimer(false);
 	}
 	
-	public void partyMemberExited(PlayerInstance player)
+	public void partyMemberExited(Player player)
 	{
 		if (_deadPlayers.contains(player))
 		{
@@ -234,7 +234,7 @@ public class DimensionalRift
 		
 		if ((_party.getMemberCount() < Config.RIFT_MIN_PARTY_SIZE) || (_party.getMemberCount() == 1))
 		{
-			for (PlayerInstance p : _party.getMembers())
+			for (Player p : _party.getMembers())
 			{
 				teleportToWaitingRoom(p);
 			}
@@ -242,7 +242,7 @@ public class DimensionalRift
 		}
 	}
 	
-	public void manualTeleport(PlayerInstance player, Npc npc)
+	public void manualTeleport(Player player, Npc npc)
 	{
 		if (!player.isInParty() || !player.getParty().isInDimensionalRift())
 		{
@@ -266,7 +266,7 @@ public class DimensionalRift
 		_completedRooms.add(_choosenRoom);
 		_choosenRoom = -1;
 		
-		for (PlayerInstance p : _party.getMembers())
+		for (Player p : _party.getMembers())
 		{
 			teleportToNextRoom(p);
 		}
@@ -277,7 +277,7 @@ public class DimensionalRift
 		createTeleporterTimer(true);
 	}
 	
-	public void manualExitRift(PlayerInstance player, Npc npc)
+	public void manualExitRift(Player player, Npc npc)
 	{
 		if (!player.isInParty() || !player.getParty().isInDimensionalRift())
 		{
@@ -290,14 +290,14 @@ public class DimensionalRift
 			return;
 		}
 		
-		for (PlayerInstance p : player.getParty().getMembers())
+		for (Player p : player.getParty().getMembers())
 		{
 			teleportToWaitingRoom(p);
 		}
 		killRift();
 	}
 	
-	protected void teleportToNextRoom(PlayerInstance player)
+	protected void teleportToNextRoom(Player player)
 	{
 		if (_choosenRoom == -1)
 		{
@@ -322,7 +322,7 @@ public class DimensionalRift
 		player.teleToLocation(getRoomCoord(_choosenRoom));
 	}
 	
-	protected void teleportToWaitingRoom(PlayerInstance player)
+	protected void teleportToWaitingRoom(Player player)
 	{
 		DimensionalRiftManager.getInstance().teleportToWaitingRoom(player);
 		final Quest riftQuest = QuestManager.getInstance().getQuest(635);
@@ -410,7 +410,7 @@ public class DimensionalRift
 		return time;
 	}
 	
-	public void memberDead(PlayerInstance player)
+	public void memberDead(Player player)
 	{
 		if (!_deadPlayers.contains(player))
 		{
@@ -418,7 +418,7 @@ public class DimensionalRift
 		}
 	}
 	
-	public void memberRessurected(PlayerInstance player)
+	public void memberRessurected(Player player)
 	{
 		if (_deadPlayers.contains(player))
 		{
@@ -426,7 +426,7 @@ public class DimensionalRift
 		}
 	}
 	
-	public void usedTeleport(PlayerInstance player)
+	public void usedTeleport(Player player)
 	{
 		if (!_revivedInWaitingRoom.contains(player))
 		{
@@ -444,7 +444,7 @@ public class DimensionalRift
 			// int rev = revivedInWaitingRoom.size();
 			// int min = Config.RIFT_MIN_PARTY_SIZE;
 			
-			for (PlayerInstance p : _party.getMembers())
+			for (Player p : _party.getMembers())
 			{
 				if ((p != null) && !_revivedInWaitingRoom.contains(p))
 				{
@@ -455,12 +455,12 @@ public class DimensionalRift
 		}
 	}
 	
-	public Collection<PlayerInstance> getDeadMemberList()
+	public Collection<Player> getDeadMemberList()
 	{
 		return _deadPlayers;
 	}
 	
-	public Collection<PlayerInstance> getRevivedAtWaitingRoom()
+	public Collection<Player> getRevivedAtWaitingRoom()
 	{
 		return _revivedInWaitingRoom;
 	}

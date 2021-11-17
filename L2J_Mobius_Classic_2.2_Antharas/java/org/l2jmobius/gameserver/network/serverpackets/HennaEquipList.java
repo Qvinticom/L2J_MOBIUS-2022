@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.HennaData;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,16 +29,16 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class HennaEquipList implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final List<Henna> _hennaEquipList;
 	
-	public HennaEquipList(PlayerInstance player)
+	public HennaEquipList(Player player)
 	{
 		_player = player;
 		_hennaEquipList = HennaData.getInstance().getHennaList(player.getClassId());
 	}
 	
-	public HennaEquipList(PlayerInstance player, List<Henna> list)
+	public HennaEquipList(Player player, List<Henna> list)
 	{
 		_player = player;
 		_hennaEquipList = list;

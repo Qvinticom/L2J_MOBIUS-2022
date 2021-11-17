@@ -27,8 +27,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
@@ -90,7 +90,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 	 * @param item the item
 	 * @return the HP bonus
 	 */
-	public int getHPBonus(ItemInstance item)
+	public int getHPBonus(Item item)
 	{
 		final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalTypePlus());
 		if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0))
@@ -99,7 +99,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 		}
 		
 		final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-		if (item.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR)
+		if (item.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)
 		{
 			return (int) (bonus * FULL_ARMOR_MODIFIER);
 		}

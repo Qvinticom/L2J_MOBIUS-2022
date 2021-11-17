@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,10 +29,10 @@ public class GetOnVehicle implements IClientOutgoingPacket
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	private final PlayerInstance _player;
-	private final BoatInstance _boat;
+	private final Player _player;
+	private final Boat _boat;
 	
-	public GetOnVehicle(PlayerInstance player, BoatInstance boat, int x, int y, int z)
+	public GetOnVehicle(Player player, Boat boat, int x, int y, int z)
 	{
 		_player = player;
 		_boat = boat;

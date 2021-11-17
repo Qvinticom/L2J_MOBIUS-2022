@@ -20,15 +20,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
 public class Radar
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final List<RadarMarker> _markers;
 	
-	public Radar(PlayerInstance player)
+	public Radar(Player player)
 	{
 		_player = player;
 		_markers = new ArrayList<>();
@@ -103,10 +103,10 @@ public class Radar
 	
 	public class RadarOnPlayer implements Runnable
 	{
-		private final PlayerInstance _myTarget;
-		private final PlayerInstance _me;
+		private final Player _myTarget;
+		private final Player _me;
 		
-		public RadarOnPlayer(PlayerInstance target, PlayerInstance me)
+		public RadarOnPlayer(Player target, Player me)
 		{
 			_me = me;
 			_myTarget = target;

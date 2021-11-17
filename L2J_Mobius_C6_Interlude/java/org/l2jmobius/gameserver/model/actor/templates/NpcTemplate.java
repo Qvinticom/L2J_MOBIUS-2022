@@ -116,10 +116,10 @@ public class NpcTemplate extends CreatureTemplate
 	
 	private final StatSet _npcStatSet;
 	
-	/** The table containing all Item that can be dropped by NpcInstance using this NpcTemplate */
+	/** The table containing all Item that can be dropped by Npc using this NpcTemplate */
 	private final List<DropCategory> _categories = new ArrayList<>();
 	
-	/** The table containing all Minions that must be spawn with the NpcInstance using this NpcTemplate */
+	/** The table containing all Minions that must be spawn with the Npc using this NpcTemplate */
 	private final List<MinionData> _minions = new ArrayList<>();
 	
 	private final List<ClassId> _teachInfo = new ArrayList<>();
@@ -286,7 +286,7 @@ public class NpcTemplate extends CreatureTemplate
 	}
 	
 	/**
-	 * Return the list of all Minions that must be spawn with the NpcInstance using this NpcTemplate.
+	 * Return the list of all Minions that must be spawn with the Npc using this NpcTemplate.
 	 * @return
 	 */
 	public List<MinionData> getMinionData()

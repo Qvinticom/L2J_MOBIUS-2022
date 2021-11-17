@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -64,7 +64,7 @@ public class CharacterSelected implements IClientIncomingPacket
 				if (client.getPlayer() == null)
 				{
 					// Load up character from disk
-					final PlayerInstance cha = client.loadCharFromDisk(_charSlot);
+					final Player cha = client.loadCharFromDisk(_charSlot);
 					if (cha == null)
 					{
 						LOGGER.warning("Character could not be loaded (slot:" + _charSlot + ")");

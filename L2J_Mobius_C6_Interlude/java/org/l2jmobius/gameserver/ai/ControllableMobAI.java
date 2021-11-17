@@ -30,12 +30,12 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Creature.AIAccessor;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -186,7 +186,7 @@ public class ControllableMobAI extends AttackableAI
 		
 		_actor.setTarget(target);
 		// as a response, we put the target in a forced attack mode
-		final ControllableMobInstance theTarget = (ControllableMobInstance) target;
+		final ControllableMob theTarget = (ControllableMob) target;
 		final ControllableMobAI ctrlAi = (ControllableMobAI) theTarget.getAI();
 		ctrlAi.forceAttack(_actor);
 		
@@ -271,17 +271,17 @@ public class ControllableMobAI extends AttackableAI
 		else
 		{
 			// notify aggression
-			if (((NpcInstance) _actor).getFactionId() != null)
+			if (((Npc) _actor).getFactionId() != null)
 			{
 				for (WorldObject obj : _actor.getKnownList().getKnownObjects().values())
 				{
-					if (!(obj instanceof NpcInstance))
+					if (!(obj instanceof Npc))
 					{
 						continue;
 					}
 					
-					final NpcInstance npc = (NpcInstance) obj;
-					final String factionId = ((NpcInstance) _actor).getFactionId();
+					final Npc npc = (Npc) obj;
+					final String factionId = ((Npc) _actor).getFactionId();
 					if (!factionId.equalsIgnoreCase(npc.getFactionId()))
 					{
 						continue;
@@ -381,7 +381,7 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		
-		if ((target instanceof FolkInstance) || (target instanceof DoorInstance))
+		if ((target instanceof Folk) || (target instanceof Door))
 		{
 			return false;
 		}
@@ -398,13 +398,13 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		
-		// Check if the target is a PlayerInstance and if the target isn't in silent move mode
-		if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving())
+		// Check if the target is a Player and if the target isn't in silent move mode
+		if ((target instanceof Player) && ((Player) target).isSilentMoving())
 		{
 			return false;
 		}
 		
-		if (target instanceof NpcInstance)
+		if (target instanceof Npc)
 		{
 			return false;
 		}
@@ -459,7 +459,7 @@ public class ControllableMobAI extends AttackableAI
 		return potentialTarget.get(choice);
 	}
 	
-	private ControllableMobInstance findNextGroupTarget()
+	private ControllableMob findNextGroupTarget()
 	{
 		return getGroupTarget().getRandomMob();
 	}

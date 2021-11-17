@@ -20,7 +20,7 @@ import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
@@ -63,7 +63,7 @@ public class GroupSpawn extends Spawn
 			newlocy = getY();
 			newlocz = getZ();
 			
-			final Npc mob = new ControllableMobInstance(_template);
+			final Npc mob = new ControllableMob(_template);
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
 			mob.setHeading(getHeading() == -1 ? Rnd.get(61794) : getHeading());
 			mob.setSpawn(this);

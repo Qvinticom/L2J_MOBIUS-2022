@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -67,7 +67,7 @@ public class PAccuracyFinalizer implements IStatFunction
 		if (creature.isPlayer())
 		{
 			// Enchanted gloves bonus
-			baseValue += calcEnchantBodyPart(creature, Item.SLOT_GLOVES);
+			baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_GLOVES);
 		}
 		
 		// Shadow sense

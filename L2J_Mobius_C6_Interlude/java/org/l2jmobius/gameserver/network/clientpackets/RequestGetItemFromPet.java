@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -46,8 +46,8 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		if ((player == null) || (player.getPet() == null) || !(player.getPet() instanceof PetInstance))
+		final Player player = client.getPlayer();
+		if ((player == null) || (player.getPet() == null) || !(player.getPet() instanceof Pet))
 		{
 			return;
 		}
@@ -58,7 +58,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 			return;
 		}
 		
-		final PetInstance pet = (PetInstance) player.getPet();
+		final Pet pet = (Pet) player.getPet();
 		if (player.getActiveEnchantItem() != null)
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " Tried To Use Enchant Exploit , And Got Banned!", IllegalPlayerAction.PUNISH_KICKBAN);

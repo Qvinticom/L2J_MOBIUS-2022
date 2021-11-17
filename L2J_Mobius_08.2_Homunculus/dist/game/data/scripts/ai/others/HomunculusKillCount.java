@@ -19,7 +19,7 @@ package ai.others;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -44,13 +44,13 @@ public class HomunculusKillCount extends AbstractNpcAI
 		final Creature creature = event.getTarget();
 		if ((creature != null) && creature.isMonster())
 		{
-			final PlayerInstance player = event.getAttacker().getActingPlayer();
+			final Player player = event.getAttacker().getActingPlayer();
 			if ((player != null) && (Math.abs(player.getLevel() - creature.getLevel()) <= LEVEL_DIFFERENCE))
 			{
 				if (player.isInParty())
 				{
 					final Party party = player.getParty();
-					for (PlayerInstance member : party.getMembers())
+					for (Player member : party.getMembers())
 					{
 						if (member.isInsideRadius3D(creature, Config.ALT_PARTY_RANGE))
 						{

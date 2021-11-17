@@ -30,7 +30,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
@@ -65,7 +65,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
 		
@@ -232,12 +232,12 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "ClanHallAuctioneer.html";
 	}
 	
-	private void processClanHallBypass(PlayerInstance player, Npc npc, BypassParser parser)
+	private void processClanHallBypass(Player player, Npc npc, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);
@@ -312,7 +312,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 		}
 	}
 	
-	private void processBidBypass(PlayerInstance player, Npc npc, BypassParser parser)
+	private void processBidBypass(Player player, Npc npc, BypassParser parser)
 	{
 		final int clanHallId = parser.getInt("id", 0);
 		final long bid = parser.getLong("bid", 0);
@@ -381,7 +381,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				if (bidder.isPresent())
 				{
 					auction.returnAdenas(bidder.get());
-					final PlayerInstance leader = bidder.get().getClan().getLeader().getPlayerInstance();
+					final Player leader = bidder.get().getClan().getLeader().getPlayer();
 					if ((leader != null) && leader.isOnline())
 					{
 						leader.sendPacket(SystemMessageId.YOU_HAVE_BEEN_OUTBID);
@@ -396,7 +396,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 		}
 	}
 	
-	private void processBiddersBypass(PlayerInstance player, Npc npc, BypassParser parser)
+	private void processBiddersBypass(Player player, Npc npc, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);

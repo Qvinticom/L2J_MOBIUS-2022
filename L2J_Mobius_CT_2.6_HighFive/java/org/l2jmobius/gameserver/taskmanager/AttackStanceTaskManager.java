@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 
 /**
@@ -103,9 +103,9 @@ public class AttackStanceTaskManager implements Runnable
 		
 		if (creature.isPlayable())
 		{
-			for (CubicInstance cubic : creature.getActingPlayer().getCubics().values())
+			for (Cubic cubic : creature.getActingPlayer().getCubics().values())
 			{
-				if (cubic.getId() != CubicInstance.LIFE_CUBIC)
+				if (cubic.getId() != Cubic.LIFE_CUBIC)
 				{
 					cubic.doAction();
 				}

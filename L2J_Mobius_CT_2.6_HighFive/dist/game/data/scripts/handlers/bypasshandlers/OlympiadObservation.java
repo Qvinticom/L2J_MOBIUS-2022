@@ -21,12 +21,11 @@ import java.util.logging.Level;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.OlympiadManagerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.OlympiadManager;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchList;
 
@@ -42,7 +41,7 @@ public class OlympiadObservation implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, PlayerInstance player, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		try
 		{
@@ -59,7 +58,7 @@ public class OlympiadObservation implements IBypassHandler
 			}
 			else
 			{
-				if ((olymanager == null) || !(olymanager instanceof OlympiadManagerInstance))
+				if ((olymanager == null) || !(olymanager instanceof OlympiadManager))
 				{
 					return false;
 				}
@@ -69,7 +68,7 @@ public class OlympiadObservation implements IBypassHandler
 					return false;
 				}
 				
-				if (OlympiadManager.getInstance().isRegisteredInComp(player))
+				if (org.l2jmobius.gameserver.model.olympiad.OlympiadManager.getInstance().isRegisteredInComp(player))
 				{
 					player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 					return false;

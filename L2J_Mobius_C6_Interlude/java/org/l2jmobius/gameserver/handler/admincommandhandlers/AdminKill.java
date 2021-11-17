@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -42,7 +42,7 @@ public class AdminKill implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_kill"))
 		{
@@ -51,7 +51,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final PlayerInstance plyr = World.getInstance().getPlayer(firstParam);
+				final Player plyr = World.getInstance().getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -61,7 +61,7 @@ public class AdminKill implements IAdminCommandHandler
 							final int radius = Integer.parseInt(st.nextToken());
 							for (Creature knownChar : plyr.getKnownList().getKnownCharactersInRadius(radius))
 							{
-								if ((knownChar == null) || (knownChar instanceof ControllableMobInstance) || knownChar.equals(activeChar))
+								if ((knownChar == null) || (knownChar instanceof ControllableMob) || knownChar.equals(activeChar))
 								{
 									continue;
 								}
@@ -87,7 +87,7 @@ public class AdminKill implements IAdminCommandHandler
 						final int radius = Integer.parseInt(firstParam);
 						for (Creature knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 						{
-							if ((knownChar == null) || (knownChar instanceof ControllableMobInstance) || knownChar.equals(activeChar))
+							if ((knownChar == null) || (knownChar instanceof ControllableMob) || knownChar.equals(activeChar))
 							{
 								continue;
 							}
@@ -108,7 +108,7 @@ public class AdminKill implements IAdminCommandHandler
 			else
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj == null) || (obj instanceof ControllableMobInstance) || !(obj instanceof Creature))
+				if ((obj == null) || (obj instanceof ControllableMob) || !(obj instanceof Creature))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
@@ -122,12 +122,12 @@ public class AdminKill implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void kill(PlayerInstance activeChar, Creature target)
+	private void kill(Player activeChar, Creature target)
 	{
-		if (target instanceof PlayerInstance)
+		if (target instanceof Player)
 		{
 			// e.g. invincibility effect
-			if (!((PlayerInstance) target).isGM())
+			if (!((Player) target).isGM())
 			{
 				target.stopAllEffects();
 			}

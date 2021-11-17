@@ -23,12 +23,12 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantResultType;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -59,7 +59,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if ((player == null) || (_objectId == 0))
 		{
 			return;
@@ -67,23 +67,23 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		
 		if (!player.isOnline() || client.isDetached())
 		{
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			return;
 		}
 		
 		if (player.isProcessingTransaction() || player.isInStoreMode())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
-		ItemInstance support = player.getInventory().getItemByObjectId(player.getActiveEnchantSupportItemId());
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
+		Item scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
+		Item support = player.getInventory().getItemByObjectId(player.getActiveEnchantSupportItemId());
 		if ((item == null) || (scroll == null))
 		{
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			return;
 		}
 		
@@ -102,7 +102,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		{
 			if (support.getObjectId() != _supportId)
 			{
-				player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+				player.setActiveEnchantItemId(Player.ID_NONE);
 				return;
 			}
 			supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
@@ -112,7 +112,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel())))
 		{
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			player.sendPacket(new EnchantResult(2, 0, 0));
 			return;
 		}
@@ -121,7 +121,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if ((player.getActiveEnchantTimestamp() == 0) || ((Chronos.currentTimeMillis() - player.getActiveEnchantTimestamp()) < 2000))
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			player.sendPacket(new EnchantResult(2, 0, 0));
 			return;
 		}
@@ -132,7 +132,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 			player.sendPacket(new EnchantResult(2, 0, 0));
 			return;
 		}
@@ -145,7 +145,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			{
 				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
-				player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+				player.setActiveEnchantItemId(Player.ID_NONE);
 				player.sendPacket(new EnchantResult(2, 0, 0));
 				return;
 			}
@@ -158,7 +158,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			if ((item.getOwnerId() != player.getObjectId()) || !item.isEnchantable())
 			{
 				player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+				player.setActiveEnchantItemId(Player.ID_NONE);
 				player.sendPacket(new EnchantResult(2, 0, 0));
 				return;
 			}
@@ -169,14 +169,14 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				case ERROR:
 				{
 					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-					player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+					player.setActiveEnchantItemId(Player.ID_NONE);
 					player.sendPacket(new EnchantResult(2, 0, 0));
 					break;
 				}
 				case SUCCESS:
 				{
 					Skill enchant4Skill = null;
-					final Item it = item.getItem();
+					final ItemTemplate it = item.getItem();
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(player, item) > 0)
 					{
@@ -286,7 +286,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								player.sendPacket(sm);
 							}
 							
-							for (ItemInstance itm : player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot()))
+							for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot()))
 							{
 								iu.addModifiedItem(itm);
 							}
@@ -332,7 +332,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							{
 								// unable to destroy item, cheater ?
 								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
-								player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+								player.setActiveEnchantItemId(Player.ID_NONE);
 								player.sendPacket(new EnchantResult(2, 0, 0));
 								if (Config.LOG_ITEM_ENCHANTS)
 								{
@@ -450,7 +450,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			}
 			
 			player.broadcastUserInfo();
-			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.setActiveEnchantItemId(Player.ID_NONE);
 		}
 	}
 }

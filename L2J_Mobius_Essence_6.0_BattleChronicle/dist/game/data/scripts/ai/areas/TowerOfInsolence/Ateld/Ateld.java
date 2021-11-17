@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -50,7 +50,7 @@ public class Ateld extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		switch (event)
 		{
@@ -60,7 +60,7 @@ public class Ateld extends AbstractNpcAI
 				{
 					return "31714-01.html";
 				}
-				for (PlayerInstance member : player.getCommandChannel().getMembers())
+				for (Player member : player.getCommandChannel().getMembers())
 				{
 					if ((member != null) && (member.getLevel() > 70))
 					{
@@ -80,7 +80,7 @@ public class Ateld extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
+	public String onFirstTalk(Npc npc, Player player)
 	{
 		return "31714.html";
 	}

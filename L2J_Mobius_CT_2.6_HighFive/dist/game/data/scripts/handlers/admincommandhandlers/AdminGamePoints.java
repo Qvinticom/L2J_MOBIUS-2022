@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
@@ -39,7 +39,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_add_game_points"))
 		{
@@ -60,7 +60,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
-				final PlayerInstance target = (PlayerInstance) activeChar.getTarget();
+				final Player target = (Player) activeChar.getTarget();
 				activeChar.sendMessage(target.getName() + " has a total of " + target.getGamePoints() + " game points.");
 			}
 			else
@@ -105,20 +105,20 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void openGamePointsMenu(PlayerInstance activeChar)
+	private void openGamePointsMenu(Player activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/admin/game_points.htm");
 		activeChar.sendPacket(html);
 	}
 	
-	private boolean addGamePoints(PlayerInstance admin, String value)
+	private boolean addGamePoints(Player admin, String value)
 	{
 		final WorldObject target = admin.getTarget();
-		PlayerInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -148,13 +148,13 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean setGamePoints(PlayerInstance admin, String value)
+	private boolean setGamePoints(Player admin, String value)
 	{
 		final WorldObject target = admin.getTarget();
-		PlayerInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{
@@ -174,13 +174,13 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean subtractGamePoints(PlayerInstance admin, String value)
+	private boolean subtractGamePoints(Player admin, String value)
 	{
 		final WorldObject target = admin.getTarget();
-		PlayerInstance player = null;
+		Player player = null;
 		if (target.isPlayer())
 		{
-			player = (PlayerInstance) target;
+			player = (Player) target;
 		}
 		else
 		{

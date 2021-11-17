@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -82,13 +82,13 @@ public class AirBind extends AbstractEffect
 	}
 	
 	@Override
-	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (!ACTIVE_AIRBINDS.contains(effected))
 		{
 			ACTIVE_AIRBINDS.add(effected);
 			
-			// for (PlayerInstance nearbyPlayer : World.getInstance().getVisibleObjectsInRange(effected, PlayerInstance.class, 1200))
+			// for (Player nearbyPlayer : World.getInstance().getVisibleObjectsInRange(effected, Player.class, 1200))
 			// {
 			// if ((nearbyPlayer.getRace() != Race.ERTHEIA) && (nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearbyPlayer.isAlterSkillActive())
 			// {

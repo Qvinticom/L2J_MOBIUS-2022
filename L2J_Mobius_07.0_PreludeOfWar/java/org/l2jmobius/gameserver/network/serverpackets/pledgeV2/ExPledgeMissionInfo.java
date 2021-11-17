@@ -21,7 +21,7 @@ import java.util.Collection;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -30,10 +30,10 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPledgeMissionInfo implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
 	
-	public ExPledgeMissionInfo(PlayerInstance player)
+	public ExPledgeMissionInfo(Player player)
 	{
 		_player = player;
 		_rewards = DailyMissionData.getInstance().getDailyMissionData(player);

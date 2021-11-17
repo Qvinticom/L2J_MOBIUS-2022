@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -60,14 +60,14 @@ public class OlympiadStadiumZone extends ZoneType
 		character.setInsideZone(ZoneId.NO_RESTART, true);
 		character.setInsideZone(ZoneId.NO_BOOKMARK, true);
 		
-		if (character instanceof PlayerInstance)
+		if (character instanceof Player)
 		{
 			character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
 		}
 		
 		if (character instanceof Playable)
 		{
-			final PlayerInstance player = character.getActingPlayer();
+			final Player player = character.getActingPlayer();
 			// only participants, observers and GMs allowed
 			if ((player != null) && !player.isGM() && !player.isInOlympiadMode() && !player.inObserverMode())
 			{
@@ -89,7 +89,7 @@ public class OlympiadStadiumZone extends ZoneType
 		character.setInsideZone(ZoneId.NO_RESTART, false);
 		character.setInsideZone(ZoneId.NO_BOOKMARK, false);
 		
-		if (character instanceof PlayerInstance)
+		if (character instanceof Player)
 		{
 			character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}

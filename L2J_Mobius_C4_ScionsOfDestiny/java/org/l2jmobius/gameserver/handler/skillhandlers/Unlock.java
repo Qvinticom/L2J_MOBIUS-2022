@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Chest;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -53,9 +53,9 @@ public class Unlock implements ISkillHandler
 		{
 			final WorldObject target = element;
 			final boolean success = Formulas.getInstance().calculateUnlockChance(skill);
-			if (target instanceof DoorInstance)
+			if (target instanceof Door)
 			{
-				final DoorInstance door = (DoorInstance) target;
+				final Door door = (Door) target;
 				if (!door.isUnlockable())
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED));
@@ -74,9 +74,9 @@ public class Unlock implements ISkillHandler
 					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR));
 				}
 			}
-			else if (target instanceof ChestInstance)
+			else if (target instanceof Chest)
 			{
-				final ChestInstance chest = (ChestInstance) element;
+				final Chest chest = (Chest) element;
 				if ((chest.getCurrentHp() <= 0) || chest.isInteracted())
 				{
 					creature.sendPacket(ActionFailed.STATIC_PACKET);

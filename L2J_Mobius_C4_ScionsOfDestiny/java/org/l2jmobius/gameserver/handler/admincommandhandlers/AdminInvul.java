@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -35,7 +35,7 @@ public class AdminInvul implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.equals("admin_invul"))
 		{
@@ -51,9 +51,9 @@ public class AdminInvul implements IAdminCommandHandler
 		if (command.equals("admin_setinvul"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if (target instanceof PlayerInstance)
+			if (target instanceof Player)
 			{
-				handleInvul((PlayerInstance) target);
+				handleInvul((Player) target);
 			}
 		}
 		
@@ -66,7 +66,7 @@ public class AdminInvul implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleInvul(PlayerInstance activeChar)
+	private void handleInvul(Player activeChar)
 	{
 		String text;
 		if (activeChar.isInvul())

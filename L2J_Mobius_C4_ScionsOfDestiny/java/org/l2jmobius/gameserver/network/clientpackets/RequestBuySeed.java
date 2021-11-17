@@ -23,10 +23,10 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ManorManager;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -82,7 +82,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		int slots = 0;
 		int totalWeight = 0;
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -100,12 +100,12 @@ public class RequestBuySeed implements IClientIncomingPacket
 		}
 		
 		WorldObject target = player.getTarget();
-		if (!(target instanceof ManorManagerInstance))
+		if (!(target instanceof ManorManager))
 		{
 			target = player.getLastFolkNPC();
 		}
 		
-		if (!(target instanceof ManorManagerInstance))
+		if (!(target instanceof ManorManager))
 		{
 			return;
 		}
@@ -133,7 +133,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			
 			totalPrice += count * price;
 			
-			final Item template = ItemTable.getInstance().getTemplate(seedId);
+			final ItemTemplate template = ItemTable.getInstance().getTemplate(seedId);
 			totalWeight += count * template.getWeight();
 			if (!template.isStackable())
 			{
@@ -193,7 +193,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			}
 			
 			// Add item to Inventory and adjust update packet
-			final ItemInstance item = player.getInventory().addItem("Buy", seedId, count, player, target);
+			final Item item = player.getInventory().addItem("Buy", seedId, count, player, target);
 			if (item.getCount() > count)
 			{
 				playerIU.addModifiedItem(item);

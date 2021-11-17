@@ -22,9 +22,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -82,7 +82,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(Player player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		if (firstEnter)
@@ -101,7 +101,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		if (event.equals("enter"))
 		{
@@ -155,7 +155,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -166,7 +166,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 				{
 					if ((damage > 0) && npc.isScriptValue(0))
 					{
-						World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 600, monster ->
+						World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 600, monster ->
 						{
 							monster.addDamageHate(npc, 0, 999);
 							monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
@@ -238,7 +238,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -252,7 +252,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	@Override
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if ((creature.isPlayer()) && !creature.isDead() && !creature.isTeleporting() && ((PlayerInstance) creature).isOnline())
+		if ((creature.isPlayer()) && !creature.isDead() && !creature.isTeleporting() && ((Player) creature).isOnline())
 		{
 			final Instance world = creature.getInstanceWorld();
 			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
@@ -272,7 +272,7 @@ public class PailakaDevilsLegacy extends AbstractInstance
 			{
 				if ((summon.getTemplate().getId() == TIGRESS_LEVEL1) || (summon.getTemplate().getId() == TIGRESS_LEVEL2))
 				{
-					summon.unSummon(((PlayerInstance) creature));
+					summon.unSummon(((Player) creature));
 				}
 			});
 		}

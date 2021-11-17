@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.TradeManager;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -44,7 +44,7 @@ public class AdminReload implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_reload"))
 		{
@@ -136,7 +136,7 @@ public class AdminReload implements IAdminCommandHandler
 	 * send reload page
 	 * @param activeChar
 	 */
-	private void sendReloadPage(PlayerInstance activeChar)
+	private void sendReloadPage(Player activeChar)
 	{
 		AdminHelpPage.showHelpPage(activeChar, "reload_menu.htm");
 	}

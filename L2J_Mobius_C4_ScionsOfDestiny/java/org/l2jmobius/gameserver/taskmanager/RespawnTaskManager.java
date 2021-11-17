@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 /**
@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
  */
 public class RespawnTaskManager implements Runnable
 {
-	private static final Map<NpcInstance, Long> PENDING_RESPAWNS = new ConcurrentHashMap<>();
+	private static final Map<Npc, Long> PENDING_RESPAWNS = new ConcurrentHashMap<>();
 	private static boolean _working = false;
 	
 	protected RespawnTaskManager()
@@ -48,11 +48,11 @@ public class RespawnTaskManager implements Runnable
 		_working = true;
 		
 		final long time = Chronos.currentTimeMillis();
-		for (Entry<NpcInstance, Long> entry : PENDING_RESPAWNS.entrySet())
+		for (Entry<Npc, Long> entry : PENDING_RESPAWNS.entrySet())
 		{
 			if (time > entry.getValue().longValue())
 			{
-				final NpcInstance npc = entry.getKey();
+				final Npc npc = entry.getKey();
 				PENDING_RESPAWNS.remove(npc);
 				final Spawn spawn = npc.getSpawn();
 				if (spawn != null)
@@ -66,7 +66,7 @@ public class RespawnTaskManager implements Runnable
 		_working = false;
 	}
 	
-	public void add(NpcInstance npc, long time)
+	public void add(Npc npc, long time)
 	{
 		PENDING_RESPAWNS.put(npc, time);
 	}

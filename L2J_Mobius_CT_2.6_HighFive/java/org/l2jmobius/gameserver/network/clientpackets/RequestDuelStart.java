@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelAskStart;
@@ -44,8 +44,8 @@ public class RequestDuelStart implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
-		final PlayerInstance targetChar = World.getInstance().getPlayer(_player);
+		final Player player = client.getPlayer();
+		final Player targetChar = World.getInstance().getPlayer(_player);
 		if (player == null)
 		{
 			return;
@@ -104,7 +104,7 @@ public class RequestDuelStart implements IClientIncomingPacket
 			}
 			
 			// Check if every player is ready for a duel
-			for (PlayerInstance temp : player.getParty().getMembers())
+			for (Player temp : player.getParty().getMembers())
 			{
 				if (!temp.canDuel())
 				{
@@ -112,8 +112,8 @@ public class RequestDuelStart implements IClientIncomingPacket
 					return;
 				}
 			}
-			PlayerInstance partyLeader = null; // snatch party leader of targetChar's party
-			for (PlayerInstance temp : targetChar.getParty().getMembers())
+			Player partyLeader = null; // snatch party leader of targetChar's party
+			for (Player temp : targetChar.getParty().getMembers())
 			{
 				if (partyLeader == null)
 				{

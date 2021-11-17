@@ -17,9 +17,9 @@
 package quests.Q10971_TalismanEnchant;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -49,7 +49,7 @@ public class Q10971_TalismanEnchant extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -89,7 +89,7 @@ public class Q10971_TalismanEnchant extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -100,7 +100,7 @@ public class Q10971_TalismanEnchant extends Quest
 		else if (qs.isStarted())
 		{
 			boolean foundEnchant = false;
-			SEARCH: for (ItemInstance item : player.getInventory().getAllItemsByItemId(TALISMAN_OF_ADEN.getId()))
+			SEARCH: for (Item item : player.getInventory().getAllItemsByItemId(TALISMAN_OF_ADEN.getId()))
 			{
 				if (item.getEnchantLevel() > 0)
 				{

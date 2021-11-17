@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -38,7 +38,7 @@ public class AdminVitality implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -57,7 +57,7 @@ public class AdminVitality implements IAdminCommandHandler
 		final String cmd = st.nextToken();
 		if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 		{
-			final PlayerInstance target = (PlayerInstance) activeChar.getTarget();
+			final Player target = (Player) activeChar.getTarget();
 			if (cmd.equals("admin_set_vitality"))
 			{
 				try

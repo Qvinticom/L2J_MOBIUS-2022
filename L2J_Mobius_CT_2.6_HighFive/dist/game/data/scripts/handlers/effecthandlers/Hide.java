@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -41,7 +41,7 @@ public class Hide extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			final PlayerInstance player = info.getEffected().getActingPlayer();
+			final Player player = info.getEffected().getActingPlayer();
 			if (!player.inObserverMode())
 			{
 				player.setInvisible(false);
@@ -54,7 +54,7 @@ public class Hide extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			final PlayerInstance player = info.getEffected().getActingPlayer();
+			final Player player = info.getEffected().getActingPlayer();
 			player.setInvisible(true);
 			
 			if ((player.getAI().getNextIntention() != null) && (player.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))

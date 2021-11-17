@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.templates;
 
-public class Armor extends Item
+public class Armor extends ItemTemplate
 {
 	public static final int ARMORTYPE_NONE = 1;
 	public static final int ARMORTYPE_LIGHT = 2;

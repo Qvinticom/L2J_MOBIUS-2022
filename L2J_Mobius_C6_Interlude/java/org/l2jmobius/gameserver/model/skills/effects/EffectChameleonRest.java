@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -42,11 +42,11 @@ public class EffectChameleonRest extends Effect
 	public void onStart()
 	{
 		final Creature effected = getEffected();
-		if (effected instanceof PlayerInstance)
+		if (effected instanceof Player)
 		{
 			setChameleon(true);
-			((PlayerInstance) effected).setSilentMoving(true);
-			((PlayerInstance) effected).sitDown();
+			((Player) effected).setSilentMoving(true);
+			((Player) effected).sitDown();
 		}
 		else
 		{
@@ -60,9 +60,9 @@ public class EffectChameleonRest extends Effect
 		setChameleon(false);
 		
 		final Creature effected = getEffected();
-		if (effected instanceof PlayerInstance)
+		if (effected instanceof Player)
 		{
-			((PlayerInstance) effected).setSilentMoving(false);
+			((Player) effected).setSilentMoving(false);
 		}
 	}
 	
@@ -82,7 +82,7 @@ public class EffectChameleonRest extends Effect
 			return false;
 		}
 		
-		if ((effected instanceof PlayerInstance) && !((PlayerInstance) effected).isSitting())
+		if ((effected instanceof Player) && !((Player) effected).isSitting())
 		{
 			retval = false;
 		}
@@ -109,9 +109,9 @@ public class EffectChameleonRest extends Effect
 	private void setChameleon(boolean value)
 	{
 		final Creature effected = getEffected();
-		if (effected instanceof PlayerInstance)
+		if (effected instanceof Player)
 		{
-			((PlayerInstance) effected).setRelax(value);
+			((Player) effected).setRelax(value);
 		}
 	}
 }

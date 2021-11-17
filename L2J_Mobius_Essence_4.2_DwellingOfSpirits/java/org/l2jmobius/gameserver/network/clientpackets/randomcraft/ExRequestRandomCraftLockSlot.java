@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.network.clientpackets.randomcraft;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerRandomCraft;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftRandomInfo;
@@ -56,7 +56,7 @@ public class ExRequestRandomCraftLockSlot implements IClientIncomingPacket
 			return;
 		}
 		
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -69,7 +69,7 @@ public class ExRequestRandomCraftLockSlot implements IClientIncomingPacket
 			if (((rc.getRewards().size() - 1) >= _id) && (lockedItemCount < 3))
 			{
 				int price = LOCK_PRICE[Math.min(lockedItemCount, 2)];
-				ItemInstance lcoin = player.getInventory().getItemByItemId(Inventory.LCOIN_ID);
+				Item lcoin = player.getInventory().getItemByItemId(Inventory.LCOIN_ID);
 				if ((lcoin != null) && (lcoin.getCount() >= price))
 				{
 					player.destroyItem("RandomCraft Lock Slot", lcoin, price, player, true);

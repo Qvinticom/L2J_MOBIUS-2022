@@ -31,14 +31,14 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -67,7 +67,7 @@ public class UseItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance player = client.getPlayer();
+		final Player player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -97,13 +97,13 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			return;
 		}
 		
-		if (item.getItem().getType2() == Item.TYPE2_QUEST)
+		if (item.getItem().getType2() == ItemTemplate.TYPE2_QUEST)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
 			return;
@@ -200,9 +200,9 @@ public class UseItem implements IClientIncomingPacket
 			
 			switch (item.getItem().getBodyPart())
 			{
-				case Item.SLOT_LR_HAND:
-				case Item.SLOT_L_HAND:
-				case Item.SLOT_R_HAND:
+				case ItemTemplate.SLOT_LR_HAND:
+				case ItemTemplate.SLOT_L_HAND:
+				case ItemTemplate.SLOT_R_HAND:
 				{
 					// Prevent players to equip weapon while wearing combat flag
 					if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819))
@@ -269,13 +269,13 @@ public class UseItem implements IClientIncomingPacket
 					}
 					break;
 				}
-				case Item.SLOT_CHEST:
-				case Item.SLOT_BACK:
-				case Item.SLOT_GLOVES:
-				case Item.SLOT_FEET:
-				case Item.SLOT_HEAD:
-				case Item.SLOT_FULL_ARMOR:
-				case Item.SLOT_LEGS:
+				case ItemTemplate.SLOT_CHEST:
+				case ItemTemplate.SLOT_BACK:
+				case ItemTemplate.SLOT_GLOVES:
+				case ItemTemplate.SLOT_FEET:
+				case ItemTemplate.SLOT_HEAD:
+				case ItemTemplate.SLOT_FULL_ARMOR:
+				case ItemTemplate.SLOT_LEGS:
 				{
 					if ((player.getRace() == Race.KAMAEL) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.MAGIC)))
 					{
@@ -284,7 +284,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 					break;
 				}
-				case Item.SLOT_DECO:
+				case ItemTemplate.SLOT_DECO:
 				{
 					if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 					{
@@ -319,7 +319,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				player.broadcastUserInfo();
-				// Send a Server->Client packet ItemList to this PlayerInstance to update left hand equipment.
+				// Send a Server->Client packet ItemList to this Player to update left hand equipment.
 				client.sendPacket(new ItemList(player, false));
 				return;
 			}
@@ -345,7 +345,7 @@ public class UseItem implements IClientIncomingPacket
 		}
 	}
 	
-	private void reuseData(PlayerInstance player, ItemInstance item, long remainingTime)
+	private void reuseData(Player player, Item item, long remainingTime)
 	{
 		final int hours = (int) (remainingTime / 3600000);
 		final int minutes = (int) (remainingTime % 3600000) / 60000;
@@ -373,7 +373,7 @@ public class UseItem implements IClientIncomingPacket
 		player.sendPacket(sm);
 	}
 	
-	private void sendSharedGroupUpdate(PlayerInstance player, int group, long remaining, int reuse)
+	private void sendSharedGroupUpdate(Player player, int group, long remaining, int reuse)
 	{
 		if (group > 0)
 		{

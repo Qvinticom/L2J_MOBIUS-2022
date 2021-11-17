@@ -34,11 +34,11 @@ import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IParseBoardHandler;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
@@ -140,7 +140,7 @@ public class DropSearchBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
+	public boolean parseCommunityBoardCommand(String command, Player player)
 	{
 		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
 		final String[] params = command.split(" ");
@@ -197,7 +197,7 @@ public class DropSearchBoard implements IParseBoardHandler
 					}
 					else
 					{
-						final Item item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
+						final ItemTemplate item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
 						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
 						{
 							rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId);
@@ -339,8 +339,8 @@ public class DropSearchBoard implements IParseBoardHandler
 	{
 		int limit = 0;
 		final Set<Integer> existInDropData = DROP_INDEX_CACHE.keySet();
-		final List<Item> items = new ArrayList<>();
-		for (Item item : ItemTable.getInstance().getAllItems())
+		final List<ItemTemplate> items = new ArrayList<>();
+		for (ItemTemplate item : ItemTable.getInstance().getAllItems())
 		{
 			if (item == null)
 			{
@@ -373,7 +373,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		
 		final StringBuilder builder = new StringBuilder(items.size() * 28);
 		int i = 0;
-		for (Item item : items)
+		for (ItemTemplate item : items)
 		{
 			i++;
 			if (i == 1)

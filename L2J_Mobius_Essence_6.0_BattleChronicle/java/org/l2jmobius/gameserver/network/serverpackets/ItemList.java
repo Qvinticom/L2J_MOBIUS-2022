@@ -20,21 +20,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ItemList extends AbstractItemPacket
 {
 	private final int _sendType;
-	private final PlayerInstance _player;
-	private final List<ItemInstance> _items = new ArrayList<>();
+	private final Player _player;
+	private final List<Item> _items = new ArrayList<>();
 	
-	public ItemList(int sendType, PlayerInstance player)
+	public ItemList(int sendType, Player player)
 	{
 		_sendType = sendType;
 		_player = player;
-		for (ItemInstance item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (!item.isQuestItem())
 			{
@@ -52,7 +52,7 @@ public class ItemList extends AbstractItemPacket
 			packet.writeC(_sendType);
 			packet.writeD(_items.size());
 			packet.writeD(_items.size());
-			for (ItemInstance item : _items)
+			for (Item item : _items)
 			{
 				writeItem(packet, item);
 			}

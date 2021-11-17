@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -124,7 +124,7 @@ public class Q00372_LegacyOfInsolence extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final int chance = getRandom(100);
@@ -443,7 +443,7 @@ public class Q00372_LegacyOfInsolence extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestItemHolder item = MONSTER_REWARDS.get(npc.getId());
 		if (npc.getId() == HALLATES_INSPECTOR)
@@ -462,7 +462,7 @@ public class Q00372_LegacyOfInsolence extends Quest
 		
 		if (Util.checkIfInRange(1500, npc, killer, true) && (getRandom(1000) < item.getChance()))
 		{
-			PlayerInstance rewardedPlayer = null;
+			Player rewardedPlayer = null;
 			if (!killer.isInParty())
 			{
 				final QuestState qs = getQuestState(killer, false);
@@ -474,7 +474,7 @@ public class Q00372_LegacyOfInsolence extends Quest
 			else
 			{
 				int chance = 0;
-				for (PlayerInstance partyMember : killer.getParty().getMembers())
+				for (Player partyMember : killer.getParty().getMembers())
 				{
 					final QuestState partyMemberQuestState = getQuestState(partyMember, false);
 					if ((partyMemberQuestState != null) && partyMemberQuestState.isStarted())
@@ -500,7 +500,7 @@ public class Q00372_LegacyOfInsolence extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, PlayerInstance player)
+	public String onTalk(Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int chance = getRandom(100);

@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
-import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.ControllableMob;
+import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -43,7 +43,7 @@ public class AdminKill implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		if (command.startsWith("admin_kill"))
 		{
@@ -52,7 +52,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final PlayerInstance plyr = World.getInstance().getPlayer(firstParam);
+				final Player plyr = World.getInstance().getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -62,7 +62,7 @@ public class AdminKill implements IAdminCommandHandler
 							final int radius = Integer.parseInt(st.nextToken());
 							World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
 							{
-								if ((knownChar instanceof ControllableMobInstance) || (knownChar instanceof FriendlyNpcInstance) || (knownChar == activeChar))
+								if ((knownChar instanceof ControllableMob) || (knownChar instanceof FriendlyNpc) || (knownChar == activeChar))
 								{
 									return;
 								}
@@ -88,7 +88,7 @@ public class AdminKill implements IAdminCommandHandler
 						final int radius = Integer.parseInt(firstParam);
 						World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
-							if ((wo instanceof ControllableMobInstance) || (wo instanceof FriendlyNpcInstance))
+							if ((wo instanceof ControllableMob) || (wo instanceof FriendlyNpc))
 							{
 								return;
 							}
@@ -108,7 +108,7 @@ public class AdminKill implements IAdminCommandHandler
 			else
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj instanceof ControllableMobInstance) || !obj.isCreature())
+				if ((obj instanceof ControllableMob) || !obj.isCreature())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
@@ -121,7 +121,7 @@ public class AdminKill implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void kill(PlayerInstance activeChar, Creature target)
+	private void kill(Player activeChar, Creature target)
 	{
 		if (target.isPlayer())
 		{

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,7 +29,7 @@ public class ExCubeGameExtendedChangePoints implements IClientOutgoingPacket
 	int _bluePoints;
 	int _redPoints;
 	boolean _isRedTeam;
-	PlayerInstance _player;
+	Player _player;
 	int _playerPoints;
 	
 	/**
@@ -41,7 +41,7 @@ public class ExCubeGameExtendedChangePoints implements IClientOutgoingPacket
 	 * @param player Player Instance
 	 * @param playerPoints Current Player Points
 	 */
-	public ExCubeGameExtendedChangePoints(int timeLeft, int bluePoints, int redPoints, boolean isRedTeam, PlayerInstance player, int playerPoints)
+	public ExCubeGameExtendedChangePoints(int timeLeft, int bluePoints, int redPoints, boolean isRedTeam, Player player, int playerPoints)
 	{
 		_timeLeft = timeLeft;
 		_bluePoints = bluePoints;

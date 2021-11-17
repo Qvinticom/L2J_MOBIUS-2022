@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PetItemList implements IClientOutgoingPacket
 {
-	private final Collection<ItemInstance> _items;
+	private final Collection<Item> _items;
 	
-	public PetItemList(PetInstance character)
+	public PetItemList(Pet character)
 	{
 		_items = character.getInventory().getItems();
 	}
@@ -41,7 +41,7 @@ public class PetItemList implements IClientOutgoingPacket
 		OutgoingPackets.PET_ITEM_LIST.writeId(packet);
 		
 		packet.writeH(_items.size());
-		for (ItemInstance temp : _items)
+		for (Item temp : _items)
 		{
 			packet.writeH(temp.getItem().getType1()); // item type1
 			packet.writeD(temp.getObjectId());

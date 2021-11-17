@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
@@ -42,7 +42,7 @@ class EffectHealOverTime extends Effect
 			return false;
 		}
 		
-		if (getEffected() instanceof DoorInstance)
+		if (getEffected() instanceof Door)
 		{
 			return false;
 		}

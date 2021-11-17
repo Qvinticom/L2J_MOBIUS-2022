@@ -23,21 +23,21 @@ import java.util.Map.Entry;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.CropProcure;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class SellListProcure implements IClientOutgoingPacket
 {
 	private final long _money;
-	private final Map<ItemInstance, Long> _sellList = new HashMap<>();
+	private final Map<Item, Long> _sellList = new HashMap<>();
 	
-	public SellListProcure(PlayerInstance player, int castleId)
+	public SellListProcure(Player player, int castleId)
 	{
 		_money = player.getAdena();
 		for (CropProcure c : CastleManorManager.getInstance().getCropProcure(castleId, false))
 		{
-			final ItemInstance item = player.getInventory().getItemByItemId(c.getId());
+			final Item item = player.getInventory().getItemByItemId(c.getId());
 			if ((item != null) && (c.getAmount() > 0))
 			{
 				_sellList.put(item, c.getAmount());
@@ -53,9 +53,9 @@ public class SellListProcure implements IClientOutgoingPacket
 		packet.writeD(0x00); // lease ?
 		packet.writeH(_sellList.size()); // list size
 		
-		for (Entry<ItemInstance, Long> entry : _sellList.entrySet())
+		for (Entry<Item, Long> entry : _sellList.entrySet())
 		{
-			final ItemInstance item = entry.getKey();
+			final Item item = entry.getKey();
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getDisplayId());

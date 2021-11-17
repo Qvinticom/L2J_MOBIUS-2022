@@ -19,18 +19,18 @@ package org.l2jmobius.gameserver.network.serverpackets.elementalspirits;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author JoeAlisson
  */
 public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiritPacket
 {
-	private final PlayerInstance _player;
+	private final Player _player;
 	private final byte _type;
 	private final boolean _update;
 	
-	UpdateElementalSpiritPacket(PlayerInstance player, byte type, boolean update)
+	UpdateElementalSpiritPacket(Player player, byte type, boolean update)
 	{
 		_player = player;
 		_type = type;

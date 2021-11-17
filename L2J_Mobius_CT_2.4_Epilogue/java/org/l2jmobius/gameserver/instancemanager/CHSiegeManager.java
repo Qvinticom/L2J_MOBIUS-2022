@@ -26,9 +26,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.clanhalls.ClanHallSiegeEngine;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
@@ -73,7 +74,7 @@ public class CHSiegeManager
 				set.set("scheduleConfig", rs.getString("schedule_config"));
 				final SiegableHall hall = new SiegableHall(set);
 				_siegableHalls.put(id, hall);
-				ClanHallManager.addClanHall(hall);
+				ClanHallTable.addClanHall(hall);
 			}
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _siegableHalls.size() + " conquerable clan halls.");
 		}
@@ -118,7 +119,7 @@ public class CHSiegeManager
 		return hall == null ? null : hall.getSiege();
 	}
 	
-	public void registerClan(Clan clan, SiegableHall hall, PlayerInstance player)
+	public void registerClan(Clan clan, SiegableHall hall, Player player)
 	{
 		if (clan.getLevel() < Config.CHS_CLAN_MINLEVEL)
 		{
