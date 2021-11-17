@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * Double Casting effect implementation.

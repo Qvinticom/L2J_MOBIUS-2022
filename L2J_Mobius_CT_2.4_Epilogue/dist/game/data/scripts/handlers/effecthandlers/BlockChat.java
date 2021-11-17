@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
-import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.skill.BuffInfo;
 
 /**
  * Block Chat effect implementation.

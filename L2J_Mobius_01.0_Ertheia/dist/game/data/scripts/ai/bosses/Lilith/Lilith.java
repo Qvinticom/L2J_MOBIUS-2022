@@ -42,8 +42,8 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.holders.SpawnHolder;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
-import org.l2jmobius.gameserver.model.skills.AbnormalType;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.AbnormalType;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 

@@ -20,7 +20,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.skills.SkillCastingType;
+import org.l2jmobius.gameserver.model.skill.SkillCastingType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ActionFailed implements IClientOutgoingPacket

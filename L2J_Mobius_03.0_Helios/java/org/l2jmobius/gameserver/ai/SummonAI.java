@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.skills.SkillCaster;
+import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.SkillCaster;
 
 public class SummonAI extends PlayableAI implements Runnable
 {

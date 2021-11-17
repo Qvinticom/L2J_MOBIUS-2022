@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.skill.BuffInfo;
 
 /**
  * Escape effect implementation.

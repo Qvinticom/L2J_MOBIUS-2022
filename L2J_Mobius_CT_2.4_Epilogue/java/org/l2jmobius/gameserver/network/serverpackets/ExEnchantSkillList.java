@@ -20,7 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExEnchantSkillList implements IClientOutgoingPacket

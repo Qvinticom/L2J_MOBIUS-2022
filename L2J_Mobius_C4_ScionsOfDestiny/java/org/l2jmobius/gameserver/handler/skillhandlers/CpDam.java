@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skills.Formulas;
+import org.l2jmobius.gameserver.model.skill.Formulas;
 
 /**
  * Just a quick draft to support Wrath skill. Missing angle based calculation etc.

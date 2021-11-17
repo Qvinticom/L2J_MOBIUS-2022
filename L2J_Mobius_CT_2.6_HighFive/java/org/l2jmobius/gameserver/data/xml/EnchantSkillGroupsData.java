@@ -30,9 +30,9 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * This class holds the Enchant Groups information.

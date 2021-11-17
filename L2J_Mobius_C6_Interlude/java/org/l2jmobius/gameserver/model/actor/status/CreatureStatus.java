@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
-import org.l2jmobius.gameserver.model.skills.Formulas;
+import org.l2jmobius.gameserver.model.skill.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class CreatureStatus

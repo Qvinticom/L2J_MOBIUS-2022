@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.Calculator;
-import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.Stat;
+import org.l2jmobius.gameserver.model.skill.Calculator;
+import org.l2jmobius.gameserver.model.skill.Env;
+import org.l2jmobius.gameserver.model.skill.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 public class CreatureStat

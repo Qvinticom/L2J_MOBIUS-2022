@@ -23,7 +23,7 @@ import java.util.Collections;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.SkillCastingType;
+import org.l2jmobius.gameserver.model.skill.SkillCastingType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

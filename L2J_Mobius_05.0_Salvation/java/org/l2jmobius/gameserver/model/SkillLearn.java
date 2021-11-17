@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * @author Zoey76

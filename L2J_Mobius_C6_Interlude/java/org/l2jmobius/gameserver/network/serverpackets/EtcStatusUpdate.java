@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
+import org.l2jmobius.gameserver.model.skill.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 

@@ -27,10 +27,10 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.effects.EffectTemplate;
-import org.l2jmobius.gameserver.model.skills.funcs.Func;
-import org.l2jmobius.gameserver.model.skills.funcs.FuncTemplate;
+import org.l2jmobius.gameserver.model.skill.Env;
+import org.l2jmobius.gameserver.model.skill.effects.EffectTemplate;
+import org.l2jmobius.gameserver.model.skill.funcs.Func;
+import org.l2jmobius.gameserver.model.skill.funcs.FuncTemplate;
 
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<br>

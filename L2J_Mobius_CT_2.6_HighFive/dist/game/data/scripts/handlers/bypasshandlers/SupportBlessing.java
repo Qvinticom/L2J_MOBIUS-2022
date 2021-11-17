@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skills.CommonSkill;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
 
 public class SupportBlessing implements IBypassHandler
 {

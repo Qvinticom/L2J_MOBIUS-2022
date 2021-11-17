@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.model.skills.SkillCaster;
+import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 
 import quests.Q10353_CertificationOfValue.Q10353_CertificationOfValue;

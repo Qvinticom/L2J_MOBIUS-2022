@@ -44,7 +44,7 @@ import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.skills.funcs.Func;
+import org.l2jmobius.gameserver.model.skill.funcs.Func;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;

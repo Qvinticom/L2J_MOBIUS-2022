@@ -80,7 +80,7 @@ import org.l2jmobius.gameserver.model.item.type.ItemType;
 import org.l2jmobius.gameserver.model.options.EnchantOptions;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;

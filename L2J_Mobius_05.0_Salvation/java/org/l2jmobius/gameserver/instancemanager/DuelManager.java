@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class DuelManager

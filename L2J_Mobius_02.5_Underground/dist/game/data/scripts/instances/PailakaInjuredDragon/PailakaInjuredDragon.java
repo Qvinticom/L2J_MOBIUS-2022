@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFacti
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.model.skills.AbnormalType;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.AbnormalType;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.TeleportZone;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;

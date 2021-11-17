@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.Trap;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**

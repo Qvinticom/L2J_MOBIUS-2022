@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.model.instancezone.conditions.ConditionGroupMax;
 import org.l2jmobius.gameserver.model.instancezone.conditions.ConditionGroupMin;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 

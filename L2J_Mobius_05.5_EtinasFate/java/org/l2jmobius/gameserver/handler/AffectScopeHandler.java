@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.handler;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
 
 /**
  * @author Nik

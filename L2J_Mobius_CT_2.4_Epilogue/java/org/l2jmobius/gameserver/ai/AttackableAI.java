@@ -58,9 +58,9 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAtta
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.skills.targets.TargetType;
+import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;

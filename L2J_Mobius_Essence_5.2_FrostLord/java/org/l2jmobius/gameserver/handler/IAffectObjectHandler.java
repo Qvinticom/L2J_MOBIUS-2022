@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
+import org.l2jmobius.gameserver.model.skill.targets.AffectObject;
 
 /**
  * @author Nik

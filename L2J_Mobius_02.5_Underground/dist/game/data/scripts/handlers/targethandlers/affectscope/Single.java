@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
-import org.l2jmobius.gameserver.model.skills.targets.TargetType;
+import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
+import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 
 /**
  * Single target affect scope implementation.

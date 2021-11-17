@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.tasks.creature;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * Task dedicated to magic use of character

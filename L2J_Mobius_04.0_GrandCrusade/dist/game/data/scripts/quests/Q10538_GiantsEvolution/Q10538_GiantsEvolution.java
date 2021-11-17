@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * GiantΞ�οΏ½Ξ’Β²Ξ�Β²Ξ²β‚¬οΏ½Ξ’Β¬Ξ�Β²Ξ²β‚¬οΏ½Ξ�β€ s Evolution (10538)

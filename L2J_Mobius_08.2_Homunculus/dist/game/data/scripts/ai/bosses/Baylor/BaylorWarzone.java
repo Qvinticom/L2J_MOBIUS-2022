@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 import instances.AbstractInstance;

@@ -34,10 +34,10 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
-import org.l2jmobius.gameserver.model.skills.Env;
-import org.l2jmobius.gameserver.model.skills.conditions.ConditionGameChance;
-import org.l2jmobius.gameserver.model.skills.funcs.Func;
-import org.l2jmobius.gameserver.model.skills.funcs.FuncTemplate;
+import org.l2jmobius.gameserver.model.skill.Env;
+import org.l2jmobius.gameserver.model.skill.conditions.ConditionGameChance;
+import org.l2jmobius.gameserver.model.skill.funcs.Func;
+import org.l2jmobius.gameserver.model.skill.funcs.FuncTemplate;
 
 /**
  * This class is dedicated to the management of weapons.

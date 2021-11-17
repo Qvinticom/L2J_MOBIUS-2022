@@ -43,11 +43,11 @@ import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.handler.SkillConditionHandler;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skills.CommonSkill;
-import org.l2jmobius.gameserver.model.skills.EffectScope;
-import org.l2jmobius.gameserver.model.skills.ISkillCondition;
-import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.skills.SkillConditionScope;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.model.skill.EffectScope;
+import org.l2jmobius.gameserver.model.skill.ISkillCondition;
+import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.SkillConditionScope;
 
 import net.objecthunter.exp4j.ExpressionBuilder;
 

@@ -22,7 +22,7 @@ import java.util.Collection;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewSkillInfo implements IClientOutgoingPacket

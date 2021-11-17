@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.actor.tasks.cubics.CubicDisappear;
 import org.l2jmobius.gameserver.model.actor.tasks.cubics.CubicHeal;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;

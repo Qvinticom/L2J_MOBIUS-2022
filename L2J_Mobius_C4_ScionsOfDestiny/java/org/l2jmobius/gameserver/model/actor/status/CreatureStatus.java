@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
-import org.l2jmobius.gameserver.model.skills.Formulas;
+import org.l2jmobius.gameserver.model.skill.Formulas;
 
 public class CreatureStatus
 {

@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.NpcStringId;
 

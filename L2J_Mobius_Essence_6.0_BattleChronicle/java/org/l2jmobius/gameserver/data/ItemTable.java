@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.model.skills.AmmunitionSkillList;
+import org.l2jmobius.gameserver.model.skill.AmmunitionSkillList;
 import org.l2jmobius.gameserver.util.DocumentItem;
 import org.l2jmobius.gameserver.util.GMAudit;
 

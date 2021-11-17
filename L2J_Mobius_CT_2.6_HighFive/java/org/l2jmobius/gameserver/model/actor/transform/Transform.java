@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 

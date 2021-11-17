@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * @author Mobius

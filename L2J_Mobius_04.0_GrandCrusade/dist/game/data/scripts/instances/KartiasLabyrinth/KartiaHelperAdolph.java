@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.skills.SkillCaster;
+import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;

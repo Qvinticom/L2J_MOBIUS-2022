@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLe
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
-import org.l2jmobius.gameserver.model.skills.CommonSkill;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
 
 import ai.AbstractNpcAI;
 

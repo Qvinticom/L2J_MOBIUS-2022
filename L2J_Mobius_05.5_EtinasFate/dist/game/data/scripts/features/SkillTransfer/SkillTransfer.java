@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfes
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;

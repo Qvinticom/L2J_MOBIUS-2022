@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableAttack;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableKill;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * This class extends Guard class for quests, that require tracking of onAttack and onKill events from monsters' attacks.

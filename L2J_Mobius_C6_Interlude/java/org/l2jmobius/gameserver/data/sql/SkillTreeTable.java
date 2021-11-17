@@ -39,8 +39,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2jmobius.gameserver.model.skills.holders.ISkillsHolder;
-import org.l2jmobius.gameserver.model.skills.holders.PlayerSkillHolder;
+import org.l2jmobius.gameserver.model.skill.holders.ISkillsHolder;
+import org.l2jmobius.gameserver.model.skill.holders.PlayerSkillHolder;
 
 /**
  * @version $Revision: 1.13.2.2.2.8 $ $Date: 2005/04/06 16:13:25 $

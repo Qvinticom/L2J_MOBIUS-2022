@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.interfaces;
 
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * @author UnAfraid

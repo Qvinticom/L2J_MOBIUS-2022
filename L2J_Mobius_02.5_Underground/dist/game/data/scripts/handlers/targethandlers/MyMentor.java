@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.skills.targets.TargetType;
+import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 
 /**
  * Target my mentor.

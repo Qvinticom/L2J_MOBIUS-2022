@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.item.type.ItemType;
 import org.l2jmobius.gameserver.model.item.type.MaterialType;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;

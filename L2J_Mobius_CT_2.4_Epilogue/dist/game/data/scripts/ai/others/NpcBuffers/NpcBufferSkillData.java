@@ -18,9 +18,9 @@ package ai.others.NpcBuffers;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
-import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.targets.AffectObject;
+import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
 
 /**
  * @author UnAfraid

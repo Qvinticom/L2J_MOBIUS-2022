@@ -37,8 +37,8 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate.Race;
-import org.l2jmobius.gameserver.model.skills.BaseStat;
-import org.l2jmobius.gameserver.model.skills.Stat;
+import org.l2jmobius.gameserver.model.skill.BaseStat;
+import org.l2jmobius.gameserver.model.skill.Stat;
 
 /**
  * @version $Revision: 1.8.2.6.2.9 $ $Date: 2005/04/06 16:13:25 $

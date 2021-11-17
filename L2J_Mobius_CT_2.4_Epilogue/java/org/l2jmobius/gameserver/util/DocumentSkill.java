@@ -28,8 +28,8 @@ import org.w3c.dom.Node;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.skills.EffectScope;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.EffectScope;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * @author mkizub

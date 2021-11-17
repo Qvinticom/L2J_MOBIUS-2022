@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * Simple class containing all necessary information to maintain<br>

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.VariationFee;
-import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public abstract class AbstractRefinePacket implements IClientIncomingPacket

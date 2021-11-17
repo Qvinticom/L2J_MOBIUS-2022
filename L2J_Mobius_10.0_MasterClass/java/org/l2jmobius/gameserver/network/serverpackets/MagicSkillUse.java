@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
-import org.l2jmobius.gameserver.model.skills.SkillCastingType;
+import org.l2jmobius.gameserver.model.skill.SkillCastingType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

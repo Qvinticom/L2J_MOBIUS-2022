@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.conditions;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * This condition becomes true whether the player is transformed and the transformation Id match the parameter or<br>

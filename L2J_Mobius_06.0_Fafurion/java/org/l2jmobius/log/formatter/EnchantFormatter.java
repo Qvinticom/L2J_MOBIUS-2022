@@ -25,7 +25,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 public class EnchantFormatter extends Formatter
 {

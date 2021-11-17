@@ -52,8 +52,8 @@ import org.l2jmobius.gameserver.model.holders.PlayerSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skills.CommonSkill;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>

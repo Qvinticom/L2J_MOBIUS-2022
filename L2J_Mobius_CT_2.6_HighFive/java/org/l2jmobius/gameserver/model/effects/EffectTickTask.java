@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.effects;
 
-import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.skill.BuffInfo;
 
 /**
  * Effect tick task.

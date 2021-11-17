@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.residences.AbstractResidence;
-import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.type.CastleZone;
 import org.l2jmobius.gameserver.model.zone.type.ResidenceTeleportZone;
 import org.l2jmobius.gameserver.model.zone.type.SiegeZone;

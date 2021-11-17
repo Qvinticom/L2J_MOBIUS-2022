@@ -49,6 +49,8 @@ import org.l2jmobius.gameserver.model.conditions.ConditionGameTime.CheckGameTime
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
+import org.l2jmobius.gameserver.model.skill.AbnormalType;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicAnd;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicNot;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicOr;
@@ -138,8 +140,6 @@ import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingSkill;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import org.l2jmobius.gameserver.model.conditions.ConditionWithSkill;
-import org.l2jmobius.gameserver.model.skills.AbnormalType;
-import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
