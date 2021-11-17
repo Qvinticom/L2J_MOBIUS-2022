@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 
 /**
  * @author Advi

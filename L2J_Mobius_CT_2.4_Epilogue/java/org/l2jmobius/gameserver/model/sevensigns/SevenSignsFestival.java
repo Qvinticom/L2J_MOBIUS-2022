@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonster;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;

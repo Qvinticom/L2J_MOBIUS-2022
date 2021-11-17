@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionCancel;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 

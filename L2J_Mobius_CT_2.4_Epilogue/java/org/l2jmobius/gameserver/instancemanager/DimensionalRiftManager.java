@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.DimensionalRiftRoom;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
 

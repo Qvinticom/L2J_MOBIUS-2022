@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
 
 /**

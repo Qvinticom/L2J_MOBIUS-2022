@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.SepulcherMonster;
 import org.l2jmobius.gameserver.model.actor.instance.SepulcherNpc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;

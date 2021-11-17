@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;

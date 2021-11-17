@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;

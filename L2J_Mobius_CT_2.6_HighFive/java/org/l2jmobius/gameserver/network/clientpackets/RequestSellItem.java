@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.holders.UniqueItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;

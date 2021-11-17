@@ -21,7 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;

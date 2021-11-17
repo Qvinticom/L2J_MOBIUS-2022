@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageDealt;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;

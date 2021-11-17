@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

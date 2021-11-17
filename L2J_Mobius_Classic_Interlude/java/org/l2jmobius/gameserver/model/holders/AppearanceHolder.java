@@ -18,11 +18,11 @@ package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceHandType;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceMagicType;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import org.l2jmobius.gameserver.model.items.type.ArmorType;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceHandType;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceMagicType;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceTargetType;
+import org.l2jmobius.gameserver.model.item.type.ArmorType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 
 /**
  * @author Sdw

@@ -24,9 +24,9 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.WarehouseItem;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.WarehouseItem;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * Get all information from Item to generate ItemInfo.

@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.multisell;
 
 import org.l2jmobius.gameserver.model.Elementals;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * @author DS

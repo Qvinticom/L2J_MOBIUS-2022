@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;

@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.model.item.Henna;
 
 /**
  * This class loads and stores {@link Henna}s infos. Hennas are called "dye" ingame.

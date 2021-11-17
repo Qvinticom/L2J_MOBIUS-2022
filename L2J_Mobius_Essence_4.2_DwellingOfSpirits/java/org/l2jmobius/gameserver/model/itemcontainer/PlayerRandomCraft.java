@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.data.xml.RandomCraftData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.RandomCraftRequest;
 import org.l2jmobius.gameserver.model.holders.RandomCraftRewardItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;

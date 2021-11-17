@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 

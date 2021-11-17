@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;

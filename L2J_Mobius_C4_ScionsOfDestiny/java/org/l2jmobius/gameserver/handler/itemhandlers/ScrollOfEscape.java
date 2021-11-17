@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;

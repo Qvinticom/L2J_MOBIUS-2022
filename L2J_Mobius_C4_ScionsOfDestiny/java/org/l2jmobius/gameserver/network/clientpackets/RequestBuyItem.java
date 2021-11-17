@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
 import org.l2jmobius.gameserver.model.actor.instance.MercManager;
 import org.l2jmobius.gameserver.model.actor.instance.Merchant;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;

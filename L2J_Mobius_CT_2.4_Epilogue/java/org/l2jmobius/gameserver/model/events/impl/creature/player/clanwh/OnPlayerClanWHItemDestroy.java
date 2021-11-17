@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.events.impl.creature.player.clanwh;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid

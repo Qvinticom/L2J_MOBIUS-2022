@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;

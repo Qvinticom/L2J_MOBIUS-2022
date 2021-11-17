@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;

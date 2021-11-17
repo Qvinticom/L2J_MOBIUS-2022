@@ -20,7 +20,7 @@ import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 import java.util.ArrayList;
 
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * @author DS

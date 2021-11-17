@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;

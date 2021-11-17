@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Deco;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.ClanHallSiege;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;

@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @version $Revision: 1.4.2.1.2.5 $ $Date: 2005/03/27 15:29:33 $

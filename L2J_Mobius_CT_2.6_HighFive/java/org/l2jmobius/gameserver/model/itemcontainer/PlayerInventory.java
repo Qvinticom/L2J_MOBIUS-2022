@@ -39,8 +39,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPl
 import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPlayerItemDestroy;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPlayerItemDrop;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPlayerItemTransfer;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;

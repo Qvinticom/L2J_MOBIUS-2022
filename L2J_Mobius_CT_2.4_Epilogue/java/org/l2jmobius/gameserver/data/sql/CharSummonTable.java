@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 

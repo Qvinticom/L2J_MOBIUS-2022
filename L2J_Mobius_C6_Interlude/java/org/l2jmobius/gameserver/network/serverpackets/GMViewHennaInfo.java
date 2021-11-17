@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewHennaInfo implements IClientOutgoingPacket

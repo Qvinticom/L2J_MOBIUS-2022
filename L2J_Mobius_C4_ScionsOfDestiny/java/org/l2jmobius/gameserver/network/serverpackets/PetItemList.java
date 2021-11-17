@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

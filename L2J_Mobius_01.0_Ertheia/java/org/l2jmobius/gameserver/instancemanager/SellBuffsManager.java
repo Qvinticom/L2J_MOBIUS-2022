@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;

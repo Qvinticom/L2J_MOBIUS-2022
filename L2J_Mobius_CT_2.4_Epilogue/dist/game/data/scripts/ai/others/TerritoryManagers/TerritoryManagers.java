@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;

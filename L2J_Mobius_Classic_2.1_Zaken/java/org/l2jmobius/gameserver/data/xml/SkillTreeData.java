@@ -51,7 +51,7 @@ import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 

@@ -47,8 +47,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**

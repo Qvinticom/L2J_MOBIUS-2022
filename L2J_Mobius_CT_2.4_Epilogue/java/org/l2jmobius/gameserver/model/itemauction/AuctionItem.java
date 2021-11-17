@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.itemauction;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * @author Forsaiken

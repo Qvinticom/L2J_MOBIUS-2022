@@ -28,7 +28,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * This class manages buylists from database

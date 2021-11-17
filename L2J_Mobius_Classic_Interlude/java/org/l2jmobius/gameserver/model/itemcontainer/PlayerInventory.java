@@ -40,9 +40,9 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemAd
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDestroy;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDrop;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemTransfer;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;

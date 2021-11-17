@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.enums.AttributeType;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class TradeItem
 {

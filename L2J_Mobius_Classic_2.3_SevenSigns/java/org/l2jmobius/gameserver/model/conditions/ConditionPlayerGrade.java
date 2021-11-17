@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.conditions;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**

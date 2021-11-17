@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 

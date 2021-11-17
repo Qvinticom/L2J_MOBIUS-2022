@@ -30,8 +30,8 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.ElementalItemType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ElementalItemHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author Mobius

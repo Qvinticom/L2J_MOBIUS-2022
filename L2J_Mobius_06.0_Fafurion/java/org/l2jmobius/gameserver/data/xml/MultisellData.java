@@ -44,8 +44,8 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantItemGroup;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
 public class MultisellData implements IXmlReader

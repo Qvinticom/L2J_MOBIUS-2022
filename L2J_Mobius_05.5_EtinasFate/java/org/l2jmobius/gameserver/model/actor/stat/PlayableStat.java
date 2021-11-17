@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 
 public class PlayableStat extends CreatureStat

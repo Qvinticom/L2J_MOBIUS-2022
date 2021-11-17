@@ -28,9 +28,9 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantSupportItem;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * Loads item enchant data.

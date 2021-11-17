@@ -31,9 +31,9 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.AppearanceHolder;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceStone;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceTargetType;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

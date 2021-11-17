@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
 import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.actor.instance.VillageMaster;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;

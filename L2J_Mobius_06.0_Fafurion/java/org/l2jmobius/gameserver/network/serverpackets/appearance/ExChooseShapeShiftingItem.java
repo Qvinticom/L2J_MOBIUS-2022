@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.serverpackets.appearance;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceStone;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceTargetType;
+import org.l2jmobius.gameserver.model.item.appearance.AppearanceType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.AugmentationData;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExVariationResult;

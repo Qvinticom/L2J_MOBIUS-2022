@@ -24,8 +24,8 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 
 /**

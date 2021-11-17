@@ -21,8 +21,8 @@ import java.util.Set;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 
 /**
  * @author Advi

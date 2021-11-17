@@ -23,11 +23,11 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.transform.TransformType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**
  * @author UnAfraid

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;

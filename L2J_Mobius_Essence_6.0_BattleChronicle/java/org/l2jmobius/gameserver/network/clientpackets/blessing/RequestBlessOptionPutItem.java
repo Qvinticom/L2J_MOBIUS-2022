@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.blessing;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;

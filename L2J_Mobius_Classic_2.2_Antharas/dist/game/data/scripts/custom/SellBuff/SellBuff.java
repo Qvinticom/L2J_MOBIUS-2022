@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.util.Util;
 

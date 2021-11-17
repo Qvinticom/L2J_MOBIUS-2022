@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;

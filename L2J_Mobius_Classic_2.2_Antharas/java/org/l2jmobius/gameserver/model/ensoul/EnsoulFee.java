@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.model.skills.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Env;
 
 /**

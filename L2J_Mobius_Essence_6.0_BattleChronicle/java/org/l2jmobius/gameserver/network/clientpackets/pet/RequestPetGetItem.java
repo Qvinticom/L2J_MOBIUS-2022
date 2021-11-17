@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;

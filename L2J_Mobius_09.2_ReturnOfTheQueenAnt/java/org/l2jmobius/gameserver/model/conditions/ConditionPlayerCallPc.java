@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;

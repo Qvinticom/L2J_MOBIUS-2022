@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 /**
  * Written by Berezkin Nikolay, on 04.05.2021

@@ -27,7 +27,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.ClanShopProductHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 /**
  * @author Mobius

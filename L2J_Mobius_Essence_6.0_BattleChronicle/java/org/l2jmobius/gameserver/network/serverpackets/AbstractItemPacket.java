@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import org.l2jmobius.gameserver.model.item.WarehouseItem;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.WarehouseItem;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid

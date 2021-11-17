@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.enums;
 
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

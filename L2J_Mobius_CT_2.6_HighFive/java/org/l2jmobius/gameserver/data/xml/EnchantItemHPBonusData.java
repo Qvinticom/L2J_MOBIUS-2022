@@ -29,9 +29,9 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.StatFunction;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 

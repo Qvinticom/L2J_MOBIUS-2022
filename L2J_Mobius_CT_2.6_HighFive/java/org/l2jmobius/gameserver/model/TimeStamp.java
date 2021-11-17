@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**

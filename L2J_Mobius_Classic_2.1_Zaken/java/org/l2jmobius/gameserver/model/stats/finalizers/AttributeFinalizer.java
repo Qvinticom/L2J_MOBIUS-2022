@@ -20,9 +20,9 @@ import java.util.OptionalDouble;
 
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.item.enchant.attribute.AttributeHolder;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
 

@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.FakePlayerTable;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 
 /**
  * This class manages Fake Player instances, they look like regular players. This effect will show up on all clients.

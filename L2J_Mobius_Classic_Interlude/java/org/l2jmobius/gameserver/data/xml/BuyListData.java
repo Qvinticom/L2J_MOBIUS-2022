@@ -36,8 +36,8 @@ import org.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * Loads buy lists for NPCs.

@@ -24,7 +24,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class ItemsAutoDestroyTaskManager implements Runnable
 {

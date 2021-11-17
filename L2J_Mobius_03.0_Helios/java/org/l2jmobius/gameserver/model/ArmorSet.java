@@ -24,9 +24,9 @@ import java.util.function.Function;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 
 /**

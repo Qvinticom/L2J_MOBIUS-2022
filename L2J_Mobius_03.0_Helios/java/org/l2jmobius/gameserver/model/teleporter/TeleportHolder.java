@@ -32,8 +32,8 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleportRequest;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 

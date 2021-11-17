@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.ensoul;
 
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

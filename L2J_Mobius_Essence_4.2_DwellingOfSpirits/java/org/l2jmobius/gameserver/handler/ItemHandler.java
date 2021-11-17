@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.handler;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.model.items.EtcItem;
+import org.l2jmobius.gameserver.model.item.EtcItem;
 
 /**
  * This class manages handlers of items

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad.COMP_TYPE;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;

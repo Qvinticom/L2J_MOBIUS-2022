@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrBuyProduct;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrGamePoint;

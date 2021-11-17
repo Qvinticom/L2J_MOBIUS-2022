@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonster;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.spawn.SpawnListener;
 import org.l2jmobius.gameserver.network.SystemMessageId;

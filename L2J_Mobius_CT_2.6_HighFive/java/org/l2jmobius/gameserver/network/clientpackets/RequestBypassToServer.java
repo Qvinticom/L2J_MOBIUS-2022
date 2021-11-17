@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Boat;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets.shuttle;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;

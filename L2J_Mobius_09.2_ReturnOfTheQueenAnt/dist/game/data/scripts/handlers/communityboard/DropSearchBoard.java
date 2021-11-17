@@ -37,8 +37,8 @@ import org.l2jmobius.gameserver.handler.IParseBoardHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.model.stats.Stat;
 

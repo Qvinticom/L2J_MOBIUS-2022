@@ -28,10 +28,10 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.holders.RangeChanceHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantRateItem;
-import org.l2jmobius.gameserver.model.items.enchant.EnchantScrollGroup;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantItemGroup;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantRateItem;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantScrollGroup;
 import org.l2jmobius.gameserver.util.Util;
 
 /**

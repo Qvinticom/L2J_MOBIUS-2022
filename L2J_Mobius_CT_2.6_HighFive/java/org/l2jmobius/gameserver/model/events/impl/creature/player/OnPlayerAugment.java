@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * @author UnAfraid

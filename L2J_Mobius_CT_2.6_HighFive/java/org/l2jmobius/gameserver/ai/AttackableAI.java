@@ -57,7 +57,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAtta
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableHate;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;

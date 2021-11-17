@@ -22,9 +22,9 @@ import java.util.List;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * A modified version of {@link MultisellListHolder} that may include altered data of the original and other dynamic data resulted from players' interraction.

@@ -23,8 +23,8 @@ import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 

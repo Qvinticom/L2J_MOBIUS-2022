@@ -67,8 +67,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttac
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;

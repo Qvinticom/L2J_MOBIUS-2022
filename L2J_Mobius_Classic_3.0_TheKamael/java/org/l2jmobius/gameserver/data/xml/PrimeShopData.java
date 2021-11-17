@@ -31,7 +31,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;

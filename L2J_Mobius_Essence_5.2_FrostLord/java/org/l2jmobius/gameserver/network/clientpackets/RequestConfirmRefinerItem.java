@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.VariationFee;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;

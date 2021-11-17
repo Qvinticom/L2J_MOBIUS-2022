@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.form.ZoneCuboid;

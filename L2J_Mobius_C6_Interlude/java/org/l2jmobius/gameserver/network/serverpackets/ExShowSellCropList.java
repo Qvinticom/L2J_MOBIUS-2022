@@ -24,7 +24,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

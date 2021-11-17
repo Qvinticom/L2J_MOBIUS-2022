@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 public class Seed
 {

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.zone;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * Abstract base class for any zone form

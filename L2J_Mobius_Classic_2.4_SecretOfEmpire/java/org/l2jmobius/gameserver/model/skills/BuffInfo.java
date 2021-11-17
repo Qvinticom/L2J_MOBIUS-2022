@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectTaskInfo;
 import org.l2jmobius.gameserver.model.effects.EffectTickTask;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;

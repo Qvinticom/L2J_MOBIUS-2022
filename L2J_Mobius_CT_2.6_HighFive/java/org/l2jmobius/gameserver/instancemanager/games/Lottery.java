@@ -30,7 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;

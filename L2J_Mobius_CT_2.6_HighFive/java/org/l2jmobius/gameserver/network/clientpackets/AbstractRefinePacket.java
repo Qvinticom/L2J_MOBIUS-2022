@@ -24,11 +24,11 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.Armor;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public abstract class AbstractRefinePacket implements IClientIncomingPacket

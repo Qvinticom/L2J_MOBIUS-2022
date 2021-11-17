@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 /**
  * @author mkizub, JIV
@@ -179,7 +179,7 @@ public class DocumentItem extends DocumentBase
 		
 		try
 		{
-			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatSet.class);
+			final Constructor<?> itemClass = Class.forName("org.l2jmobius.gameserver.model.item." + _currentItem.type).getConstructor(StatSet.class);
 			_currentItem.item = (ItemTemplate) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)

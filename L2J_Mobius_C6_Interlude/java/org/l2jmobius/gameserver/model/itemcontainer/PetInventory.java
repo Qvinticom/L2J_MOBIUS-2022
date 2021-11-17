@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.itemcontainer;
 
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
+import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 
 public class PetInventory extends Inventory
 {

@@ -54,7 +54,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.AttachSkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.targets.AffectObject;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;

@@ -47,11 +47,11 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.EventMonster;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
-import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.Armor;
+import org.l2jmobius.gameserver.model.item.EtcItem;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.util.DocumentItem;
 import org.l2jmobius.gameserver.util.GMAudit;
 

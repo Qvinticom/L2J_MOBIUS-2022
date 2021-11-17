@@ -55,7 +55,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;

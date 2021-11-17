@@ -35,8 +35,8 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 

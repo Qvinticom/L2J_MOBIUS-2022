@@ -20,7 +20,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

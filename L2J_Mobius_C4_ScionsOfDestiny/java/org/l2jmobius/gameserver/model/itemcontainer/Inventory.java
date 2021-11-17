@@ -31,14 +31,14 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.EtcItem;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.instance.Item.ItemLocation;
-import org.l2jmobius.gameserver.model.items.type.EtcItemType;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.item.Armor;
+import org.l2jmobius.gameserver.model.item.EtcItem;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
+import org.l2jmobius.gameserver.model.item.type.EtcItemType;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 
 /**
  * This class manages inventory

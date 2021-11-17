@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.Fence;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import org.l2jmobius.gameserver.network.serverpackets.DoorInfo;

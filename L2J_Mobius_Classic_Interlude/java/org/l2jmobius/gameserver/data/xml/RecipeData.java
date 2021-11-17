@@ -35,8 +35,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.model.holders.RecipeStatHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * The Class RecipeData.

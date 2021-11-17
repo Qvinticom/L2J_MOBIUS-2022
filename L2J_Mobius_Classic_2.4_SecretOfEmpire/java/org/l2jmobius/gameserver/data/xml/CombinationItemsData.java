@@ -26,9 +26,9 @@ import org.w3c.dom.Document;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.items.combination.CombinationItem;
-import org.l2jmobius.gameserver.model.items.combination.CombinationItemReward;
-import org.l2jmobius.gameserver.model.items.combination.CombinationItemType;
+import org.l2jmobius.gameserver.model.item.combination.CombinationItem;
+import org.l2jmobius.gameserver.model.item.combination.CombinationItemReward;
+import org.l2jmobius.gameserver.model.item.combination.CombinationItemType;
 
 /**
  * @author UnAfraid

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;

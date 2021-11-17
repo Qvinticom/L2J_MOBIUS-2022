@@ -30,7 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
 /**

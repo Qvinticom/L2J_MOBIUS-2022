@@ -23,7 +23,7 @@ import java.util.logging.LogRecord;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * @author Advi

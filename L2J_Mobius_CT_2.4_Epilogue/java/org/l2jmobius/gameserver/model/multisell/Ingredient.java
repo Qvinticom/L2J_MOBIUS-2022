@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.model.multisell;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.Armor;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * @author DS

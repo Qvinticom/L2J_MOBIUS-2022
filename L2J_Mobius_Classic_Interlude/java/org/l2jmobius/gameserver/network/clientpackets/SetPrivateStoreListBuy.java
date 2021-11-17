@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;

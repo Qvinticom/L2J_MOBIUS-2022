@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Defender;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**

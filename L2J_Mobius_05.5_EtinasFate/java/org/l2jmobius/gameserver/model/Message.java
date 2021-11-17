@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author Migi, DS

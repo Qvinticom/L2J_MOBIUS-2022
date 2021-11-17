@@ -17,7 +17,7 @@
 package handlers.itemhandlers;
 
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;

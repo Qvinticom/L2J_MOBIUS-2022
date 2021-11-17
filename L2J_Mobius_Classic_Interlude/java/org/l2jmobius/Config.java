@@ -65,7 +65,7 @@ import org.l2jmobius.gameserver.enums.GeoType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
 

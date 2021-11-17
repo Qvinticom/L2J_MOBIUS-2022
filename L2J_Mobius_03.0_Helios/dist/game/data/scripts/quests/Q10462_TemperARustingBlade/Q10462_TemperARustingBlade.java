@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;

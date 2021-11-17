@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

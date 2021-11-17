@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.items.instance.Item;
 
 /**
  * @author UnAfraid

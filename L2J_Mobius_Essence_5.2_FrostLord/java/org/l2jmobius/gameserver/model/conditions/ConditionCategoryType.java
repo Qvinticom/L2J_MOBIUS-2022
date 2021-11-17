@@ -20,7 +20,7 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**

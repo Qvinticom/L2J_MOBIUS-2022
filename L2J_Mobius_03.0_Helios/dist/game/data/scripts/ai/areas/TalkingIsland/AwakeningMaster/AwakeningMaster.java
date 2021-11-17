@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChangeToAwakenedClass;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.SystemMessageId;

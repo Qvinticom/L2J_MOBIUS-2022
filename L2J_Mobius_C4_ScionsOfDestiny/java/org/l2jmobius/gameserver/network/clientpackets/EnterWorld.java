@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.Quest;

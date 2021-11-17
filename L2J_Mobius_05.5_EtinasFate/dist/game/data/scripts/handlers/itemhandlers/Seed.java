@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Chest;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;

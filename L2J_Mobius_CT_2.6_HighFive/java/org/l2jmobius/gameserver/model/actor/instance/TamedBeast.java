@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;

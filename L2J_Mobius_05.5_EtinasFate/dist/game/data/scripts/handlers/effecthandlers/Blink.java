@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;

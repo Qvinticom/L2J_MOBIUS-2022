@@ -21,10 +21,10 @@ import java.util.List;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroCmd;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 /**

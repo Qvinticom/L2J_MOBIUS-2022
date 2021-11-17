@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKilled;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 

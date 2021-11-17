@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 

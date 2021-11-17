@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.HtmlUtil;
 import org.l2jmobius.gameserver.util.Util;

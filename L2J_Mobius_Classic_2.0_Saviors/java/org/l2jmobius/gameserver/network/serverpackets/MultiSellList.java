@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class MultiSellList extends AbstractItemPacket

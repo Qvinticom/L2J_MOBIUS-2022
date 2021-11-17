@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemEquip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.item.Weapon;
 
 import ai.AbstractNpcAI;
 

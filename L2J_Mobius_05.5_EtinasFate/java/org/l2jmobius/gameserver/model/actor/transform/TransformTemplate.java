@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 

@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.AttributeType;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 

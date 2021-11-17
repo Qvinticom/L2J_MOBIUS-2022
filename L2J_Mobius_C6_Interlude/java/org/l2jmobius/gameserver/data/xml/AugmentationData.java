@@ -35,7 +35,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**

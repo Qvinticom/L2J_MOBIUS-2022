@@ -20,7 +20,7 @@ import java.awt.geom.Line2D;
 
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
  * Abstract base class for any zone form

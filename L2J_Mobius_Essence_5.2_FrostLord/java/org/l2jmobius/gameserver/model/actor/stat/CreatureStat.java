@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.Position;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;

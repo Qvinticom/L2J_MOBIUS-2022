@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler;
 
 import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public interface IItemHandler
 {

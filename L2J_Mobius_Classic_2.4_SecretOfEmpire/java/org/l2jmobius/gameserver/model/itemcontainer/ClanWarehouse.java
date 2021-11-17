@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanWHItemAdd;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanWHItemDestroy;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanWHItemTransfer;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class ClanWarehouse extends Warehouse
 {

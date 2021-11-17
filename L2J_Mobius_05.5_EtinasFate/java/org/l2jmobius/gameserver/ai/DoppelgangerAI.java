@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.Doppelganger;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;

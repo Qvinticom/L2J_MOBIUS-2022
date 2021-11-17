@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 /**
  * @author Mobius

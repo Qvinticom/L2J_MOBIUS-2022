@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 
 public class TradeItem
 {

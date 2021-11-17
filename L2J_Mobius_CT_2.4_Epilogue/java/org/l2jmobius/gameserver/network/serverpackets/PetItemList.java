@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PetItemList implements IClientOutgoingPacket

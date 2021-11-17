@@ -33,11 +33,11 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.CrystallizationType;
 import org.l2jmobius.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import org.l2jmobius.gameserver.model.items.Armor;
-import org.l2jmobius.gameserver.model.items.ItemTemplate;
-import org.l2jmobius.gameserver.model.items.Weapon;
-import org.l2jmobius.gameserver.model.items.instance.Item;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.Armor;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
 import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;

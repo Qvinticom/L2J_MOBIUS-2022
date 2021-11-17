@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.model.ensoul.EnsoulFee;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulStone;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.items.Henna;
+import org.l2jmobius.gameserver.model.item.Henna;
 
 /**
  * This class holds the henna related information.<br>

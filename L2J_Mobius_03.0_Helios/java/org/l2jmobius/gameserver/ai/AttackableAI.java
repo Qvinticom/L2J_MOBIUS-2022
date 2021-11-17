@@ -52,7 +52,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFacti
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableHate;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.items.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
