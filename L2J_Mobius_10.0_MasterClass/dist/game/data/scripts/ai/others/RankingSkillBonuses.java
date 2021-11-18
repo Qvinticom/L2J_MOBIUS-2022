@@ -167,7 +167,7 @@ public class RankingSkillBonuses extends AbstractNpcAI
 		final int classRank = RankManager.getInstance().getPlayerClassRank(player);
 		if ((classRank > 0) && (classRank <= 10))
 		{
-			if ((player.getBaseClass() >= 148) && (player.getBaseClass() <= 151))
+			if ((player.getBaseClass() >= 148) && (player.getBaseClass() <= 151) || (player.getBaseClass() == 216))
 			{
 				SIGEL_RANK_BENEFIT.applyEffects(player, player);
 			}
