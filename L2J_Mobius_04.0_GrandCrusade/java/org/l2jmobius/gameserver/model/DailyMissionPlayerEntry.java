@@ -90,7 +90,7 @@ public class DailyMissionPlayerEntry
 		_lastCompleted = lastCompleted;
 	}
 	
-	public boolean getRecentlyCompleted()
+	public boolean isRecentlyCompleted()
 	{
 		return _recentlyCompleted;
 	}

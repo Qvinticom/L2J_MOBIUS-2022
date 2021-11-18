@@ -70,10 +70,10 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return entry != null ? entry.getProgress() : 0;
 	}
 	
-	public boolean getRecentlyCompleted(Player player)
+	public boolean isRecentlyCompleted(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
-		return (entry != null) && entry.getRecentlyCompleted();
+		return (entry != null) && entry.isRecentlyCompleted();
 	}
 	
 	public synchronized void reset()

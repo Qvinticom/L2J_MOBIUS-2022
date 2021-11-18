@@ -136,7 +136,7 @@ public class DailyMissionDataHolder
 		}
 		
 		// Show only if its repeatable, recently completed or incompleted that has met the checks above.
-		return (!_isOneTime || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
+		return (!_isOneTime || isRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
 	}
 	
 	public void requestReward(Player player)
@@ -157,9 +157,9 @@ public class DailyMissionDataHolder
 		return _handler != null ? _handler.getProgress(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
-	public boolean getRecentlyCompleted(Player player)
+	public boolean isRecentlyCompleted(Player player)
 	{
-		return (_handler != null) && _handler.getRecentlyCompleted(player);
+		return (_handler != null) && _handler.isRecentlyCompleted(player);
 	}
 	
 	public void reset()
