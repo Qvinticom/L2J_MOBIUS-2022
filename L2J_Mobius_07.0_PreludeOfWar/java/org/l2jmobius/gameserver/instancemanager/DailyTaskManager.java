@@ -27,9 +27,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
-import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
@@ -82,6 +80,7 @@ public class DailyTaskManager
 			clanLeaderApply();
 			resetVitalityWeekly();
 			resetClanContribution();
+			resetDailyMissionRewards();
 			resetTimedHuntingZonesWeekly();
 		}
 		else
@@ -94,7 +93,6 @@ public class DailyTaskManager
 		resetRecommends();
 		resetTrainingCamp();
 		resetTimedHuntingZones();
-		resetDailyMissionRewards();
 		resetAttendanceRewards();
 	}
 	
@@ -247,12 +245,12 @@ public class DailyTaskManager
 		}
 		
 		// Update data for online players.
-		World.getInstance().getPlayers().stream().forEach(player ->
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.setWorldChatUsed(0);
 			player.sendPacket(new ExWorldChatCnt(player));
 			player.getVariables().storeMe();
-		});
+		}
 		
 		LOGGER.info("Daily world chat points has been resetted.");
 	}
@@ -278,13 +276,13 @@ public class DailyTaskManager
 			LOGGER.log(Level.SEVERE, "Could not reset Recommendations System: ", e);
 		}
 		
-		World.getInstance().getPlayers().stream().forEach(player ->
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.setRecomLeft(0);
 			player.setRecomHave(player.getRecomHave() - 20);
 			player.sendPacket(new ExVoteSystemInfo(player));
 			player.broadcastUserInfo();
-		});
+		}
 	}
 	
 	private void resetTrainingCamp()
@@ -304,11 +302,11 @@ public class DailyTaskManager
 			}
 			
 			// Update data for online players.
-			World.getInstance().getPlayers().stream().forEach(player ->
+			for (Player player : World.getInstance().getPlayers())
 			{
 				player.resetTraingCampDuration();
 				player.getAccountVariables().storeMe();
-			});
+			}
 			
 			LOGGER.info("Training Camp daily time has been resetted.");
 		}
@@ -316,7 +314,26 @@ public class DailyTaskManager
 	
 	private void resetDailyMissionRewards()
 	{
-		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+		{
+			ps.setString(1, PlayerVariables.DAILY_MISSION_COUNT);
+			ps.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not reset Clan Mission Rewards: ", e);
+		}
+		
+		// Update data for online players.
+		for (Player player : World.getInstance().getPlayers())
+		{
+			player.getVariables().remove(PlayerVariables.DAILY_MISSION_COUNT);
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Clan Mission Rewards has been resetted.");
 	}
 	
 	private void resetClanContribution()
@@ -377,12 +394,12 @@ public class DailyTaskManager
 			}
 			
 			// Update data for online players.
-			World.getInstance().getPlayers().stream().forEach(player ->
+			for (Player player : World.getInstance().getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
 				player.getVariables().storeMe();
-			});
+			}
 		}
 		
 		LOGGER.info("Special Hunting Zones has been resetted.");
@@ -411,12 +428,12 @@ public class DailyTaskManager
 			}
 			
 			// Update data for online players.
-			World.getInstance().getPlayers().stream().forEach(player ->
+			for (Player player : World.getInstance().getPlayers())
 			{
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
 				player.getVariables().storeMe();
-			});
+			}
 		}
 		
 		LOGGER.info("Weekly Special Hunting Zones has been resetted.");

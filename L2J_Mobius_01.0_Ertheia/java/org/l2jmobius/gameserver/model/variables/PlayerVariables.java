@@ -25,8 +25,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
  * @author UnAfraid
@@ -85,7 +83,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -128,7 +126,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -155,14 +153,9 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
 			return false;
 		}
 		return true;
-	}
-	
-	public Player getPlayer()
-	{
-		return World.getInstance().getPlayer(_objectId);
 	}
 }

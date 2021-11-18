@@ -65,7 +65,7 @@ public class ExPledgeMissionInfo implements IClientOutgoingPacket
 				}
 				else
 				{
-					status = reward.getRecentlyCompleted(_player) ? 0 : 3;
+					status = reward.isRecentlyCompleted(_player) ? 0 : 3;
 				}
 			}
 			else if (status == 1)

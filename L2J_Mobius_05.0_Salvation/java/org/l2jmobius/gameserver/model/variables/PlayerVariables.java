@@ -20,17 +20,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -51,7 +45,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String VITALITY_ITEMS_USED_VARIABLE_NAME = "VITALITY_ITEMS_USED";
 	public static final String ATTENDANCE_DATE = "ATTENDANCE_DATE";
 	public static final String ATTENDANCE_INDEX = "ATTENDANCE_INDEX";
-	private static final String DAILY_MISSION_REWARDS = "DAILY_MISSION_REWARDS";
+	public static final String DAILY_MISSION_COUNT = "DAILY_MISSION_COUNT";
 	public static final String CEREMONY_OF_CHAOS_SCORE = "CEREMONY_OF_CHAOS_SCORE";
 	public static final String CEREMONY_OF_CHAOS_MARKS = "CEREMONY_OF_CHAOS_MARKS";
 	public static final String ABILITY_POINTS_MAIN_CLASS = "ABILITY_POINTS";
@@ -95,7 +89,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -138,7 +132,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -165,85 +159,9 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
 			return false;
 		}
 		return true;
-	}
-	
-	public Player getPlayer()
-	{
-		return World.getInstance().getPlayer(_objectId);
-	}
-	
-	public void addDailyMissionReward(int rewardId)
-	{
-		String result = getString(DAILY_MISSION_REWARDS, "");
-		if (result.isEmpty())
-		{
-			result = Integer.toString(rewardId);
-		}
-		else
-		{
-			result += "," + rewardId;
-		}
-		set(DAILY_MISSION_REWARDS, result);
-	}
-	
-	public void removeDailyMissionReward(int rewardId)
-	{
-		String result = "";
-		final String data = getString(DAILY_MISSION_REWARDS, "");
-		for (String s : data.split(","))
-		{
-			if (s.equals(Integer.toString(rewardId)))
-			{
-				continue;
-			}
-			if (result.isEmpty())
-			{
-				result = s;
-			}
-			else
-			{
-				result += "," + s;
-			}
-		}
-		set(DAILY_MISSION_REWARDS, result);
-	}
-	
-	public boolean hasDailyMissionReward(int rewardId)
-	{
-		final String data = getString(DAILY_MISSION_REWARDS, "");
-		for (String s : data.split(","))
-		{
-			if (s.equals(Integer.toString(rewardId)))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public List<Integer> getDailyMissionRewards()
-	{
-		List<Integer> rewards = null;
-		final String data = getString(DAILY_MISSION_REWARDS, "");
-		if (!data.isEmpty())
-		{
-			for (String s : getString(DAILY_MISSION_REWARDS, "").split(","))
-			{
-				if (Util.isDigit(s))
-				{
-					final int rewardId = Integer.parseInt(s);
-					if (rewards == null)
-					{
-						rewards = new ArrayList<>();
-					}
-					rewards.add(rewardId);
-				}
-			}
-		}
-		return rewards != null ? rewards : Collections.emptyList();
 	}
 }

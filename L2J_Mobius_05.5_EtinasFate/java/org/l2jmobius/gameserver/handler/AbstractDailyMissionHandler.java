@@ -34,9 +34,10 @@ import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
- * @author Sdw
+ * @author Sdw, NasSeKa
  */
 public abstract class AbstractDailyMissionHandler extends ListenersContainer
 {
@@ -77,7 +78,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return entry != null ? entry.getProgress() : 0;
 	}
 	
-	public boolean getRecentlyCompleted(Player player)
+	public boolean isRecentlyCompleted(Player player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return (entry != null) && entry.getRecentlyCompleted();
@@ -114,7 +115,17 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			giveRewards(player);
 			
 			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
-			entry.setStatus(DailyMissionStatus.COMPLETED);
+			if (!_holder.isOneTime())
+			{
+				int doneDailyMissions = player.getVariables().getInt(PlayerVariables.DAILY_MISSION_COUNT, 0);
+				player.getVariables().set(PlayerVariables.DAILY_MISSION_COUNT, doneDailyMissions + 1);
+				entry.setStatus(DailyMissionStatus.NOT_AVAILABLE);
+				entry.setProgress(0);
+			}
+			else
+			{
+				entry.setStatus(DailyMissionStatus.COMPLETED);
+			}
 			entry.setLastCompleted(Chronos.currentTimeMillis());
 			entry.setRecentlyCompleted(true);
 			storePlayerEntry(entry);

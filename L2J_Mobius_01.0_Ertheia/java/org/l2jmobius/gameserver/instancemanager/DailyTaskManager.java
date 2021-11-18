@@ -245,12 +245,12 @@ public class DailyTaskManager
 		}
 		
 		// Update data for online players.
-		World.getInstance().getPlayers().stream().forEach(player ->
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.setWorldChatUsed(0);
 			player.sendPacket(new ExWorldChatCnt(player));
 			player.getVariables().storeMe();
-		});
+		}
 		
 		LOGGER.info("Daily world chat points has been resetted.");
 	}
@@ -276,13 +276,13 @@ public class DailyTaskManager
 			LOGGER.log(Level.SEVERE, "Could not reset Recommendations System: ", e);
 		}
 		
-		World.getInstance().getPlayers().stream().forEach(player ->
+		for (Player player : World.getInstance().getPlayers())
 		{
 			player.setRecomLeft(0);
 			player.setRecomHave(player.getRecomHave() - 20);
 			player.sendPacket(new ExVoteSystemInfo(player));
 			player.broadcastUserInfo();
-		});
+		}
 	}
 	
 	private void resetTrainingCamp()
@@ -302,11 +302,11 @@ public class DailyTaskManager
 			}
 			
 			// Update data for online players.
-			World.getInstance().getPlayers().stream().forEach(player ->
+			for (Player player : World.getInstance().getPlayers())
 			{
 				player.resetTraingCampDuration();
 				player.getAccountVariables().storeMe();
-			});
+			}
 			
 			LOGGER.info("Training Camp daily time has been resetted.");
 		}
