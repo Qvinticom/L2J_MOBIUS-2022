@@ -118,6 +118,7 @@ import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusReady;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -399,6 +400,9 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send Adena / Inventory Count Info
 		player.sendPacket(new ExAdenaInvenCount(player));
+		
+		// Send Einhasad Coin count.
+		player.sendPacket(new ExBloodyCoinCount(player));
 		
 		// Send honor coin count.
 		player.sendPacket(new ExPledgeCoinInfo(player));
