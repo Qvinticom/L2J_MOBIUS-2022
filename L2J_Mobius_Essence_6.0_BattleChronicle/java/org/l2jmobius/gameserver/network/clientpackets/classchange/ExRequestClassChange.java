@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeSetAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 
 /**
@@ -232,6 +233,13 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			player.broadcastUserInfo();
 			player.sendSkillList();
 			player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
+			
+			if (Config.DISABLE_TUTORIAL && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) //
+				&& ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) && (playerLevel >= 38)) //
+					|| (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (playerLevel >= 76))))
+			{
+				player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
+			}
 		}
 	}
 }

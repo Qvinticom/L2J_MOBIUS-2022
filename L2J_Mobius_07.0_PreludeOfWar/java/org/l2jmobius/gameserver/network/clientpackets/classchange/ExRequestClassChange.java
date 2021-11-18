@@ -16,6 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.classchange;
 
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
@@ -29,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
 /**
  * @author Mobius
@@ -36,6 +41,24 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 public class ExRequestClassChange implements IClientIncomingPacket
 {
 	private int _classId;
+	private static final String AWAKE_POWER_REWARDED_VAR = "AWAKE_POWER_REWARDED";
+	// Reward
+	private static final int CHAOS_POMANDER = 37374;
+	private static final int VITALITY_MAINTAINING_RUNE = 80712;
+	private static final int AWAKE_POWER_EVIS = 40268;
+	private static final int AWAKE_POWER_SAYHA = 40269;
+	private static final Map<CategoryType, Integer> AWAKE_POWER = new EnumMap<>(CategoryType.class);
+	static
+	{
+		AWAKE_POWER.put(CategoryType.SIXTH_SIGEL_GROUP, 32264);
+		AWAKE_POWER.put(CategoryType.SIXTH_TIR_GROUP, 32265);
+		AWAKE_POWER.put(CategoryType.SIXTH_OTHEL_GROUP, 32266);
+		AWAKE_POWER.put(CategoryType.SIXTH_YR_GROUP, 32267);
+		AWAKE_POWER.put(CategoryType.SIXTH_FEOH_GROUP, 32268);
+		AWAKE_POWER.put(CategoryType.SIXTH_WYNN_GROUP, 32269);
+		AWAKE_POWER.put(CategoryType.SIXTH_IS_GROUP, 32270);
+		AWAKE_POWER.put(CategoryType.SIXTH_EOLH_GROUP, 32271);
+	}
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -110,6 +133,37 @@ public class ExRequestClassChange implements IClientIncomingPacket
 				{
 					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 				}
+				
+				if (Config.DISABLE_TUTORIAL && !player.getVariables().getBoolean(AWAKE_POWER_REWARDED_VAR, false))
+				{
+					player.addItem("awake", VITALITY_MAINTAINING_RUNE, 1, player, true);
+					player.addItem("awake", CHAOS_POMANDER, 2, player, true);
+					if (player.getRace() == Race.ERTHEIA)
+					{
+						if (player.getClassId() == ClassId.EVISCERATOR)
+						{
+							player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
+							player.addItem("awake", AWAKE_POWER_EVIS, 1, player, true);
+						}
+						if (player.getClassId() == ClassId.SAYHA_SEER)
+						{
+							player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
+							player.addItem("awake", AWAKE_POWER_SAYHA, 1, player, true);
+						}
+					}
+					else
+					{
+						for (Entry<CategoryType, Integer> ent : AWAKE_POWER.entrySet())
+						{
+							if (player.isInCategory(ent.getKey()))
+							{
+								player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
+								player.addItem("awake", ent.getValue().intValue(), 1, player, true);
+								break;
+							}
+						}
+					}
+				}
 			}
 			
 			if (Config.AUTO_LEARN_SKILLS)
@@ -121,6 +175,14 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			player.broadcastUserInfo();
 			player.sendSkillList();
 			player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
+			
+			if (Config.DISABLE_TUTORIAL && !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) //
+				&& ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) && (playerLevel >= 38)) //
+					|| (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (playerLevel >= 76)) //
+					|| (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (playerLevel >= 85))))
+			{
+				player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+			}
 		}
 	}
 }
