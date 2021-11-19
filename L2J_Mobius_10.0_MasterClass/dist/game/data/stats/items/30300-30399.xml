@@ -142,7 +142,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
-			<player class_id_restriction="148, 149, 150, 151" />
+			<player class_id_restriction="148, 149, 150, 151, 216" />
 		</cond>
 		<stats>
 			<stat type="pDef">50</stat>
