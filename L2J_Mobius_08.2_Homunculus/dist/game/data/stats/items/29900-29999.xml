@@ -85,6 +85,7 @@
 		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -103,6 +104,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -116,6 +118,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -129,6 +132,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />

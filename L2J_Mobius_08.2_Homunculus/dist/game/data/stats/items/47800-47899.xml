@@ -76,7 +76,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="13970" level="1" /> <!-- Skill -->
+			<skill id="13970" level="1" /> <!-- Sayha's Talisman Stage 1 -->
 		</skills>
 	</item>
 	<item id="47808" name="Sayha's Talisman Stage 2" type="Armor">
@@ -91,7 +91,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="13970" level="2" /> <!-- Skill -->
+			<skill id="13970" level="2" /> <!-- Sayha's Talisman Stage 2 -->
 		</skills>
 	</item>
 	<item id="47809" name="Sayha's Talisman Stage 3" type="Armor">
@@ -106,7 +106,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="13970" level="3" /> <!-- Skill -->
+			<skill id="13970" level="3" /> <!-- Sayha's Talisman Stage 3 -->
 		</skills>
 	</item>
 	<item id="47810" name="Sayha's Talisman Stage 4" type="Armor">
@@ -121,7 +121,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="13970" level="4" /> <!-- Skill -->
+			<skill id="13970" level="4" /> <!-- Sayha's Talisman Stage 4 -->
 		</skills>
 	</item>
 	<item id="47811" name="Sayha's Talisman Stage 5" type="Armor">
@@ -136,7 +136,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="13970" level="5" /> <!-- Skill -->
+			<skill id="13970" level="5" /> <!-- Sayha's Talisman Stage 5 -->
+			<skill id="28144" level="1" /> <!-- Sayha's Protection -->
 		</skills>
 	</item>
 	<item id="47812" name="Sayha's Talisman Stage 6" type="Armor">
@@ -152,7 +153,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="13970" level="6" /> <!-- Skill -->
+			<skill id="13970" level="6" /> <!-- Sayha's Talisman Stage 6 -->
+			<skill id="28144" level="1" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="1" /> <!-- Sayha's Encouragement -->
 		</skills>
 	</item>
 	<item id="47813" name="Sayha's Talisman Stage 7" type="Armor">
@@ -168,7 +171,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="13970" level="7" /> <!-- Skill -->
+			<skill id="13970" level="7" /> <!-- Sayha's Talisman Stage 7 -->
+			<skill id="28144" level="1" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="1" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="1" /> <!-- Sayha's Anger -->
 		</skills>
 	</item>
 	<item id="47814" name="Sayha's Talisman Stage 8" type="Armor">
@@ -184,7 +190,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="13970" level="8" /> <!-- Skill -->
+			<skill id="13970" level="8" /> <!-- Sayha's Talisman Stage 8 -->
+			<skill id="28144" level="2" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="2" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="2" /> <!-- Sayha's Anger -->
+			<skill id="28147" level="1" /> <!-- Sayha's Support -->
 		</skills>
 	</item>
 	<item id="47815" name="Sayha's Talisman Stage 9" type="Armor">
@@ -200,7 +210,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="13970" level="9" /> <!-- Skill -->
+			<skill id="13970" level="9" /> <!-- Sayha's Talisman Stage 9 -->
+			<skill id="28144" level="3" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="3" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="3" /> <!-- Sayha's Anger -->
+			<skill id="28147" level="2" /> <!-- Sayha's Support -->
 		</skills>
 	</item>
 	<item id="47816" name="Sayha's Talisman Stage 10" type="Armor">
@@ -216,7 +230,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="13970" level="10" /> <!-- Skill -->
+			<skill id="13970" level="10" /> <!-- Sayha's Talisman Stage 10 -->
+			<skill id="28144" level="4" /> <!-- Sayha's Protection -->
+			<skill id="28145" level="4" /> <!-- Sayha's Encouragement -->
+			<skill id="28146" level="4" /> <!-- Sayha's Anger -->
+			<skill id="28147" level="3" /> <!-- Sayha's Support -->
 		</skills>
 	</item>
 	<item id="47817" name="Sayha's Talisman Box" type="EtcItem">
@@ -535,6 +553,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47844" name="Mother Tree Guardian's Certification" type="EtcItem">
 		<!-- Proof of reaching Amity Level 6 with the Mother Tree Guardians. Take this with the other certifications to Logart Van Dyke in the Blackbird Campsite, and you can receive Logart Van Dyke' Certification. -->

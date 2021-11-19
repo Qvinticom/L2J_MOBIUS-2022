@@ -729,7 +729,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29162" name="Light Imbued Treasure Chest" type="EtcItem">
@@ -746,6 +745,14 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="28180" level="1" /> <!-- Stable Cloak Enchantment Scroll -->
+		</skills>
 	</item>
 	<item id="29164" name="Legendary Scroll (High-grade)" type="EtcItem">
 		<!-- Has a high chance to exchange a Elmoreden/ Aden/ Elmore/ Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
@@ -792,18 +799,48 @@
 	<item id="29170" name="High-grade Spirit Stone Pack - Legendary" type="EtcItem">
 		<!-- Double-click to obtain 1 High-grade Spirit Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios randomly. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="29169" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Ferios -->
+			<item id="29168" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Elmore -->
+			<item id="29167" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Aden -->
+			<item id="29166" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Elmoreden -->
+			<item id="29165" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Ancient Kingdom -->
+		</capsuled_items>
 	</item>
 	<item id="29171" name="High-grade Spirit Stone Pack - Cloak" type="EtcItem">
 		<!-- Double-click to obtain 1 High-grade Spirit Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios randomly. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="29169" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Ferios -->
+			<item id="29168" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Elmore -->
+			<item id="29167" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Aden -->
+			<item id="29166" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Elmoreden -->
+			<item id="29165" min="1" max="1" chance="20" /> <!-- High-grade Spirit Stone - Ancient Kingdom -->
+		</capsuled_items>
 	</item>
 	<item id="29172" name="Red Star Solvent" type="EtcItem">
 		<!-- A solution needed to melt Starlight Jars. Take it along with a Starlight Jar to the Dimensional Merchant to create a Red Stars Bottle. -->

@@ -742,9 +742,19 @@
 		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min.\n\nThe effect remains after death. Cooldown: 5 min.\nCannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<skills>
+			<skill id="39205" level="2" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="81760" name="Enhanced Talisman of Protection Lv. 1" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +5000, M. Def. +3250, Attribute Resistance +160.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
@@ -882,6 +892,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81771" name="Einhasad's Blue Box" type="EtcItem">
 		<!-- A box prepared on the occasion of minting of Einhasad's Golden Coins. Double-click to obtain one rare item with a certain chance. -->

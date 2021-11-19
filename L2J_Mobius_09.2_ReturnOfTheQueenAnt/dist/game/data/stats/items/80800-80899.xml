@@ -323,6 +323,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80824" name="Proof of Preparation" type="EtcItem">
 		<!-- A proof for Eva's Knight Lionel Hunter from Heine who asked you to kill monsters. Bring it to Lionel Hunter. -->
@@ -334,6 +335,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80825" name="Proof of Settlement" type="EtcItem">
 		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Captain Kurtiz in the Town of Aden to receive the certificate for finishing the mission. -->
@@ -345,6 +347,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80826" name="Proof of Reputation" type="EtcItem">
 		<!-- A proof for Eva's Knight Lionel Hunter from Heine who asked you to kill monsters. Bring it to Lionel Hunter. -->
@@ -356,6 +359,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80827" name="Proof of Pride" type="EtcItem">
 		<!-- A proof for Eva's Knight Lionel Hunter from Heine who asked you to kill monsters. Bring it to Lionel Hunter. -->
@@ -367,6 +371,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80828" name="Sylvain's Certificate" type="EtcItem">
 		<!-- The certificate received for completing High Priest Sylvain's mission. Take this to Lionel Hunter in Heine and get a new Exalted Power. -->
@@ -705,6 +710,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80854" name="Vampire's Ichor" type="EtcItem">
 		<!-- Item obtained as proof of having defeated the monsters in Bloody Swampland at the request of Black Wizard Lapathia. Take it to Dual Class Master Joachim in the Town of Aden. -->
@@ -716,6 +722,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80855" name="Energy of Mysterious Power" type="EtcItem">
 		<!-- Mysterious energy found from a vampire's fluids. An unknown power can be felt. -->
@@ -937,7 +944,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80866" name="Bloodthirsty Akamanah Guardian" type="Weapon">
@@ -961,7 +968,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="80867" name="Bloodthirsty Akamanah Buster" type="Weapon">
@@ -1326,7 +1333,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 			<stat type="darkPower">999</stat>
 		</stats>
 	</item>
@@ -1358,7 +1365,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 			<stat type="darkPower">999</stat>
 		</stats>
 	</item>
@@ -1771,7 +1778,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 			<stat type="firePower">999</stat>
 		</stats>
 	</item>
@@ -1803,7 +1810,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 			<stat type="firePower">999</stat>
 		</stats>
 	</item>

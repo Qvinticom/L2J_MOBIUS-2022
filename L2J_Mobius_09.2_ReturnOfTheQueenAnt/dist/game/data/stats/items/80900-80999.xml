@@ -459,6 +459,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22889" min="20000" max="20000" chance="100" /> <!-- Mysterious R-grade Spiritshot -->
+		</capsuled_items>
 	</item>
 	<item id="80931" name="Greater Zodiac Agathion Cube" type="EtcItem">
 		<!-- A cube containing one of the Enhanced Zodiac Agathion Charms, imbued with power of stars. -->
@@ -469,6 +473,23 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80936" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80937" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80938" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80939" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80940" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80941" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80942" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80943" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80944" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80945" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80946" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80947" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+		</capsuled_items>
 	</item>
 	<item id="80932" name="Greater Zodiac Agathion's Book of Growth" type="EtcItem">
 		<!-- Required for upgrading High Quality Zodiac Agathion Charms. Increases the agathion's M. Def. The maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->

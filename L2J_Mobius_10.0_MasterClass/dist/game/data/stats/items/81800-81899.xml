@@ -1020,8 +1020,17 @@
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="39245" level="2" /> <!-- Shining Nevit's Gold Hourglass -->
+		</skills>
 	</item>
 	<item id="81893" name="Freya's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain Shining Nevit's Gold Hourglass (4 pcs.). If you are lucky, you will get Nevit's Red Pack, Nevit's Silver Pack, and Nevit's Golden Pack. -->

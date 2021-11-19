@@ -105,7 +105,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="7" /> <!-- Garnet -->
@@ -120,7 +119,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="8" /> <!-- Garnet -->
@@ -135,7 +133,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="9" /> <!-- Garnet -->
@@ -150,7 +147,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="10" /> <!-- Garnet -->
@@ -998,6 +994,15 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48876" min="1" max="1" chance="60" /> <!-- Forgotten Spell Book 1 -->
+			<item id="48877" min="1" max="1" chance="30" /> <!-- Forgotten Spell Book 2 -->
+			<item id="48878" min="1" max="1" chance="10" /> <!-- Forgotten Spell Book 3 -->
+		</capsuled_items>
 	</item>
 	<item id="48876" name="Forgotten Spellbook Chapter 1" type="EtcItem">
 		<!-- A spellbook for learning the Forgotten Power skills Lv. 6-10. Can be exchanged for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3 through the Game Assistant. -->

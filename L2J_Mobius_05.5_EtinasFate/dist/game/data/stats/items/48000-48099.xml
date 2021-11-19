@@ -345,7 +345,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28444" min="1" max="1" chance="100" /> <!-- Sayha Talisman Stage 8 -->
+			<item id="47814" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 8 -->
 		</capsuled_items>
 	</item>
 	<item id="48033" name="Test - Agathion Items" type="Armor">
@@ -476,6 +476,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28118" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -490,6 +491,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28119" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -504,6 +506,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28120" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -518,6 +521,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28121" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -532,6 +536,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28122" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -546,6 +551,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28123" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -560,6 +566,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28124" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -574,6 +581,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28125" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -588,6 +596,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28126" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -602,6 +611,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28127" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -616,6 +626,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28128" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -630,6 +641,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28129" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -645,11 +657,11 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35078" level="1" /> <!-- Elementary Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -663,12 +675,11 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35079" level="1" /> <!-- Intermediate Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -682,12 +693,11 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35080" level="1" /> <!-- Advanced Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -701,12 +711,11 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35081" level="1" /> <!-- Top-grade Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -720,12 +729,11 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35071" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35082" level="1" /> <!-- Super Advanced Seed Bracelet - Stage 1 -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -745,6 +753,25 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" chance="8.3" /> <!-- Agathion Virgo Charm -->
+			<item id="48049" min="1" max="1" chance="8.3" /> <!-- Agathion Capricorn Charm -->
+			<item id="48050" min="1" max="1" chance="8.3" /> <!-- Agathion Libra Charm -->
+			<item id="48051" min="1" max="1" chance="8.3" /> <!-- Agathion Aries Charm -->
+			<item id="48052" min="1" max="1" chance="8.3" /> <!-- Agathion Taurus Charm -->
+			<item id="48053" min="1" max="1" chance="8.3" /> <!-- Agathion Leo Charm -->
+			<item id="48054" min="1" max="1" chance="8.3" /> <!-- Agathion Gemini Charm -->
+			<item id="48055" min="1" max="1" chance="8.3" /> <!-- Agathion Scorpio Charm -->
+			<item id="48056" min="1" max="1" chance="8.3" /> <!-- Agathion Aquarius Charm -->
+			<item id="48057" min="1" max="1" chance="8.3" /> <!-- Agathion Pisces Charm -->
+			<item id="48058" min="1" max="1" chance="8.3" /> <!-- Agathion Sagittarius Charm -->
+			<item id="48059" min="1" max="1" chance="8.3" /> <!-- Agathion Cancer Charm -->
+		</capsuled_items>
 	</item>
 	<item id="48067" name="Elementary Seed Bracelet Treasure Chest" type="EtcItem">
 		<!-- Open to obtain an Elementary Seed Bracelet. -->

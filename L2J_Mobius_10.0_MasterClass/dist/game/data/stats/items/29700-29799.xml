@@ -15,6 +15,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>
@@ -40,6 +44,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -64,6 +72,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4225</stat>
 			<stat type="mAtk">935</stat>
@@ -71,7 +83,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="29703" name="Antharas Buster" additionalName="1-day" type="Weapon">
@@ -90,6 +102,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -113,6 +129,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -137,6 +157,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -163,6 +188,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -188,6 +217,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -215,6 +248,10 @@
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -240,6 +277,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -264,8 +305,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
@@ -291,6 +333,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -316,6 +362,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -342,6 +393,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2090</stat>
 			<stat type="mAtk">1371</stat>
@@ -367,6 +422,10 @@
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -392,6 +451,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -416,6 +479,10 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>

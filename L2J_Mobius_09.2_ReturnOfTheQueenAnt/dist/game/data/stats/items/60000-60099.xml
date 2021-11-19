@@ -135,18 +135,32 @@
 	<item id="60015" name="Spellbook: Create Mysterious Soulshots" type="EtcItem">
 		<!-- A spellbook for learning the Create Mysterious R-grade Soulshots skill. -->
 		<set name="icon" val="BranchIcon.Icon.g_book_summonsoulshot_r" />
+		<set name="is_depositable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29443" level="1" /> <!-- Spellbook: Create Mysterious Soulshots -->
+		</skills>
 	</item>
 	<item id="60016" name="Spellbook: Create Mysterious Spiritshots" type="EtcItem">
 		<!-- A spellbook for learning the Create Mysterious R-grade Spiritshots skill. -->
 		<set name="icon" val="BranchIcon.Icon.g_book_summonspiritshot_r" />
+		<set name="is_depositable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29444" level="1" /> <!-- Spellbook: Create Mysterious Soulshots -->
+		</skills>
 	</item>
 	<item id="60017" name="Shiny Vault" type="EtcItem">
 		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->

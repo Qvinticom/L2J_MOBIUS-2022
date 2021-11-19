@@ -843,6 +843,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>
@@ -868,6 +872,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4225</stat>
 			<stat type="mAtk">935</stat>
@@ -875,7 +883,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="29689" name="Lindvior Slasher" additionalName="1 day" type="Weapon">
@@ -893,6 +901,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -918,6 +930,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -942,6 +958,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -967,6 +987,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3804</stat>
 			<stat type="mAtk">935</stat>
@@ -974,7 +998,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="29693" name="Lindvior Dual Daggers" additionalName="1 day" type="Weapon">
@@ -992,6 +1016,10 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -1017,6 +1045,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>
@@ -1042,6 +1074,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -1066,6 +1102,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -1090,6 +1130,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">4225</stat>
 			<stat type="mAtk">935</stat>
@@ -1097,7 +1141,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="29698" name="Valakas Buster" additionalName="1 day" type="Weapon">
@@ -1116,6 +1160,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -1140,6 +1188,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="time" val="1440" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>

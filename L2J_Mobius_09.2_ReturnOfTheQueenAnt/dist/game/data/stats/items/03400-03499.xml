@@ -831,7 +831,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="10000" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
+		<set name="is_tradable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />

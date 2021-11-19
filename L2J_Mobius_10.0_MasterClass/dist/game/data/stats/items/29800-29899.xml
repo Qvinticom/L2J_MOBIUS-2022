@@ -296,6 +296,14 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="28068" level="1" /> <!-- Scroll: Ancient Cloak - Legendary -->
+		</skills>
 	</item>
 	<item id="29824" name="Aden's Anniversary Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- A chest obtained as a reward for monster hunting during the game anniversary event. Double-click to obtain various items such as a greater jewel, Sealed Talisman of Insanity, R110-/ R99-grade equipment. -->

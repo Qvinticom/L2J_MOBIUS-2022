@@ -55,6 +55,28 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80901" min="1" max="1" chance="86" /> <!-- Zariche's Blood -->
+			<item id="80698" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Shaper -->
+			<item id="80699" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Cutter -->
+			<item id="80700" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Slasher -->
+			<item id="80701" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Avenger -->
+			<item id="80702" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Fighter -->
+			<item id="80703" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Stormer -->
+			<item id="80704" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Thrower -->
+			<item id="80705" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Shooter -->
+			<item id="80706" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Buster -->
+			<item id="80707" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Caster -->
+			<item id="80708" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Retributer -->
+			<item id="80709" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Dual Swords -->
+			<item id="80710" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Dual Daggers -->
+			<item id="80711" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="80904" name="Akamanah's Sealed Box" type="EtcItem">
 		<!-- Box of darkness in which the madness of the Blood Sword Akamanah is sealed. Double-click to obtain a Blood-thirsty Akamanah weapon or Akamanah's Blood. -->
@@ -63,6 +85,28 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80902" min="1" max="1" chance="86" /> <!-- Akamanah's Blood -->
+			<item id="80859" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Shaper -->
+			<item id="80860" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Cutter -->
+			<item id="80861" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Slasher -->
+			<item id="80862" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Avenger -->
+			<item id="80863" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Fighter -->
+			<item id="80864" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Stormer -->
+			<item id="80865" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Thrower -->
+			<item id="80866" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Shooter -->
+			<item id="80867" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Buster -->
+			<item id="80868" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Caster -->
+			<item id="80869" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Retributer -->
+			<item id="80870" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Dual Swords -->
+			<item id="80871" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Dual Daggers -->
+			<item id="80872" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="80905" name="Storm Isle Time Recharge Stone" type="EtcItem">
 		<!-- Use to add 60 minutes to use the timed hunting zone Storm Isle. -->
@@ -330,6 +374,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="85" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="39551" level="1" /> <!-- Spellbook: Renewed Energy of Power -->
 		</skills>
@@ -407,6 +457,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22889" min="20000" max="20000" chance="100" /> <!-- Mysterious R-grade Spiritshot -->
+		</capsuled_items>
 	</item>
 	<item id="80931" name="Cube of Enhanced Zodiac Agathion" type="EtcItem">
 		<!-- A cube containing one of the Enhanced Zodiac Agathion Charms, imbued with power of stars. -->
@@ -417,6 +471,23 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80936" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80937" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80938" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80939" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80940" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80941" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80942" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80943" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80944" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80945" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80946" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+			<item id="80947" min="1" max="1" chance="8.33" /> <!-- Greater Zodiac Agathion -->
+		</capsuled_items>
 	</item>
 	<item id="80932" name="Enhanced Zodiac Agathion Book of Growth" type="EtcItem">
 		<!-- Increases the agathion's M. Def. The maximum enchant level is +10. When enchanted +1 or higher, gradually increases the agathion's unique abilities. -->
@@ -488,6 +559,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28130" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -502,6 +574,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28131" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -516,6 +589,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28132" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -530,6 +604,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28133" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -544,6 +619,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28134" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -558,6 +634,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28135" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -572,6 +649,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28136" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -586,6 +664,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28137" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -600,6 +679,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28138" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -614,6 +694,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28139" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -628,6 +709,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28140" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -642,6 +724,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="28141" level="1" type="ON_EQUIP" />
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->

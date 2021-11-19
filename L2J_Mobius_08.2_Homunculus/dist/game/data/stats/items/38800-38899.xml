@@ -1551,6 +1551,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18717" level="1" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="38856" name="Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +3.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
@@ -1562,6 +1565,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18717" level="2" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="38857" name="Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +7.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
@@ -1573,6 +1579,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18717" level="3" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="38858" name="Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +12.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
@@ -1584,6 +1593,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18717" level="4" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="38859" name="Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- Soulshot and Beast Soulshot damage +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
@@ -1594,6 +1606,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18717" level="5" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="38860" name="Emergency Recovery Jewel Lv. 1" type="Armor">
 		<!-- Restores 1500 HP. The remaining points are used to restore CP. -->

@@ -539,7 +539,7 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="POTION" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_event_restricted" val="true" />
@@ -557,7 +557,7 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="POTION" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_event_restricted" val="true" />
@@ -646,8 +646,13 @@
 		<!-- Enchant success rate +20% for armor (R-grade and higher) with a normal enchant scroll. Only for items enchanted between +3 and +11. When enchant succeeds, it increases randomly by 1-2. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_black_ticket_all" />
 		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM_DOWN" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="39435" level="1" /> <!-- Royal Black Save Card -->
+		</skills>
 	</item>
 	<item id="80450" name="Penitent's Mark" type="EtcItem">
 		<!-- A mark that shows its holder is walking the path of penitence. Double-click to summon the Sin Eater and receive the Hour of Penitence buff. -->
@@ -777,6 +782,23 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Virgo Charm -->
+			<item id="48049" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Capricorn Charm -->
+			<item id="48050" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Libra Charm -->
+			<item id="48051" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Aries Charm -->
+			<item id="48052" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Taurus Charm -->
+			<item id="48053" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Leo Charm -->
+			<item id="48054" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Gemini Charm -->
+			<item id="48055" min="1" max="1" chance="8.3" minEnchant="7" maxEnchant="7" /> <!-- Agathion Scorpio Charm -->
+			<item id="48056" min="1" max="1" chance="8.4" minEnchant="7" maxEnchant="7" /> <!-- Agathion Aquarius Charm -->
+			<item id="48057" min="1" max="1" chance="8.4" minEnchant="7" maxEnchant="7" /> <!-- Agathion Pisces Charm -->
+			<item id="48058" min="1" max="1" chance="8.4" minEnchant="7" maxEnchant="7" /> <!-- Agathion Sagittarius Charm -->
+			<item id="48059" min="1" max="1" chance="8.4" minEnchant="7" maxEnchant="7" /> <!-- Agathion Cancer Charm -->
+		</capsuled_items>
 	</item>
 	<item id="80460" name="+8 Agathion Charm Box" type="EtcItem">
 		<!-- Double-click to obtain one +8 Enchanted Agathion Charm. -->
@@ -786,6 +808,23 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Virgo Charm -->
+			<item id="48049" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Capricorn Charm -->
+			<item id="48050" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Libra Charm -->
+			<item id="48051" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Aries Charm -->
+			<item id="48052" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Taurus Charm -->
+			<item id="48053" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Leo Charm -->
+			<item id="48054" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Gemini Charm -->
+			<item id="48055" min="1" max="1" chance="8.3" minEnchant="8" maxEnchant="8" /> <!-- Agathion Scorpio Charm -->
+			<item id="48056" min="1" max="1" chance="8.4" minEnchant="8" maxEnchant="8" /> <!-- Agathion Aquarius Charm -->
+			<item id="48057" min="1" max="1" chance="8.4" minEnchant="8" maxEnchant="8" /> <!-- Agathion Pisces Charm -->
+			<item id="48058" min="1" max="1" chance="8.4" minEnchant="8" maxEnchant="8" /> <!-- Agathion Sagittarius Charm -->
+			<item id="48059" min="1" max="1" chance="8.4" minEnchant="8" maxEnchant="8" /> <!-- Agathion Cancer Charm -->
+		</capsuled_items>
 	</item>
 	<item id="80461" name="+9 Agathion Charm Box" type="EtcItem">
 		<!-- Double-click to obtain one +9 Enchanted Agathion Charm. -->
@@ -795,6 +834,23 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Virgo Charm -->
+			<item id="48049" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Capricorn Charm -->
+			<item id="48050" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Libra Charm -->
+			<item id="48051" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Aries Charm -->
+			<item id="48052" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Taurus Charm -->
+			<item id="48053" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Leo Charm -->
+			<item id="48054" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Gemini Charm -->
+			<item id="48055" min="1" max="1" chance="8.3" minEnchant="9" maxEnchant="9" /> <!-- Agathion Scorpio Charm -->
+			<item id="48056" min="1" max="1" chance="8.4" minEnchant="9" maxEnchant="9" /> <!-- Agathion Aquarius Charm -->
+			<item id="48057" min="1" max="1" chance="8.4" minEnchant="9" maxEnchant="9" /> <!-- Agathion Pisces Charm -->
+			<item id="48058" min="1" max="1" chance="8.4" minEnchant="9" maxEnchant="9" /> <!-- Agathion Sagittarius Charm -->
+			<item id="48059" min="1" max="1" chance="8.4" minEnchant="9" maxEnchant="9" /> <!-- Agathion Cancer Charm -->
+		</capsuled_items>
 	</item>
 	<item id="80462" name="+10 Agathion Charm Box" type="EtcItem">
 		<!-- Double-click to obtain one +10 Enchanted Agathion Charm. -->
@@ -804,6 +860,23 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48048" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Virgo Charm -->
+			<item id="48049" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Capricorn Charm -->
+			<item id="48050" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Libra Charm -->
+			<item id="48051" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Aries Charm -->
+			<item id="48052" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Taurus Charm -->
+			<item id="48053" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Leo Charm -->
+			<item id="48054" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Gemini Charm -->
+			<item id="48055" min="1" max="1" chance="8.3" minEnchant="10" maxEnchant="10" /> <!-- Agathion Scorpio Charm -->
+			<item id="48056" min="1" max="1" chance="8.4" minEnchant="10" maxEnchant="10" /> <!-- Agathion Aquarius Charm -->
+			<item id="48057" min="1" max="1" chance="8.4" minEnchant="10" maxEnchant="10" /> <!-- Agathion Pisces Charm -->
+			<item id="48058" min="1" max="1" chance="8.4" minEnchant="10" maxEnchant="10" /> <!-- Agathion Sagittarius Charm -->
+			<item id="48059" min="1" max="1" chance="8.4" minEnchant="10" maxEnchant="10" /> <!-- Agathion Cancer Charm -->
+		</capsuled_items>
 	</item>
 	<item id="80463" name="Expertise Rune - ALL (30-day) Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the Expertise Rune - ALL (30-day). -->

@@ -224,19 +224,31 @@
 	<item id="29522" name="Maphr's Rune 300%" additionalName="1-hr" type="EtcItem">
 		<!-- Have it in your inventory to have Item Drop Rate +300% when hunting. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22588" level="4" /> <!-- High-grade Drop Rate Rune -->
+		</skills>
 	</item>
 	<item id="29523" name="Maphr's Rune 300% Pack (1-hr)" type="EtcItem">
 		<!-- Pack containing a Maphr's Rune 300% (1-hr). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="29522" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="29524" name="+3 Dragon Earring Box" type="EtcItem">
 		<!-- Double-click to obtain Dragon Earring enchanted to +3. -->
@@ -269,11 +281,6 @@
 	<item id="29526" name="+3 Dragon Necklace Box" type="EtcItem">
 		<!-- Double-click to obtain a +3 enchanted Dragon Necklace. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

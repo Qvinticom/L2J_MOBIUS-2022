@@ -1364,6 +1364,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18351" level="2" /> <!-- Favor of the Exalted -->
 		</skills>

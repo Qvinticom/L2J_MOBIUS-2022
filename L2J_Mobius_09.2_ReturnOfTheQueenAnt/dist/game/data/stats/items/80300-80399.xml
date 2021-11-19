@@ -1503,13 +1503,30 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80388" name="Mammon’s Adena Box" type="EtcItem">
+	<item id="80388" name="Mammon's Adena Box" type="EtcItem">
 		<!-- Double-click to obtain a random amount of adena. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="57" min="500000000" max="500000000" chance="32.5" /> <!-- Adena -->
+			<item id="57" min="750000000" max="750000000" chance="28" /> <!-- Adena -->
+			<item id="57" min="1000000000" max="1000000000" chance="17" /> <!-- Adena -->
+			<item id="57" min="1250000000" max="1250000000" chance="10.5" /> <!-- Adena -->
+			<item id="57" min="1500000000" max="1500000000" chance="7.5" /> <!-- Adena -->
+			<item id="57" min="1750000000" max="1750000000" chance="3" /> <!-- Adena -->
+			<item id="57" min="2000000000" max="2000000000" chance="1.5" /> <!-- Adena -->
+		</capsuled_items>
 	</item>
 	<item id="80389" name="Freya's Bloody Rune Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Bloody Rune (30-day). -->

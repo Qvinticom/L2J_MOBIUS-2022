@@ -1320,6 +1320,7 @@
 		<set name="weight" val="130" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
 		<cond>
 			<player level="105" />
 		</cond>

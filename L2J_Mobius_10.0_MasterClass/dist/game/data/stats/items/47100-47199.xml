@@ -188,18 +188,28 @@
 		<set name="icon" val="icon.bm_ensoulbox_PvP" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47100" min="1" max="1" chance="100" /> <!-- Lilith's Soul Crystal Lv. 1 -->
+			<item id="47118" min="10" max="10" chance="100" /> <!-- Shining Soul of Monster Spirit -->
+		</capsuled_items>
 	</item>
 	<item id="47124" name="Anakim's Soul Crystal Box" type="EtcItem">
 		<!-- Use to obtain a Crystal with Anakim's Energy. -->
 		<set name="icon" val="icon.bm_ensoulbox_PvE" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47089" min="1" max="1" chance="100" /> <!-- Anakim's Soul Crystal Lv. 1 -->
+			<item id="47118" min="10" max="10" chance="100" /> <!-- Shining Soul of Monster Spirit -->
+		</capsuled_items>
 	</item>
 	<item id="47125" name="Shining Soul of Monster Spirit Box" type="EtcItem">
 		<!-- Use to obtain a Shining Soul of Monster Spirit. -->

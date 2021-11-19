@@ -163,6 +163,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
 		<skills>
+			<skill id="18815" level="7" /> <!-- Tanzanite -->
 			<skill id="18565" level="7" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -176,6 +177,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
 		<skills>
+			<skill id="18815" level="8" /> <!-- Tanzanite -->
 			<skill id="18565" level="8" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -189,6 +191,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
 		<skills>
+			<skill id="18815" level="9" /> <!-- Tanzanite -->
 			<skill id="18565" level="9" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -202,6 +205,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
 		<skills>
+			<skill id="18815" level="10" /> <!-- Tanzanite -->
 			<skill id="18565" level="10" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -489,6 +493,27 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="38854" min="1" max="1" chance="6.25" /> <!-- Topaz Lv. 5 -->
+			<item id="38859" min="1" max="1" chance="6.25" /> <!-- Ruby Lv. 5 -->
+			<item id="38931" min="1" max="1" chance="6.25" /> <!-- Sapphire Lv. 5 -->
+			<item id="38879" min="1" max="1" chance="6.25" /> <!-- Opal Lv. 5 -->
+			<item id="38874" min="1" max="1" chance="6.25" /> <!-- Obsidian Lv. 5 -->
+			<item id="38894" min="1" max="1" chance="6.25" /> <!-- Diamond Lv. 5 -->
+			<item id="38884" min="1" max="1" chance="6.25" /> <!-- Emerald Lv. 5 -->
+			<item id="38889" min="1" max="1" chance="6.25" /> <!-- Aquamarine Lv. 5 -->
+			<item id="38899" min="1" max="1" chance="6.25" /> <!-- Pearl Lv. 5 -->
+			<item id="46674" min="1" max="1" chance="6.25" /> <!-- Vital Stone Lv. 5 -->
+			<item id="46679" min="1" max="1" chance="6.25" /> <!-- Garnet Lv. 5 -->
+			<item id="46684" min="1" max="1" chance="6.25" /> <!-- Tanzanite Lv. 5 -->
+			<item id="26501" min="1" max="1" chance="6.25" /> <!-- Cat's Eye Lv. 5 -->
+			<item id="47681" min="1" max="1" chance="6.25" /> <!-- Red Cat's Eye Lv. 5 -->
+			<item id="47686" min="1" max="1" chance="6.25" /> <!-- Blue Cat's Eye Lv. 5 -->
+			<item id="26506" min="1" max="1" chance="6.25" /> <!-- Amethyst Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="48840" name="Ultimate Lv. 1 Luxurious Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one level 1 Greater Gem. -->
@@ -497,6 +522,27 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="47687" min="1" max="1" chance="6.25" /> <!-- Greater Topaz Lv. 1 -->
+			<item id="47688" min="1" max="1" chance="6.25" /> <!-- Greater Ruby Lv. 1 -->
+			<item id="47689" min="1" max="1" chance="6.25" /> <!-- Greater Sapphire Lv. 1 -->
+			<item id="47691" min="1" max="1" chance="6.25" /> <!-- Greater Opal Lv. 1 -->
+			<item id="47690" min="1" max="1" chance="6.25" /> <!-- Greater Obsidian Lv. 1 -->
+			<item id="47694" min="1" max="1" chance="6.25" /> <!-- Greater Diamond Lv. 1 -->
+			<item id="47692" min="1" max="1" chance="6.25" /> <!-- Greater Emerald Lv. 1 -->
+			<item id="47693" min="1" max="1" chance="6.25" /> <!-- Greater Aquamarine Lv. 1 -->
+			<item id="47695" min="1" max="1" chance="6.25" /> <!-- Greater Pearl Lv. 1 -->
+			<item id="47696" min="1" max="1" chance="6.25" /> <!-- Greater Vital Stone Lv. 1 -->
+			<item id="47697" min="1" max="1" chance="6.25" /> <!-- Greater Garnet Lv. 1 -->
+			<item id="47698" min="1" max="1" chance="6.25" /> <!-- Greater Tanzanite Lv. 1 -->
+			<item id="28376" min="1" max="1" chance="6.25" /> <!-- Greater Cat's Eye Lv. 1 -->
+			<item id="47699" min="1" max="1" chance="6.25" /> <!-- Greater Red Cat's Eye Lv. 1 -->
+			<item id="47700" min="1" max="1" chance="6.25" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
+			<item id="28377" min="1" max="1" chance="6.25" /> <!-- Greater Amethyst Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="48841" name="Angel's Earring" type="Armor">
 		<!-- An Angel's earring. Enchanting increases Stun/ Mental/ Sleep Resistance and Atk. Rate, Received Healing, Vampiric Rage, P./ M. Atk., decreases Skill MP Consumption, Received P./ M. Critical Damage, depending on the enchantment level. These effects do not stack with identical earrings. -->
@@ -948,6 +994,15 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48876" min="1" max="1" chance="60" /> <!-- Forgotten Spell Book 1 -->
+			<item id="48877" min="1" max="1" chance="30" /> <!-- Forgotten Spell Book 2 -->
+			<item id="48878" min="1" max="1" chance="10" /> <!-- Forgotten Spell Book 3 -->
+		</capsuled_items>
 	</item>
 	<item id="48876" name="Forgotten Spellbook Chapter 1" type="EtcItem">
 		<!-- A spellbook required to learn Forgotten Power Levels 6 to 10. You can exchange it through a Dimensional Merchant for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3. -->

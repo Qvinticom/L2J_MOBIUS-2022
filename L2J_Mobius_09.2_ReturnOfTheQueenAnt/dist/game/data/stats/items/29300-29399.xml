@@ -1512,6 +1512,14 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28282" level="2" /> <!-- Peeves' Purple Potion -->
+		</skills>
 	</item>
 	<item id="29380" name="Peeves' Blue Potion" additionalName="1-hour" type="EtcItem">
 		<!-- When used, for 1 h. Acquired XP/ SP when fishing +50%. Applied to all bait. Can be stacked with Angler's Blessing. -->

@@ -153,6 +153,7 @@
 		<set name="icon" val="icon.fafurion_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -161,6 +162,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -176,6 +178,7 @@
 		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -184,6 +187,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -204,6 +208,7 @@
 		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -212,6 +217,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -233,6 +240,7 @@
 		<set name="icon" val="icon.fafurion_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -241,6 +249,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -270,6 +280,7 @@
 		<set name="weight" val="920" />
 		<set name="price" val="88681000" />
 		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="35295" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Leviathan Sigil Enchantment Effect -->
 		</skills>
@@ -502,6 +513,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13787" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">629</stat>
 			<stat type="mAtk">313</stat>
@@ -528,6 +544,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13788" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>
@@ -553,6 +574,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13789" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -579,7 +605,9 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13790" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
 		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
@@ -606,6 +634,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13791" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -634,6 +667,9 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13792" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
 		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
@@ -661,6 +697,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13793" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1415</stat>
 			<stat type="mAtk">313</stat>
@@ -687,6 +728,11 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13794" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1274</stat>
 			<stat type="mAtk">313</stat>
@@ -714,6 +760,11 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13795" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -739,6 +790,11 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13796" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -766,6 +822,11 @@
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13797" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">700</stat>
 			<stat type="mAtk">459</stat>
@@ -792,6 +853,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13798" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -817,6 +883,11 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13799" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">313</stat>
@@ -843,6 +914,11 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="13800" level="1" /> <!-- Additional Ability Health -->
+			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">313</stat>
@@ -1424,10 +1500,27 @@
 	<item id="80388" name="Mammon's Adena Box" type="EtcItem">
 		<!-- Use it to obtain a random amount of Adena. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="57" min="500000000" max="500000000" chance="32.5" /> <!-- Adena -->
+			<item id="57" min="750000000" max="750000000" chance="28" /> <!-- Adena -->
+			<item id="57" min="1000000000" max="1000000000" chance="17" /> <!-- Adena -->
+			<item id="57" min="1250000000" max="1250000000" chance="10.5" /> <!-- Adena -->
+			<item id="57" min="1500000000" max="1500000000" chance="7.5" /> <!-- Adena -->
+			<item id="57" min="1750000000" max="1750000000" chance="3" /> <!-- Adena -->
+			<item id="57" min="2000000000" max="2000000000" chance="1.5" /> <!-- Adena -->
+		</capsuled_items>
 	</item>
 	<item id="80389" name="Freya's Bloody Rune (30-day) Pack" type="EtcItem">
 		<!-- Double-click to obtain Freya's Bloody Rune (30-day). -->
@@ -1438,6 +1531,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48681" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="80390" name="Freya's Vital Rune (30-day) Pack" type="EtcItem">
 		<!-- Double-click to obtain Freya's Vital Rune (30-day). -->
@@ -1448,6 +1545,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48682" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="80391" name="Mammon's Relic Pouch" type="EtcItem">
 		<!-- Use it to obtain a special item. -->
