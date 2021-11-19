@@ -46,6 +46,11 @@ public class SpeedFinalizer implements IStatFunction
 		{
 			// Enchanted feet bonus
 			baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_FEET);
+			
+			// Match retail speed value.
+			// Verified on 4game EU server, protocol 286.
+			// Does not apply for Essence client.
+			baseValue += 50;
 		}
 		
 		final byte speedStat = (byte) creature.getStat().getAdd(Stat.STAT_BONUS_SPEED, -1);
@@ -55,11 +60,6 @@ public class SpeedFinalizer implements IStatFunction
 			final double bonusDex = Math.max(0, baseStat.calcValue(creature) - 55);
 			baseValue += bonusDex;
 		}
-		
-		// Match retail speed value.
-		// Verified on 4game EU server, protocol 286.
-		// Does not apply for Essence client.
-		baseValue += 50;
 		
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, creature.isPlayer() ? Config.MAX_RUN_SPEED : Double.MAX_VALUE);
 	}
