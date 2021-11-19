@@ -264,11 +264,11 @@ public class LegendsMark extends LongTimeEvent
 				}
 				
 				// Update data for online players.
-				World.getInstance().getPlayers().stream().forEach(plr ->
+				for (Player plr : World.getInstance().getPlayers())
 				{
 					plr.getVariables().remove(PROPHECY_FRAGMENTS_DROP_COUNT_VAR);
 					plr.getVariables().storeMe();
-				});
+				}
 				
 				cancelQuestTimers("schedule");
 				startQuestTimer("schedule", 1000, null, null);
