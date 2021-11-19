@@ -443,9 +443,16 @@
 	<skill id="32930" toLevel="1" name="More Adena">
 		<!-- For $s1, the amount of received adena is increased. -->
 		<icon>icon.buff_inc_adena</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<castRange>600</castRange>
+		<abnormalTime>15</abnormalTime>
+		<effects>
+			<effect name="BonusDropAdena">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32931" toLevel="1" name="Critical Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->

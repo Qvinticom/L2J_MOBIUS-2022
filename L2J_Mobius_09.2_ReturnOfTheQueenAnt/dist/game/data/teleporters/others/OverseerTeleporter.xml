@@ -2,9 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
 	<npc id="34524"> <!-- Overseer Teleporter -->
 		<teleport type="OTHER">
-			<location x="-109690" y="75379" z="-3174" /> <!-- Eastern -->
-			<location x="-122255" y="73554" z="-2867" /> <!-- Western -->
-			<location x="-112756" y="91958" z="-3163" /> <!-- Southern -->
+			<location x="-109711" y="75449" z="-3184" /> <!-- Golden Hills(north) -->
+			<location x="-112320" y="91965" z="-3184" /> <!-- Golden Hills(south) -->
+			<location x="-112756" y="91958" z="-3163" /> <!-- Golden Altar -->
+			<location x="-94625" y="51773" z="-2024" /> <!-- Mimir's Altar(Lv. 112) -->
+			<location x="-86475" y="36997" z="-2048" /> <!-- Nornil's Altar(Lv. 112) -->
+			<location x="-74376" y="53733" z="-3672" /> <!-- Isle of Souls Harbor(Lv. 112) -->
+			<location x="-110544" y="47480" z="-1056" /> <!-- Kamael Village(East)(Lv. 112) -->
+			<location x="-119643" y="52494" z="-1000" /> <!-- Kamael Village(South)(Lv. 112) -->
 		</teleport>
 	</npc>
 </list>

@@ -2309,4 +2309,17 @@
 		<stat name="skillIdLvl" val="55031-1;" /> <!-- GM Punish -->
 		<node X="-113088" Y="-251088" />
 	</zone>
+	<zone name="isle_of_souls12" type="EffectZone" shape="NPoly" minZ="-4000" maxZ="2000">
+		<stat name="skillIdLvl" val="32930-1;" /> <!-- Adena Buff -->
+		<stat name="instanceId" val="1007" />
+		<stat name="initialDelay" val="10000" />
+		<stat name="reuse" val="15000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" />
+		<node X="-111716" Y="94184" />
+		<node X="-70216" Y="52586" />
+		<node X="-73981" Y="42474" />
+		<node X="-89670" Y="35065" />
+		<node X="-130285" Y="27143" />
+		<node X="-127035" Y="94029" />
+	</zone>
 </list>

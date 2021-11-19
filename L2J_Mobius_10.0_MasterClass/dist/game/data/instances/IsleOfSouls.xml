@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="1007" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<locations>
+		<enter type="FIXED">
+			<location x="-122259" y="73678" z="-2872" />
+		</enter>
+		<exit type="TOWN" />
+	</locations>
+	<conditions>
+		<condition type="Level">
+			<param name="min" value="107" />
+			<param name="max" value="120" />
+		</condition>
+	</conditions>
+	<reenter apply="ON_ENTER">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+	<spawnlist>
+		<group name="low" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-122446" y="77851"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low1" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-121343" y="80763"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low2" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-125539" y="75768"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low3" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-128124" y="75539"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low4" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-124628" y="78563"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low5" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-124708" y="80869"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low6" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-125700" y="83090"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low7" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-123307" y="82940"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low8" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-120201" y="88114"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low9" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-123540" y="85551"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low10" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-122209" y="87652"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low11" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-124127" y="88260"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low12" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-119427" y="89517"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low13" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-119561" y="91871"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low14" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-121601" y="91462"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low15" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-117036" y="92288"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low16" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-115869" y="90682"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low17" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-112883" y="89714"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low18" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-109778" y="90225"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low19" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-110899" y="87354"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low20" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-108344" y="87141"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low21" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-109436" y="84225"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low22" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-106269" y="84535"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low23" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-108665" y="79736"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low24" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-111264" y="79643"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low25" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-110523" y="76487"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low26" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-116338" y="86781"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low27" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-111033" y="74290"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low28" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-112752" y="72556"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low29" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-111855" y="70904"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low30" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-115190" y="72452"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low31" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-113156" y="76406"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low32" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-113747" y="80578"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low33" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-115451" y="83206"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low34" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-116919" y="81850"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low35" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-118752" y="84377"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low36" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-121416" y="83653"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="low37" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-120240" y="86252"/>
+				</territory>
+			</territories>
+			<npc id="24470" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Traitor -->
+			<npc id="24471" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Kamael Renegade -->
+			<npc id="24472" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Trained Monkey -->
+			<npc id="24473" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Grave Robber -->
+			<npc id="24474" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24475" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high1" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-92846" y="50275"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high2" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-105281" y="52049"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high3" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-110227" y="51054"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high4" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-108198" y="51860"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high5" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-103103" y="46644"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high6" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-1000" rad="500">
+					<node x="-103489" y="44086"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high7" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-107852" y="42863"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high8" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-104772" y="40016"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high9" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-79036" y="39755"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high10" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-77653" y="41902"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high11" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-78018" y="46447"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high12" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-79406" y="45710"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high13" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-107703" y="47468"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high14" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-121332" y="52041"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high15" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-120548" y="54172"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high16" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-121884" y="57057"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high17" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-120342" y="58570"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high18" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-122957" y="55104"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high19" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-124198" y="57873"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high20" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-121526" y="60718"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high21" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-123472" y="61301"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high22" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-122883" y="63558"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high23" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-124871" y="64832"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high24" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-126586" y="62657"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high25" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-123440" y="61302"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high26" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-124188" y="57878"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high27" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-125859" y="55014"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high28" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-126800" y="52869"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high29" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-111461" y="46634"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high30" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-107296" y="44994"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high31" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-102524" y="50434"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high32" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-97149" y="51051"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high33" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-89257" y="56333"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high34" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-87284" y="58210"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high35" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-85575" y="59533"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high36" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-83251" y="58573"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high37" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-84259" y="55320"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high38" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-81893" y="52886"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high39" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-81753" y="50427"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high40" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-81847" y="44344"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high41" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-82990" y="41997"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high42" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-83219" y="39452"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high43" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-86859" y="39961"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high44" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-92288" y="40074"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high45" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-96999" y="39869"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high46" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-99970" y="39483"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high47" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-101940" y="40471"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high48" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-105614" y="42067"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high49" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-107393" y="45043"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high50" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-91656" y="55205"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high51" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-90071" y="52407"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high52" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-87642" y="54124"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="high53" spawnByDefault="true">
+			<territories>
+				<territory name="monsters" shape="Cylinder" minZ="-4000" maxZ="-2000" rad="500">
+					<node x="-83699" y="46406"/>
+				</territory>
+			</territories>
+			<npc id="24839" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Wild Monkey -->
+			<npc id="24837" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Mercenary -->
+			<npc id="24841" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Nerba Orc Shaman -->
+			<npc id="24840" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Dwarf Archaeologist -->
+			<npc id="24838" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Muertos Outlaw -->
+			<npc id="24842" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Orc Raider -->
+		</group>
+		<group name="teleporters" spawnByDefault="true">
+		<npc id="34524" x="-109568" y="75270" z="-3176" heading="58741" respawnTime="60sec" /> <!-- Golden Hills(north) -->
+			<npc id="34524" x="-112768" y="92123" z="-3186" heading="58741" respawnTime="60sec" /> <!-- Golden Hills(south) -->
+			<npc id="34524" x="-122260" y="73669" z="-2872" heading="58741" respawnTime="60sec" /> <!-- Golden Altar -->
+			<npc id="34524" x="-94845" y="51949" z="-2024" heading="58741" respawnTime="60sec" /> <!-- Mimir's Altar(Lv. 112) -->
+			<npc id="34524" x="-86321" y="36982" z="-2048" heading="58741" respawnTime="60sec" /> <!-- Nornil's Altar(Lv. 112) -->
+			<npc id="34524" x="-74113" y="53716" z="-3680" heading="58741" respawnTime="60sec" /> <!-- Isle of Souls Harbor(Lv. 112) -->
+			<npc id="34524" x="-110514" y="47644" z="-1016" heading="58741" respawnTime="60sec" /> <!-- Kamael Village(East)(Lv. 112) -->
+			<npc id="34524" x="-119618" y="52275" z="-936" heading="58741" respawnTime="60sec" /> <!-- Kamael Village(South)(Lv. 112) -->
+			<npc id="34525" x="-122552" y="73560" z="-2879" heading="58741" respawnTime="60sec" /> <!-- Overseer Marskman (Western) -->
+			<npc id="34525" x="-122008" y="73640" z="-2880" heading="58741" respawnTime="60sec" /> <!-- Overseer Marskman (Western) -->			
+			<npc id="34525" x="-109624" y="75627" z="-3194" heading="58741" respawnTime="60sec" /> <!-- Overseer Marskman (Eastern) -->
+			<npc id="34525" x="-109768" y="75128" z="-3180" heading="58741" respawnTime="60sec" /> <!-- Overseer Marskman (Eastern) -->
+			<npc id="19723" x="-109566" y="75380" z="-3191" heading="42257" respawnTime="60sec" /> <!-- Common Decoration - Campfire (Eastern) -->	
+			<npc id="34525" x="-112904" y="91880" z="-3174" heading="58741" respawnTime="60sec" /> <!-- Overseer Marskman (Southern) -->
+			<npc id="34525" x="-112536" y="91848" z="-3190" heading="58741" respawnTime="60sec" /> <!-- Overseer Marskman (Southern) -->
+			<npc id="19723" x="-112810" y="92282" z="-3171" heading="42257" respawnTime="60sec" /> <!-- Common Decoration - Campfire (Southern) -->
+		</group>
+	</spawnlist>
+</instance>

@@ -34,11 +34,15 @@ public class TranscendentZone extends AbstractInstance
 	private static final int PATROL_TELEPORTER = 34568;
 	private static final int PATROL_GUARD = 34569;
 	// Misc
-	private static final int TEMPLATE = 1013; // Corroded Fields
+	private static final int[] TEMPLATE_IDS =
+	{
+		1007, //Isle of Souls
+		1013 // Corroded Fields
+	};
 	
 	public TranscendentZone()
 	{
-		super(TEMPLATE);
+		super(TEMPLATE_IDS);
 		addStartNpc(PATROL_TELEPORTER, PATROL_GUARD);
 		addTalkId(PATROL_TELEPORTER, PATROL_GUARD);
 		addFirstTalkId(PATROL_TELEPORTER, PATROL_GUARD);

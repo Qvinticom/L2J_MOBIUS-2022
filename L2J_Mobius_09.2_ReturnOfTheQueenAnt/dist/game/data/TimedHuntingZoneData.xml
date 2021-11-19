@@ -9,7 +9,7 @@
 		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>100</minLevel>
-		<maxLevel>120</maxLevel>
+		<maxLevel>130</maxLevel>
 	</zone>
 	<zone id="6" name="Primeval Isle">
 		<enterLocation>9400,-21720,-3634</enterLocation>
@@ -20,18 +20,20 @@
 		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>105</minLevel>
-		<maxLevel>120</maxLevel>
+		<maxLevel>130</maxLevel>
 	</zone>
-	<zone id="7" name="Golden Altar">
+	<zone id="7" name="Isle of Souls">
 		<enterLocation>-122259,73678,-2872</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
-		<resetDelay>864000</resetDelay> <!-- 10 days -->
+		<resetDelay>86400</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
 		<remainRefillTime>7200</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>107</minLevel>
-		<maxLevel>120</maxLevel>
+		<maxLevel>130</maxLevel>
+		<instanceId>1007</instanceId>
+		<soloInstance>false</soloInstance>
 	</zone>
 	<zone id="11" name="Abandoned Coal Mines">
 		<enterLocation>139411,-169382,-1600</enterLocation>

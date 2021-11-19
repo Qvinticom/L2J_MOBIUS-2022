@@ -9,9 +9,14 @@
 		<node X="0" Y="-32768" />
 		<node X="32767" Y="-1" />
 	</zone>
-	<zone name="golden_altar_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
-		<node X="-131072" Y="65536" />
-		<node X="-98305" Y="98303" />
+	<zone name="isle_of_souls" type="TimedHuntingZone" shape="NPoly" minZ="-16000" maxZ="10000">
+		<stat name="instanceId" val="1007" />
+		<node X="-111716" Y="94184" />
+		<node X="-70216" Y="52586" />
+		<node X="-73981" Y="42474" />
+		<node X="-89670" Y="35065" />
+		<node X="-130285" Y="27143" />
+		<node X="-127035" Y="94029" />
 	</zone>
 	<zone name="coal_mines_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000">
 		<node X="131072" Y="-196608" />
