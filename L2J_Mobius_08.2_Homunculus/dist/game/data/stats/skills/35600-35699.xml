@@ -2300,7 +2300,35 @@
 	<skill id="35639" toLevel="1" name="Blessed Exalted Necklace - Cooldown">
 		<!-- P./ M. Atk. +5%, Damage Reflection +3%, Skill Cooldown -10%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>3</amount>
+			</effect>
+			<effect name="Reuse">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35640" toLevel="1" name="Blessed Exalted Earring - MP Consumption">
 		<!-- Confusion Resistance/ Atk. Rate +30%, Vampiric Rage +3%, Received Healing +10%, Skill MP Consumption -5%. -->
@@ -2402,47 +2430,391 @@
 	<skill id="35645" toLevel="1" name="Minor War">
 		<!-- P. Atk. +7%, additional damage +3%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35646" toLevel="1" name="Minor Revelation">
 		<!-- M. Atk. +7%, additional damage +3%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35647" toLevel="1" name="Minor Greed">
 		<!-- Critical Damage for standard attacks +7%, additional damage +3%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35648" toLevel="1" name="Minor Punishment">
 		<!-- P. Skill Critical Damage +7%, additional damage +3%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35649" toLevel="1" name="Minor Awakening">
 		<!-- M. Skill Critical Damage +7%, additional damage +3%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+			<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35650" toLevel="1" name="Minor Disaster">
 		<!-- Skill Cooldown -7%, Received Damage -6%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<magicType>3</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-7</amount>
+				<magicType>22</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35651" toLevel="1" name="Minor Advent">
 		<!-- Max HP +17%, Received Damage -6%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35652" toLevel="1" name="Exalted Augmentation">
 		<!-- P./ M. Atk., P./ M. Def. and Max HP/ MP/ CP +10%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35653" toLevel="1" name="Exalted Circlet">
 		<!-- LUC/ CHA +1, STR/ INT/ CON +3, Attribute Attack/ Resistance +30, Vitality Bonus +10%, P./ M. Atk. and P./ M. Def. +5%, P. Critical Rate/ M. Skill Critical Rate +50, Debuff Resistance +3%, Acquired XP/ SP +10%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>10</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>3</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35654" toLevel="1" name="Exalted Augmentation">
 		<!-- P. Critical Damage and P./ M. Skill Critical Damage +5%. -->
