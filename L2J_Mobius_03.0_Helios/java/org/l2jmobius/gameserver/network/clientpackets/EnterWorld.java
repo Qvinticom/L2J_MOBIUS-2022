@@ -330,9 +330,6 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Quest Item List
 		client.sendPacket(new ExQuestItemList(player));
 		
-		// Send Adena and Inventory Count
-		client.sendPacket(new ExAdenaInvenCount(player));
-		
 		// Send Shortcuts
 		client.sendPacket(new ShortCutInit(player));
 		
