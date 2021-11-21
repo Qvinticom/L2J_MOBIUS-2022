@@ -1228,6 +1228,9 @@
 		<targetConditions>
 			<condition name="OpSiegeHammer" />
 		</targetConditions>
+		<conditions>
+			<condition name="OpStrider" />
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>15005</power>
@@ -1279,6 +1282,9 @@
 		<specialLevel>-1</specialLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpWyvern" />
+		</conditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>7000</amount>

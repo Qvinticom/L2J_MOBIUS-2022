@@ -115,6 +115,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpSkillAcquire", OpSkillAcquireSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpSocialClass", OpSocialClassSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpSoulMax", OpSoulMaxSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpStrider", OpStriderSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpSubjob", OpSubjobSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpSweeper", OpSweeperSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpTargetAllItemType", OpTargetAllItemTypeSkillCondition::new);
