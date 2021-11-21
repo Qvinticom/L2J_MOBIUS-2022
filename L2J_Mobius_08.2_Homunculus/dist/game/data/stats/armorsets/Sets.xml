@@ -8117,18 +8117,32 @@
 	</set>
 	<set id="322" minimumPieces="2">
 		<requiredItems>
-			<item id="29751" /> <!-- Heir's Radiance Lv. 2 (PvE) -->
-			<item id="29752" /> <!-- Heir's Radiance Lv. 3 (PvE) -->
-			<item id="29753" /> <!-- Heir's Radiance Lv. 4 (PvE) -->
-			<item id="29899" /> <!-- Heir's Radiance Lv. 5 (PvE) -->
-			<item id="29900" /> <!-- Heir's Radiance Lv. 6 (PvE) -->
-			<item id="29901" /> <!-- Heir's Radiance Lv. 7 (PvE) -->		
+			<item id="29751" /> <!-- Heir's Radiance Lv. 2 (PvE) -->		
 			<item id="29755" /> <!-- Heir's Radiance Lv. 2 (PvP) -->
+			<item id="48202" /> <!-- Warrior's Circlet -->
+			<item id="48203" /> <!-- Noble Warrior's Circlet -->
+			<item id="48204" /> <!-- Radiant Warrior's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29393" level="1" minimumPieces="2" /> <!-- Warrior's Heir -->
+		</skills>
+	</set>
+	<set id="323" minimumPieces="2">
+		<requiredItems>
+			<item id="29752" /> <!-- Heir's Radiance Lv. 3 (PvE) -->
 			<item id="29756" /> <!-- Heir's Radiance Lv. 3 (PvP) -->
+			<item id="48202" /> <!-- Warrior's Circlet -->
+			<item id="48203" /> <!-- Noble Warrior's Circlet -->
+			<item id="48204" /> <!-- Radiant Warrior's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29393" level="2" minimumPieces="2" /> <!-- Warrior's Heir -->
+		</skills>
+	</set>
+	<set id="324" minimumPieces="2">
+		<requiredItems>
+			<item id="29753" /> <!-- Heir's Radiance Lv. 4 (PvE) -->
 			<item id="29757" /> <!-- Heir's Radiance Lv. 4 (PvP) -->
-			<item id="29902" /> <!-- Heir's Radiance Lv. 5 (PvP) -->
-			<item id="29903" /> <!-- Heir's Radiance Lv. 6 (PvP) -->
-			<item id="29904" /> <!-- Heir's Radiance Lv. 7 (PvP) -->
 			<item id="48202" /> <!-- Warrior's Circlet -->
 			<item id="48203" /> <!-- Noble Warrior's Circlet -->
 			<item id="48204" /> <!-- Radiant Warrior's Circlet -->
@@ -8137,20 +8151,70 @@
 			<skill id="29393" level="3" minimumPieces="2" /> <!-- Warrior's Heir -->
 		</skills>
 	</set>
-	<set id="323" minimumPieces="2">
+	<set id="325" minimumPieces="2">
 		<requiredItems>
-			<item id="29751" /> <!-- Heir's Radiance Lv. 2 (PvE) -->
-			<item id="29752" /> <!-- Heir's Radiance Lv. 3 (PvE) -->
-			<item id="29753" /> <!-- Heir's Radiance Lv. 4 (PvE) -->
 			<item id="29899" /> <!-- Heir's Radiance Lv. 5 (PvE) -->
-			<item id="29900" /> <!-- Heir's Radiance Lv. 6 (PvE) -->
-			<item id="29901" /> <!-- Heir's Radiance Lv. 7 (PvE) -->		
-			<item id="29755" /> <!-- Heir's Radiance Lv. 2 (PvP) -->
-			<item id="29756" /> <!-- Heir's Radiance Lv. 3 (PvP) -->
-			<item id="29757" /> <!-- Heir's Radiance Lv. 4 (PvP) -->
 			<item id="29902" /> <!-- Heir's Radiance Lv. 5 (PvP) -->
+			<item id="48202" /> <!-- Warrior's Circlet -->
+			<item id="48203" /> <!-- Noble Warrior's Circlet -->
+			<item id="48204" /> <!-- Radiant Warrior's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29393" level="4" minimumPieces="2" /> <!-- Warrior's Heir -->
+		</skills>
+	</set>
+	<set id="326" minimumPieces="2">
+		<requiredItems>
+			<item id="29900" /> <!-- Heir's Radiance Lv. 6 (PvE) -->
 			<item id="29903" /> <!-- Heir's Radiance Lv. 6 (PvP) -->
+			<item id="48202" /> <!-- Warrior's Circlet -->
+			<item id="48203" /> <!-- Noble Warrior's Circlet -->
+			<item id="48204" /> <!-- Radiant Warrior's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29393" level="5" minimumPieces="2" /> <!-- Warrior's Heir -->
+		</skills>
+	</set>
+	<set id="327" minimumPieces="2">
+		<requiredItems>
+			<item id="29901" /> <!-- Heir's Radiance Lv. 7 (PvE) -->
 			<item id="29904" /> <!-- Heir's Radiance Lv. 7 (PvP) -->
+			<item id="48202" /> <!-- Warrior's Circlet -->
+			<item id="48203" /> <!-- Noble Warrior's Circlet -->
+			<item id="48204" /> <!-- Radiant Warrior's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29393" level="6" minimumPieces="2" /> <!-- Warrior's Heir -->
+		</skills>
+	</set>
+	<set id="328" minimumPieces="2">
+		<requiredItems>
+			<item id="29751" /> <!-- Heir's Radiance Lv. 2 (PvE) -->		
+			<item id="29755" /> <!-- Heir's Radiance Lv. 2 (PvP) -->
+			<item id="48205" /> <!-- Wizard's Circlet -->
+			<item id="48206" /> <!-- Noble Wizard's Circlet -->
+			<item id="48207" /> <!-- Radiant Wizard's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29394" level="1" minimumPieces="2" /> <!-- Wizard's Heir -->
+		</skills>
+	</set>	
+	<set id="329" minimumPieces="2">
+		<requiredItems>
+			<item id="29752" /> <!-- Heir's Radiance Lv. 3 (PvE) -->
+			<item id="29756" /> <!-- Heir's Radiance Lv. 3 (PvP) -->
+			<item id="48205" /> <!-- Wizard's Circlet -->
+			<item id="48206" /> <!-- Noble Wizard's Circlet -->
+			<item id="48207" /> <!-- Radiant Wizard's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29394" level="2" minimumPieces="2" /> <!-- Wizard's Heir -->
+		</skills>
+	</set>	
+	<set id="330" minimumPieces="2">
+		<requiredItems>
+			<item id="29753" /> <!-- Heir's Radiance Lv. 4 (PvE) -->
+			<item id="29757" /> <!-- Heir's Radiance Lv. 4 (PvP) -->
 			<item id="48205" /> <!-- Wizard's Circlet -->
 			<item id="48206" /> <!-- Noble Wizard's Circlet -->
 			<item id="48207" /> <!-- Radiant Wizard's Circlet -->
@@ -8158,27 +8222,113 @@
 		<skills>
 			<skill id="29394" level="3" minimumPieces="2" /> <!-- Wizard's Heir -->
 		</skills>
-	</set>
-	<set id="324" minimumPieces="2">
+	</set>	
+	<set id="331" minimumPieces="2">
 		<requiredItems>
-			<item id="29751" /> <!-- Heir's Radiance Lv. 2 (PvE) -->
-			<item id="29752" /> <!-- Heir's Radiance Lv. 3 (PvE) -->
-			<item id="29753" /> <!-- Heir's Radiance Lv. 4 (PvE) -->
 			<item id="29899" /> <!-- Heir's Radiance Lv. 5 (PvE) -->
-			<item id="29900" /> <!-- Heir's Radiance Lv. 6 (PvE) -->
-			<item id="29901" /> <!-- Heir's Radiance Lv. 7 (PvE) -->		
-			<item id="29755" /> <!-- Heir's Radiance Lv. 2 (PvP) -->
-			<item id="29756" /> <!-- Heir's Radiance Lv. 3 (PvP) -->
-			<item id="29757" /> <!-- Heir's Radiance Lv. 4 (PvP) -->
 			<item id="29902" /> <!-- Heir's Radiance Lv. 5 (PvP) -->
+			<item id="48205" /> <!-- Wizard's Circlet -->
+			<item id="48206" /> <!-- Noble Wizard's Circlet -->
+			<item id="48207" /> <!-- Radiant Wizard's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29394" level="4" minimumPieces="2" /> <!-- Wizard's Heir -->
+		</skills>
+	</set>	
+	<set id="332" minimumPieces="2">
+		<requiredItems>
+			<item id="29900" /> <!-- Heir's Radiance Lv. 6 (PvE) -->
 			<item id="29903" /> <!-- Heir's Radiance Lv. 6 (PvP) -->
+			<item id="48205" /> <!-- Wizard's Circlet -->
+			<item id="48206" /> <!-- Noble Wizard's Circlet -->
+			<item id="48207" /> <!-- Radiant Wizard's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29394" level="5" minimumPieces="2" /> <!-- Wizard's Heir -->
+		</skills>
+	</set>	
+	<set id="333" minimumPieces="2">
+		<requiredItems>
+			<item id="29901" /> <!-- Heir's Radiance Lv. 7 (PvE) -->
 			<item id="29904" /> <!-- Heir's Radiance Lv. 7 (PvP) -->
+			<item id="48205" /> <!-- Wizard's Circlet -->
+			<item id="48206" /> <!-- Noble Wizard's Circlet -->
+			<item id="48207" /> <!-- Radiant Wizard's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29394" level="6" minimumPieces="2" /> <!-- Wizard's Heir -->
+		</skills>
+	</set>
+	<set id="334" minimumPieces="2">
+		<requiredItems>
+			<item id="29751" /> <!-- Heir's Radiance Lv. 2 (PvE) -->	
+			<item id="29755" /> <!-- Heir's Radiance Lv. 2 (PvP) -->
+			<item id="48208" /> <!-- Knight's Circlet -->
+			<item id="48209" /> <!-- Noble Knight's Circlet -->
+			<item id="48210" /> <!-- Radiant Knight's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29395" level="1" minimumPieces="2" /> <!-- Knight's Heir -->
+		</skills>
+	</set>
+	<set id="335" minimumPieces="2">
+		<requiredItems>
+			<item id="29752" /> <!-- Heir's Radiance Lv. 3 (PvE) -->
+			<item id="29756" /> <!-- Heir's Radiance Lv. 3 (PvP) -->
+			<item id="48208" /> <!-- Knight's Circlet -->
+			<item id="48209" /> <!-- Noble Knight's Circlet -->
+			<item id="48210" /> <!-- Radiant Knight's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29395" level="2" minimumPieces="2" /> <!-- Knight's Heir -->
+		</skills>
+	</set>
+	<set id="336" minimumPieces="2">
+		<requiredItems>
+			<item id="29753" /> <!-- Heir's Radiance Lv. 4 (PvE) -->
+			<item id="29757" /> <!-- Heir's Radiance Lv. 4 (PvP) -->
 			<item id="48208" /> <!-- Knight's Circlet -->
 			<item id="48209" /> <!-- Noble Knight's Circlet -->
 			<item id="48210" /> <!-- Radiant Knight's Circlet -->
 		</requiredItems>
 		<skills>
 			<skill id="29395" level="3" minimumPieces="2" /> <!-- Knight's Heir -->
+		</skills>
+	</set>
+	<set id="337" minimumPieces="2">
+		<requiredItems>
+			<item id="29899" /> <!-- Heir's Radiance Lv. 5 (PvE) -->
+			<item id="29902" /> <!-- Heir's Radiance Lv. 5 (PvP) -->
+			<item id="48208" /> <!-- Knight's Circlet -->
+			<item id="48209" /> <!-- Noble Knight's Circlet -->
+			<item id="48210" /> <!-- Radiant Knight's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29395" level="4" minimumPieces="2" /> <!-- Knight's Heir -->
+		</skills>
+	</set>
+	<set id="338" minimumPieces="2">
+		<requiredItems>
+			<item id="29900" /> <!-- Heir's Radiance Lv. 6 (PvE) -->
+			<item id="29903" /> <!-- Heir's Radiance Lv. 6 (PvP) -->
+			<item id="48208" /> <!-- Knight's Circlet -->
+			<item id="48209" /> <!-- Noble Knight's Circlet -->
+			<item id="48210" /> <!-- Radiant Knight's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29395" level="5" minimumPieces="2" /> <!-- Knight's Heir -->
+		</skills>
+	</set>
+	<set id="339" minimumPieces="2">
+		<requiredItems>
+			<item id="29901" /> <!-- Heir's Radiance Lv. 7 (PvE) -->
+			<item id="29904" /> <!-- Heir's Radiance Lv. 7 (PvP) -->
+			<item id="48208" /> <!-- Knight's Circlet -->
+			<item id="48209" /> <!-- Noble Knight's Circlet -->
+			<item id="48210" /> <!-- Radiant Knight's Circlet -->
+		</requiredItems>
+		<skills>
+			<skill id="29395" level="6" minimumPieces="2" /> <!-- Knight's Heir -->
 		</skills>
 	</set>
 </list>
