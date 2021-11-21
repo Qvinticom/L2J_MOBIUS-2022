@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExRequestActivate
 import org.l2jmobius.gameserver.network.clientpackets.blessing.RequestBlessOptionCancel;
 import org.l2jmobius.gameserver.network.clientpackets.blessing.RequestBlessOptionEnchant;
 import org.l2jmobius.gameserver.network.clientpackets.blessing.RequestBlessOptionPutItem;
+import org.l2jmobius.gameserver.network.clientpackets.castlewar.ExMCWCastleInfo;
 import org.l2jmobius.gameserver.network.clientpackets.classchange.ExRequestClassChange;
 import org.l2jmobius.gameserver.network.clientpackets.classchange.ExRequestClassChangeVerifying;
 import org.l2jmobius.gameserver.network.clientpackets.collection.RequestCollectionCloseUI;
@@ -558,7 +559,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_RANKING_CHAR_SPAWN_BUFFZONE_NPC(0x184, null, ConnectionState.IN_GAME),
 	EX_RANKING_CHAR_BUFFZONE_NPC_POSITION(0x185, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(0x186, null, ConnectionState.IN_GAME),
-	EX_MERCENARY_CASTLEWAR_CASTLE_INFO(0x187, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_INFO(0x187, ExMCWCastleInfo::new, ConnectionState.IN_GAME),
 	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(0x188, null, ConnectionState.IN_GAME),
 	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x189, null, ConnectionState.IN_GAME),
 	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(0x18A, null, ConnectionState.IN_GAME),
