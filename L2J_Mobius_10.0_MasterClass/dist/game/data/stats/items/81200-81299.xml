@@ -115,7 +115,7 @@
 			<skill id="39615" level="1" /> <!-- Vitality Maintaining Rune (7-day) -->
 		</skills>
 	</item>
-	<item id="81207" name="First Exalted Quest Reward" additionalName="Physical" type="EtcItem">
+	<item id="81207" name="Common Exalted Supply Box" additionalName="Physical" type="EtcItem">
 		<!-- Double-click to obtain Exalted Seed Bracelet, Exalted Dye and supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
@@ -128,10 +128,10 @@
 		<capsuled_items>
 			<item id="33780" min="1" max="100000" chance="100" /> <!-- R-grade Soulshot - Event -->
 			<item id="81202" min="1" max="1" chance="100" /> <!-- Exalted Seed Bracelet -->
-			<item id="81198" min="1" max="1" chance="100" /> <!-- Exalted STR Dye - STR+3 -->
+			<item id="81198" min="3" max="3" chance="100" /> <!-- Exalted STR Dye - STR+3 -->
 		</capsuled_items>
 	</item>
-	<item id="81208" name="First Exalted Quest Reward" additionalName="Magic Type" type="EtcItem">
+	<item id="81208" name="Common Exalted Supply Box" additionalName="Magic Type" type="EtcItem">
 		<!-- Double-click to obtain Exalted Seed Bracelet, Exalted Dye and supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
@@ -144,10 +144,10 @@
 		<capsuled_items>
 			<item id="33794" min="1" max="100000" chance="100" /> <!-- Blessed R-grade Spiritshot - Event -->
 			<item id="81202" min="1" max="1" chance="100" /> <!-- Exalted Seed Bracelet -->
-			<item id="81199" min="1" max="1" chance="100" /> <!-- Exalted INT Dye - INT+3 -->
+			<item id="81199" min="3" max="3" chance="100" /> <!-- Exalted INT Dye - INT+3 -->
 		</capsuled_items>
 	</item>
-	<item id="81209" name="Second Exalted Quest Reward" additionalName="Physical" type="EtcItem">
+	<item id="81209" name="Special Exalted Supply Box" additionalName="Physical" type="EtcItem">
 		<!-- Double-click to obtain Exalted Weapon Upgrade Stone, jewels, a shirt, right bracelet, talismans and supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
@@ -171,7 +171,7 @@
 			<item id="34987" min="1" max="1" chance="100" /> <!-- Talisman of Hellfire -->
 		</capsuled_items>
 	</item>
-	<item id="81210" name="Second Exalted Quest Reward" additionalName="Magic Type" type="EtcItem">
+	<item id="81210" name="Special Exalted Supply Box" additionalName="Magic Type" type="EtcItem">
 		<!-- Double-click to obtain Exalted Weapon Upgrade Stone, jewels, a shirt, right bracelet, talismans and supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />

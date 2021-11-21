@@ -288,7 +288,7 @@ public class Q10590_ReawakenedFate extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
-			if ((getQuestItemsCount(player, VAMPIRE_ICHOR) < 500) && (getRandom(100) < 90))
+			if (getQuestItemsCount(player, VAMPIRE_ICHOR) < 500)
 			{
 				giveItems(player, VAMPIRE_ICHOR, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

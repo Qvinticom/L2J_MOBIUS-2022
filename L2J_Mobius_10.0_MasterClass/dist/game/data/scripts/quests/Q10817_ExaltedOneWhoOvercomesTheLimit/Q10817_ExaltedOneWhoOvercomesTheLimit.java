@@ -20,10 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.CategoryData;
-import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.enums.ClassId;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
@@ -50,9 +46,6 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2 = 45923;
 	private static final int SPELLBOOK_BELIEF_OF_THE_EXALTED = 45925;
 	private static final int SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1 = 45928;
-	private static final int EXALTED_WEAPON_UPGRADE_STONE = 81200;
-	private static final int SECOND_EXALTED_QUEST_REWARD_P = 81209;
-	private static final int SECOND_EXALTED_QUEST_REWARD_M = 81210;
 	// Misc
 	private static final int MIN_LEVEL = 101;
 	private static final int MIN_COMPLETE_LEVEL = 102;
@@ -274,8 +267,6 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = null;
-		final Race race = player.getRace();
-		final ClassId classId = player.getBaseTemplate().getClassId();
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
@@ -306,164 +297,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 				{
 					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2, 1);
 					giveItems(player, SPELLBOOK_BELIEF_OF_THE_EXALTED, 1);
-					giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1, 1);
-					giveItems(player, EXALTED_WEAPON_UPGRADE_STONE, 1);
-					
-					switch (race)
-					{
-						case HUMAN:
-						case ELF:
-						case DARK_ELF:
-						{
-							if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()) || (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_WYNN_GROUP, classId.getId())))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_M, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_EOLH_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_M, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_IS_GROUP, classId.getId()) || (player.getClassId() == ClassId.TYRR_DUELIST))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (player.getClassId() == ClassId.TYRR_DREADNOUGHT)
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_SIGEL_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_M, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_BOW, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DAGGER, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DANCE, classId.getId()) || (player.getClassId() == ClassId.GLADIATOR))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (player.getClassId() == ClassId.WARLORD)
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (player.getClassId() == ClassId.DUELIST)
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.TANKER_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_WARRIOR_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							break;
-						}
-						case DWARF:
-						{
-							if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.DWARF_BOUNTY_CLASS, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							break;
-						}
-						case ORC:
-						{
-							if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_IS_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (player.getClassId() == ClassId.TYRR_GRAND_KHAVATARI)
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (player.getClassId() == ClassId.TYRR_TITAN)
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (player.isMageClass())
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.LIGHT_ARMOR_CLASS, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							break;
-						}
-						case KAMAEL:
-						{
-							if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_M, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_M, 1);
-							}
-							else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_ARCHER, classId.getId()))
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							else
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-								break;
-							}
-							break;
-						}
-						case ERTHEIA:
-						{
-							if (player.isMageClass())
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_M, 1);
-							}
-							else
-							{
-								giveItems(player, SECOND_EXALTED_QUEST_REWARD_P, 1);
-							}
-							break;
-						}
-					}
-					
+					giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1, 1);				
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -522,7 +356,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		{
 			if (getQuestItemsCount(player, PROOF_OF_RESISTANCE) < PROOF_OF_RESISTANCE_NEEDED)
 			{
-				giveItemRandomly(player, PROOF_OF_RESISTANCE, 1, PROOF_OF_RESISTANCE_NEEDED, 1, true);
+				giveItems(player, PROOF_OF_RESISTANCE, 1);
 			}
 			if ((getQuestItemsCount(player, PROOF_OF_RESISTANCE) >= PROOF_OF_RESISTANCE_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 			{

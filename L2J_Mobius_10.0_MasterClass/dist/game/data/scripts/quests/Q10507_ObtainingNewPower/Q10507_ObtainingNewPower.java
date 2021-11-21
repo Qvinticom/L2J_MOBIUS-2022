@@ -341,7 +341,7 @@ public class Q10507_ObtainingNewPower extends Quest
 		{
 			if (getQuestItemsCount(player, PROOF_OF_STRENGTH) < PROOF_OF_STRENGTH_NEEDED)
 			{
-				giveItemRandomly(player, PROOF_OF_STRENGTH, 1, PROOF_OF_STRENGTH_NEEDED, 1, true);
+				giveItems(player, PROOF_OF_STRENGTH, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			if ((getQuestItemsCount(player, PROOF_OF_STRENGTH) >= PROOF_OF_STRENGTH_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))

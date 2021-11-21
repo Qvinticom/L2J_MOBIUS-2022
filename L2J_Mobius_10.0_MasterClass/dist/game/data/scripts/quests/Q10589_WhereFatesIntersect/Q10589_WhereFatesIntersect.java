@@ -261,7 +261,7 @@ public class Q10589_WhereFatesIntersect extends Quest
 		{
 			if (getQuestItemsCount(player, MONSTER_DROP) < REQUIRED_DROP_COUNT)
 			{
-				giveItemRandomly(player, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
+				giveItems(player, MONSTER_DROP, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			if ((getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT) && (player.getLevel() >= 95))

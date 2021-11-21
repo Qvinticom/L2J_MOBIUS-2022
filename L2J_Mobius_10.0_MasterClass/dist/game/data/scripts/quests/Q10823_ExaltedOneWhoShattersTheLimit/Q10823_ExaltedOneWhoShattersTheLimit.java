@@ -44,7 +44,6 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 	private static final int LIONEL_MISSION_LIST_3 = 45637;
 	// Rewards
 	private static final int EXALTED_CLOAK = 37763;
-	private static final int OBTAIN_EXALTED_STATUS = 45638;
 	private static final int EXALTED_TIARA = 45644;
 	private static final int DIGNITY_OF_THE_EXALTED_LV3 = 45924;
 	private static final int BLESSING_OF_THE_EXALTED = 45926;
@@ -301,7 +300,6 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
 					giveItems(player, EXALTED_CLOAK, 1);
-					giveItems(player, OBTAIN_EXALTED_STATUS, 1);
 					giveItems(player, EXALTED_TIARA, 1);
 					giveItems(player, DIGNITY_OF_THE_EXALTED_LV3, 1);
 					giveItems(player, BLESSING_OF_THE_EXALTED, 1);
@@ -370,7 +368,7 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 		{
 			if (getQuestItemsCount(player, PROOF_OF_PREPARATION) < PROOF_OF_PREPARATION_NEEDED)
 			{
-				giveItemRandomly(player, PROOF_OF_PREPARATION, 1, PROOF_OF_PREPARATION_NEEDED, 1, true);
+				giveItems(player, PROOF_OF_PREPARATION, 1);
 			}
 			if ((getQuestItemsCount(player, PROOF_OF_PREPARATION) >= PROOF_OF_PREPARATION_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 			{

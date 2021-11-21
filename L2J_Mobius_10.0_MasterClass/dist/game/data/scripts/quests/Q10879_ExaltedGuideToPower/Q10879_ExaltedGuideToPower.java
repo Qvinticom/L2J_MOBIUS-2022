@@ -366,7 +366,7 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		{
 			if (getQuestItemsCount(player, PROOF_OF_PRIDE) < PROOF_OF_PRIDE_NEEDED)
 			{
-				giveItemRandomly(player, PROOF_OF_PRIDE, 1, PROOF_OF_PRIDE_NEEDED, 1, true);
+				giveItems(player, PROOF_OF_PRIDE, 1);
 			}
 			if ((getQuestItemsCount(player, PROOF_OF_PRIDE) >= PROOF_OF_PRIDE_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 			{

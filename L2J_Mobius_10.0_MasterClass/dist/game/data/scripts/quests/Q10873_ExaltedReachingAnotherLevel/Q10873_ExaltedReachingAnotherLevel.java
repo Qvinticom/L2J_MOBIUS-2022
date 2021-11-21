@@ -366,7 +366,7 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 		{
 			if (getQuestItemsCount(player, PROOF_OF_REPUTATION) < PROOF_OF_REPUTATION_NEEDED)
 			{
-				giveItemRandomly(player, PROOF_OF_REPUTATION, 1, PROOF_OF_REPUTATION_NEEDED, 1, true);
+				giveItems(player, PROOF_OF_REPUTATION, 1);
 			}
 			if ((getQuestItemsCount(player, PROOF_OF_REPUTATION) >= PROOF_OF_REPUTATION_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 			{

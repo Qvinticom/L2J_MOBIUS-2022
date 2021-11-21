@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -71,10 +72,30 @@ public class Q10591_NobleMaterial extends Quest
 	// Rewards
 	private static final int ADENA_AMOUNT = 5050;
 	private static final int ACHIEVEMENT_BOX_LV_100 = 80910;
-	private static final int ACQUIRE_NOBLESSE_PRIVILEGES = 34983;
 	private static final int WARRIOR_CICLET_BOX_LV5 = 80911;
 	private static final int WIZARD_CICLET_BOX_LV5 = 80912;
 	private static final int KNIGHT_CICLET_BOX_LV5 = 80913;
+	private static final int EXALTED_HEAVY_ARMOR_PACK = 81203;
+	private static final int EXALTED_LIGHT_ARMOR_PACK = 81204;
+	private static final int EXALTED_ROBE_PACK = 81205;
+	private static final int EXALTED_SHIELD = 81186;
+	private static final int EXALTED_SIGIL = 81197;
+	private static final int COMMON_EXALTED_QUEST_REWARD_PHYSICAL = 81207;
+	private static final int COMMON_EXALTED_QUEST_REWARD_MAGIC = 81208;
+	private static final int SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL = 81209;
+	private static final int SPECIAL_EXALTED_QUEST_REWARD_MAGIC = 81210;
+	private static final int EXALTED_CUTTER = 81157;
+	private static final int EXALTED_SLASHER = 81158;
+	private static final int EXALTED_AVENGER = 81159;
+	private static final int EXALTED_FIGHTER = 81160;
+	private static final int EXALTED_STORMER = 81161;
+	private static final int EXALTED_THROWER = 81162;
+	private static final int EXALTED_SHOOTER = 81163;
+	private static final int EXALTED_BUSTER = 81164;
+	private static final int EXALTED_CASTER = 81165;
+	private static final int EXALTED_RETRIBUTER = 81166;
+	private static final int EXALTED_DUAL_SWORDS = 81167;
+	private static final int EXALTED_DUAL_DAGGERS = 81168;
 	// Misc
 	private static final int MIN_LEVEL = 100;
 	// Location
@@ -183,11 +204,8 @@ public class Q10591_NobleMaterial extends Quest
 				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
 					// Reward #1
-					giveAdena(player, ADENA_AMOUNT, false);
-					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
-					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, WARRIOR_CICLET_BOX_LV5, 1);
-					takeItem(player, TELEPORT_CUBE);
+					basicRewards(player);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -201,11 +219,8 @@ public class Q10591_NobleMaterial extends Quest
 				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
 					// Reward #2
-					giveAdena(player, ADENA_AMOUNT, false);
-					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
-					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, WIZARD_CICLET_BOX_LV5, 1);
-					takeItem(player, TELEPORT_CUBE);
+					basicRewards(player);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -219,11 +234,8 @@ public class Q10591_NobleMaterial extends Quest
 				if (qs.isCond(7) && (player.getLevel() >= MIN_LEVEL))
 				{
 					// Reward #3
-					giveAdena(player, ADENA_AMOUNT, false);
-					giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
-					giveItems(player, ACQUIRE_NOBLESSE_PRIVILEGES, 1);
 					giveItems(player, KNIGHT_CICLET_BOX_LV5, 1);
-					takeItem(player, TELEPORT_CUBE);
+					basicRewards(player);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -358,7 +370,7 @@ public class Q10591_NobleMaterial extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
-			if ((getQuestItemsCount(player, FLAME_ENERGY) < 1000) && (getRandom(100) < 90))
+			if (getQuestItemsCount(player, FLAME_ENERGY) < 1000)
 			{
 				giveItems(player, FLAME_ENERGY, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -375,5 +387,185 @@ public class Q10591_NobleMaterial extends Quest
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	public void basicRewards(Player player)
+	{
+		final Race race = player.getRace();
+		final ClassId classId = player.getBaseTemplate().getClassId();
+		
+		giveAdena(player, ADENA_AMOUNT, false);
+		giveItems(player, ACHIEVEMENT_BOX_LV_100, 1);
+		takeItem(player, TELEPORT_CUBE);
+		switch (race)
+		{
+			case HUMAN:
+			case ELF:
+			case DARK_ELF:
+			{
+				if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_BUSTER, 1);
+					giveItems(player, EXALTED_ROBE_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_MAGIC, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_MAGIC, 1);
+				}
+				else if ((CategoryData.getInstance().isInCategory(CategoryType.SIXTH_WYNN_GROUP, classId.getId())))
+				{
+					giveItems(player, EXALTED_RETRIBUTER, 1);
+					giveItems(player, EXALTED_ROBE_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_EOLH_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_CASTER, 1);
+					giveItems(player, EXALTED_ROBE_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_MAGIC, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_MAGIC, 1);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_DUAL_DAGGERS, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_THROWER, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_IS_GROUP, classId.getId()) || (player.getClassId() == ClassId.TYRR_DUELIST))
+				{
+					giveItems(player, EXALTED_DUAL_SWORDS, 1);
+					giveItems(player, EXALTED_HEAVY_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (player.getClassId() == ClassId.TYRR_DREADNOUGHT)
+				{
+					giveItems(player, EXALTED_STORMER, 1);
+					giveItems(player, EXALTED_HEAVY_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_SIGEL_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_CUTTER, 1);
+					giveItems(player, EXALTED_HEAVY_ARMOR_PACK, 1);
+					giveItems(player, player.getClassId() == ClassId.SIGEL_DEATH_KNIGHT ? EXALTED_SIGIL : EXALTED_SHIELD, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				break;
+			}
+			case DWARF:
+			{
+				if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_DUAL_DAGGERS, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else
+				{
+					giveItems(player, EXALTED_AVENGER, 1);
+					giveItems(player, EXALTED_HEAVY_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SHIELD, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				break;
+			}
+			case ORC:
+			{
+				if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_IS_GROUP, classId.getId()))
+				{
+					giveItems(player, player.getClassId() == ClassId.ISS_DOMINATOR ? EXALTED_CUTTER : EXALTED_DUAL_SWORDS, 1);
+					giveItems(player, EXALTED_HEAVY_ARMOR_PACK, 1);
+					giveItems(player, player.getClassId() == ClassId.ISS_DOMINATOR ? EXALTED_SHIELD : EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (player.getClassId() == ClassId.TYRR_GRAND_KHAVATARI)
+				{
+					giveItems(player, EXALTED_FIGHTER, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else if (player.getClassId() == ClassId.TYRR_TITAN)
+				{
+					giveItems(player, EXALTED_SLASHER, 1);
+					giveItems(player, EXALTED_HEAVY_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				break;
+			}
+			case KAMAEL:
+			{
+				if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_BUSTER, 1);
+					giveItems(player, EXALTED_ROBE_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_MAGIC, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_MAGIC, 1);
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
+				{
+					giveItems(player, EXALTED_SHOOTER, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				else
+				{
+					giveItems(player, EXALTED_SLASHER, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					break;
+				}
+				break;
+			}
+			case ERTHEIA:
+			{
+				if (player.isMageClass())
+				{
+					giveItems(player, EXALTED_RETRIBUTER, 1);
+					giveItems(player, EXALTED_ROBE_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_MAGIC, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_MAGIC, 1);
+				}
+				else
+				{
+					giveItems(player, EXALTED_FIGHTER, 1);
+					giveItems(player, EXALTED_LIGHT_ARMOR_PACK, 1);
+					giveItems(player, EXALTED_SIGIL, 1);
+					giveItems(player, COMMON_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+					giveItems(player, SPECIAL_EXALTED_QUEST_REWARD_PHYSICAL, 1);
+				}
+				break;
+			}
+		}
 	}
 }
