@@ -54,7 +54,7 @@ public class ItemAuctionManager
 		
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Disabled by config.");
+			LOGGER.info(getClass().getSimpleName() + ": Disabled.");
 			return;
 		}
 		

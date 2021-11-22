@@ -51,7 +51,7 @@ public class ItemAuctionManager implements IXmlReader
 	{
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			LOGGER.info("Disabled by config.");
+			LOGGER.info(getClass().getSimpleName() + ": Disabled.");
 			return;
 		}
 		
