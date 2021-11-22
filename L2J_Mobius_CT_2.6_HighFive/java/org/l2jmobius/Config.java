@@ -1102,8 +1102,7 @@ public class Config
 	public static float CHAMPION_SPD_ATK;
 	public static int CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE;
 	public static int CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE;
-	public static int CHAMPION_REWARD_ID;
-	public static int CHAMPION_REWARD_QTY;
+	public static List<ItemHolder> CHAMPION_REWARD_ITEMS;
 	public static boolean CHAMPION_ENABLE_VITALITY;
 	public static boolean CHAMPION_ENABLE_IN_INSTANCES;
 	public static boolean ALLOW_WEDDING;
@@ -2709,8 +2708,15 @@ public class Config
 			CHAMPION_SPD_ATK = championMonsterConfig.getFloat("ChampionSpdAtk", 1);
 			CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE = championMonsterConfig.getInt("ChampionRewardLowerLvlItemChance", 0);
 			CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE = championMonsterConfig.getInt("ChampionRewardHigherLvlItemChance", 0);
-			CHAMPION_REWARD_ID = championMonsterConfig.getInt("ChampionRewardItemID", 6393);
-			CHAMPION_REWARD_QTY = championMonsterConfig.getInt("ChampionRewardItemQty", 1);
+			CHAMPION_REWARD_ITEMS = new ArrayList<>();
+			for (String s : championMonsterConfig.getString("ChampionRewardItems", "4356,10").split(";"))
+			{
+				if (s.isEmpty())
+				{
+					continue;
+				}
+				CHAMPION_REWARD_ITEMS.add(new ItemHolder(Integer.parseInt(s.split(",")[0]), Integer.parseInt(s.split(",")[1])));
+			}
 			CHAMPION_ENABLE_VITALITY = championMonsterConfig.getBoolean("ChampionEnableVitality", false);
 			CHAMPION_ENABLE_IN_INSTANCES = championMonsterConfig.getBoolean("ChampionEnableInInstances", false);
 			

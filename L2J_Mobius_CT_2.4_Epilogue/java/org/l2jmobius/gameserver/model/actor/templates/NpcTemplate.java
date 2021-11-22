@@ -709,7 +709,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				calculatedDrops = new ArrayList<>();
 			}
 			
-			calculatedDrops.add(new ItemHolder(Config.CHAMPION_REWARD_ID, Config.CHAMPION_REWARD_QTY));
+			calculatedDrops.addAll(Config.CHAMPION_REWARD_ITEMS);
 		}
 		
 		return calculatedDrops;
@@ -802,7 +802,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 						rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_AMOUNT : 1);
 					}
 					
-					// premium chance
+					// premium amount
 					if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus())
 					{
 						if (Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(itemId) != null)

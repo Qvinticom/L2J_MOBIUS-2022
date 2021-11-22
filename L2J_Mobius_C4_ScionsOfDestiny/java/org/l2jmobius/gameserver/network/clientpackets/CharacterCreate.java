@@ -260,7 +260,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1)); // Sit
 		for (ItemHolder item : template.getItems())
 		{
-			final Item itemInstance = newChar.getInventory().addItem("Init", item.getId(), (int) item.getCount(), newChar, null);
+			final Item itemInstance = newChar.getInventory().addItem("Init", item.getId(), item.getCount(), newChar, null);
 			if (itemInstance.getItemId() == 5588)
 			{
 				newChar.registerShortCut(new ShortCut(11, 0, 1, itemInstance.getObjectId(), -1)); // Tutorial Book shortcut

@@ -53,6 +53,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.GeoType;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
@@ -469,8 +470,7 @@ public class Config
 	public static float CHAMPION_ATK;
 	public static float CHAMPION_SPD_ATK;
 	public static int CHAMPION_REWARD;
-	public static int CHAMPION_REWARD_ID;
-	public static int CHAMPION_REWARD_QTY;
+	public static List<ItemHolder> CHAMPION_REWARD_ITEMS;
 	public static String CHAMP_TITLE;
 	public static int CHAMPION_AURA;
 	
@@ -1622,8 +1622,15 @@ public class Config
 		CHAMPION_ATK = championConfig.getFloat("ChampionAtk", 1f);
 		CHAMPION_SPD_ATK = championConfig.getFloat("ChampionSpdAtk", 1f);
 		CHAMPION_REWARD = championConfig.getInt("ChampionRewardItem", 0);
-		CHAMPION_REWARD_ID = championConfig.getInt("ChampionRewardItemID", 6393);
-		CHAMPION_REWARD_QTY = championConfig.getInt("ChampionRewardItemQty", 1);
+		CHAMPION_REWARD_ITEMS = new ArrayList<>();
+		for (String s : championConfig.getString("ChampionRewardItems", "4356,10").split(";"))
+		{
+			if (s.isEmpty())
+			{
+				continue;
+			}
+			CHAMPION_REWARD_ITEMS.add(new ItemHolder(Integer.parseInt(s.split(",")[0]), Integer.parseInt(s.split(",")[1])));
+		}
 		CHAMP_TITLE = championConfig.getString("ChampionTitle", "Champion");
 		CHAMPION_AURA = championConfig.getInt("ChampionAura", 0);
 		if ((CHAMPION_AURA < 0) || (CHAMPION_AURA > 2))

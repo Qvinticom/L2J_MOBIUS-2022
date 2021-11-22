@@ -129,6 +129,7 @@ import org.l2jmobius.gameserver.model.actor.status.PlayerStatus;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
@@ -4973,19 +4974,19 @@ public class Player extends Playable
 	 * @param target The Item dropped
 	 * @param item the item
 	 */
-	public void doAutoLoot(Attackable target, Attackable.RewardItem item)
+	public void doAutoLoot(Attackable target, ItemHolder item)
 	{
 		if (isInParty())
 		{
 			getParty().distributeItem(this, item, false, target);
 		}
-		else if (item.getItemId() == 57)
+		else if (item.getId() == 57)
 		{
 			addAdena("AutoLoot", item.getCount(), target, true);
 		}
 		else
 		{
-			addItem("AutoLoot", item.getItemId(), item.getCount(), target, true);
+			addItem("AutoLoot", item.getId(), item.getCount(), target, true);
 		}
 	}
 	

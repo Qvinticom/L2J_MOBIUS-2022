@@ -24,11 +24,10 @@ import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Attackable.RewardItem;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -88,19 +87,19 @@ public class Harvest implements ISkillHandler
 			{
 				if (calcSuccess())
 				{
-					final List<RewardItem> items = _target.takeHarvest();
+					final List<ItemHolder> items = _target.takeHarvest();
 					if ((items != null) && !items.isEmpty())
 					{
-						for (Attackable.RewardItem ritem : items)
+						for (ItemHolder ritem : items)
 						{
-							cropId = ritem.getItemId(); // Always got 1 type of crop as reward.
+							cropId = ritem.getId(); // Always got 1 type of crop as reward.
 							if (_player.isInParty())
 							{
 								_player.getParty().distributeItem(_player, ritem, true, _target);
 							}
 							else
 							{
-								final Item item = _player.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _player, _target);
+								final Item item = _player.getInventory().addItem("Manor", ritem.getId(), ritem.getCount(), _player, _target);
 								if (iu != null)
 								{
 									iu.addItem(item);

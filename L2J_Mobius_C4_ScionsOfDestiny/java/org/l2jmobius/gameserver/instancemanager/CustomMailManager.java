@@ -73,7 +73,7 @@ public class CustomMailManager
 								final String itemCount = str.split(" ")[1];
 								if (Util.isDigit(itemId) && Util.isDigit(itemCount))
 								{
-									itemHolders.add(new ItemHolder(Integer.parseInt(itemId), Long.parseLong(itemCount)));
+									itemHolders.add(new ItemHolder(Integer.parseInt(itemId), Integer.parseInt(itemCount)));
 								}
 							}
 							else if (Util.isDigit(str))
@@ -85,7 +85,7 @@ public class CustomMailManager
 						{
 							for (ItemHolder itemHolder : itemHolders)
 							{
-								player.addItem("Custom-Mail", itemHolder.getId(), (int) itemHolder.getCount(), null, true);
+								player.addItem("Custom-Mail", itemHolder.getId(), itemHolder.getCount(), null, true);
 							}
 						}
 						

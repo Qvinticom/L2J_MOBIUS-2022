@@ -24,10 +24,10 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
-import org.l2jmobius.gameserver.model.actor.Attackable.RewardItem;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -62,7 +62,7 @@ public class Sweep implements ISkillHandler
 			}
 			
 			final Attackable target = (Attackable) target1;
-			List<RewardItem> items = null;
+			List<ItemHolder> items = null;
 			boolean isSweeping = false;
 			synchronized (target)
 			{
@@ -79,7 +79,7 @@ public class Sweep implements ISkillHandler
 				{
 					continue;
 				}
-				for (Attackable.RewardItem ritem : items)
+				for (ItemHolder ritem : items)
 				{
 					if (player.isInParty())
 					{
@@ -87,7 +87,7 @@ public class Sweep implements ISkillHandler
 					}
 					else
 					{
-						final Item item = player.getInventory().addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, target);
+						final Item item = player.getInventory().addItem("Sweep", ritem.getId(), ritem.getCount(), player, target);
 						if (iu != null)
 						{
 							iu.addItem(item);
@@ -97,13 +97,13 @@ public class Sweep implements ISkillHandler
 						if (ritem.getCount() > 1)
 						{
 							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-							smsg.addItemName(ritem.getItemId());
+							smsg.addItemName(ritem.getId());
 							smsg.addNumber(ritem.getCount());
 						}
 						else
 						{
 							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-							smsg.addItemName(ritem.getItemId());
+							smsg.addItemName(ritem.getId());
 						}
 						player.sendPacket(smsg);
 					}
