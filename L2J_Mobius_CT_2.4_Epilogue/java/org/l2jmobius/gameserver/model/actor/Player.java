@@ -2708,32 +2708,41 @@ public class Player extends Playable
 		// Get available skills.
 		final Collection<Skill> skills = SkillTreeData.getInstance().getAllAvailableSkills(this, getClassId(), includeByFs, includeAutoGet, includeRequiredItems);
 		final List<Skill> skillsForStore = new ArrayList<>();
-		for (Skill sk : skills)
+		for (Skill skill : skills)
 		{
-			if (getKnownSkill(sk.getId()) == sk)
+			if (getKnownSkill(skill.getId()) == skill)
 			{
 				continue;
 			}
 			
-			if (getSkillLevel(sk.getId()) == 0)
+			if (getSkillLevel(skill.getId()) == 0)
 			{
 				skillCounter++;
 			}
 			
 			// Fix when learning toggle skills.
-			if (sk.isToggle() && isAffectedBySkill(sk.getId()))
+			if (skill.isToggle() && isAffectedBySkill(skill.getId()))
 			{
-				stopSkillEffects(SkillFinishType.REMOVED, sk.getId());
+				stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 			}
 			
-			addSkill(sk, false);
-			skillsForStore.add(sk);
+			addSkill(skill, false);
+			skillsForStore.add(skill);
+			
+			if (Config.AUTO_LEARN_SKILLS)
+			{
+				updateShortCuts(skill.getId(), skill.getLevel());
+			}
 		}
+		
 		storeSkills(skillsForStore, -1);
+		
 		if (Config.AUTO_LEARN_SKILLS && (skillCounter > 0))
 		{
+			sendPacket(new ShortCutInit(this));
 			sendMessage("You have learned " + skillCounter + " new skills.");
 		}
+		
 		return skillCounter;
 	}
 	
@@ -4190,11 +4199,11 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers. <b><u>Concept</u>:</b> Others Player in the detection area of the Player are identified in <b>_knownPlayers</b>. In order to inform other players of this
-	 * Player state modifications, server just need to go through _knownPlayers to send Server->Client Packet <b><u> Actions</u>:</b>
+	 * Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers. <b><u>Concept</u>:</b> Others Player in the detection area of the Player are identified in <b>_knownPlayers</b>. In order to inform other players of this Player state modifications, server
+	 * just need to go through _knownPlayers to send Server->Client Packet <b><u> Actions</u>:</b>
 	 * <li>Send a Server->Client packet UserInfo to this Player (Public and Private Data)</li>
-	 * <li>Send a Server->Client packet CharInfo to all Player in _KnownPlayers of the Player (Public data only)</li> <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP,
-	 * STR, DEX...</b></font>
+	 * <li>Send a Server->Client packet CharInfo to all Player in _KnownPlayers of the Player (Public data only)</li> <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR,
+	 * DEX...</b></font>
 	 */
 	public void broadcastUserInfo()
 	{

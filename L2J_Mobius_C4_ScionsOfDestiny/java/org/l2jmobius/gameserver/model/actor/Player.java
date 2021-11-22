@@ -117,8 +117,8 @@ import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 import org.l2jmobius.gameserver.model.actor.instance.TamedBeast;
 import org.l2jmobius.gameserver.model.actor.knownlist.PlayerKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
@@ -206,6 +206,7 @@ import org.l2jmobius.gameserver.network.serverpackets.Ride;
 import org.l2jmobius.gameserver.network.serverpackets.SendTradeDone;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
+import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.Snoop;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -2777,32 +2778,46 @@ public class Player extends Playable
 		int skillCounter = 0;
 		
 		final Collection<Skill> skills = SkillTreeTable.getInstance().getAllAvailableSkills(this, getClassId());
-		for (Skill sk : skills)
+		for (Skill skill : skills)
 		{
-			if (getSkillLevel(sk.getId()) == 0)
+			if (getSkillLevel(skill.getId()) == 0)
 			{
 				skillCounter++;
 			}
 			
 			// Penality skill are not auto learn
-			if ((sk.getId() == 4267 /* Grade Penalty */) || (sk.getId() == 4270 /* Weight Penalty */))
+			if ((skill.getId() == 4267 /* Grade Penalty */) || (skill.getId() == 4270 /* Weight Penalty */))
 			{
 				continue;
 			}
 			
 			// fix when learning toggle skills
-			if (sk.isToggle())
+			if (skill.isToggle())
 			{
-				final Effect toggleEffect = getFirstEffect(sk.getId());
+				final Effect toggleEffect = getFirstEffect(skill.getId());
 				if (toggleEffect != null)
 				{
 					// stop old toggle skill effect, and give new toggle skill effect back
 					toggleEffect.exit(false);
-					sk.applyEffects(this, this, false, false, false);
+					skill.applyEffects(this, this, false, false, false);
 				}
 			}
 			
-			addSkill(sk, true);
+			addSkill(skill, true);
+			
+			if (Config.AUTO_LEARN_SKILLS)
+			{
+				for (ShortCut shortcut : getAllShortCuts())
+				{
+					if ((shortcut != null) && (shortcut.getId() == skill.getId()) && (shortcut.getType() == ShortCut.TYPE_SKILL))
+					{
+						final ShortCut newsc = new ShortCut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcut.getId(), shortcut.getLevel());
+						sendPacket(new ShortCutRegister(newsc));
+						registerShortCut(newsc);
+					}
+				}
+				sendPacket(new ShortCutInit(this));
+			}
 		}
 		
 		sendMessage("You have learned " + skillCounter + " new skills.");

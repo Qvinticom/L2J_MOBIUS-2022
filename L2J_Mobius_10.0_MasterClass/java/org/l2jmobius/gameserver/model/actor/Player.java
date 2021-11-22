@@ -2711,12 +2711,21 @@ public class Player extends Playable
 			
 			addSkill(skill, false);
 			skillsForStore.add(skill);
+			
+			if (Config.AUTO_LEARN_SKILLS)
+			{
+				updateShortCuts(skill.getId(), skill.getLevel(), skill.getSubLevel());
+			}
 		}
+		
 		storeSkills(skillsForStore, -1);
+		
 		if (Config.AUTO_LEARN_SKILLS && (skillCounter > 0))
 		{
+			sendPacket(new ShortCutInit(this));
 			sendMessage("You have learned " + skillCounter + " new skills.");
 		}
+		
 		return skillCounter;
 	}
 	
