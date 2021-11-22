@@ -110,7 +110,7 @@ public class Product
 			return false;
 		}
 		
-		BuyListTaskManager.getInstance().add(this, _restockDelay);
+		BuyListTaskManager.getInstance().add(this, Chronos.currentTimeMillis() + _restockDelay);
 		
 		final boolean result = _count.addAndGet(-value) >= 0;
 		save();

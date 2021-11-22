@@ -112,7 +112,7 @@ public class BuyListData implements IXmlReader
 			{
 				final int defaultBaseTax = parseInteger(list.getAttributes(), "baseTax", 0);
 				final ProductList buyList = new ProductList(buyListId);
-				forEach(list, (node) ->
+				forEach(list, node ->
 				{
 					switch (node.getNodeName())
 					{
