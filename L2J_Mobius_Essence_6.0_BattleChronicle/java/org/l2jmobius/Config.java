@@ -747,6 +747,7 @@ public class Config
 	public static int DROP_ITEM_MIN_LEVEL_DIFFERENCE;
 	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
+	public static int EVENT_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double BLESSING_CHANCE;
 	public static boolean LCOIN_DROP_ENABLED;
 	public static double LCOIN_DROP_CHANCE;
@@ -2386,6 +2387,7 @@ public class Config
 			DROP_ITEM_MIN_LEVEL_DIFFERENCE = ratesConfig.getInt("DropItemMinLevelDifference", 5);
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = ratesConfig.getDouble("DropItemMinLevelGapChance", 10);
+			EVENT_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("EventItemMaxLevelDifference", 9);
 			BLESSING_CHANCE = ratesConfig.getDouble("BlessingChance", 15.0);
 			LCOIN_DROP_ENABLED = ratesConfig.getBoolean("LCoinDropEnable", false);
 			LCOIN_DROP_CHANCE = ratesConfig.getDouble("LCoinDropChance", 15.0);

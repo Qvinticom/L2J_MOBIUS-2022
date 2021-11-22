@@ -58,9 +58,9 @@ public class EventDropManager
 			return;
 		}
 		
-		// Event items drop only within a 9 level difference.
+		// Event items drop only within a default 9 level difference.
 		final Player player = attacker.getActingPlayer();
-		if ((player.getLevel() - attackable.getLevel()) > 9)
+		if ((player.getLevel() - attackable.getLevel()) > Config.EVENT_ITEM_MAX_LEVEL_DIFFERENCE)
 		{
 			return;
 		}
