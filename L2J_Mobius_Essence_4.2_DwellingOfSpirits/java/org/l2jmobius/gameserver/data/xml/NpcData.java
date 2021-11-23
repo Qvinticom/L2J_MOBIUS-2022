@@ -788,7 +788,7 @@ public class NpcData implements IXmlReader
 	 */
 	public List<NpcTemplate> getAllNpcStartingWith(String text)
 	{
-		return getTemplates(template -> template.isType("Npc") && template.getName().startsWith(text));
+		return getTemplates(template -> template.isType("Folk") && template.getName().startsWith(text));
 	}
 	
 	/**

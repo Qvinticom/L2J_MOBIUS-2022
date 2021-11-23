@@ -681,7 +681,7 @@ public class NpcTable
 		final List<NpcTemplate> list = new ArrayList<>();
 		for (NpcTemplate t : _npcs.values())
 		{
-			if (t.getName().startsWith(letter) && "Npc".equals(t.getType()))
+			if (t.getName().startsWith(letter) && "Folk".equals(t.getType()))
 			{
 				list.add(t);
 			}

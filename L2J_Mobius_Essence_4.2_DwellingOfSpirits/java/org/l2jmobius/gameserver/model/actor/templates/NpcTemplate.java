@@ -135,7 +135,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_id = set.getInt("id");
 		_displayId = set.getInt("displayId", _id);
 		_level = set.getInt("level", 85);
-		_type = set.getString("type", "Npc");
+		_type = set.getString("type", "Folk");
 		_name = set.getString("name", "");
 		_usingServerSideName = set.getBoolean("usingServerSideName", false);
 		_title = set.getString("title", "");
