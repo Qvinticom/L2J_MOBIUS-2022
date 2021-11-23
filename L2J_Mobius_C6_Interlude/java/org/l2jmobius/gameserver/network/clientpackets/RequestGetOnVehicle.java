@@ -57,7 +57,7 @@ public class RequestGetOnVehicle implements IClientIncomingPacket
 		}
 		
 		player.setBoatPosition(new Location(_x, _y, _z));
-		player.setXYZ(boat.getPosition().getX(), boat.getPosition().getY(), boat.getPosition().getZ());
+		player.setXYZ(boat.getLocation().getX(), boat.getLocation().getY(), boat.getLocation().getZ());
 		player.broadcastPacket(new GetOnVehicle(player, boat, _x, _y, _z));
 		player.revalidateZone(true);
 	}

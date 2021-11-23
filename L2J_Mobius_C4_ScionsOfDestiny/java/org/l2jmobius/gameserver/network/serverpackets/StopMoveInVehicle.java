@@ -47,7 +47,7 @@ public class StopMoveInVehicle implements IClientOutgoingPacket
 		packet.writeD(_player.getBoatPosition().getX());
 		packet.writeD(_player.getBoatPosition().getY());
 		packet.writeD(_player.getBoatPosition().getZ());
-		packet.writeD(_player.getPosition().getHeading());
+		packet.writeD(_player.getHeading());
 		return true;
 	}
 }

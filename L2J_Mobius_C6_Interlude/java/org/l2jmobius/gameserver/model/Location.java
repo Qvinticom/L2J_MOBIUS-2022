@@ -25,16 +25,16 @@ import org.l2jmobius.commons.util.Point2D;
  */
 public class Location extends Point2D
 {
-	public static final Location DUMMY_LOC = new Location(0, 0, 0);
-	
 	protected volatile int _z;
 	protected volatile int _heading;
+	protected volatile int _instanceId;
 	
 	public Location(int x, int y, int z)
 	{
 		super(x, y);
 		_z = z;
 		_heading = 0;
+		_instanceId = 0;
 	}
 	
 	public Location(int x, int y, int z, int heading)
@@ -42,11 +42,12 @@ public class Location extends Point2D
 		super(x, y);
 		_z = z;
 		_heading = heading;
+		_instanceId = 0;
 	}
 	
 	public Location(WorldObject obj)
 	{
-		this(obj.getX(), obj.getY(), obj.getZ(), obj.getPosition().getHeading(), obj.getInstanceId());
+		this(obj.getX(), obj.getY(), obj.getZ(), obj.getHeading(), obj.getInstanceId());
 	}
 	
 	public Location(int x, int y, int z, int heading, int instanceId)
@@ -54,6 +55,7 @@ public class Location extends Point2D
 		super(x, y);
 		_z = z;
 		_heading = heading;
+		_instanceId = instanceId;
 	}
 	
 	public Location(StatSet set)
@@ -61,6 +63,7 @@ public class Location extends Point2D
 		super(set.getInt("x", 0), set.getInt("y", 0));
 		_z = set.getInt("z", 0);
 		_heading = set.getInt("heading", 0);
+		_instanceId = set.getInt("instanceId", 0);
 	}
 	
 	/**
@@ -132,12 +135,36 @@ public class Location extends Point2D
 		_heading = heading;
 	}
 	
+	/**
+	 * Get the instance Id.
+	 * @return the instance Id
+	 */
+	public int getInstanceId()
+	{
+		return _instanceId;
+	}
+	
+	/**
+	 * Set the instance Id.
+	 * @param instanceId the instance Id to set
+	 */
+	public void setInstanceId(int instanceId)
+	{
+		_instanceId = instanceId;
+	}
+	
+	public Location getLocation()
+	{
+		return this;
+	}
+	
 	public void setLocation(Location loc)
 	{
 		_x = loc.getX();
 		_y = loc.getY();
 		_z = loc.getZ();
 		_heading = loc.getHeading();
+		_instanceId = loc.getInstanceId();
 	}
 	
 	@Override
@@ -145,12 +172,13 @@ public class Location extends Point2D
 	{
 		super.clean();
 		_z = 0;
+		_instanceId = 0;
 	}
 	
 	@Override
 	public Location clone()
 	{
-		return new Location(_x, _y, _z);
+		return new Location(_x, _y, _z, _heading, _instanceId);
 	}
 	
 	@Override
@@ -159,11 +187,22 @@ public class Location extends Point2D
 		return (31 * super.hashCode()) + Objects.hash(_z);
 	}
 	
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (obj instanceof Location)
+		{
+			final Location loc = (Location) obj;
+			return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading()) && (getInstanceId() == loc.getInstanceId());
+		}
+		return false;
+	}
+	
 	/**
 	 * @param x : The X coord to test.
 	 * @param y : The Y coord to test.
-	 * @param z : The X coord to test.
-	 * @return True if all coordinates equals this {@link Point2D} coordinates.
+	 * @param z : The Z coord to test.
+	 * @return True if all coordinates equals this {@link Location} coordinates.
 	 */
 	public boolean equals(int x, int y, int z)
 	{
@@ -171,19 +210,8 @@ public class Location extends Point2D
 	}
 	
 	@Override
-	public boolean equals(Object obj)
-	{
-		if (obj instanceof Location)
-		{
-			final Location loc = (Location) obj;
-			return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading());
-		}
-		return false;
-	}
-	
-	@Override
 	public String toString()
 	{
-		return "[" + getClass().getSimpleName() + "] X: " + _x + " Y: " + _y + " Z: " + _z + " Heading: " + _heading;
+		return "[" + getClass().getSimpleName() + "] X: " + _x + " Y: " + _y + " Z: " + _z + " Heading: " + _heading + " InstanceId: " + _instanceId;
 	}
 }

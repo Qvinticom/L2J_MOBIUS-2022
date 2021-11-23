@@ -1056,18 +1056,18 @@ public class Item extends WorldObject
 		{
 			// Set the x,y,z position of the Item dropped and update its _worldregion
 			setSpawned(true);
-			getPosition().setWorldPosition(x, y, z);
-			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
+			getLocation().setXYZ(x, y, z);
+			setWorldRegion(World.getInstance().getRegion(getLocation()));
 			
 			// Add the Item dropped to _visibleObjects of its WorldRegion
-			getPosition().getWorldRegion().addVisibleObject(this);
+			getWorldRegion().addVisibleObject(this);
 		}
 		
 		setDropTime(Chronos.currentTimeMillis());
 		
 		// this can synchronize on others instancies, so it's out of synchronized, to avoid deadlocks
 		// Add the Item dropped in the world as a visible object
-		World.getInstance().addVisibleObject(this, getPosition().getWorldRegion(), dropper);
+		World.getInstance().addVisibleObject(this, getWorldRegion(), dropper);
 		if (Config.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance().save(this);

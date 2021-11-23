@@ -56,7 +56,7 @@ public class CannotMoveAnymoreInVehicle implements IClientIncomingPacket
 		if (player.isInBoat() && (player.getBoat().getObjectId() == _boatId))
 		{
 			player.setBoatPosition(new Location(_x, _y, _z));
-			player.getPosition().setHeading(_heading);
+			player.setHeading(_heading);
 			player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
 		}
 	}

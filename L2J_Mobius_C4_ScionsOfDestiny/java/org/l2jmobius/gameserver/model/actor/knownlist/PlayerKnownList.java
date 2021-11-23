@@ -179,7 +179,7 @@ public class PlayerKnownList extends PlayableKnownList
 				final Player otherPlayer = (Player) object;
 				if (otherPlayer.isInBoat())
 				{
-					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
+					otherPlayer.getLocation().setLocation(otherPlayer.getBoat().getLocation());
 					activeChar.sendPacket(new CharInfo(otherPlayer, activeChar.isGM() && otherPlayer.getAppearance().isInvisible()));
 					
 					final int relation = otherPlayer.getRelation(activeChar);

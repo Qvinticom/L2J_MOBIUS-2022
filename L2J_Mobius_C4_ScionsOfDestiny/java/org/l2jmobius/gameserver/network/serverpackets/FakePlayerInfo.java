@@ -28,9 +28,9 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 	public FakePlayerInfo(Npc cha)
 	{
 		_activeChar = cha;
-		_activeChar.setClientX(_activeChar.getPosition().getX());
-		_activeChar.setClientY(_activeChar.getPosition().getY());
-		_activeChar.setClientZ(_activeChar.getPosition().getZ());
+		_activeChar.setClientX(_activeChar.getX());
+		_activeChar.setClientY(_activeChar.getY());
+		_activeChar.setClientZ(_activeChar.getZ());
 	}
 	
 	@Override

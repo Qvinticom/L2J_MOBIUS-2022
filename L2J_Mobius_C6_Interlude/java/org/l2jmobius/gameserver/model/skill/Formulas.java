@@ -48,8 +48,8 @@ import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerState;
-import org.l2jmobius.gameserver.model.skill.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerState.CheckPlayerState;
+import org.l2jmobius.gameserver.model.skill.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectTemplate;
 import org.l2jmobius.gameserver.model.skill.funcs.Func;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -1201,7 +1201,7 @@ public class Formulas
 			return 0;
 		}
 		
-		final Siege siege = SiegeManager.getInstance().getSiege(player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ());
+		final Siege siege = SiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
 		if ((siege == null) || !siege.isInProgress())
 		{
 			return 0;

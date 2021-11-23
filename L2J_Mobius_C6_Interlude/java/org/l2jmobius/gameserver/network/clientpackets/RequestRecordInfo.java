@@ -125,7 +125,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 				final Player otherPlayer = (Player) object;
 				if (otherPlayer.isInBoat())
 				{
-					otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());
+					otherPlayer.getLocation().setLocation(otherPlayer.getBoat().getLocation());
 					player.sendPacket(new CharInfo(otherPlayer, player.isGM() && otherPlayer.getAppearance().isInvisible()));
 					final int relation = otherPlayer.getRelation(player);
 					if ((otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))

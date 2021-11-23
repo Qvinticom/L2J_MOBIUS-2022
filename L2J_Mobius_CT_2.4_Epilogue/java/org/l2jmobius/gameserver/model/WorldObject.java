@@ -59,21 +59,13 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	private int _objectId;
 	/** World Region */
 	private WorldRegion _worldRegion;
+	/** Location */
+	private final Location _location = new Location(0, 0, -10000);
 	/** Instance type */
 	private InstanceType _instanceType;
-	private Map<String, Object> _scripts;
-	/** X coordinate */
-	private volatile int _x = 0;
-	/** Y coordinate */
-	private volatile int _y = 0;
-	/** Z coordinate */
-	private volatile int _z = -10000;
-	/** Orientation */
-	private volatile int _heading = 0;
-	/** Instance id of object. 0 - Global */
-	private volatile int _instanceId = 0;
 	private boolean _isSpawned;
 	private boolean _isInvisible;
+	private Map<String, Object> _scripts;
 	
 	public WorldObject(int objectId)
 	{
@@ -578,7 +570,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public int getX()
 	{
-		return _x;
+		return _location.getX();
 	}
 	
 	/**
@@ -588,7 +580,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public int getY()
 	{
-		return _y;
+		return _location.getY();
 	}
 	
 	/**
@@ -598,7 +590,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public int getZ()
 	{
-		return _z;
+		return _location.getZ();
 	}
 	
 	/**
@@ -608,7 +600,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public int getHeading()
 	{
-		return _heading;
+		return _location.getHeading();
 	}
 	
 	/**
@@ -618,7 +610,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public int getInstanceId()
 	{
-		return _instanceId;
+		return _location.getInstanceId();
 	}
 	
 	/**
@@ -628,7 +620,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public Location getLocation()
 	{
-		return new Location(_x, _y, _z, _heading, _instanceId);
+		return _location;
 	}
 	
 	/**
@@ -640,9 +632,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public void setXYZ(int newX, int newY, int newZ)
 	{
-		_x = newX;
-		_y = newY;
-		_z = newZ;
+		_location.setXYZ(newX, newY, newZ);
 		
 		if (_isSpawned)
 		{
@@ -677,7 +667,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public void setHeading(int newHeading)
 	{
-		_heading = newHeading;
+		_location.setHeading(newHeading);
 	}
 	
 	/**
@@ -688,12 +678,13 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public void setInstanceId(int instanceId)
 	{
-		if ((instanceId < 0) || (_instanceId == instanceId))
+		final int oldInstanceId = getInstanceId();
+		if ((instanceId < 0) || (oldInstanceId == instanceId))
 		{
 			return;
 		}
 		
-		final Instance oldI = InstanceManager.getInstance().getInstance(getInstanceId());
+		final Instance oldI = InstanceManager.getInstance().getInstance(oldInstanceId);
 		final Instance newI = InstanceManager.getInstance().getInstance(instanceId);
 		if (newI == null)
 		{
@@ -703,7 +694,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		if (isPlayer())
 		{
 			final Player player = getActingPlayer();
-			if ((_instanceId > 0) && (oldI != null))
+			if ((oldInstanceId > 0) && (oldI != null))
 			{
 				oldI.removePlayer(_objectId);
 				if (oldI.isShowTimer())
@@ -727,7 +718,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		else if (isNpc())
 		{
 			final Npc npc = (Npc) this;
-			if ((_instanceId > 0) && (oldI != null))
+			if ((oldInstanceId > 0) && (oldI != null))
 			{
 				oldI.removeNpc(npc);
 			}
@@ -737,7 +728,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 			}
 		}
 		
-		_instanceId = instanceId;
+		_location.setInstanceId(instanceId);
 	}
 	
 	/**
@@ -766,11 +757,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	@Override
 	public void setLocation(Location loc)
 	{
-		_x = loc.getX();
-		_y = loc.getY();
-		_z = loc.getZ();
-		_heading = loc.getHeading();
-		_instanceId = loc.getInstanceId();
+		_location.setXYZ(loc.getX(), loc.getY(), loc.getZ());
+		_location.setHeading(loc.getHeading());
+		_location.setInstanceId(loc.getInstanceId());
 	}
 	
 	/**
@@ -782,7 +771,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	public double calculateDistance2D(int x, int y, int z)
 	{
-		return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2));
+		return Math.sqrt(Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2));
 	}
 	
 	/**
@@ -804,7 +793,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	public double calculateDistance3D(int x, int y, int z)
 	{
-		return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2));
+		return Math.sqrt(Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2) + Math.pow(z - getZ(), 2));
 	}
 	
 	/**
@@ -826,7 +815,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	public double calculateDistanceSq2D(int x, int y, int z)
 	{
-		return Math.pow(x - _x, 2) + Math.pow(y - _y, 2);
+		return Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2);
 	}
 	
 	/**
@@ -848,7 +837,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	public double calculateDistanceSq3D(int x, int y, int z)
 	{
-		return Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2);
+		return Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2) + Math.pow(z - getZ(), 2);
 	}
 	
 	/**

@@ -46,10 +46,8 @@ public abstract class WorldObject
 	private WorldObjectKnownList _knownList;
 	private String _name = "";
 	private int _objectId;
-	private ObjectPosition _position;
-	
-	// Objects can only see objects in same instancezone, instance 0 is normal world -1 the all seeing world
-	private int _instanceId = 0;
+	private WorldRegion _worldRegion;
+	private final Location _location = new Location(0, 0, -10000);
 	
 	public WorldObject(int objectId)
 	{
@@ -91,30 +89,127 @@ public abstract class WorldObject
 	{
 	}
 	
-	// Position - Should remove to fully move to WorldObjectPosition
-	public void setXYZ(int x, int y, int z)
+	/**
+	 * Checks if current object changed its region, if so, update references.
+	 */
+	public void updateWorldRegion()
 	{
-		getPosition().setXYZ(x, y, z);
+		if (!isSpawned())
+		{
+			return;
+		}
+		
+		final WorldRegion newRegion = World.getInstance().getRegion(_location);
+		if (newRegion != getWorldRegion())
+		{
+			getWorldRegion().removeVisibleObject(this);
+			
+			setWorldRegion(newRegion);
+			
+			// Add the WorldOject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion.
+			getWorldRegion().addVisibleObject(this);
+		}
 	}
 	
+	/**
+	 * Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.<br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldRegion != null</li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Update position during and after movement, or after teleport</li><br>
+	 * @param x the x
+	 * @param y the y
+	 * @param z the z
+	 */
+	public void setXYZ(int x, int y, int z)
+	{
+		_location.setXYZ(x, y, z);
+		
+		try
+		{
+			if (World.getInstance().getRegion(_location) != getWorldRegion())
+			{
+				updateWorldRegion();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("Object Id at bad coords: (x: " + getX() + ", y: " + getY() + ", z: " + getZ() + ").");
+			if (isPlayer())
+			{
+				((Player) this).teleToLocation(0, 0, 0);
+				((Player) this).sendMessage("Error with your coords, Please ask a GM for help!");
+			}
+			else if (isCreature())
+			{
+				decayMe();
+			}
+		}
+	}
+	
+	/**
+	 * Set the x,y,z position of the WorldObject and make it invisible.<br>
+	 * <br>
+	 * <b><u>Concept</u>:</b><br>
+	 * <br>
+	 * A WorldObject is invisble if <b>_hidden</b>=true or <b>_worldregion</b>==null<br>
+	 * <br>
+	 * <b><u>Assert</u>:</b><br>
+	 * <li>_worldregion==null <i>(WorldObject is invisible)</i></li><br>
+	 * <br>
+	 * <b><u>Example of use</u>:</b><br>
+	 * <li>Create a Door</li>
+	 * <li>Restore Player</li><br>
+	 * @param x the x
+	 * @param y the y
+	 * @param z the z
+	 */
 	public void setXYZInvisible(int x, int y, int z)
 	{
-		getPosition().setXYZInvisible(x, y, z);
+		int correctX = x;
+		if (correctX > World.WORLD_X_MAX)
+		{
+			correctX = World.WORLD_X_MAX - 5000;
+		}
+		if (correctX < World.WORLD_X_MIN)
+		{
+			correctX = World.WORLD_X_MIN + 5000;
+		}
+		
+		int correctY = y;
+		if (correctY > World.WORLD_Y_MAX)
+		{
+			correctY = World.WORLD_Y_MAX - 5000;
+		}
+		if (correctY < World.WORLD_Y_MIN)
+		{
+			correctY = World.WORLD_Y_MIN + 5000;
+		}
+		
+		_location.setXYZ(correctX, correctY, z);
+		setSpawned(false);
 	}
 	
 	public int getX()
 	{
-		return getPosition().getX();
+		return _location.getX();
 	}
 	
 	public int getY()
 	{
-		return getPosition().getY();
+		return _location.getY();
 	}
 	
 	public int getZ()
 	{
-		return getPosition().getZ();
+		return _location.getZ();
+	}
+	
+	public int getHeading()
+	{
+		return _location.getHeading();
 	}
 	
 	/**
@@ -135,9 +230,9 @@ public abstract class WorldObject
 	{
 		// Remove the WorldObject from the world
 		_isSpawned = false;
-		World.getInstance().removeVisibleObject(this, getPosition().getWorldRegion());
+		World.getInstance().removeVisibleObject(this, getWorldRegion());
 		World.getInstance().removeObject(this);
-		getPosition().setWorldRegion(null);
+		setWorldRegion(null);
 		
 		if (Config.SAVE_DROPPED_ITEM)
 		{
@@ -163,7 +258,7 @@ public abstract class WorldObject
 	 */
 	public void pickupMe(Creature creature) // NOTE: Should move this function into Item because it does not apply to Creature
 	{
-		final WorldRegion oldregion = getPosition().getWorldRegion();
+		final WorldRegion oldregion = getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the Item
 		creature.broadcastPacket(new GetItem((Item) this, creature.getObjectId()));
@@ -171,7 +266,7 @@ public abstract class WorldObject
 		synchronized (this)
 		{
 			_isSpawned = false;
-			getPosition().setWorldRegion(null);
+			setWorldRegion(null);
 		}
 		
 		// if this item is a mercenary ticket, remove the spawns!
@@ -219,18 +314,18 @@ public abstract class WorldObject
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
 			_isSpawned = true;
-			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
+			setWorldRegion(World.getInstance().getRegion(getLocation()));
 			
 			// Add the WorldObject spawn in the _allobjects of World
 			World.getInstance().storeObject(this);
 			
 			// Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion
-			getPosition().getWorldRegion().addVisibleObject(this);
+			getWorldRegion().addVisibleObject(this);
 		}
 		
 		// this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
 		// Add the WorldObject spawn in the world as a visible object
-		World.getInstance().addVisibleObject(this, getPosition().getWorldRegion(), null);
+		World.getInstance().addVisibleObject(this, getWorldRegion(), null);
 		onSpawn();
 	}
 	
@@ -261,8 +356,8 @@ public abstract class WorldObject
 				spawnY = World.WORLD_Y_MIN + 5000;
 			}
 			
-			getPosition().setWorldPosition(spawnX, spawnY, z);
-			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
+			_location.setXYZ(spawnX, spawnY, z);
+			setWorldRegion(World.getInstance().getRegion(getLocation()));
 		}
 		
 		// these can synchronize on others instances, so they're out of synchronized, to avoid deadlocks
@@ -270,7 +365,7 @@ public abstract class WorldObject
 		World.getInstance().storeObject(this);
 		
 		// Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion
-		final WorldRegion region = getPosition().getWorldRegion();
+		final WorldRegion region = getWorldRegion();
 		if (region != null)
 		{
 			region.addVisibleObject(this);
@@ -302,7 +397,7 @@ public abstract class WorldObject
 	
 	public boolean isSpawned()
 	{
-		return getPosition().getWorldRegion() != null;
+		return getWorldRegion() != null;
 	}
 	
 	public void setSpawned(boolean value)
@@ -310,7 +405,7 @@ public abstract class WorldObject
 		_isSpawned = value;
 		if (!_isSpawned)
 		{
-			getPosition().setWorldRegion(null);
+			setWorldRegion(null);
 		}
 	}
 	
@@ -343,26 +438,27 @@ public abstract class WorldObject
 		return _objectId;
 	}
 	
-	public ObjectPosition getPosition()
-	{
-		if (_position == null)
-		{
-			_position = new ObjectPosition(this);
-		}
-		return _position;
-	}
-	
 	public Location getLocation()
 	{
-		return getPosition().getWorldPosition();
+		return _location;
 	}
 	
 	/**
-	 * @return reference to region this object is in
+	 * Gets the world region.
+	 * @return the world region
 	 */
-	public WorldRegion getWorldRegion()
+	public synchronized WorldRegion getWorldRegion()
 	{
-		return getPosition().getWorldRegion();
+		return _worldRegion;
+	}
+	
+	/**
+	 * Sets the world region.
+	 * @param value the new world region
+	 */
+	public synchronized void setWorldRegion(WorldRegion value)
+	{
+		_worldRegion = value;
 	}
 	
 	/**
@@ -370,7 +466,7 @@ public abstract class WorldObject
 	 */
 	public int getInstanceId()
 	{
-		return _instanceId;
+		return _location.getInstanceId();
 	}
 	
 	/**
@@ -378,7 +474,7 @@ public abstract class WorldObject
 	 */
 	public void setInstanceId(int instanceId)
 	{
-		_instanceId = instanceId;
+		_location.setInstanceId(instanceId);
 		
 		// If we change it for visible objects, me must clear & revalidates knownlists
 		if (_isSpawned && (_knownList != null))
@@ -575,6 +671,6 @@ public abstract class WorldObject
 	@Override
 	public String toString()
 	{
-		return "" + _objectId;
+		return getClass().getSimpleName() + ":" + _name + "[" + _objectId + "]";
 	}
 }

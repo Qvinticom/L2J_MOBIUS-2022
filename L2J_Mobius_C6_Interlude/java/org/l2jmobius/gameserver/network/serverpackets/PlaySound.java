@@ -23,6 +23,8 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PlaySound implements IClientOutgoingPacket
 {
+	private static final Location DUMMY_LOC = new Location(0, 0, 0);
+	
 	private final int _unknown;
 	private final String _soundFile;
 	private final boolean _isObject;
@@ -40,7 +42,7 @@ public class PlaySound implements IClientOutgoingPacket
 		_soundFile = soundFile;
 		_isObject = false;
 		_objectId = 0;
-		_loc = Location.DUMMY_LOC;
+		_loc = DUMMY_LOC;
 		_duration = 0;
 	}
 	
@@ -55,7 +57,7 @@ public class PlaySound implements IClientOutgoingPacket
 		_soundFile = soundFile;
 		_isObject = false;
 		_objectId = 0;
-		_loc = Location.DUMMY_LOC;
+		_loc = DUMMY_LOC;
 		_duration = 0;
 	}
 	

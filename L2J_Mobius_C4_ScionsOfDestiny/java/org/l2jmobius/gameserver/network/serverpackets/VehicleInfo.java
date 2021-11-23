@@ -43,7 +43,7 @@ public class VehicleInfo implements IClientOutgoingPacket
 		packet.writeD(_boat.getX());
 		packet.writeD(_boat.getY());
 		packet.writeD(_boat.getZ());
-		packet.writeD(_boat.getPosition().getHeading());
+		packet.writeD(_boat.getHeading());
 		return true;
 	}
 }

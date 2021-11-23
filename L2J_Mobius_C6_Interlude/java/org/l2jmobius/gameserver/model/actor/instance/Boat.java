@@ -87,7 +87,7 @@ public class Boat extends Creature
 		final MoveData m = new MoveData();
 		
 		// Calculate and set the heading of the Creature
-		getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
+		getLocation().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
 		m._xDestination = x;
 		m._yDestination = y;
 		m._zDestination = z; // this is what was requested from client

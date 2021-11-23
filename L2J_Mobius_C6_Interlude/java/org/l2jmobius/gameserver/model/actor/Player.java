@@ -12433,7 +12433,7 @@ public class Player extends Playable
 		if (getTrainedBeast() != null)
 		{
 			getTrainedBeast().getAI().stopFollow();
-			getTrainedBeast().teleToLocation(getPosition().getX() + Rnd.get(-100, 100), getPosition().getY() + Rnd.get(-100, 100), getPosition().getZ());
+			getTrainedBeast().teleToLocation(getLocation().getX() + Rnd.get(-100, 100), getLocation().getY() + Rnd.get(-100, 100), getLocation().getZ());
 			getTrainedBeast().getAI().startFollow(this);
 		}
 		

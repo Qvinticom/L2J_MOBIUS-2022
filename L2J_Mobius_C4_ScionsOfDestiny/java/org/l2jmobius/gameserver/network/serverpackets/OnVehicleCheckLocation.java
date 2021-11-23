@@ -52,7 +52,7 @@ public class OnVehicleCheckLocation implements IClientOutgoingPacket
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
-		packet.writeD(_boat.getPosition().getHeading());
+		packet.writeD(_boat.getHeading());
 		return true;
 	}
 }

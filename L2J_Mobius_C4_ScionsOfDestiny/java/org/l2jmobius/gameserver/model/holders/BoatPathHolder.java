@@ -80,7 +80,7 @@ public class BoatPathHolder
 			final double distance = Math.sqrt((dx * dx) + (dy * dy));
 			final double cos = dx / distance;
 			final double sin = dy / distance;
-			boat.getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
+			boat.getLocation().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
 			boat.vd = new VehicleDeparture(boat, path.speed1, path.speed2, path.x, path.y, path.z);
 			boat.boatSpeed = path.speed1;
 			boat.moveToLocation(path.x, path.y, path.z, path.speed1);

@@ -52,7 +52,6 @@ import org.l2jmobius.gameserver.model.ChanceSkillList;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.ForceBuff;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.ObjectPosition;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
@@ -72,8 +71,8 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcWalker;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.actor.instance.RiftInvader;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.actor.knownlist.CreatureKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
@@ -320,10 +319,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		final ObjectPosition pos = getPosition();
+		final Location pos = getLocation();
 		if (pos != null)
 		{
-			spawnMe(getPosition().getX(), getPosition().getY(), getPosition().getZ());
+			spawnMe(pos.getX(), pos.getY(), pos.getZ());
 		}
 		
 		setTeleporting(false);
@@ -563,7 +562,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		broadcastPacket(new TeleportToLocation(this, x, y, z, getHeading()));
 		
 		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.
-		getPosition().setXYZ(x, y, z);
+		getLocation().setXYZ(x, y, z);
 		
 		if (!isPlayer())
 		{
@@ -865,7 +864,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Mobius: Do not move when attack is launched.
 		if (isMoving())
 		{
-			stopMove(getPosition().getWorldPosition());
+			stopMove(getLocation());
 		}
 		
 		// Get the Attack Speed of the Creature (delay (in milliseconds) before next attack)
@@ -4221,8 +4220,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use, Npcs who
+	 * don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
 	 * That's why, if a Npc is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
@@ -4292,8 +4291,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use, Npcs who
+	 * don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
 	 * That's why, if a Npc is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
@@ -4371,8 +4370,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
-	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use,
-	 * Npcs who don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
+	 * A Creature owns a table of Calculators called <b>_calculators</b>. Each Calculator (a calculator per state) own a table of Func object. A Func object is a mathematic function that permit to calculate the modifier of a state (ex : REGENERATE_HP_RATE...). To reduce cache memory use, Npcs who
+	 * don't have skills share the same Calculator set called <b>NPC_STD_CALCULATOR</b>.<br>
 	 * That's why, if a Npc is under a skill/spell effect that modify one of its state, a copy of the NPC_STD_CALCULATOR must be create in its _calculators before addind new Func object.<br>
 	 * <br>
 	 * <b><u>Actions</u>:</b><br>
@@ -4567,6 +4566,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * Return the orientation of the Creature.
 	 * @return the heading
 	 */
+	@Override
 	public int getHeading()
 	{
 		return _heading;
@@ -5050,7 +5050,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// All data are contained in a CharPosition object
 		if (pos != null)
 		{
-			getPosition().setXYZ(pos.getX(), pos.getY(), pos.getZ());
+			getLocation().setXYZ(pos.getX(), pos.getY(), pos.getZ());
 			setHeading(pos.getHeading());
 			
 			if (this instanceof Player)
