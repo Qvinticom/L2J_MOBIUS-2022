@@ -5086,12 +5086,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		_move = null;
 		_cursorKeyMovement = false;
 		
-		// Set AI_INTENTION_IDLE
-		if ((this instanceof Player) && (getAI() != null))
-		{
-			((Player) this).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		}
-		
 		// Set the current position (x,y,z), its current WorldRegion if necessary and its heading
 		// All data are contained in a CharPosition object
 		if (pos != null)
