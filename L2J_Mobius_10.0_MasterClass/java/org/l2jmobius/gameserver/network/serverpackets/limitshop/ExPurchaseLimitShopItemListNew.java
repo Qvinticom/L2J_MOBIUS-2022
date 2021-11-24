@@ -45,14 +45,14 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 		
 		switch (shopType)
 		{
+			case 3: // Normal Lcoin Shop
+			{
+				_products = LimitShopData.getInstance().getProducts();
+				break;
+			}
 			case 4: // Lcoin Special Craft
 			{
 				_products = LimitShopCraftData.getInstance().getProducts();
-				break;
-			}
-			case 7: // Normal Lcoin Shop
-			{
-				_products = LimitShopData.getInstance().getProducts();
 				break;
 			}
 			default:
