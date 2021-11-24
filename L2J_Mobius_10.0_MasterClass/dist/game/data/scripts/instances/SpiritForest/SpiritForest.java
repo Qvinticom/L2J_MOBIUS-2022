@@ -18,6 +18,8 @@ package instances.SpiritForest;
 
 import java.util.List;
 
+import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -36,8 +38,8 @@ public class SpiritForest extends AbstractInstance
 {
 	private static final int[] TEMPLATE_IDS =
 	{
-		310,
-		314
+		310, // lv. 110
+		314, // lv. 105
 	};
 	
 	public SpiritForest()
@@ -51,7 +53,8 @@ public class SpiritForest extends AbstractInstance
 	{
 		if (event.contains("enterInstance"))
 		{
-			final int templateId = event.contains("105") ? TEMPLATE_IDS[1] : TEMPLATE_IDS[0];
+			
+			final int templateId = event.contains("110") ? TEMPLATE_IDS[0] : TEMPLATE_IDS[1];
 			if (player.isInParty())
 			{
 				final Party party = player.getParty();
@@ -67,6 +70,7 @@ public class SpiritForest extends AbstractInstance
 					return null;
 				}
 				
+				final long currentTime = Chronos.currentTimeMillis();
 				final List<Player> members = party.getMembers();
 				for (Player member : members)
 				{
@@ -74,6 +78,17 @@ public class SpiritForest extends AbstractInstance
 					{
 						player.sendMessage("Player " + member.getName() + " must go closer to Gatekeeper Spirit.");
 						return null;
+					}
+					
+					for (int id : TEMPLATE_IDS)
+					{
+						if (currentTime < InstanceManager.getInstance().getInstanceTime(member, id))
+						{
+							final SystemMessage msg = new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON);
+							msg.addString(member.getName());
+							party.broadcastToPartyMembers(member, msg);
+							return null;
+						}
 					}
 				}
 				

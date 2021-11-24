@@ -21,6 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -64,8 +65,8 @@ public class BaylorWarzone extends AbstractInstance
 	// Misc
 	private static final int[] TEMPLATE_IDS =
 	{
-		166,
-		312
+		166, // lv. 105
+		312, // lv. 110
 	};
 	
 	public BaylorWarzone()
@@ -84,21 +85,56 @@ public class BaylorWarzone extends AbstractInstance
 	{
 		if (event.contains("enterInstance"))
 		{
-			if (event.contains("110"))
+			final int templateId = event.contains("110") ? TEMPLATE_IDS[1] : TEMPLATE_IDS[0];
+			if (player.isInParty())
 			{
-				// Cannot enter if player finished another instance.
-				final long currentTime = Chronos.currentTimeMillis();
-				if ((currentTime < InstanceManager.getInstance().getInstanceTime(player, 166)))
+				final Party party = player.getParty();
+				if (!party.isLeader(player))
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName()));
+					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 					return null;
 				}
 				
-				enterInstance(player, npc, TEMPLATE_IDS[1]);
+				if (player.isInCommandChannel())
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+					return null;
+				}
+				
+				final long currentTime = Chronos.currentTimeMillis();
+				final List<Player> members = party.getMembers();
+				for (Player member : members)
+				{
+					if (!member.isInsideRadius3D(npc, 1000))
+					{
+						player.sendMessage("Player " + member.getName() + " must come closer.");
+						return null;
+					}
+					
+					for (int id : TEMPLATE_IDS)
+					{
+						if (currentTime < InstanceManager.getInstance().getInstanceTime(member, id))
+						{
+							final SystemMessage msg = new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON);
+							msg.addString(member.getName());
+							party.broadcastToPartyMembers(member, msg);
+							return null;
+						}
+					}
+				}
+				
+				for (Player member : members)
+				{
+					enterInstance(member, npc, templateId);
+				}
+			}
+			else if (player.isGM())
+			{
+				enterInstance(player, npc, templateId);
 			}
 			else
 			{
-				enterInstance(player, npc, TEMPLATE_IDS[0]);
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
