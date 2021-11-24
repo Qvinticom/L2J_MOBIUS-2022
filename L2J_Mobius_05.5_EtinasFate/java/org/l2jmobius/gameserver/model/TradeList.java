@@ -618,6 +618,11 @@ public class TradeList
 			}
 			success = true;
 		}
+		
+		// Visual inconsistencies fix.
+		_owner.sendItemList();
+		_partner.sendItemList();
+		
 		// Finish the trade
 		partnerList.getOwner().onTradeFinish(success);
 		_owner.onTradeFinish(success);
@@ -837,6 +842,11 @@ public class TradeList
 		// Send inventory update packet
 		_owner.sendInventoryUpdate(ownerIU);
 		player.sendInventoryUpdate(playerIU);
+		
+		// Visual inconsistencies fix.
+		_owner.sendItemList();
+		player.sendItemList();
+		
 		return ok ? 0 : 2;
 	}
 	
@@ -1035,6 +1045,10 @@ public class TradeList
 			// Send inventory update packet
 			_owner.sendInventoryUpdate(ownerIU);
 			player.sendInventoryUpdate(playerIU);
+			
+			// Visual inconsistencies fix.
+			_owner.sendItemList();
+			player.sendItemList();
 		}
 		return ok;
 	}
