@@ -16,6 +16,7 @@
  */
 package ai.bosses.Camille;
 
+import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -105,6 +106,7 @@ public class Camille extends AbstractInstance
 				}
 				case CAMILLE:
 				{
+					playMovie(world, Movie.SC_CAMILLE_ENDING);
 					world.finishInstance();
 					break;
 				}
