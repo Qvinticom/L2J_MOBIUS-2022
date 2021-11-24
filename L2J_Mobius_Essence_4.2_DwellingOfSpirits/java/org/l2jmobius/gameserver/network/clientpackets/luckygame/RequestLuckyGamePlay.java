@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.luckygame.ExBettingLuckyGameResult;
 
@@ -150,13 +149,11 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 		
 		player.sendPacket(new ExBettingLuckyGameResult(LuckyGameResultType.SUCCESS, _type, rewards, (int) (_type == LuckyGameType.LUXURY ? player.getInventory().getInventoryItemCount(LUXURY_FORTUNE_READING_TICKET, -1) : player.getInventory().getInventoryItemCount(FORTUNE_READING_TICKET, -1))));
 		
-		final InventoryUpdate iu = new InventoryUpdate();
 		for (Entry<LuckyGameItemType, List<ItemHolder>> reward : rewards.entrySet())
 		{
 			for (ItemHolder r : reward.getValue())
 			{
 				final Item item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
-				iu.addItem(item);
 				if (reward.getKey() == LuckyGameItemType.UNIQUE)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
@@ -169,7 +166,7 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 			}
 		}
 		
-		player.sendInventoryUpdate(iu);
+		player.sendItemList();
 		
 		player.getVariables().set(PlayerVariables.FORTUNE_TELLING_VARIABLE, playCount >= 50 ? (playCount - 50) : playCount);
 		if (blackCat && (playCount < 50))
