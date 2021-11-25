@@ -849,6 +849,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="60074" name="Freya's Mark" additionalName="Event" type="EtcItem">
+		<!-- Freya's special gift filled with her kindness and love. Its additional effects become available after adding the item to collections. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="60091" name="Abundance Mark" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />

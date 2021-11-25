@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="82118" name="Death Knight's Flame Sword" type="Weapon">
+		<!-- Changes a one-handed sword's appearance to that of Eigis. -->
+		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">809</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="82147" name="Grace' Fortune Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain 1 rare item (excluding Forgotten Spellbook - Chapter 1 and various supplies). -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="82158" name="+1 Attack Artifact Pack" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
@@ -68,6 +98,13 @@
 		<set name="weight" val="10" />
 		<set name="price" val="800" />
 		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82170" name="Shining Spellbook Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain various items (excluding Forgotten Spellbook - Chapter 1). -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

@@ -37,4 +37,145 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="82012" name="Orb of Anger" additionalName="1st floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82013" name="Orb of Anger" additionalName="2nd floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82014" name="Orb of Anger" additionalName="3rd floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82015" name="Orb of Anger" additionalName="4th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82016" name="Orb of Anger" additionalName="5th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82017" name="Orb of Anger" additionalName="6th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82018" name="Orb of Anger" additionalName="7th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82019" name="Orb of Anger" additionalName="8th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82020" name="Orb of Anger" additionalName="9th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82021" name="Orb of Anger" additionalName="10th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82022" name="Orb of Anger" additionalName="11th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82023" name="Orb of Anger" additionalName="12th floor" type="EtcItem">
+		<!-- Obtained in the Tower of Insolence. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82033" name="Shining Jewel Box" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain 1 special item (excluding Jewel Energy). -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82060" name="Sayha's Blessing Pack" additionalName="" type="EtcItem">
+		<!-- Double-click to obtain 1 rare item (excluding Sayha's Talisman Pack and Sayha's Energy). -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82068" name="Death Knight's Ring" type="Armor">
+		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
+		<set name="icon" val="icon.new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="82081" name="Memory Shard" additionalName="" type="EtcItem">
+		<!-- A shard that can be obtained while hunting in the Conquest world. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82082" name="Soul Potion" additionalName="" type="EtcItem">
+		<!-- Contains a soul from the Conquest world. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82083" name="Eigis Armor Fragment" additionalName="" type="EtcItem">
+		<!-- An armor piece that can be obtained after defeating Eigis. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82084" name="Soul Shard" additionalName="" type="EtcItem">
+		<!-- Required for compounding with Soul Talisman. Can be bought for Bloody Coins. -->
+		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
 </list>
