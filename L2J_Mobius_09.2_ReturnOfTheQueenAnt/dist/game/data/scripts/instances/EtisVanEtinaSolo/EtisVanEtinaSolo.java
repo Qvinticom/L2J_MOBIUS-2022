@@ -479,20 +479,20 @@ public class EtisVanEtinaSolo extends AbstractInstance
 		final Instance world = attacker.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			final boolean CAMILLE_30 = world.getParameters().getBoolean("CAMILLE_30", false);
-			final boolean CAMILLE_60 = world.getParameters().getBoolean("CAMILLE_60", false);
-			final boolean KAIN_30 = world.getParameters().getBoolean("KAIN_30", false);
-			final boolean KAIN_60 = world.getParameters().getBoolean("KAIN_60", false);
-			final boolean ETINA_80 = world.getParameters().getBoolean("ETINA_80", false);
-			final boolean ETINA_15 = world.getParameters().getBoolean("ETINA_15", false);
+			final boolean camille30 = world.getParameters().getBoolean("CAMILLE_30", false);
+			final boolean camille60 = world.getParameters().getBoolean("CAMILLE_60", false);
+			final boolean kain30 = world.getParameters().getBoolean("KAIN_30", false);
+			final boolean kain60 = world.getParameters().getBoolean("KAIN_60", false);
+			final boolean etina80 = world.getParameters().getBoolean("ETINA_80", false);
+			final boolean etina15 = world.getParameters().getBoolean("ETINA_15", false);
 			if (npc.getId() == CAMILLE)
 			{
-				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.3)) && !CAMILLE_30)
+				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.3)) && !camille30)
 				{
 					world.getParameters().set("CAMILLE_30", true);
 					world.spawnGroup("CAMILLE_MINIONS");
 				}
-				else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.6)) && !CAMILLE_60)
+				else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.6)) && !camille60)
 				{
 					world.getParameters().set("CAMILLE_60", true);
 					world.spawnGroup("CAMILLE_MINIONS");
@@ -500,13 +500,13 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			}
 			else if (npc.getId() == KAIN_VAN_HALTER)
 			{
-				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.3)) && !KAIN_30)
+				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.3)) && !kain30)
 				{
 					world.getParameters().set("KAIN_30", true);
 					showOnScreenMsg(world, NpcStringId.ETIS_VAN_ETINA_SUMMONS_HIS_APOSTLES_MINIONS, ExShowScreenMessage.TOP_CENTER, 7000, true);
 					world.spawnGroup("KAIN_MINIONS");
 				}
-				else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.6)) && !KAIN_60)
+				else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.6)) && !kain60)
 				{
 					world.getParameters().set("KAIN_60", true);
 					showOnScreenMsg(world, NpcStringId.ETIS_VAN_ETINA_SUMMONS_HIS_APOSTLES_MINIONS, ExShowScreenMessage.TOP_CENTER, 7000, true);
@@ -515,7 +515,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			}
 			else if ((npc.getId() == ETIS_VAN_ETINA1))
 			{
-				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.8)) && !ETINA_80)
+				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.8)) && !etina80)
 				{
 					final Npc etina1 = world.getNpc(ETIS_VAN_ETINA1);
 					world.getParameters().set("ETINA_80", true);
@@ -532,7 +532,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 					startQuestTimer("calamityCastTimer", 120000, npc, attacker, true);
 					startQuestTimer("destructionCastTimer", 120000, npc, attacker, true);
 				}
-				else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.15)) && !ETINA_15)
+				else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.15)) && !etina15)
 				{
 					world.getParameters().set("ETINA_15", true);
 					world.spawnGroup("ETINA_MINIONS");
@@ -704,6 +704,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 							break;
 						}
 					}
+					break;
 				}
 			}
 		}

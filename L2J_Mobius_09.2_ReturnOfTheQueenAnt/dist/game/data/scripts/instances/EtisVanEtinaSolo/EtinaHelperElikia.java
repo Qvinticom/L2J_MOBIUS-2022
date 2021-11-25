@@ -85,7 +85,6 @@ public class EtinaHelperElikia extends AbstractNpcAI
 		{
 			final StatSet npcVars = npc.getVariables();
 			final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
-			final Monster monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 			if (plr != null)
 			{
 				final double distance = npc.calculateDistance2D(plr);
@@ -109,7 +108,7 @@ public class EtinaHelperElikia extends AbstractNpcAI
 					WorldObject target = npc.getTarget();
 					if (target == null)
 					{
-						npc.setTarget(monster);
+						npc.setTarget(getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500)));
 					}
 					if ((target != null) && !target.isInvul() && target.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, target) && !CommonUtil.contains(NOT_ATK_NPCS, target.getId()) && !CommonUtil.contains(ETINA_HELPERS, target.getId()))
 					{
@@ -127,28 +126,22 @@ public class EtinaHelperElikia extends AbstractNpcAI
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
 		final FriendlyNpc npc = (FriendlyNpc) event.getTarget();
-		if (npc != null)
+		if ((npc != null) && !npc.isInCombat())
 		{
 			final Instance instance = npc.getInstanceWorld();
-			if ((instance != null) && !event.getAttacker().isPlayable() && !CommonUtil.contains(ETINA_HELPERS, event.getAttacker().getId()))
+			if ((instance != null) && !event.getAttacker().isPlayable() && (getRandom(50) < 5) && !CommonUtil.contains(ETINA_HELPERS, event.getAttacker().getId()))
 			{
-				if (!npc.isInCombat())
-				{
-					if (getRandom(50) < 5)
-					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_GET_IN_MY_WAY);
-					}
-				}
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_GET_IN_MY_WAY);
 			}
 		}
 	}
 	
 	public void onInstanceStatusChange(OnInstanceStatusChange event)
 	{
-		final Instance instance = event.getWorld();
 		final int status = event.getStatus();
 		if ((status == 1) || (status == 2) || (status == 3))
 		{
+			final Instance instance = event.getWorld();
 			instance.getAliveNpcs(ETINA_HELPER_ELIKIA).forEach(etinaHelperElikia -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, etinaHelperElikia, null));
 		}
 	}

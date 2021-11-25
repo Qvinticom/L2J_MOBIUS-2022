@@ -90,7 +90,6 @@ public class EtinaHelperLeona extends AbstractNpcAI
 		{
 			final StatSet npcVars = npc.getVariables();
 			final Player plr = npcVars.getObject("PLAYER_OBJECT", Player.class);
-			final Monster monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 			if (plr != null)
 			{
 				final double distance = npc.calculateDistance2D(plr);
@@ -114,7 +113,7 @@ public class EtinaHelperLeona extends AbstractNpcAI
 					WorldObject target = npc.getTarget();
 					if (target == null)
 					{
-						npc.setTarget(monster);
+						npc.setTarget(getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500)));
 					}
 					if ((target != null) && !target.isInvul() && target.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, target) && !CommonUtil.contains(NOT_ATK_NPCS, target.getId()) && !CommonUtil.contains(ETINA_HELPERS, target.getId()))
 					{
@@ -133,42 +132,39 @@ public class EtinaHelperLeona extends AbstractNpcAI
 	{
 		final FriendlyNpc npc = (FriendlyNpc) event.getTarget();
 		final Npc attacker = (Npc) event.getAttacker();
-		if (npc != null)
+		if ((npc != null) && !npc.isInCombat())
 		{
 			final Instance instance = npc.getInstanceWorld();
 			if ((instance != null) && !event.getAttacker().isPlayable() && !CommonUtil.contains(ETINA_HELPERS, event.getAttacker().getId()))
 			{
-				if (!npc.isInCombat())
+				switch (attacker.getId())
 				{
-					switch (attacker.getId())
+					case CAMILLE:
 					{
-						default:
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GISELLE_NO_IS_SHE_CAMILLE_IN_THAT_STATE);
+						break;
+					}
+					case KAIN_VAN_HALTER:
+					{
+						break;
+					}
+					case ETIS_VAN_ETINA1:
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EVEN_THE_MIGHTY_ETINA_SEEMS_TO_FEAR_US);
+						break;
+					}
+					case ETIS_VAN_ETINA2:
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ETIS_VAN_ETINA_WE_FINALLY_MEET);
+						break;
+					}
+					default:
+					{
+						if (getRandom(50) < 5)
 						{
-							if (getRandom(50) < 5)
-							{
-								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_GET_IN_MY_WAY);
-							}
-							break;
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_GET_IN_MY_WAY);
 						}
-						case CAMILLE:
-						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GISELLE_NO_IS_SHE_CAMILLE_IN_THAT_STATE);
-							break;
-						}
-						case KAIN_VAN_HALTER:
-						{
-							break;
-						}
-						case ETIS_VAN_ETINA1:
-						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EVEN_THE_MIGHTY_ETINA_SEEMS_TO_FEAR_US);
-							break;
-						}
-						case ETIS_VAN_ETINA2:
-						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ETIS_VAN_ETINA_WE_FINALLY_MEET);
-							break;
-						}
+						break;
 					}
 				}
 			}
@@ -177,10 +173,10 @@ public class EtinaHelperLeona extends AbstractNpcAI
 	
 	public void onInstanceStatusChange(OnInstanceStatusChange event)
 	{
-		final Instance instance = event.getWorld();
 		final int status = event.getStatus();
 		if ((status == 1) || (status == 2) || (status == 3))
 		{
+			final Instance instance = event.getWorld();
 			instance.getAliveNpcs(ETINA_HELPER_LEONA).forEach(etinaHelperLeona -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, etinaHelperLeona, null));
 			// instance.getAliveNpcs(ETINA_HELPER_LEONA).forEach(etinaHelperLeona -> getTimers().addRepeatingTimer("USE_SKILL", 6000, etinaHelperLeona, null));
 		}
