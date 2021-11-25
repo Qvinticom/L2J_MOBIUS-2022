@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -50,6 +49,7 @@ public class Q10890_SaviorsPathHallOfEtina extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 104;
 	private static final Location OUTLET_TELEPORT = new Location(-251728, 178576, -8928);
+	private static final String ETIS_VAN_ETINA_SOLO_VAR = "26322";
 	
 	public Q10890_SaviorsPathHallOfEtina()
 	{
@@ -172,9 +172,13 @@ public class Q10890_SaviorsPathHallOfEtina extends Quest
 						{
 							htmltext = "34426-02.html";
 						}
-						else if (qs.isCond(3) && qs.get(Integer.toString(ETIS_VAN_ETINA_SOLO)).equals("true"))
+						else if (qs.isCond(3))
 						{
-							htmltext = "34426-03.htm";
+							final String status = qs.get(ETIS_VAN_ETINA_SOLO_VAR);
+							if ((status != null) && status.equals("true"))
+							{
+								htmltext = "34426-03.htm";
+							}
 						}
 						break;
 					}
@@ -203,14 +207,10 @@ public class Q10890_SaviorsPathHallOfEtina extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			qs.set(Integer.toString(npc.getId()), "true");
+			qs.setCond(3, true);
+			qs.set(ETIS_VAN_ETINA_SOLO_VAR, "true");
 			notifyKill(npc, player, isSummon);
 			sendNpcLogList(player);
-			playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-			if ((qs.get(Integer.toString(ETIS_VAN_ETINA_SOLO)).equals("true")))
-			{
-				qs.setCond(3);
-			}
 		}
 	}
 	
@@ -221,7 +221,8 @@ public class Q10890_SaviorsPathHallOfEtina extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(1026322, true, qs.get(Integer.toString(ETIS_VAN_ETINA_SOLO)).equals("true") ? 1 : 0));
+			final String status = qs.get(ETIS_VAN_ETINA_SOLO_VAR);
+			holder.add(new NpcLogListHolder(1026322, true, (status != null) && status.equals("true") ? 1 : 0));
 			return holder;
 		}
 		return super.getNpcLogList(player);
