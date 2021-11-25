@@ -178,10 +178,10 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			case "checkProgress":
 			{
 				final Instance world = player.getInstanceWorld();
-				boolean CORRIDOR_MOBS_1_SPAWNED = world.getParameters().getBoolean("CORRIDOR_MOBS_1_SPAWNED", false);
-				boolean CORRIDOR_MOBS_2_SPAWNED = world.getParameters().getBoolean("CORRIDOR_MOBS_2_SPAWNED", false);
-				boolean CORRIDOR_MOBS_3_SPAWNED = world.getParameters().getBoolean("CORRIDOR_MOBS_3_SPAWNED", false);
-				boolean CORRIDOR_MOBS_4_SPAWNED = world.getParameters().getBoolean("CORRIDOR_MOBS_4_SPAWNED", false);
+				boolean mobs1 = world.getParameters().getBoolean("CORRIDOR_MOBS_1_SPAWNED", false);
+				boolean mobs2 = world.getParameters().getBoolean("CORRIDOR_MOBS_2_SPAWNED", false);
+				boolean mobs3 = world.getParameters().getBoolean("CORRIDOR_MOBS_3_SPAWNED", false);
+				boolean mobs4 = world.getParameters().getBoolean("CORRIDOR_MOBS_4_SPAWNED", false);
 				if (isInInstance(world))
 				{
 					final Monster monsterCheck = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
@@ -200,7 +200,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 							world.getParameters().set("BARRICADE_DESTROYED", false);
 						}
 					}
-					if (!CORRIDOR_MOBS_1_SPAWNED && world.getNpcsOfGroup("BARRICADES_1").isEmpty() && !world.getNpcsOfGroup("BARRICADES_2").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty())
+					if (!mobs1 && world.getNpcsOfGroup("BARRICADES_1").isEmpty() && !world.getNpcsOfGroup("BARRICADES_2").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty())
 					{
 						world.spawnGroup("CORRIDOR_MOBS_1");
 						world.getNpcsOfGroup("CORRIDOR_MOBS_1").forEach(mob ->
@@ -212,7 +212,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						});
 						world.getParameters().set("CORRIDOR_MOBS_1_SPAWNED", true);
 					}
-					if (!CORRIDOR_MOBS_2_SPAWNED && world.getNpcsOfGroup("BARRICADES_2").isEmpty() && !world.getNpcsOfGroup("BARRICADES_3").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_2).isEmpty())
+					if (!mobs2 && world.getNpcsOfGroup("BARRICADES_2").isEmpty() && !world.getNpcsOfGroup("BARRICADES_3").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_2).isEmpty())
 					{
 						world.spawnGroup("CORRIDOR_MOBS_2");
 						world.getNpcsOfGroup("CORRIDOR_MOBS_2").forEach(mob ->
@@ -224,7 +224,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						});
 						world.getParameters().set("CORRIDOR_MOBS_2_SPAWNED", true);
 					}
-					if (!CORRIDOR_MOBS_3_SPAWNED && world.getNpcsOfGroup("BARRICADES_3").isEmpty() && !world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_3).isEmpty())
+					if (!mobs3 && world.getNpcsOfGroup("BARRICADES_3").isEmpty() && !world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_3).isEmpty())
 					{
 						world.spawnGroup("CORRIDOR_MOBS_3");
 						world.getNpcsOfGroup("CORRIDOR_MOBS_3").forEach(mob ->
@@ -236,7 +236,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						});
 						world.getParameters().set("CORRIDOR_MOBS_3_SPAWNED", true);
 					}
-					if (!CORRIDOR_MOBS_4_SPAWNED && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty())
+					if (!mobs4 && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty())
 					{
 						world.spawnGroup("CORRIDOR_MOBS_4");
 						world.spawnGroup("PARAGON");
@@ -255,15 +255,12 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						}
 						npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_T_DEFEAT_PARAGON_WHILE_PARAGON_S_MINIONS_ARE_ALIVE, ExShowScreenMessage.TOP_CENTER, 7000, true));
 					}
-					if (world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty())
+					if (world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty() && (world.getNpc(PARAGON) != null) && world.getNpc(PARAGON).isInvul())
 					{
-						if ((world.getNpc(PARAGON) != null) && world.getNpc(PARAGON).isInvul())
-						{
-							world.getNpc(PARAGON).setInvul(false);
-							world.getNpc(PARAGON).getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
-							showOnScreenMsg(world, NpcStringId.PARAGON_IS_NO_LONGER_INVINCIBLE, ExShowScreenMessage.TOP_CENTER, 7000, true);
-							world.getNpc(LEONA_BLACKBIRD).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TODAY_IS_THE_DAY_THAT_I_WILL_ENTER);
-						}
+						world.getNpc(PARAGON).setInvul(false);
+						world.getNpc(PARAGON).getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+						showOnScreenMsg(world, NpcStringId.PARAGON_IS_NO_LONGER_INVINCIBLE, ExShowScreenMessage.TOP_CENTER, 7000, true);
+						world.getNpc(LEONA_BLACKBIRD).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TODAY_IS_THE_DAY_THAT_I_WILL_ENTER);
 					}
 					if ((world.getStatus() == 1) && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcs(PARAGON).isEmpty()))
 					{
@@ -353,9 +350,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfGnosis = world.getNpc(SEAL_OF_GNOSIS);
-					_sealOfGnosis.setDisplayEffect(3);
-					_sealOfGnosis.broadcastPacket(new MagicSkillUse(_sealOfGnosis, _sealOfGnosis, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 1, 10000, 0));
+					final Npc sealOfGnosis = world.getNpc(SEAL_OF_GNOSIS);
+					sealOfGnosis.setDisplayEffect(3);
+					sealOfGnosis.broadcastPacket(new MagicSkillUse(sealOfGnosis, sealOfGnosis, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 1, 10000, 0));
 					Player member = world.getPlayers().stream().findAny().get();
 					STIGMA_OF_REVELATION.getSkill().applyEffects(member, member);
 					world.getNpcsOfGroup("ETINA_MINIONS").forEach(minion ->
@@ -375,9 +372,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfStrife = world.getNpc(SEAL_OF_STRIFE);
-					_sealOfStrife.setDisplayEffect(3);
-					_sealOfStrife.broadcastPacket(new MagicSkillUse(_sealOfStrife, _sealOfStrife, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 2, 10000, 0));
+					final Npc sealOfStrife = world.getNpc(SEAL_OF_STRIFE);
+					sealOfStrife.setDisplayEffect(3);
+					sealOfStrife.broadcastPacket(new MagicSkillUse(sealOfStrife, sealOfStrife, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 2, 10000, 0));
 					world.getNpcsOfGroup("ETINA_MINIONS").forEach(minion ->
 					{
 						if (minion != null)
@@ -395,9 +392,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfAvarice = world.getNpc(SEAL_OF_AVARICE);
-					_sealOfAvarice.setDisplayEffect(3);
-					_sealOfAvarice.broadcastPacket(new MagicSkillUse(_sealOfAvarice, _sealOfAvarice, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 3, 10000, 0));
+					final Npc sealOfAvarice = world.getNpc(SEAL_OF_AVARICE);
+					sealOfAvarice.setDisplayEffect(3);
+					sealOfAvarice.broadcastPacket(new MagicSkillUse(sealOfAvarice, sealOfAvarice, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 3, 10000, 0));
 					world.getNpcsOfGroup("ETINA_MINIONS").forEach(minion ->
 					{
 						if (minion != null)
@@ -414,9 +411,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfPunishment = world.getNpc(SEAL_OF_PUNISHMENT);
-					_sealOfPunishment.setDisplayEffect(3);
-					_sealOfPunishment.broadcastPacket(new MagicSkillUse(_sealOfPunishment, _sealOfPunishment, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 4, 10000, 0));
+					final Npc sealOfPunishment = world.getNpc(SEAL_OF_PUNISHMENT);
+					sealOfPunishment.setDisplayEffect(3);
+					sealOfPunishment.broadcastPacket(new MagicSkillUse(sealOfPunishment, sealOfPunishment, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 4, 10000, 0));
 					world.getNpcsOfGroup("ETINA_MINIONS").forEach(minion ->
 					{
 						if (minion != null)
@@ -434,9 +431,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfAwakening = world.getNpc(SEAL_OF_AWAKENING);
-					_sealOfAwakening.setDisplayEffect(3);
-					_sealOfAwakening.broadcastPacket(new MagicSkillUse(_sealOfAwakening, _sealOfAwakening, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 5, 10000, 0));
+					final Npc sealOfAwakening = world.getNpc(SEAL_OF_AWAKENING);
+					sealOfAwakening.setDisplayEffect(3);
+					sealOfAwakening.broadcastPacket(new MagicSkillUse(sealOfAwakening, sealOfAwakening, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 5, 10000, 0));
 					world.getNpcsOfGroup("ETINA_MINIONS").forEach(minion ->
 					{
 						if (minion != null)
@@ -453,9 +450,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfCalamity = world.getNpc(SEAL_OF_CALAMITY);
-					_sealOfCalamity.setDisplayEffect(3);
-					_sealOfCalamity.broadcastPacket(new MagicSkillUse(_sealOfCalamity, _sealOfCalamity, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 6, 10000, 0));
+					final Npc sealOfCalamity = world.getNpc(SEAL_OF_CALAMITY);
+					sealOfCalamity.setDisplayEffect(3);
+					sealOfCalamity.broadcastPacket(new MagicSkillUse(sealOfCalamity, sealOfCalamity, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 6, 10000, 0));
 					showOnScreenMsg(world, NpcStringId.THE_SEAL_OF_CALAMITY_ACTIVATES_AND_ENORMOUS_POWER_BEGINS_TO_FLOW_OUT, ExShowScreenMessage.TOP_CENTER, 7000, true);
 				}
 				break;
@@ -465,9 +462,9 @@ public class EtisVanEtinaSolo extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					final Npc _sealOfDestruction = world.getNpc(SEAL_OF_DESTRUCTION);
-					_sealOfDestruction.setDisplayEffect(3);
-					_sealOfDestruction.broadcastPacket(new MagicSkillUse(_sealOfDestruction, _sealOfDestruction, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 7, 10000, 0));
+					final Npc sealOfDestruction = world.getNpc(SEAL_OF_DESTRUCTION);
+					sealOfDestruction.setDisplayEffect(3);
+					sealOfDestruction.broadcastPacket(new MagicSkillUse(sealOfDestruction, sealOfDestruction, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 7, 10000, 0));
 					showOnScreenMsg(world, NpcStringId.THE_SEAL_OF_DESTRUCTION_IS_ACTIVATED_AND_ETINA_S_GRAND_TEMPLE_IS_NOW_UNDER_ITS_INFLUENCE, ExShowScreenMessage.TOP_CENTER, 7000, true);
 				}
 				break;
@@ -520,11 +517,11 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			{
 				if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.8)) && !ETINA_80)
 				{
-					final Npc _etina1 = world.getNpc(ETIS_VAN_ETINA1);
+					final Npc etina1 = world.getNpc(ETIS_VAN_ETINA1);
 					world.getParameters().set("ETINA_80", true);
 					world.spawnGroup("ETINA_MINIONS");
-					_etina1.abortCast();
-					_etina1.broadcastPacket(new MagicSkillUse(_etina1, _etina1, CALL_OF_SEVEN_SIGNS.getSkillId(), CALL_OF_SEVEN_SIGNS.getSkillLevel(), 3000, 0));
+					etina1.abortCast();
+					etina1.broadcastPacket(new MagicSkillUse(etina1, etina1, CALL_OF_SEVEN_SIGNS.getSkillId(), CALL_OF_SEVEN_SIGNS.getSkillLevel(), 3000, 0));
 					showOnScreenMsg(world, NpcStringId.ETIS_VAN_ETINA_USES_THE_POWER_OF_THE_SEVEN_SIGNS_TO_SUMMON_ALL_7_SEALS_INSIDE_THE_TEMPLE, ExShowScreenMessage.TOP_CENTER, 7000, true);
 					world.spawnGroup("SEALS");
 					startQuestTimer("gnosisCastTimer", 120000, npc, attacker, true);
@@ -559,11 +556,8 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			}
 			else if (npc.getId() == ETIS_VAN_ETINA2)
 			{
+				world.getAliveNpcs().forEach(Npc::deleteMe);
 				playMovie(world.getPlayers(), Movie.SC_ETIS_VAN_ETINA_ENDING);
-				world.getAliveNpcs().forEach(mob ->
-				{
-					mob.deleteMe();
-				});
 				if (getQuestTimer("gnosisCastTimer", npc, killer) != null)
 				{
 					cancelQuestTimer("gnosisCastTimer", npc, killer);
