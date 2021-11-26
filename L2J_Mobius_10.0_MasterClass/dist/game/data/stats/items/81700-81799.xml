@@ -591,7 +591,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81747" name="Royal Honey Dark Beer" type="EtcItem">
-		<!-- For 30 min. all basic stats +3, Vitality bonus +50%, P./ M. Def. +15%.\n\nThe effect remains after death. Cooldown: 5 min.\nCannot be used in the Olympiad. -->
+		<!-- For 30 min. all basic stats +3, Vitality bonus +50%, P./ M. Def. +15%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -632,7 +632,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="81750" name="First Time Lv. 120 Gift" additionalName="Dan from the Sieghardt server" type="EtcItem">
-		<!-- Dan from the Sieghardt server was the first player in the history of Lineage 2 to reach Lv. 120.\nTo commemorate this event every player is awarded a special gift.\nDouble-click to receive a large amount of supplies. -->
+		<!-- Dan from the Sieghardt server was the first player in the history of Lineage 2 to reach Lv. 120. To commemorate this event every player is awarded a special gift. Double-click to receive a large amount of supplies. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -689,7 +689,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81754" name="Aden Unity Support Box" additionalName="Lv. 1" type="EtcItem">
-		<!-- A gift box prepared by Anhel to unite Aden warriors.\nDouble-click to receive a large amount of supplies. -->
+		<!-- A gift box prepared by Anhel to unite Aden warriors. Double-click to receive a large amount of supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -699,7 +699,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81755" name="Aden Unity Support Box" additionalName="Lv. 2" type="EtcItem">
-		<!-- A gift box prepared by Anhel to unite Aden warriors.\nDouble-click to receive a large amount of supplies. -->
+		<!-- A gift box prepared by Anhel to unite Aden warriors. Double-click to receive a large amount of supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -709,7 +709,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81756" name="Aden Unity Support Box" additionalName="Lv. 3" type="EtcItem">
-		<!-- A gift box prepared by Anhel to unite Aden warriors.\nDouble-click to receive a Krishna Weapon or Leviathan Armor with a certain chance as well as a large amount of supplies. -->
+		<!-- A gift box prepared by Anhel to unite Aden warriors. Double-click to receive a Krishna Weapon or Leviathan Armor with a certain chance as well as a large amount of supplies. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -739,7 +739,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81759" name="Glowing Royal Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
-		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min.\n\nThe effect remains after death. Cooldown: 5 min.\nCannot be used in the Olympiad. -->
+		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -757,7 +757,7 @@
 		</skills>
 	</item>
 	<item id="81760" name="Enhanced Talisman of Protection Lv. 1" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +5000, M. Def. +3250, Attribute Resistance +160.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +5000, M. Def. +3250, Attribute Resistance +160. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -770,7 +770,7 @@
 		</skills>
 	</item>
 	<item id="81761" name="Enhanced Talisman of Protection Lv. 2" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +5960, M. Def. +3874, Attribute Resistance +170.\nReceived. M. damage -5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +5960, M. Def. +3874, Attribute Resistance +170. Received. M. damage -5%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -783,7 +783,7 @@
 		</skills>
 	</item>
 	<item id="81762" name="Enhanced Talisman of Protection Lv. 3" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +6920, M. Def. +4498, Attribute Resistance +180.\nReceived. M. damage -5%.\nDagger Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +6920, M. Def. +4498, Attribute Resistance +180. Received. M. damage -5%. Dagger Resistance +5%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -796,7 +796,7 @@
 		</skills>
 	</item>
 	<item id="81763" name="Enhanced Talisman of Protection Lv. 4" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +7880, M. Def. +5122, Attribute Resistance +190.\nReceived. M. damage -5%.\nDagger/ Bow/ Crossbow Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +7880, M. Def. +5122, Attribute Resistance +190. Received. M. damage -5%. Dagger/ Bow/ Crossbow Resistance +5%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -809,7 +809,7 @@
 		</skills>
 	</item>
 	<item id="81764" name="Enhanced Talisman of Protection Lv. 5" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +8840, M. Def. +5746, Attribute Resistance +200.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +8840, M. Def. +5746, Attribute Resistance +200. Received. M. damage -5%. Dagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -822,7 +822,7 @@
 		</skills>
 	</item>
 	<item id="81765" name="Enhanced Talisman of Protection Lv. 6" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +9992, M. Def. +6495, Attribute Resistance +220.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +9992, M. Def. +6495, Attribute Resistance +220. Received. M. damage -5%. Dagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%. Received Critical Rate from standard attacks -10%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -835,7 +835,7 @@
 		</skills>
 	</item>
 	<item id="81766" name="Enhanced Talisman of Protection Lv. 7" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +11,144, M. Def. +7244, Attribute Resistance +240.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +11,144, M. Def. +7244, Attribute Resistance +240. Received. M. damage -5%. Dagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%. Received Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -848,7 +848,7 @@
 		</skills>
 	</item>
 	<item id="81767" name="Enhanced Talisman of Protection Lv. 8" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +12,296, M. Def. +7993, Attribute Resistance +260.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\nReceived Critical Damage from standard attacks -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +12,296, M. Def. +7993, Attribute Resistance +260. Received. M. damage -5%. Dagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%. Received Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%. Received Critical Damage from standard attacks -10%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -861,7 +861,7 @@
 		</skills>
 	</item>
 	<item id="81768" name="Enhanced Talisman of Protection Lv. 9" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +13,448, M. Def. +8742, Attribute Resistance +280.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\nReceived Critical Damage from standard attacks and P./ M. skills -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<!-- Applies the following effects. P. Def. +13,448, M. Def. +8742, Attribute Resistance +280. Received. M. damage -5%. Dagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%. Received Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%. Received Critical Damage from standard attacks and P./ M. skills -10%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting> Use Shining Energy of Protection. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -874,7 +874,7 @@
 		</skills>
 	</item>
 	<item id="81769" name="Enhanced Talisman of Protection Lv. 10" type="Armor">
-		<!-- Applies the following effects.\nP. Def. +14,600, M. Def. +9491, Attribute Resistance +300.\nReceived. M. damage -7%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +7%.\nReceived Critical Rate from standard attacks -15%, Received P./ M. Skill Critical Rate -15%.\nReceived Critical Damage from standard attacks and P./ M. skills -15%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<!-- Applies the following effects. P. Def. +14,600, M. Def. +9491, Attribute Resistance +300. Received. M. damage -7%. Dagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +7%. Received Critical Rate from standard attacks -15%, Received P./ M. Skill Critical Rate -15%. Received Critical Damage from standard attacks and P./ M. skills -15%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -913,7 +913,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81773" name="Beach Swimsuit" type="Armor">
-		<!-- Swimsuit for the beach.\nNote!\nDisplayed incorrectly on Ertheia. -->
+		<!-- Swimsuit for the beach. Note! Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -927,7 +927,7 @@
 		</stats>
 	</item>
 	<item id="81774" name="Alluring Swimsuit" type="Armor">
-		<!-- Alluring swimsuit with exquisite prints.\nNote!\nDisplayed incorrectly on Ertheia. -->
+		<!-- Alluring swimsuit with exquisite prints. Note! Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -941,7 +941,7 @@
 		</stats>
 	</item>
 	<item id="81775" name="Seductive Swimsuit" type="Armor">
-		<!-- Seductive swimsuit with exquisite prints.\nNote!\nDisplayed incorrectly on Ertheia. -->
+		<!-- Seductive swimsuit with exquisite prints. Note! Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1009,14 +1009,14 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81782" name="Watermelon Seed" additionalName="Event" type="EtcItem">
-		<!-- You get a fresh Watermelon.\nIf the Watermelon is crashed, there is a certain chance to obtain a buff and Ice Box. The effect duration and a number of Ice Boxes depend on the Watermelon size. -->
+		<!-- You get a fresh Watermelon. If the Watermelon is crashed, there is a certain chance to obtain a buff and Ice Box. The effect duration and a number of Ice Boxes depend on the Watermelon size. -->
 		<set name="icon" val="icon.event_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81783" name="Ice Box" additionalName="Event" type="EtcItem">
-		<!-- It can help to survive the hot summer time.\nDouble-click to obtain supplies and equipment. -->
+		<!-- It can help to survive the hot summer time. Double-click to obtain supplies and equipment. -->
 		<set name="icon" val="icon.ev_2020_summer_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1026,7 +1026,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81784" name="Blessed Angel's Necklace" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. The item can be changed. <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1040,7 +1040,7 @@
 		</stats>
 	</item>
 	<item id="81785" name="Blessed Angel's Necklace" additionalName="Assault Lv. 1" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. <Special effects> P./ M. Atk. +1% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1054,7 +1054,7 @@
 		</stats>
 	</item>
 	<item id="81786" name="Blessed Angel's Necklace" additionalName="Assault Lv. 2" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. <Special effects> P./ M. Atk. +2% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1068,7 +1068,7 @@
 		</stats>
 	</item>
 	<item id="81787" name="Blessed Angel's Necklace" additionalName="Assault Lv. 3" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. <Special effects> P./ M. Atk. +5% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1082,7 +1082,7 @@
 		</stats>
 	</item>
 	<item id="81788" name="Blessed Angel's Earring" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage. The effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped. The item can be changed. <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1096,7 +1096,7 @@
 		</stats>
 	</item>
 	<item id="81789" name="Blessed Angel's Earring" additionalName="Security Lv. 1" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage. The effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped. <Special effects> P./ M. Def. +1% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1110,7 +1110,7 @@
 		</stats>
 	</item>
 	<item id="81790" name="Blessed Angel's Earring" additionalName="Security Lv. 2" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2. When enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage. The effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped. <Special effects> P./ M. Def. +2% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1124,7 +1124,7 @@
 		</stats>
 	</item>
 	<item id="81791" name="Blessed Angel's Earring" additionalName="Security Lv. 3" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5. When enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage. The effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped. <Special effects> P./ M. Def. +5% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1138,7 +1138,7 @@
 		</stats>
 	</item>
 	<item id="81792" name="Blessed Angel's Ring" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate/ Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage, and P./ M. Skill Power.\nWhen equipped both Angel's Ring and Blessed Angel's Ring, the effects do not stack.\nThe item can be changed.\n\n<Enchanting>Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Obstruction Atk. Rate/ Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage, and P./ M. Skill Power. When equipped both Angel's Ring and Blessed Angel's Ring, the effects do not stack. The item can be changed. <Enchanting>Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_new_ring_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1152,7 +1152,7 @@
 		</stats>
 	</item>
 	<item id="81793" name="Blessed Angel's Ring" additionalName="Elements Lv. 1" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +10\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power. The effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously. <Special effect> Attribute Attack/ Resistance +10 <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_new_ring_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1166,7 +1166,7 @@
 		</stats>
 	</item>
 	<item id="81794" name="Blessed Angel's Ring" additionalName="Elements Lv. 2" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +20\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power. The effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously. <Special effect> Attribute Attack/ Resistance +20 <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_new_ring_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1180,7 +1180,7 @@
 		</stats>
 	</item>
 	<item id="81795" name="Blessed Angel's Ring" additionalName="Elements Lv. 3" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +50\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power. The effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously. <Special effect> Attribute Attack/ Resistance +50 <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_new_ring_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1194,7 +1194,7 @@
 		</stats>
 	</item>
 	<item id="81796" name="Blessed Angel's Necklace" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. The item can be changed. <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1211,7 +1211,7 @@
 		</stats>
 	</item>
 	<item id="81797" name="Blessed Angel's Necklace" additionalName="Assault Lv. 1" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. <Special effects> P./ M. Atk. +1% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1228,7 +1228,7 @@
 		</stats>
 	</item>
 	<item id="81798" name="Blessed Angel's Necklace" additionalName="Assault Lv. 2" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. <Special effects> P./ M. Atk. +2% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1245,7 +1245,7 @@
 		</stats>
 	</item>
 	<item id="81799" name="Blessed Angel's Necklace" additionalName="Assault Lv. 3" type="Armor">
-		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5. When enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns. <Special effects> P./ M. Atk. +5% <Enchanting> Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

@@ -1,5 +1,208 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="82100" name="Letter G" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_g_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82101" name="Number II" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_ii_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82102" name="Letter W" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_w_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82103" name="Letter D" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_d_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82104" name="Letter T" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_t_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82105" name="Letter O" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_o_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82106" name="Letter H" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_h_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82107" name="Letter P" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_p_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82108" name="Conquest Leader" additionalName="30-day" type="Armor">
+		<!-- Given only to the Conquest Leader. When equipped, Max HP/ MP/ CP +5%, weight limit +25,600, damage +15%, received damage -15%, Damage Reflection Resistance +20%, Fixed Damage Resistance +20%, Critical Damage -20%, inventory slots +36, Attribute Resistance +50. -->
+		<set name="icon" val="icon.dethrone_belt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">300</stat>
+		</stats>
+	</item>
+	<item id="82109" name="5 Billion Adena Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 5 billion adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82110" name="100 Million Adena Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 100 million adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82111" name="Conquest Rankings' 1st Place Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, P. Atk., M. Atk., P. Def., M. Def., acquired XP/ SP +5%. -->
+		<set name="icon" val="icon.dethrone_tier_1_rune" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82112" name="Conquest Rankings' 2nd Place Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, P. Atk., M. Atk., P. Def., M. Def., acquired XP/ SP +3%. -->
+		<set name="icon" val="icon.dethrone_tier_1_rune" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82113" name="Conquest Rankings' 3rd Place Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, P. Atk., M. Atk., P. Def., M. Def. +1%, acquired XP/ SP +3%. -->
+		<set name="icon" val="icon.dethrone_tier_1_rune" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82114" name="Conquest Rankings' 4th Place Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, P./ M. Def. +1%, acquired XP/ SP +3%. -->
+		<set name="icon" val="icon.dethrone_tier_1_rune" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82115" name="Conquest Rankings' 5th Place Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, acquired XP/ SP +3%. -->
+		<set name="icon" val="icon.dethrone_tier_1_rune" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82116" name="Conqueror Server Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, acquired XP/ SP +5%. -->
+		<set name="icon" val="icon.dethrone_server_rune" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82117" name="10 Million Adena Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 10 million adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="82118" name="Death Knight's Flame Sword" type="Weapon">
 		<!-- Changes a one-handed sword's appearance to that of Eigis. -->
 		<set name="icon" val="icon.weapon_aka_i00" />
@@ -23,12 +226,412 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
+	<item id="82119" name="Proof of Traveling to Conquest World" type="EtcItem">
+		<!-- Proves that you've been to the Conquest world. Disappears automatically after returning to your home world. For special purposes. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82120" name="Human Starting Box" additionalName="Warrior" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82121" name="Human Starting Box" additionalName="Wizard" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82122" name="Elf Starting Box" additionalName="Warrior" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82123" name="Elf Starting Box" additionalName="Wizard" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82124" name="Dark Elf Starting Box" additionalName="Warrior" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82125" name="Dark Elf Starting Box" additionalName="Wizard" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82126" name="Orc Starting Box" additionalName="Warrior" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82127" name="Orc Starting Box" additionalName="Shaman" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82128" name="Dwarf Starting Box" additionalName="Warrior" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82129" name="Kamael Starting Box" additionalName="Male" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82130" name="Kamael Starting Box" additionalName="Female" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82131" name="Ertheia Starting Box" additionalName="Warrior" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82132" name="Ertheia Starting Box" additionalName="Wizard" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82133" name="Human Starting Box" additionalName="Death Soldier" type="EtcItem">
+		<!-- Double-click to obtain some items required for starting the game. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82134" name="Abandoned Coal Mines' Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in the Abandoned Coal Mines. Required level: 99-105. -->
+		<set name="icon" val="icon.timezone_refill_lost_mine_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82135" name="Exalted Growth Support Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Nevit's Cloak of Light (30-day), Storm Isle's Time Stone/ Abandoned Coal Mines' Time Stone (9 pcs.), Emperor's Special Cocktail (72 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer, Newbie's Fortune Scroll (114 pcs.), Freya's Scroll of Storm (432 pcs.). -->
+		<set name="icon" val="icon.etc_candy_basket_i04_1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82136" name="Circlet Upgrade Kit" type="EtcItem">
+		<!-- Double-click to obtain Blessed Scroll: Enchant Circlet (20 pcs.), Crystal of Dawn (12 pcs.). -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82137" name="Large Circlet Upgrade Kit" type="EtcItem">
+		<!-- Double-click to obtain Blessed Scroll: Enchant Circlet (40 pcs.), Crystal of Dawn (38 pcs.). -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82138" name="Shirt Upgrade Kit" type="EtcItem">
+		<!-- Double-click to obtain Blessed Scroll: Enchant Dragon Shirt (20 pcs.), Crystal of Dawn (12 pcs.). -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82139" name="Large Shirt Upgrade Kit" type="EtcItem">
+		<!-- Double-click to obtain Blessed Scroll: Enchant Dragon Shirt (20 pcs.), Crystal of Dawn (38 pcs.). -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82140" name="Scroll: Enchant R-grade Armor 3-unit Pack" type="EtcItem">
+		<!-- Double-click to obtain Scroll: Enchant R-grade Armor (3 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82141" name="Emperor's Special Cocktail 5-unit Pack" type="EtcItem">
+		<!-- Double-click to obtain Emperor's Special Cocktail (5 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82142" name="Honey Dark Beer 2-unit Pack" type="EtcItem">
+		<!-- Double-click to obtain Honey Dark Beer (2 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82143" name="Glowing Dragon's Attribute Potion (XP) 2-unit Pack" type="EtcItem">
+		<!-- Double-click to obtain Glowing Dragon's Attribute Potion (XP) (2 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82144" name="Freya's Ice Rose 2-unit Pack" type="EtcItem">
+		<!-- Double-click to obtain Freya's Ice Rose (2 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82145" name="Mysterious Aid Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Storm Isle's Time Stone/ Abandoned Coal Mines' Time Stone, Emperor's Special Cocktail (24 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer, Newbie's Fortune Scroll (48 pcs.), Freya's Scroll of Storm (144 pcs.). -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82146" name="Mysterious Aid Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Emperor's Special Cocktail (72 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer (114 pcs.), Freya's Scroll of Storm (432 pcs.). -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="82147" name="Grace' Fortune Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item (excluding Forgotten Spellbook - Chapter 1 and various supplies). -->
 		<set name="icon" val="icon.collection_field_rune_lv1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82148" name="Mysterious Humble Support Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Emperor's Special Cocktail (4 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer (8 pcs.), Freya's Scroll of Storm (24 pcs.). -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82149" name="Einhasad's Elixir" type="EtcItem">
+		<!-- For 30 min., damage +15%, Attribute Attack/ Resistance +100, acquired XP/ SP +50%, Vitality bonus +50%, received damage -15%. Does not stack with Freya's Charisma Potion, Einhasad's Charisma Potion, Freya's Luck Potion. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82150" name="New Beginning's Yellow Support Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Heavenly Talisman, Blue Cube, Emperor's Special Cocktail (12 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer (24 pcs.), Freya's Scroll of Storm (72 pcs.). -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82151" name="New Beginning's Blue Support Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Superior Red Cat's Eye Lv. 10, Superior Blue Cat's Eye Lv. 10, Red Cube, Emperor's Special Cocktail (12 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer (24 pcs.), Freya's Scroll of Storm (72 pcs.). -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82152" name="New Beginning's Red Support Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Ruler's Authority, Emperor's Special Cocktail (12 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer (24 pcs.), Freya's Scroll of Storm (72 pcs.). -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82153" name="Common Dice Coupon" additionalName="Event" type="EtcItem">
+		<!-- Required for obtaining Common Dice for the Aden Adventure game. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82154" name="Alexandria's Artifact Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 rare item (excluding Artifact Crystal and various supplies). -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82155" name="Adventurer's Fortune Scroll" additionalName="Event" type="EtcItem">
+		<!-- A scroll that charges adventurers with luck. For 30 min., Attribute Attack/ Resistance +70, P. Atk./ M. Atk./ P. Def./ M. Def. +7%, acquired XP/ SP +5%, Vitality bonus +10%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82156" name="Invitation from New World" type="EtcItem">
+		<!-- An invitation from Conquest Guide Chloe. Go to the Conquest world and take it to Conquest Guide Entropy in the Town of Conquest. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82157" name="Conquest Mark" type="EtcItem">
+		<!-- A mark given to you by Conquest Guide Entropy after you gave her the invitation. A proof that you've been to the Conquest world. Take it to Conquest Guide Chloe in your home world. -->
+		<set name="icon" val="icon.etc_permit_card_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="82158" name="+1 Attack Artifact Pack" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
@@ -90,6 +693,48 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 	</item>
+	<item id="82164" name="Collection Item Box - All as One" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Orb of Abyss Lv. 1, Orb of Abyss Lv. 3, Orb of Abyss Lv. 7 (1 of each). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82165" name="Collection Item Box - Last Chance!" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Orb of Darkness Lv. 2, Orb of Darkness Lv. 3, Orb of Darkness Lv. 6, Orb of Darkness Lv. 7 (1 of each). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82166" name="Collection Item Box - Adventurer" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Orb of Bloody Soul Lv. 3, Orb of Bloody Soul Lv. 5, Orb of Bloody Soul Lv. 8, Orb of Bloody Soul Lv. 10 (1 of each). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82167" name="Collection Item Box - Empiric" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Orb of Bloody Soul Lv. 8, Orb of Bloody Soul Lv. 9 (1 of each). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82168" name="Sayha's Blessing Potion" type="EtcItem">
+		<!-- For 30 min., Attribute Attack/ Resistance +200, acquired XP/ SP +100%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_potion_of_energy_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="82169" name="Forgotten Spellbook - Finale" type="EtcItem">
 		<!-- A spellbook for learning the Forgotten Power skills Lv. 31. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
@@ -106,5 +751,61 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82171" name="Swift Growth Cookie" type="EtcItem">
+		<!-- When used, Vitality bonus +50% for 30 min. Additionally, acquired XP/ SP +300%, if your level is lower than 118. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82172" name="Swift Attack Cookie" type="EtcItem">
+		<!-- For 30 min., acquired XP/ SP +10%, Vitality bonus +20%, Attribute Attack +70, damage +10%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82173" name="Accessory Coupon" type="EtcItem">
+		<!-- Required for creating accessories. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82174" name="Collection Item Box - Conqueror of Tower of Insolence's Middle Floors" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 4 types of Orbs of Anger (48 pcs.), 5 types of Orbs of Anger (24 pcs.), 6 types of Orbs of Anger (16 pcs.), High Priest's Holy Water (500 pcs.). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82175" name="Collection Item Box - Conqueror of Tower of Insolence's Lower Floors" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 1 type of Orbs of Anger (48 pcs.), 2 types of Orbs of Anger (24 pcs.), 3 types of Orbs of Anger (16 pcs.), High Priest's Holy Water (500 pcs.). -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82187" name="Swift Defense Cookie" type="EtcItem">
+		<!-- When used for 30 min., acquired XP/ SP +10%, Vitality bonus +20%, Attribute Resistance +70, received damage -10%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

@@ -633,6 +633,24 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="96065" name="Emerald Weapon - Ancient Sword" type="Weapon">
+		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="209" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
 	<item id="96066" name="Elder Green's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
@@ -789,7 +807,6 @@
 		<set name="icon" val="icon.red_save_ticket" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -798,6 +815,184 @@
 	<item id="96082" name="Daily Kit: Equipment (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.freya_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96083" name="Garden of Genesis' Time Stone (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Prolongs your session zone's raid for 60 min. <Hunting zone> Garden of Genesis -->
+		<set name="icon" val="icon.bm_timezone_refill_pccafe_a_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96084" name="Treasure Chest of Genesis (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96085" name="Spring Energy (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Craft points +5000. <Effect> Sayha's Grace points +750. -->
+		<set name="icon" val="icon.etc_flower_i07" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="10000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96086" name="Invigorating Spring Energy (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Craft points +10,000. <Effect> Momentarily recovers 500 HP. If HP is full, CP is recovered. -->
+		<set name="icon" val="icon.etc_flower_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="20000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96087" name="Spring Crystal Shard (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A crystal shard from the Garden of Genesis. <Effect> Can be exchanged for Spring Crystals in the Special Craft window. -->
+		<set name="icon" val="icon.etc_jewel_piece" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96088" name="Spring Crystal (Time-limited)" type="EtcItem">
+		<!-- Apherus' crystal. <Effect> Required for a collection to get additional stat bonuses. Can be used once to acquire craft points. -->
+		<set name="icon" val="icon.rare_acc_smith_piece" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2000000" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96089" name="Aden Cloak" additionalName="Sealed" type="Armor">
+		<!-- Can be enchanted with Scroll: Enchant Aden Cloak. Depending on the enchant value, activates special effects. <font color=ff6666>Note! The item is destroyed if failing enchanting to +1. Available only to clan members.</font> -->
+		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96090" name="World Siege Reward Cloak - Not Available" additionalName="Not Available" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96091" name="Scroll: 100,000,000 SP" additionalName="Sealed" type="EtcItem">
+		<!-- SP +1,000,000,000. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96092" name="Protection Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_dragon_present_5" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96093" name="Buff Expansion Book Lv. 3" additionalName="Sealed" type="EtcItem">
+		<!-- Required for learning the Divine Inspiration Lv. 3 skill. <Classes> All classes after the 3rd class change <Skill effect> Increases the number of buff slots. -->
+		<set name="icon" val="icon.etc_add_buffslot_i02" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96094" name="Buff Expansion Book Lv. 4" additionalName="Sealed" type="EtcItem">
+		<!-- Required for learning the Divine Inspiration Lv. 4 skill. <Classes> All classes after the 3rd class change <Skill effect> Increases the number of buff slots. -->
+		<set name="icon" val="icon.etc_add_buffslot_i03" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96095" name="Herphah's Mark (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Shining Battle Support Chest through the Special Craft. Craft points +100,000. -->
+		<set name="icon" val="icon.etc_bereths_gold_dragon_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96096" name="Mark of Combat (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Required for a collection to get additional stat bonuses. -->
+		<set name="icon" val="icon.shield_bread_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96097" name="Shining Mark of Combat (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Required for a collection to get additional stat bonuses. -->
+		<set name="icon" val="icon.shield_bread_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96098" name="Battle Support Mark (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Battle Support Chest through the Special Craft. -->
+		<set name="icon" val="icon.etc_battle_support_coin_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96099" name="Mysterious Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Mysterious Box that lost all its power. Double-click to obtain the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -780,12 +780,12 @@
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-	   <effects>
-           <effect name="BlockActions" />
-           <effect name="TargetCancel">
-               <chance>80</chance>
-           </effect>
-       </effects>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="TargetCancel">
+				<chance>80</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="82015" toLevel="20" name="Silence Attack">
 		<icon>

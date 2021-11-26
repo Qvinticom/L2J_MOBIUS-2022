@@ -186,18 +186,18 @@
 				<amount>
 					<value level="1">200</value>
 					<value level="2">500</value>
-			    </amount>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value level="1">250</value>
 					<value level="2">500</value>
-			    </amount>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Synergy">
-				<!-- Party Solidarity  -->
+				<!-- Party Solidarity -->
 				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
 				<requiredSlots>SONG_OF_EARTH</requiredSlots>
 				<partyBuffSkillId>45403</partyBuffSkillId>
@@ -246,7 +246,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Synergy">
-				<!-- Party Solidarity  -->
+				<!-- Party Solidarity -->
 				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
 				<requiredSlots>SONG_OF_HUNTER</requiredSlots>
 				<partyBuffSkillId>45403</partyBuffSkillId>
@@ -294,7 +294,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Synergy">
-				<!-- Party Solidarity  -->
+				<!-- Party Solidarity -->
 				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
 				<requiredSlots>DANCE_OF_WARRIOR</requiredSlots>
 				<partyBuffSkillId>45403</partyBuffSkillId>
@@ -350,7 +350,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Synergy">
-				<!-- Party Solidarity  -->
+				<!-- Party Solidarity -->
 				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
 				<requiredSlots>DANCE_OF_FIRE</requiredSlots>
 				<partyBuffSkillId>45403</partyBuffSkillId>
@@ -2451,7 +2451,7 @@
 		</effects>
 	</skill>
 	<skill id="45489" toLevel="3" name="Shocking Burst">
-		<!-- P. Def. $s1\nM. Def. $s2. -->
+		<!-- P. Def. $s1 M. Def. $s2. -->
 		<icon>icon.skill1564</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>

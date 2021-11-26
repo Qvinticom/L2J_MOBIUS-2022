@@ -8,6 +8,158 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="82001" name="Lindvior's Conquest - Upper Armor" additionalName="Light armor" type="Armor">
+		<!-- Changes your upper armor's appearance to that of Lindvior light armor. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_upbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">360</stat>
+			<stat type="accCombat">5E-08</stat>
+		</stats>
+	</item>
+	<item id="82002" name="Lindvior's Conquest - Lower Armor" additionalName="Light armor" type="Armor">
+		<!-- Changes your lower armor's appearance to that of Lindvior light armor. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_downbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">225</stat>
+			<stat type="accCombat">3E-08</stat>
+		</stats>
+	</item>
+	<item id="82003" name="Lindvior's Conquest - Gloves" additionalName="Light armor" type="Armor">
+		<!-- Changes your gloves' appearance to that of Lindvior light armor. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_gloves_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="82004" name="Lindvior's Conquest - Boots" additionalName="Light armor" type="Armor">
+		<!-- Changes your boots' appearance to that of Lindvior light armor. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_shoes_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="82005" name="Lindvior's Conquest - Upper Armor" additionalName="Robe" type="Armor">
+		<!-- Changes your upper armor's appearance to that of Lindvior robe. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_upbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">360</stat>
+			<stat type="accCombat">5E-08</stat>
+		</stats>
+	</item>
+	<item id="82006" name="Lindvior's Conquest - Lower Armor" additionalName="Robe" type="Armor">
+		<!-- Changes your lower armor's appearance to that of Lindvior robe. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_downbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">225</stat>
+			<stat type="accCombat">3E-08</stat>
+		</stats>
+	</item>
+	<item id="82007" name="Lindvior's Conquest - Gloves" additionalName="Robe" type="Armor">
+		<!-- Changes your gloves' appearance to that of Lindvior robe. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_gloves_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="82008" name="Lindvior's Conquest - Boots" additionalName="Robe" type="Armor">
+		<!-- Changes your boots' appearance to that of Lindvior robe. Available to characters from the Conqueror server. -->
+		<set name="icon" val="icon.honors_light_shoes_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
 	<item id="82009" name="Heine's Blue Box" type="EtcItem">
 		<!-- A box that was hidden in Heine. Double-click to obtain 1 rare item (excluding Star Sign and Scroll: Enchant Superior Seed Bracelet). -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
@@ -30,7 +182,7 @@
 		</skills>
 	</item>
 	<item id="82011" name="Festival Fairy's Chest: Authority Ornament" additionalName="Event" type="EtcItem">
-		<!-- A gift from the Festival Fairy.\nDouble-click to obtain Authority Ornament (4 pcs.). -->
+		<!-- A gift from the Festival Fairy. Double-click to obtain Authority Ornament (4 pcs.). -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -121,6 +273,120 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="82024" name="Master's Shining Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 special item (excluding Forgotten Spellbook - Chapter 1). -->
+		<set name="icon" val="icon.bm_dragon_present_5" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82025" name="Tower of Insolence's Time Stone (Middle Floors)" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in the Tower of Insolence (Middle Floors). Required level: 110+. -->
+		<set name="icon" val="icon.timezone_refill_oman_a_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82026" name="Ultimate Death Knight C - Not Available" additionalName="Blue" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82027" name="Ultimate Death Knight D - Not Available" additionalName="Blue" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82028" name="Ultimate Death Knight E - Not Available" additionalName="Blue" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82029" name="Ultimate Death Knight C - Not Available" additionalName="Phiolet" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82030" name="Ultimate Death Knight D - Not Available" additionalName="Phiolet" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82031" name="Ultimate Death Knight E - Not Available" additionalName="Phiolet" type="Armor">
+		<!-- The item is not available. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82032" name="Shiny Jewel Energy" type="EtcItem">
+		<!-- Required for upgrading Superior jewels through compounding. Can be used with any Superior jewels of Lv. 5+. If compounding fails, the jewel's level remains the same. -->
+		<set name="icon" val="icon.bm_bless_jewel_energy" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="82033" name="Shining Jewel Box" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 special item (excluding Jewel Energy). -->
 		<set name="icon" val="icon.collection_field_rune_lv1" />
@@ -128,12 +394,367 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="82034" name="Lineage 2 (1)" additionalName="DE" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part1_1" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82035" name="Lineage 2 (2)" additionalName="THR" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part1_2" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82036" name="Lineage 2 (3)" additionalName="ONE" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part1_3" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82037" name="Awakening (1)" additionalName="DEA" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part2_1" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82038" name="Awakening (2)" additionalName="THKNI" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part2_2" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82039" name="Awakening (3)" additionalName="GHT" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part2_3" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82040" name="New Era (1)" additionalName="NEW" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part3_1" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82041" name="New Era (2)" additionalName="SER" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part3_2" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82042" name="New Era (3)" additionalName="VER" type="EtcItem">
+		<!-- A part of a word. Collect the whole word and take it to the Prophet of New World in any village to get a reward. Double-click to see an inscription on the other side. -->
+		<set name="icon" val="icon.ev_2021_teasing_part3_3" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82043" name="Call of the New World" additionalName="Event" type="EtcItem">
+		<!-- A book written in incomprehensible symbols. It is filled with strange energy. When used, damage +5%, Vitality bonus +5%, received damage -5% for 2 h. The effect remains after death, switching to the subclass and entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.ev_2021_teasing_scroll1" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82044" name="Reward Box of Awakening" additionalName="Event" type="EtcItem">
+		<!-- A reward given for deciphering a message related to the Awakening. Double-click to open. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82045" name="Reward Box of New Era" additionalName="Event" type="EtcItem">
+		<!-- A reward given for deciphering a message related to the New Era. Double-click to open. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82046" name="Gran Kain's Pack" additionalName="Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain 1 special item (excluding Gran Kain's Large Pack). -->
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82047" name="Gran Kain's Large Pack" additionalName="Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain 1 special item (excluding Gran Kain's Exceptional Pack). -->
+		<set name="icon" val="icon.bm_silver_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82048" name="Gran Kain's Exceptional Pack" additionalName="Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain 1 rare item. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82049" name="Shining Sayha's Energy" type="EtcItem">
+		<!-- Required for compounding with Enhanced Sayha's Talismanr to increase its level. In case of failure, Sayha's Talisman is not destroyed. However, Shining Sayha's Energy is consumed in any case. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman_energy" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82050" name="Enhanced Sayha's Talisman Lv. 1" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +2252 and +3%, M. Def. +1472 and +3%, acquired XP/ SP +30%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +9%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 4 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 4 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82051" name="Enhanced Sayha's Talisman Lv. 2" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +2477 and +3%, M. Def. +1619 and +3%, acquired XP/ SP +30%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +9%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 4 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 4 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82052" name="Enhanced Sayha's Talisman Lv. 3" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +2702 and +3%, M. Def. +1766 and +3%, acquired XP/ SP +30%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +11%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 5 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 5 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82053" name="Enhanced Sayha's Talisman Lv. 4" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +2927 and +3%, M. Def. +1913 and +3%, acquired XP/ SP +30%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +11%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 5 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 5 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82054" name="Enhanced Sayha's Talisman Lv. 5" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +3152 and +7%, M. Def. +2060 and +7%, acquired XP/ SP +35%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +13%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 6 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 6 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82055" name="Enhanced Sayha's Talisman Lv. 6" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +3377 and +7%, M. Def. +2207 and +7%, acquired XP/ SP +35%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +13%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 6 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 6 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82056" name="Enhanced Sayha's Talisman Lv. 7" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +3602 and +7%, M. Def. +2354 and +7%, acquired XP/ SP +35%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +15%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 7 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 7 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82057" name="Enhanced Sayha's Talisman Lv. 8" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +3827 and +7%, M. Def. +2501 and +7%, acquired XP/ SP +35%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +15%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 7 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 7 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82058" name="Enhanced Sayha's Talisman Lv. 9" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +4052 and +7%, M. Def. +2648 and +7%, acquired XP/ SP +40%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +15%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 7 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 7 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82059" name="Enhanced Sayha's Talisman Lv. 10" type="Armor">
+		<!-- When equipped, grants Sayha's power: P. Def. +4277 and +10%, M. Def. +2795 and +10%, acquired XP/ SP +40%, Recovery Potions' Effect +3000 (except percentage recovery items). If equipped with Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+: Skill Power +18%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 8 Sayha's Encouragement Lv. 4 Sayha's Anger Lv. 8 Sayha's Support Lv. 3 Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_bless_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
 	<item id="82060" name="Sayha's Blessing Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item (excluding Sayha's Talisman Pack and Sayha's Energy). -->
 		<set name="icon" val="icon.collection_field_rune_lv1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82061" name="Expedition Supplies" additionalName="Physical" type="EtcItem">
+		<!-- Double-click to obtain La Vie En Rose's Brooch Lv. 5, +5 Kaliel's Bracelet, Artifact Book, +5 Dragon Leather Shirt, Red Cat's Eye Lv. 4, High-grade Talisman of Skill Power, High-grade Talisman of Attribute Attack, High-grade Talisman of Skill Cooldown, +3 Artifact - P. Atk., +3 Artifact - P. Def., +3 Artifact - Acquired XP, +3 Artifact - P. Atk., +3 Artifact - Vitality Bonus, Artifact - Attribute Attack, Artifact - Attribute Resistance, Freya's Ice Rose (200 pcs.), Freya's Scroll of Storm (300 pcs.), Emperor's Special Cocktail (100 pcs.), Shining Nevit's Gold Hourglass (200 pcs.), Glowing Dragon's Attribute Potion (XP) (200 pcs.), Honey Dark Beer (200 pcs.). -->
+		<set name="icon" val="icon.bm_Supply_phy_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82062" name="Expedition Supplies" additionalName="Magic" type="EtcItem">
+		<!-- Double-click to obtain La Vie En Rose's Brooch Lv. 5, +5 Kaliel's Bracelet, Artifact Book, +5 Dragon Leather Shirt, Blue Cat's Eye Lv. 4, High-grade Talisman of Skill Power, High-grade Talisman of Attribute Attack, High-grade Talisman of Skill Cooldown, +3 Artifact - M. Atk., +3 Artifact - P. Def., +3 Artifact - Acquired XP, +3 Artifact - M. Atk., +3 Artifact - Vitality Bonus, Artifact - Attribute Attack, Artifact - Attribute Resistance, Freya's Ice Rose (200 pcs.), Freya's Scroll of Storm (300 pcs.), Emperor's Special Cocktail (100 pcs.), Shining Nevit's Gold Hourglass (200 pcs.), Glowing Dragon's Attribute Potion (XP) (200 pcs.), Honey Dark Beer (200 pcs.). -->
+		<set name="icon" val="icon.bm_Supply_mag_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82063" name="Blessed Valakas' Necklace - Mind" additionalName="Event" type="Armor">
+		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +20, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold debuffs and grants immunity to Obstruction for 5 sec. <Special effect> Skill Cooldown -3% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">226</stat>
+			<stat type="maxMp">79</stat>
+		</stats>
+	</item>
+	<item id="82064" name="Blessed Antharas' Earring - Shield" additionalName="Event" type="Armor">
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Holy/ Earth Resistance +30, Infection Atk. Rate and Resistance +50%, Confusion Atk. Rate and Resistance +40%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect> P. Def. +4% -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">170</stat>
+			<stat type="maxMp">59</stat>
+		</stats>
+	</item>
+	<item id="82065" name="Lindvior's Earring - Shield" additionalName="Event" type="Armor">
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect> P. Def. +4% -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">170</stat>
+			<stat type="maxMp">59</stat>
+		</stats>
+	</item>
+	<item id="82066" name="Ring of Truth-seeker - INT" additionalName="Event" type="Armor">
+		<!-- MP +46, M. Atk. +5%, M. Skill Critical Damage +20%, LUC/ CHA +2, Confusion Atk. Rate and Resistance +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using M. skills. Effects of two identical rings do not stack. <Special effect> INT +2 -->
+		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">114</stat>
+			<stat type="maxMp">46</stat>
+		</stats>
+	</item>
+	<item id="82067" name="Ruler's Ring of Authority - STR" additionalName="Event" type="Armor">
+		<!-- MP +46, P. Atk. +5%, Critical Damage for basic attacks +20%, LUC/ CHA +2, Confusion Atk. Rate and Resistance +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using attacking skills. Effects of two identical rings do not stack. <Special effect> STR +2 -->
+		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">114</stat>
+			<stat type="maxMp">46</stat>
+		</stats>
 	</item>
 	<item id="82068" name="Death Knight's Ring" type="Armor">
 		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
@@ -149,6 +770,132 @@
 		<stats>
 			<stat type="mDef">101</stat>
 		</stats>
+	</item>
+	<item id="82069" name="Top-grade Growth Rune" additionalName="30-day" type="EtcItem">
+		<!-- When in inventory, acquired XP/ SP +20%. Required level: 1-110. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82070" name="Conquest Expedition Rune" additionalName="30-day" type="EtcItem">
+		<!-- Sustains Vitality when in inventory. Required level: 1-110. No level restrictions in the Conquest world. -->
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_will" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="82071" name="Krishna Weapon Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a random Krishna weapon. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82072" name="Leviathan Armor Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a piece of Leviathan armor. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82073" name="Iron Gate's Key" additionalName="Event" type="EtcItem">
+		<!-- Required for accessing the Iron Gate Guild's secret store. -->
+		<set name="icon" val="icon.etc_skeleton_key_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82074" name="Blessed Scroll: Enchant Exalted Weapon" type="EtcItem">
+		<!-- For enchanting Blessed Exalted weapons. Enchant success rate: 100%. Cannot be used with weapons enchanted to +12 or higher. -->
+		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82075" name="Prophetess' Gift Cube" additionalName="Event" type="EtcItem">
+		<!-- A wondrous cube created by the Prophetess. Double-click to obtain Mysterious Energy Potion. Upon the 10th use you can obtain a special reward. -->
+		<set name="icon" val="icon.bm_2019_cube_lv1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82076" name="Mysterious Energy Potion" additionalName="Event" type="EtcItem">
+		<!-- A mysterious potion from another dimension. For 30 min., P./ M. Atk. +10%, Atk. Spd./ Casting Spd. +10%, Max HP/ MP/ CP +10%, acquired XP/ SP +5%. The effect does not stack with that of Royal Santiago's Soup. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. -->
+		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82077" name="Vitality" additionalName="Event" type="EtcItem">
+		<!-- Double click to recover a certain amount of Vitality. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82078" name="Emperor's Vitality Tonic" additionalName="Event" type="EtcItem">
+		<!-- Contains the strength of the emperor. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_recall_potion3" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82079" name="Invitation from New World" type="EtcItem">
+		<!-- An invitation from Larra. Take it to Conquest Guide Entropy in the Conquest world. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82080" name="Conquest Mark" type="EtcItem">
+		<!-- A mark given to you by Conquest Guide Entropy after you gave her the invitation. A proof that you've been to the Conquest world. Take it to Larra. -->
+		<set name="icon" val="icon.etc_permit_card_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="82081" name="Memory Shard" additionalName="" type="EtcItem">
 		<!-- A shard that can be obtained while hunting in the Conquest world. -->
@@ -177,5 +924,180 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="82085" name="Soul Talisman" additionalName="Lv. 1" type="Armor">
+		<!-- When equipped, MEN/ WIT/ CON +4, INT/ DEX/ STR/ LUC/ CHA +3. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82086" name="Soul Talisman" additionalName="Lv. 2" type="Armor">
+		<!-- When equipped, MEN/ WIT/ CON/ DEX +4, INT/ STR/ LUC/ CHA +3. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82087" name="Soul Talisman" additionalName="Lv. 3" type="Armor">
+		<!-- When equipped, MEN/ WIT/ CON/ DEX/ INT/ STR +4, LUC/ CHA +3. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82088" name="Soul Talisman" additionalName="Lv. 4" type="Armor">
+		<!-- When equipped, MEN/ WIT/ CON/ INT/ DEX/ STR/ LUC/ CHA +4. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82089" name="Soul Talisman" additionalName="Lv. 5" type="Armor">
+		<!-- When equipped, all stats +4, P./ M. Atk. +1%. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv5" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82090" name="Soul Talisman" additionalName="Lv. 6" type="Armor">
+		<!-- When equipped, all stats +4, P./ M. Atk. +2%. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv5" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82091" name="Soul Talisman" additionalName="Lv. 7" type="Armor">
+		<!-- When equipped, all stats +4, P./ M. Atk. +3%. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv5" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82092" name="Soul Talisman" additionalName="Lv. 8" type="Armor">
+		<!-- When equipped, all stats +4, P./ M. Atk. +3%, Critical Damage for basic attacks +1%, P./ M. Skill Critical Damage +1%. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv5" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82093" name="Soul Talisman" additionalName="Lv. 9" type="Armor">
+		<!-- When equipped, all stats +4, P./ M. Atk. +3%, Critical Damage for basic attacks +2%, P./ M. Skill Critical Damage +2%. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv9" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82094" name="Soul Talisman" additionalName="Lv. 10" type="Armor">
+		<!-- When equipped, all stats +4, P./ M. Atk. +3%, Critical Damage for basic attacks +3%, P./ M. Skill Critical Damage +3%. -->
+		<set name="icon" val="icon.dethrone_soul_talisman_lv9" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="82095" name="Letter L" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_l_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82096" name="Letter I" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_i_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82097" name="Letter N" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_n_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82098" name="Letter E" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_e_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="82099" name="Letter A" additionalName="Event" type="EtcItem">
+		<!-- A letter that can be obtained while hunting monsters on the continent. If you collect a word from such letters, you'll be able to participate in the event and get useful items. -->
+		<set name="icon" val="icon.etc_alphabet_a_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

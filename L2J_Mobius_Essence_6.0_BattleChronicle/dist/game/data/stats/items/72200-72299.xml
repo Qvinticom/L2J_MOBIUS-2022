@@ -74,7 +74,6 @@
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -96,7 +95,6 @@
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -118,7 +116,6 @@
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -130,7 +127,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
@@ -155,7 +151,6 @@
 		<set name="icon" val="BranchIcon.Icon.etc_g_field_special_coin_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -166,7 +161,6 @@
 		<set name="icon" val="icon.etc_london_olympic_gold" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
@@ -178,7 +172,6 @@
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -189,7 +182,6 @@
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -200,7 +192,6 @@
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -211,7 +202,6 @@
 		<set name="icon" val="icon.bm_doll_frintessa_30d" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -242,7 +232,6 @@
 		<set name="icon" val="icon.ev_charge_run" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -253,6 +242,131 @@
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72272" name="300 Million Adena Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain 300 million adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72273" name="10 Million Adena Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain 10 million adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72274" name="1 Million Adena Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain 1 million adena. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72283" name="Aden's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Berserker's Scroll (2 pcs.) and a random item from the list. -->
+		<set name="icon" val="icon.event_july_seven_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72284" name="Hero's Lost Trophy" type="EtcItem">
+		<!-- A trophy that belongs to a hero who has fallen in battle. Double-click to obtain various items. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72285" name="Enchantment Pass - Additional Rewards" type="EtcItem">
+		<!-- Can be bought once per account in a season. -->
+		<set name="icon" val="BranchIcon.icon.g_pass_advance_premium_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72286" name="Sayha's Grace Sustention Points" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.g_pass_sayha_grace_point_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="72287" name="Game Assistant's Exchange" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.g_pass_advance_type_multisell_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="72288" name="Item Exchange/ Upgrade" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.g_pass_advance_type_multisell_01" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+	</item>
+	<item id="72289" name="Hunt Pass - Additional Reward Ticket" type="EtcItem">
+		<!-- A ticket to the Season Pass. Required for activating additional rewards for the Hunt Pass. -->
+		<set name="icon" val="BranchIcon.icon.g_pass_hunting_premium_ticket_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72290" name="Enchantment Pass - Additional Reward Ticket" type="EtcItem">
+		<!-- A ticket to the Season Pass. Required for activating additional rewards for the Enchantment Pass. -->
+		<set name="icon" val="BranchIcon.icon.g_pass_advance_premium_ticket_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72291" name="L-Coins (1000 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.bm_lcoin_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72292" name="L-Coins (8000 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_lcoin_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72293" name="Antharas Doll (Event)" additionalName="Sealed" type="EtcItem">
+		<!-- <Antharas Doll's Sorcery Lv. 1> CON +1 MEN +1 Received damage -2% Knockback Resistance +5% Shock Resistance +5% Pull Resistance +5% Soulshot Damage Resistance +2% Spiritshot Damage Resistance +2% Boosts stats when in inventory. Cannot be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_antaras_doll_30d" />
+		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

@@ -15,7 +15,6 @@
 		<set name="icon" val="icon.ev_valentine_white_choco" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -26,7 +25,6 @@
 		<set name="icon" val="icon.ev_valentine_dark_choco" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -35,7 +33,6 @@
 		<set name="icon" val="icon.etc_coda_seed_i08" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -46,7 +43,6 @@
 		<set name="icon" val="icon.ev_valentine_basic_box" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -57,7 +53,6 @@
 		<set name="icon" val="icon.ev_valentine_deco_ribbon" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -163,6 +158,29 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+	</item>
+	<item id="95916" name="Lionel Hunter's Appearance - Not Available" additionalName="Test" type="Armor">
+		<!-- Test Item. -->
+		<set name="icon" val="icon.lionelhunter_dress" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="95917" name="Lionel Hunter's Cloak - Not Available" additionalName="Test" type="Armor">
+		<!-- Test Item. -->
+		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="95918" name="Package: New Year's Reward - Sayha's Cookie (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

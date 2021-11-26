@@ -60,7 +60,7 @@
 		</skills>
 	</item>
 	<item id="80805" name="17th Anniversary Cake" additionalName="Event" type="EtcItem">
-		<!-- Special cake prepared for the 17th anniversary festivities.\nRecovers 1 of the 4 Vitality bars.\nCannot be used in the Olympiad. -->
+		<!-- Special cake prepared for the 17th anniversary festivities. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />

@@ -136,7 +136,7 @@
 		</skills>
 	</item>
 	<item id="81909" name="Winner's Trophy" additionalName="V1" type="EtcItem">
-		<!-- Granted to Aden's warriors as a token of appreciation for their support.\nDouble-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
+		<!-- Granted to Aden's warriors as a token of appreciation for their support. Double-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
 		<set name="icon" val="icon.ev_2018_soccer_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -147,7 +147,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81910" name="Official League Winner's Trophy" additionalName="Event" type="EtcItem">
-		<!-- Granted to Aden's warriors as a token of appreciation for their support.\nDouble-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
+		<!-- Granted to Aden's warriors as a token of appreciation for their support. Double-click to obtain Dandy's Golden Ball, Belt of Fortitude and the No Doubt rune for recovering Vitality. -->
 		<set name="icon" val="icon.ev_2018_soccer_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -192,7 +192,7 @@
 		</stats>
 	</item>
 	<item id="81913" name="No Doubt" additionalName="Event" type="EtcItem">
-		<!-- A symbol of those who go only forward without hesitation.\n\nWhen in inventory, maintains your Vitality level. Available for 7 d. -->
+		<!-- A symbol of those who go only forward without hesitation. When in inventory, maintains your Vitality level. Available for 7 d. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
@@ -328,7 +328,6 @@
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -343,7 +342,6 @@
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -358,7 +356,6 @@
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -373,7 +370,6 @@
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -388,7 +384,6 @@
 		<!-- The item is not available. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -434,7 +429,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81931" name="Dragon Skin Shirt Augmenting Stone" type="EtcItem">
-		<!--A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies.\nKey material for Dragon Rind Leather Shirt's augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
+		<!--A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies. Key material for Dragon Rind Leather Shirt's augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_dragon_rind_leather_shirt" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +442,6 @@
 		<!-- Changes your appearance to that of a Death Knight. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="NONE" />
@@ -465,7 +459,6 @@
 		<!-- Changes your appearance to that of a Death Knight. -->
 		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="NONE" />
@@ -542,7 +535,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81938" name="Greater Zodiac Agathion's Sacred Book of Growth" type="EtcItem">
-		<!-- Required for upgrading Greater Zodiac Agathion Charms.\nCan be used with Greater Zodiac agathions enchanted to +5 and higher.\nIn case of failure, the enchant value remains the same. -->
+		<!-- Required for upgrading Greater Zodiac Agathion Charms. Can be used with Greater Zodiac agathions enchanted to +5 and higher. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -591,7 +584,6 @@
 		<!-- Changes the armor appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -1021,7 +1013,6 @@
 		<!-- Changes gloves' appearance to that of Lindvior armor. Available to characters from the Conquest-winning server. -->
 		<set name="icon" val="icon.honors_light_gloves_opt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1040,7 +1031,6 @@
 		<!-- Changes boots' appearance to that of Lindvior armor. Available to characters from the Conquest-winning server. -->
 		<set name="icon" val="icon.honors_light_shoes_opt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -1059,7 +1049,6 @@
 		<!-- Changes the appearance of characters from the Conquest-winning server. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="NONE" />
@@ -1458,7 +1447,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81980" name="Soul Orb" type="EtcItem">
-		<!-- At first glance, looks like an ordinary glass bead. However, if you take a closer look, you will see a soul trapped inside.\nListen closely, and you will hear its whisper: 'Here, in the depths of darkness filled with horror and despair, one may acquire special powers, and that will let them rule the world.'\n\nIt's time to go to the Conquest. -->
+		<!-- At first glance, looks like an ordinary glass bead. However, if you take a closer look, you will see a soul trapped inside. Listen closely, and you will hear its whisper: 'Here, in the depths of darkness filled with horror and despair, one may acquire special powers, and that will let them rule the world.' It's time to go to the Conquest. -->
 		<set name="icon" val="icon.collection_unite_rune_lv0" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
@@ -1485,7 +1474,6 @@
 		<!-- Changes the cloak appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="NONE" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="NONE" />
@@ -1524,5 +1512,281 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81986" name="Bloodthirsty Eigis Shaper" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_shaper_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">685</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">1.2E-07</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81987" name="Bloodthirsty Eigis Cutter" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_cutter_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81988" name="Bloodthirsty Eigis Slasher" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_slasher_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81989" name="Bloodthirsty Eigis Avenger" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_onehand_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81990" name="Bloodthirsty Eigis Fighter" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_fist_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81991" name="Bloodthirsty Eigis Stormer" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_spear_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81992" name="Bloodthirsty Eigis Thrower" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_bow_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1481</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">1.2E-07</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="81993" name="Bloodthirsty Eigis Guardian" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_crossbow_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1333</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">1.2E-07</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="81994" name="Bloodthirsty Eigis Buster" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_onehane_magic_sword_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81995" name="Bloodthirsty Eigis Caster" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_onehand_magic_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">486</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81996" name="Bloodthirsty Eigis Retributer" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_twohand_magic_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">733</stat>
+			<stat type="mAtk">535</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="81997" name="Bloodthirsty Eigis Dual Swords" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_dual_sword_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81998" name="Bloodthirsty Eigis Dual Daggers" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_dual_dagger_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">752</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="rCrit">1.2E-07</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81999" name="Bloodthirsty Eigis Dual Blunt Weapons" type="Weapon">
+		<!-- Eigis' creation. Max HP can be more than 150,000. Cannot be imbued with attributes, crystallized, augmented, enchanted. Its appearance cannot be changed. No soul crystal can be inserted. <Enhancing> Nothing is known. -->
+		<set name="icon" val="icon.aegis_dual_blunt_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">916</stat>
+			<stat type="mAtk">414</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
 	</item>
 </list>
