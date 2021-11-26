@@ -250,6 +250,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new ExPurchaseLimitShopItemResult(true, _shopIndex, _productId, rewards));
+		player.sendItemList();
 		
 		// Remove request.
 		player.removeRequest(PrimeShopRequest.class);
