@@ -127,7 +127,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15220" toLevel="1" name="Detonate">
+	<skill id="15220" toLevel="1" name="Explosion">
 		<!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 sec. -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -497,7 +497,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15235" toLevel="2" name="Wind of Darkness">
+	<skill id="15235" toLevel="2" name="Dark Wind">
 		<!-- Creates a powerful wind around a character, throwing back enemies. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
@@ -888,7 +888,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15259" toLevel="1" name="Fireworks">
+	<skill id="15259" toLevel="1" name="Firecrackers">
 		<!-- Congratulations! You have broken the record! -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>

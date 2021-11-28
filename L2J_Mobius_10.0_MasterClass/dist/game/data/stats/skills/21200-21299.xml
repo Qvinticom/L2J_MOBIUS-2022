@@ -378,7 +378,7 @@
 			<condition name="OpResurrection" />
 		</conditions>
 	</skill>
-	<skill id="21222" toLevel="1" name="Elemental Resistance">
+	<skill id="21222" toLevel="1" name="Attribute Resistance">
 		<!-- For 1 h., Fire/ Water/ Wind/ Earth Resistance +20. Skill Cooldown: 4 h. -->
 		<icon>BranchSys2.icon.br_polar_bear_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -950,7 +950,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21249" toLevel="1" name="Summon Agathion Yanzi">
+	<skill id="21249" toLevel="1" name="Summon Agathion Zinyanzi">
 		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1124,7 +1124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21257" toLevel="1" name="Mardil">
+	<skill id="21257" toLevel="1" name="Mardil's Will">
 		<!-- Has a chance of increasing Casting Spd. and wind attribute P. Atk. when attacked. -->
 		<icon>BranchSys2.icon.br_wp_wind_of_mardil_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1885,7 +1885,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="21298" toLevel="1" name="Summon Agathion Lancet">
+	<skill id="21298" toLevel="1" name="Summon Agathion Iken">
 		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1897,7 +1897,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21299" toLevel="1" name="Summon Agathion Liposa">
+	<skill id="21299" toLevel="1" name="Summon Agathion Lanya">
 		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>

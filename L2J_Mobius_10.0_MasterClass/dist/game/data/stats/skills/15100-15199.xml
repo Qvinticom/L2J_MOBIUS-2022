@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="15100" toLevel="1" name="Noblesse Blessing">
+	<skill id="15100" toLevel="1" name="Noble Blessing">
 		<!-- For 6 h., buffs and debuffs do not disappear but remain upon death. -->
 		<icon>icon.skill1323</icon>
 		<operateType>A2</operateType>
@@ -21,7 +21,7 @@
 			<effect name="NoblesseBless" />
 		</effects>
 	</skill>
-	<skill id="15101" toLevel="1" name="Elise' Radiant Heal">
+	<skill id="15101" toLevel="1" name="Elise's Radiant Heal">
 		<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -41,7 +41,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15102" toLevel="1" name="Elise' Radiant Heal">
+	<skill id="15102" toLevel="1" name="Elise's Radiant Heal">
 		<!-- Heals the target with 1519 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -61,7 +61,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15103" toLevel="1" name="Elise' Radiant Heal">
+	<skill id="15103" toLevel="1" name="Elise's Radiant Heal">
 		<!-- Heals the target with 1557 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -561,7 +561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15120" toLevel="1" name="Death by Execution">
+	<skill id="15120" toLevel="1" name="Execution">
 		<!-- Selects one party member at random and kills him/ her on the spot. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
@@ -1825,7 +1825,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15168" toLevel="1" name="Tauti Ultimate Chain Strike">
+	<skill id="15168" toLevel="1" name="Tauti's Unrivaled Chain Strike">
 		<!-- Pulls nearby enemies toward you. Inflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>

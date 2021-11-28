@@ -1087,7 +1087,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6264" toLevel="1" name="Golem Boom">
+	<skill id="6264" toLevel="1" name="Boom Golem">
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>
 		<magicLevel>75</magicLevel>
@@ -1136,7 +1136,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6267" toLevel="1" name="Soul Sucking">
+	<skill id="6267" toLevel="1" name="Soul Drain">
 		<!-- Absorbs the target's stamina and makes it your own. -->
 		<icon>icon.skill1042</icon>
 		<effectPoint>-2</effectPoint>
@@ -1787,7 +1787,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6295" toLevel="1" name="Point Target">
+	<skill id="6295" toLevel="1" name="Designation">
 		<castRange>800</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>

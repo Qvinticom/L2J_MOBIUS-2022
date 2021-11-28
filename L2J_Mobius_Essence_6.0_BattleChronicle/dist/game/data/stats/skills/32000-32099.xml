@@ -193,11 +193,11 @@
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="32010" toLevel="1" name="Potion Box">
+	<skill id="32010" toLevel="1" name="Beauty Chest">
 		<icon>icon.etc_box_of_adventure_2_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32011" toLevel="1" name="Enchantment Scroll Box">
+	<skill id="32011" toLevel="1" name="Buff Scroll Pack">
 		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -261,7 +261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32013" toLevel="1" name="Windy Dye Pack">
+	<skill id="32013" toLevel="1" name="Dye Pack">
 		<icon>icon.etc_box_of_adventure_5_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>

@@ -697,7 +697,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6826" toLevel="1" name="Critical Strike">
+	<skill id="6826" toLevel="1" name="Critical Hit">
 		<effectPoint>-10000</effectPoint>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1508,7 +1508,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6869" toLevel="1" name="Detonate">
+	<skill id="6869" toLevel="1" name="Explosion">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>900</castRange>
 		<effectPoint>-10000</effectPoint>
@@ -1799,7 +1799,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="6881" toLevel="1" name="Critical Strike">
+	<skill id="6881" toLevel="1" name="Critical Hit">
 		<castRange>40</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>

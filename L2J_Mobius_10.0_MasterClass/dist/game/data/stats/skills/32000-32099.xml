@@ -37,7 +37,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32002" toLevel="1" name="Demolish Ground">
+	<skill id="32002" toLevel="1" name="Earth Demolition">
 		<!-- A powerful AoE attack inflicting Stun for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -518,7 +518,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32021" toLevel="2" name="Distorted Avarice">
+	<skill id="32021" toLevel="2" name="Twisted Greed">
 		<!-- Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. significantly for $s1 -->
 		<icon>icon.skill32021</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -571,7 +571,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32024" toLevel="2" name="Etina's Observation">
+	<skill id="32024" toLevel="2" name="Etina's Gaze">
 		<!-- Decreases MP over $s1 and significantly slows Casting Spd. -->
 		<icon>icon.skill32024</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -601,7 +601,7 @@
 		<operateType>A1</operateType>
 		<castRange>3000</castRange>
 	</skill>
-	<skill id="32026" toLevel="2" name="Rage of the Open Eye">
+	<skill id="32026" toLevel="2" name="Blind Fury">
 		<!-- Prevents death for $s1 even if HP drops to 0. -->
 		<icon>icon.skill10022</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -623,7 +623,7 @@
 		<castRange>3000</castRange>
 		<hitTime>5000</hitTime>
 	</skill>
-	<skill id="32028" toLevel="1" name="Cyclone of Chaos">
+	<skill id="32028" toLevel="1" name="Chaos Vortex">
 		<!-- Pulls into a vortex and deals significant damage. Inflicted status: Pull. -->
 		<icon>icon.skill32028</icon>
 		<operateType>A1</operateType>
@@ -1002,7 +1002,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32062" toLevel="1" name="Tauti Whirlwind">
+	<skill id="32062" toLevel="1" name="Tauti's Whirlwind">
 		<!-- Throws nearby enemies in the air dealing them physical damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
@@ -1147,7 +1147,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32066" toLevel="1" name="Tauti Ultimate Chain Strike">
+	<skill id="32066" toLevel="1" name="Tauti's Unrivaled Chain Strike">
 		<!-- Pulls nearby enemies toward you. Inflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
@@ -1179,7 +1179,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="32067" toLevel="1" name="Tauti Ultra Whirlwind">
+	<skill id="32067" toLevel="1" name="Tauti's Ultra Whirlwind">
 		<!-- Tauti throws nearby enemies up and deals them fixed damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -1343,7 +1343,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32075" toLevel="1" name="Blood to Flash">
+	<skill id="32075" toLevel="1" name="Blood to Flesh">
 		<!-- Sucks in great amounts of the Energy of Blood and Energy of Mind in the area. -->
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -1444,7 +1444,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32082" toLevel="1" name="Spinning Slasher">
+	<skill id="32082" toLevel="1" name="Vortex">
 		<!-- Attacks multiple enemies. -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>

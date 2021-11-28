@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="39200" toLevel="1" name="Weapons Ingredient Box - A-grade">
+	<skill id="39200" toLevel="1" name="A-grade Weapon Ingredient Pack">
 		<icon>icon.etc_box_of_adventure_1_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -866,7 +866,7 @@
 		<reuseDelay>7200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39212" toLevel="1" name="Einhasad�s Protection">
+	<skill id="39212" toLevel="1" name="Einhasad's Protection">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1876,7 +1876,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39259" toLevel="1" name="Savior's Experience Box">
+	<skill id="39259" toLevel="1" name="Savior's XP Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90418</itemConsumeId> <!-- Savior's XP Box -->
@@ -2156,7 +2156,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39270" toLevel="1" name="Dragon??s Treasure Chest">
+	<skill id="39270" toLevel="1" name="Dragon's Treasure Chest">
 		<icon>icon.bm_dragon_present</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>

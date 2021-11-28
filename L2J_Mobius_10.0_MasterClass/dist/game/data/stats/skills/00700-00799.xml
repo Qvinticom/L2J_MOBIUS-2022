@@ -113,7 +113,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="704" toLevel="1" name="Divine Enchanter Water Spirit">
+	<skill id="704" toLevel="1" name="Divine Enchanter: Water Spirit">
 		<!-- For 2 min., the targeted party member's M. Critical Rate +20, MP +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Speed -20%, Skill MP Consumption -5%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -187,7 +187,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="705" toLevel="1" name="Divine Enchanter Fire Spirit">
+	<skill id="705" toLevel="1" name="Divine Enchanter: Fire Spirit">
 		<!-- For 2 min., a party member's Max MP +20%, HP Recovery Rate +20%, M. Skill Critical Rate +2, Critical Damage for standard attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -268,7 +268,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="706" toLevel="1" name="Divine Enchanter Wind Spirit">
+	<skill id="706" toLevel="1" name="Divine Enchanter: Wind Spirit">
 		<!-- For 2 min., a party member's Max HP +20%, P. Critical Rate for standard attacks +20%, M. Skill Critical Damage +20%, P. Atk. +10%, P./ M. Def. +20%, Atk. Spd./ Casting Spd. +20%, M. Atk. +20%, Debuff Resistance +10%, Speed -20%. With a certain chance, absorbs 5% of the inflicted damage as HP. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -345,7 +345,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="707" toLevel="1" name="Divine Enchanter Hero Spirit">
+	<skill id="707" toLevel="1" name="Divine Enchanter: Hero Spirit">
 		<!-- For 2 min., a party member's Max HP +20%, M. Skill Critical Rate +2, Critical Damage for standard attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1266,7 +1266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="732" toLevel="1" name="Ranku Stun Attack">
+	<skill id="732" toLevel="1" name="Ranku's Stun Attack">
 		<!-- Attacks and stuns the enemy with 1 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1887,7 +1887,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="749" toLevel="3" name="Oel Mahum Stun Attack">
+	<skill id="749" toLevel="3" name="Oel Mahum's Stun Attack">
 		<!-- Attacks and stuns the enemy. Power $s1 Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2465,7 +2465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="764" toLevel="1" name="Windstorm Song">
+	<skill id="764" toLevel="1" name="Song of Storm">
 		<!-- For $s1, for a party member Bow Resistance +$s2 and Crossbow Resistance +$s3. Additionally increases MP Consumption if the skill is used while sing/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0764</icon>
 		<abnormalLevel>1</abnormalLevel>

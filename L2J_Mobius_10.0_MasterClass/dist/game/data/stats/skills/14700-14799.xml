@@ -124,7 +124,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14704" toLevel="1" name="Forced Yoke">
+	<skill id="14704" toLevel="1" name="Chaining">
 		<!-- Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
@@ -423,7 +423,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14738" toLevel="1" name="Olympiad - Horn Melody">
+	<skill id="14738" toLevel="1" name="Horn Melody - Olympiad">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -521,7 +521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14740" toLevel="1" name="Olympiad - Pipe Organ Melody">
+	<skill id="14740" toLevel="1" name="Pipe Organ Melody - Olympiad">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1705,7 +1705,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14788" toLevel="1" name="Elemental Resistance - GM's Blessing">
+	<skill id="14788" toLevel="1" name="Attribute Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Attribute Resistance +$s2. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>

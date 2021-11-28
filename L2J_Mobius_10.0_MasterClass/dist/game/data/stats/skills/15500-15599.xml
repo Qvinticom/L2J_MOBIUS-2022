@@ -722,7 +722,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="15556" toLevel="1" name="Provoke">
+	<skill id="15556" toLevel="1" name="Grand Provoke">
 		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -830,7 +830,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15565" toLevel="1" name="Theor's Range Attack">
+	<skill id="15565" toLevel="1" name="Theor's Ranged Attack">
 		<!-- AoE P. Atk. On nearby enemies. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1211,7 +1211,7 @@
 		<effectPoint>-707</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15599" toLevel="1" name="Cyclone">
+	<skill id="15599" toLevel="1" name="Wind Cyclone">
 		<!-- Lethal Strike. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>

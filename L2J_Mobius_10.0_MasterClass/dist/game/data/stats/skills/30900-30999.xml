@@ -677,6 +677,21 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="30940" toLevel="1" name="Test Skill - Skill Type PA2">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30941" toLevel="1" name="">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30942" toLevel="1" name="">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="30943" toLevel="1" name="Create Common Item">
 		<!-- Allows to craft items using Lv. $s1 recipes. -->
 		<icon>icon.skill30943</icon>
@@ -708,6 +723,11 @@
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
+	<skill id="30947" toLevel="1" name="Aura of Restraint - Demonstration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="30948" toLevel="1" name="Aura of Fury">
 		<!-- Increases M. Atk. by $s1 and Fire defense by $s2, and applies Fire to attribute magic. -->
 		<icon>icon.skill30948</icon>
@@ -717,6 +737,11 @@
 		<operateType>TG</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="30949" toLevel="1" name="Aura of Fury - Demonstration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="30950" toLevel="5" name="Presence of Mind">
 		<!-- Death Knight uses their abilities to apply Blood Curse. For 5 min., P. Atk. +20%%, P. Skill Power +30%%, P. Skill Critical Damage +20%%, P./ M. Def. +40%%. Cannot be used along with Spirit Altar. -->
@@ -1597,6 +1622,11 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="30966" toLevel="1" name="Valakas' Roar - Recovery">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="30967" toLevel="1" name="Hellbringer">
 		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill30967</icon>
@@ -1955,6 +1985,36 @@
 				<power>50</power>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="30974" toLevel="1" name="Valakas' Protection">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30975" toLevel="1" name="Valakas' Roar">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30976" toLevel="1" name="Hellbringer - Paralysis">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30977" toLevel="1" name="Fire Earthquake Area">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30978" toLevel="2" name="Mocking Resilience - Enhancement">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30979" toLevel="1" name="Fateful Assault - Stun">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="30980" toLevel="1" name="Spirit Altar">
 		<!-- Death Knight uses their abilities to apply Blood Curse. For 5 min., P. Atk. +20%%, P. Skill Power +30%%, P. Skill Critical Damage +20%%, P./ M. Def. +40%%. Cannot be used along with Spirit Altar. -->
@@ -2340,5 +2400,35 @@
 				<percentTo>30</percentTo>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="30985" toLevel="1" name="Critical Damage Weakness Decrease - Received Damage Decrease">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30986" toLevel="1" name="Low-grade Weakness Decrease - Received Damage Decrease">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30987" toLevel="1" name="Weakness Decrease - Received Damage Decrease">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30988" toLevel="1" name="Victories of Pa'agrio">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30989" toLevel="1" name="Mocking Barrier">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30990" toLevel="2" name="Test - Acquired XP/ SP_Level Difference_Sum">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

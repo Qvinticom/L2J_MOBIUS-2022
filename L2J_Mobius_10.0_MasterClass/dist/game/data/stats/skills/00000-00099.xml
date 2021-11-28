@@ -3664,7 +3664,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="36" toLevel="37" name="Spinning Slasher">
+	<skill id="36" toLevel="37" name="Vortex">
 		<!-- Swings a spear to attack nearby enemies with $s1 power. Requires a polearm. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0036</icon>
 		<affectLimit>6-12</affectLimit>
@@ -6329,7 +6329,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="86" toLevel="3" name="Reflect Damage">
+	<skill id="86" toLevel="3" name="Damage Reflection">
 		<!-- For $s1, reflects $s2 of the received damage back to the enemy. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>

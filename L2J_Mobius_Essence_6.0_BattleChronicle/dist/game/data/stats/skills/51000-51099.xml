@@ -259,13 +259,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51010" toLevel="1" name="Refined Rare Accessory Pack">
+	<skill id="51010" toLevel="1" name="A-grade Armor Enchant Stone Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51011" toLevel="1" name="Rare Accessory Box">
+	<skill id="51011" toLevel="1" name="B-grade Armor Enchant Stone Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -910,7 +910,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51042" toLevel="1" name="Battle Box">
+	<skill id="51042" toLevel="1" name="Valor Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1316,7 +1316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51058" toLevel="1" name="Lucky Cube of Growth - 30 d.">
+	<skill id="51058" toLevel="1" name="Lucky Cube of Growth (30-day)">
 		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1569,7 +1569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51071" toLevel="1" name="Dragon's Relic Chest">
+	<skill id="51071" toLevel="1" name="Dragon's Relic Box">
 		<icon>icon.bm_special_pendant_abradant_box</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1600,7 +1600,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51072" toLevel="1" name="Fire Dragon's Relic Chest">
+	<skill id="51072" toLevel="1" name="Fire Dragon's Relic Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>91009</itemConsumeId> <!-- Fire Dragon's Relic Chest -->
@@ -1627,7 +1627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51073" toLevel="1" name="Earth Dragon Relic Pack">
+	<skill id="51073" toLevel="1" name="Earth Dragon's Relic Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1818,7 +1818,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51078" toLevel="1" name="Rash�s Supply Items - Zaken">
+	<skill id="51078" toLevel="1" name="Rash's Supplies - Zaken">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1873,13 +1873,13 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51081" toLevel="1" name="Gold Big Fish Chest">
+	<skill id="51081" toLevel="1" name="Big Fish' Golden Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51082" toLevel="1" name="Silver Big Fish Chest">
+	<skill id="51082" toLevel="1" name="Big Fish' Silver Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1908,7 +1908,7 @@
 		<icon>icon.bm_sayha_rune</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="51089" toLevel="1" name="Teleport to Forge of the Gods">
+	<skill id="51089" toLevel="1" name="Teleport: Forge of Gods">
 		<!-- Teleports you to Forge of the Gods. -->
 		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>

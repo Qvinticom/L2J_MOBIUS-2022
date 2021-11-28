@@ -492,7 +492,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14014" toLevel="3" name="Power Front Slash">
+	<skill id="14014" toLevel="3" name="Frontal Power Slash">
 		<!-- No armor effect. P./ M. Def. -$s1. Additional P./ M. Def. -$s2, P. Evasion -$s3. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0320</icon>
 		<operateType>A2</operateType>
@@ -1163,7 +1163,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14037" toLevel="1" name="Front Foot Attack">
+	<skill id="14037" toLevel="1" name="Forepaw Strike">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>85</mpConsume>
@@ -1289,7 +1289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14041" toLevel="1" name="Teleport">
+	<skill id="14041" toLevel="1" name="Instant Teleport">
 		<icon>icon.skill1448</icon>
 		<operateType>A1</operateType>
 		<mpConsume>100</mpConsume>
@@ -1419,7 +1419,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14044" toLevel="1" name="Teleport">
+	<skill id="14044" toLevel="1" name="Instant Teleport">
 		<icon>icon.skill1448</icon>
 		<operateType>A2</operateType>
 		<mpConsume>100</mpConsume>
@@ -3018,7 +3018,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14085" toLevel="1" name="Protection">
+	<skill id="14085" toLevel="1" name="Defense">
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
 		<mpConsume>77</mpConsume>
@@ -3144,7 +3144,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14089" toLevel="5" name="Reflect">
+	<skill id="14089" toLevel="5" name="strikeback">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -3192,7 +3192,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14090" toLevel="6" name="Apherus Paralysis">
+	<skill id="14090" toLevel="6" name="Apherus' Paralysis">
 		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill014090</icon>
 		<operateType>A2</operateType>
@@ -3575,7 +3575,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14099" toLevel="6" name="Lachik Front Foot Attack">
+	<skill id="14099" toLevel="6" name="Lachik's Paw Strike">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>

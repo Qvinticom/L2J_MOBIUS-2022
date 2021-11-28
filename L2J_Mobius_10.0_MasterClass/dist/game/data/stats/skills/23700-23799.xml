@@ -9,24 +9,24 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23701" toLevel="1" name="Contaminated Atelia Gas">
+	<skill id="23701" toLevel="1" name="Laceration">
 		<!-- Contaminated gas spread throughout Atelia Fortress. Inflicts continuous damage and decreases Speed and Atk. Spd. -->
 		<icon>icon.skill11066</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23702" toLevel="1" name="Laceration">
+	<skill id="23702" toLevel="1" name="Kelbim's Battle Mode">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="23703" toLevel="1" name="Kelbim Battle Mode">
+	<skill id="23703" toLevel="1" name="Kelbim's Battle Mode">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
 	</skill>
-	<skill id="23704" toLevel="1" name="Kelbim Battle Mode">
+	<skill id="23704" toLevel="1" name="Kelbim's Battle Mode">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
@@ -704,7 +704,7 @@
 		<effectPoint>-707</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23746" toLevel="1" name="Quick Evasion">
+	<skill id="23746" toLevel="1" name="Retreat">
 		<!-- Momentarily teleports 400 backward. -->
 		<icon>icon.skill10774</icon>
 		<operateType>A1</operateType>
@@ -747,7 +747,7 @@
 		<effectPoint>-709</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23749" toLevel="1" name="Elemental Storm">
+	<skill id="23749" toLevel="1" name="Final Elemental Storm">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<operateType>A1</operateType>
@@ -1002,7 +1002,7 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="23772" toLevel="1" name="Revolutionaries' Petrification">
+	<skill id="23772" toLevel="1" name="Turn to Stone">
 		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>

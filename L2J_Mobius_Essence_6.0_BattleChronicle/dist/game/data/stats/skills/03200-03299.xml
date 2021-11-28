@@ -156,7 +156,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3204" toLevel="3" name="Item Skill: Reflect Damage">
+	<skill id="3204" toLevel="3" name="Item Skill: Damage Reflection">
 		<!-- Active skill: Temporarily reflects some of the received damage back to the enemy. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2229,7 +2229,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3259" toLevel="3" name="Item Skill: Reflect Damage">
+	<skill id="3259" toLevel="3" name="Item Skill: Damage Reflection">
 		<!-- Item skill: Increases Damage Reflection Rate. -->
 		<icon>icon.skill3238</icon>
 		<magicLevel>
@@ -2333,7 +2333,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3266" toLevel="1" name="Large Firecracker's Ability">
+	<skill id="3266" toLevel="1" name="Large Firecracker">
 		<!-- Ignites firecrackers. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>

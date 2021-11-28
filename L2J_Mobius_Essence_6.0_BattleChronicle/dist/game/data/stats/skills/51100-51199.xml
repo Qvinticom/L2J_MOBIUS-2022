@@ -549,13 +549,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51140" toLevel="1" name="Wind Golden Chest">
+	<skill id="51140" toLevel="1" name="Golden Wind Chest">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51141" toLevel="1" name="Wind Silver Pack">
+	<skill id="51141" toLevel="1" name="Silver Wind Chest">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -600,7 +600,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="51147" toLevel="1" name="Transformation into Panda">
+	<skill id="51147" toLevel="1" name="Panda Transformation">
 		<!-- Panda transformation. Max HP/ MP +20%, Acquired XP/ SP +20% while Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.sayha2017_panda</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -646,7 +646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51148" toLevel="1" name="Transformation into Cat">
+	<skill id="51148" toLevel="1" name="Cat Transformation">
 		<!-- Cat transformation. Max HP/ MP +20%, Acquired XP/ SP +20% while Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.sayha2017_cat</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -713,7 +713,7 @@
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51153" toLevel="1" name="Christmas Gift">
+	<skill id="51153" toLevel="1" name="Christmas Buff Kit">
 		<!-- Santa Girl's Gift Pouch can be obtained. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -1014,7 +1014,7 @@
 		<effectPoint>495</effectPoint>
 		<mpConsume>66</mpConsume>
 	</skill>
-	<skill id="51182" toLevel="1" name="Spirit - Dance of Shadow">
+	<skill id="51182" toLevel="1" name="Adventurer - Dance of Shadows">
 		<!-- For 5 min., party members' Speed -50%, they are protected from monsters' preemptive attacks. The effect is cancelled if any party member launches an attack. -->
 		<icon>icon.skill0366</icon>
 		<operateType>A1</operateType>

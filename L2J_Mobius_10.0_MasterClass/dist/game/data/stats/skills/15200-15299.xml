@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="15200" toLevel="1" name="Tauti Ultra Whirlwind">
+	<skill id="15200" toLevel="1" name="Tauti's Ultra Whirlwind">
 		<!-- Being hurled away from shock. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -20,7 +20,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15201" toLevel="1" name="Tauti Ultra Whirlwind">
+	<skill id="15201" toLevel="1" name="Tauti's Ultra Whirlwind">
 		<!-- Tauti attacks ferociously making you flying away and stunning. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -82,7 +82,7 @@
 		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15204" toLevel="1" name="Tauti Omega Whirlwind">
+	<skill id="15204" toLevel="1" name="Tauti's Omega Whirlwind">
 		<!-- The final Tauti's attack. Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
@@ -106,7 +106,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15205" toLevel="1" name="Tauti Omega Whirlwind">
+	<skill id="15205" toLevel="1" name="Tauti's Omega Whirlwind">
 		<!-- The final Tauti's attack. Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
@@ -1303,7 +1303,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15267" toLevel="1" name="Cyclone">
+	<skill id="15267" toLevel="1" name="Wind Cyclone">
 		<!-- Lindvior's Summon Whirlwind Skill Presentation -->
 		<icon>icon.skill10263</icon>
 		<operateType>A2</operateType>
@@ -1316,7 +1316,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15268" toLevel="1" name="Cyclone">
+	<skill id="15268" toLevel="1" name="Wind Cyclone">
 		<!-- Lindvior's Whirlwind Knockback Skill -->
 		<icon>icon.skill10263</icon>
 		<operateType>A2</operateType>

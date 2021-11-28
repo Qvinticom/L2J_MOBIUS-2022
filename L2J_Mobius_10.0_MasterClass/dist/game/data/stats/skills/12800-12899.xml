@@ -2851,7 +2851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12867" toLevel="1" name="Armor Pouch">
+	<skill id="12867" toLevel="1" name="Weapon Pouch">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>33466</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2904,7 +2904,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12868" toLevel="1" name="Lesser Giant's Fortune Box">
+	<skill id="12868" toLevel="1" name="Armor Pouch">
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<itemConsumeId>33467</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -3016,7 +3016,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="12870" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="12870" toLevel="1" name="Talking Island Homemade Cookie">
 		<!-- For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
@@ -3241,7 +3241,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12882" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="12882" toLevel="1" name="Talking Island Homemade Cookie">
 		<!-- For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
@@ -3466,7 +3466,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12898" toLevel="1" name="Noblesse Blessing">
+	<skill id="12898" toLevel="1" name="Noble Blessing">
 		<!-- Maintains buffs and debuffs upon death for 60 min. However, the Noblesse Blessing and the Amulet of Luck disappear. -->
 		<icon>icon.skill1323</icon>
 		<operateType>A2</operateType>

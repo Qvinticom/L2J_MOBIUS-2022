@@ -50,7 +50,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="50006" toLevel="2" name="Blood To Flesh">
+	<skill id="50006" toLevel="2" name="Blood to Flesh">
 		<!-- Decreases HP/ MP of the target and restores player's HP. -->
 		<icon>icon.skill0289</icon>
 		<operateType>A1</operateType>
@@ -217,7 +217,7 @@
 		<effectPoint>-100</effectPoint>
 		<mpConsume>10</mpConsume>
 	</skill>
-	<skill id="50024" toLevel="20" name="Multi-arrow Shot">
+	<skill id="50024" toLevel="20" name="Arrow Multishot">
 		<operateType>A1</operateType>
 		<castRange>700</castRange>
 		<hitTime>4000</hitTime>
@@ -735,7 +735,7 @@
 		<castRange>900</castRange>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="50062" toLevel="2" name="Ignition">
+	<skill id="50062" toLevel="2" name="Conflagration">
 		<!-- Powerful flame stream of King Ignis. If you do not remove it, HP will drop to 1, Received Healing -100%. -->
 		<icon>icon.skill11365</icon>
 		<operateType>A1</operateType>
@@ -1042,7 +1042,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50093" toLevel="2" name="Stun Attack">
+	<skill id="50093" toLevel="2" name="Stone Attack">
 		<!-- Attacks nearby enemies with 542 Power added to M. Atk. and inflicts Stun for 5 sec. -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>

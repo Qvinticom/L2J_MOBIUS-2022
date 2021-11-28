@@ -940,7 +940,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4214" toLevel="12" name="Reflect Damage">
+	<skill id="4214" toLevel="12" name="Damage Reflection">
 		<!-- Reflects $s1 of the received damage. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>99</abnormalLevel>
@@ -1126,7 +1126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4222" toLevel="1" name="Teleport">
+	<skill id="4222" toLevel="1" name="Instant Teleport">
 		<hitTime>500</hitTime>
 		<magicLevel>60</magicLevel>
 		<operateType>A1</operateType>
@@ -1403,7 +1403,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4232" toLevel="12" name="Spinning Slasher">
+	<skill id="4232" toLevel="12" name="Vortex">
 		<affectRange>20</affectRange>
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
@@ -1832,7 +1832,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4247" toLevel="12" name="Dagger Storm">
+	<skill id="4247" toLevel="12" name="Storm Strike">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>

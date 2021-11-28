@@ -711,7 +711,7 @@
 			<effect name="OpenCommonRecipeBook" />
 		</effects>
 	</skill>
-	<skill id="1323" toLevel="1" name="Noblesse Blessing">
+	<skill id="1323" toLevel="1" name="Noble Blessing">
 		<!-- Maintains target's buff/ de-buff condition even following death and resurrection. The Noblesse Blessing disappears, however. Consumes 5 Spirit Ore. The skill cooldown is fixed. <The character is targeted automatically> -->
 		<icon>icon.skill1323</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -4228,7 +4228,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1392" toLevel="3" name="Holy Attack Resistance">
+	<skill id="1392" toLevel="3" name="Holy Resistance">
 		<!-- For $s1, Holy Resistance +$s2. -->
 		<icon>icon.skill1392</icon>
 		<abnormalLevel>
@@ -4274,7 +4274,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1393" toLevel="3" name="Dark Attack Resistance">
+	<skill id="1393" toLevel="3" name="Dark Resistance">
 		<!-- For $s1, Dark Resistance +$s2. -->
 		<icon>icon.skill1393</icon>
 		<abnormalLevel>

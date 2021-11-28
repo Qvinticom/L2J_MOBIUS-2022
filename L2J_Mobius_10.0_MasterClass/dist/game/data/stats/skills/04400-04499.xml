@@ -1469,7 +1469,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4418" toLevel="5" name="Fire Attack">
+	<skill id="4418" toLevel="5" name="Fire Attribute">
 		<!-- Unleashes an attack fortified with Fire. Resistant to Fire attacks. -->
 		<icon>icon.etc_fire_crystal_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1492,7 +1492,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4419" toLevel="5" name="Water Attack">
+	<skill id="4419" toLevel="5" name="Water Attribute">
 		<!-- Unleashes an attack fortified with Water. Resistant to Water attacks. -->
 		<icon>icon.etc_water_crystal_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1515,7 +1515,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4420" toLevel="5" name="Wind Attack">
+	<skill id="4420" toLevel="5" name="Wind Attribute">
 		<!-- Unleashes an attack fortified with Wind. Resistant to Wind attacks. -->
 		<icon>icon.etc_wind_crystal_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1538,7 +1538,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4421" toLevel="5" name="Earth Attack">
+	<skill id="4421" toLevel="5" name="Earth Attribute">
 		<!-- Unleashes an attack fortified with Earth. Resistant to Earth attacks. -->
 		<icon>icon.etc_earth_crystal_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1561,7 +1561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4422" toLevel="5" name="Dark Attack">
+	<skill id="4422" toLevel="5" name="Dark Attribute">
 		<!-- Unleashes an attack fortified with Dark. Resistant to Dark attacks. -->
 		<icon>icon.etc_unholy_crystal_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1584,7 +1584,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4423" toLevel="5" name="Holy Attacks">
+	<skill id="4423" toLevel="5" name="Holy Attribute">
 		<!-- Unleashes an attack fortified with Holy. Resistant to Holy attacks. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1781,7 +1781,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4434" toLevel="5" name="Greater Dark Attack Resistance">
+	<skill id="4434" toLevel="5" name="Greater Dark Resistance">
 		<!-- Very resistant to Dark. -->
 		<icon>icon.skill4434</icon>
 		<magicLevel>1</magicLevel>
@@ -1908,7 +1908,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4441" toLevel="5" name="Greater Mental Attack Resistance">
+	<skill id="4441" toLevel="5" name="Greater Mental Resistance">
 		<!-- Resistant to Silence/ Fear. -->
 		<icon>icon.skill4441</icon>
 		<magicLevel>1</magicLevel>
@@ -2804,7 +2804,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4472" toLevel="12" name="Golem Vicious Strike">
+	<skill id="4472" toLevel="12" name="Golem's Vicious Strike">
 		<!-- For powerful Golems that are $s1x stronger. -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>

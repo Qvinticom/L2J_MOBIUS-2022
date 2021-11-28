@@ -270,7 +270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11006" toLevel="1" name="Superior Mental Attack Resistance">
+	<skill id="11006" toLevel="1" name="Superior Attribute Resistance">
 		<!-- Infection/ Obstruction/ Stupor/ Confusion Resistance +30%. INT +2. -->
 		<icon>icon.skill11006</icon>
 		<magicLevel>95</magicLevel>
@@ -2405,7 +2405,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11029" toLevel="5" name="Death Breath">
+	<skill id="11029" toLevel="5" name="Breath of Death">
 		<!-- For $s1, decreases target's HP by $s2 per second. -->
 		<icon>icon.skill11029</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -3167,7 +3167,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11040" toLevel="8" name="Elemental Final Storm">
+	<skill id="11040" toLevel="8" name="Final Elemental Storm">
 		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3267,7 +3267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11041" toLevel="8" name="Elemental Final Storm (Fire)">
+	<skill id="11041" toLevel="8" name="Final Elemental Storm (Fire)">
 		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3350,7 +3350,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11042" toLevel="8" name="Elemental Final Storm (Water)">
+	<skill id="11042" toLevel="8" name="Final Elemental Storm (Water)">
 		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3433,7 +3433,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11043" toLevel="8" name="Elemental Final Storm (Wind)">
+	<skill id="11043" toLevel="8" name="Final Elemental Storm (Wind)">
 		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3516,7 +3516,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11044" toLevel="8" name="Elemental Final Storm (Earth)">
+	<skill id="11044" toLevel="8" name="Final Elemental Storm (Earth)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3599,7 +3599,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11045" toLevel="8" name="Elemental Final Storm (Holy)">
+	<skill id="11045" toLevel="8" name="Final Elemental Storm (Holy)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>

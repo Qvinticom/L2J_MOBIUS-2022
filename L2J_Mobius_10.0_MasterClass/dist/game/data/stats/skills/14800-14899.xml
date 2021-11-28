@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="14800" toLevel="1" name="Elemental Resistance - GM's Blessing">
+	<skill id="14800" toLevel="1" name="Attribute Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Attribute Resistance +$s2. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
@@ -1359,7 +1359,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14852" toLevel="1" name="Adolph's Final Ultimate Defense">
+	<skill id="14852" toLevel="1" name="Adolph's Supreme Defense">
 		<!-- For 30 sec., P. Def. +4000, M. Def. +4000. Impossible to receive more than 300 damage at a time, and 40% of it is reflected back to the enemy. Buff Cancel Resistance +80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
@@ -1399,7 +1399,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14853" toLevel="1" name="Adolph's Final Ultimate Defense">
+	<skill id="14853" toLevel="1" name="Adolph's Supreme Defense">
 		<!-- For 30 sec., P. Def. +4000, M. Def. +4000. Impossible to receive more than 300 damage at a time, and 40% of it is reflected back to the enemy. Buff Cancel Resistance +80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
@@ -1439,7 +1439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14854" toLevel="1" name="Adolph's Final Ultimate Defense">
+	<skill id="14854" toLevel="1" name="Adolph's Supreme Defense">
 		<!-- For 30 sec., P. Def. +4000, M. Def. +4000. Impossible to receive more than 300 damage at a time, and 40% of it is reflected back to the enemy. Buff Cancel Resistance +80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
@@ -2729,7 +2729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14898" toLevel="1" name="Elise' Progressive Heal">
+	<skill id="14898" toLevel="1" name="Elise's Progressive Heal">
 		<!-- Heals the target and the 10 most injured allies around the target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<icon>icon.skill11828</icon>
 		<operateType>A1</operateType>
@@ -2748,7 +2748,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="14899" toLevel="1" name="Elise' Radiant Heal">
+	<skill id="14899" toLevel="1" name="Elise's Radiant Heal">
 		<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>

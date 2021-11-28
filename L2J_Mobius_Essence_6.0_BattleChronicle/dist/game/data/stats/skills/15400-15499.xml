@@ -772,7 +772,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15449" toLevel="1" name="Dagger Storm">
+	<skill id="15449" toLevel="1" name="Storm Strike">
 		<operateType>A1</operateType>
 		<mpConsume>7</mpConsume>
 		<castRange>600</castRange>
@@ -1493,7 +1493,7 @@
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 	</skill>
-	<skill id="15483" toLevel="1" name="Destroy">
+	<skill id="15483" toLevel="1" name="Annihilation">
 		<!-- Inflicts physical damage on a single target. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -1512,7 +1512,7 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15485" toLevel="1" name="Eliminate">
+	<skill id="15485" toLevel="1" name="Contaminated Atelia Gas">
 		<!-- Inflicts physical damage on a single target. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>

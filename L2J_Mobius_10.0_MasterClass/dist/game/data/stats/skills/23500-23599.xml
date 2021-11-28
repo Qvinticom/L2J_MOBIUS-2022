@@ -771,7 +771,7 @@
 			<condition name="OpCannotUseTargetWithPrivateStore" />
 		</conditions>
 	</skill>
-	<skill id="23516" toLevel="1" name="Petrify">
+	<skill id="23516" toLevel="1" name="Petrifies the target.">
 		<!-- Petrified by an unknown power. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
@@ -2016,7 +2016,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="23564" toLevel="1" name="Agathion Cute Trick - Griffin">
+	<skill id="23564" toLevel="1" name="Cute Trick - Agathion Griffin">
 		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -2051,7 +2051,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23566" toLevel="1" name="Blessed Griffin Egg">
+	<skill id="23566" toLevel="1" name="Agathion Griffin's Blessed Egg">
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<coolTime>1000</coolTime>
@@ -2332,7 +2332,7 @@
 		<effectPoint>2</effectPoint>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="23597" toLevel="1" name="Unhide">
+	<skill id="23597" toLevel="1" name="Cancel Hide">
 		<!-- Cancels hide. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>

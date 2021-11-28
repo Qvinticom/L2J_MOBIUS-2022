@@ -3059,7 +3059,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="45170" toLevel="8" name="Multiple Shot">
+	<skill id="45170" toLevel="8" name="Multishot">
 		<!-- Attacks enemies at the front with $s1 power. -->
 		<icon>icon.skill10260</icon>
 		<operateType>A1</operateType>
@@ -3129,7 +3129,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45171" toLevel="8" name="Ultimate Multiple Shot">
+	<skill id="45171" toLevel="8" name="Ultimate Multishot">
 		<!-- <Ultimate skill> Attacks the enemies at the front with $s1 power. Critical. Ignores Shield Defense. Ignores $s2 of the target's defense. -->
 		<icon>icon.skill10953</icon>
 		<operateType>A1</operateType>
@@ -3570,7 +3570,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="45176" toLevel="2" name="Recover HP">
+	<skill id="45176" toLevel="2" name="HP Recovery">
 		<!-- Constantly recovers a certain amount of HP. The amount of HP recovered and its recovery rate are increased with the skill level. -->
 		<icon>icon.skill0211</icon>
 		<magicLevel>
@@ -3604,7 +3604,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45177" toLevel="2" name="Recover MP">
+	<skill id="45177" toLevel="2" name="MP Recovery">
 		<!-- Constantly recovers a certain amount of MP. The amount of MP recovered and its recovery rate are increased with the skill level. -->
 		<icon>icon.skill0213</icon>
 		<magicLevel>

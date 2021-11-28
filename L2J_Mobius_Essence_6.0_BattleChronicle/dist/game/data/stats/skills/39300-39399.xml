@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="39300" toLevel="1" name="Gracia's Rice Bread">
+	<skill id="39300" toLevel="1" name="Gracia's Rice Cake">
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
@@ -907,7 +907,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39362" toLevel="1" name="Angler's Fishing Box">
+	<skill id="39362" toLevel="1" name="Master Fisherman's Fishing Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -963,7 +963,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39364" toLevel="1" name="Angler's Golden Box">
+	<skill id="39364" toLevel="1" name="Master Fisherman's Golden Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1010,7 +1010,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39367" toLevel="1" name="Transformation into Teddy Bear">
+	<skill id="39367" toLevel="1" name="Teddy Bear Transformation">
 		<!-- Teddy Bear transformation. Max HP/ MP +20%, Acquired XP/ SP +20% while Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.gomdori_chest_change</icon>
 		<abnormalLevel>1</abnormalLevel>

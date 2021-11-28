@@ -467,7 +467,7 @@
 		<affectScope>SQUARE_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="907" toLevel="6" name="Aqua Blast">
+	<skill id="907" toLevel="6" name="Hydro Blast">
 		<!-- Inflicts a powerful ranged attack. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
@@ -4842,7 +4842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="987" toLevel="1" name="Multiple Shot">
+	<skill id="987" toLevel="1" name="Multishot">
 		<!-- Attacks multiple enemies with 11,030 power. Requires a bow or a crossbow. Critical. Over-hit. The skill cooldown is fixed. -->
 		<icon>icon.skill0987</icon>
 		<affectLimit>8-0-1</affectLimit>

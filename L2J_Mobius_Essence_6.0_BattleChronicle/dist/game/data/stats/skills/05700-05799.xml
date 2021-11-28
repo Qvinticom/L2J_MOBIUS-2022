@@ -210,7 +210,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5709" toLevel="2" name="Whirlpool">
+	<skill id="5709" toLevel="2" name="Whirlpool Pit">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-574</value>
@@ -2192,7 +2192,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5760" toLevel="9" name="Critical Hit">
+	<skill id="5760" toLevel="9" name="Critical Strike">
 		<!-- P. Critical Rate +30%, Atk. Spd. +33%. Successful physical critical attacks allow to gather energy for powerful distance attacks. -->
 		<icon>icon.skill5760</icon>
 		<abnormalLevel>

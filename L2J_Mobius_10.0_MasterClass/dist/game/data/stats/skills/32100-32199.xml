@@ -56,7 +56,7 @@
 		<hitTime>1500</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32107" toLevel="1" name="Multi-Shot">
+	<skill id="32107" toLevel="1" name="Multishot">
 		<!-- Inflicts damage on enemies around the target by firing multishots in a fan shape. -->
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -107,7 +107,7 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32110" toLevel="1" name="Great Heal">
+	<skill id="32110" toLevel="1" name="Greater Heal">
 		<!-- Refills the target's HP with a heal skill. Can be used only on Mary Reed. -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -158,7 +158,7 @@
 		<isDebuff>true</isDebuff>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32115" toLevel="1" name="Cyclone of Chaos">
+	<skill id="32115" toLevel="1" name="Chaos Vortex">
 		<!-- For 1 min., pulls enemies to you and deals them physical damage over time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill32028</icon>
 		<operateType>A1</operateType>
@@ -383,7 +383,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32131" toLevel="2" name="Tarti Hydro Attack">
+	<skill id="32131" toLevel="2" name="Tarti's Hydro Attack">
 		<!-- Single-Target Magic Attack -->
 		<icon>icon.skill30001</icon>
 		<operateType>A1</operateType>
@@ -476,7 +476,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="32140" toLevel="1" name="Balthus Furious Slasher">
+	<skill id="32140" toLevel="1" name="Balthus Knights' Furious Slasher">
 		<!-- For $s1, increases P. Atk. by $s2 when a two-handed sword or two-handed blunt is equipped. Additionally attacks $s3 enemies at once with a standard attack.. -->
 		<icon>icon.skill10334</icon>
 		<operateType>A1</operateType>
@@ -783,7 +783,7 @@
 		<effectPoint>1</effectPoint>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 	</skill>
-	<skill id="32173" toLevel="1" name="Freya's Art of Seduction EXP - GM's Blessing">
+	<skill id="32173" toLevel="1" name="Freya's Art of Seduction XP - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, P./ M. Def. +$s5, Speed +$s6, and Skill MP Consumption -$s7. Additionally, XP bonus +$s8 and Vitality bonus +$s9. Buffs are retained even after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A1</operateType>
@@ -802,7 +802,7 @@
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="32175" toLevel="1" name="Pa'agrio's Blessing EXP- GM's Blessing">
+	<skill id="32175" toLevel="1" name="Pa'agrio's Blessing XP - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, P./ M. Def. +$s5, P. Accuracy +$s6, M. Accuracy +$s7, Atk. Spd./ Casting Spd. +$s8, Speed +$s9, Attribute Attack +$s10, and Skill MP Consumption -$s11. Additionally, XP +$s12 and Vitality bonus +$s13. Buffs are retained even after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
@@ -819,7 +819,7 @@
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="32177" toLevel="1" name="Freya's Art of Seduction EXP - GM's Blessing">
+	<skill id="32177" toLevel="1" name="Freya's Art of Seduction XP - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, P./ M. Def. +$s5, Speed +$s6, and Skill MP Consumption -$s7. Additionally, XP bonus +$s8 and Vitality bonus +$s9. Buffs are retained even after death. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A1</operateType>
@@ -835,7 +835,7 @@
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="32179" toLevel="1" name="Pa'agrio's Blessing EXP- GM's Blessing">
+	<skill id="32179" toLevel="1" name="Pa'agrio's Blessing XP - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, P./ M. Def. +$s5, P. Accuracy +$s6, M. Accuracy +$s7, Atk. Spd./ Casting Spd. +$s8, Speed +$s9, Attribute Attack +$s10, and Skill MP Consumption -$s11. Additionally, XP +$s12 and Vitality bonus +$s13. Buffs are retained even after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>

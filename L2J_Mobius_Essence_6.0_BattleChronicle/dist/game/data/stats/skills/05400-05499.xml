@@ -233,7 +233,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
-	<skill id="5422" toLevel="12" name="Flame">
+	<skill id="5422" toLevel="12" name="Fire">
 		<!-- Body is on fire. HP continually decreases. -->
 		<icon>icon.skill1101</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -1491,42 +1491,42 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5462" toLevel="1" name="Fire Attack">
+	<skill id="5462" toLevel="1" name="Fire Attribute">
 		<!-- Strong against the element of fire. -->
 		<icon>icon.skill4279_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5463" toLevel="1" name="Water Attack">
+	<skill id="5463" toLevel="1" name="Water Attribute">
 		<!-- Strong against the element of water. -->
 		<icon>icon.skill4280_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5464" toLevel="1" name="Wind Attack">
+	<skill id="5464" toLevel="1" name="Wind Attribute">
 		<!-- Strong against the element of wind. -->
 		<icon>icon.skill4281_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5465" toLevel="1" name="Earth Attack">
+	<skill id="5465" toLevel="1" name="Earth Attribute">
 		<!-- Strong against the element of earth. -->
 		<icon>icon.skill4282_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5466" toLevel="1" name="Holy Attacks">
+	<skill id="5466" toLevel="1" name="Holy Attribute">
 		<!-- Strong against the holy elemental. -->
 		<icon>icon.skill4275_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5467" toLevel="1" name="Dark Attack">
+	<skill id="5467" toLevel="1" name="Dark Attribute">
 		<!-- Strong against the dark elemental. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLevel>1</magicLevel>

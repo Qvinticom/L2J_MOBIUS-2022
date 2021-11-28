@@ -226,7 +226,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14207" toLevel="1" name="Pull Up">
+	<skill id="14207" toLevel="1" name="Pull">
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -516,7 +516,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14220" toLevel="1" name="Flood">
+	<skill id="14220" toLevel="1" name="Brutality">
 		<!-- Flood -->
 		<icon>icon.skill14220</icon>
 		<operateType>A2</operateType>
@@ -1137,7 +1137,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14244" toLevel="1" name="Region Status Metastasis">
+	<skill id="14244" toLevel="1" name="Region Status Transfer">
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1213,7 +1213,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14246" toLevel="1" name="Earth Demolition">
+	<skill id="14246" toLevel="1" name="Earth Splitting">
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
@@ -1747,7 +1747,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14266" toLevel="1" name="Yoke">
+	<skill id="14266" toLevel="1" name="Binding">
 		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
@@ -2245,7 +2245,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14287" toLevel="1" name="Enhance">
+	<skill id="14287" toLevel="1" name="Upgrade">
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>100</effectPoint>
@@ -2658,7 +2658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14299" toLevel="3" name="Darkness Burn">
+	<skill id="14299" toLevel="3" name="Divinity Burn">
 		<icon>icon.skill1265</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>

@@ -174,7 +174,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5808" toLevel="1" name="Burst Flame">
+	<skill id="5808" toLevel="1" name="Bursting Flame">
 		<effectPoint>-676</effectPoint>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -921,7 +921,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5842" toLevel="1" name="Spinning Slasher">
+	<skill id="5842" toLevel="1" name="Vortex">
 		<affectLimit>6-12</affectLimit>
 		<affectRange>400</affectRange>
 		<coolTime>733</coolTime>
@@ -2191,7 +2191,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5888" toLevel="2" name="Earthquake">
+	<skill id="5888" toLevel="2" name="Earth Shock">
 		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>

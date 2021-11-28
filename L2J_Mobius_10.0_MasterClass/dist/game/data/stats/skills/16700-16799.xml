@@ -254,7 +254,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16719" toLevel="1" name="Elemental Resistance - Residence">
+	<skill id="16719" toLevel="1" name="Attribute Resistance - Residence">
 		<!-- For $s1, Attribute Resistance +$s2. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
@@ -296,7 +296,7 @@
 		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16723" toLevel="3" name="Powered Giant Strike">
+	<skill id="16723" toLevel="3" name="Powered Giant's Strike">
 		<!-- Attack skill that deals physical damage to a single target -->
 		<operateType>A1</operateType>
 		<mpConsume>13</mpConsume>
@@ -317,7 +317,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16724" toLevel="3" name="Powered Giant Slasher">
+	<skill id="16724" toLevel="3" name="Powered Giant's Slasher">
 		<!-- Attack skill that deals physical damage to the target and nearby enemies -->
 		<operateType>A1</operateType>
 		<mpConsume>13</mpConsume>
@@ -543,7 +543,7 @@
 			<effect name="BlockResurrection" /> <!-- TODO -->
 		</effects>
 	</skill>
-	<skill id="16735" toLevel="10" name="Inherent Abilities - Blackbird Clan Talisman">
+	<skill id="16735" toLevel="10" name="Unique Effect - Blackbird Clan's Talisman">
 		<!-- Damage received from Demons -$s1. -->
 		<icon>icon.etc_blackbird_talisman</icon>
 		<operateType>P</operateType>
@@ -671,7 +671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16738" toLevel="10" name="Inherent Abilities - Unworldly Visitors Talisman">
+	<skill id="16738" toLevel="10" name="Unique Effect - Unworldly Visitors' Talisman">
 		<!-- Damage received from Spirits -$s1. -->
 		<icon>icon.etc_stranger_talisman</icon>
 		<operateType>P</operateType>
@@ -695,7 +695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16739" toLevel="10" name="Inherent Abilities - Giant Trackers Talisman">
+	<skill id="16739" toLevel="10" name="Unique Effect - Giant Trackers' Talisman">
 		<!-- Damage received from Giants -$s1. -->
 		<icon>icon.etc_giantslayer_talisman</icon>
 		<operateType>P</operateType>
@@ -1345,7 +1345,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16770" toLevel="1" name="Energy Blast">
+	<skill id="16770" toLevel="1" name="Energy Charge">
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<attributeType>HOLY</attributeType>
@@ -1592,7 +1592,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
-	<skill id="16789" toLevel="5" name="Standby State">
+	<skill id="16789" toLevel="5" name="Standby">
 		<!-- Standby for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
@@ -1633,7 +1633,7 @@
 		<effectPoint>-1</effectPoint>
 		<isDebuff>1</isDebuff>
 	</skill>
-	<skill id="16793" toLevel="1" name="Thirst of Blood">
+	<skill id="16793" toLevel="1" name="Thirst for Blood">
 		<!-- Inflicts neutral damage on the enemy. Absorbs 40% of damage as HP. -->
 		<icon>icon.skill10509</icon>
 		<operateType>A1</operateType>
@@ -1723,7 +1723,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="16798" toLevel="1" name="Absolute Black">
+	<skill id="16798" toLevel="1" name="Absolute Darkness">
 		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>

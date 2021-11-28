@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="14100" toLevel="6" name="Lachik Front Foot Strike">
+	<skill id="14100" toLevel="6" name="Lachik's Powerful Paw Strike">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1231,7 +1231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14138" toLevel="3" name="Dark Avenger">
+	<skill id="14138" toLevel="3" name="Avenger">
 		<operateType>A1</operateType>
 		<mpConsume>78</mpConsume>
 		<castRange>150</castRange>
@@ -1600,7 +1600,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14149" toLevel="6" name="Sound of Wind">
+	<skill id="14149" toLevel="6" name="Wind Noise">
 		<!-- Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA1</operateType>
@@ -2372,7 +2372,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14175" toLevel="1" name="Cannon Blast">
+	<skill id="14175" toLevel="1" name="Fire Cannon">
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2737,7 +2737,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14192" toLevel="1" name="Petrify">
+	<skill id="14192" toLevel="1" name="Petrifies the target.">
 		<!-- Petrify status. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>

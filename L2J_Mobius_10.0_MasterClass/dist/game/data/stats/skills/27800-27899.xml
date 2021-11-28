@@ -1082,13 +1082,13 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27854" toLevel="1" name="Red Noblesse Appearance Stone">
+	<skill id="27854" toLevel="1" name="Appearance Stone: Red Noblesse Garment">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27855" toLevel="1" name="School Uniform A Appearance Stone">
+	<skill id="27855" toLevel="1" name="Appearance Stone: School Uniform A">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27856" toLevel="1" name="School Uniform B Appearance Stone">
+	<skill id="27856" toLevel="1" name="Appearance Stone: School Uniform B">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27857" toLevel="1" name="Passion Treasure Chest">
@@ -1131,7 +1131,7 @@
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27865" toLevel="24" name="Blessing of Bliss">
+	<skill id="27865" toLevel="24" name="Anniversary Blessing Lv. 1">
 		<!-- You can obtain the reward in $s1 h. There are $s2 buff levels. When the Lv. 1 buff expires, the Lv. 2 one applies, and so on. The effect remains after death, dual class/ subclass change, and after teleporting to the Olympiad and the Ceremony of Chaos. Note! If you're dead when the buff expired, you won't get a reward and a new buff. Also you must have free space in your inventory. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
@@ -1452,12 +1452,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27873" toLevel="1" name="Aden Cloak Basic Effect">
+	<skill id="27873" toLevel="1" name="Aden Cloak: Basic Effect">
 		<!-- Increases Magic Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27874" toLevel="20" name="Enchant Effect: Aden Cloak">
+	<skill id="27874" toLevel="20" name="Aden Cloak: Enchant Effect">
 		<!-- Magic PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>

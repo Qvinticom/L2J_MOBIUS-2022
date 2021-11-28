@@ -1443,7 +1443,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="45314" toLevel="3" name="Conflagration">
+	<skill id="45314" toLevel="3" name="Ignite">
 		<!-- Burns the body and decreases HP. -->
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4629,7 +4629,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45371" toLevel="1" name="Power of Eva">
+	<skill id="45371" toLevel="1" name="Eva's Help">
 		<!-- There is a certain chance after using Tribunal that the cross will be imbued with power of Eva. The energy strikes the enemy provoking them to attack you. -->
 		<magicLevel>76</magicLevel>
 		<operateType>P</operateType>
@@ -5299,7 +5299,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45386" toLevel="55" name="Transcendent Spinning Slasher">
+	<skill id="45386" toLevel="55" name="Transcendent Vortex">
 		<!-- Attacks nearby enemies with $s1 power. Ignores Shield Defense. Critical. Can be used only in the transcendent instance zones. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>

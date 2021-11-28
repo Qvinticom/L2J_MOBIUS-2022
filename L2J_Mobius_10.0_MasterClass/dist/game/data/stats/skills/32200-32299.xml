@@ -850,7 +850,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32252" toLevel="1" name="Lithra Fatal Slash">
+	<skill id="32252" toLevel="1" name="Lithra's Fatal Slasher">
 		<!-- Attacks enemies in front and has a certain chance knock them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -1052,7 +1052,7 @@
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="32260" toLevel="3" name="Raid Soul Plunderer">
+	<skill id="32260" toLevel="3" name="Raid Boss' Soul Plunderer">
 		<!-- These Death Reapers look after souls of brave adventurers and strong monsters. They could appear anywhere at any time. Never lower your guard. They disappear in an hour after spawned, even when the battle is going on. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -1227,7 +1227,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32277" toLevel="1" name="Star Fall">
+	<skill id="32277" toLevel="1" name="Starfall">
 		<!-- Powerful Magic Attack Around Target -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1445,7 +1445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32291" toLevel="1" name="Thirst of Blood">
+	<skill id="32291" toLevel="1" name="Thirst for Blood">
 		<!-- Inflicts non-attribute damage on the enemy. Absorbs 40% of the damage as HP. -->
 		<icon>icon.skill10509</icon>
 		<castRange>40</castRange>
@@ -1556,7 +1556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32296" toLevel="1" name="Provoke">
+	<skill id="32296" toLevel="1" name="Grand Provoke">
 		<!-- Decreases P. Atk./ P. Def./ Atk. Spd. of enemies near you. -->
 		<icon>icon.skill10271</icon>
 		<abnormalLevel>3</abnormalLevel>

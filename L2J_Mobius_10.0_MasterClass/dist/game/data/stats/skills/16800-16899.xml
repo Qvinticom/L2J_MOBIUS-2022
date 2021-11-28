@@ -124,7 +124,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-867</effectPoint>
 	</skill>
-	<skill id="16812" toLevel="1" name="Soul Drain">
+	<skill id="16812" toLevel="1" name="Soul Steal">
 		<!-- Inflicts HP Drain attack of severe magical damage on the target in the specified range. -->
 		<icon>icon.skill10509</icon>
 		<operateType>A1</operateType>
@@ -320,7 +320,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>1734</effectPoint>
 	</skill>
-	<skill id="16831" toLevel="1" name="Roar of the Battlefield">
+	<skill id="16831" toLevel="1" name="Call to Battle">
 		<!-- Target s and allies P./ M. Atk. +30% for 30 sec. -->
 		<icon>icon.skill10277</icon>
 		<operateType>A1</operateType>
@@ -390,7 +390,7 @@
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="16838" toLevel="1" name="Elemental Storm">
+	<skill id="16838" toLevel="1" name="Final Elemental Storm">
 		<!-- Inflicts M. Atk. added with attribute damage on the enemies in the specified range. -->
 		<icon>icon.skill11040</icon>
 		<operateType>A1</operateType>
@@ -423,7 +423,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-1378</effectPoint>
 	</skill>
-	<skill id="16841" toLevel="1" name="Final Ultimate Defense">
+	<skill id="16841" toLevel="1" name="Supreme Defense">
 		<!-- For 30 sec., increases Defense and M. Def. by 4000, respectively, sets the limit of damage received at 300, and reflects 40% of damage received to the attacker. Additionally increases Resistance to buff-canceling attacks by 80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A1</operateType>
@@ -637,7 +637,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>1734</effectPoint>
 	</skill>
-	<skill id="16854" toLevel="1" name="Mass Fatal Slip">
+	<skill id="16854" toLevel="1" name="Mass Fatal Sleep">
 		<!-- Inflicts Sleep on nearby enemies for 30 sec. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11778</icon>
 		<operateType>A1</operateType>
@@ -811,7 +811,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16869" toLevel="1" name="Horseshoe Tramping">
+	<skill id="16869" toLevel="1" name="Horseshoe Trampling">
 		<!-- Attacks enemies in front of you with hoofs knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill16869</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1013,7 +1013,7 @@
 		<coolTime>400</coolTime>
 		<effectPoint>-96</effectPoint>
 	</skill>
-	<skill id="16884" toLevel="1" name="Blood To Flesh">
+	<skill id="16884" toLevel="1" name="Blood to Flesh">
 		<!-- Recovers HP by selecting an enemy and draining their HP. -->
 		<icon>icon.skill11030</icon>
 		<operateType>A1</operateType>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="23600" toLevel="1" name="P. Atk. Boost">
+	<skill id="23600" toLevel="1" name="Increase P. Atk.">
 		<!-- P. Atk. +50%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -19,7 +19,7 @@
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23602" toLevel="1" name="P. Def. Boost">
+	<skill id="23602" toLevel="1" name="Increase P. Def.">
 		<!-- For 15 sec., P./ M. Def. x 2. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -467,7 +467,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23640" toLevel="1" name="Thirst of Blood">
+	<skill id="23640" toLevel="1" name="Thirst for Blood">
 		<!-- Inflicts damage on enemy. Recovers 40% of Damage as HP. -->
 		<icon>icon.skill1507</icon>
 		<operateType>A1</operateType>
@@ -676,7 +676,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23647" toLevel="1" name="Absolute Black">
+	<skill id="23647" toLevel="1" name="Absolute Darkness">
 		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1399</icon>
 		<operateType>A2</operateType>
@@ -1012,7 +1012,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23659" toLevel="2" name="Fatal Wind Strike">
+	<skill id="23659" toLevel="2" name="Wind Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -1207,7 +1207,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23666" toLevel="2" name="Darkness Blast">
+	<skill id="23666" toLevel="2" name="Unholy Blast">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>900</castRange>
@@ -1426,7 +1426,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23681" toLevel="1" name="Harpe Stone Cancel">
+	<skill id="23681" toLevel="1" name="Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>
@@ -1633,7 +1633,7 @@
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23695" toLevel="1" name="Tornado Shackle">
+	<skill id="23695" toLevel="1" name="Stun Crush">
 		<!-- Deals great damage to the target stunning it for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill23695</icon>
 		<operateType>A2</operateType>
@@ -1669,7 +1669,7 @@
 		<effectPoint>-379</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="23698" toLevel="1" name="Curse of Silence">
+	<skill id="23698" toLevel="1" name="Storm Rage">
 		<!-- Deals great AoE damage to enemies knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>

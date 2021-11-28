@@ -42,7 +42,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2802" toLevel="1" name="Recovery Stone">
+	<skill id="2802" toLevel="1" name="Stone of Recovery">
 		<icon>icon.stone_1_i00</icon>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
@@ -895,7 +895,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2827" toLevel="1" name="Blessing of Eva">
+	<skill id="2827" toLevel="1" name="Eva's Blessing">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1366,7 +1366,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="2838" toLevel="1" name="Treasure Sack of Ancient Times">
+	<skill id="2838" toLevel="1" name="Ancient Treasure Sack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -1968,7 +1968,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2856" toLevel="1" name="Santa's Buff Gift Set">
+	<skill id="2856" toLevel="1" name="Christmas Buff Kit">
 		<!-- For 1 h., a buff from the Great Spirit is active. Max MP +20%, MP Recovery Rate +20%, HP Recovery Rate +20%, M. Skill Critical Rate +2, Critical Damage for standard attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%, Skill MP Consumption -5%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -2183,7 +2183,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2859" toLevel="1" name="Holiday Gift">
+	<skill id="2859" toLevel="1" name="Christmas Buff Kit">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14616</itemConsumeId> <!-- Gift from Santa Claus -->

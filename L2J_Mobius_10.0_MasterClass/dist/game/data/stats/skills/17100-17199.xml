@@ -75,7 +75,7 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="17113" toLevel="1" name="2012 Christmas Gift">
+	<skill id="17113" toLevel="1" name="Christmas Buff Kit">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17114" toLevel="1" name="Promise Cube">
@@ -224,7 +224,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17126" toLevel="24" name="Lucky Box 2">
+	<skill id="17126" toLevel="24" name="Snake's Blessing Lv. 1">
 		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake. Note! The cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
@@ -327,10 +327,10 @@
 	<skill id="17144" toLevel="1" name="Reputation Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17145" toLevel="1" name="Mysterious Shot Pack">
+	<skill id="17145" toLevel="1" name="Mysterious Shot Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17146" toLevel="1" name="Kaliel's Energy Box">
+	<skill id="17146" toLevel="1" name="Kaliel's Energy Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17147" toLevel="1" name="Soul Bottle Pack">
@@ -727,7 +727,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="17166" toLevel="1" name="Knight's Harmony- GM's Blessing">
+	<skill id="17166" toLevel="1" name="Knight's Harmony - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense/ Shield Defense Rate +$s6, received P./ M. Critical Rate -$s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -780,7 +780,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17167" toLevel="1" name="Warrior's Harmony- GM's Blessing">
+	<skill id="17167" toLevel="1" name="Warrior's Harmony - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, Speed +$s6. With a certain chance, adds the Spectral Slash effect after a standard attack. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -829,7 +829,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17168" toLevel="1" name="Wizard's Harmony- GM's Blessing">
+	<skill id="17168" toLevel="1" name="Wizard's Harmony - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, and Attribute Attack by $s6. Decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -915,7 +915,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17169" toLevel="1" name="Horn Melody- GM's Blessing">
+	<skill id="17169" toLevel="1" name="Horn Melody - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -956,7 +956,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17170" toLevel="1" name="Drum Melody- GM's Blessing">
+	<skill id="17170" toLevel="1" name="Drum Melody - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -1002,7 +1002,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17171" toLevel="1" name="Pipe Organ Melody- GM's Blessing">
+	<skill id="17171" toLevel="1" name="Pipe Organ Melody - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -1047,7 +1047,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17172" toLevel="1" name="Guitar Melody- GM's Blessing">
+	<skill id="17172" toLevel="1" name="Guitar Melody - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -1297,7 +1297,7 @@
 		<icon>icon.shirt_special_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17183" toLevel="1" name="Pa'agrio's Special Pack">
+	<skill id="17183" toLevel="1" name="Maphr's Special Box">
 		<icon>icon.shirt_special_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>

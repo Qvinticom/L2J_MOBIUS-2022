@@ -2223,7 +2223,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6631" toLevel="1" name="Energy of Strength">
+	<skill id="6631" toLevel="1" name="Energy of Power">
 		<!-- Temporarily P. Atk. +15%. -->
 		<icon>icon.etc_herb_red_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
@@ -2648,7 +2648,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6655" toLevel="1" name="Tarask Carapace">
+	<skill id="6655" toLevel="1" name="Tarask's Carapace">
 		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3464,7 +3464,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6695" toLevel="12" name="Spinning Slasher">
+	<skill id="6695" toLevel="12" name="Vortex">
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
 		<magicLevel>

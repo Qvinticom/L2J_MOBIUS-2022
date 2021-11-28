@@ -143,7 +143,7 @@
 		<hitTime>60000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18515" toLevel="3" name="Weakened Defense">
+	<skill id="18515" toLevel="3" name="Decrease P. Def.">
 		<!-- P./ M. Def. -10%. -->
 		<icon>icon.skill1042</icon>
 		<!-- P./M. Def. is decreased by Lvl 2 - 30%. -->
@@ -367,49 +367,49 @@
 	<skill id="18537" toLevel="1" name="Epic Tale Pouch">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18538" toLevel="1" name="Tauti's Helmet Appearance Stone">
+	<skill id="18538" toLevel="1" name="Appearance Stone: Tauti's Helmet">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18539" toLevel="1" name="Tauti's Breastplate Appearance Stone">
+	<skill id="18539" toLevel="1" name="Appearance Stone: Tauti's Breastplate">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18540" toLevel="1" name="Tauti's Gaiters Appearance Stone">
+	<skill id="18540" toLevel="1" name="Appearance Stone: Tauti's Gaiters">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18541" toLevel="1" name="Tauti's Gauntlets Appearance Stone">
+	<skill id="18541" toLevel="1" name="Appearance Stone: Tauti's Gauntlets">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18542" toLevel="1" name="Tauti's Boots Appearance Stone">
+	<skill id="18542" toLevel="1" name="Appearance Stone: Tauti's Boots">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18543" toLevel="1" name="Kelbim's Leather Helmet Appearance Stone">
+	<skill id="18543" toLevel="1" name="Appearance Stone: Kelbim's Leather Helmet">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18544" toLevel="1" name="Kelbim's Leather Armor Appearance Stone">
+	<skill id="18544" toLevel="1" name="Appearance Stone: Kelbim's Leather Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18545" toLevel="1" name="Kelbim's Leather Leggings Appearance Stone">
+	<skill id="18545" toLevel="1" name="Appearance Stone: Kelbim's Leather Leggings">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18546" toLevel="1" name="Kelbim's Leather Gloves Appearance Stone">
+	<skill id="18546" toLevel="1" name="Appearance Stone: Kelbim's Leather Gloves">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18547" toLevel="1" name="Kelbim's Leather Boots Appearance Stone">
+	<skill id="18547" toLevel="1" name="Appearance Stone: Kelbim's Leather Boots">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18548" toLevel="1" name="Freya's Circlet Appearance Stone">
+	<skill id="18548" toLevel="1" name="Appearance Stone: Freya's Circlet">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18549" toLevel="1" name="Freya's Tunic Appearance Stone">
+	<skill id="18549" toLevel="1" name="Appearance Stone: Freya's Tunic">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18550" toLevel="1" name="Freya's Stockings Appearance Stone">
+	<skill id="18550" toLevel="1" name="Appearance Stone: Freya's Stockings">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18551" toLevel="1" name="Freya's Gloves Appearance Stone">
+	<skill id="18551" toLevel="1" name="Appearance Stone: Freya's Gloves">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18552" toLevel="1" name="Freya's Shoes Appearance Stone">
+	<skill id="18552" toLevel="1" name="Appearance Stone: Freya's Shoes">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18553" toLevel="1" name="Leona's High-grade Reward Box">
@@ -418,7 +418,7 @@
 	<skill id="18554" toLevel="1" name="Leona's Reward Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18555" toLevel="1" name="Curtiz's Reward Box">
+	<skill id="18555" toLevel="1" name="Curtis' Reward Box">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>46560</itemConsumeId>
@@ -485,7 +485,7 @@
 		<!-- Changes the armor appearance to that of Red Zubei. Can be used on upper and full-body costumes. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18558" toLevel="1" name="White Assassin Suit Appearance Stone">
+	<skill id="18558" toLevel="1" name="Appearance Stone: White Assassin Suit">
 		<!-- An appearance stone that changes appearance to that of a White Assassin Suit. Can be used on upper and full-body costumes. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -509,7 +509,7 @@
 	<skill id="18562" toLevel="1" name="Extra Pass: Crystal Caverns">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18563" toLevel="5" name="Red Libra Supplies Lv. 1">
+	<skill id="18563" toLevel="5" name="Red Libra's Supplies Lv. 1">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -988,7 +988,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18577" toLevel="1" name="Roar of the Battlefield">
+	<skill id="18577" toLevel="1" name="Call to Battle">
 		<!-- Received PvP Damage -5%, Debuff Resistance +10%. -->
 		<icon>icon.skill18577</icon>
 		<operateType>P</operateType>
@@ -1094,7 +1094,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18583" toLevel="1" name="Inject Shine Energy">
+	<skill id="18583" toLevel="1" name="Inject Shining Energy">
 		<!-- The energy of the Shine Stone is injected into the Root of the Lesser Giant to trigger evolution. -->
 		<icon>icon.etc_energy_stone_i00</icon>
 		<operateType>A1</operateType>
@@ -1107,17 +1107,17 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18585" toLevel="1" name="Schumadriba's Reward Treasure Chest">
+	<skill id="18585" toLevel="1" name="Schumadriba's Reward Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18586" toLevel="1" name="Schumadriba's Advanced Reward Treasure Chest">
+	<skill id="18586" toLevel="1" name="Schumadriba's Top-grade Reward Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18587" toLevel="1" name="Giant Evolution Control">
+	<skill id="18587" toLevel="1" name="Giant's Evolution">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>40000</reuseDelay>

@@ -1163,7 +1163,7 @@
 	<skill id="18622" toLevel="6" name="+8 Bloody Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18623" toLevel="14" name="Red Noblesse Appearance Stone">
+	<skill id="18623" toLevel="14" name="Appearance Stone: Red Noblesse Garment">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18624" toLevel="2" name="Royal Save Ticket Box">
@@ -1176,7 +1176,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18626" toLevel="1" name="Superior Giant's Codex Box">
+	<skill id="18626" toLevel="1" name="Scroll Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1206,7 +1206,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18629" toLevel="1" name="Inconspicuous">
+	<skill id="18629" toLevel="1" name="Balthus Knights' Disguise">
 		<!-- Perhaps no one will notice you? -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1216,7 +1216,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="18630" toLevel="1" name="Inconspicuous">
+	<skill id="18630" toLevel="1" name="Balthus Knights' Disguise">
 		<!-- Perhaps no one will notice you? -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1226,7 +1226,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="18631" toLevel="1" name="Inconspicuous">
+	<skill id="18631" toLevel="1" name="Balthus Knights' Disguise">
 		<!-- Perhaps no one will notice you? -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1236,7 +1236,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="18632" toLevel="1" name="Inconspicuous">
+	<skill id="18632" toLevel="1" name="Balthus Knights' Disguise">
 		<!-- Perhaps no one will notice you? -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1246,7 +1246,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="18633" toLevel="1" name="Inconspicuous">
+	<skill id="18633" toLevel="1" name="Balthus Knights' Disguise">
 		<!-- Perhaps no one will notice you? -->
 		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
@@ -1256,7 +1256,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>780</effectPoint>
 	</skill>
-	<skill id="18634" toLevel="1" name="Freya's Wind">
+	<skill id="18634" toLevel="1" name="Freya's Wind Cube">
 		<!-- Acquired XP/ SP +$s1, Vitality consumption doubled. -->
 		<icon>icon.freya_cube_box</icon>
 		<operateType>A2</operateType>
@@ -1375,7 +1375,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18639" toLevel="3" name="Scroll of Experience - Lv1">
+	<skill id="18639" toLevel="3" name="XP Book Lv. 1">
 		<!-- Use to obtain XP (TBD) -->
 		<icon>
 			<value level="1">icon.etc_codex_of_giant_i01</value>
@@ -1393,7 +1393,7 @@
 	<skill id="18641" toLevel="1" name="Freya's Lucky Pouch">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18642" toLevel="16" name="Insanity/Longing Talisman/Hellfire Energy Box">
+	<skill id="18642" toLevel="16" name="Talisman of Insanity/ Talisman of Longing/ Energy of Longing Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1922,7 +1922,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18684" toLevel="1" name="Warm Bear Paws Appearance Stone">
+	<skill id="18684" toLevel="1" name="Appearance Stone: Warm Bear Paws">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1940,7 +1940,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18686" toLevel="1" name="Cupid's Arrow Appearance Stone">
+	<skill id="18686" toLevel="1" name="Appearance Stone: Cupid's Bow">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1949,7 +1949,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18687" toLevel="1" name="Wedding Bouquet Appearance Stone -One-handed Blunt Weapon">
+	<skill id="18687" toLevel="1" name="Appearance Stone: Wedding Bouquet - One-handed Blunt Weapon">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1958,7 +1958,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18688" toLevel="1" name="Pig Lollipop Appearance Stone">
+	<skill id="18688" toLevel="1" name="Appearance Stone: Pig Lollipop">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1979,7 +1979,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18691" toLevel="2" name="Angler's Shining Treasure Chest">
+	<skill id="18691" toLevel="2" name="Master Fisherman's Shining Treasure Chest">
 		<!-- A treasure box by Chef Monkey caught with a banana bait. Use this to obtain various kinds of items. Scheduled for batch deletion during regular maintenance on February 17, 2016 (Wed.) -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>

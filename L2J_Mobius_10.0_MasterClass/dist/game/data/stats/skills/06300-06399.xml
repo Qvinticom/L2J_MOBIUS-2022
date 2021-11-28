@@ -1455,7 +1455,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6376" toLevel="9" name="Sonic Strike">
+	<skill id="6376" toLevel="9" name="Sonic Flash">
 		<!-- For $s1, 10% of Max HP, $s2 of Max MP and $s3 HP per second decrease from Dopagen's Sonic Strike. -->
 		<icon>icon.skill1417</icon>
 		<abnormalLevel>
@@ -1537,7 +1537,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6379" toLevel="1" name="Critical Hit">
+	<skill id="6379" toLevel="1" name="Critical Strike">
 		<!-- Inflicts Bleed, for 15 sec. the enemy's HP -93 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -1786,7 +1786,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6387" toLevel="1" name="Bistakon Earthquake">
+	<skill id="6387" toLevel="1" name="Bistakon's Ground Shaker">
 		<affectRange>200</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>

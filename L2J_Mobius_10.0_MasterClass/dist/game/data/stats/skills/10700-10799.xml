@@ -702,7 +702,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10754" toLevel="10" name="Superior Survival Ability">
+	<skill id="10754" toLevel="10" name="Superior Survival Instinct">
 		<!-- Speed +$s1, Weight Limit +$s2, and Terrain Damage -$s3. STR +$s4. When inflicting a critical during, Survival Movement is triggered. -->
 		<icon>icon.skill0295</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2155,7 +2155,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="10774" toLevel="4" name="Quick Evasion">
+	<skill id="10774" toLevel="4" name="Retreat">
 		<!-- Momentarily teleports $s1 backward. -->
 		<icon>icon.skill10774</icon>
 		<operateType>DA3</operateType>

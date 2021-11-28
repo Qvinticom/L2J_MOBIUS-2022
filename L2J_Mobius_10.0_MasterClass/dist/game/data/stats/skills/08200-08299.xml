@@ -1791,7 +1791,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8240" toLevel="3" name="Obliteration Storm">
+	<skill id="8240" toLevel="3" name="Storm of Retribution">
 		<!-- A powerful long-range attack. Requires a critical hit of Lv. $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.weapon_long_spear_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2039,7 +2039,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8249" toLevel="1" name="Cancel Critical Hit">
+	<skill id="8249" toLevel="1" name="Dispel Pailaka's Critical Strike">
 		<effectPoint>10</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>99</magicLevel>
