@@ -14,7 +14,8 @@
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
-		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -22,6 +23,14 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>3031</itemConsumeId>
 		<itemConsumeCount>20</itemConsumeCount>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1802</skillId> <!-- White Assassin Transformation -->
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>3</amount>
@@ -82,8 +91,9 @@
 		<magicLevel>60</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
-		<hitTime>3500</hitTime>
 		<stayAfterDeath>true</stayAfterDeath>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -91,6 +101,14 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>3031</itemConsumeId>
 		<itemConsumeCount>20</itemConsumeCount>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1800</skillId> <!-- Pirate Transformation -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1802</skillId> <!-- White Assassin Transformation -->
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>5</amount>
@@ -151,8 +169,9 @@
 		<magicLevel>70</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
-		<hitTime>3500</hitTime>
 		<stayAfterDeath>true</stayAfterDeath>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -160,6 +179,14 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>3031</itemConsumeId>
 		<itemConsumeCount>40</itemConsumeCount>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1800</skillId> <!-- Pirate Transformation -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>7</amount>
