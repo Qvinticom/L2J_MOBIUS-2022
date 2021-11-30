@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.enums;
 
 /**
  * @author Mobius
- * @implNote Update by RobikBobik
  */
 public enum BroochJewel
 {

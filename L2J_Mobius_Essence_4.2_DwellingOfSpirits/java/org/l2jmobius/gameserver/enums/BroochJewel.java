@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.enums;
 
 /**
  * @author Mobius
- * @implNote Update by RobikBobik
  */
 public enum BroochJewel
 {
@@ -45,6 +44,16 @@ public enum BroochJewel
 	GREATER_RUBY_LV3_2(91322, 59150, 0.19, true), // + 3% p atk
 	GREATER_RUBY_LV4_2(91323, 59150, 0.20, true), // + 5% p atk
 	GREATER_RUBY_LV5_2(91324, 59150, 0.20, true), // + 7% p atk + crit. p. rate +10%
+	
+	// Onyx effect
+	ONYX_LV1(92066, 50204, 0.02, true), // Soulshot / Spiritshot damage +2%
+	ONYX_LV2(92067, 50204, 0.03, true), // Soulshot / Spiritshot damage +3%
+	ONYX_LV3(92068, 50204, 0.05, true), // Soulshot / Spiritshot damage +5%
+	ONYX_LV4(92069, 50204, 0.08, true), // Soulshot / Spiritshot damage +8%
+	ONYX_LV5(94521, 50204, 0.12, true), // Soulshot / Spiritshot damage +12%
+	ONYX_LV6(92070, 50204, 0.16, true), // Soulshot / Spiritshot damage +16%, P. Atk. +50, M. Atk. +50
+	ONYX_LV7(92071, 50204, 0.20, true), // Soulshot / Spiritshot damage +20%, P. Atk. +150, M. Atk. +150
+	ONYX_LV8(92072, 50204, 0.25, true), // Soulshot / Spiritshot damage +25%, P. Atk. +300, M. Atk. +300
 	
 	// Working effect
 	SHAPPHIRE_LV1(70456, 17821, 0.02, false),
