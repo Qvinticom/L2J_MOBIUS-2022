@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 
 /**
  * The Class ConditionPlayerBaseStats.
@@ -50,48 +51,40 @@ public class ConditionPlayerBaseStats extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
-		if (effector.getActingPlayer() == null)
+		final Player player = effector.getActingPlayer();
+		if (player == null)
 		{
 			return false;
 		}
-		final Player player = effector.getActingPlayer();
+		
 		switch (_stat)
 		{
-			case Int:
+			case INT:
 			{
 				return player.getINT() >= _value;
 			}
-			case Str:
+			case STR:
 			{
 				return player.getSTR() >= _value;
 			}
-			case Con:
+			case CON:
 			{
 				return player.getCON() >= _value;
 			}
-			case Dex:
+			case DEX:
 			{
 				return player.getDEX() >= _value;
 			}
-			case Men:
+			case MEN:
 			{
 				return player.getMEN() >= _value;
 			}
-			case Wit:
+			case WIT:
 			{
 				return player.getWIT() >= _value;
 			}
 		}
+		
 		return false;
 	}
-}
-
-enum BaseStat
-{
-	Int,
-	Str,
-	Con,
-	Dex,
-	Men,
-	Wit
 }
