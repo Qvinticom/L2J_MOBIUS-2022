@@ -84,7 +84,7 @@ public class Shutdown extends Thread
 	 * This function starts a shutdown count down from Telnet (Copied from Function startShutdown())
 	 * @param seconds seconds until shutdown
 	 */
-	private void SendServerQuit(int seconds)
+	private void sendServerQuit(int seconds)
 	{
 		final SystemMessage sysm = new SystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT);
 		sysm.addInt(seconds);
@@ -307,14 +307,14 @@ public class Shutdown extends Thread
 				}
 				default:
 				{
-					SendServerQuit(seconds);
+					sendServerQuit(seconds);
 				}
 			}
 		}
 		
 		if (_counterInstance != null)
 		{
-			_counterInstance._abort();
+			_counterInstance.abort();
 		}
 		
 		if (Config.PRECAUTIONARY_RESTART_ENABLED)
@@ -336,7 +336,7 @@ public class Shutdown extends Thread
 		LOGGER.warning("GM: " + (player != null ? player.getName() + "(" + player.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		if (_counterInstance != null)
 		{
-			_counterInstance._abort();
+			_counterInstance.abort();
 			
 			if (Config.PRECAUTIONARY_RESTART_ENABLED)
 			{
@@ -359,7 +359,7 @@ public class Shutdown extends Thread
 	/**
 	 * Set shutdown mode to ABORT.
 	 */
-	private void _abort()
+	private void abort()
 	{
 		_shutdownMode = ABORT;
 	}
@@ -401,7 +401,9 @@ public class Shutdown extends Thread
 					case 3:
 					case 2:
 					case 1:
-						SendServerQuit(_secondsShut);
+					{
+						sendServerQuit(_secondsShut);
+					}
 				}
 				
 				// Prevent players from logging in.
@@ -412,8 +414,7 @@ public class Shutdown extends Thread
 				
 				_secondsShut--;
 				
-				final int delay = 1000; // milliseconds
-				Thread.sleep(delay);
+				Thread.sleep(1000);
 			}
 		}
 		catch (Exception e)
@@ -557,19 +558,19 @@ public class Shutdown extends Thread
 			restartCounter();
 		}
 		
-		protected void restartCounter()
+		public void restartCounter()
 		{
 			_startTime = Chronos.currentTimeMillis();
 		}
 		
-		protected long getEstimatedTimeAndRestartCounter()
+		public long getEstimatedTimeAndRestartCounter()
 		{
 			final long toReturn = Chronos.currentTimeMillis() - _startTime;
 			restartCounter();
 			return toReturn;
 		}
 		
-		protected long getEstimatedTime()
+		public long getEstimatedTime()
 		{
 			return Chronos.currentTimeMillis() - _startTime;
 		}

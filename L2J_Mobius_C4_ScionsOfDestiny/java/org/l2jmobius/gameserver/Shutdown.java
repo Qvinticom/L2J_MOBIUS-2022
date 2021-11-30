@@ -197,7 +197,7 @@ public class Shutdown extends Thread
 		
 		if (_counterInstance != null)
 		{
-			_counterInstance._abort();
+			_counterInstance.abort();
 		}
 		
 		if (Config.PRECAUTIONARY_RESTART_ENABLED)
@@ -229,7 +229,7 @@ public class Shutdown extends Thread
 		
 		if (_counterInstance != null)
 		{
-			_counterInstance._abort();
+			_counterInstance.abort();
 		}
 		
 		if (Config.PRECAUTIONARY_RESTART_ENABLED)
@@ -241,7 +241,7 @@ public class Shutdown extends Thread
 	/**
 	 * set shutdown mode to ABORT
 	 */
-	private void _abort()
+	private void abort()
 	{
 		_shutdownMode = ABORT;
 	}
@@ -288,8 +288,7 @@ public class Shutdown extends Thread
 				
 				_secondsShut--;
 				
-				final int delay = 1000; // milliseconds
-				Thread.sleep(delay);
+				Thread.sleep(1000);
 				
 				if (_shutdownMode == ABORT)
 				{
@@ -379,11 +378,11 @@ public class Shutdown extends Thread
 	}
 	
 	/**
-	 * this sends a last byebye, disconnects all players and saves data
+	 * This sends a last byebye, disconnects all players and saves data.
 	 */
 	private synchronized void saveData()
 	{
-		final AnnouncementsTable _an = AnnouncementsTable.getInstance();
+		final AnnouncementsTable announcements = AnnouncementsTable.getInstance();
 		switch (_shutdownMode)
 		{
 			case SIGTERM:
@@ -404,7 +403,7 @@ public class Shutdown extends Thread
 		}
 		try
 		{
-			_an.announceToAll("Server is " + MODE_TEXT[_shutdownMode] + " NOW!");
+			announcements.announceToAll("Server is " + MODE_TEXT[_shutdownMode] + " NOW!");
 		}
 		catch (Throwable t)
 		{
