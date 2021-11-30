@@ -58,7 +58,6 @@ import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommi
 /**
  * @author NosBit, Ren
  */
-
 public class ItemCommissionManager
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemCommissionManager.class.getName());
@@ -519,7 +518,7 @@ public class ItemCommissionManager
 	public static boolean isPlayerAllowedToInteract(Player player)
 	{
 		final Npc npc = player.getLastFolkNPC();
-		if ((npc != null) && (npc instanceof CommissionManager))
+		if (npc instanceof CommissionManager)
 		{
 			return npc.calculateDistance3D(player) <= INTERACTION_DISTANCE;
 		}
