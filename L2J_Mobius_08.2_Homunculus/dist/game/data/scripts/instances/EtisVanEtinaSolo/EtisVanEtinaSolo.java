@@ -52,8 +52,8 @@ public class EtisVanEtinaSolo extends AbstractInstance
 	// RB
 	private static final int ETIS_VAN_ETINA1 = 26321;
 	private static final int ETIS_VAN_ETINA2 = 26322;
-	private static final int KAIN_VAN_HALTER = 26235;
-	private static final int CAMILLE = 26236;
+	private static final int KAIN_VAN_HALTER = 24179;
+	private static final int CAMILLE = 24178;
 	// Corridor Mobs
 	//@formatter:off
 	private static final int[] CORRIDOR_MOBS_1 = {24173, 24174, 24175, 24176};
