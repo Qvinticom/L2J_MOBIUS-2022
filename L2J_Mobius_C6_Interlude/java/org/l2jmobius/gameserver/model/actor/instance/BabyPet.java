@@ -140,7 +140,7 @@ public class BabyPet extends Pet
 			
 			// if the owner is dead, merely wait for the owner to be resurrected
 			// if the pet is still casting from the previous iteration, allow the cast to complete...
-			if (!owner.isDead() && !_baby.isCastingNow() && !_baby.isBetrayed())
+			if (!owner.isDead() && !_baby.isDead() && !_baby.isCastingNow() && !_baby.isBetrayed())
 			{
 				// casting automatically stops any other action (such as autofollow or a move-to).
 				// We need to gather the necessary info to restore the previous state.

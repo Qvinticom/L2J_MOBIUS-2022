@@ -270,7 +270,7 @@ public class BabyPet extends Pet
 			}
 			
 			// If the pet doesn't meet the conditions avoid casting.
-			if (_baby.isCastingNow() || _baby.isBetrayed() || _baby.isMuted() || _baby.isOutOfControl() || !_bufferMode || (_baby.getAI().getIntention() == CtrlIntention.AI_INTENTION_CAST))
+			if (_baby.isDead() || _baby.isCastingNow() || _baby.isBetrayed() || _baby.isMuted() || _baby.isOutOfControl() || !_bufferMode || (_baby.getAI().getIntention() == CtrlIntention.AI_INTENTION_CAST))
 			{
 				return;
 			}
