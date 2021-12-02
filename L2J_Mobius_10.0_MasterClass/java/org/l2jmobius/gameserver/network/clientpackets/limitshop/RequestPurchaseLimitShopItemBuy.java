@@ -138,7 +138,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		}
 		
 		// Check existing items.
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < _product.getIngredientIds().length; i++)
 		{
 			if (_product.getIngredientIds()[i] == 0)
 			{
@@ -171,7 +171,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		}
 		
 		// Remove items.
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < _product.getIngredientIds().length; i++)
 		{
 			if (_product.getIngredientIds()[i] == 0)
 			{
