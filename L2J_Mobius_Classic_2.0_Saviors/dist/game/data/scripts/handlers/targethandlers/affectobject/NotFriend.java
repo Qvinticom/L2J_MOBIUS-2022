@@ -85,7 +85,7 @@ public class NotFriend implements IAffectObjectHandler
 			}
 			
 			// Arena.
-			if (creature.isInsideZone(ZoneId.PVP) && target.isInsideZone(ZoneId.PVP))
+			if (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE) && target.isInsideZone(ZoneId.PVP) && !target.isInsideZone(ZoneId.SIEGE))
 			{
 				return true;
 			}
