@@ -107,7 +107,7 @@ public class Q10891_AtANewPlace extends Quest
 				if (qs.isCond(5))
 				{
 					addExpAndSp(player, 906_387_492, 906_387);
-					giveItems(player, SCROLL, 10); // Scroll of Escape: Blackbird Campsite Ξ²β‚¬β€� 10 pcs.
+					giveItems(player, SCROLL, 10); // Scroll of Escape: Blackbird Campsite - 10 pcs.
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
- * GiantΞ�οΏ½ΞΏΞ�Β½Ξ�β€™Ξ’Β²Ξ�οΏ½Ξ’Β²Ξ�Β²Ξ²β€�Β¬ΞΏΞ�Β½Ξ�β€™Ξ’Β¬Ξ�οΏ½Ξ’Β²Ξ�Β²Ξ²β€�Β¬ΞΏΞ�Β½Ξ�οΏ½Ξ²β‚¬Β s Evolution (10538)
+ * Giant's Evolution (10538)
  * @URL https://l2wiki.com/Giant%E2%80%99s_Evolution
  * @author Dmitri
  */
