@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14700" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14700" level="80" type="Pet" name="Mechanical Golem">
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" />
 			<param name="step1_action01" value="48" />
@@ -40,7 +40,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14701" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14701" level="80" type="Pet" name="Mechanical Golem">
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" />
 			<param name="step1_action01" value="48" />

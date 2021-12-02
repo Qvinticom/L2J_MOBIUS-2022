@@ -337,7 +337,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25805" level="98" type="Monster" name="Escort" title="Queen's Subordinate">
+	<npc id="25805" level="98" type="Monster" name="Praetorian" title="Queen's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="4" />
@@ -400,7 +400,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25806" level="98" type="Monster" name="Escort" title="Queen's Subordinate">
+	<npc id="25806" level="98" type="Monster" name="Praetorian" title="Queen's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -767,7 +767,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25813" level="66" type="Monster" name="Byron" title="Queen of Blood">
+	<npc id="25813" level="66" type="Monster" name="Baron" title="Queen of Blood">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25814" count="2" respawnTime="360" weightPoint="1" />
@@ -831,7 +831,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25814" level="65" type="Monster" name="Byron's Maid">
+	<npc id="25814" level="65" type="Monster" name="Baron's Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -5385,7 +5385,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25898" level="99" type="Monster" name="Cyclone">
+	<npc id="25898" level="99" type="Monster" name="Vortex">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />

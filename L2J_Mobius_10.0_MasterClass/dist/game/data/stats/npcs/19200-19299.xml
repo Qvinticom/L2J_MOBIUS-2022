@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19200" level="85" type="FriendlyNpc" name="Reep" title="Weapons Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2792,7 +2792,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="19276" level="99" type="Folk" name="Bundle (Presentation)">
+	<npc id="19276" level="99" type="Folk" name="Scarecrow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3030,7 +3030,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19284" level="61" type="Folk" name="Explosive Orc Barrel">
+	<npc id="19284" level="61" type="Folk" name="Bomb Loaded Oak Barrel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3310,7 +3310,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19294" level="93" type="Monster" name="Cocoon Destroyer" title="Violent">
+	<npc id="19294" level="93" type="Monster" name="Cocoon Destroyer" title="Savage">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="party_mode" value="1" />

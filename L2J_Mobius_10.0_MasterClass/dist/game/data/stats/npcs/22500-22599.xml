@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22500" level="78" type="Monster" name="Lost Watchman">
 		<parameters>
@@ -711,7 +711,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22541" level="94" type="Monster" name="Dragontroop Infantry">
+	<npc id="22541" level="94" type="Monster" name="Dragontroop Soldier">
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -984,7 +984,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22546" level="93" type="Monster" name="Berserker">
+	<npc id="22546" level="93" type="Monster" name="Dragontroop Berserker">
 		<parameters>
 			<param name="Skill01_Prob" value="3333" />
 			<skill name="Skill01_ID" id="5274" level="5" />
@@ -1648,7 +1648,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22597" level="94" type="Monster" name="Dragontroop Infantry">
+	<npc id="22597" level="94" type="Monster" name="Dragontroop Soldier">
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />

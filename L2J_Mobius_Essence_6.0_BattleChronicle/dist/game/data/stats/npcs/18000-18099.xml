@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18001" level="60" type="Monster" name="">
 		<parameters>
@@ -766,8 +766,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="14.5" />
-			<height normal="30" />
+			<radius normal="18.85" />
+			<height normal="39.9" />
 		</collision>
 	</npc>
 	<npc id="18018" level="80" type="Folk" name="">
@@ -808,7 +808,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18020" level="80" type="RaidBoss" name="Queen Ant">
+	<npc id="18020" level="80" type="RaidBoss" name="Queen Ant" title="Dungeon Queen">
 		<!-- DEFEAT THE QUEEN EVENT -->
 		<parameters>
 			<minions name="Privates">
@@ -1126,7 +1126,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18028" level="80" type="Folk" name="Crazy Mechanic Golem" title="Raid Fighter">
+	<npc id="18028" level="80" type="Folk" name="Crazy Mechanical Golem" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1537,7 +1537,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="18049" level="80" type="Folk" name="Shilen's Messenger Cabrio" title="Raid Boss">
+	<npc id="18049" level="80" type="Folk" name="Shillien's Messenger Cabrio" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

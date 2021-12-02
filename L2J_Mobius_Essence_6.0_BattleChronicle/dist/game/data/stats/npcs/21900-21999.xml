@@ -1302,7 +1302,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="21943" level="83" type="Monster" name="Ryurik">
+	<npc id="21943" level="83" type="Monster" name="Ryurik" title="Ancient Pirate">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="816485" sp="24495" />
@@ -1336,7 +1336,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="21944" level="83" type="Monster" name="Eric">
+	<npc id="21944" level="83" type="Monster" name="Eric" title="Ancient Pirate">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="39719" /> 
@@ -1370,7 +1370,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="21945" level="83" type="Monster" name="Leif">
+	<npc id="21945" level="83" type="Monster" name="Leif" title="Ancient Pirate">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="836463" sp="25094" />
@@ -1403,7 +1403,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="21946" level="83" type="Monster" name="Gunhilde">
+	<npc id="21946" level="83" type="Monster" name="Gunhilde" title="Ancient Pirate">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="827507" sp="24826" />
@@ -1628,7 +1628,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="21957" level="85" type="Folk" name="Crokin Commander">
+	<npc id="21957" level="85" type="Folk" name="Crokin Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1735,7 +1735,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21960" level="80" type="Monster" name="Lord Ishka" title="Apostle of the Valley" element="EARTH">
+	<npc id="21960" level="80" type="Monster" name="Lord Ishka" title="Slayer of the Valley" element="EARTH">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8444672" sp="4110208" attributeExp="1144" />
@@ -1897,7 +1897,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21964" level="67" type="Monster" name="Pachycephalosaurus" title="Possessed Berserker" element="EARTH">
+	<npc id="21964" level="67" type="Monster" name="Pachycephalosaurus" element="EARTH">
 		<race>NONE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8126" sp="885" attributeExp="25" />
@@ -1984,7 +1984,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21968" level="69" type="Monster" name="Ornithomimus" title="Possessed Berserker" element="EARTH">
+	<npc id="21968" level="69" type="Monster" name="Ornithomimus" element="EARTH">
 		<race>NONE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8618" sp="1255" attributeExp="28" />
@@ -2071,7 +2071,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21971" level="80" type="Monster" name="Velociraptor" title="Possessed Berserker" element="EARTH">
+	<npc id="21971" level="80" type="Monster" name="Velociraptor" element="EARTH">
 		<race>NONE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10374" sp="839" attributeExp="360" />
@@ -2158,7 +2158,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21974" level="80" type="Monster" name="Ornithomimus" title="Possessed Berserker" element="EARTH">
+	<npc id="21974" level="80" type="Monster" name="Ornithomimus" element="EARTH">
 		<race>NONE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10635" sp="1589" attributeExp="440" />
@@ -2216,7 +2216,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21976" level="80" type="Monster" name="Deinonychus" title="Possessed Berserker" element="EARTH">
+	<npc id="21976" level="80" type="Monster" name="Deinonychus" element="EARTH">
 		<race>NONE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10723" sp="2467" attributeExp="480" />
@@ -2274,7 +2274,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21978" level="80" type="Monster" name="Tyrannosaurus" title="Possessed Berserker" element="EARTH">
+	<npc id="21978" level="80" type="Monster" name="Tyrannosaurus" element="EARTH">
 		<race>NONE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21632" sp="2696" attributeExp="520" />

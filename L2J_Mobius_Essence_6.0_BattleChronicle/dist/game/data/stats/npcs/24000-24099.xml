@@ -23,7 +23,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="24001" level="80" type="Folk" name="Kain Van Halter" title="Prince of the Second Dimension">
+	<npc id="24001" level="80" type="Folk" name="Kain van Halter" title="Prince of the Second Dimension">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -311,7 +311,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="24014" level="66" type="Monster" name="Vanor" title="Mercenary of Glory" element="WIND">
+	<npc id="24014" level="66" type="Monster" name="Vanor" element="WIND">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="5007" sp="459" attributeExp="23" />
@@ -708,7 +708,7 @@
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 	</npc>
-	<npc id="24024" level="80" type="Folk" name="Hunter" title="Ancient Marauder">
+	<npc id="24024" level="80" type="Folk" name="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1202,7 +1202,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24033" level="71" type="Monster" name="Guardian Spirit" element="FIRE">
+	<npc id="24033" level="71" type="Monster" name="Guardian's Spirit" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />

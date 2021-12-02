@@ -102,7 +102,7 @@
 			<height normal="120.75" />
 		</collision>
 	</npc>
-	<npc id="26431" level="120" type="RaidBoss" name="Avenger Alusion">
+	<npc id="26431" level="120" type="RaidBoss" name="Avenger Alusion" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4270604083200" sp="3843543600" />
@@ -234,7 +234,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26432" level="106" type="RaidBoss" name="Avenger Graff">
+	<npc id="26432" level="106" type="RaidBoss" name="Avenger Graff" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="3332257463808" sp="2999031659" />
@@ -319,7 +319,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26433" level="120" type="RaidBoss" name="Demon Venoma">
+	<npc id="26433" level="120" type="RaidBoss" name="Demonic Venom" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="4908329395200" sp="4417496352" />
@@ -452,7 +452,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26434" level="116" type="RaidBoss" name="Fiend Sarboth">
+	<npc id="26434" level="116" type="RaidBoss" name="Fiend Sarboth" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="4583834285184" sp="4125450760" />
@@ -520,7 +520,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26435" level="120" type="RaidBoss" name="Watcher Tristan">
+	<npc id="26435" level="120" type="RaidBoss" name="Watcher Tristan" title="Raid Boss">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="4391878579200" sp="3952690704" />
@@ -652,7 +652,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26436" level="108" type="RaidBoss" name="Watcher Setheth">
+	<npc id="26436" level="108" type="RaidBoss" name="Watcher Setheth" title="Raid Boss">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="3557421649152" sp="3201679471" />
@@ -720,7 +720,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26437" level="120" type="RaidBoss" name="Berserker Zetahl">
+	<npc id="26437" level="120" type="RaidBoss" name="Berserker Zetahl" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="4773773491200" sp="4296396096" />
@@ -852,7 +852,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26438" level="114" type="RaidBoss" name="Berserker Tabris">
+	<npc id="26438" level="114" type="RaidBoss" name="Berserker Tabris" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="4308330575808" sp="3877497477" />
@@ -920,7 +920,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26439" level="120" type="RaidBoss" name="Ferocious Valac">
+	<npc id="26439" level="120" type="RaidBoss" name="Ferocious Valac" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="4642918963200" sp="4178626992" />
@@ -1052,7 +1052,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26440" level="112" type="RaidBoss" name="Arrogant Lebruum">
+	<npc id="26440" level="112" type="RaidBoss" name="Arrogant Lebruum" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="4044498296832" sp="3640048402" />
@@ -1269,7 +1269,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26442" level="110" type="RaidBoss" name="Mad Cullan">
+	<npc id="26442" level="110" type="RaidBoss" name="Mad Cullan" title="Raid Boss">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="3794387889600" sp="3414948999" raidPoints="0" />
@@ -1487,7 +1487,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26444" level="118" type="RaidBoss" name="Scorpion King Votan">
+	<npc id="26444" level="118" type="RaidBoss" name="Scorpion King Votan" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="4879895267520" sp="4391905713" raidPoints="0" />
@@ -2271,7 +2271,7 @@
 			<height normal="82.02" />
 		</collision>
 	</npc>
-	<npc id="26468" level="110" type="Monster" name="Krotanion">
+	<npc id="26468" level="110" type="Monster" name="Krotanion" title="Brutal">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2299,7 +2299,7 @@
 			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26469" level="110" type="Monster" name="Kropion">
+	<npc id="26469" level="110" type="Monster" name="Kropion" title="Wrathful">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2587,5 +2587,43 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
+	</npc>
+	<npc id="26480" level="85" type="Folk" name="Slaughter Bathin" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="141473764" hpRegen="10.5" mp="66584" mpRegen="3.6" />
+			<speed>
+				<walk ground="100" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="56" />
+			<height normal="125" />
+		</collision>
+	</npc>
+	<npc id="26481" level="85" type="Folk" name="Slaughter Bathin" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="141473764" hpRegen="10.5" mp="66584" mpRegen="3.6" />
+			<speed>
+				<walk ground="100" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="56" />
+			<height normal="125" />
+		</collision>
 	</npc>
 </list>

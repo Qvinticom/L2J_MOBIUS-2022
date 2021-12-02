@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20800" level="76" type="Monster" name="Eva's Watchman" element="WATER">
 		<parameters>
@@ -70,7 +70,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20801" level="77" type="Monster" name="Piker" element="WATER">
+	<npc id="20801" level="77" type="Monster" name="Pikeman" element="WATER">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1022,7 +1022,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="20817" level="62" type="Monster" name="Corrupt Sage" element="WIND">
+	<npc id="20817" level="62" type="Monster" name="Corrupted Sage" element="WIND">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1899,7 +1899,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="20831" level="76" type="Monster" name="Seal Angel">
+	<npc id="20831" level="76" type="Monster" name="Sealed Angel">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -3788,7 +3788,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20860" level="76" type="Monster" name="Seal Angel">
+	<npc id="20860" level="76" type="Monster" name="Sealed Angel">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />

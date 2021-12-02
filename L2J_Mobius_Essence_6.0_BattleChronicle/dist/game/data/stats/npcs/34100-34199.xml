@@ -38,7 +38,7 @@
 			<height normal="52.8" />
 		</collision>
 	</npc>
-	<npc id="34102" level="85" type="Folk" name="Heppy" title="Merry Christmas 2017">
+	<npc id="34102" level="85" type="Folk" name="Heppy" title="Event Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -57,7 +57,7 @@
 			<height normal="22.25" />
 		</collision>
 	</npc>
-	<npc id="34103" level="85" type="Folk" name="Nuia" title="Event Reward">
+	<npc id="34103" level="85" type="Folk" name="Nuia" title="Reward Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -306,7 +306,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34116" level="85" type="Guard" name="Putin" title="Marksman">
+	<npc id="34116" level="85" type="Guard" name="Pugin" title="Marksman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>KAMAEL</race>
 		<sex>MALE</sex>
@@ -345,7 +345,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="34163" level="85" type="Folk" name="Augustina">
+	<npc id="34163" level="85" type="Folk" name="Aylein" title="Baium's Trial Guide">
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -698,7 +698,7 @@
 			<height normal="16.7" />
 		</collision>
 	</npc>
-	<npc id="34136" level="85" type="Folk" name="Artheo Ken Sider" title="Military Association Leader">
+	<npc id="34136" level="85" type="Folk" name="Artheo Ken Sider" title="Chief Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1173,7 +1173,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="34161" level="85" type="Teleporter" name="Tarr" title="Teleporter">
+	<npc id="34161" level="85" type="Teleporter" name="Tarr" title="Lair Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1713,7 +1713,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="5207" attributeExp="1204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="128" />
@@ -1749,7 +1749,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="5207" attributeExp="1204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -1768,7 +1768,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="5207" attributeExp="1204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
@@ -1804,7 +1804,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="5207" attributeExp="1204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="10" />
 				<run ground="1" />
@@ -1916,7 +1916,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="5207" attributeExp="1204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1935,7 +1935,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="35866" sp="5207" attributeExp="1204"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="118446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18800" level="77" type="Monster" name="Fledgling Lavasaurus">
 		<parameters>
@@ -466,7 +466,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18812" level="81" type="Monster" name="Kasha's Eye" title="Atk. Spd. Boost">
+	<npc id="18812" level="81" type="Monster" name="Kasha's Eye" title="Atk. Spd.">
 		<parameters>
 			<param name="my_buff_type" value="1" />
 		</parameters>
@@ -497,7 +497,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18813" level="81" type="Monster" name="Kasha's Eye" title="P. Atk. Boost">
+	<npc id="18813" level="81" type="Monster" name="Kasha's Eye" title="P. Atk.">
 		<parameters>
 			<param name="my_buff_type" value="2" />
 		</parameters>
@@ -528,7 +528,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18814" level="81" type="Monster" name="Kasha's Eye" title="Critical Rate Boost">
+	<npc id="18814" level="81" type="Monster" name="Kasha's Eye" title="Critical Rate">
 		<parameters>
 			<param name="my_buff_type" value="3" />
 		</parameters>
@@ -891,7 +891,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="18826" level="80" type="Folk" name="Shilen's Evil Thoughts (Presentation)">
+	<npc id="18826" level="80" type="Folk" name="Shillien's Evil Thoughts (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -990,7 +990,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18829" level="80" type="Folk" name="Shilen's Evil Thoughts Captain (Presentation)">
+	<npc id="18829" level="80" type="Folk" name="Shillien's Evil Thoughts Captain (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2304,7 +2304,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18863" level="84" type="Monster" name="Priest Ugoros" title="Tanta Lizardmen">
+	<npc id="18863" level="84" type="Monster" name="Priest Ugoros" title="Tanta Lizardman">
 		<parameters>
 			<skill name="Skill01_ID" id="6426" level="1" />
 		</parameters>
@@ -2590,7 +2590,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="18869" level="83" type="TamedBeast" name="Kookaburra" title="Tame">
+	<npc id="18869" level="83" type="TamedBeast" name="Alpine Kookaburra" title="Tame">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -2861,7 +2861,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="18873" level="83" type="FeedableBeast" name="Baby Alpine Kookaburra">
+	<npc id="18873" level="83" type="FeedableBeast" name="Alpine Kookaburra">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="1" />
@@ -2917,7 +2917,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18874" level="83" type="FeedableBeast" name="Young Kookaburra">
+	<npc id="18874" level="83" type="FeedableBeast" name="Alpine Kookaburra">
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="2" />

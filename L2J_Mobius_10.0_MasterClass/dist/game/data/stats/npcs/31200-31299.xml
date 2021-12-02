@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31200" level="70" type="Folk" name="Preacher of Doom">
 		<!-- Confirmed CT2.5 -->
@@ -2535,7 +2535,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="31262" level="70" type="Merchant" name="Rupert" title="Trader">
+	<npc id="31262" level="70" type="Merchant" name="Rupert" title="Merchant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2617,7 +2617,7 @@
 			<height normal="21.1" />
 		</collision>
 	</npc>
-	<npc id="31264" level="70" type="Folk" name="Olsun" title="Symbol Maker">
+	<npc id="31264" level="70" type="Folk" name="Olsun" title="Dye Merchant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2732,7 +2732,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="31266" level="70" type="Folk" name="Kaiser">
+	<npc id="31266" level="70" type="Folk" name="Kaysen">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>

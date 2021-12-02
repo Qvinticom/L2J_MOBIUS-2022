@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="13400" level="1" type="Monster" name="High Quality Wintermelon">
+	<npc id="13400" level="1" type="Monster" name="Snowy Ripe Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -28,7 +28,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13401" level="1" type="Monster" name="Defective Wintermelon">
+	<npc id="13401" level="1" type="Monster" name="Snowy Rotten Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -56,7 +56,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="13402" level="1" type="Monster" name="King Wintermelon">
+	<npc id="13402" level="1" type="Monster" name="Snowy Royal Ripe Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -84,7 +84,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="13403" level="1" type="Folk" name="Young Large Wintermelon">
+	<npc id="13403" level="1" type="Folk" name="Snowy Large Young Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -112,7 +112,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13404" level="1" type="Monster" name="High Quality Large Wintermelon">
+	<npc id="13404" level="1" type="Monster" name="Snowy Large Ripe Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -140,7 +140,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="13405" level="1" type="Monster" name="Defective Large Wintermelon">
+	<npc id="13405" level="1" type="Monster" name="Snowy Large Rotten Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -168,7 +168,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="13406" level="1" type="Monster" name="Emperor Wintermelon">
+	<npc id="13406" level="1" type="Monster" name="Snowy Royal Large Ripe Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -367,7 +367,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13416" level="99" type="Folk" name="Saggitarius">
+	<npc id="13416" level="99" type="Folk" name="Sagittarius">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -424,7 +424,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13419" level="1" type="Monster" name="High Quality Squash">
+	<npc id="13419" level="1" type="Monster" name="Ripe Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -468,7 +468,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="13421" level="1" type="Monster" name="High Quality Large Squash">
+	<npc id="13421" level="1" type="Monster" name="Large Ripe Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -787,7 +787,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="13436" level="85" type="Decoy" name="Decoy">
+	<npc id="13436" level="85" type="Decoy" name="False Decoy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -806,7 +806,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13437" level="90" type="Decoy" name="Decoy">
+	<npc id="13437" level="90" type="Decoy" name="False Decoy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -825,7 +825,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13438" level="95" type="Decoy" name="Decoy">
+	<npc id="13438" level="95" type="Decoy" name="False Decoy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -844,7 +844,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13439" level="99" type="Decoy" name="Decoy">
+	<npc id="13439" level="99" type="Decoy" name="False Decoy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1377,7 +1377,7 @@
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="13461" level="101" type="Folk" name="Severe Trap">
+	<npc id="13461" level="101" type="Folk" name="Frost Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="10806" level="2" />
@@ -1408,7 +1408,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13462" level="103" type="Folk" name="Severe Trap">
+	<npc id="13462" level="103" type="Folk" name="Frost Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="10806" level="3" />
@@ -1439,7 +1439,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13463" level="105" type="Folk" name="Severe Trap">
+	<npc id="13463" level="105" type="Folk" name="Frost Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="10806" level="4" />
@@ -1762,7 +1762,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="13485" level="85" type="Folk" name="Pisces">
+	<npc id="13485" level="85" type="Folk" name="Peace">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1781,7 +1781,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13486" level="85" type="Folk" name="Aquarius">
+	<npc id="13486" level="85" type="Folk" name="Aku">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1933,7 +1933,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13494" level="85" type="Folk" name="Saggitarius">
+	<npc id="13494" level="85" type="Folk" name="Sagittarius">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

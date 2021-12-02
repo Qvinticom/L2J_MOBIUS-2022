@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23101" level="61" type="Monster" name="Slaughter Bathin">
 		<parameters>
@@ -164,7 +164,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23104" level="65" type="Monster" name="Elmoreden's Lady">
+	<npc id="23104" level="65" type="Monster" name="Elmoreden Lady">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23107" count="1" respawnTime="360" weightPoint="1" />
@@ -2379,7 +2379,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23151" level="96" type="Monster" name="Shilen's Messenger">
+	<npc id="23151" level="96" type="Monster" name="Shillien's Messenger">
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
 			<param name="MoveAroundSocial1" value="180" />

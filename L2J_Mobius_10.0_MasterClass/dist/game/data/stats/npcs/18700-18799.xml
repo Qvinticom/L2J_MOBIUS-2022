@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18700" level="80" type="Monster">
 		<!-- Confirmed CT2.5 -->
@@ -3255,7 +3255,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="18782" level="70" type="Monster" name="Shilen's Zealot">
+	<npc id="18782" level="70" type="Monster" name="Shillien's Zealot">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3450,7 +3450,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18786" level="80" type="Monster" name="Defeated Troops Infantry">
+	<npc id="18786" level="80" type="Monster" name="Defeated Dragontroop Soldier">
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3557,7 +3557,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18788" level="81" type="Monster" name="Defeated Troops Wizard">
+	<npc id="18788" level="81" type="Monster" name="Defeated Dragontroop Wizard">
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3717,7 +3717,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="18791" level="80" type="Monster" name="Defeated Troops Javelin Thrower">
+	<npc id="18791" level="80" type="Monster" name="Defeated Dragontroop Lancer">
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3780,7 +3780,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="18792" level="80" type="Monster" name="Defeated Troops Javelin Thrower">
+	<npc id="18792" level="80" type="Monster" name="Defeated Dragontroop Lancer">
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />

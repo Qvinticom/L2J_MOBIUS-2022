@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="31400" level="99" type="Guard" name="Dummy - Sword Guard" title="For Test">
+	<npc id="31400" level="99" type="Guard" name="Dummy - Sword Guard" title="Test">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
@@ -41,7 +41,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31401" level="99" type="Guard" name="Dummy - Bow Guard" title="For Test">
+	<npc id="31401" level="99" type="Guard" name="Dummy - Bow Guard" title="Test">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
@@ -287,7 +287,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="31409" level="70" type="Folk" name="Monster Race Guide" title="Hunter's Village">
+	<npc id="31409" level="70" type="Folk" name="Monster Race Guide" title="Hunters' Village">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -410,7 +410,7 @@
 			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="31412" level="70" type="Folk" name="Monster Race Guide" title="Town of Rune">
+	<npc id="31412" level="70" type="Folk" name="Monster Race Guide" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

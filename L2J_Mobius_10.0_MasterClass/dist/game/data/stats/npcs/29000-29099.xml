@@ -698,7 +698,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29020" level="125" type="GrandBoss" name="Baium">
+	<npc id="29020" level="125" type="GrandBoss" name="Baium" title="Elmoreden's Emperor">
 		<!-- NEW UPDATE: PRELUDE OF WAR -->
 		<parameters>
 			<minions name="Privates">
@@ -895,7 +895,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29023" level="58" type="Monster" name="Doll Blader">
+	<npc id="29023" level="58" type="Monster" name="Maiden Doll">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -1294,7 +1294,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="29030" level="84" type="RaidBoss" name="Fenril Hound Kerinne" title="Family of Valakas">
+	<npc id="29030" level="84" type="RaidBoss" name="Fenril Hound Kerinne" title="Valakas' Spawn">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29031" count="2" respawnTime="360" weightPoint="1" />
@@ -1427,7 +1427,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29033" level="84" type="RaidBoss" name="Fenril Hound Freki" title="Family of Valakas">
+	<npc id="29033" level="84" type="RaidBoss" name="Fenril Hound Freki" title="Valakas' Spawn">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29034" count="3" respawnTime="360" weightPoint="1" />
@@ -1560,7 +1560,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29036" level="84" type="RaidBoss" name="Fenril Hound Uruz" title="Family of Valakas">
+	<npc id="29036" level="84" type="RaidBoss" name="Fenril Hound Uruz" title="Valakas' Spawn">
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="9" />
 			<skill name="SelfBuff_a" id="4175" level="9" />
@@ -1611,7 +1611,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29037" level="84" type="RaidBoss" name="Fenril Hound Kinaz" title="Family of Valakas">
+	<npc id="29037" level="84" type="RaidBoss" name="Fenril Hound Kinaz" title="Valakas' Spawn">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29038" count="3" respawnTime="360" weightPoint="1" />
@@ -2473,7 +2473,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="29054" level="99" type="RaidBoss" name="Benom" title="Triol's Leader">
+	<npc id="29054" level="99" type="RaidBoss" name="Venom" title="Triol's Leader">
 		<parameters>
 			<skill name="PhysicalSpecial" id="4993" level="1" />
 			<skill name="DDMagic" id="4994" level="1" />
@@ -2818,7 +2818,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29062" level="99" type="RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
+	<npc id="29062" level="99" type="RaidBoss" name="Andreas Van Halter" title="High Priestess">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29063" count="3" respawnTime="360" weightPoint="1" />
@@ -3205,7 +3205,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29068" level="118" type="GrandBoss" name="Antharas" title="Land Dragon">
+	<npc id="29068" level="118" type="GrandBoss" name="Antharas" title="Earth Dragon">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>

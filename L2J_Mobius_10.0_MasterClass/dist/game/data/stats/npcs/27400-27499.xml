@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="27400" level="51" type="Monster" name="Shilen's Evil Thoughts">
+	<npc id="27400" level="51" type="Monster" name="Shillien's Evil Thoughts">
 		<parameters>
 			<skill name="Skill01_ID" id="5975" level="1" />
 			<skill name="Skill02_ID" id="5976" level="1" />
@@ -36,7 +36,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27401" level="61" type="Monster" name="Shilen's Evil Thoughts">
+	<npc id="27401" level="61" type="Monster" name="Shillien's Evil Thoughts">
 		<parameters>
 			<skill name="Skill01_ID" id="5975" level="1" />
 			<skill name="Skill02_ID" id="5976" level="2" />
@@ -72,7 +72,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27402" level="79" type="Monster" name="Shilen's Evil Thoughts">
+	<npc id="27402" level="79" type="Monster" name="Shillien's Evil Thoughts">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1223,7 +1223,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="27425" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
+	<npc id="27425" level="79" type="Monster" name="Death Wound" title="Shillien's Creation">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6050" level="13" />
@@ -1266,7 +1266,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27426" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
+	<npc id="27426" level="79" type="Monster" name="Death Wound" title="Shillien's Creation">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6914" level="3" />
@@ -1310,7 +1310,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27427" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
+	<npc id="27427" level="79" type="Monster" name="Death Wound" title="Shillien's Creation">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6914" level="3" />
@@ -1352,7 +1352,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27428" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
+	<npc id="27428" level="79" type="Monster" name="Death Wound" title="Shillien's Creation">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6050" level="13" />
@@ -1396,7 +1396,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27429" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
+	<npc id="27429" level="79" type="Monster" name="Death Wound" title="Shillien's Creation">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6914" level="3" />
@@ -1440,7 +1440,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27430" level="76" type="Monster" name="Screaming Shaman" title="Resurrected">
+	<npc id="27430" level="76" type="Monster" name="Dismal Shriller" title="Resurrected">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6527" level="11" />
@@ -1767,7 +1767,7 @@
 			<skill id="14677" level="1" /> <!-- Cry of Destiny - Giant Punch -->
 		</skillList>
 	</npc>
-	<npc id="27438" level="85" type="Monster" name="Krakia Carcass" title="Yul Archer">
+	<npc id="27438" level="85" type="Monster" name="Krakia Krakos" title="Yul Archer">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14682" level="1" />
@@ -2262,7 +2262,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27447" level="86" type="Monster" name="Demonic Carcass" title="Watchman of the Seal">
+	<npc id="27447" level="86" type="Monster" name="Demonic Krakos" title="Watchman of the Seal">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2986,7 +2986,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27465" level="86" type="Monster" name="Krakia Carcass" title="Yul Archer">
+	<npc id="27465" level="86" type="Monster" name="Krakia Krakos" title="Yul Archer">
 		<parameters>
 			<skill name="Skill01_ID" id="14682" level="1" />
 			<skill name="Skill02_ID" id="14683" level="1" />
@@ -3283,7 +3283,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27470" level="70" type="Monster" name="Shilen's Messenger Cabrio" title="Quest Monster">
+	<npc id="27470" level="70" type="Monster" name="Shillien's Messenger Cabrio" title="Quest Monster">
 		<parameters>
 			<minions name="Privates">
 				<npc id="27471" count="2" respawnTime="120" weightPoint="1" />
@@ -4007,7 +4007,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="27492" level="96" type="Monster" name="Shilen's Messenger">
+	<npc id="27492" level="96" type="Monster" name="Shillien's Messenger">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="13983" /> <!-- Monster Only (Death Knight_2hs) -->

@@ -323,7 +323,7 @@
 			<height normal="193.5" />
 		</collision>
 	</npc>
-	<npc id="19717" level="85" type="Folk" name="Seal of Punishment">
+	<npc id="19717" level="85" type="Folk" name="Seal of Scourge">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -643,7 +643,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="19734" level="85" type="Folk" name="Explosive Orc Barrel">
+	<npc id="19734" level="85" type="Folk" name="Bomb Loaded Oak Barrel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1204,64 +1204,64 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="19782" level="85" type="Folk" name="Baium">
+	<npc id="19782" level="85" type="Folk" name="Lindvior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="80" />
-				<run ground="120" />
+				<walk ground="100" />
+				<run ground="270" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="65" />
-			<height normal="174" />
+			<radius normal="350" />
+			<height normal="210" />
 		</collision>
 	</npc>
-	<npc id="19783" level="85" type="Folk" name="Zaken">
+	<npc id="19783" level="85" type="Folk" name="Fafurion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="42" />
-				<run ground="170" />
+				<walk ground="45" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="16" />
-			<height normal="32" />
+			<radius normal="200" />
+			<height normal="320" />
 		</collision>
 	</npc>
-	<npc id="19784" level="85" type="Folk" name="Queen Ant">
+	<npc id="19784" level="85" type="Folk" name="Valakas">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="80" />
-				<run ground="130" />
+				<walk ground="120" />
+				<run ground="300" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="45" />
-			<height normal="53" />
+			<radius normal="190" />
+			<height normal="335" />
 		</collision>
 	</npc>
-	<npc id="19785" level="85" type="Folk" name="Orfen">
+	<npc id="19785" level="85" type="Folk" name="Eigis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1269,15 +1269,15 @@
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="35" />
-			<height normal="143" />
+			<radius normal="20" />
+			<height normal="67" />
 		</collision>
 	</npc>
 	<npc id="19786" level="85" type="Folk" name="Core">

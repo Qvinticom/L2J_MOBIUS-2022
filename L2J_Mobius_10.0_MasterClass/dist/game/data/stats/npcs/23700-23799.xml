@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23700" level="100" type="Monster" name="Altar Guardian">
 		<race>ETC</race>
@@ -860,7 +860,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23728" level="100" type="Monster" name="Shaqrima Carcass">
+	<npc id="23728" level="100" type="Monster" name="Shaqrima Krakos">
 		<race>GIANT</race>
 		<acquire exp="1333313600" sp="1199900" />
 		<equipment rhand="15304" />
@@ -989,7 +989,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23731" level="101" type="Monster" name="Om Carcass">
+	<npc id="23731" level="101" type="Monster" name="Om Krakos">
 		<race>GIANT</race>
 		<acquire exp="1187051811" sp="1068249" />
 		<equipment rhand="15304" />
@@ -1442,7 +1442,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23742" level="101" type="Monster" name="Naia Bathus" title="Demons Foreman">
+	<npc id="23742" level="101" type="Monster" name="Naia Bathus" title="Demonic Foreman">
 		<parameters>
 			<skill name="Skill01_ID" id="16594" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -1492,7 +1492,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23743" level="101" type="Monster" name="Naia Karkus" title="Demons Foreman">
+	<npc id="23743" level="101" type="Monster" name="Naia Krakos" title="Demonic Foreman">
 		<!-- Source: www.l2wiki.com -->
 		<parameters>
 			<skill name="Skill01_ID" id="16595" level="1" />
@@ -1546,7 +1546,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23744" level="101" type="Monster" name="Naia Kshana" title="Demons Foreman">
+	<npc id="23744" level="101" type="Monster" name="Naia Kshana" title="Demonic Foreman">
 		<race>GIANT</race>
 		<acquire exp="494607115" sp="445070" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1592,7 +1592,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23745" level="101" type="Monster" name="Naia Lucas" title="Demons Foreman">
+	<npc id="23745" level="101" type="Monster" name="Naia Lucas" title="Demonic Foreman">
 		<race>GIANT</race>
 		<acquire exp="247303558" sp="247375" />
 		<equipment rhand="15304" />
@@ -2248,7 +2248,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23763" level="85" type="Monster" name="Fairy Knight" title="Enraged">
+	<npc id="23763" level="85" type="Monster" name="Fairy Knight" title="Savage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2304,7 +2304,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23765" level="85" type="Monster" name="Fairy Rogue" title="Enraged">
+	<npc id="23765" level="85" type="Monster" name="Fairy Rogue" title="Savage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2360,7 +2360,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23767" level="85" type="Monster" name="Fairy Warrior" title="Enraged">
+	<npc id="23767" level="85" type="Monster" name="Fairy Warrior" title="Savage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2418,7 +2418,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23769" level="85" type="Monster" name="Satyr Summoner" title="Enraged">
+	<npc id="23769" level="85" type="Monster" name="Satyr Summoner" title="Savage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2478,7 +2478,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23771" level="85" type="Monster" name="Satyr Witch" title="Enraged">
+	<npc id="23771" level="85" type="Monster" name="Satyr Witch" title="Savage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2538,7 +2538,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23773" level="85" type="Monster" name="Satyr Wizard" title="Enraged">
+	<npc id="23773" level="85" type="Monster" name="Satyr Wizard" title="Savage">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2634,7 +2634,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23775" level="102" type="Monster" name="Delta Carcass">
+	<npc id="23775" level="102" type="Monster" name="Delta Krakos">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16653" level="1" />
@@ -3322,7 +3322,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23792" level="101" type="Monster" name="Carcass" title="Marred">
+	<npc id="23792" level="101" type="Monster" name="Krakos" title="Marred">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="15304" />
@@ -3536,7 +3536,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23799" level="102" type="Monster" name="Delta Carcass" title="Superion Scout">
+	<npc id="23799" level="102" type="Monster" name="Delta Krakos" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="364870361" sp="328351" />
 		<equipment rhand="15304" />

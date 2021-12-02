@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="36200" level="90" type="Defender" name="Wizard" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
@@ -2677,7 +2677,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36248" level="75" type="FortManager" name="Foreman" title="Hunter's Fortress">
+	<npc id="36248" level="75" type="FortManager" name="Foreman" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
@@ -2724,7 +2724,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36249" level="75" type="Folk" name="Suspicious Merchant" title="Hunter's Fortress">
+	<npc id="36249" level="75" type="Folk" name="Suspicious Merchant" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2771,7 +2771,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36250" level="75" type="Folk" name="Guard Captain" title="Hunter's Fortress">
+	<npc id="36250" level="75" type="Folk" name="Guard Captain" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2820,7 +2820,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36251" level="75" type="Folk" name="Archer Captain" title="Hunter's Fortress">
+	<npc id="36251" level="75" type="Folk" name="Archer Captain" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2861,7 +2861,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36252" level="75" type="Folk" name="General" title="Hunter's Fortress">
+	<npc id="36252" level="75" type="Folk" name="General" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2903,7 +2903,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36253" level="75" type="Folk" name="Support Unit Captain" title="Hunter's Fortress">
+	<npc id="36253" level="75" type="Folk" name="Support Unit Captain" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2944,7 +2944,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36254" level="75" type="Folk" name="Engineering Manager" title="Hunter's Fortress">
+	<npc id="36254" level="75" type="Folk" name="Engineering Manager" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2985,7 +2985,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36255" level="75" type="FortLogistics" name="Logistics Officer" title="Hunter's Fortress">
+	<npc id="36255" level="75" type="FortLogistics" name="Logistics Officer" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3084,7 +3084,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36257" level="75" type="Folk" name="Detention Camp Warden" title="Hunter's Fortress">
+	<npc id="36257" level="75" type="Folk" name="Detention Camp Warden" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3270,7 +3270,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36261" level="94" type="Defender" name="Rebel Commander" title="Hunter's Fortress">
+	<npc id="36261" level="94" type="Defender" name="Rebel Commander" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3335,7 +3335,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36262" level="90" type="Defender" name="Rebel Elite Soldier" title="Hunter's Fortress">
+	<npc id="36262" level="90" type="Defender" name="Rebel Elite Soldier" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3395,7 +3395,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36263" level="89" type="Defender" name="Rebel Private" title="Hunter's Fortress">
+	<npc id="36263" level="89" type="Defender" name="Rebel Private" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3450,7 +3450,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36264" level="86" type="Defender" name="Royal Guard" title="Hunter's Fortress">
+	<npc id="36264" level="86" type="Defender" name="Royal Guard" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3508,7 +3508,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36265" level="86" type="Defender" name="Escort" title="Hunter's Fortress">
+	<npc id="36265" level="86" type="Defender" name="Escort" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4525,7 +4525,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36282" level="80" type="Monster" name="Ballista" title="Hunter's Fortress">
+	<npc id="36282" level="80" type="Monster" name="Ballista" title="Hunters' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="FameValue" value="30" />

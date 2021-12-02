@@ -1230,7 +1230,7 @@
 			<height normal="25.8" />
 		</collision>
 	</npc>
-	<npc id="25329" level="70" type="Monster" name="Violet" title="Raid Fighter">
+	<npc id="25329" level="70" type="Monster" name="Violette" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="7" />
 			<skill name="Debuff_a" id="4206" level="7" />
@@ -1688,7 +1688,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="25339" level="85" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25339" level="85" type="Monster" name="Alectia" title="Halisha's Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25340" count="1" respawnTime="360" weightPoint="1" />
@@ -1742,7 +1742,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25340" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25340" level="80" type="Monster" name="Alectia's Knight">
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="9" />
 			<skill name="SelfRangeBuff_a" id="4212" level="9" />
@@ -1784,7 +1784,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25341" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25341" level="80" type="Monster" name="Alectia's Knight">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1820,7 +1820,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25342" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25342" level="80" type="Monster" name="Tisha" title="Halisha's Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25343" count="1" respawnTime="360" weightPoint="1" />
@@ -1870,7 +1870,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25343" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25343" level="80" type="Monster" name="Tisha's Knight">
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="9" />
 			<skill name="SelfRangeBuff_a" id="4212" level="9" />
@@ -1912,7 +1912,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25344" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25344" level="80" type="Monster" name="Tisha's Knight">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1948,7 +1948,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25345" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25345" level="80" type="Monster" name="Tisha's Knight">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" />
 			<skill name="Debuff_a" id="4203" level="9" />
@@ -1990,7 +1990,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25346" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25346" level="80" type="Monster" name="Mekara" title="Halisha's Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25347" count="1" respawnTime="360" weightPoint="1" />
@@ -2039,7 +2039,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25347" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25347" level="80" type="Monster" name="Mekara's Knight">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" />
 			<skill name="Debuff_a" id="4199" level="9" />
@@ -2081,7 +2081,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25348" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25348" level="80" type="Monster" name="Mekara's Knight">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="9" />
 		</parameters>
@@ -2124,7 +2124,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25349" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25349" level="80" type="Monster" name="Morigul" title="Halisha's Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25350" count="1" respawnTime="360" weightPoint="1" />
@@ -2177,7 +2177,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25350" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25350" level="80" type="Monster" name="Morigul's Knight">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" />
 			<skill name="Debuff_a" id="4201" level="9" />
@@ -2219,7 +2219,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25351" level="80" type="Monster" name="Knight of Shadow">
+	<npc id="25351" level="80" type="Monster" name="Morigul's Knight">
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="9" />
 			<skill name="SelfRangeBuff_a" id="4212" level="9" />
@@ -2861,7 +2861,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25365" level="70" type="RaidBoss" name="Patriarch Kuroboros" title="Raid Boss">
+	<npc id="25365" level="70" type="RaidBoss" name="Patriarch Kuroboros" title="High Elite">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfBuff_a" id="4174" level="2" />
@@ -2945,7 +2945,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25366" level="85" type="RaidBoss" name="Kuroboros' High Priest" title="Raid Boss">
+	<npc id="25366" level="85" type="RaidBoss" name="Kuroboros' High Priest" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25367" count="2" respawnTime="360" weightPoint="1" />
@@ -3102,7 +3102,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25369" level="75" type="RaidBoss" name="Cursed Scavenger" title="Raid Boss">
+	<npc id="25369" level="75" type="RaidBoss" name="Cursed Scavenger" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25370" count="1" respawnTime="360" weightPoint="1" />
@@ -3801,7 +3801,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="25385" level="75" type="RaidBoss" name="Evil Spirit Tempest" title="Raid Boss">
+	<npc id="25385" level="75" type="RaidBoss" name="Evil Spirit Tempest" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25386" count="1" respawnTime="360" weightPoint="1" />
@@ -3888,7 +3888,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25386" level="35" type="Monster" name="Ghost of the Execution Grounds" title="Raid Fighter">
+	<npc id="25386" level="35" type="Monster" name="Storm Ghost" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="3" />
 		</parameters>
@@ -3931,7 +3931,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25387" level="35" type="Monster" name="Malignant Spirit of the Execution Grounds" title="Raid Fighter">
+	<npc id="25387" level="35" type="Monster" name="Storm Spirit" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
@@ -3970,7 +3970,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25388" level="60" type="RaidBoss" name="Red Eye Captain Trakia" title="Raid Boss">
+	<npc id="25388" level="60" type="RaidBoss" name="Red Eye Captain Trakia" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25389" count="3" respawnTime="360" weightPoint="1" />
@@ -4140,7 +4140,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25392" level="35" type="RaidBoss" name="Queen's Royal Guard Captain" title="Raid Boss">
+	<npc id="25392" level="35" type="RaidBoss" name="Queen's Royal Guard Captain" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25393" count="3" respawnTime="360" weightPoint="1" />
@@ -4271,7 +4271,7 @@
 			<height normal="39" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25395" level="80" type="RaidBoss" name="Archon Susceptor" title="Raid Boss">
+	<npc id="25395" level="80" type="RaidBoss" name="Archon Susceptor" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25396" count="1" respawnTime="360" weightPoint="1" />
@@ -4441,7 +4441,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="25398" level="80" type="RaidBoss" name="Gaze of Abyss" title="Raid Boss">
+	<npc id="25398" level="80" type="RaidBoss" name="Gaze of Abyss" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25399" count="3" respawnTime="360" weightPoint="1" />

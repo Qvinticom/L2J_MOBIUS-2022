@@ -41,7 +41,7 @@
 			<height normal="82" />
 		</collision>
 	</npc>
-	<npc id="29102" level="84" type="RaidBoss" name="Antharas" title="Land Dragon">
+	<npc id="29102" level="84" type="RaidBoss" name="Antharas" title="Earth Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="1000" />
@@ -106,7 +106,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="29105" level="80" type="RaidBoss" name="King Ignis" title="Flame Spirit King" element="FIRE">
+	<npc id="29105" level="80" type="RaidBoss" name="King Ignis" element="FIRE">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" attributeExp="104000" />
@@ -363,7 +363,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29108" level="80" type="RaidBoss" name="King Petram" title="Earth Spirit King" element="EARTH">
+	<npc id="29108" level="80" type="RaidBoss" name="King Petram" element="EARTH">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" attributeExp="104000" />
@@ -948,6 +948,253 @@
 		<collision>
 			<radius normal="40" />
 			<height normal="94" />
+		</collision>
+	</npc>
+	<npc id="29144" level="85" type="Folk" name="Beleth" title="Demon King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="88888888" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="29145" level="85" type="Folk" name="Beleth' Slave">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="170000" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="29146" level="85" type="Folk" name="Darion" title="Demons">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="22222222" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="44" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="50" />
+			<height normal="81.217" />
+		</collision>
+	</npc>
+	<npc id="29147" level="85" type="Folk" name="Tarask Dragon" title="Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="34.5" />
+			<height normal="54.9" />
+		</collision>
+	</npc>
+	<npc id="29148" level="85" type="Folk" name="Tarask Dragon" title="Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="51084444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="34.5" />
+			<height normal="54.9" />
+		</collision>
+	</npc>
+	<npc id="29149" level="85" type="Folk" name="Tarask Dragon" title="Dreadful Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="51084444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="35" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="48" />
+			<height normal="82.5" />
+		</collision>
+	</npc>
+	<npc id="29150" level="85" type="Folk" name="Tarask Dragon" title="Immortal Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="51084444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="55" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="60" />
+			<height normal="82.5" />
+		</collision>
+	</npc>
+	<npc id="29151" level="85" type="Folk" name="Antharas" title="Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="666666666" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="279" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+	</npc>
+	<npc id="29152" level="85" type="Folk" name="Antharas" title="Dreadful Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="888888888" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="279" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+	</npc>
+	<npc id="29153" level="85" type="Folk" name="Antharas" title="Immortal Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="888888888" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="279" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+	</npc>
+	<npc id="29154" level="85" type="Folk" name="Antharas" title="Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="60000000" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="279" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+	</npc>
+	<npc id="29155" level="85" type="Folk" name="Antharas" title="Earth Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="60000000" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="279" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="300" />
+			<height normal="300" />
+		</collision>
+	</npc>
+	<npc id="29156" level="85" type="Folk" name="Beleth' Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="400000" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="22" />
+			<height normal="19" />
 		</collision>
 	</npc>
 	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">

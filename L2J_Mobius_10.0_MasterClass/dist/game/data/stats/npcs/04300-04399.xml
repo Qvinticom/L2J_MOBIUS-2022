@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="4301" level="70" type="Folk" name="Queen of Hearts" title="Valentine Messenger">
 		<!-- Confirmed CT2.5 -->
@@ -227,7 +227,7 @@
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="4307" level="80" type="Folk" name="Santa" title="Event Manager">
+	<npc id="4307" level="80" type="Folk" name="Santa Claus" title="Event Manager">
 		<!-- TODO: Must be confirmed -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -255,7 +255,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="4308" level="70" type="Folk" name="Angel Cat" title="Love's Envoy">
+	<npc id="4308" level="70" type="Folk" name="Angel Cat" title="Herald of Love">
 		<!-- TODO: Must be confirmed -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -824,7 +824,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="4324" level="70" type="Folk" name="Worshipper" title="Sinister">
+	<npc id="4324" level="70" type="Folk" name="Worshipper" title="Violent">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -921,7 +921,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="4327" level="70" type="Folk" name="Worshipper" title="Sinister">
+	<npc id="4327" level="70" type="Folk" name="Worshipper" title="Violent">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

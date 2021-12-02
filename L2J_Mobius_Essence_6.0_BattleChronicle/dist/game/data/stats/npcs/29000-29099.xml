@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29001" level="80" type="GrandBoss" name="Queen Ant">
+	<npc id="29001" level="80" type="GrandBoss" name="Queen Ant" title="Dungeon Queen">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
@@ -257,7 +257,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29006" level="80" type="GrandBoss" name="Core">
+	<npc id="29006" level="80" type="GrandBoss" name="Core" title="Cruma Control Device">
 		<parameters>
 			<minions name="Privates">
 				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
@@ -739,7 +739,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29014" level="80" type="GrandBoss" name="Orfen">
+	<npc id="29014" level="80" type="GrandBoss" name="Orfen" title="Spore Mistress">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1114,7 +1114,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29020" level="80" type="GrandBoss" name="Baium">
+	<npc id="29020" level="80" type="GrandBoss" name="Baium" title="Lord">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -1228,7 +1228,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29022" level="80" type="GrandBoss" name="Zaken">
+	<npc id="29022" level="80" type="GrandBoss" name="Zaken" title="Pirate Captain">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -1421,7 +1421,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="29025" level="75" type="Folk" name="Baium">
+	<npc id="29025" level="75" type="Folk" name="Baium" title="Lord">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -2235,7 +2235,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29068" level="80" type="GrandBoss" name="Antharas" title="Land Dragon">
+	<npc id="29068" level="80" type="GrandBoss" name="Antharas" title="Earth Dragon">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>

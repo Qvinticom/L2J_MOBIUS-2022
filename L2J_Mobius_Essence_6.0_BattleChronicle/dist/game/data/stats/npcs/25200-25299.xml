@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25200" level="71" type="Monster" name="Sheshark's Family" title="Raid Fighter">
+	<npc id="25200" level="71" type="Monster" name="Sheshark's Family" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="7" />
 			<skill name="Debuff_a" id="4200" level="7" />
@@ -40,7 +40,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25201" level="71" type="Monster" name="Sheshark's Escort" title="Raid Fighter">
+	<npc id="25201" level="71" type="Monster" name="Sheshark's Escort" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4724" level="7" />
 		</parameters>
@@ -126,7 +126,7 @@
 			<height normal="86" />
 		</collision>
 	</npc>
-	<npc id="25203" level="73" type="Monster" name="Parhit Sha Sobekk" title="Raid Fighter">
+	<npc id="25203" level="73" type="Monster" name="Parhit Sha Sobekk" title="Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="6" />
 			<skill name="SelfRangeBuff_a" id="4213" level="6" />
@@ -167,7 +167,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="25204" level="73" type="Monster" name="Krokian Sha Sobekk" title="Raid Fighter">
+	<npc id="25204" level="73" type="Monster" name="Krokian Sha Sobekk" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
@@ -254,7 +254,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25206" level="75" type="Monster" name="Ashakiel's Blade" title="Raid Fighter">
+	<npc id="25206" level="75" type="Monster" name="Ashakiel's Blade" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4729" level="8" />
 		</parameters>
@@ -293,7 +293,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="25207" level="75" type="Monster" name="Ashakiel's Rod" title="Raid Fighter">
+	<npc id="25207" level="75" type="Monster" name="Ashakiel's Rod" title="Minion">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
@@ -374,7 +374,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25209" level="39" type="Monster" name="Ateka's Shaman" title="Raid Fighter">
+	<npc id="25209" level="39" type="Monster" name="Ateka's Shaman" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="3" />
 			<skill name="Debuff_a" id="4204" level="3" />
@@ -414,7 +414,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25210" level="39" type="Monster" name="Ateka's Soldier" title="Raid Fighter">
+	<npc id="25210" level="39" type="Monster" name="Ateka's Soldier" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4721" level="3" />
 		</parameters>
@@ -499,7 +499,7 @@
 			<height normal="42" grown="50.8" />
 		</collision>
 	</npc>
-	<npc id="25212" level="35" type="Monster" name="Sebek's Priest" title="Raid Fighter">
+	<npc id="25212" level="35" type="Monster" name="Sebek's Priest" title="Minion">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4756" level="5" />
 		</parameters>
@@ -538,7 +538,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25213" level="35" type="Monster" name="Sebek's Fanatic" title="Raid Fighter">
+	<npc id="25213" level="35" type="Monster" name="Sebek's Fanatic" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- Dailaon Knife -->
@@ -620,7 +620,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25215" level="39" type="Monster" name="Sika's Mage" title="Raid Fighter">
+	<npc id="25215" level="39" type="Monster" name="Sika's Mage" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="3" />
 			<skill name="Debuff_a" id="4200" level="3" />
@@ -660,7 +660,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25216" level="39" type="Monster" name="Sika's Warrior" title="Raid Fighter">
+	<npc id="25216" level="39" type="Monster" name="Sika's Warrior" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4732" level="3" />
 		</parameters>
@@ -698,7 +698,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25217" level="75" type="RaidBoss" name="Cursed Kele" title="Raid Boss">
+	<npc id="25217" level="75" type="RaidBoss" name="Cursed Kele" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25218" count="3" respawnTime="360" weightPoint="1" />
@@ -745,7 +745,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25218" level="49" type="Monster" name="Clara's Marksman" title="Raid Fighter">
+	<npc id="25218" level="49" type="Monster" name="Clara's Marksman" title="Minion">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4777" level="4" />
 		</parameters>
@@ -784,7 +784,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25219" level="49" type="Monster" name="Clara's Pawn" title="Raid Fighter">
+	<npc id="25219" level="49" type="Monster" name="Clara's Pawn" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
@@ -819,7 +819,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25220" level="83" type="RaidBoss" name="Death Lord Hallate" title="Raid Boss">
+	<npc id="25220" level="83" type="RaidBoss" name="Death Lord Hallate" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25221" count="3" respawnTime="360" weightPoint="1" />
@@ -922,7 +922,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25221" level="79" type="Monster" name="Death Mage Krician" title="Raid Fighter">
+	<npc id="25221" level="79" type="Monster" name="Death Mage Krician" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="7" />
 			<skill name="Debuff_a" id="4204" level="7" />
@@ -965,7 +965,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="25222" level="79" type="Monster" name="Death Fighter Harik" title="Raid Fighter">
+	<npc id="25222" level="79" type="Monster" name="Death Fighter Harik" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4169" level="7" />
 		</parameters>
@@ -1006,7 +1006,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25223" level="65" type="RaidBoss" name="Soul Collector Acheron" title="Raid Boss">
+	<npc id="25223" level="65" type="RaidBoss" name="Soul Collector Acheron" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25224" count="3" respawnTime="360" weightPoint="1" />
@@ -1069,7 +1069,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25224" level="34" type="Monster" name="Soul Slasher" title="Raid Fighter">
+	<npc id="25224" level="34" type="Monster" name="Soul Slasher" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" />
 			<skill name="Debuff_a" id="4203" level="3" />
@@ -1110,7 +1110,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="25225" level="34" type="Monster" name="Soul Strainer" title="Raid Fighter">
+	<npc id="25225" level="34" type="Monster" name="Soul Strainer" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="3" />
 		</parameters>
@@ -1149,7 +1149,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="25226" level="65" type="RaidBoss" name="Roaring Lord Kastor" title="Raid Boss">
+	<npc id="25226" level="65" type="RaidBoss" name="Roaring Lord Kastor" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25227" count="2" respawnTime="360" weightPoint="1" />
@@ -1196,7 +1196,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25227" level="61" type="Monster" name="Kastor's Priest" title="Raid Fighter">
+	<npc id="25227" level="61" type="Monster" name="Kastor's Priest" title="Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4779" level="6" />
 			<skill name="SelfRangeBuff_a" id="4213" level="6" />
@@ -1237,7 +1237,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25228" level="61" type="Monster" name="Kastor's Prefect" title="Raid Fighter">
+	<npc id="25228" level="61" type="Monster" name="Kastor's Prefect" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
@@ -1319,7 +1319,7 @@
 			<height normal="108" />
 		</collision>
 	</npc>
-	<npc id="25230" level="70" type="RaidBoss" name="Timak Priest Ragoth" title="Raid Boss">
+	<npc id="25230" level="70" type="RaidBoss" name="Priest Ragoth" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25231" count="1" respawnTime="360" weightPoint="1" />
@@ -1370,7 +1370,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25231" level="56" type="Monster" name="Ragoth' Escort" title="Raid Fighter">
+	<npc id="25231" level="56" type="Monster" name="Ragoth' Escort" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="5" />
 		</parameters>
@@ -1409,7 +1409,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25232" level="56" type="Monster" name="Ragoth' Herald" title="Raid Fighter">
+	<npc id="25232" level="56" type="Monster" name="Ragoth' Herald" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
@@ -1494,7 +1494,7 @@
 			<height normal="46.5" grown="48.4" />
 		</collision>
 	</npc>
-	<npc id="25234" level="80" type="RaidBoss" name="Ancient Weird Drake" title="Raid Boss">
+	<npc id="25234" level="80" type="RaidBoss" name="Ancient Weird Drake" title="Elite">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfBuff_a" id="4175" level="6" />
@@ -1588,7 +1588,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="25236" level="71" type="Monster" name="Kandra's Healer" title="Raid Fighter">
+	<npc id="25236" level="71" type="Monster" name="Kandra's Healer" title="Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="7" />
 			<skill name="SelfRangeBuff_a" id="4212" level="7" />
@@ -1629,7 +1629,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25237" level="71" type="Monster" name="Kandra's Guard" title="Raid Fighter">
+	<npc id="25237" level="71" type="Monster" name="Kandra's Guard" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="228" /> <!-- Crystal Dagger -->
@@ -1710,7 +1710,7 @@
 			<height normal="150" />
 		</collision>
 	</npc>
-	<npc id="25239" level="58" type="Monster" name="Monstrous Beast of Abyss Brukunt" title="Raid Fighter">
+	<npc id="25239" level="58" type="Monster" name="Monstrous Beast of Abyss Brukunt" title="Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4786" level="5" />
 			<skill name="SelfRangeBuff_a" id="4212" level="5" />
@@ -1749,7 +1749,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="25240" level="58" type="Monster" name="Wild Beast of Abyss Brukunt" title="Raid Fighter">
+	<npc id="25240" level="58" type="Monster" name="Wild Beast of Abyss Brukunt" title="Minion">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1782,7 +1782,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25241" level="80" type="RaidBoss" name="Hero Tamash" title="Raid Boss">
+	<npc id="25241" level="80" type="RaidBoss" name="Hero Tamash" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25242" count="3" respawnTime="360" weightPoint="1" />
@@ -1883,7 +1883,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25242" level="54" type="Monster" name="Tamash's Advisor" title="Raid Fighter">
+	<npc id="25242" level="54" type="Monster" name="Tamash's Advisor" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="5" />
 			<skill name="Debuff_a" id="4204" level="5" />
@@ -1924,7 +1924,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25243" level="54" type="Monster" name="Tamash's Confidant" title="Raid Fighter">
+	<npc id="25243" level="54" type="Monster" name="Tamash's Confidant" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4730" level="5" />
 		</parameters>
@@ -2061,7 +2061,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25246" level="77" type="Monster" name="Glaki's Henchman" title="Raid Fighter">
+	<npc id="25246" level="77" type="Monster" name="Glaki's Henchman" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="8" />
 		</parameters>
@@ -2100,7 +2100,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25247" level="77" type="Monster" name="Glaki's Servant" title="Raid Fighter">
+	<npc id="25247" level="77" type="Monster" name="Glaki's Servant" title="Minion">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="166" /> <!-- Heavy Mace -->
@@ -2232,7 +2232,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="25250" level="74" type="Monster" name="Man-Eating Plant of Palatanos" title="Raid Fighter">
+	<npc id="25250" level="74" type="Monster" name="Man-Eating Plant of Palatanos" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="7" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4198" level="7" /> <!-- Poison -->
@@ -2272,7 +2272,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25251" level="74" type="Monster" name="Sapling of Palatanos" title="Raid Fighter">
+	<npc id="25251" level="74" type="Monster" name="Sapling of Palatanos" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4739" level="7" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2311,7 +2311,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25252" level="85" type="RaidBoss" name="Palibati Queen Themis" title="Raid Boss">
+	<npc id="25252" level="85" type="RaidBoss" name="Palibati Queen Themis" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25253" count="3" respawnTime="360" weightPoint="1" />
@@ -2393,7 +2393,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25253" level="69" type="Monster" name="Handmaiden of Themis" title="Raid Fighter">
+	<npc id="25253" level="69" type="Monster" name="Handmaiden of Themis" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="6" />
 			<skill name="Debuff_a" id="4202" level="6" />
@@ -2435,7 +2435,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25254" level="69" type="Monster" name="Themis' Royal Guard" title="Raid Fighter">
+	<npc id="25254" level="69" type="Monster" name="Themis' Royal Guard" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4739" level="6" />
 		</parameters>
@@ -2478,7 +2478,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="25255" level="80" type="RaidBoss" name="Tiphon" title="Raid Boss">
+	<npc id="25255" level="80" type="RaidBoss" name="Tiphon" title="Elite">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfBuff_a" id="4175" level="6" />
@@ -2527,7 +2527,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25256" level="70" type="RaidBoss" name="Taik High Prefect Arak" title="Raid Boss">
+	<npc id="25256" level="70" type="RaidBoss" name="High Prefect Arak" title="Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25257" count="3" respawnTime="360" weightPoint="1" />
@@ -2573,7 +2573,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25257" level="59" type="Monster" name="Arak's Archer" title="Raid Fighter">
+	<npc id="25257" level="59" type="Monster" name="Arak's Archer" title="Minion">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="6" />
 		</parameters>
@@ -2612,7 +2612,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25258" level="59" type="Monster" name="Arak's Footman" title="Raid Fighter">
+	<npc id="25258" level="59" type="Monster" name="Arak's Footman" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
@@ -2693,7 +2693,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25260" level="75" type="RaidBoss" name="Iron Giant Totem" title="Raid Boss">
+	<npc id="25260" level="75" type="RaidBoss" name="Iron Giant Totem" title="High Elite">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25261" count="3" respawnTime="360" weightPoint="1" />
@@ -2777,7 +2777,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25261" level="44" type="Monster" name="Totem Guard Archer" title="Raid Fighter">
+	<npc id="25261" level="44" type="Monster" name="Totem Guard Archer" title="Minion">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4760" level="5" />
 		</parameters>
@@ -2816,7 +2816,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25262" level="44" type="Monster" name="Totem Guard" title="Raid Fighter">
+	<npc id="25262" level="44" type="Monster" name="Totem Guard" title="Minion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="215" /> <!-- Doom Dagger -->
@@ -2948,7 +2948,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25264" level="66" type="Monster" name="Kelone's Assassin" title="Raid Fighter">
+	<npc id="25264" level="66" type="Monster" name="Kelone's Assassin" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="6" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -2990,7 +2990,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25265" level="66" type="Monster" name="Kelone's Secret Knight" title="Raid Fighter">
+	<npc id="25265" level="66" type="Monster" name="Kelone's Secret Knight" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="6" /> <!-- Stun -->
 		</parameters>
@@ -3081,7 +3081,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25267" level="74" type="Monster" name="Decarbia's Royal Guard" title="Raid Fighter">
+	<npc id="25267" level="74" type="Monster" name="Decarbia's Royal Guard" title="Minion">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="5286" /> <!-- Berserker Blade -->
@@ -3120,7 +3120,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25268" level="74" type="Monster" name="Decarbia's Escort" title="Raid Fighter">
+	<npc id="25268" level="74" type="Monster" name="Decarbia's Escort" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4170" level="7" />
 		</parameters>
@@ -3208,7 +3208,7 @@
 			<height normal="71.5" />
 		</collision>
 	</npc>
-	<npc id="25270" level="69" type="Monster" name="Behemoth Javeliner" title="Raid Fighter">
+	<npc id="25270" level="69" type="Monster" name="Behemoth Javeliner" title="Minion">
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4774" level="7" />
 		</parameters>
@@ -3247,7 +3247,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25271" level="69" type="Monster" name="Behemoth Flare" title="Raid Fighter">
+	<npc id="25271" level="69" type="Monster" name="Behemoth Flare" title="Minion">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3383,7 +3383,7 @@
 			<height normal="46.377" />
 		</collision>
 	</npc>
-	<npc id="25274" level="49" type="Monster" name="Carnabarun" title="Raid Fighter">
+	<npc id="25274" level="49" type="Monster" name="Carnabarun" title="Minion">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="4" />
 			<skill name="Debuff_a" id="4198" level="4" />
@@ -3423,7 +3423,7 @@
 			<height normal="20" grown="24" />
 		</collision>
 	</npc>
-	<npc id="25275" level="49" type="Monster" name="Carnassiud" title="Raid Fighter">
+	<npc id="25275" level="49" type="Monster" name="Carnassiud" title="Minion">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4739" level="4" />
 		</parameters>
@@ -3559,7 +3559,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="25278" level="49" type="Monster" name="Dead Soul of the Branded" title="Raid Fighter">
+	<npc id="25278" level="49" type="Monster" name="Dead Soul of the Branded" title="Minion">
 		<parameters>
 			<skill name="HealMagic_a" id="4779" level="4" />
 			<skill name="SelfRangeBuff_a" id="4211" level="4" />
@@ -3602,7 +3602,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25279" level="49" type="Monster" name="Evil Spirit of the Branded" title="Raid Fighter">
+	<npc id="25279" level="49" type="Monster" name="Evil Spirit of the Branded" title="Minion">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">

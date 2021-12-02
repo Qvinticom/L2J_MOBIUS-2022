@@ -1016,7 +1016,7 @@
 			<skill id="32296" level="1" /> <!-- Provoke -->
 		</skillList>
 	</npc>
-	<npc id="29322" level="108" type="Monster" name="Guide of Pride">
+	<npc id="29322" level="108" type="Monster" name="Guide of Arrogance">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="15747706368" sp="14171760" />
@@ -2763,7 +2763,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="29358" level="125" type="Monster" name="Nephilim Knight Captain" title="Anakim's Eye">
+	<npc id="29358" level="125" type="Monster" name="Nephilim Knight Captain" title="Anakim�s Eye">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -4294,7 +4294,7 @@
 			<skill id="32741" level="1" /> <!-- Arrow Flush -->
 		</skillList>
 	</npc>
-	<npc id="29379" level="125" type="RaidBoss" name="Lord Ishka">
+	<npc id="29379" level="125" type="RaidBoss" name="Lord Ishka" title="Blade of Revenge">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="80949" /> 
@@ -4508,6 +4508,44 @@
 		<collision>
 			<radius normal="90" />
 			<height normal="109" />
+		</collision>
+	</npc>
+	<npc id="29385" level="85" type="Folk" name="Eigis" title="Lady of Despair">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="761086172" hpRegen="10.5" mp="68076" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="36" />
+			<height normal="123" />
+		</collision>
+	</npc>
+	<npc id="29386" level="85" type="Folk" name="Magic Device" title="Owned by Eigis">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="250" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="56" />
+			<height normal="143" />
 		</collision>
 	</npc>
 </list>

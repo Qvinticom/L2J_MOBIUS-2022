@@ -153,7 +153,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="25909" level="80" type="Monster" name="Carcs">
+	<npc id="25909" level="80" type="Monster" name="Carcs" title="Elite">
 		<race>HUMANOID</race>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -188,7 +188,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25910" level="80" type="Monster" name="Drak">
+	<npc id="25910" level="80" type="Monster" name="Drak" title="Elite">
 		<race>HUMANOID</race>
 		<equipment rhand="38425" /> <!-- Monster Only: Amden Blunt Weapon - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -223,7 +223,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25911" level="80" type="Monster" name="Ourick">
+	<npc id="25911" level="80" type="Monster" name="Ourick" title="Elite">
 		<race>HUMANOID</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="135763.583815029" hpRegen="8.5" mp="4242.24422442244" mpRegen="3" />
@@ -257,7 +257,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25912" level="85" type="Monster" name="Monster">
+	<npc id="25912" level="85" type="Monster" name="Behemoth" title="Antharas' Avatar">
 		<race>DRAGON</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="15606936.416185" hpRegen="9.5" mp="22800" mpRegen="3.3" />
@@ -324,7 +324,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25913" level="85" type="Monster" name="Karim">
+	<npc id="25913" level="85" type="Monster" name="Karim" title="Antharas' Follower">
 		<race>DEMONIC</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2623786.12716763" hpRegen="9.5" mp="4677.88778877888" mpRegen="3.3" />
@@ -391,7 +391,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25914" level="82" type="Monster" name="Atingo">
+	<npc id="25914" level="82" type="Monster" name="Atingo" title="Pet Legion's Master">
 		<race>HUMANOID</race>
 		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -419,7 +419,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25915" level="82" type="Monster" name="Atingo">
+	<npc id="25915" level="82" type="Monster" name="Atingo" title="Pet Legion's Master">
 		<race>HUMANOID</race>
 		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -447,7 +447,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25916" level="82" type="Monster" name="Atingo">
+	<npc id="25916" level="82" type="Monster" name="Atingo" title="Pet Legion's Master">
 		<race>HUMANOID</race>
 		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -475,7 +475,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25917" level="82" type="Monster" name="Atingo">
+	<npc id="25917" level="82" type="Monster" name="Atingo" title="Pet Legion's Master">
 		<race>HUMANOID</race>
 		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -503,7 +503,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25918" level="82" type="Monster" name="Wolf">
+	<npc id="25918" level="82" type="Monster" name="Wolf" title="Atingo's Pet">
 		<race>BEAST</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
@@ -527,7 +527,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25919" level="82" type="Monster" name="Buffalo">
+	<npc id="25919" level="82" type="Monster" name="Buffalo" title="Atingo's Pet">
 		<race>BEAST</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="60567.0391061452" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
@@ -551,7 +551,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25920" level="82" type="Monster" name="Tiger">
+	<npc id="25920" level="82" type="Monster" name="Tiger" title="Atingo's Pet">
 		<race>BEAST</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="42337.9888268156" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
@@ -575,7 +575,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25921" level="82" type="Monster" name="Kookaburra">
+	<npc id="25921" level="82" type="Monster" name="Kookaburra" title="Atingo's Pet">
 		<race>BEAST</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="30577.2811918063" hpRegen="9.5" mp="4240.032546786" mpRegen="3.3" />
@@ -599,7 +599,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25922" level="82" type="Monster" name="Strider">
+	<npc id="25922" level="82" type="Monster" name="Strider" title="Atingo's Pet">
 		<race>DRAGON</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="53804.469273743" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
@@ -623,7 +623,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25923" level="82" type="Monster" name="Hawk">
+	<npc id="25923" level="82" type="Monster" name="Hawk" title="Atingo's Pet">
 		<race>ANIMAL</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="41162.0111731844" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
@@ -647,7 +647,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25924" level="82" type="Monster" name="Sin Eater">
+	<npc id="25924" level="82" type="Monster" name="Sin Eater" title="Atingo's Favorite">
 		<race>FAIRY</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
@@ -708,7 +708,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25925" level="85" type="RaidBoss" name="Jisra">
+	<npc id="25925" level="85" type="RaidBoss" name="Jisra" title="Elite">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="RangeDDMagic_a" id="4178" level="2" />
@@ -746,7 +746,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25926" level="85" type="Monster" name="Kuka">
+	<npc id="25926" level="85" type="Monster" name="Kuka" title="Jisra's Prefect">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="RangeDDMagic_a" id="4178" level="2" />
@@ -1153,5 +1153,159 @@
 				<item id="95743" min="1" max="1" chance="7.748" /> <!-- Top Grade A Weapon pack -->
 			</drop>
 		</dropLists>
+	</npc>
+	<npc id="25944" level="85" type="Folk" name="Royal Vampire" title="Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="242088" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="22" />
+			<height normal="43" />
+		</collision>
+	</npc>
+	<npc id="25945" level="85" type="Folk" name="Tower Knight" title="Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="428" /> <!-- Feriotic Tunic -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="242088" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="22.88" />
+			<height normal="41.6" />
+		</collision>
+	</npc>
+	<npc id="25946" level="85" type="Folk" name="Knight of Darkness" title="Battlefield Nightmare">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="418328" hpRegen="10.5" mp="4047" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="25947" level="85" type="Folk" name="Dark Banshee" title="Battlefield Nightmare">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="418328" hpRegen="10.5" mp="4047" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="49" />
+		</collision>
+	</npc>
+	<npc id="25948" level="85" type="Folk" name="Beoro" title="Bee Hive Emperor">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="420292" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="18" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="70.4" />
+			<height normal="62.56" />
+		</collision>
+	</npc>
+	<npc id="25949" level="85" type="Folk" name="Hermit Beoro" title="Bee Hive Emperor">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="420292" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="105" />
+				<run ground="360" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="54" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="25950" level="85" type="Folk" name="Royda" title="Pet Legion's Grand Master">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="521936" hpRegen="10.5" mp="3486" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="19.5" />
+			<height normal="39.9" />
+		</collision>
+	</npc>
+	<npc id="25951" level="85" type="Folk" name="Sin Eater" title="Atingo's Favorite">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="31577" hpRegen="10.5" mp="3486" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="80" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="29.4" />
+		</collision>
 	</npc>
 </list>

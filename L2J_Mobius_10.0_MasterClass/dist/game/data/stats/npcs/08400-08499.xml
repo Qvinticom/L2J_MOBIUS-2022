@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="8401" level="88" type="Monster" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8401" level="88" type="Monster" name="Jermann" title="Lord of Ancient Kartia">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -37,7 +37,7 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="8402" level="88" type="Monster" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8402" level="88" type="Monster" name="Jermann" title="Lord of Ancient Kartia">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -74,7 +74,7 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="8403" level="88" type="Monster" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8403" level="88" type="Monster" name="Jermann" title="Lord of Ancient Kartia">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -139,7 +139,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="8405" level="80" type="Folk" name="Ancient Kartia Records" title="Holder of Mysterious Power">
+	<npc id="8405" level="80" type="Folk" name="Ancient Kartia's Records" title="Holder of Mysterious Power">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -886,7 +886,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="8422" level="99" type="Monster" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8422" level="99" type="Monster" name="Jermann" title="Lord of Ancient Kartia">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="i_despawn_time" value="10" />
@@ -926,7 +926,7 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="8423" level="85" type="Monster" name="Warrior of Death">
+	<npc id="8423" level="85" type="Monster" name="Death Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1356,7 +1356,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="8433" level="90" type="Monster" name="Warrior of Death">
+	<npc id="8433" level="90" type="Monster" name="Death Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1400,7 +1400,7 @@
 			<height normal="27.2" />
 		</collision>
 	</npc>
-	<npc id="8434" level="95" type="Monster" name="Warrior of Death">
+	<npc id="8434" level="95" type="Monster" name="Death Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1904,7 +1904,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="8449" level="88" type="Folk" name="Zellaka" title="Shilen's Subordinate">
+	<npc id="8449" level="88" type="Folk" name="Zellaka" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="atkdeco_type" value="1" />
@@ -1943,7 +1943,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="8450" level="93" type="Folk" name="Pelline" title="Shilen's Subordinate">
+	<npc id="8450" level="93" type="Folk" name="Pelline" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="atkdeco_type" value="1" />
@@ -1982,7 +1982,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="8451" level="98" type="Folk" name="Kalios" title="Shilen's Subordinate">
+	<npc id="8451" level="98" type="Folk" name="Kalios" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="atkdeco_type" value="1" />
@@ -2021,7 +2021,7 @@
 			<height normal="65.5" />
 		</collision>
 	</npc>
-	<npc id="8452" level="88" type="Folk" name="Kartia Guard" title="Shilen's Subordinate">
+	<npc id="8452" level="88" type="Folk" name="Kartia Guard" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2055,7 +2055,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="8453" level="88" type="Folk" name="Kartia Watchman" title="Shilen's Subordinate">
+	<npc id="8453" level="88" type="Folk" name="Kartia Watchman" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2089,7 +2089,7 @@
 			<height normal="40.48" />
 		</collision>
 	</npc>
-	<npc id="8454" level="93" type="Folk" name="Kartia Guard" title="Shilen's Subordinate">
+	<npc id="8454" level="93" type="Folk" name="Kartia Guard" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2124,7 +2124,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="8455" level="93" type="Folk" name="Kartia Watchman" title="Shilen's Subordinate">
+	<npc id="8455" level="93" type="Folk" name="Kartia Watchman" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2159,7 +2159,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="8456" level="98" type="Folk" name="Kartia Guard" title="Shilen's Subordinate">
+	<npc id="8456" level="98" type="Folk" name="Kartia Guard" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2195,7 +2195,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="8457" level="98" type="Folk" name="Kartia Watchman" title="Shilen's Subordinate">
+	<npc id="8457" level="98" type="Folk" name="Kartia Watchman" title="Shillien's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>

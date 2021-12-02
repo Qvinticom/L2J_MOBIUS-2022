@@ -3373,7 +3373,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<collision>
-			<radius normal="29" />
+			<radius normal="20" />
 			<height normal="72" />
 		</collision>
 		<dropLists>
@@ -3665,7 +3665,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23497" level="99" type="Monster" name="Blazing Saurus" title="Fire Stigma">
+	<npc id="23497" level="99" type="Monster" name="Blazing Saurus" title="Mark of Fire">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="147131926" sp="132412" />
@@ -3711,7 +3711,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23498" level="99" type="Monster" name="Blazing Wizard" title="Fire Stigma">
+	<npc id="23498" level="99" type="Monster" name="Blazing Wizard" title="Mark of Fire">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="147131926" sp="132412" />
