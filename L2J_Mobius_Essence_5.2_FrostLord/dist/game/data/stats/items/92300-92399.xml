@@ -288,18 +288,19 @@
 	<item id="92314" name="Giran Seal" type="EtcItem" additionalName="Sealed">
 		<!-- For 20 min., acquired XP/ SP +20%. Can be exchanged for various items in the L-Coin Store. Note!. When used with Einhasad's Blessing Scroll, Einhasad's Protection, Dandy's Home Run Ball, or Dandy's Golden Ball, the most powerful effect is active. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="reuse_delay" val="60000" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="POTION" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
 		<skills>
 			<skill id="40058" level="1" /> <!-- Giran Seal -->
 		</skills>
