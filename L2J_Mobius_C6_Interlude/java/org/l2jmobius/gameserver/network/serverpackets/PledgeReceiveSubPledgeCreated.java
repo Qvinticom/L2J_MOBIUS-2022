@@ -27,9 +27,6 @@ public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 {
 	private final SubPledge _subPledge;
 	
-	/**
-	 * @param subPledge
-	 */
 	public PledgeReceiveSubPledgeCreated(SubPledge subPledge)
 	{
 		_subPledge = subPledge;

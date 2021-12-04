@@ -21,15 +21,12 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-/**
- * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
- */
 public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 {
 	private String _name;
 	private int _level;
 	private int _classId;
-	private int _objectId;
+	private int _isOnline;
 	private int _pledgeType;
 	
 	public PledgeShowMemberListAdd(Player player)
@@ -37,7 +34,7 @@ public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 		_name = player.getName();
 		_level = player.getLevel();
 		_classId = player.getClassId().getId();
-		_objectId = player.isOnline() ? player.getObjectId() : 0;
+		_isOnline = player.isOnline() ? player.getObjectId() : 0;
 		_pledgeType = player.getPledgeType();
 	}
 	
@@ -48,7 +45,7 @@ public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 			_name = cm.getName();
 			_level = cm.getLevel();
 			_classId = cm.getClassId();
-			_objectId = cm.isOnline() ? cm.getObjectId() : 0;
+			_isOnline = cm.isOnline() ? cm.getObjectId() : 0;
 			_pledgeType = cm.getPledgeType();
 		}
 		catch (Exception e)
@@ -65,7 +62,7 @@ public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 		packet.writeD(_classId);
 		packet.writeD(0);
 		packet.writeD(1);
-		packet.writeD(_objectId); // 1=online 0=offline?
+		packet.writeD(_isOnline);
 		packet.writeD(_pledgeType);
 		return true;
 	}

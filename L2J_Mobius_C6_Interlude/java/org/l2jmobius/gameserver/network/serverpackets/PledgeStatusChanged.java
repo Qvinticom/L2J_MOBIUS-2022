@@ -39,9 +39,9 @@ public class PledgeStatusChanged implements IClientOutgoingPacket
 		OutgoingPackets.PLEDGE_STATUS_CHANGED.writeId(packet);
 		packet.writeD(_clan.getLeaderId());
 		packet.writeD(_clan.getClanId());
-		packet.writeD(0);
-		packet.writeD(_clan.getLevel());
-		packet.writeD(0);
+		packet.writeD(_clan.getCrestId());
+		packet.writeD(_clan.getAllyId());
+		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(0);
 		packet.writeD(0);
 		return true;

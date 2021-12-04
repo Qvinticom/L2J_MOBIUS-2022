@@ -56,7 +56,7 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 		packet.writeS(_member.getClan().getAllyName());
 		packet.writeD(_member.getClan().getAllyCrestId());
 		
-		packet.writeD(_member.getClan().isAtWar());// new c3
+		packet.writeD(_member.getClan().isAtWar()); // new c3
 		
 		packet.writeD(_member.getClan().getMembers().size() - 1);
 		for (ClanMember m : _member.getClan().getMembers())

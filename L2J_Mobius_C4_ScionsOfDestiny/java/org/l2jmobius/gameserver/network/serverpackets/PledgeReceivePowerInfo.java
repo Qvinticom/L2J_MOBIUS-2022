@@ -28,9 +28,6 @@ public class PledgeReceivePowerInfo implements IClientOutgoingPacket
 {
 	private final ClanMember _member;
 	
-	/**
-	 * @param member
-	 */
 	public PledgeReceivePowerInfo(ClanMember member)
 	{
 		_member = member;

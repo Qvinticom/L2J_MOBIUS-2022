@@ -31,10 +31,6 @@ public class PledgeSkillList implements IClientOutgoingPacket
 {
 	private final Collection<Skill> _skills;
 	
-	/**
-	 * Instantiates a new pledge skill list.
-	 * @param clan the clan
-	 */
 	public PledgeSkillList(Clan clan)
 	{
 		_skills = clan.getAllSkills();

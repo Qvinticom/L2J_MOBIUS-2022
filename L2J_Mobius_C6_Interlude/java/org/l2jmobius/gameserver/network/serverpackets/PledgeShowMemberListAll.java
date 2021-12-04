@@ -26,21 +26,12 @@ import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-//
-/**
- * sample 0000: 68 b1010000 48 00 61 00 6d 00 62 00 75 00 72 00 67 00 00 00 H.a.m.b.u.r.g... 43 00 61 00 6c 00 61 00 64 00 6f 00 6e 00 00 00 C.a.l.a.d.o.n... 00000000 crestid | not used (nuocnam) 00000000 00000000 00000000 00000000 22000000 00000000 00000000 00000000 ally id 00 00 ally name 00000000
- * ally crrest id 02000000 6c 00 69 00 74 00 68 00 69 00 75 00 6d 00 31 00 00 00 l.i.t.h.i.u.m... 0d000000 level 12000000 class id 00000000 01000000 offline 1=true 00000000 45 00 6c 00 61 00 6e 00 61 00 00 00 E.l.a.n.a... 08000000 19000000 01000000 01000000 00000000 format dSS dddddddddSdd d
- * (Sddddd) dddSS dddddddddSdd d (Sdddddd)
- * @version $Revision: 1.6.2.2.2.3 $ $Date: 2005/03/27 15:29:57 $
- */
 public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
 	private final Clan _clan;
 	private final Player _player;
 	private final Collection<ClanMember> _members;
 	private int _pledgeType;
-	
-	// private static final Logger LOGGER = Logger.getLogger(PledgeShowMemberListAll.class);
 	
 	public PledgeShowMemberListAll(Clan clan, Player player)
 	{
@@ -69,14 +60,13 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			_player.sendPacket(new PledgeShowMemberListAdd(m));
 		}
 		
-		// unless this is sent sometimes, the client doesn't recognise the player as the leader
+		// unless this is sent sometimes, the client doesn't recognize the player as the leader
 		_player.sendPacket(new UserInfo(_player));
 		return true;
 	}
 	
 	void writePledge(PacketWriter packet, int mainOrSubpledge)
 	{
-		final int TOP = ClanTable.getInstance().getTopRate(_clan.getClanId());
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
 		
 		packet.writeD(mainOrSubpledge); // c5 main clan 0 or any subpledge 1?
@@ -89,7 +79,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
 		packet.writeD(_clan.getHideoutId());
-		packet.writeD(TOP);
+		packet.writeD(ClanTable.getInstance().getTopRate(_clan.getClanId()));
 		packet.writeD(_clan.getReputationScore()); // was activechar level
 		packet.writeD(0); // 0
 		packet.writeD(0); // 0
@@ -107,6 +97,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			{
 				continue;
 			}
+			
 			if (m.getPledgeType() == -1)
 			{
 				yellow = m.getSponsor() != 0 ? 1 : 0;
@@ -119,12 +110,13 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			{
 				yellow = 0;
 			}
+			
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());
 			packet.writeD(m.getClassId());
 			packet.writeD(0);
-			packet.writeD(m.getObjectId());
-			packet.writeD(m.isOnline() ? 1 : 0);
+			packet.writeD(1);
+			packet.writeD(m.isOnline() || (_player.getObjectId() == m.getObjectId()) ? m.getObjectId() : 0);
 			packet.writeD(yellow);
 		}
 	}

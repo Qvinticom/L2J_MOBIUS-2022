@@ -21,9 +21,6 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-/**
- * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
- */
 public class PledgeShowInfoUpdate implements IClientOutgoingPacket
 {
 	private final Clan _clan;
@@ -36,7 +33,6 @@ public class PledgeShowInfoUpdate implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final int TOP = ClanTable.getInstance().getTopRate(_clan.getClanId());
 		// ddddddddddSdd
 		OutgoingPackets.PLEDGE_SHOW_INFO_UPDATE.writeId(packet);
 		// sending empty data so client will ask all the info in response ;)
@@ -45,7 +41,7 @@ public class PledgeShowInfoUpdate implements IClientOutgoingPacket
 		packet.writeD(_clan.getLevel()); // clan level
 		packet.writeD(_clan.getFortId() != 0 ? _clan.getFortId() : _clan.getCastleId());
 		packet.writeD(_clan.getHideoutId());
-		packet.writeD(TOP);
+		packet.writeD(ClanTable.getInstance().getTopRate(_clan.getClanId()));
 		packet.writeD(_clan.getReputationScore()); // clan reputation score
 		packet.writeD(0);
 		packet.writeD(0);

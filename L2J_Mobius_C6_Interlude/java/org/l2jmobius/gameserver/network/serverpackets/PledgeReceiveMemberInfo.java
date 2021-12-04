@@ -27,9 +27,6 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 {
 	private final ClanMember _member;
 	
-	/**
-	 * @param member
-	 */
 	public PledgeReceiveMemberInfo(ClanMember member)
 	{
 		_member = member;
