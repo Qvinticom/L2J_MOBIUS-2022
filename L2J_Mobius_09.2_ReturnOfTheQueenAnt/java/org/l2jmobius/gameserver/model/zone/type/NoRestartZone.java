@@ -32,7 +32,6 @@ public class NoRestartZone extends ZoneType
 {
 	private int _restartAllowedTime = 0;
 	private int _restartTime = 0;
-	private boolean _enabled = true;
 	
 	public NoRestartZone(int id)
 	{
