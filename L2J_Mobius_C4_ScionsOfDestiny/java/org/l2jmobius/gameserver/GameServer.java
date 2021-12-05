@@ -405,7 +405,7 @@ public class GameServer
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{
-			OfflineTraderTable.restoreOfflineTraders();
+			OfflineTraderTable.getInstance().restoreOfflineTraders();
 		}
 		
 		printSection("Protection");

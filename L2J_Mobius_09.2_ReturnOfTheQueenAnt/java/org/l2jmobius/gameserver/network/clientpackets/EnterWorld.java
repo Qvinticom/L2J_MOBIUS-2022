@@ -619,7 +619,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 		{
-			OfflineTraderTable.onTransaction(player, true, false);
+			OfflineTraderTable.getInstance().onTransaction(player, true, false);
 		}
 		
 		// Check if expoff is enabled.

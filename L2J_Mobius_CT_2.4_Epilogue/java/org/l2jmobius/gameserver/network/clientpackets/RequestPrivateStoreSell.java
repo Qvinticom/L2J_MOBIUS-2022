@@ -138,7 +138,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		// Update offline trade record, if realtime saving is enabled
 		if (Config.OFFLINE_TRADE_ENABLE && Config.STORE_OFFLINE_TRADE_IN_REALTIME && ((storePlayer.getClient() == null) || storePlayer.getClient().isDetached()))
 		{
-			OfflineTraderTable.onTransaction(storePlayer, storeList.getItemCount() == 0, false);
+			OfflineTraderTable.getInstance().onTransaction(storePlayer, storeList.getItemCount() == 0, false);
 		}
 		
 		if (storeList.getItemCount() == 0)

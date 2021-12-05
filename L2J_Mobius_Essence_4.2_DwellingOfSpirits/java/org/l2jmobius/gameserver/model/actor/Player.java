@@ -67,6 +67,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
@@ -4118,11 +4119,11 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers. <b><u>Concept</u>:</b> Others Player in the detection area of the Player are identified in <b>_knownPlayers</b>. In order to inform other players of this
-	 * Player state modifications, server just need to go through _knownPlayers to send Server->Client Packet <b><u> Actions</u>:</b>
+	 * Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers. <b><u>Concept</u>:</b> Others Player in the detection area of the Player are identified in <b>_knownPlayers</b>. In order to inform other players of this Player state modifications, server
+	 * just need to go through _knownPlayers to send Server->Client Packet <b><u> Actions</u>:</b>
 	 * <li>Send a Server->Client packet UserInfo to this Player (Public and Private Data)</li>
-	 * <li>Send a Server->Client packet CharInfo to all Player in _KnownPlayers of the Player (Public data only)</li> <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP,
-	 * STR, DEX...</b></font>
+	 * <li>Send a Server->Client packet CharInfo to all Player in _KnownPlayers of the Player (Public data only)</li> <font color=#FF0000><b><u>Caution</u>: DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP, STR,
+	 * DEX...</b></font>
 	 */
 	public void broadcastUserInfo()
 	{
@@ -5754,8 +5755,8 @@ public class Player extends Playable
 		_privateStoreType = privateStoreType;
 		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached()))
 		{
+			OfflineTraderTable.getInstance().removeTrader(getObjectId());
 			Disconnection.of(this).storeMe().deleteMe();
-			World.OFFLINE_TRADE_COUNT--;
 		}
 	}
 	

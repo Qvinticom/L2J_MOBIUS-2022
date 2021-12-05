@@ -1066,7 +1066,7 @@ public class TradeList
 		
 		if (_owner.isInOfflineMode())
 		{
-			OfflineTraderTable.storeOffliner(_owner);
+			OfflineTraderTable.getInstance().storeOffliner(_owner);
 		}
 		
 		return true;
@@ -1323,7 +1323,7 @@ public class TradeList
 		
 		if (_owner.isInOfflineMode())
 		{
-			OfflineTraderTable.storeOffliner(_owner);
+			OfflineTraderTable.getInstance().storeOffliner(_owner);
 		}
 		
 		return true;

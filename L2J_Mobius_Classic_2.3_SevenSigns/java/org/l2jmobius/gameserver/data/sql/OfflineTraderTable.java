@@ -325,7 +325,7 @@ public class OfflineTraderTable
 		}
 	}
 	
-	public static synchronized void onTransaction(Player trader, boolean finished, boolean firstCall)
+	public synchronized void onTransaction(Player trader, boolean finished, boolean firstCall)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
@@ -336,14 +336,12 @@ public class OfflineTraderTable
 			String title = null;
 			stm1.setInt(1, trader.getObjectId()); // Char Id
 			stm1.execute();
-			stm1.close();
 			
 			// Trade is done - clear info
 			if (finished)
 			{
 				stm2.setInt(1, trader.getObjectId()); // Char Id
 				stm2.execute();
-				stm2.close();
 			}
 			else
 			{
@@ -421,7 +419,6 @@ public class OfflineTraderTable
 								break;
 							}
 						}
-						stm3.close();
 						if (firstCall)
 						{
 							stm4.setInt(1, trader.getObjectId()); // Char Id
@@ -430,23 +427,22 @@ public class OfflineTraderTable
 							stm4.setString(4, title);
 							stm4.executeUpdate();
 							stm4.clearParameters();
-							stm4.close();
 						}
 					}
 				}
 				catch (Exception e)
 				{
-					LOGGER.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline trader: " + trader.getObjectId() + " " + e, e);
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while saving offline trader: " + trader.getObjectId() + " " + e, e);
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline traders: " + e, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while saving offline traders: " + e, e);
 		}
 	}
 	
-	public static synchronized void removeTrader(int traderObjId)
+	public synchronized void removeTrader(int traderObjId)
 	{
 		World.OFFLINE_TRADE_COUNT--;
 		
@@ -456,15 +452,13 @@ public class OfflineTraderTable
 		{
 			stm1.setInt(1, traderObjId);
 			stm1.execute();
-			stm1.close();
 			
 			stm2.setInt(1, traderObjId);
 			stm2.execute();
-			stm2.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "OfflineTradersTable[removeTrader()]: Error while removing offline trader: " + traderObjId + " " + e, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while removing offline trader: " + traderObjId + " " + e, e);
 		}
 	}
 	

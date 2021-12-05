@@ -61,6 +61,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
@@ -6085,8 +6086,8 @@ public class Player extends Playable
 		_privateStoreType = privateStoreType;
 		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached()))
 		{
+			OfflineTraderTable.getInstance().removeTrader(getObjectId());
 			Disconnection.of(this).storeMe().deleteMe();
-			World.OFFLINE_TRADE_COUNT--;
 		}
 	}
 	

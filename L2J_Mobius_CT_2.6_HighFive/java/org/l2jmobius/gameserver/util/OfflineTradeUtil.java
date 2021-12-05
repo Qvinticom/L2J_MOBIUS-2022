@@ -145,7 +145,7 @@ public class OfflineTradeUtil
 		// Store trade on exit, if realtime saving is enabled.
 		if (Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 		{
-			OfflineTraderTable.onTransaction(player, false, true);
+			OfflineTraderTable.getInstance().onTransaction(player, false, true);
 		}
 		
 		player.storeMe();

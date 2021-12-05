@@ -679,7 +679,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 								player.setOfflineStartTime(Chronos.currentTimeMillis());
 							}
 							
-							OfflineTraderTable.storeOffliner(player);
+							OfflineTraderTable.getInstance().storeOffliner(player);
 							World.OFFLINE_TRADE_COUNT++;
 							return;
 						}
