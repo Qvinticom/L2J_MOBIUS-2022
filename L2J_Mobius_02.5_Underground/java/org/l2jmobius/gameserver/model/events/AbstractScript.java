@@ -483,7 +483,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @param npcIds
 	 * @return
 	 */
-	protected final List<AbstractEventListener> setCreatureAttackedid(Consumer<OnCreatureAttacked> callback, Collection<Integer> npcIds)
+	protected final List<AbstractEventListener> setCreatureAttackedId(Consumer<OnCreatureAttacked> callback, Collection<Integer> npcIds)
 	{
 		return registerConsumer(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
 	}
