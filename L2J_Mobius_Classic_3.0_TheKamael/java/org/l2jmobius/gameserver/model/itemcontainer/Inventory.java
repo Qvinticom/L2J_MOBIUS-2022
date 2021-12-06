@@ -22,6 +22,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -2598,7 +2599,7 @@ public abstract class Inventory extends ItemContainer
 			filter = filter.and(additionalFilter);
 		}
 		
-		final List<Item> items = new ArrayList<>(_paperdoll.length / (filters.length + 1));
+		final List<Item> items = new LinkedList<>();
 		for (Item item : _paperdoll)
 		{
 			if (filter.test(item))

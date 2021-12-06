@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -414,15 +415,14 @@ public class World
 		final WorldRegion[] surroundingRegions = oldRegion.getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if (wo == null)
-				{
-					continue;
-				}
-				
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
 				// Remove the WorldObject from the WorldObjectHashSet(WorldObject) _knownObjects of the surrounding WorldRegion Creatures
 				// If object is a Player, remove the WorldObject from the WorldObjectHashSet(Player) _knownPlayer of the surrounding WorldRegion Creatures
 				// If object is targeted by one of the surrounding WorldRegion Creatures, cancel ATTACK and cast
@@ -488,21 +488,20 @@ public class World
 		}
 		
 		// Create a list in order to contain all visible WorldObject
-		final List<WorldObject> result = new ArrayList<>();
+		final List<WorldObject> result = new LinkedList<>();
 		
 		// Go through the list of region
 		final WorldRegion[] surroundingRegions = region.getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if (wo == null)
-				{
-					continue;
-				}
-				
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
 				if (wo.equals(object))
 				{
 					continue; // skip our own character
@@ -554,22 +553,21 @@ public class World
 		final int sqRadius = radius * radius;
 		
 		// Create a list in order to contain all visible WorldObject
-		final List<WorldObject> result = new ArrayList<>();
+		final List<WorldObject> result = new LinkedList<>();
 		
 		// Go through the list of region
 		final WorldRegion[] surroundingRegions = region.getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
 			// Go through visible objects of the selected region
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if (wo == null)
-				{
-					continue;
-				}
-				
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
 				if (wo.equals(object))
 				{
 					continue; // skip our own character
@@ -619,21 +617,20 @@ public class World
 		final int sqRadius = radius * radius;
 		
 		// Create a list in order to contain all visible WorldObject
-		final List<WorldObject> result = new ArrayList<>();
+		final List<WorldObject> result = new LinkedList<>();
 		
 		// Go through visible object of the selected region
 		final WorldRegion[] surroundingRegions = object.getWorldRegion().getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if (wo == null)
-				{
-					continue;
-				}
-				
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
 				if (wo.equals(object))
 				{
 					continue; // skip our own character

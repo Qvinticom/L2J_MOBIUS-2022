@@ -16,11 +16,11 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Queue;
@@ -136,7 +136,7 @@ public class EffectList
 	 */
 	public List<BuffInfo> getBuffs()
 	{
-		final List<BuffInfo> result = new ArrayList<>();
+		final List<BuffInfo> result = new LinkedList<>();
 		for (BuffInfo info : _actives)
 		{
 			if (info.getSkill().getBuffType().isBuff())
@@ -153,7 +153,7 @@ public class EffectList
 	 */
 	public List<BuffInfo> getDances()
 	{
-		final List<BuffInfo> result = new ArrayList<>();
+		final List<BuffInfo> result = new LinkedList<>();
 		for (BuffInfo info : _actives)
 		{
 			if (info.getSkill().getBuffType().isDance())
@@ -170,7 +170,7 @@ public class EffectList
 	 */
 	public List<BuffInfo> getDebuffs()
 	{
-		final List<BuffInfo> result = new ArrayList<>();
+		final List<BuffInfo> result = new LinkedList<>();
 		for (BuffInfo info : _actives)
 		{
 			if (info.getSkill().getBuffType().isDebuff())

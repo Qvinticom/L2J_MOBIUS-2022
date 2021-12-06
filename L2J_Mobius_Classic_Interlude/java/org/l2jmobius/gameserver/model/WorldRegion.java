@@ -17,7 +17,10 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,12 +31,11 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.Fence;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
-import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 public class WorldRegion
 {
-	/** List containing visible objects in this world region. */
-	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
+	/** Set containing visible objects in this world region. */
+	private final Set<WorldObject> _visibleObjects = ConcurrentHashMap.newKeySet();
 	/** List containing doors in this world region. */
 	private final List<Door> _doors = new ArrayList<>(1);
 	/** List containing fences in this world region. */
@@ -61,14 +63,8 @@ public class WorldRegion
 		
 		if (!isOn)
 		{
-			for (int i = 0; i < _visibleObjects.size(); i++)
+			for (WorldObject wo : _visibleObjects)
 			{
-				final WorldObject wo = _visibleObjects.get(i);
-				if (wo == null)
-				{
-					continue;
-				}
-				
 				if (wo.isAttackable())
 				{
 					final Attackable mob = (Attackable) wo;
@@ -102,14 +98,8 @@ public class WorldRegion
 		}
 		else
 		{
-			for (int i = 0; i < _visibleObjects.size(); i++)
+			for (WorldObject wo : _visibleObjects)
 			{
-				final WorldObject wo = _visibleObjects.get(i);
-				if (wo == null)
-				{
-					continue;
-				}
-				
 				if (wo.isAttackable())
 				{
 					// Start HP/MP/CP regeneration task.
@@ -151,10 +141,14 @@ public class WorldRegion
 			final WorldRegion worldRegion = _surroundingRegions[i];
 			if (worldRegion.isActive())
 			{
-				final List<WorldObject> regionObjects = worldRegion.getVisibleObjects();
-				for (int j = 0; j < regionObjects.size(); j++)
+				final Collection<WorldObject> regionObjects = worldRegion.getVisibleObjects();
+				if (regionObjects.isEmpty())
 				{
-					final WorldObject wo = regionObjects.get(j);
+					continue;
+				}
+				
+				for (WorldObject wo : regionObjects)
+				{
 					if ((wo != null) && wo.isPlayable())
 					{
 						return false;
@@ -267,7 +261,7 @@ public class WorldRegion
 			return;
 		}
 		
-		_visibleObjects.addIfAbsent(object);
+		_visibleObjects.add(object);
 		
 		if (object.isDoor())
 		{
@@ -330,7 +324,7 @@ public class WorldRegion
 		}
 	}
 	
-	public List<WorldObject> getVisibleObjects()
+	public Collection<WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
 	}

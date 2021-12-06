@@ -16,9 +16,7 @@
  */
 package org.l2jmobius.gameserver.taskmanager;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -30,7 +28,6 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
  * Game Time task manager class.
@@ -48,7 +45,7 @@ public class GameTimeTaskManager extends Thread
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
 	private static final int SHADOW_SENSE_ID = 294;
 	
-	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
+	private static final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
 	private static final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
@@ -108,7 +105,7 @@ public class GameTimeTaskManager extends Thread
 			return;
 		}
 		
-		_movingObjects.addIfAbsent(creature);
+		_movingObjects.add(creature);
 	}
 	
 	/**
@@ -127,32 +124,7 @@ public class GameTimeTaskManager extends Thread
 	 */
 	private void moveObjects()
 	{
-		List<Creature> finished = null;
-		for (int i = 0; i < _movingObjects.size(); i++)
-		{
-			final Creature creature = _movingObjects.get(i);
-			if (creature == null)
-			{
-				continue;
-			}
-			
-			if (creature.updatePosition())
-			{
-				if (finished == null)
-				{
-					finished = new ArrayList<>();
-				}
-				finished.add(creature);
-			}
-		}
-		
-		if (finished != null)
-		{
-			for (int i = 0; i < finished.size(); i++)
-			{
-				_movingObjects.remove(finished.get(i));
-			}
-		}
+		_movingObjects.removeIf(Creature::updatePosition);
 	}
 	
 	public void stopTimer()

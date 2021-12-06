@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
@@ -128,7 +128,7 @@ public class PlayerInventory extends Inventory
 	
 	public Collection<Item> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if (!allowAdena && (item.getId() == ADENA_ID))
@@ -164,7 +164,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<Item> getAllItemsByItemId(int itemId, boolean includeEquipped)
 	{
-		final List<Item> result = new ArrayList<>();
+		final List<Item> result = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((itemId == item.getId()) && (includeEquipped || !item.isEquipped()))
@@ -194,7 +194,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<Item> getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
 	{
-		final List<Item> result = new ArrayList<>();
+		final List<Item> result = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((itemId == item.getId()) && (item.getEnchantLevel() == enchantment) && (includeEquipped || !item.isEquipped()))
@@ -213,7 +213,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<Item> getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable)
 	{
-		final List<Item> result = new ArrayList<>();
+		final List<Item> result = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if (!item.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
@@ -240,7 +240,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public Collection<TradeItem> getAvailableItems(TradeList tradeList)
 	{
-		final List<TradeItem> result = new ArrayList<>();
+		final List<TradeItem> result = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((item != null) && item.isAvailable(_owner, false, false))

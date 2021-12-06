@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -403,11 +404,15 @@ public class World
 		final WorldRegion[] surroundingRegions = oldRegion.getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if ((wo == null) || (wo == object))
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
+				if (wo == object)
 				{
 					continue;
 				}
@@ -472,11 +477,15 @@ public class World
 				continue;
 			}
 			
-			final List<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if ((wo == null) || (wo == object))
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
+				if (wo == object)
 				{
 					continue;
 				}
@@ -532,11 +541,15 @@ public class World
 				continue;
 			}
 			
-			final List<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if ((wo == null) || (wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld()))
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
+				if ((wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld()))
 				{
 					continue;
 				}
@@ -580,14 +593,14 @@ public class World
 	
 	public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		forEachVisibleObject(object, clazz, result::add);
 		return result;
 	}
 	
 	public <T extends WorldObject> List<T> getVisibleObjects(WorldObject object, Class<T> clazz, Predicate<T> predicate)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		forEachVisibleObject(object, clazz, o ->
 		{
 			if (predicate.test(o))
@@ -614,11 +627,15 @@ public class World
 		final WorldRegion[] surroundingRegions = worldRegion.getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if ((wo == null) || (wo == object) || !clazz.isInstance(wo))
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
+				if ((wo == object) || !clazz.isInstance(wo))
 				{
 					continue;
 				}
@@ -635,14 +652,14 @@ public class World
 	
 	public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		forEachVisibleObjectInRange(object, clazz, range, result::add);
 		return result;
 	}
 	
 	public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject object, Class<T> clazz, int range, Predicate<T> predicate)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		forEachVisibleObjectInRange(object, clazz, range, o ->
 		{
 			if (predicate.test(o))
@@ -669,11 +686,15 @@ public class World
 		final WorldRegion[] surroundingRegions = worldRegion.getSurroundingRegions();
 		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
-			for (int j = 0; j < visibleObjects.size(); j++)
+			final Collection<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			if (visibleObjects.isEmpty())
 			{
-				final WorldObject wo = visibleObjects.get(j);
-				if ((wo == null) || (wo == object) || !clazz.isInstance(wo))
+				continue;
+			}
+			
+			for (WorldObject wo : visibleObjects)
+			{
+				if ((wo == object) || !clazz.isInstance(wo))
 				{
 					continue;
 				}

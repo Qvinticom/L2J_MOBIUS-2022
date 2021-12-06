@@ -17,8 +17,11 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
@@ -39,19 +42,18 @@ import org.l2jmobius.gameserver.model.zone.ZoneManager;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
-import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 public class WorldRegion
 {
 	private static final Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
 	
-	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
+	private final Set<WorldObject> _visibleObjects = ConcurrentHashMap.newKeySet();
 	private final List<Door> _doors = new ArrayList<>(1);
 	private final List<Fence> _fences = new ArrayList<>(1);
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
-	private Boolean _active = Config.GRIDS_ALWAYS_ON;
+	private boolean _active = Config.GRIDS_ALWAYS_ON;
 	private ScheduledFuture<?> _neighborsTask = null;
 	private final AtomicInteger _activeNeighbors = new AtomicInteger();
 	private ZoneManager _zoneManager;
@@ -125,18 +127,17 @@ public class WorldRegion
 		_zoneManager.onRevive(creature);
 	}
 	
-	private void switchAI(Boolean isOn)
+	private void switchAI(boolean isOn)
 	{
+		if (_visibleObjects.isEmpty())
+		{
+			return;
+		}
+		
 		if (!isOn)
 		{
-			for (int i = 0; i < _visibleObjects.size(); i++)
+			for (WorldObject wo : _visibleObjects)
 			{
-				final WorldObject wo = _visibleObjects.get(i);
-				if (wo == null)
-				{
-					continue;
-				}
-				
 				if (wo instanceof Attackable)
 				{
 					final Attackable mob = (Attackable) wo;
@@ -182,14 +183,8 @@ public class WorldRegion
 		}
 		else
 		{
-			for (int i = 0; i < _visibleObjects.size(); i++)
+			for (WorldObject wo : _visibleObjects)
 			{
-				final WorldObject wo = _visibleObjects.get(i);
-				if (wo == null)
-				{
-					continue;
-				}
-				
 				if (wo instanceof Attackable)
 				{
 					// Start HP/MP/CP Regeneration task
@@ -231,17 +226,22 @@ public class WorldRegion
 			final WorldRegion worldRegion = _surroundingRegions[i];
 			if (worldRegion.isActive())
 			{
-				final List<WorldObject> regionObjects = worldRegion.getVisibleObjects();
-				for (int j = 0; j < regionObjects.size(); j++)
+				final Collection<WorldObject> regionObjects = worldRegion.getVisibleObjects();
+				if (regionObjects.isEmpty())
 				{
-					final WorldObject wo = regionObjects.get(j);
-					if ((wo != null) && wo.isPlayable())
+					continue;
+				}
+				
+				for (WorldObject wo : regionObjects)
+				{
+					if (wo.isPlayable())
 					{
 						return false;
 					}
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -347,7 +347,7 @@ public class WorldRegion
 			return;
 		}
 		
-		_visibleObjects.addIfAbsent(object);
+		_visibleObjects.add(object);
 		
 		if (object.isDoor())
 		{
@@ -410,7 +410,7 @@ public class WorldRegion
 		}
 	}
 	
-	public List<WorldObject> getVisibleObjects()
+	public Collection<WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
 	}
@@ -478,14 +478,8 @@ public class WorldRegion
 	public synchronized void deleteVisibleNpcSpawns()
 	{
 		LOGGER.info("Deleting all visible NPCs in Region: " + getName());
-		for (int i = 0; i < _visibleObjects.size(); i++)
+		for (WorldObject wo : _visibleObjects)
 		{
-			final WorldObject wo = _visibleObjects.get(i);
-			if (wo == null)
-			{
-				continue;
-			}
-			
 			if (wo instanceof Npc)
 			{
 				final Npc target = (Npc) wo;

@@ -19,18 +19,18 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.model.WorldObject;
 
 public class PlayerInventory extends Inventory
 {
@@ -99,7 +99,7 @@ public class PlayerInventory extends Inventory
 	
 	public List<Item> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if (!allowAdena && (item.getItemId() == 57))
@@ -143,7 +143,7 @@ public class PlayerInventory extends Inventory
 	
 	public List<Item> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if (!allowAdena && (item.getItemId() == 57))
@@ -181,7 +181,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public List<Item> getAllItemsByItemId(int itemId)
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if (item.getItemId() == itemId)
@@ -200,7 +200,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public List<Item> getAllItemsByItemId(int itemId, int enchantment)
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((item.getItemId() == itemId) && (item.getEnchantLevel() == enchantment))
@@ -218,7 +218,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public List<Item> getAvailableItems(boolean allowAdena)
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((item != null) && item.isAvailable(_owner, allowAdena, false))
@@ -235,7 +235,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public List<Item> getAugmentedItems()
 	{
-		final List<Item> list = new ArrayList<>();
+		final List<Item> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((item != null) && item.isAugmented())
@@ -253,7 +253,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public List<TradeItem> getAvailableItems(TradeList tradeList)
 	{
-		final List<TradeItem> list = new ArrayList<>();
+		final List<TradeItem> list = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if (item.isAvailable(_owner, false, false))

@@ -17,9 +17,11 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
@@ -28,7 +30,6 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
  * Game Time task manager class.
@@ -45,7 +46,7 @@ public class GameTimeTaskManager
 	protected static long _gameStartTime;
 	protected static boolean _isNight = false;
 	
-	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
+	private static final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
 	
 	protected static TimerThread _timer;
 	private final ScheduledFuture<?> _timerWatcher;
@@ -102,7 +103,7 @@ public class GameTimeTaskManager
 			return;
 		}
 		
-		_movingObjects.addIfAbsent(creature);
+		_movingObjects.add(creature);
 	}
 	
 	/**
@@ -119,30 +120,20 @@ public class GameTimeTaskManager
 	 */
 	protected void moveObjects()
 	{
-		List<Creature> finished = null;
-		for (int i = 0; i < _movingObjects.size(); i++)
+		final List<Creature> finished = new LinkedList<>();
+		for (Creature creature : _movingObjects)
 		{
-			final Creature creature = _movingObjects.get(i);
-			if (creature == null)
-			{
-				continue;
-			}
-			
 			if (creature.updatePosition(_gameTicks))
 			{
-				if (finished == null)
-				{
-					finished = new ArrayList<>();
-				}
 				finished.add(creature);
 			}
 		}
 		
-		if (finished != null)
+		if (!finished.isEmpty())
 		{
-			for (int i = 0; i < finished.size(); i++)
+			for (Creature creature : finished)
 			{
-				_movingObjects.remove(finished.get(i));
+				_movingObjects.remove(creature);
 			}
 			ThreadPool.execute(new MovingObjectArrived(finished));
 		}

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.itemcontainer;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -81,7 +81,7 @@ public class PlayerFreight extends ItemContainer
 	@Override
 	public Collection<Item> getItems()
 	{
-		final List<Item> result = new ArrayList<>();
+		final List<Item> result = new LinkedList<>();
 		for (Item item : _items)
 		{
 			if ((item.getEquipSlot() == 0) || (item.getEquipSlot() == _activeLocationId))
