@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RaceManager extends Npc
 {
-	protected static final int TICKET_PRICES[] =
+	protected static final int[] TICKET_PRICES =
 	{
 		100,
 		500,

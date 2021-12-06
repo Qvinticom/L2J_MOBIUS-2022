@@ -3110,7 +3110,7 @@ public class Config
 			COMMUNITY_AVAILABLE_TELEPORTS = new HashMap<>(availableTeleports.length);
 			for (String s : availableTeleports)
 			{
-				final String splitInfo[] = s.split(",");
+				final String[] splitInfo = s.split(",");
 				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
 			}
 			

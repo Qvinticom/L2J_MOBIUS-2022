@@ -35,7 +35,7 @@ public class FakePlayer
 	private String _title;
 	
 	private int[] _int; // Player integer stats
-	private boolean _boolean[]; // Player booolean stats
+	private boolean[] _boolean; // Player booolean stats
 	private Npc _npcInstance; // Reference to Npc with this stats
 	private ClassId _classId; // ClassId of this (N)Pc
 	
@@ -481,7 +481,7 @@ public class FakePlayer
 		
 		// Not really necessary but maybe called upon on wrong random settings:
 		// Initiate this Player class id to the correct Player class.
-		final ClassId ids[] = ClassId.values();
+		final ClassId[] ids = ClassId.values();
 		if (ids != null)
 		{
 			for (ClassId id : ids)

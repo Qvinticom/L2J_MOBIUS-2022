@@ -182,7 +182,7 @@ public class Lindvior extends AbstractNpcAI
 		{21170106, 21170107},
 		{21170108, 21170109}
 	};
-	protected final int _chargedValues[] = new int[] {0, 0, 0, 0};
+	protected final int[] _chargedValues = new int[] {0, 0, 0, 0};
 	private static final int[] LINDVIOR_SERVITOR = {25895, 25896, 25897, 29242, 29241, 29243};
 	// @formatter:on
 	private static final NpcStringId[] GUARD_MSG =

@@ -68,7 +68,7 @@ public class ItemCommissionManager
 	private static final long MIN_REGISTRATION_AND_SALE_FEE = 1000;
 	private static final double REGISTRATION_FEE_PER_DAY = 0.0001;
 	private static final double SALE_FEE_PER_DAY = 0.005;
-	private static final int DURATION[] =
+	private static final int[] DURATION =
 	{
 		1,
 		3,

@@ -48,7 +48,7 @@ public class KnownListUpdateTaskManager
 		{
 			try
 			{
-				for (WorldRegion regions[] : World.getInstance().getAllWorldRegions())
+				for (WorldRegion[] regions : World.getInstance().getAllWorldRegions())
 				{
 					for (WorldRegion r : regions) // go through all world regions
 					{

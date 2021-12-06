@@ -1334,7 +1334,7 @@ public class Config
 		ACTIVE_AUGMENTS_START_REUSE_TIME = generalConfig.getInt("AugmStartReuseTime", 0);
 		INVUL_NPC_LIST = new ArrayList<>();
 		final String t = generalConfig.getString("InvulNpcList", "30001-32132,35092-35103,35142-35146,35176-35187,35218-35232,35261-35278,35308-35319,35352-35367,35382-35407,35417-35427,35433-35469,35497-35513,35544-35587,35600-35617,35623-35628,35638-35640,35644,35645,50007,70010,99999");
-		String as[];
+		String[] as;
 		final int k = (as = t.split(",")).length;
 		for (int j = 0; j < k; j++)
 		{

@@ -30,7 +30,7 @@ public class HeroCustomItem implements IItemHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(HeroCustomItem.class.getName());
 	
-	private static final int ITEM_IDS[] =
+	private static final int[] ITEM_IDS =
 	{
 		Config.HERO_CUSTOM_ITEM_ID
 	};
