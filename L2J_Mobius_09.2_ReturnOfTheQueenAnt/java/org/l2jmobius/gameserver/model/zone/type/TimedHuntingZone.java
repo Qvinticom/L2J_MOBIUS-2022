@@ -40,6 +40,11 @@ public class TimedHuntingZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
+		if (!creature.isPlayer())
+		{
+			return;
+		}
+		
 		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
@@ -71,6 +76,11 @@ public class TimedHuntingZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
+		if (!creature.isPlayer())
+		{
+			return;
+		}
+		
 		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
