@@ -42,6 +42,7 @@ public class GlobalVariablesManager extends AbstractVariables
 	private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
 	
 	// Public variable names
+	public static final String DAILY_TASK_RESET = "DAILY_TASK_RESET";
 	public static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	public static final String PURGE_REWARD_TIME = "PURGE_REWARD_TIME";
 	

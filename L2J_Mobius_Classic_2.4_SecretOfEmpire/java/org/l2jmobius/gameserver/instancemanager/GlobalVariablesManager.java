@@ -41,6 +41,9 @@ public class GlobalVariablesManager extends AbstractVariables
 	private static final String DELETE_QUERY = "DELETE FROM global_variables";
 	private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
 	
+	// Public variable names
+	public static final String DAILY_TASK_RESET = "DAILY_TASK_RESET";
+	
 	protected GlobalVariablesManager()
 	{
 		restoreMe();

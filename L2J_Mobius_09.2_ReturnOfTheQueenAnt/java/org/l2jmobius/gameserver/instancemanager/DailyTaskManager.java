@@ -18,7 +18,9 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
@@ -49,6 +51,7 @@ public class DailyTaskManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DailyTaskManager.class.getName());
 	
+	private static final SimpleDateFormat SDF = new SimpleDateFormat("dd/MM HH:mm");
 	private static final int[] RESET_SKILLS =
 	{
 		2510, // Wondrous Cubic
@@ -57,9 +60,8 @@ public class DailyTaskManager
 	
 	protected DailyTaskManager()
 	{
-		final long currentTime = Chronos.currentTimeMillis();
-		
 		// Schedule reset everyday at 6:30.
+		final long currentTime = Chronos.currentTimeMillis();
 		final Calendar calendar = Calendar.getInstance();
 		calendar.set(Calendar.HOUR_OF_DAY, 6);
 		calendar.set(Calendar.MINUTE, 30);
@@ -68,7 +70,21 @@ public class DailyTaskManager
 		{
 			calendar.add(Calendar.DAY_OF_YEAR, 1);
 		}
-		final long startDelay = Math.max(0, calendar.getTimeInMillis() - currentTime);
+		
+		// Check if 24 hours have passed since the last daily reset.
+		final long calendarTime = calendar.getTimeInMillis();
+		if (GlobalVariablesManager.getInstance().getLong(GlobalVariablesManager.DAILY_TASK_RESET, 0) < calendarTime)
+		{
+			LOGGER.info(getClass().getSimpleName() + ": Next schedule at " + SDF.format(new Date(calendarTime)) + ".");
+		}
+		else
+		{
+			LOGGER.info(getClass().getSimpleName() + ": Daily task will run now.");
+			onReset();
+		}
+		
+		// Daily reset task.
+		final long startDelay = Math.max(0, calendarTime - currentTime);
 		ThreadPool.scheduleAtFixedRate(this::onReset, startDelay, 86400000); // 86400000 = 1 day
 		
 		// Global save task.
@@ -77,6 +93,10 @@ public class DailyTaskManager
 	
 	private void onReset()
 	{
+		// Store last reset time.
+		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.DAILY_TASK_RESET, Chronos.currentTimeMillis());
+		
+		// Wednesday weekly tasks.
 		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)
 		{
 			clanLeaderApply();
@@ -84,17 +104,18 @@ public class DailyTaskManager
 			resetClanContribution();
 			resetDailyMissionRewards();
 			resetTimedHuntingZonesWeekly();
-			resetThroneOfHeroes();
 		}
-		else
+		else // All days, except Wednesday.
 		{
 			resetVitalityDaily();
 		}
 		
+		// Daily tasks.
 		resetDailySkills();
 		resetWorldChatPoints();
 		resetRecommends();
 		resetTrainingCamp();
+		resetThroneOfHeroes();
 		resetTimedHuntingZones();
 		resetHomunculusResetPoints();
 		resetAttendanceRewards();
