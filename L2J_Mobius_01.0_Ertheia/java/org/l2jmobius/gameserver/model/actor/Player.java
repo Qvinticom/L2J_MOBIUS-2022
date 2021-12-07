@@ -4268,18 +4268,12 @@ public class Player extends Playable
 		return getAllyId() == 0 ? 0 : _clan.getAllyCrestId();
 	}
 	
-	/**
-	 * Send a Server->Client packet StatusUpdate to the Player.
-	 */
 	@Override
-	public void sendPacket(IClientOutgoingPacket... packets)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
 		if (_client != null)
 		{
-			for (IClientOutgoingPacket packet : packets)
-			{
-				_client.sendPacket(packet);
-			}
+			_client.sendPacket(packet);
 		}
 	}
 	

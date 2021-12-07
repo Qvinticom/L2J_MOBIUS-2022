@@ -188,11 +188,11 @@ public class Decoy extends Creature
 	}
 	
 	@Override
-	public void sendPacket(IClientOutgoingPacket... packets)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
 		if (_owner != null)
 		{
-			_owner.sendPacket(packets);
+			_owner.sendPacket(packet);
 		}
 	}
 	

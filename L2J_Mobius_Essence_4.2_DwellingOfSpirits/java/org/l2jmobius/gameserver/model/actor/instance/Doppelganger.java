@@ -191,11 +191,11 @@ public class Doppelganger extends Npc
 	}
 	
 	@Override
-	public void sendPacket(IClientOutgoingPacket... packets)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
 		if (getSummoner() != null)
 		{
-			getSummoner().sendPacket(packets);
+			getSummoner().sendPacket(packet);
 		}
 	}
 	

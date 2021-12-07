@@ -249,7 +249,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	
 	public abstract void sendInfo(Player player);
 	
-	public void sendPacket(IClientOutgoingPacket... packets)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
 	}
 	
