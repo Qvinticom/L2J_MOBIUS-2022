@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MercManager;
 import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -263,7 +264,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 			
 			if (price < 0)
 			{
-				LOGGER.warning("ERROR, no price found .. wrong buylist ??");
+				PacketLogger.warning("ERROR, no price found .. wrong buylist ??");
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

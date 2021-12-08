@@ -44,8 +44,8 @@ public class RequestPledgeMemberInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		// LOGGER.info("C5: RequestPledgeMemberInfo d:"+_unk1);
-		// LOGGER.info("C5: RequestPledgeMemberInfo S:"+_player);
+		// PacketLogger.info("C5: RequestPledgeMemberInfo d:"+_unk1);
+		// PacketLogger.info("C5: RequestPledgeMemberInfo S:"+_player);
 		final Player player = client.getPlayer();
 		if (player == null)
 		{

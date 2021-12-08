@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.IOutgoingPacket;
 import org.l2jmobius.gameserver.model.actor.Player;
 
@@ -26,8 +24,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
  */
 public interface IClientOutgoingPacket extends IOutgoingPacket
 {
-	Logger LOGGER = Logger.getLogger(IClientOutgoingPacket.class.getName());
-	
 	default void runImpl(Player player)
 	{
 	}

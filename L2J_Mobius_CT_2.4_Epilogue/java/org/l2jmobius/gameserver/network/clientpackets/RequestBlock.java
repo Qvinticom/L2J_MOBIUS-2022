@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class RequestBlock implements IClientIncomingPacket
@@ -107,7 +108,7 @@ public class RequestBlock implements IClientIncomingPacket
 			}
 			default:
 			{
-				LOGGER.info("Unknown 0xA9 block type: " + _type);
+				PacketLogger.info("Unknown 0xA9 block type: " + _type);
 			}
 		}
 	}

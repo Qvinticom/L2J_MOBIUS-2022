@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -69,7 +70,7 @@ public class RequestWearItem implements IClientIncomingPacket
 			}
 			catch (Throwable e)
 			{
-				LOGGER.warning(e.getMessage());
+				PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 			}
 		}
 	}
@@ -148,7 +149,7 @@ public class RequestWearItem implements IClientIncomingPacket
 		final Merchant merchant = (target != null) && (target instanceof Merchant) ? (Merchant) target : null;
 		if (merchant == null)
 		{
-			LOGGER.warning("Null merchant!");
+			PacketLogger.warning(getClass().getSimpleName() + ": Null merchant!");
 			return;
 		}
 		

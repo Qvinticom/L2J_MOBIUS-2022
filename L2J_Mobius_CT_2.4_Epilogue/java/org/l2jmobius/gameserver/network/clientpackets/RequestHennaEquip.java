@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.util.Util;
@@ -65,7 +66,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 		final Henna henna = HennaData.getInstance().getHenna(_symbolId);
 		if (henna == null)
 		{
-			LOGGER.warning(getClass().getName() + ": Invalid Henna Id: " + _symbolId + " from player " + player);
+			PacketLogger.warning(getClass().getName() + ": Invalid Henna Id: " + _symbolId + " from player " + player);
 			client.sendActionFailed();
 			return;
 		}

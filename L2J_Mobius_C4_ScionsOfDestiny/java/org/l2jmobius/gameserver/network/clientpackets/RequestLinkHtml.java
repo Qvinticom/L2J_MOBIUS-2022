@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -46,7 +47,7 @@ public class RequestLinkHtml implements IClientIncomingPacket
 		
 		if (_link.contains("..") || !_link.contains(".htm"))
 		{
-			LOGGER.warning("[RequestLinkHtml] hack? link contains prohibited characters: '" + _link + "', skipped");
+			PacketLogger.warning("[RequestLinkHtml] hack? link contains prohibited characters: '" + _link + "', skipped");
 			return;
 		}
 		

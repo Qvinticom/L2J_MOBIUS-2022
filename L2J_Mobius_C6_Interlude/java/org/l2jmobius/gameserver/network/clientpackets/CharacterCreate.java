@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
@@ -159,7 +160,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		}
 		catch (PatternSyntaxException e) // case of illegal pattern
 		{
-			LOGGER.warning("Character name pattern of config is wrong!");
+			PacketLogger.warning("Character name pattern of config is wrong!");
 			pattern = Pattern.compile(".*");
 		}
 		

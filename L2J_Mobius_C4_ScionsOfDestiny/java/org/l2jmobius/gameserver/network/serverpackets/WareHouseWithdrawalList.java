@@ -22,6 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * 0x42 WarehouseWithdrawalList dh (h dddhh dhhh d)
@@ -47,7 +48,7 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 		if (_player.getActiveWarehouse() == null)
 		{
 			// Something went wrong!
-			LOGGER.warning("error while sending withdraw request to: " + _player.getName());
+			PacketLogger.warning("Error while sending withdraw request to: " + _player.getName());
 			return;
 		}
 		_items = _player.getActiveWarehouse().getItems();

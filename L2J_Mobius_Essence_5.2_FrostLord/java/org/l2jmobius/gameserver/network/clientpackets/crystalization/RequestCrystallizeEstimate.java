@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -94,7 +95,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
-			LOGGER.warning(player + ": tried to crystallize " + item.getItem());
+			PacketLogger.warning(player + ": tried to crystallize " + item.getItem());
 			return;
 		}
 		

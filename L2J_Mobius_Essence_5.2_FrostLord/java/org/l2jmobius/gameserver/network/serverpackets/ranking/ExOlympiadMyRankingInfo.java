@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -96,7 +97,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
+			PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 		}
 		
 		int previousPlace = 0;
@@ -125,7 +126,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
+			PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 		}
 		
 		int heroCount = 0;

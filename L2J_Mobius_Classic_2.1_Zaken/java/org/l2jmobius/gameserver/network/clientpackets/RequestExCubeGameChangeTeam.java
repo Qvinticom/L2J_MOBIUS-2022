@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * Format: chdd d: Arena d: Team
@@ -74,7 +75,7 @@ public class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 			}
 			default:
 			{
-				LOGGER.warning("Wrong Cube Game Team ID: " + _team);
+				PacketLogger.warning("Wrong Cube Game Team ID: " + _team);
 				break;
 			}
 		}

@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -33,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -169,7 +169,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "could not delete pet objectid: ", e);
+				PacketLogger.warning("Could not delete pet objectid: " + e.getMessage());
 			}
 		}
 		if (itemToRemove.isTimeLimitedItem())

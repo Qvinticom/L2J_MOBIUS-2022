@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -29,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrBuyProduct;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrGamePoint;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -132,7 +132,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Could not save Item Mall transaction: " + e.getMessage(), e);
+			PacketLogger.warning("Could not save Item Mall transaction: " + e.getMessage());
 		}
 	}
 }

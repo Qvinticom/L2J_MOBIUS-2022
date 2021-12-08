@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ClientSetTime;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -112,7 +113,7 @@ public class EnterWorld implements IClientIncomingPacket
 		final Player player = client.getPlayer();
 		if (player == null)
 		{
-			LOGGER.warning("EnterWorld failed! player is null...");
+			PacketLogger.warning("EnterWorld failed! player is null...");
 			client.closeNow();
 			return;
 		}
@@ -126,7 +127,7 @@ public class EnterWorld implements IClientIncomingPacket
 		// FloodProtector.getInstance().registerNewPlayer(player.getObjectId());
 		if (!player.isGM() && !player.isDonator() && Config.CHECK_NAME_ON_LOGIN && ((player.getName().length() < 3) || (player.getName().length() > 16) || !Util.isAlphaNumeric(player.getName()) || !isValidName(player.getName())))
 		{
-			LOGGER.warning("Charname: " + player.getName() + " is invalid. EnterWorld failed.");
+			PacketLogger.warning("Charname: " + player.getName() + " is invalid. EnterWorld failed.");
 			client.closeNow();
 			return;
 		}
@@ -244,8 +245,8 @@ public class EnterWorld implements IClientIncomingPacket
 					// Punishment e LOGGER in audit
 					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has Overenchanted  item! Kicked! ", Config.DEFAULT_PUNISH);
 					// Logger in console
-					LOGGER.info("#### ATTENTION ####");
-					LOGGER.info(i + " item has been removed from " + player);
+					PacketLogger.info("#### ATTENTION ####");
+					PacketLogger.info(i + " item has been removed from " + player);
 				}
 			}
 		}
@@ -444,7 +445,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 			else
 			{
-				LOGGER.info("Attention: Remote ClassMaster is Enabled, but not inserted into DataBase. Remember to install 31288 Custom_Npc...");
+				PacketLogger.info("Attention: Remote ClassMaster is Enabled, but not inserted into DataBase. Remember to install 31288 Custom_Npc...");
 			}
 		}
 		
@@ -503,7 +504,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		catch (PatternSyntaxException e) // case of illegal pattern
 		{
-			LOGGER.warning("Character name pattern of config is wrong!");
+			PacketLogger.warning("Character name pattern of config is wrong!");
 			pattern = Pattern.compile(".*");
 		}
 		

@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
@@ -109,7 +110,7 @@ public class Say2 implements IClientIncomingPacket
 		ChatType chatType = ChatType.findByClientId(_type);
 		if (chatType == null)
 		{
-			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
+			PacketLogger.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
@@ -117,7 +118,7 @@ public class Say2 implements IClientIncomingPacket
 		
 		if (_text.isEmpty())
 		{
-			LOGGER.warning(player.getName() + ": sending empty text. Possible packet hack!");
+			PacketLogger.warning(player.getName() + ": sending empty text. Possible packet hack!");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			Disconnection.of(player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
@@ -204,7 +205,7 @@ public class Say2 implements IClientIncomingPacket
 		}
 		else
 		{
-			LOGGER.info("No handler registered for ChatType: " + _type + " Player: " + client);
+			PacketLogger.info("No handler registered for ChatType: " + _type + " Player: " + client);
 		}
 	}
 	
@@ -252,7 +253,7 @@ public class Say2 implements IClientIncomingPacket
 			{
 				if (owner.getInventory().getItemByObjectId(id) == null)
 				{
-					LOGGER.info(owner.getClient() + " trying publish item which doesnt own! ID:" + id);
+					PacketLogger.info(owner.getClient() + " trying publish item which doesnt own! ID:" + id);
 					return false;
 				}
 				((Item) item).publish();
@@ -264,7 +265,7 @@ public class Say2 implements IClientIncomingPacket
 			pos1 = _text.indexOf(8, pos) + 1;
 			if (pos1 == 0) // missing ending tag
 			{
-				LOGGER.info(owner.getClient() + " sent invalid publish item msg! ID:" + id);
+				PacketLogger.info(owner.getClient() + " sent invalid publish item msg! ID:" + id);
 				return false;
 			}
 		}

@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
@@ -193,7 +194,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 			final Item item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
 			if (item == null)
 			{
-				LOGGER.warning("Error refunding object for char " + player.getName() + " (newitem == null)");
+				PacketLogger.warning("Error refunding object for char " + player.getName() + " (newitem == null)");
 			}
 		}
 		

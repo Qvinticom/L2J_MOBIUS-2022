@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Player.PunishLevel;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -101,14 +102,14 @@ public class Say2 implements IClientIncomingPacket
 		final Player player = client.getPlayer();
 		if (player == null)
 		{
-			LOGGER.warning("[Say2.java] Active Character is null.");
+			PacketLogger.warning("[Say2.java] Active Character is null.");
 			return;
 		}
 		
 		ChatType chatType = ChatType.findByClientId(_type);
 		if (chatType == null)
 		{
-			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
+			PacketLogger.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
 			return;
 		}
 		

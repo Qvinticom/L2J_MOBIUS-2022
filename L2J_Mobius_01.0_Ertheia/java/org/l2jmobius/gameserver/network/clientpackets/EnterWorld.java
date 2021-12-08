@@ -67,6 +67,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
@@ -148,7 +149,7 @@ public class EnterWorld implements IClientIncomingPacket
 		final Player player = client.getPlayer();
 		if (player == null)
 		{
-			LOGGER.warning("EnterWorld failed! player returned 'null'.");
+			PacketLogger.warning("EnterWorld failed! player returned 'null'.");
 			Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}

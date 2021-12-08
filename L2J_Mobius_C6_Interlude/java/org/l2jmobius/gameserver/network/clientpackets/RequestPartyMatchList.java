@@ -64,7 +64,7 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 			if (room != null)
 			{
-				LOGGER.info("PartyMatchRoom #" + room.getId() + " changed by " + player.getName());
+				// PacketLogger.info("PartyMatchRoom #" + room.getId() + " changed by " + player.getName());
 				room.setMaxMembers(_membersmax);
 				room.setMinLevel(_minLevel);
 				room.setMaxLevel(_maxLevel);
@@ -88,7 +88,7 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			final int maxId = PartyMatchRoomList.getInstance().getMaxId();
 			final PartyMatchRoom room = new PartyMatchRoom(maxId, _roomtitle, _loot, _minLevel, _maxLevel, _membersmax, player);
 			
-			LOGGER.info("PartyMatchRoom #" + maxId + " created by " + player.getName());
+			// PacketLogger.info("PartyMatchRoom #" + maxId + " created by " + player.getName());
 			
 			// Remove from waiting list, and add to current room
 			PartyMatchWaitingList.getInstance().removePlayer(player);

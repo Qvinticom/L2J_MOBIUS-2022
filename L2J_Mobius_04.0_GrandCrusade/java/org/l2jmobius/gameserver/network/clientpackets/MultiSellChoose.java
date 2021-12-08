@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -153,7 +154,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 		
 		if (((_soulCrystalOptions != null) && CommonUtil.contains(_soulCrystalOptions, null)) || ((_soulCrystalSpecialOptions != null) && CommonUtil.contains(_soulCrystalSpecialOptions, null)))
 		{
-			LOGGER.severe("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
+			PacketLogger.warning("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -161,14 +162,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 		final MultisellEntryHolder entry = list.getEntries().get(_entryId - 1); // Entry Id begins from 1. We currently use entry IDs as index pointer.
 		if (entry == null)
 		{
-			LOGGER.severe("Character: " + player.getName() + " requested inexistant prepared multisell entry. Multisell: " + _listId + " entry: " + _entryId);
+			PacketLogger.warning("Character: " + player.getName() + " requested inexistant prepared multisell entry. Multisell: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
 		
 		if (!entry.isStackable() && (_amount > 1))
 		{
-			LOGGER.severe("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
+			PacketLogger.warning("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -196,7 +197,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			))
 		//@formatter:on
 		{
-			LOGGER.severe("Character: " + player.getName() + " is trying to upgrade equippable item, but the stats doesn't match. Id: " + _listId + " entry: " + _entryId);
+			PacketLogger.warning("Character: " + player.getName() + " is trying to upgrade equippable item, but the stats doesn't match. Id: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -368,7 +369,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						default:
 						{
-							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
+							PacketLogger.warning("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
 							return;
 						}
 					}
@@ -478,7 +479,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						default:
 						{
-							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special product with id: " + product.getId() + ".");
+							PacketLogger.warning("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special product with id: " + product.getId() + ".");
 							return;
 						}
 					}
@@ -673,7 +674,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				default:
 				{
-					LOGGER.severe("Multisell: " + _listId + " is using a non-implemented special ingredient with id: " + ingredientId + ".");
+					PacketLogger.warning("Multisell: " + _listId + " is using a non-implemented special ingredient with id: " + ingredientId + ".");
 					return false;
 				}
 			}

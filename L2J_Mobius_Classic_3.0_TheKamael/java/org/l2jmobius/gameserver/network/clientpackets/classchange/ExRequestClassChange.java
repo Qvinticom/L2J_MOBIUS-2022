@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -66,7 +67,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 		}
 		if (!canChange)
 		{
-			LOGGER.warning(player + " tried to change class from " + player.getClassId() + " to " + ClassId.getClassId(_classId) + "!");
+			PacketLogger.warning(player + " tried to change class from " + player.getClassId() + " to " + ClassId.getClassId(_classId) + "!");
 			return;
 		}
 		

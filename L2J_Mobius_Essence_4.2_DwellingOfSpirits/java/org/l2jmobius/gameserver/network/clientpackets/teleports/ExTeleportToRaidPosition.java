@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.teleports.ExRaidTeleportInfo;
@@ -65,7 +66,7 @@ public class ExTeleportToRaidPosition implements IClientIncomingPacket
 		final TeleportListHolder teleport = RaidTeleportListData.getInstance().getTeleport(_raidId);
 		if (teleport == null)
 		{
-			LOGGER.warning("No registered teleport location for raid id: " + _raidId);
+			PacketLogger.warning("No registered teleport location for raid id: " + _raidId);
 			return;
 		}
 		

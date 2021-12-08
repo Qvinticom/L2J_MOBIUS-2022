@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
@@ -166,7 +167,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			final Item item = player.checkItemManipulation(objectId, count, "deposit");
 			if (item == null)
 			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
+				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
 				_items[(i * 2) + 0] = 0;
 				_items[(i * 2) + 1] = 0;
 				continue;
@@ -223,7 +224,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			final Item oldItem = player.getInventory().getItemByObjectId(objectId);
 			if (oldItem == null)
 			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
+				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
 				continue;
 			}
 			
@@ -235,14 +236,14 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			
 			if (CursedWeaponsManager.getInstance().isCursed(itemId))
 			{
-				LOGGER.warning(player.getName() + " try to deposit Cursed Weapon on wherehouse.");
+				PacketLogger.warning(player.getName() + " try to deposit Cursed Weapon on wherehouse.");
 				continue;
 			}
 			
 			final Item newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
+				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 			

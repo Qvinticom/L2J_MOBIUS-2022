@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -85,7 +86,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 		
 		if (pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet) == null)
 		{
-			LOGGER.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
+			PacketLogger.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
 		}
 		player.sendPacket(new ItemList(player, true));
 	}

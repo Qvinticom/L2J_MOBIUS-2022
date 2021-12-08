@@ -44,6 +44,7 @@ import org.l2jmobius.gameserver.model.item.type.ActionType;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -282,7 +283,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				if ((etcItem != null) && (etcItem.getHandlerName() != null))
 				{
-					LOGGER.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
+					PacketLogger.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
 				}
 			}
 			else if (handler.useItem(player, item, _ctrlPressed))

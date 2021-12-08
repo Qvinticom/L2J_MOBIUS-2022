@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -163,13 +164,13 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 			final Item oldItem = warehouse.getItemByObjectId(i.getId());
 			if ((oldItem == null) || (oldItem.getCount() < i.getCount()))
 			{
-				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
+				PacketLogger.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
 				return;
 			}
 			final Item newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, manager);
 			if (newItem == null)
 			{
-				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
+				PacketLogger.warning("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
 				return;
 			}
 		}

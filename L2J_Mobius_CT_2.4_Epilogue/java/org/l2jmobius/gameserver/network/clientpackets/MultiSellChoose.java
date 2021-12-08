@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.multisell.Entry;
 import org.l2jmobius.gameserver.model.multisell.Ingredient;
 import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -143,7 +144,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			{
 				if (!entry.isStackable() && (_amount > 1))
 				{
-					LOGGER.severe("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell, id:" + _listId + ":" + _entryId);
+					PacketLogger.warning("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell, id:" + _listId + ":" + _entryId);
 					player.setMultiSell(null);
 					return;
 				}
@@ -265,7 +266,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						Item itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
 						if (itemToTake == null)
 						{ // this is a cheat, transaction will be aborted and if any items already taken will not be returned back to inventory!
-							LOGGER.severe("Character: " + player.getName() + " is trying to cheat in multisell, id:" + _listId + ":" + _entryId);
+							PacketLogger.warning("Character: " + player.getName() + " is trying to cheat in multisell, id:" + _listId + ":" + _entryId);
 							player.setMultiSell(null);
 							return;
 						}

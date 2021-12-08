@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
@@ -54,7 +55,7 @@ public class AddTradeItem implements IClientIncomingPacket
 		final TradeList trade = player.getActiveTradeList();
 		if (trade == null) // Trade null
 		{
-			LOGGER.warning("Character: " + player.getName() + " requested item:" + _objectId + " add without active tradelist:" + _tradeId);
+			PacketLogger.warning("Character: " + player.getName() + " requested item:" + _objectId + " add without active tradelist:" + _tradeId);
 			player.getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -65,7 +66,7 @@ public class AddTradeItem implements IClientIncomingPacket
 			// Trade partner not found, cancel trade
 			if (trade.getPartner() != null)
 			{
-				LOGGER.warning("Character:" + player.getName() + " requested invalid trade object: " + _objectId);
+				PacketLogger.warning("Character:" + player.getName() + " requested invalid trade object: " + _objectId);
 			}
 			
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -94,7 +95,7 @@ public class AddTradeItem implements IClientIncomingPacket
 		// Java Emulator Security
 		if ((player.getInventory().getItemByObjectId(_objectId) == null) || (_count <= 0))
 		{
-			LOGGER.info("Character:" + player.getName() + " requested invalid trade object");
+			PacketLogger.info("Character:" + player.getName() + " requested invalid trade object.");
 			player.getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

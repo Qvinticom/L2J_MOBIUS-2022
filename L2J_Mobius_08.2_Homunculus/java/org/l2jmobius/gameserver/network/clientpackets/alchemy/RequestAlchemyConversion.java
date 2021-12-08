@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -98,13 +99,13 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		if (data == null)
 		{
 			player.sendPacket(new ExAlchemyConversion(0, 0));
-			LOGGER.warning("Missing AlchemyData for skillId: " + _skillId + ", skillLevel: " + _skillLevel);
+			PacketLogger.warning("Missing AlchemyData for skillId: " + _skillId + ", skillLevel: " + _skillLevel);
 			return;
 		}
 		
 		// if (!_ingredients.equals(data.getIngredients()))
 		// {
-		// LOGGER.warning("Client ingredients are not same as server ingredients for alchemy conversion player: "+ +"", player);
+		// PacketLogger.warning("Client ingredients are not same as server ingredients for alchemy conversion player: "+ +"", player);
 		// return;
 		// }
 		

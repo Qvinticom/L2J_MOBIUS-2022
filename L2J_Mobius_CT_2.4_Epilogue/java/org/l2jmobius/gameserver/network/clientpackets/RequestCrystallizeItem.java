@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -55,7 +56,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final Player player = client.getPlayer();
 		if (player == null)
 		{
-			LOGGER.fine("RequestCrystalizeItem: activeChar was null");
+			// PacketLogger.finer("RequestCrystalizeItem: activeChar was null");
 			return;
 		}
 		
@@ -84,7 +85,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			if ((player.getRace() != Race.DWARF) && (player.getClassId().getId() != 117) && (player.getClassId().getId() != 55))
 			{
-				LOGGER.info("Player " + client + " used crystalize with classid: " + player.getClassId().getId());
+				PacketLogger.info("Player " + client + " used crystalize with classid: " + player.getClassId().getId());
 			}
 			return;
 		}
@@ -113,7 +114,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == CrystalType.NONE))
 		{
-			LOGGER.warning(player.getName() + " (" + player.getObjectId() + ") tried to crystallize " + itemToRemove.getItem().getId());
+			PacketLogger.warning(player.getName() + " (" + player.getObjectId() + ") tried to crystallize " + itemToRemove.getItem().getId());
 			return;
 		}
 		

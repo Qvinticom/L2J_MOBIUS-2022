@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.CharacterDeleteFailType;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
@@ -25,6 +23,7 @@ import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDelete;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharDeleteSuccess;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
@@ -74,7 +73,7 @@ public class CharacterDelete implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Error:", e);
+			PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);

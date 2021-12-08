@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -59,7 +60,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		LOGGER.info("RequestSurrenderPledgeWar by " + player.getClan().getName() + " with " + _pledgeName);
+		PacketLogger.info("RequestSurrenderPledgeWar by " + player.getClan().getName() + " with " + _pledgeName);
 		if (!playerclan.isAtWarWith(clan.getClanId()))
 		{
 			player.sendMessage("You aren't at war with this clan.");

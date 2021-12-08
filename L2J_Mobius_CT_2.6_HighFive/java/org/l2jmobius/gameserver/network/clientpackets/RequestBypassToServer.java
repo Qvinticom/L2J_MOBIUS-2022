@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.StringTokenizer;
-import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
@@ -38,6 +37,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -83,7 +83,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		
 		if (_command.isEmpty())
 		{
-			LOGGER.warning("Player " + player.getName() + " sent empty bypass!");
+			PacketLogger.warning("Player " + player.getName() + " sent empty bypass!");
 			Disconnection.of(client, player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}
@@ -180,7 +180,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				}
 				catch (NumberFormatException nfe)
 				{
-					LOGGER.log(Level.WARNING, "NFE for command [" + _command + "]", nfe);
+					PacketLogger.warning("NFE for command [" + _command + "] " + nfe.getMessage());
 				}
 			}
 			else if (_command.startsWith("_match"))
@@ -252,13 +252,13 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				}
 				else
 				{
-					LOGGER.warning(client + " sent not handled RequestBypassToServer: [" + _command + "]");
+					PacketLogger.warning(client + " sent not handled RequestBypassToServer: [" + _command + "]");
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception processing bypass from player " + player.getName() + ": " + _command, e);
+			PacketLogger.warning("Exception processing bypass from player " + player.getName() + ": " + _command + " " + e.getMessage());
 			if (player.isGM())
 			{
 				final StringBuilder sb = new StringBuilder(200);

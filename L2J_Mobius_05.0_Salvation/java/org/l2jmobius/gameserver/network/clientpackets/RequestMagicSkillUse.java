@@ -64,7 +64,7 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				// if (_magicId > 0)
 				// {
-				// LOGGER.warning("Skill Id " + _magicId + " not found in player: " + player);
+				// PacketLogger.warning("Skill Id " + _magicId + " not found in player: " + player);
 				// }
 				return;
 			}

@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
@@ -55,7 +56,7 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		final TeleportListHolder teleport = TeleportListData.getInstance().getTeleport(_teleportId);
 		if (teleport == null)
 		{
-			LOGGER.warning("No registered teleport location for id: " + _teleportId);
+			PacketLogger.warning("No registered teleport location for id: " + _teleportId);
 			return;
 		}
 		

@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
@@ -53,7 +54,7 @@ public class ExRequestTeleportFavoritesAddDel implements IClientIncomingPacket
 		
 		if (TeleportListData.getInstance().getTeleport(_teleportId) == null)
 		{
-			LOGGER.warning("No registered teleport location for id: " + _teleportId);
+			PacketLogger.warning("No registered teleport location for id: " + _teleportId);
 			return;
 		}
 		
@@ -62,7 +63,7 @@ public class ExRequestTeleportFavoritesAddDel implements IClientIncomingPacket
 		{
 			if (TeleportListData.getInstance().getTeleport(_teleportId) == null)
 			{
-				LOGGER.warning("No registered teleport location for id: " + _teleportId);
+				PacketLogger.warning("No registered teleport location for id: " + _teleportId);
 			}
 			else
 			{

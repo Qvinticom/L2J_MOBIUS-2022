@@ -18,12 +18,12 @@ package org.l2jmobius.gameserver.network.clientpackets.friend;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -102,7 +102,7 @@ public class RequestAnswerFriendInvite implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "Could not add friend objectid: " + e.getMessage(), e);
+				PacketLogger.warning("Could not add friend objectid: " + e.getMessage());
 			}
 		}
 		else

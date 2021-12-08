@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.actor.instance.SymbolMaker;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.GMAudit;
@@ -86,7 +87,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				if (ach == null)
 				{
 					player.sendMessage("The command " + command + " does not exists!");
-					LOGGER.warning("No handler registered for admin command '" + command + "'");
+					PacketLogger.warning("No handler registered for admin command '" + command + "'");
 					return;
 				}
 				
@@ -241,7 +242,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Bad RequestBypassToServer: " + e);
+			PacketLogger.warning("Bad RequestBypassToServer: " + e.getMessage());
 		}
 	}
 }

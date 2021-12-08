@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -45,7 +46,7 @@ public class RequestSurrenderPersonally implements IClientIncomingPacket
 			return;
 		}
 		
-		LOGGER.info("RequestSurrenderPersonally by " + player.getName() + " with " + _pledgeName);
+		PacketLogger.info("RequestSurrenderPersonally by " + player.getName() + " with " + _pledgeName);
 		final Clan playerClan = player.getClan();
 		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		if (playerClan == null)

@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Shuttle;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
@@ -60,7 +61,7 @@ public class RequestShuttleGetOn implements IClientIncomingPacket
 				player.getInVehiclePosition().setXYZ(_x, _y, _z);
 				break;
 			}
-			LOGGER.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance3D(player));
+			PacketLogger.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance3D(player));
 		}
 	}
 }

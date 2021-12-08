@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
@@ -157,7 +158,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " provided invalid list or request! ", Config.DEFAULT_PUNISH);
-			LOGGER.warning("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
+			PacketLogger.warning("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
 			return;
 		}
 		

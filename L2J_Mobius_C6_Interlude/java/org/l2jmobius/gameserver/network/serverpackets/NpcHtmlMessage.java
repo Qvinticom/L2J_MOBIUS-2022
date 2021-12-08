@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -181,14 +182,14 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 	{
 		if (text == null)
 		{
-			LOGGER.warning("Html is null! this will crash the client!");
+			PacketLogger.warning("Html is null! This will crash the client!");
 			_html = "<html><body></body></html>";
 			return;
 		}
 		
 		if (text.length() > 8192)
 		{
-			LOGGER.warning("Html is too long! this will crash the client!");
+			PacketLogger.warning("Html is too long! This will crash the client!");
 			_html = "<html><body>Html was too long,<br>Try to use DB for this action</body></html>";
 			return;
 		}
@@ -207,7 +208,7 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 		if (content == null)
 		{
 			setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");
-			LOGGER.warning("missing html page " + path);
+			PacketLogger.warning("Missing html page " + path);
 			return false;
 		}
 		

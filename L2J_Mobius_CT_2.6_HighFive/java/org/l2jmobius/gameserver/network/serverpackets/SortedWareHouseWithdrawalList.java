@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.item.type.MaterialType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 {
@@ -94,7 +95,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		if (player.getActiveWarehouse() == null)
 		{
 			// Something went wrong!
-			LOGGER.warning("error while sending withdraw request to: " + player.getName());
+			PacketLogger.warning("Error while sending withdraw request to: " + player.getName());
 			return;
 		}
 		

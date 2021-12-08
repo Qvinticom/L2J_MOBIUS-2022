@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
@@ -38,6 +37,7 @@ import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
@@ -74,7 +74,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.SEVERE, "", e);
+				PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 			}
 		}
 	}
@@ -152,7 +152,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		final Merchant merchant = (target instanceof Merchant) ? (Merchant) target : null;
 		if (merchant == null)
 		{
-			LOGGER.warning("Null merchant!");
+			PacketLogger.warning(getClass().getSimpleName() + ": Null merchant!");
 			return;
 		}
 		

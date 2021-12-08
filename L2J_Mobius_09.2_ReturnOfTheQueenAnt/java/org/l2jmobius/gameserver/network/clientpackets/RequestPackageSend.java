@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.util.Util;
@@ -113,7 +114,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			final Item item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
 			if (item == null)
 			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
+				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
 				warehouse.deleteMe();
 				return;
 			}
@@ -162,7 +163,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			final Item oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (oldItem == null)
 			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
+				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
 				warehouse.deleteMe();
 				return;
 			}
@@ -170,7 +171,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 			final Item newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
 			if (newItem == null)
 			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
+				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 			

@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.actor.instance.VillageMaster;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
@@ -270,7 +271,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 		}
 		else
 		{
-			LOGGER.warning("Recived Wrong Packet Data in Aquired Skill - unk1:" + _skillType);
+			PacketLogger.warning("Recived Wrong Packet Data in Aquired Skill - unk1:" + _skillType);
 			return;
 		}
 		

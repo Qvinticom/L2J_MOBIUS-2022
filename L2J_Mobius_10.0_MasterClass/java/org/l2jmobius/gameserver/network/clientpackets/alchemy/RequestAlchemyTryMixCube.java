@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -74,7 +75,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 			else // Player used packet injection tool.
 			{
 				final Player player = client.getPlayer();
-				LOGGER.warning("Kicked " + player + " for using packet injection tool with " + getClass().getSimpleName());
+				PacketLogger.warning("Kicked " + player + " for using packet injection tool with " + getClass().getSimpleName());
 				Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
 				return false;
 			}

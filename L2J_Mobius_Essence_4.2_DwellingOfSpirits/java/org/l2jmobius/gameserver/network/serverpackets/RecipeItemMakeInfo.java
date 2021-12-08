@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 public class RecipeItemMakeInfo implements IClientOutgoingPacket
 {
@@ -58,7 +59,8 @@ public class RecipeItemMakeInfo implements IClientOutgoingPacket
 			packet.writeQ(0x00);
 			return true;
 		}
-		LOGGER.info("Character: " + _player + ": Requested unexisting recipe with id = " + _id);
+		
+		PacketLogger.info("Character: " + _player + ": Requested unexisting recipe with id = " + _id);
 		return false;
 	}
 }

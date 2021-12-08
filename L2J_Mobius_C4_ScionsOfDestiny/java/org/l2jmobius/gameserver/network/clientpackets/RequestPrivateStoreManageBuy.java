@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
@@ -47,7 +48,7 @@ public class RequestPrivateStoreManageBuy implements IClientIncomingPacket
 		if (!player.isSpawned() || player.isLocked())
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " try exploit at login with privatestore!", Config.DEFAULT_PUNISH);
-			LOGGER.warning("Player " + player.getName() + " try exploit at login with privatestore!");
+			PacketLogger.warning("Player " + player.getName() + " try exploit at login with privatestore!");
 			return;
 		}
 		

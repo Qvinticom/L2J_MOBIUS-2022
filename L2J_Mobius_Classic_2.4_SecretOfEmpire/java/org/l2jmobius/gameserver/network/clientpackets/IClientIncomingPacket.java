@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -27,5 +25,4 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public interface IClientIncomingPacket extends IIncomingPacket<GameClient>
 {
-	Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
 }

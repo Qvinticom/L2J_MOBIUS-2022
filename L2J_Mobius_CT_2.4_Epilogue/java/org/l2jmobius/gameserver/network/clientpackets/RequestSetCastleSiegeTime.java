@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
@@ -26,6 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -55,17 +55,17 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if ((player == null) || (castle == null))
 		{
-			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId);
+			PacketLogger.warning("[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId);
 			return;
 		}
 		
 		if ((castle.getOwnerId() > 0) && (castle.getOwnerId() != player.getClanId()))
 		{
-			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date of not his own castle!");
+			PacketLogger.warning("[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date of not his own castle!");
 		}
 		else if (!player.isClanLeader())
 		{
-			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but is not clan leader!");
+			PacketLogger.warning("[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but is not clan leader!");
 		}
 		else if (!castle.isTimeRegistrationOver())
 		{
@@ -81,12 +81,12 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 			}
 			else
 			{
-				LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to an invalid time (" + new Date(_time) + " !");
+				PacketLogger.warning("[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to an invalid time (" + new Date(_time) + " !");
 			}
 		}
 		else
 		{
-			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but currently not possible!");
+			PacketLogger.warning("[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but currently not possible!");
 		}
 	}
 	

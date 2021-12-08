@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
@@ -69,7 +70,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		}
 		else if (!player.isAlikeDead())
 		{
-			LOGGER.warning("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
+			PacketLogger.warning("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
 			return;
 		}
 		
@@ -254,7 +255,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			}
 			catch (Throwable e)
 			{
-				LOGGER.warning(e.toString());
+				PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 			}
 		}
 	}

@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @author -Wooden-
@@ -56,7 +57,7 @@ public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 		}
 		else if (_clan.getClanMember(LeaderId) == null)
 		{
-			LOGGER.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getId() + "]");
+			PacketLogger.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getId() + "]");
 			return "";
 		}
 		else

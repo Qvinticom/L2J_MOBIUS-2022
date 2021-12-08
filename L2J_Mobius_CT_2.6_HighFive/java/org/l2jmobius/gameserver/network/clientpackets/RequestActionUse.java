@@ -48,6 +48,7 @@ import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
@@ -128,7 +129,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
-				LOGGER.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().getId());
+				PacketLogger.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().getId());
 				return;
 			}
 		}

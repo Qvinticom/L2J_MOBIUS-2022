@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
@@ -70,7 +71,7 @@ public class RequestRestart implements IClientIncomingPacket
 		
 		if (player.isLocked())
 		{
-			LOGGER.warning("Player " + player.getName() + " tried to restart during class change.");
+			PacketLogger.warning("Player " + player.getName() + " tried to restart during class change.");
 			client.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

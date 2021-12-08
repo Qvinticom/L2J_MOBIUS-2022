@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductList;
 
@@ -60,7 +61,7 @@ public class RequestBRProductList implements IClientIncomingPacket
 				}
 				default:
 				{
-					LOGGER.warning(player + " send unhandled product list type: " + _type);
+					PacketLogger.warning(player + " send unhandled product list type: " + _type);
 					break;
 				}
 			}

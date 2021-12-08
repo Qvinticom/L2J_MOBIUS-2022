@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
@@ -77,7 +78,7 @@ public class RequestPledgeBonusReward implements IClientIncomingPacket
 			}
 			else
 			{
-				LOGGER.warning(player + " Attempting to claim reward but clan(" + clan + ") doesn't have such!");
+				PacketLogger.warning(player + " Attempting to claim reward but clan(" + clan + ") doesn't have such!");
 			}
 		}
 	}

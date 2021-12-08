@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.ActionData;
@@ -30,6 +29,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
@@ -41,8 +41,6 @@ import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
  */
 public class RequestActionUse implements IClientIncomingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
-	
 	private int _actionId;
 	private boolean _ctrlPressed;
 	private boolean _shiftPressed;
@@ -93,7 +91,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
-				LOGGER.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().get().getId());
+				PacketLogger.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().get().getId());
 				return;
 			}
 		}
@@ -107,7 +105,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				actionHandler.useAction(player, actionHolder, _ctrlPressed, _shiftPressed);
 				return;
 			}
-			LOGGER.warning("Couldnt find handler with name: " + actionHolder.getHandler());
+			PacketLogger.warning("Couldn't find handler with name: " + actionHolder.getHandler());
 			return;
 		}
 		
@@ -143,7 +141,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			default:
 			{
-				LOGGER.warning(player.getName() + ": unhandled action type " + _actionId);
+				PacketLogger.warning(player.getName() + ": unhandled action type " + _actionId);
 				break;
 			}
 		}

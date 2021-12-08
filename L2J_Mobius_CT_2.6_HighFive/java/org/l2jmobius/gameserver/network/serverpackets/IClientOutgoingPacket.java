@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.commons.network.IOutgoingPacket;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -27,8 +25,6 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
  */
 public interface IClientOutgoingPacket extends IOutgoingPacket
 {
-	Logger LOGGER = Logger.getLogger(IClientOutgoingPacket.class.getName());
-	
 	int[] PAPERDOLL_ORDER = new int[]
 	{
 		Inventory.PAPERDOLL_UNDER,

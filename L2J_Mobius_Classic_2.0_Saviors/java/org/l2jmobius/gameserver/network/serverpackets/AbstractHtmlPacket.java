@@ -16,11 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Level;
-
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -75,7 +74,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 	{
 		if (html.length() > 17200)
 		{
-			LOGGER.log(Level.WARNING, "Html is too long! this will crash the client!", new Throwable());
+			PacketLogger.warning(getClass().getSimpleName() + ": Html is too long! this will crash the client!");
 			_html = html.substring(0, 17200);
 		}
 		
@@ -94,7 +93,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		if (content == null)
 		{
 			setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");
-			LOGGER.warning("missing html page " + path);
+			PacketLogger.warning(getClass().getSimpleName() + ": Missing html page " + path);
 			return false;
 		}
 		

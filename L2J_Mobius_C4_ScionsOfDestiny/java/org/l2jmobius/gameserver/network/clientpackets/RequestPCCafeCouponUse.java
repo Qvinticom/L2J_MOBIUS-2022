@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * Format: (ch) S
@@ -37,6 +38,6 @@ public class RequestPCCafeCouponUse implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		LOGGER.info("C5: RequestPCCafeCouponUse: S: " + _str);
+		PacketLogger.info("C5: RequestPCCafeCouponUse: S: " + _str);
 	}
 }

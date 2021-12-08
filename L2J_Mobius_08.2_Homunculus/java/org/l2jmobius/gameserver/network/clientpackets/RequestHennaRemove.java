@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -76,7 +77,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		// TODO: Test.
 		if (!found)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " requested Henna Draw remove without any henna.");
+			PacketLogger.warning(getClass().getSimpleName() + ": Player " + player + " requested Henna Draw remove without any henna.");
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}

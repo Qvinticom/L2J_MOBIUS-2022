@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
@@ -25,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 
@@ -71,7 +70,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			player.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
+				PacketLogger.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
 			}
 			return;
 		}

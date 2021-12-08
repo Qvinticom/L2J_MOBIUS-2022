@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * Format: (ch) d
@@ -44,6 +45,6 @@ public class RequestGetBossRecord implements IClientIncomingPacket
 			return;
 		}
 		
-		LOGGER.warning("Player " + player + " (boss ID: " + _bossId + ") used unsuded packet " + RequestGetBossRecord.class.getSimpleName());
+		PacketLogger.warning("Player " + player + " (boss ID: " + _bossId + ") used unsuded packet " + RequestGetBossRecord.class.getSimpleName());
 	}
 }

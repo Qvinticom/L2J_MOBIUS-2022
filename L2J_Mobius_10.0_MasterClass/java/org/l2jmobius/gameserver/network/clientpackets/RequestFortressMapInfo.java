@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowFortressMapInfo;
 
@@ -43,7 +44,7 @@ public class RequestFortressMapInfo implements IClientIncomingPacket
 		final Fort fort = FortManager.getInstance().getFortById(_fortressId);
 		if (fort == null)
 		{
-			LOGGER.warning("Fort is not found with id (" + _fortressId + ") in all forts with size of (" + FortManager.getInstance().getForts().size() + ") called by player (" + client.getPlayer() + ")");
+			PacketLogger.warning("Fort is not found with id (" + _fortressId + ") in all forts with size of (" + FortManager.getInstance().getForts().size() + ") called by player (" + client.getPlayer() + ")");
 			if (client.getPlayer() == null)
 			{
 				return;

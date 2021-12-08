@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 
@@ -157,7 +158,7 @@ public class SystemMessage implements IClientOutgoingPacket
 			// Mobius: With additional on-screen damage param (popup), length is increased.
 			if (param.getType() != TYPE_POPUP_ID)
 			{
-				LOGGER.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
+				PacketLogger.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
 			}
 		}
 		
@@ -414,7 +415,7 @@ public class SystemMessage implements IClientOutgoingPacket
 		{
 			if (param == null)
 			{
-				LOGGER.warning("Found null parameter for SystemMessageId " + _smId);
+				PacketLogger.warning("Found null parameter for SystemMessageId " + _smId);
 				continue;
 			}
 			

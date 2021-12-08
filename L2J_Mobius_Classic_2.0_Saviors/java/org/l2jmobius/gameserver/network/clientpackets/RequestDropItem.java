@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.GMAudit;
 import org.l2jmobius.gameserver.util.Util;
@@ -210,7 +211,7 @@ public class RequestDropItem implements IClientIncomingPacket
 		if ((dropedItem != null) && (dropedItem.getId() == Inventory.ADENA_ID) && (dropedItem.getCount() >= 1000000))
 		{
 			final String msg = "Character (" + player.getName() + ") has dropped (" + dropedItem.getCount() + ")adena at (" + _x + "," + _y + "," + _z + ")";
-			LOGGER.warning(msg);
+			PacketLogger.warning(msg);
 			AdminData.getInstance().broadcastMessageToGMs(msg);
 		}
 	}

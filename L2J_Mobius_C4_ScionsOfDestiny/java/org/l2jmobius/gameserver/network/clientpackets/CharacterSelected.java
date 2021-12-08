@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 
@@ -67,7 +68,7 @@ public class CharacterSelected implements IClientIncomingPacket
 					final Player cha = client.loadCharFromDisk(_charSlot);
 					if (cha == null)
 					{
-						LOGGER.warning("Character could not be loaded (slot:" + _charSlot + ")");
+						PacketLogger.warning("Character could not be loaded (slot:" + _charSlot + ")");
 						client.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
@@ -86,7 +87,7 @@ public class CharacterSelected implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(e.toString());
+				PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 			}
 			finally
 			{

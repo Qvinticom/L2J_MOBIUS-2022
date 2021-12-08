@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
@@ -26,6 +25,7 @@ import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -98,7 +98,7 @@ public class RequestFriendDel implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "could not del friend objectid: ", e);
+			PacketLogger.warning(getClass().getSimpleName() + ": Could not delele friend objectId: " + e.getMessage());
 		}
 	}
 }

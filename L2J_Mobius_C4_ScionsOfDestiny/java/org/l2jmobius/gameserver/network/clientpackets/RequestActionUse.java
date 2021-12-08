@@ -33,12 +33,13 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
-import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
@@ -494,14 +495,14 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 96: // Quit Party Command Channel
 			{
-				LOGGER.info("98 Accessed");
+				PacketLogger.info("98 Accessed");
 				break;
 			}
 			case 97: // Request Party Command Channel Info
 			{
 				// if (!PartyCommandManager.getInstance().isPlayerInChannel(activeChar))
 				// return;
-				LOGGER.info("97 Accessed");
+				PacketLogger.info("97 Accessed");
 				// PartyCommandManager.getInstance().getActiveChannelInfo(activeChar);
 				break;
 			}
@@ -650,7 +651,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			default:
 			{
-				LOGGER.warning(player.getName() + ": unhandled action type " + _actionId);
+				PacketLogger.warning(player.getName() + ": unhandled action type " + _actionId);
 			}
 		}
 	}

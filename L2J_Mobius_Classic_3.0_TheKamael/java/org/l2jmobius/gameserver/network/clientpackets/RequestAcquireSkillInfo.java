@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExAcquireSkillInfo;
 
@@ -54,7 +55,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 	{
 		if ((_id <= 0) || (_level <= 0))
 		{
-			LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Invalid Id: " + _id + " or level: " + _level + "!");
+			PacketLogger.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Invalid Id: " + _id + " or level: " + _level + "!");
 			return;
 		}
 		
@@ -73,7 +74,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 		final Skill skill = SkillData.getInstance().getSkill(_id, _level);
 		if (skill == null)
 		{
-			LOGGER.warning("Skill Id: " + _id + " level: " + _level + " is undefined. " + RequestAcquireSkillInfo.class.getName() + " failed.");
+			PacketLogger.warning("Skill Id: " + _id + " level: " + _level + " is undefined. " + RequestAcquireSkillInfo.class.getName() + " failed.");
 			return;
 		}
 		

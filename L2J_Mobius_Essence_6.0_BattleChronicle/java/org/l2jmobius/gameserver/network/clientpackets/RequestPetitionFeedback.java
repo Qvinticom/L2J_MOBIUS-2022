@@ -25,6 +25,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @author Plim
@@ -74,7 +75,7 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 		}
 		catch (SQLException e)
 		{
-			LOGGER.severe("Error while saving petition feedback");
+			PacketLogger.warning("Error while saving petition feedback.");
 		}
 	}
 }

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @author UnAfraid
@@ -51,7 +52,7 @@ public class RequestMagicSkillList implements IClientIncomingPacket
 		
 		if (player.getObjectId() != _objectId)
 		{
-			LOGGER.warning("Player: " + player + " requested " + getClass().getSimpleName() + " with different object id: " + _objectId);
+			PacketLogger.warning("Player: " + player + " requested " + getClass().getSimpleName() + " with different object id: " + _objectId);
 			return;
 		}
 		

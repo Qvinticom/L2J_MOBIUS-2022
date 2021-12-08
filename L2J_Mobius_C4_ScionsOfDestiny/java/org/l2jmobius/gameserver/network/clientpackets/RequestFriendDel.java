@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -81,7 +82,7 @@ public class RequestFriendDel implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not delete friend objectid: " + e);
+			PacketLogger.warning("Could not delete friend objectId: " + e.getMessage());
 		}
 	}
 }

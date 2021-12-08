@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ExNeedToChangeName;
 
 /**
@@ -42,6 +43,6 @@ public class RequestExChangeName implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		LOGGER.info("Recieved [C]RequestExChangeName name: " + _newName + " type: " + _type + " CharSlot: " + _charSlot);
+		PacketLogger.info("Recieved [C]RequestExChangeName name: " + _newName + " type: " + _type + " CharSlot: " + _charSlot);
 	}
 }

@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -77,7 +78,7 @@ public class ExOpenHtml implements IClientIncomingPacket
 			// }
 			default:
 			{
-				LOGGER.warning("Unknown ExOpenHtml type (" + _type + ")");
+				PacketLogger.warning("Unknown ExOpenHtml type (" + _type + ")");
 				break;
 			}
 		}

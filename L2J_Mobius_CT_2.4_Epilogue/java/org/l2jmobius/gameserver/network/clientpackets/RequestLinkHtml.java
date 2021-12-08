@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -50,20 +51,20 @@ public class RequestLinkHtml implements IClientIncomingPacket
 		
 		if (_link.isEmpty())
 		{
-			LOGGER.warning("Player " + actor.getName() + " sent empty html link!");
+			PacketLogger.warning("Player " + actor.getName() + " sent empty html link!");
 			return;
 		}
 		
 		if (_link.contains(".."))
 		{
-			LOGGER.warning("Player " + actor.getName() + " sent invalid html link: link " + _link);
+			PacketLogger.warning("Player " + actor.getName() + " sent invalid html link: link " + _link);
 			return;
 		}
 		
 		final int htmlObjectId = actor.validateHtmlAction("link " + _link);
 		if (htmlObjectId == -1)
 		{
-			LOGGER.warning("Player " + actor.getName() + " sent non cached  html link: link " + _link);
+			PacketLogger.warning("Player " + actor.getName() + " sent non cached html link: link " + _link);
 			return;
 		}
 		

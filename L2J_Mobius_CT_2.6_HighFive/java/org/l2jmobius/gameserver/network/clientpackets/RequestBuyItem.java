@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
@@ -178,7 +179,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 			
 			if (price < 0)
 			{
-				LOGGER.warning("ERROR, no price found .. wrong buylist ??");
+				PacketLogger.warning("ERROR, no price found .. wrong buylist ??");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

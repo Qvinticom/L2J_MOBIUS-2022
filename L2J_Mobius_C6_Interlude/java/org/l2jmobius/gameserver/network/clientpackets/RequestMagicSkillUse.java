@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -97,7 +98,7 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 		else
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			LOGGER.warning("No skill found with id " + _magicId + " and level " + level + " !!");
+			PacketLogger.warning("No skill found with id " + _magicId + " and level " + level + " !!");
 		}
 	}
 }

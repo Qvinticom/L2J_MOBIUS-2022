@@ -21,11 +21,12 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -189,7 +190,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			// Punishment e LOGGER in audit
 			Util.handleIllegalPlayerAction(storePlayer, "PrivateStore buy has failed due to invalid list or request. Player: " + player.getName(), Config.DEFAULT_PUNISH);
-			LOGGER.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
+			PacketLogger.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
 			return;
 		}
 		

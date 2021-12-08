@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.model.item.PlayerItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
@@ -127,21 +128,21 @@ public class CharacterCreate implements IClientIncomingPacket
 		
 		if ((_face > 2) || (_face < 0))
 		{
-			LOGGER.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
+			PacketLogger.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
 		
 		if ((_hairStyle < 0) || ((_sex == 0) && (_hairStyle > 4)) || ((_sex != 0) && (_hairStyle > 6)))
 		{
-			LOGGER.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
+			PacketLogger.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
 		
 		if ((_hairColor > 3) || (_hairColor < 0))
 		{
-			LOGGER.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
+			PacketLogger.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -345,7 +346,7 @@ public class CharacterCreate implements IClientIncomingPacket
 				final Item item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
 				if (item == null)
 				{
-					LOGGER.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
+					PacketLogger.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
 					continue;
 				}
 				
@@ -362,7 +363,7 @@ public class CharacterCreate implements IClientIncomingPacket
 				final Item item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
 				if (item == null)
 				{
-					LOGGER.warning("Could not create item during char creation: itemId " + reward.getId() + ", amount " + reward.getCount() + ".");
+					PacketLogger.warning("Could not create item during char creation: itemId " + reward.getId() + ", amount " + reward.getCount() + ".");
 					continue;
 				}
 				

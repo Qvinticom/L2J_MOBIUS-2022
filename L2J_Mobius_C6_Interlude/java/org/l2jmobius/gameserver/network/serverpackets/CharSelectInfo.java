@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @version $Revision: 1.8.2.4.2.6 $ $Date: 2005/04/06 16:13:46 $
@@ -226,7 +227,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(e.toString());
+			PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
 		return characterList;
@@ -252,7 +253,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(e.toString());
+			PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 	
@@ -332,7 +333,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Could not restore augmentation info: " + e);
+				PacketLogger.warning(getClass().getSimpleName() + ": Could not restore augmentation info: " + e.getMessage());
 			}
 		}
 		

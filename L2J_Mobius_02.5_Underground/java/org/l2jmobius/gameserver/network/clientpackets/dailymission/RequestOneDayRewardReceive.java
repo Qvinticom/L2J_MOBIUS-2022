@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
@@ -61,7 +62,7 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 		
 		if (player.hasRequest(RewardRequest.class))
 		{
-			LOGGER.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
+			PacketLogger.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
 			Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
 			return;
 		}

@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 public class RequestReplySurrenderPledgeWar implements IClientIncomingPacket
 {
@@ -54,7 +55,7 @@ public class RequestReplySurrenderPledgeWar implements IClientIncomingPacket
 		}
 		else
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
+			PacketLogger.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
 		}
 		player.onTransactionRequest(requestor);
 	}

@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -136,7 +137,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			else
 			{
 				player.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
-				LOGGER.warning("No item handler registered for itemId: " + item.getId());
+				PacketLogger.warning("No item handler registered for itemId: " + item.getId());
 			}
 		}
 	}

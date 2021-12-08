@@ -25,9 +25,13 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class ExGetOnAirShip implements IClientIncomingPacket
 {
+	@SuppressWarnings("unused")
 	private int _x;
+	@SuppressWarnings("unused")
 	private int _y;
+	@SuppressWarnings("unused")
 	private int _z;
+	@SuppressWarnings("unused")
 	private int _shipId;
 	
 	@Override
@@ -43,9 +47,9 @@ public class ExGetOnAirShip implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		LOGGER.info("[T1:ExGetOnAirShip] x: " + _x);
-		LOGGER.info("[T1:ExGetOnAirShip] y: " + _y);
-		LOGGER.info("[T1:ExGetOnAirShip] z: " + _z);
-		LOGGER.info("[T1:ExGetOnAirShip] ship ID: " + _shipId);
+		// PacketLogger.info("[T1:ExGetOnAirShip] x: " + _x);
+		// PacketLogger.info("[T1:ExGetOnAirShip] y: " + _y);
+		// PacketLogger.info("[T1:ExGetOnAirShip] z: " + _z);
+		// PacketLogger.info("[T1:ExGetOnAirShip] ship ID: " + _shipId);
 	}
 }

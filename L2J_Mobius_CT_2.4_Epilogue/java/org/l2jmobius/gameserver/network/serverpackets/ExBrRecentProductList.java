@@ -21,7 +21,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
@@ -29,6 +28,7 @@ import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @author Mobius
@@ -59,7 +59,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Could not restore Item Mall transaction: " + e.getMessage(), e);
+			PacketLogger.warning("Could not restore Item Mall transaction: " + e.getMessage());
 		}
 	}
 	

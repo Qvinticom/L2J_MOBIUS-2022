@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -152,7 +153,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 			}
 			catch (SQLException e)
 			{
-				LOGGER.warning("Hero and Legend Info: Couldnt load data: " + e.getMessage());
+				PacketLogger.warning("Hero and Legend Info: Couldnt load data: " + e.getMessage());
 			}
 		}
 		return true;

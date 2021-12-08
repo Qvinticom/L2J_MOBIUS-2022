@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
@@ -71,7 +72,7 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		final ClanMember member = clan.getClanMember(_target);
 		if (member == null)
 		{
-			LOGGER.warning("Target (" + _target + ") is not member of the clan");
+			PacketLogger.warning("Target (" + _target + ") is not member of the clan");
 			return;
 		}
 		if (member.isOnline() && member.getPlayer().isInCombat())

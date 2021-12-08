@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.util.GMAudit;
 
 /**
@@ -56,7 +57,7 @@ public class SendBypassBuildCmd implements IClientIncomingPacket
 		if (handler == null)
 		{
 			player.sendMessage("The command " + _command + " does not exist!");
-			LOGGER.warning("No handler registered for admin command '" + _command + "'.");
+			PacketLogger.warning("No handler registered for admin command '" + _command + "'.");
 			return;
 		}
 		
@@ -64,7 +65,7 @@ public class SendBypassBuildCmd implements IClientIncomingPacket
 		if (!AdminData.getInstance().hasAccess(_command, player.getAccessLevel()))
 		{
 			player.sendMessage("You don't have the access right to use this command!");
-			LOGGER.warning("Character " + player.getName() + " tried to use admin command " + _command + ", but doesn't have access to it!");
+			PacketLogger.warning("Character " + player.getName() + " tried to use admin command " + _command + ", but doesn't have access to it!");
 			return;
 		}
 		

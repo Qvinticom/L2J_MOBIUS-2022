@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
-import java.util.logging.Level;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * Format: c dddd
@@ -79,7 +79,7 @@ public class GameGuardReply implements IClientIncomingPacket
 		}
 		catch (NoSuchAlgorithmException e)
 		{
-			LOGGER.log(Level.WARNING, "", e);
+			PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 }

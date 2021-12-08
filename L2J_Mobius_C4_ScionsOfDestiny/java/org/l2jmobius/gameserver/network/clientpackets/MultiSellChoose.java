@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.multisell.MultiSellEntry;
 import org.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import org.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -257,13 +258,13 @@ public class MultiSellChoose implements IClientIncomingPacket
 				// this is a cheat, transaction will be aborted and if any items already tanken will not be returned back to inventory!
 				if (itemToTake == null)
 				{
-					LOGGER.warning("Character: " + player.getName() + " is trying to cheat in multisell, merchatnt id:" + (merchant != null ? merchant.getNpcId() : 0));
+					PacketLogger.warning("Character: " + player.getName() + " is trying to cheat in multisell, merchatnt id:" + (merchant != null ? merchant.getNpcId() : 0));
 					return;
 				}
 				
 				if (itemToTake.isWear())
 				{
-					LOGGER.warning("Character: " + player.getName() + " is trying to cheat in multisell with weared item");
+					PacketLogger.warning("Character: " + player.getName() + " is trying to cheat in multisell with weared item");
 					return;
 				}
 				

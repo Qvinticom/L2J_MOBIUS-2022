@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -56,12 +57,12 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 				final SkillHolder holder = new SkillHolder(packet.readD(), packet.readD());
 				if (holder.getSkillLevel() < 1)
 				{
-					LOGGER.warning("Player " + client + " is trying to learn skill " + holder + " by sending packet with level 0!");
+					PacketLogger.warning("Player " + client + " is trying to learn skill " + holder + " by sending packet with level 0!");
 					return false;
 				}
 				if (_skills.putIfAbsent(holder.getSkillId(), holder) != null)
 				{
-					LOGGER.warning("Player " + client + " is trying to send two times one skill " + holder + " to learn!");
+					PacketLogger.warning("Player " + client + " is trying to send two times one skill " + holder + " to learn!");
 					return false;
 				}
 			}
@@ -85,7 +86,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 		
 		if ((player.getAbilityPoints() == 0) || (player.getAbilityPoints() == player.getAbilityPointsUsed()))
 		{
-			LOGGER.warning("Player " + player + " is trying to learn ability without ability points!");
+			PacketLogger.warning("Player " + player + " is trying to learn ability without ability points!");
 			return;
 		}
 		
@@ -114,7 +115,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			final SkillLearn learn = SkillTreeData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLevel());
 			if (learn == null)
 			{
-				LOGGER.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
+				PacketLogger.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
@@ -122,7 +123,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			final Skill skill = holder.getSkill();
 			if (skill == null)
 			{
-				LOGGER.warning("Skill " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
+				PacketLogger.warning("Skill " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
@@ -155,7 +156,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			// Case 1: Learning skill without having X points spent on the specific tree
 			if (learn.getPointsRequired() > pointsSpent[learn.getTreeId() - 1])
 			{
-				LOGGER.warning("Player " + player + " is trying to learn " + skill + " without enough ability points spent!");
+				PacketLogger.warning("Player " + player + " is trying to learn " + skill + " without enough ability points spent!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -165,7 +166,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			{
 				if (player.getSkillLevel(required.getSkillId()) < required.getSkillLevel())
 				{
-					LOGGER.warning("Player " + player + " is trying to learn " + skill + " without having prerequsite skill: " + required.getSkill() + "!");
+					PacketLogger.warning("Player " + player + " is trying to learn " + skill + " without having prerequsite skill: " + required.getSkill() + "!");
 					client.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -174,7 +175,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			// Case 3 Learning a skill without having enough points
 			if ((player.getAbilityPoints() - player.getAbilityPointsUsed()) < points)
 			{
-				LOGGER.warning("Player " + player + " is trying to learn ability without ability points!");
+				PacketLogger.warning("Player " + player + " is trying to learn ability without ability points!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @author Migi, DS
@@ -44,7 +45,7 @@ public class ExReplySentPost extends AbstractItemPacket
 			}
 			else
 			{
-				LOGGER.warning("Message " + msg.getId() + " has attachments but itemcontainer is empty.");
+				PacketLogger.warning("Message " + msg.getId() + " has attachments but itemcontainer is empty.");
 			}
 		}
 	}

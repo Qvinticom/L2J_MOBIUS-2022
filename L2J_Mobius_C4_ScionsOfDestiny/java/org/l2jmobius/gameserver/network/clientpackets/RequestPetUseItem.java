@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
@@ -183,7 +184,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			final IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
 			if (handler == null)
 			{
-				LOGGER.warning("no itemhandler registered for itemId:" + item.getItemId());
+				PacketLogger.warning("No itemhandler registered for itemId: " + item.getItemId());
 			}
 			else
 			{

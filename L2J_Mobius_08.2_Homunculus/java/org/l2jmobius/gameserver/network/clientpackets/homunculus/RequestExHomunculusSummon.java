@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusSummonResult;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
@@ -150,7 +151,7 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 			final HomunculusTemplate template = HomunculusData.getInstance().getTemplate(homunculusId);
 			if (template == null)
 			{
-				LOGGER.warning("Counld not find Homunculus template " + homunculusId + ".");
+				PacketLogger.warning("Counld not find Homunculus template " + homunculusId + ".");
 				return;
 			}
 			

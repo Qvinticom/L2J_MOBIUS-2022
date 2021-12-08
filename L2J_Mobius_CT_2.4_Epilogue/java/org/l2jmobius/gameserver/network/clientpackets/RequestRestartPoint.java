@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
@@ -145,7 +146,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			{
 				if ((player.getClan() == null) || (player.getClan().getHideoutId() == 0))
 				{
-					LOGGER.warning("Player [" + player.getName() + "] called RestartPointPacket - To Clanhall and he doesn't have Clanhall!");
+					PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - To Clanhall and he doesn't have Clanhall!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
@@ -171,7 +172,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 					}
 					else
 					{
-						LOGGER.warning("Player [" + player.getName() + "] called RestartPointPacket - To Castle and he doesn't have Castle!");
+						PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - To Castle and he doesn't have Castle!");
 						return;
 					}
 				}
@@ -193,7 +194,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			{
 				if (((player.getClan() == null) || (player.getClan().getFortId() == 0)) && !isInDefense)
 				{
-					LOGGER.warning("Player [" + player.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
+					PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.FORTRESS);
@@ -234,7 +235,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 						}
 					}
 					
-					LOGGER.warning("Player [" + player.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
+					PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.SIEGEFLAG);
@@ -244,7 +245,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			{
 				if (!player.isGM() && !player.isFestivalParticipant() && !player.getInventory().haveItemForSelfResurrection())
 				{
-					LOGGER.warning("Player [" + player.getName() + "] called RestartPointPacket - Fixed and he isn't festival participant!");
+					PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - Fixed and he isn't festival participant!");
 					return;
 				}
 				if (player.isGM() || player.destroyItemByItemId("Feather", 10649, 1, player, false) || player.destroyItemByItemId("Feather", 13300, 1, player, false) || player.destroyItemByItemId("Feather", 13128, 1, player, false))

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Arrays;
-import java.util.logging.Level;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -29,6 +28,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 
@@ -148,7 +148,7 @@ public class SystemMessage implements IClientOutgoingPacket
 		{
 			_params = Arrays.copyOf(_params, _paramIndex + 1);
 			_smId.setParamCount(_paramIndex + 1);
-			LOGGER.log(Level.INFO, "Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
+			PacketLogger.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
 		}
 		
 		_params[_paramIndex++] = param;
@@ -369,7 +369,7 @@ public class SystemMessage implements IClientOutgoingPacket
 		{
 			if (param == null)
 			{
-				LOGGER.warning("Found null parameter for SystemMessageId " + _smId);
+				PacketLogger.warning("Found null parameter for SystemMessageId " + _smId);
 				continue;
 			}
 			

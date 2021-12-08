@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * Format: chddd d: Arena d: Answer
@@ -64,7 +65,7 @@ public class RequestExCubeGameReadyAnswer implements IClientIncomingPacket
 			}
 			default:
 			{
-				LOGGER.warning("Unknown Cube Game Answer ID: " + _answer);
+				PacketLogger.warning("Unknown Cube Game Answer ID: " + _answer);
 				break;
 			}
 		}

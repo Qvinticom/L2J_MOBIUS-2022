@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -126,7 +127,7 @@ public class Action implements IClientIncomingPacket
 				default:
 				{
 					// Invalid action detected (probably client cheating), LOGGER this
-					LOGGER.warning("Character: " + player.getName() + " requested invalid action: " + _actionId);
+					PacketLogger.warning("Character: " + player.getName() + " requested invalid action: " + _actionId);
 					client.sendPacket(ActionFailed.STATIC_PACKET);
 					break;
 				}

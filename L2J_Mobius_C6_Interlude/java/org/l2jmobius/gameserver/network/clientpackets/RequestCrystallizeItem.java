@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -53,7 +54,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final Player player = client.getPlayer();
 		if (player == null)
 		{
-			LOGGER.warning("RequestCrystalizeItem: activeChar was null");
+			PacketLogger.warning("RequestCrystalizeItem: activeChar was null.");
 			return;
 		}
 		
@@ -115,7 +116,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == ItemTemplate.CRYSTAL_NONE))
 		{
-			LOGGER.warning("" + player.getObjectId() + " tried to crystallize " + itemToRemove.getItem().getItemId());
+			PacketLogger.warning(player.getObjectId() + " tried to crystallize " + itemToRemove.getItem().getItemId());
 			return;
 		}
 		

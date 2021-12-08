@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
 public class ProtocolVersion implements IClientIncomingPacket
@@ -42,8 +43,8 @@ public class ProtocolVersion implements IClientIncomingPacket
 		}
 		else if ((_version < Config.MIN_PROTOCOL_REVISION) || (_version > Config.MAX_PROTOCOL_REVISION))
 		{
-			LOGGER.info("Client: " + client + " -> Protocol Revision: " + _version + " is invalid. Minimum is " + Config.MIN_PROTOCOL_REVISION + " and Maximum is " + Config.MAX_PROTOCOL_REVISION + " are supported. Closing connection.");
-			LOGGER.warning("Wrong Protocol Version " + _version);
+			PacketLogger.info("Client: " + client + " -> Protocol Revision: " + _version + " is invalid. Minimum is " + Config.MIN_PROTOCOL_REVISION + " and Maximum is " + Config.MAX_PROTOCOL_REVISION + " are supported. Closing connection.");
+			PacketLogger.warning("Wrong Protocol Version " + _version);
 			client.close(new KeyPacket(client.enableCrypt(), 0));
 		}
 		else

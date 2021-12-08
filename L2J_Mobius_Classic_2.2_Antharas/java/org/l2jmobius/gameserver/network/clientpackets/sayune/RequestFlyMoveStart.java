@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.request.SayuneRequest;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.SayuneZone;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
@@ -72,7 +73,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 		if (zone.getMapId() == -1)
 		{
 			player.sendMessage("That zone is not supported yet!");
-			LOGGER.warning(getClass().getSimpleName() + ": " + player + " Requested sayune on zone with no map id set");
+			PacketLogger.warning(getClass().getSimpleName() + ": " + player + " Requested sayune on zone with no map id set");
 			return;
 		}
 		
@@ -80,7 +81,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 		if (map == null)
 		{
 			player.sendMessage("This zone is not handled yet!!");
-			LOGGER.warning(getClass().getSimpleName() + ": " + player + " Requested sayune on unhandled map zone " + zone.getName());
+			PacketLogger.warning(getClass().getSimpleName() + ": " + player + " Requested sayune on unhandled map zone " + zone.getName());
 			return;
 		}
 		

@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 
@@ -73,7 +74,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			client.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
+				PacketLogger.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
 			}
 			return;
 		}

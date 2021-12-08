@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostSent;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -313,14 +314,14 @@ public class RequestSendPost implements IClientIncomingPacket
 			final Item oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 			if ((oldItem == null) || !oldItem.isTradeable() || oldItem.isEquipped())
 			{
-				LOGGER.warning("Error adding attachment for char " + player.getName() + " (olditem == null)");
+				PacketLogger.warning("Error adding attachment for char " + player.getName() + " (olditem == null)");
 				return false;
 			}
 			
 			final Item newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, receiver);
 			if (newItem == null)
 			{
-				LOGGER.warning("Error adding attachment for char " + player.getName() + " (newitem == null)");
+				PacketLogger.warning("Error adding attachment for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 			newItem.setItemLocation(newItem.getItemLocation(), msg.getId());

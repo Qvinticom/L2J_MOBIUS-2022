@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 
 /**
  * @author Plim
@@ -74,7 +74,7 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.SEVERE, "Error while saving petition feedback");
+			PacketLogger.warning(getClass().getSimpleName() + ": Error while saving petition feedback: " + e.getMessage());
 		}
 	}
 }

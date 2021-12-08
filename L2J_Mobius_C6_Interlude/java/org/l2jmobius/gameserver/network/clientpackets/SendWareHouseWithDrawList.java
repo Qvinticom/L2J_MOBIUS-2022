@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
@@ -189,7 +190,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 			final Item newItem = warehouse.transferItem("Warehouse", objectId, count, player.getInventory(), player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
-				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName());
+				PacketLogger.warning("Error withdrawing a warehouse object for char " + player.getName());
 				continue;
 			}
 			

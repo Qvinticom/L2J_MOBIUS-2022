@@ -22,6 +22,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBossRecord;
 
 /**
@@ -50,7 +51,7 @@ public class RequestGetBossRecord implements IClientIncomingPacket
 		
 		if (_bossId != 0)
 		{
-			LOGGER.info("C5: RequestGetBossRecord: d: " + _bossId + " ActiveChar: " + player); // should be always 0, log it if isnt 0 for furture research
+			PacketLogger.info("C5: RequestGetBossRecord: d: " + _bossId + " ActiveChar: " + player); // should be always 0, log it if isnt 0 for furture research
 		}
 		
 		final int points = RaidBossPointsManager.getInstance().getPointsByOwnerId(player.getObjectId());

@@ -43,6 +43,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillDone;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
@@ -96,7 +97,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		if ((_level < 1) || (_level > 1000) || (_id < 1) || (_id > 32000))
 		{
 			Util.handleIllegalPlayerAction(player, "Wrong Packet Data in Aquired Skill", Config.DEFAULT_PUNISH);
-			LOGGER.warning("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + player);
+			PacketLogger.warning("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + player);
 			return;
 		}
 		
@@ -109,7 +110,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		final Skill skill = SkillData.getInstance().getSkill(_id, _level);
 		if (skill == null)
 		{
-			LOGGER.warning(RequestAcquireSkill.class.getSimpleName() + ": Player " + player.getName() + " is trying to learn a null skill Id: " + _id + " level: " + _level + "!");
+			PacketLogger.warning(RequestAcquireSkill.class.getSimpleName() + ": Player " + player.getName() + " is trying to learn a null skill Id: " + _id + " level: " + _level + "!");
 			return;
 		}
 		
@@ -312,7 +313,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					}
 					else
 					{
-						LOGGER.warning("Null SubClassSkills quest, for Sub-Class skill Id: " + _id + " level: " + _level + " for player " + player.getName() + "!");
+						PacketLogger.warning("Null SubClassSkills quest, for Sub-Class skill Id: " + _id + " level: " + _level + " for player " + player.getName() + "!");
 						return;
 					}
 				}
@@ -346,12 +347,12 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 								}
 								else
 								{
-									LOGGER.warning("Inexistent item for object Id " + itemObjId + ", for Sub-Class skill Id: " + _id + " level: " + _level + " for player " + player.getName() + "!");
+									PacketLogger.warning("Inexistent item for object Id " + itemObjId + ", for Sub-Class skill Id: " + _id + " level: " + _level + " for player " + player.getName() + "!");
 								}
 							}
 							else
 							{
-								LOGGER.warning("Invalid item object Id " + itemOID + ", for Sub-Class skill Id: " + _id + " level: " + _level + " for player " + player.getName() + "!");
+								PacketLogger.warning("Invalid item object Id " + itemOID + ", for Sub-Class skill Id: " + _id + " level: " + _level + " for player " + player.getName() + "!");
 							}
 						}
 					}
@@ -372,7 +373,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 			}
 			default:
 			{
-				LOGGER.warning("Recived Wrong Packet Data in Aquired Skill, unknown skill type:" + _skillType);
+				PacketLogger.warning("Recived Wrong Packet Data in Aquired Skill, unknown skill type:" + _skillType);
 				break;
 			}
 		}
