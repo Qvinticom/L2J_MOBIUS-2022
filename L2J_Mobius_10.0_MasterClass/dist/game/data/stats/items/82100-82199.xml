@@ -472,6 +472,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80817" min="5" max="5" chance="100" /> <!-- Emperor's Special Cocktail -->
+		</capsuled_items>
 	</item>
 	<item id="82142" name="Honey Dark Beer 2-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Honey Dark Beer (2 pcs.). -->
@@ -482,6 +487,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80842" min="2" max="2" chance="100" /> <!-- Honey Dark Beer -->
+		</capsuled_items>
 	</item>
 	<item id="82143" name="Glowing Dragon's Attribute Potion (XP) 2-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potion (XP) (2 pcs.). -->
@@ -492,6 +502,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48497" min="2" max="2" chance="100" /> <!-- Glowing Dragon's Attribute Potion (XP) -->
+		</capsuled_items>
 	</item>
 	<item id="82144" name="Freya's Ice Rose 2-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Freya's Ice Rose (2 pcs.). -->
@@ -502,6 +517,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48830" min="2" max="2" chance="100" /> <!-- Freya's Ice Rose -->
+		</capsuled_items>
 	</item>
 	<item id="82145" name="Mysterious Aid Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Storm Isle's Time Stone/ Abandoned Coal Mines' Time Stone, Emperor's Special Cocktail (24 pcs.), Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Shining Nevit's Gold Hourglass, Honey Dark Beer, Newbie's Fortune Scroll (48 pcs.), Freya's Scroll of Storm (144 pcs.). -->
