@@ -1489,7 +1489,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27787" toLevel="10" name="Sayha's Talisman">
+	<skill id="27787" toLevel="20" name="Sayha's Talisman">
 		<!-- P. Def. +$s1, M. Def. +$s2, Acquired XP/ SP +$s3. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>P</operateType>
@@ -1508,6 +1508,16 @@
 					<value level="8">1576</value>
 					<value level="9">1801</value>
 					<value level="10">2027</value>
+					<value level="11">2252</value>
+					<value level="12">2477</value>
+					<value level="13">2702</value>
+					<value level="14">2927</value>
+					<value level="15">3152</value>
+					<value level="16">3377</value>
+					<value level="17">3602</value>
+					<value level="18">3827</value>
+					<value level="19">4052</value>
+					<value level="20">4277</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1523,6 +1533,16 @@
 					<value level="8">1030</value>
 					<value level="9">1178</value>
 					<value level="10">1325</value>
+					<value level="11">1472</value>
+					<value level="12">1619</value>
+					<value level="13">1766</value>
+					<value level="14">1913</value>
+					<value level="15">2060</value>
+					<value level="16">2207</value>
+					<value level="17">2354</value>
+					<value level="18">2501</value>
+					<value level="19">2648</value>
+					<value level="20">2795</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1538,6 +1558,16 @@
 					<value level="8">20</value>
 					<value level="9">25</value>
 					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">35</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">35</value>
+					<value level="19">40</value>
+					<value level="20">40</value>
 				</amount>
 			</effect>
 			<effect name="SpModify">
@@ -1552,41 +1582,62 @@
 					<value level="8">20</value>
 					<value level="9">25</value>
 					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">35</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">35</value>
+					<value level="19">40</value>
+					<value level="20">40</value>
 				</amount>
 			</effect>
 			<effect name="AdditionalPotionCp">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">1000</value>
-					<value level="10">2000</value>
+					<value fromLevel="1" toLevel="8">0</value>
+					<value level="9">5000</value>
+					<value level="10">7000</value>
+					<value fromLevel="11" toLevel="20">3000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="AdditionalPotionHp">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">1000</value>
-					<value level="10">2000</value>
+					<value fromLevel="1" toLevel="8">0</value>
+					<value level="9">5000</value>
+					<value level="10">7000</value>
+					<value fromLevel="11" toLevel="20">3000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value fromLevel="1" toLevel="8">0</value>
+					<value level="9">5000</value>
+					<value level="10">7000</value>
+					<value fromLevel="11" toLevel="20">3000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="11" toLevel="14">3</value>
+					<value fromLevel="15" toLevel="19">7</value>
+					<value level="20">10</value>
+				</amount>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="11" toLevel="14">3</value>
+					<value fromLevel="15" toLevel="19">7</value>
+					<value level="20">10</value>
+				</amount>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="27788" toLevel="4" name="Sayha's Trust">
+	<skill id="27788" toLevel="8" name="Sayha's Trust">
 		<!-- Skill Power +$s1, Skill Cooldown -$s2. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>P</operateType>
@@ -1599,6 +1650,10 @@
 					<value level="2">3</value>
 					<value level="3">5</value>
 					<value level="4">9</value>
+					<value level="5">11</value>
+					<value level="6">13</value>
+					<value level="7">15</value>
+					<value level="8">18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1608,6 +1663,10 @@
 					<value level="2">3</value>
 					<value level="3">5</value>
 					<value level="4">9</value>
+					<value level="5">11</value>
+					<value level="6">13</value>
+					<value level="7">15</value>
+					<value level="8">18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1615,8 +1674,7 @@
 				<amount>
 					<value level="1">-2</value>
 					<value level="2">-3</value>
-					<value level="3">-5</value>
-					<value level="4">-5</value>
+					<value fromLevel="3" toLevel="8">-5</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
@@ -1625,8 +1683,7 @@
 				<amount>
 					<value level="1">-2</value>
 					<value level="2">-3</value>
-					<value level="3">-5</value>
-					<value level="4">-5</value>
+					<value fromLevel="3" toLevel="8">-5</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -1635,15 +1692,14 @@
 				<amount>
 					<value level="1">-2</value>
 					<value level="2">-3</value>
-					<value level="3">-5</value>
-					<value level="4">-5</value>
+					<value fromLevel="3" toLevel="8">-5</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27789" toLevel="4" name="Sayha's Grace">
+	<skill id="27789" toLevel="8" name="Sayha's Grace">
 		<!-- For $s1, Received Damage -$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
@@ -1666,6 +1722,10 @@
 			<value level="2">420000</value>
 			<value level="3">300000</value>
 			<value level="4">180000</value>
+			<value level="5">170000</value>
+			<value level="6">150000</value>
+			<value level="7">140000</value>
+			<value level="8">120000</value>
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
@@ -1679,7 +1739,7 @@
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">7</value>
-					<value level="4">10</value>
+					<value fromLevel="4" toLevel="8">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1688,7 +1748,7 @@
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">7</value>
-					<value level="4">10</value>
+					<value fromLevel="4" toLevel="8">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1697,7 +1757,7 @@
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">7</value>
-					<value level="4">10</value>
+					<value fromLevel="4" toLevel="8">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1706,7 +1766,7 @@
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">7</value>
-					<value level="4">10</value>
+					<value fromLevel="4" toLevel="8">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1715,7 +1775,7 @@
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">7</value>
-					<value level="4">10</value>
+					<value fromLevel="4" toLevel="8">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1724,7 +1784,7 @@
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">7</value>
-					<value level="4">10</value>
+					<value fromLevel="4" toLevel="8">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1795,7 +1855,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27791" toLevel="4" name="Sayha's Anger">
+	<skill id="27791" toLevel="8" name="Sayha's Anger">
 		<!-- For $s1, PvP Damage +$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
@@ -1818,6 +1878,10 @@
 			<value level="2">420000</value>
 			<value level="3">300000</value>
 			<value level="4">180000</value>
+			<value level="5">170000</value>
+			<value level="6">150000</value>
+			<value level="7">140000</value>
+			<value level="8">120000</value>
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
@@ -1831,7 +1895,7 @@
 					<value level="1">8</value>
 					<value level="2">8</value>
 					<value level="3">12</value>
-					<value level="4">15</value>
+					<value fromLevel="4" toLevel="8">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1840,7 +1904,7 @@
 					<value level="1">8</value>
 					<value level="2">8</value>
 					<value level="3">12</value>
-					<value level="4">15</value>
+					<value fromLevel="4" toLevel="8">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1849,7 +1913,7 @@
 					<value level="1">8</value>
 					<value level="2">8</value>
 					<value level="3">12</value>
-					<value level="4">15</value>
+					<value fromLevel="4" toLevel="8">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

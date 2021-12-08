@@ -421,7 +421,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18024" toLevel="24" name="Venir's Talisman">
+	<skill id="18024" toLevel="34" name="Venir's Talisman">
 		<!-- MEN +$s1. -->
 		<icon>
 			<value level="1">icon.etc_all_stat_talisman_i00</value>
@@ -448,6 +448,16 @@
 			<value level="22">icon.etc_all_stat_talisman_i02</value>
 			<value level="23">icon.etc_all_stat_talisman_i02</value>
 			<value level="24">icon.etc_all_stat_talisman_i02</value>
+			<value level="25">icon.dethrone_soul_talisman_lv1</value>
+			<value level="26">icon.dethrone_soul_talisman_lv1</value>
+			<value level="27">icon.dethrone_soul_talisman_lv1</value>
+			<value level="28">icon.dethrone_soul_talisman_lv1</value>
+			<value level="29">icon.dethrone_soul_talisman_lv5</value>
+			<value level="30">icon.dethrone_soul_talisman_lv5</value>
+			<value level="31">icon.dethrone_soul_talisman_lv5</value>
+			<value level="32">icon.dethrone_soul_talisman_lv5</value>
+			<value level="33">icon.dethrone_soul_talisman_lv9</value>
+			<value level="34">icon.dethrone_soul_talisman_lv9</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -477,6 +487,9 @@
 					<value level="22">3</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value level="25">3</value>
+					<value level="26">3</value>
+					<value fromLevel="27" toLevel="34">4</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -506,6 +519,9 @@
 					<value level="22">3</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value level="25">3</value>
+					<value level="26">3</value>
+					<value fromLevel="27" toLevel="34">4</value>
 				</amount>
 				<stat>INT</stat>
 			</effect>
@@ -535,6 +551,7 @@
 					<value level="22">3</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value fromLevel="25" toLevel="34">4</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -564,6 +581,8 @@
 					<value level="22">3</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value level="25">3</value>
+					<value fromLevel="26" toLevel="34">4</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -593,6 +612,7 @@
 					<value level="22">3</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value fromLevel="25" toLevel="34">4</value>
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -622,6 +642,7 @@
 					<value level="22">3</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value fromLevel="25" toLevel="34">4</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -651,6 +672,10 @@
 					<value level="22">2</value>
 					<value level="23">2</value>
 					<value level="24">3</value>
+					<value level="25">3</value>
+					<value level="26">3</value>
+					<value level="27">3</value>
+					<value fromLevel="28" toLevel="34">4</value>
 				</amount>
 				<stat>CHA</stat>
 			</effect>
@@ -680,8 +705,57 @@
 					<value level="22">2</value>
 					<value level="23">3</value>
 					<value level="24">3</value>
+					<value level="25">3</value>
+					<value level="26">3</value>
+					<value level="27">3</value>
+					<value fromLevel="28" toLevel="34">4</value>
 				</amount>
 				<stat>LUC</stat>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="28">0</value>
+					<value level="29">1</value>
+					<value level="30">2</value>
+					<value fromLevel="31" toLevel="34">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="28">0</value>
+					<value level="29">1</value>
+					<value level="30">2</value>
+					<value fromLevel="31" toLevel="34">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="31">0</value>
+					<value level="32">1</value>
+					<value level="33">2</value>
+					<value level="34">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="31">0</value>
+					<value level="32">1</value>
+					<value level="33">2</value>
+					<value level="34">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="31">0</value>
+					<value level="32">1</value>
+					<value level="33">2</value>
+					<value level="34">3</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
