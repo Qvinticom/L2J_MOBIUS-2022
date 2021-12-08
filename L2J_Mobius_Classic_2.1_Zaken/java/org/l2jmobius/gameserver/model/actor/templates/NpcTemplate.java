@@ -774,9 +774,22 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 			calculatedDrops.addAll(Config.CHAMPION_REWARD_ITEMS);
 		}
 		
-		if (dropType == DropType.DROP)
+		if (Config.VIP_SYSTEM_ENABLED && (dropType == DropType.DROP))
 		{
+			// list may be null here
+			if (calculatedDrops == null)
+			{
+				calculatedDrops = new ArrayList<>();
+			}
+			
+			// calculate vip drops
 			processVipDrops(calculatedDrops, victim, killer);
+			
+			// returning empty list may cause problems
+			if (calculatedDrops.isEmpty())
+			{
+				calculatedDrops = null;
+			}
 		}
 		
 		return calculatedDrops;
