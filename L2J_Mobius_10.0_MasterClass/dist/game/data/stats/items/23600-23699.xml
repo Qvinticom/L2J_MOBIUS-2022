@@ -46,9 +46,6 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<stats>
 			<stat type="fireRes">7</stat>
 			<stat type="waterRes">7</stat>
@@ -591,9 +588,6 @@
 		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
-		</cond>
-		<cond>
-			<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">25</stat>

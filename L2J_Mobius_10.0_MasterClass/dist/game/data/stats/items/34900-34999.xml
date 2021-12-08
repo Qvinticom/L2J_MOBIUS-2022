@@ -1629,9 +1629,6 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19037" level="1" /> <!-- Cloak of Radiant Light -->
@@ -1665,9 +1662,6 @@
 				<player isOnSide="DARK" />
 				<player cloakStatus="true" />
 			</and>
-		</cond>
-		<cond>
-			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->

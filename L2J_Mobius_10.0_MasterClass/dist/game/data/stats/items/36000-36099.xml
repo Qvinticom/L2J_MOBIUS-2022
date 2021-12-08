@@ -1015,9 +1015,6 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -1038,9 +1035,6 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -1060,9 +1054,6 @@
 		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
-		</cond>
-		<cond>
-			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="13405" level="1" /> <!-- Clan Cloak - Castle -->

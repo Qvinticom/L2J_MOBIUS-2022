@@ -1514,9 +1514,6 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<skills>
 			<skill id="19041" level="1" /> <!-- King's Call -->
 			<skill id="19039" level="1" /> <!-- Cloak of Light -->
@@ -1538,9 +1535,6 @@
 		<set name="material" val="LEATHER" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
-		</cond>
-		<cond>
-			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="19041" level="1" /> <!-- King's Call -->

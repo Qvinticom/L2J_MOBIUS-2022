@@ -245,9 +245,6 @@
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
-		<cond msgId="113" addName="1">
-			<player level="99" />
-		</cond>
 	</item>
 	<item id="47715" name="Clan Reward" type="EtcItem">
 		<!-- Recharge yourself! This item is paid to those who have worked for the growth of the Clan. You can get 25 Vitality Replenishing Star Candy. -->

@@ -1269,9 +1269,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
-		<cond>
-			<player level="85" />
-		</cond>
 		<stats>
 			<stat type="mDef">23</stat>
 			<stat type="pDef">46</stat>
@@ -1296,9 +1293,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
-		<cond>
-			<player level="99" />
-		</cond>
 		<stats>
 			<stat type="mDef">27</stat>
 			<stat type="pDef">54</stat>
@@ -1318,12 +1312,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="10" />
-		<cond>
-			<player level="105" />
-		</cond>
 		<stats>
 			<stat type="mDef">31</stat>
 			<stat type="pDef">62</stat>

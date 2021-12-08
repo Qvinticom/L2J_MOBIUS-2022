@@ -610,9 +610,6 @@
 		<set name="weight" val="2" />
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113" addName="1">
-			<player level="110" />
-		</cond>
 	</item>
 	<item id="80131" name="R110-grade Accessory Augmenting Stone" type="EtcItem">
 		<!-- Ordinary Mineral that has been petrified by a creature's physical or magical damage. Used when augmenting R110-grade accessories. -->
@@ -623,9 +620,6 @@
 		<set name="weight" val="2" />
 		<set name="price" val="10030020" />
 		<set name="is_stackable" val="true" />
-		<cond msgId="113" addName="1">
-			<player level="110" />
-		</cond>
 	</item>
 	<item id="80132" name="R110-grade Weapon Attribute Change Crystal" type="EtcItem">
 		<!-- Double-click to change the attribute of an R110-grade weapon. The weapon imbued with an attribute must be in the inventory. -->

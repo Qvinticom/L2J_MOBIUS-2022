@@ -901,9 +901,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="material" val="LIQUID" />
-		<cond msgId="113" addName="1">
-			<player level="99" />
-		</cond>
 	</item>
 	<item id="46589" name="Sealed Soul Crystal" additionalName="Not used" type="EtcItem">
 		<!-- A crystal that contains the soul of a monster. Double-click to summon an Evil Spirit that can be absorbed with Soul Crystal Lv. 1-10. -->

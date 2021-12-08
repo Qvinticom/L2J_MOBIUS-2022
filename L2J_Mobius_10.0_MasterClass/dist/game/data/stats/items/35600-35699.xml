@@ -1942,9 +1942,6 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<skills>
 			<skill id="9498" level="1" /> <!-- Santa Girl's Cloak -->
 		</skills>
@@ -1970,9 +1967,6 @@
 		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
-		</cond>
-		<cond>
-			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="9498" level="1" /> <!-- Santa Girl's Cloak -->

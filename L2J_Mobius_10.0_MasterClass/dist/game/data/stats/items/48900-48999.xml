@@ -619,9 +619,6 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
-		<cond msgId="113" addName="1">
-			<player level="100" />
-		</cond>
 		<skills>
 			<skill id="39393" level="1" /> <!-- Artifact Book (Open 1 Slot) -->
 		</skills>
@@ -635,9 +632,6 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
-		<cond msgId="113" addName="1">
-			<player level="105" />
-		</cond>
 		<skills>
 			<skill id="39394" level="1" /> <!-- Artifact Book (Open 2 Slot) -->
 		</skills>
@@ -653,9 +647,6 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
 		<set name="weight" val="150" />
-		<cond msgId="113" addName="1">
-			<player level="110" />
-		</cond>
 		<skills>
 			<skill id="39395" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
 		</skills>
