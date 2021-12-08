@@ -301,7 +301,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					{
 						if (player.isNotBlocked(activeChar))
 						{
-							cs.sendTo(player);
+							player.sendPacket(cs);
 						}
 					}
 					break;

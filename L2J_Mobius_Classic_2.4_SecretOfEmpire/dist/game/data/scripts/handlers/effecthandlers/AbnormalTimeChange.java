@@ -150,7 +150,7 @@ public class AbnormalTimeChange extends AbstractEffect
 		{
 			if ((creature != null) && creature.isPlayer())
 			{
-				upd.sendTo(creature.getActingPlayer());
+				creature.sendPacket(upd);
 			}
 		}
 		

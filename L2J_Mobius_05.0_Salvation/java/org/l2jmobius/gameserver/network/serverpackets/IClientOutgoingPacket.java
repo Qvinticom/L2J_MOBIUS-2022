@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.network.IOutgoingPacket;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 /**
@@ -106,26 +105,6 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 	default int[] getPaperdollOrderVisualId()
 	{
 		return PAPERDOLL_ORDER_VISUAL_ID;
-	}
-	
-	/**
-	 * @param masks
-	 * @param type
-	 * @return {@code true} if the mask contains the current update component type
-	 */
-	static boolean containsMask(int masks, IUpdateTypeComponent type)
-	{
-		return (masks & type.getMask()) == type.getMask();
-	}
-	
-	/**
-	 * Sends this packet to the target player, useful for lambda operations like<br>
-	 * {@code World.getInstance().getPlayers().forEach(packet::sendTo)}
-	 * @param player
-	 */
-	default void sendTo(Player player)
-	{
-		player.sendPacket(this);
 	}
 	
 	default void runImpl(Player player)

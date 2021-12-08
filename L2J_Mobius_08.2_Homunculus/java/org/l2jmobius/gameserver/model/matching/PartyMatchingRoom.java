@@ -73,7 +73,7 @@ public class PartyMatchingRoom extends MatchingRoom
 		{
 			if (member != player)
 			{
-				sm.sendTo(member);
+				member.sendPacket(sm);
 			}
 		}
 		

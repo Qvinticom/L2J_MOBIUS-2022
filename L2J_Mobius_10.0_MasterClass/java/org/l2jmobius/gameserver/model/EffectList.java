@@ -1129,7 +1129,7 @@ public class EffectList
 		{
 			if ((creature != null) && creature.isPlayer())
 			{
-				upd.sendTo(creature.getActingPlayer());
+				creature.sendPacket(upd);
 			}
 		}
 		

@@ -111,10 +111,10 @@ public class Broadcast
 	 * In order to inform other players of state modification on the Creature, server just needs to go through _knownPlayers to send Server->Client Packet and check the distance between the targets.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
-	 * @param mov
+	 * @param packet
 	 * @param radiusValue
 	 */
-	public static void toKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radiusValue)
+	public static void toKnownPlayersInRadius(Creature creature, IClientOutgoingPacket packet, int radiusValue)
 	{
 		int radius = radiusValue;
 		if (radius < 0)
@@ -122,7 +122,7 @@ public class Broadcast
 			radius = 1500;
 		}
 		
-		World.getInstance().forEachVisibleObjectInRange(creature, Player.class, radius, mov::sendTo);
+		World.getInstance().forEachVisibleObjectInRange(creature, Player.class, radius, player -> player.sendPacket(packet));
 	}
 	
 	/**
@@ -146,7 +146,7 @@ public class Broadcast
 	}
 	
 	// To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
-	public static void toSelfAndKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radiusValue)
+	public static void toSelfAndKnownPlayersInRadius(Creature creature, IClientOutgoingPacket packet, int radiusValue)
 	{
 		int radius = radiusValue;
 		if (radius < 0)
@@ -156,10 +156,10 @@ public class Broadcast
 		
 		if (creature.isPlayer())
 		{
-			creature.sendPacket(mov);
+			creature.sendPacket(packet);
 		}
 		
-		World.getInstance().forEachVisibleObjectInRange(creature, Player.class, radius, mov::sendTo);
+		World.getInstance().forEachVisibleObjectInRange(creature, Player.class, radius, player -> player.sendPacket(packet));
 	}
 	
 	/**

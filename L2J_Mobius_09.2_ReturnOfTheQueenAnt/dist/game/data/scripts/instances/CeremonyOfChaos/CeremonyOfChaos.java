@@ -544,7 +544,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 					{
 						if (member.getObjectId() != player.getObjectId())
 						{
-							deleteObject.sendTo(member);
+							member.sendPacket(deleteObject);
 						}
 					}
 					
@@ -1006,7 +1006,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				{
 					if (member.getObjectId() != targetPlayer.getObjectId())
 					{
-						deleteObject.sendTo(member);
+						member.sendPacket(deleteObject);
 					}
 				}
 				
@@ -1118,7 +1118,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	{
 		for (Player player : PARTICIPANT_PLAYERS)
 		{
-			packet.sendTo(player);
+			player.sendPacket(packet);
 		}
 	}
 	

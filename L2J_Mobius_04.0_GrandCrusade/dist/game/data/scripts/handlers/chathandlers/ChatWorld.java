@@ -102,7 +102,7 @@ public class ChatWorld implements IChatHandler
 					{
 						if (player.isNotBlocked(activeChar))
 						{
-							cs.sendTo(player);
+							player.sendPacket(cs);
 						}
 					}
 				}
@@ -112,7 +112,7 @@ public class ChatWorld implements IChatHandler
 					{
 						if (player.isNotBlocked(activeChar))
 						{
-							cs.sendTo(player);
+							player.sendPacket(cs);
 						}
 					}
 				}
@@ -123,7 +123,7 @@ public class ChatWorld implements IChatHandler
 				{
 					if (player.isNotBlocked(activeChar))
 					{
-						cs.sendTo(player);
+						player.sendPacket(cs);
 					}
 				}
 			}

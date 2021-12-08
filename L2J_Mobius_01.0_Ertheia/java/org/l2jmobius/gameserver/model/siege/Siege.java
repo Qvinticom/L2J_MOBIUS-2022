@@ -539,7 +539,10 @@ public class Siege implements Siegable
 			final Clan clan = ClanTable.getInstance().getClan(siegeClans.getClanId());
 			if (clan != null)
 			{
-				clan.getOnlineMembers(0).forEach(message::sendTo);
+				for (Player member : clan.getOnlineMembers(0))
+				{
+					member.sendPacket(message);
+				}
 			}
 		}
 		
@@ -550,7 +553,10 @@ public class Siege implements Siegable
 				final Clan clan = ClanTable.getInstance().getClan(siegeClans.getClanId());
 				if (clan != null)
 				{
-					clan.getOnlineMembers(0).forEach(message::sendTo);
+					for (Player member : clan.getOnlineMembers(0))
+					{
+						member.sendPacket(message);
+					}
 				}
 			}
 		}

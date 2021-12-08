@@ -22,7 +22,7 @@ import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
- * Packets received by the game serv@Override er from clients
+ * Packets received by the game server from clients
  * @author KenM
  */
 public interface IClientIncomingPacket extends IIncomingPacket<GameClient>

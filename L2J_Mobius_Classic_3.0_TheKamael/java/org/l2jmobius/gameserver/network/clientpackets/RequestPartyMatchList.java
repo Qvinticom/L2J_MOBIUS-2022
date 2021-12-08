@@ -74,7 +74,10 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 				room.setTitle(_roomTitle);
 				
 				final PartyRoomInfo packet = new PartyRoomInfo((PartyMatchingRoom) room);
-				room.getMembers().forEach(packet::sendTo);
+				for (Player member : room.getMembers())
+				{
+					member.sendPacket(packet);
+				}
 			}
 		}
 	}
