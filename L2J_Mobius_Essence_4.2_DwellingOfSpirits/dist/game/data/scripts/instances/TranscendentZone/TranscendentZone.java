@@ -174,7 +174,7 @@ public class TranscendentZone extends AbstractInstance
 	{
 		if (player.getInstanceWorld().getParameters().getBoolean("TranscendentZoneTaskFinished", false))
 		{
-			return super.onFirstTalk(npc, player) + "-finished.html";
+			return npc.getId() + "-finished.html";
 		}
 		
 		if (!player.getInstanceWorld().getParameters().getBoolean("PlayerEnter", false))
