@@ -357,6 +357,9 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send EtcStatusUpdate
 		player.sendPacket(new EtcStatusUpdate(player));
 		
+		// Calculate stat increase skills.
+		player.calculateStatIncreaseSkills();
+		
 		// Clan packets
 		if (clan != null)
 		{

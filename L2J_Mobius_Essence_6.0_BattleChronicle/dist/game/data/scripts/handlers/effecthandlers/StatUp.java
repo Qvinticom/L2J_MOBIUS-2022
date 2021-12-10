@@ -71,5 +71,11 @@ public class StatUp extends AbstractEffect
 			}
 		}
 		effected.getStat().mergeAdd(stat, _amount);
+		
+		// Calculate stat increase skills.
+		if (effected.isPlayer())
+		{
+			effected.getActingPlayer().calculateStatIncreaseSkills();
+		}
 	}
 }

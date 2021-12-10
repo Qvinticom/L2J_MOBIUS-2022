@@ -906,6 +906,8 @@ public class Player extends Playable
 	
 	private PlayerRandomCraft _randomCraft = null;
 	
+	private ScheduledFuture<?> _statIncreaseSkillTask;
+	
 	private final Map<Integer, PetEvolveHolder> _petEvolves = new HashMap<>();
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
@@ -14764,5 +14766,148 @@ public class Player extends Playable
 				LOGGER.log(Level.SEVERE, "Could not restore pet evolve for playerId: " + getObjectId(), e);
 			}
 		});
+	}
+	
+	public void calculateStatIncreaseSkills()
+	{
+		// Use a task to prevent multiple execution from effects.
+		if (_statIncreaseSkillTask != null)
+		{
+			return;
+		}
+		
+		_statIncreaseSkillTask = ThreadPool.schedule(() ->
+		{
+			Skill knownSkill;
+			double statValue;
+			boolean update = false;
+			
+			// Remove stat increase skills.
+			for (int i = CommonSkill.STR_INCREASE_BONUS_1.getId(); i <= CommonSkill.MEN_INCREASE_BONUS_1.getId(); i++)
+			{
+				knownSkill = getKnownSkill(i);
+				if (knownSkill != null)
+				{
+					removeSkill(knownSkill);
+					update = true;
+				}
+			}
+			
+			// STR bonus.
+			statValue = getStat().getValue(Stat.STAT_STR);
+			if ((statValue >= 60) && (statValue < 70))
+			{
+				addSkill(CommonSkill.STR_INCREASE_BONUS_1.getSkill(), false);
+				update = true;
+			}
+			else if ((statValue >= 70) && (statValue < 90))
+			{
+				addSkill(CommonSkill.STR_INCREASE_BONUS_2.getSkill(), false);
+				update = true;
+			}
+			else if (statValue >= 90)
+			{
+				addSkill(CommonSkill.STR_INCREASE_BONUS_3.getSkill(), false);
+				update = true;
+			}
+			
+			// INT bonus.
+			statValue = getStat().getValue(Stat.STAT_INT);
+			if ((statValue >= 60) && (statValue < 70))
+			{
+				addSkill(CommonSkill.INT_INCREASE_BONUS_1.getSkill(), false);
+				update = true;
+			}
+			else if ((statValue >= 70) && (statValue < 90))
+			{
+				addSkill(CommonSkill.INT_INCREASE_BONUS_2.getSkill(), false);
+				update = true;
+			}
+			else if (statValue >= 90)
+			{
+				addSkill(CommonSkill.INT_INCREASE_BONUS_3.getSkill(), false);
+				update = true;
+			}
+			
+			// DEX bonus.
+			statValue = getStat().getValue(Stat.STAT_DEX);
+			if ((statValue >= 50) && (statValue < 60))
+			{
+				addSkill(CommonSkill.DEX_INCREASE_BONUS_1.getSkill(), false);
+				update = true;
+			}
+			else if ((statValue >= 60) && (statValue < 80))
+			{
+				addSkill(CommonSkill.DEX_INCREASE_BONUS_2.getSkill(), false);
+				update = true;
+			}
+			else if (statValue >= 80)
+			{
+				addSkill(CommonSkill.DEX_INCREASE_BONUS_3.getSkill(), false);
+				update = true;
+			}
+			
+			// WIT bonus.
+			statValue = getStat().getValue(Stat.STAT_WIT);
+			if ((statValue >= 40) && (statValue < 50))
+			{
+				addSkill(CommonSkill.WIT_INCREASE_BONUS_1.getSkill(), false);
+				update = true;
+			}
+			else if ((statValue >= 50) && (statValue < 70))
+			{
+				addSkill(CommonSkill.WIT_INCREASE_BONUS_2.getSkill(), false);
+				update = true;
+			}
+			else if (statValue >= 70)
+			{
+				addSkill(CommonSkill.WIT_INCREASE_BONUS_3.getSkill(), false);
+				update = true;
+			}
+			
+			// CON bonus.
+			statValue = getStat().getValue(Stat.STAT_CON);
+			if ((statValue >= 50) && (statValue < 65))
+			{
+				addSkill(CommonSkill.CON_INCREASE_BONUS_1.getSkill(), false);
+				update = true;
+			}
+			else if ((statValue >= 65) && (statValue < 90))
+			{
+				addSkill(CommonSkill.CON_INCREASE_BONUS_2.getSkill(), false);
+				update = true;
+			}
+			else if (statValue >= 90)
+			{
+				addSkill(CommonSkill.CON_INCREASE_BONUS_3.getSkill(), false);
+				update = true;
+			}
+			
+			// MEN bonus.
+			statValue = getStat().getValue(Stat.STAT_MEN);
+			if ((statValue >= 45) && (statValue < 60))
+			{
+				addSkill(CommonSkill.MEN_INCREASE_BONUS_1.getSkill(), false);
+				update = true;
+			}
+			else if ((statValue >= 60) && (statValue < 85))
+			{
+				addSkill(CommonSkill.MEN_INCREASE_BONUS_2.getSkill(), false);
+				update = true;
+			}
+			else if (statValue >= 85)
+			{
+				addSkill(CommonSkill.MEN_INCREASE_BONUS_3.getSkill(), false);
+				update = true;
+			}
+			
+			// Update skill list.
+			if (update)
+			{
+				sendSkillList();
+			}
+			
+			_statIncreaseSkillTask = null;
+		}, 500);
 	}
 }

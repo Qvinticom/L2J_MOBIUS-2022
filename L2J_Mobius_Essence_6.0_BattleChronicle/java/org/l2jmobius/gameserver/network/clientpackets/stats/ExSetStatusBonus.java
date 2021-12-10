@@ -110,5 +110,8 @@ public class ExSetStatusBonus implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new UserInfo(player));
+		
+		// Calculate stat increase skills.
+		player.calculateStatIncreaseSkills();
 	}
 }

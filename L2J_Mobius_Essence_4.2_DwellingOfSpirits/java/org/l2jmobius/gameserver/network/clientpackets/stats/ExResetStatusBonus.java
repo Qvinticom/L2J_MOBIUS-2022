@@ -119,6 +119,9 @@ public class ExResetStatusBonus implements IClientIncomingPacket
 			
 			player.sendPacket(new UserInfo(player));
 			player.getStat().recalculateStats(true);
+			
+			// Calculate stat increase skills.
+			player.calculateStatIncreaseSkills();
 		}
 	}
 }
