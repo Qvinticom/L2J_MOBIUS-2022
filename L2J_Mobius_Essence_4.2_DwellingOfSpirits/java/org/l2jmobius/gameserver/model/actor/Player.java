@@ -2676,6 +2676,7 @@ public class Player extends Playable
 			sendPacket(new ShortCutInit(this));
 			sendMessage("You have learned " + skillCounter + " new skills.");
 		}
+		restoreAutoShortcutVisual();
 		
 		return skillCounter;
 	}
@@ -14479,29 +14480,29 @@ public class Player extends Playable
 	
 	public void restoreAutoShortcutVisual()
 	{
-		if (_autoUseSettings.isEmpty())
+		if (!getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
 		{
 			return;
 		}
 		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
 		for (Shortcut shortcut : getAllShortCuts())
 		{
-			if (!shortcut.isAutoUse())
+			final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			if (!positions.contains(position))
 			{
 				continue;
 			}
 			
-			if (_autoUseSettings.isAutoSkill(shortcut.getId()))
+			final Skill knownSkill = getKnownSkill(shortcut.getId());
+			if (knownSkill != null)
 			{
-				if (getKnownSkill(shortcut.getId()) != null)
-				{
-					sendPacket(new ExActivateAutoShortcut(shortcut, true));
-				}
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
 			}
 			else
 			{
 				final Item item = getInventory().getItemByObjectId(shortcut.getId());
-				if ((item != null) && _autoUseSettings.getAutoSupplyItems().contains(item.getId()))
+				if (item != null)
 				{
 					sendPacket(new ExActivateAutoShortcut(shortcut, true));
 				}
