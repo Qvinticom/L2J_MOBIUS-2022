@@ -112,13 +112,13 @@ public class ExMagicLampGameResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_MAGICLAMP_GAME_RESULT.writeId(packet);
 		packet.writeD(_reward.size()); // magicLampGameResult
-		_reward.values().forEach(lamp ->
+		for (MagicLampHolder lamp : _reward.values())
 		{
 			packet.writeC(lamp.getType().getGrade()); // cGradeNum
 			packet.writeD(lamp.getCount()); // nRewardCount
 			packet.writeQ(lamp.getExp()); // nEXP
 			packet.writeQ(lamp.getSp()); // nSP
-		});
+		}
 		return true;
 	}
 }

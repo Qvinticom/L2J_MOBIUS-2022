@@ -43,9 +43,6 @@
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
 		</skill>
-		<skill skillName="Mount Night Mare" skillId="54207" skillLevel="1" getLevel="76">
-			<item id="93383" count="1" /> <!-- Spellbook - Mount Nightmare Steed -->
-		</skill>
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="8000000" />
 		<skill skillName="Evolution Defense" skillId="45188" skillLevel="1" getLevel="76">
 			<item id="57" count="5000000" /> <!-- Adena -->
@@ -71,6 +68,9 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
 		<skill skillName="Ultimate Death Knight Transformation" skillId="54206" skillLevel="1" getLevel="76" levelUpSp="8000000">
 			<item id="93387" count="1" /> <!-- Spellbook - Ultimate Death Knight Form -->
+		</skill>
+		<skill skillName="Mount Night Mare" skillId="54207" skillLevel="1" getLevel="76">
+			<item id="93383" count="1" /> <!-- Spellbook - Mount Nightmare Steed -->
 		</skill>
 
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="47" getLevel="77" levelUpSp="10000000" />
@@ -213,5 +213,40 @@
 		<skill skillName="Death Sword Mastery" skillId="45353" skillLevel="35" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Death Armor Mastery" skillId="45354" skillLevel="35" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
+		
+		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="1" getLevel="88" autoGet="true" />
+		<skill skillName="Glorious Warrior's Special Teleport" skillId="45472" skillLevel="1" getLevel="88" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="1" getLevel="88" autoGet="true" />
+		
+		<skill skillName="Expand Glorious Warrior's Special Teleports" skillId="45473" skillLevel="1" getLevel="89" autoGet="true" />
+		
+		<skill skillName="Glorious Warrior's Unique Title Color" skillId="45474" skillLevel="1" getLevel="90" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Hair Accessory Slots" skillId="45475" skillLevel="1" getLevel="90" autoGet="true" />
+		<skill skillName="Glorious Warrior's Ability" skillId="45361" skillLevel="1" getLevel="90">
+			<item id="94046" count="1" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 1 -->
+		</skill>
+		
+		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="2" getLevel="91" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="2" getLevel="91" autoGet="true" />
+		<skill skillName="Glorious Warrior's Ability" skillId="45361" skillLevel="2" getLevel="91">
+			<item id="95890" count="1" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 2 -->
+		</skill>
+		<skill skillName="Glorious Warrior's Resurrection Cost Decrease" skillId="47240" skillLevel="1" getLevel="91" autoGet="true" />
+		
+		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="3" getLevel="92" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="3" getLevel="92" autoGet="true" />
+		<skill skillName="Glorious Warrior's Ability" skillId="45361" skillLevel="3" getLevel="92">
+			<item id="95891" count="1" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 3 -->
+		</skill>
+		
+		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="4" getLevel="93" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="4" getLevel="93" autoGet="true" />
+		
+		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="5" getLevel="94" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="5" getLevel="94" autoGet="true" />
+		
+		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="6" getLevel="95" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="6" getLevel="95" autoGet="true" />
+		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="7" getLevel="96" autoGet="true" />
 	</skillTree>
 </list>

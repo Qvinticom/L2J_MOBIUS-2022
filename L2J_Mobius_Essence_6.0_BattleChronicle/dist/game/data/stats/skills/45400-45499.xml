@@ -2116,20 +2116,6 @@
 		<!-- Magic Lamp limit $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<effects>
-			<effect name="ModifyMagicLampPoints">
-				<amount>
-					<value level="1">100</value>
-					<value level="2">200</value>
-					<value level="3">300</value>
-					<value level="4">400</value>
-					<value level="5">500</value>
-					<value level="6">600</value>
-					<value level="7">700</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="45484" toLevel="45" name="Power Break">
 		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Ignores Shield Defense. -->

@@ -1250,19 +1250,24 @@ public class Player extends Playable
 		return getVariables().getInt(PlayerVariables.MAGIC_LAMP_EXP, 0);
 	}
 	
-	public int getLampCount()
-	{
-		return getVariables().getInt(PlayerVariables.MAGIC_LAMP_COUNT, 0);
-	}
-	
 	public void setLampExp(int exp)
 	{
 		getVariables().set(PlayerVariables.MAGIC_LAMP_EXP, exp);
 	}
 	
+	public int getLampCount()
+	{
+		return Math.min(getVariables().getInt(PlayerVariables.MAGIC_LAMP_COUNT, 0), getMaxLampCount());
+	}
+	
 	public void setLampCount(int count)
 	{
-		getVariables().set(PlayerVariables.MAGIC_LAMP_COUNT, count);
+		getVariables().set(PlayerVariables.MAGIC_LAMP_COUNT, Math.min(count, getMaxLampCount()));
+	}
+	
+	public int getMaxLampCount()
+	{
+		return Config.MAGIC_LAMP_MAX_GAME_COUNT;
 	}
 	
 	/**

@@ -21,7 +21,6 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
-import org.l2jmobius.gameserver.enums.LampMode;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.GreaterMagicLampHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -47,31 +46,19 @@ public class ExMagicLampGameInfoUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MAGICLAMP_GAME_INFO.writeId(packet);
-		packet.writeD(Config.MAGIC_LAMP_MAX_GAME_COUNT); // nMagicLampGameMaxCCount
+		packet.writeD(_player.getMaxLampCount()); // nMagicLampGameMaxCCount
 		packet.writeD(_count); // cMagicLampGameCCount
-		switch (LampMode.getByMode(_mode))
-		{
-			case NORMAL:
-			{
-				packet.writeD(Config.MAGIC_LAMP_REWARD_COUNT);// cMagicLampCountPerGame
-				break;
-			}
-			case GREATER:
-			{
-				packet.writeD(Config.MAGIC_LAMP_GREATER_REWARD_COUNT); // cMagicLampCountPerGame
-				break;
-			}
-		}
+		packet.writeD(_mode == 0 ? Config.MAGIC_LAMP_REWARD_COUNT : Config.MAGIC_LAMP_GREATER_REWARD_COUNT); // cMagicLampCountPerGame
 		packet.writeD(_player.getLampCount()); // cMagicLampCount
 		packet.writeC(_mode); // cGameMode
 		final List<GreaterMagicLampHolder> greater = MagicLampData.getInstance().getGreaterLamps();
 		packet.writeD(greater.size()); // costItemList
-		greater.forEach(lamp ->
+		for (GreaterMagicLampHolder lamp : greater)
 		{
 			packet.writeD(lamp.getItemId()); // nItemClassID
 			packet.writeQ(lamp.getCount()); // nItemAmountPerGame
 			packet.writeQ(_player.getInventory().getInventoryItemCount(lamp.getItemId(), -1)); // nItemAmount
-		});
+		}
 		return true;
 	}
 }
