@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets.autoplay;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.ActionData;
+import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.handler.PlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
@@ -74,11 +75,15 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			player.removeAutoShortcut(_slot, _page);
 		}
 		
-		final Item item = player.getInventory().getItemByObjectId(shortcut.getId());
+		Item item = null;
 		Skill skill = null;
-		if (item == null)
+		if (shortcut.getType() == ShortcutType.SKILL)
 		{
 			skill = player.getKnownSkill(shortcut.getId());
+		}
+		else
+		{
+			item = player.getInventory().getItemByObjectId(shortcut.getId());
 		}
 		
 		// stop

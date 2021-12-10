@@ -14436,10 +14436,13 @@ public class Player extends Playable
 				continue;
 			}
 			
-			final Skill knownSkill = getKnownSkill(shortcut.getId());
-			if (knownSkill != null)
+			if (shortcut.getType() == ShortcutType.SKILL)
 			{
-				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				final Skill knownSkill = getKnownSkill(shortcut.getId());
+				if (knownSkill != null)
+				{
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				}
 			}
 			else
 			{
@@ -14515,7 +14518,7 @@ public class Player extends Playable
 		{
 			for (Shortcut shortcut : getAllShortCuts())
 			{
-				if (usedShortcut.getId() == shortcut.getId())
+				if ((usedShortcut.getId() == shortcut.getId()) && (usedShortcut.getType() == shortcut.getType()))
 				{
 					shortcut.setAutoUse(true);
 					sendPacket(new ExActivateAutoShortcut(shortcut, true));
@@ -14549,7 +14552,7 @@ public class Player extends Playable
 		{
 			for (Shortcut shortcut : getAllShortCuts())
 			{
-				if (usedShortcut.getId() == shortcut.getId())
+				if ((usedShortcut.getId() == shortcut.getId()) && (usedShortcut.getType() == shortcut.getType()))
 				{
 					shortcut.setAutoUse(false);
 					sendPacket(new ExActivateAutoShortcut(shortcut, false));

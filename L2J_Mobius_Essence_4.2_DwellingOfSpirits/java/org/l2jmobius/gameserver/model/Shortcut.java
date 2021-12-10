@@ -136,18 +136,18 @@ public class Shortcut
 	}
 	
 	/**
-	* Gets is shortcut is auto use enabled.
-	* @return if shortcut is auto use enabled.
-	*/
+	 * Gets is shortcut is auto use enabled.
+	 * @return if shortcut is auto use enabled.
+	 */
 	public boolean isAutoUse()
 	{
 		return _autoUse;
 	}
 	
 	/**
-	* Sets the auto use status.
-	* @param value of shortcut auto use status.
-	*/
+	 * Sets the auto use status.
+	 * @param value of shortcut auto use status.
+	 */
 	public void setAutoUse(boolean value)
 	{
 		_autoUse = value;
