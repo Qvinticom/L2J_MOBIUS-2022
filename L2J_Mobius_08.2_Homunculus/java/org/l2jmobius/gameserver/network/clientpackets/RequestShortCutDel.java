@@ -57,34 +57,47 @@ public class RequestShortCutDel implements IClientIncomingPacket
 		// Delete the shortcut.
 		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
 		player.deleteShortCut(_slot, _page);
-		boolean removed = true;
 		
-		// Keep other similar shortcuts activated.
-		if ((oldShortcut != null) && oldShortcut.isAutoUse())
+		if (oldShortcut != null)
 		{
-			player.removeAutoShortcut(_slot, _page);
-			for (Shortcut shortcut : player.getAllShortCuts())
+			boolean removed = true;
+			
+			// Keep other similar shortcuts activated.
+			if (oldShortcut.isAutoUse())
 			{
-				if (oldShortcut.getId() == shortcut.getId())
+				player.removeAutoShortcut(_slot, _page);
+				for (Shortcut shortcut : player.getAllShortCuts())
 				{
-					player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
-					removed = false;
+					if ((oldShortcut.getId() == shortcut.getId()) && (oldShortcut.getType() == shortcut.getType()))
+					{
+						player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+						removed = false;
+					}
 				}
 			}
-		}
-		
-		// Remove auto used ids.
-		if (removed)
-		{
-			final int id = oldShortcut == null ? -1 : oldShortcut.getId();
-			if (_slot > 263)
+			
+			// Remove auto used ids.
+			if (removed)
 			{
-				AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, id);
-			}
-			else
-			{
-				AutoUseTaskManager.getInstance().removeAutoBuff(player, id);
-				AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
+				switch (oldShortcut.getType())
+				{
+					case SKILL:
+					{
+						AutoUseTaskManager.getInstance().removeAutoBuff(player, oldShortcut.getId());
+						AutoUseTaskManager.getInstance().removeAutoSkill(player, oldShortcut.getId());
+						break;
+					}
+					case ITEM:
+					{
+						AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldShortcut.getId());
+						break;
+					}
+					case ACTION:
+					{
+						AutoUseTaskManager.getInstance().removeAutoAction(player, oldShortcut.getId());
+						break;
+					}
+				}
 			}
 		}
 		

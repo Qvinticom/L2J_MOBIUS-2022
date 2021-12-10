@@ -93,16 +93,13 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		// Activate if any other similar shortcut is activated.
 		for (Shortcut shortcut : player.getAllShortCuts())
 		{
-			if (!shortcut.isAutoUse() || (shortcut.getType() != _type))
+			if (!shortcut.isAutoUse() || (shortcut.getId() != _id) || (shortcut.getType() != _type))
 			{
 				continue;
 			}
 			
-			if (_id == shortcut.getId())
-			{
-				player.addAutoShortcut(_slot, _page);
-				break;
-			}
+			player.addAutoShortcut(_slot, _page);
+			break;
 		}
 	}
 }
