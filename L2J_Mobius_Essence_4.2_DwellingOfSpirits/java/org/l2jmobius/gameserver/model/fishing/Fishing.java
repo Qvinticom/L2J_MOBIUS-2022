@@ -155,7 +155,7 @@ public class Fishing
 		{
 			if (Config.PREMIUM_ONLY_FISHING && !_player.hasPremiumStatus())
 			{
-				_player.sendPacket(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_FISHING);
+				_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_AS_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 				stopFishing(FishingEndType.ERROR);
 				return;
