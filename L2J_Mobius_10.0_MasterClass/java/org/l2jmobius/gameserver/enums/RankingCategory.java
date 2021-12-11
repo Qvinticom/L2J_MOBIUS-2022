@@ -41,9 +41,6 @@ public enum RankingCategory
 				return id == 0 ? TOP_150 : SELF;
 			}
 			case RACE:
-			{
-				return id == 0 ? TOP_100 : SELF;
-			}
 			case CLASS:
 			{
 				return id == 0 ? TOP_100 : SELF;
