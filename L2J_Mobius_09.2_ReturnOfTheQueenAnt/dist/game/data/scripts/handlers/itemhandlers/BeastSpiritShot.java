@@ -127,7 +127,7 @@ public class BeastSpiritShot implements IItemHandler
 			// Visual effect change if player has equipped Sapphire level 3 or higher
 			if (activeOwner.getActiveShappireJewel() != null)
 			{
-				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
+				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getSkillId(), activeOwner.getActiveShappireJewel().getSkillLevel(), 0, 0), 600);
 			}
 			else
 			{
@@ -144,7 +144,7 @@ public class BeastSpiritShot implements IItemHandler
 				// Visual effect change if player has equipped Sapphire level 3 or higher
 				if (activeOwner.getActiveShappireJewel() != null)
 				{
-					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, activeOwner.getActiveShappireJewel().getSkillId(), activeOwner.getActiveShappireJewel().getSkillLevel(), 0, 0), 600);
 				}
 				else
 				{

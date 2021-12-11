@@ -104,7 +104,7 @@ public class BlessedSpiritShot implements IItemHandler
 		// Visual effect change if player has equipped Sapphire level 3 or higher
 		if (player.getActiveShappireJewel() != null)
 		{
-			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, player.getActiveShappireJewel().getEffectId(), 1, 0, 0), 600);
+			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, player.getActiveShappireJewel().getSkillId(), player.getActiveShappireJewel().getSkillLevel(), 0, 0), 600);
 		}
 		else
 		{

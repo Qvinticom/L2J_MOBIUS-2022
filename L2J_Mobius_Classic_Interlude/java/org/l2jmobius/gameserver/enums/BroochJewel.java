@@ -21,28 +21,37 @@ package org.l2jmobius.gameserver.enums;
  */
 public enum BroochJewel
 {
-	RUBY_LV1(38855, 17814, 0.01, true),
-	RUBY_LV2(38856, 17814, 0.035, true),
-	RUBY_LV3(38857, 17815, 0.075, true),
-	RUBY_LV4(38858, 17816, 0.125, true),
-	RUBY_LV5(38859, 17817, 0.2, true),
-	SHAPPHIRE_LV1(38927, 17818, 0.01, false),
-	SHAPPHIRE_LV2(38928, 17818, 0.035, false),
-	SHAPPHIRE_LV3(38929, 17819, 0.075, false),
-	SHAPPHIRE_LV4(38930, 17820, 0.125, false),
-	SHAPPHIRE_LV5(38931, 17821, 0.2, false);
+	RUBY_LV1(38855, 17814, 1, 0.01, true, false),
+	RUBY_LV2(38856, 17814, 1, 0.035, true, false),
+	RUBY_LV3(38857, 17815, 1, 0.075, true, false),
+	RUBY_LV4(38858, 17816, 1, 0.125, true, false),
+	RUBY_LV5(38859, 17817, 1, 0.2, true, false),
+	
+	GREATER_RUBY(47688, 18715, 1, 0.2, true, false),
+	
+	SAPPHIRE_LV1(38927, 17818, 1, 0.01, false, true),
+	SAPPHIRE_LV2(38928, 17818, 1, 0.035, false, true),
+	SAPPHIRE_LV3(38929, 17819, 1, 0.075, false, true),
+	SAPPHIRE_LV4(38930, 17820, 1, 0.125, false, true),
+	SAPPHIRE_LV5(38931, 17821, 1, 0.2, false, true),
+	
+	GREATER_SAPPHIRE(47689, 18718, 1, 0.2, false, true);
 	
 	private int _itemId;
-	private int _effectId;
+	private int _skillId;
+	private int _skillLevel;
 	private double _bonus;
-	private boolean _isRuby; // If not, it is sapphire.
+	private boolean _isRuby;
+	private boolean _isSapphire;
 	
-	private BroochJewel(int itemId, int effectId, double bonus, boolean isRuby)
+	private BroochJewel(int itemId, int skillId, int skillLevel, double bonus, boolean isRuby, boolean isSapphire)
 	{
 		_itemId = itemId;
-		_effectId = effectId;
+		_skillId = skillId;
+		_skillLevel = skillLevel;
 		_bonus = bonus;
 		_isRuby = isRuby;
+		_isSapphire = isSapphire;
 	}
 	
 	public int getItemId()
@@ -50,9 +59,14 @@ public enum BroochJewel
 		return _itemId;
 	}
 	
-	public int getEffectId()
+	public int getSkillId()
 	{
-		return _effectId;
+		return _skillId;
+	}
+	
+	public int getSkillLevel()
+	{
+		return _skillLevel;
 	}
 	
 	public double getBonus()
@@ -63,5 +77,10 @@ public enum BroochJewel
 	public boolean isRuby()
 	{
 		return _isRuby;
+	}
+	
+	public boolean isSapphire()
+	{
+		return _isSapphire;
 	}
 }

@@ -8882,7 +8882,7 @@ public class Player extends Playable
 		for (int i = broochJewels.length - 1; i > 0; i--)
 		{
 			final BroochJewel jewel = broochJewels[i];
-			if (!jewel.isRuby() && _inventory.isItemEquipped(jewel.getItemId()))
+			if (jewel.isSapphire() && _inventory.isItemEquipped(jewel.getItemId()))
 			{
 				setActiveShappireJewel(jewel);
 				break;

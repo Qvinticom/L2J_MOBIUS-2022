@@ -112,7 +112,7 @@ public class BlessedSoulShots implements IItemHandler
 		// Visual effect change if player has equipped Ruby level 3 or higher
 		if (player.getActiveRubyJewel() != null)
 		{
-			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, player.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
+			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, player.getActiveRubyJewel().getSkillId(), player.getActiveRubyJewel().getSkillLevel(), 0, 0), 600);
 		}
 		else
 		{

@@ -126,7 +126,7 @@ public class BeastSoulShot implements IItemHandler
 			// Visual effect change if player has equipped Ruby level 3 or higher
 			if (activeOwner.getActiveRubyJewel() != null)
 			{
-				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
+				Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveRubyJewel().getSkillId(), activeOwner.getActiveRubyJewel().getSkillLevel(), 0, 0), 600);
 			}
 			else
 			{
@@ -143,7 +143,7 @@ public class BeastSoulShot implements IItemHandler
 				// Visual effect change if player has equipped Ruby level 3 or higher
 				if (activeOwner.getActiveRubyJewel() != null)
 				{
-					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, activeOwner.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, activeOwner.getActiveRubyJewel().getSkillId(), activeOwner.getActiveRubyJewel().getSkillLevel(), 0, 0), 600);
 				}
 				else
 				{
