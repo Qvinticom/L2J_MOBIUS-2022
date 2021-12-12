@@ -703,6 +703,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81478" min="1" max="1" chance="100" /> <!-- Blessed Exalted Circlet -->
+			<item id="81479" min="1" max="1" chance="100" /> <!-- Blessed Exalted Tunic -->
+			<item id="81480" min="1" max="1" chance="100" /> <!-- Blessed Exalted Stockings -->
+			<item id="81481" min="1" max="1" chance="100" /> <!-- Blessed Exalted Gloves -->
+			<item id="81482" min="1" max="1" chance="100" /> <!-- Blessed Exalted Shoes -->		
+			<item id="81484" min="1" max="1" chance="100" /> <!-- Blessed Exalted Circlet -->
+			<item id="81488" min="1" max="1" chance="100" /> <!-- Blessed Exalted Agathion Braclet -->
+			<item id="81489" min="1" max="1" chance="100" /> <!-- Blessed Exalted Enchanting Stone -->
+			<item id="81485" min="1" max="1" chance="100" /> <!-- Blessed Exalted Soul Stone -->
+			<item id="81486" min="1" max="1" chance="100" /> <!-- Blessed Exalted Talisman of Longing -->
+			<item id="81487" min="1" max="1" chance="100" /> <!-- Blessed Exalted Sayha Talisman -->
+			<item id="81650" min="1" max="1" chance="100" /> <!-- Blessed Exalted Box with Supplies -->
+			<item id="81472" min="1" max="1" chance="100" /> <!-- Blessed Exalted Shield -->
+			<item id="81492" min="1" max="1" chance="100" /> <!-- Blessed Exalted Earring ( Vampire Rage ) -->			
+			<item id="81491" min="1" max="1" chance="100" /> <!-- Blessed Exalted Earring ( MP Consumption ) -->			
+			<item id="81493" min="1" max="1" chance="100" /> <!-- Blessed Exalted Ring ( Critical Rate ) -->			
+			<item id="81494" min="1" max="1" chance="100" /> <!-- Blessed Exalted Ring ( Critical Damage ) -->		
+			<item id="81490" min="1" max="1" chance="100" /> <!-- Blessed Exalted Necklace ( Skill Cooldown ) -->
+		</capsuled_items>
 	</item>
 	<item id="81650" name="Blessed Exalted Support Box" type="EtcItem">
 		<!-- Double-click to obtain 300 pcs. of each following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass, Honey Dark Beer, also 150 Emperor's Special Cocktails. Before it opened, can be transferred within the account. -->
@@ -715,6 +736,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29789" min="300" max="300" chance="100" /> <!-- Freya's Ice Rose -->
+			<item id="48497" min="300" max="300" chance="100" /> <!-- Glowing Dragon's Attribute Potion -->
+			<item id="48642" min="300" max="300" chance="100" /> <!-- Shining Nevit's Gold Hourglass -->
+			<item id="80842" min="300" max="300" chance="100" /> <!-- Honey Dark Beer -->
+			<item id="81012" min="150" max="150" chance="100" /> <!-- Emperor's Special Cocktail -->
+		</capsuled_items>
 	</item>
 	<item id="81651" name="Maphr's Wind Scroll" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption during hunting +30%, amount of dropped adena +30%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Does not stack with the Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Scroll of Storm effects. -->
