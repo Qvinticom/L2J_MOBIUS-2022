@@ -4362,10 +4362,9 @@
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<hitTime>1</hitTime>
+		<hitTime>500</hitTime>
 		<reuseDelay>10000</reuseDelay>
-		<coolTime>1</coolTime>
-		<abnormalType>ARMOR_HOLY</abnormalType>
+		<coolTime>500</coolTime>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>
@@ -4374,9 +4373,9 @@
 			<value level="3">15</value>
 			<value level="4">20</value>
 		</itemConsumeCount>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">65</value>
 			<value level="2">75</value>
