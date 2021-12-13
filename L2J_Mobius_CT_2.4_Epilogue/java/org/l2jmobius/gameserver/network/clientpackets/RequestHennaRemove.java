@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @author Zoey76
@@ -48,7 +49,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		
 		if (!client.getFloodProtectors().canPerformTransaction())
 		{
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -66,7 +67,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 				else
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-					client.sendActionFailed();
+					client.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 				found = true;
 				break;
@@ -76,7 +77,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		if (!found)
 		{
 			PacketLogger.warning(getClass().getSimpleName() + ": Player " + player + " requested Henna Draw remove without any henna.");
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
@@ -658,11 +657,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public int[][] getTrace()
 	{
 		return _trace;
-	}
-	
-	public void sendActionFailed()
-	{
-		sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	public ICrypt getCrypt()

@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -59,7 +60,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 		if (player.getHennaEmptySlots() == 0)
 		{
 			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -67,12 +68,12 @@ public class RequestHennaEquip implements IClientIncomingPacket
 		if (henna == null)
 		{
 			PacketLogger.warning(getClass().getName() + ": Invalid Henna Id: " + _symbolId + " from player " + player);
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final long _count = player.getInventory().getInventoryItemCount(henna.getDyeItemId(), -1);
-		if (henna.isAllowedClass(player.getClassId()) && (_count >= henna.getWearCount()) && (player.getAdena() >= henna.getWearFee()) && player.addHenna(henna))
+		final long count = player.getInventory().getInventoryItemCount(henna.getDyeItemId(), -1);
+		if (henna.isAllowedClass(player.getClassId()) && (count >= henna.getWearCount()) && (player.getAdena() >= henna.getWearFee()) && player.addHenna(henna))
 		{
 			player.destroyItemByItemId("Henna", henna.getDyeItemId(), henna.getWearCount(), player, true);
 			player.getInventory().reduceAdena("Henna", henna.getWearFee(), player, player.getLastFolkNPC());
@@ -88,7 +89,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			{
 				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);
 			}
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

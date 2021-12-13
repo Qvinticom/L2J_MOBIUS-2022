@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -86,21 +87,21 @@ public class RequestProcureCropList implements IClientIncomingPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		if (manor.isUnderMaintenance())
 		{
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final Npc manager = player.getLastFolkNPC();
 		if (!(manager instanceof Merchant) || !manager.canInteract(player))
 		{
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final int castleId = manager.getCastle().getResidenceId();
 		if (manager.getTemplate().getParameters().getInt("manor_id", -1) != castleId)
 		{
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -111,14 +112,14 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			final Item item = player.getInventory().getItemByObjectId(i.getObjectId());
 			if ((item == null) || (item.getCount() < i.getCount()) || (item.getId() != i.getId()))
 			{
-				client.sendActionFailed();
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
 			final CropProcure cp = i.getCropProcure();
 			if ((cp == null) || (cp.getAmount() < i.getCount()))
 			{
-				client.sendActionFailed();
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			

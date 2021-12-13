@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.SeedProduction;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @author l3x
@@ -79,7 +80,7 @@ public class RequestSetSeed implements IClientIncomingPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		if (!manor.isModifiablePeriod())
 		{
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -87,7 +88,7 @@ public class RequestSetSeed implements IClientIncomingPacket
 		final Player player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player))
 		{
-			client.sendActionFailed();
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
