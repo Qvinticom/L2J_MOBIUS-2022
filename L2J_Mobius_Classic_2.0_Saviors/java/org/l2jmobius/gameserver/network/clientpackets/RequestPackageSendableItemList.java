@@ -44,6 +44,7 @@ public class RequestPackageSendableItemList implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new PackageSendableList(player, _objectId));
+		
+		player.sendPacket(new PackageSendableList(player, _objectId));
 	}
 }

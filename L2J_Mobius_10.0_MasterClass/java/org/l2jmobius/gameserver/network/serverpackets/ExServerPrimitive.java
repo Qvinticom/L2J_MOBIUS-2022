@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * A packet used to draw points and lines on client.<br/>
+ * A packet used to draw points and lines on cplayer.<br/>
  * <b>Note:</b> Names in points and lines are bugged they will appear even when not looking at them.
  * @author NosBit
  */
@@ -62,7 +62,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param name the name that will be displayed over the point
 	 * @param color the color
 	 * @param isNameColored if {@code true} name will be colored as well.
@@ -76,7 +76,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param name the name that will be displayed over the point
 	 * @param color the color
 	 * @param isNameColored if {@code true} name will be colored as well.
@@ -88,7 +88,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param color the color
 	 * @param x the x coordinate for this point
 	 * @param y the y coordinate for this point
@@ -100,7 +100,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param color the color
 	 * @param locational the ILocational to take coordinates for this point
 	 */
@@ -110,7 +110,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param name the name that will be displayed over the point
 	 * @param color the color
 	 * @param isNameColored if {@code true} name will be colored as well.
@@ -124,7 +124,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param name the name that will be displayed over the point
 	 * @param color the color
 	 * @param isNameColored if {@code true} name will be colored as well.
@@ -136,7 +136,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param color the color
 	 * @param x the x coordinate for this point
 	 * @param y the y coordinate for this point
@@ -148,7 +148,7 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Adds a point to be displayed on client.
+	 * Adds a point to be displayed on cplayer.
 	 * @param color the color
 	 * @param locational the ILocational to take coordinates for this point
 	 */

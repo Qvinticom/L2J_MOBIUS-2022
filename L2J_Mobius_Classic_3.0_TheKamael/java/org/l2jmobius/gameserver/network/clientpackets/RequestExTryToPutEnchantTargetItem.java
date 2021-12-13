@@ -69,9 +69,9 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
 		{
-			client.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+			player.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
 			player.removeRequest(request.getClass());
-			client.sendPacket(new ExPutEnchantTargetItemResult(0));
+			player.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
 				PacketLogger.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
@@ -79,6 +79,6 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			return;
 		}
 		request.setTimestamp(Chronos.currentTimeMillis());
-		client.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
+		player.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 	}
 }

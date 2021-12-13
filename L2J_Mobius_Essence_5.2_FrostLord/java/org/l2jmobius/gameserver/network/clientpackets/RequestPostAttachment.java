@@ -78,25 +78,25 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
 			return;
 		}
 		
 		if (player.getActiveTradeList() != null)
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
 			return;
 		}
 		
 		if (player.hasItemRequest())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
 			return;
 		}
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
 			return;
 		}
 		
@@ -165,21 +165,21 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		// Item Max Limit Check
 		if (!player.getInventory().validateCapacity(slots))
 		{
-			client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+			player.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		// Weight limit Check
 		if (!player.getInventory().validateWeight(weight))
 		{
-			client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+			player.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		final long adena = msg.getReqAdena();
 		if ((adena > 0) && !player.reduceAdena("PayMail", adena, null, true))
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -219,7 +219,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
-			client.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		
 		// Send updated item list to the player
@@ -262,7 +262,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			sender.sendPacket(sm);
 		}
 		
-		client.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
-		client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
+		player.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
+		player.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
 	}
 }

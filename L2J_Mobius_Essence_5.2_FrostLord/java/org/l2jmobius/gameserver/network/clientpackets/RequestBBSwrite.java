@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -48,6 +49,12 @@ public class RequestBBSwrite implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		CommunityBoardHandler.getInstance().handleWriteCommand(client.getPlayer(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		CommunityBoardHandler.getInstance().handleWriteCommand(player, _url, _arg1, _arg2, _arg3, _arg4, _arg5);
 	}
 }

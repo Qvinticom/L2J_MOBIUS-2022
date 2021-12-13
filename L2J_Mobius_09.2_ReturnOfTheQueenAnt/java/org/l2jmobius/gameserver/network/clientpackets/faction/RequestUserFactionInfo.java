@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.faction;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.faction.ExFactionInfo;
@@ -39,6 +40,12 @@ public class RequestUserFactionInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		client.getPlayer().sendPacket(new ExFactionInfo(client.getPlayer(), _openDialog));
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(new ExFactionInfo(player, _openDialog));
 	}
 }

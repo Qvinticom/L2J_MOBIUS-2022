@@ -72,7 +72,7 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _level, _subLevel, _characterType);
 		sc.setAutoUse(_active);
 		player.registerShortCut(sc);
-		client.sendPacket(new ShortCutRegister(sc));
+		player.sendPacket(new ShortCutRegister(sc));
 		player.sendPacket(new ExActivateAutoShortcut(sc, _active));
 		
 		// When id is not auto used, deactivate auto shortcuts.

@@ -51,28 +51,28 @@ public class RequestVoteNew implements IClientIncomingPacket
 		{
 			if (object == null)
 			{
-				client.sendPacket(SystemMessageId.SELECT_TARGET);
+				player.sendPacket(SystemMessageId.SELECT_TARGET);
 			}
 			else if (object.isFakePlayer() && FakePlayerData.getInstance().isTalkable(object.getName()))
 			{
 				if (player.getRecomLeft() <= 0)
 				{
-					client.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
+					player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
 					return;
 				}
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
 				sm.addString(FakePlayerData.getInstance().getProperName(object.getName()));
 				sm.addInt(player.getRecomLeft());
-				client.sendPacket(sm);
+				player.sendPacket(sm);
 				
 				player.setRecomLeft(player.getRecomLeft() - 1);
-				client.sendPacket(new UserInfo(player));
-				client.sendPacket(new ExVoteSystemInfo(player));
+				player.sendPacket(new UserInfo(player));
+				player.sendPacket(new ExVoteSystemInfo(player));
 			}
 			else
 			{
-				client.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+				player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			}
 			return;
 		}
@@ -85,19 +85,19 @@ public class RequestVoteNew implements IClientIncomingPacket
 		
 		if (target == player)
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
 			return;
 		}
 		
 		if (player.getRecomLeft() <= 0)
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
+			player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
 			return;
 		}
 		
 		if (target.getRecomHave() >= 255)
 		{
-			client.sendPacket(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
+			player.sendPacket(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
 			return;
 		}
 		
@@ -106,16 +106,16 @@ public class RequestVoteNew implements IClientIncomingPacket
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
 		sm.addPcName(target);
 		sm.addInt(player.getRecomLeft());
-		client.sendPacket(sm);
+		player.sendPacket(sm);
 		
 		sm = new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_RECOMMENDED_BY_C1);
 		sm.addPcName(player);
 		target.sendPacket(sm);
 		
-		client.sendPacket(new UserInfo(player));
+		player.sendPacket(new UserInfo(player));
 		target.broadcastUserInfo();
 		
-		client.sendPacket(new ExVoteSystemInfo(player));
+		player.sendPacket(new ExVoteSystemInfo(player));
 		target.sendPacket(new ExVoteSystemInfo(target));
 	}
 }

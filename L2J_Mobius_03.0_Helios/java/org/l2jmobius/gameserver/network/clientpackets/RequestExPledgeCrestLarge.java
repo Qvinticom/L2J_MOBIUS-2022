@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.model.Crest;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 
@@ -41,6 +42,12 @@ public class RequestExPledgeCrestLarge implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
 		final Crest crest = CrestTable.getInstance().getCrest(_crestId);
 		final byte[] data = crest != null ? crest.getData() : null;
 		if (data != null)
@@ -54,7 +61,7 @@ public class RequestExPledgeCrestLarge implements IClientIncomingPacket
 				}
 				final byte[] chunk = new byte[size];
 				System.arraycopy(data, (14336 * i), chunk, 0, size);
-				client.sendPacket(new ExPledgeEmblem(_crestId, chunk, _clanId, i));
+				player.sendPacket(new ExPledgeEmblem(_crestId, chunk, _clanId, i));
 			}
 		}
 	}

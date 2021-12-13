@@ -55,7 +55,7 @@ public class BypassUserCmd implements IClientIncomingPacket
 		}
 		else
 		{
-			handler.useUserCommand(_command, client.getPlayer());
+			handler.useUserCommand(_command, player);
 		}
 	}
 }

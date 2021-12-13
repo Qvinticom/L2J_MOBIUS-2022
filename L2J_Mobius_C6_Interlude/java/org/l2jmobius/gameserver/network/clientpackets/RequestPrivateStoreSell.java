@@ -63,6 +63,7 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 				_count = 0;
 				return false;
 			}
+			
 			_items[i] = new ItemRequest(objectId, itemId, enchant, (int) count, price);
 			priceTotal += price * count;
 		}
@@ -76,7 +77,6 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 		}
 		
 		_price = (int) priceTotal;
-		
 		return true;
 	}
 	

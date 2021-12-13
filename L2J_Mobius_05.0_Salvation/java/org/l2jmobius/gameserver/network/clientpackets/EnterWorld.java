@@ -322,18 +322,18 @@ public class EnterWorld implements IClientIncomingPacket
 		player.getMacros().sendAllMacros();
 		
 		// Send Teleport Bookmark List
-		client.sendPacket(new ExGetBookMarkInfoPacket(player));
+		player.sendPacket(new ExGetBookMarkInfoPacket(player));
 		
 		// Send Item List
-		client.sendPacket(new ItemList(1, player));
-		client.sendPacket(new ItemList(2, player));
+		player.sendPacket(new ItemList(1, player));
+		player.sendPacket(new ItemList(2, player));
 		
 		// Send Quest Item List
-		client.sendPacket(new ExQuestItemList(1, player));
-		client.sendPacket(new ExQuestItemList(2, player));
+		player.sendPacket(new ExQuestItemList(1, player));
+		player.sendPacket(new ExQuestItemList(2, player));
 		
 		// Send Shortcuts
-		client.sendPacket(new ShortCutInit(player));
+		player.sendPacket(new ShortCutInit(player));
 		
 		// Send Action list
 		player.sendPacket(ExBasicActionList.STATIC_PACKET);
@@ -443,7 +443,7 @@ public class EnterWorld implements IClientIncomingPacket
 		player.sendPacket(new ExStorageMaxCount(player));
 		
 		// Friend list
-		client.sendPacket(new L2FriendList(player));
+		player.sendPacket(new L2FriendList(player));
 		if (Config.SHOW_GOD_VIDEO_INTRO && player.getVariables().getBoolean("intro_god_video", false))
 		{
 			player.getVariables().remove("intro_god_video");
@@ -484,14 +484,14 @@ public class EnterWorld implements IClientIncomingPacket
 			notice.replace("%clan_name%", player.getClan().getName());
 			notice.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>"));
 			notice.disableValidation();
-			client.sendPacket(notice);
+			player.sendPacket(notice);
 		}
 		else if (Config.SERVER_NEWS)
 		{
 			final String serverNews = HtmCache.getInstance().getHtm(player, "data/html/servnews.htm");
 			if (serverNews != null)
 			{
-				client.sendPacket(new NpcHtmlMessage(serverNews));
+				player.sendPacket(new NpcHtmlMessage(serverNews));
 			}
 		}
 		
@@ -503,13 +503,13 @@ public class EnterWorld implements IClientIncomingPacket
 		if (player.isAlikeDead()) // dead or fake dead
 		{
 			// no broadcast needed since the player will already spawn dead to others
-			client.sendPacket(new Die(player));
+			player.sendPacket(new Die(player));
 		}
 		
 		player.onPlayerEnter();
 		
-		client.sendPacket(new SkillCoolTime(player));
-		client.sendPacket(new ExVoteSystemInfo(player));
+		player.sendPacket(new SkillCoolTime(player));
+		player.sendPacket(new ExVoteSystemInfo(player));
 		for (Item item : player.getInventory().getItems())
 		{
 			if (item.isTimeLimitedItem())
@@ -572,7 +572,7 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			if (MailManager.getInstance().hasUnreadPost(player))
 			{
-				client.sendPacket(ExNoticePostArrived.valueOf(false));
+				player.sendPacket(ExNoticePostArrived.valueOf(false));
 			}
 		}
 		

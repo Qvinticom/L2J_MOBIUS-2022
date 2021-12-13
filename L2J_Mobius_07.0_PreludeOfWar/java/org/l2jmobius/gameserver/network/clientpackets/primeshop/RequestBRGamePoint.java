@@ -37,9 +37,11 @@ public class RequestBRGamePoint implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final Player player = client.getPlayer();
-		if (player != null)
+		if (player == null)
 		{
-			client.sendPacket(new ExBRGamePoint(player));
+			return;
 		}
+		
+		player.sendPacket(new ExBRGamePoint(player));
 	}
 }

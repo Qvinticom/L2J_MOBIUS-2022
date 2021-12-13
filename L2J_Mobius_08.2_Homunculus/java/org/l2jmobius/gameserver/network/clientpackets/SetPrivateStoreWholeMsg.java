@@ -55,6 +55,6 @@ public class SetPrivateStoreWholeMsg implements IClientIncomingPacket
 		}
 		
 		player.getSellList().setTitle(_msg);
-		client.sendPacket(new ExPrivateStoreSetWholeMsg(player));
+		player.sendPacket(new ExPrivateStoreSetWholeMsg(player));
 	}
 }

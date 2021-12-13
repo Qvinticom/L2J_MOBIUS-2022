@@ -57,7 +57,7 @@ public class RequestGetOnVehicle implements IClientIncomingPacket
 			boat = player.getBoat();
 			if (boat.getObjectId() != _boatId)
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
@@ -66,7 +66,7 @@ public class RequestGetOnVehicle implements IClientIncomingPacket
 			boat = BoatManager.getInstance().getBoat(_boatId);
 			if ((boat == null) || boat.isMoving() || !player.isInsideRadius3D(boat, 1000))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}

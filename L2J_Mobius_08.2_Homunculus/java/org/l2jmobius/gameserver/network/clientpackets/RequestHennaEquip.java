@@ -62,7 +62,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 		if (henna == null)
 		{
 			PacketLogger.warning("Invalid Henna Id: " + _symbolId + " from player " + player);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -73,20 +73,20 @@ public class RequestHennaEquip implements IClientIncomingPacket
 				if (player.getHenna(4) != null)
 				{
 					player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 			else
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
 		else if (player.getHennaEmptySlots() == 0)
 		{
 			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -109,7 +109,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			{
 				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);
 			}
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

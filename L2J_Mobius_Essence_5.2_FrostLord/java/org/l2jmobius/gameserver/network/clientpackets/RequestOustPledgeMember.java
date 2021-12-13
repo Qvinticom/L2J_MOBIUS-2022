@@ -54,17 +54,17 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		}
 		if (player.getClan() == null)
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 			return;
 		}
 		if (!player.hasClanPrivilege(ClanPrivilege.CL_DISMISS))
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
 		if (player.getName().equalsIgnoreCase(_target))
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_YOURSELF);
 			return;
 		}
 		
@@ -77,7 +77,7 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		}
 		if (member.isOnline() && member.getPlayer().isInCombat())
 		{
-			client.sendPacket(SystemMessageId.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
+			player.sendPacket(SystemMessageId.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
 			return;
 		}
 		
@@ -89,8 +89,8 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DISMISSED_FROM_THE_CLAN);
 		sm.addString(member.getName());
 		clan.broadcastToOnlineMembers(sm);
-		client.sendPacket(SystemMessageId.THE_CLAN_MEMBER_IS_DISMISSED);
-		client.sendPacket(SystemMessageId.YOU_CANNOT_ACCEPT_A_NEW_CLAN_MEMBER_FOR_24_H_AFTER_DISMISSING_SOMEONE);
+		player.sendPacket(SystemMessageId.THE_CLAN_MEMBER_IS_DISMISSED);
+		player.sendPacket(SystemMessageId.YOU_CANNOT_ACCEPT_A_NEW_CLAN_MEMBER_FOR_24_H_AFTER_DISMISSING_SOMEONE);
 		
 		// Remove the Player From the Member list
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(_target));

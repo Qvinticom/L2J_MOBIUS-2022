@@ -46,10 +46,10 @@ public class RequestCommissionRegistrableItemList implements IClientIncomingPack
 		
 		if (!ItemCommissionManager.isPlayerAllowedToInteract(player))
 		{
-			client.sendPacket(ExCloseCommission.STATIC_PACKET);
+			player.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
-		client.sendPacket(new ExResponseCommissionItemList(player.getInventory().getAvailableItems(false, false, false)));
+		player.sendPacket(new ExResponseCommissionItemList(player.getInventory().getAvailableItems(false, false, false)));
 	}
 }

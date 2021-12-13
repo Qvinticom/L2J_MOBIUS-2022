@@ -66,7 +66,7 @@ public class RequestPledgeWaitingApply implements IClientIncomingPacket
 		final PledgeApplicantInfo info = new PledgeApplicantInfo(player.getObjectId(), player.getName(), player.getLevel(), _karma, _clanId, _message);
 		if (ClanEntryManager.getInstance().addPlayerApplicationToClan(_clanId, info))
 		{
-			client.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
+			player.sendPacket(new ExPledgeRecruitApplyInfo(ClanEntryStatus.WAITING));
 			
 			final Player clanLeader = World.getInstance().getPlayer(clan.getLeaderId());
 			if (clanLeader != null)
@@ -78,7 +78,7 @@ public class RequestPledgeWaitingApply implements IClientIncomingPacket
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
 			sm.addLong(ClanEntryManager.getInstance().getPlayerLockTime(player.getObjectId()));
-			client.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 	}
 }

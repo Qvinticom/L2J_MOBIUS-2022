@@ -47,6 +47,6 @@ public class RequestExFriendListExtended implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new FriendList(player));
+		player.sendPacket(new FriendList(player));
 	}
 }

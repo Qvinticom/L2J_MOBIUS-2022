@@ -71,7 +71,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		if (player.reduceAdena("RemoveElement", getPrice(targetItem), player, true))
 		{
 			targetItem.clearAttribute(type);
-			client.sendPacket(new UserInfo(player));
+			player.sendPacket(new UserInfo(player));
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
@@ -113,12 +113,12 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 					sm.addAttribute(realElement.getOpposite().getClientId());
 				}
 			}
-			client.sendPacket(sm);
-			client.sendPacket(new ExBaseAttributeCancelResult(targetItem.getObjectId(), _element));
+			player.sendPacket(sm);
+			player.sendPacket(new ExBaseAttributeCancelResult(targetItem.getObjectId(), _element));
 		}
 		else
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_TO_CANCEL_THIS_ATTRIBUTE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_TO_CANCEL_THIS_ATTRIBUTE);
 		}
 	}
 	

@@ -54,6 +54,6 @@ public class RequestRecipeShopMakeInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
+		player.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
 	}
 }

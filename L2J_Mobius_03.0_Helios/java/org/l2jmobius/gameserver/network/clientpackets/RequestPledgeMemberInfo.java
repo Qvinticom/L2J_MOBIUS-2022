@@ -64,6 +64,7 @@ public class RequestPledgeMemberInfo implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new PledgeReceiveMemberInfo(member));
+		
+		player.sendPacket(new PledgeReceiveMemberInfo(member));
 	}
 }

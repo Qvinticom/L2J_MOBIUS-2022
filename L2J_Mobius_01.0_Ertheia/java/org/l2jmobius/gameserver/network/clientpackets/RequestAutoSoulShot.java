@@ -92,7 +92,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (soulshotCount > item.getCount())
 							{
-								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 								return;
 							}
 						}
@@ -110,14 +110,14 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (spiritshotCount > item.getCount())
 							{
-								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 								return;
 							}
 						}
 						
 						// Activate shots
 						player.addAutoSoulShot(_itemId);
-						client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+						player.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 						
 						// Recharge summon's shots
 						final Summon pet = player.getPet();
@@ -128,7 +128,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addItemName(item);
-								client.sendPacket(sm);
+								player.sendPacket(sm);
 							}
 							// Charge
 							pet.rechargeShots(isSoulshot, isSpiritshot, false);
@@ -140,7 +140,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addItemName(item);
-								client.sendPacket(sm);
+								player.sendPacket(sm);
 							}
 							// Charge
 							summon.rechargeShots(isSoulshot, isSpiritshot, false);
@@ -148,7 +148,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					}
 					else
 					{
-						client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 					}
 				}
 				else if (isPlayerShot(item.getItem()))
@@ -158,18 +158,18 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					final boolean isFishingshot = item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT;
 					if ((player.getActiveWeaponItem() == player.getFistsWeaponItem()) || (item.getItem().getCrystalType() != player.getActiveWeaponItem().getCrystalTypePlus()))
 					{
-						client.sendPacket(isSoulshot ? SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON : SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
+						player.sendPacket(isSoulshot ? SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON : SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 						return;
 					}
 					
 					// Activate shots
 					player.addAutoSoulShot(_itemId);
-					client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+					player.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 					
 					// Send message
 					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 					sm.addItemName(item);
-					client.sendPacket(sm);
+					player.sendPacket(sm);
 					
 					// Recharge player's shots
 					player.rechargeShots(isSoulshot, isSpiritshot, isFishingshot);
@@ -179,12 +179,12 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 			{
 				// Cancel auto shots
 				player.removeAutoSoulShot(_itemId);
-				client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+				player.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 				
 				// Send message
 				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addItemName(item);
-				client.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
 	}

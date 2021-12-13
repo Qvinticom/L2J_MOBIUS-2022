@@ -144,7 +144,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		
 		if ((_count < 1) || (_listId >= 4000000))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

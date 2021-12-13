@@ -95,7 +95,7 @@ public class RequestCommissionRegister implements IClientIncomingPacket
 		
 		if (!ItemCommissionManager.isPlayerAllowedToInteract(player))
 		{
-			client.sendPacket(ExCloseCommission.STATIC_PACKET);
+			player.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		

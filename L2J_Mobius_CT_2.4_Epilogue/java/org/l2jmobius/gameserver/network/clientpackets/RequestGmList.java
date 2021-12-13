@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -35,10 +36,12 @@ public class RequestGmList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if (client.getPlayer() == null)
+		final Player player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		AdminData.getInstance().sendListToPlayer(client.getPlayer());
+		
+		AdminData.getInstance().sendListToPlayer(player);
 	}
 }

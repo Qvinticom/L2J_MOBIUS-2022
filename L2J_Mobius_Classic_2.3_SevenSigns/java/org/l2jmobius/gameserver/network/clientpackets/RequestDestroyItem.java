@@ -81,7 +81,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		long count = _count;
 		if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
-			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
@@ -111,14 +111,14 @@ public class RequestDestroyItem implements IClientIncomingPacket
 				return;
 			}
 			
-			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
 		
 		// Cannot discard item that the skill is consuming
 		if (player.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId()))
 		{
-			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
 		
@@ -127,11 +127,11 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		{
 			if (itemToRemove.isHeroItem())
 			{
-				client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
+				player.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
 			}
 			else
 			{
-				client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			}
 			return;
 		}
@@ -184,13 +184,13 @@ public class RequestDestroyItem implements IClientIncomingPacket
 				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
-				client.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 			else
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 				sm.addItemName(itemToRemove);
-				client.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();

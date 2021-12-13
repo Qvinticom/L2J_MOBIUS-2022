@@ -43,7 +43,7 @@ public class RequestRecipeShopManagePrev implements IClientIncomingPacket
 		}
 		else if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

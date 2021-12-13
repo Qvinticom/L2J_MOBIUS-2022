@@ -37,9 +37,14 @@ public class Appearing implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final Player player = client.getPlayer();
-		if ((player == null) || !player.isOnline())
+		if (player == null)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (!player.isOnline())
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -48,6 +53,6 @@ public class Appearing implements IClientIncomingPacket
 			player.onTeleported();
 		}
 		
-		client.sendPacket(new UserInfo(player));
+		player.sendPacket(new UserInfo(player));
 	}
 }

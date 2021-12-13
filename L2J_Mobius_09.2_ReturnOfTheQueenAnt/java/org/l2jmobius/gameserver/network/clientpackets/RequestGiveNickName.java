@@ -49,7 +49,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 		if ((player.getNobleLevel() > 0) && _target.equalsIgnoreCase(player.getName()))
 		{
 			player.setTitle(_title);
-			client.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
+			player.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
 			player.broadcastTitleInfo();
 		}
 		else
@@ -57,13 +57,13 @@ public class RequestGiveNickName implements IClientIncomingPacket
 			// Can the player change/give a title?
 			if (!player.hasClanPrivilege(ClanPrivilege.CL_GIVE_TITLE))
 			{
-				client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
 			
 			if (player.getClan().getLevel() < 3)
 			{
-				client.sendPacket(SystemMessageId.THE_CLAN_MUST_BE_LEVEL_3_OR_ABOVE_TO_GRANT_A_TITLE);
+				player.sendPacket(SystemMessageId.THE_CLAN_MUST_BE_LEVEL_3_OR_ABOVE_TO_GRANT_A_TITLE);
 				return;
 			}
 			
@@ -80,12 +80,12 @@ public class RequestGiveNickName implements IClientIncomingPacket
 				}
 				else
 				{
-					client.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
+					player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 				}
 			}
 			else
 			{
-				client.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
+				player.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 			}
 		}
 	}

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.model.Shortcut;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
@@ -48,13 +49,19 @@ public class RequestShortCutReg implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if ((client.getPlayer() == null) || (_page > 10) || (_page < 0))
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if ((_page > 10) || (_page < 0))
 		{
 			return;
 		}
 		
 		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _level, _characterType);
-		client.getPlayer().registerShortCut(sc);
-		client.sendPacket(new ShortCutRegister(sc));
+		player.registerShortCut(sc);
+		player.sendPacket(new ShortCutRegister(sc));
 	}
 }

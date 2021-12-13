@@ -64,7 +64,7 @@ public class RequestDeleteSentPost implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
 		}
 		
@@ -88,6 +88,6 @@ public class RequestDeleteSentPost implements IClientIncomingPacket
 			
 			msg.setDeletedBySender();
 		}
-		client.sendPacket(new ExChangePostState(false, _msgIds, Message.DELETED));
+		player.sendPacket(new ExChangePostState(false, _msgIds, Message.DELETED));
 	}
 }

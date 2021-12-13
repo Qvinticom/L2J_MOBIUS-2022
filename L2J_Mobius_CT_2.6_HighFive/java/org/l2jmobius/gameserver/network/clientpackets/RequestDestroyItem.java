@@ -204,7 +204,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		}
 		else
 		{
-			client.sendPacket(new ItemList(player, true));
+			player.sendPacket(new ItemList(player, true));
 		}
 		
 		final StatusUpdate su = new StatusUpdate(player);

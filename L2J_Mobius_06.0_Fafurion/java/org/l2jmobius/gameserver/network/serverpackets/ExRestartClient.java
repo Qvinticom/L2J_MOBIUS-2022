@@ -34,7 +34,6 @@ public class ExRestartClient implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESTART_CLIENT.writeId(packet);
-		
 		return true;
 	}
 }

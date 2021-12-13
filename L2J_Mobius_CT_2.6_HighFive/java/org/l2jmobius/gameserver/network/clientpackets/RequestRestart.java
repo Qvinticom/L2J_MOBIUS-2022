@@ -64,7 +64,7 @@ public class RequestRestart implements IClientIncomingPacket
 		
 		if ((player.getActiveEnchantItemId() != Player.ID_NONE) || (player.getActiveEnchantAttrItemId() != Player.ID_NONE))
 		{
-			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -72,7 +72,7 @@ public class RequestRestart implements IClientIncomingPacket
 		if (player.isLocked())
 		{
 			PacketLogger.warning("Player " + player.getName() + " tried to restart during class change.");
-			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -80,14 +80,14 @@ public class RequestRestart implements IClientIncomingPacket
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendMessage("Cannot restart while trading.");
-			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
-			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -99,7 +99,7 @@ public class RequestRestart implements IClientIncomingPacket
 			if (SevenSignsFestival.getInstance().isFestivalInitialized())
 			{
 				player.sendMessage("You cannot restart while you are a participant in a festival.");
-				client.sendPacket(RestartResponse.valueOf(false));
+				player.sendPacket(RestartResponse.valueOf(false));
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -113,7 +113,7 @@ public class RequestRestart implements IClientIncomingPacket
 		
 		if (!player.canLogout())
 		{
-			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

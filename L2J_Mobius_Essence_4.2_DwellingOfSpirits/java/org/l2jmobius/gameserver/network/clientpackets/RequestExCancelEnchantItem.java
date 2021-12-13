@@ -42,7 +42,7 @@ public class RequestExCancelEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new EnchantResult(2, 0, 0));
+		player.sendPacket(new EnchantResult(2, 0, 0));
 		player.removeRequest(EnchantItemRequest.class);
 	}
 }

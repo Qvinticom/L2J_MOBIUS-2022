@@ -53,10 +53,12 @@ public class AnswerCoupleAction implements IClientIncomingPacket
 		{
 			return;
 		}
+		
 		if ((target.getMultiSocialTarget() != player.getObjectId()) || (target.getMultiSociaAction() != _actionId))
 		{
 			return;
 		}
+		
 		if (_answer == 0) // cancel
 		{
 			target.sendPacket(SystemMessageId.THE_COUPLE_ACTION_WAS_DENIED);
@@ -66,7 +68,7 @@ public class AnswerCoupleAction implements IClientIncomingPacket
 			final int distance = (int) player.calculateDistance2D(target);
 			if ((distance > 125) || (distance < 15) || (player.getObjectId() == target.getObjectId()))
 			{
-				client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
+				player.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 				target.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 				return;
 			}

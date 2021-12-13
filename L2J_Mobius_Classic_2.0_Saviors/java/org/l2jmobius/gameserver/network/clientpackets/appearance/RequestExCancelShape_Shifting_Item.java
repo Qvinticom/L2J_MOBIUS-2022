@@ -44,6 +44,6 @@ public class RequestExCancelShape_Shifting_Item implements IClientIncomingPacket
 		}
 		
 		player.removeRequest(ShapeShiftingItemRequest.class);
-		client.sendPacket(ExShapeShiftingResult.FAILED);
+		player.sendPacket(ExShapeShiftingResult.FAILED);
 	}
 }

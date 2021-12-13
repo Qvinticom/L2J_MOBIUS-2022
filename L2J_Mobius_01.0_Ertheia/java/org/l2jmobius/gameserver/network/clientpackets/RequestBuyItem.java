@@ -91,14 +91,14 @@ public class RequestBuyItem implements IClientIncomingPacket
 		
 		if (_items == null)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Alt game - Karma punishment
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -108,7 +108,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 		{
 			if (!(target instanceof Merchant) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceWorld() != target.getInstanceWorld()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			merchant = (Merchant) target; // FIXME: Doesn't work for GMs.
@@ -116,7 +116,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -132,7 +132,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 		{
 			if (!buyList.isNpcAllowed(merchant.getId()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			castleTaxRate = merchant.getCastleTaxRate(TaxType.BUY);
@@ -155,7 +155,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 			if (!product.getItem().isStackable() && (i.getCount() > 1))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase invalid quantity of items at the same time.", Config.DEFAULT_PUNISH);
-				client.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			
@@ -163,7 +163,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 			if (price < 0)
 			{
 				PacketLogger.warning("ERROR, no price found .. wrong buylist ??");
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
@@ -177,7 +177,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 			// trying to buy more then available
 			if (product.hasLimitedStock() && (i.getCount() > product.getCount()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
@@ -204,23 +204,23 @@ public class RequestBuyItem implements IClientIncomingPacket
 		
 		if (!player.isGM() && ((weight > Integer.MAX_VALUE) || (weight < 0) || !player.getInventory().validateWeight((int) weight)))
 		{
-			client.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!player.isGM() && ((slots > Integer.MAX_VALUE) || (slots < 0) || !player.getInventory().validateCapacity((int) slots)))
 		{
-			client.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Charge buyer and add tax to castle treasury if not owned by npc clan
 		if ((subTotal < 0) || !player.reduceAdena("Buy", subTotal, player.getLastFolkNPC(), false))
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -253,7 +253,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 			merchant.handleTaxPayment((long) (subTotal * castleTaxRate));
 		}
 		
-		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true));
+		player.sendPacket(new ExUserInfoInvenWeight(player));
+		player.sendPacket(new ExBuySellList(player, true));
 	}
 }

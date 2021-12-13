@@ -66,7 +66,7 @@ public class RequestActionUse implements IClientIncomingPacket
 		// Don't do anything if player is dead or confused
 		if ((player.isFakeDeath() && (_actionId != 0)) || player.isDead() || player.isControlBlocked())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -90,7 +90,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
 			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				PacketLogger.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().get().getId());
 				return;
 			}
@@ -116,13 +116,13 @@ public class RequestActionUse implements IClientIncomingPacket
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 				if (player.isAlikeDead())
 				{
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
 				if (player.isSellingBuffs())
 				{
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
@@ -136,7 +136,7 @@ public class RequestActionUse implements IClientIncomingPacket
 					player.standUp();
 				}
 				
-				client.sendPacket(new RecipeShopManageList(player, false));
+				player.sendPacket(new RecipeShopManageList(player, false));
 				break;
 			}
 			default:

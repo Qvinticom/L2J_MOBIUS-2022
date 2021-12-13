@@ -49,6 +49,6 @@ public class RequestPledgeInfo implements IClientIncomingPacket
 			return; // we have no clan data ?!? should not happen
 		}
 		
-		client.sendPacket(new PledgeInfo(clan));
+		player.sendPacket(new PledgeInfo(clan));
 	}
 }

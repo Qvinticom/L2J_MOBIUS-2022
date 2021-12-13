@@ -41,6 +41,7 @@ public class RequestShowMiniMap implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new ShowMiniMap(0));
+		
+		player.sendPacket(new ShowMiniMap(0));
 	}
 }

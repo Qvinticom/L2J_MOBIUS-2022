@@ -67,12 +67,12 @@ public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 		}
 		else if ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(false))
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
 			return;
 		}
 		else if (player.isProcessingTransaction())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
 			return;
 		}
 		
@@ -101,11 +101,11 @@ public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 		
 		if (player.getPremiumItemList().isEmpty())
 		{
-			client.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
+			player.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
 		}
 		else
 		{
-			client.sendPacket(new ExGetPremiumItemList(player));
+			player.sendPacket(new ExGetPremiumItemList(player));
 		}
 	}
 }

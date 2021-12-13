@@ -41,6 +41,6 @@ public class RequestRecipeItemMakeInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new RecipeItemMakeInfo(_id, player));
+		player.sendPacket(new RecipeItemMakeInfo(_id, player));
 	}
 }

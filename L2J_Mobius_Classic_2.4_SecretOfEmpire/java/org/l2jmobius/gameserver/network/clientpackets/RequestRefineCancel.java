@@ -54,21 +54,21 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		final Item targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
-			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
+			player.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
 			return;
 		}
 		
 		if (targetItem.getOwnerId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
 		// cannot remove augmentation from a not augmented item
 		if (!targetItem.isAugmented())
 		{
-			client.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
-			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
+			player.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
+			player.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
 			return;
 		}
 		
@@ -76,15 +76,15 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		final long price = VariationData.getInstance().getCancelFee(targetItem.getId(), targetItem.getAugmentation().getMineralId());
 		if (price < 0)
 		{
-			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
+			player.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
 			return;
 		}
 		
 		// try to reduce the players adena
 		if (!player.reduceAdena("RequestRefineCancel", price, targetItem, true))
 		{
-			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -102,7 +102,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		targetItem.removeAugmentation();
 		
 		// send ExVariationCancelResult
-		client.sendPacket(ExVariationCancelResult.STATIC_PACKET_SUCCESS);
+		player.sendPacket(ExVariationCancelResult.STATIC_PACKET_SUCCESS);
 		
 		// send inventory update
 		iu.addModifiedItem(targetItem);

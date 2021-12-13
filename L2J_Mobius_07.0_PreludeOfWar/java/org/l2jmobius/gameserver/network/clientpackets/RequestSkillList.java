@@ -34,10 +34,12 @@ public class RequestSkillList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final Player cha = client.getPlayer();
-		if (cha != null)
+		final Player player = client.getPlayer();
+		if (player == null)
 		{
-			cha.sendSkillList();
+			return;
 		}
+		
+		player.sendSkillList();
 	}
 }

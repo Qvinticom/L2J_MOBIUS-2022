@@ -59,7 +59,7 @@ public class RequestReceivedPost implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE) && msg.hasAttachments())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
 		}
 		
@@ -74,8 +74,8 @@ public class RequestReceivedPost implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExReplyReceivedPost(msg));
-		client.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
+		player.sendPacket(new ExReplyReceivedPost(msg));
+		player.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
 		msg.markAsRead();
 	}
 }

@@ -41,6 +41,7 @@ public class RequestAlchemySkillList implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new ExAlchemySkillList(player));
+		
+		player.sendPacket(new ExAlchemySkillList(player));
 	}
 }

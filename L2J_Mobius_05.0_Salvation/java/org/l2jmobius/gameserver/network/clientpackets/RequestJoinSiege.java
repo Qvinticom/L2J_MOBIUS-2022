@@ -55,7 +55,7 @@ public class RequestJoinSiege implements IClientIncomingPacket
 		
 		if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
 		
@@ -72,7 +72,7 @@ public class RequestJoinSiege implements IClientIncomingPacket
 			{
 				if (Chronos.currentTimeMillis() < clan.getDissolvingExpiryTime())
 				{
-					client.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
+					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;
 				}
 				if (_isAttacker == 1)

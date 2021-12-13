@@ -49,7 +49,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		
 		if (!client.getFloodProtectors().canPerformTransaction())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -67,7 +67,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 				else
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 				found = true;
 				break;
@@ -77,7 +77,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		if (!found)
 		{
 			PacketLogger.warning(getClass().getSimpleName() + ": Player " + player + " requested Henna Draw remove without any henna.");
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

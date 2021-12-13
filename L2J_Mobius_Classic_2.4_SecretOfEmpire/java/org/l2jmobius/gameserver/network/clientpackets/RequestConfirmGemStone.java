@@ -76,17 +76,17 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 		final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), refinerItem.getId());
 		if (!isValid(player, targetItem, refinerItem, gemStoneItem, fee))
 		{
-			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
 		// Check for fee count
 		if (_feeCount != fee.getItemCount())
 		{
-			client.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
 			return;
 		}
 		
-		client.sendPacket(new ExPutCommissionResultForVariationMake(_feeItemObjId, _feeCount, gemStoneItem.getId()));
+		player.sendPacket(new ExPutCommissionResultForVariationMake(_feeItemObjId, _feeCount, gemStoneItem.getId()));
 	}
 }

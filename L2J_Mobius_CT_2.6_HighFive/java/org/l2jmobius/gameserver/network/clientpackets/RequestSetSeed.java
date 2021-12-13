@@ -77,18 +77,23 @@ public class RequestSetSeed implements IClientIncomingPacket
 			return;
 		}
 		
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		if (!manor.isModifiablePeriod())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Check player privileges
-		final Player player = client.getPlayer();
-		if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player))
+		if ((player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

@@ -51,6 +51,6 @@ public class RequestRecipeItemMakeInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new RecipeItemMakeInfo(_id, player, recipe.getMaxOffering()));
+		player.sendPacket(new RecipeItemMakeInfo(_id, player, recipe.getMaxOffering()));
 	}
 }

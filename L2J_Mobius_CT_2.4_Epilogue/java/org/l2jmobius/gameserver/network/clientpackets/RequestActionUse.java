@@ -101,7 +101,7 @@ public class RequestActionUse implements IClientIncomingPacket
 		// Don't do anything if player is dead or confused
 		if ((player.isFakeDeath() && (_actionId != 0)) || player.isDead() || player.isOutOfControl())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -125,7 +125,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
 			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				PacketLogger.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().getId());
 				return;
 			}
@@ -200,23 +200,23 @@ public class RequestActionUse implements IClientIncomingPacket
 				}
 				if (summon.isDead())
 				{
-					client.sendPacket(SystemMessageId.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM);
+					player.sendPacket(SystemMessageId.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM);
 					break;
 				}
 				if (summon.isAttackingNow() || summon.isInCombat() || summon.isMovementDisabled())
 				{
-					client.sendPacket(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
+					player.sendPacket(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
 					break;
 				}
 				if (summon.isHungry())
 				{
 					if (summon.isPet() && !((Pet) summon).getPetData().getFood().isEmpty())
 					{
-						client.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
+						player.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
 					}
 					else
 					{
-						client.sendPacket(SystemMessageId.THE_HUNTING_HELPER_PET_CANNOT_BE_RETURNED_BECAUSE_THERE_IS_NOT_MUCH_TIME_REMAINING_UNTIL_IT_LEAVES);
+						player.sendPacket(SystemMessageId.THE_HUNTING_HELPER_PET_CANNOT_BE_RETURNED_BECAUSE_THERE_IS_NOT_MUCH_TIME_REMAINING_UNTIL_IT_LEAVES);
 					}
 					break;
 				}
@@ -266,7 +266,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			{
 				if (player.isAlikeDead() || player.isSellingBuffs())
 				{
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (player.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -278,7 +278,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				{
 					player.standUp();
 				}
-				client.sendPacket(new RecipeShopManageList(player, true));
+				player.sendPacket(new RecipeShopManageList(player, true));
 				break;
 			}
 			case 38: // Mount/Dismount
@@ -301,7 +301,7 @@ public class RequestActionUse implements IClientIncomingPacket
 					}
 					else
 					{
-						client.sendPacket(SystemMessageId.INVALID_TARGET);
+						player.sendPacket(SystemMessageId.INVALID_TARGET);
 					}
 				}
 				break;
@@ -346,7 +346,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 				if (player.isAlikeDead())
 				{
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (player.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -358,7 +358,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				{
 					player.standUp();
 				}
-				client.sendPacket(new RecipeShopManageList(player, false));
+				player.sendPacket(new RecipeShopManageList(player, false));
 				break;
 			}
 			case 52: // Unsummon Servitor
@@ -367,7 +367,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				{
 					if (summon.isAttackingNow() || summon.isInCombat())
 					{
-						client.sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
+						player.sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
 						break;
 					}
 					summon.unSummon(player);

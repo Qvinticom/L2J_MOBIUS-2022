@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExReplyDominionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowOwnthingPos;
@@ -35,7 +36,13 @@ public class RequestDominionInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		client.sendPacket(ExReplyDominionInfo.STATIC_PACKET);
-		client.sendPacket(ExShowOwnthingPos.STATIC_PACKET);
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(ExReplyDominionInfo.STATIC_PACKET);
+		player.sendPacket(ExShowOwnthingPos.STATIC_PACKET);
 	}
 }

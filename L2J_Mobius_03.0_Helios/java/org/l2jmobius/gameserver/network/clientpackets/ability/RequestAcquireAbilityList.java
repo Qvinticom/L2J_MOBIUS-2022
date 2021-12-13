@@ -116,7 +116,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			if (learn == null)
 			{
 				PacketLogger.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
 			
@@ -124,7 +124,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			if (skill == null)
 			{
 				PacketLogger.warning("Skill " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
 			
@@ -157,7 +157,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			if (learn.getPointsRequired() > pointsSpent[learn.getTreeId() - 1])
 			{
 				PacketLogger.warning("Player " + player + " is trying to learn " + skill + " without enough ability points spent!");
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
@@ -167,7 +167,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 				if (player.getSkillLevel(required.getSkillId()) < required.getSkillLevel())
 				{
 					PacketLogger.warning("Player " + player + " is trying to learn " + skill + " without having prerequsite skill: " + required.getSkill() + "!");
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
@@ -176,7 +176,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			if ((player.getAbilityPoints() - player.getAbilityPointsUsed()) < points)
 			{
 				PacketLogger.warning("Player " + player + " is trying to learn ability without ability points!");
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			

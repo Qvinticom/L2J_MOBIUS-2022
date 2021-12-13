@@ -60,7 +60,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			if ((member != null) && member.isOnline() && member.getPlayer().isInCombat())
 			{
 				player.sendPacket(SystemMessageId.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE);
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
@@ -69,13 +69,13 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		if (targetClan == null)
 		{
 			player.sendMessage("No such clan.");
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		else if (!player.hasClanPrivilege(ClanPrivilege.CL_PLEDGE_WAR))
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -85,14 +85,14 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_AGAINST_THE_CLAN_S1);
 			sm.addString(targetClan.getName());
 			player.sendPacket(sm);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DECLARE_DEFEAT_AS_IT_HAS_NOT_BEEN_7_DAYS_SINCE_STARTING_A_CLAN_WAR_WITH_CLAN_S1);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 
@@ -34,9 +35,17 @@ public class RequestItemList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if ((client != null) && (client.getPlayer() != null) && !client.getPlayer().isInventoryDisabled())
+		final Player player = client.getPlayer();
+		if (player == null)
 		{
-			client.sendPacket(new ItemList(client.getPlayer(), true));
+			return;
 		}
+		
+		if (player.isInventoryDisabled())
+		{
+			return;
+		}
+		
+		player.sendPacket(new ItemList(player, true));
 	}
 }

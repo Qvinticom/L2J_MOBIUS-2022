@@ -48,6 +48,7 @@ public class RequestMenteeWaitingList implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new ListMenteeWaiting(_page, _minLevel, _maxLevel));
+		
+		player.sendPacket(new ListMenteeWaiting(_page, _minLevel, _maxLevel));
 	}
 }

@@ -68,7 +68,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		{
 			// Player canceled enchant
 			player.removeRequest(request.getClass());
-			client.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
+			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
 		
@@ -80,7 +80,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -91,7 +91,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			// Cancel trade
 			player.cancelActiveTrade();
 			player.removeRequest(request.getClass());
-			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_TRADING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_TRADING);
 			return;
 		}
 		
@@ -100,13 +100,13 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if ((item == null) || (stone == null))
 		{
 			player.removeRequest(request.getClass());
-			client.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
+			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
 		
 		if (!item.isElementable())
 		{
-			client.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
+			player.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -146,7 +146,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		int powerToAdd = getPowerToAdd(stoneId, elementValue, item);
 		if ((item.isWeapon() && (oldElement != null) && (oldElement.getType() != elementToAdd) && (oldElement.getType() != AttributeType.NONE)) || (item.isArmor() && (item.getAttribute(elementToAdd) == null) && (item.getAttributes() != null) && (item.getAttributes().size() >= 3)))
 		{
-			client.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
+			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -174,7 +174,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		
 		if (powerToAdd <= 0)
 		{
-			client.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
+			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -251,7 +251,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		}
 		else
 		{
-			client.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_ELEMENTAL_POWER);
+			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_ELEMENTAL_POWER);
 		}
 		
 		int result = 0;
@@ -272,8 +272,8 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		}
 		
 		player.removeRequest(request.getClass());
-		client.sendPacket(new ExAttributeEnchantResult(result, item.isWeapon(), elementToAdd, elementValue, newValue, successfulAttempts, failedAttempts));
-		client.sendPacket(new UserInfo(player));
+		player.sendPacket(new ExAttributeEnchantResult(result, item.isWeapon(), elementToAdd, elementValue, newValue, successfulAttempts, failedAttempts));
+		player.sendPacket(new UserInfo(player));
 		player.sendInventoryUpdate(iu);
 	}
 	

@@ -65,8 +65,8 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		// attempting to destroy item
 		if (player.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, player, item) == null)
 		{
-			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			client.sendPacket(ExChangeAttributeFail.STATIC);
+			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+			player.sendPacket(ExChangeAttributeFail.STATIC);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
 			return;
 		}

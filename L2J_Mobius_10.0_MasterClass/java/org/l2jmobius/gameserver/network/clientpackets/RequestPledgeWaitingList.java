@@ -44,6 +44,6 @@ public class RequestPledgeWaitingList implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExPledgeWaitingList(_clanId));
+		player.sendPacket(new ExPledgeWaitingList(_clanId));
 	}
 }

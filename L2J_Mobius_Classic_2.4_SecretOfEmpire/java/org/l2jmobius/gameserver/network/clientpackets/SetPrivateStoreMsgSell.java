@@ -55,6 +55,6 @@ public class SetPrivateStoreMsgSell implements IClientIncomingPacket
 		}
 		
 		player.getSellList().setTitle(_storeMsg);
-		client.sendPacket(new PrivateStoreMsgSell(player));
+		player.sendPacket(new PrivateStoreMsgSell(player));
 	}
 }

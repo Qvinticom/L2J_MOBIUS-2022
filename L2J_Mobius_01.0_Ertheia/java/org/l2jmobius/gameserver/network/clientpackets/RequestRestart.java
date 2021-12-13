@@ -57,7 +57,7 @@ public class RequestRestart implements IClientIncomingPacket
 		
 		if (!player.canLogout())
 		{
-			client.sendPacket(RestartResponse.FALSE);
+			player.sendPacket(RestartResponse.FALSE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

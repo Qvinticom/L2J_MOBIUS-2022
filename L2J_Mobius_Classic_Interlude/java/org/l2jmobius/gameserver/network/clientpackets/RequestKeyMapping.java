@@ -44,7 +44,7 @@ public class RequestKeyMapping implements IClientIncomingPacket
 		
 		if (Config.STORE_UI_SETTINGS)
 		{
-			client.sendPacket(new ExUISetting(player));
+			player.sendPacket(new ExUISetting(player));
 		}
 	}
 }

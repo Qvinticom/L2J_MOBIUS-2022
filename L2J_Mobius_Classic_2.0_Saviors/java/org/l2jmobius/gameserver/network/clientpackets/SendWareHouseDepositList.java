@@ -150,14 +150,14 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		// Item Max Limit Check
 		if (!warehouse.validateCapacity(slots))
 		{
-			client.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
 		}
 		
 		// Check if enough adena and charge the fee
 		if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false))
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		

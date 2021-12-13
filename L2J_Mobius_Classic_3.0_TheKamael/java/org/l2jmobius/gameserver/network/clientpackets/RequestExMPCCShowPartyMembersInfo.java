@@ -49,7 +49,7 @@ public class RequestExMPCCShowPartyMembersInfo implements IClientIncomingPacket
 		final Player target = World.getInstance().getPlayer(_partyLeaderId);
 		if ((target != null) && (target.getParty() != null))
 		{
-			client.sendPacket(new ExMPCCShowPartyMemberInfo(target.getParty()));
+			player.sendPacket(new ExMPCCShowPartyMemberInfo(target.getParty()));
 		}
 	}
 }

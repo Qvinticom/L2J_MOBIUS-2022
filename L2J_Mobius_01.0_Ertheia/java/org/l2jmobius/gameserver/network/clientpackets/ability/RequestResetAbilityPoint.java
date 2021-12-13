@@ -60,12 +60,12 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		}
 		else if ((player.getLevel() < 99) || !player.isNoble())
 		{
-			client.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
+			player.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;
 		}
 		else if (player.isInOlympiadMode())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
 		else if (player.isOnEvent())
@@ -85,7 +85,7 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		}
 		else if (player.getAdena() < Config.ABILITY_POINTS_RESET_ADENA)
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -101,7 +101,7 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 				}
 			}
 			player.setAbilityPointsUsed(0);
-			client.sendPacket(new ExAcquireAPSkillList(player));
+			player.sendPacket(new ExAcquireAPSkillList(player));
 		}
 	}
 }

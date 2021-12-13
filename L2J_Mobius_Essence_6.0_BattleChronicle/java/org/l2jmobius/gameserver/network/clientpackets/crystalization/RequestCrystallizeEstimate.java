@@ -65,6 +65,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		// player.sendMessage("You are crystallizing too fast.");
 		// return;
 		// }
+		
 		if (_count <= 0)
 		{
 			Util.handleIllegalPlayerAction(player, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + player.getName(), Config.DEFAULT_PUNISH);
@@ -73,28 +74,28 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		
 		if ((player.getPrivateStoreType() != PrivateStoreType.NONE) || player.isInCrystallize())
 		{
-			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
 		final int skillLevel = player.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
 		if (skillLevel <= 0)
 		{
-			client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem() || (!Config.ALT_ALLOW_AUGMENT_DESTROY && item.isAugmented()))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			PacketLogger.warning(player + ": tried to crystallize " + item.getItem());
 			return;
 		}
@@ -167,8 +168,8 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		
 		if (!canCrystallize)
 		{
-			client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -177,11 +178,11 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		if ((crystallizationRewards != null) && !crystallizationRewards.isEmpty())
 		{
 			player.setInCrystallize(true);
-			client.sendPacket(new ExGetCrystalizingEstimation(crystallizationRewards));
+			player.sendPacket(new ExGetCrystalizingEstimation(crystallizationRewards));
 		}
 		else
 		{
-			client.sendPacket(SystemMessageId.ANGEL_NEVIT_S_DESCENT_BONUS_TIME_S1);
+			player.sendPacket(SystemMessageId.ANGEL_NEVIT_S_DESCENT_BONUS_TIME_S1);
 		}
 	}
 }

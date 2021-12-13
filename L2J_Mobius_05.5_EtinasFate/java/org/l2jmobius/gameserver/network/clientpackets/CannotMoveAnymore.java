@@ -65,12 +65,12 @@ public class CannotMoveAnymore implements IClientIncomingPacket
 		// PacketLogger.finer("client: x:"+_x+" y:"+_y+" z:"+_z+
 		// " server x:"+player.getX()+" y:"+player.getZ()+" z:"+player.getZ());
 		// StopMove smwl = new StopMove(player);
-		// client.getPlayer().sendPacket(smwl);
-		// client.getPlayer().broadcastPacket(smwl);
+		// cplayer.getPlayer().sendPacket(smwl);
+		// cplayer.getPlayer().broadcastPacket(smwl);
 		//
-		// StopRotation sr = new StopRotation(client.getPlayer(),
+		// StopRotation sr = new StopRotation(cplayer.getPlayer(),
 		// _heading);
-		// client.getPlayer().sendPacket(sr);
-		// client.getPlayer().broadcastPacket(sr);
+		// cplayer.getPlayer().sendPacket(sr);
+		// cplayer.getPlayer().broadcastPacket(sr);
 	}
 }

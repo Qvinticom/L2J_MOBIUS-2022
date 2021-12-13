@@ -92,7 +92,7 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLevel, _skillSubLevel, playerSkill.getSubLevel()));
+		player.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLevel, _skillSubLevel, playerSkill.getSubLevel()));
 		// ExEnchantSkillInfoDetail - not really necessary I think
 		// client.sendPacket(new ExEnchantSkillInfoDetail(SkillEnchantType.NORMAL, _skillId, _skillLevel, _skillSubLevel , activeChar));
 	}

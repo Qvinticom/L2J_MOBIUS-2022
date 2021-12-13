@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -40,31 +41,42 @@ public class RequestPetGetItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final World world = World.getInstance();
-		final Item item = (Item) world.findObject(_objectId);
-		if ((item == null) || (client.getPlayer() == null) || !client.getPlayer().hasPet())
+		final Player player = client.getPlayer();
+		if (player == null)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (!player.hasPet())
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		final Item item = (Item) World.getInstance().findObject(_objectId);
+		if (item == null)
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final int castleId = MercTicketManager.getInstance().getTicketCastleId(item.getId());
 		if (castleId > 0)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (FortSiegeManager.getInstance().isCombat(item.getId()))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final Pet pet = (Pet) client.getPlayer().getSummon();
+		final Pet pet = (Pet) player.getSummon();
 		if (pet.isDead() || pet.isOutOfControl())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

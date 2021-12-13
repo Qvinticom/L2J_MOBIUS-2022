@@ -96,8 +96,8 @@ public class RequestVoteNew implements IClientIncomingPacket
 		sm.addPcName(player);
 		target.sendPacket(sm);
 		
-		client.sendPacket(new UserInfo(player));
-		client.sendPacket(new ExBrExtraUserInfo(player));
+		player.sendPacket(new UserInfo(player));
+		player.sendPacket(new ExBrExtraUserInfo(player));
 		target.broadcastUserInfo();
 		
 		if (Config.NEVIT_ENABLED)

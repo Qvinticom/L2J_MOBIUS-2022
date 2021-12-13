@@ -81,7 +81,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		if ((_items == null) || !player.hasRefund())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -91,7 +91,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		{
 			if (!(target instanceof Merchant) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			merchant = (Merchant) target;
@@ -99,7 +99,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -112,7 +112,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -170,22 +170,22 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		if ((weight > Integer.MAX_VALUE) || (weight < 0) || !player.getInventory().validateWeight((int) weight))
 		{
-			client.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((slots > Integer.MAX_VALUE) || (slots < 0) || !player.getInventory().validateCapacity((int) slots))
 		{
-			client.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!Config.MERCHANT_ZERO_SELL_PRICE && ((adena < 0) || !player.reduceAdena("Refund", adena, player.getLastFolkNPC(), false)))
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -199,7 +199,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		}
 		
 		// Update current load status on player
-		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true));
+		player.sendPacket(new ExUserInfoInvenWeight(player));
+		player.sendPacket(new ExBuySellList(player, true));
 	}
 }

@@ -87,21 +87,21 @@ public class RequestProcureCropList implements IClientIncomingPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		if (manor.isUnderMaintenance())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final Npc manager = player.getLastFolkNPC();
 		if (!(manager instanceof Merchant) || !manager.canInteract(player))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final int castleId = manager.getCastle().getResidenceId();
 		if (manager.getTemplate().getParameters().getInt("manor_id", -1) != castleId)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -112,14 +112,14 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			final Item item = player.getInventory().getItemByObjectId(i.getObjectId());
 			if ((item == null) || (item.getCount() < i.getCount()) || (item.getId() != i.getId()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
 			final CropProcure cp = i.getCropProcure();
 			if ((cp == null) || (cp.getAmount() < i.getCount()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			

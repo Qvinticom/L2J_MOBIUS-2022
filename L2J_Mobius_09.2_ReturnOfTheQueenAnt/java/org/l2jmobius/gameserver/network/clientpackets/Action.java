@@ -70,7 +70,7 @@ public class Action implements IClientIncomingPacket
 		if (player.inObserverMode())
 		{
 			player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -106,27 +106,27 @@ public class Action implements IClientIncomingPacket
 		if (obj == null)
 		{
 			// pressing e.g. pickup many times quickly would get you here
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((!obj.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PlayerCondOverride.TARGET_ALL))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't interact with objects in the other instances
 		if (obj.getInstanceWorld() != player.getInstanceWorld())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly interact with invisible characters
 		if (!obj.isVisibleFor(player))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -134,7 +134,7 @@ public class Action implements IClientIncomingPacket
 		if (player.getActiveRequester() != null)
 		{
 			// Actions prohibited when in trade
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -163,7 +163,7 @@ public class Action implements IClientIncomingPacket
 			{
 				// Invalid action detected (probably client cheating), log this
 				PacketLogger.warning(getClass().getSimpleName() + ": Character: " + player.getName() + " requested invalid action: " + _actionId);
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
 		}

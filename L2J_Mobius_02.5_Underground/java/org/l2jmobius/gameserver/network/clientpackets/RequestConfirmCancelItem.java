@@ -57,7 +57,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 		
 		if (item.getOwnerId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

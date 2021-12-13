@@ -64,8 +64,8 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		final ShapeShiftingItemRequest request = player.getRequest(ShapeShiftingItemRequest.class);
 		if (player.isInStoreMode() || player.isCrafting() || player.isProcessingRequest() || player.isProcessingTransaction() || (request == null))
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
-			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			return;
 		}
 		
@@ -74,36 +74,36 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		Item stone = request.getAppearanceStone();
 		if ((targetItem == null) || (stone == null))
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
 		if ((stone.getOwnerId() != player.getObjectId()) || (targetItem.getOwnerId() != player.getObjectId()))
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
 		if (!targetItem.getItem().isAppearanceable())
 		{
-			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_MODIFIED_OR_RESTORED);
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_MODIFIED_OR_RESTORED);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
 		if ((targetItem.getItemLocation() != ItemLocation.INVENTORY) && (targetItem.getItemLocation() != ItemLocation.PAPERDOLL))
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
 		if ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null)
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
@@ -111,14 +111,14 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		final AppearanceStone appearanceStone = AppearanceItemData.getInstance().getStone(stone.getId());
 		if (appearanceStone == null)
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
 		if (!appearanceStone.checkConditions(player, targetItem))
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
@@ -129,56 +129,56 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		{
 			if (extractItem == null)
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if (extractItem.getOwnerId() != player.getObjectId())
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if (!extractItem.getItem().isAppearanceable())
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if ((extractItem.getItemLocation() != ItemLocation.INVENTORY) && (extractItem.getItemLocation() != ItemLocation.PAPERDOLL))
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if (extractItem.getItem().getCrystalType().isGreater(targetItem.getItem().getCrystalType()))
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if (extractItem.getVisualId() > 0)
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if ((extractItem.getItemType() != targetItem.getItemType()) || (extractItem.getId() == targetItem.getId()) || (extractItem.getObjectId() == targetItem.getObjectId()))
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
 			
 			if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_CHEST)))
 			{
-				client.sendPacket(ExShapeShiftingResult.CLOSE);
+				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
 				return;
 			}
@@ -189,21 +189,21 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		final long cost = appearanceStone.getCost();
 		if (cost > player.getAdena())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		
 		if (stone.getCount() < 1L)
 		{
-			client.sendPacket(ExShapeShiftingResult.CLOSE);
+			player.sendPacket(ExShapeShiftingResult.CLOSE);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
 		if ((appearanceStone.getType() == AppearanceType.NORMAL) && (inventory.destroyItem(getClass().getSimpleName(), extractItem, 1, player, this) == null))
 		{
-			client.sendPacket(ExShapeShiftingResult.FAILED);
+			player.sendPacket(ExShapeShiftingResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
 			return;
 		}
@@ -276,7 +276,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		player.sendInventoryUpdate(iu);
 		
 		player.removeRequest(ShapeShiftingItemRequest.class);
-		client.sendPacket(new ExShapeShiftingResult(ExShapeShiftingResult.RESULT_SUCCESS, targetItem.getId(), extracItemId));
+		player.sendPacket(new ExShapeShiftingResult(ExShapeShiftingResult.RESULT_SUCCESS, targetItem.getId(), extracItemId));
 		if (targetItem.isEquipped())
 		{
 			player.broadcastUserInfo();
@@ -288,8 +288,8 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 					slots.addComponentType(slot);
 				}
 			}
-			client.sendPacket(slots);
+			player.sendPacket(slots);
 		}
-		client.sendPacket(new ExAdenaInvenCount(player));
+		player.sendPacket(new ExAdenaInvenCount(player));
 	}
 }

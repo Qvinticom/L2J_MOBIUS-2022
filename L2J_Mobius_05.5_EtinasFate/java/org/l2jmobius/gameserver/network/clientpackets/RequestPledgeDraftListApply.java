@@ -51,7 +51,7 @@ public class RequestPledgeDraftListApply implements IClientIncomingPacket
 		
 		if (player.getClan() != null)
 		{
-			client.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_OR_SOMEONE_WITH_RANK_MANAGEMENT_AUTHORITY_MAY_REGISTER_THE_CLAN);
+			player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_OR_SOMEONE_WITH_RANK_MANAGEMENT_AUTHORITY_MAY_REGISTER_THE_CLAN);
 			return;
 		}
 		
@@ -61,7 +61,7 @@ public class RequestPledgeDraftListApply implements IClientIncomingPacket
 			{
 				if (ClanEntryManager.getInstance().removeFromWaitingList(player.getObjectId()))
 				{
-					client.sendPacket(SystemMessageId.ENTRY_APPLICATION_CANCELLED_YOU_MAY_APPLY_TO_A_NEW_CLAN_AFTER_5_MINUTES);
+					player.sendPacket(SystemMessageId.ENTRY_APPLICATION_CANCELLED_YOU_MAY_APPLY_TO_A_NEW_CLAN_AFTER_5_MINUTES);
 				}
 				break;
 			}
@@ -70,13 +70,13 @@ public class RequestPledgeDraftListApply implements IClientIncomingPacket
 				final PledgeWaitingInfo pledgeDraftList = new PledgeWaitingInfo(player.getObjectId(), player.getLevel(), _karma, player.getClassId().getId(), player.getName());
 				if (ClanEntryManager.getInstance().addToWaitingList(player.getObjectId(), pledgeDraftList))
 				{
-					client.sendPacket(SystemMessageId.ENTERED_INTO_WAITING_LIST_NAME_IS_AUTOMATICALLY_DELETED_AFTER_30_DAYS_IF_DELETE_FROM_WAITING_LIST_IS_USED_YOU_CANNOT_ENTER_NAMES_INTO_THE_WAITING_LIST_FOR_5_MINUTES);
+					player.sendPacket(SystemMessageId.ENTERED_INTO_WAITING_LIST_NAME_IS_AUTOMATICALLY_DELETED_AFTER_30_DAYS_IF_DELETE_FROM_WAITING_LIST_IS_USED_YOU_CANNOT_ENTER_NAMES_INTO_THE_WAITING_LIST_FOR_5_MINUTES);
 				}
 				else
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
 					sm.addLong(ClanEntryManager.getInstance().getPlayerLockTime(player.getObjectId()));
-					client.sendPacket(sm);
+					player.sendPacket(sm);
 				}
 				break;
 			}

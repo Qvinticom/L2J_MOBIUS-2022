@@ -51,23 +51,25 @@ public class RequestNewEnchantPushTwo implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if (player.isInStoreMode())
+		
+		if (player.isInStoreMode())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (player.isProcessingTransaction() || player.isProcessingRequest())
+		
+		if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
-			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			player.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
 		
 		final CompoundRequest request = player.getRequest(CompoundRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
-			client.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
 			return;
 		}
 		
@@ -77,14 +79,14 @@ public class RequestNewEnchantPushTwo implements IClientIncomingPacket
 		final Item itemTwo = request.getItemTwo();
 		if ((itemOne == null) || (itemTwo == null))
 		{
-			client.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
 			return;
 		}
 		
 		// Lets prevent using same item twice. Also stackable item check.
 		if ((itemOne.getObjectId() == itemTwo.getObjectId()) && (!itemOne.isStackable() || (player.getInventory().getInventoryItemCount(itemOne.getItem().getId(), -1) < 2)))
 		{
-			client.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
 			return;
 		}
 		
@@ -93,10 +95,10 @@ public class RequestNewEnchantPushTwo implements IClientIncomingPacket
 		// Not implemented or not able to merge!
 		if (combinationItem == null)
 		{
-			client.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantTwoFail.STATIC_PACKET);
 			return;
 		}
 		
-		client.sendPacket(ExEnchantTwoOK.STATIC_PACKET);
+		player.sendPacket(ExEnchantTwoOK.STATIC_PACKET);
 	}
 }

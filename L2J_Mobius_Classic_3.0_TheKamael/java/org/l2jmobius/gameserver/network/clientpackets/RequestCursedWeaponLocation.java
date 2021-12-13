@@ -67,7 +67,7 @@ public class RequestCursedWeaponLocation implements IClientIncomingPacket
 		// send the ExCursedWeaponLocation
 		if (!list.isEmpty())
 		{
-			client.sendPacket(new ExCursedWeaponLocation(list));
+			player.sendPacket(new ExCursedWeaponLocation(list));
 		}
 	}
 }

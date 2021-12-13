@@ -82,7 +82,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		
 		if (_items == null)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -129,21 +129,21 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Transactions are disabled for your Access Level.");
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL) && (storeList.getItemCount() > _items.size()))
 		{
-			final String msgErr = "[RequestPrivateStoreBuy] player " + client.getPlayer().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
-			Util.handleIllegalPlayerAction(client.getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
+			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 			return;
 		}
 		
 		final int result = storeList.privateStoreBuy(player, _items);
 		if (result > 0)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			if (result > 1)
 			{
 				PacketLogger.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());

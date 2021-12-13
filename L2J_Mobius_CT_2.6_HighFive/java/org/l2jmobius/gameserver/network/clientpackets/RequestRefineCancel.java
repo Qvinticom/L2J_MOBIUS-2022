@@ -58,7 +58,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		}
 		if (targetItem.getOwnerId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		// cannot remove augmentation from a not augmented item

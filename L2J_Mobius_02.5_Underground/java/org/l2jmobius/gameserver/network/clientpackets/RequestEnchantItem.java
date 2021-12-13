@@ -84,7 +84,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		
 		if (player.isProcessingTransaction() || player.isInStoreMode())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -120,9 +120,9 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		// first validation check - also over enchant check
 		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && ((item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()) || (!(item.getItem().getEnchantLimit() == 0) && (item.getEnchantLevel() == item.getItem().getEnchantLimit())))))
 		{
-			client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.removeRequest(request.getClass());
-			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
@@ -131,27 +131,27 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
-			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
 		// attempting to destroy scroll
 		if (player.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, player, item) == null)
 		{
-			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
-			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
 		// attempting to destroy support if exist
 		if ((support != null) && (player.getInventory().destroyItem("Enchant", support.getObjectId(), 1, player, item) == null))
 		{
-			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
-			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
@@ -161,9 +161,9 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			// last validation check
 			if ((item.getOwnerId() != player.getObjectId()) || !item.isEnchantable())
 			{
-				client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+				player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 				player.removeRequest(request.getClass());
-				client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+				player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
 			}
 			
@@ -172,9 +172,9 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			{
 				case ERROR:
 				{
-					client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 					player.removeRequest(request.getClass());
-					client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+					player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 					break;
 				}
 				case SUCCESS:
@@ -193,7 +193,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						}
 						item.updateDatabase();
 					}
-					client.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));
+					player.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));
 					if (Config.LOG_ITEM_ENCHANTS)
 					{
 						if (item.getEnchantLevel() > 0)
@@ -258,8 +258,8 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					if (scrollTemplate.isSafe())
 					{
 						// safe enchant - remain old value
-						client.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_VALUE_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
-						client.sendPacket(new EnchantResult(EnchantResult.SAFE_FAIL, item));
+						player.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_VALUE_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
+						player.sendPacket(new EnchantResult(EnchantResult.SAFE_FAIL, item));
 						if (Config.LOG_ITEM_ENCHANTS)
 						{
 							if (item.getEnchantLevel() > 0)
@@ -293,13 +293,13 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 								sm.addInt(item.getEnchantLevel());
 								sm.addItemName(item);
-								client.sendPacket(sm);
+								player.sendPacket(sm);
 							}
 							else
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 								sm.addItemName(item);
-								client.sendPacket(sm);
+								player.sendPacket(sm);
 							}
 							
 							for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot()))
@@ -319,11 +319,11 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							}
 							else // blessed enchant - clear enchant value
 							{
-								client.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
+								player.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
 								item.setEnchantLevel(0);
 							}
 							item.updateDatabase();
-							client.sendPacket(new EnchantResult(EnchantResult.BLESSED_FAIL, 0, 0));
+							player.sendPacket(new EnchantResult(EnchantResult.BLESSED_FAIL, 0, 0));
 							if (Config.LOG_ITEM_ENCHANTS)
 							{
 								if (item.getEnchantLevel() > 0)
@@ -355,7 +355,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								// unable to destroy item, cheater ?
 								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
 								player.removeRequest(request.getClass());
-								client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
+								player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 								if (Config.LOG_ITEM_ENCHANTS)
 								{
 									if (item.getEnchantLevel() > 0)
@@ -398,7 +398,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 								sm.addItemName(crystals);
 								sm.addLong(count);
-								client.sendPacket(sm);
+								player.sendPacket(sm);
 							}
 							
 							if (!Config.FORCE_INVENTORY_UPDATE && (crystals != null))
@@ -408,11 +408,11 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							
 							if ((crystalId == 0) || (count == 0))
 							{
-								client.sendPacket(new EnchantResult(EnchantResult.NO_CRYSTAL, 0, 0));
+								player.sendPacket(new EnchantResult(EnchantResult.NO_CRYSTAL, 0, 0));
 							}
 							else
 							{
-								client.sendPacket(new EnchantResult(EnchantResult.FAIL, crystalId, count));
+								player.sendPacket(new EnchantResult(EnchantResult.FAIL, crystalId, count));
 							}
 							
 							if (Config.LOG_ITEM_ENCHANTS)

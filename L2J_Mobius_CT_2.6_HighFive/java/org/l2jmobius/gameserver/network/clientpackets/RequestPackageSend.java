@@ -204,11 +204,11 @@ public class RequestPackageSend implements IClientIncomingPacket
 		warehouse.deleteMe();
 		
 		// Send updated item list to the player
-		client.sendPacket(playerIU != null ? playerIU : new ItemList(player, false));
+		player.sendPacket(playerIU != null ? playerIU : new ItemList(player, false));
 		
 		// Update current load status on player
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
-		client.sendPacket(su);
+		player.sendPacket(su);
 	}
 }

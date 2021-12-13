@@ -41,6 +41,7 @@ public class RequestHennaRemoveList implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new HennaRemoveList(player));
+		
+		player.sendPacket(new HennaRemoveList(player));
 	}
 }

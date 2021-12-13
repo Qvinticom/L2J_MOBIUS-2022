@@ -56,7 +56,7 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 		
 		if (!VariationData.getInstance().hasFeeData(item.getId()))
 		{
-			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
@@ -65,14 +65,14 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 			// Different system message here
 			if (item.isAugmented())
 			{
-				client.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
+				player.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
 				return;
 			}
 			
-			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
-		client.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()));
+		player.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()));
 	}
 }

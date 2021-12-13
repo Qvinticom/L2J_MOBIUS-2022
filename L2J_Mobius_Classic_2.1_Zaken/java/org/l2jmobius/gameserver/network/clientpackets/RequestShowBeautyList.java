@@ -44,6 +44,6 @@ public class RequestShowBeautyList implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExResponseBeautyList(player, _type));
+		player.sendPacket(new ExResponseBeautyList(player, _type));
 	}
 }

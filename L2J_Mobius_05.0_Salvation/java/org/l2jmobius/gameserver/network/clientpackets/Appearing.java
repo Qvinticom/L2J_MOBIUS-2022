@@ -51,6 +51,6 @@ public class Appearing implements IClientIncomingPacket
 			player.onTeleported();
 		}
 		
-		client.sendPacket(new UserInfo(player));
+		player.sendPacket(new UserInfo(player));
 	}
 }

@@ -52,11 +52,11 @@ public class RequestPledgeWaitingUser implements IClientIncomingPacket
 		final PledgeApplicantInfo infos = ClanEntryManager.getInstance().getPlayerApplication(_clanId, _playerId);
 		if (infos == null)
 		{
-			client.sendPacket(new ExPledgeWaitingList(_clanId));
+			player.sendPacket(new ExPledgeWaitingList(_clanId));
 		}
 		else
 		{
-			client.sendPacket(new ExPledgeWaitingUser(infos));
+			player.sendPacket(new ExPledgeWaitingUser(infos));
 		}
 	}
 }

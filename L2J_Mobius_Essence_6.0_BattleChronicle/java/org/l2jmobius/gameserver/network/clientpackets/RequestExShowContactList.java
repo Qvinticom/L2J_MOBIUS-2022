@@ -48,6 +48,6 @@ public class RequestExShowContactList implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExShowContactList(player));
+		player.sendPacket(new ExShowContactList(player));
 	}
 }

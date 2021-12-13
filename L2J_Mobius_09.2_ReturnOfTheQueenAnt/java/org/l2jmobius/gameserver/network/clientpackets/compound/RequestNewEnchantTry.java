@@ -52,23 +52,25 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if (player.isInStoreMode())
+		
+		if (player.isInStoreMode())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (player.isProcessingTransaction() || player.isProcessingRequest())
+		
+		if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
-			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			player.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
 		
 		final CompoundRequest request = player.getRequest(CompoundRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
-			client.sendPacket(ExEnchantFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantFail.STATIC_PACKET);
 			return;
 		}
 		
@@ -78,7 +80,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		final Item itemTwo = request.getItemTwo();
 		if ((itemOne == null) || (itemTwo == null))
 		{
-			client.sendPacket(ExEnchantFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantFail.STATIC_PACKET);
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -86,7 +88,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		// Lets prevent using same item twice. Also stackable item check.
 		if ((itemOne.getObjectId() == itemTwo.getObjectId()) && (player.getInventory().getInventoryItemCount(itemOne.getItem().getId(), -1) < 2))
 		{
-			client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
+			player.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -96,7 +98,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		// Not implemented or not able to merge!
 		if (combinationItem == null)
 		{
-			client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
+			player.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
 			player.removeRequest(request.getClass());
 			return;
 		}
@@ -121,11 +123,11 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			final Item item = player.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
 			if (success)
 			{
-				client.sendPacket(new ExEnchantSucess(item.getId()));
+				player.sendPacket(new ExEnchantSucess(item.getId()));
 			}
 			else
 			{
-				client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
+				player.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
 			}
 		}
 		

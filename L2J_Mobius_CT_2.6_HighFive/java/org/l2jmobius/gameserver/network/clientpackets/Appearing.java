@@ -47,12 +47,13 @@ public class Appearing implements IClientIncomingPacket
 		{
 			return;
 		}
+		
 		if (player.isTeleporting())
 		{
 			player.onTeleported();
 		}
 		
-		client.sendPacket(new UserInfo(player));
-		client.sendPacket(new ExBrExtraUserInfo(player));
+		player.sendPacket(new UserInfo(player));
+		player.sendPacket(new ExBrExtraUserInfo(player));
 	}
 }

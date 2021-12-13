@@ -84,21 +84,21 @@ public class Action implements IClientIncomingPacket
 		// pressing e.g. pickup many times quickly would get you here
 		if (obj == null)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't interact with objects in the other instances except from multiverse
 		if ((obj.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly interact with invisible characters
 		if ((obj instanceof Player) && (((Player) obj).getAppearance().isInvisible()) && !player.isGM())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -128,14 +128,14 @@ public class Action implements IClientIncomingPacket
 				{
 					// Invalid action detected (probably client cheating), LOGGER this
 					PacketLogger.warning("Character: " + player.getName() + " requested invalid action: " + _actionId);
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					break;
 				}
 			}
 		}
 		else
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET); // Actions prohibited when in trade
+			player.sendPacket(ActionFailed.STATIC_PACKET); // Actions prohibited when in trade
 		}
 	}
 }

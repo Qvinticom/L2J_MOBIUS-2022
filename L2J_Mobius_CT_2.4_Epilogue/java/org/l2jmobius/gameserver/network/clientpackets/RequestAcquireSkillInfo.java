@@ -90,7 +90,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 			case COLLECT:
 			case TRANSFER:
 			{
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case CLASS:
@@ -98,7 +98,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 				if (trainer.getTemplate().canTeach(player.getLearningClass()))
 				{
 					final int customSp = s.getCalculatedLevelUpSp(player.getClassId(), player.getLearningClass());
-					client.sendPacket(new AcquireSkillInfo(_skillType, s, customSp));
+					player.sendPacket(new AcquireSkillInfo(_skillType, s, customSp));
 				}
 				break;
 			}
@@ -108,7 +108,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 				{
 					return;
 				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case SUBPLEDGE:
@@ -117,7 +117,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 				{
 					return;
 				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 		}

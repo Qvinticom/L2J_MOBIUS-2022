@@ -67,7 +67,7 @@ public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 		final int level = player.getSkillLevel(_skillId);
 		if (level <= 0)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -86,7 +86,7 @@ public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 		}
 		else
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			PacketLogger.warning("No skill found with id " + _skillId + " and level " + level + " !!");
 		}
 	}

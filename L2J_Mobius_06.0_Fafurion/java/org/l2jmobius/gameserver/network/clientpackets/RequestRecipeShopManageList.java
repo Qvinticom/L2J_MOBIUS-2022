@@ -78,7 +78,7 @@ public class RequestRecipeShopManageList implements IClientIncomingPacket
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -91,6 +91,6 @@ public class RequestRecipeShopManageList implements IClientIncomingPacket
 			}
 		}
 		
-		client.sendPacket(new RecipeShopManageList(player, true));
+		player.sendPacket(new RecipeShopManageList(player, true));
 	}
 }

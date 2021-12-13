@@ -72,6 +72,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 				_count = 0;
 				return false;
 			}
+			
 			_items[(i * 2) + 0] = itemId;
 			
 			final int count = packet.readD();
@@ -80,12 +81,14 @@ public class RequestBuyItem implements IClientIncomingPacket
 				_count = 0;
 				return false;
 			}
+			
 			if (count > 10000) // Count check.
 			{
 				client.getPlayer().sendMessage("You cannot buy more than 10.000 items.");
 				_count = 0;
 				return false;
 			}
+			
 			_items[(i * 2) + 1] = count;
 		}
 		
@@ -114,10 +117,9 @@ public class RequestBuyItem implements IClientIncomingPacket
 		}
 		
 		final WorldObject target = player.getTarget();
-		if (!player.isGM() && ((target == null // No target (ie GM Shop)
-		) || (!(target instanceof Merchant) && !(target instanceof Fisherman) && !(target instanceof MercManager) && !(target instanceof ClanHallManager) && !(target instanceof CastleChamberlain)) // Target not a merchant, fisherman or mercmanager
-			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE) // Distance is too far
-		))
+		if (!player.isGM() && ((target == null) // No target (ie GM Shop)
+			|| (!(target instanceof Merchant) && !(target instanceof Fisherman) && !(target instanceof MercManager) && !(target instanceof ClanHallManager) && !(target instanceof CastleChamberlain)) // Target not a merchant, fisherman or mercmanager
+			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE))) // Distance is too far
 		{
 			return;
 		}

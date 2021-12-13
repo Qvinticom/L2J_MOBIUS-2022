@@ -44,13 +44,13 @@ public class RequestRecipeShopManagePrev implements IClientIncomingPacket
 		
 		if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (player.calculateDistance2D(player.getTarget()) > 250)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

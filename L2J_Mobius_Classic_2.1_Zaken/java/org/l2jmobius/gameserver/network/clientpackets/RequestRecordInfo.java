@@ -41,7 +41,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new UserInfo(player));
+		player.sendPacket(new UserInfo(player));
 		World.getInstance().forEachVisibleObject(player, WorldObject.class, object ->
 		{
 			if (object.isVisibleFor(player))

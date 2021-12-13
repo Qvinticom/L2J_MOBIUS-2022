@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -40,6 +41,12 @@ public class RequestShowBoard implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, client.getPlayer());
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, player);
 	}
 }

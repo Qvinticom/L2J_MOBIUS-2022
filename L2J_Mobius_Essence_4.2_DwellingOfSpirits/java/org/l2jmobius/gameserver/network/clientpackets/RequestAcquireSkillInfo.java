@@ -93,12 +93,12 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 			case TRANSFER:
 			case DUALCLASS:
 			{
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case CLASS:
 			{
-				client.sendPacket(new ExAcquireSkillInfo(player, s));
+				player.sendPacket(new ExAcquireSkillInfo(player, s));
 				break;
 			}
 			case PLEDGE:
@@ -107,7 +107,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 				{
 					return;
 				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case SUBPLEDGE:
@@ -116,7 +116,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 				{
 					return;
 				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case ALCHEMY:
@@ -125,7 +125,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 				{
 					return;
 				}
-				client.sendPacket(new AcquireSkillInfo(_skillType, s));
+				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case REVELATION:

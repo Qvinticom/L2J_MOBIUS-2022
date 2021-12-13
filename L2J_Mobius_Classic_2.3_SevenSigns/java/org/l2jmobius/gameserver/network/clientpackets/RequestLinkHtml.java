@@ -42,32 +42,32 @@ public class RequestLinkHtml implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final Player actor = client.getPlayer();
-		if (actor == null)
+		final Player player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (_link.isEmpty())
 		{
-			PacketLogger.warning("Player " + actor.getName() + " sent empty html link!");
+			PacketLogger.warning("Player " + player.getName() + " sent empty html link!");
 			return;
 		}
 		
 		if (_link.contains(".."))
 		{
-			PacketLogger.warning("Player " + actor.getName() + " sent invalid html link: link " + _link);
+			PacketLogger.warning("Player " + player.getName() + " sent invalid html link: link " + _link);
 			return;
 		}
 		
-		final int htmlObjectId = actor.validateHtmlAction("link " + _link);
+		final int htmlObjectId = player.validateHtmlAction("link " + _link);
 		if (htmlObjectId == -1)
 		{
-			PacketLogger.warning("Player " + actor.getName() + " sent non cached html link: link " + _link);
+			PacketLogger.warning("Player " + player.getName() + " sent non cached html link: link " + _link);
 			return;
 		}
 		
-		if ((htmlObjectId > 0) && !Util.isInsideRangeOfObjectId(actor, htmlObjectId, Npc.INTERACTION_DISTANCE))
+		if ((htmlObjectId > 0) && !Util.isInsideRangeOfObjectId(player, htmlObjectId, Npc.INTERACTION_DISTANCE))
 		{
 			// No logging here, this could be a common case
 			return;
@@ -75,7 +75,7 @@ public class RequestLinkHtml implements IClientIncomingPacket
 		
 		final String filename = "data/html/" + _link;
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
-		msg.setFile(actor, filename);
-		actor.sendPacket(msg);
+		msg.setFile(player, filename);
+		player.sendPacket(msg);
 	}
 }

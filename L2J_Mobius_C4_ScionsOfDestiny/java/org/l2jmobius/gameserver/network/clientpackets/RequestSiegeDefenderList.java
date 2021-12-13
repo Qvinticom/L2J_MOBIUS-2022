@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -41,6 +42,12 @@ public class RequestSiegeDefenderList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
 		if (_castleId < 100)
 		{
 			final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
@@ -49,7 +56,7 @@ public class RequestSiegeDefenderList implements IClientIncomingPacket
 				return;
 			}
 			
-			client.sendPacket(new SiegeDefenderList(castle));
+			player.sendPacket(new SiegeDefenderList(castle));
 		}
 		else
 		{
@@ -59,7 +66,7 @@ public class RequestSiegeDefenderList implements IClientIncomingPacket
 				return;
 			}
 			
-			client.sendPacket(new SiegeDefenderList(fort));
+			player.sendPacket(new SiegeDefenderList(fort));
 		}
 	}
 }

@@ -40,11 +40,13 @@ public class RequestDismissAlly implements IClientIncomingPacket
 		{
 			return;
 		}
+		
 		if (!player.isClanLeader())
 		{
-			client.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
 			return;
 		}
+		
 		player.getClan().dissolveAlly(player);
 	}
 }

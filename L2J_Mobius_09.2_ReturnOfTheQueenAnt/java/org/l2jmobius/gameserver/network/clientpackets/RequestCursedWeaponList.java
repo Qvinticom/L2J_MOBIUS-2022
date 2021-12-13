@@ -42,6 +42,6 @@ public class RequestCursedWeaponList implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExCursedWeaponList());
+		player.sendPacket(new ExCursedWeaponList());
 	}
 }

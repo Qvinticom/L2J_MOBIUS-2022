@@ -20,6 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -42,17 +43,23 @@ public class RequestSiegeAttackerList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if (castle != null)
 		{
-			client.sendPacket(new SiegeAttackerList(castle));
+			player.sendPacket(new SiegeAttackerList(castle));
 		}
 		else
 		{
 			final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(_castleId);
 			if (hall != null)
 			{
-				client.sendPacket(new SiegeAttackerList(hall));
+				player.sendPacket(new SiegeAttackerList(hall));
 			}
 		}
 	}

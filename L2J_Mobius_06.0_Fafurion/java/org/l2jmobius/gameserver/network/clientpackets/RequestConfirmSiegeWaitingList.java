@@ -96,6 +96,6 @@ public class RequestConfirmSiegeWaitingList implements IClientIncomingPacket
 		}
 		
 		// Update the defender list
-		client.sendPacket(new SiegeDefenderList(castle));
+		player.sendPacket(new SiegeDefenderList(castle));
 	}
 }

@@ -40,9 +40,11 @@ public class RequestFriendDetailInfo implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final Player player = client.getPlayer();
-		if (player != null)
+		if (player == null)
 		{
-			client.sendPacket(new ExFriendDetailInfo(player, _name));
+			return;
 		}
+		
+		player.sendPacket(new ExFriendDetailInfo(player, _name));
 	}
 }

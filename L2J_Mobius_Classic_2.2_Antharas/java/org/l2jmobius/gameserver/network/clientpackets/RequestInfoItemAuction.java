@@ -65,6 +65,6 @@ public class RequestInfoItemAuction implements IClientIncomingPacket
 		}
 		
 		player.updateLastItemAuctionRequest();
-		client.sendPacket(new ExItemAuctionInfoPacket(true, auction, instance.getNextAuction()));
+		player.sendPacket(new ExItemAuctionInfoPacket(true, auction, instance.getNextAuction()));
 	}
 }

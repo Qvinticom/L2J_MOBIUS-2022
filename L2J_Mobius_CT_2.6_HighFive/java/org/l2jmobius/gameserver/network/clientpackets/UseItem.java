@@ -320,7 +320,7 @@ public class UseItem implements IClientIncomingPacket
 				player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
 				player.broadcastUserInfo();
 				// Send a Server->Client packet ItemList to this Player to update left hand equipment.
-				client.sendPacket(new ItemList(player, false));
+				player.sendPacket(new ItemList(player, false));
 				return;
 			}
 			

@@ -65,6 +65,7 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLevel, _skillSubLevel, player));
 	}
 }

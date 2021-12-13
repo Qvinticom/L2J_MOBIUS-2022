@@ -73,7 +73,7 @@ public class TradeRequest implements IClientIncomingPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Transactions are disabled for your current Access Level.");
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -84,8 +84,8 @@ public class TradeRequest implements IClientIncomingPacket
 			{
 				if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID))
 				{
-					client.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
@@ -104,7 +104,7 @@ public class TradeRequest implements IClientIncomingPacket
 		// and the following system message is sent to acting player.
 		if (target.getObjectId() == player.getObjectId())
 		{
-			client.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return;
 		}
 		
@@ -141,7 +141,7 @@ public class TradeRequest implements IClientIncomingPacket
 		
 		if (!target.isPlayer())
 		{
-			client.sendPacket(SystemMessageId.INVALID_TARGET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
@@ -161,8 +161,8 @@ public class TradeRequest implements IClientIncomingPacket
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_IS_CURRENTLY_BEING_INVESTIGATED);
 					sm.addString(partner.getName());
-					client.sendPacket(sm);
-					client.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(sm);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
@@ -189,13 +189,13 @@ public class TradeRequest implements IClientIncomingPacket
 		
 		if ((player.getPrivateStoreType() != PrivateStoreType.NONE) || (partner.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
-			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
 		if (player.isProcessingTransaction())
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
+			player.sendPacket(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
 			return;
 		}
 		
@@ -204,7 +204,7 @@ public class TradeRequest implements IClientIncomingPacket
 		{
 			sm = new SystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(partner.getName());
-			client.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
@@ -218,13 +218,13 @@ public class TradeRequest implements IClientIncomingPacket
 		{
 			sm = new SystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(partner.getName());
-			client.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
 		if (player.calculateDistance3D(partner) > 150)
 		{
-			client.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
+			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			return;
 		}
 		
@@ -232,6 +232,6 @@ public class TradeRequest implements IClientIncomingPacket
 		partner.sendPacket(new SendTradeRequest(player.getObjectId()));
 		sm = new SystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
 		sm.addString(partner.getName());
-		client.sendPacket(sm);
+		player.sendPacket(sm);
 	}
 }

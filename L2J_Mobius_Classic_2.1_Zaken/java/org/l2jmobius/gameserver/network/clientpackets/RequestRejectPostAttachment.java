@@ -65,7 +65,7 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
 		}
 		
@@ -87,8 +87,8 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 		}
 		
 		MailManager.getInstance().sendMessage(new Message(msg));
-		client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
-		client.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
+		player.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
+		player.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
 		
 		final Player sender = World.getInstance().getPlayer(msg.getSenderId());
 		if (sender != null)

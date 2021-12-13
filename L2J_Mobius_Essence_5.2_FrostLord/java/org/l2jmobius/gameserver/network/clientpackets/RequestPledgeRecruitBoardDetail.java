@@ -52,6 +52,6 @@ public class RequestPledgeRecruitBoardDetail implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExPledgeRecruitBoardDetail(pledgeRecruitInfo));
+		player.sendPacket(new ExPledgeRecruitBoardDetail(pledgeRecruitInfo));
 	}
 }

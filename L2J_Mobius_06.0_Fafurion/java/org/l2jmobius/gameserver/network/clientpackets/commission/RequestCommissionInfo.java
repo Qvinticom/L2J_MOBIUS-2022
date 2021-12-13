@@ -50,18 +50,18 @@ public class RequestCommissionInfo implements IClientIncomingPacket
 		
 		if (!ItemCommissionManager.isPlayerAllowedToInteract(player))
 		{
-			client.sendPacket(ExCloseCommission.STATIC_PACKET);
+			player.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
 		final Item itemInstance = player.getInventory().getItemByObjectId(_itemObjectId);
 		if (itemInstance != null)
 		{
-			client.sendPacket(player.getLastCommissionInfos().getOrDefault(itemInstance.getId(), ExResponseCommissionInfo.EMPTY));
+			player.sendPacket(player.getLastCommissionInfos().getOrDefault(itemInstance.getId(), ExResponseCommissionInfo.EMPTY));
 		}
 		else
 		{
-			client.sendPacket(ExResponseCommissionInfo.EMPTY);
+			player.sendPacket(ExResponseCommissionInfo.EMPTY);
 		}
 	}
 }

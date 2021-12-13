@@ -41,6 +41,7 @@ public class RequestMentorList implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new ExMentorList(player));
+		
+		player.sendPacket(new ExMentorList(player));
 	}
 }

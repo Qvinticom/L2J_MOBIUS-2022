@@ -60,12 +60,12 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		}
 		else if (player.getLevel() < 85)
 		{
-			client.sendPacket(SystemMessageId.REACH_LEVEL_85_TO_USE_THE_ABILITY);
+			player.sendPacket(SystemMessageId.REACH_LEVEL_85_TO_USE_THE_ABILITY);
 			return;
 		}
 		else if (player.isInOlympiadMode())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
 		else if (player.isOnEvent())
@@ -85,7 +85,7 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		}
 		else if (player.getSp() < Config.ABILITY_POINTS_RESET_SP)
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_FOR_THIS);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_FOR_THIS);
 			return;
 		}
 		player.setSp(player.getSp() - Config.ABILITY_POINTS_RESET_SP);

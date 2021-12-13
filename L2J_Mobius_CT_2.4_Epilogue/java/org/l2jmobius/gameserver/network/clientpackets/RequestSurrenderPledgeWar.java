@@ -58,7 +58,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		PacketLogger.info("RequestSurrenderPledgeWar by " + client.getPlayer().getClan().getName() + " with " + _pledgeName);
+		PacketLogger.info("RequestSurrenderPledgeWar by " + player.getClan().getName() + " with " + _pledgeName);
 		if (!playerClan.isAtWarWith(clan.getId()))
 		{
 			player.sendMessage("You aren't at war with this clan.");

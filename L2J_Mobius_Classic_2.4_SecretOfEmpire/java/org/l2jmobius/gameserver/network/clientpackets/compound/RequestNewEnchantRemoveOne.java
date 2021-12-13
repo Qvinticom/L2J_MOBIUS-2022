@@ -49,34 +49,36 @@ public class RequestNewEnchantRemoveOne implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if (player.isInStoreMode())
+		
+		if (player.isInStoreMode())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (player.isProcessingTransaction() || player.isProcessingRequest())
+		
+		if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
-			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			player.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
 		
 		final CompoundRequest request = player.getRequest(CompoundRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
-			client.sendPacket(ExEnchantOneRemoveFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantOneRemoveFail.STATIC_PACKET);
 			return;
 		}
 		
 		final Item item = request.getItemOne();
 		if ((item == null) || (item.getObjectId() != _objectId))
 		{
-			client.sendPacket(ExEnchantOneRemoveFail.STATIC_PACKET);
+			player.sendPacket(ExEnchantOneRemoveFail.STATIC_PACKET);
 			return;
 		}
 		request.setItemOne(0);
 		
-		client.sendPacket(ExEnchantOneRemoveOK.STATIC_PACKET);
+		player.sendPacket(ExEnchantOneRemoveOK.STATIC_PACKET);
 	}
 }

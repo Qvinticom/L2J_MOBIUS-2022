@@ -65,7 +65,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 		// The English system message say weapon, but it's applied to any equipped item.
 		if (player.isAttackingNow() || player.isCastingNow())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_WEAPONS_DURING_AN_ATTACK);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_WEAPONS_DURING_AN_ATTACK);
 			return;
 		}
 		
@@ -89,13 +89,13 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 		
 		if (!player.getInventory().canManipulateWithItemId(item.getId()))
 		{
-			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
+			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
 			return;
 		}
 		
 		if (item.isWeapon() && item.getWeaponItem().isForceEquip() && !player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS))
 		{
-			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
+			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
 			return;
 		}
 		
@@ -117,7 +117,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 				sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 			}
 			sm.addItemName(unequippedItem);
-			client.sendPacket(sm);
+			player.sendPacket(sm);
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItems(unequipped);

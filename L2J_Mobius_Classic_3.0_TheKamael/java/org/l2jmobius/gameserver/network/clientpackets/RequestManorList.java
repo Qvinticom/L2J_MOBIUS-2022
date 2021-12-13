@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExSendManorList;
 
@@ -34,6 +35,12 @@ public class RequestManorList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		client.sendPacket(ExSendManorList.STATIC_PACKET);
+		final Player player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(ExSendManorList.STATIC_PACKET);
 	}
 }

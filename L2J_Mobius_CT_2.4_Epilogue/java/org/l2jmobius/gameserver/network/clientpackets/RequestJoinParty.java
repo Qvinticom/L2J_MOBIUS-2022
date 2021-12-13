@@ -49,12 +49,12 @@ public class RequestJoinParty implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final Player requestor = client.getPlayer();
-		final Player target = World.getInstance().getPlayer(_name);
 		if (requestor == null)
 		{
 			return;
 		}
 		
+		final Player target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);

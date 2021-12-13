@@ -73,7 +73,7 @@ public class RequestPledgePower implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(new ManagePledgePower(client.getPlayer().getClan(), _action, _rank));
+			player.sendPacket(new ManagePledgePower(player.getClan(), _action, _rank));
 		}
 	}
 }

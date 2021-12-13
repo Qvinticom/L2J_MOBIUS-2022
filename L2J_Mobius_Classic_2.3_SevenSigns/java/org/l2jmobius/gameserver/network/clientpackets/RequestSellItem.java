@@ -90,14 +90,14 @@ public class RequestSellItem implements IClientIncomingPacket
 		
 		if (_items == null)
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Alt game - Karma punishment
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -107,7 +107,7 @@ public class RequestSellItem implements IClientIncomingPacket
 		{
 			if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			if (target instanceof Merchant)
@@ -116,14 +116,14 @@ public class RequestSellItem implements IClientIncomingPacket
 			}
 			else
 			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -136,7 +136,7 @@ public class RequestSellItem implements IClientIncomingPacket
 		
 		if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -174,7 +174,7 @@ public class RequestSellItem implements IClientIncomingPacket
 		}
 		
 		// Update current load as well
-		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true));
+		player.sendPacket(new ExUserInfoInvenWeight(player));
+		player.sendPacket(new ExBuySellList(player, true));
 	}
 }

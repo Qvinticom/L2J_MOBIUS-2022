@@ -47,7 +47,7 @@ public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead() || player.isInOlympiadMode())
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

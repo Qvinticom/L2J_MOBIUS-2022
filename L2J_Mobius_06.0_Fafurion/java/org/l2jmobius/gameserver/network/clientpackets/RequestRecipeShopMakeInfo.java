@@ -70,6 +70,6 @@ public class RequestRecipeShopMakeInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new RecipeShopItemInfo(manufacturer, _recipeId, manufactureRecipeCost, recipe.getMaxOffering()));
+		player.sendPacket(new RecipeShopItemInfo(manufacturer, _recipeId, manufactureRecipeCost, recipe.getMaxOffering()));
 	}
 }

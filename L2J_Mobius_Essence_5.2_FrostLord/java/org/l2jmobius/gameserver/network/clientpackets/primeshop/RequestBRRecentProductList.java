@@ -34,7 +34,7 @@ public class RequestBRRecentProductList implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		// Player player = client.getPlayer();
+		// Player player = cplayer.getPlayer();
 		// TODO: Implement it.
 	}
 }

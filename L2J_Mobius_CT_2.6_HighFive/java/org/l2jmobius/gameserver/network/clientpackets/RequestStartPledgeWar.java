@@ -47,7 +47,7 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		final Clan playerClan = client.getPlayer().getClan();
+		final Clan playerClan = player.getClan();
 		if (playerClan == null)
 		{
 			return;

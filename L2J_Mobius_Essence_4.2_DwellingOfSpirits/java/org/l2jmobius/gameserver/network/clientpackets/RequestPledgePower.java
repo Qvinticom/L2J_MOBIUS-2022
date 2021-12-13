@@ -53,7 +53,7 @@ public class RequestPledgePower implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new ManagePledgePower(client.getPlayer().getClan(), _action, _rank));
+		player.sendPacket(new ManagePledgePower(player.getClan(), _action, _rank));
 		if ((_action == 2) && player.isClanLeader())
 		{
 			if (_rank == 9)

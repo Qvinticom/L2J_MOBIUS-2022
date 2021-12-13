@@ -54,14 +54,14 @@ public class RequestGetOffVehicle implements IClientIncomingPacket
 		}
 		if (!player.isInBoat() || (player.getBoat().getObjectId() != _boatId) || player.getBoat().isMoving() || !player.isInsideRadius3D(_x, _y, _z, 1000))
 		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
 		player.setVehicle(null);
 		player.setInVehiclePosition(null);
-		client.sendPacket(ActionFailed.STATIC_PACKET);
+		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.broadcastPacket(new GetOffVehicle(player.getObjectId(), _boatId, _x, _y, _z));
 		player.setXYZ(_x, _y, _z);
 		player.setInsideZone(ZoneId.PEACE, false);
