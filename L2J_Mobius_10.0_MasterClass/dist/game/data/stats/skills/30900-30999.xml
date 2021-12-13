@@ -608,7 +608,7 @@
 			<value level="5">114</value>
 		</magicLevel>
 		<effects>
-			<effect name="DamageByAttack" >
+			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">-1</value>
 					<value level="2">-3</value>
@@ -618,7 +618,7 @@
 				</amount>
 				<type>PK</type>
 			</effect>
-			<effect name="DamageByAttack" >
+			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">-1</value>
 					<value level="2">-3</value>
@@ -761,7 +761,8 @@
 		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects> <!-- TO DO Cannot be used along with Spirit Altar -->
+		<effects>
+			<!-- TO DO Cannot be used along with Spirit Altar -->
 			<effect name="PAtk">
 				<amount>
 					<value level="1">10</value>
@@ -826,7 +827,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>	
+		<effects>
 			<effect name="PhysicalDefence">
 				<amount>200</amount>
 				<mode>PER</mode>
@@ -876,6 +877,10 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>30975</skillId> <!-- Valakas' Roar - Recovery -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30953" toLevel="5" name="Ignition">
@@ -898,7 +903,8 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId>
-		<effects> <!-- TO DO Cannot be used along with Spirit Altar -->
+		<effects>
+			<!-- TO DO Cannot be used along with Spirit Altar -->
 			<effect name="PAtk">
 				<amount>
 					<value level="1">10</value>
@@ -1003,7 +1009,7 @@
 				<amount>
 					<value level="1">80</value>
 					<value level="2">100</value>
-					</amount>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1277,7 +1283,7 @@
 					<value level="9">-30</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>	
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30961" toLevel="6" name="Death Sentence">
@@ -1404,7 +1410,7 @@
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.9</pDefMod>
-			</effect>	
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30963" toLevel="9" name="Hellfire">
@@ -1505,6 +1511,10 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>30989</skillId> <!-- Mocking Barrier -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalAttack">
 				<pAtkMod>
 					<value level="1">1.10</value>
@@ -1623,9 +1633,15 @@
 		</effects>
 	</skill>
 	<skill id="30966" toLevel="1" name="Valakas' Roar - Recovery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>5</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30967" toLevel="1" name="Hellbringer">
 		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
@@ -1656,6 +1672,13 @@
 				<skillId>30969</skillId> <!-- Hellbringer (Fury) -->
 			</item>
 		</attachSkillList>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.30</pAtkMod>
@@ -1684,12 +1707,35 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<abnormalType>TARGET_LOCK</abnormalType>
+		<affectLimit>20-30</affectLimit>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.30</pAtkMod>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
+			</effect>
+			<effect name="GetAgro" />
+			<effect name="AddHate">
+				<power>
+					<value level="1">1050350</value>
+				</power>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>30</chance>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Confuse">
+				<chance>30</chance>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1701,26 +1747,34 @@
 		<reuseDelayGroup>30967</reuseDelayGroup>
 		<magicLevel>105</magicLevel>
 		<mpConsume>195</mpConsume>
-		<abnormalType>PARALYZE</abnormalType>
-		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>60</activateRate>
-		<isDebuff>true</isDebuff>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<affectLimit>20-30</affectLimit>
+		<effectPoint>-5000</effectPoint>
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.30</pAtkMod>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>30976</skillId> <!-- Hellbringer - Paralysis -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1773,6 +1827,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<trait>PULL</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1781,6 +1836,10 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="SummonNpc">
+				<npcId>13611</npcId> <!-- Fire EarthQuake -->
+				<npcCount>1</npcCount>
+			</effect>
 			<effect name="PhysicalAttack">
 				<pAtkMod>
 					<value level="1">1.2</value>
@@ -1992,19 +2051,153 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="30975" toLevel="1" name="Valakas' Roar">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Hell Slash -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30957</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Hell Slash (Fury) -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30958</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Hell Slash (Restraint) -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30959</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Hellfire -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30963</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- HellFire (Restraint) -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30964</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- HellFire (Fury) -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30965</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Hellbringer -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30967</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Hellbringer (Restraint) -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30968</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- HellBringer (Fury) -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30969</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30966</skillId> <!-- Fire earthquake -->
+				<skillLevel>1</skillLevel>
+				<castSkillId>30970</castSkillId> <!-- Valakas' Roar - Recovery -->
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30976" toLevel="1" name="Hellbringer - Paralysis">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<abnormalTime>5</abnormalTime>
+		<activateRate>60</activateRate>
+		<isDebuff>true</isDebuff>
+		<trait>PARALYZE</trait>
+		<affectLimit>20-30</affectLimit>
+		<effectPoint>-5000</effectPoint>
+		<affectRange>300</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30977" toLevel="1" name="Fire Earthquake Area">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill1469</icon>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>DERANGEMENT</abnormalType>
+		<activateRate>100</activateRate>
+		<affectLimit>5-20</affectLimit>
+		<affectRange>650</affectRange>
+		<operateType>A2</operateType>
+		<trait>PULL</trait>
+		<effectPoint>-709</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>97</magicLevel>
+		<isMagic>2</isMagic>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>650</delay>
+			</effect>
+			<effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">586900</value>
+					<value level="3">586900</value>
+					<value level="4">693700</value>
+					<value level="5">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+				</power>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">100</value>
+					<value level="2">100</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">100</value>
+					<value level="6">100</value>
+					<value level="7">100</value>
+					<value level="8">100</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30978" toLevel="2" name="Mocking Resilience - Enhancement">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -2028,7 +2221,8 @@
 		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects> <!-- TO DO Cannot be used along with Spirit Altar -->
+		<effects>
+			<!-- TO DO Cannot be used along with Spirit Altar -->
 			<effect name="PAtk">
 				<amount>20</amount>
 				<mode>PER</mode>
@@ -2422,9 +2616,24 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="30989" toLevel="1" name="Mocking Barrier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30990" toLevel="2" name="Test - Acquired XP/ SP_Level Difference_Sum">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
