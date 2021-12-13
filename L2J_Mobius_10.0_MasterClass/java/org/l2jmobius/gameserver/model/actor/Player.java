@@ -1860,12 +1860,12 @@ public class Player extends Playable
 		}
 		else if (isInsideZone(ZoneId.SIEGE))
 		{
-			if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE2)
+			if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE)
 			{
 				return;
 			}
-			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
-			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2));
+			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE;
+			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE));
 		}
 		else if (isInsideZone(ZoneId.PVP))
 		{
@@ -1900,7 +1900,7 @@ public class Player extends Playable
 			{
 				return;
 			}
-			if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE2)
+			if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE)
 			{
 				updatePvPStatus();
 			}
