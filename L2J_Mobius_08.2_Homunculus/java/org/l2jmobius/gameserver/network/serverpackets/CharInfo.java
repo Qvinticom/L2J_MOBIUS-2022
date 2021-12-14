@@ -244,7 +244,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getTransformationDisplayId()); // Confirmed
 		packet.writeD(_player.getAgathionId()); // Confirmed
 		
-		packet.writeC(0x00); // TODO: Find me!
+		packet.writeC(0x00); // nPvPRestrainStatus
 		
 		packet.writeD((int) Math.round(_player.getCurrentCp())); // Confirmed
 		packet.writeD(_player.getMaxHp()); // Confirmed
@@ -252,7 +252,8 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getMaxMp()); // Confirmed
 		packet.writeD((int) Math.round(_player.getCurrentMp())); // Confirmed
 		
-		packet.writeC(0x00); // TODO: Find me!
+		packet.writeC(0x00); // cBRLectureMark
+		
 		final Set<AbnormalVisualEffect> abnormalVisualEffects = _player.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeD(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
@@ -267,7 +268,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
 		packet.writeC(_player.getAbilityPointsUsed()); // Used Ability Points
 		
-		packet.writeD(0x00);
+		packet.writeD(0x00); // nCursedWeaponClassId
 		
 		// AFK animation.
 		if ((_player.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(_player.getClan()) != null))
@@ -280,7 +281,10 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		// Rank.
-		packet.writeC(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
+		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
+		
+		packet.writeD(0x00); // 272 - hNotoriety
+		packet.writeD(0x00); // 286 - nMainClass
 		
 		return true;
 	}
