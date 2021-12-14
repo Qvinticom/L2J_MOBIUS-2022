@@ -31,8 +31,8 @@ public class RequestPledgeCrest implements IClientIncomingPacket
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_crestId = packet.readD();
 		packet.readD(); // clanId
+		_crestId = packet.readD();
 		return true;
 	}
 	
