@@ -16,12 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
-import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
-import org.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 
 /**
  * @author NosBit
@@ -84,54 +79,5 @@ public class Crest implements IIdentifiable
 	public CrestType getType()
 	{
 		return _type;
-	}
-	
-	/**
-	 * Gets the client path to crest for use in html and sends the crest to {@code Player}
-	 * @param player the @{code Player} where html is send to.
-	 * @return the client path to crest
-	 */
-	public String getClientPath(Player player)
-	{
-		String path = null;
-		switch (_type)
-		{
-			case PLEDGE:
-			{
-				player.sendPacket(new PledgeCrest(_id, _data));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id;
-				break;
-			}
-			case PLEDGE_LARGE:
-			{
-				if (_data != null)
-				{
-					for (int i = 0; i <= 4; i++)
-					{
-						if (i < 4)
-						{
-							final byte[] fullChunk = new byte[14336];
-							System.arraycopy(_data, (14336 * i), fullChunk, 0, 14336);
-							player.sendPacket(new ExPledgeEmblem(_id, fullChunk, 0, i));
-						}
-						else
-						{
-							final byte[] lastChunk = new byte[8320];
-							System.arraycopy(_data, (14336 * i), lastChunk, 0, 8320);
-							player.sendPacket(new ExPledgeEmblem(_id, lastChunk, 0, i));
-						}
-					}
-				}
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id + "_l";
-				break;
-			}
-			case ALLY:
-			{
-				player.sendPacket(new AllyCrest(_id, _data));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id;
-				break;
-			}
-		}
-		return path;
 	}
 }

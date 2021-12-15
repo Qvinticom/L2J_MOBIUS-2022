@@ -44,11 +44,11 @@ public class PledgeCrest implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_CREST.writeId(packet);
-		
 		packet.writeD(Config.SERVER_ID);
 		packet.writeD(_crestId);
 		if (_data != null)
 		{
+			packet.writeD(_data.length);
 			packet.writeD(_data.length);
 			packet.writeB(_data);
 		}

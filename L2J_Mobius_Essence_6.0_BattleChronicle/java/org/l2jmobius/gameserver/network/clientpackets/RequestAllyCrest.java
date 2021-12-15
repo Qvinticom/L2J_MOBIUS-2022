@@ -27,13 +27,15 @@ import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 public class RequestAllyCrest implements IClientIncomingPacket
 {
 	private int _crestId;
+	private int _clanId;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
+		packet.readD(); // Server ID
 		_crestId = packet.readD();
 		packet.readD(); // Ally ID
-		packet.readD(); // Server ID
+		_clanId = packet.readD();
 		return true;
 	}
 	
@@ -46,6 +48,6 @@ public class RequestAllyCrest implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new AllyCrest(_crestId));
+		player.sendPacket(new AllyCrest(_crestId, _clanId));
 	}
 }
