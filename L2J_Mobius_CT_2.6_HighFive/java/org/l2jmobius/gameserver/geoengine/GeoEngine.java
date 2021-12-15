@@ -645,7 +645,7 @@ public class GeoEngine
 			int z = block.getHeight(index);
 			
 			// Perform sine of sight check (next cell is above line of sight line), return fail.
-			if (z > losz)
+			if (!canMove && (z > losz))
 			{
 				return false;
 			}
