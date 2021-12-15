@@ -138,7 +138,7 @@ public class AutoUseTaskManager implements Runnable
 				}
 			}
 			
-			if (Config.ENABLE_AUTO_POTION && !isInPeaceZone && (player.getCurrentHpPercent() <= player.getAutoPlaySettings().getAutoPotionPercent()))
+			if (Config.ENABLE_AUTO_POTION && !isInPeaceZone && (player.getCurrentHpPercent() < player.getAutoPlaySettings().getAutoPotionPercent()))
 			{
 				POTIONS: for (Integer itemId : player.getAutoUseSettings().getAutoPotionItems())
 				{
