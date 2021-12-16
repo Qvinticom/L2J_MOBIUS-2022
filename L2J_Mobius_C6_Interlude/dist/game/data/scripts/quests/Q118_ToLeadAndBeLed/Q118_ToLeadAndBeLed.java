@@ -117,7 +117,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 				final Player academic = getApprentice(player);
 				if (academic != null)
 				{
-					final QuestState st2 = academic.getQuestState(Q123_TheLeaderAndTheFollower.class.getSimpleName());
+					final QuestState st2 = academic.getQuestState(getName());
 					if ((st2 != null) && (st2.getInt("state") == 2))
 					{
 						final int stateEx = st2.getInt("stateEx");
@@ -241,7 +241,7 @@ public class Q118_ToLeadAndBeLed extends Quest
 					}
 					else
 					{
-						if (!getSponsor(player))
+						if (getSponsor(player))
 						{
 							if (stateEx == 1)
 							{
