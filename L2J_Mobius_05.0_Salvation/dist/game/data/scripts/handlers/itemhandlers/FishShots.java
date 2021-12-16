@@ -55,7 +55,7 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		if (player.isChargedShot(ShotType.FISH_SOULSHOTS))
+		if (player.isChargedShot(ShotType.FISH_SOULSHOTS) || player.isChargedShot(ShotType.GOLD_FISH_SOULSHOTS))
 		{
 			return false;
 		}
@@ -73,7 +73,15 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		player.chargeShot(ShotType.FISH_SOULSHOTS);
+		if (item.getId() == 29186) // Gold Fish Shot
+		{
+			player.chargeShot(ShotType.GOLD_FISH_SOULSHOTS);
+		}
+		else
+		{
+			player.chargeShot(ShotType.FISH_SOULSHOTS);
+		}
+		
 		player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 		final WorldObject oldTarget = player.getTarget();
 		player.setTarget(player);

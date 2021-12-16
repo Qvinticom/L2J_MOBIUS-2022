@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./xsd/Fishing.xsd">
 	<baitDistance min="90" max="250" />
-	<xpRate min="1" max="1" /> <!-- XP modifiction rate -->
-	<spRate min="1" max="1" /> <!-- SP modifiction rate -->
+	<xpRate min="1" max="1" /> <!-- XP modification rate -->
+	<spRate min="1" max="1" /> <!-- SP modification rate -->
 	<baits>
 		<bait itemId="46737" minPlayerLevel="95" chance="40" timeMin="105000" waitMin="15000"> <!-- Practice Bait -->
 			<catch itemId="46736" chance="70" multiplier="1" /> <!-- Practice Fish -->
@@ -47,13 +47,13 @@
 			<catch itemId="47550" chance="70" multiplier="1" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1" /> <!-- Nimble Fish -->
 			<catch itemId="47552" chance="3" multiplier="1" /> <!-- Powerful Fish -->
-			<catch itemId="47554" chance="2" multiplier="1" /> <!-- Purplish Box -->
+			<catch itemId="47555" chance="2" multiplier="1" /> <!-- Purplish Box -->
 		</bait>
 		<bait itemId="81146" minPlayerLevel="99" chance="40" timeMin="105000" waitMin="15000"> <!-- Santiago's Bait -->
 			<catch itemId="47550" chance="70" multiplier="1476" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1804" /> <!-- Nimble Fish -->
 			<catch itemId="47552" chance="3" multiplier="1968" /> <!-- Powerful Fish -->
-			<catch itemId="47554" chance="2" multiplier="1" /> <!-- Reddish Box -->
+			<catch itemId="81144" chance="2" multiplier="1" /> <!-- Santiago's Star Energy Pack -->
 		</bait>
 	</baits>
 	<rods>
@@ -61,6 +61,7 @@
 		<rod itemId="45494" /> <!-- Sturdy Fishing Rod -->
 		<rod itemId="46738" /> <!-- Practice Fishing Rod -->
 		<rod itemId="46740" /> <!-- Reward Fishing Rod - 7-day -->
+		<rod itemId="46286" reduceFishingTime="100000" xpMultiplier="2.5" spMultiplier="2.5" /> <!-- Christmas Fishing Rod -->
 		<rod itemId="27632" reduceFishingTime="95000" xpMultiplier="1.5" spMultiplier="1.5" /> <!-- Fancy Fishing Rod -->
 		<rod itemId="27633" reduceFishingTime="95000" xpMultiplier="1.5" spMultiplier="1.5" /> <!-- Fancy Fishing Rod - 1-day -->
 		<rod itemId="27635" reduceFishingTime="95000" xpMultiplier="1.5" spMultiplier="1.5" /> <!-- Fancy Fishing Rod - 7-day -->

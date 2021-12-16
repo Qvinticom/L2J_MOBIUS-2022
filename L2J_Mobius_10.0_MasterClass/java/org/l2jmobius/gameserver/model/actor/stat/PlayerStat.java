@@ -20,6 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.FishingData;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.Party;
@@ -28,7 +29,6 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
-import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
@@ -59,8 +59,6 @@ public class PlayerStat extends PlayableStat
 	
 	public static final int MAX_VITALITY_POINTS = 140000;
 	public static final int MIN_VITALITY_POINTS = 0;
-	
-	private static final int FANCY_FISHING_ROD_SKILL = 21484;
 	
 	public PlayerStat(Player player)
 	{
@@ -126,18 +124,12 @@ public class PlayerStat extends PlayableStat
 		{
 			if (player.isFishing())
 			{
-				// rod fishing skills
+				// rod fishing bonus
 				final Item rod = player.getActiveWeaponInstance();
-				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getItem().getAllSkills() != null))
+				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD))
 				{
-					for (ItemSkillHolder s : rod.getItem().getAllSkills())
-					{
-						if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL)
-						{
-							bonusExp *= 1.5;
-							bonusSp *= 1.5;
-						}
-					}
+					bonusExp *= FishingData.getInstance().getRodData(rod.getItem().getId()).getXpMultiplier();
+					bonusSp *= FishingData.getInstance().getRodData(rod.getItem().getId()).getSpMultiplier();
 				}
 			}
 			else

@@ -991,8 +991,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
-		<set name="is_sellable" val="false" />
+		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="28186" level="1" /> <!-- Gold Fishing Shot -->
+		</skills>
 	</item>
 	<item id="29187" name="Fishing XP Box" additionalName="Lv. 85-94" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 85 to 94). There's a chance to obtain a Shining Fishing Box. -->

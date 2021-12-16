@@ -239,7 +239,7 @@ public class Fishing
 			return;
 		}
 		
-		if (!_player.isChargedShot(ShotType.FISH_SOULSHOTS))
+		if (!_player.isChargedShot(ShotType.FISH_SOULSHOTS) || !_player.isChargedShot(ShotType.GOLD_FISH_SOULSHOTS))
 		{
 			_player.rechargeShots(false, false, true);
 		}
@@ -274,6 +274,10 @@ public class Fishing
 		if (_player.isChargedShot(ShotType.FISH_SOULSHOTS))
 		{
 			chance *= 2;
+		}
+		else if (_player.isChargedShot(ShotType.GOLD_FISH_SOULSHOTS))
+		{
+			chance = 100;
 		}
 		
 		if (Rnd.get(100) <= chance)
@@ -320,7 +324,14 @@ public class Fishing
 					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 					msg.addItemName(fishingCatchData.getItemId());
 					_player.sendPacket(msg);
-					_player.unchargeShot(ShotType.FISH_SOULSHOTS);
+					if (_player.isChargedShot(ShotType.GOLD_FISH_SOULSHOTS))
+					{
+						_player.unchargeShot(ShotType.GOLD_FISH_SOULSHOTS);
+					}
+					else
+					{
+						_player.unchargeShot(ShotType.FISH_SOULSHOTS);
+					}
 					_player.rechargeShots(false, false, true);
 				}
 				else

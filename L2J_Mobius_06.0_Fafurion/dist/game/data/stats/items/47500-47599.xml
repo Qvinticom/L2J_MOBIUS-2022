@@ -626,18 +626,18 @@
 	<item id="47554" name="Reddish Box" type="EtcItem">
 		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="39720" min="1" max="1" chance="27" /> <!-- Maphr's Luck Potion -->
 			<item id="45494" min="1" max="1" chance="3" /> <!-- Sturdy Fishing Rod -->
@@ -648,13 +648,25 @@
 	<item id="47555" name="Purplish Box" type="EtcItem">
 		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38154" min="50" max="50" chance="16.666666666667" /> <!-- Fishing Shot -->
+			<item id="39720" min="1" max="1" chance="16.666666666667" /> <!-- Freya's Luck Potion -->
+			<item id="8034" min="1" max="1" chance="16.666666666667" /> <!-- Rainbow Springs Clan Hall War Decree -->
+			<item id="47556" min="1" max="1" chance="16.666666666667" /> <!-- Stardust -->
+			<item id="45494" min="1" max="1" chance="16.666666666667" /> <!-- Sturdy Fishing Rod -->
+			<item id="48065" min="1" max="1" chance="16.666666666667" /> <!-- Zodiac Cube Fragment -->
+		</capsuled_items>
 	</item>
 	<item id="47556" name="Stardust" type="EtcItem">
 		<!-- Ingredient needed to exchange Elementary Seed Bracelet. -->
