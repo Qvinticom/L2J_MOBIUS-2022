@@ -556,8 +556,6 @@ public class UseItem implements IClientIncomingPacket
 				{
 					// Charge Soulshot/Spiritshot like L2OFF
 					player.rechargeAutoSoulShot(true, true, false);
-					item.setChargedSoulshot(Item.CHARGED_NONE);
-					item.setChargedSpiritshot(Item.CHARGED_NONE);
 				}
 				// Consume mana - will start a task if required; returns if item is not a shadow item.
 				item.decreaseMana(false);
