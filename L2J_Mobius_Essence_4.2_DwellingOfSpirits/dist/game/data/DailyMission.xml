@@ -91,7 +91,7 @@
 			<item id="90768" count="1" /> Hair Accessory Coupon
 		</items>
 	</reward>
-	 -->
+	-->
 	<!-- TODO: spiritevolve handler
 	<reward id="1112" reward_id="508" name="Fire Spirit Lv. 3" requiredCompletion="3">
 		One-time mission. A reward is given when evolving the Fire Spirit up to Lv. 3.
@@ -129,7 +129,7 @@
 			<item id="91185" count="30" /> Mid-grade Spirit's Blessing
 		</items>
 	</reward>
-	 -->
+	-->
 	<!-- TODO: Weekly monster handler
 	<reward id="1116" reward_id="118" name="Attribute monsters hunting" requiredCompletion="1800">
 		A reward is given once a week for elemental monster hunting.
@@ -142,7 +142,7 @@
 			<item id="91030" count="10" /> Blessed Soul
 		</items>
 	</reward>
-	 -->
+	-->
 	<reward id="1126" reward_id="2001" name="Daily Hunting II (Lv. 1-20)" requiredCompletion="50" isOneTime="false">
 		<!-- Daily mission. A reward is given for killing any 50 monsters. Monsters whose level is lower than the character's for more than 10 levels do not count. -->
 		<handler name="monster">
@@ -544,7 +544,7 @@
 			<item id="91186" count="30" />
 		</items>
 	</reward>
-	 -->
+	-->
 	<reward id="4000" reward_id="1077" name="Reach Level 10" requiredCompletion="10">
 		<!-- One-time mission. A reward is given when the character reaches Lv. 10. -->
 		<handler name="level">
@@ -1030,5 +1030,5 @@
 			<item id="91830" count="5" /> Improved Fire Attack Potion
 		</items>
 	</reward>
-	 -->
+	-->
 </list>

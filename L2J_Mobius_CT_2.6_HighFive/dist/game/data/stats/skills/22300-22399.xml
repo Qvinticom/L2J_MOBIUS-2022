@@ -8,7 +8,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
-				<mul stat="runSpd" val="1.30" /> <!--Increases Speed by 30% -->
+				<mul stat="runSpd" val="1.30" /> <!-- Increases Speed by 30% -->
 				<mul stat="fall" val="0.7" />
 			</effect>
 		</for>

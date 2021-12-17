@@ -408,7 +408,7 @@
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
 		<!-- Makes sacred attacks. -->
 		<table name="#power">20 30 40 50 60 70 80 90 100 110 120 130</table>
-		<!-- Test-->
+		<!-- Test -->
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
@@ -614,7 +614,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2000" />
-		<!-- Test-->
+		<!-- Test -->
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -641,7 +641,7 @@
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
-			<!--core support <effect count="1" name="CharmOfCourage" time="1200" val="0" noicon="1" /> -->
+			<!-- core support <effect count="1" name="CharmOfCourage" time="1200" val="0" noicon="1" /> -->
 		</for>
 	</skill>
 	<skill id="5042" levels="12" name="NPC Dispel Bomb">
@@ -652,7 +652,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2000" />
-		<!-- Test-->
+		<!-- Test -->
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />

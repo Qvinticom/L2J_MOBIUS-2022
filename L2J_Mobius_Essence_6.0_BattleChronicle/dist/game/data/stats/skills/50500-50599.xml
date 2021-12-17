@@ -981,7 +981,7 @@
 	<skill id="50543" toLevel="10" name="+1 Helmet of Protection">
 		<!-- TODO: Need repeat test but look fine -->
 		<icon>icon.armor_t902_l_i00</icon>
-		<operateType>P</operateType><!-- TODO: A1 -> P -->
+		<operateType>P</operateType> <!-- TODO: A1 -> P -->
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1089,7 +1089,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>Creature</attackerType><!-- need fix-->
+				<attackerType>Creature</attackerType> <!-- need fix -->
 				<chance>
 					<value level="1">1</value>
 					<value level="2">1</value>
@@ -1104,7 +1104,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>50544</skillId><!-- Critical Rate Defense -->
+				<skillId>50544</skillId> <!-- Critical Rate Defense -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">1</value>

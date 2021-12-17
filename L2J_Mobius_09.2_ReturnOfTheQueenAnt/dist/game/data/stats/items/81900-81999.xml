@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81904" name="Prophecy Fragment" additionalName="Event" type="EtcItem">
-		<!-- Can be exchanged with certain chance to Legend's Mark, Prophecy Chest or Retired Legend's Scroll (3 pcs.). You can do it through the Dreamer of the Legend Title in any town.-->
+		<!-- Can be exchanged with certain chance to Legend's Mark, Prophecy Chest or Retired Legend's Scroll (3 pcs.). You can do it through the Dreamer of the Legend Title in any town. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -65,7 +65,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="81696" min="1" max="1" chance="2" /> <!-- Unique Artifact Book Lv. 3 -->
-			<item id="80090" min="1" max="1" chance="2" /> <!-- Krishna Shaper-->
+			<item id="80090" min="1" max="1" chance="2" /> <!-- Krishna Shaper -->
 			<item id="80091" min="1" max="1" chance="2" /> <!-- Krishna Cutter -->
 			<item id="80092" min="1" max="1" chance="2" /> <!-- Krishna Slasher -->
 			<item id="80093" min="1" max="1" chance="2" /> <!-- Krishna Avenger -->
@@ -434,7 +434,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="81931" name="Dragon Skin Shirt Augmenting Stone" type="EtcItem">
-		<!--A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies.\nKey material for Dragon Rind Leather Shirt's augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
+		<!-- A mineral that has been petrified by some kind of physical or magical damage and dimensional anomalies.\nKey material for Dragon Rind Leather Shirt's augmentation. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_dragon_rind_leather_shirt" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
@@ -480,7 +480,7 @@
 		</stats>
 	</item>
 	<item id="81934" name="Lucky Pouch of Growth" additionalName="Event" type="EtcItem">
-		<!-- Lucky Pouch that contains the sunlight energy. When in inventory, acquired XP/ SP +5%.-->
+		<!-- Lucky Pouch that contains the sunlight energy. When in inventory, acquired XP/ SP +5%. -->
 		<set name="icon" val="icon.ev_2021_newyear_rune2" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />

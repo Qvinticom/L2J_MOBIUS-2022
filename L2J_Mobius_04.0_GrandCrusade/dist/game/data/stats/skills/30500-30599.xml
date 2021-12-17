@@ -1235,7 +1235,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<activateRate>
-			<value fromLevel="7" toLevel="11">80</value><!-- Guessed -->
+			<value fromLevel="7" toLevel="11">80</value> <!-- Guessed -->
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
@@ -1290,7 +1290,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="7" toLevel="11">80</value><!-- Guessed -->
+			<value fromLevel="7" toLevel="11">80</value> <!-- Guessed -->
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>2-6</affectLimit>
