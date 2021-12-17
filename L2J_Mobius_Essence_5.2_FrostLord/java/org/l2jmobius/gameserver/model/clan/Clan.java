@@ -121,6 +121,21 @@ public class Clan implements IIdentifiable, INamable
 	/** Clan subunit type of Order of Knights B-2 */
 	public static final int SUBUNIT_KNIGHT4 = 2002;
 	
+	public static final int[] EXP_TABLE =
+	{
+		0,
+		100,
+		1000,
+		5000,
+		100000,
+		500000,
+		1500000,
+		4500000,
+		7500000,
+		11000000,
+		14500000
+	};
+	
 	private String _name;
 	private int _clanId;
 	private ClanMember _leader;
@@ -156,21 +171,7 @@ public class Clan implements IIdentifiable, INamable
 	
 	private int _reputationScore = 0;
 	private int _rank = 0;
-	
-	private int _exp;
-	private static final int[] EXP_TABLE =
-	{
-		100,
-		1000,
-		5000,
-		100000,
-		500000,
-		1500000,
-		4500000,
-		7500000,
-		11000000,
-		14500000
-	};
+	private int _exp = 0;
 	
 	private String _notice;
 	private boolean _noticeEnabled = false;
@@ -3114,7 +3115,7 @@ public class Clan implements IIdentifiable, INamable
 		_exp += value;
 		broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
 		
-		if ((EXP_TABLE[Math.max(0, getLevel() - 1)]) <= _exp)
+		if (((EXP_TABLE[Math.max(0, getLevel() + 1)]) <= _exp))
 		{
 			changeLevel(_level + 1);
 		}
@@ -3126,5 +3127,16 @@ public class Clan implements IIdentifiable, INamable
 			setClanContributionWeekly(objId, contribution + value);
 			updateClanInDB();
 		}
+	}
+	
+	public void setExp(int objId, int value)
+	{
+		_exp = value;
+		broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
+		
+		final int contribution = getClanContribution(objId);
+		setClanContribution(objId, contribution + value);
+		setClanContributionWeekly(objId, contribution + value);
+		updateClanInDB();
 	}
 }

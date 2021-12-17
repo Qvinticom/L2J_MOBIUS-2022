@@ -156,9 +156,10 @@ public class AdminPledge implements IAdminCommandHandler
 						}
 						
 						final int level = Integer.parseInt(param);
-						if ((level >= 0) && (level < 12))
+						if ((level >= 0) && (level <= (Clan.EXP_TABLE.length - 1)))
 						{
 							clan.changeLevel(level);
+							clan.setExp(activeChar.getObjectId(), Clan.EXP_TABLE[level]);
 							for (Player member : clan.getOnlineMembers(0))
 							{
 								member.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
