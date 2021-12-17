@@ -201,7 +201,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 						}
 					}
 					
-					clan.takeReputationScore(repCost, true);
+					clan.takeReputationScore(repCost);
 					
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addInt(repCost);
@@ -264,7 +264,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				
 				if (repCost > 0)
 				{
-					clan.takeReputationScore(repCost, true);
+					clan.takeReputationScore(repCost);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addInt(repCost);
 					player.sendPacket(cr);

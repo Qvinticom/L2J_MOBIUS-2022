@@ -905,7 +905,7 @@ public class Hero
 		final Clan clan = player.getClan();
 		if ((clan != null) && (clan.getLevel() >= 5))
 		{
-			clan.addReputationScore(Config.HERO_POINTS, true);
+			clan.addReputationScore(Config.HERO_POINTS);
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 			sm.addString(CharNameTable.getInstance().getNameById(player.getObjectId()));
 			sm.addInt(Config.HERO_POINTS);

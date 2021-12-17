@@ -2384,15 +2384,15 @@ public class Player extends Playable
 			{
 				if (_lvlJoinedAcademy <= 16)
 				{
-					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE, true);
+					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE);
 				}
 				else if (_lvlJoinedAcademy >= 39)
 				{
-					_clan.addReputationScore(Config.JOIN_ACADEMY_MIN_REP_SCORE, true);
+					_clan.addReputationScore(Config.JOIN_ACADEMY_MIN_REP_SCORE);
 				}
 				else
 				{
-					_clan.addReputationScore((Config.JOIN_ACADEMY_MAX_REP_SCORE - ((_lvlJoinedAcademy - 16) * 20)), true);
+					_clan.addReputationScore((Config.JOIN_ACADEMY_MAX_REP_SCORE - ((_lvlJoinedAcademy - 16) * 20)));
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
@@ -6734,7 +6734,7 @@ public class Player extends Playable
 					final Clan clan = player.getClan();
 					if (clan != null)
 					{
-						clan.addReputationScore(150000, true);
+						clan.addReputationScore(150000);
 					}
 				}
 				player.setTrueHero(true);

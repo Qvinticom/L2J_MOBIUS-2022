@@ -141,7 +141,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		{
 			if (reward.getId() == SpecialItemType.CLAN_REPUTATION.getClientId())
 			{
-				player.getClan().addReputationScore((int) reward.getCount(), true);
+				player.getClan().addReputationScore((int) reward.getCount());
 			}
 			else if (reward.getId() == SpecialItemType.FAME.getClientId())
 			{

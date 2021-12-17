@@ -946,28 +946,6 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void updateInDB()
-	{
-		// Update reputation
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET reputation_score=? WHERE clan_id=?"))
-		{
-			ps.setInt(1, _reputationScore);
-			ps.setInt(2, _clanId);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception on updateClanScoreInDb(): " + e.getMessage(), e);
-		}
-		
-		// Update variables at database
-		if (_vars != null)
-		{
-			_vars.storeMe();
-		}
-	}
-	
 	/**
 	 * Updates in database clan information:
 	 * <ul>
@@ -1109,7 +1087,7 @@ public class Clan implements IIdentifiable, INamable
 					setCrestLargeId(clanData.getInt("crest_large_id"));
 					setAllyCrestId(clanData.getInt("ally_crest_id"));
 					
-					setReputationScore(clanData.getInt("reputation_score"), false);
+					setReputationScore(clanData.getInt("reputation_score"));
 					setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 					setNewLeaderId(clanData.getInt("new_leader_id"), false);
 					
@@ -1898,11 +1876,11 @@ public class Clan implements IIdentifiable, INamable
 				// Order of Knights 10000 points per each
 				if (pledgeType < SUBUNIT_KNIGHT1)
 				{
-					setReputationScore(_reputationScore - Config.ROYAL_GUARD_COST, true);
+					setReputationScore(_reputationScore - Config.ROYAL_GUARD_COST);
 				}
 				else
 				{
-					setReputationScore(_reputationScore - Config.KNIGHT_UNIT_COST, true);
+					setReputationScore(_reputationScore - Config.KNIGHT_UNIT_COST);
 					// TODO: clan lvl9 or more can reinforce knights cheaper if first knight unit already created, use Config.KNIGHT_REINFORCE_COST
 				}
 			}
@@ -2102,17 +2080,17 @@ public class Clan implements IIdentifiable, INamable
 		return id;
 	}
 	
-	public synchronized void addReputationScore(int value, boolean save)
+	public synchronized void addReputationScore(int value)
 	{
-		setReputationScore(_reputationScore + value, save);
+		setReputationScore(_reputationScore + value);
 	}
 	
-	public synchronized void takeReputationScore(int value, boolean save)
+	public synchronized void takeReputationScore(int value)
 	{
-		setReputationScore(_reputationScore - value, save);
+		setReputationScore(_reputationScore - value);
 	}
 	
-	private void setReputationScore(int value, boolean save)
+	private void setReputationScore(int value)
 	{
 		if ((_reputationScore >= 0) && (value < 0))
 		{
@@ -2146,11 +2124,8 @@ public class Clan implements IIdentifiable, INamable
 		{
 			_reputationScore = -100000000;
 		}
+		
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
-		if (save)
-		{
-			updateInDB();
-		}
 	}
 	
 	public int getReputationScore()
@@ -2604,7 +2579,7 @@ public class Clan implements IIdentifiable, INamable
 				// Upgrade to 6
 				if ((_reputationScore >= Config.CLAN_LEVEL_6_COST) && (_members.size() >= Config.CLAN_LEVEL_6_REQUIREMENT))
 				{
-					setReputationScore(_reputationScore - Config.CLAN_LEVEL_6_COST, true);
+					setReputationScore(_reputationScore - Config.CLAN_LEVEL_6_COST);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_6_COST);
 					player.sendPacket(cr);
@@ -2617,7 +2592,7 @@ public class Clan implements IIdentifiable, INamable
 				// Upgrade to 7
 				if ((_reputationScore >= Config.CLAN_LEVEL_7_COST) && (_members.size() >= Config.CLAN_LEVEL_7_REQUIREMENT))
 				{
-					setReputationScore(_reputationScore - Config.CLAN_LEVEL_7_COST, true);
+					setReputationScore(_reputationScore - Config.CLAN_LEVEL_7_COST);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_7_COST);
 					player.sendPacket(cr);
@@ -2630,7 +2605,7 @@ public class Clan implements IIdentifiable, INamable
 				// Upgrade to 8
 				if ((_reputationScore >= Config.CLAN_LEVEL_8_COST) && (_members.size() >= Config.CLAN_LEVEL_8_REQUIREMENT))
 				{
-					setReputationScore(_reputationScore - Config.CLAN_LEVEL_8_COST, true);
+					setReputationScore(_reputationScore - Config.CLAN_LEVEL_8_COST);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_8_COST);
 					player.sendPacket(cr);
@@ -2646,7 +2621,7 @@ public class Clan implements IIdentifiable, INamable
 					// itemId 9910 == Blood Oath
 					if (player.destroyItemByItemId("ClanLvl", 9910, 150, player.getTarget(), false))
 					{
-						setReputationScore(_reputationScore - Config.CLAN_LEVEL_9_COST, true);
+						setReputationScore(_reputationScore - Config.CLAN_LEVEL_9_COST);
 						final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 						cr.addInt(Config.CLAN_LEVEL_9_COST);
 						player.sendPacket(cr);
@@ -2667,7 +2642,7 @@ public class Clan implements IIdentifiable, INamable
 					// itemId 9911 == Blood Alliance
 					if (player.destroyItemByItemId("ClanLvl", 9911, 5, player.getTarget(), false))
 					{
-						setReputationScore(_reputationScore - Config.CLAN_LEVEL_10_COST, true);
+						setReputationScore(_reputationScore - Config.CLAN_LEVEL_10_COST);
 						final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 						cr.addInt(Config.CLAN_LEVEL_10_COST);
 						player.sendPacket(cr);
@@ -2685,7 +2660,7 @@ public class Clan implements IIdentifiable, INamable
 				// Upgrade to 11
 				if ((_reputationScore >= Config.CLAN_LEVEL_11_COST) && (_members.size() >= Config.CLAN_LEVEL_11_REQUIREMENT))
 				{
-					setReputationScore(_reputationScore - Config.CLAN_LEVEL_11_COST, true);
+					setReputationScore(_reputationScore - Config.CLAN_LEVEL_11_COST);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_11_COST);
 					player.sendPacket(cr);

@@ -860,28 +860,6 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void updateInDB()
-	{
-		// Update reputation
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET reputation_score=? WHERE clan_id=?"))
-		{
-			ps.setInt(1, _reputationScore);
-			ps.setInt(2, _clanId);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception on updateClanScoreInDb(): " + e.getMessage(), e);
-		}
-		
-		// Update variables at database
-		if (_vars != null)
-		{
-			_vars.storeMe();
-		}
-	}
-	
 	/**
 	 * Updates in database clan information:
 	 * <ul>
@@ -1030,7 +1008,7 @@ public class Clan implements IIdentifiable, INamable
 					setCrestLargeId(clanData.getInt("crest_large_id"));
 					setAllyCrestId(clanData.getInt("ally_crest_id"));
 					
-					setReputationScore(clanData.getInt("reputation_score"), false);
+					setReputationScore(clanData.getInt("reputation_score"));
 					setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 					setNewLeaderId(clanData.getInt("new_leader_id"), false);
 					
@@ -1953,17 +1931,17 @@ public class Clan implements IIdentifiable, INamable
 		return id;
 	}
 	
-	public synchronized void addReputationScore(int value, boolean save)
+	public synchronized void addReputationScore(int value)
 	{
-		setReputationScore(_reputationScore + value, save);
+		setReputationScore(_reputationScore + value);
 	}
 	
-	public synchronized void takeReputationScore(int value, boolean save)
+	public synchronized void takeReputationScore(int value)
 	{
-		setReputationScore(_reputationScore - value, save);
+		setReputationScore(_reputationScore - value);
 	}
 	
-	private void setReputationScore(int value, boolean save)
+	private void setReputationScore(int value)
 	{
 		if ((_reputationScore >= 0) && (value < 0))
 		{
@@ -1997,11 +1975,8 @@ public class Clan implements IIdentifiable, INamable
 		{
 			_reputationScore = -100000000;
 		}
+		
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
-		if (save)
-		{
-			updateInDB();
-		}
 	}
 	
 	public int getReputationScore()
@@ -2349,7 +2324,7 @@ public class Clan implements IIdentifiable, INamable
 			final int requiredReputation = ClanLevelData.getLevelRequirement(_level);
 			if (requiredReputation <= _reputationScore)
 			{
-				setReputationScore(_reputationScore - requiredReputation, true);
+				setReputationScore(_reputationScore - requiredReputation);
 				final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 				cr.addInt(requiredReputation);
 				player.sendPacket(cr);

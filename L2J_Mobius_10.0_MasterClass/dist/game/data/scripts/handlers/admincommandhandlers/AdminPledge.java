@@ -187,7 +187,7 @@ public class AdminPledge implements IAdminCommandHandler
 						try
 						{
 							final int points = Integer.parseInt(param);
-							clan.addReputationScore(points, true);
+							clan.addReputationScore(points);
 							BuilderUtil.sendSysMessage(activeChar, "You " + (points > 0 ? "add " : "remove ") + Math.abs(points) + " points " + (points > 0 ? "to " : "from ") + clan.getName() + "'s reputation. Their current score is " + clan.getReputationScore());
 						}
 						catch (Exception e)

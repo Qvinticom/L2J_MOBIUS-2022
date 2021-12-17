@@ -183,7 +183,7 @@ public class Q00245_ComeToMe extends Quest
 							{
 								if (player.isAcademyMember())
 								{
-									player.getClan().addReputationScore(500, true);
+									player.getClan().addReputationScore(500);
 								}
 								addExpAndSp(player, 2_018_733, 484);
 								giveItems(player, MENTOR_RING, 1);

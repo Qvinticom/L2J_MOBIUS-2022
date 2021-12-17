@@ -65,7 +65,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 			{
 				if (player.reduceAdena("pledge donation", 10000, null, true))
 				{
-					clan.addExp(player.getObjectId(), 9, true);
+					clan.addExp(player.getObjectId(), 9);
 				}
 				else
 				{
@@ -79,7 +79,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 				{
 					if (player.getInventory().destroyItemByItemId("pledge donation", Inventory.LCOIN_ID, 100, player, null) != null)
 					{
-						clan.addExp(player.getObjectId(), 30, true);
+						clan.addExp(player.getObjectId(), 30);
 						player.setHonorCoins(player.getHonorCoins() + 100);
 					}
 					else
@@ -99,7 +99,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 				{
 					if (player.getInventory().destroyItemByItemId("pledge donation", Inventory.LCOIN_ID, 500, player, null) != null)
 					{
-						clan.addExp(player.getObjectId(), 150, true);
+						clan.addExp(player.getObjectId(), 150);
 						player.setHonorCoins(player.getHonorCoins() + 500);
 					}
 					else

@@ -965,28 +965,6 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void updateInDB()
-	{
-		// Update reputation
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET reputation_score=? WHERE clan_id=?"))
-		{
-			ps.setInt(1, _reputationScore);
-			ps.setInt(2, _clanId);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception on updateClanScoreInDb(): " + e.getMessage(), e);
-		}
-		
-		// Update variables at database
-		if (_vars != null)
-		{
-			_vars.storeMe();
-		}
-	}
-	
 	/**
 	 * Updates in database clan information:
 	 * <ul>
@@ -1131,7 +1109,7 @@ public class Clan implements IIdentifiable, INamable
 					setAllyCrestId(clanData.getInt("ally_crest_id"));
 					
 					_exp = clanData.getInt("exp");
-					setReputationScore(clanData.getInt("reputation_score"), false);
+					setReputationScore(clanData.getInt("reputation_score"));
 					setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 					setNewLeaderId(clanData.getInt("new_leader_id"), false);
 					
@@ -1917,11 +1895,11 @@ public class Clan implements IIdentifiable, INamable
 				// Order of Knights 10000 points per each
 				if (pledgeType < SUBUNIT_KNIGHT1)
 				{
-					setReputationScore(_reputationScore - Config.ROYAL_GUARD_COST, true);
+					setReputationScore(_reputationScore - Config.ROYAL_GUARD_COST);
 				}
 				else
 				{
-					setReputationScore(_reputationScore - Config.KNIGHT_UNIT_COST, true);
+					setReputationScore(_reputationScore - Config.KNIGHT_UNIT_COST);
 					// TODO: clan lvl9 or more can reinforce knights cheaper if first knight unit already created, use Config.KNIGHT_REINFORCE_COST
 				}
 			}
@@ -2115,17 +2093,17 @@ public class Clan implements IIdentifiable, INamable
 		return id;
 	}
 	
-	public synchronized void addReputationScore(int value, boolean save)
+	public synchronized void addReputationScore(int value)
 	{
-		setReputationScore(_reputationScore + value, save);
+		setReputationScore(_reputationScore + value);
 	}
 	
-	public synchronized void takeReputationScore(int value, boolean save)
+	public synchronized void takeReputationScore(int value)
 	{
-		setReputationScore(_reputationScore - value, save);
+		setReputationScore(_reputationScore - value);
 	}
 	
-	private void setReputationScore(int value, boolean save)
+	private void setReputationScore(int value)
 	{
 		if ((_reputationScore >= 0) && (value < 0))
 		{
@@ -2159,11 +2137,8 @@ public class Clan implements IIdentifiable, INamable
 		{
 			_reputationScore = -100000000;
 		}
+		
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
-		if (save)
-		{
-			updateInDB();
-		}
 	}
 	
 	public int getReputationScore()
@@ -3110,7 +3085,7 @@ public class Clan implements IIdentifiable, INamable
 		return _exp;
 	}
 	
-	public void addExp(int objId, int value, boolean save)
+	public void addExp(int objId, int value)
 	{
 		_exp += value;
 		broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
@@ -3120,13 +3095,9 @@ public class Clan implements IIdentifiable, INamable
 			changeLevel(_level + 1);
 		}
 		
-		if (save)
-		{
-			final int contribution = getClanContribution(objId);
-			setClanContribution(objId, contribution + value);
-			setClanContributionWeekly(objId, contribution + value);
-			updateClanInDB();
-		}
+		final int contribution = getClanContribution(objId);
+		setClanContribution(objId, contribution + value);
+		setClanContributionWeekly(objId, contribution + value);
 	}
 	
 	public void setExp(int objId, int value)
@@ -3137,6 +3108,7 @@ public class Clan implements IIdentifiable, INamable
 		final int contribution = getClanContribution(objId);
 		setClanContribution(objId, contribution + value);
 		setClanContributionWeekly(objId, contribution + value);
+		
 		updateClanInDB();
 	}
 }

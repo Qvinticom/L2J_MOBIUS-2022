@@ -939,11 +939,11 @@ public class Fort extends AbstractResidence
 		{
 			if (removePoints)
 			{
-				owner.takeReputationScore(Config.LOOSE_FORT_POINTS, true);
+				owner.takeReputationScore(Config.LOOSE_FORT_POINTS);
 			}
 			else
 			{
-				owner.addReputationScore(Config.TAKE_FORT_POINTS, true);
+				owner.addReputationScore(Config.TAKE_FORT_POINTS);
 			}
 		}
 	}

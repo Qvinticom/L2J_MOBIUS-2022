@@ -528,6 +528,14 @@ public class ClanTable
 		}
 	}
 	
+	public void shutdown()
+	{
+		for (Clan clan : _clans.values())
+		{
+			clan.updateClanInDB();
+		}
+	}
+	
 	public static ClanTable getInstance()
 	{
 		return SingletonHolder.INSTANCE;

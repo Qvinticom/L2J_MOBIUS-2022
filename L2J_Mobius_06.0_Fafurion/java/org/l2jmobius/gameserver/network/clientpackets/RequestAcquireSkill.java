@@ -225,7 +225,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				
 				if (repCost > 0)
 				{
-					clan.takeReputationScore(repCost, true);
+					clan.takeReputationScore(repCost);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(repCost);
 					player.sendPacket(cr);

@@ -130,7 +130,7 @@ public class TaskRaidPointsReset extends Task
 								break;
 							}
 						}
-						c.setReputationScore(c.getReputationScore() + reputation, true);
+						c.setReputationScore(c.getReputationScore() + reputation);
 					}
 				}
 			}

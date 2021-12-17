@@ -535,7 +535,7 @@ public class ClanTable
 	{
 		for (Clan clan : _clans.values())
 		{
-			clan.updateInDB();
+			clan.updateClanInDB();
 		}
 	}
 	

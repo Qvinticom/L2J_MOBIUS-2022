@@ -140,7 +140,7 @@ public class Q00510_AClansPrestige extends Quest
 					final int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
 					playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 					takeItems(player, TYRANNOSAURUS_CLAW, -1);
-					clan.addReputationScore(reward, true);
+					clan.addReputationScore(reward);
 					player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE).addInt(reward));
 					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					htmltext = "31331-7.html";

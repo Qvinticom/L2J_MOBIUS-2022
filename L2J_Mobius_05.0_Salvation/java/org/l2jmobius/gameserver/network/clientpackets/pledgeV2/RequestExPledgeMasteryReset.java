@@ -61,7 +61,7 @@ public class RequestExPledgeMasteryReset implements IClientIncomingPacket
 			return;
 		}
 		
-		clan.takeReputationScore(REPUTATION_COST, true);
+		clan.takeReputationScore(REPUTATION_COST);
 		clan.removeAllMasteries();
 		clan.setDevelopmentPoints(0);
 		player.sendPacket(new ExPledgeMasteryInfo(player));

@@ -592,13 +592,13 @@ public class Fort
 				final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				if (owner != null)
 				{
-					owner.setReputationScore(owner.getReputationScore() + Math.min(500, maxreward), true);
+					owner.setReputationScore(owner.getReputationScore() + Math.min(500, maxreward));
 					owner.broadcastToOnlineMembers(new PledgeShowInfoUpdate(owner));
 				}
 			}
 			else
 			{
-				_formerOwner.setReputationScore(_formerOwner.getReputationScore() + 250, true);
+				_formerOwner.setReputationScore(_formerOwner.getReputationScore() + 250);
 			}
 			
 			_formerOwner.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_formerOwner));
@@ -608,7 +608,7 @@ public class Fort
 			final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			if (owner != null)
 			{
-				owner.setReputationScore(owner.getReputationScore() + 500, true);
+				owner.setReputationScore(owner.getReputationScore() + 500);
 				owner.broadcastToOnlineMembers(new PledgeShowInfoUpdate(owner));
 			}
 		}

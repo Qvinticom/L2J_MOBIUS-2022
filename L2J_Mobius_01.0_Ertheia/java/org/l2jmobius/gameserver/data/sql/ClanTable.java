@@ -473,7 +473,8 @@ public class ClanTable
 	{
 		for (Clan clan : _clans.values())
 		{
-			clan.updateInDB();
+			clan.updateClanInDB();
+			clan.getVariables().storeMe();
 			for (ClanWar war : clan.getWarList().values())
 			{
 				storeClanWars(war);

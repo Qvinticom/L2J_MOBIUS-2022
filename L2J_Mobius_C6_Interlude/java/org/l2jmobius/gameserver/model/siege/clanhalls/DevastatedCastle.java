@@ -797,7 +797,7 @@ public class DevastatedCastle
 		if (clanIdMaxDamage != null)
 		{
 			ClanHallTable.getInstance().setOwner(34, clanIdMaxDamage);
-			clanIdMaxDamage.setReputationScore(clanIdMaxDamage.getReputationScore() + 600, true);
+			clanIdMaxDamage.setReputationScore(clanIdMaxDamage.getReputationScore() + 600);
 			update();
 			
 			Announce("Siege of Devastated castle is over.");

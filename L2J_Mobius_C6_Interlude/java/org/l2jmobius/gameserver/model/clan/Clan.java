@@ -827,7 +827,7 @@ public class Clan
 				setCrestLargeId(clanData.getInt("crest_large_id"));
 				setAllyCrestId(clanData.getInt("ally_crest_id"));
 				
-				setReputationScore(clanData.getInt("reputation_score"), false);
+				setReputationScore(clanData.getInt("reputation_score"));
 				setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 				
 				final int leaderId = clanData.getInt("leader_id");
@@ -1487,7 +1487,7 @@ public class Clan
 			
 			if (pledgeType != -1)
 			{
-				setReputationScore(_reputationScore - 2500, true);
+				setReputationScore(_reputationScore - 2500);
 			}
 		}
 		catch (Exception e)
@@ -1678,7 +1678,7 @@ public class Clan
 		return id;
 	}
 	
-	public void setReputationScore(int value, boolean save)
+	public void setReputationScore(int value)
 	{
 		if ((_reputationScore >= 0) && (value < 0))
 		{
@@ -1722,11 +1722,6 @@ public class Clan
 		if (_reputationScore < -100000000)
 		{
 			_reputationScore = -100000000;
-		}
-		
-		if (save)
-		{
-			updateClanInDB();
 		}
 	}
 	
@@ -2219,7 +2214,7 @@ public class Clan
 			{
 				if ((_reputationScore >= 10000) && (_members.size() >= 30))
 				{
-					setReputationScore(_reputationScore - 10000, true);
+					setReputationScore(_reputationScore - 10000);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addNumber(10000);
 					player.sendPacket(cr);
@@ -2231,7 +2226,7 @@ public class Clan
 			{
 				if ((_reputationScore >= 20000) && (_members.size() >= 80))
 				{
-					setReputationScore(_reputationScore - 20000, true);
+					setReputationScore(_reputationScore - 20000);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addNumber(20000);
 					player.sendPacket(cr);
@@ -2243,7 +2238,7 @@ public class Clan
 			{
 				if ((_reputationScore >= 40000) && (_members.size() >= 120))
 				{
-					setReputationScore(_reputationScore - 40000, true);
+					setReputationScore(_reputationScore - 40000);
 					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
 					cr.addNumber(40000);
 					player.sendPacket(cr);

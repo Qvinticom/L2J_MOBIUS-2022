@@ -107,7 +107,7 @@ public class Q510_AClansReputation extends Quest
 						final int reward = (CLAN_POINTS_REWARD * count);
 						st.takeItems(CLAW, -1);
 						final Clan clan = player.getClan();
-						clan.setReputationScore(clan.getReputationScore() + reward, true);
+						clan.setReputationScore(clan.getReputationScore() + reward);
 						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE).addNumber(reward));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 						htmltext = "31331-7.htm";

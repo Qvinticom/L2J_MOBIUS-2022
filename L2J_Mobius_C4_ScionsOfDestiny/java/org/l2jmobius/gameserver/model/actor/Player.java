@@ -2508,15 +2508,15 @@ public class Player extends Playable
 		{
 			if (getLvlJoinedAcademy() <= 16)
 			{
-				_clan.setReputationScore(_clan.getReputationScore() + 400, true);
+				_clan.setReputationScore(_clan.getReputationScore() + 400);
 			}
 			else if (getLvlJoinedAcademy() >= 39)
 			{
-				_clan.setReputationScore(_clan.getReputationScore() + 170, true);
+				_clan.setReputationScore(_clan.getReputationScore() + 170);
 			}
 			else
 			{
-				_clan.setReputationScore((_clan.getReputationScore() + 400) - ((getLvlJoinedAcademy() - 16) * 10), true);
+				_clan.setReputationScore((_clan.getReputationScore() + 400) - ((getLvlJoinedAcademy() - 16) * 10));
 			}
 			
 			_clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_clan));
@@ -5559,12 +5559,12 @@ public class Player extends Playable
 				{
 					if (getClan().getReputationScore() > 0)
 					{
-						pk.getClan().setReputationScore(((Player) killer).getClan().getReputationScore() + 2, true);
+						pk.getClan().setReputationScore(((Player) killer).getClan().getReputationScore() + 2);
 						pk.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(pk.getClan())); // Update status to all members
 					}
 					if (pk.getClan().getReputationScore() > 0)
 					{
-						_clan.setReputationScore(_clan.getReputationScore() - 2, true);
+						_clan.setReputationScore(_clan.getReputationScore() - 2);
 						_clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_clan)); // Update status to all members
 					}
 				}

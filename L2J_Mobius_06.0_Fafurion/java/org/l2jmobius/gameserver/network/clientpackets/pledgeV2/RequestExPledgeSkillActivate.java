@@ -111,7 +111,7 @@ public class RequestExPledgeSkillActivate implements IClientIncomingPacket
 		}
 		
 		// Learn.
-		clan.takeReputationScore(cost, true);
+		clan.takeReputationScore(cost);
 		clan.addMasterySkill(_skillId);
 		player.sendPacket(new ExPledgeSkillInfo(_skillId, 1, 1296000, 2));
 	}

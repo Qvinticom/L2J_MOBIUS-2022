@@ -339,7 +339,7 @@ public class Hero
 				final Clan clan = player.getClan();
 				if (clan != null)
 				{
-					clan.setReputationScore(clan.getReputationScore() + 1000, true);
+					clan.setReputationScore(clan.getReputationScore() + 1000);
 					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 					sm.addString(name);
@@ -366,7 +366,7 @@ public class Hero
 							final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 							if (clan != null)
 							{
-								clan.setReputationScore(clan.getReputationScore() + 1000, true);
+								clan.setReputationScore(clan.getReputationScore() + 1000);
 								clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 								final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 								sm.addString(name);

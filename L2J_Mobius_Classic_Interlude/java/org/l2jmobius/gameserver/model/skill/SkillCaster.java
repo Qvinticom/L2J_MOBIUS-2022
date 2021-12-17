@@ -391,7 +391,7 @@ public class SkillCaster implements Runnable
 					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
 					return false;
 				}
-				clan.takeReputationScore(_skill.getClanRepConsume(), true);
+				clan.takeReputationScore(_skill.getClanRepConsume());
 				
 				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
 				msg.addInt(_skill.getClanRepConsume());

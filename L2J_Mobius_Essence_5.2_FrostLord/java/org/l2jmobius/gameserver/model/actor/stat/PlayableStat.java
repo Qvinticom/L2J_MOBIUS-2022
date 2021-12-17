@@ -353,7 +353,7 @@ public class PlayableStat extends CreatureStat
 		
 		reputation = (int) Math.ceil(reputation * Config.LVL_OBTAINED_REP_SCORE_MULTIPLIER);
 		
-		clan.addReputationScore(reputation, true);
+		clan.addReputationScore(reputation);
 		
 		for (ClanMember member : clan.getMembers())
 		{

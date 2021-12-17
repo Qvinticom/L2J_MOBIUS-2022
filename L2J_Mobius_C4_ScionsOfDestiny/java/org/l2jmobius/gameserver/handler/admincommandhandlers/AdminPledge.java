@@ -167,7 +167,7 @@ public class AdminPledge implements IAdminCommandHandler
 							showMainPage(activeChar);
 							return false;
 						}
-						clan.setReputationScore(clan.getReputationScore() + points, true);
+						clan.setReputationScore(clan.getReputationScore() + points);
 						BuilderUtil.sendSysMessage(activeChar, "You " + (points > 0 ? "add " : "remove ") + Math.abs(points) + " points " + (points > 0 ? "to " : "from ") + clan.getName() + "'s reputation. Their current score is " + clan.getReputationScore());
 						return true;
 					}

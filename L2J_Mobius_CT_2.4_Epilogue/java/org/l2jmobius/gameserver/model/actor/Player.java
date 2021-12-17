@@ -2391,15 +2391,15 @@ public class Player extends Playable
 			{
 				if (_lvlJoinedAcademy <= 16)
 				{
-					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE, true);
+					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE);
 				}
 				else if (_lvlJoinedAcademy >= 39)
 				{
-					_clan.addReputationScore(Config.JOIN_ACADEMY_MIN_REP_SCORE, true);
+					_clan.addReputationScore(Config.JOIN_ACADEMY_MIN_REP_SCORE);
 				}
 				else
 				{
-					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE - ((_lvlJoinedAcademy - 16) * 20), true);
+					_clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE - ((_lvlJoinedAcademy - 16) * 20));
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
@@ -5265,12 +5265,12 @@ public class Player extends Playable
 									// when your reputation score is 0 or below, the other clan cannot acquire any reputation points
 									if (_clan.getReputationScore() > 0)
 									{
-										pk.getClan().addReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
+										pk.getClan().addReputationScore(Config.REPUTATION_SCORE_PER_KILL);
 									}
 									// when the opposing sides reputation score is 0 or below, your clans reputation score does not decrease
 									if (pk.getClan().getReputationScore() > 0)
 									{
-										_clan.takeReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
+										_clan.takeReputationScore(Config.REPUTATION_SCORE_PER_KILL);
 									}
 								}
 							}

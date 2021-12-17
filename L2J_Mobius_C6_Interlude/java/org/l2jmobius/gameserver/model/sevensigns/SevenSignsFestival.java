@@ -3489,7 +3489,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			if (player.getClan() != null)
 			{
-				player.getClan().setReputationScore(player.getClan().getReputationScore() + 100, true);
+				player.getClan().setReputationScore(player.getClan().getReputationScore() + 100);
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
 				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 				sm.addString(partyMemberName);
@@ -3512,7 +3512,7 @@ public class SevenSignsFestival implements SpawnListener
 						final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 						if (clan != null)
 						{
-							clan.setReputationScore(clan.getReputationScore() + 100, true);
+							clan.setReputationScore(clan.getReputationScore() + 100);
 							clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 							final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_WAS_AN_ACTIVE_MEMBER_OF_THE_HIGHEST_RANKED_PARTY_IN_THE_FESTIVAL_OF_DARKNESS_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE);
 							sm.addString(partyMemberName);

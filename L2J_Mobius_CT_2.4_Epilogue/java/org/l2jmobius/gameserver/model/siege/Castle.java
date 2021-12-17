@@ -967,16 +967,16 @@ public class Castle extends AbstractResidence
 			if (_formerOwner != ClanTable.getInstance().getClan(getOwnerId()))
 			{
 				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
-				_formerOwner.takeReputationScore(Config.LOOSE_CASTLE_POINTS, true);
+				_formerOwner.takeReputationScore(Config.LOOSE_CASTLE_POINTS);
 				final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				if (owner != null)
 				{
-					owner.addReputationScore(Math.min(Config.TAKE_CASTLE_POINTS, maxreward), true);
+					owner.addReputationScore(Math.min(Config.TAKE_CASTLE_POINTS, maxreward));
 				}
 			}
 			else
 			{
-				_formerOwner.addReputationScore(Config.CASTLE_DEFENDED_POINTS, true);
+				_formerOwner.addReputationScore(Config.CASTLE_DEFENDED_POINTS);
 			}
 		}
 		else
@@ -984,7 +984,7 @@ public class Castle extends AbstractResidence
 			final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			if (owner != null)
 			{
-				owner.addReputationScore(Config.TAKE_CASTLE_POINTS, true);
+				owner.addReputationScore(Config.TAKE_CASTLE_POINTS);
 			}
 		}
 	}

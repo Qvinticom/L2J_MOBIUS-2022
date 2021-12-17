@@ -360,7 +360,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			else if (e.getItemId() == 65336)
 			{
 				final int repCost = player.getClan().getReputationScore() - e.getItemCount();
-				player.getClan().setReputationScore(repCost, true);
+				player.getClan().setReputationScore(repCost);
 				player.sendPacket(new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE).addNumber(e.getItemCount()));
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
 			}

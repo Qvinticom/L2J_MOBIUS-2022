@@ -88,7 +88,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		}
 		
 		// Reduce reputation.
-		playerClan.takeReputationScore(500, true);
+		playerClan.takeReputationScore(500);
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 		for (Player member : playerClan.getOnlineMembers(0))
 		{

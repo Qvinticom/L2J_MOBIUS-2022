@@ -24,6 +24,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -446,6 +447,10 @@ public class Shutdown extends Thread
 		// Save all Grandboss status
 		GrandBossManager.getInstance().cleanUp();
 		LOGGER.info("GrandBossManager: All Grand Boss info saved!!");
+		
+		// Save clan data.
+		ClanTable.getInstance().shutdown();
+		LOGGER.info("Clan System: Data saved!!");
 		
 		// Save data CountStore
 		TradeManager.getInstance().dataCountStore();

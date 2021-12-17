@@ -52,7 +52,7 @@ public class GiveClanReputation extends AbstractEffect
 			return;
 		}
 		
-		effector.getActingPlayer().getClan().addReputationScore(_reputation, true);
+		effector.getActingPlayer().getClan().addReputationScore(_reputation);
 		
 		for (ClanMember member : effector.getActingPlayer().getClan().getMembers())
 		{

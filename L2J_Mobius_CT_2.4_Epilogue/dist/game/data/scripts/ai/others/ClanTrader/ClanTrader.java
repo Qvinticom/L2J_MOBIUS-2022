@@ -57,7 +57,7 @@ public class ClanTrader extends AbstractNpcAI
 		if (getQuestItemsCount(player, itemId) >= itemCount)
 		{
 			takeItems(player, itemId, itemCount);
-			player.getClan().addReputationScore(count, true);
+			player.getClan().addReputationScore(count);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_1S_POINTS_TO_ITS_CLAN_REPUTATION_SCORE);
 			sm.addInt(count);

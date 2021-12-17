@@ -339,7 +339,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						{
 							if (clan != null)
 							{
-								clan.takeReputationScore((int) totalCount, true);
+								clan.takeReputationScore((int) totalCount);
 								final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 								smsg.addLong(totalCount);
 								player.sendPacket(smsg);
@@ -464,7 +464,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						{
 							if (clan != null)
 							{
-								clan.addReputationScore((int) totalCount, true);
+								clan.addReputationScore((int) totalCount);
 							}
 							break;
 						}

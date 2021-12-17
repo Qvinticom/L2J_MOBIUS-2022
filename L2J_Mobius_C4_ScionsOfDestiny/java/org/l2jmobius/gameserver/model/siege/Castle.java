@@ -1137,18 +1137,18 @@ public class Castle
 			if (_formerOwner != ClanTable.getInstance().getClan(getOwnerId()))
 			{
 				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
-				_formerOwner.setReputationScore(_formerOwner.getReputationScore() - 1000, true);
+				_formerOwner.setReputationScore(_formerOwner.getReputationScore() - 1000);
 				
 				final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				if (owner != null)
 				{
-					owner.setReputationScore(owner.getReputationScore() + Math.min(1000, maxreward), true);
+					owner.setReputationScore(owner.getReputationScore() + Math.min(1000, maxreward));
 					owner.broadcastToOnlineMembers(new PledgeShowInfoUpdate(owner));
 				}
 			}
 			else
 			{
-				_formerOwner.setReputationScore(_formerOwner.getReputationScore() + 500, true);
+				_formerOwner.setReputationScore(_formerOwner.getReputationScore() + 500);
 			}
 			
 			_formerOwner.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_formerOwner));
@@ -1158,7 +1158,7 @@ public class Castle
 			final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			if (owner != null)
 			{
-				owner.setReputationScore(owner.getReputationScore() + 1000, true);
+				owner.setReputationScore(owner.getReputationScore() + 1000);
 				owner.broadcastToOnlineMembers(new PledgeShowInfoUpdate(owner));
 			}
 		}

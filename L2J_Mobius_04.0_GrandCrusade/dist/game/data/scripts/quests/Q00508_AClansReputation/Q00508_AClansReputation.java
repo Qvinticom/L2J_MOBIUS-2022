@@ -198,7 +198,7 @@ public class Q00508_AClansReputation extends Quest
 						playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 						takeItems(player, REWARD_POINTS.get(raid).get(1), -1);
 						final int rep = REWARD_POINTS.get(raid).get(2);
-						clan.addReputationScore(rep, true);
+						clan.addReputationScore(rep);
 						player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(rep));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 					}

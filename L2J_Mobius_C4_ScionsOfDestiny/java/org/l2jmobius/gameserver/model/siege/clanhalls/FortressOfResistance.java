@@ -300,7 +300,7 @@ public class FortressOfResistance
 		if (clanIdMaxDamage != null)
 		{
 			ClanHallTable.getInstance().setOwner(21, clanIdMaxDamage);
-			clanIdMaxDamage.setReputationScore(clanIdMaxDamage.getReputationScore() + 600, true);
+			clanIdMaxDamage.setReputationScore(clanIdMaxDamage.getReputationScore() + 600);
 			update();
 			
 			Announce("Capture of Partisan Hideout is over.");

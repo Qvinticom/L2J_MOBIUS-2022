@@ -300,7 +300,7 @@ public class Attackable extends Npc
 		{
 			if ((killer.getClan() != null) && (Rnd.get(100) < 2))
 			{
-				killer.getClan().addExp(killer.getObjectId(), 1, true);
+				killer.getClan().addExp(killer.getObjectId(), 1);
 			}
 			
 			// Delayed notification

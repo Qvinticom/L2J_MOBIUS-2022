@@ -100,7 +100,7 @@ public class RequestExPledgeMasterySet implements IClientIncomingPacket
 		}
 		
 		// Learn.
-		clan.takeReputationScore(mastery.getClanReputation(), true);
+		clan.takeReputationScore(mastery.getClanReputation());
 		clan.addMastery(mastery.getId());
 		clan.setDevelopmentPoints(clan.getUsedDevelopmentPoints() + 1);
 		for (Skill skill : mastery.getSkills())

@@ -246,7 +246,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 				player.sendPacket(new SystemMessage(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION_SCORE));
 				return;
 			}
-			player.getClan().setReputationScore(player.getClan().getReputationScore() - repCost, true);
+			player.getClan().setReputationScore(player.getClan().getReputationScore() - repCost);
 			player.getClan().addNewSkill(skill);
 			
 			final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);

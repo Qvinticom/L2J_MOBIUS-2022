@@ -110,8 +110,8 @@ public class ClanWar
 			// however, when the other side reputation score is 0 or below, your clan cannot acquire any reputation points from them.
 			if (victimClan.getReputationScore() > 0)
 			{
-				victimClan.takeReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
-				killerClan.addReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
+				victimClan.takeReputationScore(Config.REPUTATION_SCORE_PER_KILL);
+				killerClan.addReputationScore(Config.REPUTATION_SCORE_PER_KILL);
 			}
 			
 			// System Message notification to clan members
@@ -167,7 +167,7 @@ public class ClanWar
 		final Clan winnerClan = cancelor.getId() == _attackerClanId ? ClanTable.getInstance().getClan(_attackedClanId) : ClanTable.getInstance().getClan(_attackerClanId);
 		
 		// Reduce reputation.
-		cancelor.takeReputationScore(500, true);
+		cancelor.takeReputationScore(500);
 		player.sendPacket(new SurrenderPledgeWar(cancelor.getName(), player.getName()));
 		SystemMessage sm = new SystemMessage(SystemMessageId.THE_WAR_ENDED_BY_YOUR_DEFEAT_DECLARATION_WITH_THE_S1_CLAN);
 		sm.addString(winnerClan.getName());
