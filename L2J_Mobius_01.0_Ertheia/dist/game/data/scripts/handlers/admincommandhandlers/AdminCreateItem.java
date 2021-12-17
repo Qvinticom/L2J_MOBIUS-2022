@@ -309,6 +309,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			target.sendMessage("Admin spawned " + num + " " + template.getName() + " in your inventory.");
 		}
+		target.sendItemList(false);
+		
 		BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " " + template.getName() + "(" + id + ") in " + target.getName() + " inventory.");
 		target.sendPacket(new ExAdenaInvenCount(target));
 	}
