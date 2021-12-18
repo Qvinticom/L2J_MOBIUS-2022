@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
-import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -152,7 +151,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_player.isGM() ? 0x01 : 0x00);
 			packet.writeC(_player.getRace().ordinal());
 			packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00);
-			packet.writeD(ClassId.getClassId(_player.getBaseTemplate().getClassId().getId()).getRootClassId().getId());
+			packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
 			packet.writeD(_player.getClassId().getId());
 			packet.writeC(_player.getLevel());
 		}

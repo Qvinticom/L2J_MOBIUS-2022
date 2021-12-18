@@ -132,7 +132,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeH(_player.getRace().ordinal()); // Confirmed
 		packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00); // Confirmed
 		
-		packet.writeD(_player.isDeathKnight() ? 212 : _player.getBaseClass());
+		packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
 		
 		for (int slot : getPaperdollOrder())
 		{
@@ -282,12 +282,14 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		// Rank.
-		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
+		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : RankManager.getInstance().getPlayerClassRank(_player) == 1 ? 4 : 0);
 		
-		packet.writeD(0x00); // 272 - hNotoriety
-		packet.writeD(0x00); // 286 - nMainClass
+		packet.writeH(0x00);
+		packet.writeC(0x00);
+		packet.writeD(_player.getClassId().getId());
+		packet.writeC(0x00);
 		packet.writeD(_player.getVisualHairColor() + 1); // 338 - DK color.
-		packet.writeD(0x00); // 338 - nWorldID
+		packet.writeD(0x00);
 		
 		return true;
 	}

@@ -130,7 +130,8 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeH(_player.getRace().ordinal()); // Confirmed
 		packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00); // Confirmed
-		packet.writeD(_player.getBaseClass()); // Confirmed
+		
+		packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
 		
 		for (int slot : getPaperdollOrder())
 		{
@@ -243,7 +244,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getTransformationDisplayId()); // Confirmed
 		packet.writeD(_player.getAgathionId()); // Confirmed
 		
-		packet.writeC(0x00); // TODO: Find me!
+		packet.writeC(0x00); // nPvPRestrainStatus
 		
 		packet.writeD((int) Math.round(_player.getCurrentCp())); // Confirmed
 		packet.writeD(_player.getMaxHp()); // Confirmed
@@ -251,7 +252,8 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getMaxMp()); // Confirmed
 		packet.writeD((int) Math.round(_player.getCurrentMp())); // Confirmed
 		
-		packet.writeC(0x00); // TODO: Find me!
+		packet.writeC(0x00); // cBRLectureMark
+		
 		final Set<AbnormalVisualEffect> abnormalVisualEffects = _player.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeD(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)

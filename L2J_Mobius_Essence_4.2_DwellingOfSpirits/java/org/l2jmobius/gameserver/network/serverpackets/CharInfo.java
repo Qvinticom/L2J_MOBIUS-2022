@@ -132,27 +132,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeH(_player.getRace().ordinal()); // Confirmed
 		packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00); // Confirmed
 		
-		// DK Human
-		final int baseClassId = _player.getBaseClass();
-		if ((baseClassId >= 196) && (baseClassId <= 199))
-		{
-			packet.writeD(196);
-		}
-		// DK Elf
-		else if ((baseClassId >= 200) && (baseClassId <= 203))
-		{
-			packet.writeD(200);
-		}
-		// DK Dark Elf
-		else if ((baseClassId >= 204) && (baseClassId <= 207))
-		{
-			packet.writeD(204);
-		}
-		// Other Classes
-		else
-		{
-			packet.writeD(baseClassId);
-		}
+		packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
 		
 		for (int slot : getPaperdollOrder())
 		{
@@ -302,10 +282,12 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		// Rank.
-		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
+		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : RankManager.getInstance().getPlayerClassRank(_player) == 1 ? 4 : 0);
 		
-		packet.writeD(0x00); // 272 - hNotoriety
-		packet.writeD(0x00); // 286 - nMainClass
+		packet.writeH(0x00);
+		packet.writeC(0x00);
+		packet.writeD(_player.getClassId().getId());
+		packet.writeC(0x00);
 		
 		return true;
 	}
