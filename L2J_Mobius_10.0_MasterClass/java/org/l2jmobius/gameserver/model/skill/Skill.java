@@ -971,7 +971,7 @@ public class Skill implements IIdentifiable
 	 */
 	public boolean isTransformation()
 	{
-		return _abnormalType == AbnormalType.TRANSFORM;
+		return (_abnormalType == AbnormalType.TRANSFORM) || (_abnormalType == AbnormalType.CHANGEBODY);
 	}
 	
 	public int getEffectPoint()
