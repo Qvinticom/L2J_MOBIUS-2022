@@ -398,7 +398,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_RAIDBOSS_SPAWN_INFO(0x129, RequestRaidBossSpawnInfo::new, ConnectionState.IN_GAME),
 	REQUEST_RAID_SERVER_INFO(0x12A, RequestRaidServerInfo::new, ConnectionState.IN_GAME),
 	REQUEST_SHOW_AGIT_SIEGE_INFO(0x12B, null, ConnectionState.IN_GAME),
-	REQUEST_ITEM_AUCTION_STATUS(0x12C, null, ConnectionState.IN_GAME),
+	REQUEST_ITEM_AUCTION_STATUS(0x12C, RequestItemAuctionStatus::new, ConnectionState.IN_GAME),
 	REQUEST_MONSTER_BOOK_OPEN(0x12D, RequestMonsterBookOpen::new, ConnectionState.IN_GAME),
 	REQUEST_MONSTER_BOOK_CLOSE(0x12E, RequestMonsterBookClose::new, ConnectionState.IN_GAME),
 	REQUEST_MONSTER_BOOK_REWARD(0x12F, RequestMonsterBookReward::new, ConnectionState.IN_GAME),
