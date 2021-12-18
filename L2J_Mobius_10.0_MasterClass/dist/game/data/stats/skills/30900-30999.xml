@@ -1040,6 +1040,18 @@
 			<effect name="GetDamageLimit">
 				<amount>500</amount>
 			</effect>
+			<effect name="ReuseSkillByDamageId">
+				<skillId>30963</skillId>
+				<chance>70</chance>
+			</effect>
+			<effect name="ReuseSkillByDamageId">
+				<skillId>30964</skillId>
+				<chance>70</chance>
+			</effect>
+			<effect name="ReuseSkillByDamageId">
+				<skillId>30965</skillId>
+				<chance>70</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30957" toLevel="9" name="Hell Slash">
@@ -2616,25 +2628,25 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="30989" toLevel="1" name="Mocking Barrier">
-		<icon>icon.skill0000</icon>
-		<operateType>A2</operateType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalDefence">
-				<amount>100</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>100</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
+        <icon>icon.skill0000</icon>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <abnormalLevel>1</abnormalLevel>
+        <abnormalTime>5</abnormalTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="PhysicalDefence">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MagicalDefence">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
 	<skill id="30990" toLevel="2" name="Test - Acquired XP/ SP_Level Difference_Sum">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>

@@ -311,6 +311,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Resurrection", Resurrection::new);
 		EffectHandler.getInstance().registerHandler("ResurrectionSpecial", ResurrectionSpecial::new);
 		EffectHandler.getInstance().registerHandler("Reuse", Reuse::new);
+		EffectHandler.getInstance().registerHandler("ReuseSkillByDamageId", ReuseSkillByDamageId::new);
 		EffectHandler.getInstance().registerHandler("ReuseSkillById", ReuseSkillById::new);
 		EffectHandler.getInstance().registerHandler("Root", Root::new);
 		EffectHandler.getInstance().registerHandler("SacrificeSummon", SacrificeSummon::new);
