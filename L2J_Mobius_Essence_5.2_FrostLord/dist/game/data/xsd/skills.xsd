@@ -1660,7 +1660,10 @@
 															</xs:element>
 															<xs:element name="zoneId" type="xs:unsignedByte" />
 															<xs:element name="instanceId" type="xs:string" />
+															<xs:element name="existingSkillId" type="xs:unsignedShort" />
+															<xs:element name="existingSkillLevel" type="xs:unsignedByte" />
 															<xs:element name="skills" type="xs:string" />
+															<xs:element name="replacementSkillId" type="xs:unsignedShort" />
 															<xs:element name="level">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">

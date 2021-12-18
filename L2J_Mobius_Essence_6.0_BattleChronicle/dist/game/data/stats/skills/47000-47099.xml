@@ -2686,5 +2686,11 @@
 		<!-- Enhances a blow. The Dual Blow skill is upgraded to Triple Blow. -->
 		<icon>icon.additional_hit</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>47002</existingSkillId> <!-- Dual Blow-->
+				<replacementSkillId>47005</replacementSkillId> <!-- Tripple Blow -->
+			</effect>
+		</effects>
 	</skill>
 </list>
