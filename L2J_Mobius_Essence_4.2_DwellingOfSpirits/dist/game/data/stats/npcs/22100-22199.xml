@@ -484,7 +484,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -510,7 +510,7 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true" />
 		<skillList>
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -570,7 +570,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="350" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="350" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="33.5" />
@@ -803,7 +803,7 @@
 			<defence physical="136.567164179104" magical="64.5288409437959" />
 		</stats>
 		<status attackable="false" />
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
@@ -831,7 +831,7 @@
 			<defence physical="169.444444444444" magical="77.007700770077" />
 		</stats>
 		<status attackable="false" />
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
@@ -886,7 +886,7 @@
 			<defence physical="190.243902439024" magical="91.7652740883845" />
 		</stats>
 		<status attackable="false" />
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
@@ -913,7 +913,7 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<ai aggroRange="500" clanHelpRange="400" isAggressive="true"/>
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
@@ -1653,7 +1653,7 @@
 			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
-		<ai isAggressive="true" aggroRange="500" clanHelpRange="500"/>
+		<ai isAggressive="true" aggroRange="500" clanHelpRange="500" />
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
@@ -1682,7 +1682,7 @@
 			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
-		<ai isAggressive="true" aggroRange="500" clanHelpRange="500"/>
+		<ai isAggressive="true" aggroRange="500" clanHelpRange="500" />
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
@@ -1711,7 +1711,7 @@
 			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
-		<ai isAggressive="true" aggroRange="500" clanHelpRange="500"/>
+		<ai isAggressive="true" aggroRange="500" clanHelpRange="500" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
@@ -1739,7 +1739,7 @@
 			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
-		<ai isAggressive="true" aggroRange="500" clanHelpRange="500"/>
+		<ai isAggressive="true" aggroRange="500" clanHelpRange="500" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>

@@ -404,24 +404,24 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="8678" min="1" max="1" chance="7.14"/> <!-- Sirra's Blade -->
-			<item id="8679" min="1" max="1" chance="7.14"/> <!-- Sword of Ipos -->
-			<item id="8680" min="1" max="1" chance="7.14"/> <!-- Barakiel's Axe -->
-			<item id="8681" min="1" max="1" chance="7.14"/> <!-- Behemoth' Tuning Fork -->
-			<item id="8682" min="1" max="1" chance="7.14"/> <!-- Naga's Storm -->
-			<item id="8683" min="1" max="1" chance="7.14"/> <!-- Tiphon's Spear -->
-			<item id="8684" min="1" max="1" chance="7.14"/> <!-- Shyeed's Bow -->
-			<item id="8685" min="1" max="1" chance="7.14"/> <!-- Sobekk's Hurricane -->
-			<item id="8686" min="1" max="1" chance="7.14"/> <!-- Themis' Tongue -->
-			<item id="8687" min="1" max="1" chance="7.14"/> <!-- Cabrio's Hand -->
-			<item id="8688" min="1" max="1" chance="7.14"/> <!-- Daimon Crystal -->
-			<item id="91887" min="1" max="1" chance="7.14"/> <!-- Durendal -->
-			<item id="14339" min="1" max="1" chance="7.14"/> <!-- clair Bijou - Not Available - Not Available -->
-			<item id="8938" min="1" max="1" chance="7.14"/> <!-- Tallum Blade*Damascus Sword -->
+			<item id="8678" min="1" max="1" chance="7.14" /> <!-- Sirra's Blade -->
+			<item id="8679" min="1" max="1" chance="7.14" /> <!-- Sword of Ipos -->
+			<item id="8680" min="1" max="1" chance="7.14" /> <!-- Barakiel's Axe -->
+			<item id="8681" min="1" max="1" chance="7.14" /> <!-- Behemoth' Tuning Fork -->
+			<item id="8682" min="1" max="1" chance="7.14" /> <!-- Naga's Storm -->
+			<item id="8683" min="1" max="1" chance="7.14" /> <!-- Tiphon's Spear -->
+			<item id="8684" min="1" max="1" chance="7.14" /> <!-- Shyeed's Bow -->
+			<item id="8685" min="1" max="1" chance="7.14" /> <!-- Sobekk's Hurricane -->
+			<item id="8686" min="1" max="1" chance="7.14" /> <!-- Themis' Tongue -->
+			<item id="8687" min="1" max="1" chance="7.14" /> <!-- Cabrio's Hand -->
+			<item id="8688" min="1" max="1" chance="7.14" /> <!-- Daimon Crystal -->
+			<item id="91887" min="1" max="1" chance="7.14" /> <!-- Durendal -->
+			<item id="14339" min="1" max="1" chance="7.14" /> <!-- clair Bijou - Not Available - Not Available -->
+			<item id="8938" min="1" max="1" chance="7.14" /> <!-- Tallum Blade*Damascus Sword -->
 		</capsuled_items>
 	</item>
 	<item id="94729" name="Master's Book Chest" type="EtcItem">
@@ -432,19 +432,19 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="94135" min="1" max="1" chance="11.1"/> <!-- Master's Book: Might -->
-			<item id="94136" min="1" max="1" chance="11.1"/> <!-- Master's Book: Shield -->
-			<item id="94361" min="1" max="1" chance="11.1"/> <!-- Master's Book: Empower -->
-			<item id="94362" min="1" max="1" chance="11.1"/> <!-- Master's Book: Magic Barrier -->
-			<item id="94363" min="1" max="1" chance="11.1"/> <!-- Master's Book: Focus -->
-			<item id="94364" min="1" max="1" chance="11.1"/> <!-- Master's Book: Death Whisper -->
-			<item id="94365" min="1" max="1" chance="11.1"/> <!-- Master's Book: Wind Walk -->
-			<item id="94369" min="1" max="1" chance="11.1"/> <!-- Master's Book: Haste -->
-			<item id="94370" min="1" max="1" chance="11.1"/> <!-- Master's Book: Acumen -->
+			<item id="94135" min="1" max="1" chance="11.1" /> <!-- Master's Book: Might -->
+			<item id="94136" min="1" max="1" chance="11.1" /> <!-- Master's Book: Shield -->
+			<item id="94361" min="1" max="1" chance="11.1" /> <!-- Master's Book: Empower -->
+			<item id="94362" min="1" max="1" chance="11.1" /> <!-- Master's Book: Magic Barrier -->
+			<item id="94363" min="1" max="1" chance="11.1" /> <!-- Master's Book: Focus -->
+			<item id="94364" min="1" max="1" chance="11.1" /> <!-- Master's Book: Death Whisper -->
+			<item id="94365" min="1" max="1" chance="11.1" /> <!-- Master's Book: Wind Walk -->
+			<item id="94369" min="1" max="1" chance="11.1" /> <!-- Master's Book: Haste -->
+			<item id="94370" min="1" max="1" chance="11.1" /> <!-- Master's Book: Acumen -->
 		</capsuled_items>
 	</item>
 	<item id="94730" name="Dynastic Essence (Time-limited)" type="EtcItem">
@@ -629,9 +629,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="79" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Damascus Sword -->
+			<item id="79" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Damascus Sword -->
 		</capsuled_items>
 	</item>
 	<item id="94740" name="+7 Wizard's Tear" additionalName="Sealed" type="EtcItem">
@@ -643,9 +643,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="7889" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Wizard's Tear -->
+			<item id="7889" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Wizard's Tear -->
 		</capsuled_items>
 	</item>
 	<item id="94741" name="+7 Guardian's Sword" additionalName="Sealed" type="EtcItem">
@@ -657,9 +657,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="7883" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Guardian's Sword -->
+			<item id="7883" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Guardian's Sword -->
 		</capsuled_items>
 	</item>
 	<item id="94742" name="+7 Bellion Cestus" additionalName="Sealed" type="EtcItem">
@@ -671,9 +671,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="268" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Bellion Cestus -->
+			<item id="268" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Bellion Cestus -->
 		</capsuled_items>
 	</item>
 	<item id="94743" name="+7 Bow of Peril" additionalName="Sealed" type="EtcItem">
@@ -685,9 +685,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="287" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Bow of Peril -->
+			<item id="287" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Bow of Peril -->
 		</capsuled_items>
 	</item>
 	<item id="94744" name="+7 Lance" additionalName="Sealed" type="EtcItem">
@@ -699,9 +699,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="97" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Lance -->
+			<item id="97" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Lance -->
 		</capsuled_items>
 	</item>
 	<item id="94745" name="+7 Staff of Evil Spirits" additionalName="Sealed" type="EtcItem">
@@ -713,9 +713,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="210" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Staff of Evil Spirits -->
+			<item id="210" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Staff of Evil Spirits -->
 		</capsuled_items>
 	</item>
 	<item id="94746" name="+7 Deadman's Glory" additionalName="Sealed" type="EtcItem">
@@ -727,9 +727,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="171" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Deadman's Glory -->
+			<item id="171" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Deadman's Glory -->
 		</capsuled_items>
 	</item>
 	<item id="94747" name="+7 Art of Battle Axe" additionalName="Sealed" type="EtcItem">
@@ -741,9 +741,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="175" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Art of Battle Axe -->
+			<item id="175" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Art of Battle Axe -->
 		</capsuled_items>
 	</item>
 	<item id="94748" name="+7 Samurai Long Sword*Samurai Long Sword" additionalName="Sealed" type="EtcItem">
@@ -755,9 +755,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2626" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Samurai Long Sword*Samurai Long Sword -->
+			<item id="2626" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Samurai Long Sword*Samurai Long Sword -->
 		</capsuled_items>
 	</item>
 	<item id="94749" name="+7 Demon's Dagger" additionalName="Sealed" type="EtcItem">
@@ -769,9 +769,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="234" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Demon's Dagger -->
+			<item id="234" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Demon's Dagger -->
 		</capsuled_items>
 	</item>
 	<item id="94750" name="+7 Colichemarde" additionalName="Sealed" type="EtcItem">
@@ -783,9 +783,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91900" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Colichemarde -->
+			<item id="91900" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Colichemarde -->
 		</capsuled_items>
 	</item>
 	<item id="94751" name="+7 Dismantler" additionalName="Sealed" type="EtcItem">
@@ -797,9 +797,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91885" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Dismantler -->
+			<item id="91885" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Dismantler -->
 		</capsuled_items>
 	</item>
 	<item id="94752" name="+7 Star Buster" additionalName="Sealed" type="EtcItem">
@@ -811,9 +811,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="7901" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- Star Buster -->
+			<item id="7901" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- Star Buster -->
 		</capsuled_items>
 	</item>
 	<item id="94753" name="Orfen's Lair Pass (Time-limited)" additionalName="Sealed" type="EtcItem">
@@ -1186,9 +1186,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93128" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- +7 Agathion Ignis -->
+			<item id="93128" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- +7 Agathion Ignis -->
 		</capsuled_items>
 	</item>
 	<item id="94771" name="+7 Agathion Nebula Pack" additionalName="Sealed" type="EtcItem">
@@ -1200,9 +1200,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93129" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- 7 Agathion Nebula -->
+			<item id="93129" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- 7 Agathion Nebula -->
 		</capsuled_items>
 	</item>
 	<item id="94772" name="+7 Agathion Procella Pack" additionalName="Sealed" type="EtcItem">
@@ -1214,9 +1214,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93130" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- +7 Agathion Procella -->
+			<item id="93130" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- +7 Agathion Procella -->
 		</capsuled_items>
 	</item>
 	<item id="94773" name="+7 Agathion Petram Pack" additionalName="Sealed" type="EtcItem">
@@ -1228,9 +1228,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93131" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/>
+			<item id="93131" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" />
 		</capsuled_items>
 	</item>
 	<item id="94774" name="+7 Agathion Joy Pack" additionalName="Sealed" type="EtcItem">
@@ -1242,9 +1242,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93132" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7"/> <!-- +7 Agathion Joy -->
+			<item id="93132" min="1" max="1" chance="100" maxEnchant="7" minEnchant="7" /> <!-- +7 Agathion Joy -->
 		</capsuled_items>
 	</item>
 	<item id="94775" name="+4 Circlet of Hero Pack" additionalName="Sealed" type="EtcItem">
@@ -1256,9 +1256,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="94166" min="1" max="1" chance="100" maxEnchant="4" minEnchant="4"/> <!-- Circlet of Hero - Sealed -->
+			<item id="94166" min="1" max="1" chance="100" maxEnchant="4" minEnchant="4" /> <!-- Circlet of Hero - Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94776" name="Berserker's Scroll" type="EtcItem">

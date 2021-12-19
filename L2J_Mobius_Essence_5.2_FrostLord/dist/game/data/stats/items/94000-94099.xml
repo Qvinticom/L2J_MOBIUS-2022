@@ -1383,9 +1383,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93960" min="1" max="1" chance="100"/>
+			<item id="93960" min="1" max="1" chance="100" />
 		</capsuled_items>
 	</item>
 	<item id="94098" name="Sealed Buffalo Necklace" additionalName="Sealed" type="EtcItem">
@@ -1399,9 +1399,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93961" min="1" max="1" chance="100"/>
+			<item id="93961" min="1" max="1" chance="100" />
 		</capsuled_items>
 	</item>
 	<item id="94099" name="Sealed Tiger Necklace" additionalName="Sealed" type="EtcItem">
@@ -1415,9 +1415,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93962" min="1" max="1" chance="100"/>
+			<item id="93962" min="1" max="1" chance="100" />
 		</capsuled_items>
 	</item>
 </list>

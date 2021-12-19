@@ -943,7 +943,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="90317" min="1" max="1" chance="100" /> <!-- Topaz Lv. 5 -->
 			<item id="90322" min="1" max="1" chance="100" /> <!-- Garnet Lv. 5 -->

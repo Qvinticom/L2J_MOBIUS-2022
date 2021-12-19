@@ -308,8 +308,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91952" min="1" max="1" chance="100"/> <!-- Ring of Insolence -->
-			<item id="91966" min="4" max="4" chance="100"/> <!-- Scroll: Enchant Ring of Insolence -->
+			<item id="91952" min="1" max="1" chance="100" /> <!-- Ring of Insolence -->
+			<item id="91966" min="4" max="4" chance="100" /> <!-- Scroll: Enchant Ring of Insolence -->
 		</capsuled_items>
 	</item>
 	<item id="93927" name="Enchant Package: Dragon Valley's Earring" type="EtcItem">
@@ -322,8 +322,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91953" min="1" max="1" chance="100"/> <!-- Dragon Valley's Earring -->
-			<item id="91967" min="4" max="4" chance="100"/> <!-- Scroll: Enchant Dragon Valley's Earring -->
+			<item id="91953" min="1" max="1" chance="100" /> <!-- Dragon Valley's Earring -->
+			<item id="91967" min="4" max="4" chance="100" /> <!-- Scroll: Enchant Dragon Valley's Earring -->
 		</capsuled_items>
 	</item>
 	<item id="93928" name="Antharas Transformation Costume" additionalName="Sealed" type="Armor">
@@ -533,9 +533,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93094" min="1" max="1" chance="100"/> <!-- Majestic Sigil -->
+			<item id="93094" min="1" max="1" chance="100" /> <!-- Majestic Sigil -->
 		</capsuled_items>
 	</item>
 	<item id="93947" name="Package: Majestic Sigil" additionalName="Sealed" type="EtcItem">
@@ -548,9 +548,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="93120" min="1" max="1" chance="100"/> <!-- Majestic Sigil Sealed -->
+			<item id="93120" min="1" max="1" chance="100" /> <!-- Majestic Sigil Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="93948" name="Extra Pass: Transcendent Instance Zone" additionalName="Sealed" type="EtcItem">
@@ -906,7 +906,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="2048" level="1"/>
+			<skill id="2048" level="1" />
 		</skills>
 	</item>
 	<item id="93967" name="Pet's HP Recovery Potion" type="EtcItem">

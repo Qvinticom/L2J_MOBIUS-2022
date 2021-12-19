@@ -254,7 +254,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="40060" level="1"/> <!-- Primeval Garden's Time Stone -->
+			<skill id="40060" level="1" /> <!-- Primeval Garden's Time Stone -->
 		</skills>
 	</item>
 	<item id="94616" name="Blessing Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
@@ -1300,7 +1300,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="92018" min="1" max="1" chance="100" minEnchant="9" maxEnchant="9"/> <!-- Talisman of Eva - Sealed -->
+			<item id="92018" min="1" max="1" chance="100" minEnchant="9" maxEnchant="9" /> <!-- Talisman of Eva - Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94686" name="+10 Talisman of Eva Pack" additionalName="Sealed" type="EtcItem">
@@ -1314,7 +1314,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="92018" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10"/> <!-- Talisman of Eva - Sealed -->
+			<item id="92018" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10" /> <!-- Talisman of Eva - Sealed -->
 		</capsuled_items>
 	</item>
 	<item id="94687" name="Forgotten Primeval Garden's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">

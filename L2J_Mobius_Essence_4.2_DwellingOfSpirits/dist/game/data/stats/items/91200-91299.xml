@@ -276,11 +276,11 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49588" min="2" max="2" chance="100"/> <!-- Golden Mermaid's Fishing Rod Chest - 30-day -->
-			<item id="90139" min="25920" max="25920" chance="100"/> <!-- Silver Bait -->
-			<item id="90143" min="20" max="20" chance="100"/> <!-- Einhasad's Protection (Exchangeable) -->
-			<item id="91222" min="1" max="1" chance="100"/> <!-- Antharas' Earring Box Lv. 3 - 30-day -->
-			<item id="91224" min="1" max="1" chance="100"/> <!-- Sayha's Jewel Box - 30-day -->
+			<item id="49588" min="2" max="2" chance="100" /> <!-- Golden Mermaid's Fishing Rod Chest - 30-day -->
+			<item id="90139" min="25920" max="25920" chance="100" /> <!-- Silver Bait -->
+			<item id="90143" min="20" max="20" chance="100" /> <!-- Einhasad's Protection (Exchangeable) -->
+			<item id="91222" min="1" max="1" chance="100" /> <!-- Antharas' Earring Box Lv. 3 - 30-day -->
+			<item id="91224" min="1" max="1" chance="100" /> <!-- Sayha's Jewel Box - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="91221" name="Enhanced Antharas' Earring" additionalName="30-day" type="Armor">
@@ -315,7 +315,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91221" min="1" max="1" chance="100"/> <!-- Antharas' Earring Box Lv. 3 - 30-day -->
+			<item id="91221" min="1" max="1" chance="100" /> <!-- Antharas' Earring Box Lv. 3 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="91223" name="Aquamarine Lv. 5" additionalName="30-day" type="Armor">
@@ -343,8 +343,8 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91196" min="1" max="1" chance="100"/> <!-- Cat's Eye Lv. 5 (30-day) -->
-			<item id="91223" min="1" max="1" chance="100"/> <!-- Aquamarine Lv. 5 (30-day) -->
+			<item id="91196" min="1" max="1" chance="100" /> <!-- Cat's Eye Lv. 5 (30-day) -->
+			<item id="91223" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 5 (30-day) -->
 		</capsuled_items>
 	</item>
 	<item id="91225" name="Gift from Wealthy Merchant Red" type="EtcItem">
@@ -489,7 +489,7 @@
 		<set name="material" val="FISH" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91238" min="1" max="1" chance="100"/> 
+			<item id="91238" min="1" max="1" chance="100" /> 
 		</capsuled_items>
 	</item>
 	<item id="91240" name="Christmas Amulet" additionalName="15-day" type="EtcItem">

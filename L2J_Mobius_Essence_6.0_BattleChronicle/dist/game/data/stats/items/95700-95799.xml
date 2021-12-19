@@ -961,25 +961,25 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="8678" min="1" max="1" chance="6.66"/> <!-- Sirra's Blade -->
-			<item id="8679" min="1" max="1" chance="6.66"/> <!-- Sword of Ipos -->
-			<item id="8680" min="1" max="1" chance="6.66"/> <!-- Barakiel's Axe -->
-			<item id="8681" min="1" max="1" chance="6.66"/> <!-- Behemoth' Tuning Fork -->
-			<item id="8682" min="1" max="1" chance="6.66"/> <!-- Naga's Storm -->
-			<item id="8683" min="1" max="1" chance="6.66"/> <!-- Tiphon's Spear -->
-			<item id="8684" min="1" max="1" chance="6.66"/> <!-- Shyeed's Bow -->
-			<item id="8685" min="1" max="1" chance="6.66"/> <!-- Sobekk's Hurricane -->
-			<item id="8686" min="1" max="1" chance="6.66"/> <!-- Themis' Tongue -->
-			<item id="8687" min="1" max="1" chance="6.66"/> <!-- Cabrio's Hand -->
-			<item id="8688" min="1" max="1" chance="6.66"/> <!-- Daimon Crystal -->
-			<item id="91887" min="1" max="1" chance="6.66"/> <!-- Durendal -->
-			<item id="14339" min="1" max="1" chance="6.66"/> <!-- Éclair Bijou -->
-			<item id="8938" min="1" max="1" chance="6.66"/> <!-- Tallum Blade*Damascus -->
-			<item id="94886" min="1" max="1" chance="6.66"/> <!-- Zephyrus -->
+			<item id="8678" min="1" max="1" chance="6.66" /> <!-- Sirra's Blade -->
+			<item id="8679" min="1" max="1" chance="6.66" /> <!-- Sword of Ipos -->
+			<item id="8680" min="1" max="1" chance="6.66" /> <!-- Barakiel's Axe -->
+			<item id="8681" min="1" max="1" chance="6.66" /> <!-- Behemoth' Tuning Fork -->
+			<item id="8682" min="1" max="1" chance="6.66" /> <!-- Naga's Storm -->
+			<item id="8683" min="1" max="1" chance="6.66" /> <!-- Tiphon's Spear -->
+			<item id="8684" min="1" max="1" chance="6.66" /> <!-- Shyeed's Bow -->
+			<item id="8685" min="1" max="1" chance="6.66" /> <!-- Sobekk's Hurricane -->
+			<item id="8686" min="1" max="1" chance="6.66" /> <!-- Themis' Tongue -->
+			<item id="8687" min="1" max="1" chance="6.66" /> <!-- Cabrio's Hand -->
+			<item id="8688" min="1" max="1" chance="6.66" /> <!-- Daimon Crystal -->
+			<item id="91887" min="1" max="1" chance="6.66" /> <!-- Durendal -->
+			<item id="14339" min="1" max="1" chance="6.66" /> <!-- Éclair Bijou -->
+			<item id="8938" min="1" max="1" chance="6.66" /> <!-- Tallum Blade*Damascus -->
+			<item id="94886" min="1" max="1" chance="6.66" /> <!-- Zephyrus -->
 		</capsuled_items>
 	</item>
 	<item id="95760" name="Package: Zephyrus" additionalName="Sealed" type="EtcItem">
@@ -1284,22 +1284,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="94135" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Might -->
-			<item id="94136" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Shield -->
-			<item id="94361" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Empower -->
-			<item id="94362" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Magic Barrier -->
-			<item id="94363" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Focus -->
-			<item id="94364" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Death Whisper -->
-			<item id="94365" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Wind Walk -->
-			<item id="94369" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Haste -->
-			<item id="94370" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Acumen -->
-			<item id="94366" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Berserker Spirit -->
-			<item id="94367" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Clarity -->
-			<item id="94368" min="1" max="1" chance="8.33333333333"/> <!-- Master's Book: Wild Magic -->
+			<item id="94135" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Might -->
+			<item id="94136" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Shield -->
+			<item id="94361" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Empower -->
+			<item id="94362" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Magic Barrier -->
+			<item id="94363" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Focus -->
+			<item id="94364" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Death Whisper -->
+			<item id="94365" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Wind Walk -->
+			<item id="94369" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Haste -->
+			<item id="94370" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Acumen -->
+			<item id="94366" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Berserker Spirit -->
+			<item id="94367" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Clarity -->
+			<item id="94368" min="1" max="1" chance="8.33333333333" /> <!-- Master's Book: Wild Magic -->
 		</capsuled_items>
 	</item>
 	<item id="95769" name="Master's Book: Berserker Spirit" additionalName="Sealed" type="EtcItem">

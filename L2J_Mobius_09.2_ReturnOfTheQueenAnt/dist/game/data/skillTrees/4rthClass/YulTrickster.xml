@@ -3,10 +3,10 @@
 	<!-- Yul Trickster -->
 	<skillTree type="classSkillTree" classId="165" parentClassId="134">
 		<skill skillName="Battle Instinct" skillId="1923" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1923" onlyReplaceByLearn="true"/>
+			<removeSkill id="1923" onlyReplaceByLearn="true" />
 		</skill>
 		<skill skillName="Dark Silence" skillId="1924" skillLevel="2" getLevel="85" autoGet="true">
-			<removeSkill id="1924" onlyReplaceByLearn="true"/>
+			<removeSkill id="1924" onlyReplaceByLearn="true" />
 		</skill>
 
 		<skill skillName="Superior Critical Arrow" skillId="10756" skillLevel="1" getLevel="85" autoGet="true" />
@@ -544,9 +544,9 @@
 		
 		<!-- Homunculus -->
 		<skill skillName="Last Stance" skillId="30854" skillLevel="1" getLevel="110" levelUpSp="17455723311">
-			<removeSkill id="10757" onlyReplaceByLearn="true"/>
-			<removeSkill id="10759" onlyReplaceByLearn="true"/>
-			<removeSkill id="10758" onlyReplaceByLearn="true"/>
+			<removeSkill id="10757" onlyReplaceByLearn="true" />
+			<removeSkill id="10759" onlyReplaceByLearn="true" />
+			<removeSkill id="10758" onlyReplaceByLearn="true" />
 			<item id="81453" count="1" /> <!-- Improved Rune Stone -->
 		</skill>
 		<skill skillName="Yul's Defense Mastery" skillId="30894" skillLevel="1" getLevel="85" levelUpSp="0" />
@@ -555,34 +555,34 @@
 		<skill skillName="Dual Class - Renewed Energy of Power" skillId="30820" skillLevel="1" getLevel="85" getDualClassLevel="85" levelUpSp="0" autoGet="false" />
 
 		<!-- Queen Ant Update -->
-		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="1" getLevel="115" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="1" getLevel="115" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="2" getLevel="116" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="2" getLevel="116" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="3" getLevel="117" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="3" getLevel="117" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="4" getLevel="118" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="4" getLevel="118" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="5" getLevel="119" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Eraton's Spear" skillId="30930" skillLevel="5" getLevel="119" levelUpSp="49225139737" autoGet="false">
 			<item id="81889" count="1" /> <!-- Eraton's Historical Book -->
 		</skill>
-		<skill skillName="Masia's Shield" skillId="30931" skillLevel="1" getLevel="110" levelUpSp="17455723311" autoGet="false" >
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="1" getLevel="110" levelUpSp="17455723311" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-		<skill skillName="Masia's Shield" skillId="30931" skillLevel="2" getLevel="111" levelUpSp="20946867973" autoGet="false" >
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="2" getLevel="111" levelUpSp="20946867973" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-		<skill skillName="Masia's Shield" skillId="30931" skillLevel="3" getLevel="112" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="3" getLevel="112" levelUpSp="49225139737" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-		<skill skillName="Masia's Shield" skillId="30931" skillLevel="4" getLevel="113" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="4" getLevel="113" levelUpSp="49225139737" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
-		<skill skillName="Masia's Shield" skillId="30931" skillLevel="5" getLevel="114" levelUpSp="49225139737" autoGet="false" >
+		<skill skillName="Masia's Shield" skillId="30931" skillLevel="5" getLevel="114" levelUpSp="49225139737" autoGet="false">
 			<item id="81888" count="1" /> <!-- Masia's Historical Book -->
 		</skill>
 	</skillTree>

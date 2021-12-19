@@ -232,35 +232,35 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="49487" min="20" max="20" chance="4.0"/> <!-- Soulshots Coupon (Can be transferred by account) -->
-			<item id="49674" min="5" max="5" chance="4.0"/> <!-- Exp Scroll -->
-			<item id="49683" min="1" max="1" chance="4.0"/> <!-- Baium's Talisman -->
-			<item id="90045" min="31" max="31" chance="4.0"/> <!-- Magic Tablet -->
-			<item id="91159" min="1" max="1" chance="4.0"/> <!-- Agathion Exchange Coupon -->
-			<item id="91213" min="1" max="1" chance="4.0"/> <!-- Scroll: Enchant Sayha's Cloak -->
-			<item id="91227" min="1" max="1" chance="4.0"/> <!-- Sayha's Cloak Coupon -->
-			<item id="91246" min="1" max="1" chance="4.0"/> <!-- Dragon Pendant Lv. 3 -->
-			<item id="91247" min="1" max="1" chance="4.0"/> <!-- Dragon Pendant Lv. 4 -->
-			<item id="91690" min="5" max="5" chance="4.0"/> <!-- Special HP Recovery Potion Event -->
-			<item id="91712" min="5" max="5" chance="4.0"/> <!-- Sayha's Storm Lv. 3 -->
-			<item id="91767" min="1" max="1" chance="4.0"/> <!-- Enchant Set: Talisman of Aden -->
-			<item id="91780" min="5" max="5" chance="4.0"/> <!-- Scroll of Battle -->
-			<item id="91781" min="5" max="5" chance="4.0"/> <!-- Sayha's Effects Scroll -->
-			<item id="91864" min="1" max="1" chance="4.0"/> <!-- Dragon Belt Chest -->
-			<item id="92010" min="1" max="1" chance="4.0"/> <!-- Majestic Robe Set -->
-			<item id="92011" min="1" max="1" chance="4.0"/> <!-- Majestic Light Armor Set -->
-			<item id="92012" min="1" max="1" chance="4.0"/> <!-- Dark Crystal Robe Set -->
-			<item id="92013" min="1" max="1" chance="4.0"/> <!-- Dark Crystal Light Armor Set -->
-			<item id="92014" min="1" max="1" chance="4.0"/> <!-- Heavy Armor of Nightmare Set -->
-			<item id="92015" min="1" max="1" chance="4.0"/> <!-- Tallum Heavy Armor Set -->
-			<item id="92020" min="1" max="1" chance="4.0"/> <!-- Enchant Set: Talisman of Eva -->
-			<item id="862" min="1" max="1" chance="4.0"/> <!-- Majestic Earring -->
-			<item id="893" min="1" max="1" chance="4.0"/> <!-- Ring of Majesty -->
-			<item id="924" min="1" max="1" chance="4.0"/> <!-- Necklace of Majesty -->
+			<item id="49487" min="20" max="20" chance="4.0" /> <!-- Soulshots Coupon (Can be transferred by account) -->
+			<item id="49674" min="5" max="5" chance="4.0" /> <!-- Exp Scroll -->
+			<item id="49683" min="1" max="1" chance="4.0" /> <!-- Baium's Talisman -->
+			<item id="90045" min="31" max="31" chance="4.0" /> <!-- Magic Tablet -->
+			<item id="91159" min="1" max="1" chance="4.0" /> <!-- Agathion Exchange Coupon -->
+			<item id="91213" min="1" max="1" chance="4.0" /> <!-- Scroll: Enchant Sayha's Cloak -->
+			<item id="91227" min="1" max="1" chance="4.0" /> <!-- Sayha's Cloak Coupon -->
+			<item id="91246" min="1" max="1" chance="4.0" /> <!-- Dragon Pendant Lv. 3 -->
+			<item id="91247" min="1" max="1" chance="4.0" /> <!-- Dragon Pendant Lv. 4 -->
+			<item id="91690" min="5" max="5" chance="4.0" /> <!-- Special HP Recovery Potion Event -->
+			<item id="91712" min="5" max="5" chance="4.0" /> <!-- Sayha's Storm Lv. 3 -->
+			<item id="91767" min="1" max="1" chance="4.0" /> <!-- Enchant Set: Talisman of Aden -->
+			<item id="91780" min="5" max="5" chance="4.0" /> <!-- Scroll of Battle -->
+			<item id="91781" min="5" max="5" chance="4.0" /> <!-- Sayha's Effects Scroll -->
+			<item id="91864" min="1" max="1" chance="4.0" /> <!-- Dragon Belt Chest -->
+			<item id="92010" min="1" max="1" chance="4.0" /> <!-- Majestic Robe Set -->
+			<item id="92011" min="1" max="1" chance="4.0" /> <!-- Majestic Light Armor Set -->
+			<item id="92012" min="1" max="1" chance="4.0" /> <!-- Dark Crystal Robe Set -->
+			<item id="92013" min="1" max="1" chance="4.0" /> <!-- Dark Crystal Light Armor Set -->
+			<item id="92014" min="1" max="1" chance="4.0" /> <!-- Heavy Armor of Nightmare Set -->
+			<item id="92015" min="1" max="1" chance="4.0" /> <!-- Tallum Heavy Armor Set -->
+			<item id="92020" min="1" max="1" chance="4.0" /> <!-- Enchant Set: Talisman of Eva -->
+			<item id="862" min="1" max="1" chance="4.0" /> <!-- Majestic Earring -->
+			<item id="893" min="1" max="1" chance="4.0" /> <!-- Ring of Majesty -->
+			<item id="924" min="1" max="1" chance="4.0" /> <!-- Necklace of Majesty -->
 		</capsuled_items>
 	</item>
 	<item id="92020" name="Enchant Kit: Talisman of Eva" additionalName="Sealed" type="EtcItem">

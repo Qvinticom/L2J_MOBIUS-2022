@@ -77,24 +77,24 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="8678" min="1" max="1" chance="7.14"/> <!-- Sirra's Blade -->
-			<item id="8679" min="1" max="1" chance="7.14"/> <!-- Sword of Ipos -->
-			<item id="8680" min="1" max="1" chance="7.14"/> <!-- Barakiel's Axe -->
-			<item id="8681" min="1" max="1" chance="7.14"/> <!-- Behemoth' Tuning Fork -->
-			<item id="8682" min="1" max="1" chance="7.14"/> <!-- Naga's Storm -->
-			<item id="8683" min="1" max="1" chance="7.14"/> <!-- Tiphon's Spear -->
-			<item id="8684" min="1" max="1" chance="7.14"/> <!-- Shyeed's Bow -->
-			<item id="8685" min="1" max="1" chance="7.14"/> <!-- Sobekk's Hurricane -->
-			<item id="8686" min="1" max="1" chance="7.14"/> <!-- Themis' Tongue -->
-			<item id="8687" min="1" max="1" chance="7.14"/> <!-- Cabrio's Hand -->
-			<item id="8688" min="1" max="1" chance="7.14"/> <!-- Daimon Crystal -->
-			<item id="91887" min="1" max="1" chance="7.14"/> <!-- Durendal -->
-			<item id="14339" min="1" max="1" chance="7.14"/> <!-- Ã‰clair Bijou -->
-			<item id="8938" min="1" max="1" chance="7.14"/> <!-- Tallum Blade*Damascus -->
+			<item id="8678" min="1" max="1" chance="7.14" /> <!-- Sirra's Blade -->
+			<item id="8679" min="1" max="1" chance="7.14" /> <!-- Sword of Ipos -->
+			<item id="8680" min="1" max="1" chance="7.14" /> <!-- Barakiel's Axe -->
+			<item id="8681" min="1" max="1" chance="7.14" /> <!-- Behemoth' Tuning Fork -->
+			<item id="8682" min="1" max="1" chance="7.14" /> <!-- Naga's Storm -->
+			<item id="8683" min="1" max="1" chance="7.14" /> <!-- Tiphon's Spear -->
+			<item id="8684" min="1" max="1" chance="7.14" /> <!-- Shyeed's Bow -->
+			<item id="8685" min="1" max="1" chance="7.14" /> <!-- Sobekk's Hurricane -->
+			<item id="8686" min="1" max="1" chance="7.14" /> <!-- Themis' Tongue -->
+			<item id="8687" min="1" max="1" chance="7.14" /> <!-- Cabrio's Hand -->
+			<item id="8688" min="1" max="1" chance="7.14" /> <!-- Daimon Crystal -->
+			<item id="91887" min="1" max="1" chance="7.14" /> <!-- Durendal -->
+			<item id="14339" min="1" max="1" chance="7.14" /> <!-- Ã‰clair Bijou -->
+			<item id="8938" min="1" max="1" chance="7.14" /> <!-- Tallum Blade*Damascus -->
 		</capsuled_items>
 	</item>
 	<item id="72186" name="Special Kit" type="EtcItem">

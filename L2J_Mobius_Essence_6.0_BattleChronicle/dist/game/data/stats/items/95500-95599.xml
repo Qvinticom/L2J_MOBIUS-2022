@@ -652,7 +652,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true"/>
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="95572" name="+0 ~ +5 Heavy Armor Pack - Full Plate Helmet" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -665,13 +665,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2414" min="1" max="1" chance="8.33"/>
+			<item id="2414" min="1" max="1" chance="8.33" />
 			<item id="2414" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2414" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2414" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2414" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2414" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93639" min="1" max="1" chance="8.33"/>
+			<item id="93639" min="1" max="1" chance="8.33" />
 			<item id="93639" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93639" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93639" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -690,13 +690,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2438" min="1" max="1" chance="8.33"/>
+			<item id="2438" min="1" max="1" chance="8.33" />
 			<item id="2438" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2438" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2438" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2438" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2438" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93640" min="1" max="1" chance="8.33"/>
+			<item id="93640" min="1" max="1" chance="8.33" />
 			<item id="93640" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93640" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93640" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -715,13 +715,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2462" min="1" max="1" chance="8.33"/>
+			<item id="2462" min="1" max="1" chance="8.33" />
 			<item id="2462" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2462" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2462" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2462" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2462" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93641" min="1" max="1" chance="8.33"/>
+			<item id="93641" min="1" max="1" chance="8.33" />
 			<item id="93641" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93641" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93641" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -740,13 +740,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="356" min="1" max="1" chance="8.33"/>
+			<item id="356" min="1" max="1" chance="8.33" />
 			<item id="356" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="356" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="356" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="356" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="356" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93642" min="1" max="1" chance="8.33"/>
+			<item id="93642" min="1" max="1" chance="8.33" />
 			<item id="93642" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93642" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93642" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -765,13 +765,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="401" min="1" max="1" chance="8.33"/>
+			<item id="401" min="1" max="1" chance="8.33" />
 			<item id="401" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="401" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="401" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="401" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="401" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93643" min="1" max="1" chance="8.33"/>
+			<item id="93643" min="1" max="1" chance="8.33" />
 			<item id="93643" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93643" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93643" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -790,13 +790,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2437" min="1" max="1" chance="8.33"/>
+			<item id="2437" min="1" max="1" chance="8.33" />
 			<item id="2437" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2437" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2437" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2437" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2437" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93644" min="1" max="1" chance="8.33"/>
+			<item id="93644" min="1" max="1" chance="8.33" />
 			<item id="93644" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93644" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93644" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -815,13 +815,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2461" min="1" max="1" chance="8.33"/>
+			<item id="2461" min="1" max="1" chance="8.33" />
 			<item id="2461" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2461" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2461" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2461" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2461" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93645" min="1" max="1" chance="8.33"/>
+			<item id="93645" min="1" max="1" chance="8.33" />
 			<item id="93645" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93645" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93645" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -840,13 +840,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="439" min="1" max="1" chance="8.33"/>
+			<item id="439" min="1" max="1" chance="8.33" />
 			<item id="439" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="439" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="439" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="439" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="439" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93646" min="1" max="1" chance="8.33"/>
+			<item id="93646" min="1" max="1" chance="8.33" />
 			<item id="93646" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93646" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93646" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -865,13 +865,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="471" min="1" max="1" chance="8.33"/>
+			<item id="471" min="1" max="1" chance="8.33" />
 			<item id="471" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="471" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="471" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="471" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="471" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93647" min="1" max="1" chance="8.33"/>
+			<item id="93647" min="1" max="1" chance="8.33" />
 			<item id="93647" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93647" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93647" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -890,13 +890,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2430" min="1" max="1" chance="8.33"/>
+			<item id="2430" min="1" max="1" chance="8.33" />
 			<item id="2430" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2430" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2430" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2430" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2430" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93648" min="1" max="1" chance="8.33"/>
+			<item id="93648" min="1" max="1" chance="8.33" />
 			<item id="93648" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93648" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93648" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
@@ -915,13 +915,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="2454" min="1" max="1" chance="8.33"/>
+			<item id="2454" min="1" max="1" chance="8.33" />
 			<item id="2454" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="2454" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="2454" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />
 			<item id="2454" min="1" max="1" chance="8.33" maxEnchant="4" minEnchant="4" />
 			<item id="2454" min="1" max="1" chance="8.33" maxEnchant="5" minEnchant="5" />
-			<item id="93649" min="1" max="1" chance="8.33"/>
+			<item id="93649" min="1" max="1" chance="8.33" />
 			<item id="93649" min="1" max="1" chance="8.33" maxEnchant="1" minEnchant="1" />
 			<item id="93649" min="1" max="1" chance="8.33" maxEnchant="2" minEnchant="2" />
 			<item id="93649" min="1" max="1" chance="8.33" maxEnchant="3" minEnchant="3" />

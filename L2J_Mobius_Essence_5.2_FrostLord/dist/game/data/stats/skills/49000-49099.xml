@@ -255,7 +255,7 @@
 					<value level="5">70</value>
 				</amount>
 			</effect>
-			<effect name="ImmobilePetBuff"/>
+			<effect name="ImmobilePetBuff" />
 		</effects>
 	</skill>
 	<skill id="49005" toLevel="5" name="Chain Block">
@@ -295,7 +295,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlinkSwap"/>
+			<effect name="BlinkSwap" />
 		</effects>
 	</skill>
 	<skill id="49011" toLevel="5" name="Pet's Specific Skill: Tiger Cub">
@@ -1218,7 +1218,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<effects>
-			<effect name="GetAgro"/>
+			<effect name="GetAgro" />
 			<effect name="AddHate">
 				<power>
 					<value level="1">6000</value>
@@ -1242,7 +1242,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<effects>
-			<effect name="BlockActions"/>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="49041" toLevel="5" name="Pet's Specific Skill: Hawk Hatchling">
