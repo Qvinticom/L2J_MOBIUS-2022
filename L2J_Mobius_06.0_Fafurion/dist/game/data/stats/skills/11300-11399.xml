@@ -2213,6 +2213,14 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="5" toLevel="5">
+				<chance>7</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<skillId>30531</skillId> <!-- Servitor Rage -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11352" toLevel="4" name="Arcane Ability">

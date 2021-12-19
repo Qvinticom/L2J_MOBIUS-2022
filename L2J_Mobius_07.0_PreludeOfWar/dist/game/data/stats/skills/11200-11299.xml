@@ -588,26 +588,37 @@
 			<effect name="CubicMastery">
 				<amount>3</amount>
 			</effect>
-			<effect name="TriggerSkillBySkillAttack">
+			<effect name="TriggerSkillBySkill">
 				<skillId>11351</skillId> <!-- Link of Loyalty -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
-				<attackSkillId>11350</attackSkillId> <!-- Arcane Rage -->
+				<castSkillId>11259</castSkillId> <!-- Mark of Weakness -->
 				<targetType>SUMMON</targetType>
+				<replace>false</replace>
 			</effect>
-			<effect name="TriggerSkillBySkillAttack">
-				<skillId>11354</skillId> <!-- Elemental Link -->
+			<effect name="TriggerSkillBySkill">
+				<skillId>11351</skillId> <!-- Link of Loyalty -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
-				<attackSkillId>11353</attackSkillId> <!-- Elemental Rage -->
+				<castSkillId>11260</castSkillId> <!-- Mark of Void -->
 				<targetType>SUMMON</targetType>
+				<replace>false</replace>
 			</effect>
-			<effect name="TriggerSkillBySkillAttack">
-				<skillId>11357</skillId> <!-- Spectral Link -->
+			<effect name="TriggerSkillBySkill">
+				<skillId>11351</skillId> <!-- Link of Loyalty -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
-				<attackSkillId>11356</attackSkillId> <!-- Spectral Rage -->
+				<castSkillId>11261</castSkillId> <!-- Mark of Plague -->
 				<targetType>SUMMON</targetType>
+				<replace>false</replace>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>11351</skillId> <!-- Link of Loyalty -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<castSkillId>11262</castSkillId> <!-- Mark of Trick -->
+				<targetType>SUMMON</targetType>
+				<replace>false</replace>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>

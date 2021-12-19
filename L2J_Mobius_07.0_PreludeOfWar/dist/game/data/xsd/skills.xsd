@@ -1955,6 +1955,7 @@
 															</xs:element>
 															<xs:element name="allowNormalAttack" type="xs:boolean" />
 															<xs:element name="saveHp" type="xs:unsignedByte" />
+															<xs:element name="replace" type="xs:boolean" />
 															<xs:element name="summonPoints" type="xs:unsignedByte" />
 															<xs:element name="abnormalType" type="xs:string" />
 															<xs:element name="CRITICAL_DAMAGE" type="xs:unsignedByte" />

@@ -1686,8 +1686,9 @@
 		</effects>
 	</skill>
 	<skill id="30531" toLevel="1" name="Servitor's Rage">
+		<!-- Critical Damage Received increases by $s2 for $s1 due to the rage of Servitor. -->
 		<icon>icon.skill11351</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
@@ -1695,6 +1696,20 @@
 		<coolTime>100</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-671</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>30</lvlBonusRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>T_CRT_RATE_UP</abnormalType>
+		<reuseDelay>3000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- P. Critical Rate +$s1, P. Skill Critical Rate +$s2. -->
