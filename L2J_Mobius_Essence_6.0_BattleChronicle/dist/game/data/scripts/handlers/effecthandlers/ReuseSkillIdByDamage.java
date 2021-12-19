@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 /**
  * @author NasSeKa
  */
-public class ReuseSkillByDamageId extends AbstractEffect
+public class ReuseSkillIdByDamage extends AbstractEffect
 {
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;
@@ -43,7 +43,7 @@ public class ReuseSkillByDamageId extends AbstractEffect
 	private final int _amount;
 	private final InstanceType _attackerType;
 	
-	public ReuseSkillByDamageId(StatSet params)
+	public ReuseSkillIdByDamage(StatSet params)
 	{
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
 		_maxAttackerLevel = params.getInt("maxAttackerLevel", Integer.MAX_VALUE);
