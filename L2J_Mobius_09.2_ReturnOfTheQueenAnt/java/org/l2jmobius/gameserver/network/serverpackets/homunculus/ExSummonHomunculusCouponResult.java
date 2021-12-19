@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -26,8 +25,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExSummonHomunculusCouponResult implements IClientOutgoingPacket
 {
-	public ExSummonHomunculusCouponResult()
+	private final int _slot;
+	
+	public ExSummonHomunculusCouponResult(int slot)
 	{
+		_slot = slot;
 	}
 	
 	@Override
@@ -36,7 +38,8 @@ public class ExSummonHomunculusCouponResult implements IClientOutgoingPacket
 		OutgoingPackets.EX_SUMMON_HOMUNCULUS_COUPON_RESULT.writeId(packet);
 		
 		packet.writeD(1); // 1 - success
-		packet.writeD(SystemMessageId.A_NEW_HOMUNCULUS_IS_CREATED.getId());
+		packet.writeD(_slot); // homunculus slot
+		packet.writeD(0); // keep or delete
 		
 		return true;
 	}
